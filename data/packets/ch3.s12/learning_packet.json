@@ -1,0 +1,806 @@
+{
+  "schema_version": "7.4",
+  "packet_type": "DEEPSEEK_SEQUENTIAL_LEARNING_PACKET",
+  "section": "ch3.s12",
+  "status": "VERIFIED",
+  "source": {
+    "ocr_root": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180",
+    "ocr_docs": [
+      163,
+      171
+    ],
+    "source_file": null
+  },
+  "workflow_order": [
+    "repeat_each_learning_cycle_in_order",
+    "watch_current_courses",
+    "learn_each_current_example_then_attempt_its_direct_variants",
+    "attempt_current_abc_exercises_without_answers",
+    "assess_current_cycle_before_advancing",
+    "unseen_near_transfer",
+    "delayed_closed_book_review"
+  ],
+  "learning_cycles": [
+    {
+      "cycle_id": "ch3.s12-cycle-1",
+      "sequence": 1,
+      "title": "类型Ⅰ 直角、锐角、钝角",
+      "course_keys": [
+        "dot_product_translation",
+        "dot_product_double_root",
+        "angle_bisector",
+        "range_upper"
+      ],
+      "prerequisite_course_keys": [],
+      "optional_course_keys": [],
+      "knowledge_refs": [],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅰ 直角、锐角、钝角"
+      ],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [
+        {
+          "item_id": "3e92fe4812b96094",
+          "kind": "example",
+          "label": "例1",
+          "example_number": 1,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型Ⅰ 直角、锐角、钝角",
+          "source_docs": [
+            163,
+            164
+          ],
+          "question_text": "【例 1】已知定点  \\(A(-1,0)\\)， \\(F(2,0)\\)，定直线  \\(l: x = \\frac{1}{2}\\)，不在 x 轴上的动点 P 与点 F 的距离是它到直线 l 的距离的 2 倍。设点 P 的轨迹为 E，过点 F 的直线交 E 于 B，C 两点，直线 AB，AC 分别交 l 于点 M，N.\n（1）求E的方程：\n（2）试判断以线段 MN 为直径的圆是否过点 F，并说明理由.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例 1】已知定点  \\(A(-1,0)\\)， \\(F(2,0)\\)，定直线  \\(l: x = \\frac{1}{2}\\)，不在 x 轴上的动点 P 与点 F 的距离是它到直线 l 的距离的 2 倍。设点 P 的轨迹为 E，过点 F 的直线交 E 于 B，C 两点，直线 AB，AC 分别交 l 于点 M，N.\n（1）求E的方程：\n（2）试判断以线段 MN 为直径的圆是否过点 F，并说明理由.\n解：（1）设  \\(P(x,y)\\)，由题意， \\(\\sqrt{(x-2)^2+y^2}=2\\left|x-\\frac{1}{2}\\right|\\)，两端同时平方化简得： \\(x^2-\\frac{y^2}{3}=1\\)，又点  \\(P\\) 不在  \\(x\\) 轴上，所以点  \\(P\\) 的轨迹  \\(E\\) 的方程为  \\(x^2-\\frac{y^2}{3}=1(y\\neq0)\\)。\n（2）（怎样判断以 MN 为直径的圆是否过点 F？要求出该圆的方程，再将点 F 的坐标代入验证吗？这样做很麻烦，以 MN 为直径的圆过点  \\(F \\Leftrightarrow FM \\perp FN\\)，故只需看  \\(\\overrightarrow{FM} \\cdot \\overrightarrow{FN} = 0\\) 是否成立，求  \\(\\overrightarrow{FM} \\cdot \\overrightarrow{FN}\\) 需要 M，N 的坐标，如图，M，N 是 AB，AC 与 l 的交点，可设 B，C 的坐标，写出 AB，AC 的方程，与 l 联立求 M，N 的坐标）\n由题意，设  \\(B(x_1, y_1)\\)， \\(C(x_2, y_2)\\)，则  \\(k_{AB} = \\frac{y_1}{x_1 + 1}\\)，所以直线 AB 的方程为  \\(y = \\frac{y_1}{x_1 + 1}(x + 1)\\)，\n令  \\(x = \\frac{1}{2}\\) 得  \\(y = \\frac{3y_1}{2(x_1 + 1)}\\)，所以  \\(M\\left(\\frac{1}{2}, \\frac{3y_1}{2(x_1 + 1)}\\right)\\)，同理， \\(N\\left(\\frac{1}{2}, \\frac{3y_2}{2(x_2 + 1)}\\right)\\)，所以  \\(\\overrightarrow{FM} = \\left(-\\frac{3}{2}, \\frac{3y_1}{2(x_1 + 1)}\\right)\\)， \\(\\overrightarrow{FN} = \\left(-\\frac{3}{2}, \\frac{3y_2}{2(x_2 + 1)}\\right)\\)，故  \\(\\overrightarrow{FM} \\cdot \\overrightarrow{FN} = \\left(-\\frac{3}{2}\\right)^2 + \\frac{3y_1}{2(x_1 + 1)} \\cdot \\frac{3y_2}{2(x_2 + 1)} = \\frac{9}{4}\\left[1 + \\frac{y_1 y_2}{x_1 x_2 + (x_1 + x_2) + 1}\\right]\\) ①，\n（有 x，y，x + x，y，y，又想到设直线 BC 的方程，与双曲线的方程联立，结合韦达定理计算它们）\n直线 BC 过点  \\(F(2,0)\\)，且与 E 交于 B，C 两点，所以 BC 不与 y 轴垂直，故可设其方程为  \\(x = my + 2\\)，代入  \\(x^2 - \\frac{y^2}{3} = 1\\) 消去 x 整理得： \\((3m^2 - 1)y^2 + 12my + 9 = 0\\)，\n因为直线 BC 与双曲线有 2 个交点，所以  \\(\\begin{cases} 3m^2 - 1 \\ne 0 \\\\ \\Delta = 144m^2 - 36(3m^2 - 1) = 36(m^2 + 1) > 0 \\end{cases}\\)，故  \\(m^2 \\ne \\frac{1}{3}\\)，由韦达定理， \\(y_1 + y_2 = -\\frac{12m}{3m^2 - 1}\\)， \\(y_1 y_2 = \\frac{9}{3m^2 - 1}\\)，\n所以  \\(x_1 + x_2 = m(y_1 + y_2) + 4 = -\\frac{4}{3m^2 - 1}\\)， \\(x_1x_2 = m^2y_1y_2 + 2m(y_1 + y_2) + 4\\)\n \\(= -\\frac{3m^2 + 4}{3m^2 - 1}\\)，代入①得  \\(\\overrightarrow{FM} \\cdot \\overrightarrow{FN} = \\frac{9}{4}\\left(1 + \\frac{\\frac{9}{3m^2 - 1}}{-\\frac{3m^2 + 4}{3m^2 - 1} - \\frac{4}{3m^2 - 1} + 1}\\right)\\)\n \\(= \\frac{9}{4}\\left(1 + \\frac{9}{-3m^2 - 4 - 4 + 3m^2 - 1}\\right) = 0\\)，所以  \\(FM \\perp FN\\)，\n故以线段  \\(MN\\) 为直径的圆讨占  \\(F\\)\n【反思】直角、锐角、钝角这类条件可能会以点在圆上、点在圆外、点在圆内这样的形式隐含地给出，一般而言，可总结如下. 设  \\(M\\)， \\(N\\) 是不重合的两点，则：\n①  \\(\\overrightarrow{FM} \\cdot \\overrightarrow{FN} = 0 \\Leftrightarrow \\angle MFN = 90^\\circ\\) 或  \\(F\\) 与  \\(M\\)， \\(N\\) 中的一个重合  \\(\\Leftrightarrow\\) 点  \\(F\\) 在以  \\(MN\\) 为直径的圆上；\n②  \\(\\overrightarrow{FM} \\cdot \\overrightarrow{FN} > 0 \\Leftrightarrow \\angle MFN\\) 为锐角或  \\(0^\\circ \\Leftrightarrow\\) 点  \\(F\\) 在以  \\(MN\\) 为直径的圆外；\n③  \\(\\overrightarrow{FM} \\cdot \\overrightarrow{FN} < 0 \\Leftrightarrow \\angle MFN\\) 为钝角或平角  \\(\\Leftrightarrow\\) 点  \\(F\\) 在以  \\(MN\\) 为直径的圆内.\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_863_335_1091_601.jpg\" alt=\"Image\" width=\"19%\" /></div>",
+          "solution_present": true,
+          "vision_hint": "ch3.s12-LI3e92fe4812b96094"
+        },
+        {
+          "item_id": "35f25e4a25650379",
+          "kind": "example",
+          "label": "例2",
+          "example_number": 2,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型Ⅰ 直角、锐角、钝角",
+          "source_docs": [
+            165,
+            166
+          ],
+          "question_text": "【例2】设抛物线  \\(y^{2}=4x\\) 的焦点为 F，O 是坐标原点， \\(M(4,0)\\)，过点 F 的直线与抛物线交于 A，B 两点，延长 AM，BM 分别交抛物线于 C，D 两点，P，Q 分别是 AB，CD 的中点.\n（1）求直线 OP 的斜率的取值范围：\n(2) 求  \\(\\cos\\angle POQ\\) 的最小值.\n直线 \\(AB\\) 的方程）由题意，\\(F(1,0)\\)，垂直于 \\(y\\) 轴的直线与抛物线 \\(y^2 = 4x\\) 只有 1 个交点，所以 \\(AB\\) 不与 \\(y\\) 轴垂直，故可设其方程为 \\(x = my + 1\\)，代入 \\(y^2 = 4x\\) 消去 \\(x\\) 整理得：\\(y^2 - 4my - 4 = 0\\)，判别式 \\(\\Delta = (-4m)^2 - 4 \\times 1 \\times (-4) = 16(m^2 + 1) > 0\\)，设 \\(A(x_1, y_1)\\)，\\(B(x_2, y_2)\\)，由韦达定理，\\(y_1 + y_2 = 4m\\)，\\(y_1 y_2 = -4\\)，所以 \\(x_1 + x_2 = my_1 + 1 + my_2 + 1 = m(y_1 + y_2) + 2 = 4m^2 + 2\\)，故 \\(AB\\) 中点 \\(P\\) 的坐标为 \\((2m^2 + 1, 2m)\\)，所以 \\(k_{OP} = \\frac{2m}{2m^2 + 1}\\)，（怎样求 \\(k_{OP}\\) 的范围？可看成关于 \\(m\\) 的函数，该函数是奇函数，先看 \\(m > 0\\) 的情形，可上下同除以 \\(m\\)，用均值不等式处理）\n记 \\(f(m) = \\frac{2m}{2m^2 + 1}\\)，\\(m \\in \\mathbf{R}\\)，则 \\(f(-m) = \\frac{2(-m)}{2(-m)^2 + 1} = -\\frac{2m}{2m^2 + 1} = -f(m)\\)，所以 \\(f(m)\\) 为奇函数，当 \\(m > 0\\) 时，\\(f(m) = \\frac{2}{2m + \\frac{1}{m}}\\)，因为 \\(2m + \\frac{1}{m} \\geq 2\\sqrt{2m \\cdot \\frac{1}{m}} = 2\\sqrt{2}\\)，所以 \\(0 < f(m) \\leq \\frac{2}{2\\sqrt{2}} = \\frac{\\sqrt{2}}{2}\\)，当且仅当 \\(2m = \\frac{1}{m}\\)，即 \\(m = \\frac{\\sqrt{2}}{2}\\) 时取等号，所以 \\(f(m)\\) 在 \\((0, +\\infty)\\) 上的值域为 \\(\\left[0, \\frac{\\sqrt{2}}{2}\\right]\\)，由奇函数的对称性，\\(f(m)\\) 在 \\((-\\infty, 0)\\) 上的值域为 \\(\\left[-\\frac{\\sqrt{2}}{2}, 0\\right)\\)，结合 \\(f(0) = 0\\) 可得 \\(f(m)\\) 的值域为 \\(\\left[-\\frac{\\sqrt{2}}{2}, \\frac{\\sqrt{2}}{2}\\right]\\)，所以直线 \\(OP\\) 的斜率的取值范围是 \\(\\left[-\\frac{\\sqrt{2}}{2}, \\frac{\\sqrt{2}}{2}\\right]\\)。\n（2）（\\(\\angle POQ\\) 可看成 \\(\\overrightarrow{OP}\\) 与 \\(\\overrightarrow{OQ}\\) 的夹角，故考虑用夹角余弦公式处理，下面先求点 \\(Q\\) 的坐标. 因为 \\(Q\\) 为 \\(CD\\) 中点，于是又得先算 \\(C\\)，\\(D\\) 的坐标，可将直线 \\(AM\\)，\\(BM\\) 与抛物线联立，结合韦达定理来求 \\(C\\)，\\(D\\) 的坐标）\n由题意，\\(AM\\) 不与 \\(y\\) 轴垂直，可设其方程为 \\(x = ny + 4\\)，代入 \\(y^2 = 4x\\) 消去 \\(x\\) 整理得：\\(y^2 - 4ny - 16 = 0\\)，\\(\\Delta' = 16n^2 + 64 > 0\\)，因为直线 \\(AM\\) 与抛物线的两个交点是 \\(A\\)，\\(C\\)，所以由韦达定理，\\(y_1 y_C = -16\\)，\n从而 \\(y_C = -\\frac{16}{y_1}\\)，故 \\(x_C = \\frac{y_C^2}{4} = \\frac{64}{y_1^2}\\)，所以 \\(C\\left(\\frac{64}{y_1^2}, -\\frac{16}{y_1}\\right)\\)，同理，\\(D\\left(\\frac{64}{y_2^2}, -\\frac{16}{y_2}\\right)\\)，\n因为 \\(Q\\) 是 \\(CD\\) 中点，所以点 \\(Q\\) 的坐标为 \\(\\left(\\frac{32}{y_1^2} + \\frac{32}{y_2^2}, -\\frac{8}{y_1} - \\frac{8}{y_2}\\right)\\) ①，\n\\(\\frac{32}{y_1^2} + \\frac{32}{y_2^2} = \\frac{32(y_1^2 + y_2^2)}{y_1^2 + y_2^2} = \\frac{32[(y_1 + y_2)^2 - 2y_1y_2]}{y_1^2 + y_2^2} = \\frac{32(16m^2 + 8)}{16} = 16(2m^2 + 1)\\)，\n \\[-\\frac{8}{y_{1}}-\\frac{8}{y_{2}}=-\\frac{8(y_{1}+y_{2})}{y_{1}y_{2}}=-\\frac{8\\times4m}{-4}=8m\\] \n \\[(16(2m^{2}+1),8m)\\] \n\\((P, Q)\\)的坐标都有了，若直接算\\(OP\\)与\\(OQ\\)的夹角余弦，则结果较复杂，能否简化？观察发现\\(P, Q\\)的坐标结构很像，对应分量有明显的倍数关系，故可考虑将\\(\\overrightarrow{OP}, \\overrightarrow{OQ}\\)的坐标同除以\\(2m^2 + 1\\)，得到与\\(\\overrightarrow{OP}, \\overrightarrow{OQ}\\)同向的向量，用它们来算\\(\\cos \\angle POQ\\)）\\(\\overrightarrow{OP} = (2m^2 + 1, 2m)\\)，\\(\\overrightarrow{OQ} = (16(2m^2 + 1), 8m)\\)，\n记 \\(a=\\left(1,\\frac{2m}{2m^2+1}\\right)\\)， \\(b=\\left(16,\\frac{8m}{2m^2+1}\\right)\\)，则 \\(a\\)， \\(b\\)分别与 \\(\\overrightarrow{OP}\\)， \\(\\overrightarrow{OQ}\\)同向，\n令 \\(t=\\frac{2m}{2m^2+1}\\)，则 \\(t=f(m)\\)，由（1）可得 \\(-\\frac{\\sqrt{2}}{2}\\leq t\\leq\\frac{\\sqrt{2}}{2}\\)，且 \\(a=(1,t)\\)， \\(b=(16,4t)\\)，\n所以 \\(\\cos\\angle POQ=\\cos\\langle a,b\\rangle=\\frac{a\\cdot b}{|a|\\cdot|b|}=\\frac{16+4t^2}{\\sqrt{1+t^2}\\cdot\\sqrt{256+16t^2}}=\\frac{4+t^2}{\\sqrt{1+t^2}\\cdot\\sqrt{16+t^2}}\\)，\n（怎样求此式的最小值？不妨全拿进根号再看）\n故  \\(\\cos\\angle POQ=\\sqrt{\\frac{(4+t^{2})^{2}}{(1+t^{2})(16+t^{2})}}=\\sqrt{\\frac{t^{4}+8t^{2}+16}{16+17t^{2}+t^{4}}}=\\sqrt{\\frac{t^{4}+17t^{2}+16-9t^{2}}{t^{4}+17t^{2}+16}}=\\sqrt{1-\\frac{9t^{2}}{t^{4}+17t^{2}+16}}\\) ②，\n（要使  \\(\\cos \\angle POQ\\) 最小，只需  \\(\\frac{9t^2}{t^4 + 17t^2 + 16}\\) 最大，可上下同除以  \\(t^2\\)，将分子化为常数再看，但需先考虑  \\(t^2 = 0\\) 的情形）由  \\(-\\frac{\\sqrt{2}}{2} \\leq t \\leq \\frac{\\sqrt{2}}{2}\\) 可得  \\(0 \\leq t^2 \\leq \\frac{1}{2}\\)，当  \\(t^2 = 0\\) 时， \\(\\cos \\angle POQ = 1\\)；\n当  \\(0 < t^2 \\leq \\frac{1}{2}\\) 时， \\(\\frac{9t^2}{t^4 + 17t^2 + 16} = \\frac{9}{t^2 + \\frac{16}{t^2} + 17}\\) ③，（能用均值不等式吗？经尝试，等号取不到，所以不能，故直\n接分析单调性，显然将 \\(t^{2}\\)换元更容易看出单调性，故先换元）\n设  \\(u = t^2\\)，则  \\(0 < u \\leq \\frac{1}{2}\\)，且  \\(t^2 + \\frac{16}{t^2} = u + \\frac{16}{u}\\)，由双勾函数的性质可知函数  \\(y = u + \\frac{16}{u}\\) 在  \\(\\left(0, \\frac{1}{2}\\right]\\) 上单调递减，所以当  \\(u = \\frac{1}{2}\\) 时， \\(y = u + \\frac{16}{u}\\) 取得最小值  \\(\\frac{65}{2}\\)，故  \\(\\left(t^2 + \\frac{16}{t^2}\\right)_{\\min} = \\frac{65}{2}\\)，\n结合③可得 \\(\\frac{9t^{2}}{t^{4}+17t^{2}+16}\\)的最大值为 \\(\\frac{9}{\\frac{65}{2}+17}=\\frac{2}{11}\\)\n由②知当 \\(\\frac{9t^2}{t^4 + 17t^2 + 16}\\)最大时， \\(\\cos \\angle POQ\\)最小，所以 \\((\\cos \\angle POQ)_{\\min} = \\sqrt{1 - \\frac{2}{11}} = \\frac{3\\sqrt{11}}{11}\\)；综上所述， \\(\\cos \\angle POQ\\)的最小值为 \\(\\frac{3\\sqrt{11}}{11}\\)。",
+          "image_refs": [
+            {
+              "ref": "imgs/img_in_image_box_865_722_1092_940.jpg",
+              "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\imgs\\img_in_image_box_865_722_1092_940.jpg",
+              "exists": true
+            }
+          ],
+          "visual_status": "VISION_VERIFIED",
+          "teaching_text": "【例2】设抛物线  \\(y^{2}=4x\\) 的焦点为 F，O 是坐标原点， \\(M(4,0)\\)，过点 F 的直线与抛物线交于 A，B 两点，延长 AM，BM 分别交抛物线于 C，D 两点，P，Q 分别是 AB，CD 的中点.\n（1）求直线 OP 的斜率的取值范围：\n(2) 求  \\(\\cos\\angle POQ\\) 的最小值.\n直线 \\(AB\\) 的方程）由题意，\\(F(1,0)\\)，垂直于 \\(y\\) 轴的直线与抛物线 \\(y^2 = 4x\\) 只有 1 个交点，所以 \\(AB\\) 不与 \\(y\\) 轴垂直，故可设其方程为 \\(x = my + 1\\)，代入 \\(y^2 = 4x\\) 消去 \\(x\\) 整理得：\\(y^2 - 4my - 4 = 0\\)，判别式 \\(\\Delta = (-4m)^2 - 4 \\times 1 \\times (-4) = 16(m^2 + 1) > 0\\)，设 \\(A(x_1, y_1)\\)，\\(B(x_2, y_2)\\)，由韦达定理，\\(y_1 + y_2 = 4m\\)，\\(y_1 y_2 = -4\\)，所以 \\(x_1 + x_2 = my_1 + 1 + my_2 + 1 = m(y_1 + y_2) + 2 = 4m^2 + 2\\)，故 \\(AB\\) 中点 \\(P\\) 的坐标为 \\((2m^2 + 1, 2m)\\)，所以 \\(k_{OP} = \\frac{2m}{2m^2 + 1}\\)，（怎样求 \\(k_{OP}\\) 的范围？可看成关于 \\(m\\) 的函数，该函数是奇函数，先看 \\(m > 0\\) 的情形，可上下同除以 \\(m\\)，用均值不等式处理）\n记 \\(f(m) = \\frac{2m}{2m^2 + 1}\\)，\\(m \\in \\mathbf{R}\\)，则 \\(f(-m) = \\frac{2(-m)}{2(-m)^2 + 1} = -\\frac{2m}{2m^2 + 1} = -f(m)\\)，所以 \\(f(m)\\) 为奇函数，当 \\(m > 0\\) 时，\\(f(m) = \\frac{2}{2m + \\frac{1}{m}}\\)，因为 \\(2m + \\frac{1}{m} \\geq 2\\sqrt{2m \\cdot \\frac{1}{m}} = 2\\sqrt{2}\\)，所以 \\(0 < f(m) \\leq \\frac{2}{2\\sqrt{2}} = \\frac{\\sqrt{2}}{2}\\)，当且仅当 \\(2m = \\frac{1}{m}\\)，即 \\(m = \\frac{\\sqrt{2}}{2}\\) 时取等号，所以 \\(f(m)\\) 在 \\((0, +\\infty)\\) 上的值域为 \\(\\left[0, \\frac{\\sqrt{2}}{2}\\right]\\)，由奇函数的对称性，\\(f(m)\\) 在 \\((-\\infty, 0)\\) 上的值域为 \\(\\left[-\\frac{\\sqrt{2}}{2}, 0\\right)\\)，结合 \\(f(0) = 0\\) 可得 \\(f(m)\\) 的值域为 \\(\\left[-\\frac{\\sqrt{2}}{2}, \\frac{\\sqrt{2}}{2}\\right]\\)，所以直线 \\(OP\\) 的斜率的取值范围是 \\(\\left[-\\frac{\\sqrt{2}}{2}, \\frac{\\sqrt{2}}{2}\\right]\\)。\n（2）（\\(\\angle POQ\\) 可看成 \\(\\overrightarrow{OP}\\) 与 \\(\\overrightarrow{OQ}\\) 的夹角，故考虑用夹角余弦公式处理，下面先求点 \\(Q\\) 的坐标. 因为 \\(Q\\) 为 \\(CD\\) 中点，于是又得先算 \\(C\\)，\\(D\\) 的坐标，可将直线 \\(AM\\)，\\(BM\\) 与抛物线联立，结合韦达定理来求 \\(C\\)，\\(D\\) 的坐标）\n由题意，\\(AM\\) 不与 \\(y\\) 轴垂直，可设其方程为 \\(x = ny + 4\\)，代入 \\(y^2 = 4x\\) 消去 \\(x\\) 整理得：\\(y^2 - 4ny - 16 = 0\\)，\\(\\Delta' = 16n^2 + 64 > 0\\)，因为直线 \\(AM\\) 与抛物线的两个交点是 \\(A\\)，\\(C\\)，所以由韦达定理，\\(y_1 y_C = -16\\)，\n从而 \\(y_C = -\\frac{16}{y_1}\\)，故 \\(x_C = \\frac{y_C^2}{4} = \\frac{64}{y_1^2}\\)，所以 \\(C\\left(\\frac{64}{y_1^2}, -\\frac{16}{y_1}\\right)\\)，同理，\\(D\\left(\\frac{64}{y_2^2}, -\\frac{16}{y_2}\\right)\\)，\n因为 \\(Q\\) 是 \\(CD\\) 中点，所以点 \\(Q\\) 的坐标为 \\(\\left(\\frac{32}{y_1^2} + \\frac{32}{y_2^2}, -\\frac{8}{y_1} - \\frac{8}{y_2}\\right)\\) ①，\n\\(\\frac{32}{y_1^2} + \\frac{32}{y_2^2} = \\frac{32(y_1^2 + y_2^2)}{y_1^2 + y_2^2} = \\frac{32[(y_1 + y_2)^2 - 2y_1y_2]}{y_1^2 + y_2^2} = \\frac{32(16m^2 + 8)}{16} = 16(2m^2 + 1)\\)，\n \\[-\\frac{8}{y_{1}}-\\frac{8}{y_{2}}=-\\frac{8(y_{1}+y_{2})}{y_{1}y_{2}}=-\\frac{8\\times4m}{-4}=8m\\] \n \\[(16(2m^{2}+1),8m)\\] \n\\((P, Q)\\)的坐标都有了，若直接算\\(OP\\)与\\(OQ\\)的夹角余弦，则结果较复杂，能否简化？观察发现\\(P, Q\\)的坐标结构很像，对应分量有明显的倍数关系，故可考虑将\\(\\overrightarrow{OP}, \\overrightarrow{OQ}\\)的坐标同除以\\(2m^2 + 1\\)，得到与\\(\\overrightarrow{OP}, \\overrightarrow{OQ}\\)同向的向量，用它们来算\\(\\cos \\angle POQ\\)）\\(\\overrightarrow{OP} = (2m^2 + 1, 2m)\\)，\\(\\overrightarrow{OQ} = (16(2m^2 + 1), 8m)\\)，\n记 \\(a=\\left(1,\\frac{2m}{2m^2+1}\\right)\\)， \\(b=\\left(16,\\frac{8m}{2m^2+1}\\right)\\)，则 \\(a\\)， \\(b\\)分别与 \\(\\overrightarrow{OP}\\)， \\(\\overrightarrow{OQ}\\)同向，\n令 \\(t=\\frac{2m}{2m^2+1}\\)，则 \\(t=f(m)\\)，由（1）可得 \\(-\\frac{\\sqrt{2}}{2}\\leq t\\leq\\frac{\\sqrt{2}}{2}\\)，且 \\(a=(1,t)\\)， \\(b=(16,4t)\\)，\n所以 \\(\\cos\\angle POQ=\\cos\\langle a,b\\rangle=\\frac{a\\cdot b}{|a|\\cdot|b|}=\\frac{16+4t^2}{\\sqrt{1+t^2}\\cdot\\sqrt{256+16t^2}}=\\frac{4+t^2}{\\sqrt{1+t^2}\\cdot\\sqrt{16+t^2}}\\)，\n（怎样求此式的最小值？不妨全拿进根号再看）\n故  \\(\\cos\\angle POQ=\\sqrt{\\frac{(4+t^{2})^{2}}{(1+t^{2})(16+t^{2})}}=\\sqrt{\\frac{t^{4}+8t^{2}+16}{16+17t^{2}+t^{4}}}=\\sqrt{\\frac{t^{4}+17t^{2}+16-9t^{2}}{t^{4}+17t^{2}+16}}=\\sqrt{1-\\frac{9t^{2}}{t^{4}+17t^{2}+16}}\\) ②，\n（要使  \\(\\cos \\angle POQ\\) 最小，只需  \\(\\frac{9t^2}{t^4 + 17t^2 + 16}\\) 最大，可上下同除以  \\(t^2\\)，将分子化为常数再看，但需先考虑  \\(t^2 = 0\\) 的情形）由  \\(-\\frac{\\sqrt{2}}{2} \\leq t \\leq \\frac{\\sqrt{2}}{2}\\) 可得  \\(0 \\leq t^2 \\leq \\frac{1}{2}\\)，当  \\(t^2 = 0\\) 时， \\(\\cos \\angle POQ = 1\\)；\n当  \\(0 < t^2 \\leq \\frac{1}{2}\\) 时， \\(\\frac{9t^2}{t^4 + 17t^2 + 16} = \\frac{9}{t^2 + \\frac{16}{t^2} + 17}\\) ③，（能用均值不等式吗？经尝试，等号取不到，所以不能，故直\n接分析单调性，显然将 \\(t^{2}\\)换元更容易看出单调性，故先换元）\n设  \\(u = t^2\\)，则  \\(0 < u \\leq \\frac{1}{2}\\)，且  \\(t^2 + \\frac{16}{t^2} = u + \\frac{16}{u}\\)，由双勾函数的性质可知函数  \\(y = u + \\frac{16}{u}\\) 在  \\(\\left(0, \\frac{1}{2}\\right]\\) 上单调递减，所以当  \\(u = \\frac{1}{2}\\) 时， \\(y = u + \\frac{16}{u}\\) 取得最小值  \\(\\frac{65}{2}\\)，故  \\(\\left(t^2 + \\frac{16}{t^2}\\right)_{\\min} = \\frac{65}{2}\\)，\n结合③可得 \\(\\frac{9t^{2}}{t^{4}+17t^{2}+16}\\)的最大值为 \\(\\frac{9}{\\frac{65}{2}+17}=\\frac{2}{11}\\)\n由②知当 \\(\\frac{9t^2}{t^4 + 17t^2 + 16}\\)最大时， \\(\\cos \\angle POQ\\)最小，所以 \\((\\cos \\angle POQ)_{\\min} = \\sqrt{1 - \\frac{2}{11}} = \\frac{3\\sqrt{11}}{11}\\)；综上所述， \\(\\cos \\angle POQ\\)的最小值为 \\(\\frac{3\\sqrt{11}}{11}\\)。\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_865_722_1092_940.jpg\" alt=\"Image\" width=\"19%\" /></div>\n【反思】若要具体计算某角的大小或其三角函数值，则可考虑将该角看成某两个向量的夹角，用夹角余弦公式处理.",
+          "solution_present": true,
+          "vision_hint": "ch3.s12-LI35f25e4a25650379",
+          "vision_sidecars": [
+            {
+              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\imgs\\img_in_image_box_865_722_1092_940.jpg",
+              "image_sha256": "03ceac7cb096062c0b51ecbdef19ed72a4e67a6e7af3f45480c3ce47e9def70b",
+              "confidence": "E2",
+              "structured": {
+                "objects": [
+                  "坐标轴Ox,Oy",
+                  "抛物线",
+                  "点A,D,C,B",
+                  "线段AD,AC,CD,AB,BC,OD,OC",
+                  "线段PQ",
+                  "线段OF"
+                ],
+                "relations": [
+                  "点A在抛物线上",
+                  "点D在抛物线上",
+                  "点C在抛物线上",
+                  "点B在抛物线上",
+                  "点O在原点",
+                  "线段PQ过点M且平行于x轴"
+                ],
+                "coordinates": [
+                  "O(0,0)",
+                  "F在y轴上",
+                  "M在PQ上",
+                  "Q在x轴上",
+                  "A在抛物线左上方",
+                  "B在抛物线左下方"
+                ],
+                "ranges": [],
+                "text": [
+                  "y轴",
+                  "x轴",
+                  "D",
+                  "A",
+                  "C",
+                  "B"
+                ],
+                "uncertainties": [],
+                "confidence": "E2"
+              },
+              "source_provenance": null
+            }
+          ],
+          "vision_sidecar": {
+            "objects": [
+              "坐标轴Ox,Oy",
+              "抛物线",
+              "点A,D,C,B",
+              "线段AD,AC,CD,AB,BC,OD,OC",
+              "线段PQ",
+              "线段OF"
+            ],
+            "relations": [
+              "点A在抛物线上",
+              "点D在抛物线上",
+              "点C在抛物线上",
+              "点B在抛物线上",
+              "点O在原点",
+              "线段PQ过点M且平行于x轴"
+            ],
+            "coordinates": [
+              "O(0,0)",
+              "F在y轴上",
+              "M在PQ上",
+              "Q在x轴上",
+              "A在抛物线左上方",
+              "B在抛物线左下方"
+            ],
+            "ranges": [],
+            "text": [
+              "y轴",
+              "x轴",
+              "D",
+              "A",
+              "C",
+              "B"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "vision_source_provenance": [],
+          "evidence": [
+            "E1",
+            "E2"
+          ]
+        }
+      ],
+      "direct_variants": [
+        {
+          "item_id": "9e67e9d288e6eae6",
+          "kind": "direct_variant",
+          "label": "变式",
+          "example_number": null,
+          "parent_example_number": 1,
+          "role": "direct_variant",
+          "role_ref": null,
+          "source_docs": [
+            164,
+            165
+          ],
+          "question_text": "【变式】已知抛物线 C 的顶点在原点，焦点在直线  \\(l: x - 2y - 2 = 0\\) 上.\n（1）求抛物线 C 的标准方程；\n（2）过点  \\(M(a,0)\\) 的直线  \\(l'\\) 与焦点在 x 轴上的抛物线 C 交于 A, B 两点，若  \\(\\angle AOB\\) 为锐角，求实数 a 的取值范围.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "ch3.s12-LI9e67e9d288e6eae6"
+        }
+      ],
+      "exercise_questions": [],
+      "action_order": [
+        "watch_current_courses",
+        "learn_each_current_example_then_attempt_its_direct_variants",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [],
+      "prerequisite_knowledge_blocks": []
+    },
+    {
+      "cycle_id": "ch3.s12-cycle-2",
+      "sequence": 2,
+      "title": "类型Ⅱ 倾斜角互补",
+      "course_keys": [
+        "range_mid",
+        "range_lower",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "prerequisite_course_keys": [
+        "dot_product_translation",
+        "dot_product_double_root",
+        "angle_bisector",
+        "range_upper"
+      ],
+      "optional_course_keys": [],
+      "knowledge_refs": [],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 倾斜角互补"
+      ],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [
+        {
+          "item_id": "911ac7a4cbc0df8d",
+          "kind": "example",
+          "label": "例3",
+          "example_number": 3,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型Ⅱ 倾斜角互补",
+          "source_docs": [
+            166,
+            167
+          ],
+          "question_text": "【例 3】椭圆  \\(C: \\frac{x^2}{a^2} + \\frac{y^2}{b^2} = 1 (a > b > 0)\\) 的右焦点为  \\(F(c, 0)\\)，短轴长为 2，且  \\(C\\) 截直线  \\(x = c\\) 所得弦  \\(MN\\) 的长为  \\(\\sqrt{2}\\)。\n（1）求椭圆 C 的方程；\n（2）若 A，B 是椭圆 C 上的两个动点，且  \\(\\angle AFM = \\angle BFM\\)，证明：直线 AB 过定点.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例 3】椭圆  \\(C: \\frac{x^2}{a^2} + \\frac{y^2}{b^2} = 1 (a > b > 0)\\) 的右焦点为  \\(F(c, 0)\\)，短轴长为 2，且  \\(C\\) 截直线  \\(x = c\\) 所得弦  \\(MN\\) 的长为  \\(\\sqrt{2}\\)。\n（1）求椭圆 C 的方程；\n（2）若 A，B 是椭圆 C 上的两个动点，且  \\(\\angle AFM = \\angle BFM\\)，证明：直线 AB 过定点.\n解：（1）由题意，椭圆 C 的短轴长 2b=2，所以 b=1\n将 \\(x=c\\) 代入 \\(\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1\\) 解得： \\(y=\\pm\\frac{b\\sqrt{a^2-c^2}}{a}\\)，结合 \\(a^2-c^2=b^2\\) 可得 \\(y=\\pm\\frac{b^2}{a}\\)，所以 \\(|MN|=\\frac{2b^2}{a}\\)。\n又 \\(|MN|=\\sqrt{2}\\)，所以 \\(\\frac{2b^2}{a}=\\sqrt{2}\\)，结合 \\(b=1\\) 可得 \\(a=\\sqrt{2}\\)，故椭圆 \\(C\\) 的方程为 \\(\\frac{x^2}{2}+y^2=1\\)。\n（2）（怎样翻译  \\(\\angle AFM = \\angle BFM\\) ？如图，显然这两个角不好求， \\(\\angle AFM = \\angle BFM\\) 意味着直线 AF 和 BF 关于竖直线 MN 对称，于是它们的斜率互为相反数，即斜率之和为 0，故可按此翻译，下面先设点，表示斜率之和）\n由（1）得  \\(F(1,0)\\)，设  \\(A(x_1,y_1)\\)， \\(B(x_2,y_2)\\)，因为  \\(\\angle AFM = \\angle BFM\\) 且  \\(FM \\perp x\\) 轴，所以  \\(k_{FA} + k_{FB} = \\frac{y_1}{x_1 - 1} + \\frac{y_2}{x_2 - 1} = 0\\) 从而  \\(\\frac{y_1(x_2 - 1) + y_2(x_1 - 1)}{(x_1 - 1)(x_2 - 1)} = \\frac{x_1y_2 + x_2y_1 - (y_1 + y_2)}{(x_1 - 1)(x_2 - 1)} = 0\\)，故  \\(x_1y_2 + x_2y_1 - (y_1 + y_2) = 0\\) ①，\n（涉及  \\(x_1, y_2 + x_2, y_1\\)， \\(y_1 + y_2\\)，想到设直线  \\(AB\\) 的方程，与椭圆联立，结合韦达定理计算它们）\n直线  \\(AB\\) 的斜率存在，否则  \\(\\angle AFM\\) 和  \\(\\angle BFM\\) 一个为锐角，一个为钝角，它们不可能相等，\n所以可设直线  \\(AB\\) 的方程为  \\(y = kx + m\\)，代入  \\(\\frac{x^2}{2} + y^2 = 1\\) 消去  \\(y\\) 整理得： \\((1 + 2k^2)x^2 + 4kmx + 2m^2 - 2 = 0\\)，\n判别式  \\(\\Delta = 8(2k^2 - m^2 + 1) > 0\\)，由韦达定理， \\(x_1 + x_2 = -\\frac{4km}{1 + 2k^2}\\)， \\(x_1x_2 = \\frac{2m^2 - 2}{1 + 2k^2}\\)，\n所以  \\(x_1y_2 + x_2y_1 = x_1(kx_2 + m) + x_2(kx_1 + m) = 2kx_1x_2 + m(x_1 + x_2)\\)\n \\(= 2k \\cdot \\left( \\frac{2m^2 - 2}{1 + 2k^2} \\right) + m \\cdot \\left( -\\frac{4km}{1 + 2k^2} \\right) = -\\frac{4k}{1 + 2k^2}\\)，\n \\(y_1 + y_2 = kx_1 + m + kx_2 + m = k(x_1 + x_2) + 2m = k \\cdot \\left( -\\frac{4km}{1 + 2k^2} \\right) + 2m = \\frac{2m}{1 + 2k^2}\\)，\n代入①得  \\(-\\frac{4k}{1 + 2k^2} - \\frac{2m}{1 + 2k^2} = 0\\)，化简得： \\(m = -2k\\)，\n所以直线  \\(AB\\) 的方程为  \\(y = kx - 2k\\)，即  \\(y = k(x - 2)\\)，故直线  \\(AB\\) 过定点  \\((2,0)\\)。\n【反思】当我们通过分析图形的几何特征发现两条直线的倾斜角互补时，常按它们的斜率之和为 0 来翻译。有时倾斜角互补不会直白地给出，需要将已知条件进行分析整合才能发现，我们来看一个变式。\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_822_450_1093_620.jpg\" alt=\"Image\" width=\"22%\" /></div>",
+          "solution_present": true,
+          "vision_hint": "ch3.s12-LI911ac7a4cbc0df8d"
+        }
+      ],
+      "direct_variants": [
+        {
+          "item_id": "4a6a0bd04734a6a6",
+          "kind": "direct_variant",
+          "label": "变式",
+          "example_number": null,
+          "parent_example_number": 3,
+          "role": "direct_variant",
+          "role_ref": null,
+          "source_docs": [
+            167,
+            168
+          ],
+          "question_text": "【变式】已知椭圆  \\(C: \\frac{x^{2}}{a^{2}} + \\frac{y^{2}}{b^{2}} = 1 (a > b > 0)\\) 的左、右焦点分别为  \\(F_{1}\\)， \\(F_{2}\\)，点  \\(P\\left(1, \\frac{\\sqrt{3}}{2}\\right)\\) 在椭圆  \\(C\\) 上，且  \\(\\triangle PF_{1}F_{2}\\) 的面积为  \\(\\frac{3}{2}\\)。\n（1）求椭圆 C 的方程；\n（2）过点  \\(M(4,0)\\) 的直线 l 与椭圆 C 交于  \\(A(x_1,y_1)\\)， \\(B(x_2,y_2)\\) 两点，且  \\(y_1y_2 \\neq 0\\)，在 x 轴上是否存在定点 N，使得直线 NA，NB 与 y 轴围成的三角形始终为底边在 y 轴上的等腰三角形？若存在，求出点 N 的坐标；若不存在，说明理由.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "ch3.s12-LI4a6a0bd04734a6a6"
+        }
+      ],
+      "exercise_questions": [],
+      "action_order": [
+        "watch_current_courses",
+        "learn_each_current_example_then_attempt_its_direct_variants",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [],
+      "prerequisite_knowledge_blocks": []
+    },
+    {
+      "cycle_id": "ch3.s12-cycle-3",
+      "sequence": 3,
+      "title": "B组 强化能力",
+      "course_keys": [],
+      "prerequisite_course_keys": [
+        "dot_product_translation",
+        "dot_product_double_root",
+        "angle_bisector",
+        "range_upper",
+        "range_mid",
+        "range_lower",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "optional_course_keys": [],
+      "knowledge_refs": [],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅰ 直角、锐角、钝角",
+        "类型Ⅱ 倾斜角互补"
+      ],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [],
+      "direct_variants": [],
+      "exercise_questions": [
+        {
+          "qid": "Q-5b070dea131193eb",
+          "section": "ch3.s12",
+          "group": "B",
+          "number": 1,
+          "kind": "B组",
+          "source_anchor": {
+            "ocr_doc": 168,
+            "pdf_page": 169,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_168.md"
+          },
+          "question_text": "1.（2017·新课标Ⅱ卷）\n\n设 O 为坐标原点，动点 M 在椭圆  \\(C: \\frac{x^{2}}{2} + y^{2} = 1\\) 上，过 M 作 x 轴的垂线，垂足为 N，点 P 满足  \\(\\overrightarrow{NP} = \\sqrt{2}\\overrightarrow{NM}\\).\n\n（1）求点P的轨迹方程；\n\n（2）设点  \\(Q\\) 在直线  \\(x = -3\\) 上，且  \\(\\overrightarrow{OP} \\cdot \\overrightarrow{PQ} = 1\\)，证明：过点  \\(P\\) 且垂直于  \\(OQ\\) 的直线  \\(l\\) 过  \\(C\\) 的左焦点  \\(F\\)。",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1"
+          ]
+        },
+        {
+          "qid": "Q-5aa5be52f4d5132a",
+          "section": "ch3.s12",
+          "group": "B",
+          "number": 2,
+          "kind": "B组",
+          "source_anchor": {
+            "ocr_doc": 169,
+            "pdf_page": 170,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_169.md"
+          },
+          "question_text": "2.（2025·广西模拟）\n\n已知椭圆  \\(E:\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1(a>b>0)\\) 过点  \\((0,\\sqrt{3})\\)，离心率为  \\(\\frac{\\sqrt{2}}{2}\\).\n\n（1）求椭圆E的方程：\n\n（2）过点  \\(M(0,2)\\) 且不与 x 轴垂直的直线 l 与椭圆 E 交于 A, B 两点，若原点 O 在以 AB 为直径的圆内，求直线 l 斜率的取值范围.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1"
+          ]
+        },
+        {
+          "qid": "Q-378f73b151fe5845",
+          "section": "ch3.s12",
+          "group": "B",
+          "number": 3,
+          "kind": "B组",
+          "source_anchor": {
+            "ocr_doc": 169,
+            "pdf_page": 170,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_169.md"
+          },
+          "question_text": "3.（2025·四川德阳模拟）\n\n设抛物线  \\(C: y^{2}=2x\\)，点  \\(A(2,0)\\)， \\(B(-2,0)\\)，过点 A 的直线 l 与 C 交于 M，N 两点.\n\n（1）当 l 与 x 轴垂直时，求直线 BM 的方程；\n\n（2）证明： \\(\\angle ABM = \\angle ABN\\)。",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1"
+          ]
+        },
+        {
+          "qid": "Q-979ff80a7f9d6f08",
+          "section": "ch3.s12",
+          "group": "B",
+          "number": 4,
+          "kind": "B组",
+          "source_anchor": {
+            "ocr_doc": 170,
+            "pdf_page": 171,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_170.md"
+          },
+          "question_text": "4.（2024·东北三省三校第一次联考）\n\n已知双曲线  \\(C: \\frac{x^{2}}{a^{2}} - \\frac{y^{2}}{b^{2}} = 1 (a > 0, b > 0)\\) 的右顶点为  \\(E(1,0)\\)，斜率为 1 的直线交双曲线 C 于 M, N 两点，且 MN 的中点为  \\(\\underline{Q}(1,3)\\).\n\n（1）求双曲线 C 的方程；\n\n（2）证明： \\(\\triangle MEN\\) 为直角三角形.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1"
+          ]
+        }
+      ],
+      "action_order": [
+        "attempt_current_abc_exercises_without_answers",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [],
+      "prerequisite_knowledge_blocks": []
+    },
+    {
+      "cycle_id": "ch3.s12-cycle-4",
+      "sequence": 4,
+      "title": "C组 拓展提升",
+      "course_keys": [],
+      "prerequisite_course_keys": [
+        "dot_product_translation",
+        "dot_product_double_root",
+        "angle_bisector",
+        "range_upper",
+        "range_mid",
+        "range_lower",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "optional_course_keys": [],
+      "knowledge_refs": [],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅰ 直角、锐角、钝角",
+        "类型Ⅱ 倾斜角互补"
+      ],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [],
+      "direct_variants": [],
+      "exercise_questions": [
+        {
+          "qid": "Q-ad82d519907f92fb",
+          "section": "ch3.s12",
+          "group": "C",
+          "number": 5,
+          "kind": "C组",
+          "source_anchor": {
+            "ocr_doc": 170,
+            "pdf_page": 171,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_170.md"
+          },
+          "question_text": "5.（2025·山东模拟）\n\n设抛物线  \\(C: x^2 = 2py (p > 0)\\) 的焦点为  \\(F\\)，点  \\(A(t, 2)\\) 在抛物线  \\(C\\) 上，且  \\(|AF| = 3\\)。\n\n（1）求p的值：\n\n（2）过 F 的直线 l 与抛物线 C 交于 M, N 两点，在 y 轴上是否存在定点 P，使  \\(\\frac{|PM|}{|PN|} = \\frac{|MF|}{|NF|}\\) 恒成立？若存在，求出点 P 的坐标；若不存在，说明理由.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1"
+          ]
+        },
+        {
+          "qid": "Q-219c4afdb5758dd9",
+          "section": "ch3.s12",
+          "group": "C",
+          "number": 6,
+          "kind": "C组",
+          "source_anchor": {
+            "ocr_doc": 171,
+            "pdf_page": 172,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_171.md"
+          },
+          "question_text": "6.（2024·广东广州一模（节选））\n\n已知 O 为坐标原点，双曲线  \\(C: \\frac{x^{2}}{a^{2}} - \\frac{y^{2}}{b^{2}} = 1 (a > 0, b\\)\n\n>0) 的焦距为 4，且过点  \\((\\sqrt{2},\\sqrt{3})\\).\n\n（1）求 C 的方程：\n\n（2）若直线  \\(l\\) 与  \\(C\\) 交于  \\(A\\)， \\(B\\) 两点，且  \\(\\overrightarrow{OA} \\cdot \\overrightarrow{OB} = 0\\)，求  \\(|AB|\\) 的取值范围.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1"
+          ]
+        }
+      ],
+      "action_order": [
+        "attempt_current_abc_exercises_without_answers",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [],
+      "prerequisite_knowledge_blocks": []
+    }
+  ],
+  "knowledge_and_type_pages": [
+    {
+      "ocr_doc": 163,
+      "text": "# 微专题8：解析几何大题——角度\n\n习题：P1\n\n## 内容提要\n\n1. 在解析几何大题中，锐角、直角、钝角的条件可通过向量的数量积来翻译：\n\n①\\(\\angle APB\\) 为直角：可翻译为 \\(\\overrightarrow{PA} \\cdot \\overrightarrow{PB}=0\\)，但需单独排除 \\(P\\) 与 \\(A\\) 或 \\(B\\) 重合的情况；也可翻译为 \\(k_{PA} \\cdot k_{PB}=-1\\)，但需单独考虑 \\(P\\) 与 \\(A\\) 或 \\(B\\) 重合以及 \\(PA\\) 或 \\(PB\\) 斜率不存在的情况；\n\n②∠APB为锐角：可翻译为 \\(\\overrightarrow{PA}\\cdot\\overrightarrow{PB}>0\\)，但需单独排除 \\(\\angle APB=0^{\\circ}\\)的情况；\n\n③\\(\\angle APB\\) 为钝角：可翻译为 \\(\\overrightarrow{PA} \\cdot \\overrightarrow{PB} < 0\\)，但需单独排除 \\(\\angle APB = 180^{\\circ}\\) 的情况.\n\n注：若需要具体地求  \\(\\angle APB\\)，则可考虑将  \\(\\angle APB\\) 看成向量  \\(\\overrightarrow{PA}\\) 与向量  \\(\\overrightarrow{PB}\\) 的夹角，用夹角余弦公式  \\(\\cos \\angle APB = \\cos \\langle \\overrightarrow{PA}, \\overrightarrow{PB} \\rangle = \\frac{\\overrightarrow{PA} \\cdot \\overrightarrow{PB}}{|\\overrightarrow{PA}| \\cdot |\\overrightarrow{PB}|}\\) 处理。\n\n2. 倾斜角互补：当两直线倾斜角互补时，根据  \\(\\tan(\\pi - \\alpha) = -\\tan\\alpha\\)，可以得出两直线斜率互为相反数，所以倾斜角互补的问题，在解析几何中往往采用斜率和为零来进行计算.\n\n## 典型例题\n\n## 类型Ⅰ：直角、锐角、钝角",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 166,
+      "text": "类型Ⅱ：倾斜角互补",
+      "image_refs": [],
+      "math_errors": []
+    }
+  ],
+  "knowledge_blocks": [],
+  "worked_examples": [
+    {
+      "item_id": "3e92fe4812b96094",
+      "kind": "example",
+      "label": "例1",
+      "example_number": 1,
+      "parent_example_number": null,
+      "role": "type_example",
+      "role_ref": "类型Ⅰ 直角、锐角、钝角",
+      "source_docs": [
+        163,
+        164
+      ],
+      "question_text": "【例 1】已知定点  \\(A(-1,0)\\)， \\(F(2,0)\\)，定直线  \\(l: x = \\frac{1}{2}\\)，不在 x 轴上的动点 P 与点 F 的距离是它到直线 l 的距离的 2 倍。设点 P 的轨迹为 E，过点 F 的直线交 E 于 B，C 两点，直线 AB，AC 分别交 l 于点 M，N.\n（1）求E的方程：\n（2）试判断以线段 MN 为直径的圆是否过点 F，并说明理由.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "teaching_text": "【例 1】已知定点  \\(A(-1,0)\\)， \\(F(2,0)\\)，定直线  \\(l: x = \\frac{1}{2}\\)，不在 x 轴上的动点 P 与点 F 的距离是它到直线 l 的距离的 2 倍。设点 P 的轨迹为 E，过点 F 的直线交 E 于 B，C 两点，直线 AB，AC 分别交 l 于点 M，N.\n（1）求E的方程：\n（2）试判断以线段 MN 为直径的圆是否过点 F，并说明理由.\n解：（1）设  \\(P(x,y)\\)，由题意， \\(\\sqrt{(x-2)^2+y^2}=2\\left|x-\\frac{1}{2}\\right|\\)，两端同时平方化简得： \\(x^2-\\frac{y^2}{3}=1\\)，又点  \\(P\\) 不在  \\(x\\) 轴上，所以点  \\(P\\) 的轨迹  \\(E\\) 的方程为  \\(x^2-\\frac{y^2}{3}=1(y\\neq0)\\)。\n（2）（怎样判断以 MN 为直径的圆是否过点 F？要求出该圆的方程，再将点 F 的坐标代入验证吗？这样做很麻烦，以 MN 为直径的圆过点  \\(F \\Leftrightarrow FM \\perp FN\\)，故只需看  \\(\\overrightarrow{FM} \\cdot \\overrightarrow{FN} = 0\\) 是否成立，求  \\(\\overrightarrow{FM} \\cdot \\overrightarrow{FN}\\) 需要 M，N 的坐标，如图，M，N 是 AB，AC 与 l 的交点，可设 B，C 的坐标，写出 AB，AC 的方程，与 l 联立求 M，N 的坐标）\n由题意，设  \\(B(x_1, y_1)\\)， \\(C(x_2, y_2)\\)，则  \\(k_{AB} = \\frac{y_1}{x_1 + 1}\\)，所以直线 AB 的方程为  \\(y = \\frac{y_1}{x_1 + 1}(x + 1)\\)，\n令  \\(x = \\frac{1}{2}\\) 得  \\(y = \\frac{3y_1}{2(x_1 + 1)}\\)，所以  \\(M\\left(\\frac{1}{2}, \\frac{3y_1}{2(x_1 + 1)}\\right)\\)，同理， \\(N\\left(\\frac{1}{2}, \\frac{3y_2}{2(x_2 + 1)}\\right)\\)，所以  \\(\\overrightarrow{FM} = \\left(-\\frac{3}{2}, \\frac{3y_1}{2(x_1 + 1)}\\right)\\)， \\(\\overrightarrow{FN} = \\left(-\\frac{3}{2}, \\frac{3y_2}{2(x_2 + 1)}\\right)\\)，故  \\(\\overrightarrow{FM} \\cdot \\overrightarrow{FN} = \\left(-\\frac{3}{2}\\right)^2 + \\frac{3y_1}{2(x_1 + 1)} \\cdot \\frac{3y_2}{2(x_2 + 1)} = \\frac{9}{4}\\left[1 + \\frac{y_1 y_2}{x_1 x_2 + (x_1 + x_2) + 1}\\right]\\) ①，\n（有 x，y，x + x，y，y，又想到设直线 BC 的方程，与双曲线的方程联立，结合韦达定理计算它们）\n直线 BC 过点  \\(F(2,0)\\)，且与 E 交于 B，C 两点，所以 BC 不与 y 轴垂直，故可设其方程为  \\(x = my + 2\\)，代入  \\(x^2 - \\frac{y^2}{3} = 1\\) 消去 x 整理得： \\((3m^2 - 1)y^2 + 12my + 9 = 0\\)，\n因为直线 BC 与双曲线有 2 个交点，所以  \\(\\begin{cases} 3m^2 - 1 \\ne 0 \\\\ \\Delta = 144m^2 - 36(3m^2 - 1) = 36(m^2 + 1) > 0 \\end{cases}\\)，故  \\(m^2 \\ne \\frac{1}{3}\\)，由韦达定理， \\(y_1 + y_2 = -\\frac{12m}{3m^2 - 1}\\)， \\(y_1 y_2 = \\frac{9}{3m^2 - 1}\\)，\n所以  \\(x_1 + x_2 = m(y_1 + y_2) + 4 = -\\frac{4}{3m^2 - 1}\\)， \\(x_1x_2 = m^2y_1y_2 + 2m(y_1 + y_2) + 4\\)\n \\(= -\\frac{3m^2 + 4}{3m^2 - 1}\\)，代入①得  \\(\\overrightarrow{FM} \\cdot \\overrightarrow{FN} = \\frac{9}{4}\\left(1 + \\frac{\\frac{9}{3m^2 - 1}}{-\\frac{3m^2 + 4}{3m^2 - 1} - \\frac{4}{3m^2 - 1} + 1}\\right)\\)\n \\(= \\frac{9}{4}\\left(1 + \\frac{9}{-3m^2 - 4 - 4 + 3m^2 - 1}\\right) = 0\\)，所以  \\(FM \\perp FN\\)，\n故以线段  \\(MN\\) 为直径的圆讨占  \\(F\\)\n【反思】直角、锐角、钝角这类条件可能会以点在圆上、点在圆外、点在圆内这样的形式隐含地给出，一般而言，可总结如下. 设  \\(M\\)， \\(N\\) 是不重合的两点，则：\n①  \\(\\overrightarrow{FM} \\cdot \\overrightarrow{FN} = 0 \\Leftrightarrow \\angle MFN = 90^\\circ\\) 或  \\(F\\) 与  \\(M\\)， \\(N\\) 中的一个重合  \\(\\Leftrightarrow\\) 点  \\(F\\) 在以  \\(MN\\) 为直径的圆上；\n②  \\(\\overrightarrow{FM} \\cdot \\overrightarrow{FN} > 0 \\Leftrightarrow \\angle MFN\\) 为锐角或  \\(0^\\circ \\Leftrightarrow\\) 点  \\(F\\) 在以  \\(MN\\) 为直径的圆外；\n③  \\(\\overrightarrow{FM} \\cdot \\overrightarrow{FN} < 0 \\Leftrightarrow \\angle MFN\\) 为钝角或平角  \\(\\Leftrightarrow\\) 点  \\(F\\) 在以  \\(MN\\) 为直径的圆内.\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_863_335_1091_601.jpg\" alt=\"Image\" width=\"19%\" /></div>",
+      "solution_present": true,
+      "vision_hint": "ch3.s12-LI3e92fe4812b96094"
+    },
+    {
+      "item_id": "35f25e4a25650379",
+      "kind": "example",
+      "label": "例2",
+      "example_number": 2,
+      "parent_example_number": null,
+      "role": "type_example",
+      "role_ref": "类型Ⅰ 直角、锐角、钝角",
+      "source_docs": [
+        165,
+        166
+      ],
+      "question_text": "【例2】设抛物线  \\(y^{2}=4x\\) 的焦点为 F，O 是坐标原点， \\(M(4,0)\\)，过点 F 的直线与抛物线交于 A，B 两点，延长 AM，BM 分别交抛物线于 C，D 两点，P，Q 分别是 AB，CD 的中点.\n（1）求直线 OP 的斜率的取值范围：\n(2) 求  \\(\\cos\\angle POQ\\) 的最小值.\n直线 \\(AB\\) 的方程）由题意，\\(F(1,0)\\)，垂直于 \\(y\\) 轴的直线与抛物线 \\(y^2 = 4x\\) 只有 1 个交点，所以 \\(AB\\) 不与 \\(y\\) 轴垂直，故可设其方程为 \\(x = my + 1\\)，代入 \\(y^2 = 4x\\) 消去 \\(x\\) 整理得：\\(y^2 - 4my - 4 = 0\\)，判别式 \\(\\Delta = (-4m)^2 - 4 \\times 1 \\times (-4) = 16(m^2 + 1) > 0\\)，设 \\(A(x_1, y_1)\\)，\\(B(x_2, y_2)\\)，由韦达定理，\\(y_1 + y_2 = 4m\\)，\\(y_1 y_2 = -4\\)，所以 \\(x_1 + x_2 = my_1 + 1 + my_2 + 1 = m(y_1 + y_2) + 2 = 4m^2 + 2\\)，故 \\(AB\\) 中点 \\(P\\) 的坐标为 \\((2m^2 + 1, 2m)\\)，所以 \\(k_{OP} = \\frac{2m}{2m^2 + 1}\\)，（怎样求 \\(k_{OP}\\) 的范围？可看成关于 \\(m\\) 的函数，该函数是奇函数，先看 \\(m > 0\\) 的情形，可上下同除以 \\(m\\)，用均值不等式处理）\n记 \\(f(m) = \\frac{2m}{2m^2 + 1}\\)，\\(m \\in \\mathbf{R}\\)，则 \\(f(-m) = \\frac{2(-m)}{2(-m)^2 + 1} = -\\frac{2m}{2m^2 + 1} = -f(m)\\)，所以 \\(f(m)\\) 为奇函数，当 \\(m > 0\\) 时，\\(f(m) = \\frac{2}{2m + \\frac{1}{m}}\\)，因为 \\(2m + \\frac{1}{m} \\geq 2\\sqrt{2m \\cdot \\frac{1}{m}} = 2\\sqrt{2}\\)，所以 \\(0 < f(m) \\leq \\frac{2}{2\\sqrt{2}} = \\frac{\\sqrt{2}}{2}\\)，当且仅当 \\(2m = \\frac{1}{m}\\)，即 \\(m = \\frac{\\sqrt{2}}{2}\\) 时取等号，所以 \\(f(m)\\) 在 \\((0, +\\infty)\\) 上的值域为 \\(\\left[0, \\frac{\\sqrt{2}}{2}\\right]\\)，由奇函数的对称性，\\(f(m)\\) 在 \\((-\\infty, 0)\\) 上的值域为 \\(\\left[-\\frac{\\sqrt{2}}{2}, 0\\right)\\)，结合 \\(f(0) = 0\\) 可得 \\(f(m)\\) 的值域为 \\(\\left[-\\frac{\\sqrt{2}}{2}, \\frac{\\sqrt{2}}{2}\\right]\\)，所以直线 \\(OP\\) 的斜率的取值范围是 \\(\\left[-\\frac{\\sqrt{2}}{2}, \\frac{\\sqrt{2}}{2}\\right]\\)。\n（2）（\\(\\angle POQ\\) 可看成 \\(\\overrightarrow{OP}\\) 与 \\(\\overrightarrow{OQ}\\) 的夹角，故考虑用夹角余弦公式处理，下面先求点 \\(Q\\) 的坐标. 因为 \\(Q\\) 为 \\(CD\\) 中点，于是又得先算 \\(C\\)，\\(D\\) 的坐标，可将直线 \\(AM\\)，\\(BM\\) 与抛物线联立，结合韦达定理来求 \\(C\\)，\\(D\\) 的坐标）\n由题意，\\(AM\\) 不与 \\(y\\) 轴垂直，可设其方程为 \\(x = ny + 4\\)，代入 \\(y^2 = 4x\\) 消去 \\(x\\) 整理得：\\(y^2 - 4ny - 16 = 0\\)，\\(\\Delta' = 16n^2 + 64 > 0\\)，因为直线 \\(AM\\) 与抛物线的两个交点是 \\(A\\)，\\(C\\)，所以由韦达定理，\\(y_1 y_C = -16\\)，\n从而 \\(y_C = -\\frac{16}{y_1}\\)，故 \\(x_C = \\frac{y_C^2}{4} = \\frac{64}{y_1^2}\\)，所以 \\(C\\left(\\frac{64}{y_1^2}, -\\frac{16}{y_1}\\right)\\)，同理，\\(D\\left(\\frac{64}{y_2^2}, -\\frac{16}{y_2}\\right)\\)，\n因为 \\(Q\\) 是 \\(CD\\) 中点，所以点 \\(Q\\) 的坐标为 \\(\\left(\\frac{32}{y_1^2} + \\frac{32}{y_2^2}, -\\frac{8}{y_1} - \\frac{8}{y_2}\\right)\\) ①，\n\\(\\frac{32}{y_1^2} + \\frac{32}{y_2^2} = \\frac{32(y_1^2 + y_2^2)}{y_1^2 + y_2^2} = \\frac{32[(y_1 + y_2)^2 - 2y_1y_2]}{y_1^2 + y_2^2} = \\frac{32(16m^2 + 8)}{16} = 16(2m^2 + 1)\\)，\n \\[-\\frac{8}{y_{1}}-\\frac{8}{y_{2}}=-\\frac{8(y_{1}+y_{2})}{y_{1}y_{2}}=-\\frac{8\\times4m}{-4}=8m\\] \n \\[(16(2m^{2}+1),8m)\\] \n\\((P, Q)\\)的坐标都有了，若直接算\\(OP\\)与\\(OQ\\)的夹角余弦，则结果较复杂，能否简化？观察发现\\(P, Q\\)的坐标结构很像，对应分量有明显的倍数关系，故可考虑将\\(\\overrightarrow{OP}, \\overrightarrow{OQ}\\)的坐标同除以\\(2m^2 + 1\\)，得到与\\(\\overrightarrow{OP}, \\overrightarrow{OQ}\\)同向的向量，用它们来算\\(\\cos \\angle POQ\\)）\\(\\overrightarrow{OP} = (2m^2 + 1, 2m)\\)，\\(\\overrightarrow{OQ} = (16(2m^2 + 1), 8m)\\)，\n记 \\(a=\\left(1,\\frac{2m}{2m^2+1}\\right)\\)， \\(b=\\left(16,\\frac{8m}{2m^2+1}\\right)\\)，则 \\(a\\)， \\(b\\)分别与 \\(\\overrightarrow{OP}\\)， \\(\\overrightarrow{OQ}\\)同向，\n令 \\(t=\\frac{2m}{2m^2+1}\\)，则 \\(t=f(m)\\)，由（1）可得 \\(-\\frac{\\sqrt{2}}{2}\\leq t\\leq\\frac{\\sqrt{2}}{2}\\)，且 \\(a=(1,t)\\)， \\(b=(16,4t)\\)，\n所以 \\(\\cos\\angle POQ=\\cos\\langle a,b\\rangle=\\frac{a\\cdot b}{|a|\\cdot|b|}=\\frac{16+4t^2}{\\sqrt{1+t^2}\\cdot\\sqrt{256+16t^2}}=\\frac{4+t^2}{\\sqrt{1+t^2}\\cdot\\sqrt{16+t^2}}\\)，\n（怎样求此式的最小值？不妨全拿进根号再看）\n故  \\(\\cos\\angle POQ=\\sqrt{\\frac{(4+t^{2})^{2}}{(1+t^{2})(16+t^{2})}}=\\sqrt{\\frac{t^{4}+8t^{2}+16}{16+17t^{2}+t^{4}}}=\\sqrt{\\frac{t^{4}+17t^{2}+16-9t^{2}}{t^{4}+17t^{2}+16}}=\\sqrt{1-\\frac{9t^{2}}{t^{4}+17t^{2}+16}}\\) ②，\n（要使  \\(\\cos \\angle POQ\\) 最小，只需  \\(\\frac{9t^2}{t^4 + 17t^2 + 16}\\) 最大，可上下同除以  \\(t^2\\)，将分子化为常数再看，但需先考虑  \\(t^2 = 0\\) 的情形）由  \\(-\\frac{\\sqrt{2}}{2} \\leq t \\leq \\frac{\\sqrt{2}}{2}\\) 可得  \\(0 \\leq t^2 \\leq \\frac{1}{2}\\)，当  \\(t^2 = 0\\) 时， \\(\\cos \\angle POQ = 1\\)；\n当  \\(0 < t^2 \\leq \\frac{1}{2}\\) 时， \\(\\frac{9t^2}{t^4 + 17t^2 + 16} = \\frac{9}{t^2 + \\frac{16}{t^2} + 17}\\) ③，（能用均值不等式吗？经尝试，等号取不到，所以不能，故直\n接分析单调性，显然将 \\(t^{2}\\)换元更容易看出单调性，故先换元）\n设  \\(u = t^2\\)，则  \\(0 < u \\leq \\frac{1}{2}\\)，且  \\(t^2 + \\frac{16}{t^2} = u + \\frac{16}{u}\\)，由双勾函数的性质可知函数  \\(y = u + \\frac{16}{u}\\) 在  \\(\\left(0, \\frac{1}{2}\\right]\\) 上单调递减，所以当  \\(u = \\frac{1}{2}\\) 时， \\(y = u + \\frac{16}{u}\\) 取得最小值  \\(\\frac{65}{2}\\)，故  \\(\\left(t^2 + \\frac{16}{t^2}\\right)_{\\min} = \\frac{65}{2}\\)，\n结合③可得 \\(\\frac{9t^{2}}{t^{4}+17t^{2}+16}\\)的最大值为 \\(\\frac{9}{\\frac{65}{2}+17}=\\frac{2}{11}\\)\n由②知当 \\(\\frac{9t^2}{t^4 + 17t^2 + 16}\\)最大时， \\(\\cos \\angle POQ\\)最小，所以 \\((\\cos \\angle POQ)_{\\min} = \\sqrt{1 - \\frac{2}{11}} = \\frac{3\\sqrt{11}}{11}\\)；综上所述， \\(\\cos \\angle POQ\\)的最小值为 \\(\\frac{3\\sqrt{11}}{11}\\)。",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_865_722_1092_940.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\imgs\\img_in_image_box_865_722_1092_940.jpg",
+          "exists": true
+        }
+      ],
+      "visual_status": "VISION_VERIFIED",
+      "teaching_text": "【例2】设抛物线  \\(y^{2}=4x\\) 的焦点为 F，O 是坐标原点， \\(M(4,0)\\)，过点 F 的直线与抛物线交于 A，B 两点，延长 AM，BM 分别交抛物线于 C，D 两点，P，Q 分别是 AB，CD 的中点.\n（1）求直线 OP 的斜率的取值范围：\n(2) 求  \\(\\cos\\angle POQ\\) 的最小值.\n直线 \\(AB\\) 的方程）由题意，\\(F(1,0)\\)，垂直于 \\(y\\) 轴的直线与抛物线 \\(y^2 = 4x\\) 只有 1 个交点，所以 \\(AB\\) 不与 \\(y\\) 轴垂直，故可设其方程为 \\(x = my + 1\\)，代入 \\(y^2 = 4x\\) 消去 \\(x\\) 整理得：\\(y^2 - 4my - 4 = 0\\)，判别式 \\(\\Delta = (-4m)^2 - 4 \\times 1 \\times (-4) = 16(m^2 + 1) > 0\\)，设 \\(A(x_1, y_1)\\)，\\(B(x_2, y_2)\\)，由韦达定理，\\(y_1 + y_2 = 4m\\)，\\(y_1 y_2 = -4\\)，所以 \\(x_1 + x_2 = my_1 + 1 + my_2 + 1 = m(y_1 + y_2) + 2 = 4m^2 + 2\\)，故 \\(AB\\) 中点 \\(P\\) 的坐标为 \\((2m^2 + 1, 2m)\\)，所以 \\(k_{OP} = \\frac{2m}{2m^2 + 1}\\)，（怎样求 \\(k_{OP}\\) 的范围？可看成关于 \\(m\\) 的函数，该函数是奇函数，先看 \\(m > 0\\) 的情形，可上下同除以 \\(m\\)，用均值不等式处理）\n记 \\(f(m) = \\frac{2m}{2m^2 + 1}\\)，\\(m \\in \\mathbf{R}\\)，则 \\(f(-m) = \\frac{2(-m)}{2(-m)^2 + 1} = -\\frac{2m}{2m^2 + 1} = -f(m)\\)，所以 \\(f(m)\\) 为奇函数，当 \\(m > 0\\) 时，\\(f(m) = \\frac{2}{2m + \\frac{1}{m}}\\)，因为 \\(2m + \\frac{1}{m} \\geq 2\\sqrt{2m \\cdot \\frac{1}{m}} = 2\\sqrt{2}\\)，所以 \\(0 < f(m) \\leq \\frac{2}{2\\sqrt{2}} = \\frac{\\sqrt{2}}{2}\\)，当且仅当 \\(2m = \\frac{1}{m}\\)，即 \\(m = \\frac{\\sqrt{2}}{2}\\) 时取等号，所以 \\(f(m)\\) 在 \\((0, +\\infty)\\) 上的值域为 \\(\\left[0, \\frac{\\sqrt{2}}{2}\\right]\\)，由奇函数的对称性，\\(f(m)\\) 在 \\((-\\infty, 0)\\) 上的值域为 \\(\\left[-\\frac{\\sqrt{2}}{2}, 0\\right)\\)，结合 \\(f(0) = 0\\) 可得 \\(f(m)\\) 的值域为 \\(\\left[-\\frac{\\sqrt{2}}{2}, \\frac{\\sqrt{2}}{2}\\right]\\)，所以直线 \\(OP\\) 的斜率的取值范围是 \\(\\left[-\\frac{\\sqrt{2}}{2}, \\frac{\\sqrt{2}}{2}\\right]\\)。\n（2）（\\(\\angle POQ\\) 可看成 \\(\\overrightarrow{OP}\\) 与 \\(\\overrightarrow{OQ}\\) 的夹角，故考虑用夹角余弦公式处理，下面先求点 \\(Q\\) 的坐标. 因为 \\(Q\\) 为 \\(CD\\) 中点，于是又得先算 \\(C\\)，\\(D\\) 的坐标，可将直线 \\(AM\\)，\\(BM\\) 与抛物线联立，结合韦达定理来求 \\(C\\)，\\(D\\) 的坐标）\n由题意，\\(AM\\) 不与 \\(y\\) 轴垂直，可设其方程为 \\(x = ny + 4\\)，代入 \\(y^2 = 4x\\) 消去 \\(x\\) 整理得：\\(y^2 - 4ny - 16 = 0\\)，\\(\\Delta' = 16n^2 + 64 > 0\\)，因为直线 \\(AM\\) 与抛物线的两个交点是 \\(A\\)，\\(C\\)，所以由韦达定理，\\(y_1 y_C = -16\\)，\n从而 \\(y_C = -\\frac{16}{y_1}\\)，故 \\(x_C = \\frac{y_C^2}{4} = \\frac{64}{y_1^2}\\)，所以 \\(C\\left(\\frac{64}{y_1^2}, -\\frac{16}{y_1}\\right)\\)，同理，\\(D\\left(\\frac{64}{y_2^2}, -\\frac{16}{y_2}\\right)\\)，\n因为 \\(Q\\) 是 \\(CD\\) 中点，所以点 \\(Q\\) 的坐标为 \\(\\left(\\frac{32}{y_1^2} + \\frac{32}{y_2^2}, -\\frac{8}{y_1} - \\frac{8}{y_2}\\right)\\) ①，\n\\(\\frac{32}{y_1^2} + \\frac{32}{y_2^2} = \\frac{32(y_1^2 + y_2^2)}{y_1^2 + y_2^2} = \\frac{32[(y_1 + y_2)^2 - 2y_1y_2]}{y_1^2 + y_2^2} = \\frac{32(16m^2 + 8)}{16} = 16(2m^2 + 1)\\)，\n \\[-\\frac{8}{y_{1}}-\\frac{8}{y_{2}}=-\\frac{8(y_{1}+y_{2})}{y_{1}y_{2}}=-\\frac{8\\times4m}{-4}=8m\\] \n \\[(16(2m^{2}+1),8m)\\] \n\\((P, Q)\\)的坐标都有了，若直接算\\(OP\\)与\\(OQ\\)的夹角余弦，则结果较复杂，能否简化？观察发现\\(P, Q\\)的坐标结构很像，对应分量有明显的倍数关系，故可考虑将\\(\\overrightarrow{OP}, \\overrightarrow{OQ}\\)的坐标同除以\\(2m^2 + 1\\)，得到与\\(\\overrightarrow{OP}, \\overrightarrow{OQ}\\)同向的向量，用它们来算\\(\\cos \\angle POQ\\)）\\(\\overrightarrow{OP} = (2m^2 + 1, 2m)\\)，\\(\\overrightarrow{OQ} = (16(2m^2 + 1), 8m)\\)，\n记 \\(a=\\left(1,\\frac{2m}{2m^2+1}\\right)\\)， \\(b=\\left(16,\\frac{8m}{2m^2+1}\\right)\\)，则 \\(a\\)， \\(b\\)分别与 \\(\\overrightarrow{OP}\\)， \\(\\overrightarrow{OQ}\\)同向，\n令 \\(t=\\frac{2m}{2m^2+1}\\)，则 \\(t=f(m)\\)，由（1）可得 \\(-\\frac{\\sqrt{2}}{2}\\leq t\\leq\\frac{\\sqrt{2}}{2}\\)，且 \\(a=(1,t)\\)， \\(b=(16,4t)\\)，\n所以 \\(\\cos\\angle POQ=\\cos\\langle a,b\\rangle=\\frac{a\\cdot b}{|a|\\cdot|b|}=\\frac{16+4t^2}{\\sqrt{1+t^2}\\cdot\\sqrt{256+16t^2}}=\\frac{4+t^2}{\\sqrt{1+t^2}\\cdot\\sqrt{16+t^2}}\\)，\n（怎样求此式的最小值？不妨全拿进根号再看）\n故  \\(\\cos\\angle POQ=\\sqrt{\\frac{(4+t^{2})^{2}}{(1+t^{2})(16+t^{2})}}=\\sqrt{\\frac{t^{4}+8t^{2}+16}{16+17t^{2}+t^{4}}}=\\sqrt{\\frac{t^{4}+17t^{2}+16-9t^{2}}{t^{4}+17t^{2}+16}}=\\sqrt{1-\\frac{9t^{2}}{t^{4}+17t^{2}+16}}\\) ②，\n（要使  \\(\\cos \\angle POQ\\) 最小，只需  \\(\\frac{9t^2}{t^4 + 17t^2 + 16}\\) 最大，可上下同除以  \\(t^2\\)，将分子化为常数再看，但需先考虑  \\(t^2 = 0\\) 的情形）由  \\(-\\frac{\\sqrt{2}}{2} \\leq t \\leq \\frac{\\sqrt{2}}{2}\\) 可得  \\(0 \\leq t^2 \\leq \\frac{1}{2}\\)，当  \\(t^2 = 0\\) 时， \\(\\cos \\angle POQ = 1\\)；\n当  \\(0 < t^2 \\leq \\frac{1}{2}\\) 时， \\(\\frac{9t^2}{t^4 + 17t^2 + 16} = \\frac{9}{t^2 + \\frac{16}{t^2} + 17}\\) ③，（能用均值不等式吗？经尝试，等号取不到，所以不能，故直\n接分析单调性，显然将 \\(t^{2}\\)换元更容易看出单调性，故先换元）\n设  \\(u = t^2\\)，则  \\(0 < u \\leq \\frac{1}{2}\\)，且  \\(t^2 + \\frac{16}{t^2} = u + \\frac{16}{u}\\)，由双勾函数的性质可知函数  \\(y = u + \\frac{16}{u}\\) 在  \\(\\left(0, \\frac{1}{2}\\right]\\) 上单调递减，所以当  \\(u = \\frac{1}{2}\\) 时， \\(y = u + \\frac{16}{u}\\) 取得最小值  \\(\\frac{65}{2}\\)，故  \\(\\left(t^2 + \\frac{16}{t^2}\\right)_{\\min} = \\frac{65}{2}\\)，\n结合③可得 \\(\\frac{9t^{2}}{t^{4}+17t^{2}+16}\\)的最大值为 \\(\\frac{9}{\\frac{65}{2}+17}=\\frac{2}{11}\\)\n由②知当 \\(\\frac{9t^2}{t^4 + 17t^2 + 16}\\)最大时， \\(\\cos \\angle POQ\\)最小，所以 \\((\\cos \\angle POQ)_{\\min} = \\sqrt{1 - \\frac{2}{11}} = \\frac{3\\sqrt{11}}{11}\\)；综上所述， \\(\\cos \\angle POQ\\)的最小值为 \\(\\frac{3\\sqrt{11}}{11}\\)。\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_865_722_1092_940.jpg\" alt=\"Image\" width=\"19%\" /></div>\n【反思】若要具体计算某角的大小或其三角函数值，则可考虑将该角看成某两个向量的夹角，用夹角余弦公式处理.",
+      "solution_present": true,
+      "vision_hint": "ch3.s12-LI35f25e4a25650379",
+      "vision_sidecars": [
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\imgs\\img_in_image_box_865_722_1092_940.jpg",
+          "image_sha256": "03ceac7cb096062c0b51ecbdef19ed72a4e67a6e7af3f45480c3ce47e9def70b",
+          "confidence": "E2",
+          "structured": {
+            "objects": [
+              "坐标轴Ox,Oy",
+              "抛物线",
+              "点A,D,C,B",
+              "线段AD,AC,CD,AB,BC,OD,OC",
+              "线段PQ",
+              "线段OF"
+            ],
+            "relations": [
+              "点A在抛物线上",
+              "点D在抛物线上",
+              "点C在抛物线上",
+              "点B在抛物线上",
+              "点O在原点",
+              "线段PQ过点M且平行于x轴"
+            ],
+            "coordinates": [
+              "O(0,0)",
+              "F在y轴上",
+              "M在PQ上",
+              "Q在x轴上",
+              "A在抛物线左上方",
+              "B在抛物线左下方"
+            ],
+            "ranges": [],
+            "text": [
+              "y轴",
+              "x轴",
+              "D",
+              "A",
+              "C",
+              "B"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        }
+      ],
+      "vision_sidecar": {
+        "objects": [
+          "坐标轴Ox,Oy",
+          "抛物线",
+          "点A,D,C,B",
+          "线段AD,AC,CD,AB,BC,OD,OC",
+          "线段PQ",
+          "线段OF"
+        ],
+        "relations": [
+          "点A在抛物线上",
+          "点D在抛物线上",
+          "点C在抛物线上",
+          "点B在抛物线上",
+          "点O在原点",
+          "线段PQ过点M且平行于x轴"
+        ],
+        "coordinates": [
+          "O(0,0)",
+          "F在y轴上",
+          "M在PQ上",
+          "Q在x轴上",
+          "A在抛物线左上方",
+          "B在抛物线左下方"
+        ],
+        "ranges": [],
+        "text": [
+          "y轴",
+          "x轴",
+          "D",
+          "A",
+          "C",
+          "B"
+        ],
+        "uncertainties": [],
+        "confidence": "E2"
+      },
+      "vision_source_provenance": [],
+      "evidence": [
+        "E1",
+        "E2"
+      ]
+    },
+    {
+      "item_id": "911ac7a4cbc0df8d",
+      "kind": "example",
+      "label": "例3",
+      "example_number": 3,
+      "parent_example_number": null,
+      "role": "type_example",
+      "role_ref": "类型Ⅱ 倾斜角互补",
+      "source_docs": [
+        166,
+        167
+      ],
+      "question_text": "【例 3】椭圆  \\(C: \\frac{x^2}{a^2} + \\frac{y^2}{b^2} = 1 (a > b > 0)\\) 的右焦点为  \\(F(c, 0)\\)，短轴长为 2，且  \\(C\\) 截直线  \\(x = c\\) 所得弦  \\(MN\\) 的长为  \\(\\sqrt{2}\\)。\n（1）求椭圆 C 的方程；\n（2）若 A，B 是椭圆 C 上的两个动点，且  \\(\\angle AFM = \\angle BFM\\)，证明：直线 AB 过定点.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "teaching_text": "【例 3】椭圆  \\(C: \\frac{x^2}{a^2} + \\frac{y^2}{b^2} = 1 (a > b > 0)\\) 的右焦点为  \\(F(c, 0)\\)，短轴长为 2，且  \\(C\\) 截直线  \\(x = c\\) 所得弦  \\(MN\\) 的长为  \\(\\sqrt{2}\\)。\n（1）求椭圆 C 的方程；\n（2）若 A，B 是椭圆 C 上的两个动点，且  \\(\\angle AFM = \\angle BFM\\)，证明：直线 AB 过定点.\n解：（1）由题意，椭圆 C 的短轴长 2b=2，所以 b=1\n将 \\(x=c\\) 代入 \\(\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1\\) 解得： \\(y=\\pm\\frac{b\\sqrt{a^2-c^2}}{a}\\)，结合 \\(a^2-c^2=b^2\\) 可得 \\(y=\\pm\\frac{b^2}{a}\\)，所以 \\(|MN|=\\frac{2b^2}{a}\\)。\n又 \\(|MN|=\\sqrt{2}\\)，所以 \\(\\frac{2b^2}{a}=\\sqrt{2}\\)，结合 \\(b=1\\) 可得 \\(a=\\sqrt{2}\\)，故椭圆 \\(C\\) 的方程为 \\(\\frac{x^2}{2}+y^2=1\\)。\n（2）（怎样翻译  \\(\\angle AFM = \\angle BFM\\) ？如图，显然这两个角不好求， \\(\\angle AFM = \\angle BFM\\) 意味着直线 AF 和 BF 关于竖直线 MN 对称，于是它们的斜率互为相反数，即斜率之和为 0，故可按此翻译，下面先设点，表示斜率之和）\n由（1）得  \\(F(1,0)\\)，设  \\(A(x_1,y_1)\\)， \\(B(x_2,y_2)\\)，因为  \\(\\angle AFM = \\angle BFM\\) 且  \\(FM \\perp x\\) 轴，所以  \\(k_{FA} + k_{FB} = \\frac{y_1}{x_1 - 1} + \\frac{y_2}{x_2 - 1} = 0\\) 从而  \\(\\frac{y_1(x_2 - 1) + y_2(x_1 - 1)}{(x_1 - 1)(x_2 - 1)} = \\frac{x_1y_2 + x_2y_1 - (y_1 + y_2)}{(x_1 - 1)(x_2 - 1)} = 0\\)，故  \\(x_1y_2 + x_2y_1 - (y_1 + y_2) = 0\\) ①，\n（涉及  \\(x_1, y_2 + x_2, y_1\\)， \\(y_1 + y_2\\)，想到设直线  \\(AB\\) 的方程，与椭圆联立，结合韦达定理计算它们）\n直线  \\(AB\\) 的斜率存在，否则  \\(\\angle AFM\\) 和  \\(\\angle BFM\\) 一个为锐角，一个为钝角，它们不可能相等，\n所以可设直线  \\(AB\\) 的方程为  \\(y = kx + m\\)，代入  \\(\\frac{x^2}{2} + y^2 = 1\\) 消去  \\(y\\) 整理得： \\((1 + 2k^2)x^2 + 4kmx + 2m^2 - 2 = 0\\)，\n判别式  \\(\\Delta = 8(2k^2 - m^2 + 1) > 0\\)，由韦达定理， \\(x_1 + x_2 = -\\frac{4km}{1 + 2k^2}\\)， \\(x_1x_2 = \\frac{2m^2 - 2}{1 + 2k^2}\\)，\n所以  \\(x_1y_2 + x_2y_1 = x_1(kx_2 + m) + x_2(kx_1 + m) = 2kx_1x_2 + m(x_1 + x_2)\\)\n \\(= 2k \\cdot \\left( \\frac{2m^2 - 2}{1 + 2k^2} \\right) + m \\cdot \\left( -\\frac{4km}{1 + 2k^2} \\right) = -\\frac{4k}{1 + 2k^2}\\)，\n \\(y_1 + y_2 = kx_1 + m + kx_2 + m = k(x_1 + x_2) + 2m = k \\cdot \\left( -\\frac{4km}{1 + 2k^2} \\right) + 2m = \\frac{2m}{1 + 2k^2}\\)，\n代入①得  \\(-\\frac{4k}{1 + 2k^2} - \\frac{2m}{1 + 2k^2} = 0\\)，化简得： \\(m = -2k\\)，\n所以直线  \\(AB\\) 的方程为  \\(y = kx - 2k\\)，即  \\(y = k(x - 2)\\)，故直线  \\(AB\\) 过定点  \\((2,0)\\)。\n【反思】当我们通过分析图形的几何特征发现两条直线的倾斜角互补时，常按它们的斜率之和为 0 来翻译。有时倾斜角互补不会直白地给出，需要将已知条件进行分析整合才能发现，我们来看一个变式。\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_822_450_1093_620.jpg\" alt=\"Image\" width=\"22%\" /></div>",
+      "solution_present": true,
+      "vision_hint": "ch3.s12-LI911ac7a4cbc0df8d"
+    }
+  ],
+  "direct_variants": [
+    {
+      "item_id": "9e67e9d288e6eae6",
+      "kind": "direct_variant",
+      "label": "变式",
+      "example_number": null,
+      "parent_example_number": 1,
+      "role": "direct_variant",
+      "role_ref": null,
+      "source_docs": [
+        164,
+        165
+      ],
+      "question_text": "【变式】已知抛物线 C 的顶点在原点，焦点在直线  \\(l: x - 2y - 2 = 0\\) 上.\n（1）求抛物线 C 的标准方程；\n（2）过点  \\(M(a,0)\\) 的直线  \\(l'\\) 与焦点在 x 轴上的抛物线 C 交于 A, B 两点，若  \\(\\angle AOB\\) 为锐角，求实数 a 的取值范围.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "solution_isolated": true,
+      "vision_hint": "ch3.s12-LI9e67e9d288e6eae6"
+    },
+    {
+      "item_id": "4a6a0bd04734a6a6",
+      "kind": "direct_variant",
+      "label": "变式",
+      "example_number": null,
+      "parent_example_number": 3,
+      "role": "direct_variant",
+      "role_ref": null,
+      "source_docs": [
+        167,
+        168
+      ],
+      "question_text": "【变式】已知椭圆  \\(C: \\frac{x^{2}}{a^{2}} + \\frac{y^{2}}{b^{2}} = 1 (a > b > 0)\\) 的左、右焦点分别为  \\(F_{1}\\)， \\(F_{2}\\)，点  \\(P\\left(1, \\frac{\\sqrt{3}}{2}\\right)\\) 在椭圆  \\(C\\) 上，且  \\(\\triangle PF_{1}F_{2}\\) 的面积为  \\(\\frac{3}{2}\\)。\n（1）求椭圆 C 的方程；\n（2）过点  \\(M(4,0)\\) 的直线 l 与椭圆 C 交于  \\(A(x_1,y_1)\\)， \\(B(x_2,y_2)\\) 两点，且  \\(y_1y_2 \\neq 0\\)，在 x 轴上是否存在定点 N，使得直线 NA，NB 与 y 轴围成的三角形始终为底边在 y 轴上的等腰三角形？若存在，求出点 N 的坐标；若不存在，说明理由.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "solution_isolated": true,
+      "vision_hint": "ch3.s12-LI4a6a0bd04734a6a6"
+    }
+  ],
+  "deduplicated_learning_items": [],
+  "exercise_questions": [
+    {
+      "qid": "Q-5b070dea131193eb",
+      "section": "ch3.s12",
+      "group": "B",
+      "number": 1,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 168,
+        "pdf_page": 169,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_168.md"
+      },
+      "question_text": "1.（2017·新课标Ⅱ卷）\n\n设 O 为坐标原点，动点 M 在椭圆  \\(C: \\frac{x^{2}}{2} + y^{2} = 1\\) 上，过 M 作 x 轴的垂线，垂足为 N，点 P 满足  \\(\\overrightarrow{NP} = \\sqrt{2}\\overrightarrow{NM}\\).\n\n（1）求点P的轨迹方程；\n\n（2）设点  \\(Q\\) 在直线  \\(x = -3\\) 上，且  \\(\\overrightarrow{OP} \\cdot \\overrightarrow{PQ} = 1\\)，证明：过点  \\(P\\) 且垂直于  \\(OQ\\) 的直线  \\(l\\) 过  \\(C\\) 的左焦点  \\(F\\)。",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-5aa5be52f4d5132a",
+      "section": "ch3.s12",
+      "group": "B",
+      "number": 2,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 169,
+        "pdf_page": 170,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_169.md"
+      },
+      "question_text": "2.（2025·广西模拟）\n\n已知椭圆  \\(E:\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1(a>b>0)\\) 过点  \\((0,\\sqrt{3})\\)，离心率为  \\(\\frac{\\sqrt{2}}{2}\\).\n\n（1）求椭圆E的方程：\n\n（2）过点  \\(M(0,2)\\) 且不与 x 轴垂直的直线 l 与椭圆 E 交于 A, B 两点，若原点 O 在以 AB 为直径的圆内，求直线 l 斜率的取值范围.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-378f73b151fe5845",
+      "section": "ch3.s12",
+      "group": "B",
+      "number": 3,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 169,
+        "pdf_page": 170,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_169.md"
+      },
+      "question_text": "3.（2025·四川德阳模拟）\n\n设抛物线  \\(C: y^{2}=2x\\)，点  \\(A(2,0)\\)， \\(B(-2,0)\\)，过点 A 的直线 l 与 C 交于 M，N 两点.\n\n（1）当 l 与 x 轴垂直时，求直线 BM 的方程；\n\n（2）证明： \\(\\angle ABM = \\angle ABN\\)。",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-979ff80a7f9d6f08",
+      "section": "ch3.s12",
+      "group": "B",
+      "number": 4,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 170,
+        "pdf_page": 171,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_170.md"
+      },
+      "question_text": "4.（2024·东北三省三校第一次联考）\n\n已知双曲线  \\(C: \\frac{x^{2}}{a^{2}} - \\frac{y^{2}}{b^{2}} = 1 (a > 0, b > 0)\\) 的右顶点为  \\(E(1,0)\\)，斜率为 1 的直线交双曲线 C 于 M, N 两点，且 MN 的中点为  \\(\\underline{Q}(1,3)\\).\n\n（1）求双曲线 C 的方程；\n\n（2）证明： \\(\\triangle MEN\\) 为直角三角形.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-ad82d519907f92fb",
+      "section": "ch3.s12",
+      "group": "C",
+      "number": 5,
+      "kind": "C组",
+      "source_anchor": {
+        "ocr_doc": 170,
+        "pdf_page": 171,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_170.md"
+      },
+      "question_text": "5.（2025·山东模拟）\n\n设抛物线  \\(C: x^2 = 2py (p > 0)\\) 的焦点为  \\(F\\)，点  \\(A(t, 2)\\) 在抛物线  \\(C\\) 上，且  \\(|AF| = 3\\)。\n\n（1）求p的值：\n\n（2）过 F 的直线 l 与抛物线 C 交于 M, N 两点，在 y 轴上是否存在定点 P，使  \\(\\frac{|PM|}{|PN|} = \\frac{|MF|}{|NF|}\\) 恒成立？若存在，求出点 P 的坐标；若不存在，说明理由.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-219c4afdb5758dd9",
+      "section": "ch3.s12",
+      "group": "C",
+      "number": 6,
+      "kind": "C组",
+      "source_anchor": {
+        "ocr_doc": 171,
+        "pdf_page": 172,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_171.md"
+      },
+      "question_text": "6.（2024·广东广州一模（节选））\n\n已知 O 为坐标原点，双曲线  \\(C: \\frac{x^{2}}{a^{2}} - \\frac{y^{2}}{b^{2}} = 1 (a > 0, b\\)\n\n>0) 的焦距为 4，且过点  \\((\\sqrt{2},\\sqrt{3})\\).\n\n（1）求 C 的方程：\n\n（2）若直线  \\(l\\) 与  \\(C\\) 交于  \\(A\\)， \\(B\\) 两点，且  \\(\\overrightarrow{OA} \\cdot \\overrightarrow{OB} = 0\\)，求  \\(|AB|\\) 的取值范围.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    }
+  ],
+  "counts": {
+    "worked_examples": 3,
+    "direct_variants": 2,
+    "abc_exercises": 6,
+    "total_numbered_learning_items": 11
+  },
+  "answer_policy": {
+    "worked_examples": "teaching solutions allowed",
+    "direct_variants": "question only; solution isolated",
+    "abc_exercises": "question only; answer sidecar forbidden"
+  },
+  "unresolved": []
+}

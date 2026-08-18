@@ -1,0 +1,172 @@
+﻿{
+  "schema_version": "4.0",
+  "iteration": 4,
+  "worker_id": "worker-1",
+  "agent_id": "Z1",
+  "agent_role": "zero_base_high_school_student_simulation",
+  "cycle_scope": "1.1-cycle-5（数量积基础与投影）：核对 1.1-k4 是否完整包含数量积性质与投影向量原书续页；完成投影检查点 1.1-projection-check-1 与直属习题 B4/B5。",
+  "assigned_items": [
+    "k4 完整性核对（数量积性质 + 投影向量原书续页）",
+    "1.1-projection-check-1（投影向量方向与长度检查）",
+    "B4（正四面体 AB·CD）",
+    "B5（正方体 EB1·EB）"
+  ],
+  "assigned_items_note": "最新 learning_packet.json（2026-08-14 19:26:22 重建，schema 7.4）：cycle-5 标题'数量积基础与投影'，course_keys=line_line_angle，knowledge_refs=1.1-k4，bridge_unit_ids=bridge-1.1-projection，worked_examples=例6/7/8，exercises=B4,B5，method_checkpoints=1（投影检查点），direct_variants=0。",
+  "materials_evidence": {
+    "learning_packet": {
+      "file": "C:/开发/小工具/一本通学习系统_v7/data/packets/1.1/learning_packet.json",
+      "sha256": "35D8EC639A6FA4129CBA0074F21E4D8009184181EFF9220B424CAD6D11A227FC",
+      "last_write": "2026-08-14T19:26:22+08:00",
+      "schema_version": "7.4"
+    },
+    "line_line_angle_transcript": {
+      "file": "C:/开发/小工具/一本通学习系统_v7/data/course_transcripts/3.1.4.3 向量夹角与直线夹角.json",
+      "sha256": "0BE63E83ADAC131E7F4E0CF99D0424F23B1981EE3A446D5B2FA6029733311147",
+      "last_write": "2026-08-14T19:26:21+08:00",
+      "duration_s": 2452.656625,
+      "provenance": "transcript source video is byte-identical to the Downloads/课程合集 video by SHA-256",
+      "reading_mode": "full_text 逐段通读（先于检查点与习题）"
+    },
+    "bridge_units": {
+      "bridge_micro_lessons": {"file": "C:/开发/小工具/一本通学习系统_v7/data/bridge_micro_lessons.json", "sha256": "E8539CDD1EFE50AD336EAA516891F25D571AB6E4245290138B276C8C5B424F7E", "projection_unit_status": "SUPPLEMENT_READY"},
+      "bridge_supplement_lessons": {"file": "C:/开发/小工具/一本通学习系统_v7/data/bridge_supplement_lessons.json", "sha256": "41666EA61612090C6DB027F574CE1DEF620FC9C1357E80F2893E3D296863BA84", "projection_lesson_read": true}
+    },
+    "deepseek_context": {
+      "file": "C:/开发/小工具/一本通学习系统_v7/data/contexts/1.1.json",
+      "sha256": "8EBF417EAD7B3C1B4F79D0A09777AA80F81692B1FFC302A3B2E752A65BC23C36",
+      "last_write": "2026-08-14T19:26:22+08:00",
+      "status": "VERIFIED",
+      "canary": "1221e8b5057d51fb",
+      "probe_tokens_verified": [
+        {"qid": "Q-84442c12da683ad3", "sha256_prefix8": "8873b63a", "match": true},
+        {"qid": "Q-1727695600a57e80", "sha256_prefix8": "ff47249c", "match": true},
+        {"qid": "Q-7370f2df587a419e", "sha256_prefix8": "a2b5fc31", "match": true}
+      ]
+    }
+  },
+  "k4_completeness_check": {
+    "verdict": "COMPLETE",
+    "detail": "1.1-k4 知识块现完整包含：第2节 数量积定义与运算律（含锐/直/钝判定）；第3节 空间向量数量积的性质（a⊥b ⇔ a·b=0；a·a=|a|²；|a|=√(a·a)；cos⟨a,b⟩=a·b/(|a||b|)；|a·b|≤|a||b| 当且仅当共线取等）；第4节 投影向量（向量向向量投影公式 (a·b/|b|²)b、向量向直线投影、向量向平面投影、注 a·b=c·b）。原书续页（ocr doc_4：钝角判定 + 性质表 + 投影向量）已并入 k4 块文本；原始 knowledge_and_type_pages 的 doc_3/doc_4 为 OCR 分页（doc_3 止于'直角 ⇔ a·b=0'，doc_4 承接续页），k4 块层面完整。",
+    "was_gap_in_earlier_builds": true,
+    "earlier_state": "iteration-1/2 时代 k4 知识页（doc_3）止于'直角 ⇔ a·b=0'，性质表与投影向量缺失/截断"
+  },
+  "attempts": [
+    {
+      "item": "1.1-projection-check-1",
+      "label": "投影向量方向与长度检查",
+      "question_parts": [
+        "自选正方体一条面对角线和一条棱：画面对角线在该棱所在直线上的投影方向，用数量积写投影长度；说明投影向量与投影长度为什么不是同一个量。"
+      ],
+      "process": "自选：正方体 ABCD-A1B1C1D1（棱长 1），面对角线 AC，棱 AB（所在直线）。(1) 投影方向：AC 的起点 A 在直线 AB 上；终点 C 向直线 AB 作垂线，正方形中 AB⊥BC，垂足为 B，故投影向量方向为 AB 方向（k4 块'向量向直线投影'定义：起点落直线上、终点作垂线、垂足连向起点）。(2) 数量积投影长度：AC·AB=|AC||AB|cos45°=√2·1·(√2/2)=1；带符号投影长度 a·b/|b|=1/1=1（与 AB 同向为正）；投影向量 c=(a·b/|b|²)b=(1/1)·AB=AB（长度 1、方向 AB）。(3) 为什么不是同一个量：投影长度是标量（实数，只有大小与相对方向的符号，如对反向方向 B1A1 计为 -1），投影向量是向量（(a·b/|b|²)b，同时含方向与大小）；长度丢掉方向信息，向量包含方向；k4 块注 a·b=c·b 说明数量积等于'投影向量与 b 的数量积'，长度仅是 |c| 或带符号标量。反向投影复核（bridge method_check'能处理反向投影'）：向 B1A1（=-AB）方向投影，AC·B1A1=|AC||B1A1|cos135°=-1，投影向量=(-1/1)·B1A1=AB（投影向量不变），带符号长度按该方向为 -1——方向选择只改变符号不改变投影向量本身。",
+      "answer": "投影方向=AB 方向（垂足 B）；投影长度=1（AC·AB/|AB|=1）；投影向量=AB=(AC·AB/|AB|²)AB；投影长度是标量、投影向量是向量，前者无方向、后者含方向，故不是同一个量（反向投影例：向 B1A1 方向投影向量仍为 AB，带符号长度变为 -1）。",
+      "first_breakpoint": null,
+      "hint_used": false,
+      "confidence": 0.85,
+      "verification": "公式法（k4 块第4节）与垂足图形法（k4 块定义）一致；例8 同款（AC 在 AB 上投影=AB）交叉印证；反向投影复核通过。"
+    },
+    {
+      "item": "B4",
+      "label": "B组习题",
+      "stem": "正四面体（三棱锥 A-BCD 每条棱长 2），求 AB·CD。",
+      "process": "CD=AD-AC（末减出，cycle-1 技术）。AB·CD=AB·(AD-AC)=AB·AD-AB·AC（数量积分配律，k4 块第2节）。正四面体每个面为正三角形，AB 与 AD、AC 的夹角均为 60°（例7 教学解同款：正四面体中使用 cos(π/3)）。|AB|=|AD|=|AC|=2：AB·AD=2·2·cos60°=2；AB·AC=2·2·cos60°=2。故 AB·CD=2-2=0。",
+      "answer": "D（AB·CD=0）",
+      "confidence": 0.9,
+      "hint_used": false,
+      "first_breakpoint": null,
+      "verification": "例7 同型技术前置显式（EF=½AC，½|AC||AB|cos(π/3)）；分配律展开与坐标交叉验证一致（A(0,0,0),B(2,0,0),C(1,√3,0),D(1,√3/3,2√6/3)：AB=(2,0,0)，CD=(0,-2√3/3,2√6/3)，点积=0）。"
+    },
+    {
+      "item": "B5",
+      "label": "B组习题",
+      "stem": "棱长 2 的正方体，E 为棱 A1D1 的中点，求 EB1·EB。",
+      "process": "拆分（cycle-1/2 技术）：EB1=EA1+A1B1=-(1/2)A1D1+A1B1=-(1/2)d+x；EB=EA1+A1A+AB=-(1/2)d-z+x（d=A1D1，x=AB，z=AA1，三者两两垂直、模为 2，正方体棱两两垂直为图形事实，VISION_VERIFIED E1/E2）。EB1·EB=(-d/2+x)·(-d/2-z+x)=(1/4)d·d+x·x+交叉项（垂直向量点积为 0，k4 块性质 a⊥b ⇔ a·b=0；d·d=|d|²=4、x·x=|x|²=4，k4 块性质 a·a=|a|²）=(1/4)·4+4=1+4=5。",
+      "answer": "B（EB1·EB=5）",
+      "confidence": 0.85,
+      "hint_used": false,
+      "first_breakpoint": null,
+      "verification": "坐标交叉验证：E(0,1,2)，EB1=(2,-1,0)，EB=(2,-1,-2)，点积=4+1+0=5；k4 性质表支撑垂直/平方步骤。"
+    }
+  ],
+  "first_breakpoints": [
+    {
+      "item": "1.1-projection-check-1",
+      "first_breakpoint": null,
+      "risk_note": "无卡点。潜在易混点（非卡点）：'投影长度 vs 投影向量'的区分由 k4 块第4节（向量 vs 标量）与 bridge-1.1-projection 第1条显式覆盖；若真人学生卡住，最小提示应为'题目问的是向量还是长度？公式 (a·b/|b|²)b 的系数正负表示什么？'。"
+    },
+    {
+      "item": "B4",
+      "first_breakpoint": null,
+      "risk_note": "无卡点：例7 已在 B4 之前显式建立正四面体 60° 面角与数量积定义用法。"
+    },
+    {
+      "item": "B5",
+      "first_breakpoint": null,
+      "risk_note": "无卡点：中点向量（cycle-1 例3）、垂直与平方性质（k4 块第3节）、正方体三棱两两垂直（图形事实）均在题前显式出现。"
+    }
+  ],
+  "comparison_to_iteration_3": {
+    "k4_completeness_gap": {
+      "iteration3_state": "未核验（iteration-3 范围为 cycle-3，不涉及 k4；k4 截断问题自 iteration-1/2 观察以来未确认修复）",
+      "iteration4_state": "已修复：k4 块完整包含数量积性质表与投影向量（原书续页 doc_4 并入），投影公式 (a·b/|b|²)b 与 a·b=c·b 注显式",
+      "verdict": "k4 完整性缺口消失"
+    },
+    "projection_bridge": {
+      "iteration3_state": "不存在（bridge-1.1-projection 未在路径中挂接）",
+      "iteration4_state": "cycle-5 挂接 bridge-1.1-projection（SUPPLEMENT_READY，含无答案方法骨架与自造变式要求），投影检查点获得显式支撑",
+      "verdict": "新增桥接已就位"
+    },
+    "cycle3_observations": {
+      "iteration3_remaining": "cycle-3 knowledge_blocks 为空、cycle-3 无直属习题——为 cycle-3 结构观察，本轮 cycle-5 不适用（cycle-5 有完整 k4 块与 B4/B5 直属习题）",
+      "verdict": "不适用于本轮范围，未重复判定"
+    },
+    "cold_retest": {
+      "iteration3": "not_run",
+      "iteration4": "not_run（human_evidence_not_run 单列，不因模拟路径通过而降级状态）"
+    }
+  },
+  "knowledge_order_assessment": {
+    "method": "对每个作答项列出首次用到的技术，检查其在路径中的出现位置与顺序（左栏 knowledge_blocks / 教学例题 / 桥接 / 前序循环），确保不凭模型先验补洞。",
+    "per_technique": [
+      {"technique": "数量积定义与运算律（分配律等）", "first_used_in": "B4/B5", "appears_before": true, "source": "k4 块第2节（cycle-5 左栏，先于习题）", "linkage": "full"},
+      {"technique": "数量积性质：a·a=|a|²、a⊥b ⇔ a·b=0", "first_used_in": "B5", "appears_before": true, "source": "k4 块第3节性质表（续页并入，先于习题）", "linkage": "full"},
+      {"technique": "投影向量公式 (a·b/|b|²)b、向直线/平面投影定义、a·b=c·b", "first_used_in": "投影检查点", "appears_before": true, "source": "k4 块第4节 + bridge-1.1-projection + 例8（AC 在 AB 上投影=AB，AC1 在底面投影=AC）", "linkage": "full"},
+      {"technique": "正四面体 60° 面角与中点向量数量积", "first_used_in": "B4", "appears_before": true, "source": "例7（EF=½AC，½·1·1·cos(π/3)=1/4）教学解显式，先于 B4", "linkage": "full"},
+      {"technique": "中点向量（EA1=-(1/2)A1D1）与拆分", "first_used_in": "B5", "appears_before": true, "source": "cycle-1 例3（中点向量）与 cycle-2 拆分法（前置课程），先于 cycle-5", "linkage": "full"},
+      {"technique": "线线角 = |a·b|/(|a||b|)（建系法）", "first_used_in": "本循环课程覆盖", "appears_before": true, "source": "转写 3.1.4.3 显式（本轮 B4/B5 未直接使用该公式，但课程在习题前出现）", "linkage": "full"}
+    ],
+    "verdict": "全部作答项首次用到的知识均在路径中显式前置出现（k4 块含续页、例7/例8、bridge-1.1-projection、cycle-1/2 技术），无模型先验补洞。",
+    "course_exercise_match_note": "3.1.4.3 转写主要支撑线线角（建系+点乘绝对值）；B4/B5 与投影检查点的支撑主要来自 k4 块（性质/投影续页）与例6/7/8——路径顺序完整（左栏与例题先于习题），课程与习题内容匹配为'块+例题'支撑而非转写直接示范，记录为结构观察（非缺口）。"
+  },
+  "status": "proxy_pass",
+  "status_qualifier": "proxy_pass 限定 cycle-5 分配项：k4 完整性核对通过（性质+投影续页完整）、投影检查点与 B4/B5 全部独立完成（hint_used=false、无未解决首次断点、结论自检与交叉验证一致）。代理推理不等于真人掌握；真人冷复测 not_run 单列于 human_evidence_not_run，不将模拟路径本身降级。",
+  "structural_gaps": [
+    "cycle-5 直属变式=0（例6/7/8 无变式）：近迁移仅由投影检查点与 B4/B5 承担，缺少'只改一个条件'的同构变式证据链。",
+    "3.1.4.3 转写未直接示范投影向量计算与正四面体 60° 点积：该两项由 k4 块（续页）+例7/例8+bridge-1.1-projection 支撑（顺序完整），记录课程与题目匹配度观察。",
+    "投影检查点 answer_policy=NO_ANSWER：无标准对照，结论依赖独立推导与图形/公式双重自检。",
+    "未覆盖桥接（本循环范围外）：bridge-1.1-polarization（极化恒等式）target 为 B8/C13/C14（cycle-8+），不属本轮；本轮所需 bridge-1.1-projection 已就位。"
+  ],
+  "human_evidence_not_run": [
+    "真人冷复测（隔天闭卷重做投影检查点/B4/B5）未执行",
+    "真人书写过程与讲解未执行",
+    "真人限时作答未执行",
+    "结论：以上不参与本模拟 proxy_pass 判定，亦不作为真人掌握证据"
+  ],
+  "answer_sources_read": [
+    "data/packets/1.1/learning_packet.json（cycle-5 元数据、k4 知识块全文含续页、例6/7/8 教学解、投影检查点题干、B4/B5 题干、knowledge_and_type_pages doc_3/doc_4 核对）",
+    "data/course_transcripts/3.1.4.3 向量夹角与直线夹角.json（full_text 全文，本循环课程转写）",
+    "data/bridge_micro_lessons.json（bridge-1.1-projection 单元）",
+    "data/bridge_supplement_lessons.json（bridge-1.1-projection 补充课文本）",
+    "data/contexts/1.1.json（evidence/canary 校验与 instructions）",
+    "chapter1_manifest.json（cycle-5 归属核对）"
+  ],
+  "forbidden_answer_sources_read": [],
+  "honesty_boundary": {
+    "simulation_nature": "Z1 模拟'零基础高中生'iteration-4：按'视频/转写→左栏知识→教学例题→无答案检查点→直属习题'顺序真实模拟 cycle-5；所有结论为代理在路径材料内的独立推理，不代表任何真人学习者已掌握。",
+    "answer_sources": "未读取 data/packets/1.1/answer_sidecar.json、任何答案册、其他代理报告或其他循环的作答或习题答案；forbidden_answer_sources_read=[]。教学例题 teaching_text 为教材允许（answer_policy: teaching solutions allowed）；习题仅读取题干（solution_isolated）。",
+    "context_probe_usage": "data/contexts/1.1.json canary=1221e8b5057d51fb 已回显；三个探针 qid 的 sha256(canary+qid) 前 8 位（8873b63a / ff47249c / a2b5fc31）与上下文 probe_tokens 全部匹配；仅复述题目可见字段，未输出答案册内容。",
+    "no_answer_policy": "投影检查点 answer_policy=NO_ANSWER：未获取、未推断标准答案文本；结论为独立推导并用垂足图形法与公式法双重自检。",
+    "incidental_exposure": "解析 packet 输出流中偶然可见其他循环题干文本（question stems only），未读取其解答。",
+    "file_boundary": "仅新增 reports/zero_base_cycles/1.1-iteration-4-worker-1.json；未修改 manifest、packet、代码、测试或其他报告文件。",
+    "runtime_notes": "deepseek-mode.json 为 active=true（default_count=5，契约 opencode-go/deepseek-v4-flash / 1000000 / max）；本 child worker 无子代理生成工具且禁止再派生子代理，本任务即被委派的独立单元（worker-1/cycle-5 非重叠范围），未伪造派发或成功标记。"
+  }
+}

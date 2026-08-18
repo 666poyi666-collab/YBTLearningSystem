@@ -1,0 +1,335 @@
+{
+ "schema_version": "1.2+1.3-10cycles",
+ "section": "1.2+1.3",
+ "worker": 5,
+ "generation": "G-CH1-S12-01",
+ "worker_status": "COMPLETED",
+ "scope": {
+  "tasks": [
+   "29",
+   "30",
+   "31",
+   "32",
+   "33"
+  ],
+  "item_count": 5,
+  "note": "任务29-33：循环8 末（B6、B11）+ 循环9（C14）+ 循环10（C15、C16）"
+ },
+ "context_binding": {
+  "canary": "01cb4018b3977ceb",
+  "context_sha256": "271c68719a46b628e716267fb786ee13c4e40bec9523ffe4f005fada1c05fd86",
+  "context_file": "data/contexts/1.2_1.3.json",
+  "binding": "worker must echo canary and answer derived probes from this exact context",
+  "probe_qids": [
+   "Q-6ed7e46c02ea0cbe",
+   "Q-9dc59a76b39b51c2",
+   "Q-8937bea007e341dc"
+  ],
+  "probe_tokens": {
+   "Q-6ed7e46c02ea0cbe": "d9f08af0",
+   "Q-9dc59a76b39b51c2": "9819bc0a",
+   "Q-8937bea007e341dc": "638a9259"
+  },
+  "probe_answered_in_items": [
+   "A1",
+   "A2",
+   "A3"
+  ],
+  "gate": {
+   "file": "reports/builds/1.2_1.3-build.json",
+   "read_at": "2026-08-16T22:02:19",
+   "built_at_declared": "2026-08-16T22:10:00",
+   "worker": "build-1.2-1.3",
+   "hard_constraint": "33 项不变（13 例题+4 变式+16 习题，item_id/qid 复用），10 循环重构",
+   "test_results": "104 passed / 2 failed（均与本节无关：1.4-k3 重复渲染、1.1 台账哈希失配）"
+  },
+  "context_finalized_at": "2026-08-16T22:03:40",
+  "context_stability": "mtime 22:03:40 后 3 分钟无变化（确认至 22:06:56）",
+  "note": "上下文在轮询期间被构建流水线多次重写（688be4…→b08a72…→7628a1…→终版 271c68…），终版 evidence 已核对；五门课程文稿（3.1.1.1/3.1.2.1/3.1.2.2/3.1.3.1/3.1.3.2）已全部通读"
+ },
+ "answer_sidecar_read": false,
+ "human_acceptance_not_proven": true,
+ "verdicts_summary": {
+  "PASS": 3,
+  "BLOCKED": 2
+ },
+ "method_check_results": [
+  {
+   "method_key": "1.2_1.3-coplanar-check-1",
+   "label": "方法检查：重心向量表示独立推导",
+   "cycle": 9,
+   "status": "CLOSED",
+   "verdict": "PASS",
+   "note": "学生独立推导：三角形重心=三点平均（G 为 △ABC 重心 ⇒ SG=⅓(SA+SB+SC)，源自 3.1.2.2 等值面法重心特性），并在 B9（任务13）、C14（任务31）中实际调用；等值面复核系数和。"
+  },
+  {
+   "method_key": "1.2_1.3-coplanar-check-2",
+   "label": "方法检查：截线共面条件自造验证",
+   "cycle": 9,
+   "status": "CLOSED",
+   "verdict": "PASS",
+   "note": "自造无答案验证：三棱锥 S-ABC，取 SA/SB/SC 中点 D,E,F，平面 DEF 为 ½ 倍面（位置向量系数和 ½=½(u+v+w)）；SG 中点 M 的 SM=¼(SA+SB+SC) 系数和 ¾≠½ ⇒ M 不在平面 DEF；与 C14 中『系数和=1 判定点面位置』正反互证。"
+  },
+  {
+   "method_key": "1.2_1.3-single-variable-check-1",
+   "label": "方法检查：空间动点单变量化检查",
+   "cycle": 10,
+   "status": "NOT_CLOSED",
+   "verdict": "BLOCKED",
+   "note": "桥接『空间动点单变量化配方』=SOURCE_METHOD_READY（只有方法骨架、缺完整无答案微课），标准规定零基础不能据此放行；检查标准（单变量规划、含定义域近变式、延迟冷复述）无法在模拟中满足。"
+  },
+  {
+   "method_key": "1.2_1.3-apollonius-check-1",
+   "label": "方法检查：阿波罗尼斯球轨迹检查",
+   "cycle": 10,
+   "status": "NOT_CLOSED",
+   "verdict": "BLOCKED",
+   "note": "桥接『阿波罗尼斯球与等距轨迹』=SUPPLEMENT_READY 但检查标准未具备（需自造变式、视觉/题面放行），且循环10 整体因动点单变量化未闭合而阻断。"
+  },
+  {
+   "bridge_key": "micro-four-point-coplanar",
+   "label": "桥接：四点共面系数和=1",
+   "target_items": [
+    "C14"
+   ],
+   "status": "CLOSED",
+   "verdict": "PASS",
+   "note": "SUPPLEMENT_READY 无答案文本在路线内；模拟中完成正向/逆向推导与自造验证；C14 独立作答通过；question_coverage=READY_FOR_INDEPENDENT_ATTEMPT。"
+  },
+  {
+   "bridge_key": "bridge-1.2-single-variable",
+   "label": "桥接：空间动点单变量化配方",
+   "target_items": [
+    "C15",
+    "C16"
+   ],
+   "status": "NOT_CLOSED",
+   "verdict": "BLOCKED",
+   "note": "SOURCE_METHOD_READY：只有方法骨架，缺完整无答案微课；零基础放行不成立；question_coverage=BLOCKED_BRIDGE（构建报告 gap_list 确认既有状态未变）。"
+  },
+  {
+   "bridge_key": "bridge-1.2-apollonius",
+   "label": "桥接：阿波罗尼斯球与等距轨迹",
+   "target_items": [
+    "C16"
+   ],
+   "status": "NOT_CLOSED",
+   "verdict": "BLOCKED",
+   "note": "SUPPLEMENT_READY 但检查标准未具备（自造变式、视觉/题面放行）；C16 整体因动点单变量化未闭合而阻断。"
+  },
+  {
+   "bridge_key": "bridge-1.1-polarization",
+   "label": "桥接：极化恒等式与数量积最值",
+   "target_items": [
+    "C16"
+   ],
+   "status": "NOT_CLOSED",
+   "verdict": "BLOCKED",
+   "note": "SUPPLEMENT_READY 但检查标准未具备（原型题独立过程、全空间型与区域型各一题无答案近迁移、等号条件可解释）；C16 整体阻断。"
+  }
+ ],
+ "first_breakpoints": [
+  {
+   "breakpoint": "图形未核验（NEEDS_VISION_SIDECAR）：路线标注『未完成视觉核验，禁止猜图』，缺已核验视觉侧车",
+   "class": "VISUAL_GATE",
+   "items": [
+    "例1",
+    "例2",
+    "例3",
+    "例4",
+    "例5",
+    "例12",
+    "例13",
+    "变式(5)",
+    "变式1(10)",
+    "变式2(10)",
+    "变式(12)"
+   ]
+  },
+  {
+   "breakpoint": "桥接未闭合：空间动点单变量化配方 SOURCE_METHOD_READY（只有方法骨架，缺完整无答案微课）",
+   "class": "BRIDGE_GATE",
+   "items": [
+    "C15",
+    "C16"
+   ]
+  },
+  {
+   "breakpoint": "桥接检查标准未具备：阿波罗尼斯球与等距轨迹、极化恒等式与数量积最值（SUPPLEMENT_READY 但未通过自造变式/放行门禁）",
+   "class": "BRIDGE_GATE",
+   "items": [
+    "C16"
+   ]
+  }
+ ],
+ "item_results": [
+  {
+   "section": "1.2+1.3",
+   "cycle": 8,
+   "item_id": "Q-a0ac3d3dec067140",
+   "task": "29",
+   "label": "B6",
+   "kind": "A/B/C习题",
+   "visual_status": "READY_TEXT_ONLY",
+   "source_revision": {
+    "generation": "G-CH1-S12-01",
+    "source_packet_type": "DEEPSEEK_STUDENT_CONTEXT",
+    "packet_status": "VERIFIED",
+    "route_revision": "10 循环重构（build-1.2-1.3, 2026-08-16T22:10:00, item_id/qid 复用）"
+   },
+   "context_sha256": "271c68719a46b628e716267fb786ee13c4e40bec9523ffe4f005fada1c05fd86",
+   "observation_signal": "题面：x,y∈R，a=(x,1,1)，b=(1,y,1)，c=(2,-4,2)，且 a⊥b，b∥c，则 |a+b|=（四选一）。信号词：垂直+平行定参数→模长；与例11 同构（A/B 组独立作答）。",
+   "course_call": {
+    "course_id": "3.1.3.2",
+    "method_model_id": "3.1.3.2:parallel_perpendicular",
+    "appears_before_first_use": true,
+    "linkage": "课程 3.1.3.2（类型Ⅴ 夹角与模）：垂直点乘 0、平行对应成比例（例11 模型的独立迁移）。",
+    "first_use_location": "任务29 B6（3.1.3.2 独立习题）"
+   },
+   "first_line": "目标量：|a+b|；b∥c ⇒ (1,y,1)=λ(2,-4,2) ⇒ λ=½，y=-2。",
+   "second_line": "依据：a⊥b ⇒ x·1+1·(-2)+1·1=x-1=0 ⇒ x=1；a+b=(2,-1,2)。",
+   "continuation": "|a+b|=√(4+1+4)=3，对应选项 C。",
+   "independent_self_check": "核对：参数回代验算 a·b=1-2+1=0 ✓、b=½c ✓；模长平方和开根。",
+   "first_breakpoint": "none",
+   "hint_level": "none",
+   "verdict": "PASS",
+   "answer_sidecar_read": false,
+   "human_acceptance_not_proven": true
+  },
+  {
+   "section": "1.2+1.3",
+   "cycle": 8,
+   "item_id": "Q-bba50604ebcccacf",
+   "task": "30",
+   "label": "B11",
+   "kind": "A/B/C习题",
+   "visual_status": "READY_TEXT_ONLY",
+   "source_revision": {
+    "generation": "G-CH1-S12-01",
+    "source_packet_type": "DEEPSEEK_STUDENT_CONTEXT",
+    "packet_status": "VERIFIED",
+    "route_revision": "10 循环重构（build-1.2-1.3, 2026-08-16T22:10:00, item_id/qid 复用）"
+   },
+   "context_sha256": "271c68719a46b628e716267fb786ee13c4e40bec9523ffe4f005fada1c05fd86",
+   "observation_signal": "题面：三棱锥 A-BCD 中，AB=AC=AD=2，AB、AC、AD 两两垂直，M、N 分别为 BC、AD 的中点，则异面直线 AM 和 CN 夹角的余弦值为（四选一）。信号词：两两垂直→建系；异面直线夹角→|点乘|公式。",
+   "course_call": {
+    "course_id": "3.1.3.1",
+    "method_model_id": "3.1.3.2:vector_angle_abs",
+    "appears_before_first_use": true,
+    "linkage": "课程 3.1.3.1（建系）+3.1.3.2（类型Ⅴ）：两两垂直天然建系（A 为原点，AB/AC/AD 为轴）；线线角 cos=|a·b|/(|a||b|)。",
+    "first_use_location": "任务30 B11（3.1.3.1+3.1.3.2 独立习题）"
+   },
+   "first_line": "目标量：cos(AM, CN)；建系 A(0,0,0)，B(2,0,0)，C(0,2,0)，D(0,0,2)；M(1,1,0)，N(0,0,1)。",
+   "second_line": "依据：AM=(1,1,0)，CN=N-C=(0,-2,1)；AM·CN=0-2+0=-2；|AM|=√2，|CN|=√5。",
+   "continuation": "cos=|-2|/(√2·√5)=2/√10=√10/5，对应选项 D。",
+   "independent_self_check": "核对：异面直线夹角取绝对值（课程强调线线角 0~90°）；2/√10=√10/5 有理化一致；M、N 中点坐标正确。",
+   "first_breakpoint": "none",
+   "hint_level": "none",
+   "verdict": "PASS",
+   "answer_sidecar_read": false,
+   "human_acceptance_not_proven": true
+  },
+  {
+   "section": "1.2+1.3",
+   "cycle": 9,
+   "item_id": "Q-8bc83f44a0a18ca0",
+   "task": "31",
+   "label": "C14",
+   "kind": "A/B/C习题",
+   "visual_status": "VISION_VERIFIED",
+   "source_revision": {
+    "generation": "G-CH1-S12-01",
+    "source_packet_type": "DEEPSEEK_STUDENT_CONTEXT",
+    "packet_status": "VERIFIED",
+    "route_revision": "10 循环重构（build-1.2-1.3, 2026-08-16T22:10:00, item_id/qid 复用）"
+   },
+   "context_sha256": "271c68719a46b628e716267fb786ee13c4e40bec9523ffe4f005fada1c05fd86",
+   "observation_signal": "题面：三棱锥 S-ABC，点 G 为 △ABC 的重心，点 M 是线段 SG 的中点，过点 M 的平面分别交 SA、SB、SC 于点 D、E、F，若 SD=kSA，SE=mSB，SF=nSC，则 1/k+1/m+1/n=（四选一）。信号词：重心+中点+过点平面截三条棱→共面系数和=1。视觉侧车（E2）：S 顶、E 在 SB、F 在 SC、G 在 AB 下方、M 中部（侧车对 D 位置描述与题干『D 在 SA 上』存在噪声，以题干为准）；桥接『四点共面系数和=1』无答案补充课文本已包含在学习路径中。",
+   "course_call": {
+    "course_id": "3.1.2.1",
+    "method_model_id": "bridge:coplanar_coefficient_sum_1",
+    "appears_before_first_use": true,
+    "linkage": "课程 3.1.2.1（唯一分解）+3.1.2.2（重心平均/等值面）+3.1.3.2 前置 + 桥接：点 P 在平面 DEF 内 ⇔ SP=uSD+vSE+wSF 且 u+v+w=1（位置向量系数，非自由向量系数）；循环9 方法检查（重心向量表示独立推导、截线共面条件自造验证）已先完成。",
+    "first_use_location": "任务31 C14（循环9 桥接后独立习题）"
+   },
+   "first_line": "目标量：1/k+1/m+1/n；先写 SM：G 为重心 ⇒ SG=⅓(SA+SB+SC)；M 为 SG 中点 ⇒ SM=½SG=⅙(SA+SB+SC)。",
+   "second_line": "依据：SD=kSA ⇒ SA=SD/k（同理 SB=SE/m、SC=SF/n）⇒ SM=⅙(SD/k+SE/m+SF/n)；M 在平面 DEF 内 ⇒ SM 在基底 {SD,SE,SF} 下的位置向量系数和为 1（桥接正反推导：正向 AP=uAB+vAC 换公共起点；逆向 x+y+z=1 ⇒ OP=OA+yAB+zAC；自造验证：三中点平面 DEF 为 ½ 倍面，系数和 ½，SG 中点 M 系数和 ¾ 不在其上）。",
+   "continuation": "⅙·(1/k)+⅙·(1/m)+⅙·(1/n)=1 ⇒ 1/k+1/m+1/n=6，对应选项 B。",
+   "independent_self_check": "核对：①系数唯一性由空间向量基本定理保证（D、E、F 与 S 构成不共面三向量，平面不过 S）；②共面条件用的是位置向量系数和=1，与自由向量系数区分；③⅙ 因子未漏乘；④结果 6 在选项中；⑤等值面复核：M 在 SM=⅙(SA+SB+SC) ⇒ 系数和 ⅙·3=½，M 位于 SG 上且 G 在 1 倍面 ⇒ ½ 倍面一致性成立。",
+   "first_breakpoint": "none",
+   "hint_level": "none",
+   "verdict": "PASS",
+   "answer_sidecar_read": false,
+   "human_acceptance_not_proven": true,
+   "bridge_status": "四点共面系数和=1：CLOSED（SUPPLEMENT_READY 文本在路线内；循环9 两个方法检查在模拟中通过）"
+  },
+  {
+   "section": "1.2+1.3",
+   "cycle": 10,
+   "item_id": "Q-3e85a8a45c48effa",
+   "task": "32",
+   "label": "C15",
+   "kind": "A/B/C习题",
+   "visual_status": "READY_TEXT_ONLY",
+   "source_revision": {
+    "generation": "G-CH1-S12-01",
+    "source_packet_type": "DEEPSEEK_STUDENT_CONTEXT",
+    "packet_status": "VERIFIED",
+    "route_revision": "10 循环重构（build-1.2-1.3, 2026-08-16T22:10:00, item_id/qid 复用）"
+   },
+   "context_sha256": "271c68719a46b628e716267fb786ee13c4e40bec9523ffe4f005fada1c05fd86",
+   "observation_signal": "题面：a、b 是空间互相垂直的单位向量，且 |c|=8，c·a=c·b=2√6，则 |c-ma-nb| 的最小值是___。题面纯文字可读；但前置桥接『空间动点单变量化配方』状态为 SOURCE_METHOD_READY（只有方法骨架、缺完整无答案微课），零基础放行不成立；question_coverage 标记 BLOCKED_BRIDGE；循环10 方法检查『空间动点单变量化检查』因桥接未闭合无法通过。",
+   "course_call": {
+    "course_id": "3.1.3.2",
+    "method_model_id": "bridge:single_variable_parameterization",
+    "appears_before_first_use": true,
+    "linkage": "课程 3.1.3.2 提供坐标与点乘工具，但『把距离/数量积条件化成单变量函数并配方求最值』的完整桥接方法尚未成课（SOURCE_METHOD_READY）；循环10 方法检查前置未通过。",
+    "first_use_location": "任务32 C15（循环10 桥接目标题）"
+   },
+   "first_line": "目标量：min |c-ma-nb|；方法入口：把 c 分解为 (c·a)a+(c·b)b+与 {a,b} 垂直的分量，对 |c-ma-nb|² 配方。",
+   "second_line": "依据：|c|²=(c·a)²+(c·b)²+|c⊥|² ⇒ 64=24+24+|c⊥|² ⇒ |c⊥|²=16；|c-ma-nb|²=|c⊥|²+|(2√6-m)a+(2√6-n)b|²≥16。",
+   "continuation": "按协议停止（不代算）：桥接『空间动点单变量化配方』仅 SOURCE_METHOD_READY——只有方法骨架、缺完整无答案微课，标准规定零基础不能据此放行；不把推导结果当作桥接证据。",
+   "independent_self_check": "检查：桥接进入目标题前必须具备项（单变量规划独立完成、含定义域的近变式独立完成、一次延迟冷复述）均未具备；循环10 方法检查未通过；question_coverage=BLOCKED_BRIDGE；按标准阻断。",
+   "first_breakpoint": "桥接未闭合：空间动点单变量化配方 SOURCE_METHOD_READY（只有方法骨架，缺完整无答案微课），零基础放行不成立",
+   "hint_level": "none",
+   "verdict": "BLOCKED",
+   "answer_sidecar_read": false,
+   "human_acceptance_not_proven": true,
+   "bridge_status": "空间动点单变量化配方：NOT_CLOSED（SOURCE_METHOD_READY）"
+  },
+  {
+   "section": "1.2+1.3",
+   "cycle": 10,
+   "item_id": "Q-9e0354161f002565",
+   "task": "33",
+   "label": "C16",
+   "kind": "A/B/C习题",
+   "visual_status": "READY_TEXT_ONLY",
+   "source_revision": {
+    "generation": "G-CH1-S12-01",
+    "source_packet_type": "DEEPSEEK_STUDENT_CONTEXT",
+    "packet_status": "VERIFIED",
+    "route_revision": "10 循环重构（build-1.2-1.3, 2026-08-16T22:10:00, item_id/qid 复用）"
+   },
+   "context_sha256": "271c68719a46b628e716267fb786ee13c4e40bec9523ffe4f005fada1c05fd86",
+   "observation_signal": "题面：在棱长为 3 的正方体 ABCD-A1B1C1D1 中，E、F 为线段 BD1 的三等分点（E 在 B、F 之间），一动点 P 满足 PF=2PE，则 (PA+PA1)·(PC+PC1) 的取值范围是___。题面纯文字；前置桥接『空间动点单变量化配方』SOURCE_METHOD_READY 未闭合，另需『阿波罗尼斯球与等距轨迹』『极化恒等式与数量积最值』的检查标准；question_coverage=BLOCKED_BRIDGE。",
+   "course_call": {
+    "course_id": "3.1.3.2",
+    "method_model_id": "bridge:apollonius_sphere_and_polarization",
+    "appears_before_first_use": true,
+    "linkage": "课程 3.1.3.2 提供坐标运算基础，但 PF=2PE 的阿波罗尼斯球轨迹、极化恒等式与数量积最值、动点单变量化配方三个桥接未全部闭合（动点单变量化仅方法骨架）；循环10 两个方法检查均未通过。",
+    "first_use_location": "任务33 C16（循环10 桥接目标题）"
+   },
+   "first_line": "目标量：(PA+PA1)·(PC+PC1) 的取值范围；入口：设正方体顶点坐标，P 满足 PF=2PE ⇒ 平方距离比→阿波罗尼斯球面方程（桥接方法）。",
+   "second_line": "依据：极化恒等式改写 (PA+PA1)·(PC+PC1)（和/差向量或中点）；PF=2PE 平方展开得球心与半径；再与定义域/轨迹求交做区域型最值检查（桥接检查标准）。",
+   "continuation": "按协议停止（不代算）：动点单变量化桥接未闭合（SOURCE_METHOD_READY），阿波罗尼斯球与极化恒等式桥接的检查标准（自造变式、放行门禁）也未具备；不以代算结果替代桥接证据。",
+   "independent_self_check": "检查：三个桥接进入目标题前必须具备项未满足（补充微课、自造变式、全空间型与区域型各一题近迁移、等号条件解释）；循环10 方法检查未通过；按标准阻断。",
+   "first_breakpoint": "桥接未闭合：空间动点单变量化配方 SOURCE_METHOD_READY；且阿波罗尼斯球与等距轨迹、极化恒等式与数量积最值未通过检查标准（自造变式/放行门禁）",
+   "hint_level": "none",
+   "verdict": "BLOCKED",
+   "answer_sidecar_read": false,
+   "human_acceptance_not_proven": true,
+   "bridge_status": "空间动点单变量化配方：NOT_CLOSED；阿波罗尼斯球与等距轨迹：NOT_CLOSED；极化恒等式与数量积最值：NOT_CLOSED"
+  }
+ ]
+}

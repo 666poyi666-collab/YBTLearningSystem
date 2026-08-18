@@ -1,0 +1,22 @@
+{
+  "schema_version": "ybt-shared-defects-v1",
+  "task_id": "LUNA-CH12-02",
+  "section": "1.2+1.3",
+  "defects": [
+    {
+      "id": "course-coverage-c15-c16",
+      "scope": "shared course corpus",
+      "status": "reported_with_route_bridge",
+      "source": "chapter1_manifest.json section 1.2+1.3 coverage_gaps and bridge_units",
+      "observed": "Current transcripts have no dedicated single-variable or Apollonius-sphere lesson for C15/C16.",
+      "impact": "Route calls coordinate_ops and adds explicit bridge checks; no dedicated-video coverage is claimed."
+    },
+    {
+      "id": "fallback-builder-exercise-anchor",
+      "scope": "build_paddle_glm_crosscheck.py",
+      "status": "workaround_applied",
+      "source": "Official builder reads source_docs while exercise items expose source_anchor.ocr_doc.",
+      "impact": "A task-local compatibility wrapper supplied the existing OCR document number in a temporary copy, invoked the official builder, and was removed after evidence generation."
+    }
+  ]
+}

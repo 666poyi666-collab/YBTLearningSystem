@@ -1,0 +1,181 @@
+{
+ "schema_version": "7.4",
+ "section": "1.1",
+ "round": 3,
+ "worker": 3,
+ "assigned_cycles": [
+  "1.1-cycle-5",
+  "1.1-cycle-6"
+ ],
+ "focus": "数量积、投影、极化与重心",
+ "runtime_contract": "deepseek_worker / opencode-go/deepseek-v4-flash / reasoning_effort=max / context_window=1000000; verified this turn against deepseek-mode.json (schema_version=1, active=true, default_count=5, model/context/effort match); no fallback, no Kimi, no subagents, no delegation.",
+ "sources_read": [
+  "data/packets/1.1/learning_path_without_questions.md",
+  "data/packets/1.1/learning_packet.json",
+  "data/contexts/1.1.json",
+  "data/bridge_supplement_lessons.json",
+  "data/bridge_micro_lessons.json",
+  "data/course_transcripts/3.1.4.3 向量夹角与直线夹角.json",
+  "declared course video metadata: C:\\Users\\poyi\\Downloads\\课程合集\\3.1 空间向量与立体几何\\3.1.4.3 向量夹角与直线夹角.mp4 (exists on disk, 214614196 bytes)"
+ ],
+ "forbidden_sources_read": false,
+ "answer_sidecar_read": false,
+ "human_acceptance_not_proven": true,
+ "cycle_results": [
+  {
+   "cycle": "1.1-cycle-5",
+   "verdict": "partial",
+   "first_breakpoint": "任务18 例6（同门禁覆盖 例7/例8）：visual_status=NEEDS_VISION_SIDECAR 且 learning_packet 中该三项例题 vision_sidecars=0（仅有图片文件，无侧车）；learning_path_without_questions.md 自身标注“图形状态：未完成视觉核验，禁止猜图；先补视觉侧车再作答”。按路线自身门禁，零基础学生在知识块与桥接之后遇到的第一组任务即无法完成。",
+   "evidence": [
+    "例6：夹角 45°/135°/60°/120°/90°（正方体结构：A1B1∥AB、△ACD1 等边、AC⊥BD）；teaching_text 有 OCR 残损片段（“AD1=AC=CD1”长度与向量混写、“>180°−”乱码、B1D1 行“180°=180°=120°”乱码后得 90°），最终数值可独立复核一致",
+    "例7：独立推导 EF=½AC（△ACD 中位线）→ EF·AB=½·1·1·cos60°=1/4，与 teaching 答案一致",
+    "例8：独立推导 AC 在直线 AB 上的投影向量=AB（因 AB⊥BC）、AC1 在平面 ABCD 上的投影向量=AC（因 C1C⊥面ABCD），与 teaching 答案一致",
+    "检查点 1.1-projection-check-1：可独立完成。自选 AC 向 AB 投影：方向沿 AB；带符号投影长度 a·b/|b|=(a·a)/a=a（由 a·b=|a||b|cosθ 一步自推）；投影向量=(a·b/|b|²)b=b=AB；向量 vs 标量区分由桥接直接给出。仅需一步代数自推，bridge-1.1-projection 与 k4 已提供全部输入",
+    "B4：独立推导 AB·CD=AB·(AD−AC)=2·2·cos60°−2·2·cos60°=0，选 D；未读答案侧车",
+    "B5：独立推导 EB1=AB−½AD，EB=AB−½AD−AA1，正交项为零 → EB1·EB=|AB|²+¼|AD|²=4+1=5，选 B；未读答案侧车"
+   ],
+   "method_models": [
+    {
+     "name": "数量积定义与夹角",
+     "trigger": "已知两向量长度与夹角（或要求夹角）",
+     "steps": [
+      "写 a·b=|a||b|cosθ",
+      "需角度时 cosθ=a·b/(|a||b|)",
+      "核对范围 [0,π] 与锐/直/钝判定"
+     ],
+     "checks": [
+      "符号与图形一致",
+      "夹角范围"
+     ]
+    },
+    {
+     "name": "向量拆解法（用已知基表示目标向量）",
+     "trigger": "目标向量长度/夹角不便直接计算",
+     "steps": [
+      "选长度与夹角已知的基向量",
+      "用中点/平行关系表示目标向量",
+      "按分配律展开点积",
+      "正交项归零、a·a=|a|² 归并"
+     ],
+     "checks": [
+      "中点系数 ½ 正确",
+      "交叉项零化",
+      "与 teaching 数值一致（例7 ¼、B4=0、B5=5）"
+     ]
+    },
+    {
+     "name": "投影向量模型",
+     "trigger": "问投影向量/投影长度/方向",
+     "steps": [
+      "投影向量 c=(a·b/|b|²)b，系数可负",
+      "带符号投影长度=a·b/|b|=|a|cosθ（自推一步）",
+      "向直线/平面投影先找垂足",
+      "图形与公式互相复核"
+     ],
+     "checks": [
+      "分母 |b|²",
+      "方向符号",
+      "区分向量与标量长度"
+     ]
+    },
+    {
+     "name": "向量角 vs 线线角",
+     "trigger": "课程 3.1.4.3 方法（仅取该结论）",
+     "steps": [
+      "向量角直接点乘公式",
+      "直线夹角加绝对值并取 [0,90°]"
+     ],
+     "checks": [
+      "看清题目问的是哪一种"
+     ]
+    }
+   ],
+   "unresolved_gaps": [
+    "例6/例7/例8 视觉侧车缺失：路线自身“禁止猜图，先补视觉侧车”，当前包无侧车 → 三项例题按路线门禁不可完成（图片文件存在但未视觉核验）",
+    "课程 3.1.4.3 全程建系坐标法（full_text 中“坐标”35 处、“投影”0 处），假设空间直角坐标系（3.1.3.x，属 1.2/1.3 内容）已会；该坐标课程不在 1.1 路线 cycle1-5 内 → 课程例题（高考原题坐标法）零基础不可复现，只能取“向量角 vs 线线角 + |cos|”结论；路线未标注此方法错位",
+    "课程方法（坐标法）与例题方法（几何/向量法）不一致，cycle-5 路径无标注（观察项）",
+    "cycle-5 直属变式=0（例6/7/8 无变式）：近迁移仅由投影检查点与 B4/B5 承担，缺“只改一个条件”的同构变式证据链",
+    "带符号投影长度（标量 a·b/|b|）无显式文本，需学生从定义自推一步；bridge 仅给出向量/标量概念区分与公式 (a·b/|b|²)b",
+    "例6 teaching_text OCR 残损（长度与向量混写、乱码符号），数值可核但文本质量差",
+    "隐含初中/必修事实：三角形中位线（例7 EF=½AC）、cos60°、正方体/正四面体结构事实——路线未讲授，按“零基础=空间向量零基础、必修几何已有”前提处理",
+    "contexts/1.1.json route_support.sequential_learning_packet.current_cycle 仍指向 1.1-cycle-1（生成器问题，非内容缺口；观察项）"
+   ]
+  },
+  {
+   "cycle": "1.1-cycle-6",
+   "verdict": "partial",
+   "first_breakpoint": "bridge-1.1-polarization（SOURCE_METHOD_READY）：learning_path_without_questions.md 自述“目前只有来源方法骨架，不能把它当成零基础学生已经学会；必须先补成完整无答案微课”。骨架 lesson_steps 未陈述恒等式本身（无 PA·PD=|PG|²−|GA|² 亦无 a·b=(|a+b|²−|a−b|²)/4），无无答案原型题、无检查点；其 release_requirements（原型题独立过程、近迁移只改一个条件、等号条件可解释）当前材料无法满足。按路线顺序（桥接先于类型训练），零基础学生在 例14 之前即卡在桥接。",
+   "evidence": [
+    "例13：独立推导 AE=½(AB+AC)（E 为 BC 中点）→ AE·AD=½·cos60°+½·cos60°=1/2，与 teaching 答案一致；READY_TEXT_ONLY 纯文字可作答",
+    "变式(例13)：独立推导 BD1=AD+AA1−AB，AC=AB+AD → BD1·AC=½+1+½+½−1−½=1，选 A；未读答案侧车；但视觉门禁未过（NEEDS_VISION_SIDECAR，无侧车）",
+    "例14：独立推导 PB+PC=2PD → PA·(PB+PC)=2PA·PD；极化恒等式 PA·PD=|PG|²−|GA|²≥−3/4（等号 P=G）→ 最小值 −3/2，选 A；恒等式推导可完整见于例14 教学文本【反思】（(PG+GA)·(PG+GD) 展开），非来自桥接骨架",
+    "检查点 1.1-centroid-check-1：可独立完成。OM=(OB+OC)/2 → OG=OA+(2/3)(OM−OA)=(OA+OB+OC)/3；系数对称性由推导中三顶点等权地位与 B/C 互换不变说明；bridge-1.1-centroid 的 lesson 恰好逐步给出该推导并明示 AG:GM=2:1",
+    "B11：独立推导 G=(OB+OC)/3（△OBC 重心，O 为起点），M=½(OA+G) → OM=½OA+⅙OB+⅙OC；|OM|²=¼·4+1/36·12+2·(½·⅙·4)=1+⅓+⅔=2 → |OM|=√2；OM·BC=(OA/2+OB/6+OC/6)·(OC−OB)=0 → OM⊥BC；未读答案侧车"
+   ],
+   "method_models": [
+    {
+     "name": "拆解法（展开分配律）",
+     "trigger": "目标点积涉及中点/和差向量",
+     "steps": [
+      "用已知基（长度夹角已知）表示",
+      "按 (a+b)·c=a·c+b·c 展开",
+      "合并 a·a=|a|² 与交叉项"
+     ],
+     "checks": [
+      "系数核对（½、⅙、⅓）",
+      "与 teaching 一致（例13 ½、变式 1）"
+     ]
+    },
+    {
+     "name": "极化恒等式",
+     "trigger": "共起点两向量数量积，中点/中心可算，求最值",
+     "steps": [
+      "取公共线段中点 G",
+      "PA·PD=|PG|²−|GA|²（可由模长平方展开导出）",
+      "以 |PG|²≥0 取最值并写等号条件 P=G"
+     ],
+     "checks": [
+      "恒等式来源可复述",
+      "等号条件",
+      "当前来源=例14【反思】，桥接骨架未提供"
+     ]
+    },
+    {
+     "name": "重心向量模型",
+     "trigger": "重心/中点相关表示",
+     "steps": [
+      "取中线 AM，OM=(OB+OC)/2",
+      "AG:GM=2:1 → OG=OA+(2/3)(OM−OA)",
+      "整理为 (OA+OB+OC)/3，换中线复核"
+     ],
+     "checks": [
+      "2:1 方向不写反",
+      "三系数相等",
+      "公共起点任意"
+     ]
+    },
+    {
+     "name": "垂直判定",
+     "trigger": "证垂直/求含垂直项点积",
+     "steps": [
+      "展开点积",
+      "正交项 a·b=0 归零"
+     ],
+     "checks": [
+      "B11(2) OM·BC=0"
+     ]
+    }
+   ],
+   "unresolved_gaps": [
+    "bridge-1.1-polarization 为 SOURCE_METHOD_READY 且路线自认不完整（“必须先补成完整无答案微课”）；cycle-6 仅因例14 教学文本【反思】含完整推导才可继续；B8（cycle-9）与 1.2+1.3-C16 依赖其未满足的 release_requirements",
+    "变式(例13) 与 例14 视觉侧车缺失（同 cycle-5 门禁）：NEEDS_VISION_SIDECAR、无侧车、路线“禁止猜图”",
+    "隐含必修/初中事实：重心分中线 2:1（桥接 lesson 内明示，非讲授）、cos60°/sin60° 三角函数值（课程 3.1.4.3 明言“高一三角函数应该熟”）",
+    "cycle-6 无新增视频：极化与重心均无讲授课程，仅文本桥接 → 零基础“先听讲”环节缺失",
+    "例13/例14 教学文本含完整解答（教学允许），但独立掌握证据需延迟闭卷复测，本轮未运行（human_acceptance_not_proven）",
+    "contexts/1.1.json current_cycle 指针仍为 cycle-1（生成器问题，观察项）"
+   ]
+  }
+ ],
+ "overall_verdict": "partial",
+ "summary": "Worker 3, detailed round 3, cycles 5-6 (数量积/投影/极化/重心): all answer-free items independently derived and numerically verified by me without reading any answer sidecar — B4=0(D), B5=5(B), 例7=1/4, 例13=1/2, 变式(13)=1(A), 例14 最小值=-3/2(A), B11 |OM|=sqrt(2) 且 OM⊥BC, 两个检查点均可由 k4+桥接独立完成（投影长度需一步自推）。但两循环均非 proxy_pass：(1) 例6/7/8 与 变式/例14 视觉侧车缺失而路线自身“禁止猜图，先补视觉侧车”；(2) bridge-1.1-polarization 为 SOURCE_METHOD_READY 且路线自认不完整；(3) 课程 3.1.4.3 建系坐标法超前于路线内 1.3 坐标前置且无标注；(4) 中位线/2:1/三角函数值等必修事实为隐含假设；(5) cycle-5 直属变式=0。human_acceptance_not_proven=true：无真人观察、无延迟闭卷复测，代理独立推导≠真人掌握。"
+}

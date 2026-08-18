@@ -1,0 +1,179 @@
+{
+  "schema_version": "1",
+  "section": "1.1",
+  "round": 4,
+  "worker": 2,
+  "assigned_cycles": [
+    "1.1-cycle-3",
+    "1.1-cycle-4"
+  ],
+  "focus": "复核四点共面完整微课、变式12视觉链和共面证明",
+  "runtime_contract": {
+    "agent_role": "deepseek_worker",
+    "model": "opencode-go/deepseek-v4-flash",
+    "reasoning_effort": "max",
+    "context_window": 1000000,
+    "contract_honored": true,
+    "note": "复用现有 worker, 未派生子代理, 未使用 Kimi; 环境内无法自证模型身份, 未观察到偏离信号。"
+  },
+  "sources_read": [
+    "data/packets/1.1/learning_path_without_questions.md (mtime 2026-08-16 00:03:23, 59605B; 循环3-4节)",
+    "data/packets/1.1/learning_packet.json (cycles 3/4 全量 + 条目内嵌 vision_sidecar/vision_hint/vision_source_provenance/image_refs)",
+    "data/contexts/1.1.json (questions 14 条, instructions, unresolved=[])",
+    "data/bridge_micro_lessons.json (unit micro-four-point-coplanar, status=SUPPLEMENT_READY)",
+    "data/bridge_supplement_lessons.json (10 个 lesson, 含 micro-four-point-coplanar 四点共面的仿射系数判定)",
+    "data/course_transcripts/3.1.2.1 空间向量拆分法.json (635 句, provenance)",
+    "data/course_transcripts/3.1.2.2 空间向量等值面法.json (536 句; 系数和必然为一/末减出 命中)",
+    "data/course_transcripts/3.1.4.2 证明共面.json (441 句; 向量拆分/前面讲过 命中)"
+  ],
+  "forbidden_sources_read": false,
+  "answer_sidecar_read": false,
+  "human_acceptance_not_proven": true,
+  "repair_checks": [
+    {
+      "id": "RC-1",
+      "name": "变式12 视觉链 (NEEDS_VISION_SIDECAR → VISION_VERIFIED)",
+      "status": "fixed",
+      "evidence": [
+        "packet 变式 item visual_status=VISION_VERIFIED, 内嵌 vision_sidecar: 12 个命名坐标 (A,B,C,D front; A1,B1,C1,D1 back; E,F,G,H 中点位置), confidence=E2",
+        "路线 md 任务16 图形状态: 视觉已核验 (旧版为 未完成视觉核验, 禁止猜图)",
+        "image_refs=[imgs/img_in_image_box_879_813_1092_1011.jpg] exists=True; vision_hint=1.1-LI0d9860d67f5ba867",
+        "题干文字本身完整给出中点配置 (A1D1/C1D1/CC1/AB 中点), sidecar 坐标与之自洽"
+      ],
+      "residual": [
+        "sidecar confidence=E2 (低置信), 该 packet 副本 objects/relations/text 为空, 仅坐标表; 建议控制器核对 E2 是否需升级",
+        "C1/D1/G 的坐标措辞非正式 (top-right back top / top-right back bottom), 但未与题干冲突"
+      ]
+    },
+    {
+      "id": "RC-2",
+      "name": "四点共面桥接完整无答案微课 (SOURCE_METHOD_READY → SUPPLEMENT_READY)",
+      "status": "fixed",
+      "evidence": [
+        "bridge_micro_lessons.json: micro-four-point-coplanar status=SUPPLEMENT_READY, supplement_path=data/bridge_supplement_lessons.json",
+        "bridge_supplement_lessons.json 新增 lesson: 四点共面的仿射系数判定：系数和为什么等于1, 含双向推导: 正向 P∈面ABC→AP=uAB+vAC→OP=(1-u-v)OA+uOB+vOC→系数和=1; 逆向 x+y+z=1→OP=OA+yAB+zAC→P∈面ABC",
+        "lesson 附 prerequisite_check(3 项), self_made_variant(自造和为1/不为1 变式), independent_check(正向/逆向/区分点共面与向量共面), release_note(补充课已具备; 须完成无答案方法检查和一题同构变式)",
+        "路线 md 循环4 桥接节已渲染为: 当前状态 SUPPLEMENT_READY｜已有无答案补充课",
+        "round-3 缺口(系数和=1 推导书面只有结论, 依赖视频白板)由此关闭"
+      ],
+      "residual": [
+        "微课本身无教材题答案(符合 answer_free); 但需真实验收 self_made_variant 与口述理由后才放行 B9/C13/C14",
+        "桥接 target_questions 含 C13/C14, 属循环9/10 范围, 不在本 worker 复核内"
+      ]
+    },
+    {
+      "id": "RC-3",
+      "name": "课程前置先于首次使用",
+      "status": "pass",
+      "evidence": [
+        "全 10 循环 course_keys 扫描: cycle1 space_vector_ops → cycle2 decomposition → cycle3 equal_surface → cycle4 coplanar, 每循环 prerequisite_course_keys 均已在更早循环引入 (cycles 3-4 的前置 decomposition 在 cycle 2 首次使用)",
+        "prerequisite_knowledge_refs 同样无缺失 (1.1-k3 于 cycle 2 首次呈现, cycles 3-4 复用)"
+      ],
+      "residual": [
+        "范围外观察(供控制器裁定): cycle 8 与 cycle 10 的 prerequisite_course_keys=[parallel_perpendicular], 但全 10 循环 course_keys 从未引入该课程 — 属其他循环缺陷, 非本 worker 范围"
+      ]
+    },
+    {
+      "id": "RC-4",
+      "name": "视觉完整性覆盖分配循环的全部图片",
+      "status": "pass",
+      "evidence": [
+        "cycle 3 两项方法检查 visual=None, 无图片依赖",
+        "例12 img_refs=0 (READY_TEXT_ONLY, vision_hint=1.1-LI85adf2efd96849c8), 纯文字",
+        "变式12 img_refs=1, 图片 exists=True, 内嵌 sidecar 覆盖 12 点布局",
+        "B9 img_refs=1, 图片 exists=True, 内嵌 sidecar: relations 含 点E在直线PA上/点F在直线PC上/点G在直线PD上/底面 ABCD 各边, 与题干 DG=2GP、E/F 为 PA/PC 中点自洽"
+      ],
+      "residual": [
+        "B9 sidecar 的 image 路径指向 data/ocr_live_full/imgs, 而 image_refs 指向 data/ocr_live_current/.../imgs (同文件名 img_in_image_box_871_1191_1093_1374.jpg, sidecar 带 image_sha256=e868adaf...); 需控制器确认两个副本一致",
+        "两张图 sidecar 均为 E2 置信度, B9 sidecar 无 coordinates 仅有 relations"
+      ]
+    }
+  ],
+  "cycle_results": [
+    {
+      "cycle": "1.1-cycle-3",
+      "title": "空间向量等值面法",
+      "verdict": "proxy_pass",
+      "first_breakpoint": null,
+      "evidence": [
+        "独立推导 MCK1: P∈面ABC ⟺ x+y+z=1 (1.1-k3 推论补全 + 3.1.2.2 转写 系数和必然为一); 自造例 (1/3,1/3,1/3) 和=1 在面内; 反例 (1,1,1) 和=3 落平行 3 倍面 → 不能只检查三系数非零",
+        "独立推导 MCK2: E 系数和=1/2+1/2+1=2 → 2倍面; F 系数和=1+2+1/2=7/2 → 7/2倍面; EF=OF-OE 系数和 = 7/2-2 = 3/2 (末减出); 系数相减为纯算术, 比 3D 作图稳定",
+        "3.1.2.2 转写(536 句)通篇覆盖: 系数和必然为一/倍面/末减出; 视频文件存在",
+        "无教材例题/变式/习题, 仅 2 个纯文字检查点 (visual=None), 无隐藏前置 (前置 decomposition 与 1.1-k3 均已在 cycle 2 交付)"
+      ],
+      "method_models": [
+        {
+          "name": "等值面法（系数和速解）",
+          "trigger": "以不共面 O,A,B,C 为基, 点 P 表示为 OP=xOA+yOB+zOC; 判断 P 与面/倍面位置或求差向量系数和",
+          "steps": [
+            "选公共起点 O, 目标点写成三条不共面基向量的线性组合",
+            "按系数和 x+y+z 定位等值面: 1倍面=面ABC, 0倍面过 O, k倍面为平行面",
+            "点共面判定: P,A,B,C 共面 ⟺ x+y+z=1; 二维退化 三点共线 ⟺ x+y=1",
+            "差向量: OF-OE 的系数和 = 各自系数和相减, 免作图"
+          ],
+          "checks": [
+            "能说明为什么是系数和=1 而非三系数非零",
+            "能区分二维/三维系数条件",
+            "能用系数相减算差向量系数和并说明稳定性"
+          ]
+        }
+      ],
+      "unresolved_gaps": [
+        "本循环无教材例题作书面脚手架, 方法依赖视频+知识结论 (书面推导现由补充微课 RC-2 补齐)",
+        "转写为 ASR 噪声文本, 白板细节不可完全复核"
+      ]
+    },
+    {
+      "cycle": "1.1-cycle-4",
+      "title": "共面证明",
+      "verdict": "proxy_pass",
+      "first_breakpoint": null,
+      "evidence": [
+        "独立推导 例12 (READY_TEXT_ONLY): 以 O 为原点 M=(OA+OB+OC)/3, 得 MA=-MB-MC → λ=μ=-1 → MA,MB,MC 共面; 教学文本给出完整解法, 纯文字可学",
+        "独立推导 变式12: 以 A 为原点, E=a+d/2, G=b+d+a/2 → EG=G-E=b+d/2-a/2 → (1) x=1, y=1/2, z=-1/2; (2) F=b/2+d+a, H=b/2, 得 F-E=(2/3)(G-E)-(1/3)(H-E) → E,F,G,H 四点共面 (或 H=2E-3F+2G 系数和=1); sidecar 坐标与推导自洽",
+        "独立推导 B9 (VISION_VERIFIED): 以 B 为原点, D=BA+BC, DG=2GP → G=D/3+2P/3 → (1) x=1/3, y=1/3, z=2/3; (2) E=(a+p)/2, F=(c+p)/2, G=(a+c+2p)/3=(2/3)E+(2/3)F → B,E,G,F 共面",
+        "桥接放行条件已可满足: SUPPLEMENT_READY 微课含双向推导, 可完成 口述系数和成立理由 + 自造变式 + 一题同构变式, 之后 B9 放行",
+        "3.1.4.2 转写(441 句)教学主线: 证明共面=向量拆分 (代表 P 与 ABC 共面, 这是前面讲过的), 与微课/K3 一致"
+      ],
+      "method_models": [
+        {
+          "name": "向量共面判定（拆分法）",
+          "trigger": "证四点共面或向量共面: 证 D 与 A,B,C 共面 / 证 MA,MB,MC 共面",
+          "steps": [
+            "选公共起点, 目标向量写成面内两不共线向量的线性组合",
+            "有解(λ,μ 存在) ⟺ 向量共面; 四点共面 ⟺ 同起点下第四点向量可拆",
+            "例12 技巧: 把题设 OM=(OA+OB+OC)/3 拆成 MA=OA-OM 消去 O",
+            "或套系数和: O,A,B,C 不共面, OP=xOA+yOB+zOC, P∈面ABC ⟺ x+y+z=1"
+          ],
+          "checks": [
+            "区分向量共面(可拆)与点共面(同面)并回代几何位置",
+            "能用消 O 技巧翻译题设为同一基底等式",
+            "三点共线(x+y=1)与四点共面(x+y+z=1)不混淆"
+          ]
+        },
+        {
+          "name": "四点共面系数和=1（补充微课方法, SUPPLEMENT_READY）",
+          "trigger": "目标题 B9 (放行=完成本批方法桥接后) 及 C13/C14",
+          "steps": [
+            "固定公共起点 O, 待判定点 P 写成 OP=xOA+yOB+zOC",
+            "正向: P∈面ABC → AP=uAB+vAC → OP=(1-u-v)OA+uOB+vOC → 系数和=1",
+            "逆向: x+y+z=1 → OP=OA+yAB+zAC → P 在面 ABC 内",
+            "回代几何位置, 区分点共面与向量共面"
+          ],
+          "checks": [
+            "能正向推出系数和为1 (非记忆口号)",
+            "能完成逆向证明",
+            "能区分点共面与向量共面; 换公共起点时重新推导"
+          ]
+        }
+      ],
+      "unresolved_gaps": [
+        "变式12/B9 sidecar 均为 E2 置信度: 视觉链存在但置信低, 文本配置自洽故不构成硬断点; 若控制器要求 E1 才放行, 则需补核",
+        "B9 sidecar image 路径与 image_refs 目录不一致 (ocr_live_full vs ocr_live_current, 同文件名)",
+        "C13/C14 (桥接 target) 属后续循环, 不在本 worker 范围"
+      ]
+    }
+  ],
+  "overall_verdict": "proxy_pass",
+  "summary": "Round-3 三类缺陷复核: (1) 变式12 视觉链已修复 — NEEDS_VISION_SIDECAR→VISION_VERIFIED, 包内嵌 12 点坐标 sidecar, md 图形状态=视觉已核验, 图片 exists=True; (2) 四点共面桥接已修复 — SOURCE_METHOD_READY→SUPPLEMENT_READY, 补充微课含系数和=1 双向推导+自造变式+独立检查, 关闭了 round-3 的书面推导缺口; (3) 课程前置顺序在 cycles 3-4 通过 (decomposition 先于 equal_surface/coplanar)。独立推导全部通过: MCK1/2 (系数和=1, 2倍面/7/2倍面, EF 系数和=3/2), 例12 (MA=-MB-MC), 变式12 ((1) x=1,y=1/2,z=-1/2; (2) F-E=(2/3)(G-E)-(1/3)(H-E)), B9 ((1) x=y=1/3,z=2/3; (2) G=(2/3)E+(2/3)F)。未发现硬断点; 残余: 两张图 sidecar 均 E2 低置信、B9 sidecar 路径目录不一致(full vs current), 均不构成内容阻塞。范围外观察: cycles 8/10 前置课程 parallel_perpendicular 从未在 course_keys 引入, 建议控制器转交对应 worker。human_acceptance_not_proven=true; 未读 answer_sidecar/vision_sidecar_full/其他报告, 未用 Kimi, 未派生子代理。"
+}

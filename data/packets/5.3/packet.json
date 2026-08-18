@@ -1,0 +1,1089 @@
+{
+  "schema_version": "7.1",
+  "packet_type": "DEEPSEEK_TEXT_PACKET",
+  "section": "5.3",
+  "label": "第3节 函数的单调性",
+  "source": {
+    "ocr_root": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95",
+    "ocr_docs": [
+      21,
+      41
+    ],
+    "source_file": null
+  },
+  "manifest": {
+    "page_count": 21,
+    "question_count": 20,
+    "expected_question_count": 20,
+    "expected_groups": {
+      "A": [
+        1,
+        3
+      ],
+      "B": [
+        4,
+        17
+      ],
+      "C": [
+        18,
+        20
+      ]
+    },
+    "derived_question_correction_count": 0
+  },
+  "status": "VERIFIED",
+  "consumer_guard": "Only consume when status=VERIFIED; UNVERIFIED packets are diagnostic evidence only.",
+  "pages": [
+    {
+      "ocr_doc": 21,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_21.md",
+      "text": "# 5.3.1 函数的单调性\n\n## 知识梳理\n\n## 知识点 1：函数的单调性与导数\n\n### 1. 函数的单调性与导数正负的关系\n\n一般地，函数  \\(f(x)\\) 的单调性与导函数  \\(f'(x)\\) 的正负之间具有如下关系：\n\n在某个区间 \\((a,b)\\)上，若 \\(f'(x)>0\\)，则函数 \\(y=f(x)\\)在区间 \\((a,b)\\)上单调递增；若 \\(f'(x)<0\\)，则函数 \\(y=f(x)\\)在区间 \\((a,b)\\)上单调递减。\n\n注：①当  \\(f'(x) \\geq 0\\) 在  \\((a,b)\\) 上恒成立时，只要使  \\(f'(x) = 0\\) 的点是“孤立”的，也即没有连成区间，那么  \\(f(x)\\) 在  \\((a,b)\\) 上仍然单调递增。例如，对于  \\(f(x) = x^3\\)，有  \\(f'(x) = 3x^2 \\geq 0\\)，但使  \\(f'(x) = 0\\) 的点只有  \\(x = 0\\)，是孤立的，而不是在某个区间上恒有  \\(f'(x) = 0\\)，所以  \\(f(x)\\) 在  \\(\\mathbb{R}\\) 上单调递增。 \\(f'(x) \\leq 0\\) 时有类似的结论。\n\n②初等函数中，除常值函数外，都能满足使 \\(f'(x)=0\\)的点是“孤立”的，所以当题干给出非常值函数 \\(f(x)\\)在 \\((a,b)\\)上单调递增时，需将其翻译为 \\(f'(x)\\geq0\\)在 \\((a,b)\\)上恒成立，而不是 \\(f'(x)>0\\)在 \\((a,b)\\)上恒成立.\n\n### 2. 函数值变化快慢与导数的关系\n\n一般地，如果一个函数在某一范围内导数的绝对值较大，那么函数在这个范围内变化较快，这时函数的图象就会比较“陡峭”（向上或向下）；反之，如果导数的绝对值较小，那么函数在这个范围内变化较慢，函数的图象就会比较“平缓”。\n\n## 知识点 2：利用导数判断函数的单调性\n\n一般情况下，可以通过如下步骤判断函数  \\(y = f(x)\\) 的单调性：\n\n## 知识点1\n\n【例1】若定义在(0,6]上的函数 \\(f(x)\\)的图象如图，则不等式 \\(f'(x)<0\\)的解集为___.\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_810_434_1005_596.jpg\" alt=\"Image\" width=\"16%\" /></div>\n\n\nA. (2,4) B. (0,2)\n\nC. (4,6) D. (2,6)\n\n解析：由所给图象可以看出  \\(f(x)\\) 的单调递减区间，从而推断出满足  \\(f'(x) < 0\\) 的区间，由图可知， \\(f(x)\\) 的单调递减区间是  \\((2,4)\\)，所以不等式  \\(f'(x) < 0\\) 的解集为  \\((2,4)\\).\n\n答案：A\n\n【例2】如果函数 \\(f(x)=2x+\\frac{a}{x}\\)在区间[1,2]上单调递增，则实数a的取值范围为___.\n\n解析：条件给出 \\(f(x)\\) 在 \\([1,2]\\) 上 \\(\\nearrow\\)，可翻译为 \\(f'(x) \\ge 0\\) 在 \\([1,2]\\) 上恒成立，\n\n由题意，\\(f'(x) = 2 - \\frac{a}{x^2} \\ge 0\\) 在区间 \\([1,2]\\) 上恒成立，观察发现上述不等式中的参数 \\(a\\) 容易分离出来，故可考虑用参变分离处理，\n\n当 \\(x \\in [1,2]\\) 时，\\(2 - \\frac{a}{x^2} \\ge 0 \\Leftrightarrow \\frac{a}{x^2} \\le 2\\)\n\n\\(\\Leftrightarrow a \\le 2x^2\\)，\n\n当 \\(x \\in [1,2]\\) 时，\\((2x^2)_{\\min} = 2 \\times 1^2 = 2\\)，\n\n所以要使 \\(a \\le 2x^2\\) 恒成立，应有 \\(a \\le 2\\)。\n\n答案：\\((-\\infty,2]\\)",
+      "text_sha256": "dd2c7e8ddf501addbfe060112c67dc875a994cf9c9db27166a1b8f550bd1d05f",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_810_434_1005_596.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_810_434_1005_596.jpg",
+          "exists": true
+        }
+      ],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 22,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_22.md",
+      "text": "求出函数的定义域\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_121_112_634_403.jpg\" alt=\"Image\" width=\"43%\" /></div>\n\n\n求出导数 \\(f'(x)\\)的零点\n\n用 \\(f'(x)\\)的零点将 \\(f(x)\\)的定义域划分为若干个区间，判断 \\(f'(x)\\)在各区间上的正负，由此得出函数 \\(y=f(x)\\)在定义域内的单调性\n\n注：①对于间隔开的具有相同单调性的单调区间，这些区间一般不能用“ \\(\\cup\\)”连接，可用“，”或“和”连接.\n\n## 知识点2\n\n②在对函数划分单调区间时，除了注意使导数为0的点，还要注意在定义域内的间断点。\n\n【例3】函数 \\(f(x)=x\\ln x\\)的单调递增区间为___。\n\n解析：由题意， \\(f(x)\\)的定义域是 \\((0,+\\infty)\\)，\n\n且 \\(f'(x)=1\\cdot\\ln x+x\\cdot\\frac{1}{x}=\\ln x+1\\)，\n\n令 \\(f'(x)>0\\)可得 \\(\\ln x+1>0\\)，\n\n所以 \\(\\ln x>-1\\)，解得： \\(x>\\frac{1}{e}\\)，\n\n故 \\(f(x)\\)的单调递增区间为 \\(\\left(\\frac{1}{e},+\\infty\\right)\\)。\n\n答案： \\(\\left(\\frac{1}{e},+\\infty\\right)\\)\n\n\n\n## 本节核心题型\n\n用导数研究函数的单调性，在高中数学中有着广泛的应用。本节我们先通过类型Ⅰ来给大家强化导函数与原函数图象的关系；接着又设计了类型Ⅱ和类型Ⅲ这两组题分别针对无参函数和含参函数的单调性分析；有时我们也会遇到给出函数的单调性，让求参数范围的问题，这在类型Ⅳ中会有详细的分析；最后，研究函数零点时，往往也需要先分析函数的单调性，所以我们通过类型V来给大家讲解如何用导数研究较复杂的函数的零点。\n\n类型Ⅰ：导函数与原函数图象关联的分析\n\n【例4】函数  \\(y = f(x)\\) 的图象如图（最左边的图）所示，则  \\(y = f'(x)\\) 的图象可能是（）\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_120_1056_277_1201.jpg\" alt=\"Image\" width=\"13%\" /></div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_292_1053_475_1255.jpg\" alt=\"Image\" width=\"15%\" /></div>\n\n\n<div style=\"text-align: center;\">A</div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_487_1053_674_1252.jpg\" alt=\"Image\" width=\"15%\" /></div>\n\n\n<div style=\"text-align: center;\">B</div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_690_1054_874_1227.jpg\" alt=\"Image\" width=\"15%\" /></div>\n\n\n<div style=\"text-align: center;\">C</div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_889_1052_1075_1225.jpg\" alt=\"Image\" width=\"15%\" /></div>\n\n\n<div style=\"text-align: center;\">D</div>\n\n\n解析：给出  \\(f(x)\\) 的图象，让选  \\(f'(x)\\) 的图象，可由  \\(f(x)\\) 的图象得到其单调性，该单调性与  \\(f'(x)\\) 的正负有关，由此推断  \\(f'(x)\\) 的图象，由所给图象可知  \\(f(x)\\) 在  \\((-\\infty, 0)\\) 上  \\(\\nearrow\\)，在  \\((0, +\\infty)\\) 上  \\(\\searrow\\)，所以在  \\((-\\infty, 0)\\) 上， \\(f'(x) > 0\\)，在  \\((0, +\\infty)\\) 上， \\(f'(x) < 0\\)，结合选项可知选 D.\n\n答案：D\n\n【反思】对于给出  \\(f(x)\\) 的图象，让选  \\(f'(x)\\) 的图象这类题，常由所给图象分析出  \\(f(x)\\) 的单调区间，进而得到  \\(f'(x)\\) 在对应区间上的正负情况，并由此判断选项。那如果是给出  \\(f'(x)\\) 的图象，让选  \\(f(x)\\) 的图象呢？这就需要由所给图象分析出  \\(f'(x)\\) 在哪些区间为正，哪些区间为负，得到  \\(f(x)\\) 在对应区间上的单调性，并由此判断选项，我们来看下面的变式1.\n\n【变式1】已知函数  \\(y=f(x)\\) 的导函数  \\(y=f'(x)\\) 的图象如图（最左边的图）所示，则  \\(f(x)\\) 的图象",
+      "text_sha256": "7acfc132395995533f8fc043ec265aa64ef719909030fd1f1c257ac733492018",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_121_112_634_403.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_121_112_634_403.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_120_1056_277_1201.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_120_1056_277_1201.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_292_1053_475_1255.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_292_1053_475_1255.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_487_1053_674_1252.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_487_1053_674_1252.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_690_1054_874_1227.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_690_1054_874_1227.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_889_1052_1075_1225.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_889_1052_1075_1225.jpg",
+          "exists": true
+        }
+      ],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 23,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_23.md",
+      "text": "可能是（）\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_176_165_342_292.jpg\" alt=\"Image\" width=\"13%\" /></div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_367_167_514_291.jpg\" alt=\"Image\" width=\"12%\" /></div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_536_164_677_289.jpg\" alt=\"Image\" width=\"11%\" /></div>\n\n\n<div style=\"text-align: center;\">A</div>\n\n\n<div style=\"text-align: center;\">B</div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_702_165_851_287.jpg\" alt=\"Image\" width=\"12%\" /></div>\n\n\n<div style=\"text-align: center;\">C</div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_877_164_1016_290.jpg\" alt=\"Image\" width=\"11%\" /></div>\n\n\n<div style=\"text-align: center;\">D</div>\n\n\n解析：给出  \\(f'(x)\\) 的图象，可以看看它在哪些区间为正，哪些区间为负，得到  \\(f(x)\\) 的单调性，由所给图象可知当 x < -2 或 -1 < x < 1 时， \\(f'(x) < 0\\)，当 -2 < x < -1 或 x > 1 时， \\(f'(x) > 0\\)，所以  \\(f(x)\\) 在  \\((-∞, -2)\\) 上↘，在  \\((-2, -1)\\) 上↗，在  \\((-1, 1)\\) 上↘，在  \\((1, +∞)\\) 上↗，故选 B.\n\n答案：B\n\n【变式 2】函数  \\(f(x)\\) 的图象如图所示，设  \\(f(x)\\) 的导函数为  \\(f'(x)\\)，则  \\(\\frac{f'(x)}{f(x)} > 0\\) 的解集为（ ）\n\nA.  \\((1,6)\\) \\quad B.  \\((1,4)\\) \\quad C.  \\((-\\infty,1)\\) \\quad D.  \\((1,4) \\cup (6,+\\infty)\\)\n\n解析： \\(\\frac{f'(x)}{f(x)} > 0 \\Leftrightarrow \\begin{cases} f(x) > 0 \\\\ f'(x) > 0 \\end{cases}\\) 或  \\(\\begin{cases} f(x) < 0 \\\\ f'(x) < 0 \\end{cases}\\)，\n\n\n\n\\(f(x)\\) 的正负情况容易由图直接看出，那 \\(f'(x)\\) 的正负呢？可结合单调性来看，\n\n由图可知，\\(f(x)>0\\Leftrightarrow1<x<6\\)，\\(f(x)<0\\Leftrightarrow x<1\\) 或 \\(x>6\\)，\n\n另一方面，\\(f(x)\\) 在 \\((-\\infty,4)\\) 上 \\(\\nearrow\\)，在 \\((4,+\\infty)\\) 上 \\(\\searrow\\)，所以 \\(f'(x)>0\\Leftrightarrow x<4\\)，\\(f'(x)<0\\Leftrightarrow x>4\\)，\n\n所以 \\(\\begin{cases} f(x)>0 \\\\ f'(x)>0 \\end{cases}\\) 即为 \\(\\begin{cases} 1<x<6 \\\\ x<4 \\end{cases}\\)，取交集得 \\(1<x<4\\)；\\(\\begin{cases} f(x)<0 \\\\ f'(x)<0 \\end{cases}\\) 即为 \\(\\begin{cases} x<1\\text{ 或 } x>6 \\\\ x>4 \\end{cases}\\)，取交集得 \\(x>6\\)；故选 D.\n\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_917_643_1094_748.jpg\" alt=\"Image\" width=\"14%\" /></div>\n\n\n答案：D\n\n类型Ⅱ：用导数研究无参函数的单调性\n\n【例 5】已知函数  \\(f(x)=\\frac{1}{3}x^{3}-x^{2}+ax+b\\) 的图象在点  \\((0,f(0))\\) 处的切线方程是  \\(3x+y-2=0\\).\n\n（1）求a，b的值：\n\n（2）求函数  \\(f(x)\\) 的单调区间.\n\n解：（1）（条件给出  \\(f(x)\\) 在  \\((0,f(0))\\) 处的切线方程，可按  \\(f'(0)\\) 等于切线斜率，建立一个方程）由题意， \\(f'(x)=x^{2}-2x+a\\)，所以  \\(f'(0)=a\\)，又  \\(f(x)\\) 在  \\((0,f(0))\\) 处的切线方程为  \\(3x+y-2=0\\) 该直线的方程可化为  \\(y=-3x+2\\)，所以斜率为 -3，故 a=-3，\n\n（再求b，注意到点 \\((0,f(0))\\)也在切线上，故考虑将其代入切线方程求b）\n\n由题意， \\(f(0)=b\\)，所以点 \\((0,b)\\)在切线 \\(3x+y-2=0\\)上，故b-2=0，解得：b=2。\n\n（2）（已求得 \\(a\\), \\(b\\), 则 \\(f'(x)\\) 不含参，故可直接分析 \\(f'(x)\\) 的正负，得到 \\(f(x)\\) 的单调区间）\n\n由（1）可得 \\(f'(x) = x^2 - 2x - 3 = (x+1)(x-3)\\)，所以 \\(f'(x) > 0 \\Leftrightarrow x < -1\\) 或 \\(x > 3\\)，\n\n\\(f'(x) < 0 \\Leftrightarrow -1 < x < 3\\)，故 \\(f(x)\\) 的单调递增区间是 \\((-\\infty, -1)\\)，\\((3, +\\infty)\\)，单调递减区间是 \\((-1, 3)\\)。\n\n【反思】若函数  \\(f(x)\\) 的解析式较复杂，不易通过简单的观察就得到其单调性，此时可用导函数来进行判断，具体步骤为：①求出导函数  \\(f'(x)\\)；②将  \\(f'(x)\\) 变形（如分解因式），使其容易判断正负；③求解不等式  \\(f'(x)>0\\) 和  \\(f'(x)<0\\)，分别得到  \\(f(x)\\) 的单调递增区间和单调递减区间。本题的  \\(f(x)\\) 是三次函数，导数也可以用于研究含指数、对数、三角函数结构的函数的单调性，下面我们再来看几个变式。",
+      "text_sha256": "16549b218d9eaf3c4fea4d3f8cc44749496b1c6bd9fcda692812eaace9e64b94",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_176_165_342_292.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_176_165_342_292.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_367_167_514_291.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_367_167_514_291.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_536_164_677_289.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_536_164_677_289.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_702_165_851_287.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_702_165_851_287.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_877_164_1016_290.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_877_164_1016_290.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_917_643_1094_748.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_917_643_1094_748.jpg",
+          "exists": true
+        }
+      ],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 24,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_24.md",
+      "text": "【变式1】已知函数  \\(f(x)=\\frac{2+\\ln x}{x}\\)，讨论  \\(f(x)\\) 的单调性.\n\n解：（函数  \\(f(x)\\) 的解析式较复杂，不易直接看出其单调性，考虑求导，用导函数来判断）\n\n解：（四数  \\(f(x)\\) 的解析式按要求，不易直接看出其单调性，考虑求导，用导函数来判断）\n\n由题意，函数  \\(f(x)\\) 的定义域是  \\((0,+\\infty)\\)，且  \\(f'(x)=\\frac{\\frac{1}{x}\\cdot x-(2+\\ln x)}{x^2}=-\\frac{1+\\ln x}{x^2}\\)，\n\n所以  \\(f'(x)>0\\Leftrightarrow 1+\\ln x<0\\Leftrightarrow \\ln x<-1\\Leftrightarrow 0<x<\\frac{1}{e}\\)，  \\(f'(x)<0\\Leftrightarrow 1+\\ln x>0\\Leftrightarrow \\ln x>-1\\Leftrightarrow x>\\frac{1}{e}\\)，\n\n故  \\(f(x)\\) 在区间  \\(\\left(0,\\frac{1}{e}\\right)\\) 上单调递增，在区间  \\(\\left(\\frac{1}{e},+\\infty\\right)\\) 上单调递减.\n\n【反思】①若题干让求  \\(f(x)\\) 的单调区间，则应回答 “ \\(f(x)\\) 的单调递增区间是⋯，单调递减区间是⋯”；若让讨论  \\(f(x)\\) 的单调性，则应回答 “ \\(f(x)\\) 在⋯单调递增，在⋯单调递减”；②若连续的函数  \\(f(x)\\) 在其单调性的转折点处有定义，则写单调区间时，该点处可以写成开区间，也可以写成闭区间。以本题为例，也可以写成 “ \\(f(x)\\) 在区间  \\(\\left(0, \\frac{1}{e}\\right]\\) 上单调递增，在区间  \\(\\left[\\frac{1}{e}, +\\infty\\right)\\) 上单调递减”。\n\n【变式2】已知函数  \\(f(x)=\\frac{e^{x}}{x^{2}-x+1}\\)，讨论函数  \\(f(x)\\) 的单调性.\n\n解：（定义域不易直接看出，先分析定义域）因为 \\(x^2 - x + 1 = \\left(x - \\frac{1}{2}\\right)^2 + \\frac{3}{4} \\geq \\frac{3}{4} > 0\\)，所以 \\(f(x)\\)的定义域为 \\(\\mathbb{R}\\)，\n\n（解析式较复杂，不易直接看出单调性，考虑求导分析）由题意， \\(f'(x) = \\frac{e^x(x^2 - x + 1) - (2x - 1)e^x}{(x^2 - x + 1)^2} = \\frac{(x^2 - 3x + 2)e^x}{(x^2 - x + 1)^2} = \\frac{(x - 1)(x - 2)e^x}{(x^2 - x + 1)^2}\\)，所以 \\(f'(x) > 0 \\Leftrightarrow x < 1\\)或 \\(x > 2\\)， \\(f'(x) < 0 \\Leftrightarrow 1 < x < 2\\)，\n\n故 \\(f(x)\\)在 \\((-\\infty, 1)\\)上单调递增，在 \\((1, 2)\\)上单调递减，在 \\((2, +\\infty)\\)上单调递增。\n\n【变式 3】已知函数  \\(f(x)=x+a\\sin x\\) 在 x=0 处的切线方程为  \\(x+y=0\\).\n\n（1）求 a 的值：\n\n（2）当 \\(x\\in[0,2\\pi]\\)时，求函数 \\(f(x)\\)的单调区间.\n\n解：（1） \\(f(x)\\) 在 x=0 处的切线方程  \\(x+y=0\\) 可化为 y=-x，其斜率为 -1，所以  \\(f'(0)=-1\\)，又由题意， \\(f'(x)=1+a\\cos x\\)，所以  \\(f'(0)=1+a\\)，故 1+a=-1，解得：a=-2。\n\n（2）由（1）可得  \\(f'(x)=1-2\\cos x\\)\n\n（要判断  \\(f'(x)\\) 在  \\([0,2\\pi]\\) 上的正负，就看  \\(\\cos x\\) 与  \\(\\frac{1}{2}\\) 的大小关系，可借助  \\(y = \\cos x\\) 的图象来看）\n\n（要判断 \\(f'(x)\\) 在 \\([0,2\\pi]\\) 上的正负，就看 \\(\\cos x\\) 与 \\(\\frac{1}{2}\\) 的大小关系，可借助 \\(y=c\\) 如图，当 \\(0 \\leq x < \\frac{\\pi}{3}\\) 或 \\(\\frac{5\\pi}{3} < x \\leq 2\\pi\\) 时，\\(\\cos x > \\frac{1}{2}\\)，所以 \\(f'(x) = 1 - 2\\cos x < 0\\)，当 \\(\\frac{\\pi}{3} < x < \\frac{5\\pi}{3}\\) 时，\\(\\cos x < \\frac{1}{2}\\)，所以 \\(f'(x) = 1 - 2\\cos x > 0\\)，故 \\(f(x)\\) 的单调递增区间是 \\(\\left(\\frac{\\pi}{3}, \\frac{5\\pi}{3}\\right)\\)，单调递减区间是 \\(\\left[0, \\frac{\\pi}{3}\\right)\\)，\\(\\left(\\frac{5\\pi}{3}, 2\\pi\\right]\\)。\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_849_1310_1093_1429.jpg\" alt=\"Image\" width=\"20%\" /></div>\n\n\n【变式4】已知函数  \\(f(x)=(x-2)e^{x}-\\frac{1}{2}x^{2}+x\\)，求  \\(f(x)\\) 的单调区间.",
+      "text_sha256": "cf0d00da8acf0c76f805cd599f08d87d94a79c8b7e603da90ee55072b6f5412d",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_849_1310_1093_1429.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_849_1310_1093_1429.jpg",
+          "exists": true
+        }
+      ],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 25,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_25.md",
+      "text": "解：由题意， \\(f(x)\\)的定义域为 \\(\\mathbb{R}\\)， \\(f'(x) = \\mathrm{e}^x + (x-2)\\mathrm{e}^x - x + 1 = (x-1)\\mathrm{e}^x - (x-1) = (x-1)(\\mathrm{e}^x - 1)\\)，\n\n解：由题意， \\(f(x)\\) 的定义域为  \\(\\mathbb{R}\\)， \\(f'(x) = e^x + (x-2)e^x - x + 1 = (x-1)e^x - (x-1) = (x-1)(e^x - 1)\\)，\n\n（如何分析  \\(f'(x)\\) 的正负？观察发现当  \\(x=0\\) 或 1 时，都有  \\(f'(x)=0\\)，而  \\(f'(x)\\) 的零点很可能是其正负分界点，故\n\n按 0，1 将  \\(\\mathbb{R}\\) 划分成三段区间来讨论，分别分析  \\(f'(x)\\) 的正负）\n\n当  \\(x<0\\) 时， \\(x-1<0\\)， \\(\\mathrm{e}^x - 1<0\\)，所以  \\(f'(x)>0\\)；当  \\(0<x<1\\) 时， \\(x-1<0\\)， \\(\\mathrm{e}^x - 1>0\\)，所以  \\(f'(x)<0\\)；\n\n当  \\(x>1\\) 时， \\(x-1>0\\)， \\(\\mathrm{e}^x - 1>0\\)，所以  \\(f'(x)>0\\)；\n\n故  \\(f(x)\\) 的单调递增区间是  \\((-∞,0)\\) 和  \\((1,+∞)\\)，单调递减区间是  \\((0,1)\\).\n\n【反思】①用 \\(f'(x)\\)的零点来划分定义域，再判断 \\(f'(x)\\)在各区间上的正负，这是研究单调性时常用的分析方法；②像 \\(e^x - 1\\)这种结构，它是单调的，且在 \\(x=0\\)左侧为负，右侧为正，这与 \\(x\\)本身的正负特性完全相同，所以本题在判断 \\(f'(x)\\)的正负情况时，完全可将其等效成 \\(f'(x)=(x-1)x\\)来分析，从而使问题简化；③上面的几道题求出 \\(f'(x)\\)后，都能直接判断其正负，若 \\(f'(x)\\)不容易直接判断正负，又怎么办呢？我们来看下面的变式5.\n\n【变式5】已知函数  \\(f(x)=x\\ln x-\\frac{1}{2}x^{2}\\)，讨论  \\(f(x)\\) 的单调性.\n\n解：由题意， \\(f(x)\\) 的定义域为  \\((0,+\\infty)\\)， \\(f'(x) = \\ln x - x + 1\\)，（不易直接看出  \\(f'(x)\\) 的正负，怎么办呢？可将  \\(f'(x)\\) 看成函数，再求导分析）令  \\(g(x) = f'(x) = \\ln x - x + 1\\)，则  \\(g'(x) = \\frac{1}{x} - 1 = \\frac{1 - x}{x}\\)，\n\n所以  \\(g'(x) > 0 \\Leftrightarrow 0 < x < 1\\)， \\(g'(x) < 0 \\Leftrightarrow x > 1\\)，故  \\(g(x)\\) 在  \\((0,1)\\) 上单调递增，在  \\((1,+\\infty)\\) 上单调递减，\n\n所以  \\(g(x) \\leq g(1) = \\ln 1 - 1 + 1 = 0\\)，即  \\(f'(x) \\leq 0\\)，所以  \\(f(x)\\) 在  \\((0,+\\infty)\\) 上单调递减。\n\n【反思】①当求出的  \\(f'(x)\\) 不易判断正负时，可将  \\(f'(x)\\) 看成新的函数，继续求导分析。本题是将  \\(f'(x)\\) 重新设成了  \\(g(x)\\)，再求  \\(g'(x)\\)，也可以用  \\(f''(x)\\) 直接表示  \\(f'(x)\\) 的导函数，即  \\(f''(x) = g'(x)\\)，这种表示方法更简洁，本书后续内容我们将用  \\(f''(x)\\) 来表示  \\(f'(x)\\) 的导函数，类似的，用  \\(f'''(x)\\) 表示  \\(f''(x)\\) 的导函数；\n\n②若  \\(f'(x) \\leq 0\\) 在区间 D 上恒成立，且使  \\(f'(x) = 0\\) 的点是孤立的，没有连成区间，则  \\(f(x)\\) 在 D 上单调递减。例如本题的  \\(f'(x) \\leq 0\\) 在  \\((0, +\\infty)\\) 上恒成立，且  \\(f'(x) = 0\\) 仅在 x = 1 时成立，所以有  \\(f(x)\\) 在  \\((0, +\\infty)\\) 上单调递减。同理，若  \\(f'(x) \\geq 0\\) 在区间 D 上恒成立，且使  \\(f'(x) = 0\\) 的点是孤立的，则  \\(f(x)\\) 在 D 上单调递增。\n\n## 类型Ⅲ：讨论含参函数的单调性\n\n【例 6】已知函数  \\(f(x)=ax-\\mathrm{e}^{x}\\)，讨论函数  \\(f(x)\\) 的单调性.\n\n解：由题意， \\(f(x)\\) 的定义域为  \\(\\mathbb{R}\\)，且  \\(f'(x) = a - e^x\\)，（观察发现由  \\(f'(x) = 0\\) 得  \\(a - e^x = 0 \\Rightarrow e^x = a \\Rightarrow x = \\ln a\\)，但  \\(\\ln a\\) 只在  \\(a > 0\\) 时才有意义，故据此讨论）当  \\(a > 0\\) 时， \\(f'(x) > 0 \\Leftrightarrow a - e^x > 0 \\Leftrightarrow e^x < a \\Leftrightarrow x < \\ln a\\)， \\(f'(x) < 0 \\Leftrightarrow x > \\ln a\\)，所以  \\(f(x)\\) 在  \\((-\\infty, \\ln a)\\) 上单调递增，在  \\((\\ln a, +\\infty)\\) 上单调递减；\n\n当 \\(a \\leq 0\\)时， \\(f'(x) = a - e^x < 0\\)，所以 \\(f(x)\\)在 \\(\\mathbb{R}\\)上单调递减。\n\n【反思】求出  \\(f'(x)\\) 后，一般先令  \\(f'(x)=0\\)，求出  \\(f'(x)\\) 的零点，分析何时该零点有意义，找到讨论的分界点。有时尽管由  \\(f'(x)=0\\) 求得的解有意义，但该解可能在定义域范围内，也可能不在定义域范围内，此时就可以此为依据讨论，比如下面的两个变式。\n\n【变式1】已知函数  \\(f(x)=x\\ln x+ax^{2}\\)，设  \\(g(x)=f'(x)\\)，讨论  \\(g(x)\\) 的单调性.\n\n解：由题意， \\(g(x)=f'(x)=\\ln x+x\\cdot\\frac{1}{x}+2ax=\\ln x+1+2ax\\)，所以 \\(g'(x)=\\frac{1}{x}+2a=\\frac{1+2ax}{x}\\)，x>0，\n\n（令 \\(g'(x)=0\\)得 \\(1+2ax=0\\Rightarrow x=-\\frac{1}{2a}\\)，但 \\(-\\frac{1}{2a}\\)只在 \\(a\\neq0\\)时才有意义，且只有当a<0时， \\(-\\frac{1}{2a}\\)才在定义域内，\n\n故据此讨论）当a≥0时，因为x>0，所以 \\(1+2ax\\geq1>0\\)，从而 \\(g'(x)>0\\)，故 \\(g(x)\\)在 \\((0,+\\infty)\\)上单调递增；\n\n当a<0时，直线y=1+2ax在 \\((0,+\\infty)\\)上的部分图象如图所示，\n\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_900_1513_1093_1648.jpg\" alt=\"Image\" width=\"16%\" /></div>\n",
+      "text_sha256": "e65e596635b1f2f4e348dbbbf68f4057a2f5e0faa457c7767c03e9d828857736",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_900_1513_1093_1648.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_900_1513_1093_1648.jpg",
+          "exists": true
+        }
+      ],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 26,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_26.md",
+      "text": "由图可知  \\(g'(x) > 0 \\Leftrightarrow 0 < x < -\\frac{1}{2a}\\)， \\(g'(x) < 0 \\Leftrightarrow x > -\\frac{1}{2a}\\)，\n\n所以  \\(g(x)\\) 在  \\(\\left(0,-\\frac{1}{2a}\\right)\\) 上单调递增，在  \\(\\left(-\\frac{1}{2a},+\\infty\\right)\\) 上单调递减，\n\n【变式 2】已知函数  \\(f(x)=ax+(2-a)\\ln x+1\\) ( \\(a\\in\\mathbf{R}\\))，讨论  \\(f(x)\\) 的单调性.\n\n解：由题意， \\(f'(x) = a + \\frac{2 - a}{x} = \\frac{ax + 2 - a}{x}\\)， \\(x > 0\\)，（由  \\(f'(x) = 0\\) 可得  \\(x = \\frac{a - 2}{a}\\)，若导函数在定义域内有零点，则  \\(\\frac{a - 2}{a} > 0\\)，故  \\(a < 0\\) 或  \\(a > 2\\)，余下即为  \\(f'(x)\\) 在定义域内没有零点的情形，讨论的标准就有了）\n\n①当 \\(a<0\\) 时，直线 \\(y=ax+2-a\\) 在 \\((0,+\\infty)\\) 上的部分图象如图 1，由图 1 可知，\\(f'(x)>0 \\Leftrightarrow 0<x<\\frac{a-2}{a}\\)，\\(f'(x)<0 \\Leftrightarrow x>\\frac{a-2}{a}\\)，所以 \\(f(x)\\) 在 \\(\\left(0,\\frac{a-2}{a}\\right)\\) 上单调递增，在 \\(\\left(\\frac{a-2}{a},+\\infty\\right)\\) 上单调递减；\n\n②当 \\(a>2\\) 时，直线 \\(y=ax+2-a\\) 如图2，由图2可知 \\(f'(x)<0 \\Leftrightarrow 0<x<\\frac{a-2}{a}\\)，\\(f'(x)>0 \\Leftrightarrow x>\\frac{a-2}{a}\\)，所以 \\(f(x)\\) 在 \\(\\left(0,\\frac{a-2}{a}\\right)\\) 上单调递减，在 \\(\\left(\\frac{a-2}{a},+\\infty\\right)\\) 上单调递增；\n\n（余下的部分就是  \\(f'(x)\\) 在定义域上无零点的情形，此时  \\(f'(x)\\) 必定不变号）\n\n③当  \\(0 \\leq a \\leq 2\\) 时， \\(ax \\geq 0\\)， \\(2 - a \\geq 0\\)，所以  \\(ax + 2 - a \\geq 0\\)，从而  \\(f'(x) \\geq 0\\)，故  \\(f(x)\\) 在  \\((0, +\\infty)\\) 上单调递增.\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_403_775_562_939.jpg\" alt=\"Image\" width=\"13%\" /></div>\n\n\n<div style=\"text-align: center;\">图1</div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_632_776_793_941.jpg\" alt=\"Image\" width=\"13%\" /></div>\n\n\n<div style=\"text-align: center;\">图2</div>\n\n\n【例 7】已知函数  \\(f(x)=x^3-\\frac{1}{2}(a-3)x^2 - ax+1\\)，其中  \\(a \\in \\mathbb{R}\\)，讨论  \\(f(x)\\) 的单调性.\n\n解：由题意， \\(f(x)\\)的定义域为 \\(\\mathbb{R}\\)，且 \\(f'(x)=3x^2-(a-3)x-a=(3x-a)(x+1)\\)，\n\n（观察发现  \\(f'(x)\\) 有零点  \\(\\frac{a}{3}\\) 和 -1，这两个零点的大小关系不确定，且该大小关系会影响  \\(f'(x)\\) 在各段上的正负情况，故应讨论两个零点的大小，即讨论 a 与 -3 的大小）\n\n当 \\(a < -3\\) 时，\\(\\frac{a}{3} < -1\\)，如图 1，\\(f'(x) > 0 \\Leftrightarrow x < \\frac{a}{3}\\) 或 \\(x > -1\\)，\\(f'(x) < 0 \\Leftrightarrow \\frac{a}{3} < x < -1\\)，\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_300_1275_473_1381.jpg\" alt=\"Image\" width=\"14%\" /></div>\n\n\n<div style=\"text-align: center;\">图1</div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_503_1275_676_1378.jpg\" alt=\"Image\" width=\"14%\" /></div>\n\n\n<div style=\"text-align: center;\">图2</div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_715_1275_888_1381.jpg\" alt=\"Image\" width=\"14%\" /></div>\n\n\n<div style=\"text-align: center;\">图3</div>\n\n\n所以  \\(f(x)\\) 在  \\(\\left(-\\infty, \\frac{a}{3}\\right)\\) 上单调递增，在  \\(\\left(\\frac{a}{3}, -1\\right)\\) 上单调递减，在  \\((-1, +\\infty)\\) 上单调递增；\n\n当 a = -3 时，如图 2， \\(f'(x) = 3(x + 1)^2 \\geq 0\\)，所以  \\(f(x)\\) 在  \\(\\mathbb{R}\\) 上单调递增；\n\n当 a > -3 时， \\(\\frac{a}{3} > -1\\)，如图 3， \\(f'(x) > 0 \\Leftrightarrow x < -1\\) 或  \\(x > \\frac{a}{3}\\)， \\(f'(x) < 0 \\Leftrightarrow -1 < x < \\frac{a}{3}\\)，",
+      "text_sha256": "798b2c6ce47647ff31e7fec9cfeadc4fca33955e1862670ab055de1a20123dca",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_403_775_562_939.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_403_775_562_939.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_632_776_793_941.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_632_776_793_941.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_300_1275_473_1381.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_300_1275_473_1381.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_503_1275_676_1378.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_503_1275_676_1378.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_715_1275_888_1381.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_715_1275_888_1381.jpg",
+          "exists": true
+        }
+      ],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 27,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_27.md",
+      "text": "所以  \\(f(x)\\) 在  \\((-\\infty,-1)\\) 上单调递增，在  \\(\\left(-1,\\frac{a}{3}\\right)\\) 上单调递减，在  \\(\\left(\\frac{a}{3},+\\infty\\right)\\) 上单调递增.\n\n【反思】若 \\(f'(x)\\)有2个零点，则这两个零点的大小关系往往会影响 \\(f'(x)\\)在各段上的正负，故讨论的依据往往是两个零点的大小。有时 \\(f'(x)\\)的两个零点中，有一个可能不在定义域内，此时又怎么处理？我们来看下面的变式1和变式2。\n\n【变式1】已知函数  \\(f(x)=m(x^{2}-2x)+\\ln x-x\\) ，讨论  \\(f(x)\\) 的单调性.\n\n解：由题意， \\(f(x)\\)的定义域为 \\((0,+\\infty)\\)，且 \\(f'(x)=m(2x-2)+\\frac{1}{x}-1=2m(x-1)-\\frac{x-1}{x}=\\frac{(x-1)(2mx-1)}{x}\\)，\n\n（令 \\(f'(x)=0\\) 得 \\((x-1)(2mx-1)=0 \\Rightarrow x=1\\) 或 \\(\\frac{1}{2m}\\)，其中 \\(\\frac{1}{2m}\\) 是否在定义域内由 \\(m\\) 的正负决定，故先据此讨论）当 \\(m \\leq 0\\) 时，因为 \\(x > 0\\)，所以 \\(2mx - 1 < 0\\)，从而 \\(f'(x) > 0 \\Leftrightarrow \\begin{cases} x - 1 < 0 \\\\ x > 0 \\end{cases} \\Leftrightarrow 0 < x < 1\\)，\\(f'(x) < 0 \\Leftrightarrow x > 1\\)，所以 \\(f(x)\\) 在 \\((0,1)\\) 上单调递增，在 \\((1,+\\infty)\\) 上单调递减；\n\n（再看 m>0 的情况，此时  \\(f'(x)\\) 的零点 1 和  \\(\\frac{1}{2m}\\) 都在定义域内，且它们的大小对  \\(f'(x)\\) 在各段上的正负情况有影响，故又讨论 1 和  \\(\\frac{1}{2m}\\) 的大小，即讨论 m 与  \\(\\frac{1}{2}\\) 的大小）\n\n当  \\(0 < m < \\frac{1}{2}\\) 时， \\(\\frac{1}{2m} > 1\\)，函数  \\(y = (x-1)(2mx-1)\\) 在  \\((0, +\\infty)\\) 上的草图如图 1，\n\n由图1可知  \\(f'(x) > 0 \\Leftrightarrow 0 < x < 1\\) 或  \\(x > \\frac{1}{2m}\\)， \\(f'(x) < 0 \\Leftrightarrow 1 < x < \\frac{1}{2m}\\)，\n\n所以  \\(f(x)\\) 在  \\((0,1)\\) 上单调递增，在  \\(\\left(1,\\frac{1}{2m}\\right)\\) 上单调递减，在  \\(\\left(\\frac{1}{2m},+\\infty\\right)\\) 上单调递增；\n\n当  \\(m = \\frac{1}{2}\\) 时， \\(f'(x) = \\frac{(x-1)^2}{x} \\geq 0\\)，当且仅当 x=1 时取等号，所以  \\(f(x)\\) 在  \\((0, +\\infty)\\) 上单调递增；\n\n当  \\(m > \\frac{1}{2}\\) 时， \\(0 < \\frac{1}{2m} < 1\\)，函数  \\(y = (x-1)(2mx-1)\\) 在  \\((0, +\\infty)\\) 上的草图如图 2，\n\n由图2可知  \\(f'(x) > 0 \\Leftrightarrow 0 < x < \\frac{1}{2m}\\) 或  \\(x > 1\\)， \\(f'(x) < 0 \\Leftrightarrow \\frac{1}{2m} < x < 1\\)，\n\n所以  \\(f(x)\\) 在  \\(\\left(0,\\frac{1}{2m}\\right)\\) 上单调递增，在  \\(\\left(\\frac{1}{2m},1\\right)\\) 上单调递减，在  \\((1,+\\infty)\\) 上单调递增.\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_378_1093_575_1239.jpg\" alt=\"Image\" width=\"16%\" /></div>\n\n\n<div style=\"text-align: center;\">图1</div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_620_1094_817_1240.jpg\" alt=\"Image\" width=\"16%\" /></div>\n\n\n<div style=\"text-align: center;\">图2</div>\n\n\n【反思】当  \\(f'(x)\\) 的 2 个零点中有一个可能不在定义域内时，则先按  \\(f'(x)\\) 有 1 个、2 个零点这两大类讨论，而对于  \\(f'(x)\\) 有 2 个零点的情况，则又细分讨论两个零点的大小.\n\n【变式 2】已知函数  \\(f(x)=\\frac{e^x - a}{x} - a \\ln x\\)，其中  \\(a \\in \\mathbb{R}\\)，讨论  \\(f(x)\\) 的单调性。\n\n解：由题意， \\(f(x)\\)的定义域为 \\((0,+\\infty)\\)，且 \\(f'(x)=\\frac{e^x \\cdot x - (e^x - a)}{x^2} - \\frac{a}{x} = \\frac{(x-1)e^x + a - ax}{x^2} = \\frac{(x-1)(e^x - a)}{x^2}\\)，\n\n（观察发现  \\(f'(x)\\) 必有 x=1 这个零点，但由于 x>0，所以  \\(e^x>1\\)，于是只有当 a>1 时， \\(e^x - a = 0\\) 的解才有意义",
+      "text_sha256": "eb7f1d34c35b3fe8de97fb2e4524a4d09a42ba4ad653f460ca3cde50d69b7908",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_378_1093_575_1239.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_378_1093_575_1239.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_620_1094_817_1240.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_620_1094_817_1240.jpg",
+          "exists": true
+        }
+      ],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 28,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_28.md",
+      "text": "且在定义域内，于是分 \\(a \\leq 1\\)和 \\(a > 1\\)考虑）\n\n当 \\(a \\leq 1\\)时，因为 \\(x > 0\\)，所以 \\(\\mathrm{e}^x - a > 1 - a \\geq 0\\)，从而 \\(f'(x) < 0 \\Leftrightarrow \\begin{cases} x - 1 < 0 \\\\ x > 0 \\end{cases} \\Leftrightarrow 0 < x < 1\\)，\n\n \\(f'(x) > 0 \\Leftrightarrow \\left\\{ \\begin{aligned} x - 1 & > 0 \\\\ x & > 0 \\end{aligned} \\right. \\Leftrightarrow x > 1\\)，故  \\(f(x)\\) 在  \\((0,1)\\) 上单调递减，在  \\((1,+\\infty)\\) 上单调递增；\n\n（再看 \\(a>1\\) 的情形，此时令 \\(f'(x)=0\\) 得 \\(x=1\\) 或 \\(\\ln a\\)，且 \\(1\\) 和 \\(\\ln a\\) 都在定义域内，它们的大小会影响 \\(f'(x)\\) 在各段上的正负情况，故据此讨论，即讨论 \\(a\\) 与 \\(e\\) 的大小，且由于 \\(e^x - a\\) 与 \\(x - \\ln a\\) 的正负情况相同，则 \\(f'(x)\\) 与 \\(y = (x-1)(x - \\ln a)\\) 的正负情况也相同，故可将 \\(f'(x)\\) 等改成 \\((x-1)(x - \\ln a)\\) 来分析，此时三种情况分别如图）\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_256_382_453_540.jpg\" alt=\"Image\" width=\"16%\" /></div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_498_383_695_539.jpg\" alt=\"Image\" width=\"16%\" /></div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_739_386_938_540.jpg\" alt=\"Image\" width=\"16%\" /></div>\n\n\n当 \\(1 < a < e\\) 时，\\(0 < \\ln a < 1\\)，所以 \\(f'(x) > 0 \\Leftrightarrow 0 < x < \\ln a\\) 或 \\(x > 1\\)，\\(f'(x) < 0 \\Leftrightarrow \\ln a < x < 1\\)，\n\n故 \\(f(x)\\) 在 \\((0, \\ln a)\\) 上单调递增，在 \\((\\ln a, 1)\\) 上单调递减，在 \\((1, +\\infty)\\) 上单调递增；\n\n当 \\(a = e\\) 时，\\(\\ln a = 1\\)，所以 \\(f'(x) \\geq 0\\) 恒成立，当且仅当 \\(x = 1\\) 时取等号，故 \\(f(x)\\) 在 \\((0, +\\infty)\\) 上单调递增；\n\n当 \\(a > e\\) 时，\\(\\ln a > 1\\)，所以 \\(f'(x) > 0 \\Leftrightarrow 0 < x < 1\\) 或 \\(x > \\ln a\\)，\\(f'(x) < 0 \\Leftrightarrow 1 < x < \\ln a\\)，\n\n故 \\(f(x)\\) 在 \\((0, 1)\\) 上单调递增，在 \\((1, \\ln a)\\) 上单调递减，在 \\((\\ln a, +\\infty)\\) 上单调递增。\n\n【变式 3】已知函数  \\(f(x)=\\frac{1}{2}x^2 - 2x + a\\ln x\\)，其中  \\(a \\in \\mathbb{R}\\)，讨论  \\(f(x)\\) 的单调性.\n\n解：由题意， \\(f(x)\\)的定义域为 \\((0,+\\infty)\\)，且 \\(f'(x)=x-2+\\frac{a}{x}=\\frac{x^2-2x+a}{x}\\)，\n\n（与前面几道题不同，这里显然不能分解因式，如何寻找讨论的分界点呢？由  \\(f'(x)=0\\) 可得  \\(2x - x^2 = a\\)，所以可考虑画出  \\(y = 2x - x^2\\) 和  \\(y = a\\) 的图象来看。如下图，按二者图象的相对位置，有下面四种情况，其中图1和图2对应的  \\(f'(x)\\) 都不变号，可合并讨论，分界点就找到了）\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_170_995_372_1130.jpg\" alt=\"Image\" width=\"16%\" /></div>\n\n\n<div style=\"text-align: center;\">图1</div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_386_993_591_1129.jpg\" alt=\"Image\" width=\"17%\" /></div>\n\n\n<div style=\"text-align: center;\">图2</div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_604_995_807_1130.jpg\" alt=\"Image\" width=\"17%\" /></div>\n\n\n<div style=\"text-align: center;\">图3</div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_821_996_1024_1129.jpg\" alt=\"Image\" width=\"17%\" /></div>\n\n\n<div style=\"text-align: center;\">图4</div>\n\n\n当 \\(a \\geq 1\\)时， \\(f'(x) = \\frac{x^2 - 2x + a}{x} \\geq \\frac{x^2 - 2x + 1}{x} = \\frac{(x-1)^2}{x} \\geq 0\\)，当且仅当 \\(a = x = 1\\)时， \\(f'(x) = 0\\)，所以 \\(f(x)\\)在 \\((0, +\\infty)\\)上单调递增；\n\n \\[x^{2}-2x+a=0\\] \n\n \\[x=1\\pm\\sqrt{1-a}\\] \n\n且  \\(f'(x)>0\\Leftrightarrow0<x<1-\\sqrt{1-a}\\) 或  \\(x>1+\\sqrt{1-a}\\)， \\(f'(x)<0\\Leftrightarrow1-\\sqrt{1-a}<x<1+\\sqrt{1-a}\\)，\n\n所以 \\(f(x)\\) 在 \\((0,1-\\sqrt{1-a})\\) 上单调递增，在 \\((1-\\sqrt{1-a},1+\\sqrt{1-a})\\) 上单调递减，在 \\((1+\\sqrt{1-a},+\\infty)\\) 上单调递增；当 \\(a \\leq 0\\) 时，令 \\(f'(x)=0\\) 可得 \\(x^2 - 2x + a = 0\\)，解得：\\(x = 1 \\pm \\sqrt{1-a}\\)，此时 \\(1 - \\sqrt{1-a} \\leq 0\\)，不在定义域内，\n\n当 \\(a \\leq x\\)时，令 \\(f'(x) = 0\\)可得 \\(x^2 - 2x + a = 0\\)，解得： \\(x = 1 \\pm \\sqrt{1 - a}\\)，此时 \\(1 - \\sqrt{1 - a} \\leq 0\\)，不在定义域内，所以 \\(f'(x) > 0 \\Leftrightarrow x > 1 + \\sqrt{1 - a}\\)， \\(f'(x) < 0 \\Leftrightarrow 0 < x < 1 + \\sqrt{1 - a}\\)，\n\n故  \\(f(x)\\) 在  \\((0,1+\\sqrt{1-a})\\) 上单调递减，在  \\((1+\\sqrt{1-a},+\\infty)\\) 上单调递增.\n\n【反思】当无法对 \\(f'(x)\\)进行因式分解时，还可考虑通过画图分析来寻找讨论的分界点.",
+      "text_sha256": "fac0f6096c7a0cb4389398fae9890b4b24d011dd3fa7ded6914982b280870d55",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_256_382_453_540.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_256_382_453_540.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_498_383_695_539.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_498_383_695_539.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_739_386_938_540.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_739_386_938_540.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_170_995_372_1130.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_170_995_372_1130.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_386_993_591_1129.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_386_993_591_1129.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_604_995_807_1130.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_604_995_807_1130.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_821_996_1024_1129.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_821_996_1024_1129.jpg",
+          "exists": true
+        }
+      ],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 29,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_29.md",
+      "text": "类型IV：已知单调性求参数范围\n\n【例 8】已知函数  \\(f(x)=2x^x - ax^x - x\\) 在  \\([2,+\\infty)\\) 上单调递增，求实数  \\(a\\) 的取值范围。\n\n解：（怎样翻译  \\(f(x)\\) 在  \\([2,+\\infty)\\) 上  \\(\\nearrow\\)？ \\(\\nearrow\\) 意味着  \\(f'(x) \\geq 0\\) 恒成立，故可由此建立关于  \\(a\\) 的不等式来分析）\n\n由题意， \\(f'(x)=6x^2 - 2ax - 1\\)，因为  \\(f(x)\\) 在  \\([2,+\\infty)\\) 上单调递增，所以  \\(f'(x) \\geq 0\\) 在  \\([2,+\\infty)\\) 上恒成立，\n\n即当  \\(x \\in [2,+\\infty)\\) 时， \\(6x^2 - 2ax - 1 \\geq 0\\) ①，（观察发现  \\(a\\) 只出现一次，容易将其分离出来，故考虑参变分离）\n\n当  \\(x \\in [2,+\\infty)\\) 时，不等式①等价于  \\(2ax \\leq 6x^2 - 1 \\Leftrightarrow a \\leq 3x - \\frac{1}{2x}\\) ②，\n\n设函数  \\(g(x) = 3x - \\frac{1}{2x}\\)， \\(x \\in [2,+\\infty)\\)，则  \\(g(x)\\) 为增函数，所以  \\(g(x)_{\\min} = g(2) = 3 \\times 2 - \\frac{1}{2 \\times 2} = \\frac{23}{4}\\)，\n\n由②可知  \\(a \\leq g(x)\\) 恒成立，所以  \\(a \\leq \\frac{23}{4}\\)，故实数  \\(a\\) 的取值范围是  \\(\\left(-\\infty, \\frac{23}{4}\\right]\\)。\n\n【反思】通常情况下使  \\(f'(x) = 0\\) 的点不会连成区间，它们不影响  \\(f(x)\\) 的单调性，所以  \\(f(x)\\) 在区间  \\(D\\) 上  \\(\\nearrow\\) 常翻译为  \\(f'(x) \\ge 0\\) 在  \\(D\\) 上恒成立；类似的， \\(f(x)\\) 在区间  \\(D\\) 上  \\(\\searrow\\) 则可翻译为  \\(f'(x) \\le 0\\) 在  \\(D\\) 上恒成立。有时单调性不会像本题这样直白地给出，需要通过变形才能发现，我们来看下面的变式。\n\n【变式】已知函数  \\(f(x)=2a\\ln x+\\frac{1}{2}x^2-(a+2)x\\)， \\(a\\in\\mathbf{R}\\)。\n\n（1）讨论  \\(f(x)\\) 的单调性；\n\n（2）若对任意的  \\(x_1, x_2 \\in (0, +\\infty)\\) 且  \\(x_1 \\neq x_2\\)，都有  \\(\\frac{f(x_2) - f(x_1)}{x_2 - x_1} > 3 - a\\)，求  \\(a\\) 的取值范围。\n\n解：（1）由题意， \\(f(x)\\)的定义域为 \\((0,+\\infty)\\)，且 \\(f'(x)=\\frac{2a}{x}+x-(a+2)=\\frac{x^2-(a+2)x+2a}{x}=\\frac{(x-a)(x-2)}{x}\\)，\n\n（观察发现 \\(f'(x)\\)必有零点 \\(x=2\\)，至于是否有零点 \\(x=a\\)，由 \\(a\\)的正负决定，故先讨论 \\(a\\)的正负）\n\n当 \\(a\\leq0\\)时，因为 \\(x>0\\)，所以 \\(x-a>0\\)，从而 \\(f'(x)>0\\Leftrightarrow x-2>0\\Leftrightarrow x>2\\)， \\(f'(x)<0\\Leftrightarrow 0<x<2\\)，\n\n故 \\(f(x)\\)在 \\((0,2)\\)上单调递减，在 \\((2,+\\infty)\\)上单调递增；\n\n（再看 \\(a>0\\) 的情况，此时 \\(f'(x)\\) 有两个零点 \\(a\\) 与 2，它们的大小关系不确定，且该大小关系会影响 \\(f'(x)\\) 在各段上的正负情况，故又讨论 \\(a\\) 与 2 的大小）\n\n当 \\(0<a<2\\) 时，如图 1，\\(f'(x)>0 \\Leftrightarrow 0<x<a\\) 或 \\(x>2\\)，\\(f'(x)<0 \\Leftrightarrow a<x<2\\)，\n\n所以 \\(f(x)\\) 在 \\((0,a)\\) 上单调递增，在 \\((a,2)\\) 上单调递减，在 \\((2,+\\infty)\\) 上单调递增；\n\n上段\n\n当 \\(0 < a < 2\\) 时，\n\n所以 \\(f(x)\\) 在 \\((0, a)\\) 上单调增。\n\n当 \\(a = 2\\) 时，如图 2，\\(f'(x) = \\frac{(x - 2)}{x} \\leq 0\\)，所以 \\(f(x)\\) 在 \\((0, +\\infty)\\) 上单调递增；\n\n当 \\(a > 2\\) 时，如图 3，\\(f'(x) > 0 \\Leftrightarrow 0 < x < 2\\) 或 \\(x > a\\)，\\(f(x) < 0 \\Leftrightarrow 2 < x < a\\)，\n\n所以  \\(f(x)\\) 在  \\((0,2)\\) 上单调递增，在  \\((2,a)\\) 上单调递减，在  \\((a,+\\infty)\\) 上单调递增.\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_244_1248_462_1397.jpg\" alt=\"Image\" width=\"18%\" /></div>\n\n\n<div style=\"text-align: center;\">图1</div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_490_1249_708_1395.jpg\" alt=\"Image\" width=\"18%\" /></div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_745_1248_951_1397.jpg\" alt=\"Image\" width=\"17%\" /></div>\n\n\n<div style=\"text-align: center;\">图3</div>\n\n\n（2）（怎样翻译  \\(\\frac{f(x_2) - f(x_1)}{x_2 - x_1} > 3 - a\\)？由左边的结构联想到单调性，但右边不是 0，不能直接用单调性，怎么办呢？注意到该不等式关于  \\(x_1\\)， \\(x_2\\) 是对称的，故可想象，若通过等价变形，将  \\(x_1\\)， \\(x_2\\) 分离到不等号两侧，则所得不等式也应关于  \\(x_1\\)， \\(x_2\\) 对称，可以构造函数，用单调性分析，于是按此尝试）",
+      "text_sha256": "f219cc729e5ed8c9884c03f8e63142e79d995947af053b8c76d3682a7febeffe",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_244_1248_462_1397.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_244_1248_462_1397.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_490_1249_708_1395.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_490_1249_708_1395.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_745_1248_951_1397.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_745_1248_951_1397.jpg",
+          "exists": true
+        }
+      ],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 30,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_30.md",
+      "text": "不妨设  \\(0 < x_{1} < x_{2}\\)，则  \\(x_{2} - x_{1} > 0\\)，所以  \\(\\frac{f(x_{2}) - f(x_{1})}{x_{2} - x_{1}} > 3 - a \\Leftrightarrow f(x_{2}) - f(x_{1}) > (3 - a)x_{2} - (3 - a)x_{1}\\)\n\n\\(\\Leftrightarrow f(x_2)-(3-a)x_2 > f(x_1)-(3-a)x_1\\) ①，（左右两边同构了，可构造函数，转化为单调性来分析）\n\n设 \\(g(x) = f(x)-(3-a)x\\)，\\(x > 0\\)，则不等式①即为 \\(g(x_2) > g(x_1)\\)，结合 \\(0 < x_1 < x_2\\) 得 \\(g(x)\\) 在 \\((0,+\\infty)\\) 上单调递增，所以 \\(g'(x) = f'(x)-(3-a) = \\frac{2a}{x} + x - (a+2) - (3-a) = \\frac{2a}{x} + x - 5 \\geq 0\\) 在 \\((0,+\\infty)\\) 上恒成立，\n\n（观察发现参数a只出现一次，容易分离出来，故可考虑参变分离）\n\n当x>0时， \\(\\frac{2a}{x}+x-5\\geq0\\Leftrightarrow\\frac{2a}{x}\\geq5-x\\Leftrightarrow a\\geq\\frac{x(5-x)}{2}\\) ②，\n\n因为 \\(\\frac{x(5-x)}{2}\\leq\\frac{1}{2}\\left(\\frac{x+5-x}{2}\\right)^2=\\frac{25}{8}\\)，取等条件是 \\(x=5-x\\)，即 \\(x=\\frac{5}{2}\\)，所以 \\(\\left[\\frac{x(5-x)}{2}\\right]_{\\max}=\\frac{25}{8}\\)，由②可知 \\(a\\geq\\frac{x(5-x)}{2}\\)在 \\((0,+\\infty)\\)上恒成立，所以 \\(a\\geq\\frac{25}{8}\\)，故 \\(a\\)的取值范围是 \\(\\left[\\frac{25}{8},+\\infty\\right)\\)。\n\n## 类型V：利用导数研究函数的零点个数\n\n【例 9】（2019·新课标Ⅱ卷（节选））已知函数  \\(f(x)=\\ln x-\\frac{x+1}{x-1}\\)，讨论  \\(f(x)\\) 的单调性，并证明  \\(f(x)\\) 有且仅有两个零点.\n\n解：（研究函数的零点，可先求导分析其单调性）由题意， \\(f(x)\\) 的定义域为  \\((0,1)\\cup(1,+\\infty)\\)\n\n且  \\(f'(x)=\\frac{1}{x}+\\frac{2}{(x-1)^2}>0\\) ，所以  \\(f(x)\\) 在  \\((0,1)\\) 上单调递增，在  \\((1,+\\infty)\\) 上单调递增，\n\n（可以想象， \\(f(x)\\) 在  \\((0,1)\\) 和  \\((1,+\\infty)\\) 上都  \\(\\nearrow\\)，则这两个区间上各自最多有 1 个零点，于是要证  \\(f(x)\\) 有 2 个零点，只需证  \\(f(x)\\) 在  \\((0,1)\\) 和  \\((1,+\\infty)\\) 上各有 1 个零点，怎么证？可通过取点，结合零点存在定理来证。考虑到解析式中有  \\(\\ln x\\) 这一项，为了方便计算，我们尝试取  \\(e^{-2}\\)， \\(e^{-1}\\)，e， \\(e^{2}\\) 这些点）\n\n因为  \\(f(\\mathrm{e}^{-2}) = -2 - \\frac{\\mathrm{e}^{-x} + 1}{\\mathrm{e}^{-2} - 1} = \\frac{3 - \\mathrm{e}^{-x}}{\\mathrm{e}^{2} - 1} < 0\\)， \\(f(\\mathrm{e}^{-1}) = -1 - \\frac{\\mathrm{e}^{-x} + 1}{\\mathrm{e}^{-1} - 1} = \\frac{2}{\\mathrm{e} - 1} > 0\\)，所以  \\(f(x)\\) 在  \\((\\mathrm{e}^{-2}, \\mathrm{e}^{-1})\\) 上存在零点，\n\n结合  \\(f(x)\\) 在  \\((0,1)\\) 上单调递增可得  \\(f(x)\\) 在  \\((0,1)\\) 上有且仅有 1 个零点；\n\n又  \\(f(e)=1-\\frac{e+1}{e-1}=-\\frac{2}{e-1}<0\\)， \\(f(e^2)=2-\\frac{e^2+1}{e^2-1}=\\frac{e^2-3}{e^2-1}>0\\)，所以  \\(f(x)\\) 在  \\((e,e^2)\\) 上存在零点，\n\n结合  \\(f(x)\\) 在  \\((1,+\\infty)\\) 上单调递增可得  \\(f(x)\\) 在  \\((1,+\\infty)\\) 上有且仅有 1 个零点；综上所述， \\(f(x)\\) 有且仅有两个零点.\n\n【反思】分析函数的零点，常先求导分析单调性，再通过取点，结合零点存在定理严格论证零点的个数。本题的函数不含参，如果含参，又怎么办呢？我们来看下面的变式1.\n\n【变式1】（2015·广东卷（节选））设a>1，函数 \\(f(x)=(1+x^{2})e^{x}-a\\)\n\n（1）求  \\(f(x)\\) 的单调区间；\n\n（2）证明： \\(f(x)\\) 在  \\((-∞,+∞)\\) 上有且仅有 1 个零点.\n\n解：（1）由题意，函数  \\(f(x)\\) 的定义域为  \\(\\mathbb{R}\\)，且  \\(f'(x) = 2x\\mathrm{e}^x + (1 + x^2)\\mathrm{e}^x = (x + 1)^2\\mathrm{e}^x \\geq 0\\) 恒成立，当且仅当  \\(x = -1\\) 时  \\(f'(x) = 0\\)，所以  \\(f(x)\\) 有增区间  \\((-\\infty, +\\infty)\\)，无减区间。\n\n（2）证法1：（观察发现 \\(f(x)\\)解析式中的 \\(a\\)是孤立的，容易分离出来，故可考虑先将方程 \\(f(x)=0\\)参变分离，再画图分析）由题意， \\(f(x)=0\\Leftrightarrow(1+x^2)\\mathrm{e}^x-a=0\\Leftrightarrow a=(1+x^2)\\mathrm{e}^x\\)，\n\n（函数  \\(y=(1+x^{2})e^{x}\\) 无法直接画图，可先求导，分析单调性，再画图）\n\n令  \\(g(x)=(1+x^2)\\mathrm{e}^x\\)， \\(x\\in\\mathbf{R}\\)，则  \\(g'(x)=2x\\mathrm{e}^x+(1+x^2)\\mathrm{e}^x=(x+1)^2\\mathrm{e}^x\\geq0\\)，当且仅当  \\(x=-1\\) 时取等号，",
+      "text_sha256": "ed377035390f8a5f471227d375c4f2bd759f854703fff6524419bee5fa8588cc",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 31,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_31.md",
+      "text": "所以  \\(g(x)\\) 在  \\((-\\infty,+\\infty)\\) 上单调递增，又当  \\(x \\to -\\infty\\) 时， \\(g(x)=(1+x^2)e^x = \\frac{1+x^2}{e^{-x}} \\to 0\\)，当  \\(x \\to +\\infty\\) 时， \\(g(x) \\to +\\infty\\)，所以函数  \\(g(x)\\) 的草图如图，因为  \\(a > 1\\)，所以如图，直线  \\(y = a\\) 与  \\(y = g(x)\\) 的图象有且仅有 1 个交点，所以  \\(f(x)\\) 在  \\((-\\infty,+\\infty)\\) 上有且仅有 1 个零点。\n\n证法2：（已有 \\(f(x)\\)在 \\((-\\infty,+\\infty)\\)上单调递增，故也可考虑直接取点论证 \\(f(x)\\)有且仅有1）\n\n个零点，怎么取？先试试简单的，比如看看 \\(f(0)\\)的正负情况）\n\n因为 \\(a>1\\)，所以 \\(f(0)=1-a<0\\) ①，（只要再取出一个满足 \\(f(x)\\geq0\\)的点，就能得出结论成立，怎么取？注意到 \\(1+x^2\\geq1\\)，所以只要让 \\(e^x=a\\)，则必然就有 \\((1+x^2)e^x\\geq a\\)，于是 \\(f(x)\\geq0\\)，取点的思路就有了）\n\n因为 \\(f(\\ln a)=(1+\\ln^2a)e^{\\ln a}-a=(1+\\ln^2a)a-a=a\\ln^2a>0\\)，所以结合①可得 \\(f(x)\\)在 \\((0,\\ln a)\\)上有零点，\n\n又因为 \\(f(x)\\)在 \\(\\mathbb{R}\\)上单调递增，所以 \\(f(x)\\)在 \\((-\\infty,+\\infty)\\)上有且仅有一个零点.\n\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_905_137_1095_283.jpg\" alt=\"Image\" width=\"15%\" /></div>\n\n\n【反思】①分析含参函数的零点个数，可考虑参变分离，转化为水平直线与函数图象的交点个数问题来研究，也可考虑直接求导分析单调性，再通过取点论证零点个数；②取点的方法不是唯一的，例如本题使 \\(f(x)\\geq0\\)的点，也可取 \\(x=a\\)，即 \\(f(a)=(1+a^2)\\mathrm{e}^a-a>1+a^2-a=\\left(a-\\frac{1}{2}\\right)^2+\\frac{3}{4}>0\\)。\n\n【变式2】设函数 \\(f(x)=x^{3}+ax^{2}+bx+c\\)\n\n（1）若a=b=4，且函数 \\(f(x)\\)有三个不同的零点，求实数c的取值范围；\n\n（2）证明：“ \\(a^{2}-3b>0\\)”是“ \\(f(x)\\)有三个不同的零点”的必要不充分条件.\n\n解：（1）当 \\(a=b=4\\) 时，\\(f(x)=x^3+4x^2+4x+c\\)，（观察发现 \\(c\\) 是孤立的，故可考虑将方程 \\(f(x)=0\\) 中的 \\(c\\) 分离出来，以便于画图看交点）\\(f(x)=0 \\Leftrightarrow x^3+4x^2+4x+c=0 \\Leftrightarrow x^3+4x^2+4x=-c\\)，令 \\(h(x)=x^3+4x^2+4x\\)，则题设条件等价于 \\(h(x)\\) 的图象与直线 \\(y=-c\\) 有 3 个交点，\\(h'(x)=3x^2+8x+4=(x+2)(3x+2)\\)，所以 \\(h'(x)>0 \\Leftrightarrow x<-2\\) 或 \\(x>-\\frac{2}{3}\\)，\\(h'(x)<0 \\Leftrightarrow -2<x<-\\frac{2}{3}\\)，从而 \\(h(x)\\) 在 \\((-\\infty,-2)\\) 上单调递增，在 \\(\\left(-2,-\\frac{2}{3}\\right)\\) 上单调递减，在 \\(\\left(-\\frac{2}{3},+\\infty\\right)\\) 上单调递增，又 \\(h(-2)=(-2)^3+4\\times(-2)^2+4\\times(-2)=0\\)，\\(h\\left(-\\frac{2}{3}\\right)=\\left(-\\frac{2}{3}\\right)^3+4\\times\\left(-\\frac{2}{3}\\right)^2+4\\times\\left(-\\frac{2}{3}\\right)\\) \\(=-\\frac{32}{27}\\)，所以 \\(h(x)\\) 的大致图象如图，要使 \\(y=-c\\) 与之有 3 个交点，应有 \\(-\\frac{32}{27}<-c<0\\)，从而 \\(0<c<\\frac{32}{27}\\)，故 \\(c\\) 的取值范围是 \\(\\left(0,\\frac{32}{27}\\right)\\)。\n\n（2）\\(\\forall\\) 充分性成立，所以 \\(f(x)\\) 有二个不同的零点，则 \\(f(x)\\) 有三个不同的零点，则 \\(f(x)\\) 必定不单调，又 \\(f'(x)=3x^2+2ax+b\\)，所以 \\(f'(x)\\) 有两个不同的零点，否则 \\(f'(x)\\geq0\\) 恒成立，\\(f(x)\\) 在 \\(\\mathbf{R}\\) 上单调递增，所以 \\(f(x)\\) 最多有 1 个零点，不合题意，所以 \\(\\Delta=(2a)^2-4\\times3\\times b=4(a^2-3b)>0\\)，故 \\(a^2-3b>0\\)，所以必要性成立；\n\n\n\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_847_1025_1093_1171.jpg\" alt=\"Image\" width=\"20%\" /></div>\n\n\n \\[a^{2}-3b>0\\] \n\n（再证充分性不成立，即证当  \\(a^2 - 3b > 0\\) 时， \\(f(x)\\) 不一定有三个不同的零点，怎么证？只需找个反例，从哪里入手去找？可以想象， \\(a^2 - 3b > 0\\) 只能保证  \\(f'(x)\\) 有两个零点，此时  \\(f(x)\\) 的单调性必为先  \\(\\nearrow\\) 后  \\(\\searrow\\)，但  \\(c\\) 不确定，故可以通过调整  \\(c\\) 来对  \\(f(x)\\) 的图象进行上下平移，零点个数也可能随之改变，所以任取满足  \\(a^2 - 3b > 0\\) 的  \\(a\\) 和  \\(b\\)，都能通过调整  \\(c\\) 来改变  \\(f(x)\\) 的零点个数，最简单的取法，就是取第（1）问的  \\(a\\) 和  \\(b\\)）当  \\(a = b = 4\\)， \\(c = 0\\) 时，满足  \\(a^2 - 3b > 0\\)，此时  \\(f(x) = x^3 + 4x^2 + 4x = x(x + 2)^2\\)，令  \\(f(x) = 0\\) 可得  \\(x = -2\\) 或 0，所以  \\(f(x)\\) 只有两个零点，故充分性不成立；\n\n综上所述，“ \\(a^2 - 3b > 0\\)” 是“ \\(f(x)\\) 有三个不同的零点”的必要不充分条件。",
+      "text_sha256": "48d5b787252bf483bf6551bb907ccd0f6c02193691864279b364c70bb2771160",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_905_137_1095_283.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_905_137_1095_283.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_847_1025_1093_1171.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_847_1025_1093_1171.jpg",
+          "exists": true
+        }
+      ],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 32,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_32.md",
+      "text": "# 补充、拓展\n\n相信通过上面的学习，大家已经对用导数研究函数的方法比较熟悉了，有时我们也会遇到题干给出导数有关的条件，让求解一些与原函数有关的问题，此时就需要我们由所给的导数条件去构造原函数，这是求导的逆运算，我们通过下面的类型VI来给大家总结一些常见的模型。\n\n## 类型VI：构造原函数\n\n【例 10】若函数  \\(f(x)\\) 及其导函数  \\(f'(x)\\) 的定义域均为  \\(\\mathbb{R}\\)，且  \\(f'(x) > 3\\)，则关于  \\(x\\) 的不等式  \\(f(x) - f(1-x) \\leq 6x - 3\\) 的解集为（ ）\n\nA.  \\([1, +\\infty)\\)  \n\nB.  \\(\\left[\\frac{1}{2}, +\\infty\\right)\\)  \n\nC.  \\((-\\infty, 1]\\)  \n\nD.  \\(\\left(-\\infty, \\frac{1}{2}\\right]\\)\n\n解析：没有解析式，要求解目标不等式，当然考虑单调性，如何分析单调性？条件给出  \\(f'(x) > 3\\)，用它能研究哪个函数的单调性？该不等式可化为  \\(f'(x) - 3 > 0\\)，谁求导后等于  \\(f'(x) - 3\\)？其中  \\(f'(x)\\) 是由  \\(f(x)\\) 求导而来，那一呢？这部分可由  \\(-3x\\) 求导得来，于是应构造函数  \\(f(x) - 3x\\) 来分析，思路就有了，设  \\(g(x) = f(x) - 3x\\)，则由题意， \\(g'(x) = f'(x) - 3 > 0\\)，所以  \\(g(x)\\) 在  \\(\\mathbb{R}\\) 上  \\(\\nearrow\\)，既然有了  \\(g(x)\\) 的单调性，当然考虑把要解的不等式化为  \\(g(x)\\) 的形式， \\(f(x) - f(1 - x) \\leq 6x - 3 \\Leftrightarrow f(x) \\leq f(1 - x) + 6x - 3 \\Leftrightarrow f(x) - 3x \\leq f(1 - x) + 3x - 3 \\Leftrightarrow f(x) - 3x \\leq f(1 - x) - 3(1 - x) \\Leftrightarrow g(x) \\leq g(1 - x)\\)，结合  \\(g(x)\\) 在  \\(\\mathbb{R}\\) 上  \\(\\nearrow\\) 可得  \\(x \\leq 1 - x\\)，解得： \\(x \\leq \\frac{1}{2}\\)。\n\n答案：D\n\n【反思】若给出的含 \\(f'(x)\\)的不等式各部分都容易看出原函数，则直接移项到同一侧，构造原函数即可，我们再通过两个变式来巩固一下。\n\n【变式 1】设函数  \\(f(x)\\)， \\(g(x)\\) 在  \\([a,b]\\) 上的导函数分别为  \\(f'(x)\\)， \\(g'(x)\\)，且  \\(f'(x) > g'(x)\\)， \\(f(a) = g(a)\\)，则当  \\(x \\in (a,b)\\) 时，下列不等式中一定成立的是（ ）\n\nA.  \\(f(x) + g(x) > 0\\)  B.  \\(f(x) < g(x)\\)  C.  \\(f(x) > g(x)\\)  D.  \\(f(x) + g(x) < 0\\)\n\n解析： \\(f'(x)\\) 和  \\(g'(x)\\) 的原函数分别为  \\(f(x)\\) 和  \\(g(x)\\)，所以直接将  \\(f'(x) > g'(x)\\) 移项，就能构造原函数分析，当  \\(x \\in [a,b]\\) 时，由  \\(f'(x) > g'(x)\\) 得  \\(f'(x) - g'(x) > 0\\)，令  \\(F(x) = f(x) - g(x)\\)， \\(x \\in [a,b]\\)，则  \\(F'(x) = f'(x) - g'(x) > 0\\)，所以  \\(F(x)\\) 在  \\([a,b]\\) 上  \\(\\nearrow\\)，又因为  \\(f(a) = g(a)\\)，所以  \\(F(a) = f(a) - g(a) = 0\\)，故当  \\(x \\in (a,b)\\) 时， \\(F(x) > F(a) = 0\\)，即  \\(f(x) - g(x) > 0\\)，所以  \\(f(x) > g(x)\\)。\n\n答案：C\n\n【变式 2】已知定义在  \\(\\mathbb{R}\\) 上的可导的函数  \\(f(x)\\) 满足  \\(f'(x) < \\frac{1}{3}x\\)，如果实数  \\(a\\) 满足  \\(f(3a-1) - f(a) < \\frac{4}{3}a^2 - a + \\frac{1}{6}\\)，则  \\(a\\) 的取值范围是（ ）\n\nA.  \\((0, +\\infty)\\) \\quad B.  \\(\\left(\\frac{1}{2}, +\\infty\\right)\\) \\quad C.  \\((1, +\\infty)\\) \\quad D.  \\(\\left(\\frac{3}{2}, +\\infty\\right)\\)\n\n解析：条件给出  \\(f'(x) < \\frac{1}{3}x\\)，其中  \\(f'(x)\\) 和  \\(\\frac{1}{3}x\\) 的原函数都容易找到，故直接移项构造原函数分析，",
+      "text_sha256": "cee5503d7c42efb98d50d7cc568a2b274b223ffc22afc2a731369c7cd4960e8a",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 33,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_33.md",
+      "text": "因为  \\(f'(x) < \\frac{1}{3}x\\)，所以  \\(f'(x) - \\frac{1}{3}x < 0\\)，设  \\(g(x) = f(x) - \\frac{1}{6}x^2\\)，则  \\(g'(x) = f'(x) - \\frac{1}{3}x < 0\\)，所以  \\(g(x)\\) 在  \\(\\mathbb{R}\\) 上  \\(\\searrow\\)，既然有了  \\(g(x)\\) 的单调性，那么当然将要求解的不等式往  \\(g(x)\\) 上去化，\n\n \\(f(3a-1) - f(a) < \\frac{4}{3}a^2 - a + \\frac{1}{6} \\Leftrightarrow f(3a-1) - \\frac{4}{3}a^2 + a - \\frac{1}{6} < f(a) \\Leftrightarrow f(3a-1) - \\frac{4}{3}a^2 + a - \\frac{1}{6} - \\frac{1}{6}a^2 < f(a) - \\frac{1}{6}a^2 \\Leftrightarrow f(3a-1) - \\left(\\frac{3}{2}a^2 - a + \\frac{1}{6}\\right) < f(a) - \\frac{1}{6}a^2 \\Leftrightarrow f(3a-1) - \\frac{1}{6}(9a^2 - 6a + 1) < f(a) - \\frac{1}{6}a^2 \\Leftrightarrow f(3a-1) - \\frac{1}{6}(3a-1)^2 < f(a) - \\frac{1}{6}a^2 \\Leftrightarrow g(3a-1) < g(a)\\)，结合  \\(g(x)\\) 在  \\(\\mathbb{R}\\) 上  \\(\\searrow\\) 可得  \\(3a-1 > a\\)，所以  \\(a > \\frac{1}{2}\\)。\n\n答案：B\n\n【例 11】已知函数  \\(f(x)\\) 为奇函数，且当  \\(x \\in (-\\infty, 0)\\) 时， \\(f(x) + x f'(x) < 0\\)，记  \\(a = 3^{0.2} f(3^{0.2})\\)， \\(b = \\ln 2 f(\\ln 2)\\)， \\(c = -3 f(-3)\\)，则  \\(a\\)， \\(b\\)， \\(c\\) 的大小关系是（ ）\n\nA.  \\(a > b > c\\)          B.  \\(c > b > a\\)          C.  \\(a > c > b\\)          D.  \\(c > a > b\\)\n\n解析： \\(f(x) + xf'(x) < 0\\) 中的  \\(f(x)\\) 和  \\(xf'(x)\\) 各自的原函数都不易看出，故不能拆开来看了，怎么办呢？考虑整体观察原函数，谁求导后等于  \\(f(x) + xf'(x)\\)？因为中间是加号，所以联想到积的导数，进一步尝试会发现  \\(xf(x)\\) 求导后结果就是  \\(f(x) + xf'(x)\\)，构造原函数的思路就有了，\n\n设  \\(g(x) = xf(x)\\)，当  \\(x \\in (-\\infty, 0)\\) 时， \\(g'(x) = f(x) + xf'(x) < 0\\)，所以  \\(g(x)\\) 在  \\((- \\infty, 0)\\) 上  \\(\\searrow\\)，\n\n由题意， \\(a = 3^{0.2} f(3^{0.2}) = g(3^{0.2})\\)， \\(b = \\ln 2 f(\\ln 2) = g(\\ln 2)\\)， \\(c = -3 f(-3) = g(-3)\\)，\n\n三个自变量的值不都在  \\((- \\infty, 0)\\) 上，怎么办呢？题干还给出了  \\(f(x)\\) 为奇函数，故考虑结合奇偶性来看，\n\n由题意， \\(f(x)\\) 为奇函数，所以  \\(g(-x) = -xf(-x) = -x[-f(x)] = xf(x) = g(x)\\)，故  \\(g(x)\\) 为偶函数，\n\n所以  \\(g(x)\\) 在  \\((0, +\\infty)\\) 上  \\(\\nearrow\\)，且  \\(c = g(-3) = g(3)\\)，因为  \\(0 < \\ln 2 < 1 < 3^{0.2} < 3\\)，所以  \\(g(\\ln 2) < g(3^{0.2}) < g(3)\\)，\n\n从而  \\(b < a < c\\)，故  \\(c > a > b\\)。\n\n答案：D\n\n【反思】若各部分的原函数无法单独看出，则常整体考虑，此时一般对应着积、商的导数，这种情况下要顺利地构造出原函数，需要熟悉一些常见的模型，我们用下面的表格给大家归纳出来：\n\n\n<table border=1 style='margin: auto; word-wrap: break-word;'><tr><td style='text-align: center; word-wrap: break-word;'>已知的不等式中所含结构</td><td style='text-align: center; word-wrap: break-word;'>构造原函数的方法</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>\\(xf&#x27;(x) + f(x)\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(F(x) = xf(x), \\quad F&#x27;(x) = f(x) + xf&#x27;(x)\\)</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>\\(xf&#x27;(x) - f(x)\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(F(x) = \\frac{f(x)}{x}, \\quad F&#x27;(x) = \\frac{xf&#x27;(x) - f(x)}{x^2}\\)</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>\\(xf&#x27;(x) + 2f(x)\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(F(x) = x^2f(x), \\quad F&#x27;(x) = x[xf&#x27;(x) + 2f(x)]\\)</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>\\(xf&#x27;(x) - 2f(x)\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(F(x) = \\frac{f(x)}{x^2}, \\quad F&#x27;(x) = \\frac{xf&#x27;(x) - 2f(x)}{x^3}\\)</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>\\(f(x) + f&#x27;(x)\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(F(x) = e^x, \\quad F&#x27;(x) = e^x[f(x) + f&#x27;(x)]\\)</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>\\(f&#x27;(x) - f(x)\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(F(x) = \\frac{f(x)}{e^x}, \\quad F&#x27;(x) = \\frac{f&#x27;(x) - f(x)}{e^x}\\)</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>\\(f&#x27;(x)\\sin x + f(x)\\cos x\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(F(x) = f(x)\\sin x, \\quad F&#x27;(x) = f&#x27;(x)\\sin x + f(x)\\cos x\\)</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>\\(f&#x27;(x)\\cos x - f(x)\\sin x\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(F(x) = f(x)\\cos x, \\quad F&#x27;(x) = f&#x27;(x)\\cos x - f(x)\\sin x\\)</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>\\(f&#x27;(x)\\sin x - f(x)\\cos x\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(F(x) = \\frac{f(x)}{\\sin x}, \\quad F&#x27;(x) = \\frac{f&#x27;(x)\\sin x - f(x)\\cos x}{\\sin^2 x}\\)</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>\\(f&#x27;(x)\\cos x + f(x)\\sin x\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(F(x) = \\frac{f(x)}{\\cos x}, \\quad F&#x27;(x) = \\frac{f&#x27;(x)\\cos x + f(x)\\sin x}{\\cos^2 x}\\)</td></tr></table>\n\n【变式1】设定义在\\(\\mathbb{R}\\)上的函数\\(f(x)\\)的导函数为\\(f'(x)\\)，若\\(f(x)>f'(x)\\)，且\\(f(x)+2025\\)为奇函数，",
+      "text_sha256": "b6d1666c1ba9e834bfe21e20cadc3611443ce3aa97f18e905c79af5c187b4332",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 34,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_34.md",
+      "text": "则不等式  \\(f(x)+2025\\mathrm{e}^{x}<0\\) 的解集是（）\n\nA.  \\((-\\infty,0)\\) B.  \\((0,+\\infty)\\) C.  \\(\\left(-\\infty,\\frac{1}{e}\\right)\\) D.  \\(\\left(\\frac{1}{e},+\\infty\\right)\\)\n\n解析：条件给出  \\(f(x) > f'(x)\\)，移项可产生  \\(f(x) - f'(x)\\) 这一结构，联想到构造函数  \\(y = \\frac{f(x)}{\\mathrm{e}^x}\\) 来分析，\n\n设  \\(g(x) = \\frac{f(x)}{\\mathrm{e}^x}\\)， \\(x \\in \\mathbf{R}\\)，则  \\(g'(x) = \\frac{f'(x)\\mathrm{e}^x - \\mathrm{e}^x f(x)}{(\\mathrm{e}^x)^2} = \\frac{f'(x) - f(x)}{\\mathrm{e}^x}\\)，由题意， \\(f(x) > f'(x)\\)，\n\n所以  \\(f'(x) - f(x) < 0\\)，从而  \\(g'(x) < 0\\)，故  \\(g(x)\\) 在  \\(\\mathbf{R}\\) 上  \\(\\searrow\\)，有  \\(g(x)\\) 的单调性，当然把要解的不等式往  \\(g(x)\\) 上化，\n\n \\(f(x) + 2025\\mathrm{e}^x < 0 \\Leftrightarrow f(x) < -2025\\mathrm{e}^x \\Leftrightarrow \\frac{f(x)}{\\mathrm{e}^x} < -2025 \\Leftrightarrow g(x) < -2025\\) ①，\n\n若能将右边的 -2025 也化为  \\(g(x)\\) 在某处的函数值，就能用单调性处理了，怎么化？条件还给出  \\(f(x) + 2025\\) 为奇函数，可联想到  \\(f(0) + 2025 = 0\\)，移项即可产生 -2025，故尝试由此出发分析，\n\n因为  \\(f(x) + 2025\\) 为奇函数，所以  \\(f(0) + 2025 = 0 \\Rightarrow f(0) = -2025 \\Rightarrow \\frac{f(0)}{\\mathrm{e}^0} = -2025 \\Rightarrow g(0) = -2025\\)，\n\n所以不等式①即为  \\(g(x) < g(0)\\)，结合  \\(g(x)\\) 在  \\(\\mathbf{R}\\) 上  \\(\\searrow\\) 可得  \\(x > 0\\)，故所求不等式的解集为  \\((0, +\\infty)\\)。\n\n答案：B\n\n【变式 2】（多选）已知函数  \\(f(x)\\) 对任意的  \\(x \\in \\left(-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right)\\)，满足  \\(f'(x) \\cos x + f(x) \\sin x > 0\\)，则下列不等式中成立的是（ ）\n\nA.  \\(\\sqrt{2} f\\left(-\\frac{\\pi}{3}\\right) < f\\left(-\\frac{\\pi}{4}\\right)\\)\n\nB.  \\(\\sqrt{2} f\\left(\\frac{\\pi}{3}\\right) < f\\left(\\frac{\\pi}{4}\\right)\\)\n\nC.  \\(f(0) < \\sqrt{2} f\\left(\\frac{\\pi}{4}\\right)\\)\n\nD.  \\(f(0) > 2 f\\left(\\frac{\\pi}{3}\\right)\\)\n\n解析：由  \\(f'(x)\\cos x + f(x)\\sin x\\) 这一结构联想到构造函数  \\(y = \\frac{f(x)}{\\cos x}\\) 来分析，设  \\(g(x) = \\frac{f(x)}{\\cos x}\\)， \\(x \\in \\left(-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right)\\)，由题意， \\(g'(x) = \\frac{f'(x)\\cos x - (-\\sin x)f(x)}{\\cos^2 x} = \\frac{f'(x)\\cos x + f(x)\\sin x}{\\cos^2 x} > 0\\)，所以  \\(g(x)\\) 在  \\(\\left(-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right)\\) 上  \\(\\nearrow\\)，下面分析选项，以 A 项为例，涉及  \\(f\\left(-\\frac{\\pi}{3}\\right)\\) 和  \\(f\\left(-\\frac{\\pi}{4}\\right)\\)，当然想到研究  \\(g\\left(-\\frac{\\pi}{3}\\right)\\) 和  \\(g\\left(-\\frac{\\pi}{4}\\right)\\) 的大小关系，A 项，因为  \\(-\\frac{\\pi}{3} < -\\frac{\\pi}{4}\\)，所以  \\(g\\left(-\\frac{\\pi}{3}\\right) < g\\left(-\\frac{\\pi}{4}\\right)\\)，即  \\(\\frac{f\\left(-\\frac{\\pi}{3}\\right)}{\\cos\\left(-\\frac{\\pi}{3}\\right)} < \\frac{f\\left(-\\frac{\\pi}{4}\\right)}{\\cos\\left(-\\frac{\\pi}{4}\\right)}\\)，也即  \\(2f\\left(-\\frac{\\pi}{3}\\right) < \\sqrt{2}f\\left(-\\frac{\\pi}{4}\\right)\\)，所以  \\(\\sqrt{2}f\\left(-\\frac{\\pi}{3}\\right) < f\\left(-\\frac{\\pi}{4}\\right)\\)，故 A 项正确；B 项，因为  \\(\\frac{\\pi}{4} < \\frac{\\pi}{3}\\)，所以  \\(g\\left(\\frac{\\pi}{4}\\right) < g\\left(\\frac{\\pi}{3}\\right)\\)，即  \\(\\frac{f\\left(\\frac{\\pi}{4}\\right)}{\\cos\\frac{\\pi}{4}} < \\frac{f\\left(\\frac{\\pi}{3}\\right)}{\\cos\\frac{\\pi}{3}}\\)，也即  \\(\\sqrt{2}f\\left(\\frac{\\pi}{4}\\right) < 2f\\left(\\frac{\\pi}{3}\\right)\\)，所以  \\(f\\left(\\frac{\\pi}{4}\\right) < \\sqrt{2}f\\left(\\frac{\\pi}{3}\\right)\\)，故 B 项错误；",
+      "text_sha256": "d3a2c0922b47d2947f861a8d3b56cf33aba87984d9d8e7f13745dab93efe3648",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 35,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_35.md",
+      "text": "C 项，因为  \\(0 < \\frac{\\pi}{4}\\)，所以  \\(g(0) < g\\left(\\frac{\\pi}{4}\\right)\\)，即  \\(\\frac{f(0)}{\\cos 0} < \\frac{f\\left(\\frac{\\pi}{4}\\right)}{\\cos \\frac{\\pi}{4}}\\)，也即  \\(f(0) < \\sqrt{2}f\\left(\\frac{\\pi}{4}\\right)\\)，故 C 项正确\n\nD 项，因为  \\(0 < \\frac{\\pi}{3}\\)，所以  \\(g(0) < g\\left(\\frac{\\pi}{3}\\right)\\)，即  \\(\\frac{f(0)}{\\cos 0} < \\frac{f\\left(\\frac{\\pi}{3}\\right)}{\\cos \\frac{\\pi}{2}}\\)，也即  \\(f(0) < 2f\\left(\\frac{\\pi}{3}\\right)\\)，故 D 项错误.\n\n答案：AC\n\n## 强化训练\n\n## A 组 夯实基础\n\n1. (2025·广东模拟)\n\n若  \\(f'(x)\\) 为函数  \\(f(x)\\) 的导函数， \\(f'(x)\\) 的图象大致如图所示，则下列关于  \\(f(x)\\) 的结论正确的是（）\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_522_614_698_753.jpg\" alt=\"Image\" width=\"14%\" /></div>\n\n\nA.  \\(f(0) > f(3)\\)\n\nB.  \\(f(3) = f(-1)\\)\n\nC.  \\(f(x)\\) 在  \\((-\\infty, 1)\\) 上单调递减\n\nD.  \\(f(x)\\) 在  \\((1, +\\infty)\\) 上单调递增\n\n2.（2025·上海期末）\n\n设  \\(f'(x)\\) 是函数  \\(f(x)\\) 的导函数， \\(y = f'(x)\\) 的图象如图所示，则  \\(y = f(x)\\) 的图象可能是（）\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_537_1121_722_1237.jpg\" alt=\"Image\" width=\"15%\" /></div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_435_1250_600_1369.jpg\" alt=\"Image\" width=\"13%\" /></div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_623_1251_788_1368.jpg\" alt=\"Image\" width=\"13%\" /></div>\n\n\n<div style=\"text-align: center;\">A</div>\n\n\n<div style=\"text-align: center;\">B</div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_433_1399_599_1519.jpg\" alt=\"Image\" width=\"13%\" /></div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_622_1399_788_1519.jpg\" alt=\"Image\" width=\"13%\" /></div>\n",
+      "text_sha256": "89224c9d7cd882ee1ff9f51e49ff24ecc0e42894f03ac2f9e2954ff4a0fb4d45",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_522_614_698_753.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_522_614_698_753.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_537_1121_722_1237.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_537_1121_722_1237.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_435_1250_600_1369.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_435_1250_600_1369.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_623_1251_788_1368.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_623_1251_788_1368.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_433_1399_599_1519.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_433_1399_599_1519.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_622_1399_788_1519.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_622_1399_788_1519.jpg",
+          "exists": true
+        }
+      ],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 36,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_36.md",
+      "text": "3.（2025·海南模拟）\n\n已知函数  \\(f(x)=x^{2}-2x+\\ln x\\)\n\n（1）求  \\(f(x)\\) 的导函数；\n\n（2）求  \\(f(x)\\) 的单调区间.\n\n## B组 强化能力\n\n4.（2025 · 江西期末）\n\n若  \\(f(x)\\) 是定义在区间  \\((-3,2)\\) 上的函数，其图象如图所示，设  \\(f(x)\\) 的导函数为  \\(f'(x)\\)，则  \\(f(x)f'(x)>0\\) 的解集为（）\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_277_753_912_889.jpg\" alt=\"Image\" width=\"53%\" /></div>\n\n\nA.  \\((-2,-1)\\cup(1,2)\\) B.  \\((-2,-1)\\cup(0,1)\\)\n\nC.  \\((-3,-2)\\cup(0,1)\\) D.  \\((-1,0)\\cup(1,2)\\)\n\n5.（2025·吉林长春期末）\n\n已知定义在  \\(\\mathbb{R}\\) 上的函数  \\(f(x)\\) 的导函数为  \\(f'(x)\\)，若  \\(f'(x) < 1\\) 恒成立，且  \\(f(0) = 0\\)，则  \\(f(x) \\leq x\\) 的解集为（ ）\n\nA.  \\(\\mathbb{R}\\)  \n\nB.  \\((-\\infty, 0]\\)  \n\nC.  \\([1, +\\infty)\\)  \n\nD.  \\([0, +\\infty)\\)",
+      "text_sha256": "6fc7276e080a6f87e99de1b3e8c9c3f5094360bee5dbef3eb38fdfb125f51735",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_277_753_912_889.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_277_753_912_889.jpg",
+          "exists": true
+        }
+      ],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 37,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_37.md",
+      "text": "6.（2025·全国模拟）\n\n已知  \\(f'(x)\\) 是定义域为  \\(\\mathbb{R}\\) 的函数  \\(f(x)\\) 的导函数，满足  \\(f'(x) - f(x) > 0\\)，且  \\(f(1) = 2e\\)，则不等式  \\(f(x) - 2e^x > 0\\) 的解集为（ ）\n\nA.  \\(\\left(\\frac{1}{e}, 1\\right)\\)  \n\nB.  \\(\\left(\\frac{1}{e}, e\\right)\\)  \n\nC.  \\((1, +\\infty)\\)  \n\nD.  \\(\\left(\\frac{1}{e}, +\\infty\\right)\\)\n\n7.（2025·浙江杭州期末）\n\n已知函数  \\(f(x)\\) 的定义域为  \\(\\mathbb{R}\\)， \\(f(0)=0\\)，若对任意的  \\(x \\in \\mathbb{R}\\)，都有  \\(f(x) > -1 + f'(x)\\)，则不等式  \\(f(x) < -1 + e^x\\) 的解集是（ ）\n\nA.  \\((-\\infty, 0)\\) B.  \\((0, +\\infty)\\)\n\nC.  \\((-1, 0) \\cup (1, +\\infty)\\) D.  \\((-1, 0) \\cup (0, 1)\\)\n\n已知  \\(f'(x)\\) 是函数  \\(f(x)\\) 的导函数，且对  \\(\\forall x \\in \\left(0, \\frac{\\pi}{2}\\right)\\)， \\(f'(x)\\cos x > f(x)\\sin(-x)\\)，则下列不等式一定不成立的是（ ）\n\nA.  \\(\\frac{\\sqrt{3}}{2}f\\left(\\frac{\\pi}{3}\\right) > f\\left(\\frac{\\pi}{6}\\right)\\cos\\frac{\\pi}{3}\\)\n\nB.  \\(f(1) > \\sqrt{2}f\\left(\\frac{\\pi}{4}\\right)\\cos1\\)\n\nC.  \\(f\\left(\\frac{\\pi}{4}\\right) < \\sqrt{2}f\\left(\\frac{\\pi}{3}\\right)\\)\n\nD.  \\(\\frac{2\\sqrt{3}}{3}f\\left(\\frac{\\pi}{6}\\right)\\cos1 > f(1)\\)",
+      "text_sha256": "d87e0784fcf2f8e49a1bf42c42f848cc44b0a0d0cd244328825b60d0d626dae9",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 38,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_38.md",
+      "text": "### 9. （2025 · 山东威海期末）\n\n已知函数  \\(f(x)=\\ln x + ax - x^{2}\\)，若  \\(f(x)\\) 在  \\([1, +\\infty)\\) 上单调递减，求实数 a 的取值范围.\n\n10.（2025·内蒙古包头期中（节选））\n\n已知函数  \\(f(x)=\\ln x - ax\\)，讨论  \\(f(x)\\) 的单调性.\n\n## 一 数·高中数学一本通\n\n11.（2025 · 全国模拟）\n\n已知函数  \\(f(x)=x^{2}-\\pi x+2\\sin x\\)，求  \\(f(x)\\) 的单调区间.\n\n### 12 \\. (2025 · 全国模拟)\n\n讨论函数  \\(f(x)=(a-1)\\ln x+ax^{2}+1\\) 的单调性.",
+      "text_sha256": "f03a90389fc140932a06bb41d66d6c4b2fd872e14a687c7e5949f5f745093b31",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 39,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_39.md",
+      "text": "13\\. （2025 · 贵州六盘水期末）\n\n设函数  \\(f(x)=\\left(x-\\frac{1}{x}\\right)\\ln x\\).\n\n（1）求  \\(f(x)\\) 的定义域，并证明： \\(f\\left(\\frac{1}{x}\\right)=f(x)\\);\n\n（2）讨论  \\(f(x)\\) 的单调性，并比较  \\(f\\left(\\frac{2}{3}\\right)\\) 与  \\(f(\\sqrt{e})\\) 的大小.\n\n14.（2025·四川达州期末）\n\n已知函数  \\(f(x)=2x^{3}-3(a+3)x^{2}+18ax+6\\).\n\n（1）若 a=0，求曲线  \\(y=f(x)\\) 在点  \\((1,f(1))\\) 处的切线方程；\n\n（2）讨论函数  \\(f(x)\\) 的单调性.\n\n一数·高中数学一本通\n\n### 15. （2025 · 辽宁模拟（节选））\n\n已知函数  \\(f(x)=\\frac{1}{2}ax^2-(2+a)x+2\\ln x\\) ( \\(a\\in\\mathbb{R}\\))，讨论函数  \\(f(x)\\) 的单调性.\n\n### 16. （2025·福建漳州模拟（节选））\n\n已知函数  \\(f(x) = 2\\mathrm{e}^x - ax\\) ( \\(a \\in \\mathbf{R}\\))，若  \\(f(x)\\) 有 2 个零点，求  \\(a\\) 的取值范围.",
+      "text_sha256": "baf9b9f6824a52ee6491381602969cfcc2a5afdafc317d0433b597c8ebdde1cd",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 40,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_40.md",
+      "text": "### 17. （2025·重庆沙坪坝期末（节选）)\n\n已知函数  \\(f(x)=xe^{x}-a\\left(\\frac{1}{2}x^{2}+x\\right)\\)，讨论  \\(f(x)\\) 的单调性.\n\n## C组 拓展提升\n\n### 18. （2025 · 全国模拟）\n\n已知  \\(f(x)=(a+1)\\ln x+ax^2+1\\) ( \\(a<-1\\))，若对  \\(\\forall x_1\\)， \\(x_2\\in(0,+\\infty)\\) 且  \\(x_1\\neq x_2\\)， \\(\\left|f(x_1)-f(x_2)\\right|>4\\left|x_1-x_2\\right|\\)，求  \\(a\\) 的取值范围。\n\n### 19. （2025·内蒙古模拟）\n\n已知函数  \\(f(x)=\\mathrm{e}^{x}-ax^{2}-x\\)\n\n（1）当a=-1时，讨论 \\(f(x)\\)的单调性；\n\n（2）若  \\(f(x)\\) 在  \\((0,+\\infty)\\) 上单调递增，求实数 a 的取值范围.",
+      "text_sha256": "c784aef99e1df91dec64d5618e47d2038f3e1663117d3c1d8b21351cf269c5ff",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 41,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_41.md",
+      "text": "20.（2019·新课标Ⅰ卷（改）)\n\n已知函数  \\(f(x)=\\sin x-\\ln(x+1)\\)，设  \\(g(x)=f'(x)\\).\n\n证明：（1） \\(g'(x)\\) 在区间 \\(\\left(-1,\\frac{\\pi}{2}\\right)\\)存在唯一的零点；\n\n（2） \\(f(x)\\) 有且仅有 2 个零点.",
+      "text_sha256": "e01251153dc0ba88be06d184d6f58ffc08cfd9ff3fd4d3f4189924356a6b838c",
+      "image_refs": [],
+      "math_errors": []
+    }
+  ],
+  "questions": [
+    {
+      "qid": "Q-05750b956f0587a2",
+      "section": "5.3",
+      "group": "A",
+      "number": 1,
+      "kind": "A组",
+      "source_anchor": {
+        "ocr_doc": 35,
+        "pdf_page": 36,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_35.md"
+      },
+      "question_text": "1. (2025·广东模拟)\n\n若  \\(f'(x)\\) 为函数  \\(f(x)\\) 的导函数， \\(f'(x)\\) 的图象大致如图所示，则下列关于  \\(f(x)\\) 的结论正确的是（）\n\n\n\n\nA.  \\(f(0) > f(3)\\)\n\nB.  \\(f(3) = f(-1)\\)\n\nC.  \\(f(x)\\) 在  \\((-\\infty, 1)\\) 上单调递减\n\nD.  \\(f(x)\\) 在  \\((1, +\\infty)\\) 上单调递增",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_522_614_698_753.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_522_614_698_753.jpg",
+          "exists": true
+        }
+      ],
+      "visual_status": "VISION_VERIFIED",
+      "math_errors": [],
+      "evidence": [
+        "E1",
+        "E2"
+      ],
+      "vision_sidecars": [
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_522_614_698_753.jpg",
+          "image_sha256": "a7117ff470fa4e32c5738f69ed8c50c4e532e2c16c404736522f5e53cdd8e79c",
+          "confidence": "E2",
+          "structured": {
+            "objects": [],
+            "relations": [],
+            "coordinates": [],
+            "ranges": [],
+            "text": [
+              "y = f'(x)"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        }
+      ],
+      "vision_sidecar": {
+        "objects": [],
+        "relations": [],
+        "coordinates": [],
+        "ranges": [],
+        "text": [
+          "y = f'(x)"
+        ],
+        "uncertainties": [],
+        "confidence": "E2"
+      },
+      "vision_source_provenance": []
+    },
+    {
+      "qid": "Q-5e5957c03e0418c1",
+      "section": "5.3",
+      "group": "A",
+      "number": 2,
+      "kind": "A组",
+      "source_anchor": {
+        "ocr_doc": 35,
+        "pdf_page": 36,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_35.md"
+      },
+      "question_text": "2.（2025·上海期末）\n\n设  \\(f'(x)\\) 是函数  \\(f(x)\\) 的导函数， \\(y = f'(x)\\) 的图象如图所示，则  \\(y = f(x)\\) 的图象可能是（）\n\n\n\n\n\n\n\n\n\n\nA\n\n\nB\n\n\n\n\n\n",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_537_1121_722_1237.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_537_1121_722_1237.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_435_1250_600_1369.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_435_1250_600_1369.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_623_1251_788_1368.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_623_1251_788_1368.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_433_1399_599_1519.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_433_1399_599_1519.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_622_1399_788_1519.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_622_1399_788_1519.jpg",
+          "exists": true
+        }
+      ],
+      "visual_status": "VISION_VERIFIED",
+      "math_errors": [],
+      "evidence": [
+        "E1",
+        "E2"
+      ],
+      "vision_sidecars": [
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_537_1121_722_1237.jpg",
+          "image_sha256": "b14e20d71da62b80408b519ca4964de0a0832a8a844b49c927ef2c01c48c0157",
+          "confidence": "E2",
+          "structured": {
+            "objects": [
+              "坐标轴",
+              "曲线y=f'(x)",
+              "点O",
+              "点(1,0)",
+              "点(2,0)"
+            ],
+            "relations": [
+              "曲线y=f'(x)经过点O",
+              "曲线y=f'(x)经过点(1,0)",
+              "曲线y=f'(x)经过点(2,0)"
+            ],
+            "coordinates": [
+              "O(0,0)",
+              "(1,0)",
+              "(2,0)"
+            ],
+            "ranges": [
+              "x∈[1,2]"
+            ],
+            "text": [
+              "y",
+              "y=f'(x)",
+              "x"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        },
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_435_1250_600_1369.jpg",
+          "image_sha256": "f4270c1e2bb221cc7a97eca98a995101823099394725ef2d0c1dfb2cdc13dd52",
+          "confidence": "E2",
+          "structured": {
+            "objects": [
+              "坐标轴",
+              "曲线"
+            ],
+            "relations": [
+              "曲线与x轴交于两点",
+              "曲线在x=1处有极小值点"
+            ],
+            "coordinates": [
+              [
+                0,
+                0
+              ]
+            ],
+            "ranges": [
+              [
+                1,
+                2
+              ]
+            ],
+            "text": [
+              "y",
+              "x",
+              "O",
+              "1",
+              "2"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        },
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_623_1251_788_1368.jpg",
+          "image_sha256": "99852f0b415b4ae27cc838a9a37dee0d302960b3ac8f43ef33981c2714703480",
+          "confidence": "E2",
+          "structured": {
+            "objects": [],
+            "relations": [],
+            "coordinates": [],
+            "ranges": [],
+            "text": [
+              "y",
+              "x",
+              "O",
+              "1",
+              "2"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        },
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_433_1399_599_1519.jpg",
+          "image_sha256": "417008080f5d35b769281b32fb749f5379ec3074289167fecc276ed91f85053b",
+          "confidence": "E2",
+          "structured": {
+            "objects": [
+              "坐标轴",
+              "曲线",
+              "点O"
+            ],
+            "relations": [
+              "曲线经过点O",
+              "曲线与x轴交于点O和另一点",
+              "曲线在x=1和x=2附近有极值点"
+            ],
+            "coordinates": [
+              "O(0,0)"
+            ],
+            "ranges": [
+              "x∈(1,2)"
+            ],
+            "text": [
+              "1",
+              "2"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        },
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_622_1399_788_1519.jpg",
+          "image_sha256": "5125e2316acd3343b5a7a25ffe21c5d672286819de5ab6bb101953fb6a3ea901",
+          "confidence": "E2",
+          "structured": {
+            "objects": [],
+            "relations": [],
+            "coordinates": [],
+            "ranges": [],
+            "text": [
+              "O",
+              "1",
+              "2"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        }
+      ],
+      "vision_sidecar": {
+        "objects": [
+          "坐标轴",
+          "曲线y=f'(x)",
+          "点O",
+          "点(1,0)",
+          "点(2,0)"
+        ],
+        "relations": [
+          "曲线y=f'(x)经过点O",
+          "曲线y=f'(x)经过点(1,0)",
+          "曲线y=f'(x)经过点(2,0)"
+        ],
+        "coordinates": [
+          "O(0,0)",
+          "(1,0)",
+          "(2,0)"
+        ],
+        "ranges": [
+          "x∈[1,2]"
+        ],
+        "text": [
+          "y",
+          "y=f'(x)",
+          "x"
+        ],
+        "uncertainties": [],
+        "confidence": "E2"
+      },
+      "vision_source_provenance": []
+    },
+    {
+      "qid": "Q-480e2413636e68a1",
+      "section": "5.3",
+      "group": "A",
+      "number": 3,
+      "kind": "A组",
+      "source_anchor": {
+        "ocr_doc": 36,
+        "pdf_page": 37,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_36.md"
+      },
+      "question_text": "3.（2025·海南模拟）\n\n已知函数  \\(f(x)=x^{2}-2x+\\ln x\\)\n\n（1）求  \\(f(x)\\) 的导函数；\n\n（2）求  \\(f(x)\\) 的单调区间.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-d2095e89eec47ff2",
+      "section": "5.3",
+      "group": "B",
+      "number": 4,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 36,
+        "pdf_page": 37,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_36.md"
+      },
+      "question_text": "4.（2025 · 江西期末）\n\n若  \\(f(x)\\) 是定义在区间  \\((-3,2)\\) 上的函数，其图象如图所示，设  \\(f(x)\\) 的导函数为  \\(f'(x)\\)，则  \\(f(x)f'(x)>0\\) 的解集为（）\n\n\n\n\nA.  \\((-2,-1)\\cup(1,2)\\) B.  \\((-2,-1)\\cup(0,1)\\)\n\nC.  \\((-3,-2)\\cup(0,1)\\) D.  \\((-1,0)\\cup(1,2)\\)",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_277_753_912_889.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_277_753_912_889.jpg",
+          "exists": true
+        }
+      ],
+      "visual_status": "VISION_VERIFIED",
+      "math_errors": [],
+      "evidence": [
+        "E1",
+        "E2"
+      ],
+      "vision_sidecars": [
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_277_753_912_889.jpg",
+          "image_sha256": "c6442e4ab2588ef75f0eb203790bdde2312fb97d4fcb3c819c0206d95fd86cce",
+          "confidence": "E2",
+          "structured": {
+            "objects": [],
+            "relations": [],
+            "coordinates": [],
+            "ranges": [],
+            "text": [
+              "一数·高",
+              "数学一本通"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        }
+      ],
+      "vision_sidecar": {
+        "objects": [],
+        "relations": [],
+        "coordinates": [],
+        "ranges": [],
+        "text": [
+          "一数·高",
+          "数学一本通"
+        ],
+        "uncertainties": [],
+        "confidence": "E2"
+      },
+      "vision_source_provenance": []
+    },
+    {
+      "qid": "Q-64e714238fbc3b15",
+      "section": "5.3",
+      "group": "B",
+      "number": 5,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 36,
+        "pdf_page": 37,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_36.md"
+      },
+      "question_text": "5.（2025·吉林长春期末）\n\n已知定义在  \\(\\mathbb{R}\\) 上的函数  \\(f(x)\\) 的导函数为  \\(f'(x)\\)，若  \\(f'(x) < 1\\) 恒成立，且  \\(f(0) = 0\\)，则  \\(f(x) \\leq x\\) 的解集为（ ）\n\nA.  \\(\\mathbb{R}\\)  \n\nB.  \\((-\\infty, 0]\\)  \n\nC.  \\([1, +\\infty)\\)  \n\nD.  \\([0, +\\infty)\\)",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-e2c99d251f8689df",
+      "section": "5.3",
+      "group": "B",
+      "number": 6,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 37,
+        "pdf_page": 38,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_37.md"
+      },
+      "question_text": "6.（2025·全国模拟）\n\n已知  \\(f'(x)\\) 是定义域为  \\(\\mathbb{R}\\) 的函数  \\(f(x)\\) 的导函数，满足  \\(f'(x) - f(x) > 0\\)，且  \\(f(1) = 2e\\)，则不等式  \\(f(x) - 2e^x > 0\\) 的解集为（ ）\n\nA.  \\(\\left(\\frac{1}{e}, 1\\right)\\)  \n\nB.  \\(\\left(\\frac{1}{e}, e\\right)\\)  \n\nC.  \\((1, +\\infty)\\)  \n\nD.  \\(\\left(\\frac{1}{e}, +\\infty\\right)\\)",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-a1c9c9a472532534",
+      "section": "5.3",
+      "group": "B",
+      "number": 7,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 37,
+        "pdf_page": 38,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_37.md"
+      },
+      "question_text": "7.（2025·浙江杭州期末）\n\n已知函数  \\(f(x)\\) 的定义域为  \\(\\mathbb{R}\\)， \\(f(0)=0\\)，若对任意的  \\(x \\in \\mathbb{R}\\)，都有  \\(f(x) > -1 + f'(x)\\)，则不等式  \\(f(x) < -1 + e^x\\) 的解集是（ ）\n\nA.  \\((-\\infty, 0)\\) B.  \\((0, +\\infty)\\)\n\nC.  \\((-1, 0) \\cup (1, +\\infty)\\) D.  \\((-1, 0) \\cup (0, 1)\\)\n\n已知  \\(f'(x)\\) 是函数  \\(f(x)\\) 的导函数，且对  \\(\\forall x \\in \\left(0, \\frac{\\pi}{2}\\right)\\)， \\(f'(x)\\cos x > f(x)\\sin(-x)\\)，则下列不等式一定不成立的是（ ）\n\nA.  \\(\\frac{\\sqrt{3}}{2}f\\left(\\frac{\\pi}{3}\\right) > f\\left(\\frac{\\pi}{6}\\right)\\cos\\frac{\\pi}{3}\\)\n\nB.  \\(f(1) > \\sqrt{2}f\\left(\\frac{\\pi}{4}\\right)\\cos1\\)\n\nC.  \\(f\\left(\\frac{\\pi}{4}\\right) < \\sqrt{2}f\\left(\\frac{\\pi}{3}\\right)\\)\n\nD.  \\(\\frac{2\\sqrt{3}}{3}f\\left(\\frac{\\pi}{6}\\right)\\cos1 > f(1)\\)",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-6a7045892f5885ae",
+      "section": "5.3",
+      "group": "B",
+      "number": 8,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 37,
+        "pdf_page": 38,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_37.md",
+        "recovery": "PADDLE_OCR_TEXT_AFTER_B7_BEFORE_B9",
+        "recovery_source_kind": "primary_ocr"
+      },
+      "question_text": "已知  \\(f'(x)\\) 是函数  \\(f(x)\\) 的导函数，且对  \\(\\forall x \\in \\left(0, \\frac{\\pi}{2}\\right)\\)， \\(f'(x)\\cos x > f(x)\\sin(-x)\\)，则下列不等式一定不成立的是（ ）\n\nA.  \\(\\frac{\\sqrt{3}}{2}f\\left(\\frac{\\pi}{3}\\right) > f\\left(\\frac{\\pi}{6}\\right)\\cos\\frac{\\pi}{3}\\)\n\nB.  \\(f(1) > \\sqrt{2}f\\left(\\frac{\\pi}{4}\\right)\\cos1\\)\n\nC.  \\(f\\left(\\frac{\\pi}{4}\\right) < \\sqrt{2}f\\left(\\frac{\\pi}{3}\\right)\\)\n\nD.  \\(\\frac{2\\sqrt{3}}{3}f\\left(\\frac{\\pi}{6}\\right)\\cos1 > f(1)\\)",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1",
+        "PADDLE_OCR_TEXT_AFTER_B7_BEFORE_B9"
+      ],
+      "recovery_reason": "printed_number_missing_from_paddle_ocr"
+    },
+    {
+      "qid": "Q-4ff8f7d021e4edb6",
+      "section": "5.3",
+      "group": "B",
+      "number": 9,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 38,
+        "pdf_page": 39,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_38.md"
+      },
+      "question_text": "### 9. （2025 · 山东威海期末）\n\n已知函数  \\(f(x)=\\ln x + ax - x^{2}\\)，若  \\(f(x)\\) 在  \\([1, +\\infty)\\) 上单调递减，求实数 a 的取值范围.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-91ef7f55fa437189",
+      "section": "5.3",
+      "group": "B",
+      "number": 10,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 38,
+        "pdf_page": 39,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_38.md"
+      },
+      "question_text": "10.（2025·内蒙古包头期中（节选））\n\n已知函数  \\(f(x)=\\ln x - ax\\)，讨论  \\(f(x)\\) 的单调性.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-e3b8a3f1e7ee2af0",
+      "section": "5.3",
+      "group": "B",
+      "number": 11,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 38,
+        "pdf_page": 39,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_38.md"
+      },
+      "question_text": "11.（2025 · 全国模拟）\n\n已知函数  \\(f(x)=x^{2}-\\pi x+2\\sin x\\)，求  \\(f(x)\\) 的单调区间.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-4eb7a7915d8272c3",
+      "section": "5.3",
+      "group": "B",
+      "number": 12,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 38,
+        "pdf_page": 39,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_38.md"
+      },
+      "question_text": "### 12 \\. (2025 · 全国模拟)\n\n讨论函数  \\(f(x)=(a-1)\\ln x+ax^{2}+1\\) 的单调性.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-5c0998ceb9c22c1b",
+      "section": "5.3",
+      "group": "B",
+      "number": 13,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 39,
+        "pdf_page": 40,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_39.md"
+      },
+      "question_text": "13\\. （2025 · 贵州六盘水期末）\n\n设函数  \\(f(x)=\\left(x-\\frac{1}{x}\\right)\\ln x\\).\n\n（1）求  \\(f(x)\\) 的定义域，并证明： \\(f\\left(\\frac{1}{x}\\right)=f(x)\\);\n\n（2）讨论  \\(f(x)\\) 的单调性，并比较  \\(f\\left(\\frac{2}{3}\\right)\\) 与  \\(f(\\sqrt{e})\\) 的大小.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-7334ab9cbaf9edc7",
+      "section": "5.3",
+      "group": "B",
+      "number": 14,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 39,
+        "pdf_page": 40,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_39.md"
+      },
+      "question_text": "14.（2025·四川达州期末）\n\n已知函数  \\(f(x)=2x^{3}-3(a+3)x^{2}+18ax+6\\).\n\n（1）若 a=0，求曲线  \\(y=f(x)\\) 在点  \\((1,f(1))\\) 处的切线方程；\n\n（2）讨论函数  \\(f(x)\\) 的单调性.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-1260493a993f5c60",
+      "section": "5.3",
+      "group": "B",
+      "number": 15,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 39,
+        "pdf_page": 40,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_39.md"
+      },
+      "question_text": "### 15. （2025 · 辽宁模拟（节选））\n\n已知函数  \\(f(x)=\\frac{1}{2}ax^2-(2+a)x+2\\ln x\\) ( \\(a\\in\\mathbb{R}\\))，讨论函数  \\(f(x)\\) 的单调性.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-969d501dddef87d2",
+      "section": "5.3",
+      "group": "B",
+      "number": 16,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 39,
+        "pdf_page": 40,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_39.md"
+      },
+      "question_text": "### 16. （2025·福建漳州模拟（节选））\n\n已知函数  \\(f(x) = 2\\mathrm{e}^x - ax\\) ( \\(a \\in \\mathbf{R}\\))，若  \\(f(x)\\) 有 2 个零点，求  \\(a\\) 的取值范围.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-4dc98decff0d407c",
+      "section": "5.3",
+      "group": "B",
+      "number": 17,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 40,
+        "pdf_page": 41,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_40.md"
+      },
+      "question_text": "### 17. （2025·重庆沙坪坝期末（节选）)\n\n已知函数  \\(f(x)=xe^{x}-a\\left(\\frac{1}{2}x^{2}+x\\right)\\)，讨论  \\(f(x)\\) 的单调性.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-e48ffec657c69eff",
+      "section": "5.3",
+      "group": "C",
+      "number": 18,
+      "kind": "C组",
+      "source_anchor": {
+        "ocr_doc": 40,
+        "pdf_page": 41,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_40.md"
+      },
+      "question_text": "### 18. （2025 · 全国模拟）\n\n已知  \\(f(x)=(a+1)\\ln x+ax^2+1\\) ( \\(a<-1\\))，若对  \\(\\forall x_1\\)， \\(x_2\\in(0,+\\infty)\\) 且  \\(x_1\\neq x_2\\)， \\(\\left|f(x_1)-f(x_2)\\right|>4\\left|x_1-x_2\\right|\\)，求  \\(a\\) 的取值范围。",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-ca373976d40e39b8",
+      "section": "5.3",
+      "group": "C",
+      "number": 19,
+      "kind": "C组",
+      "source_anchor": {
+        "ocr_doc": 40,
+        "pdf_page": 41,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_40.md"
+      },
+      "question_text": "### 19. （2025·内蒙古模拟）\n\n已知函数  \\(f(x)=\\mathrm{e}^{x}-ax^{2}-x\\)\n\n（1）当a=-1时，讨论 \\(f(x)\\)的单调性；\n\n（2）若  \\(f(x)\\) 在  \\((0,+\\infty)\\) 上单调递增，求实数 a 的取值范围.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-936946954e60d770",
+      "section": "5.3",
+      "group": "C",
+      "number": 20,
+      "kind": "C组",
+      "source_anchor": {
+        "ocr_doc": 41,
+        "pdf_page": 42,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_41.md"
+      },
+      "question_text": "20.（2019·新课标Ⅰ卷（改）)\n\n已知函数  \\(f(x)=\\sin x-\\ln(x+1)\\)，设  \\(g(x)=f'(x)\\).\n\n",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    }
+  ],
+  "unresolved": []
+}

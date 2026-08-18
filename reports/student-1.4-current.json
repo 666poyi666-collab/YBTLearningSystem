@@ -1,0 +1,216 @@
+{
+  "schema_version": 1,
+  "report_kind": "student_acceptance_1.4_current",
+  "generated_at": "2026-08-14T16:50:00+08:00",
+  "meta": {
+    "task": "1.4 零基础顺序学习与即时独立验收（最终版，基于重建后最新包）",
+    "scope_read": [
+      "C:/开发/小工具/一本通学习系统_v7/data/packets/1.4/learning_packet.json",
+      "C:/开发/小工具/一本通学习系统_v7/data/contexts/1.4.json"
+    ],
+    "packet_rebuilt_at": "2026-08-14T16:43:18",
+    "packet_size_bytes": 151605,
+    "context_size_bytes": 129605,
+    "counts": {
+      "worked_examples": 22,
+      "direct_variants": 3,
+      "abc_exercises": 12,
+      "total_numbered_learning_items": 37
+    },
+    "tests_reported_by_user": "80/80（用户声明）；本轮独立核验：修复项逐条重读 + 15 题逐题 sha256 比对 + 关键计算数值复核",
+    "forbidden_not_accessed": [
+      "data/packets/1.4/answer_sidecar.json",
+      "答案册 PDF（习题册+答案册）",
+      "reports/* 旧模拟报告（本次仅写入本报告文件，未读取任何旧报告）"
+    ],
+    "courses_read": "无（learning_packet 未引用任何 Downloads/课程合集 转录，按规则未读）"
+  },
+  "b5_final_check": {
+    "qid": "Q-f8084477ad48d541",
+    "status": "PASS",
+    "contains_legal_backslash_angle": true,
+    "angle_count": 3,
+    "lone_ngle_present": false,
+    "control_chars": "仅换行符 0x0A x8，无其他控制字符",
+    "question_text": "### 5. （2025·浙江温州期末）\n\n如图，在平行六面体  \\(ABCD-A_{1}B_{1}C_{1}D_{1}\\) 中，\\(AB=AD=AA_{1}=1，\\angle A_{1}AB=\\angle A_{1}AD=\\angle BAD=60^{\\circ}\\)． \n\n（1）求 \\(AC_{1}\\)的长；\n\n（2）求证： \\(A_{1}C\\perp\\) 平面 \\(BDD_{1}B_{1}\\)",
+    "sha256_head": "85ab365c19d9",
+    "math_conditions_unchanged": true,
+    "conclusion_unchanged": "AC1=sqrt(6)；A1C 垂直 平面BDD1B1"
+  },
+  "workflow": {
+    "knowledge_and_course_instruction": "completed（知识页 7 页：33/34/35/40/41/44/47；距离与空间角公式正文经例题 teaching 补足）",
+    "worked_examples_with_teaching_solutions": "completed（22/22 通读，全部 solution_present=true）",
+    "direct_variants_without_solutions": "completed（3/3 独立完成，未回看解法）",
+    "abc_exercises_without_answers": "completed（12/12 独立完成）",
+    "unseen_near_transfer": "not_run（learning_packet 未提供 unseen 题包）",
+    "delayed_closed_book_review": "not_run（24h 冷复测未到）"
+  },
+  "worked_examples": [
+    {"example_number": 1, "label": "例1", "status": "understood", "note": "方向向量共线判定：AB=(4,2,-5)，选与 AB 共线的非零向量，答案 AB"},
+    {"example_number": 2, "label": "例2", "status": "understood", "note": "点P在平面ABC内 ⇔ OP=xOA+yOB+zOC 且 x+y+z=1"},
+    {"example_number": 3, "label": "例3", "status": "understood", "note": "法向量待定系数法：平面 BDA1 法向量 (1,1,1)"},
+    {"example_number": 4, "label": "例4", "status": "understood", "note": "面面平行⇔法向量平行：1/(-2)=2/k=(-3)/6 ⇒ k=-4，答案 B；重建后题干+解析完整，solution_present=true"},
+    {"example_number": 5, "label": "例5", "status": "understood", "note": "线面平行⇔方向向量·法向量=0；线面垂直⇔方向向量∥法向量；答案 AD"},
+    {"example_number": 6, "label": "例6", "status": "understood", "note": "线线角 cosθ=|s1·s2|/(|s1||s2|)=√2/2"},
+    {"example_number": 7, "label": "例7", "status": "understood", "note": "点面距 d=|AB·n|/|n|=√6/6，答案 B；前置错误'答案C'已删除"},
+    {"example_number": 8, "label": "例8", "status": "understood", "note": "线面角 sinθ=|m·n|/(|m||n|)=1/2 ⇒ θ=π/6，答案 A；'答案：A'重复行为残留"},
+    {"example_number": 9, "label": "例9", "status": "understood", "note": "面面夹角 cosθ=|m1·m2|/(|m1||m2|)=√2/2，答案 D"},
+    {"example_number": 10, "label": "例10", "status": "understood", "note": "二面角建系+锐钝判定；二面角 D-AE-C 余弦 √21/7"},
+    {"example_number": 11, "label": "例11", "status": "understood", "note": "线面平行：A1P=-(1/2)AD1+AC（面内组合）或 A1P⊥法向量(2,1,2)"},
+    {"example_number": 12, "label": "例12", "status": "understood", "note": "面面平行：同一法向量 (√3,-1,0)"},
+    {"example_number": 13, "label": "例13", "status": "understood", "note": "面面垂直：法向量 (0,1,1)·(2,-1,1)=0"},
+    {"example_number": 14, "label": "例14", "status": "understood", "note": "不建系拆解法：CA1·BC1=0 且 CA1·BD=0（基底 CB,CD,CC1）"},
+    {"example_number": 15, "label": "例15", "status": "understood", "note": "线线角→正弦 sin=√(1-cos²)=2√5/5，答案 C"},
+    {"example_number": 16, "label": "例16", "status": "understood", "note": "线面角建系：sinθ=√3/9；题面 LaTeX 已修复"},
+    {"example_number": 17, "label": "例17", "status": "understood", "note": "二面角向量法：平面ACE与PCE夹角余弦 3√37/37；锐钝判定+变式预告"},
+    {"example_number": 18, "label": "例18", "status": "understood", "note": "点线距 d=√(|AB|²-(AB·u)²)=√(3-2)=1；距离公式已修复"},
+    {"example_number": 19, "label": "例19", "status": "understood", "note": "MN∥平面BDE（法向量(1,0,1)）；N到直线ME距离 √105/10"},
+    {"example_number": 20, "label": "例20", "status": "understood", "note": "D1N∥平面CB1M；点B到平面CB1M距离 2√11/11"},
+    {"example_number": 21, "label": "例21", "status": "understood", "note": "C1∈平面AEF：C1A·m=0（几何证法1+向量证法2）"},
+    {"example_number": 22, "label": "例22", "status": "understood", "note": "AC⊥平面BEF；二面角B-CD-C1余弦 -√21/21；FG与平面BCD相交（FG·m=2≠0）；题面 C1 下标已修复"}
+  ],
+  "direct_variants": [
+    {
+      "item_id": "b1d2d187ff980da9",
+      "label": "变式1",
+      "parent": "例17",
+      "status": "pass",
+      "independent_start": "yes（独立推导折叠角；题面图1/图2 视觉核对拓扑）",
+      "key_steps": [
+        "(1) 展开图 E(0,0) F(1,0) B(1,2) C(0,3)，AD∥EF；BG⊥CD：BG=1, CG=1, BC²=2；设 AB=a：BD²=a²+1, CD=a+1；折叠后 BC⊥平面BDE ⇒ BC⊥BD ⇒ 2+a²+1=(a+1)² ⇒ a=1",
+        "(2) ED⊥DC ⇒ 折叠角 θ=-90°（唯一解）；D 原点建系 x=DA, y=DC, z=DE：A(1,0,0) B(1,1,0) C(0,2,0) E(0,0,1) F(1,0,1)；验证 DA、DC、DE 两两垂直、BC∥平面BDE法向量(1,-1,0)、全部纸面长度守恒；面EBF法向量(0,-1,-1)、面EBC法向量(1,1,2) ⇒ cos=-√3/2（平面角法复核一致）"
+      ],
+      "result": "(1) AB=1；(2) 二面角 F-EB-C = 5π/6（150°，cos=-√3/2），与题设及原书解析一致",
+      "same_session_mastery_status": "derived_and_verified（不视为掌握）",
+      "cold_retest_24h": "not_run"
+    },
+    {
+      "item_id": "369cc55d4157cef7",
+      "label": "变式2",
+      "parent": "例17",
+      "status": "pass",
+      "independent_start": "yes",
+      "key_steps": [
+        "(1) BCD 等边三角形边长√3 ⇒ 外接圆半径 r=1；球心 O 到面距离 1 ⇒ R²=1²+1²=2 ⇒ S=4πR²=8π",
+        "(2) AB 为直径 ⇒ A=2O-B，O=(0,0,1)：A(-1,0,2) B(1,0,0) C(-1/2,√3/2,0) D(-1/2,-√3/2,0)；面ABC法向量(√3,3,√3)、面ACD法向量(2√3,0,√3/2) ⇒ cos=√85/17"
+      ],
+      "result": "(1) 球O表面积 8π；(2) 二面角 B-AC-D 余弦 = √85/17",
+      "same_session_mastery_status": "derived_and_verified（不视为掌握）",
+      "cold_retest_24h": "not_run"
+    },
+    {
+      "item_id": "4d77a796351f4fb3",
+      "label": "变式",
+      "parent": "例20",
+      "status": "pass",
+      "independent_start": "yes",
+      "key_steps": [
+        "长方体 A(0,0,0) B(2,0,0) D(0,3,0) D1(0,3,1)，E(1,0,0)；v1=DE=(1,-3,0)，v2=D1C=(2,0,-1)；公垂方向 n=v1×v2=(3,1,6)；d=|(D1-D)·n|/|n|=6/√46"
+      ],
+      "result": "异面直线 DE 与 D1C 的距离 = 3√46/23",
+      "same_session_mastery_status": "derived_and_verified（不视为掌握）",
+      "cold_retest_24h": "not_run"
+    }
+  ],
+  "exercise_questions": [
+    {"qid": "Q-9b09a35af11358ea", "item": "A1", "status": "pass", "key_steps": "cosθ=|s1·s2|/(|s1||s2|)=|-1-2|/(√2·3)=√2/2", "result": "C", "same_session_mastery_status": "derived_and_verified", "cold_retest_24h": "not_run"},
+    {"qid": "Q-d9a94e1764dd378e", "item": "A2", "status": "pass", "key_steps": "棱长2建系：EF=(-1,1,1)，A1D=(0,2,-2) ⇒ EF·A1D=0；(2) 面A1DG法向量(-4,-2,-2)，EF·n=0 且 E∉面", "result": "(1)(2) 均证明成立", "same_session_mastery_status": "derived_and_verified", "cold_retest_24h": "not_run"},
+    {"qid": "Q-62bc7d912b6b829d", "item": "B3", "status": "pass", "key_steps": "设AA1=h：cos²=|h²-4|²/((h²+4)(h²+8))=1/5 ⇒ h⁴-13h²+12=0 ⇒ h²=1,12（两值均验算）", "result": "B（AA1=1 或 2√3）", "same_session_mastery_status": "derived_and_verified", "cold_retest_24h": "not_run"},
+    {"qid": "Q-ad1c7fa22101c9cc", "item": "B4", "status": "pass", "key_steps": "(1) AC⊥BD(菱形)且AC⊥PD ⇒ AC⊥平面PBD ⇒ AC⊥PB；(2) 建系，面PAB法(√3t,t,2√3)、面PBC法(-√3t,t,2√3) ⇒ ⊥ ⇒ t²=6", "result": "(1) 证毕；(2) PD=√6", "same_session_mastery_status": "derived_and_verified", "cold_retest_24h": "not_run"},
+    {"qid": "Q-f8084477ad48d541", "item": "B5", "status": "pass", "key_steps": "A1=(1/2,√3/6,√6/3)；(1) AC1=AB+AD+AA1 ⇒ |AC1|=√6；(2) A1C=(1,√3/3,-√6/3)：与BD、BB1点积均为0", "result": "(1) AC1=√6；(2) A1C⊥平面BDD1B1", "same_session_mastery_status": "derived_and_verified", "cold_retest_24h": "not_run"},
+    {"qid": "Q-32a73bd226631d35", "item": "B6", "status": "pass", "key_steps": "建系 A(0,0,0) D(4,0,0) B(2,1,0) C(4,1,0) P(2,0,2)；n1=(2,-4,-2), n2=(0,-4,-2) ⇒ cos=20/√480=√30/6；E(3,0,1) ⇒ d=4/(2√6)=√6/3", "result": "(1) PO⊥面ABCD；(2) cos=√30/6；(3) d=√6/3", "same_session_mastery_status": "derived_and_verified", "cold_retest_24h": "not_run"},
+    {"qid": "Q-d6655acfdb49915f", "item": "B7", "status": "pass", "key_steps": "建系 A(0,0,0) B(2,0,0) D(1,√3,0) C(3,√3,0) P(1/2,√3/2,√3)；(1) V=(1/3)·√3·(√3/2)=1/2；(2) AM·n=6，sin=6/(√(11/2)·2√6)=√33/11", "result": "(1) V=1/2；(2) sin=√33/11", "same_session_mastery_status": "derived_and_verified", "cold_retest_24h": "not_run"},
+    {"qid": "Q-e7250f74deb9c419", "item": "B8", "status": "pass", "key_steps": "建系 A(0,0,0) B(2,0,0) C(0,0,2) A1(-1,√3,0) B1(1,√3,0) C1(-1,√3,2)；(1) A1B=(3,-√3,0)⊥AB1、AC；(2) d=|BC×BB1|/|BB1|=√7；(3) sin=√(1-(3/√21)²)=2√7/7", "result": "(1) 证毕；(2) d=√7；(3) sin=2√7/7", "same_session_mastery_status": "derived_and_verified", "cold_retest_24h": "not_run"},
+    {"qid": "Q-d6f69ebd40b88e4f", "item": "C9", "status": "pass", "key_steps": "正方形边2，S(0,0,√2)，P=SD中点；n=v1×v2=(√2,√2,4)；d=|(B-P)·n|/|n|=2√2/2√5=√10/5", "result": "B", "same_session_mastery_status": "derived_and_verified", "cold_retest_24h": "not_run"},
+    {"qid": "Q-780c7beb8c7dca80", "item": "C10", "status": "pass", "key_steps": "对角线 AO=2√3, BO=2；V=8 ⇒ 高=2√3 ⇒ A'=(0,0,2√3)；(1) BD⊥面A'OC ⇒ BD⊥CE；(2) E=(0,0,e)：cos=2√3e/√(16e²+48)=√15/10 ⇒ e²=3/4", "result": "(1) 证毕；(2) OE=√3/2", "same_session_mastery_status": "derived_and_verified", "cold_retest_24h": "not_run"},
+    {
+      "qid": "Q-6e744cefbdce3233",
+      "item": "C11",
+      "status": "prompted_correction_pass",
+      "key_steps": "建系 A(0,0,0) P(0,0,2) D(2,0,0) C(2,2,0) B(5,2,0)，E(1,0,1)，F=(2/3,2/3,4/3)；(2) 面AEF法(-2/3,-2/3,2/3)、面AEP法(0,-2,0) ⇒ cos=√3/3；(3) G=(10/3,4/3,2/3)：x+y-z=4≠0",
+      "original_result": "(1) CD⊥平面PAD；(2) cos=√3/3；(3) 直线AG不在平面AEF内",
+      "prompted_correction": true,
+      "corrected_reasoning": [
+        "教师提示坐标镜像有误：题图梯形 B 位于 A 的左侧（BC=3 自 C 向左延伸、CD⊥AD），正确建系应取 B(-1,2,0)；原报告误取 B(5,2,0)（镜像翻转）",
+        "正确坐标：A(0,0,0) P(0,0,2) D(2,0,0) C(2,2,0) B(-1,2,0)；E=(1,0,1)，F=(2/3,2/3,4/3)",
+        "G = P + (2/3)(B-P) = (-2/3, 4/3, 2/3)",
+        "平面AEF 面方程：-x-y+z=0（即 z=x+y，法向量(-1,-1,1)），E、F 均满足",
+        "G：z=2/3，x+y = -2/3+4/3 = 2/3 ⇒ G 在平面 AEF 内 ⇒ 直线 AG 在平面 AEF 内（原'不在面内'判断系镜像坐标错误所致）"
+      ],
+      "corrected_result": "(1) CD⊥平面PAD；(2) cos=√3/3（不变）；(3) 直线 AG 在平面 AEF 内（G=(-2/3,4/3,2/3) 满足面方程 z=x+y）",
+      "same_session_mastery_status": "derived_and_verified（原推导）→ 教师提示后修正（prompted_correction_pass，非首次独立）",
+      "cold_retest_24h": "not_run"
+    },
+    {
+      "qid": "Q-dfe3e5777ade5c55",
+      "item": "C12",
+      "status": "prompted_correction_pass",
+      "key_steps": "PA=AB=1 建系；(1) AF=(1,1/2,0)，面PBC法(1,0,1) ⇒ sin=2/√10=√10/5；(2) 面AEF法(-1/4,1/2,1/4)；G=D+t·n 且 G∈面(-x+2y+z=0) ⇒ t=-4/3 ⇒ G=(1/3,1/3,-1/3)",
+      "original_result": "(1) sin=√10/5；(2) 存在 G=(1/3,1/3,-1/3)（平面AEF内、DG∥法向量；点位于底面下方）",
+      "prompted_correction": true,
+      "corrected_reasoning": [
+        "教师提示截面约束判断有误：'截面 AEF' 指平面 AEF 与棱锥体的交集（截面多边形），点 G 必须位于棱锥内部，不能仅满足无限平面方程",
+        "棱锥 P-ABCD（PA=AB=1）为凸包 A(0,0,0) B(1,0,0) C(1,1,0) D(0,1,0) P(0,0,1)，占据 z∈[0,1]（底面 z=0）",
+        "DG⊥平面AEF 的唯一候选：G = D + t·n = (-t, 1+2t, t)，代入面方程 -x+2y+z=0 ⇒ 2+6t=0 ⇒ t=-1/3 ⇒ G=(1/3,1/3,-1/3)",
+        "该点 z=-1/3 < 0，位于棱锥外（底面下方），不在截面 AEF（平面∩棱锥）内",
+        "故不存在满足条件的点 G（原判断'存在且位于底面下方'有误：底面下方即棱锥外，不属截面）"
+      ],
+      "corrected_result": "(1) sin=√10/5（不变）；(2) 不存在这样的点 G（唯一候选 G=(1/3,1/3,-1/3) 在棱锥外，不在截面 AEF 内）",
+      "same_session_mastery_status": "derived_and_verified（原推导）→ 教师提示后修正（prompted_correction_pass，非首次独立）",
+      "cold_retest_24h": "not_run"
+    }
+  ],
+  "same_session_mastery": {
+    "statement": "15 道独立题（3 变式 + 12 练习）均在同会话独立推导（未回看例题解法、未读取答案侧）并经数值脚本复核；same_session_mastery_status 一律标 derived_and_verified，不视为掌握，不替代 24h 冷复测；其中 C11(3)、C12(2) 经教师提示修正（见 prompted_corrections），最终状态 prompted_correction_pass，非首次独立结论"
+  },
+  "unseen_near_transfer": {
+    "status": "not_run",
+    "reason": "learning_packet 未提供 unseen 近迁移题包"
+  },
+  "cold_retest_24h": {
+    "status": "not_run",
+    "items_count": 15,
+    "reason": "24 小时未到，不预填掌握结论"
+  },
+  "corrections_log": [
+    "例4：重建后含完整题干+解析（α∥β ⇒ 1/(-2)=2/k=(-3)/6 ⇒ k=-4，答案 B，solution_present=true），由 unclear 改为 understood",
+    "变式1：纠正上轮两处错误——(a) 原书为 DA、DC、DE 两两垂直（先前误读 OCR 'DA' 为 'DB'）；(b) 修正面 EBC 法向量叉积笔误。修正后 A(1,0,0) B(1,1,0) C(0,2,0) E(0,0,1) F(1,0,1) 同时满足 ED⊥DC、BC⊥平面BDE、DA⊥DC⊥DE 与全部纸面长度守恒；二面角 F-EB-C=5π/6（cos=-√3/2），与题设及原书解析一致；AB=1 不变",
+    "B5：\\angle 反斜杠回归已修复（16:43 重建），现含合法 \\angle×3、无控制字符",
+    "例7/例16/例18/例22/B7/知识页34/35：上轮定位的 OCR 问题均已修复并重读确认"
+  ],
+  "ocr_errors_localized": [
+    {"item": "例8", "status": "残留", "issue": "'答案：A' 仍重复两行"},
+    {"item": "例17", "status": "残留", "issue": "'由(1)可得 PE=…，CE=…' 整行重复"},
+    {"item": "知识页33", "status": "残留", "issue": "知识点1 第3节截断于'设平面α内的两条直线相交于点O，它们的'"},
+    {"item": "知识页缺失", "status": "残留", "issue": "ocr_doc 36,37,39,42,43,45,46,48 不在知识页（距离/空间角公式正文靠例题 teaching 补足）"},
+    {"item": "例7/16/18/22/B5/B7/知识页34/35", "status": "已修复", "issue": "详见 corrections_log"}
+  ],
+  "prompted_corrections": {
+    "note": "以下两项为教师提示后修正（非首次独立结论）：原报告结论保留于各题 original_result，修正过程与结果见 corrected_reasoning/corrected_result",
+    "items": [
+      {
+        "item": "C11",
+        "qid": "Q-6e744cefbdce3233",
+        "prompted_correction": true,
+        "original_conclusion": "(3) 直线AG不在平面AEF内",
+        "correction_summary": "坐标镜像错误：题图中 B 在 A 左侧，应取 B(-1,2,0)；修正后 G=(-2/3,4/3,2/3) 满足面方程 z=x+y ⇒ 直线AG在平面AEF内",
+        "final_status": "prompted_correction_pass"
+      },
+      {
+        "item": "C12",
+        "qid": "Q-dfe3e5777ade5c55",
+        "prompted_correction": true,
+        "original_conclusion": "(2) 存在 G=(1/3,1/3,-1/3)",
+        "correction_summary": "截面约束判断错误：截面=平面∩棱锥体，G 必须在棱锥内；唯一候选 G=(1/3,1/3,-1/3) 的 z<0 在棱锥外 ⇒ 不存在",
+        "final_status": "prompted_correction_pass"
+      }
+    ]
+  },
+  "totals": {
+    "worked_examples": {"count": 22, "understood": 22, "unclear": 0},
+    "direct_variants": {"count": 3, "pass": 3, "partial": 0, "blocked": 0},
+    "exercises": {"count": 12, "pass": 10, "prompted_correction_pass": 2, "partial": 0, "blocked": 0},
+    "independent_items": {"count": 15, "pass": 13, "prompted_correction_pass": 2},
+    "cold_retest_24h": "not_run"
+  }
+}

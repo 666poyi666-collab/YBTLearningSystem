@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0",
+  "section": "micro专题1",
+  "worker": "worker-4",
+  "generation": "G-CH1-MICRO-01",
+  "worker_status": "BLOCKED",
+  "item_results": [
+    {
+      "section": "micro专题1",
+      "cycle": "micro-cycle-5",
+      "item_id": "micro-cycle-5-C5",
+      "source_revision": {
+        "generation": "G-CH1-MICRO-01"
+      },
+      "context_sha256": "3893aba77597e51b7941015bbd7ef52ea476de47cd349e1f6ddf61386aa8f031",
+      "observation_signal": "目标=轨迹/球心/距离相关结论（模板级观察信号，无题干）",
+      "course_call": {
+        "course_id": "3.1.4.7",
+        "method_model_id": "sphere_center_equidist",
+        "appears_before_first_use": true,
+        "linkage": "C 组拓展题：外接球/轨迹（模板；题前复述桥接'阿波罗尼斯球与等距轨迹；异面直线距离；外接球球心的垂直平分面法'）",
+        "first_use_location": "3.1.4.7 视频距离段"
+      },
+      "first_line": "第一行：写等距关系（目标点与两定点距离比例/相等）",
+      "second_line": "第二行：距离平方等式→配方→判断轨迹类型（球/面）；依据：球面等距条件",
+      "continuation": "继续：与线段/平面限制求交 → 卡点：①题面不可见 ②桥接'异面直线距离'SOURCE_METHOD_READY 未闭合（阿波罗尼斯球、外接球垂直平分面法 SUPPLEMENT_READY 未验证）",
+      "independent_self_check": "模板检查：从距离关系推轨迹而非套'球'结论；半径非正/退化检查；轨迹与数量积最值分两步 —— 无法闭合",
+      "first_breakpoint": "题面不可见 + 桥接未闭合（异面直线距离：SOURCE_METHOD_READY；阿波罗尼斯球与等距轨迹、外接球球心的垂直平分面法：SUPPLEMENT_READY 未验证）",
+      "hint_level": "none",
+      "verdict": "BLOCKED",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "micro专题1",
+      "cycle": "micro-cycle-5",
+      "item_id": "micro-cycle-5-C6",
+      "source_revision": {
+        "generation": "G-CH1-MICRO-01"
+      },
+      "context_sha256": "3893aba77597e51b7941015bbd7ef52ea476de47cd349e1f6ddf61386aa8f031",
+      "observation_signal": "目标=双动点存在性相关结论（模板级观察信号，无题干）",
+      "course_call": {
+        "course_id": "3.1.4.8",
+        "method_model_id": "existence_two_param",
+        "appears_before_first_use": true,
+        "linkage": "C 组拓展题：存在性双参数化（模板；题前复述桥接'空间动点单变量化配方；存在性双参数化'）",
+        "first_use_location": "3.1.4.8 视频斜线设参段（AP=λ·AB）"
+      },
+      "first_line": "第一行：两个动点分别设参数 λ、μ 并写各自几何范围",
+      "second_line": "第二行：把共线/距离/角度/垂直条件逐项化为方程组；依据：单变量参数化推广",
+      "continuation": "继续：先解代数候选→再筛选线段范围/非退化/图形位置 —— 卡点：①题面不可见 ②桥接'空间动点单变量化配方'SOURCE_METHOD_READY 未闭合",
+      "independent_self_check": "模板检查：'方程有解'≠'几何存在符合范围的点'；两参数互换重复解；结论写存在性判断 —— 无法闭合",
+      "first_breakpoint": "题面不可见 + 桥接未闭合（空间动点单变量化配方：SOURCE_METHOD_READY 仅方法骨架；存在性双参数化：SUPPLEMENT_READY 未验证）",
+      "hint_level": "none",
+      "verdict": "BLOCKED",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    }
+  ],
+  "method_check_results": [
+    {
+      "section": "micro专题1",
+      "cycle": "micro-cycle-5",
+      "method_check_id": "micro-sphere-check-1",
+      "method_model_id": "sphere_center_equidist",
+      "result": "BLOCKED",
+      "evidence": "检查链含'空间动点单变量化配方'（SOURCE_METHOD_READY）等课程外桥接，桥接未闭合不能放行"
+    },
+    {
+      "section": "micro专题1",
+      "cycle": "micro-cycle-5",
+      "method_check_id": "micro-existence-check-1",
+      "method_model_id": "existence_two_param",
+      "result": "BLOCKED",
+      "evidence": "检查链含'空间动点单变量化配方'（SOURCE_METHOD_READY）等课程外桥接，桥接未闭合不能放行"
+    }
+  ],
+  "first_breakpoints": [
+    {
+      "item_id": "micro-cycle-5-C5",
+      "cycle": "micro-cycle-5",
+      "first_breakpoint": "题面不可见 + 桥接未闭合（异面直线距离：SOURCE_METHOD_READY；阿波罗尼斯球与等距轨迹、外接球球心的垂直平分面法：SUPPLEMENT_READY 未验证）"
+    },
+    {
+      "item_id": "micro-cycle-5-C6",
+      "cycle": "micro-cycle-5",
+      "first_breakpoint": "题面不可见 + 桥接未闭合（空间动点单变量化配方：SOURCE_METHOD_READY 仅方法骨架；存在性双参数化：SUPPLEMENT_READY 未验证）"
+    }
+  ],
+  "answer_sidecar_read": false,
+  "human_acceptance_not_proven": true
+}

@@ -1,0 +1,4626 @@
+{
+  "schema_version": "7.3-ch3",
+  "target_identity": {
+    "module": "解析几何",
+    "chapter": "第三章 圆锥曲线的方程",
+    "source_set": "2025-2025版选择性必修第1册",
+    "primary_file": "第3章 圆锥曲线的方程（无答案册）.pdf",
+    "primary_file_path": "C:\\Users\\poyi\\Downloads\\【2025-2025版】选择性必修第1册\\按章节合并（无答案册）\\第3章 圆锥曲线的方程（无答案册）.pdf",
+    "rejected_source": {
+      "file": "数学选择性必修1.pdf",
+      "reason": "视觉确认封面/CIP 为《高中必刷题 数学 选择性必修第一册 RJA》2021 版（首师大出版社），与 2025-2025版《一本通》系列不同产品线且含答案体系；不满足无答案来源要求。"
+    }
+  },
+  "source_evidence": {
+    "merged_pdf_pages": 180,
+    "ocr_doc_range": [
+      0,
+      179
+    ],
+    "ocr_root": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180",
+    "course_roots": {
+      "3.3": "C:\\Users\\poyi\\Downloads\\课程合集\\3.3 圆锥曲线的方程",
+      "3.4": "C:\\Users\\poyi\\Downloads\\课程合集\\3.4 圆锥曲线方程的综合提升"
+    },
+    "course_source_rule": "only Downloads/课程合集, strictly ordered by filename",
+    "transcript_root": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\course_transcripts",
+    "answer_ocr_roots": null,
+    "manual_review_flags": [],
+    "learning_item_counts": {
+      "worked_examples": 101,
+      "direct_variants": 89,
+      "abc_exercises": 156,
+      "total_numbered_learning_items": 346
+    },
+    "manual_review_resolutions": [],
+    "ocr_status": "PADDLE_AI_STUDIO_CURRENT_COMPLETE",
+    "question_number_recovery_source": "data/question_number_recoveries.json"
+  },
+  "courses": {
+    "3.3 圆锥曲线的方程": [
+      {
+        "course_id": "3.3.1.1",
+        "course_key": "ellipse_definition",
+        "title": "椭圆的第一定义及相关概念"
+      },
+      {
+        "course_id": "3.3.1.2",
+        "course_key": "ellipse_standard_equations",
+        "title": "两种椭圆标准方程"
+      },
+      {
+        "course_id": "3.3.1.3",
+        "course_key": "ellipse_eccentricity",
+        "title": "椭圆离心率的简单计算"
+      },
+      {
+        "course_id": "3.3.2.1",
+        "course_key": "hyperbola_definition_equation",
+        "title": "双曲线的第一定义及标准方程"
+      },
+      {
+        "course_id": "3.3.2.2",
+        "course_key": "hyperbola_eccentricity_asymptote",
+        "title": "双曲线离心率与渐近线的简单计算"
+      },
+      {
+        "course_id": "3.3.3.1",
+        "course_key": "parabola_definition_equation",
+        "title": "抛物线的定义及其方程"
+      },
+      {
+        "course_id": "3.3.3.2",
+        "course_key": "parabola_properties",
+        "title": "抛物线性质的简单应用"
+      }
+    ],
+    "3.4 圆锥曲线方程的综合提升": [
+      {
+        "course_id": "3.4.1.1",
+        "course_key": "focus_triangle_perimeter_area",
+        "title": "焦点三角形周长与面积"
+      },
+      {
+        "course_id": "3.4.1.2",
+        "course_key": "midpoint_idea",
+        "title": "中位线思想"
+      },
+      {
+        "course_id": "3.4.2.1",
+        "course_key": "focal_radius_formula",
+        "title": "焦半径公式"
+      },
+      {
+        "course_id": "3.4.2.2",
+        "course_key": "focal_chord_area",
+        "title": "焦点弦公式与面积"
+      },
+      {
+        "course_id": "3.4.3.1",
+        "course_key": "chord_midpoint_slope_constant",
+        "title": "弦中点与斜率积为定值"
+      },
+      {
+        "course_id": "3.4.3.2",
+        "course_key": "chord_midpoint_extended",
+        "title": "弦中点引申与抛物线弦中点"
+      },
+      {
+        "course_id": "3.4.4.1",
+        "course_key": "evaluation_algebra",
+        "title": "求值问题（代数法）"
+      },
+      {
+        "course_id": "3.4.4.2",
+        "course_key": "evaluation_geometry",
+        "title": "求值问题（几何法）"
+      },
+      {
+        "course_id": "3.4.4.3.a",
+        "course_key": "range_upper",
+        "title": "求范围问题（上）"
+      },
+      {
+        "course_id": "3.4.4.3.b",
+        "course_key": "range_mid",
+        "title": "求范围问题（中）"
+      },
+      {
+        "course_id": "3.4.4.3.c",
+        "course_key": "range_lower",
+        "title": "求范围问题（下）"
+      },
+      {
+        "course_id": "3.4.5.0.a",
+        "course_key": "intersection_algebra_upper",
+        "title": "交点问题的基本代数处理（上·题型辨识）"
+      },
+      {
+        "course_id": "3.4.5.0.b",
+        "course_key": "intersection_algebra_lower",
+        "title": "交点问题的基本代数处理（下·点线设法与处理）"
+      },
+      {
+        "course_id": "3.4.5.1",
+        "course_key": "dot_product_translation",
+        "title": "向量点乘的翻译"
+      },
+      {
+        "course_id": "3.4.5.2",
+        "course_key": "dot_product_double_root",
+        "title": "点乘双根式算法"
+      },
+      {
+        "course_id": "3.4.6.1",
+        "course_key": "chord_length_formula",
+        "title": "直线与曲线上的弦长公式"
+      },
+      {
+        "course_id": "3.4.6.2",
+        "course_key": "in_curve_triangle_area",
+        "title": "曲线内三角形面积公式"
+      },
+      {
+        "course_id": "3.4.6.3",
+        "course_key": "in_curve_quad_area",
+        "title": "曲线内四边形面积公式"
+      },
+      {
+        "course_id": "3.4.6.4.a",
+        "course_key": "polar_focal_chord_upper",
+        "title": "极坐标下的焦点弦（上）"
+      },
+      {
+        "course_id": "3.4.6.4.b",
+        "course_key": "polar_focal_chord_lower",
+        "title": "极坐标下的焦点弦（下）"
+      },
+      {
+        "course_id": "3.4.7.1",
+        "course_key": "collinearity",
+        "title": "共线问题"
+      },
+      {
+        "course_id": "3.4.7.2",
+        "course_key": "angle_bisector",
+        "title": "角平分线问题"
+      },
+      {
+        "course_id": "3.4.8.1",
+        "course_key": "constant_value_1",
+        "title": "第一类定值问题"
+      },
+      {
+        "course_id": "3.4.8.2",
+        "course_key": "constant_value_2",
+        "title": "第二类定值问题"
+      },
+      {
+        "course_id": "3.4.8.3",
+        "course_key": "fixed_point_1",
+        "title": "第一类定点问题"
+      },
+      {
+        "course_id": "3.4.8.4.a",
+        "course_key": "fixed_point_2_upper",
+        "title": "第二类定点问题（上）"
+      },
+      {
+        "course_id": "3.4.8.4.b",
+        "course_key": "fixed_point_2_lower",
+        "title": "第二类定点问题（下）"
+      },
+      {
+        "course_id": "3.4.8.5.a",
+        "course_key": "pole_polar_upper",
+        "title": "极点极线模型（上）"
+      },
+      {
+        "course_id": "3.4.8.5.b",
+        "course_key": "pole_polar_lower",
+        "title": "极点极线模型（下）"
+      },
+      {
+        "course_id": "3.4.9.1",
+        "course_key": "eliminate_parameter",
+        "title": "消参法"
+      },
+      {
+        "course_id": "3.4.9.2",
+        "course_key": "related_point_method",
+        "title": "相关点法"
+      },
+      {
+        "course_id": "3.4.10.1",
+        "course_key": "moving_point_basic",
+        "title": "简单动点问题的处理"
+      },
+      {
+        "course_id": "3.4.11.1",
+        "course_key": "completion_separation_substitution",
+        "title": "配方法与分离常数法与换元法"
+      },
+      {
+        "course_id": "3.4.11.2",
+        "course_key": "quadratic_fraction_speed_upper",
+        "title": "特殊二次分式速解（上）"
+      },
+      {
+        "course_id": "3.4.11.3",
+        "course_key": "quadratic_fraction_speed_lower",
+        "title": "特殊二次分式速解（下）"
+      },
+      {
+        "course_id": "3.4.12.1",
+        "course_key": "complete_asymmetry",
+        "title": "补全不对称"
+      },
+      {
+        "course_id": "3.4.12.2",
+        "course_key": "eliminate_asymmetry",
+        "title": "消去不对称"
+      }
+    ]
+  },
+  "sections": [
+    {
+      "id": "ch3.s1",
+      "label": "第1节 椭圆及其标准方程",
+      "pdf_pages": [
+        1,
+        17
+      ],
+      "question_groups": {
+        "A": [
+          1,
+          4
+        ],
+        "B": [
+          5,
+          14
+        ],
+        "C": [
+          15,
+          17
+        ]
+      },
+      "learning_item_counts": {
+        "worked_examples": 15,
+        "direct_variants": 13,
+        "abc_exercises": 17,
+        "total": 45
+      },
+      "course_mapping": "PRELIMINARY_TITLE_BASED",
+      "coverage_status": "SOURCE_STRUCTURE_READY_SIMULATION_PENDING",
+      "course_mapping_preliminary": [
+        "3.3.1.1",
+        "3.3.1.2"
+      ],
+      "course_mapping_common_tools": [
+        "3.4.5.0.a",
+        "3.4.5.0.b"
+      ],
+      "course_mapping_verify_note": "依据课程文件名语义初步映射；须以 44 份转写内容核验后转正（PENDING_CONTENT_REVIEW）",
+      "ocr_docs": [
+        0,
+        16
+      ],
+      "specialized_pdf_pages": 17,
+      "question_groups_status": "SOURCE_ANCHORED_CURRENT_OCR",
+      "verified_question_count": 17,
+      "knowledge_points": [
+        {
+          "id": "ch3.s1-k1",
+          "label": "椭圆的定义",
+          "pages": [
+            0
+          ],
+          "examples": [
+            "例1"
+          ]
+        },
+        {
+          "id": "ch3.s1-k2",
+          "label": "椭圆的标准方程",
+          "pages": [
+            0
+          ],
+          "examples": [
+            "例2",
+            "例3"
+          ]
+        },
+        {
+          "id": "ch3.s1-k3",
+          "label": "点 $ P(x_{0}, y_{0}) $ 与椭圆的位置关系",
+          "pages": [
+            1
+          ],
+          "examples": [
+            "例6"
+          ]
+        },
+        {
+          "id": "ch3.s1-k4",
+          "label": "椭圆中两个常考的三角形",
+          "pages": [
+            1,
+            2
+          ],
+          "examples": [
+            "例4",
+            "例5",
+            "例7",
+            "例8",
+            "例9",
+            "例10",
+            "例11",
+            "例12",
+            "例13",
+            "例14",
+            "例15"
+          ]
+        }
+      ],
+      "type_training": [
+        {
+          "type": "类型I 椭圆定义的简单应用",
+          "example_numbers": [
+            8
+          ],
+          "focus": "椭圆定义的简单应用"
+        },
+        {
+          "type": "类型Ⅱ 求椭圆的标准方程",
+          "example_numbers": [
+            9
+          ],
+          "focus": "求椭圆的标准方程"
+        },
+        {
+          "type": "类型III 由椭圆标准方程求参",
+          "example_numbers": [
+            10
+          ],
+          "focus": "由椭圆标准方程求参"
+        },
+        {
+          "type": "类型IV 与椭圆有关的求轨迹方程问题",
+          "example_numbers": [
+            11
+          ],
+          "focus": "与椭圆有关的求轨迹方程问题"
+        },
+        {
+          "type": "类型V 椭圆定义与几何性质综合题",
+          "example_numbers": [
+            12,
+            13
+          ],
+          "focus": "椭圆定义与几何性质综合题"
+        },
+        {
+          "type": "类型VI 基于椭圆定义的最值问题",
+          "example_numbers": [
+            14,
+            15
+          ],
+          "focus": "基于椭圆定义的最值问题"
+        }
+      ],
+      "type_labels": [
+        "类型I 椭圆定义的简单应用",
+        "类型Ⅱ 求椭圆的标准方程",
+        "类型III 由椭圆标准方程求参",
+        "类型IV 与椭圆有关的求轨迹方程问题",
+        "类型V 椭圆定义与几何性质综合题",
+        "类型VI 基于椭圆定义的最值问题"
+      ],
+      "direct_variants": [
+        {
+          "example": "例8",
+          "variants": [
+            "变式1",
+            "变式2"
+          ],
+          "ocr_docs": [
+            3
+          ]
+        },
+        {
+          "example": "例10",
+          "variants": [
+            "变式"
+          ],
+          "ocr_docs": [
+            4
+          ]
+        },
+        {
+          "example": "例11",
+          "variants": [
+            "变式1",
+            "变式2",
+            "变式3"
+          ],
+          "ocr_docs": [
+            5,
+            6
+          ]
+        },
+        {
+          "example": "例12",
+          "variants": [
+            "变式"
+          ],
+          "ocr_docs": [
+            7
+          ]
+        },
+        {
+          "example": "例13",
+          "variants": [
+            "变式1",
+            "变式2",
+            "变式3",
+            "变式4"
+          ],
+          "ocr_docs": [
+            8,
+            9
+          ]
+        },
+        {
+          "example": "例15",
+          "variants": [
+            "变式1",
+            "变式2"
+          ],
+          "ocr_docs": [
+            11
+          ]
+        }
+      ],
+      "required_course_ids": [
+        "3.3.1.1",
+        "3.3.1.2"
+      ],
+      "support_course_ids": [
+        "3.4.5.0.a",
+        "3.4.5.0.b"
+      ],
+      "required_course_keys": [
+        "ellipse_definition",
+        "ellipse_standard_equations"
+      ],
+      "support_course_keys": [
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "learning_cycles": [
+        {
+          "id": "ch3.s1-cycle-1",
+          "title": "椭圆的定义",
+          "course_keys": [
+            "ellipse_definition"
+          ],
+          "prerequisite_course_keys": [],
+          "knowledge_refs": [
+            "ch3.s1-k1"
+          ],
+          "type_refs": [],
+          "example_numbers": [
+            1
+          ],
+          "exercise_keys": [],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "ch3.s1-cycle-2",
+          "title": "椭圆的标准方程",
+          "course_keys": [
+            "ellipse_standard_equations"
+          ],
+          "prerequisite_course_keys": [
+            "ellipse_definition"
+          ],
+          "knowledge_refs": [
+            "ch3.s1-k2"
+          ],
+          "type_refs": [],
+          "example_numbers": [
+            2,
+            3
+          ],
+          "exercise_keys": [],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "ch3.s1-cycle-3",
+          "title": "椭圆中两个常考的三角形",
+          "course_keys": [
+            "intersection_algebra_upper"
+          ],
+          "prerequisite_course_keys": [
+            "ellipse_definition",
+            "ellipse_standard_equations"
+          ],
+          "knowledge_refs": [
+            "ch3.s1-k4"
+          ],
+          "type_refs": [],
+          "example_numbers": [
+            4,
+            5
+          ],
+          "exercise_keys": [],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "ch3.s1-cycle-4",
+          "title": "点 $ P(x_{0}, y_{0}) $ 与椭圆的位置关系",
+          "course_keys": [
+            "intersection_algebra_lower"
+          ],
+          "prerequisite_course_keys": [
+            "ellipse_definition",
+            "ellipse_standard_equations",
+            "intersection_algebra_upper"
+          ],
+          "knowledge_refs": [
+            "ch3.s1-k3"
+          ],
+          "type_refs": [],
+          "example_numbers": [
+            6
+          ],
+          "exercise_keys": [],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "ch3.s1-cycle-5",
+          "title": "椭圆中两个常考的三角形",
+          "course_keys": [],
+          "prerequisite_course_keys": [
+            "ellipse_definition",
+            "ellipse_standard_equations",
+            "intersection_algebra_upper",
+            "intersection_algebra_lower"
+          ],
+          "knowledge_refs": [
+            "ch3.s1-k4"
+          ],
+          "type_refs": [],
+          "example_numbers": [
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "exercise_keys": [],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "ch3.s1-cycle-6",
+          "title": "A组 夯实基础",
+          "course_keys": [],
+          "prerequisite_course_keys": [
+            "ellipse_definition",
+            "ellipse_standard_equations",
+            "intersection_algebra_upper",
+            "intersection_algebra_lower"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型I 椭圆定义的简单应用",
+            "类型Ⅱ 求椭圆的标准方程",
+            "类型III 由椭圆标准方程求参",
+            "类型IV 与椭圆有关的求轨迹方程问题",
+            "类型V 椭圆定义与几何性质综合题",
+            "类型VI 基于椭圆定义的最值问题"
+          ],
+          "example_numbers": [],
+          "exercise_keys": [
+            "A1",
+            "A2",
+            "A3",
+            "A4"
+          ],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "ch3.s1-cycle-7",
+          "title": "B组 强化能力",
+          "course_keys": [],
+          "prerequisite_course_keys": [
+            "ellipse_definition",
+            "ellipse_standard_equations",
+            "intersection_algebra_upper",
+            "intersection_algebra_lower"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型I 椭圆定义的简单应用",
+            "类型Ⅱ 求椭圆的标准方程",
+            "类型III 由椭圆标准方程求参",
+            "类型IV 与椭圆有关的求轨迹方程问题",
+            "类型V 椭圆定义与几何性质综合题",
+            "类型VI 基于椭圆定义的最值问题"
+          ],
+          "example_numbers": [],
+          "exercise_keys": [
+            "B5",
+            "B6",
+            "B7",
+            "B8",
+            "B9",
+            "B10",
+            "B11",
+            "B12",
+            "B13",
+            "B14"
+          ],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "ch3.s1-cycle-8",
+          "title": "C组 拓展提升",
+          "course_keys": [],
+          "prerequisite_course_keys": [
+            "ellipse_definition",
+            "ellipse_standard_equations",
+            "intersection_algebra_upper",
+            "intersection_algebra_lower"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型I 椭圆定义的简单应用",
+            "类型Ⅱ 求椭圆的标准方程",
+            "类型III 由椭圆标准方程求参",
+            "类型IV 与椭圆有关的求轨迹方程问题",
+            "类型V 椭圆定义与几何性质综合题",
+            "类型VI 基于椭圆定义的最值问题"
+          ],
+          "example_numbers": [],
+          "exercise_keys": [
+            "C15",
+            "C16",
+            "C17"
+          ],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        }
+      ],
+      "learning_cycles_status": "SOURCE_ORDER_BASELINE_CURRENT",
+      "coverage_gate": "教材页、题号、例题和直属变式已按当前 OCR 与源页恢复层闭合；视觉题侧车、逐题零基础模拟和冷复测未通过前不得宣称掌握。",
+      "coverage_gaps": []
+    },
+    {
+      "id": "ch3.s2",
+      "label": "第2节 椭圆的简单几何性质",
+      "pdf_pages": [
+        18,
+        40
+      ],
+      "question_groups": {
+        "A": [
+          1,
+          3
+        ],
+        "B": [
+          4,
+          14
+        ],
+        "C": [
+          15,
+          17
+        ]
+      },
+      "learning_item_counts": {
+        "worked_examples": 15,
+        "direct_variants": 10,
+        "abc_exercises": 17,
+        "total": 42
+      },
+      "course_mapping": "PRELIMINARY_TITLE_BASED",
+      "coverage_status": "SOURCE_STRUCTURE_READY_SIMULATION_PENDING",
+      "course_mapping_preliminary": [
+        "3.3.1.3"
+      ],
+      "course_mapping_common_tools": [
+        "3.4.5.0.a",
+        "3.4.5.0.b"
+      ],
+      "course_mapping_verify_note": "依据课程文件名语义初步映射；须以 44 份转写内容核验后转正（PENDING_CONTENT_REVIEW）",
+      "ocr_docs": [
+        17,
+        39
+      ],
+      "specialized_pdf_pages": 23,
+      "question_groups_status": "SOURCE_ANCHORED_CURRENT_OCR",
+      "verified_question_count": 17,
+      "knowledge_points": [
+        {
+          "id": "ch3.s2-k1",
+          "label": "椭圆的简单几何性质",
+          "pages": [
+            17
+          ],
+          "examples": [
+            "例1",
+            "例2",
+            "例3",
+            "例4"
+          ]
+        },
+        {
+          "id": "ch3.s2-k2",
+          "label": "直线与椭圆的位置关系",
+          "pages": [
+            17,
+            18
+          ],
+          "examples": [
+            "例5"
+          ]
+        },
+        {
+          "id": "ch3.s2-k3",
+          "label": "椭圆的第二定义",
+          "pages": [
+            18,
+            19
+          ],
+          "examples": [
+            "例6",
+            "例7",
+            "例8",
+            "例9",
+            "例10",
+            "例11",
+            "例12",
+            "例13",
+            "例14",
+            "例15"
+          ]
+        }
+      ],
+      "type_training": [
+        {
+          "type": "类型Ⅰ 考查椭圆简单几何性质的基础题",
+          "example_numbers": [
+            7,
+            8,
+            9
+          ],
+          "focus": "考查椭圆简单几何性质的基础题"
+        },
+        {
+          "type": "类型Ⅱ 椭圆的离心率问题",
+          "example_numbers": [
+            10,
+            11
+          ],
+          "focus": "椭圆的离心率问题"
+        },
+        {
+          "type": "类型III 直线与椭圆的位置关系",
+          "example_numbers": [
+            12
+          ],
+          "focus": "直线与椭圆的位置关系"
+        },
+        {
+          "type": "类型IV 基于椭圆方程的一类距离最值问题",
+          "example_numbers": [
+            13
+          ],
+          "focus": "基于椭圆方程的一类距离最值问题"
+        },
+        {
+          "type": "类型V 直线与椭圆位置关系综合题",
+          "example_numbers": [
+            14,
+            15
+          ],
+          "focus": "直线与椭圆位置关系综合题"
+        }
+      ],
+      "type_labels": [
+        "类型Ⅰ 考查椭圆简单几何性质的基础题",
+        "类型Ⅱ 椭圆的离心率问题",
+        "类型III 直线与椭圆的位置关系",
+        "类型IV 基于椭圆方程的一类距离最值问题",
+        "类型V 直线与椭圆位置关系综合题"
+      ],
+      "direct_variants": [
+        {
+          "example": "例7",
+          "variants": [
+            "变式"
+          ],
+          "ocr_docs": [
+            21
+          ]
+        },
+        {
+          "example": "例10",
+          "variants": [
+            "变式1",
+            "变式2",
+            "变式3",
+            "变式4",
+            "变式5"
+          ],
+          "ocr_docs": [
+            23,
+            24,
+            25,
+            26
+          ]
+        },
+        {
+          "example": "例11",
+          "variants": [
+            "变式"
+          ],
+          "ocr_docs": [
+            27
+          ]
+        },
+        {
+          "example": "例12",
+          "variants": [
+            "变式"
+          ],
+          "ocr_docs": [
+            28
+          ]
+        },
+        {
+          "example": "例13",
+          "variants": [
+            "变式"
+          ],
+          "ocr_docs": [
+            30
+          ]
+        },
+        {
+          "example": "例15",
+          "variants": [
+            "变式"
+          ],
+          "ocr_docs": [
+            32
+          ]
+        }
+      ],
+      "required_course_ids": [
+        "3.3.1.3"
+      ],
+      "support_course_ids": [
+        "3.4.5.0.a",
+        "3.4.5.0.b"
+      ],
+      "required_course_keys": [
+        "ellipse_eccentricity"
+      ],
+      "support_course_keys": [
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "learning_cycles": [
+        {
+          "id": "ch3.s2-cycle-1",
+          "title": "椭圆的简单几何性质",
+          "course_keys": [
+            "ellipse_eccentricity"
+          ],
+          "prerequisite_course_keys": [],
+          "knowledge_refs": [
+            "ch3.s2-k1"
+          ],
+          "type_refs": [],
+          "example_numbers": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "exercise_keys": [],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "ch3.s2-cycle-2",
+          "title": "直线与椭圆的位置关系",
+          "course_keys": [
+            "intersection_algebra_upper"
+          ],
+          "prerequisite_course_keys": [
+            "ellipse_eccentricity"
+          ],
+          "knowledge_refs": [
+            "ch3.s2-k2"
+          ],
+          "type_refs": [],
+          "example_numbers": [
+            5
+          ],
+          "exercise_keys": [],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "ch3.s2-cycle-3",
+          "title": "椭圆的第二定义",
+          "course_keys": [
+            "intersection_algebra_lower"
+          ],
+          "prerequisite_course_keys": [
+            "ellipse_eccentricity",
+            "intersection_algebra_upper"
+          ],
+          "knowledge_refs": [
+            "ch3.s2-k3"
+          ],
+          "type_refs": [],
+          "example_numbers": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "exercise_keys": [],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "ch3.s2-cycle-4",
+          "title": "A组 夯实基础",
+          "course_keys": [],
+          "prerequisite_course_keys": [
+            "ellipse_eccentricity",
+            "intersection_algebra_upper",
+            "intersection_algebra_lower"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型Ⅰ 考查椭圆简单几何性质的基础题",
+            "类型Ⅱ 椭圆的离心率问题",
+            "类型III 直线与椭圆的位置关系",
+            "类型IV 基于椭圆方程的一类距离最值问题",
+            "类型V 直线与椭圆位置关系综合题"
+          ],
+          "example_numbers": [],
+          "exercise_keys": [
+            "A1",
+            "A2",
+            "A3"
+          ],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "ch3.s2-cycle-5",
+          "title": "B组 强化能力",
+          "course_keys": [],
+          "prerequisite_course_keys": [
+            "ellipse_eccentricity",
+            "intersection_algebra_upper",
+            "intersection_algebra_lower"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型Ⅰ 考查椭圆简单几何性质的基础题",
+            "类型Ⅱ 椭圆的离心率问题",
+            "类型III 直线与椭圆的位置关系",
+            "类型IV 基于椭圆方程的一类距离最值问题",
+            "类型V 直线与椭圆位置关系综合题"
+          ],
+          "example_numbers": [],
+          "exercise_keys": [
+            "B4",
+            "B5",
+            "B6",
+            "B7",
+            "B8",
+            "B9",
+            "B10",
+            "B11",
+            "B12",
+            "B13",
+            "B14"
+          ],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "ch3.s2-cycle-6",
+          "title": "C组 拓展提升",
+          "course_keys": [],
+          "prerequisite_course_keys": [
+            "ellipse_eccentricity",
+            "intersection_algebra_upper",
+            "intersection_algebra_lower"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型Ⅰ 考查椭圆简单几何性质的基础题",
+            "类型Ⅱ 椭圆的离心率问题",
+            "类型III 直线与椭圆的位置关系",
+            "类型IV 基于椭圆方程的一类距离最值问题",
+            "类型V 直线与椭圆位置关系综合题"
+          ],
+          "example_numbers": [],
+          "exercise_keys": [
+            "C15",
+            "C16",
+            "C17"
+          ],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        }
+      ],
+      "learning_cycles_status": "SOURCE_ORDER_BASELINE_CURRENT",
+      "coverage_gate": "教材页、题号、例题和直属变式已按当前 OCR 与源页恢复层闭合；视觉题侧车、逐题零基础模拟和冷复测未通过前不得宣称掌握。",
+      "coverage_gaps": []
+    },
+    {
+      "id": "ch3.s3",
+      "label": "第3节 微专题3：椭圆常用二级结论",
+      "pdf_pages": [
+        41,
+        58
+      ],
+      "question_groups": {
+        "B": [
+          1,
+          9
+        ],
+        "C": [
+          10,
+          13
+        ]
+      },
+      "learning_item_counts": {
+        "worked_examples": 5,
+        "direct_variants": 12,
+        "abc_exercises": 13,
+        "total": 30
+      },
+      "course_mapping": "PRELIMINARY_TITLE_BASED",
+      "coverage_status": "SOURCE_STRUCTURE_READY_SIMULATION_PENDING",
+      "course_mapping_preliminary": [
+        "3.4.1.1",
+        "3.4.1.2",
+        "3.4.2.1",
+        "3.4.2.2",
+        "3.4.3.1"
+      ],
+      "course_mapping_common_tools": [
+        "3.4.5.0.a",
+        "3.4.5.0.b"
+      ],
+      "course_mapping_verify_note": "依据课程文件名语义初步映射；须以 44 份转写内容核验后转正（PENDING_CONTENT_REVIEW）",
+      "ocr_docs": [
+        40,
+        57
+      ],
+      "specialized_pdf_pages": 18,
+      "question_groups_status": "SOURCE_ANCHORED_CURRENT_OCR",
+      "verified_question_count": 13,
+      "knowledge_points": [],
+      "type_training": [
+        {
+          "type": "类型I 椭圆通径公式的应用",
+          "example_numbers": [
+            1
+          ],
+          "focus": "椭圆通径公式的应用"
+        },
+        {
+          "type": "类型Ⅱ 椭圆焦半径、焦点弦公式的应用",
+          "example_numbers": [
+            2
+          ],
+          "focus": "椭圆焦半径、焦点弦公式的应用"
+        },
+        {
+          "type": "类型Ⅲ 椭圆焦点三角形面积公式的应用",
+          "example_numbers": [
+            3
+          ],
+          "focus": "椭圆焦点三角形面积公式的应用"
+        },
+        {
+          "type": "类型IV 椭圆第三定义斜率积结论的应用",
+          "example_numbers": [
+            4
+          ],
+          "focus": "椭圆第三定义斜率积结论的应用"
+        },
+        {
+          "type": "类型V 椭圆中点弦斜率积结论的应用",
+          "example_numbers": [
+            5
+          ],
+          "focus": "椭圆中点弦斜率积结论的应用"
+        }
+      ],
+      "type_labels": [
+        "类型I 椭圆通径公式的应用",
+        "类型Ⅱ 椭圆焦半径、焦点弦公式的应用",
+        "类型Ⅲ 椭圆焦点三角形面积公式的应用",
+        "类型IV 椭圆第三定义斜率积结论的应用",
+        "类型V 椭圆中点弦斜率积结论的应用"
+      ],
+      "direct_variants": [
+        {
+          "example": "例1",
+          "variants": [
+            "变式"
+          ],
+          "ocr_docs": [
+            44
+          ]
+        },
+        {
+          "example": "例2",
+          "variants": [
+            "变式1",
+            "变式2",
+            "变式3",
+            "变式4"
+          ],
+          "ocr_docs": [
+            45,
+            46,
+            47
+          ]
+        },
+        {
+          "example": "例3",
+          "variants": [
+            "变式1",
+            "变式2",
+            "变式3"
+          ],
+          "ocr_docs": [
+            48,
+            49
+          ]
+        },
+        {
+          "example": "例4",
+          "variants": [
+            "变式1",
+            "变式2"
+          ],
+          "ocr_docs": [
+            51
+          ]
+        },
+        {
+          "example": "例5",
+          "variants": [
+            "变式1",
+            "变式2"
+          ],
+          "ocr_docs": [
+            52,
+            53
+          ]
+        }
+      ],
+      "required_course_ids": [
+        "3.4.1.1",
+        "3.4.1.2",
+        "3.4.2.1",
+        "3.4.2.2",
+        "3.4.3.1"
+      ],
+      "support_course_ids": [
+        "3.4.5.0.a",
+        "3.4.5.0.b"
+      ],
+      "required_course_keys": [
+        "focus_triangle_perimeter_area",
+        "midpoint_idea",
+        "focal_radius_formula",
+        "focal_chord_area",
+        "chord_midpoint_slope_constant"
+      ],
+      "support_course_keys": [
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "learning_cycles": [
+        {
+          "id": "ch3.s3-cycle-1",
+          "title": "类型I 椭圆通径公式的应用",
+          "course_keys": [
+            "focus_triangle_perimeter_area",
+            "midpoint_idea"
+          ],
+          "prerequisite_course_keys": [],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型I 椭圆通径公式的应用"
+          ],
+          "example_numbers": [
+            1
+          ],
+          "exercise_keys": [],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "ch3.s3-cycle-2",
+          "title": "类型Ⅱ 椭圆焦半径、焦点弦公式的应用",
+          "course_keys": [
+            "focal_radius_formula"
+          ],
+          "prerequisite_course_keys": [
+            "focus_triangle_perimeter_area",
+            "midpoint_idea"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型Ⅱ 椭圆焦半径、焦点弦公式的应用"
+          ],
+          "example_numbers": [
+            2
+          ],
+          "exercise_keys": [],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "ch3.s3-cycle-3",
+          "title": "类型Ⅲ 椭圆焦点三角形面积公式的应用",
+          "course_keys": [
+            "focal_chord_area",
+            "chord_midpoint_slope_constant"
+          ],
+          "prerequisite_course_keys": [
+            "focus_triangle_perimeter_area",
+            "midpoint_idea",
+            "focal_radius_formula"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型Ⅲ 椭圆焦点三角形面积公式的应用"
+          ],
+          "example_numbers": [
+            3
+          ],
+          "exercise_keys": [],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "ch3.s3-cycle-4",
+          "title": "类型IV 椭圆第三定义斜率积结论的应用",
+          "course_keys": [
+            "intersection_algebra_upper"
+          ],
+          "prerequisite_course_keys": [
+            "focus_triangle_perimeter_area",
+            "midpoint_idea",
+            "focal_radius_formula",
+            "focal_chord_area",
+            "chord_midpoint_slope_constant"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型IV 椭圆第三定义斜率积结论的应用"
+          ],
+          "example_numbers": [
+            4
+          ],
+          "exercise_keys": [],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "ch3.s3-cycle-5",
+          "title": "类型V 椭圆中点弦斜率积结论的应用",
+          "course_keys": [
+            "intersection_algebra_lower"
+          ],
+          "prerequisite_course_keys": [
+            "focus_triangle_perimeter_area",
+            "midpoint_idea",
+            "focal_radius_formula",
+            "focal_chord_area",
+            "chord_midpoint_slope_constant",
+            "intersection_algebra_upper"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型V 椭圆中点弦斜率积结论的应用"
+          ],
+          "example_numbers": [
+            5
+          ],
+          "exercise_keys": [],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "ch3.s3-cycle-6",
+          "title": "B组 强化能力",
+          "course_keys": [],
+          "prerequisite_course_keys": [
+            "focus_triangle_perimeter_area",
+            "midpoint_idea",
+            "focal_radius_formula",
+            "focal_chord_area",
+            "chord_midpoint_slope_constant",
+            "intersection_algebra_upper",
+            "intersection_algebra_lower"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型I 椭圆通径公式的应用",
+            "类型Ⅱ 椭圆焦半径、焦点弦公式的应用",
+            "类型Ⅲ 椭圆焦点三角形面积公式的应用",
+            "类型IV 椭圆第三定义斜率积结论的应用",
+            "类型V 椭圆中点弦斜率积结论的应用"
+          ],
+          "example_numbers": [],
+          "exercise_keys": [
+            "B1",
+            "B2",
+            "B3",
+            "B4",
+            "B5",
+            "B6",
+            "B7",
+            "B8",
+            "B9"
+          ],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "ch3.s3-cycle-7",
+          "title": "C组 拓展提升",
+          "course_keys": [],
+          "prerequisite_course_keys": [
+            "focus_triangle_perimeter_area",
+            "midpoint_idea",
+            "focal_radius_formula",
+            "focal_chord_area",
+            "chord_midpoint_slope_constant",
+            "intersection_algebra_upper",
+            "intersection_algebra_lower"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型I 椭圆通径公式的应用",
+            "类型Ⅱ 椭圆焦半径、焦点弦公式的应用",
+            "类型Ⅲ 椭圆焦点三角形面积公式的应用",
+            "类型IV 椭圆第三定义斜率积结论的应用",
+            "类型V 椭圆中点弦斜率积结论的应用"
+          ],
+          "example_numbers": [],
+          "exercise_keys": [
+            "C10",
+            "C11",
+            "C12",
+            "C13"
+          ],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        }
+      ],
+      "learning_cycles_status": "SOURCE_ORDER_BASELINE_CURRENT",
+      "coverage_gate": "教材页、题号、例题和直属变式已按当前 OCR 与源页恢复层闭合；视觉题侧车、逐题零基础模拟和冷复测未通过前不得宣称掌握。",
+      "coverage_gaps": []
+    },
+    {
+      "id": "ch3.s4",
+      "label": "第4节 双曲线及其标准方程",
+      "pdf_pages": [
+        59,
+        73
+      ],
+      "question_groups": {
+        "A": [
+          1,
+          5
+        ],
+        "B": [
+          6,
+          14
+        ],
+        "C": [
+          15,
+          16
+        ]
+      },
+      "learning_item_counts": {
+        "worked_examples": 11,
+        "direct_variants": 12,
+        "abc_exercises": 16,
+        "total": 39
+      },
+      "course_mapping": "PRELIMINARY_TITLE_BASED",
+      "coverage_status": "SOURCE_STRUCTURE_READY_SIMULATION_PENDING",
+      "course_mapping_preliminary": [
+        "3.3.2.1"
+      ],
+      "course_mapping_common_tools": [
+        "3.4.5.0.a",
+        "3.4.5.0.b"
+      ],
+      "course_mapping_verify_note": "依据课程文件名语义初步映射；须以 44 份转写内容核验后转正（PENDING_CONTENT_REVIEW）",
+      "ocr_docs": [
+        58,
+        72
+      ],
+      "specialized_pdf_pages": 15,
+      "question_groups_status": "SOURCE_ANCHORED_CURRENT_OCR",
+      "verified_question_count": 16,
+      "knowledge_points": [
+        {
+          "id": "ch3.s4-k1",
+          "label": "双曲线的定义",
+          "pages": [
+            58
+          ],
+          "examples": [
+            "例1",
+            "例2",
+            "例3",
+            "例4",
+            "例5",
+            "例6",
+            "例7",
+            "例8",
+            "例9",
+            "例10",
+            "例11"
+          ]
+        },
+        {
+          "id": "ch3.s4-k2",
+          "label": "双曲线的标准方程",
+          "pages": [
+            58
+          ],
+          "examples": []
+        }
+      ],
+      "type_training": [
+        {
+          "type": "类型I 双曲线定义的简单应用",
+          "example_numbers": [
+            5
+          ],
+          "focus": "双曲线定义的简单应用"
+        },
+        {
+          "type": "类型Ⅱ 求双曲线的标准方程",
+          "example_numbers": [
+            6,
+            7
+          ],
+          "focus": "求双曲线的标准方程"
+        },
+        {
+          "type": "类型Ⅲ 由双曲线的标准方程求参",
+          "example_numbers": [
+            8
+          ],
+          "focus": "由双曲线的标准方程求参"
+        },
+        {
+          "type": "类型IV 双曲线定义与几何性质综合题",
+          "example_numbers": [
+            9
+          ],
+          "focus": "双曲线定义与几何性质综合题"
+        },
+        {
+          "type": "类型V 双曲线有关的应用题",
+          "example_numbers": [
+            10
+          ],
+          "focus": "双曲线有关的应用题"
+        },
+        {
+          "type": "类型VI 基于双曲线定义的最值问题",
+          "example_numbers": [
+            11
+          ],
+          "focus": "基于双曲线定义的最值问题"
+        }
+      ],
+      "type_labels": [
+        "类型I 双曲线定义的简单应用",
+        "类型Ⅱ 求双曲线的标准方程",
+        "类型Ⅲ 由双曲线的标准方程求参",
+        "类型IV 双曲线定义与几何性质综合题",
+        "类型V 双曲线有关的应用题",
+        "类型VI 基于双曲线定义的最值问题"
+      ],
+      "direct_variants": [
+        {
+          "example": "例5",
+          "variants": [
+            "变式1",
+            "变式2"
+          ],
+          "ocr_docs": [
+            60
+          ]
+        },
+        {
+          "example": "例6",
+          "variants": [
+            "变式1",
+            "变式2"
+          ],
+          "ocr_docs": [
+            61
+          ]
+        },
+        {
+          "example": "例7",
+          "variants": [
+            "变式1",
+            "变式2"
+          ],
+          "ocr_docs": [
+            62,
+            63
+          ]
+        },
+        {
+          "example": "例8",
+          "variants": [
+            "变式1",
+            "变式2"
+          ],
+          "ocr_docs": [
+            63,
+            64
+          ]
+        },
+        {
+          "example": "例9",
+          "variants": [
+            "变式1",
+            "变式2",
+            "变式3"
+          ],
+          "ocr_docs": [
+            65,
+            66
+          ]
+        },
+        {
+          "example": "例11",
+          "variants": [
+            "变式"
+          ],
+          "ocr_docs": [
+            67
+          ]
+        }
+      ],
+      "required_course_ids": [
+        "3.3.2.1"
+      ],
+      "support_course_ids": [
+        "3.4.5.0.a",
+        "3.4.5.0.b"
+      ],
+      "required_course_keys": [
+        "hyperbola_definition_equation"
+      ],
+      "support_course_keys": [
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "learning_cycles": [
+        {
+          "id": "ch3.s4-cycle-1",
+          "title": "双曲线的定义",
+          "course_keys": [
+            "hyperbola_definition_equation",
+            "intersection_algebra_upper",
+            "intersection_algebra_lower"
+          ],
+          "prerequisite_course_keys": [],
+          "knowledge_refs": [
+            "ch3.s4-k1"
+          ],
+          "type_refs": [],
+          "example_numbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "exercise_keys": [],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "ch3.s4-cycle-2",
+          "title": "A组 夯实基础",
+          "course_keys": [],
+          "prerequisite_course_keys": [
+            "hyperbola_definition_equation",
+            "intersection_algebra_upper",
+            "intersection_algebra_lower"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型I 双曲线定义的简单应用",
+            "类型Ⅱ 求双曲线的标准方程",
+            "类型Ⅲ 由双曲线的标准方程求参",
+            "类型IV 双曲线定义与几何性质综合题",
+            "类型V 双曲线有关的应用题",
+            "类型VI 基于双曲线定义的最值问题"
+          ],
+          "example_numbers": [],
+          "exercise_keys": [
+            "A1",
+            "A2",
+            "A3",
+            "A4",
+            "A5"
+          ],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "ch3.s4-cycle-3",
+          "title": "B组 强化能力",
+          "course_keys": [],
+          "prerequisite_course_keys": [
+            "hyperbola_definition_equation",
+            "intersection_algebra_upper",
+            "intersection_algebra_lower"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型I 双曲线定义的简单应用",
+            "类型Ⅱ 求双曲线的标准方程",
+            "类型Ⅲ 由双曲线的标准方程求参",
+            "类型IV 双曲线定义与几何性质综合题",
+            "类型V 双曲线有关的应用题",
+            "类型VI 基于双曲线定义的最值问题"
+          ],
+          "example_numbers": [],
+          "exercise_keys": [
+            "B6",
+            "B7",
+            "B8",
+            "B9",
+            "B10",
+            "B11",
+            "B12",
+            "B13",
+            "B14"
+          ],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "ch3.s4-cycle-4",
+          "title": "C组 拓展提升",
+          "course_keys": [],
+          "prerequisite_course_keys": [
+            "hyperbola_definition_equation",
+            "intersection_algebra_upper",
+            "intersection_algebra_lower"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型I 双曲线定义的简单应用",
+            "类型Ⅱ 求双曲线的标准方程",
+            "类型Ⅲ 由双曲线的标准方程求参",
+            "类型IV 双曲线定义与几何性质综合题",
+            "类型V 双曲线有关的应用题",
+            "类型VI 基于双曲线定义的最值问题"
+          ],
+          "example_numbers": [],
+          "exercise_keys": [
+            "C15",
+            "C16"
+          ],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        }
+      ],
+      "learning_cycles_status": "SOURCE_ORDER_BASELINE_CURRENT",
+      "coverage_gate": "教材页、题号、例题和直属变式已按当前 OCR 与源页恢复层闭合；视觉题侧车、逐题零基础模拟和冷复测未通过前不得宣称掌握。",
+      "coverage_gaps": []
+    },
+    {
+      "id": "ch3.s5",
+      "label": "第5节 双曲线的简单几何性质",
+      "pdf_pages": [
+        74,
+        92
+      ],
+      "question_groups": {
+        "A": [
+          1,
+          5
+        ],
+        "B": [
+          6,
+          12
+        ],
+        "C": [
+          13,
+          16
+        ]
+      },
+      "learning_item_counts": {
+        "worked_examples": 16,
+        "direct_variants": 8,
+        "abc_exercises": 16,
+        "total": 40
+      },
+      "course_mapping": "PRELIMINARY_TITLE_BASED",
+      "coverage_status": "SOURCE_STRUCTURE_READY_SIMULATION_PENDING",
+      "course_mapping_preliminary": [
+        "3.3.2.2"
+      ],
+      "course_mapping_common_tools": [
+        "3.4.5.0.a",
+        "3.4.5.0.b"
+      ],
+      "course_mapping_verify_note": "依据课程文件名语义初步映射；须以 44 份转写内容核验后转正（PENDING_CONTENT_REVIEW）",
+      "ocr_docs": [
+        73,
+        91
+      ],
+      "specialized_pdf_pages": 19,
+      "question_groups_status": "SOURCE_ANCHORED_CURRENT_OCR",
+      "verified_question_count": 16,
+      "knowledge_points": [
+        {
+          "id": "ch3.s5-k1",
+          "label": "双曲线的简单几何性质",
+          "pages": [
+            73
+          ],
+          "examples": [
+            "例1",
+            "例2",
+            "例3"
+          ]
+        },
+        {
+          "id": "ch3.s5-k2",
+          "label": "直线与双曲线的位置关系",
+          "pages": [
+            74
+          ],
+          "examples": [
+            "例4"
+          ]
+        },
+        {
+          "id": "ch3.s5-k3",
+          "label": "共轭双曲线和等轴双曲线",
+          "pages": [
+            74
+          ],
+          "examples": [
+            "例5",
+            "例6"
+          ]
+        },
+        {
+          "id": "ch3.s5-k4",
+          "label": "双曲线的第二定义",
+          "pages": [
+            75
+          ],
+          "examples": [
+            "例7",
+            "例8",
+            "例9",
+            "例10",
+            "例11",
+            "例12",
+            "例13",
+            "例14",
+            "例15",
+            "例16"
+          ]
+        }
+      ],
+      "type_training": [
+        {
+          "type": "类型Ⅰ 考查双曲线简单几何性质的基础题",
+          "example_numbers": [
+            8,
+            9
+          ],
+          "focus": "考查双曲线简单几何性质的基础题"
+        },
+        {
+          "type": "类型Ⅱ 双曲线的离心率问题",
+          "example_numbers": [
+            10,
+            11
+          ],
+          "focus": "双曲线的离心率问题"
+        },
+        {
+          "type": "类型Ⅲ 直线与双曲线的位置关系",
+          "example_numbers": [
+            12
+          ],
+          "focus": "直线与双曲线的位置关系"
+        },
+        {
+          "type": "类型IV 双曲线的简单几何性质与平面几何综合题",
+          "example_numbers": [
+            13
+          ],
+          "focus": "双曲线的简单几何性质与平面几何综合题"
+        },
+        {
+          "type": "类型IV 基于双曲线方程的最值问题",
+          "example_numbers": [
+            14,
+            15,
+            16
+          ],
+          "focus": "基于双曲线方程的最值问题"
+        }
+      ],
+      "type_labels": [
+        "类型Ⅰ 考查双曲线简单几何性质的基础题",
+        "类型Ⅱ 双曲线的离心率问题",
+        "类型Ⅲ 直线与双曲线的位置关系",
+        "类型IV 双曲线的简单几何性质与平面几何综合题",
+        "类型IV 基于双曲线方程的最值问题"
+      ],
+      "direct_variants": [
+        {
+          "example": "例10",
+          "variants": [
+            "变式1",
+            "变式2",
+            "变式3",
+            "变式4"
+          ],
+          "ocr_docs": [
+            78,
+            79,
+            80
+          ]
+        },
+        {
+          "example": "例11",
+          "variants": [
+            "变式"
+          ],
+          "ocr_docs": [
+            81
+          ]
+        },
+        {
+          "example": "例12",
+          "variants": [
+            "变式"
+          ],
+          "ocr_docs": [
+            82
+          ]
+        },
+        {
+          "example": "例13",
+          "variants": [
+            "变式"
+          ],
+          "ocr_docs": [
+            83
+          ]
+        },
+        {
+          "example": "例14",
+          "variants": [
+            "变式"
+          ],
+          "ocr_docs": [
+            84
+          ]
+        }
+      ],
+      "required_course_ids": [
+        "3.3.2.2"
+      ],
+      "support_course_ids": [
+        "3.4.5.0.a",
+        "3.4.5.0.b"
+      ],
+      "required_course_keys": [
+        "hyperbola_eccentricity_asymptote"
+      ],
+      "support_course_keys": [
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "learning_cycles": [
+        {
+          "id": "ch3.s5-cycle-1",
+          "title": "双曲线的简单几何性质",
+          "course_keys": [
+            "hyperbola_eccentricity_asymptote"
+          ],
+          "prerequisite_course_keys": [],
+          "knowledge_refs": [
+            "ch3.s5-k1"
+          ],
+          "type_refs": [],
+          "example_numbers": [
+            1,
+            2,
+            3
+          ],
+          "exercise_keys": [],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "ch3.s5-cycle-2",
+          "title": "直线与双曲线的位置关系",
+          "course_keys": [
+            "intersection_algebra_upper"
+          ],
+          "prerequisite_course_keys": [
+            "hyperbola_eccentricity_asymptote"
+          ],
+          "knowledge_refs": [
+            "ch3.s5-k2"
+          ],
+          "type_refs": [],
+          "example_numbers": [
+            4
+          ],
+          "exercise_keys": [],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "ch3.s5-cycle-3",
+          "title": "共轭双曲线和等轴双曲线",
+          "course_keys": [
+            "intersection_algebra_lower"
+          ],
+          "prerequisite_course_keys": [
+            "hyperbola_eccentricity_asymptote",
+            "intersection_algebra_upper"
+          ],
+          "knowledge_refs": [
+            "ch3.s5-k3"
+          ],
+          "type_refs": [],
+          "example_numbers": [
+            5,
+            6
+          ],
+          "exercise_keys": [],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "ch3.s5-cycle-4",
+          "title": "双曲线的第二定义",
+          "course_keys": [],
+          "prerequisite_course_keys": [
+            "hyperbola_eccentricity_asymptote",
+            "intersection_algebra_upper",
+            "intersection_algebra_lower"
+          ],
+          "knowledge_refs": [
+            "ch3.s5-k4"
+          ],
+          "type_refs": [],
+          "example_numbers": [
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16
+          ],
+          "exercise_keys": [],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "ch3.s5-cycle-5",
+          "title": "A组 夯实基础",
+          "course_keys": [],
+          "prerequisite_course_keys": [
+            "hyperbola_eccentricity_asymptote",
+            "intersection_algebra_upper",
+            "intersection_algebra_lower"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型Ⅰ 考查双曲线简单几何性质的基础题",
+            "类型Ⅱ 双曲线的离心率问题",
+            "类型Ⅲ 直线与双曲线的位置关系",
+            "类型IV 双曲线的简单几何性质与平面几何综合题",
+            "类型IV 基于双曲线方程的最值问题"
+          ],
+          "example_numbers": [],
+          "exercise_keys": [
+            "A1",
+            "A2",
+            "A3",
+            "A4",
+            "A5"
+          ],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "ch3.s5-cycle-6",
+          "title": "B组 强化能力",
+          "course_keys": [],
+          "prerequisite_course_keys": [
+            "hyperbola_eccentricity_asymptote",
+            "intersection_algebra_upper",
+            "intersection_algebra_lower"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型Ⅰ 考查双曲线简单几何性质的基础题",
+            "类型Ⅱ 双曲线的离心率问题",
+            "类型Ⅲ 直线与双曲线的位置关系",
+            "类型IV 双曲线的简单几何性质与平面几何综合题",
+            "类型IV 基于双曲线方程的最值问题"
+          ],
+          "example_numbers": [],
+          "exercise_keys": [
+            "B6",
+            "B7",
+            "B8",
+            "B9",
+            "B10",
+            "B11",
+            "B12"
+          ],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "ch3.s5-cycle-7",
+          "title": "C组 拓展提升",
+          "course_keys": [],
+          "prerequisite_course_keys": [
+            "hyperbola_eccentricity_asymptote",
+            "intersection_algebra_upper",
+            "intersection_algebra_lower"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型Ⅰ 考查双曲线简单几何性质的基础题",
+            "类型Ⅱ 双曲线的离心率问题",
+            "类型Ⅲ 直线与双曲线的位置关系",
+            "类型IV 双曲线的简单几何性质与平面几何综合题",
+            "类型IV 基于双曲线方程的最值问题"
+          ],
+          "example_numbers": [],
+          "exercise_keys": [
+            "C13",
+            "C14",
+            "C15",
+            "C16"
+          ],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        }
+      ],
+      "learning_cycles_status": "SOURCE_ORDER_BASELINE_CURRENT",
+      "coverage_gate": "教材页、题号、例题和直属变式已按当前 OCR 与源页恢复层闭合；视觉题侧车、逐题零基础模拟和冷复测未通过前不得宣称掌握。",
+      "coverage_gaps": []
+    },
+    {
+      "id": "ch3.s6",
+      "label": "第6节 微专题4：双曲线常用二级结论",
+      "pdf_pages": [
+        93,
+        105
+      ],
+      "question_groups": {
+        "B": [
+          1,
+          10
+        ],
+        "C": [
+          11,
+          12
+        ]
+      },
+      "learning_item_counts": {
+        "worked_examples": 6,
+        "direct_variants": 9,
+        "abc_exercises": 12,
+        "total": 27
+      },
+      "course_mapping": "PRELIMINARY_TITLE_BASED",
+      "coverage_status": "SOURCE_STRUCTURE_READY_SIMULATION_PENDING",
+      "course_mapping_preliminary": [
+        "3.4.1.1",
+        "3.4.1.2",
+        "3.4.2.1",
+        "3.4.2.2",
+        "3.4.3.1",
+        "3.4.3.2"
+      ],
+      "course_mapping_common_tools": [
+        "3.4.5.0.a",
+        "3.4.5.0.b"
+      ],
+      "course_mapping_verify_note": "依据课程文件名语义初步映射；须以 44 份转写内容核验后转正（PENDING_CONTENT_REVIEW）",
+      "ocr_docs": [
+        92,
+        104
+      ],
+      "specialized_pdf_pages": 13,
+      "question_groups_status": "SOURCE_ANCHORED_CURRENT_OCR",
+      "verified_question_count": 12,
+      "knowledge_points": [],
+      "type_training": [
+        {
+          "type": "类型I 双曲线通径公式的应用",
+          "example_numbers": [
+            1
+          ],
+          "focus": "双曲线通径公式的应用"
+        },
+        {
+          "type": "类型Ⅱ 双曲线的特征三角形的应用",
+          "example_numbers": [
+            2
+          ],
+          "focus": "双曲线的特征三角形的应用"
+        },
+        {
+          "type": "类型III 双曲线焦半径公式的应用",
+          "example_numbers": [
+            3
+          ],
+          "focus": "双曲线焦半径公式的应用"
+        },
+        {
+          "type": "类型IV 双曲线焦点三角形面积公式的应用",
+          "example_numbers": [
+            4
+          ],
+          "focus": "双曲线焦点三角形面积公式的应用"
+        },
+        {
+          "type": "类型V 双曲线的第三定义斜率积结论的应用",
+          "example_numbers": [
+            5
+          ],
+          "focus": "双曲线的第三定义斜率积结论的应用"
+        },
+        {
+          "type": "类型VI 双曲线的中点弦斜率积结论的应用",
+          "example_numbers": [
+            6
+          ],
+          "focus": "双曲线的中点弦斜率积结论的应用"
+        }
+      ],
+      "type_labels": [
+        "类型I 双曲线通径公式的应用",
+        "类型Ⅱ 双曲线的特征三角形的应用",
+        "类型III 双曲线焦半径公式的应用",
+        "类型IV 双曲线焦点三角形面积公式的应用",
+        "类型V 双曲线的第三定义斜率积结论的应用",
+        "类型VI 双曲线的中点弦斜率积结论的应用"
+      ],
+      "direct_variants": [
+        {
+          "example": "例1",
+          "variants": [
+            "变式"
+          ],
+          "ocr_docs": [
+            95
+          ]
+        },
+        {
+          "example": "例2",
+          "variants": [
+            "变式"
+          ],
+          "ocr_docs": [
+            96
+          ]
+        },
+        {
+          "example": "例3",
+          "variants": [
+            "变式"
+          ],
+          "ocr_docs": [
+            97
+          ]
+        },
+        {
+          "example": "例4",
+          "variants": [
+            "变式1",
+            "变式2"
+          ],
+          "ocr_docs": [
+            98
+          ]
+        },
+        {
+          "example": "例5",
+          "variants": [
+            "变式1",
+            "变式2"
+          ],
+          "ocr_docs": [
+            99
+          ]
+        },
+        {
+          "example": "例6",
+          "variants": [
+            "变式1",
+            "变式2"
+          ],
+          "ocr_docs": [
+            100
+          ]
+        }
+      ],
+      "required_course_ids": [
+        "3.4.1.1",
+        "3.4.1.2",
+        "3.4.2.1",
+        "3.4.2.2",
+        "3.4.3.1",
+        "3.4.3.2"
+      ],
+      "support_course_ids": [
+        "3.4.5.0.a",
+        "3.4.5.0.b"
+      ],
+      "required_course_keys": [
+        "focus_triangle_perimeter_area",
+        "midpoint_idea",
+        "focal_radius_formula",
+        "focal_chord_area",
+        "chord_midpoint_slope_constant",
+        "chord_midpoint_extended"
+      ],
+      "support_course_keys": [
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "learning_cycles": [
+        {
+          "id": "ch3.s6-cycle-1",
+          "title": "类型I 双曲线通径公式的应用",
+          "course_keys": [
+            "focus_triangle_perimeter_area",
+            "midpoint_idea"
+          ],
+          "prerequisite_course_keys": [],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型I 双曲线通径公式的应用"
+          ],
+          "example_numbers": [
+            1
+          ],
+          "exercise_keys": [],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "ch3.s6-cycle-2",
+          "title": "类型Ⅱ 双曲线的特征三角形的应用",
+          "course_keys": [
+            "focal_radius_formula"
+          ],
+          "prerequisite_course_keys": [
+            "focus_triangle_perimeter_area",
+            "midpoint_idea"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型Ⅱ 双曲线的特征三角形的应用"
+          ],
+          "example_numbers": [
+            2
+          ],
+          "exercise_keys": [],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "ch3.s6-cycle-3",
+          "title": "类型III 双曲线焦半径公式的应用",
+          "course_keys": [
+            "focal_chord_area"
+          ],
+          "prerequisite_course_keys": [
+            "focus_triangle_perimeter_area",
+            "midpoint_idea",
+            "focal_radius_formula"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型III 双曲线焦半径公式的应用"
+          ],
+          "example_numbers": [
+            3
+          ],
+          "exercise_keys": [],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "ch3.s6-cycle-4",
+          "title": "类型IV 双曲线焦点三角形面积公式的应用",
+          "course_keys": [
+            "chord_midpoint_slope_constant",
+            "chord_midpoint_extended"
+          ],
+          "prerequisite_course_keys": [
+            "focus_triangle_perimeter_area",
+            "midpoint_idea",
+            "focal_radius_formula",
+            "focal_chord_area"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型IV 双曲线焦点三角形面积公式的应用"
+          ],
+          "example_numbers": [
+            4
+          ],
+          "exercise_keys": [],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "ch3.s6-cycle-5",
+          "title": "类型V 双曲线的第三定义斜率积结论的应用",
+          "course_keys": [
+            "intersection_algebra_upper"
+          ],
+          "prerequisite_course_keys": [
+            "focus_triangle_perimeter_area",
+            "midpoint_idea",
+            "focal_radius_formula",
+            "focal_chord_area",
+            "chord_midpoint_slope_constant",
+            "chord_midpoint_extended"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型V 双曲线的第三定义斜率积结论的应用"
+          ],
+          "example_numbers": [
+            5
+          ],
+          "exercise_keys": [],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "ch3.s6-cycle-6",
+          "title": "类型VI 双曲线的中点弦斜率积结论的应用",
+          "course_keys": [
+            "intersection_algebra_lower"
+          ],
+          "prerequisite_course_keys": [
+            "focus_triangle_perimeter_area",
+            "midpoint_idea",
+            "focal_radius_formula",
+            "focal_chord_area",
+            "chord_midpoint_slope_constant",
+            "chord_midpoint_extended",
+            "intersection_algebra_upper"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型VI 双曲线的中点弦斜率积结论的应用"
+          ],
+          "example_numbers": [
+            6
+          ],
+          "exercise_keys": [],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "ch3.s6-cycle-7",
+          "title": "B组 强化能力",
+          "course_keys": [],
+          "prerequisite_course_keys": [
+            "focus_triangle_perimeter_area",
+            "midpoint_idea",
+            "focal_radius_formula",
+            "focal_chord_area",
+            "chord_midpoint_slope_constant",
+            "chord_midpoint_extended",
+            "intersection_algebra_upper",
+            "intersection_algebra_lower"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型I 双曲线通径公式的应用",
+            "类型Ⅱ 双曲线的特征三角形的应用",
+            "类型III 双曲线焦半径公式的应用",
+            "类型IV 双曲线焦点三角形面积公式的应用",
+            "类型V 双曲线的第三定义斜率积结论的应用",
+            "类型VI 双曲线的中点弦斜率积结论的应用"
+          ],
+          "example_numbers": [],
+          "exercise_keys": [
+            "B1",
+            "B2",
+            "B3",
+            "B4",
+            "B5",
+            "B6",
+            "B7",
+            "B8",
+            "B9",
+            "B10"
+          ],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "ch3.s6-cycle-8",
+          "title": "C组 拓展提升",
+          "course_keys": [],
+          "prerequisite_course_keys": [
+            "focus_triangle_perimeter_area",
+            "midpoint_idea",
+            "focal_radius_formula",
+            "focal_chord_area",
+            "chord_midpoint_slope_constant",
+            "chord_midpoint_extended",
+            "intersection_algebra_upper",
+            "intersection_algebra_lower"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型I 双曲线通径公式的应用",
+            "类型Ⅱ 双曲线的特征三角形的应用",
+            "类型III 双曲线焦半径公式的应用",
+            "类型IV 双曲线焦点三角形面积公式的应用",
+            "类型V 双曲线的第三定义斜率积结论的应用",
+            "类型VI 双曲线的中点弦斜率积结论的应用"
+          ],
+          "example_numbers": [],
+          "exercise_keys": [
+            "C11",
+            "C12"
+          ],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        }
+      ],
+      "learning_cycles_status": "SOURCE_ORDER_BASELINE_CURRENT",
+      "coverage_gate": "教材页、题号、例题和直属变式已按当前 OCR 与源页恢复层闭合；视觉题侧车、逐题零基础模拟和冷复测未通过前不得宣称掌握。",
+      "coverage_gaps": []
+    },
+    {
+      "id": "ch3.s7",
+      "label": "第7节 抛物线及其标准方程",
+      "pdf_pages": [
+        106,
+        117
+      ],
+      "question_groups": {
+        "A": [
+          1,
+          6
+        ],
+        "B": [
+          7,
+          14
+        ],
+        "C": [
+          15,
+          16
+        ]
+      },
+      "learning_item_counts": {
+        "worked_examples": 10,
+        "direct_variants": 8,
+        "abc_exercises": 16,
+        "total": 34
+      },
+      "course_mapping": "PRELIMINARY_TITLE_BASED",
+      "coverage_status": "SOURCE_STRUCTURE_READY_SIMULATION_PENDING",
+      "course_mapping_preliminary": [
+        "3.3.3.1"
+      ],
+      "course_mapping_common_tools": [
+        "3.4.5.0.a",
+        "3.4.5.0.b"
+      ],
+      "course_mapping_verify_note": "依据课程文件名语义初步映射；须以 44 份转写内容核验后转正（PENDING_CONTENT_REVIEW）",
+      "ocr_docs": [
+        105,
+        116
+      ],
+      "specialized_pdf_pages": 12,
+      "question_groups_status": "SOURCE_ANCHORED_CURRENT_OCR",
+      "verified_question_count": 16,
+      "knowledge_points": [
+        {
+          "id": "ch3.s7-k1",
+          "label": "抛物线的定义",
+          "pages": [
+            105
+          ],
+          "examples": [
+            "例1"
+          ]
+        },
+        {
+          "id": "ch3.s7-k2",
+          "label": "抛物线的标准方程",
+          "pages": [
+            105
+          ],
+          "examples": [
+            "例2",
+            "例3"
+          ]
+        },
+        {
+          "id": "ch3.s7-k3",
+          "label": "抛物线的焦半径公式",
+          "pages": [
+            106
+          ],
+          "examples": [
+            "例4",
+            "例5",
+            "例6",
+            "例7",
+            "例8",
+            "例9",
+            "例10"
+          ]
+        }
+      ],
+      "type_training": [
+        {
+          "type": "类型I 抛物线的标准方程有关概念题",
+          "example_numbers": [
+            5
+          ],
+          "focus": "抛物线的标准方程有关概念题"
+        },
+        {
+          "type": "类型Ⅱ 定义法求抛物线的轨迹方程",
+          "example_numbers": [
+            6
+          ],
+          "focus": "定义法求抛物线的轨迹方程"
+        },
+        {
+          "type": "类型Ⅲ 用抛物线定义计算焦半径",
+          "example_numbers": [
+            7
+          ],
+          "focus": "用抛物线定义计算焦半径"
+        },
+        {
+          "type": "类型IV 抛物线定义与几何性质综合题",
+          "example_numbers": [
+            8
+          ],
+          "focus": "抛物线定义与几何性质综合题"
+        },
+        {
+          "type": "类型V 抛物线的实际应用",
+          "example_numbers": [
+            9
+          ],
+          "focus": "抛物线的实际应用"
+        },
+        {
+          "type": "类型VI 基于抛物线定义的一类最值问题",
+          "example_numbers": [
+            10
+          ],
+          "focus": "基于抛物线定义的一类最值问题"
+        }
+      ],
+      "type_labels": [
+        "类型I 抛物线的标准方程有关概念题",
+        "类型Ⅱ 定义法求抛物线的轨迹方程",
+        "类型Ⅲ 用抛物线定义计算焦半径",
+        "类型IV 抛物线定义与几何性质综合题",
+        "类型V 抛物线的实际应用",
+        "类型VI 基于抛物线定义的一类最值问题"
+      ],
+      "direct_variants": [
+        {
+          "example": "例5",
+          "variants": [
+            "变式1",
+            "变式2"
+          ],
+          "ocr_docs": [
+            107
+          ]
+        },
+        {
+          "example": "例6",
+          "variants": [
+            "变式"
+          ],
+          "ocr_docs": [
+            108
+          ]
+        },
+        {
+          "example": "例7",
+          "variants": [
+            "变式"
+          ],
+          "ocr_docs": [
+            109
+          ]
+        },
+        {
+          "example": "例8",
+          "variants": [
+            "变式1",
+            "变式2",
+            "变式3"
+          ],
+          "ocr_docs": [
+            110
+          ]
+        },
+        {
+          "example": "例10",
+          "variants": [
+            "变式"
+          ],
+          "ocr_docs": [
+            112
+          ]
+        }
+      ],
+      "required_course_ids": [
+        "3.3.3.1"
+      ],
+      "support_course_ids": [
+        "3.4.5.0.a",
+        "3.4.5.0.b"
+      ],
+      "required_course_keys": [
+        "parabola_definition_equation"
+      ],
+      "support_course_keys": [
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "learning_cycles": [
+        {
+          "id": "ch3.s7-cycle-1",
+          "title": "抛物线的定义",
+          "course_keys": [
+            "parabola_definition_equation"
+          ],
+          "prerequisite_course_keys": [],
+          "knowledge_refs": [
+            "ch3.s7-k1"
+          ],
+          "type_refs": [],
+          "example_numbers": [
+            1
+          ],
+          "exercise_keys": [],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "ch3.s7-cycle-2",
+          "title": "抛物线的标准方程",
+          "course_keys": [
+            "intersection_algebra_upper"
+          ],
+          "prerequisite_course_keys": [
+            "parabola_definition_equation"
+          ],
+          "knowledge_refs": [
+            "ch3.s7-k2"
+          ],
+          "type_refs": [],
+          "example_numbers": [
+            2,
+            3
+          ],
+          "exercise_keys": [],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "ch3.s7-cycle-3",
+          "title": "抛物线的焦半径公式",
+          "course_keys": [
+            "intersection_algebra_lower"
+          ],
+          "prerequisite_course_keys": [
+            "parabola_definition_equation",
+            "intersection_algebra_upper"
+          ],
+          "knowledge_refs": [
+            "ch3.s7-k3"
+          ],
+          "type_refs": [],
+          "example_numbers": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "exercise_keys": [],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "ch3.s7-cycle-4",
+          "title": "A组 夯实基础",
+          "course_keys": [],
+          "prerequisite_course_keys": [
+            "parabola_definition_equation",
+            "intersection_algebra_upper",
+            "intersection_algebra_lower"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型I 抛物线的标准方程有关概念题",
+            "类型Ⅱ 定义法求抛物线的轨迹方程",
+            "类型Ⅲ 用抛物线定义计算焦半径",
+            "类型IV 抛物线定义与几何性质综合题",
+            "类型V 抛物线的实际应用",
+            "类型VI 基于抛物线定义的一类最值问题"
+          ],
+          "example_numbers": [],
+          "exercise_keys": [
+            "A1",
+            "A2",
+            "A3",
+            "A4",
+            "A5",
+            "A6"
+          ],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "ch3.s7-cycle-5",
+          "title": "B组 强化能力",
+          "course_keys": [],
+          "prerequisite_course_keys": [
+            "parabola_definition_equation",
+            "intersection_algebra_upper",
+            "intersection_algebra_lower"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型I 抛物线的标准方程有关概念题",
+            "类型Ⅱ 定义法求抛物线的轨迹方程",
+            "类型Ⅲ 用抛物线定义计算焦半径",
+            "类型IV 抛物线定义与几何性质综合题",
+            "类型V 抛物线的实际应用",
+            "类型VI 基于抛物线定义的一类最值问题"
+          ],
+          "example_numbers": [],
+          "exercise_keys": [
+            "B7",
+            "B8",
+            "B9",
+            "B10",
+            "B11",
+            "B12",
+            "B13",
+            "B14"
+          ],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "ch3.s7-cycle-6",
+          "title": "C组 拓展提升",
+          "course_keys": [],
+          "prerequisite_course_keys": [
+            "parabola_definition_equation",
+            "intersection_algebra_upper",
+            "intersection_algebra_lower"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型I 抛物线的标准方程有关概念题",
+            "类型Ⅱ 定义法求抛物线的轨迹方程",
+            "类型Ⅲ 用抛物线定义计算焦半径",
+            "类型IV 抛物线定义与几何性质综合题",
+            "类型V 抛物线的实际应用",
+            "类型VI 基于抛物线定义的一类最值问题"
+          ],
+          "example_numbers": [],
+          "exercise_keys": [
+            "C15",
+            "C16"
+          ],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        }
+      ],
+      "learning_cycles_status": "SOURCE_ORDER_BASELINE_CURRENT",
+      "coverage_gate": "教材页、题号、例题和直属变式已按当前 OCR 与源页恢复层闭合；视觉题侧车、逐题零基础模拟和冷复测未通过前不得宣称掌握。",
+      "coverage_gaps": []
+    },
+    {
+      "id": "ch3.s8",
+      "label": "第8节 抛物线的简单几何性质",
+      "pdf_pages": [
+        118,
+        130
+      ],
+      "question_groups": {
+        "A": [
+          1,
+          3
+        ],
+        "B": [
+          4,
+          9
+        ],
+        "C": [
+          10,
+          12
+        ]
+      },
+      "learning_item_counts": {
+        "worked_examples": 7,
+        "direct_variants": 4,
+        "abc_exercises": 12,
+        "total": 23
+      },
+      "course_mapping": "PRELIMINARY_TITLE_BASED",
+      "coverage_status": "SOURCE_STRUCTURE_READY_SIMULATION_PENDING",
+      "course_mapping_preliminary": [
+        "3.3.3.2"
+      ],
+      "course_mapping_common_tools": [
+        "3.4.5.0.a",
+        "3.4.5.0.b"
+      ],
+      "course_mapping_verify_note": "依据课程文件名语义初步映射；须以 44 份转写内容核验后转正（PENDING_CONTENT_REVIEW）",
+      "ocr_docs": [
+        117,
+        129
+      ],
+      "specialized_pdf_pages": 13,
+      "question_groups_status": "SOURCE_ANCHORED_CURRENT_OCR",
+      "verified_question_count": 12,
+      "knowledge_points": [
+        {
+          "id": "ch3.s8-k1",
+          "label": "抛物线的简单几何性质（表中均有 p > 0）",
+          "pages": [
+            117
+          ],
+          "examples": [
+            "例1",
+            "例2",
+            "例3",
+            "例4",
+            "例5",
+            "例6",
+            "例7"
+          ]
+        },
+        {
+          "id": "ch3.s8-k2",
+          "label": "直线与抛物线的位置关系",
+          "pages": [
+            117
+          ],
+          "examples": []
+        }
+      ],
+      "type_training": [
+        {
+          "type": "类型I 由抛物线的简单几何性质求其标准方程",
+          "example_numbers": [
+            2
+          ],
+          "focus": "由抛物线的简单几何性质求其标准方程"
+        },
+        {
+          "type": "类型Ⅱ 直线与抛物线的位置关系",
+          "example_numbers": [
+            3
+          ],
+          "focus": "直线与抛物线的位置关系"
+        },
+        {
+          "type": "类型III 抛物线中的中点弦问题",
+          "example_numbers": [
+            4
+          ],
+          "focus": "抛物线中的中点弦问题"
+        },
+        {
+          "type": "类型IV 抛物线上动点的设法",
+          "example_numbers": [
+            5
+          ],
+          "focus": "抛物线上动点的设法"
+        },
+        {
+          "type": "类型V 抛物线综合题",
+          "example_numbers": [
+            6,
+            7
+          ],
+          "focus": "抛物线综合题"
+        }
+      ],
+      "type_labels": [
+        "类型I 由抛物线的简单几何性质求其标准方程",
+        "类型Ⅱ 直线与抛物线的位置关系",
+        "类型III 抛物线中的中点弦问题",
+        "类型IV 抛物线上动点的设法",
+        "类型V 抛物线综合题"
+      ],
+      "direct_variants": [
+        {
+          "example": "例3",
+          "variants": [
+            "变式1",
+            "变式2"
+          ],
+          "ocr_docs": [
+            119,
+            120
+          ]
+        },
+        {
+          "example": "例4",
+          "variants": [
+            "变式"
+          ],
+          "ocr_docs": [
+            121
+          ]
+        },
+        {
+          "example": "例5",
+          "variants": [
+            "变式"
+          ],
+          "ocr_docs": [
+            123
+          ]
+        }
+      ],
+      "required_course_ids": [
+        "3.3.3.2"
+      ],
+      "support_course_ids": [
+        "3.4.5.0.a",
+        "3.4.5.0.b"
+      ],
+      "required_course_keys": [
+        "parabola_properties"
+      ],
+      "support_course_keys": [
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "learning_cycles": [
+        {
+          "id": "ch3.s8-cycle-1",
+          "title": "抛物线的简单几何性质（表中均有 p > 0）",
+          "course_keys": [
+            "parabola_properties",
+            "intersection_algebra_upper",
+            "intersection_algebra_lower"
+          ],
+          "prerequisite_course_keys": [],
+          "knowledge_refs": [
+            "ch3.s8-k1"
+          ],
+          "type_refs": [],
+          "example_numbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "exercise_keys": [],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "ch3.s8-cycle-2",
+          "title": "A组 夯实基础",
+          "course_keys": [],
+          "prerequisite_course_keys": [
+            "parabola_properties",
+            "intersection_algebra_upper",
+            "intersection_algebra_lower"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型I 由抛物线的简单几何性质求其标准方程",
+            "类型Ⅱ 直线与抛物线的位置关系",
+            "类型III 抛物线中的中点弦问题",
+            "类型IV 抛物线上动点的设法",
+            "类型V 抛物线综合题"
+          ],
+          "example_numbers": [],
+          "exercise_keys": [
+            "A1",
+            "A2",
+            "A3"
+          ],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "ch3.s8-cycle-3",
+          "title": "B组 强化能力",
+          "course_keys": [],
+          "prerequisite_course_keys": [
+            "parabola_properties",
+            "intersection_algebra_upper",
+            "intersection_algebra_lower"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型I 由抛物线的简单几何性质求其标准方程",
+            "类型Ⅱ 直线与抛物线的位置关系",
+            "类型III 抛物线中的中点弦问题",
+            "类型IV 抛物线上动点的设法",
+            "类型V 抛物线综合题"
+          ],
+          "example_numbers": [],
+          "exercise_keys": [
+            "B4",
+            "B5",
+            "B6",
+            "B7",
+            "B8",
+            "B9"
+          ],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "ch3.s8-cycle-4",
+          "title": "C组 拓展提升",
+          "course_keys": [],
+          "prerequisite_course_keys": [
+            "parabola_properties",
+            "intersection_algebra_upper",
+            "intersection_algebra_lower"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型I 由抛物线的简单几何性质求其标准方程",
+            "类型Ⅱ 直线与抛物线的位置关系",
+            "类型III 抛物线中的中点弦问题",
+            "类型IV 抛物线上动点的设法",
+            "类型V 抛物线综合题"
+          ],
+          "example_numbers": [],
+          "exercise_keys": [
+            "C10",
+            "C11",
+            "C12"
+          ],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        }
+      ],
+      "learning_cycles_status": "SOURCE_ORDER_BASELINE_CURRENT",
+      "coverage_gate": "教材页、题号、例题和直属变式已按当前 OCR 与源页恢复层闭合；视觉题侧车、逐题零基础模拟和冷复测未通过前不得宣称掌握。",
+      "coverage_gaps": []
+    },
+    {
+      "id": "ch3.s9",
+      "label": "第9节 微专题5：抛物线常用二级结论",
+      "pdf_pages": [
+        131,
+        141
+      ],
+      "question_groups": {
+        "B": [
+          1,
+          10
+        ],
+        "C": [
+          11,
+          12
+        ]
+      },
+      "learning_item_counts": {
+        "worked_examples": 3,
+        "direct_variants": 5,
+        "abc_exercises": 12,
+        "total": 20
+      },
+      "course_mapping": "PRELIMINARY_TITLE_BASED",
+      "coverage_status": "SOURCE_STRUCTURE_READY_SIMULATION_PENDING",
+      "course_mapping_preliminary": [
+        "3.4.3.2",
+        "3.4.6.4.a",
+        "3.4.6.4.b",
+        "3.4.5.2"
+      ],
+      "course_mapping_common_tools": [
+        "3.4.5.0.a",
+        "3.4.5.0.b"
+      ],
+      "course_mapping_verify_note": "依据课程文件名语义初步映射；须以 44 份转写内容核验后转正（PENDING_CONTENT_REVIEW）",
+      "ocr_docs": [
+        130,
+        140
+      ],
+      "specialized_pdf_pages": 11,
+      "question_groups_status": "SOURCE_ANCHORED_CURRENT_OCR",
+      "verified_question_count": 12,
+      "knowledge_points": [],
+      "type_training": [
+        {
+          "type": "类型Ⅰ 角版焦半径、焦点弦、焦原三角形面积公式、焦半径倒数和定值结论的应用",
+          "example_numbers": [
+            1
+          ],
+          "focus": "角版焦半径、焦点弦、焦原三角形面积公式、焦半径倒数和定值结论的应用"
+        },
+        {
+          "type": "类型Ⅱ 两个“神奇小圆”的应用",
+          "example_numbers": [
+            2,
+            3
+          ],
+          "focus": "两个“神奇小圆”的应用"
+        }
+      ],
+      "type_labels": [
+        "类型Ⅰ 角版焦半径、焦点弦、焦原三角形面积公式、焦半径倒数和定值结论的应用",
+        "类型Ⅱ 两个“神奇小圆”的应用"
+      ],
+      "direct_variants": [
+        {
+          "example": "例1",
+          "variants": [
+            "变式1",
+            "变式2",
+            "变式3",
+            "变式4"
+          ],
+          "ocr_docs": [
+            132,
+            133,
+            134,
+            135
+          ]
+        },
+        {
+          "example": "例2",
+          "variants": [
+            "变式"
+          ],
+          "ocr_docs": [
+            136
+          ]
+        }
+      ],
+      "required_course_ids": [
+        "3.4.3.2",
+        "3.4.6.4.a",
+        "3.4.6.4.b",
+        "3.4.5.2"
+      ],
+      "support_course_ids": [
+        "3.4.5.0.a",
+        "3.4.5.0.b"
+      ],
+      "required_course_keys": [
+        "chord_midpoint_extended",
+        "polar_focal_chord_upper",
+        "polar_focal_chord_lower",
+        "dot_product_double_root"
+      ],
+      "support_course_keys": [
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "learning_cycles": [
+        {
+          "id": "ch3.s9-cycle-1",
+          "title": "类型Ⅰ 角版焦半径、焦点弦、焦原三角形面积公式、焦半径倒数和定值结论的应用",
+          "course_keys": [
+            "chord_midpoint_extended",
+            "polar_focal_chord_upper",
+            "polar_focal_chord_lower"
+          ],
+          "prerequisite_course_keys": [],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型Ⅰ 角版焦半径、焦点弦、焦原三角形面积公式、焦半径倒数和定值结论的应用"
+          ],
+          "example_numbers": [
+            1
+          ],
+          "exercise_keys": [],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "ch3.s9-cycle-2",
+          "title": "类型Ⅱ 两个“神奇小圆”的应用",
+          "course_keys": [
+            "dot_product_double_root",
+            "intersection_algebra_upper",
+            "intersection_algebra_lower"
+          ],
+          "prerequisite_course_keys": [
+            "chord_midpoint_extended",
+            "polar_focal_chord_upper",
+            "polar_focal_chord_lower"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型Ⅱ 两个“神奇小圆”的应用"
+          ],
+          "example_numbers": [
+            2,
+            3
+          ],
+          "exercise_keys": [],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "ch3.s9-cycle-3",
+          "title": "B组 强化能力",
+          "course_keys": [],
+          "prerequisite_course_keys": [
+            "chord_midpoint_extended",
+            "polar_focal_chord_upper",
+            "polar_focal_chord_lower",
+            "dot_product_double_root",
+            "intersection_algebra_upper",
+            "intersection_algebra_lower"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型Ⅰ 角版焦半径、焦点弦、焦原三角形面积公式、焦半径倒数和定值结论的应用",
+            "类型Ⅱ 两个“神奇小圆”的应用"
+          ],
+          "example_numbers": [],
+          "exercise_keys": [
+            "B1",
+            "B2",
+            "B3",
+            "B4",
+            "B5",
+            "B6",
+            "B7",
+            "B8",
+            "B9",
+            "B10"
+          ],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "ch3.s9-cycle-4",
+          "title": "C组 拓展提升",
+          "course_keys": [],
+          "prerequisite_course_keys": [
+            "chord_midpoint_extended",
+            "polar_focal_chord_upper",
+            "polar_focal_chord_lower",
+            "dot_product_double_root",
+            "intersection_algebra_upper",
+            "intersection_algebra_lower"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型Ⅰ 角版焦半径、焦点弦、焦原三角形面积公式、焦半径倒数和定值结论的应用",
+            "类型Ⅱ 两个“神奇小圆”的应用"
+          ],
+          "example_numbers": [],
+          "exercise_keys": [
+            "C11",
+            "C12"
+          ],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        }
+      ],
+      "learning_cycles_status": "SOURCE_ORDER_BASELINE_CURRENT",
+      "coverage_gate": "教材页、题号、例题和直属变式已按当前 OCR 与源页恢复层闭合；视觉题侧车、逐题零基础模拟和冷复测未通过前不得宣称掌握。",
+      "coverage_gaps": []
+    },
+    {
+      "id": "ch3.s10",
+      "label": "第10节 微专题6：解析几何大题——长度与面积",
+      "pdf_pages": [
+        142,
+        151
+      ],
+      "question_groups": {
+        "B": [
+          1,
+          5
+        ],
+        "C": [
+          6,
+          8
+        ]
+      },
+      "learning_item_counts": {
+        "worked_examples": 3,
+        "direct_variants": 2,
+        "abc_exercises": 8,
+        "total": 13
+      },
+      "course_mapping": "PRELIMINARY_TITLE_BASED",
+      "coverage_status": "SOURCE_STRUCTURE_READY_SIMULATION_PENDING",
+      "course_mapping_preliminary": [
+        "3.4.6.1",
+        "3.4.6.2",
+        "3.4.6.3",
+        "3.4.4.1",
+        "3.4.4.2"
+      ],
+      "course_mapping_common_tools": [
+        "3.4.5.0.a",
+        "3.4.5.0.b"
+      ],
+      "course_mapping_verify_note": "依据课程文件名语义初步映射；须以 44 份转写内容核验后转正（PENDING_CONTENT_REVIEW）",
+      "ocr_docs": [
+        141,
+        150
+      ],
+      "specialized_pdf_pages": 10,
+      "question_groups_status": "SOURCE_ANCHORED_CURRENT_OCR",
+      "verified_question_count": 8,
+      "knowledge_points": [],
+      "type_training": [
+        {
+          "type": "类型Ⅰ 弦长的计算",
+          "example_numbers": [
+            1
+          ],
+          "focus": "弦长的计算"
+        },
+        {
+          "type": "类型Ⅱ 面积的计算",
+          "example_numbers": [
+            2,
+            3
+          ],
+          "focus": "面积的计算"
+        }
+      ],
+      "type_labels": [
+        "类型Ⅰ 弦长的计算",
+        "类型Ⅱ 面积的计算"
+      ],
+      "direct_variants": [
+        {
+          "example": "例1",
+          "variants": [
+            "变式"
+          ],
+          "ocr_docs": [
+            143
+          ]
+        },
+        {
+          "example": "例3",
+          "variants": [
+            "变式"
+          ],
+          "ocr_docs": [
+            145
+          ]
+        }
+      ],
+      "required_course_ids": [
+        "3.4.6.1",
+        "3.4.6.2",
+        "3.4.6.3",
+        "3.4.4.1",
+        "3.4.4.2"
+      ],
+      "support_course_ids": [
+        "3.4.5.0.a",
+        "3.4.5.0.b"
+      ],
+      "required_course_keys": [
+        "chord_length_formula",
+        "in_curve_triangle_area",
+        "in_curve_quad_area",
+        "evaluation_algebra",
+        "evaluation_geometry"
+      ],
+      "support_course_keys": [
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "learning_cycles": [
+        {
+          "id": "ch3.s10-cycle-1",
+          "title": "类型Ⅰ 弦长的计算",
+          "course_keys": [
+            "chord_length_formula",
+            "in_curve_triangle_area",
+            "in_curve_quad_area",
+            "evaluation_algebra"
+          ],
+          "prerequisite_course_keys": [],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型Ⅰ 弦长的计算"
+          ],
+          "example_numbers": [
+            1
+          ],
+          "exercise_keys": [],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "ch3.s10-cycle-2",
+          "title": "类型Ⅱ 面积的计算",
+          "course_keys": [
+            "evaluation_geometry",
+            "intersection_algebra_upper",
+            "intersection_algebra_lower"
+          ],
+          "prerequisite_course_keys": [
+            "chord_length_formula",
+            "in_curve_triangle_area",
+            "in_curve_quad_area",
+            "evaluation_algebra"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型Ⅱ 面积的计算"
+          ],
+          "example_numbers": [
+            2,
+            3
+          ],
+          "exercise_keys": [],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "ch3.s10-cycle-3",
+          "title": "B组 强化能力",
+          "course_keys": [],
+          "prerequisite_course_keys": [
+            "chord_length_formula",
+            "in_curve_triangle_area",
+            "in_curve_quad_area",
+            "evaluation_algebra",
+            "evaluation_geometry",
+            "intersection_algebra_upper",
+            "intersection_algebra_lower"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型Ⅰ 弦长的计算",
+            "类型Ⅱ 面积的计算"
+          ],
+          "example_numbers": [],
+          "exercise_keys": [
+            "B1",
+            "B2",
+            "B3",
+            "B4",
+            "B5"
+          ],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "ch3.s10-cycle-4",
+          "title": "C组 拓展提升",
+          "course_keys": [],
+          "prerequisite_course_keys": [
+            "chord_length_formula",
+            "in_curve_triangle_area",
+            "in_curve_quad_area",
+            "evaluation_algebra",
+            "evaluation_geometry",
+            "intersection_algebra_upper",
+            "intersection_algebra_lower"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型Ⅰ 弦长的计算",
+            "类型Ⅱ 面积的计算"
+          ],
+          "example_numbers": [],
+          "exercise_keys": [
+            "C6",
+            "C7",
+            "C8"
+          ],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        }
+      ],
+      "learning_cycles_status": "SOURCE_ORDER_BASELINE_CURRENT",
+      "coverage_gate": "教材页、题号、例题和直属变式已按当前 OCR 与源页恢复层闭合；视觉题侧车、逐题零基础模拟和冷复测未通过前不得宣称掌握。",
+      "coverage_gaps": []
+    },
+    {
+      "id": "ch3.s11",
+      "label": "第11节 微专题7：解析几何大题——定值与定点",
+      "pdf_pages": [
+        152,
+        163
+      ],
+      "question_groups": {
+        "B": [
+          1,
+          2
+        ],
+        "C": [
+          3,
+          6
+        ]
+      },
+      "learning_item_counts": {
+        "worked_examples": 4,
+        "direct_variants": 2,
+        "abc_exercises": 6,
+        "total": 12
+      },
+      "course_mapping": "PRELIMINARY_TITLE_BASED",
+      "coverage_status": "SOURCE_STRUCTURE_READY_SIMULATION_PENDING",
+      "course_mapping_preliminary": [
+        "3.4.8.1",
+        "3.4.8.2",
+        "3.4.8.3",
+        "3.4.8.4.a",
+        "3.4.8.4.b",
+        "3.4.8.5.a",
+        "3.4.8.5.b"
+      ],
+      "course_mapping_common_tools": [
+        "3.4.5.0.a",
+        "3.4.5.0.b"
+      ],
+      "course_mapping_verify_note": "依据课程文件名语义初步映射；须以 44 份转写内容核验后转正（PENDING_CONTENT_REVIEW）",
+      "ocr_docs": [
+        151,
+        162
+      ],
+      "specialized_pdf_pages": 12,
+      "question_groups_status": "SOURCE_ANCHORED_CURRENT_OCR",
+      "verified_question_count": 6,
+      "knowledge_points": [],
+      "type_training": [
+        {
+          "type": "类型I 证明类定值问题",
+          "example_numbers": [
+            1
+          ],
+          "focus": "证明类定值问题"
+        },
+        {
+          "type": "类型Ⅱ 探究类定值问题",
+          "example_numbers": [
+            2
+          ],
+          "focus": "探究类定值问题"
+        },
+        {
+          "type": "类型III 定点问题",
+          "example_numbers": [
+            3,
+            4
+          ],
+          "focus": "定点问题"
+        }
+      ],
+      "type_labels": [
+        "类型I 证明类定值问题",
+        "类型Ⅱ 探究类定值问题",
+        "类型III 定点问题"
+      ],
+      "direct_variants": [
+        {
+          "example": "例1",
+          "variants": [
+            "变式"
+          ],
+          "ocr_docs": [
+            153
+          ]
+        },
+        {
+          "example": "例3",
+          "variants": [
+            "变式"
+          ],
+          "ocr_docs": [
+            157
+          ]
+        }
+      ],
+      "required_course_ids": [
+        "3.4.8.1",
+        "3.4.8.2",
+        "3.4.8.3",
+        "3.4.8.4.a",
+        "3.4.8.4.b",
+        "3.4.8.5.a",
+        "3.4.8.5.b"
+      ],
+      "support_course_ids": [
+        "3.4.5.0.a",
+        "3.4.5.0.b"
+      ],
+      "required_course_keys": [
+        "constant_value_1",
+        "constant_value_2",
+        "fixed_point_1",
+        "fixed_point_2_upper",
+        "fixed_point_2_lower",
+        "pole_polar_upper",
+        "pole_polar_lower"
+      ],
+      "support_course_keys": [
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "learning_cycles": [
+        {
+          "id": "ch3.s11-cycle-1",
+          "title": "类型I 证明类定值问题",
+          "course_keys": [
+            "constant_value_1",
+            "constant_value_2",
+            "fixed_point_1"
+          ],
+          "prerequisite_course_keys": [],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型I 证明类定值问题"
+          ],
+          "example_numbers": [
+            1
+          ],
+          "exercise_keys": [],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "ch3.s11-cycle-2",
+          "title": "类型Ⅱ 探究类定值问题",
+          "course_keys": [
+            "fixed_point_2_upper",
+            "fixed_point_2_lower",
+            "pole_polar_upper"
+          ],
+          "prerequisite_course_keys": [
+            "constant_value_1",
+            "constant_value_2",
+            "fixed_point_1"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型Ⅱ 探究类定值问题"
+          ],
+          "example_numbers": [
+            2
+          ],
+          "exercise_keys": [],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "ch3.s11-cycle-3",
+          "title": "类型III 定点问题",
+          "course_keys": [
+            "pole_polar_lower",
+            "intersection_algebra_upper",
+            "intersection_algebra_lower"
+          ],
+          "prerequisite_course_keys": [
+            "constant_value_1",
+            "constant_value_2",
+            "fixed_point_1",
+            "fixed_point_2_upper",
+            "fixed_point_2_lower",
+            "pole_polar_upper"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型III 定点问题"
+          ],
+          "example_numbers": [
+            3,
+            4
+          ],
+          "exercise_keys": [],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "ch3.s11-cycle-4",
+          "title": "B组 强化能力",
+          "course_keys": [],
+          "prerequisite_course_keys": [
+            "constant_value_1",
+            "constant_value_2",
+            "fixed_point_1",
+            "fixed_point_2_upper",
+            "fixed_point_2_lower",
+            "pole_polar_upper",
+            "pole_polar_lower",
+            "intersection_algebra_upper",
+            "intersection_algebra_lower"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型I 证明类定值问题",
+            "类型Ⅱ 探究类定值问题",
+            "类型III 定点问题"
+          ],
+          "example_numbers": [],
+          "exercise_keys": [
+            "B1",
+            "B2"
+          ],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "ch3.s11-cycle-5",
+          "title": "C组 拓展提升",
+          "course_keys": [],
+          "prerequisite_course_keys": [
+            "constant_value_1",
+            "constant_value_2",
+            "fixed_point_1",
+            "fixed_point_2_upper",
+            "fixed_point_2_lower",
+            "pole_polar_upper",
+            "pole_polar_lower",
+            "intersection_algebra_upper",
+            "intersection_algebra_lower"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型I 证明类定值问题",
+            "类型Ⅱ 探究类定值问题",
+            "类型III 定点问题"
+          ],
+          "example_numbers": [],
+          "exercise_keys": [
+            "C3",
+            "C4",
+            "C5",
+            "C6"
+          ],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        }
+      ],
+      "learning_cycles_status": "SOURCE_ORDER_BASELINE_CURRENT",
+      "coverage_gate": "教材页、题号、例题和直属变式已按当前 OCR 与源页恢复层闭合；视觉题侧车、逐题零基础模拟和冷复测未通过前不得宣称掌握。",
+      "coverage_gaps": []
+    },
+    {
+      "id": "ch3.s12",
+      "label": "第12节 微专题8：解析几何大题——角度",
+      "pdf_pages": [
+        164,
+        172
+      ],
+      "question_groups": {
+        "B": [
+          1,
+          4
+        ],
+        "C": [
+          5,
+          6
+        ]
+      },
+      "learning_item_counts": {
+        "worked_examples": 3,
+        "direct_variants": 2,
+        "abc_exercises": 6,
+        "total": 11
+      },
+      "course_mapping": "PRELIMINARY_TITLE_BASED",
+      "coverage_status": "SOURCE_STRUCTURE_READY_SIMULATION_PENDING",
+      "course_mapping_preliminary": [
+        "3.4.5.1",
+        "3.4.5.2",
+        "3.4.7.2",
+        "3.4.4.3.a",
+        "3.4.4.3.b",
+        "3.4.4.3.c"
+      ],
+      "course_mapping_common_tools": [
+        "3.4.5.0.a",
+        "3.4.5.0.b"
+      ],
+      "course_mapping_verify_note": "依据课程文件名语义初步映射；须以 44 份转写内容核验后转正（PENDING_CONTENT_REVIEW）",
+      "ocr_docs": [
+        163,
+        171
+      ],
+      "specialized_pdf_pages": 9,
+      "question_groups_status": "SOURCE_ANCHORED_CURRENT_OCR",
+      "verified_question_count": 6,
+      "knowledge_points": [],
+      "type_training": [
+        {
+          "type": "类型Ⅰ 直角、锐角、钝角",
+          "example_numbers": [
+            1,
+            2
+          ],
+          "focus": "直角、锐角、钝角"
+        },
+        {
+          "type": "类型Ⅱ 倾斜角互补",
+          "example_numbers": [
+            3
+          ],
+          "focus": "倾斜角互补"
+        }
+      ],
+      "type_labels": [
+        "类型Ⅰ 直角、锐角、钝角",
+        "类型Ⅱ 倾斜角互补"
+      ],
+      "direct_variants": [
+        {
+          "example": "例1",
+          "variants": [
+            "变式"
+          ],
+          "ocr_docs": [
+            164
+          ]
+        },
+        {
+          "example": "例3",
+          "variants": [
+            "变式"
+          ],
+          "ocr_docs": [
+            167
+          ]
+        }
+      ],
+      "required_course_ids": [
+        "3.4.5.1",
+        "3.4.5.2",
+        "3.4.7.2",
+        "3.4.4.3.a",
+        "3.4.4.3.b",
+        "3.4.4.3.c"
+      ],
+      "support_course_ids": [
+        "3.4.5.0.a",
+        "3.4.5.0.b"
+      ],
+      "required_course_keys": [
+        "dot_product_translation",
+        "dot_product_double_root",
+        "angle_bisector",
+        "range_upper",
+        "range_mid",
+        "range_lower"
+      ],
+      "support_course_keys": [
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "learning_cycles": [
+        {
+          "id": "ch3.s12-cycle-1",
+          "title": "类型Ⅰ 直角、锐角、钝角",
+          "course_keys": [
+            "dot_product_translation",
+            "dot_product_double_root",
+            "angle_bisector",
+            "range_upper"
+          ],
+          "prerequisite_course_keys": [],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型Ⅰ 直角、锐角、钝角"
+          ],
+          "example_numbers": [
+            1,
+            2
+          ],
+          "exercise_keys": [],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "ch3.s12-cycle-2",
+          "title": "类型Ⅱ 倾斜角互补",
+          "course_keys": [
+            "range_mid",
+            "range_lower",
+            "intersection_algebra_upper",
+            "intersection_algebra_lower"
+          ],
+          "prerequisite_course_keys": [
+            "dot_product_translation",
+            "dot_product_double_root",
+            "angle_bisector",
+            "range_upper"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型Ⅱ 倾斜角互补"
+          ],
+          "example_numbers": [
+            3
+          ],
+          "exercise_keys": [],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "ch3.s12-cycle-3",
+          "title": "B组 强化能力",
+          "course_keys": [],
+          "prerequisite_course_keys": [
+            "dot_product_translation",
+            "dot_product_double_root",
+            "angle_bisector",
+            "range_upper",
+            "range_mid",
+            "range_lower",
+            "intersection_algebra_upper",
+            "intersection_algebra_lower"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型Ⅰ 直角、锐角、钝角",
+            "类型Ⅱ 倾斜角互补"
+          ],
+          "example_numbers": [],
+          "exercise_keys": [
+            "B1",
+            "B2",
+            "B3",
+            "B4"
+          ],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "ch3.s12-cycle-4",
+          "title": "C组 拓展提升",
+          "course_keys": [],
+          "prerequisite_course_keys": [
+            "dot_product_translation",
+            "dot_product_double_root",
+            "angle_bisector",
+            "range_upper",
+            "range_mid",
+            "range_lower",
+            "intersection_algebra_upper",
+            "intersection_algebra_lower"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型Ⅰ 直角、锐角、钝角",
+            "类型Ⅱ 倾斜角互补"
+          ],
+          "example_numbers": [],
+          "exercise_keys": [
+            "C5",
+            "C6"
+          ],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        }
+      ],
+      "learning_cycles_status": "SOURCE_ORDER_BASELINE_CURRENT",
+      "coverage_gate": "教材页、题号、例题和直属变式已按当前 OCR 与源页恢复层闭合；视觉题侧车、逐题零基础模拟和冷复测未通过前不得宣称掌握。",
+      "coverage_gaps": []
+    },
+    {
+      "id": "ch3.s13",
+      "label": "第13节 微专题9：解析几何大题——特殊图形与特殊方法",
+      "pdf_pages": [
+        173,
+        180
+      ],
+      "question_groups": {
+        "B": [
+          1,
+          2
+        ],
+        "C": [
+          3,
+          5
+        ]
+      },
+      "learning_item_counts": {
+        "worked_examples": 3,
+        "direct_variants": 2,
+        "abc_exercises": 5,
+        "total": 10
+      },
+      "course_mapping": "PRELIMINARY_TITLE_BASED",
+      "coverage_status": "SOURCE_STRUCTURE_READY_SIMULATION_PENDING",
+      "course_mapping_preliminary": [
+        "3.4.7.1",
+        "3.4.9.1",
+        "3.4.9.2",
+        "3.4.10.1",
+        "3.4.11.1",
+        "3.4.11.2",
+        "3.4.11.3",
+        "3.4.12.1",
+        "3.4.12.2"
+      ],
+      "course_mapping_common_tools": [
+        "3.4.5.0.a",
+        "3.4.5.0.b"
+      ],
+      "course_mapping_verify_note": "依据课程文件名语义初步映射；须以 44 份转写内容核验后转正（PENDING_CONTENT_REVIEW）",
+      "ocr_docs": [
+        172,
+        179
+      ],
+      "specialized_pdf_pages": 8,
+      "question_groups_status": "SOURCE_ANCHORED_CURRENT_OCR",
+      "verified_question_count": 5,
+      "knowledge_points": [],
+      "type_training": [
+        {
+          "type": "类型I 平行四边形的翻译方法",
+          "example_numbers": [
+            1
+          ],
+          "focus": "平行四边形的翻译方法"
+        },
+        {
+          "type": "类型Ⅱ 菱形的翻译方法",
+          "example_numbers": [
+            2
+          ],
+          "focus": "菱形的翻译方法"
+        },
+        {
+          "type": "类型Ⅲ 非对称韦达定理问题",
+          "example_numbers": [
+            3
+          ],
+          "focus": "非对称韦达定理问题"
+        }
+      ],
+      "type_labels": [
+        "类型I 平行四边形的翻译方法",
+        "类型Ⅱ 菱形的翻译方法",
+        "类型Ⅲ 非对称韦达定理问题"
+      ],
+      "direct_variants": [
+        {
+          "example": "例2",
+          "variants": [
+            "变式"
+          ],
+          "ocr_docs": [
+            174
+          ]
+        },
+        {
+          "example": "例3",
+          "variants": [
+            "变式"
+          ],
+          "ocr_docs": [
+            176
+          ]
+        }
+      ],
+      "required_course_ids": [
+        "3.4.7.1",
+        "3.4.9.1",
+        "3.4.9.2",
+        "3.4.10.1",
+        "3.4.11.1",
+        "3.4.11.2",
+        "3.4.11.3",
+        "3.4.12.1",
+        "3.4.12.2"
+      ],
+      "support_course_ids": [
+        "3.4.5.0.a",
+        "3.4.5.0.b"
+      ],
+      "required_course_keys": [
+        "collinearity",
+        "eliminate_parameter",
+        "related_point_method",
+        "moving_point_basic",
+        "completion_separation_substitution",
+        "quadratic_fraction_speed_upper",
+        "quadratic_fraction_speed_lower",
+        "complete_asymmetry",
+        "eliminate_asymmetry"
+      ],
+      "support_course_keys": [
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "learning_cycles": [
+        {
+          "id": "ch3.s13-cycle-1",
+          "title": "类型I 平行四边形的翻译方法",
+          "course_keys": [
+            "collinearity",
+            "eliminate_parameter",
+            "related_point_method",
+            "moving_point_basic"
+          ],
+          "prerequisite_course_keys": [],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型I 平行四边形的翻译方法"
+          ],
+          "example_numbers": [
+            1
+          ],
+          "exercise_keys": [],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "ch3.s13-cycle-2",
+          "title": "类型Ⅱ 菱形的翻译方法",
+          "course_keys": [
+            "completion_separation_substitution",
+            "quadratic_fraction_speed_upper",
+            "quadratic_fraction_speed_lower",
+            "complete_asymmetry"
+          ],
+          "prerequisite_course_keys": [
+            "collinearity",
+            "eliminate_parameter",
+            "related_point_method",
+            "moving_point_basic"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型Ⅱ 菱形的翻译方法"
+          ],
+          "example_numbers": [
+            2
+          ],
+          "exercise_keys": [],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "ch3.s13-cycle-3",
+          "title": "类型Ⅲ 非对称韦达定理问题",
+          "course_keys": [
+            "eliminate_asymmetry",
+            "intersection_algebra_upper",
+            "intersection_algebra_lower"
+          ],
+          "prerequisite_course_keys": [
+            "collinearity",
+            "eliminate_parameter",
+            "related_point_method",
+            "moving_point_basic",
+            "completion_separation_substitution",
+            "quadratic_fraction_speed_upper",
+            "quadratic_fraction_speed_lower",
+            "complete_asymmetry"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型Ⅲ 非对称韦达定理问题"
+          ],
+          "example_numbers": [
+            3
+          ],
+          "exercise_keys": [],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "ch3.s13-cycle-4",
+          "title": "B组 强化能力",
+          "course_keys": [],
+          "prerequisite_course_keys": [
+            "collinearity",
+            "eliminate_parameter",
+            "related_point_method",
+            "moving_point_basic",
+            "completion_separation_substitution",
+            "quadratic_fraction_speed_upper",
+            "quadratic_fraction_speed_lower",
+            "complete_asymmetry",
+            "eliminate_asymmetry",
+            "intersection_algebra_upper",
+            "intersection_algebra_lower"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型I 平行四边形的翻译方法",
+            "类型Ⅱ 菱形的翻译方法",
+            "类型Ⅲ 非对称韦达定理问题"
+          ],
+          "example_numbers": [],
+          "exercise_keys": [
+            "B1",
+            "B2"
+          ],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "ch3.s13-cycle-5",
+          "title": "C组 拓展提升",
+          "course_keys": [],
+          "prerequisite_course_keys": [
+            "collinearity",
+            "eliminate_parameter",
+            "related_point_method",
+            "moving_point_basic",
+            "completion_separation_substitution",
+            "quadratic_fraction_speed_upper",
+            "quadratic_fraction_speed_lower",
+            "complete_asymmetry",
+            "eliminate_asymmetry",
+            "intersection_algebra_upper",
+            "intersection_algebra_lower"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型I 平行四边形的翻译方法",
+            "类型Ⅱ 菱形的翻译方法",
+            "类型Ⅲ 非对称韦达定理问题"
+          ],
+          "example_numbers": [],
+          "exercise_keys": [
+            "C3",
+            "C4",
+            "C5"
+          ],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        }
+      ],
+      "learning_cycles_status": "SOURCE_ORDER_BASELINE_CURRENT",
+      "coverage_gate": "教材页、题号、例题和直属变式已按当前 OCR 与源页恢复层闭合；视觉题侧车、逐题零基础模拟和冷复测未通过前不得宣称掌握。",
+      "coverage_gaps": []
+    }
+  ],
+  "known_visual_recoveries": [
+    {
+      "section": "ch3.s1",
+      "group": "A",
+      "number": 4,
+      "source_kind": "primary_ocr",
+      "source_doc": 13,
+      "pdf_page": 14,
+      "start_regex": "^椭圆Γ",
+      "end_regex": "^## B",
+      "reason": "printed_number_missing_from_paddle_ocr",
+      "evidence": "PADDLE_OCR_TEXT_AFTER_A3_BEFORE_B_GROUP"
+    },
+    {
+      "section": "ch3.s1",
+      "group": "B",
+      "number": 7,
+      "source_kind": "primary_ocr",
+      "source_doc": 13,
+      "pdf_page": 14,
+      "start_regex": "^点 A，B 的坐标",
+      "end_regex": "^8[.．]",
+      "reason": "printed_number_missing_from_paddle_ocr",
+      "evidence": "PADDLE_OCR_TEXT_NEIGHBOR_SEQUENCE_B6_B7_B8"
+    },
+    {
+      "section": "ch3.s2",
+      "group": "B",
+      "number": 6,
+      "source_kind": "primary_ocr",
+      "source_doc": 35,
+      "pdf_page": 36,
+      "start_regex": "^椭圆 .*上的点 P 到直线",
+      "end_regex": "^已知椭圆 .*的左焦点为",
+      "reason": "printed_number_missing_from_paddle_ocr",
+      "evidence": "PADDLE_OCR_TEXT_ORDER_B5_B6_B7_B8_B9"
+    },
+    {
+      "section": "ch3.s2",
+      "group": "B",
+      "number": 7,
+      "source_kind": "primary_ocr",
+      "source_doc": 35,
+      "pdf_page": 36,
+      "start_regex": "^已知椭圆 .*的左焦点为",
+      "end_regex": "^已知  .*F.*是椭圆 C",
+      "reason": "printed_number_missing_from_paddle_ocr",
+      "evidence": "PADDLE_OCR_TEXT_ORDER_B5_B6_B7_B8_B9"
+    },
+    {
+      "section": "ch3.s2",
+      "group": "B",
+      "number": 8,
+      "source_kind": "primary_ocr",
+      "source_doc": 35,
+      "pdf_page": 36,
+      "start_regex": "^已知  .*F.*是椭圆 C",
+      "reason": "printed_number_missing_from_paddle_ocr",
+      "evidence": "PADDLE_OCR_TEXT_ORDER_B5_B6_B7_B8_B9"
+    },
+    {
+      "section": "ch3.s2",
+      "group": "B",
+      "number": 11,
+      "source_kind": "primary_ocr",
+      "source_doc": 36,
+      "pdf_page": 37,
+      "start_regex": "^已知 P 为椭圆",
+      "reason": "printed_number_missing_from_paddle_ocr",
+      "evidence": "PADDLE_OCR_TEXT_AFTER_B10_BEFORE_B12"
+    },
+    {
+      "section": "ch3.s3",
+      "group": "B",
+      "number": 3,
+      "source_kind": "primary_ocr",
+      "source_doc": 54,
+      "pdf_page": 55,
+      "start_regex": "^设 .*F_1.*F_2.*椭圆",
+      "end_regex": "^### 4",
+      "reason": "printed_number_missing_from_paddle_ocr",
+      "evidence": "PADDLE_OCR_TEXT_NEIGHBOR_SEQUENCE_B2_B3_B4"
+    },
+    {
+      "section": "ch3.s3",
+      "group": "B",
+      "number": 7,
+      "source_kind": "primary_ocr",
+      "source_doc": 55,
+      "pdf_page": 56,
+      "start_regex": "^## .2025·全国模拟",
+      "end_regex": "^### 8",
+      "reason": "printed_number_missing_from_paddle_ocr",
+      "evidence": "PADDLE_OCR_TEXT_NEIGHBOR_SEQUENCE_B6_B7_B8"
+    },
+    {
+      "section": "ch3.s5",
+      "group": "A",
+      "number": 1,
+      "source_kind": "primary_ocr",
+      "source_doc": 87,
+      "pdf_page": 88,
+      "start_regex": "^双曲线  .*3t.*离心率为",
+      "reason": "printed_number_missing_from_paddle_ocr_after_a_group_header",
+      "evidence": "PADDLE_OCR_TEXT_A_GROUP_HEADER_THEN_A1_THEN_A2"
+    },
+    {
+      "section": "ch3.s5",
+      "group": "B",
+      "number": 8,
+      "source_kind": "primary_ocr",
+      "source_doc": 89,
+      "pdf_page": 90,
+      "start_regex": "^已知点 P 为双曲线",
+      "end_regex": "^已知双曲线  .*C_\\{1\\}",
+      "reason": "printed_number_missing_from_paddle_ocr",
+      "evidence": "PADDLE_OCR_TEXT_ORDER_B7_B8_B9_B10_B11"
+    },
+    {
+      "section": "ch3.s5",
+      "group": "B",
+      "number": 9,
+      "source_kind": "primary_ocr",
+      "source_doc": 89,
+      "pdf_page": 90,
+      "start_regex": "^已知双曲线  .*C_\\{1\\}",
+      "end_regex": "^双曲线  .*C: .*9.*16",
+      "reason": "printed_number_missing_from_paddle_ocr",
+      "evidence": "PADDLE_OCR_TEXT_ORDER_B7_B8_B9_B10_B11"
+    },
+    {
+      "section": "ch3.s5",
+      "group": "B",
+      "number": 10,
+      "source_kind": "primary_ocr",
+      "source_doc": 89,
+      "pdf_page": 90,
+      "start_regex": "^双曲线  .*C: .*9.*16",
+      "reason": "printed_number_missing_from_paddle_ocr",
+      "evidence": "PADDLE_OCR_TEXT_ORDER_B7_B8_B9_B10_B11"
+    },
+    {
+      "section": "ch3.s6",
+      "group": "B",
+      "number": 2,
+      "source_kind": "primary_ocr",
+      "source_doc": 101,
+      "pdf_page": 102,
+      "start_regex": "^双曲线  .*的左顶点",
+      "reason": "printed_number_missing_from_paddle_ocr",
+      "evidence": "PADDLE_OCR_TEXT_AFTER_B1_BEFORE_B3"
+    },
+    {
+      "section": "ch3.s7",
+      "group": "A",
+      "number": 6,
+      "source_kind": "primary_ocr",
+      "source_doc": 113,
+      "pdf_page": 114,
+      "start_regex": "^已知 A 为抛物线",
+      "reason": "printed_number_missing_from_paddle_ocr_before_b_group_header",
+      "evidence": "PADDLE_OCR_TEXT_AFTER_A5_BEFORE_B_GROUP"
+    },
+    {
+      "section": "ch3.s8",
+      "group": "B",
+      "number": 6,
+      "source_kind": "primary_ocr",
+      "source_doc": 127,
+      "pdf_page": 128,
+      "start_regex": "^已知抛物线  .*与直线",
+      "end_regex": "^设 O 为坐标原点",
+      "reason": "printed_number_missing_from_paddle_ocr",
+      "evidence": "PADDLE_OCR_TEXT_ORDER_B5_B6_B7_B8"
+    },
+    {
+      "section": "ch3.s8",
+      "group": "B",
+      "number": 7,
+      "source_kind": "primary_ocr",
+      "source_doc": 127,
+      "pdf_page": 128,
+      "start_regex": "^设 O 为坐标原点",
+      "reason": "printed_number_missing_from_paddle_ocr",
+      "evidence": "PADDLE_OCR_TEXT_ORDER_B5_B6_B7_B8"
+    },
+    {
+      "section": "ch3.s9",
+      "group": "B",
+      "number": 3,
+      "source_kind": "primary_ocr",
+      "source_doc": 137,
+      "pdf_page": 138,
+      "start_regex": "^设抛物线  .*焦点为 F",
+      "reason": "printed_number_missing_from_paddle_ocr",
+      "evidence": "PADDLE_OCR_TEXT_AFTER_B2_BEFORE_B4"
+    },
+    {
+      "section": "ch3.s9",
+      "group": "B",
+      "number": 7,
+      "source_kind": "primary_ocr",
+      "source_doc": 138,
+      "pdf_page": 139,
+      "start_regex": "^已知抛物线",
+      "reason": "printed_number_missing_from_paddle_ocr",
+      "evidence": "PADDLE_OCR_TEXT_AFTER_B6_BEFORE_B8"
+    }
+  ],
+  "notes": [
+    "章节 id 使用 ch3.sN 以避免与课程编号 3.1/3.2/3.3/3.4 混淆。",
+    "题包目录规划：data/packets/ch3.sN/ 与节一一对应（13 个）；export 脚本按 data/packets/<section>/ 解析，--section 传 ch3.sN 即可。任务描述中的 data/packets/3.x/ 由 ch3.sN 目录满足（同一章节命名空间）。",
+    "上下文/无题路线沿用第1章管线：build-deepseek-context --student-packet <packet> --out <ctx> → validate-deepseek-context；导出用 scripts/export_learning_packet_markdown.py --section <ch3.sN> [--without-questions] 与 export_learning_preview_html.py。",
+    "OCR 与缺题硬门禁 blocked：PADDLE_OCR_TOKEN 缺失（详见 reports/builds/ch3-build.json）。",
+    "本文件为骨架：pdf_pages/question_groups/learning_item_counts 待视觉批处理与 AI Studio OCR 填充；course_mapping 待转写内容核验。",
+    "44 个课程转写已生成并归一化至 data/course_transcripts/（FunASR SenseVoiceSmall，含 source_video_sha256 证据）。"
+  ],
+  "structure_applied_at": "2026-08-16T19:37:53.869642+00:00",
+  "structure_source": "reports/builds/ch3-structure-current.json",
+  "derived_question_corrections": [
+    {
+      "id": "ch3-s5-doc88-a3-option-a-delimiter",
+      "section": "ch3.s5",
+      "source_doc": 88,
+      "action": "replace_line",
+      "match_prefix": "A.  \\(\\frac{x^2}{3} - y^2 = 1\\)",
+      "replacement": "A. \\(\\frac{x^2}{3}-y^2=1\\)",
+      "expected_matches": 1,
+      "evidence": "data/ocr_live_current/third_chapter_180/layout_det_res_88.jpg#question-3-options",
+      "reason": "PaddleOCR appended layout padding and a stray dollar delimiter after option A."
+    },
+    {
+      "id": "ch3-s5-doc88-a3-options-bcd",
+      "section": "ch3.s5",
+      "source_doc": 88,
+      "action": "replace_line",
+      "match_prefix": "B.  \\(x^2 - \\frac{y^2}{3} = 1\\)",
+      "replacement": "B. \\(x^2-\\frac{y^2}{3}=1\\)\n\nC. \\(\\frac{x^2}{6}-\\frac{y^2}{2}=1\\)\n\nD. \\(\\frac{x^2}{2}-\\frac{y^2}{4}=1\\)",
+      "expected_matches": 1,
+      "evidence": "data/ocr_live_current/third_chapter_180/layout_det_res_88.jpg#question-3-options",
+      "reason": "PaddleOCR replaced the two-row option layout with thousands of padding tokens and omitted options C and D."
+    }
+  ]
+}

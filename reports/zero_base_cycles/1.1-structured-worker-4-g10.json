@@ -1,0 +1,405 @@
+{
+  "schema_version": "1.1",
+  "worker": "4",
+  "generation": "G-20260816-10",
+  "section": "1.1",
+  "worker_status": "PASS",
+  "answer_sidecar_read": false,
+  "human_acceptance_not_proven": true,
+  "item_results": [
+    {
+      "item_id": "e476dadb1e02f99e",
+      "label": "教材例15",
+      "task_ref": "任务27",
+      "section": "1.1",
+      "cycle": 7,
+      "source_revision": {
+        "generation": "G-20260816-10",
+        "packet": "data/packets/1.1/learning_path_without_questions.md",
+        "context": "data/contexts/1.1.json",
+        "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f"
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "四棱锥 P-ABCD，底面为平行四边形；三个共顶点角 ∠APB=∠APC=∠BPC=π/3，PA=3，PB=PC=2；M 为 PD 中点。问（1）BD 在基底 {PA,PB,PC} 下的系数和 m+n+p；（2）线段 BM 的长。关键词：平行四边形、共顶点三夹角、中点、求长度——类型Ⅴ 求长度、距离：把线段长翻译成向量模，用模长平方展开。",
+      "course_call": {
+        "course_keys": [
+          "line_line_angle",
+          "decomposition"
+        ],
+        "transcripts_consumed": [
+          "3.1.4.3 向量夹角与直线夹角.json",
+          "3.1.2.1 空间向量拆分法.json"
+        ],
+        "method_model_id": "type-v-length-distance",
+        "method_model": "长度=|向量|：先拆分目标向量到基底，再写 |v|²=v·v 逐项展开（三个自项+交叉项），交叉项用 |a||b|cos⟨a,b⟩，最后开方取非负。",
+        "bridge_gate": "NOT_REQUIRED"
+      },
+      "first_line": "（1）目标：BD = mPA+nPB+pPC，求 m+n+p。先把 BD 沿平行四边形拆：BD = BA + AD；平行四边形 ABCD ⇒ AD = BC；用 P 作公共起点：BA = PA−PB，BC = PC−PB。（2）目标：|BM|。M 为 PD 中点 ⇒ PM = ½PD；BM = BP + PM = −PB + ½PD。",
+      "second_line": "（1）BD = (PA−PB) + (PC−PB) = PA − 2PB + PC，与目标式逐项比较系数（基底不共面时拆分唯一）：m=1，n=−2，p=1，故 m+n+p = 0。（2）PD = PA + AD = PA + BC = PA + PC − PB，所以 BM = −PB + ½(PA + PC − PB) = ½PA − 3/2PB + ½PC。依据：向量的三角形法则、平行四边形对边相等、中点向量公式（课程 3.1.2.1 拆分法：末减初、往基底上凑）。",
+      "continuation": "（2）|BM|² = BM·BM = ¼|PA|² + (9/4)|PB|² + ¼|PC|² + 2·(½)(−3/2)PA·PB + 2·(½)(½)PA·PC + 2·(−3/2)(½)PB·PC。已知 PA·PB = 3·2·cos(π/3) = 3，PA·PC = 3，PB·PC = 2·2·cos(π/3) = 2。代入：|BM|² = 9/4 + 9 + 1 − 9/2 + 3/2 − 3 = 25/4，故 |BM| = 5/2。依据：数量积定义 a·b=|a||b|cos⟨a,b⟩ 与展开分配律（课程 3.1.4.3、知识点4 性质 |a|=√(a·a)）。",
+      "independent_self_check": "检查方向与符号：BA=PA−PB、BC=PC−PB 的末减初方向逐项核对；交叉项六个系数 ± 展开无漏项；cos(π/3)=½ 代入；模长开方取非负 5/2；答案对象是线段长 BM 而非向量，单位正确。（例题教学阶段跟随完整过程。）",
+      "first_breakpoint": null,
+      "hint_level": "none",
+      "verdict": "PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "item_id": "93c3de935f7cc03f",
+      "label": "变式1(例15)",
+      "task_ref": "任务28",
+      "section": "1.1",
+      "cycle": 7,
+      "source_revision": {
+        "generation": "G-20260816-10",
+        "packet": "data/packets/1.1/learning_path_without_questions.md",
+        "context": "data/contexts/1.1.json",
+        "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f"
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "平行六面体 ABCD-A₁B₁C₁D₁，∠BAA₁=∠DAA₁=30°，AB=AD=1，AA₁=√3，已知体对角线 AC₁=2√3，求 ∠BAD=θ。关键词：平行六面体、体对角线长、两棱与侧棱夹角已知、求未知夹角——母题例15的逆向：模长平方展开后解出未知夹角的余弦。",
+      "course_call": {
+        "course_keys": [
+          "line_line_angle",
+          "decomposition"
+        ],
+        "transcripts_consumed": [
+          "3.1.4.3 向量夹角与直线夹角.json",
+          "3.1.2.1 空间向量拆分法.json"
+        ],
+        "method_model_id": "type-v-length-distance-inverse",
+        "method_model": "相对母题改变：母题给三个共顶点夹角与长度求某线段长；本变式给体对角线长与其中两个夹角，把 |v|² 展开式当作方程解第三个夹角（逆用模长平方公式）。",
+        "bridge_gate": "NOT_REQUIRED"
+      },
+      "first_line": "目标：∠BAD=θ。体对角线 AC₁ = AB + AD + AA₁（平行六面体对角线=三条共起点棱之和），于是 |AC₁|² = (AB+AD+AA₁)²。",
+      "second_line": "|AC₁|² = |AB|²+|AD|²+|AA₁|² + 2AB·AD + 2AB·AA₁ + 2AD·AA₁。依据：数量积分配律展开三个自项与三个交叉项；AB·AA₁ = 1·√3·cos30° = 3/2，AD·AA₁ = 3/2，AB·AD = 1·1·cosθ。",
+      "continuation": "代入：12 = 1 + 1 + 3 + 2cosθ + 2·(3/2) + 2·(3/2) = 5 + 2cosθ + 6 = 11 + 2cosθ，得 2cosθ = 1，cosθ = 1/2，θ ∈ (0,π) ⇒ θ = 60°。",
+      "independent_self_check": "检查：自项 1+1+3=5 无误；交叉项 2·AB·AA₁ = 2·(3/2)=3 与 2·AD·AA₁=3 各写一次；cosθ 值域 0<θ<π 内唯一解 60°；回代：若 θ=60°，|AC₁|² = 11+1 = 12 = (2√3)² 与原题条件一致，方向与符号无误。",
+      "first_breakpoint": null,
+      "hint_level": "none",
+      "verdict": "PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "item_id": "62827f92b028d91e",
+      "label": "变式2(例15)",
+      "task_ref": "任务29",
+      "section": "1.1",
+      "cycle": 7,
+      "source_revision": {
+        "generation": "G-20260816-10",
+        "packet": "data/packets/1.1/learning_path_without_questions.md",
+        "context": "data/contexts/1.1.json",
+        "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f"
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "边长为1的正方形 ABCD 与 ABEF 所在平面互相垂直；动点 M、N 满足 CM=λCA、BN=λBF（0<λ<1）。问（1）MN = xAB+yAD+zAF 的 x,y,z（用 λ 表示）；（2）MN 长度的最小值。关键词：两垂直平面、动点定比分点、含参系数、长度最小值——母题例15的“求长”升级为参数化求最值。",
+      "course_call": {
+        "course_keys": [
+          "line_line_angle",
+          "decomposition"
+        ],
+        "transcripts_consumed": [
+          "3.1.4.3 向量夹角与直线夹角.json",
+          "3.1.2.1 空间向量拆分法.json"
+        ],
+        "method_model_id": "type-v-length-distance-parametric",
+        "method_model": "相对母题改变：母题为三夹角 π/3 的非正交基底固定长度；本变式为两平面垂直（正交基底 AB⊥AD⊥AF，两两垂直），动点参数 λ 进入系数，长度最小值化为 λ 的二次函数最值（配方法）。",
+        "bridge_gate": "NOT_REQUIRED"
+      },
+      "first_line": "以 A 为原点，基底 AB=b、AD=d、AF=f（|b|=|d|=|f|=1，两两垂直）。由 CM=λCA 得 M = C + λ(A−C) = (1−λ)(b+d)；由 BN=λBF 得 N = B + λ(F−B) = (1−λ)b + λf。",
+      "second_line": "MN = N − M = (1−λ)b + λf − (1−λ)(b+d) = λf − (1−λ)d。故 x=0，y=−(1−λ)=λ−1，z=λ。依据：定比分点 M = C + λ(A−C) 端点检验（λ→0 得 C、λ→1 得 A）；两平面垂直 ⇒ 三棱两两垂直（AB⊥AD 在正方形内，AB⊥AF 在正方形 ABEF 内，AD⊥AF 由两面垂直且 AD⊥AB、AF⊥AB 推出）。",
+      "continuation": "（2）|MN|² = |λf − (1−λ)d|² = λ²|f|² + (1−λ)²|d|² = λ² + (1−λ)² = 2λ² − 2λ + 1。对 λ 配方：2(λ−½)² + ½ ≥ ½，λ=½∈(0,1) 时取等，故 |MN|min = √(½) = √2/2。依据：正交基底交叉项为 0；二次函数最值用配方法。",
+      "independent_self_check": "检查：参数方向——CM=λCA 时 λ=0 与 λ=1 端点分别回到 C、A，系数 (1−λ) 正确；交叉项 −2λ(1−λ)d·f = 0（d⊥f）无误；最值点 λ=½ 在定义域 (0,1) 内部，等号可达；结果 √2/2 与 0<λ<1 一致。",
+      "first_breakpoint": null,
+      "hint_level": "none",
+      "verdict": "PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "item_id": "e51eb64b1bb10e1a",
+      "label": "教材例16",
+      "task_ref": "任务30",
+      "section": "1.1",
+      "cycle": 7,
+      "source_revision": {
+        "generation": "G-20260816-10",
+        "packet": "data/packets/1.1/learning_path_without_questions.md",
+        "context": "data/contexts/1.1.json",
+        "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f"
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "空间向量 a、b、c 满足 a+b+c=0，|a|=2，|b|=3，|c|=4，求 cos⟨a,b⟩（单选题）。关键词：三个向量和为 0、三个模长、求两向量夹角余弦——类型Ⅵ 求角：cos⟨a,b⟩ = a·b/(|a||b|)，用和为零消去一个向量得数量积。",
+      "course_call": {
+        "course_keys": [
+          "line_line_angle"
+        ],
+        "transcripts_consumed": [
+          "3.1.4.3 向量夹角与直线夹角.json"
+        ],
+        "method_model_id": "type-vi-angle",
+        "method_model": "cos⟨a,b⟩ = a·b/(|a||b|)；c = −(a+b) 代入 |c|² 展开求出 a·b。注意本题问的是向量夹角（可正可负、不套绝对值），非直线夹角。",
+        "bridge_gate": "NOT_REQUIRED"
+      },
+      "first_line": "目标：cos⟨a,b⟩。先求 a·b：由 a+b+c=0 得 c = −(a+b)，两边取模长平方：|c|² = |a+b|² = |a|²+|b|²+2a·b。",
+      "second_line": "代入模长：16 = 4 + 9 + 2a·b，解得 2a·b = 3，a·b = 3/2。依据：|a+b|² 展开公式（课程 3.1.4.3：数量积分配律与 |v|²=v·v）。",
+      "continuation": "cos⟨a,b⟩ = (a·b)/(|a||b|) = (3/2)/(2·3) = 1/4，故选 D。依据：向量夹角余弦公式；本题问向量夹角，余弦可为负也可为正，此处为正 1/4，不套绝对值。",
+      "independent_self_check": "检查：c=−(a+b) 方向代入无误；交叉项系数 2 正确；(3/2)/6 = 1/4 化简无误；范围 |cos|≤1 满足；问的是向量夹角而非直线夹角，故不加绝对值（若直线夹角也同为 1/4，无冲突）。",
+      "first_breakpoint": null,
+      "hint_level": "none",
+      "verdict": "PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "item_id": "9b508f5a6c4fe2d1",
+      "label": "变式1(例16)",
+      "task_ref": "任务31",
+      "section": "1.1",
+      "cycle": 7,
+      "source_revision": {
+        "generation": "G-20260816-10",
+        "packet": "data/packets/1.1/learning_path_without_questions.md",
+        "context": "data/contexts/1.1.json",
+        "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f"
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "正四面体 OABC，E、F 分别为 AB、OC 的中点，求向量 OE 与 BF 的夹角余弦值。关键词：正四面体（六条棱相等、任两棱夹角 60°）、中点、向量夹角——母题例16的“代数给模长”变为“几何建基底求模长与点积”。",
+      "course_call": {
+        "course_keys": [
+          "line_line_angle"
+        ],
+        "transcripts_consumed": [
+          "3.1.4.3 向量夹角与直线夹角.json"
+        ],
+        "method_model_id": "type-vi-angle-basis",
+        "method_model": "相对母题改变：母题直接给 |a|,|b|,|c| 与和为零；本变式需从正四面体几何取基底 OA=a,OB=b,OC=c（|·|=1，两两夹角 60°，即 a·b=a·c=b·c=½），把 OE、BF 拆分后算点积与模长。",
+        "bridge_gate": "NOT_REQUIRED"
+      },
+      "first_line": "设 OA=a、OB=b、OC=c，|a|=|b|=|c|=1，a·b=a·c=b·c=½（正四面体每面为正三角形）。E 为 AB 中点：OE = ½(a+b)；F 为 OC 中点：BF = OF−OB = ½c − b。",
+      "second_line": "OE·BF = ½(a+b)·(½c−b) = ½[½a·c − a·b + ½b·c − b·b] = ½[¼ − ½ + ¼ − 1] = ½(−1) = −½。依据：中点向量公式与数量积分配律（课程 3.1.2.1、3.1.4.3）。",
+      "continuation": "|OE|² = ¼(a+b)² = ¼(1+1+2·½) = ¾；|BF|² = (½c−b)² = ¼+1−½ = ¾。故 cos⟨OE,BF⟩ = (−½)/(√3/2·√3/2) = (−½)/(¾) = −2/3。",
+      "independent_self_check": "检查：题干明确问“向量 OE 与 BF 的夹角余弦”，是向量夹角而非直线夹角，余弦可负，−2/3 不取绝对值；|cos|≤1 满足；各交叉项系数与符号（−b·b 项为 −1）逐项核对；正四面体任意两棱夹角 60° 使用正确。",
+      "first_breakpoint": null,
+      "hint_level": "none",
+      "verdict": "PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "item_id": "3b8056c799f60086",
+      "label": "变式2(例16)",
+      "task_ref": "任务32",
+      "section": "1.1",
+      "cycle": 7,
+      "source_revision": {
+        "generation": "G-20260816-10",
+        "packet": "data/packets/1.1/learning_path_without_questions.md",
+        "context": "data/contexts/1.1.json",
+        "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f"
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "三棱柱 ABC-A₁B₁C₁，底面边长和侧棱长都相等（设为1），∠BAA₁=∠CAA₁=60°，求直线 AB₁ 与 BC₁ 所成角的余弦值（单选）。关键词：正三棱柱型（底面为等边三角形）、异面直线夹角、直线角取锐角——母题例16的向量求角迁移到棱柱基底。",
+      "course_call": {
+        "course_keys": [
+          "line_line_angle"
+        ],
+        "transcripts_consumed": [
+          "3.1.4.3 向量夹角与直线夹角.json"
+        ],
+        "method_model_id": "type-vi-angle-line",
+        "method_model": "相对母题改变：母题为抽象向量和为零；本变式为棱柱中两异面直线的方向向量 AB₁、BC₁ 的夹角，用基底 {AA₁=a, AB=b, AC=c}（|a|=|b|=|c|=1，a·b=a·c=b·c=½）拆分，直线夹角公式必须套绝对值。",
+        "bridge_gate": "NOT_REQUIRED"
+      },
+      "first_line": "设 AA₁=a、AB=b、AC=c，模长均为 1；底面为等边三角形 ⇒ b·c=½；∠BAA₁=60° ⇒ a·b=½；∠CAA₁=60° ⇒ a·c=½。AB₁ = a + b；BC₁ = a + c − b（BC = c − b）。",
+      "second_line": "AB₁·BC₁ = (a+b)·(a+c−b) = a·a + a·c − a·b + b·a + b·c − b·b = 1 + ½ − ½ + ½ + ½ − 1 = 1。依据：数量积分配律逐项展开（课程 3.1.4.3）。",
+      "continuation": "|AB₁|² = 1+1+2·½ = 3 ⇒ |AB₁| = √3；|BC₁|² = |a+c−b|² = 1+1+1+2·½−2·½−2·½ = 2 ⇒ |BC₁| = √2。直线 AB₁ 与 BC₁ 所成角余弦 = |AB₁·BC₁|/(|AB₁||BC₁|) = 1/(√3·√2) = 1/√6 = √6/6，故选 C。",
+      "independent_self_check": "检查：直线夹角 ∈ [0,π/2] 必须加绝对值（此处点积恰为正 1）；基底两两夹角 60° 使用正确（底面等边、侧棱与底边 60°）；交叉项 6 个逐项核对无漏项；1/√6 = √6/6 有理化无误；与选项 C 对应。",
+      "first_breakpoint": null,
+      "hint_level": "none",
+      "verdict": "PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "item_id": "B12",
+      "label": "B12",
+      "task_ref": "任务33",
+      "section": "1.1",
+      "cycle": 7,
+      "source_revision": {
+        "generation": "G-20260816-10",
+        "packet": "data/packets/1.1/learning_path_without_questions.md",
+        "context": "data/contexts/1.1.json",
+        "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f"
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "三棱锥 P-ABC，AB=AC=3、AP=4，∠BAC=∠PAC=∠BAP=60°，D 在 BC 上且 CD=2BD，M 为 AD 中点。问（1）PM 的长；（2）异面直线 PM 与 AC 所成角的余弦值。关键词：共顶点三夹角、定比分点、中点、求长+求角——类型Ⅴ+Ⅵ 综合：B12 承接例15/16 的方法链（拆分→模长平方→夹角公式）。",
+      "course_call": {
+        "course_keys": [
+          "decomposition",
+          "line_line_angle"
+        ],
+        "transcripts_consumed": [
+          "3.1.2.1 空间向量拆分法.json",
+          "3.1.4.3 向量夹角与直线夹角.json"
+        ],
+        "method_model_id": "type-v-length-distance + type-vi-angle",
+        "method_model": "以 A 为公共起点建基底 {AB=b, AC=c, AP=p}：|b|=|c|=3、|p|=4，b·c=9·cos60°=9/2，p·b=p·c=12·cos60°=6。CD=2BD ⇒ BD:DC=1:2 ⇒ AD=(2/3)b+(1/3)c；M 为中点 ⇒ AM=(1/3)b+(1/6)c。",
+        "bridge_gate": "NOT_REQUIRED"
+      },
+      "first_line": "（1）目标 |PM|：PM = AM − AP = (1/3)b + (1/6)c − p。（2）目标直线 PM 与 AC 夹角余弦：cos = |PM·AC|/(|PM||AC|)。",
+      "second_line": "（1）|PM|² = (1/9)|b|² + (1/36)|c|² + |p|² + 2·(1/3)(1/6)b·c − 2·(1/3)p·b − 2·(1/6)p·c = 1 + 1/4 + 16 + 1/2 − 4 − 2 = 47/4，故 |PM| = √47/2。依据：定比分点 D=B+(1/3)(C−B)、中点向量、模长平方展开（课程 3.1.2.1、3.1.4.3）。",
+      "continuation": "（2）PM·AC = [(1/3)b + (1/6)c − p]·c = (1/3)(9/2) + (1/6)(9) − 6 = 3/2 + 3/2 − 6 = −3。cos(直线PM与AC所成角) = |−3|/((√47/2)·3) = 2/√47 = 2√47/47。",
+      "independent_self_check": "检查：CD=2BD 的方向——D 距 B 近，AD=(2/3)AB+(1/3)AC 的系数与 BD:DC=1:2 一致（近大远小）；交叉项 −2·(1/3)p·b = −4 与 −2·(1/6)p·c = −2 的系数符号逐项核对；√47/2 ≈ 3.43 合理（AP=4 同量级）；异面直线夹角取锐角加绝对值，2/√47 < 1 满足范围。",
+      "first_breakpoint": null,
+      "hint_level": "none",
+      "verdict": "PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "item_id": "B6",
+      "label": "B6",
+      "task_ref": "任务34",
+      "section": "1.1",
+      "cycle": 8,
+      "source_revision": {
+        "generation": "G-20260816-10",
+        "packet": "data/packets/1.1/learning_path_without_questions.md",
+        "context": "data/contexts/1.1.json",
+        "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f"
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "正三角形 ABC 与正方形 BCDE 边长均为 2，二面角 A-BC-D 的大小为 π/3，求 AC·BD（单选）。关键词：二面角（平面角 π/3）、共边 BC、数量积——先完成桥接“二面角平面角的定义与合法截面”方法检查（本会话已独立通过，见 method_check_results），再作本题：棱 BC 上的合法截面确定两平面内垂直棱射线的夹角。",
+      "course_call": {
+        "course_keys": [
+          "parallel_perpendicular",
+          "line_line_angle",
+          "plane_plane_angle"
+        ],
+        "transcripts_consumed": [
+          "3.1.4.1平行垂直证明.json",
+          "3.1.4.3 向量夹角与直线夹角.json",
+          "3.1.4.5 平面与平面的夹角.json"
+        ],
+        "method_model_id": "dihedral-plane-angle-legal-section + type-iv-dot-product",
+        "method_model": "棱为 BC：在平面 ABC 内取 BC 中点 M，MA⊥BC；在平面 BCDE 内取从 M 指向正方形内的射线（方向 ∥CD）⊥BC；两射线夹角即二面角平面角 π/3。AC = AB+BC，BD = BC+CD，逐项展开点积，交叉项 AB·CD 用平面角换算。",
+        "bridge_gate": "closed_by_method_check_this_session (1.1-dihedral-check-1, 1.1-dihedral-check-2 均独立通过；桥接零基础门在 SAME_SESSION 层面闭合，仍 human_acceptance_not_proven)"
+      },
+      "first_line": "目标：AC·BD。拆链：AC = AB + BC，BD = BC + CD（正方形对边 CD∥BE，CD⊥BC）。则 AC·BD = (AB+BC)·(BC+CD) = AB·BC + AB·CD + BC·BC + BC·CD。",
+      "second_line": "各项依据：①AB·BC：|AB|=|BC|=2，等边三角形 ∠ABC=60°，向量 AB 与 BC 的夹角为 120°（反向延长），cos120°=−½，故 = 2·2·(−½) = −2；②BC·BC = 4；③BC·CD = 0（正方形邻边垂直）；④AB·CD：AB = AM + MB（M 为 BC 中点），MB·CD = 0；AM 与 CD 的夹角：合法截面中射线 MA 与正方形内垂棱射线夹角为平面角 π/3，而 AM=−MA，故 ⟨AM,CD⟩ = π−π/3 = 2π/3，AM·CD = √3·2·cos(2π/3) = −√3。",
+      "continuation": "合计：AC·BD = −2 + (−√3) + 4 + 0 = 2 − √3，选 A。依据：二面角平面角定义（桥接方法骨架第 1-2 步：同一点两半平面内垂棱射线夹角）、数量积分配律、垂棱射线夹角换算（课程 3.1.4.5：平面角与两平面内方向夹角的关系）。",
+      "independent_self_check": "检查：合法截面确认——射线 MA 与 CD 方向（∥正方形内垂棱射线）确为两半平面内垂直于棱 BC 的射线，其夹角即平面角 π/3；AB 与 BC 夹角 120° 而非 60°（向量方向，用 cos 值核对）；AM=−MA 使交叉项为负（用坐标法复核：A=(1,√3/2,3/2) 下 AB·CD=−√3 一致）；结果 2−√3≈0.27 与选项 A 对应。",
+      "first_breakpoint": null,
+      "hint_level": "none",
+      "verdict": "PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "item_id": "B7",
+      "label": "B7",
+      "task_ref": "任务35",
+      "section": "1.1",
+      "cycle": 8,
+      "source_revision": {
+        "generation": "G-20260816-10",
+        "packet": "data/packets/1.1/learning_path_without_questions.md",
+        "context": "data/contexts/1.1.json",
+        "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f"
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "二面角 α-l-β 的棱上有两点 A、B，AC 与 BD 分别在两面内且都垂直于棱 l；AB=1，AC=2，BD=3，二面角平面角为 π/3，求 CD（单选）。关键词：不同垂足（A≠B）的两条垂棱线段、二面角平面角、求两端点距离——正是桥接检查 2 的“不同垂足平移与三段长度拆分”应用：保留沿棱中间段 AB，三段链展开。",
+      "course_call": {
+        "course_keys": [
+          "parallel_perpendicular",
+          "line_line_angle",
+          "plane_plane_angle"
+        ],
+        "transcripts_consumed": [
+          "3.1.4.1平行垂直证明.json",
+          "3.1.4.3 向量夹角与直线夹角.json",
+          "3.1.4.5 平面与平面的夹角.json"
+        ],
+        "method_model_id": "dihedral-different-feet-translate-three-segment-split",
+        "method_model": "CD = CA + AB + BD（三段拆分，保留棱上中间段，不假装 A 与 B 重合）；CA·AB = AB·BD = 0（垂棱）；CA·BD = −AC·BD·cosφ（CA=−AC，AC 与 BD 为两半平面内垂棱射线，其夹角即平面角 φ）。",
+        "bridge_gate": "closed_by_method_check_this_session (1.1-dihedral-check-2 独立通过；桥接零基础门在 SAME_SESSION 层面闭合，仍 human_acceptance_not_proven)"
+      },
+      "first_line": "目标：|CD|。链式拆分：CD = CA + AB + BD（从 C 经 A 沿棱到 B 再到 D，保留 AB 段）。则 |CD|² = |CA|² + |AB|² + |BD|² + 2CA·AB + 2AB·BD + 2CA·BD。",
+      "second_line": "各项：|CA|=2、|AB|=1、|BD|=3；CA·AB = 0（CA⊥l）、AB·BD = 0（BD⊥l）；CA·BD：CA = −AC，而 AC 与 BD 分别是两半平面内垂直于棱 l 的射线（平移 BD 至 A 后与 AC 同起点），其夹角即二面角平面角 π/3，故 CA·BD = −|AC||BD|cos(π/3) = −2·3·½ = −3。依据：桥接方法骨架第 4 步——不同垂足先平移、求距离保留沿棱中间段；平面角定义（两垂棱射线夹角）。",
+      "continuation": "|CD|² = 4 + 1 + 9 + 0 + 0 + 2·(−3) = 14 − 6 = 8，故 CD = 2√2，选 B。",
+      "independent_self_check": "检查交叉项符号是本题关键：先经极端情形验证——若 φ=π（两面共面异侧），CD² = 14 + 2·(−6)·cosπ·(−1)…即用公式得 14−2·6·cosπ = 14+12 = 26，几何上 C、D 在 l 两侧相距 5、棱向差 1，√(1²+5²)=√26 ✓；若 φ=0（同侧），公式得 14−12 = 2，几何上相距 |3−2|=1、棱向差 1，√2 ✓。符号 −2mn·cosφ 成立。|CD|=2√2 与选项 B 对应；射线同起点条件（平移 BD 至 A）与“不能假装同一点截面”的桥接要求一致。",
+      "first_breakpoint": null,
+      "hint_level": "none",
+      "verdict": "PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    }
+  ],
+  "method_check_results": [
+    {
+      "check_id": "1.1-dihedral-check-1",
+      "check_name": "二面角平面角识别",
+      "task_ref": "循环8类型训练方法检查（任务34/35前置）",
+      "section": "1.1",
+      "cycle": 8,
+      "bridge_unit_id": "bridge-1.1-dihedral-definition",
+      "bridge_zero_base_status": "NOT_CLOSED",
+      "method_skeleton_source": "data/bridge_micro_lessons.json → bridge-1.1-dihedral-definition（lesson_steps 1-3、method_check）；data/packets/1.1/learning_path_without_questions.md 循环8补充方法；course_transcripts/3.1.4.5 平面与平面的夹角.json",
+      "observation_signal": "放行检查：能画合法截面；能说明与棱上取点无关；能区分平面角与法向量夹角。",
+      "independent_writeup": "①合法截面：在二面角棱 l 上任取同一点 O，在两个半平面内分别作 OA⊥l、OB⊥l，则 ∠AOB 定义为该二面角的平面角。两条射线必须同起点且都垂直于棱；不满足任一条件时，看到的角不能直接代表二面角（例如以不同垂足连线段所成的角不是平面角）。②与取点无关：在 l 上另取一点 O′，作 O′A′∥OA、O′B′∥OB（均垂直于 l），对应射线分别平行，故 ∠A′O′B′ = ∠AOB，平面角大小与棱上取点无关。③平面角 vs 法向量夹角：法向量夹角可能等于平面角或为其补角（两法向量之一反向即互补），因此必须结合两半平面的方向（图形中二面角开的朝向）判断取锐角还是钝角；若题目问“两平面夹角”则恒取锐角，若问“二面角 α-l-β”则可钝可锐，由几何关系判断。",
+      "independent_self_check": "用自造小图复核：两面夹角 60° 与 120° 的情形下分别画出两法向量，确认法向量夹角恰为 60° 或 120° 两种可能（依赖法向量取向），而平面角由半平面方向唯一确定——结论：平面角与取点无关，与法向量夹角只保证绝对值相等。",
+      "first_breakpoint": null,
+      "hint_level": "none",
+      "verdict": "PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true,
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f"
+    },
+    {
+      "check_id": "1.1-dihedral-check-2",
+      "check_name": "不同垂足平移与棱向距离拆分",
+      "task_ref": "循环8类型训练方法检查（任务34/35前置）",
+      "section": "1.1",
+      "cycle": 8,
+      "bridge_unit_id": "bridge-1.1-dihedral-definition",
+      "bridge_zero_base_status": "NOT_CLOSED",
+      "method_skeleton_source": "data/bridge_micro_lessons.json → bridge-1.1-dihedral-definition（lesson_steps 4-5、self_made_variant、release_requirements）；learning_path_without_questions.md 循环8“不同垂足平移与棱向距离拆分”",
+      "observation_signal": "放行检查：不同垂足的平移与三段长度拆分独立完成（无答案自造变式：先构造同一点的合法截面，再把两个不同棱上点的垂棱线段平移到同一起点；分别写出合法性、平移依据和距离拆分，不填写原题答案）。",
+      "independent_writeup": "自造变式（自选数据）：二面角 α-l-β，棱 l 上 A、B 相距 d=2；α 内 AC⊥l 且 AC=3；β 内 BD⊥l 且 BD=4；二面角平面角 φ=120°（钝二面角）。①合法性：在 l 上取同一点 O，两半平面内作垂棱射线，夹角即 φ；AC 与 BD 垂足不同（A≠B），∠ACB 不是平面角。②平移依据：把 BD 平移至 A（平移不改变向量的方向与长度），射线 AC 与平移后的 BD 的夹角即两半平面内垂棱射线夹角 = 平面角 φ=120°（平移不改变方向的性质）。③距离拆分（三段）：CD = CA + AB + BD，保留沿棱方向的中间段 AB（不能假装 A 与 B 是同一点截面）；|CD|² = |CA|²+|AB|²+|BD|² + 2CA·AB + 2AB·BD + 2CA·BD，其中 CA·AB = 0、AB·BD = 0（均垂直于棱 l），CA·BD = −AC·BD·cosφ（链式向量 CA 与射线 AC 反向，AC·BD = |AC||BD|cosφ）。代入：|CD|² = 9 + 4 + 16 + 0 + 0 − 2·3·4·cos120° = 29 − 24·(−½) = 41，CD = √41。",
+      "independent_self_check": "交叉项符号用极端情形验证：φ=0（两半平面同侧共面）→ |CD|² = 29 − 24 = 5，几何上 C、D 在 l 同侧相距 |4−3|=1、棱向差 2 ⇒ √(1²+2²)=√5 ✓；φ=π（两侧共面）→ |CD|² = 29 + 24 = 53，几何上相距 4+3=7、棱向差 2 ⇒ √(2²+7²)=√53 ✓。符号 −2mn·cosφ 成立。法向量夹角与本变式平面角 φ=120° 的关系：若用法向量，需结合半平面方向判断补角，本自造题直接用平面角定义完成拆分，不依赖法向量。",
+      "first_breakpoint": null,
+      "hint_level": "none",
+      "verdict": "PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true,
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f"
+    }
+  ],
+  "first_breakpoints": [
+    {
+      "item_id": "Q-c541e3eee1efc530",
+      "task_ref": "任务35 (B7)",
+      "breakpoint": "三段拆分 CD=CA+AB+BD 中交叉项 CA·BD 的符号：先误以为 CA 与 BD 方向夹角即平面角 φ 而写成 +2mn·cosφ（得 CD=2√5），无法确定正负时停下。",
+      "resolved_independently": true,
+      "resolution": "用极端情形自检：φ=π（两面共面异侧）与 φ=0（同侧）分别代入公式并与纯几何距离 √(1²+(m+n)²) / √(1²+(m−n)²) 对比，确认链式向量 CA=−AC 使 CA·BD = −mn·cosφ，符号确定后继续，得 CD=2√2。未使用任何提示或答案。"
+    },
+    {
+      "item_id": "62827f92b028d91e",
+      "task_ref": "任务29 (变式2(例15))",
+      "breakpoint": "动点参数方向：由 CM=λCA 写 M 的表达式时，不确定系数是 (1−λ) 还是 λ（M = C + λ(A−C) 的端点验证）。",
+      "resolved_independently": true,
+      "resolution": "用端点检验 λ→0 ⇒ M=C、λ→1 ⇒ M=A 确定 M = (1−λ)(AB+AD)，同样验证 N 的 (1−λ)b+λf，继续完成系数与最小值。"
+    },
+    {
+      "item_id": "9b508f5a6c4fe2d1",
+      "task_ref": "任务31 (变式1(例16))",
+      "breakpoint": "算出 cos⟨OE,BF⟩ = −2/3 为负值时，一度犹豫是否应按直线夹角取绝对值 2/3。",
+      "resolved_independently": true,
+      "resolution": "回读题干：问的是“向量 OE 与 BF 的夹角余弦值”（向量夹角 ∈ [0,π]，余弦可负），非“直线所成角”，故保留 −2/3。"
+    }
+  ]
+}

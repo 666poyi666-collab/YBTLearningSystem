@@ -1,0 +1,400 @@
+{
+ "schema_version": "1.2+1.3-10cycles",
+ "section": "1.2+1.3",
+ "worker": 2,
+ "generation": "G-CH1-S12-01",
+ "worker_status": "COMPLETED",
+ "scope": {
+  "tasks": [
+   "08",
+   "09",
+   "10",
+   "11",
+   "12",
+   "13",
+   "14"
+  ],
+  "item_count": 7,
+  "note": "任务08-14：循环3 末（A3、A4）+ 循环4（例5、变式(5)、B5、B9）+ 循环5 首（例6）"
+ },
+ "context_binding": {
+  "canary": "01cb4018b3977ceb",
+  "context_sha256": "271c68719a46b628e716267fb786ee13c4e40bec9523ffe4f005fada1c05fd86",
+  "context_file": "data/contexts/1.2_1.3.json",
+  "binding": "worker must echo canary and answer derived probes from this exact context",
+  "probe_qids": [
+   "Q-6ed7e46c02ea0cbe",
+   "Q-9dc59a76b39b51c2",
+   "Q-8937bea007e341dc"
+  ],
+  "probe_tokens": {
+   "Q-6ed7e46c02ea0cbe": "d9f08af0",
+   "Q-9dc59a76b39b51c2": "9819bc0a",
+   "Q-8937bea007e341dc": "638a9259"
+  },
+  "probe_answered_in_items": [
+   "A1",
+   "A2",
+   "A3"
+  ],
+  "gate": {
+   "file": "reports/builds/1.2_1.3-build.json",
+   "read_at": "2026-08-16T22:02:19",
+   "built_at_declared": "2026-08-16T22:10:00",
+   "worker": "build-1.2-1.3",
+   "hard_constraint": "33 项不变（13 例题+4 变式+16 习题，item_id/qid 复用），10 循环重构",
+   "test_results": "104 passed / 2 failed（均与本节无关：1.4-k3 重复渲染、1.1 台账哈希失配）"
+  },
+  "context_finalized_at": "2026-08-16T22:03:40",
+  "context_stability": "mtime 22:03:40 后 3 分钟无变化（确认至 22:06:56）",
+  "note": "上下文在轮询期间被构建流水线多次重写（688be4…→b08a72…→7628a1…→终版 271c68…），终版 evidence 已核对；五门课程文稿（3.1.1.1/3.1.2.1/3.1.2.2/3.1.3.1/3.1.3.2）已全部通读"
+ },
+ "answer_sidecar_read": false,
+ "human_acceptance_not_proven": true,
+ "verdicts_summary": {
+  "PASS": 5,
+  "BLOCKED": 2
+ },
+ "method_check_results": [
+  {
+   "method_key": "1.2_1.3-coplanar-check-1",
+   "label": "方法检查：重心向量表示独立推导",
+   "cycle": 9,
+   "status": "CLOSED",
+   "verdict": "PASS",
+   "note": "学生独立推导：三角形重心=三点平均（G 为 △ABC 重心 ⇒ SG=⅓(SA+SB+SC)，源自 3.1.2.2 等值面法重心特性），并在 B9（任务13）、C14（任务31）中实际调用；等值面复核系数和。"
+  },
+  {
+   "method_key": "1.2_1.3-coplanar-check-2",
+   "label": "方法检查：截线共面条件自造验证",
+   "cycle": 9,
+   "status": "CLOSED",
+   "verdict": "PASS",
+   "note": "自造无答案验证：三棱锥 S-ABC，取 SA/SB/SC 中点 D,E,F，平面 DEF 为 ½ 倍面（位置向量系数和 ½=½(u+v+w)）；SG 中点 M 的 SM=¼(SA+SB+SC) 系数和 ¾≠½ ⇒ M 不在平面 DEF；与 C14 中『系数和=1 判定点面位置』正反互证。"
+  },
+  {
+   "method_key": "1.2_1.3-single-variable-check-1",
+   "label": "方法检查：空间动点单变量化检查",
+   "cycle": 10,
+   "status": "NOT_CLOSED",
+   "verdict": "BLOCKED",
+   "note": "桥接『空间动点单变量化配方』=SOURCE_METHOD_READY（只有方法骨架、缺完整无答案微课），标准规定零基础不能据此放行；检查标准（单变量规划、含定义域近变式、延迟冷复述）无法在模拟中满足。"
+  },
+  {
+   "method_key": "1.2_1.3-apollonius-check-1",
+   "label": "方法检查：阿波罗尼斯球轨迹检查",
+   "cycle": 10,
+   "status": "NOT_CLOSED",
+   "verdict": "BLOCKED",
+   "note": "桥接『阿波罗尼斯球与等距轨迹』=SUPPLEMENT_READY 但检查标准未具备（需自造变式、视觉/题面放行），且循环10 整体因动点单变量化未闭合而阻断。"
+  },
+  {
+   "bridge_key": "micro-four-point-coplanar",
+   "label": "桥接：四点共面系数和=1",
+   "target_items": [
+    "C14"
+   ],
+   "status": "CLOSED",
+   "verdict": "PASS",
+   "note": "SUPPLEMENT_READY 无答案文本在路线内；模拟中完成正向/逆向推导与自造验证；C14 独立作答通过；question_coverage=READY_FOR_INDEPENDENT_ATTEMPT。"
+  },
+  {
+   "bridge_key": "bridge-1.2-single-variable",
+   "label": "桥接：空间动点单变量化配方",
+   "target_items": [
+    "C15",
+    "C16"
+   ],
+   "status": "NOT_CLOSED",
+   "verdict": "BLOCKED",
+   "note": "SOURCE_METHOD_READY：只有方法骨架，缺完整无答案微课；零基础放行不成立；question_coverage=BLOCKED_BRIDGE（构建报告 gap_list 确认既有状态未变）。"
+  },
+  {
+   "bridge_key": "bridge-1.2-apollonius",
+   "label": "桥接：阿波罗尼斯球与等距轨迹",
+   "target_items": [
+    "C16"
+   ],
+   "status": "NOT_CLOSED",
+   "verdict": "BLOCKED",
+   "note": "SUPPLEMENT_READY 但检查标准未具备（自造变式、视觉/题面放行）；C16 整体因动点单变量化未闭合而阻断。"
+  },
+  {
+   "bridge_key": "bridge-1.1-polarization",
+   "label": "桥接：极化恒等式与数量积最值",
+   "target_items": [
+    "C16"
+   ],
+   "status": "NOT_CLOSED",
+   "verdict": "BLOCKED",
+   "note": "SUPPLEMENT_READY 但检查标准未具备（原型题独立过程、全空间型与区域型各一题无答案近迁移、等号条件可解释）；C16 整体阻断。"
+  }
+ ],
+ "first_breakpoints": [
+  {
+   "breakpoint": "图形未核验（NEEDS_VISION_SIDECAR）：路线标注『未完成视觉核验，禁止猜图』，缺已核验视觉侧车",
+   "class": "VISUAL_GATE",
+   "items": [
+    "例1",
+    "例2",
+    "例3",
+    "例4",
+    "例5",
+    "例12",
+    "例13",
+    "变式(5)",
+    "变式1(10)",
+    "变式2(10)",
+    "变式(12)"
+   ]
+  },
+  {
+   "breakpoint": "桥接未闭合：空间动点单变量化配方 SOURCE_METHOD_READY（只有方法骨架，缺完整无答案微课）",
+   "class": "BRIDGE_GATE",
+   "items": [
+    "C15",
+    "C16"
+   ]
+  },
+  {
+   "breakpoint": "桥接检查标准未具备：阿波罗尼斯球与等距轨迹、极化恒等式与数量积最值（SUPPLEMENT_READY 但未通过自造变式/放行门禁）",
+   "class": "BRIDGE_GATE",
+   "items": [
+    "C16"
+   ]
+  }
+ ],
+ "item_results": [
+  {
+   "section": "1.2+1.3",
+   "cycle": 3,
+   "item_id": "Q-8937bea007e341dc",
+   "task": "08",
+   "label": "A3",
+   "kind": "A/B/C习题",
+   "visual_status": "READY_TEXT_ONLY",
+   "source_revision": {
+    "generation": "G-CH1-S12-01",
+    "source_packet_type": "DEEPSEEK_STUDENT_CONTEXT",
+    "packet_status": "VERIFIED",
+    "route_revision": "10 循环重构（build-1.2-1.3, 2026-08-16T22:10:00, item_id/qid 复用）"
+   },
+   "context_sha256": "271c68719a46b628e716267fb786ee13c4e40bec9523ffe4f005fada1c05fd86",
+   "observation_signal": "题面：a=(-1,0,-1)，b=(1,x,y)，且 a∥b，则 x+y=（四选一）。信号词：平行→对应成比例；本项为上下文探针题（probe_qids 之一，probe_token 638a9259）。",
+   "course_call": {
+    "course_id": "3.1.3.2",
+    "method_model_id": "3.1.3.2:parallel_ratio",
+    "appears_before_first_use": true,
+    "linkage": "课程 3.1.3.2：a∥b ⇔ b=λa（对应成比例）。",
+    "first_use_location": "任务08 A3（3.1.3.2 独立习题）"
+   },
+   "first_line": "目标量：x+y；b=λa ⇒ (1,x,y)=λ(-1,0,-1) ⇒ λ=-1。",
+   "second_line": "依据：由第一分量 λ=-1，得 x=0，y=1。",
+   "continuation": "x+y=1，对应选项 A。",
+   "independent_self_check": "核对：回代 b=(1,0,1) ✓；x+y=1 与选项 A 一致。",
+   "first_breakpoint": "none",
+   "hint_level": "none",
+   "verdict": "PASS",
+   "answer_sidecar_read": false,
+   "human_acceptance_not_proven": true
+  },
+  {
+   "section": "1.2+1.3",
+   "cycle": 3,
+   "item_id": "Q-e3eea135920d1de5",
+   "task": "09",
+   "label": "A4",
+   "kind": "A/B/C习题",
+   "visual_status": "READY_TEXT_ONLY",
+   "source_revision": {
+    "generation": "G-CH1-S12-01",
+    "source_packet_type": "DEEPSEEK_STUDENT_CONTEXT",
+    "packet_status": "VERIFIED",
+    "route_revision": "10 循环重构（build-1.2-1.3, 2026-08-16T22:10:00, item_id/qid 复用）"
+   },
+   "context_sha256": "271c68719a46b628e716267fb786ee13c4e40bec9523ffe4f005fada1c05fd86",
+   "observation_signal": "题面：m=(2,1,1)，n=(0,2,1)，则 m 与 n 的夹角的余弦值为（四选一）。信号词：夹角余弦公式。",
+   "course_call": {
+    "course_id": "3.1.3.2",
+    "method_model_id": "3.1.3.2:vector_angle_abs",
+    "appears_before_first_use": true,
+    "linkage": "课程 3.1.3.2：cos=(m·n)/(|m||n|)；本题为两向量夹角（结果为正，无需绝对值分支）。",
+    "first_use_location": "任务09 A4（3.1.3.2 独立习题）"
+   },
+   "first_line": "目标量：cos；m·n=0+2+1=3，|m|=√6，|n|=√5。",
+   "second_line": "依据：cos=3/(√6·√5)=3/√30=√30/10。",
+   "continuation": "√30/10，对应选项 B。",
+   "independent_self_check": "核对：分母是两模长乘积；3/√30 有理化后 √30/10 ✓。",
+   "first_breakpoint": "none",
+   "hint_level": "none",
+   "verdict": "PASS",
+   "answer_sidecar_read": false,
+   "human_acceptance_not_proven": true
+  },
+  {
+   "section": "1.2+1.3",
+   "cycle": 4,
+   "item_id": "85160af783cfe7ee",
+   "task": "10",
+   "label": "教材例5",
+   "kind": "教学例题（类型例题）",
+   "visual_status": "NEEDS_VISION_SIDECAR",
+   "source_revision": {
+    "generation": "G-CH1-S12-01",
+    "source_packet_type": "DEEPSEEK_STUDENT_CONTEXT",
+    "packet_status": "VERIFIED",
+    "route_revision": "10 循环重构（build-1.2-1.3, 2026-08-16T22:10:00, item_id/qid 复用）"
+   },
+   "context_sha256": "271c68719a46b628e716267fb786ee13c4e40bec9523ffe4f005fada1c05fd86",
+   "observation_signal": "题干：空间四边形 OABC 中，OA=a，OB=b，OC=c，则 MN=（选项给出 a,b,c 的 ±1/2 系数组合）。信号词：空间四边形基底拆分；但 M、N 在棱上的位置只由图中给出，题干文字未定义。",
+   "course_call": {
+    "course_id": "3.1.2.1",
+    "method_model_id": "3.1.2.1:unique_decomposition",
+    "appears_before_first_use": true,
+    "linkage": "前置 3.1.1.1、3.1.2.2 已听；课程 3.1.2.1：共起点 O 末减初拆分 MN=ON-OM，再按三角形法则/中点与等分点系数往基底上凑。",
+    "first_use_location": "任务10 教材例5（3.1.2.1 第二次使用）"
+   },
+   "first_line": "目标量：MN；先读出 M、N 在棱上的分点位置（图中信息）。",
+   "second_line": "依据：MN=ON-OM（公共起点 O 末减初）；M、N 分点确定后按课程中点/等分点系数与『系数和=1、近大远小』拆分。",
+   "continuation": "按协议停止：M、N 位置仅由配图定义，图未核验（NEEDS_VISION_SIDECAR），不猜测 M、N 是中点或其他分点。",
+   "independent_self_check": "检查：若猜 M、N 为中点也能得到确定表达式，但那是猜图；协议禁止以猜中当掌握，须等视觉侧车。",
+   "first_breakpoint": "图形未核验（NEEDS_VISION_SIDECAR）：例5 的 M、N 分点位置仅在图面，禁止猜图",
+   "hint_level": "none",
+   "verdict": "BLOCKED",
+   "answer_sidecar_read": false,
+   "human_acceptance_not_proven": true
+  },
+  {
+   "section": "1.2+1.3",
+   "cycle": 4,
+   "item_id": "cf037999c56eca66",
+   "task": "11",
+   "label": "变式(5)",
+   "kind": "直属变式",
+   "visual_status": "NEEDS_VISION_SIDECAR",
+   "source_revision": {
+    "generation": "G-CH1-S12-01",
+    "source_packet_type": "DEEPSEEK_STUDENT_CONTEXT",
+    "packet_status": "VERIFIED",
+    "route_revision": "10 循环重构（build-1.2-1.3, 2026-08-16T22:10:00, item_id/qid 复用）"
+   },
+   "context_sha256": "271c68719a46b628e716267fb786ee13c4e40bec9523ffe4f005fada1c05fd86",
+   "observation_signal": "直属变式：与例5 同型（空间四边形基底拆分），相对母题改变的条件（分点位置或系数）需从图与题面对照读出；图未核验。",
+   "course_call": {
+    "course_id": "3.1.2.1",
+    "method_model_id": "3.1.2.1:unique_decomposition",
+    "appears_before_first_use": true,
+    "linkage": "变式检验例5『共起点末减初+分点系数拆分』模型能否独立迁移；路线提示：同一直线上的分点比例先设整段为 t 倍、剩余段为 (1-t) 倍再解 t；先复述例5 模型再指出改变项。",
+    "first_use_location": "任务11 变式(5)（例5 直属变式）"
+   },
+   "first_line": "目标量：按变式问句写出待拆向量；先复述例5 模型：MN=ON-OM，系数由 M、N 分点比例确定。",
+   "second_line": "依据：同课程 3.1.2.1；变式相对例5 改变的位置/系数必须由图读出。",
+   "continuation": "按协议停止：图未核验，无法读出变式改变的分点位置，桥接不闭合。",
+   "independent_self_check": "检查：变式必须记录『相对母题改变了什么』；无图无法完成对照，不猜测。",
+   "first_breakpoint": "图形未核验（NEEDS_VISION_SIDECAR）：变式(5) 依赖图中分点位置，禁止猜图",
+   "hint_level": "none",
+   "verdict": "BLOCKED",
+   "answer_sidecar_read": false,
+   "human_acceptance_not_proven": true
+  },
+  {
+   "section": "1.2+1.3",
+   "cycle": 4,
+   "item_id": "Q-ca47ddb3109b2aa7",
+   "task": "12",
+   "label": "B5",
+   "kind": "A/B/C习题",
+   "visual_status": "VISION_VERIFIED",
+   "source_revision": {
+    "generation": "G-CH1-S12-01",
+    "source_packet_type": "DEEPSEEK_STUDENT_CONTEXT",
+    "packet_status": "VERIFIED",
+    "route_revision": "10 循环重构（build-1.2-1.3, 2026-08-16T22:10:00, item_id/qid 复用）"
+   },
+   "context_sha256": "271c68719a46b628e716267fb786ee13c4e40bec9523ffe4f005fada1c05fd86",
+   "observation_signal": "题面：三棱锥 O-ABC，OA=a，OB=b，OC=c；M、N 分别在棱 OA、BC 上，且 OM+3AM=0，2BN+CN=0，求 MN。信号词：向量等式给出共线分点条件→基底拆分。视觉侧车（E2）：O 顶部、A 左下、B 底部、C 右下，M 在 OA 上靠 A，N 在 BC 上靠 B，MN 虚线、AC 虚线。",
+   "course_call": {
+    "course_id": "3.1.2.1",
+    "method_model_id": "3.1.2.1:unique_decomposition",
+    "appears_before_first_use": true,
+    "linkage": "课程 3.1.2.1（+3.1.1.1、3.1.2.2 前置）：共起点 O 末减初拆分 MN=ON-OM；把 OM+3AM=0、2BN+CN=0 化为分点比例（设整段 t 倍、剩余 (1-t) 倍解 t），用『系数和=1、近大远小』核对分点位置。",
+    "first_use_location": "任务12 B5（3.1.2.1 独立习题）"
+   },
+   "first_line": "目标量：MN 用 a,b,c 表示；先写 MN=ON-OM，再分别确定 OM、ON 的分点比例。",
+   "second_line": "依据：①AM=OM-OA，代入 OM+3AM=0 ⇒ 4OM=3OA ⇒ OM=¾a；②BN=ON-OB，CN=ON-OC，代入 2BN+CN=0 ⇒ 3ON=2OB+OC ⇒ ON=⅔b+⅓c。",
+   "continuation": "MN=ON-OM=-¾a+⅔b+⅓c，对应选项 C。",
+   "independent_self_check": "核对：M 在 OA 上 ¾ 处（靠 A，与视觉侧车一致）；N 在 BC 上 BN:NC=1:2（靠 B，与侧车一致）；MN 方向 M→N 未写反；系数可回代 OM+3AM=0、2BN+CN=0 验算。",
+   "first_breakpoint": "none",
+   "hint_level": "none",
+   "verdict": "PASS",
+   "answer_sidecar_read": false,
+   "human_acceptance_not_proven": true
+  },
+  {
+   "section": "1.2+1.3",
+   "cycle": 4,
+   "item_id": "Q-0e25875e8ce0e2b0",
+   "task": "13",
+   "label": "B9",
+   "kind": "A/B/C习题",
+   "visual_status": "VISION_VERIFIED",
+   "source_revision": {
+    "generation": "G-CH1-S12-01",
+    "source_packet_type": "DEEPSEEK_STUDENT_CONTEXT",
+    "packet_status": "VERIFIED",
+    "route_revision": "10 循环重构（build-1.2-1.3, 2026-08-16T22:10:00, item_id/qid 复用）"
+   },
+   "context_sha256": "271c68719a46b628e716267fb786ee13c4e40bec9523ffe4f005fada1c05fd86",
+   "observation_signal": "题面：三棱锥 P-ABC，M 为底面 △ABC 的重心，PM=xPA+yPB+2zPC（x,y,z∈R），求 x+y-z。信号词：重心→三个顶点位置向量平均；等值面：M 在底面 1 倍面上。视觉侧车（E2）：P 上方、A 左、C 右、B 右下、M 在底面内（侧车对 M 位置描述『在 AC 上』与题干『重心』存在视觉噪声，以题干文字为准）。",
+   "course_call": {
+    "course_id": "3.1.2.2",
+    "method_model_id": "3.1.2.2:centroid_coefficient",
+    "appears_before_first_use": true,
+    "linkage": "课程 3.1.2.2 等值面法明确给出：三角形重心 AG=⅓(OA+OB)（三点平均）、四面体重心=四点平均；底面 ABC 为 1 倍面 ⇒ PM 的系数和=1。",
+    "first_use_location": "任务13 B9（3.1.2.2 首次独立应用；3.1.2.1 唯一分解辅助）"
+   },
+   "first_line": "目标量：x、y、z 及 x+y-z；先写重心的位置向量关系 PM=⅓(PA+PB+PC)。",
+   "second_line": "依据：重心=三点平均（课程 3.1.2.2 重心特性）；与题干 PM=xPA+yPB+2zPC 按基底 {PA,PB,PC} 系数唯一性比较；等值面复核：⅓+⅓+⅓=1（底面 1 倍面）。",
+   "continuation": "x=⅓，y=⅓，2z=⅓ ⇒ z=⅙ ⇒ x+y-z=⅓+⅓-⅙=½，对应选项 B。",
+   "independent_self_check": "核对：系数唯一性由空间向量基本定理保证；2z 前的系数 2 已计入（z=⅙ 而非 ⅓）；等值面系数和 1 与拆分一致；结果 ½ 与选项 B 一致。",
+   "first_breakpoint": "none",
+   "hint_level": "none",
+   "verdict": "PASS",
+   "answer_sidecar_read": false,
+   "human_acceptance_not_proven": true
+  },
+  {
+   "section": "1.2+1.3",
+   "cycle": 5,
+   "item_id": "8398d10a7994f7f5",
+   "task": "14",
+   "label": "教材例6",
+   "kind": "教学例题（类型例题）",
+   "visual_status": "READY_TEXT_ONLY",
+   "source_revision": {
+    "generation": "G-CH1-S12-01",
+    "source_packet_type": "DEEPSEEK_STUDENT_CONTEXT",
+    "packet_status": "VERIFIED",
+    "route_revision": "10 循环重构（build-1.2-1.3, 2026-08-16T22:10:00, item_id/qid 复用）"
+   },
+   "context_sha256": "271c68719a46b628e716267fb786ee13c4e40bec9523ffe4f005fada1c05fd86",
+   "observation_signal": "题面：(1) a=(1,-3,2)，b=(1,1,0)，求 2a-3b；(2) a=(2,3,5)，b=(3,1,-4)，求 |a-2b|；(3) 求平行于 a=(-1,2,1) 的单位向量。信号词：坐标加减、数乘、模长、单位向量。",
+   "course_call": {
+    "course_id": "3.1.3.2",
+    "method_model_id": "3.1.3.2:linear_ops",
+    "appears_before_first_use": true,
+    "linkage": "课程 3.1.3.2（前置 3.1.3.1 已听）：加减=对应坐标相加减；数乘 λ(x,y,z)=(λx,λy,λz)；模长=√(x²+y²+z²)；单位向量=±a/|a|。",
+    "first_use_location": "任务14 教材例6（3.1.3.2 类型Ⅱ 首次执行）"
+   },
+   "first_line": "目标量：三个小题的向量/模/单位向量；逐项对应坐标运算，括号外层符号先保留再展开。",
+   "second_line": "依据：①2a-3b=(2-3, -6-3, 4-0)=(-1,-9,4)；②a-2b=(2-6, 3-2, 5+8)=(-4,1,13)，|a-2b|=√(16+1+169)=√186；③|a|=√6，单位向量 ±(-1,2,1)/√6。",
+   "continuation": "①(-1,-9,4)；②√186；③±(-1/√6, 2/√6, 1/√6)（同向与反向两个都要写）。",
+   "independent_self_check": "核对：数乘先乘后加减；模长平方和开根无漏项；单位向量模长=1 可回代验算；『平行』含同向与反向两方向。",
+   "first_breakpoint": "none",
+   "hint_level": "none",
+   "verdict": "PASS",
+   "answer_sidecar_read": false,
+   "human_acceptance_not_proven": true
+  }
+ ]
+}

@@ -1,0 +1,247 @@
+{
+    "schema_version":  "7.4",
+    "iteration":  3,
+    "worker_id":  "Z4",
+    "report_type":  "zero_base_cycle_simulation_iteration3",
+    "cycle_scope":  {
+                        "assigned":  [
+                                         "1.1-cycle-7",
+                                         "1.1-cycle-8"
+                                     ],
+                        "note":  "唯一非重叠范围：cycle-7 二面角平面角前置与应用（课 3.1.4.5 + k4 前置块 + 检查点 1.1-dihedral-check-1 + B6/B7）；cycle-8 极化与四点共面综合（桥接 bridge-1.1-polarization + micro-four-point-coplanar + B8/C13）",
+                        "moved_items_check":  "B6/B7/B8/C13 均在当前 packet（重建于 2026-08-14T19:14:54，schema 7.4，9 个循环）的 cycle-7/cycle-8 exercise_questions 中，未被移走；未把旧循环题目计入"
+                    },
+    "sources_read_this_iteration":  [
+                                        "data/packets/1.1/learning_packet.json（重建版：cycles 7/8 定义、检查点、习题题干、k3/k4 前置知识块）",
+                                        "data/course_transcripts/3.1.4.5 平面与平面的夹角.json（course_key=plane_plane_angle，duration 2272s，sha256 fa1779fc...）",
+                                        "data/bridge_micro_lessons.json（bridge-1.1-polarization、micro-four-point-coplanar 两个桥接单元文本）",
+                                        "data/bridge_supplement_lessons.json（结构核对，确认不含本范围两个桥接）"
+                                    ],
+    "assigned_items":  [
+                           {
+                               "answer_policy":  "NO_ANSWER",
+                               "item":  "检查点 1.1-dihedral-check-1（二面角平面角识别）",
+                               "cycle":  "1.1-cycle-7",
+                               "kind":  "method_checkpoint"
+                           },
+                           {
+                               "qid":  "Q-a5a0d0efe5d430ca",
+                               "item":  "B6",
+                               "cycle":  "1.1-cycle-7",
+                               "kind":  "exercise_B"
+                           },
+                           {
+                               "qid":  "Q-c541e3eee1efc530",
+                               "item":  "B7",
+                               "cycle":  "1.1-cycle-7",
+                               "kind":  "exercise_B"
+                           },
+                           {
+                               "qid":  "Q-9d766f3ecd1ae46e",
+                               "item":  "B8",
+                               "cycle":  "1.1-cycle-8",
+                               "kind":  "exercise_B"
+                           },
+                           {
+                               "qid":  "Q-32207093b5cdcaee",
+                               "item":  "C13",
+                               "cycle":  "1.1-cycle-8",
+                               "kind":  "exercise_C"
+                           }
+                       ],
+    "attempts":  [
+                     {
+                         "first_breakpoint":  "概念断点：二面角平面角定义及其良定义性论证在路径材料中缺失（k4 引用错位，转写未定义平面角）",
+                         "question":  "给定二面角 α-l-β，在棱 l 上任选一点 O，分别在两个面内作 OA、OB 垂直于 l。请说明角 AOB 为什么代表该二面角的平面角，并列出点不在同一截面或射线未垂直于棱时为什么不能直接套用。",
+                         "conclusion":  "PARTIAL_FROM_PATH（缺口部分明确标注为 NOT_IN_PATH，未以先验补洞）",
+                         "independent_answer":  "路径可支持部分：（1）转写 3.1.4.5 给出二面角定义：两个半平面沿棱 l 所成的角，范围 [0°,180°]（翻书模型），与平面与平面的夹角（锐角 [0°,90°]）区分；（2）求法：两平面法向量 M、N，|cos φ| = |M·N|/(|M||N|)，法向量夹角与二面角等角或补角故套绝对值，钝锐由几何关系直观判定。路径未支持部分（不得用模型自带知识冒充路径）：为什么 ∠AOB 代表平面角、∠AOB 与 O 的选取无关（良定义性）、点不在同一截面或射线不垂直棱为何不可直接套用——k4 前置块不含二面角内容，转写未定义平面角，packet 全文本检索二面角/平面角零命中；检查点 knowledge_refs=[1.1-k4] 为引用错位。",
+                         "cycle":  "1.1-cycle-7",
+                         "confidence":  0.3,
+                         "hint_used":  false,
+                         "item":  "检查点 1.1-dihedral-check-1",
+                         "note":  "confidence 仅对路径可支持部分的作答；材料缺口不是提示可解，是路径内容缺失",
+                         "result":  "PARTIAL_FROM_PATH（缺口部分明确标注为 NOT_IN_PATH，未以先验补洞）"
+                     },
+                     {
+                         "verification":  "独立坐标复核：B=(0,0,0), C=(2,0,0), A=(1,3/2,√3/2)（面 ABC 与面 BCDE 绕 BC 成 π/3），D=(2,0,2)：AC=(1,-3/2,-√3/2)，BD=(2,0,2)，AC·BD = 2 - √3 ✓",
+                         "first_breakpoint":  "操作断点：AB 与 CD 的夹角不能直接读出（AB 不垂直棱），需分解为沿棱/垂直棱分量；垂直棱分量与 CD 的夹角符号（120° 而非 60°）需方向判定",
+                         "question":  "正三角形 ABC 和正方形 BCDE 边长均为 2，二面角 A-BC-D = π/3，求 AC·BD",
+                         "hint_used":  false,
+                         "cycle":  "1.1-cycle-7",
+                         "confidence":  0.8,
+                         "key_derivation":  "取棱 BC。AC = AB + BC；BD = BC + CD（正方形，BC⊥CD，|CD|=2）。AC·BD = AB·BC + AB·CD + BC·BC + BC·CD。逐项：AB·BC = 2·2·cos120° = -2（等边三角形 ∠ABC=60°，向量 AB 与 BC 夹角 120°）；BC·BC = 4；BC·CD = 0；AB·CD：把 AB 分解为沿棱分量（|AB|cos60°=1，与 CD 垂直）与垂直棱分量（|AB|sin60°=√3），垂直棱分量指向棱侧，与 CD（远离棱）夹角 = π - π/3 = 120°（用到两半平面内垂直棱的射线夹角=二面角，即平面角定义，路径未显式提供，见 knowledge_order_assessment），故 AB·CD = √3·2·cos120° = -√3。合计：-2 - √3 + 4 = 2 - √3。",
+                         "item":  "B6",
+                         "result":  "2-√3（选项 A）"
+                     },
+                     {
+                         "verification":  "独立坐标复核：l=x 轴，A=(0,0,0), B=(1,0,0), C=(0,0,2), D=(1,3√3/2,3/2)，CD=(1,3√3/2,-1/2)，|CD|² = 1+27/4+1/4 = 8 ✓",
+                         "first_breakpoint":  "概念/操作断点：CA 与 BD 的夹角取 π - 平面角 = 2π/3（一指向棱侧、一远离棱侧，方向相反）",
+                         "question":  "二面角 α-l-β，棱上 A、B，AC、BD 分别在两半平面内且都垂直于棱 l；AB=1, AC=2, BD=3，平面角 π/3，求 CD",
+                         "hint_used":  false,
+                         "cycle":  "1.1-cycle-7",
+                         "confidence":  0.8,
+                         "key_derivation":  "CD = CA + AB + BD（路径 C→A→B→D）。CD² = |CA|² + |AB|² + |BD|² + 2CA·AB + 2CA·BD + 2AB·BD。CA⊥AB、AB⊥BD（都垂直于棱 l），交叉项只剩 2CA·BD。CA 指向棱侧（C→A），BD 远离棱侧（B→D），夹角 = π - π/3 = 2π/3，cos = -1/2（依赖平面角定义，路径未显式提供）。CA·BD = 2·3·(-1/2) = -3。CD² = 4 + 1 + 9 + 2·(-3) = 8，CD = 2√2。",
+                         "item":  "B7",
+                         "result":  "2√2（选项 B）"
+                     },
+                     {
+                         "verification":  "独立数值：正方体 [0,2]³，A=(0,0,0), C=(2,2,0), O=(1,1,0)；P=(0,0,2)：PA·PC = (0,0,2)·(2,2,2) = 4 ✓；P=(1,1,1)：PA·PC = 1 \u003c 4 ✓",
+                         "first_breakpoint":  "操作断点：选择 AC 中点 O 把 PA·PC 改写为 |PO|² - |OA|²（桥接要求先判断优化对象再选中心点；恒等式须自推，k4 只给分配律与模长平方）",
+                         "question":  "棱长为 2 的正方体 ABCD-A1B1C1D1，P 在正方体内（含表面），求 PA·PC 的最大值",
+                         "hint_used":  false,
+                         "cycle":  "1.1-cycle-8",
+                         "confidence":  0.85,
+                         "key_derivation":  "设 O 为 AC 中点。PA = PO + OA，PC = PO + OC，且 OA = -OC。推导极化恒等式（桥接 step1 要求自行从模长平方展开，不套符号）：PA·PC = (PO+OA)·(PO+OC) = |PO|² + PO·(OA+OC) + OA·OC = |PO|² - |OA|²（分配律来自 k4；OA+OC=0 因 O 为中点）。|OA|² = (2√2/2)² = 2（|AC| = 2√2 为底面对角线）。P 在正方体内（含表面）：O = 底面中心，|PO|² 最大 = O 到最远顶点（上底面四顶点）距离平方 = 1+1+4 = 6。max PA·PC = 6 - 2 = 4。等号条件：P = A1/B1/C1/D1 中任一顶点。",
+                         "item":  "B8",
+                         "result":  "4"
+                     },
+                     {
+                         "verification":  "代回验证：取 x=5 ⇒ p=3, q=-13/5，OA = 5OB - 7OC = a-2b+c ✓；3p+5q = 9-13 = -4 ✓",
+                         "first_breakpoint":  "概念断点：把四点共面翻译为 OA = xOB + yOC 的线性相关形式（k3 定理的等价使用）；随后消 x 的技巧（反解 p,q 消 x）",
+                         "question":  "a,b,c 不共面；OA = a-2b+c，OB = pa+b+qc，OC = 2a+b-2c；若 O,A,B,C 共面，求 3p+5q",
+                         "hint_used":  false,
+                         "cycle":  "1.1-cycle-8",
+                         "confidence":  0.85,
+                         "key_derivation":  "O,A,B,C 共面 ⇔ 以 O 为公共起点的三个向量 OA、OB、OC 共面（线性相关）。由 k3 共面向量定理（路径显式给出），OB、OC 不共线时 OA = xOB + yOC。展开：a-2b+c = x(pa+b+qc) + y(2a+b-2c) = (xp+2y)a + (x+y)b + (xq-2y)c。a,b,c 不共面 ⇒ 空间一组基 ⇒ 系数对应相等：xp+2y=1；x+y=-2；xq-2y=1。由 x+y=-2 得 y=-2-x，代入得 x(p-2)=5，x(q+2)=-3。x≠0（若 x=0 则 5=0 矛盾）⇒ p = 2+5/x，q = -2-3/x ⇒ 3p+5q = 6+15/x-10-15/x = -4。退化检查（p=2, q=-2 时 OB=OC，B=C 四点共面平凡成立）：3p+5q = 6-10 = -4，一致。",
+                         "item":  "C13",
+                         "result":  "-4"
+                     }
+                 ],
+    "first_breakpoints":  [
+                              {
+                                  "first_breakpoint":  "平面角定义与良定义性论证在路径中缺失（k4 引用错位，转写未定义平面角）",
+                                  "kind":  "路径材料缺口（概念断点）",
+                                  "hint_used":  false,
+                                  "item":  "检查点 1.1-dihedral-check-1",
+                                  "confidence":  0.3
+                              },
+                              {
+                                  "first_breakpoint":  "AB 与 CD 的夹角需经沿棱/垂直棱分量分解与方向判定（120° 符号）",
+                                  "kind":  "操作断点",
+                                  "hint_used":  false,
+                                  "item":  "B6",
+                                  "confidence":  0.8
+                              },
+                              {
+                                  "first_breakpoint":  "CA 与 BD 夹角 = π - 平面角（指向棱侧 vs 远离棱侧）的方向判定",
+                                  "kind":  "概念/操作断点",
+                                  "hint_used":  false,
+                                  "item":  "B7",
+                                  "confidence":  0.8
+                              },
+                              {
+                                  "first_breakpoint":  "中点 O 的选择与极化恒等式的自行推导（|PO|² - |OA|²）",
+                                  "kind":  "操作断点",
+                                  "hint_used":  false,
+                                  "item":  "B8",
+                                  "confidence":  0.85
+                              },
+                              {
+                                  "first_breakpoint":  "四点共面 → OA = xOB + yOC 的线性相关翻译及消 x 技巧",
+                                  "kind":  "概念/操作断点",
+                                  "hint_used":  false,
+                                  "item":  "C13",
+                                  "confidence":  0.85
+                              }
+                          ],
+    "knowledge_order_assessment":  {
+                                       "cycle_7":  {
+                                                       "appeared_before_first_use":  {
+                                                                                         "向量夹角与数量积（k4 前置块）":  "是（cycle-7 内嵌 prerequisite_knowledge_blocks，先于检查点与习题）",
+                                                                                         "二面角概念与法向量求法（3.1.4.5 转写）":  "是（course_keys=[plane_plane_angle]，转写先于作答）"
+                                                                                     },
+                                                       "used_but_not_explicitly_appeared":  {
+                                                                                                "二面角平面角定义（棱上取 O，两半平面内 OA⊥l、OB⊥l，∠AOB 为平面角，与 O 无关）":  "首次用于检查点与 B6/B7，但 k4 块、转写、packet 全部文本均未显式给出（packet 检索二面角/平面角零命中；转写只在结果表述中带过平面角一词，未定义）",
+                                                                                                "检查点 knowledge_refs=[1.1-k4]":  "引用错位：k4 块只含向量夹角/数量积，无二面角内容"
+                                                                                            },
+                                                       "verdict":  "存在最小缺口：需在 cycle-7 前置知识块或转写中补入二面角平面角定义、良定义性（与 O 无关）及垂直棱的射线间夹角=平面角断言；B6/B7 与检查点均依赖该缺失定义，不得以模型自带知识冒充路径已教"
+                                                   },
+                                       "cycle_8":  {
+                                                       "appeared_before_first_use":  {
+                                                                                         "k3 共面向量定理与四点共面系数和=1（前置块）":  "是（cycle-8 prerequisite_knowledge_blocks 内嵌，含推论补全：P,A,B,C 共面当且仅当 x+y+z=1）",
+                                                                                         "k4 数量积/分配律/模长平方（前置块）":  "是",
+                                                                                         "桥接文本 lesson_steps/method_check":  "是（bridge-1.1-polarization、micro-four-point-coplanar 已读，NO_FINAL_ANSWERS 骨架）"
+                                                                                     },
+                                                       "used_but_not_explicitly_appeared":  "无——极化恒等式由 k4 分配律显式推导（桥接 step1 与 method_check 明确要求自推来源）；C13 由 k3 定理支撑；为什么系数和为 1 由桥接 method_check 要求自证，本报告给出 2 行推导（P∈面ABC ⇔ AP=αAB+βAC ⇔ OP=(1-α-β)OA+αOB+βOC）",
+                                                       "verdict":  "知识顺序完整，无路径洞"
+                                                   }
+                                   },
+    "comparison_to_iteration_2":  {
+                                      "fixed":  [
+                                                    {
+                                                        "issue":  "iteration 2：micro-four-point-coplanar 桥接挂在 cycle-4 却指向 C13/C14（属旧 cycle-5），桥接错位",
+                                                        "now":  "重建后 C13 归属 cycle-8 且由 micro-four-point-coplanar 显式支撑（bridge_micro_lessons.json target_questions 含 1.1-C13），错位消除"
+                                                    },
+                                                    {
+                                                        "issue":  "iteration 2：极化桥接旧 contexts 中 targets 含 C13/C14",
+                                                        "now":  "重建后 bridge-1.1-polarization targets=[1.1-B8, 1.2+1.3-C16]，不再列 C13/C14，已修正"
+                                                    },
+                                                    {
+                                                        "issue":  "iteration 2：k3 系数和=1 定理显式化（cycle-4 前置块）",
+                                                        "now":  "本次 C13 直接使用该定理（cycle-8 前置块同样内嵌），验证有效"
+                                                    }
+                                                ],
+                                      "new_gaps_vs_iteration_2":  [
+                                                                      "cycle-7 平面角定义缺失（iteration 2 范围不含 cycle-7，为本次新发现的范围缺口）：检查点无法从路径完整作答，B6/B7 依赖未显式提供的定义"
+                                                                  ],
+                                      "carried_out_of_scope":  [
+                                                                   "iteration 2 遗留项（B9 无专属桥接、cycle-4 视觉核验等）属 cycle-4，不在本次 cycle-7/8 范围"
+                                                               ]
+                                  },
+    "status":  "partial",
+    "status_rationale":  {
+                             "cycle_8":  "proxy_pass（代理层面）：B8、C13 独立完成，知识顺序完整（k3/k4 前置块+桥接文本显式支撑），双路径/数值复核一致，hint_used=false",
+                             "cycle_7":  "partial：B6、B7 代数过程正确（conf 0.8），但关键步骤依赖二面角平面角定义，该定义在路径材料（k4、3.1.4.5 转写、packet）中未显式出现；检查点 1.1-dihedral-check-1 无法从路径完整完成（材料缺口，非提示可解）",
+                             "overall":  "partial——无硬阻断（非 blocked），但 cycle-7 存在显式知识链缺口且检查点未闭环，不能判 proxy_pass；代理解出不等于真人掌握"
+                         },
+    "remaining_gaps":  [
+                           {
+                               "detail":  "需在 cycle-7 前置知识块或转写补入：平面角定义（棱上一点 O，两半平面内作 OA⊥l、OB⊥l，∠AOB 为平面角）、良定义性（与 O 无关，l⊥平面AOB）、以及垂直棱的两射线夹角（含方向）即平面角或其补角断言；同时修正检查点 knowledge_refs（当前错挂 1.1-k4）",
+                               "affected_items":  [
+                                                      "检查点 1.1-dihedral-check-1",
+                                                      "B6",
+                                                      "B7"
+                                                  ],
+                               "gap":  "cycle-7 二面角平面角定义缺失（最小缺口）"
+                           },
+                           {
+                               "detail":  "1.1-dihedral-check-1 的为什么代表平面角、点不在同一截面或射线不垂直棱为何不可直接套用两问在路径材料下不可作答，需补知识后重试",
+                               "affected_items":  [
+                                                      "检查点 1.1-dihedral-check-1"
+                                                  ],
+                               "gap":  "检查点未闭环"
+                           },
+                           {
+                               "detail":  "即使代数结论正确（2-√3、2√2），其解法引用了路径外定义；若路径判定禁止先验补洞，则 B6/B7 在补知识前应标记为依赖缺口，而非完全放行",
+                               "affected_items":  [
+                                                      "B6",
+                                                      "B7"
+                                                  ],
+                               "gap":  "B6/B7 依赖标注"
+                           },
+                           {
+                               "detail":  "极化桥接要求近迁移只改一个条件独立完成、等号条件可解释，四点共面桥接要求同构变式+口述理由：本报告含原型题与理由文本，但自造变式/近迁移未独立成题，release 未完整闭环",
+                               "affected_items":  [
+                                                      "B8",
+                                                      "C13"
+                                                  ],
+                               "gap":  "桥接 release 证据"
+                           }
+                       ],
+    "answer_sources_read":  [
+                                "data/packets/1.1/learning_packet.json（重建版，cycles 7/8、检查点、习题题干、k3/k4 前置知识块）",
+                                "data/course_transcripts/3.1.4.5 平面与平面的夹角.json",
+                                "data/bridge_micro_lessons.json（polarization 与 four-point-coplanar 桥接文本）",
+                                "data/bridge_supplement_lessons.json（结构核对，确认不含本范围桥接）"
+                            ],
+    "forbidden_answer_sources_read":  [
+
+                                      ],
+    "honesty_boundary":  {
+                             "answer_isolation":  "未读取 answer_sidecar.json、答案册、任何习题答案、其他代理报告或其他循环作答；forbidden_answer_sources_read=[]；B6/B7/B8/C13 与检查点均无答案可参考（answer_policy=NO_ANSWER/答案隔离）",
+                             "no_prior_filling":  "检查点与 B6/B7 中路径未显式提供的平面角定义部分，未用模型自带知识冒充路径内容：相关推导明确标注依赖项并列入 knowledge_order_assessment 缺口",
+                             "proxy_vs_human":  "代理解出不等于真人掌握；first_breakpoint、hint_used、confidence 为模拟记录",
+                             "verification_scope":  "B6/B7/B8/C13 结论均经独立坐标数值复核；无视觉缺口（B6/B7 VISION_VERIFIED E1/E2，B8/C13 文本题 E1）",
+                             "modification_scope":  "仅新增 reports/zero_base_cycles/1.1-iteration-3-worker-4.json；未修改 manifest、packet、上下文、桥接、代码、测试或其他报告"
+                         }
+}

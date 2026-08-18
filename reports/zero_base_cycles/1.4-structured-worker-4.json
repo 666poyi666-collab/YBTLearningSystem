@@ -1,0 +1,285 @@
+{
+  "schema_version": "1.0",
+  "section": "1.4",
+  "worker": "worker-4",
+  "generation": "G-CH1-S14-01",
+  "worker_status": "PARTIAL",
+  "item_results": [
+    {
+      "section": "1.4",
+      "cycle": "1.4-cycle-5",
+      "item_id": "1.4-cycle-5-例18",
+      "source_revision": {
+        "generation": "G-CH1-S14-01"
+      },
+      "context_sha256": "d638b3d2dd2364a3e89da9fb90cab36005e9cc2a132cbbdc9bac599e579a69a6",
+      "observation_signal": "类型Ⅳ 求距离：目标=点线距/线段长度（标准解题模型）",
+      "course_call": {
+        "course_id": "3.1.4.7",
+        "method_model_id": "length_as_vector_mod",
+        "appears_before_first_use": true,
+        "linkage": "类型Ⅳ 距离：先把所求长度/距离翻译成向量模，判断是否需要垂足或法向量",
+        "first_use_location": "3.1.4.7 视频距离段（点面距投影法；向量模长方法）"
+      },
+      "first_line": "第一行：写代表目标线段的向量（或目标距离）",
+      "second_line": "第二行：用中点/分点/模长平方表示，逐项列出交叉项；依据：|v|²=Σ坐标平方",
+      "continuation": "继续：代入并开方→注明距离非负→答题",
+      "independent_self_check": "核对：向量方向不影响长度；根式非负；分点参数范围；垂足/垂直条件成立；线段长度 vs 点面距离区分",
+      "first_breakpoint": "",
+      "hint_level": "full",
+      "verdict": "PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.4",
+      "cycle": "1.4-cycle-5",
+      "item_id": "1.4-cycle-5-例19",
+      "source_revision": {
+        "generation": "G-CH1-S14-01"
+      },
+      "context_sha256": "d638b3d2dd2364a3e89da9fb90cab36005e9cc2a132cbbdc9bac599e579a69a6",
+      "observation_signal": "类型Ⅳ 求距离：目标=点面距（标准解题模型）",
+      "course_call": {
+        "course_id": "3.1.4.7",
+        "method_model_id": "point_plane_dist_projection",
+        "appears_before_first_use": true,
+        "linkage": "类型Ⅳ 距离：点面距 d=|AP·n|/|n|（面内任取一点）",
+        "first_use_location": "3.1.4.7 视频点面距段（CC1/CD/CE 三向量殊途同归）"
+      },
+      "first_line": "第一行：目标=d(P,α)；面内任取 A，面外点 P",
+      "second_line": "第二行：d=|AP·n|/|n|；依据：AP 在法向量上投影长",
+      "continuation": "继续：求法向量（待定系数/差乘/平面方程）→点乘→除模→答题（图形未核验：本记录为教学阶段方法层跟随，未对题图做任何猜测）",
+      "independent_self_check": "核对：A∈α、P∉α；绝对值；距离非负",
+      "first_breakpoint": "",
+      "hint_level": "full",
+      "verdict": "PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.4",
+      "cycle": "1.4-cycle-5",
+      "item_id": "1.4-cycle-5-例20",
+      "source_revision": {
+        "generation": "G-CH1-S14-01"
+      },
+      "context_sha256": "d638b3d2dd2364a3e89da9fb90cab36005e9cc2a132cbbdc9bac599e579a69a6",
+      "observation_signal": "类型Ⅳ 求距离：目标=异面直线距离（标准解题模型）",
+      "course_call": {
+        "course_id": "3.1.4.7",
+        "method_model_id": "skew_line_dist_common_normal",
+        "appears_before_first_use": true,
+        "linkage": "类型Ⅳ 距离：异面直线距离=公垂向量投影（带变式）",
+        "first_use_location": "3.1.4.7 视频异面直线距离段（PM 与 FQ 公垂向量 N，MF 投影得 3分之根号3 A）"
+      },
+      "first_line": "第一行：目标=d(l1,l2)；写两直线方向向量 a、b 与公垂向量 n",
+      "second_line": "第二行：n·a=0 且 n·b=0 求 n；d=|PQ·n|/|n|（P∈l1、Q∈l2 任取连线）；依据：连线在公垂方向投影",
+      "continuation": "继续：求公垂向量（待定系数注意 Z=0 换设/差乘）→连线点乘→除模（图形未核验：本记录为教学阶段方法层跟随，未对题图做任何猜测）",
+      "independent_self_check": "核对：两线确为异面；公垂向量非零；两端点确实落在两直线上；异面距离≠线线角",
+      "first_breakpoint": "",
+      "hint_level": "full",
+      "verdict": "PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.4",
+      "cycle": "1.4-cycle-5",
+      "item_id": "1.4-cycle-5-变式",
+      "source_revision": {
+        "generation": "G-CH1-S14-01"
+      },
+      "context_sha256": "d638b3d2dd2364a3e89da9fb90cab36005e9cc2a132cbbdc9bac599e579a69a6",
+      "observation_signal": "直属变式：检验同一类型方法能否独立迁移",
+      "course_call": {
+        "course_id": "3.1.4.7",
+        "method_model_id": "skew_line_dist_common_normal",
+        "appears_before_first_use": true,
+        "linkage": "直属例20变式：独立迁移异面距离模型（复述母题模型+指出变更）",
+        "first_use_location": "3.1.4.7 视频异面直线距离段"
+      },
+      "first_line": "第一行：复述例20通用模型（公垂向量+投影）",
+      "second_line": "第二行：指出变更条件并只替换 —— 卡点：变式题面不可见",
+      "continuation": "继续：重建公垂向量与投影式 —— 停在题面不可见",
+      "independent_self_check": "核对：独立重建、参数范围、几何结论 —— 无法完成",
+      "first_breakpoint": "变式题面不可见：无法确认相对母题改动的具体条件（对象/系数/位置），独立重建仅到通用模型层",
+      "hint_level": "none",
+      "verdict": "PARTIAL",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.4",
+      "cycle": "1.4-cycle-5",
+      "item_id": "1.4-cycle-5-B8",
+      "source_revision": {
+        "generation": "G-CH1-S14-01"
+      },
+      "context_sha256": "d638b3d2dd2364a3e89da9fb90cab36005e9cc2a132cbbdc9bac599e579a69a6",
+      "observation_signal": "目标=异面距离相关结论（模板级观察信号，无题干）",
+      "course_call": {
+        "course_id": "3.1.4.7",
+        "method_model_id": "skew_line_dist_common_normal",
+        "appears_before_first_use": true,
+        "linkage": "B 组强化题：异面直线距离（模板：向量模/垂直分解/距离公式；题前复述桥接'异面直线距离'）",
+        "first_use_location": "3.1.4.7 视频异面直线距离段（公垂向量+投影）"
+      },
+      "first_line": "第一行：目标=d(异面直线)；写两方向向量",
+      "second_line": "第二行：公垂向量条件 n·a=n·b=0；d=|PQ·n|/|n|",
+      "continuation": "继续：求 n→投影 → 卡点：①题面不可见 ②桥接'异面直线距离'SOURCE_METHOD_READY 未闭合（放行条件：完成本批专项微单元）",
+      "independent_self_check": "模板检查：异面距离≠线线角；公垂方向与端点落在两线上；图形核验 —— 无法闭合",
+      "first_breakpoint": "题面不可见 + 桥接未闭合（异面直线距离：SOURCE_METHOD_READY，仅方法骨架未补完整无答案微课）",
+      "hint_level": "none",
+      "verdict": "BLOCKED",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.4",
+      "cycle": "1.4-cycle-5",
+      "item_id": "1.4-cycle-5-C9",
+      "source_revision": {
+        "generation": "G-CH1-S14-01"
+      },
+      "context_sha256": "d638b3d2dd2364a3e89da9fb90cab36005e9cc2a132cbbdc9bac599e579a69a6",
+      "observation_signal": "目标=翻折后距离相关结论（模板级观察信号，无题干）",
+      "course_call": {
+        "course_id": "3.1.4.7",
+        "method_model_id": "folding_invariance_dist",
+        "appears_before_first_use": true,
+        "linkage": "C 组拓展题：翻折守恒+异面距离综合（模板；题前复述桥接'翻折守恒与折后平面角；异面直线距离'）",
+        "first_use_location": "3.1.4.7 视频距离段"
+      },
+      "first_line": "第一行：标折痕、折前平面与折后平面；写目标距离",
+      "second_line": "第二行：列翻折保持的长度/角度（不变量），距离公式（投影/向量模）",
+      "continuation": "继续：列式求解 —— 卡点：①题面不可见 ②桥接'翻折守恒与折后平面角''异面直线距离'均 SOURCE_METHOD_READY 未闭合",
+      "independent_self_check": "模板检查：折痕不变量/刚性面内不变量区分、截面正确性、锐角约定 —— 无法闭合",
+      "first_breakpoint": "题面不可见 + 桥接未闭合（翻折守恒与折后平面角、异面直线距离：均 SOURCE_METHOD_READY，仅方法骨架）",
+      "hint_level": "none",
+      "verdict": "BLOCKED",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.4",
+      "cycle": "1.4-cycle-6",
+      "item_id": "1.4-cycle-6-例21",
+      "source_revision": {
+        "generation": "G-CH1-S14-01"
+      },
+      "context_sha256": "d638b3d2dd2364a3e89da9fb90cab36005e9cc2a132cbbdc9bac599e579a69a6",
+      "observation_signal": "类型Ⅴ 点线在面内判断：目标=判断点/线是否在平面内",
+      "course_call": {
+        "course_id": "3.1.4.2",
+        "method_model_id": "coplanar_decomposition",
+        "appears_before_first_use": true,
+        "linkage": "类型Ⅴ 点线在面内判断：区分'向量共面'与'点落在同一平面'，选两不共线基向量",
+        "first_use_location": "3.1.4.2 视频共面证明段（AG=2AF−2AE 拆分有解即共面）"
+      },
+      "first_line": "第一行：目标=判点/线在面内；写目标向量（统一公共起点）",
+      "second_line": "第二行：设目标向量= x·基1 + y·基2，比较系数；依据：平面向量基本定理（拆分有解 ⇔ 共面）",
+      "continuation": "继续：解系数→有解即共面→若判断点面位置，另核位置向量系数和条件→落回结论（图形未核验：本记录为教学阶段方法层跟随，未对题图做任何猜测）",
+      "independent_self_check": "核对：基向量不共线；系数唯一；不能把向量共面直接写成点共面",
+      "first_breakpoint": "",
+      "hint_level": "full",
+      "verdict": "PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.4",
+      "cycle": "1.4-cycle-6",
+      "item_id": "1.4-cycle-6-例22",
+      "source_revision": {
+        "generation": "G-CH1-S14-01"
+      },
+      "context_sha256": "d638b3d2dd2364a3e89da9fb90cab36005e9cc2a132cbbdc9bac599e579a69a6",
+      "observation_signal": "类型Ⅴ 点线在面内判断：目标=判断点/线在面内",
+      "course_call": {
+        "course_id": "3.1.4.2",
+        "method_model_id": "coplanar_decomposition",
+        "appears_before_first_use": true,
+        "linkage": "类型Ⅴ 点线在面内判断：同上（共面拆分判定）",
+        "first_use_location": "3.1.4.2 视频共面证明段"
+      },
+      "first_line": "第一行：写目标向量或点的位置向量（公共起点）",
+      "second_line": "第二行：设为基向量线性组合并逐项比较系数；依据：平面向量基本定理",
+      "continuation": "继续：判断位置向量系数和是否满足题目平面→落回共面结论（图形未核验：本记录为教学阶段方法层跟随，未对题图做任何猜测）",
+      "independent_self_check": "核对：基向量条件、系数唯一性、位置向量系数和、向量共面≠点共面",
+      "first_breakpoint": "",
+      "hint_level": "full",
+      "verdict": "PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.4",
+      "cycle": "1.4-cycle-6",
+      "item_id": "1.4-cycle-6-C11",
+      "source_revision": {
+        "generation": "G-CH1-S14-01"
+      },
+      "context_sha256": "d638b3d2dd2364a3e89da9fb90cab36005e9cc2a132cbbdc9bac599e579a69a6",
+      "observation_signal": "目标=动态二面角/共面相关结论（模板级观察信号，无题干）",
+      "course_call": {
+        "course_id": "3.1.4.5",
+        "method_model_id": "dihedral_trig_param",
+        "appears_before_first_use": true,
+        "linkage": "C 组拓展题：动态二面角三角参数化+补形（模板：基向量/共面条件；题前复述两桥接）",
+        "first_use_location": "3.1.4.5 视频二面角段"
+      },
+      "first_line": "第一行：写基向量与共面/角度条件（参数化）",
+      "second_line": "第二行：把动态位置参数化，写参数方程或向量等式",
+      "continuation": "继续：列方程求解 —— 卡点：①题面不可见 ②桥接'动态二面角三角参数化'SOURCE_METHOD_READY 未闭合（补形 SUPPLEMENT_READY 未验证）",
+      "independent_self_check": "模板检查：基向量条件、系数唯一、位置系数和、参数定义域 —— 无法闭合",
+      "first_breakpoint": "题面不可见 + 桥接未闭合（动态二面角三角参数化：SOURCE_METHOD_READY 仅方法骨架；补形与辅助平行体：SUPPLEMENT_READY 未验证）",
+      "hint_level": "none",
+      "verdict": "BLOCKED",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    }
+  ],
+  "method_check_results": [
+    {
+      "section": "1.4",
+      "cycle": "1.4-cycle-5",
+      "method_check_id": "1.4-distance-check-1",
+      "method_model_id": "skew_distance_conversion",
+      "result": "PASS",
+      "evidence": "异面距离转化方法（公垂向量+投影）由 3.1.4.7 完整教学覆盖，可复述；注：补充桥接'异面直线距离'自身仍标记 SOURCE_METHOD_READY，只影响 B8/C9 放行，不影响本方法链复述"
+    },
+    {
+      "section": "1.4",
+      "cycle": "1.4-cycle-6",
+      "method_check_id": "1.4-in-plane-check-1",
+      "method_model_id": "in_plane_method_chain",
+      "result": "PASS",
+      "evidence": "点线在面内判断链由 3.1.4.2（共面拆分）+3.1.4.8（动点设参）覆盖，可复述；桥接'动态二面角三角参数化/补形'为习题服务，不计入本检查"
+    }
+  ],
+  "first_breakpoints": [
+    {
+      "item_id": "1.4-cycle-5-变式",
+      "cycle": "1.4-cycle-5",
+      "first_breakpoint": "变式题面不可见：无法确认相对母题改动的具体条件（对象/系数/位置），独立重建仅到通用模型层"
+    },
+    {
+      "item_id": "1.4-cycle-5-B8",
+      "cycle": "1.4-cycle-5",
+      "first_breakpoint": "题面不可见 + 桥接未闭合（异面直线距离：SOURCE_METHOD_READY，仅方法骨架未补完整无答案微课）"
+    },
+    {
+      "item_id": "1.4-cycle-5-C9",
+      "cycle": "1.4-cycle-5",
+      "first_breakpoint": "题面不可见 + 桥接未闭合（翻折守恒与折后平面角、异面直线距离：均 SOURCE_METHOD_READY，仅方法骨架）"
+    },
+    {
+      "item_id": "1.4-cycle-6-C11",
+      "cycle": "1.4-cycle-6",
+      "first_breakpoint": "题面不可见 + 桥接未闭合（动态二面角三角参数化：SOURCE_METHOD_READY 仅方法骨架；补形与辅助平行体：SUPPLEMENT_READY 未验证）"
+    }
+  ],
+  "answer_sidecar_read": false,
+  "human_acceptance_not_proven": true
+}

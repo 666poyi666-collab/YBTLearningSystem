@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "artifact": "LEARNING_ROUTE_GENERATION_SNAPSHOT",
+  "generation": "G-20260816-01",
+  "created_at": "2026-08-16T17:18:05+08:00",
+  "scope": "第一章当前路线；扩展章节必须另建章节级快照",
+  "revisions": {
+    "route": {
+      "sha256": "1b4eafc89e45de1f55f8cd91ebee31a3d5cc814c7f3e03536c490fb63dd8b25c",
+      "files": {
+        "chapter1_manifest.json": "c5405931b83aa684d3fccccfe5ec21917a40d520bee5eab3ce0af36eba9f6f12",
+        "data/bridge_micro_lessons.json": "745610806378f189ad97cc24d51e92b8a12a47e5b82be9fb654e34236b56c882",
+        "data/chapter1_learning_plan.json": "a57f0b916224a4c70b64123eb625dcee21d77b1d309f4206cfcbb308f3268d0e",
+        "data/question_coverage.json": "488b7d361c49f5c3f673812db3252e3f06466799e3f5ca5c89b61991c13fa809"
+      }
+    },
+    "packets": {
+      "sha256": "691782f7cb57e3c41fee98002575ec5a87b8a989830fcce3afc8be3e73611182",
+      "files": {
+        "data/packets/1.1/learning_packet.json": "88479f19ba0e2c147d9344d9e73648f3b0829925c919bdc8ebf18ceed1229b65",
+        "data/packets/1.2_1.3/learning_packet.json": "5cafb8dc40a3f1ea5adab861f27624b978d74c4195642b890b7b6d44bc10cbde",
+        "data/packets/1.4/learning_packet.json": "d18b83c5c3081a5e4b4d40304e7bd57e746d1c12009302f407e0929d440f3f87",
+        "data/packets/micro专题1/learning_packet.json": "6e6fe97baff7dd1de5156d619fd00e676ab261338b8404d6e8d29aae172f63de"
+      }
+    },
+    "contexts": {
+      "sha256": "544c7568e24f79f4001c2946ceaf2e0ecd5b1d0d4f51e90fea1e36f0edcc4796",
+      "files": {
+        "data/contexts/1.1.json": "cc0b7343bf1654288e651d3a0e7a763109aa38db989f4defeb116d26248b111a",
+        "data/contexts/1.2_1.3.json": "0020a62ac6dc2ac63fec88ad7e92950c97d4ae8305e86a3cbcb1cfadfee0a3a6",
+        "data/contexts/1.4.json": "14e59f8028947ecb78cf5b813d7f77d7555649001af51454d9c32ebd103dfe47",
+        "data/contexts/micro专题1.json": "68f20dd1f58a982b72df1dedb63ef3bb35c4547411afc712fdbaf6f1e8f722de"
+      }
+    },
+    "tests": {
+      "sha256": "276c332fa14c6174179d183fb1ac565069584ca7042e9a5e6fa642d550f189e2",
+      "files": {
+        "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "tests/test_browser_collector.py": "24f1de9f786ecdf56d550ed3eaa58a13718970ba23f5c5bb3d30a8ea91c5bc66",
+        "tests/test_completeness.py": "0a4b24546b23e87efe95e7ad24d578900557fe1138ce27c1538bb236a7a6ad65",
+        "tests/test_manifest_fidelity.py": "50e8eaa414ba3a700ff485256e81db724b15626bf264bd5c99d6a6873acd8a9f",
+        "tests/test_ocr_vision.py": "ebebe5abe3c5d76365aa3c9b52e460b51f73d39609865b28c9185cbc4f0a41aa",
+        "tests/test_preview_html.py": "5b8405982c6d5935a9119e57a072307a50918960a1644803568ac13effcc7244",
+        "tests/test_runtime.py": "c64e62dee3339b613d39cf607431f6d4611379978c018d4e34e9348cc3c2658a"
+      }
+    },
+    "standards": {
+      "sha256": "945101d8a41d4c7a1f78e9a688bdfd7b7b92f2b6c818fc64f4c810d57bff63f2",
+      "files": {
+        "data/zero_base_simulation_standard.md": "3c934e9cc73e36be66d0a7252c0cc3af42b37d8eb28377e25cfda9d349384cea"
+      }
+    },
+    "student_evidence": {
+      "sha256": "7232ef7ed7bcd5d8e1f42f44c29c140793b6155aa8f79abca60087242f20023f",
+      "files": {
+        "reports/final-teacher-judge-current.json": "762a4c510b39e11ca86c365e7a6933d343e6531aec7b9af51f829d7074707f92",
+        "reports/zero_base_agent_simulation.json": "a6e538480cf98b32e7984375cc2387d4b8119f99f68063fb843aee27428389a3",
+        "reports/zero_base_cycles/1.1-detailed-five-round-summary.json": "fb0100a1bfbb24bd67249fda0bee125aa615ea9a4b39528a23a69cc2328ab155",
+        "reports/zero_base_cycles/1.1-detailed-five-round-summary.md": "9d0fbd7a4fd08f903acc704050d7654f9196f46321d849252d2329845a5a0c66"
+      }
+    }
+  },
+  "changed_groups_from_previous": [
+    "route",
+    "packets",
+    "contexts",
+    "tests",
+    "standards",
+    "student_evidence"
+  ],
+  "completeness": {
+    "schema_version": 1,
+    "artifact": "ANSWER_FREE_LEARNING_COMPLETENESS_AUDIT",
+    "status": "passed",
+    "manifest_totals": {
+      "worked_examples": 58,
+      "direct_variants": 16,
+      "abc_exercises": 50,
+      "total_numbered_learning_items": 124
+    },
+    "packet_totals": {
+      "worked_examples": 58,
+      "direct_variants": 16,
+      "abc_exercises": 50,
+      "total_numbered_learning_items": 124
+    },
+    "expected_question_count": 50,
+    "coverage_question_count": 50,
+    "findings": []
+  },
+  "release_gates": {
+    "all_questions_release": false,
+    "attempt_ready_gate": false,
+    "full_every_question_release_gate": false,
+    "final_acceptance_status": "IN_PROGRESS_NOT_PUBLISHABLE"
+  },
+  "simulation_boundary": {
+    "proxy_results_can_be_recorded": true,
+    "human_acceptance_not_proven": true,
+    "cold_retest_24h": "not_run",
+    "real_user_observation": "not_run"
+  },
+  "verdict": "IN_PROGRESS_NOT_PUBLISHABLE"
+}

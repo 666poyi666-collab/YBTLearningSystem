@@ -1,0 +1,470 @@
+{
+  "schema_version": "7.1",
+  "kind": "CHAPTER_DEEPSEEK_CONSUMPTION_PROBE",
+  "checked_at": "2026-08-13T20:34:44.250796+00:00",
+  "endpoint": "http://127.0.0.1:10100/v1/chat/completions",
+  "requested_model": "opencode-go/deepseek-v4-flash",
+  "requested_reasoning_effort": "max",
+  "configured_context_window": 1000000,
+  "gate_policy": "validate_context 门禁原样执行；被门禁拦下的节不派发 HTTP、只记录缺口；不降低门禁、不把单节通过扩大为全章。",
+  "sections": [
+    {
+      "section": "1.1",
+      "context_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\contexts\\1.1.json",
+      "status": "passed",
+      "gate": {
+        "status": "passed",
+        "errors": [],
+        "route_status": "passed",
+        "route_errors": [],
+        "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\contexts\\1.1.json"
+      },
+      "dispatch": true,
+      "errors": [],
+      "transport": {
+        "id": "chatcmpl-a8f6af8c1a7440a4aa13100b",
+        "object": "chat.completion",
+        "status": "completed",
+        "returned_model": "opencode-go/deepseek-v4-flash",
+        "usage": {
+          "prompt_tokens": 2345,
+          "completion_tokens": 21183,
+          "total_tokens": 23528,
+          "prompt_tokens_details": {
+            "cached_tokens": 2304
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 18909
+          }
+        },
+        "raw_path": "C:\\开发\\小工具\\一本通学习系统_v7\\scripts\\deepseek\\out\\raw_1.1.json",
+        "response_contract": "chat_completions_completed_or_incomplete_recorded",
+        "projection_sha256": "49069595effe6dfa13ffc2d239aba2618afa71d5451d62879b667a46fe03d883"
+      },
+      "model_output_text_present": true,
+      "model_output_parse_error": null,
+      "response": {
+        "runtime": {
+          "model": "opencode-go/deepseek-v4-flash",
+          "reasoning_effort": "max",
+          "context_window": 1000000
+        },
+        "context_sha256": "b807ba05de9c548de945a5b95ce05abb01e21e34f83243f2b750a563c870d14b",
+        "canary": "3763c686b0c27aad",
+        "probe_tokens": {
+          "Q-898523c513a8b29a": "ff013ee9",
+          "Q-6ce8264d983a858c": "5dc09d3d",
+          "Q-fe6dd2e1ff436d64": "f57b54c9"
+        },
+        "question_echo": {
+          "Q-898523c513a8b29a": {
+            "qid": "Q-898523c513a8b29a",
+            "question_key": "A1",
+            "group": "A",
+            "number": 1,
+            "question_text_prefix": "1. (2025 • 新疆巴音郭楞斯坦) 如图，在四面体 OABC 中，N 是 BC 的中点，设 \\(\\overrightarrow{OA} = a\\)， \\(",
+            "visual_status": "VISION_VERIFIED"
+          },
+          "Q-6ce8264d983a858c": {
+            "qid": "Q-6ce8264d983a858c",
+            "question_key": "A2",
+            "group": "A",
+            "number": 2,
+            "question_text_prefix": "2.（2025·全国模拟） 化简下列算式： （1） \\(2(a-2b-3c)-3(a+2b-c)\\)； （2） \\(\\overrightarrow{AB}-\\o",
+            "visual_status": "READY_TEXT_ONLY"
+          },
+          "Q-fe6dd2e1ff436d64": {
+            "qid": "Q-fe6dd2e1ff436d64",
+            "question_key": "A3",
+            "group": "A",
+            "number": 3,
+            "question_text_prefix": "3.（2025 · 山东菏泽模拟） 如图，在正方体 \\(ABCD-A_1B_1C_1D_1\\) 中，G 为 \\(CC_1\\) 中点，O 为 AC 与 BD 的交",
+            "visual_status": "VISION_VERIFIED"
+          },
+          "Q-6513d8c486c1c04d": {
+            "qid": "Q-6513d8c486c1c04d",
+            "question_key": "B4",
+            "group": "B",
+            "number": 4,
+            "question_text_prefix": "4.（2025·四川内江期末） 如图，已知三棱锥 \\(A-BCD\\) 的每条棱长都为 2，则 \\(\\overrightarrow{AB} \\cdot \\over",
+            "visual_status": "VISION_VERIFIED"
+          },
+          "Q-d81b063e40102a13": {
+            "qid": "Q-d81b063e40102a13",
+            "question_key": "B5",
+            "group": "B",
+            "number": 5,
+            "question_text_prefix": "### 5. （2025·新疆博尔塔拉期末） 如图，在棱长为2的正方体 \\(ABCD-A_{1}B_{1}C_{1}D_{1}\\) 中，E 是棱 \\(A_{1}",
+            "visual_status": "VISION_VERIFIED"
+          },
+          "Q-f6fb66a4ecb38a68": {
+            "qid": "Q-f6fb66a4ecb38a68",
+            "question_key": "B6",
+            "group": "B",
+            "number": 6,
+            "question_text_prefix": "6.（2025·山东菏泽期末） 如图，已知正三角形 ABC 和正方形 BCDE 的边长均为 2，且二面角 A-BC-D 的大小为 \\(\\frac{\\pi}{3}",
+            "visual_status": "VISION_VERIFIED"
+          },
+          "Q-870029d2572394b5": {
+            "qid": "Q-870029d2572394b5",
+            "question_key": "B7",
+            "group": "B",
+            "number": 7,
+            "question_text_prefix": "### 7. （2025·四川成都期末） 如图，二面角 \\(\\alpha-l-\\beta\\) 的棱上有两个点 \\(A\\)， \\(B\\)，线段 \\(AC\\) 与 ",
+            "visual_status": "VISION_VERIFIED"
+          },
+          "Q-200b0783bb2dbf45": {
+            "qid": "Q-200b0783bb2dbf45",
+            "question_key": "B8",
+            "group": "B",
+            "number": 8,
+            "question_text_prefix": "### 8. （2025·上海模拟） 已知 \\(P\\) 是棱长为 2 的正方体 \\(ABCD-A_1B_1C_1D_1\\) 内（含正方体表面）任意一点，则 \\(",
+            "visual_status": "READY_TEXT_ONLY"
+          },
+          "Q-215cfb5e2e2a9761": {
+            "qid": "Q-215cfb5e2e2a9761",
+            "question_key": "B9",
+            "group": "B",
+            "number": 9,
+            "question_text_prefix": "### 9. （2025·河北模拟） 如图，在正四棱锥 \\(P-ABCD\\) 中， \\(E\\)， \\(F\\) 分别为 \\(PA\\)， \\(PC\\) 的中点， \\",
+            "visual_status": "VISION_VERIFIED"
+          },
+          "Q-e059773ac9b297fc": {
+            "qid": "Q-e059773ac9b297fc",
+            "question_key": "B10",
+            "group": "B",
+            "number": 10,
+            "question_text_prefix": "### 10. （2025·上海模拟） 如图，在四面体 \\(ABCD\\) 中，点 \\(E, F, I, H\\) 分别是 \\(AB, AC, CD, BD\\) 的",
+            "visual_status": "VISION_VERIFIED"
+          },
+          "Q-55721055a4275230": {
+            "qid": "Q-55721055a4275230",
+            "question_key": "B11",
+            "group": "B",
+            "number": 11,
+            "question_text_prefix": "11.（2025·山东模拟） 已知正四面体 OABC 的棱长为 2，点 G 是 \\(\\triangle OBC\\) 的重心，M 是线段 AG 的中点. （1）用",
+            "visual_status": "VISION_VERIFIED"
+          },
+          "Q-7ef92b168cb1da62": {
+            "qid": "Q-7ef92b168cb1da62",
+            "question_key": "B12",
+            "group": "B",
+            "number": 12,
+            "question_text_prefix": "12\\. （2025·浙江台州模拟） 如图，在三棱锥 \\(P-ABC\\) 中，若 \\(AB = AC = 3\\)， \\(AP = 4\\)， \\(\\angle B",
+            "visual_status": "VISION_VERIFIED"
+          },
+          "Q-4b64e44d56d7b597": {
+            "qid": "Q-4b64e44d56d7b597",
+            "question_key": "C13",
+            "group": "C",
+            "number": 13,
+            "question_text_prefix": "13\\. (2025 · 安徽模拟) 已知 \\(a\\), \\(b\\), \\(c\\) 是空间中不共面的三个向量, \\(\\overrightarrow{OA}\\) ",
+            "visual_status": "READY_TEXT_ONLY"
+          },
+          "Q-b57617d1ae494d55": {
+            "qid": "Q-b57617d1ae494d55",
+            "question_key": "C14",
+            "group": "C",
+            "number": 14,
+            "question_text_prefix": "14.（2025·重庆模拟）（多选） 如图，在棱长为1的正四面体 \\(P-ABC\\) 中， \\(O\\) 为底面 \\(ABC\\) 的重心， \\(G\\)， \\(F\\",
+            "visual_status": "VISION_VERIFIED"
+          }
+        },
+        "understanding_summary": {
+          "section": "1.1",
+          "question_count": 14,
+          "expected_groups": {
+            "A": [
+              1,
+              3
+            ],
+            "B": [
+              4,
+              12
+            ],
+            "C": [
+              13,
+              14
+            ]
+          },
+          "must_listen_course_keys": [
+            "space_vector_ops",
+            "decomposition",
+            "equal_surface"
+          ],
+          "knowledge_point_ids": [
+            "1.1-k1",
+            "1.1-k2",
+            "1.1-k3",
+            "1.1-k4"
+          ],
+          "type_training": [
+            "类型Ⅰ 线性运算",
+            "类型Ⅱ 证明平行、共线",
+            "类型Ⅲ 证明共面",
+            "类型Ⅳ 数量积",
+            "类型Ⅴ 求长度、距离",
+            "类型Ⅵ 求角"
+          ],
+          "exercise_order": [
+            {
+              "group": "A",
+              "numbers": [
+                1,
+                2,
+                3
+              ]
+            },
+            {
+              "group": "B",
+              "numbers": [
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ]
+            },
+            {
+              "group": "C",
+              "numbers": [
+                13,
+                14
+              ]
+            }
+          ],
+          "mastery_not_assessed": true
+        }
+      },
+      "response_normalization": [
+        "question_echo[Q-898523c513a8b29a].qid_to_group_key",
+        "question_echo[Q-6ce8264d983a858c].qid_to_group_key",
+        "question_echo[Q-fe6dd2e1ff436d64].qid_to_group_key",
+        "question_echo[Q-6513d8c486c1c04d].qid_to_group_key",
+        "question_echo[Q-d81b063e40102a13].qid_to_group_key",
+        "question_echo[Q-f6fb66a4ecb38a68].qid_to_group_key",
+        "question_echo[Q-870029d2572394b5].qid_to_group_key",
+        "question_echo[Q-200b0783bb2dbf45].qid_to_group_key",
+        "question_echo[Q-215cfb5e2e2a9761].qid_to_group_key",
+        "question_echo[Q-e059773ac9b297fc].qid_to_group_key",
+        "question_echo[Q-55721055a4275230].qid_to_group_key",
+        "question_echo[Q-7ef92b168cb1da62].qid_to_group_key",
+        "question_echo[Q-4b64e44d56d7b597].qid_to_group_key",
+        "question_echo[Q-b57617d1ae494d55].qid_to_group_key",
+        "question_echo:list_to_qid_map"
+      ],
+      "verification": {
+        "status": "passed",
+        "errors": [],
+        "context": {
+          "status": "passed",
+          "errors": [],
+          "route_status": "passed",
+          "route_errors": [],
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\contexts\\1.1.json"
+        },
+        "path": "C:\\开发\\小工具\\一本通学习系统_v7\\scripts\\deepseek\\out\\.chapter_probe_response.tmp.json",
+        "verification_kind": "standalone_understanding_receipt"
+      }
+    },
+    {
+      "section": "1.2+1.3",
+      "context_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\contexts\\1.2_1.3.json",
+      "status": "blocked",
+      "gate": {
+        "status": "failed",
+        "errors": [
+          "context_status_not_verified",
+          "visual_not_consumable",
+          "unresolved_items"
+        ],
+        "route_status": "passed",
+        "route_errors": [],
+        "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\contexts\\1.2_1.3.json"
+      },
+      "dispatch": false,
+      "errors": [
+        "context_status_not_verified",
+        "visual_not_consumable",
+        "unresolved_items"
+      ],
+      "gap_detail": {
+        "status": "UNVERIFIED",
+        "unresolved": [
+          "Q-0b9899dd462c0221:NEEDS_VISION_SIDECAR"
+        ],
+        "needs_vision_sidecar_questions": [
+          {
+            "qid": "Q-0b9899dd462c0221",
+            "question_key": "B13",
+            "visual_status": "NEEDS_VISION_SIDECAR"
+          }
+        ],
+        "question_count": 16
+      }
+    },
+    {
+      "section": "1.4",
+      "context_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\contexts\\1.4.json",
+      "status": "blocked",
+      "gate": {
+        "status": "failed",
+        "errors": [
+          "context_status_not_verified",
+          "visual_not_consumable",
+          "unresolved_items"
+        ],
+        "route_status": "passed",
+        "route_errors": [],
+        "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\contexts\\1.4.json"
+      },
+      "dispatch": false,
+      "errors": [
+        "context_status_not_verified",
+        "visual_not_consumable",
+        "unresolved_items"
+      ],
+      "gap_detail": {
+        "status": "UNVERIFIED",
+        "unresolved": [
+          "Q-600b1406480e8a36:NEEDS_VISION_SIDECAR"
+        ],
+        "needs_vision_sidecar_questions": [
+          {
+            "qid": "Q-600b1406480e8a36",
+            "question_key": "B4",
+            "visual_status": "NEEDS_VISION_SIDECAR"
+          }
+        ],
+        "question_count": 12
+      }
+    },
+    {
+      "section": "micro专题1",
+      "context_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\contexts\\micro专题1.json",
+      "status": "blocked",
+      "gate": {
+        "status": "failed",
+        "errors": [
+          "context_status_not_verified",
+          "visual_not_consumable",
+          "unresolved_items"
+        ],
+        "route_status": "passed",
+        "route_errors": [],
+        "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\contexts\\micro专题1.json"
+      },
+      "dispatch": false,
+      "errors": [
+        "context_status_not_verified",
+        "visual_not_consumable",
+        "unresolved_items"
+      ],
+      "gap_detail": {
+        "status": "UNVERIFIED",
+        "unresolved": [
+          "Q-5a4561f30ce0989a:NEEDS_VISION_SIDECAR",
+          "Q-a216f4f643221e77:NEEDS_VISION_SIDECAR"
+        ],
+        "needs_vision_sidecar_questions": [
+          {
+            "qid": "Q-a216f4f643221e77",
+            "question_key": "B1",
+            "visual_status": "NEEDS_VISION_SIDECAR"
+          },
+          {
+            "qid": "Q-5a4561f30ce0989a",
+            "question_key": "B4",
+            "visual_status": "NEEDS_VISION_SIDECAR"
+          }
+        ],
+        "question_count": 8
+      }
+    }
+  ],
+  "summary": {
+    "total_sections": 4,
+    "gate_passed": 1,
+    "dispatched": 1,
+    "consumption_passed": 1,
+    "chapter_consumption_ready": false
+  },
+  "gaps": [
+    {
+      "section": "1.2+1.3",
+      "errors": [
+        "context_status_not_verified",
+        "visual_not_consumable",
+        "unresolved_items"
+      ],
+      "gap_detail": {
+        "status": "UNVERIFIED",
+        "unresolved": [
+          "Q-0b9899dd462c0221:NEEDS_VISION_SIDECAR"
+        ],
+        "needs_vision_sidecar_questions": [
+          {
+            "qid": "Q-0b9899dd462c0221",
+            "question_key": "B13",
+            "visual_status": "NEEDS_VISION_SIDECAR"
+          }
+        ],
+        "question_count": 16
+      }
+    },
+    {
+      "section": "1.4",
+      "errors": [
+        "context_status_not_verified",
+        "visual_not_consumable",
+        "unresolved_items"
+      ],
+      "gap_detail": {
+        "status": "UNVERIFIED",
+        "unresolved": [
+          "Q-600b1406480e8a36:NEEDS_VISION_SIDECAR"
+        ],
+        "needs_vision_sidecar_questions": [
+          {
+            "qid": "Q-600b1406480e8a36",
+            "question_key": "B4",
+            "visual_status": "NEEDS_VISION_SIDECAR"
+          }
+        ],
+        "question_count": 12
+      }
+    },
+    {
+      "section": "micro专题1",
+      "errors": [
+        "context_status_not_verified",
+        "visual_not_consumable",
+        "unresolved_items"
+      ],
+      "gap_detail": {
+        "status": "UNVERIFIED",
+        "unresolved": [
+          "Q-5a4561f30ce0989a:NEEDS_VISION_SIDECAR",
+          "Q-a216f4f643221e77:NEEDS_VISION_SIDECAR"
+        ],
+        "needs_vision_sidecar_questions": [
+          {
+            "qid": "Q-a216f4f643221e77",
+            "question_key": "B1",
+            "visual_status": "NEEDS_VISION_SIDECAR"
+          },
+          {
+            "qid": "Q-5a4561f30ce0989a",
+            "question_key": "B4",
+            "visual_status": "NEEDS_VISION_SIDECAR"
+          }
+        ],
+        "question_count": 8
+      }
+    }
+  ]
+}

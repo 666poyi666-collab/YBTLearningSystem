@@ -1,0 +1,525 @@
+{
+  "schema_version": "7.4",
+  "packet_type": "DEEPSEEK_SEQUENTIAL_LEARNING_PACKET",
+  "section": "4.6",
+  "status": "VERIFIED",
+  "source": {
+    "ocr_root": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100",
+    "ocr_docs": [
+      77,
+      81
+    ],
+    "source_file": null
+  },
+  "workflow_order": [
+    "repeat_each_learning_cycle_in_order",
+    "watch_current_courses",
+    "learn_each_current_example_then_attempt_its_direct_variants",
+    "attempt_current_abc_exercises_without_answers",
+    "assess_current_cycle_before_advancing",
+    "unseen_near_transfer",
+    "delayed_closed_book_review"
+  ],
+  "learning_cycles": [
+    {
+      "cycle_id": "4.6-cycle-1",
+      "sequence": 1,
+      "title": "类型I 用数学归纳法证明等式",
+      "course_keys": [
+        "4.4.9.1 数学归纳法求通项"
+      ],
+      "prerequisite_course_keys": [],
+      "optional_course_keys": [],
+      "knowledge_refs": [],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [
+        "类型I 用数学归纳法证明等式"
+      ],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [
+        {
+          "item_id": "2ded18214d55a0fc",
+          "kind": "example",
+          "label": "例1",
+          "example_number": 1,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型I 用数学归纳法证明等式",
+          "source_docs": [
+            77,
+            78
+          ],
+          "question_text": "【例 1】用数学归纳法证明： \\(1^3 + 2^3 + 3^3 + \\cdots + n^3 = \\left[\\frac{n(n+1)}{2}\\right]^2\\)。",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例 1】用数学归纳法证明： \\(1^3 + 2^3 + 3^3 + \\cdots + n^3 = \\left[\\frac{n(n+1)}{2}\\right]^2\\)。\n证明：（用数学归纳法证明与正整数n有关的结论，先验证当n取初始值时结论成立，这里n的初始值为1）\n(i)当 \\(n=1\\)时，左边 \\(=1^3=1\\)，右边 \\(\\left[\\frac{1\\times(1+1)}{2}\\right]^2=1\\)，所以结论成立；\n（接下来需假设当  \\(n = k (k \\geq 1)\\) 时结论成立，并由此出发去推导当  \\(n = k + 1\\) 时，结论也成立）\n(ii)假设当 \\(n=k(k\\geq1)\\)时，结论成立，即 \\(1^3+2^3+3^3+\\cdots+k^3=\\left[\\frac{k(k+1)}{2}\\right]^2\\)①，\n（接下来需要证明当 \\(n=k+1\\) 时结论也成立，也就是证明在题干所给等式中将 \\(n\\) 换成 \\(k+1\\) 所得的结果成立，即 \\(1^3 + 2^3 + 3^3 + \\cdots + k^3 + (k+1)^3 = \\left[\\frac{(k+1)(k+2)}{2}\\right]^2\\)，怎么证？只需运用归纳假设，将式①代入，化简整理即可）\n \\[1^{3}+2^{3}+3^{3}+\\cdots+k^{3}+(k+1)^{3}=\\left[\\frac{k(k+1)}{2}\\right]^{2}+(k+1)^{3}=(k+1)^{2}\\left(\\frac{k^{2}}{4}+k+1\\right)=(k+1)^{2}\\cdot\\frac{k^{2}+4k+4}{4}\\] \n\\[=(k+1)^2\\cdot\\left(\\frac{k+2}{2}\\right)^2=\\left[\\frac{(k+1)(k+2)}{2}\\right]^2\\]，故当 \\(n=k+1\\) 时，结论也成立；\n由(i)(ii)结合数学归纳法原理可知对任意的  \\(n \\in \\mathbb{N}^*\\)， \\(1^3 + 2^3 + 3^3 + \\cdots + n^3 = \\left[\\frac{n(n+1)}{2}\\right]^2\\) 都成立。\n【反思】可以看到，用数学归纳法证明结论的步骤是流程化的操作：先证明 \\(n\\) 取初始值 \\(n_0\\) 时（本题 \\(n_0=1\\)），结论成立，再假设当 \\(n=k\\) (\\(k \\geq n_0\\)) 时结论成立，由此出发推导出当 \\(n=k+1\\) 时结论也成立即可。本题的结论是直接给出的，只需证明，有时需要先猜测结论，再用数学归纳法证明，比如下面的变式。",
+          "solution_present": true,
+          "vision_hint": "4.6-LI2ded18214d55a0fc"
+        }
+      ],
+      "direct_variants": [
+        {
+          "item_id": "5ab0419a737b7a51",
+          "kind": "direct_variant",
+          "label": "变式",
+          "example_number": null,
+          "parent_example_number": 1,
+          "role": "direct_variant",
+          "role_ref": null,
+          "source_docs": [
+            78
+          ],
+          "question_text": "【变式】是否存在常数 \\(a\\), \\(b\\), 使 \\(1 \\times n + 2 \\times (n-1) + 3 \\times (n-2) + \\cdots + (n-1) \\times 2 + n \\times 1 = \\frac{1}{6}n(n+a)(n+b)\\) 对任意的 \\(n \\in \\mathbb{N}^*\\) 都成立？若存在，求出 \\(a\\), \\(b\\) 的值，并用数学归纳法证明你的结论；若不存在，请说明理由。",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "4.6-LI5ab0419a737b7a51"
+        }
+      ],
+      "exercise_questions": [],
+      "action_order": [
+        "watch_current_courses",
+        "learn_each_current_example_then_attempt_its_direct_variants",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [],
+      "prerequisite_knowledge_blocks": []
+    },
+    {
+      "cycle_id": "4.6-cycle-2",
+      "sequence": 2,
+      "title": "类型Ⅱ 用数学归纳法证明不等式",
+      "course_keys": [
+        "4.4.9.2 数学归纳法证明数列不等式"
+      ],
+      "prerequisite_course_keys": [
+        "4.4.9.1 数学归纳法求通项"
+      ],
+      "optional_course_keys": [],
+      "knowledge_refs": [],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 用数学归纳法证明不等式"
+      ],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [
+        {
+          "item_id": "669339f1ad2e10ee",
+          "kind": "example",
+          "label": "例2",
+          "example_number": 2,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型Ⅱ 用数学归纳法证明不等式",
+          "source_docs": [
+            78,
+            79
+          ],
+          "question_text": "【例 2】当  \\(n \\geq 2\\) 且  \\(n \\in \\mathbb{N}^*\\) 时，求证： \\(1 + \\frac{1}{2^2} + \\frac{1}{3^2} + \\cdots + \\frac{1}{n^2} < 2 - \\frac{1}{n}\\).",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例 2】当  \\(n \\geq 2\\) 且  \\(n \\in \\mathbb{N}^*\\) 时，求证： \\(1 + \\frac{1}{2^2} + \\frac{1}{3^2} + \\cdots + \\frac{1}{n^2} < 2 - \\frac{1}{n}\\).\n证明：（要证的是与正整数 \\(n\\) 有关的不等式，与证明等式类似，还是分两步完成，但需注意，这里要证的是结论在 \\(n \\geq 2\\) 时恒成立，所以初始值不再是 \\(n=1\\) 了，而是 \\(n=2\\)）\n(i)当 \\(n=2\\) 时，结论的左边 \\(=1+\\frac{1}{2^2}=\\frac{5}{4}\\)，右边 \\(=2-\\frac{1}{2}=\\frac{3}{2}\\)，所以左边 < 右边，结论成立；\n(ii)假设当 \\(n=k(k \\geq 2)\\) 时，结论成立，即 \\(1+\\frac{1}{2^2}+\\frac{1}{3^2}+\\cdots+\\frac{1}{k^2}<2-\\frac{1}{k}\\) ①，\n（要证当 \\(n=k+1\\) 时结论也成立，即证 \\(1+\\frac{1}{2^2}+\\frac{1}{3^2}+\\cdots+\\frac{1}{k^2}+\\frac{1}{(k+1)^2}<2-\\frac{1}{k+1}\\)，怎么证？可以运用上面的假设将 \\(1+\\frac{1}{2^2}+\\frac{1}{3^2}+\\cdots+\\frac{1}{k^2}\\) 这部分进行放缩）由①可得 \\(1+\\frac{1}{2^2}+\\frac{1}{3^2}+\\cdots+\\frac{1}{k^2}+\\frac{1}{(k+1)^2}<2-\\frac{1}{k}+\\frac{1}{(k+1)^2}\\) ②，\n（于是只要再证 \\(2-\\frac{1}{k}+\\frac{1}{(k+1)^2}<2-\\frac{1}{k+1}\\)，就能得到 \\(1+\\frac{1}{2^2}+\\frac{1}{3^2}+\\cdots+\\frac{1}{k^2}+\\frac{1}{(k+1)^2}<2-\\frac{1}{k+1}\\)，可通过作差比较来证）因为 \\(2-\\frac{1}{k}+\\frac{1}{(k+1)^2}-\\left(2-\\frac{1}{k+1}\\right)=\\frac{1}{k+1}-\\frac{1}{k}+\\frac{1}{(k+1)^2}=\\frac{k(k+1)-(k+1)^2+k}{k(k+1)^2}=-\\frac{1}{k(k+1)^2}<0\\)，\n所以 \\(2-\\frac{1}{k}+\\frac{1}{(k+1)^2}<2-\\frac{1}{k+1}\\)，结合②可得 \\(1+\\frac{1}{2^2}+\\frac{1}{3^2}+\\cdots+\\frac{1}{k^2}+\\frac{1}{(k+1)^2}<2-\\frac{1}{k+1}\\)，\n故当 \\(n=k+1\\) 时，结论也成立；\n由(i)(ii)结合数学归纳法原理可知对任意的  \\(n \\geq 2\\) 且  \\(n \\in \\mathbb{N}^*\\)，都有  \\(1 + \\frac{1}{2^2} + \\frac{1}{3^2} + \\cdots + \\frac{1}{n^2} < 2 - \\frac{1}{n}\\)。\n【反思】①初始值是结论中规定的 \\(n\\) 的最小值，不一定是 1；②可以看到，用数学归纳法证明不等式与用数学归纳法证明等式的步骤类似，也是分两步完成：先证 \\(n\\) 取初始值 \\(n_0\\) 时不等式成立；再假设当 \\(n = k (k \\geq n_0)\\) 时不等式成立，由此出发推导出当 \\(n = k + 1\\) 时不等式也成立。本题的结论不等式除了 \\(n \\geq 2\\) 外，没有附加条件，有时也会遇到在特定情境下的数列问题中让我们证明某不等式成立的情形，比如下面的变式。",
+          "solution_present": true,
+          "vision_hint": "4.6-LI669339f1ad2e10ee"
+        }
+      ],
+      "direct_variants": [
+        {
+          "item_id": "c7a1f7856662363b",
+          "kind": "direct_variant",
+          "label": "变式",
+          "example_number": null,
+          "parent_example_number": 2,
+          "role": "direct_variant",
+          "role_ref": null,
+          "source_docs": [
+            79,
+            80
+          ],
+          "question_text": "【变式】已知数列 \\(\\{a_n\\}\\) 满足 \\(a_1 = \\frac{1}{2}\\)，且 \\(a_{n+1} = \\frac{1}{3}a_n^3 + \\frac{2}{3}a_n\\)，求证：\\(\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^{n+1} \\leq a_n \\leq \\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^{n+1}\\)。\n证法1：(i) 当 \\(n=1\\) 时，结论即为 \\(\\frac{1}{2} \\leq a_1 \\leq \\frac{1}{2}\\)，也即 \\(a_1 = \\frac{1}{2}\\)，由所给条件可知结论成立；\n(ii) 假设当 \\(n=k\\) (\\(k \\geq 1\\)) 时结论成立，即 \\(\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^{k-1} \\leq a_k \\leq \\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}\\) ①，（怎样证当 \\(n=k+1\\) 时结论也成立？只需证 \\(\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^k \\leq a_{k+1} \\leq \\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\)，条件给出了 \\(a_{n+1}\\) 与 \\(a_n\\) 的关系式，故运用该关系式，结合上面的假设来证明）\n由①可知 \\(a_k \\geq \\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^{k-1}\\)，所以 \\(a_{k+1} = \\frac{1}{3}a_k^3 + \\frac{2}{3}a_k \\geq \\frac{1}{3} \\times \\left[\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^{k-1}\\right]^{3} + \\frac{2}{3} \\times \\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^{k-1} = \\frac{1}{24}\\cdot\\left(\\frac{2}{3}\\right)^{3k-3} + \\frac{1}{3}\\cdot\\left(\\frac{2}{3}\\right)^{k-1}\\)\n\\(= \\frac{1}{24}\\cdot\\left(\\frac{2}{3}\\right)^{3k-3} + \\frac{1}{3}\\cdot\\left(\\frac{2}{3}\\right)^k \\cdot \\frac{3}{2} = \\frac{1}{24}\\cdot\\left(\\frac{2}{3}\\right)^{3k-3} + \\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^k \\geq \\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^k\\)，\n由①可知 \\(a_k \\leq \\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}\\)，所以 \\(a_{k+1} = \\frac{1}{3}a_k^3 + \\frac{2}{3}a_k \\leq \\frac{1}{3}\\cdot\\left[\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}\\right]^{3} + \\frac{2}{3} \\times \\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^{k-1} = \\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{3k-3} + \\frac{1}{3}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}\\) ②，\n（接下来只需证明 \\(\\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{3k-3} + \\frac{1}{3}\\cdot\\left(\\frac{3}{4}\\right)^{k-1} \\leq \\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\)，就能得出 \\(a_{k+1} \\leq \\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\)，怎么证？可尝试作差比较）\n\\(\\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{3k-3} + \\frac{1}{3}\\cdot\\left(\\frac{3}{4}\\right)^{k-1} - \\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k = \\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{3k-3} + \\frac{1}{3}\\cdot\\left(\\frac{3}{4}\\right)^{k-1} - \\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^{k-1} \\cdot \\frac{3}{4} = \\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{3k-3} + \\frac{1}{3}\\cdot\\left(\\frac{3}{4}\\right)^{k-1} - \\frac{3}{8}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}\\)\n\\(= \\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{3k-3} - \\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{k-1} = \\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}\\left[\\left(\\frac{3}{4}\\right)^{2k-2} - 1\\right]\\)，\n因为 \\(k \\geq 1\\)，所以 \\(\\left(\\frac{3}{4}\\right)^{2k-2} \\leq 1\\)，从而 \\(\\left(\\frac{3}{4}\\right)^{2k-2} - 1 \\leq 0\\)，故 \\(\\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}\\left[\\left(\\frac{3}{4}\\right)^{2k-2} - 1\\right] \\leq 0\\)，\n所以 \\(\\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{3k-3}+\\frac{1}{3}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}-\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\leq0\\)，故 \\(\\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{3k-3}+\\frac{1}{3}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}\\leq\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\)，\n结合②可得 \\(a_{k+1}\\leq\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\)，综上所述， \\(\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^k\\leq a_{k+1}\\leq\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\)，即当 \\(n=k+1\\)时结论也成立；\n由(i)(ii)结合数学归纳法原理可知对任意的 \\(n\\in\\mathbb{N}^*\\)，都有 \\(\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^{n-1}\\leq a_n\\leq\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^{n-1}\\)。\n证法2：（前面过程同证法1，得到不等式①后，要证当\\(n=k+1\\)时结论也成立，即证\\(\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^k\\leq a_{k+1}\\leq\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\)也成立，注意到递推公式\\(a_{k+1}=\\frac{1}{3}a_k^3+\\frac{2}{3}a_k\\)中\\(\\frac{1}{3}a_k^3\\)这部分较复杂，故也可尝试将其放缩掉）\n由①可知\\(a_k\\geq\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^{k-1}\\)，所以\\(a_{k+1}=\\frac{1}{3}a_k^3+\\frac{2}{3}a_k\\geq\\frac{2}{3}a_k\\geq\\frac{2}{3}\\times\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^{k-1}=\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^k\\)，\n由①可知\\(a_k\\leq\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}\\)，又因为\\(k\\geq1\\)，所以\\(\\left(\\frac{3}{4}\\right)^{k-1}\\leq1\\)，故\\(a_k\\leq\\frac{1}{2}\\)，\n所以\\(a_{k+1}=\\frac{1}{3}a_k^3+\\frac{2}{3}a_k=\\frac{1}{3}a_k^2\\cdot a_k+\\frac{2}{3}a_k\\leq\\frac{1}{3}\\times\\left(\\frac{1}{2}\\right)^2a_k+\\frac{2}{3}a_k=\\frac{3}{4}a_k\\leq\\frac{3}{4}\\times\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}=\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\)，\n综上所述，\\(\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^k\\leq a_{k+1}\\leq\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\)，接下来同证法1.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "4.6-LIc7a1f7856662363b"
+        }
+      ],
+      "exercise_questions": [],
+      "action_order": [
+        "watch_current_courses",
+        "learn_each_current_example_then_attempt_its_direct_variants",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [],
+      "prerequisite_knowledge_blocks": []
+    },
+    {
+      "cycle_id": "4.6-cycle-3",
+      "sequence": 3,
+      "title": "类型Ⅲ 用数学归纳法证明整除有关的结论",
+      "course_keys": [],
+      "prerequisite_course_keys": [
+        "4.4.9.1 数学归纳法求通项",
+        "4.4.9.2 数学归纳法证明数列不等式"
+      ],
+      "optional_course_keys": [],
+      "knowledge_refs": [],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 用数学归纳法证明整除有关的结论"
+      ],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [
+        {
+          "item_id": "acffc7a955085168",
+          "kind": "example",
+          "label": "例3",
+          "example_number": 3,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型Ⅲ 用数学归纳法证明整除有关的结论",
+          "source_docs": [
+            80
+          ],
+          "question_text": "【例 3】用数学归纳法证明：对任意的正整数 n，数  \\(A_{n}=5^{n}+2\\times3^{n-1}+1\\) 都能被 8 整除.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例 3】用数学归纳法证明：对任意的正整数 n，数  \\(A_{n}=5^{n}+2\\times3^{n-1}+1\\) 都能被 8 整除.\n证明：(i)当 \\(n=1\\)时， \\(A_{1}=5^{1}+2\\times3^{1-1}+1=8\\)，所以 \\(A_{1}\\)能被8整除，结论成立；\n(ii) 假设当  \\(n = k (k \\geq 1)\\) 时，结论成立，即  \\(A_k = 5^k + 2 \\times 3^{k-1} + 1\\) 能被 8 整除，\n（如何证明当 \\(n=k+1\\) 时结论也成立？只需证 \\(A_{k+1}=5^{k+1}+2\\times3^k+1\\) 能被 8 整除，为了运用归纳假设，考虑将 \\(A_{k+1}\\) 凑出 \\(A_k=5^k+2\\times3^{k-1}+1\\) 这一结构）\n\\(A_{k+1}=5^{k+1}+2\\times3^k+1=5\\times5^k+2\\times3\\times3^{k-1}+1=4\\times5^k+5^k+4\\times3^{k-1}+2\\times3^{k-1}+1\\)\n\\(=4\\times5^k+4\\times3^{k-1}+5^k+2\\times3^{k-1}+1=4(5^k+3^{k-1})+A_k\\)，\n因为 \\(5^k\\)和 \\(3^{k-1}\\)都是奇数，所以 \\(5^k + 3^{k-1}\\)为偶数，故 \\(4(5^k + 3^{k-1})\\)必为8的倍数，它能被8整除，又因为 \\(A_k\\)也能被8整除，所以 \\(4(5^k + 3^{k-1}) + A_k\\)能被8整除，即 \\(A_{k+1}\\)能被8整除，故当 \\(n = k + 1\\)时，结论也成立；由(i)(ii)结合数学归纳法原理可知对任意的正整数 \\(n\\)，数 \\(A_n = 5^n + 2 \\times 3^{n-1} + 1\\)都能被8整除。\n【反思】用数学归纳法证明整除问题，基本步骤还是分两步，但需注意，解决这类问题的核心是将 \\(n=k+1\\)时的数拆分成当n=k时的数和余下部分，从而把问题转化为证明余下部分满足整除.",
+          "solution_present": true,
+          "vision_hint": "4.6-LIacffc7a955085168"
+        }
+      ],
+      "direct_variants": [],
+      "exercise_questions": [],
+      "action_order": [
+        "learn_each_current_example_then_attempt_its_direct_variants",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [],
+      "prerequisite_knowledge_blocks": []
+    },
+    {
+      "cycle_id": "4.6-cycle-4",
+      "sequence": 4,
+      "title": "B组 强化能力",
+      "course_keys": [],
+      "prerequisite_course_keys": [
+        "4.4.9.1 数学归纳法求通项",
+        "4.4.9.2 数学归纳法证明数列不等式"
+      ],
+      "optional_course_keys": [],
+      "knowledge_refs": [],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [
+        "类型I 用数学归纳法证明等式",
+        "类型Ⅱ 用数学归纳法证明不等式",
+        "类型Ⅲ 用数学归纳法证明整除有关的结论"
+      ],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [],
+      "direct_variants": [],
+      "exercise_questions": [
+        {
+          "qid": "Q-a4c5853be5dea235",
+          "section": "4.6",
+          "group": "B",
+          "number": 1,
+          "kind": "B组",
+          "source_anchor": {
+            "ocr_doc": 80,
+            "pdf_page": 81,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_80.md"
+          },
+          "question_text": "### 1. (2025 · 全国模拟)\n\n用数学归纳法证明： \\((\\cos\\theta + i\\sin\\theta)^n = \\cos n\\theta + i\\sin n\\theta\\)，其中 \\(i\\)为虚数单位， \\(n \\in \\mathbb{N}^*\\)。",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1"
+          ]
+        },
+        {
+          "qid": "Q-081995c727235287",
+          "section": "4.6",
+          "group": "B",
+          "number": 2,
+          "kind": "B组",
+          "source_anchor": {
+            "ocr_doc": 81,
+            "pdf_page": 82,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_81.md"
+          },
+          "question_text": "### 2. （2025·全国模拟）\n\n用数学归纳法证明： \\(a_n = 9^{n+1} - 8n - 9 (n \\in \\mathbf{N}^*)\\) 能被 64 整除。",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1"
+          ]
+        },
+        {
+          "qid": "Q-79a15e9da205c5bc",
+          "section": "4.6",
+          "group": "B",
+          "number": 3,
+          "kind": "B组",
+          "source_anchor": {
+            "ocr_doc": 81,
+            "pdf_page": 82,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_81.md"
+          },
+          "question_text": "### 3. （2025 · 全国模拟）\n\n是否存在常数 a, b, c, 使等式  \\(1^{2} + 2^{2} + \\cdots + n^{2} = an^{3} + bn^{2} + cn\\) 对任意的正整数 n 都成立？",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1"
+          ]
+        },
+        {
+          "qid": "Q-d75e5265af1bfe3e",
+          "section": "4.6",
+          "group": "B",
+          "number": 4,
+          "kind": "B组",
+          "source_anchor": {
+            "ocr_doc": 81,
+            "pdf_page": 82,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_81.md"
+          },
+          "question_text": "### 4. （2025·全国模拟）\n\n用数学归纳法证明不等式： \\(1 + \\frac{1}{\\sqrt{2}} + \\frac{1}{\\sqrt{3}} + \\cdots + \\frac{1}{\\sqrt{n}} > 2(\\sqrt{n+1}-1)\\)，其中  \\(n \\in \\mathbb{N}^*\\)。",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1"
+          ]
+        }
+      ],
+      "action_order": [
+        "attempt_current_abc_exercises_without_answers",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [],
+      "prerequisite_knowledge_blocks": []
+    }
+  ],
+  "knowledge_and_type_pages": [
+    {
+      "ocr_doc": 77,
+      "text": "### 4.4 \\(^{*}\\) 数学归纳法\n\n习题：P1\n\n## 知识梳理\n\n### 1. 数学归纳法\n\n在证明与自然数 n 有关的命题时，可以按下面两个步骤进行：\n\n①归纳奠基：证明当 n 取初始值  \\(n_{0}\\) 时，命题成立；\n\n②归纳递推：假设当  \\(n = k (k \\geq n_0, k \\in \\mathbb{N})\\) 时命题成立，并由此出发去证明当  \\(n = k + 1\\) 时，命题也成立。\n\n完成了上述的步骤①②，就能得出命题对任意的 \\(n \\geq n_0\\)都成立，这种证明与正整数 \\(n\\)有关的命题的方法叫做数学归纳法。\n\n### 2. 数学归纳法的原理解读\n\n上述步骤②说明在  \\(n = k (k \\geq n_0, k \\in \\mathbb{N})\\) 时命题成立，可以推出当  \\(n = k + 1\\) 时命题也成立。而我们在①中已经证明了当  \\(n = n_0\\) 时命题成立，故结合②就能得出当  \\(n = n_0 + 1\\) 时，命题成立；由  \\(n = n_0 + 1\\) 时命题成立结合②又能得出当  \\(n = n_0 + 2\\) 时命题也成立；如此递推下去，可发现对任意的  \\(n \\geq n_0\\)，命题都成立，这就是数学归纳法的原理。由此原理可以看出，步骤①不可或缺，它是后续递推的起点，没有这一步，后面的逐级递推可能都是无效的。\n\n## 本节核心题型\n\n数学归纳法的应用非常广泛，但考虑到教材上这一节是加了星号的，属于选学内容，不作考试要求，所以我们只举一些简单的例子，让大家初步了解数学归纳法在证明等式、不等式以及整除等问题中的应用，请大家跟着下面的类型Ⅰ、Ⅱ、Ⅲ的例题和反思去学习吧。\n\n类型 I：用数学归纳法证明等式",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 78,
+      "text": "类型Ⅱ：用数学归纳法证明不等式",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 80,
+      "text": "## 类型Ⅲ：用数学归纳法证明整除有关的结论",
+      "image_refs": [],
+      "math_errors": []
+    }
+  ],
+  "knowledge_blocks": [],
+  "worked_examples": [
+    {
+      "item_id": "2ded18214d55a0fc",
+      "kind": "example",
+      "label": "例1",
+      "example_number": 1,
+      "parent_example_number": null,
+      "role": "type_example",
+      "role_ref": "类型I 用数学归纳法证明等式",
+      "source_docs": [
+        77,
+        78
+      ],
+      "question_text": "【例 1】用数学归纳法证明： \\(1^3 + 2^3 + 3^3 + \\cdots + n^3 = \\left[\\frac{n(n+1)}{2}\\right]^2\\)。",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "teaching_text": "【例 1】用数学归纳法证明： \\(1^3 + 2^3 + 3^3 + \\cdots + n^3 = \\left[\\frac{n(n+1)}{2}\\right]^2\\)。\n证明：（用数学归纳法证明与正整数n有关的结论，先验证当n取初始值时结论成立，这里n的初始值为1）\n(i)当 \\(n=1\\)时，左边 \\(=1^3=1\\)，右边 \\(\\left[\\frac{1\\times(1+1)}{2}\\right]^2=1\\)，所以结论成立；\n（接下来需假设当  \\(n = k (k \\geq 1)\\) 时结论成立，并由此出发去推导当  \\(n = k + 1\\) 时，结论也成立）\n(ii)假设当 \\(n=k(k\\geq1)\\)时，结论成立，即 \\(1^3+2^3+3^3+\\cdots+k^3=\\left[\\frac{k(k+1)}{2}\\right]^2\\)①，\n（接下来需要证明当 \\(n=k+1\\) 时结论也成立，也就是证明在题干所给等式中将 \\(n\\) 换成 \\(k+1\\) 所得的结果成立，即 \\(1^3 + 2^3 + 3^3 + \\cdots + k^3 + (k+1)^3 = \\left[\\frac{(k+1)(k+2)}{2}\\right]^2\\)，怎么证？只需运用归纳假设，将式①代入，化简整理即可）\n \\[1^{3}+2^{3}+3^{3}+\\cdots+k^{3}+(k+1)^{3}=\\left[\\frac{k(k+1)}{2}\\right]^{2}+(k+1)^{3}=(k+1)^{2}\\left(\\frac{k^{2}}{4}+k+1\\right)=(k+1)^{2}\\cdot\\frac{k^{2}+4k+4}{4}\\] \n\\[=(k+1)^2\\cdot\\left(\\frac{k+2}{2}\\right)^2=\\left[\\frac{(k+1)(k+2)}{2}\\right]^2\\]，故当 \\(n=k+1\\) 时，结论也成立；\n由(i)(ii)结合数学归纳法原理可知对任意的  \\(n \\in \\mathbb{N}^*\\)， \\(1^3 + 2^3 + 3^3 + \\cdots + n^3 = \\left[\\frac{n(n+1)}{2}\\right]^2\\) 都成立。\n【反思】可以看到，用数学归纳法证明结论的步骤是流程化的操作：先证明 \\(n\\) 取初始值 \\(n_0\\) 时（本题 \\(n_0=1\\)），结论成立，再假设当 \\(n=k\\) (\\(k \\geq n_0\\)) 时结论成立，由此出发推导出当 \\(n=k+1\\) 时结论也成立即可。本题的结论是直接给出的，只需证明，有时需要先猜测结论，再用数学归纳法证明，比如下面的变式。",
+      "solution_present": true,
+      "vision_hint": "4.6-LI2ded18214d55a0fc"
+    },
+    {
+      "item_id": "669339f1ad2e10ee",
+      "kind": "example",
+      "label": "例2",
+      "example_number": 2,
+      "parent_example_number": null,
+      "role": "type_example",
+      "role_ref": "类型Ⅱ 用数学归纳法证明不等式",
+      "source_docs": [
+        78,
+        79
+      ],
+      "question_text": "【例 2】当  \\(n \\geq 2\\) 且  \\(n \\in \\mathbb{N}^*\\) 时，求证： \\(1 + \\frac{1}{2^2} + \\frac{1}{3^2} + \\cdots + \\frac{1}{n^2} < 2 - \\frac{1}{n}\\).",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "teaching_text": "【例 2】当  \\(n \\geq 2\\) 且  \\(n \\in \\mathbb{N}^*\\) 时，求证： \\(1 + \\frac{1}{2^2} + \\frac{1}{3^2} + \\cdots + \\frac{1}{n^2} < 2 - \\frac{1}{n}\\).\n证明：（要证的是与正整数 \\(n\\) 有关的不等式，与证明等式类似，还是分两步完成，但需注意，这里要证的是结论在 \\(n \\geq 2\\) 时恒成立，所以初始值不再是 \\(n=1\\) 了，而是 \\(n=2\\)）\n(i)当 \\(n=2\\) 时，结论的左边 \\(=1+\\frac{1}{2^2}=\\frac{5}{4}\\)，右边 \\(=2-\\frac{1}{2}=\\frac{3}{2}\\)，所以左边 < 右边，结论成立；\n(ii)假设当 \\(n=k(k \\geq 2)\\) 时，结论成立，即 \\(1+\\frac{1}{2^2}+\\frac{1}{3^2}+\\cdots+\\frac{1}{k^2}<2-\\frac{1}{k}\\) ①，\n（要证当 \\(n=k+1\\) 时结论也成立，即证 \\(1+\\frac{1}{2^2}+\\frac{1}{3^2}+\\cdots+\\frac{1}{k^2}+\\frac{1}{(k+1)^2}<2-\\frac{1}{k+1}\\)，怎么证？可以运用上面的假设将 \\(1+\\frac{1}{2^2}+\\frac{1}{3^2}+\\cdots+\\frac{1}{k^2}\\) 这部分进行放缩）由①可得 \\(1+\\frac{1}{2^2}+\\frac{1}{3^2}+\\cdots+\\frac{1}{k^2}+\\frac{1}{(k+1)^2}<2-\\frac{1}{k}+\\frac{1}{(k+1)^2}\\) ②，\n（于是只要再证 \\(2-\\frac{1}{k}+\\frac{1}{(k+1)^2}<2-\\frac{1}{k+1}\\)，就能得到 \\(1+\\frac{1}{2^2}+\\frac{1}{3^2}+\\cdots+\\frac{1}{k^2}+\\frac{1}{(k+1)^2}<2-\\frac{1}{k+1}\\)，可通过作差比较来证）因为 \\(2-\\frac{1}{k}+\\frac{1}{(k+1)^2}-\\left(2-\\frac{1}{k+1}\\right)=\\frac{1}{k+1}-\\frac{1}{k}+\\frac{1}{(k+1)^2}=\\frac{k(k+1)-(k+1)^2+k}{k(k+1)^2}=-\\frac{1}{k(k+1)^2}<0\\)，\n所以 \\(2-\\frac{1}{k}+\\frac{1}{(k+1)^2}<2-\\frac{1}{k+1}\\)，结合②可得 \\(1+\\frac{1}{2^2}+\\frac{1}{3^2}+\\cdots+\\frac{1}{k^2}+\\frac{1}{(k+1)^2}<2-\\frac{1}{k+1}\\)，\n故当 \\(n=k+1\\) 时，结论也成立；\n由(i)(ii)结合数学归纳法原理可知对任意的  \\(n \\geq 2\\) 且  \\(n \\in \\mathbb{N}^*\\)，都有  \\(1 + \\frac{1}{2^2} + \\frac{1}{3^2} + \\cdots + \\frac{1}{n^2} < 2 - \\frac{1}{n}\\)。\n【反思】①初始值是结论中规定的 \\(n\\) 的最小值，不一定是 1；②可以看到，用数学归纳法证明不等式与用数学归纳法证明等式的步骤类似，也是分两步完成：先证 \\(n\\) 取初始值 \\(n_0\\) 时不等式成立；再假设当 \\(n = k (k \\geq n_0)\\) 时不等式成立，由此出发推导出当 \\(n = k + 1\\) 时不等式也成立。本题的结论不等式除了 \\(n \\geq 2\\) 外，没有附加条件，有时也会遇到在特定情境下的数列问题中让我们证明某不等式成立的情形，比如下面的变式。",
+      "solution_present": true,
+      "vision_hint": "4.6-LI669339f1ad2e10ee"
+    },
+    {
+      "item_id": "acffc7a955085168",
+      "kind": "example",
+      "label": "例3",
+      "example_number": 3,
+      "parent_example_number": null,
+      "role": "type_example",
+      "role_ref": "类型Ⅲ 用数学归纳法证明整除有关的结论",
+      "source_docs": [
+        80
+      ],
+      "question_text": "【例 3】用数学归纳法证明：对任意的正整数 n，数  \\(A_{n}=5^{n}+2\\times3^{n-1}+1\\) 都能被 8 整除.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "teaching_text": "【例 3】用数学归纳法证明：对任意的正整数 n，数  \\(A_{n}=5^{n}+2\\times3^{n-1}+1\\) 都能被 8 整除.\n证明：(i)当 \\(n=1\\)时， \\(A_{1}=5^{1}+2\\times3^{1-1}+1=8\\)，所以 \\(A_{1}\\)能被8整除，结论成立；\n(ii) 假设当  \\(n = k (k \\geq 1)\\) 时，结论成立，即  \\(A_k = 5^k + 2 \\times 3^{k-1} + 1\\) 能被 8 整除，\n（如何证明当 \\(n=k+1\\) 时结论也成立？只需证 \\(A_{k+1}=5^{k+1}+2\\times3^k+1\\) 能被 8 整除，为了运用归纳假设，考虑将 \\(A_{k+1}\\) 凑出 \\(A_k=5^k+2\\times3^{k-1}+1\\) 这一结构）\n\\(A_{k+1}=5^{k+1}+2\\times3^k+1=5\\times5^k+2\\times3\\times3^{k-1}+1=4\\times5^k+5^k+4\\times3^{k-1}+2\\times3^{k-1}+1\\)\n\\(=4\\times5^k+4\\times3^{k-1}+5^k+2\\times3^{k-1}+1=4(5^k+3^{k-1})+A_k\\)，\n因为 \\(5^k\\)和 \\(3^{k-1}\\)都是奇数，所以 \\(5^k + 3^{k-1}\\)为偶数，故 \\(4(5^k + 3^{k-1})\\)必为8的倍数，它能被8整除，又因为 \\(A_k\\)也能被8整除，所以 \\(4(5^k + 3^{k-1}) + A_k\\)能被8整除，即 \\(A_{k+1}\\)能被8整除，故当 \\(n = k + 1\\)时，结论也成立；由(i)(ii)结合数学归纳法原理可知对任意的正整数 \\(n\\)，数 \\(A_n = 5^n + 2 \\times 3^{n-1} + 1\\)都能被8整除。\n【反思】用数学归纳法证明整除问题，基本步骤还是分两步，但需注意，解决这类问题的核心是将 \\(n=k+1\\)时的数拆分成当n=k时的数和余下部分，从而把问题转化为证明余下部分满足整除.",
+      "solution_present": true,
+      "vision_hint": "4.6-LIacffc7a955085168"
+    }
+  ],
+  "direct_variants": [
+    {
+      "item_id": "5ab0419a737b7a51",
+      "kind": "direct_variant",
+      "label": "变式",
+      "example_number": null,
+      "parent_example_number": 1,
+      "role": "direct_variant",
+      "role_ref": null,
+      "source_docs": [
+        78
+      ],
+      "question_text": "【变式】是否存在常数 \\(a\\), \\(b\\), 使 \\(1 \\times n + 2 \\times (n-1) + 3 \\times (n-2) + \\cdots + (n-1) \\times 2 + n \\times 1 = \\frac{1}{6}n(n+a)(n+b)\\) 对任意的 \\(n \\in \\mathbb{N}^*\\) 都成立？若存在，求出 \\(a\\), \\(b\\) 的值，并用数学归纳法证明你的结论；若不存在，请说明理由。",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "solution_isolated": true,
+      "vision_hint": "4.6-LI5ab0419a737b7a51"
+    },
+    {
+      "item_id": "c7a1f7856662363b",
+      "kind": "direct_variant",
+      "label": "变式",
+      "example_number": null,
+      "parent_example_number": 2,
+      "role": "direct_variant",
+      "role_ref": null,
+      "source_docs": [
+        79,
+        80
+      ],
+      "question_text": "【变式】已知数列 \\(\\{a_n\\}\\) 满足 \\(a_1 = \\frac{1}{2}\\)，且 \\(a_{n+1} = \\frac{1}{3}a_n^3 + \\frac{2}{3}a_n\\)，求证：\\(\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^{n+1} \\leq a_n \\leq \\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^{n+1}\\)。\n证法1：(i) 当 \\(n=1\\) 时，结论即为 \\(\\frac{1}{2} \\leq a_1 \\leq \\frac{1}{2}\\)，也即 \\(a_1 = \\frac{1}{2}\\)，由所给条件可知结论成立；\n(ii) 假设当 \\(n=k\\) (\\(k \\geq 1\\)) 时结论成立，即 \\(\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^{k-1} \\leq a_k \\leq \\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}\\) ①，（怎样证当 \\(n=k+1\\) 时结论也成立？只需证 \\(\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^k \\leq a_{k+1} \\leq \\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\)，条件给出了 \\(a_{n+1}\\) 与 \\(a_n\\) 的关系式，故运用该关系式，结合上面的假设来证明）\n由①可知 \\(a_k \\geq \\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^{k-1}\\)，所以 \\(a_{k+1} = \\frac{1}{3}a_k^3 + \\frac{2}{3}a_k \\geq \\frac{1}{3} \\times \\left[\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^{k-1}\\right]^{3} + \\frac{2}{3} \\times \\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^{k-1} = \\frac{1}{24}\\cdot\\left(\\frac{2}{3}\\right)^{3k-3} + \\frac{1}{3}\\cdot\\left(\\frac{2}{3}\\right)^{k-1}\\)\n\\(= \\frac{1}{24}\\cdot\\left(\\frac{2}{3}\\right)^{3k-3} + \\frac{1}{3}\\cdot\\left(\\frac{2}{3}\\right)^k \\cdot \\frac{3}{2} = \\frac{1}{24}\\cdot\\left(\\frac{2}{3}\\right)^{3k-3} + \\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^k \\geq \\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^k\\)，\n由①可知 \\(a_k \\leq \\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}\\)，所以 \\(a_{k+1} = \\frac{1}{3}a_k^3 + \\frac{2}{3}a_k \\leq \\frac{1}{3}\\cdot\\left[\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}\\right]^{3} + \\frac{2}{3} \\times \\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^{k-1} = \\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{3k-3} + \\frac{1}{3}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}\\) ②，\n（接下来只需证明 \\(\\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{3k-3} + \\frac{1}{3}\\cdot\\left(\\frac{3}{4}\\right)^{k-1} \\leq \\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\)，就能得出 \\(a_{k+1} \\leq \\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\)，怎么证？可尝试作差比较）\n\\(\\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{3k-3} + \\frac{1}{3}\\cdot\\left(\\frac{3}{4}\\right)^{k-1} - \\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k = \\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{3k-3} + \\frac{1}{3}\\cdot\\left(\\frac{3}{4}\\right)^{k-1} - \\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^{k-1} \\cdot \\frac{3}{4} = \\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{3k-3} + \\frac{1}{3}\\cdot\\left(\\frac{3}{4}\\right)^{k-1} - \\frac{3}{8}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}\\)\n\\(= \\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{3k-3} - \\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{k-1} = \\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}\\left[\\left(\\frac{3}{4}\\right)^{2k-2} - 1\\right]\\)，\n因为 \\(k \\geq 1\\)，所以 \\(\\left(\\frac{3}{4}\\right)^{2k-2} \\leq 1\\)，从而 \\(\\left(\\frac{3}{4}\\right)^{2k-2} - 1 \\leq 0\\)，故 \\(\\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}\\left[\\left(\\frac{3}{4}\\right)^{2k-2} - 1\\right] \\leq 0\\)，\n所以 \\(\\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{3k-3}+\\frac{1}{3}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}-\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\leq0\\)，故 \\(\\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{3k-3}+\\frac{1}{3}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}\\leq\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\)，\n结合②可得 \\(a_{k+1}\\leq\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\)，综上所述， \\(\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^k\\leq a_{k+1}\\leq\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\)，即当 \\(n=k+1\\)时结论也成立；\n由(i)(ii)结合数学归纳法原理可知对任意的 \\(n\\in\\mathbb{N}^*\\)，都有 \\(\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^{n-1}\\leq a_n\\leq\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^{n-1}\\)。\n证法2：（前面过程同证法1，得到不等式①后，要证当\\(n=k+1\\)时结论也成立，即证\\(\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^k\\leq a_{k+1}\\leq\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\)也成立，注意到递推公式\\(a_{k+1}=\\frac{1}{3}a_k^3+\\frac{2}{3}a_k\\)中\\(\\frac{1}{3}a_k^3\\)这部分较复杂，故也可尝试将其放缩掉）\n由①可知\\(a_k\\geq\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^{k-1}\\)，所以\\(a_{k+1}=\\frac{1}{3}a_k^3+\\frac{2}{3}a_k\\geq\\frac{2}{3}a_k\\geq\\frac{2}{3}\\times\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^{k-1}=\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^k\\)，\n由①可知\\(a_k\\leq\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}\\)，又因为\\(k\\geq1\\)，所以\\(\\left(\\frac{3}{4}\\right)^{k-1}\\leq1\\)，故\\(a_k\\leq\\frac{1}{2}\\)，\n所以\\(a_{k+1}=\\frac{1}{3}a_k^3+\\frac{2}{3}a_k=\\frac{1}{3}a_k^2\\cdot a_k+\\frac{2}{3}a_k\\leq\\frac{1}{3}\\times\\left(\\frac{1}{2}\\right)^2a_k+\\frac{2}{3}a_k=\\frac{3}{4}a_k\\leq\\frac{3}{4}\\times\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}=\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\)，\n综上所述，\\(\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^k\\leq a_{k+1}\\leq\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\)，接下来同证法1.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "solution_isolated": true,
+      "vision_hint": "4.6-LIc7a1f7856662363b"
+    }
+  ],
+  "deduplicated_learning_items": [],
+  "exercise_questions": [
+    {
+      "qid": "Q-a4c5853be5dea235",
+      "section": "4.6",
+      "group": "B",
+      "number": 1,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 80,
+        "pdf_page": 81,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_80.md"
+      },
+      "question_text": "### 1. (2025 · 全国模拟)\n\n用数学归纳法证明： \\((\\cos\\theta + i\\sin\\theta)^n = \\cos n\\theta + i\\sin n\\theta\\)，其中 \\(i\\)为虚数单位， \\(n \\in \\mathbb{N}^*\\)。",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-081995c727235287",
+      "section": "4.6",
+      "group": "B",
+      "number": 2,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 81,
+        "pdf_page": 82,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_81.md"
+      },
+      "question_text": "### 2. （2025·全国模拟）\n\n用数学归纳法证明： \\(a_n = 9^{n+1} - 8n - 9 (n \\in \\mathbf{N}^*)\\) 能被 64 整除。",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-79a15e9da205c5bc",
+      "section": "4.6",
+      "group": "B",
+      "number": 3,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 81,
+        "pdf_page": 82,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_81.md"
+      },
+      "question_text": "### 3. （2025 · 全国模拟）\n\n是否存在常数 a, b, c, 使等式  \\(1^{2} + 2^{2} + \\cdots + n^{2} = an^{3} + bn^{2} + cn\\) 对任意的正整数 n 都成立？",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-d75e5265af1bfe3e",
+      "section": "4.6",
+      "group": "B",
+      "number": 4,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 81,
+        "pdf_page": 82,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_81.md"
+      },
+      "question_text": "### 4. （2025·全国模拟）\n\n用数学归纳法证明不等式： \\(1 + \\frac{1}{\\sqrt{2}} + \\frac{1}{\\sqrt{3}} + \\cdots + \\frac{1}{\\sqrt{n}} > 2(\\sqrt{n+1}-1)\\)，其中  \\(n \\in \\mathbb{N}^*\\)。",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    }
+  ],
+  "counts": {
+    "worked_examples": 3,
+    "direct_variants": 2,
+    "abc_exercises": 4,
+    "total_numbered_learning_items": 9
+  },
+  "answer_policy": {
+    "worked_examples": "teaching solutions allowed",
+    "direct_variants": "question only; solution isolated",
+    "abc_exercises": "question only; answer sidecar forbidden"
+  },
+  "unresolved": []
+}

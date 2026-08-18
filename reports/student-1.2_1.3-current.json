@@ -1,0 +1,145 @@
+{
+  "schema_version": "1.0",
+  "report_id": "student-1.2_1.3-current",
+  "section": "1.2+1.3",
+  "label": "第2节 空间向量基本定理、空间向量及其运算的坐标表示",
+  "phase": "第二阶段：零基础顺序学习与即时独立验收",
+  "generated_on": "2026-08-14",
+  "inputs_read_fresh_from_disk": [
+    "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\1.2_1.3\\learning_packet.json (83914B, 2026-08-14T16:40:17)",
+    "C:\\开发\\小工具\\一本通学习系统_v7\\data\\contexts\\1.2_1.3.json (87942B, 2026-08-14T16:40:17)"
+  ],
+  "packet_verify": {
+    "schema_version": "7.3",
+    "status": "VERIFIED",
+    "counts": {
+      "worked_examples": 13,
+      "direct_variants": 4,
+      "abc_exercises": 16,
+      "total_numbered_learning_items": 33
+    },
+    "fixes_confirmed": [
+      "B5 已带来源 (2025·广东清远期末)，页眉『一数·高中数学一本通』已清除",
+      "B9 已带来源 (2025·安徽阜阳期末)，source_anchor.pdf_page=31（原为 None）",
+      "B11 已带来源 (2025·河北廊坊期末)",
+      "例3 跨栏解答已修复（教学文本完整，含答案 B）"
+    ]
+  },
+  "answer_side_declaration": {
+    "answer_sidecar_read": false,
+    "answer_book_pdf_read": false,
+    "reports_old_simulations_read": false,
+    "policy": "worked_examples 教学解答允许；direct_variants 仅题干、解答隔离；abc_exercises 仅题干、答案侧禁读。本报告全部独立项未参考任何答案侧材料。"
+  },
+  "deepseek_mode_note": "deepseek-mode.json active=true default_count=5；执行者为受限子 worker（opencode-go/deepseek-v4-flash / max / 1000000），不可再派生 agent，按契约直接执行并如实报告。",
+  "knowledge_pages": [
+    {
+      "page": "KP0 ocr_doc=18",
+      "understood": true,
+      "note": "知识点1 完整（基本定理/基底与基向量/单位正交基底/正交分解）；知识点2 仅到坐标系建立一句被截断",
+      "defect": "知识点2 正文截断（脱敏），后续概念依赖例题教学文本补全"
+    },
+    {
+      "page": "KP1 ocr_doc=19",
+      "understood": true,
+      "note": "仅标题『知识点2』",
+      "defect": "坐标系作法/点的坐标与向量坐标/垂面法/对称规律不在知识页，靠例1教学文本尾部与例2/例3补齐"
+    },
+    {
+      "page": "KP2 ocr_doc=20",
+      "understood": true,
+      "note": "知识点3 公式①加减 ②数乘；末尾误嵌入例3解析残段",
+      "defect": "公式③-⑦（数量积/平行/垂直/模/夹角）与距离/中点/重心公式缺失，由例4教学文本补齐；残段属结构缺陷"
+    },
+    {
+      "page": "KP3 ocr_doc=22",
+      "understood": true,
+      "note": "仅标题『类型Ⅱ』",
+      "defect": "类型Ⅰ 标题及例题不在知识页（在例题块）"
+    },
+    {
+      "page": "KP4 ocr_doc=23",
+      "understood": true,
+      "note": "仅标题『类型Ⅲ』"
+    },
+    {
+      "page": "KP5 ocr_doc=24",
+      "understood": true,
+      "note": "仅标题『类型IV』"
+    },
+    {
+      "page": "KP6 ocr_doc=26",
+      "understood": true,
+      "note": "仅标题『类型V』"
+    }
+  ],
+  "worked_examples_not_counted_as_mastery": [
+    { "no": 1, "label": "例1", "understood": true, "key": "基底⇔三向量不共面；共面判定（平行/面内向量）", "result": "答案 C", "defect": "无" },
+    { "no": 2, "label": "例2", "understood": true, "key": "建系写长方体顶点坐标；轴上/面内/体内点按射影写坐标", "result": "C1(3,4,2)", "defect": "教学文本无显式『答案：』行（坐标已给出，可读）" },
+    { "no": 3, "label": "例3", "understood": true, "key": "投影向量=终点在Oyz射影（横坐标置0）", "result": "(0,2,-3)，答案 B；跨栏解答已修复（教学文本完整含答案）", "defect": "无" },
+    { "no": 4, "label": "例4", "understood": true, "key": "坐标运算综合：加减/点积/距离/垂直判断/夹角余弦/重心；教学文本内嵌公式③-⑦与距离、中点、重心公式", "result": "(-1,-2,3)；-4；√5；不垂直(点积4)；√2/6；重心(2/3,2/3,1)", "defect": "第(5)问存在 LaTeX 转义残段（数学内容可读）" },
+    { "no": 5, "label": "例5", "understood": true, "key": "基底路径分解 M→O→N；路径不唯一", "result": "答案 A", "defect": "无" },
+    { "no": 6, "label": "例6", "understood": true, "key": "线性运算坐标；模；单位向量 ±a/|a|", "result": "(-1,-9,4)；√186；(-√6/6,√6/3,√6/6)或(√6/6,-√6/3,-√6/6)", "defect": "无" },
+    { "no": 7, "label": "例7", "understood": true, "key": "终点减起点；(2)用 CD=AD-AC", "result": "(2,-1,-1)；(4,1,-1)", "defect": "无" },
+    { "no": 8, "label": "例8", "understood": true, "key": "数量积分配律", "result": "5，答案 B", "defect": "无" },
+    { "no": 9, "label": "例9", "understood": true, "key": "投影向量公式 (a·b/|b|²)b", "result": "(2/3,-2/3,2/3)", "defect": "无" },
+    { "no": 10, "label": "例10", "understood": true, "key": "平行⇔λ方程组；垂直⇔点积0", "result": "x+y=1；x=10/3", "defect": "无" },
+    { "no": 11, "label": "例11", "understood": true, "key": "由垂直/平行解未知数再求模与夹角余弦", "result": "|a+b|=3；cos=-√6/3", "defect": "无" },
+    { "no": 12, "label": "例12", "understood": true, "key": "异面直线角：cosθ=|cos⟨a,b⟩|，建系", "result": "√3/3", "defect": "无" },
+    { "no": 13, "label": "例13", "understood": true, "key": "动点单变量 λ∈[0,1]，|PQ|²配方求最值；双解法", "result": "最小值 √3（λ=3/4）", "defect": "无" }
+  ],
+  "direct_variants_independent": [
+    { "item": "DV0", "of_example": 5, "status": "pass", "reasoning": "AE=AP+PE=AP+(2/3)PC=AP+(2/3)(-AP+AB+AD)=(2/3)AB+(2/3)AD+(1/3)AP → x=y=2/3, z=1/3", "result": "x+y-z=1，选 B", "defect": "无" },
+    { "item": "DV1", "of_example": 10, "status": "pass", "reasoning": "建系 C 为原点：C1M=(1,1,0), B1D=(2,-2,-2)，点积 0→垂直；(2) C1M=(1/2)ED+(1/2)EB1 且 C1∉面B1DE→线面平行", "result": "两问均证毕", "defect": "无" },
+    { "item": "DV2", "of_example": 10, "status": "pass", "reasoning": "正四棱锥建系：A(0,-√2,0),C(0,√2,0),S(0,0,√6),D(-√2,0,0)；AC·SD=0；(2) SD⊥面PAC→SD⊥PC→λ=3/4 定 P；设 BE=x·AP+y·AC 解得 μ=2/3", "result": "AC⊥SD 证毕；E 存在，SE:EC=2:1", "defect": "无" },
+    { "item": "DV3", "of_example": 12, "status": "pass", "reasoning": "曲池建系：O 为扇环圆心，内半径 1 外半径 2；B(0,1,0),C(1,0,0),D(2,0,0),C1(1,0,1)；E 为弧 A1D1 靠 D1 三等分点→E(√3,1,1)；BE=(√3,0,1), C1D=(1,0,-1)", "result": "cos=|√3-1|/(2√2)=(√6-√2)/4，选 D", "defect": "无" }
+  ],
+  "exercise_questions_independent": [
+    { "no": 1, "group": "A", "source": "(2025·重庆长寿期末)", "status": "pass", "reasoning": "分量相减 (1+2,-2-1,1+2)", "result": "(3,-3,3)，选 B" },
+    { "no": 2, "group": "A", "source": "(2025·福建福州期末)", "status": "pass", "reasoning": "a⊥b→x-2+1=0", "result": "x=1，选 C" },
+    { "no": 3, "group": "A", "source": "(2025·河南安阳期末)", "status": "pass", "reasoning": "b=λa→λ=-1, x=0, y=1", "result": "x+y=1，选 A" },
+    { "no": 4, "group": "A", "source": "(2025·河北邯郸期末)", "status": "pass", "reasoning": "cos=3/(√6·√5)", "result": "√30/10，选 B" },
+    {
+      "no": 5,
+      "group": "B",
+      "source": "(2025·广东清远期末)",
+      "status": "prompted_correction_pass",
+      "original_result": "MN=-3a/4+2b/3+c/3，选 A（推导正确，选项字母映射误标）",
+      "prompted_correction": true,
+      "corrected_reasoning": "M 在 OA 上，设 OM=t·a，AM=(t-1)a，由 OM+3AM=0 得 4t-3=0 → t=3/4，即 OM=(3/4)a；N 在 BC 上，设 N=(1-u)b+u·c，由 2BN+CN=0 得 3u-1=0 → u=1/3，即 N=(2/3)b+(1/3)c；故 MN=N-M=-(3/4)a+(2/3)b+(1/3)c。逐项对照题面选项：a 系数 -(3/4)、b 系数 +(2/3)、c 系数 +(1/3) → 选项 C。原推导无误，首次记录误将选项字母写成 A。",
+      "corrected_result": "MN=-(3/4)a+(2/3)b+(1/3)c，选 C"
+    },
+    { "no": 6, "group": "B", "source": "(2025·贵州安顺期中)", "status": "pass", "reasoning": "b∥c→λ=2,y=-2；a⊥b→x=1；a+b=(2,-1,2)", "result": "|a+b|=3，选 C" },
+    { "no": 7, "group": "B", "source": "(2025·江苏苏州开学考试)", "status": "pass", "reasoning": "投影=(b·a/|a|²)a=(-1)a", "result": "-a，选 B" },
+    { "no": 8, "group": "B", "source": "(2025·北京期末)", "status": "pass", "reasoning": "逐项线性相关性判定：A/B/C 均存在非零组合为零，D 唯一零解", "result": "选 D (a+c, a-b, b-c)" },
+    { "no": 9, "group": "B", "source": "(2025·安徽阜阳期末)", "status": "pass", "reasoning": "重心 M=(PA+PB+PC)/3 → x=y=1/3, 2z=1/3→z=1/6", "result": "x+y-z=1/2，选 B" },
+    { "no": 10, "group": "B", "source": "(2025·江西上饶期末)", "status": "pass", "reasoning": "3a-2b=(-10,5,-13)→b=(2,-1,-1)", "result": "a·b=0，选 C" },
+    { "no": 11, "group": "B", "source": "(2025·河北廊坊期末)", "status": "pass", "reasoning": "建系 A 原点：B(2,0,0),C(0,2,0),D(0,0,2),M(1,1,0),N(0,0,1)；AM·CN=-2", "result": "cos=2/√10=√10/5，选 D" },
+    { "no": 12, "group": "B", "source": "(2025·浙江杭州模拟)", "status": "pass_source_ambiguity", "reasoning": "(1) a∥c→λ=2, c=(2,6,-4), b+c=(3,6,-2)→|·|=7；(2) b⊥c→m=8；|c|=9→n²=1→n=±1（均满足全部条件），a·c=16+3n。父控对整章PDF第32页 240dpi 视觉核对：印刷题面仅有 b⊥c、|c|=9，无 n>0 或其他约束，OCR 未漏字", "result": "(1)=7；(2) a·c∈{13,19}，原题非唯一，正确识别源歧义，不臆造唯一答案", "note": "pass_source_ambiguity 非学生 partial" },
+    { "no": 13, "group": "B", "source": "(2025·内蒙古通辽期末)", "status": "pass", "reasoning": "正方体建系 D 原点：E(0,0,2),F(2,2,0)；EF·B1C=0；(2) cos=|EF·DC|/(|EF||DC|)", "result": "(1) EF⊥B1C 证毕；(2) √3/3" },
+    { "no": 14, "group": "C", "source": "(2025·福建南平期末)", "status": "pass", "reasoning": "S 为原点：G=(a+b+c)/3, M=(a+b+c)/6；M=α(ka)+β(mb)+γ(nc)，α+β+γ=1→αk=βm=γn=1/6", "result": "1/k+1/m+1/n=6，选 B" },
+    { "no": 15, "group": "C", "source": "(2025·上海期末)", "status": "pass", "reasoning": "|c-ma-nb|²=64+m²+n²-4√6(m+n)=(m-2√6)²+(n-2√6)²+16", "result": "最小值 4" },
+    { "no": 16, "group": "C", "source": "(2025·河南模拟)", "status": "pass", "reasoning": "E(2,1,1),F(1,2,2)；PF=2PE→球面 (x-7/3)²+(y-2/3)²+(z-2/3)²=4/3；目标式=4(x²+y²+z²)-12(x+y+z)+9=(20/3)(x-y-z)-11；x-y-z∈[-1,3]", "result": "取值范围 [-53/3, 9]" }
+  ],
+  "acceptance_summary": {
+    "same_session": {
+      "independent_items": 20,
+      "pass": 18,
+      "prompted_correction_pass": 1,
+      "pass_source_ambiguity": 1,
+      "partial": 0,
+      "blocked": 0,
+      "detail": "4 变式全过；16 练习中 14 首过、B5 经教师提示后修正（prompted_correction_pass，非首次独立）、B12 pass_source_ambiguity"
+    },
+    "unseen_transfer": "not_run（本阶段未提供未见迁移题组）",
+    "24h_cold_retest": "not_run",
+    "worked_examples_excluded_from_mastery": true,
+    "mastery_claim": "same_session 20/20 独立项终态通过（18 首过 + B5 教师提示后修正 + B12 源歧义正确识别）；B5 不冒充首次独立；不宣称远迁移或隔日保持"
+  },
+  "material_defects": [
+    "知识页脱敏过重：知识点2 正文、知识点3 公式③-⑦/距离/中点/重心均不在 knowledge_and_type_pages，零基础者须靠例题教学文本补齐（已确认可补齐）",
+    "KP2 (ocr_doc=20) 末尾混入例3 解析残段，知识页内容归属错误（轻微结构缺陷）",
+    "例2 教学文本无显式『答案：』行；例4 第(5)问存在 LaTeX 转义残段（均可读）",
+    "B12 原题非唯一（a·c∈{13,19}）系原书印刷如此，非 OCR 缺陷（父控 240dpi 视觉核对确认）"
+  ]
+}

@@ -1,0 +1,400 @@
+{
+ "schema_version": "1.2+1.3-10cycles",
+ "section": "1.2+1.3",
+ "worker": 1,
+ "generation": "G-CH1-S12-01",
+ "worker_status": "COMPLETED",
+ "scope": {
+  "tasks": [
+   "01",
+   "02",
+   "03",
+   "04",
+   "05",
+   "06",
+   "07"
+  ],
+  "item_count": 7,
+  "note": "任务01-07：循环1（例1、B8）+ 循环2（例2、例3）+ 循环3 前半（例4、A1、A2）"
+ },
+ "context_binding": {
+  "canary": "01cb4018b3977ceb",
+  "context_sha256": "271c68719a46b628e716267fb786ee13c4e40bec9523ffe4f005fada1c05fd86",
+  "context_file": "data/contexts/1.2_1.3.json",
+  "binding": "worker must echo canary and answer derived probes from this exact context",
+  "probe_qids": [
+   "Q-6ed7e46c02ea0cbe",
+   "Q-9dc59a76b39b51c2",
+   "Q-8937bea007e341dc"
+  ],
+  "probe_tokens": {
+   "Q-6ed7e46c02ea0cbe": "d9f08af0",
+   "Q-9dc59a76b39b51c2": "9819bc0a",
+   "Q-8937bea007e341dc": "638a9259"
+  },
+  "probe_answered_in_items": [
+   "A1",
+   "A2",
+   "A3"
+  ],
+  "gate": {
+   "file": "reports/builds/1.2_1.3-build.json",
+   "read_at": "2026-08-16T22:02:19",
+   "built_at_declared": "2026-08-16T22:10:00",
+   "worker": "build-1.2-1.3",
+   "hard_constraint": "33 项不变（13 例题+4 变式+16 习题，item_id/qid 复用），10 循环重构",
+   "test_results": "104 passed / 2 failed（均与本节无关：1.4-k3 重复渲染、1.1 台账哈希失配）"
+  },
+  "context_finalized_at": "2026-08-16T22:03:40",
+  "context_stability": "mtime 22:03:40 后 3 分钟无变化（确认至 22:06:56）",
+  "note": "上下文在轮询期间被构建流水线多次重写（688be4…→b08a72…→7628a1…→终版 271c68…），终版 evidence 已核对；五门课程文稿（3.1.1.1/3.1.2.1/3.1.2.2/3.1.3.1/3.1.3.2）已全部通读"
+ },
+ "answer_sidecar_read": false,
+ "human_acceptance_not_proven": true,
+ "verdicts_summary": {
+  "BLOCKED": 4,
+  "PASS": 3
+ },
+ "method_check_results": [
+  {
+   "method_key": "1.2_1.3-coplanar-check-1",
+   "label": "方法检查：重心向量表示独立推导",
+   "cycle": 9,
+   "status": "CLOSED",
+   "verdict": "PASS",
+   "note": "学生独立推导：三角形重心=三点平均（G 为 △ABC 重心 ⇒ SG=⅓(SA+SB+SC)，源自 3.1.2.2 等值面法重心特性），并在 B9（任务13）、C14（任务31）中实际调用；等值面复核系数和。"
+  },
+  {
+   "method_key": "1.2_1.3-coplanar-check-2",
+   "label": "方法检查：截线共面条件自造验证",
+   "cycle": 9,
+   "status": "CLOSED",
+   "verdict": "PASS",
+   "note": "自造无答案验证：三棱锥 S-ABC，取 SA/SB/SC 中点 D,E,F，平面 DEF 为 ½ 倍面（位置向量系数和 ½=½(u+v+w)）；SG 中点 M 的 SM=¼(SA+SB+SC) 系数和 ¾≠½ ⇒ M 不在平面 DEF；与 C14 中『系数和=1 判定点面位置』正反互证。"
+  },
+  {
+   "method_key": "1.2_1.3-single-variable-check-1",
+   "label": "方法检查：空间动点单变量化检查",
+   "cycle": 10,
+   "status": "NOT_CLOSED",
+   "verdict": "BLOCKED",
+   "note": "桥接『空间动点单变量化配方』=SOURCE_METHOD_READY（只有方法骨架、缺完整无答案微课），标准规定零基础不能据此放行；检查标准（单变量规划、含定义域近变式、延迟冷复述）无法在模拟中满足。"
+  },
+  {
+   "method_key": "1.2_1.3-apollonius-check-1",
+   "label": "方法检查：阿波罗尼斯球轨迹检查",
+   "cycle": 10,
+   "status": "NOT_CLOSED",
+   "verdict": "BLOCKED",
+   "note": "桥接『阿波罗尼斯球与等距轨迹』=SUPPLEMENT_READY 但检查标准未具备（需自造变式、视觉/题面放行），且循环10 整体因动点单变量化未闭合而阻断。"
+  },
+  {
+   "bridge_key": "micro-four-point-coplanar",
+   "label": "桥接：四点共面系数和=1",
+   "target_items": [
+    "C14"
+   ],
+   "status": "CLOSED",
+   "verdict": "PASS",
+   "note": "SUPPLEMENT_READY 无答案文本在路线内；模拟中完成正向/逆向推导与自造验证；C14 独立作答通过；question_coverage=READY_FOR_INDEPENDENT_ATTEMPT。"
+  },
+  {
+   "bridge_key": "bridge-1.2-single-variable",
+   "label": "桥接：空间动点单变量化配方",
+   "target_items": [
+    "C15",
+    "C16"
+   ],
+   "status": "NOT_CLOSED",
+   "verdict": "BLOCKED",
+   "note": "SOURCE_METHOD_READY：只有方法骨架，缺完整无答案微课；零基础放行不成立；question_coverage=BLOCKED_BRIDGE（构建报告 gap_list 确认既有状态未变）。"
+  },
+  {
+   "bridge_key": "bridge-1.2-apollonius",
+   "label": "桥接：阿波罗尼斯球与等距轨迹",
+   "target_items": [
+    "C16"
+   ],
+   "status": "NOT_CLOSED",
+   "verdict": "BLOCKED",
+   "note": "SUPPLEMENT_READY 但检查标准未具备（自造变式、视觉/题面放行）；C16 整体因动点单变量化未闭合而阻断。"
+  },
+  {
+   "bridge_key": "bridge-1.1-polarization",
+   "label": "桥接：极化恒等式与数量积最值",
+   "target_items": [
+    "C16"
+   ],
+   "status": "NOT_CLOSED",
+   "verdict": "BLOCKED",
+   "note": "SUPPLEMENT_READY 但检查标准未具备（原型题独立过程、全空间型与区域型各一题无答案近迁移、等号条件可解释）；C16 整体阻断。"
+  }
+ ],
+ "first_breakpoints": [
+  {
+   "breakpoint": "图形未核验（NEEDS_VISION_SIDECAR）：路线标注『未完成视觉核验，禁止猜图』，缺已核验视觉侧车",
+   "class": "VISUAL_GATE",
+   "items": [
+    "例1",
+    "例2",
+    "例3",
+    "例4",
+    "例5",
+    "例12",
+    "例13",
+    "变式(5)",
+    "变式1(10)",
+    "变式2(10)",
+    "变式(12)"
+   ]
+  },
+  {
+   "breakpoint": "桥接未闭合：空间动点单变量化配方 SOURCE_METHOD_READY（只有方法骨架，缺完整无答案微课）",
+   "class": "BRIDGE_GATE",
+   "items": [
+    "C15",
+    "C16"
+   ]
+  },
+  {
+   "breakpoint": "桥接检查标准未具备：阿波罗尼斯球与等距轨迹、极化恒等式与数量积最值（SUPPLEMENT_READY 但未通过自造变式/放行门禁）",
+   "class": "BRIDGE_GATE",
+   "items": [
+    "C16"
+   ]
+  }
+ ],
+ "item_results": [
+  {
+   "section": "1.2+1.3",
+   "cycle": 1,
+   "item_id": "fcfa77372aee59c2",
+   "task": "01",
+   "label": "教材例1",
+   "kind": "教学例题",
+   "visual_status": "NEEDS_VISION_SIDECAR",
+   "source_revision": {
+    "generation": "G-CH1-S12-01",
+    "source_packet_type": "DEEPSEEK_STUDENT_CONTEXT",
+    "packet_status": "VERIFIED",
+    "route_revision": "10 循环重构（build-1.2-1.3, 2026-08-16T22:10:00, item_id/qid 复用）"
+   },
+   "context_sha256": "271c68719a46b628e716267fb786ee13c4e40bec9523ffe4f005fada1c05fd86",
+   "observation_signal": "题干：平行六面体 ABCD-A1B1C1D1 中，判断下列哪组向量一定能作为空间基底（选项含 AB、AD、AA1、A1A、B1D1、C1D1、A1D1、AC、CC1 的组合）。信号词：『基底』『一定能』——需逐一判断三向量是否共面；配图未核验。",
+   "course_call": {
+    "course_id": "3.1.2.1",
+    "method_model_id": "3.1.2.1:unique_decomposition",
+    "appears_before_first_use": true,
+    "linkage": "前置 3.1.1.1（空间向量的运算：自由向量/字母运算）已听；课程 3.1.2.1 定义：三个不共面向量构成基底（空间向量基本定理），判定基底需检查三向量不共面（线性无关）。",
+    "first_use_location": "任务01 教材例1（3.1.2.1 首次使用；3.1.1.1 首次前置）"
+   },
+   "first_line": "目标量：判定四组三向量中哪组一定构成基底；先固定平行六面体顶点布局（ABCD 下底面、A1B1C1D1 上底面、A1 在 A 正上方）。",
+   "second_line": "依据：a,b,c 构成基底 ⇔ 三向量不共面 ⇔ xa+yb+zc=0 只有零解；平行六面体中相对棱对应向量相等（如 AB=D1C1、AA1=CC1）。",
+   "continuation": "按协议停止：配图状态 NEEDS_VISION_SIDECAR、路线标注『未完成视觉核验，禁止猜图』，不凭常规记法推断图上方位，等待视觉侧车后再判断。",
+   "independent_self_check": "检查：即使按常规记法可推选项关系，题图与文字一致性未核验；禁止猜图、禁止把推导当作已核验掌握。",
+   "first_breakpoint": "图形未核验（NEEDS_VISION_SIDECAR）：教材例1 配图无已核验视觉侧车，路线标注禁止猜图",
+   "hint_level": "none",
+   "verdict": "BLOCKED",
+   "answer_sidecar_read": false,
+   "human_acceptance_not_proven": true
+  },
+  {
+   "section": "1.2+1.3",
+   "cycle": 1,
+   "item_id": "Q-491d3349a231a63f",
+   "task": "02",
+   "label": "B8",
+   "kind": "A/B/C习题",
+   "visual_status": "READY_TEXT_ONLY",
+   "source_revision": {
+    "generation": "G-CH1-S12-01",
+    "source_packet_type": "DEEPSEEK_STUDENT_CONTEXT",
+    "packet_status": "VERIFIED",
+    "route_revision": "10 循环重构（build-1.2-1.3, 2026-08-16T22:10:00, item_id/qid 复用）"
+   },
+   "context_sha256": "271c68719a46b628e716267fb786ee13c4e40bec9523ffe4f005fada1c05fd86",
+   "observation_signal": "题面：{a,b,c} 为空间的一组基底，下列各组向量中也能构成空间的一组基底的是（四组线性组合）。信号词：基底⇔线性无关⇔三向量不共面。",
+   "course_call": {
+    "course_id": "3.1.2.1",
+    "method_model_id": "3.1.2.1:basis_criterion",
+    "appears_before_first_use": true,
+    "linkage": "课程 3.1.2.1（+前置 3.1.1.1）：基底=三个不共面向量（基本定理）；用系数齐次方程组判断线性无关（路线同时列出 3.1.3.2 为参照课程）。",
+    "first_use_location": "任务02 B8（3.1.2.1 独立习题首次使用）"
+   },
+   "first_line": "目标量：判定四组；方法：设 αu+βv+γw=0，在 {a,b,c} 的系数下列齐次方程组，看是否存在非零解。",
+   "second_line": "依据：A 组 a+b, b-c, a+c：α+γ=0, α+β=0, -β+γ=0 有非零解（α=1,β=-1,γ=-1）→ 相关；B 组 -a+b+2c, b+c, a+b：-α+γ=0, α+β+γ=0, 2α+β=0 有非零解（1,-2,1）→ 相关；C 组 a+2b, a+2c, a+b+c：α+β+γ=0, 2α+γ=0, 2β+γ=0 有非零解（1,1,-2）→ 相关；D 组 a+c, a-b, b-c：α+β=0, -β+γ=0, α-γ=0 只有零解 → 无关。",
+   "continuation": "只有 D 组构成基底，对应选项 D。",
+   "independent_self_check": "核对：每组都解齐次方程并验证非零解存在性；D 组系数矩阵满秩；基底要求三向量不共面=线性无关；『一定能』排除仅个别位置成立的情形。",
+   "first_breakpoint": "none",
+   "hint_level": "none",
+   "verdict": "PASS",
+   "answer_sidecar_read": false,
+   "human_acceptance_not_proven": true
+  },
+  {
+   "section": "1.2+1.3",
+   "cycle": 2,
+   "item_id": "cfccea517f624ccf",
+   "task": "03",
+   "label": "教材例2",
+   "kind": "教学例题",
+   "visual_status": "NEEDS_VISION_SIDECAR",
+   "source_revision": {
+    "generation": "G-CH1-S12-01",
+    "source_packet_type": "DEEPSEEK_STUDENT_CONTEXT",
+    "packet_status": "VERIFIED",
+    "route_revision": "10 循环重构（build-1.2-1.3, 2026-08-16T22:10:00, item_id/qid 复用）"
+   },
+   "context_sha256": "271c68719a46b628e716267fb786ee13c4e40bec9523ffe4f005fada1c05fd86",
+   "observation_signal": "题干：长方体 ABCD-A1B1C1D1 以顶点 A 为原点、过 A 的三条棱所在直线为坐标轴建系，AB=4，AD=3，AA1=2，写出各顶点坐标。文字给出棱长；『如图所示』的轴与棱对应关系（x/y/z 各是哪条棱）须由图确认。",
+   "course_call": {
+    "course_id": "3.1.3.1",
+    "method_model_id": "3.1.3.1:right_handed_coordinate_system",
+    "appears_before_first_use": true,
+    "linkage": "前置 3.1.1.1 已听；课程 3.1.3.1：以墙角为原点建空间直角坐标系（右手系、Z 轴竖直），点坐标=沿轴平移距离；需对照图确认三条棱与 x/y/z 轴对应。",
+    "first_use_location": "任务03 教材例2（3.1.3.1 首次使用）"
+   },
+   "first_line": "目标量：八个顶点坐标；先确定三条棱与 x/y/z 轴的对应（图中信息）。",
+   "second_line": "依据：课程建系规则：沿 x 轴方向棱长记入 x 坐标，其余轴同理；中点/对角点按坐标相加。",
+   "continuation": "按协议停止：轴与棱的对应关系由图面定义，图未核验（NEEDS_VISION_SIDECAR），禁止猜图。",
+   "independent_self_check": "检查：若猜 AB 为 x 轴、AD 为 y 轴会得到一套坐标，但图未核验时不能确认；按协议阻断。",
+   "first_breakpoint": "图形未核验（NEEDS_VISION_SIDECAR）：教材例2 的坐标轴与棱对应依赖配图，禁止猜图",
+   "hint_level": "none",
+   "verdict": "BLOCKED",
+   "answer_sidecar_read": false,
+   "human_acceptance_not_proven": true
+  },
+  {
+   "section": "1.2+1.3",
+   "cycle": 2,
+   "item_id": "9069871239ce9982",
+   "task": "04",
+   "label": "教材例3",
+   "kind": "教学例题",
+   "visual_status": "NEEDS_VISION_SIDECAR",
+   "source_revision": {
+    "generation": "G-CH1-S12-01",
+    "source_packet_type": "DEEPSEEK_STUDENT_CONTEXT",
+    "packet_status": "VERIFIED",
+    "route_revision": "10 循环重构（build-1.2-1.3, 2026-08-16T22:10:00, item_id/qid 复用）"
+   },
+   "context_sha256": "271c68719a46b628e716267fb786ee13c4e40bec9523ffe4f005fada1c05fd86",
+   "observation_signal": "题干：向量 a=(1,2,-3)，则 a 在坐标平面 Oyz 上的投影向量是（选项 (0,2,3)、(0,2,-3)、(1,2,0)、(1,2,-3)）。文字本身完整、不依赖图形内容；但学习项视觉状态仍为 NEEDS_VISION_SIDECAR，路线标注『未完成视觉核验，禁止猜图』。",
+   "course_call": {
+    "course_id": "3.1.3.1",
+    "method_model_id": "3.1.3.1:coordinate_projection",
+    "appears_before_first_use": true,
+    "linkage": "课程知识（3.1.3.1/3.1.3.2 讲义段落）：点在 Oyz 平面上的射影=横坐标改 0（A(1,2,-3) 在 Oyz 的射影为 A'(0,2,-3)），投影向量同理。",
+    "first_use_location": "任务04 教材例3（3.1.3.1 第二次使用）"
+   },
+   "first_line": "目标量：a 在 Oyz 上的投影向量；Oyz 平面即 x=0 坐标面。",
+   "second_line": "依据：投影=把横坐标改为 0 ⇒ 候选为 (0,2,-3)（z 分量 -3 保持不变，不是 +3）。",
+   "continuation": "按协议停止：学习项图形状态 NEEDS_VISION_SIDECAR 未核验，标准要求模拟器必须停止并记录阻断；不因文字可读而自行放行。",
+   "independent_self_check": "检查：方法已明确，但证据门禁（视觉核验）未过；不把未核验项当作掌握记录。",
+   "first_breakpoint": "图形未核验（NEEDS_VISION_SIDECAR）：教材例3 学习项视觉状态未核验，按标准阻断",
+   "hint_level": "none",
+   "verdict": "BLOCKED",
+   "answer_sidecar_read": false,
+   "human_acceptance_not_proven": true
+  },
+  {
+   "section": "1.2+1.3",
+   "cycle": 3,
+   "item_id": "ced7480896c3ecc3",
+   "task": "05",
+   "label": "教材例4",
+   "kind": "教学例题",
+   "visual_status": "NEEDS_VISION_SIDECAR",
+   "source_revision": {
+    "generation": "G-CH1-S12-01",
+    "source_packet_type": "DEEPSEEK_STUDENT_CONTEXT",
+    "packet_status": "VERIFIED",
+    "route_revision": "10 循环重构（build-1.2-1.3, 2026-08-16T22:10:00, item_id/qid 复用）"
+   },
+   "context_sha256": "271c68719a46b628e716267fb786ee13c4e40bec9523ffe4f005fada1c05fd86",
+   "observation_signal": "题干：四棱锥 P-ABCD，底面 ABCD 为正方形，PA⊥平面ABCD，PA=AB=2，M、N 分别为 PB、CD 中点，『如图建系』回答 6 小问（坐标、数量积、长度、垂直判断、夹角余弦、重心坐标）。『如图建系』依赖图中原点与坐标轴方向。",
+   "course_call": {
+    "course_id": "3.1.3.1",
+    "method_model_id": "3.1.3.1:right_handed_coordinate_system",
+    "appears_before_first_use": true,
+    "linkage": "课程 3.1.3.1：先找直角建系（PA⊥底面可取 z 轴，底面正方形两邻边取 x/y），右手系；中点坐标=两端点坐标平均。",
+    "first_use_location": "任务05 教材例4（3.1.3.1 第三次使用 / 循环3 知识点例题）"
+   },
+   "first_line": "目标量：六个小问；先建系：确定原点与 x/y/z 轴对应（图中信息）。",
+   "second_line": "依据：课程建系规则与中点坐标公式；DM、BP、PC、MN、BD、PN 等向量=末减初，数量积=对应坐标相乘相加。",
+   "continuation": "按协议停止：『如图建系』的轴与原点由图定义，图未核验（NEEDS_VISION_SIDECAR），禁止猜图。",
+   "independent_self_check": "检查：不同建系坐标不同但几何结论等价；未核验前不能选定轴对应，按协议阻断。",
+   "first_breakpoint": "图形未核验（NEEDS_VISION_SIDECAR）：教材例4 依赖图中建系信息，禁止猜图",
+   "hint_level": "none",
+   "verdict": "BLOCKED",
+   "answer_sidecar_read": false,
+   "human_acceptance_not_proven": true
+  },
+  {
+   "section": "1.2+1.3",
+   "cycle": 3,
+   "item_id": "Q-6ed7e46c02ea0cbe",
+   "task": "06",
+   "label": "A1",
+   "kind": "A/B/C习题",
+   "visual_status": "READY_TEXT_ONLY",
+   "source_revision": {
+    "generation": "G-CH1-S12-01",
+    "source_packet_type": "DEEPSEEK_STUDENT_CONTEXT",
+    "packet_status": "VERIFIED",
+    "route_revision": "10 循环重构（build-1.2-1.3, 2026-08-16T22:10:00, item_id/qid 复用）"
+   },
+   "context_sha256": "271c68719a46b628e716267fb786ee13c4e40bec9523ffe4f005fada1c05fd86",
+   "observation_signal": "题面：a=(1,-2,1)，b=(-2,1,-2)，则 a-b=（四选一）。信号词：向量坐标减法；本项为上下文探针题（probe_qids 之一，probe_token d9f08af0）。",
+   "course_call": {
+    "course_id": "3.1.3.2",
+    "method_model_id": "3.1.3.2:linear_ops",
+    "appears_before_first_use": true,
+    "linkage": "课程 3.1.3.2（前置 3.1.3.1 已听）：减法=对应坐标相减。",
+    "first_use_location": "任务06 A1（3.1.3.2 独立习题首次使用）"
+   },
+   "first_line": "目标量：a-b=(1-(-2), -2-1, 1-(-2))。",
+   "second_line": "依据：课程坐标减法规则，逐项相减。",
+   "continuation": "a-b=(3,-3,3)，对应选项 B。",
+   "independent_self_check": "核对：逐项相减未错位；(3,-3,3) 与选项 B 一致。",
+   "first_breakpoint": "none",
+   "hint_level": "none",
+   "verdict": "PASS",
+   "answer_sidecar_read": false,
+   "human_acceptance_not_proven": true
+  },
+  {
+   "section": "1.2+1.3",
+   "cycle": 3,
+   "item_id": "Q-9dc59a76b39b51c2",
+   "task": "07",
+   "label": "A2",
+   "kind": "A/B/C习题",
+   "visual_status": "READY_TEXT_ONLY",
+   "source_revision": {
+    "generation": "G-CH1-S12-01",
+    "source_packet_type": "DEEPSEEK_STUDENT_CONTEXT",
+    "packet_status": "VERIFIED",
+    "route_revision": "10 循环重构（build-1.2-1.3, 2026-08-16T22:10:00, item_id/qid 复用）"
+   },
+   "context_sha256": "271c68719a46b628e716267fb786ee13c4e40bec9523ffe4f005fada1c05fd86",
+   "observation_signal": "题面：a=(x,1,1)，b=(1,-2,1)，且 a⊥b，则 x=（四选一）。信号词：垂直→点乘为 0；本项为上下文探针题（probe_qids 之一，probe_token 9819bc0a）。",
+   "course_call": {
+    "course_id": "3.1.3.2",
+    "method_model_id": "3.1.3.2:coordinate_dot_product",
+    "appears_before_first_use": true,
+    "linkage": "课程 3.1.3.2：a⊥b ⇔ a·b=0。",
+    "first_use_location": "任务07 A2（3.1.3.2 独立习题）"
+   },
+   "first_line": "目标量：x；a·b=x·1+1·(-2)+1·1=x-1。",
+   "second_line": "依据：垂直条件 a·b=0 ⇒ x=1。",
+   "continuation": "x=1，对应选项 C。",
+   "independent_self_check": "核对：代入验算 1-2+1=0 ✓；选项 C=1。",
+   "first_breakpoint": "none",
+   "hint_level": "none",
+   "verdict": "PASS",
+   "answer_sidecar_read": false,
+   "human_acceptance_not_proven": true
+  }
+ ]
+}

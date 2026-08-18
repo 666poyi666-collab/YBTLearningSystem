@@ -1,0 +1,17 @@
+{
+  "schema_version": "ybt-shared-defects-v1",
+  "task_id": "LUNA-CH12-09",
+  "status": "reported",
+  "defects": [
+    {
+      "path": "data/packets/2.6/learning_packet.json",
+      "item_key": "Q:Q-dfa5d1d45a2d1637",
+      "field": "source_docs",
+      "severity": "medium",
+      "observed": "exercise_questions[...].source_docs is empty while source_anchor.ocr_doc is 88",
+      "evidence": ["data/packets/2.6/packet.json", "data/packets/2.6/student_packet.json", "data/ocr_live_current/second_chapter_109/doc_88.md"],
+      "impact": "The official build_paddle_glm_crosscheck.py cannot select a PaddleOCR artifact for the image and exits before writing evidence.",
+      "workaround": "Local task-only fallback used source_anchor.ocr_doc=88; no shared source was modified."
+    }
+  ]
+}

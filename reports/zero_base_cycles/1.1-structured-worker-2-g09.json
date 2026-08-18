@@ -1,0 +1,386 @@
+{
+  "schema_version": "1.1",
+  "artifact": "CURRENT_GENERATION_ZERO_BASE_AGENT_SIMULATION",
+  "report_type": "zero_base_student_simulation",
+  "generation": "G-20260816-09",
+  "section": "1.1",
+  "worker": 2,
+  "role": "deepseek_worker",
+  "worker_status": "PARTIAL",
+  "worker_contract": {
+    "role": "deepseek_worker",
+    "agent_id": "01a00a58-1f0c-7210-9f90-d32ecce2133b",
+    "model": "opencode-go/deepseek-v4-flash",
+    "reasoning_effort": "max",
+    "context_window": 1000000,
+    "answer_sidecar_read": false,
+    "contract_evidence": "deepseek-mode.json schema v1 active=true model=opencode-go/deepseek-v4-flash context_window=1000000 reasoning_effort=max; deepseek-worker.toml locks role deepseek_worker with same model/effort/context; 本 worker 按该精确契约运行，未降级、未回退。"
+  },
+  "answer_sidecar_read": false,
+  "human_acceptance_not_proven": true,
+  "source_revision": {
+    "generation": "G-20260816-09",
+    "section": "1.1",
+    "source": "data/contexts/1.1.json (context_sha256=f7134202319beade76dd7f8dbbbd07b36613661ffa57b56c17267b7976e50dd2, status VERIFIED) + data/packets/1.1/learning_packet.json (current no-answer route, status VERIFIED)"
+  },
+  "simulated_at": "2026-08-16T21:12:14+08:00",
+  "scope": {
+    "assigned": "tasks 15-17 (循环3方法检查；例12及其直属变式；B9)",
+    "cycle_ids": [
+      "1.1-cycle-3",
+      "1.1-cycle-4"
+    ],
+    "task_number_mapping": {
+      "task 15": {
+        "cycle": "1.1-cycle-3",
+        "items": [
+          "1.1-equal-surface-check-1",
+          "1.1-equal-surface-check-2"
+        ]
+      },
+      "task 16": {
+        "cycle": "1.1-cycle-4",
+        "items": [
+          "85adf2efd96849c8",
+          "0d9860d67f5ba867"
+        ]
+      },
+      "task 17": {
+        "cycle": "1.1-cycle-4",
+        "items": [
+          "B9"
+        ]
+      }
+    },
+    "mapping_assumption": "任务编号按主控给定枚举归属：任务15=循环3两个方法检查点，任务16=例12及其直属变式（教学+独立作答），任务17=B9；learning_packet.json 与 contexts/1.1.json 内均无任务编号字段，题项级归属为本 worker 按该枚举的分组。item_id 与 packet 对齐：例12=85adf2efd96849c8、变式=0d9860d67f5ba867、B9 以 group+number 名 B9 表示（qid=Q-2191f72b893e2bf4）。"
+  },
+  "input_boundary": {
+    "consumed": [
+      "data/contexts/1.1.json (当前学生上下文, status=VERIFIED, context_sha256=f7134202319beade76dd7f8dbbbd07b36613661ffa57b56c17267b7976e50dd2)",
+      "data/zero_base_simulation_standard.md",
+      "data/packets/1.1/learning_packet.json (当前无题路线, status=VERIFIED, schema 7.4)",
+      "指定课程转写: 3.1.2.1 空间向量拆分法 / 3.1.2.2 空间向量等值面法 / 3.1.4.2 证明共面",
+      "无答案桥接: micro-four-point-coplanar (SUPPLEMENT_READY, 四点共面系数和=1)",
+      "已验证视觉侧车: 变式 0d9860d67f5ba867 与 B9 Q-2191f72b893e2bf4 (均 VISION_VERIFIED, evidence E1+E2)"
+    ],
+    "not_consumed": [
+      "data/packets/1.1/answer_sidecar.json",
+      "答案 OCR / 答案正文 / 教师判卷结果",
+      "历史 simulation 报告"
+    ],
+    "answer_sidecar_read": false
+  },
+  "context": {
+    "context_sha256": "f7134202319beade76dd7f8dbbbd07b36613661ffa57b56c17267b7976e50dd2",
+    "context_sha256_source": "读取自 data/contexts/1.1.json evidence.context_sha256（当前代）",
+    "context_file_sha256": "2b2145f52f0c99fc1bf69e72764ff67e20e79c5ca485295a1c27ab0b03abd84b",
+    "status": "VERIFIED",
+    "canary_echo": "9aa133e8105f3e95",
+    "context_probe": [
+      {
+        "qid": "Q-84442c12da683ad3",
+        "probe_sha256_prefix": "bb957c78",
+        "visible_fields_only": "A组第1题, VISION_VERIFIED, 四面体 OABC 中 N 为 BC 中点, 设 OA=a, OB=b, OC=c, 求 AN 的分解（仅复述可见题面字段）"
+      },
+      {
+        "qid": "Q-1727695600a57e80",
+        "probe_sha256_prefix": "8af98ec5",
+        "visible_fields_only": "A组第2题, READY_TEXT_ONLY, 化简 (1) 2(a-2b-3c)-3(a+2b-c); (2) AB-DB-AC（仅复述可见题面字段）"
+      },
+      {
+        "qid": "Q-7370f2df587a419e",
+        "probe_sha256_prefix": "474ad3ed",
+        "visible_fields_only": "A组第3题, VISION_VERIFIED, 正方体 ABCD-A1B1C1D1, G 为 CC1 中点, O 为 AC 与 BD 的交点, 化简各式（仅复述可见题面字段）"
+      }
+    ]
+  },
+  "cycle_status": [
+    {
+      "cycle_id": "1.1-cycle-3",
+      "title": "空间向量等值面法",
+      "course_keys": [
+        "equal_surface(3.1.2.2, support, COVERED)"
+      ],
+      "prerequisite_course_keys": [
+        "decomposition(3.1.2.1, required, COVERED)"
+      ],
+      "no_textbook_question_check": {
+        "worked_examples": 0,
+        "direct_variants": 0,
+        "exercise_questions": 0,
+        "conclusion": "循环3无教材题确认：learning_packet.json 中本循环 worked_examples/direct_variants/exercise_questions 均为空，仅含 2 个 NO_ANSWER 方法检查点。"
+      },
+      "method_checkpoints": [
+        "1.1-equal-surface-check-1",
+        "1.1-equal-surface-check-2"
+      ],
+      "all_no_answer": true,
+      "action_order": [
+        "watch_current_courses",
+        "attempt_current_method_checkpoints_without_answers",
+        "assess_current_cycle"
+      ]
+    },
+    {
+      "cycle_id": "1.1-cycle-4",
+      "title": "共面证明",
+      "course_keys": [
+        "coplanar(3.1.4.2, required, COVERED)"
+      ],
+      "prerequisite_course_keys": [
+        "decomposition(3.1.2.1, required, COVERED)"
+      ],
+      "bridge_unit_ids": [
+        "micro-four-point-coplanar(SUPPLEMENT_READY)"
+      ],
+      "items": [
+        {
+          "kind": "worked_example",
+          "item_id": "85adf2efd96849c8",
+          "label": "例12",
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_allowed": true
+        },
+        {
+          "kind": "direct_variant",
+          "item_id": "0d9860d67f5ba867",
+          "label": "变式",
+          "visual_status": "VISION_VERIFIED",
+          "solution_isolated": true
+        },
+        {
+          "kind": "abc_exercise",
+          "item_id": "Q-2191f72b893e2bf4",
+          "label": "B9",
+          "visual_status": "VISION_VERIFIED",
+          "answer_sidecar_forbidden": true
+        }
+      ],
+      "vision_gate": "范围内无 NEEDS_VISION_SIDECAR / MISSING_OCR_ANCHOR / UNVERIFIED 题项，无需因视觉阻断。"
+    }
+  ],
+  "first_breakpoints": [
+    "方法检查1 (1.1-equal-surface-check-1)：在'为什么不能只检查三个系数都非零'处卡住——想举 x=y=z=1/2（和 3/2）说明非零不够，但只能用'因为系数和要为 1'复述课程结论，无法用等值面分层或逆向拆分给出几何理由。",
+    "方法检查2 (1.1-equal-surface-check-2)：在'为什么系数相减比重新作图更稳定'处卡住——只能写不用画图、更快，不能说明倍面由系数和直接决定、末减出把层差变成确定性算术。",
+    "变式 (0d9860d67f5ba867)：第一断点在 (1) 的末减出符号——写出 AG、AE 后，对 EG=AG-AE 中 AA1 方向系数 z 的符号无法确定（AE 含整条 AA1 加 A1E，AG 只含半条 AA1，相减后是抵消还是保留符号分不清），停在 (1)，(2) 未进入。",
+    "B9 (Q-2191f72b893e2bf4)：第一断点在 (1) 的定比分点方向——把 DG=2GP 换算成 PG 与 PD 的倍数时方向不确定（2:1 是哪两段、G 更靠近 P 还是 D），写出的系数无法通过自检确认；同时自检误把四点共面系数和=1 套到本题 (1) 的系数上，发现对不上后以为拆分错了，(2) 未进入。"
+  ],
+  "item_results": [
+    {
+      "section": "1.1",
+      "cycle": "1.1-cycle-4",
+      "item_id": "85adf2efd96849c8",
+      "task_number": 16,
+      "kind": "worked_example",
+      "label": "例12（教学跟随）",
+      "answer_policy": "TEACHING_ALLOWED",
+      "visual_status": "READY_TEXT_ONLY",
+      "observation_signal": "题面：A、B、C 三点不共线，平面 ABC 外一点 O 满足 OM=(1/3)OA+(1/3)OB+(1/3)OC，判断 MA、MB、MC 三个向量是否共面；关键词：平面外一点、系数和、向量共面判定；文字题面完整，不需要图。",
+      "course_call": {
+        "course_keys": [
+          "coplanar(3.1.4.2 证明共面)",
+          "decomposition(3.1.2.1 空间向量拆分法, 前置)",
+          "bridge: micro-four-point-coplanar"
+        ],
+        "method_model_id": "3.1.4.2-coplanar-by-vector-decomposition + micro-four-point-coplanar-coefficient-sum-1",
+        "method_usage": "课程 3.1.4.2（证明共面）的方法：证明共面 = 把一个向量用另外两个向量拆分，能拆即有解即共面；配合 3.1.2.1 公共起点拆分消去中间点 O；桥接微课四点共面系数和=1 提供点共面与系数和的对应。教学阶段按课程例题跟随完整过程。"
+      },
+      "first_line": "写目标：找实数 λ、μ 使 MA=λMB+μMC；三个向量都以 M 为起点，先把 O 消掉。",
+      "second_line": "把 OM 拆成 3 个 (1/3)OM，与 (1/3)OA、(1/3)OB、(1/3)OC 分别合并消去 O；依据：公共起点拆分法（3.1.2.1），所有分量都写成从 O 出发的形式再合并。",
+      "continuation": "合并得 3OM=OA+OB+OC，移项整理：由 OA-OM=MA、OB-OM=MB、OC-OM=MC，得到 MA+MB+MC=0，即 MA=-MB-MC，拆分存在，三向量共面。",
+      "independent_self_check": "检查：MA 已由 MB、MC 线性表示，故三向量共面；对照系数和 1/3+1/3+1/3=1（与四点共面系数和结论呼应）；逐项核对移项符号与方向。",
+      "first_breakpoint": "教学阶段无断点，跟随完整教学过程。",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "source_revision": {
+        "generation": "G-20260816-09",
+        "section": "1.1",
+        "source": "data/contexts/1.1.json + data/packets/1.1/learning_packet.json (current no-answer route, status VERIFIED)"
+      },
+      "context_sha256": "f7134202319beade76dd7f8dbbbd07b36613661ffa57b56c17267b7976e50dd2",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true,
+      "teaching_phase_note": "例题允许在教学阶段跟随完整过程；该 PASS 只是教学跟随证据，不能作为独立掌握证据，需以直属变式独立作答为准。",
+      "evidence": [
+        "E1"
+      ],
+      "source_anchor": "ocr_doc 7"
+    },
+    {
+      "section": "1.1",
+      "cycle": "1.1-cycle-4",
+      "item_id": "0d9860d67f5ba867",
+      "task_number": 16,
+      "kind": "direct_variant",
+      "label": "变式（例12直属，独立作答）",
+      "answer_policy": "SOLUTION_ISOLATED",
+      "visual_status": "VISION_VERIFIED",
+      "variant_delta_from_parent": "相对母题例12的改变：母题只给系数分解式直接判断向量共面；变式改为在平行六面体中先由四个棱中点求 EG 在 AB、AD、AA1 下的系数（拆分计算），再证 E、F、G、H 四点共面（从向量共面到点共面），图形由四面体换成平行六面体并给出中点条件。",
+      "observation_signal": "平行六面体 ABCD-A1B1C1D1，E、F、G、H 分别为棱 A1D1、C1D1、CC1、AB 的中点；(1) 设 EG=xAB+yAD+zAA1 求 x、y、z；(2) 证明 E、F、G、H 四点共面；关键词：中点、基底拆分、四点共面；视觉侧车 VISION_VERIFIED(E1+E2)：12 个顶点坐标齐全，E 在 A1D1 中点、F 在 C1D1 中点、G 在 CC1 中点、H 在 AB 中点，无不确定项。",
+      "course_call": {
+        "course_keys": [
+          "coplanar(3.1.4.2 证明共面)",
+          "decomposition(3.1.2.1 空间向量拆分法)",
+          "equal_surface(3.1.2.2 空间向量等值面法)",
+          "bridge: micro-four-point-coplanar"
+        ],
+        "method_model_id": "3.1.2.1-midpoint-bridge-decomposition + 3.1.4.2-coplanar-by-vector-decomposition",
+        "method_usage": "例题教学后独立作答：先用 3.1.2.1 拆分法（选公共起点 A、中点向量、末减出 EG=AG-AE、平行四边形法则）求 EG 的系数，再用课程 3.1.4.2 的向量拆分（有解即共面）证 E、F、G、H 共面；桥接 micro-four-point-coplanar 已 SUPPLEMENT_READY 并在本题前完成。"
+      },
+      "first_line": "选公共起点 A：写 EG=AG-AE（末减出）；先把 E、G 用中点条件写成从 A 出发的向量。",
+      "second_line": "E 是 A1D1 中点：AE=AA1+A1E，A1E=(1/2)A1D1=(1/2)AD；G 是 CC1 中点：AG=AC+CG，CG=(1/2)AA1，AC=AB+AD；依据：平行四边形法则与中点向量性质。",
+      "continuation": "代入 EG=AG-AE 并合并同类项，向 AB、AD、AA1 三个方向逐项收集系数；到 AA1 方向时对减法产生的符号犹豫，反复核对 E 与 G 在 AA1 方向上的位置关系，(1) 未写完 z；(2) 未进入。",
+      "independent_self_check": "检查系数是否逐项对应三个基底向量；对 z 的符号用方向自查：E 沿 AA1 方向到 A1 再沿 A1D1 走一半，G 沿 AA1 方向只到一半，相减后正负仍无法确信；(2) 四点共面尚未开始。",
+      "first_breakpoint": "第一断点在 (1) 的末减出符号：写出 AG、AE 后，对 EG=AG-AE 中 AA1 方向系数 z 的符号无法确定（AE 含整条 AA1 加 A1E，AG 只含半条 AA1，相减后是抵消还是保留符号分不清），停在 (1)，(2) 未进入。",
+      "hint_level": "none",
+      "verdict": "PARTIAL",
+      "source_revision": {
+        "generation": "G-20260816-09",
+        "section": "1.1",
+        "source": "data/contexts/1.1.json + data/packets/1.1/learning_packet.json (current no-answer route, status VERIFIED)"
+      },
+      "context_sha256": "f7134202319beade76dd7f8dbbbd07b36613661ffa57b56c17267b7976e50dd2",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true,
+      "evidence": [
+        "E1",
+        "E2"
+      ],
+      "source_anchor": "ocr_doc 7"
+    },
+    {
+      "section": "1.1",
+      "cycle": "1.1-cycle-4",
+      "item_id": "B9",
+      "task_number": 17,
+      "kind": "abc_exercise",
+      "label": "B9（独立作答）",
+      "answer_policy": "ANSWER_SIDECAR_FORBIDDEN",
+      "visual_status": "VISION_VERIFIED",
+      "observation_signal": "正四棱锥 P-ABCD，E、F 分别为 PA、PC 的中点，DG=2GP；(1) 若 BG=xBA+yBC+zBP 求 x、y、z；(2) 证明 B、E、G、F 四点共面；关键词：中点、定比分点 2:1、基底拆分、共面证明；视觉侧车 VISION_VERIFIED(E1+E2)：E 在直线 PA 上、F 在直线 PC 上、G 在直线 PD 上，底面与侧棱连接关系完整，无不确定项。",
+      "course_call": {
+        "course_keys": [
+          "coplanar(3.1.4.2 证明共面)",
+          "decomposition(3.1.2.1 空间向量拆分法)",
+          "equal_surface(3.1.2.2 空间向量等值面法)",
+          "bridge: micro-four-point-coplanar"
+        ],
+        "method_model_id": "3.1.2.1-midpoint-and-ratio-bridge-decomposition + 3.1.4.2-coplanar-by-vector-decomposition",
+        "method_usage": "独立作答：先用 3.1.2.1 拆分法（选公共起点 B、加法拆分过中间点 P、末减出、平行四边形法则）把 BG 在 BA、BC、BP 下拆分求系数，再用课程 3.1.4.2 向量拆分（有解即共面）证 B、E、G、F 共面；桥接 micro-four-point-coplanar 已 SUPPLEMENT_READY 并在本题前完成。"
+      },
+      "first_line": "选公共起点 B：写 BG=BP+PG（加法拆分，中间桥梁 P）。",
+      "second_line": "由 DG=2GP 写 PG 与 PD 的比例关系（2:1 的定比分点方向此处最易错）；PD=BD-BP（末减出）；BD=BA+BC（平行四边形法则，底面正方形对角线）。",
+      "continuation": "代入合并得 BG 在 BA、BC、BP 下的系数，写出 x、y、z；开始 (2)：先把 BE、BF 写成以 BA/BP 和 BC/BP 表示的中点向量，再尝试把 BG 表示成 BE、BF 的组合。",
+      "independent_self_check": "反复核对定比分点方向：DG=2GP 时哪一段更长、G 更靠近 P 还是 D、PG 占 PD 的几分之几；自检时误把四点共面系数和=1 直接套到本题 (1) 的系数上，发现对不上后不知所措，以为拆分错了；(2) 的表示方向不确信。",
+      "first_breakpoint": "第一断点在 (1) 的定比分点方向：把 DG=2GP 换算成 PG 与 PD 的倍数时方向不确定（2:1 是哪两段、G 更靠近 P 还是 D），写出的系数无法通过自检确认；同时自检误用四点共面系数和=1 检查本题（(1) 的系数和条件与 (2) 的点共面判定不是同一回事，B、A、C、P 本就不共面），造成额外困惑；(2) 未进入。",
+      "hint_level": "none",
+      "verdict": "PARTIAL",
+      "source_revision": {
+        "generation": "G-20260816-09",
+        "section": "1.1",
+        "source": "data/contexts/1.1.json + data/packets/1.1/learning_packet.json (current no-answer route, status VERIFIED)"
+      },
+      "context_sha256": "f7134202319beade76dd7f8dbbbd07b36613661ffa57b56c17267b7976e50dd2",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true,
+      "qid": "Q-2191f72b893e2bf4",
+      "evidence": [
+        "E1",
+        "E2"
+      ],
+      "source_anchor": "ocr_doc 14 / pdf_page 15"
+    }
+  ],
+  "method_check_results": [
+    {
+      "section": "1.1",
+      "cycle": "1.1-cycle-3",
+      "item_id": "1.1-equal-surface-check-1",
+      "task_number": 15,
+      "kind": "method_checkpoint",
+      "label": "等值面法方法检查",
+      "answer_policy": "NO_ANSWER",
+      "visual_status": "TEXT_ONLY_NO_ANSWER",
+      "observation_signal": "题面给出不共面四点 O、A、B、C 与分解式 OP=xOA+yOB+zOC，设问 P 在平面 ABC 内时 x、y、z 应满足什么关系，并要求自取一组三个非零系数构造满足条件的 P，再说明为什么不能只检查三个系数都非零；关键词：在平面内、系数关系、非零系数。",
+      "course_call": {
+        "course_keys": [
+          "equal_surface(3.1.2.2 空间向量等值面法)",
+          "decomposition(3.1.2.1 空间向量拆分法, 前置)"
+        ],
+        "method_model_id": "3.1.2.2-equal-surface-coefficient-sum-1-coplanarity",
+        "method_usage": "课程 3.1.2.2 把平面三点共线系数和 x+y=1 的等值线推广为空间四点共面系数和 x+y+z=1 的等值面：过 A、B、C 的平面是 1 倍面，过 O 的是 0 倍面，中点连成的面是 1/2 倍面，系数和决定所在层；用该模型把'P 在平面 ABC 内'翻译成系数和条件。"
+      },
+      "first_line": "固定公共起点 O，保持 OP=xOA+yOB+zOC 的分解形式；先写目标：把'P 在平面 ABC 内'翻译成对 x、y、z 的约束。",
+      "second_line": "按课程等值面法写：P 在平面 ABC 内等价于 x+y+z=1——平面 ABC 是 1 倍面，P 必须落在这一层上；依据是 3.1.2.2 的等值面分层结论（类比三点共线 x+y=1 的等值线）。",
+      "continuation": "自取一组三个非零系数使和为 1，例如 x=1/2、y=1/3、z=1/6，构造出满足条件的 P 并写 OP=(1/2)OA+(1/3)OB+(1/6)OC；随后开始回答为什么只检查三个系数都非零不够。",
+      "independent_self_check": "回查自取系数之和：1/2+1/3+1/6=1，通过；再核对分层方向：0 倍面过 O、1 倍面过 ABC，没有写反；但'为什么非零不够'的解释只停在复述'还要系数和为 1'，没有几何依据。",
+      "first_breakpoint": "在'为什么不能只检查三个系数都非零'处卡住：想举反例说明三个系数都非零但和不为 1（如 x=y=z=1/2，和为 3/2）时 P 不在平面 ABC 内，但只能重复'因为和要为 1'，无法用等值面分层（3/2 倍面是与 1 倍面平行的一层）或逆向拆分（把 OP 写成 OA 加平面内两方向的组合）给出理由，没有可继续的下一步。",
+      "hint_level": "none",
+      "verdict": "PARTIAL",
+      "source_revision": {
+        "generation": "G-20260816-09",
+        "section": "1.1",
+        "source": "data/contexts/1.1.json + data/packets/1.1/learning_packet.json (current no-answer route, status VERIFIED)"
+      },
+      "context_sha256": "f7134202319beade76dd7f8dbbbd07b36613661ffa57b56c17267b7976e50dd2",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": "1.1-cycle-3",
+      "item_id": "1.1-equal-surface-check-2",
+      "task_number": 15,
+      "kind": "method_checkpoint",
+      "label": "等值面法末减出近迁移",
+      "answer_policy": "NO_ANSWER",
+      "visual_status": "TEXT_ONLY_NO_ANSWER",
+      "observation_signal": "题面给 E、F 两点的公共起点分解式 OE=(1/2)OA+(1/2)OB+OC 与 OF=OA+2OB+(1/2)OC，设问用等值面法判断 E、F 各落在哪个倍面，只通过系数相减判断向量 EF 的系数和，并说明这一步为何比重新作图更稳定；关键词：倍面、系数相减、稳定性。",
+      "course_call": {
+        "course_keys": [
+          "equal_surface(3.1.2.2 空间向量等值面法)",
+          "decomposition(3.1.2.1 空间向量拆分法, 前置)"
+        ],
+        "method_model_id": "3.1.2.2-equal-surface-k-fold-plane-and-end-minus-start",
+        "method_usage": "课程 3.1.2.2 以系数和给空间分层（0 倍面、1/2 倍面、1 倍面等），并给出末减出模型：EF 的系数和 = F 的系数和 - E 的系数和（末减出）；课程例题用该方法直接由层数差得到向量系数和。"
+      },
+      "first_line": "先分别算 E、F 的系数和：E 的系数和 1/2+1/2+1=2，F 的系数和 1+2+1/2=7/2，所以 E 在 2 倍面、F 在 7/2 倍面上。",
+      "second_line": "写 EF=OF-OE（公共起点减法/末减出），EF 的系数和 = F 的系数和 - E 的系数和 = 7/2-2=3/2；依据：系数线性关系与课程 3.1.2.2 的末减出模型。",
+      "continuation": "得到 EF 的系数和为 3/2（末是 F、初是 E，方向为正）；开始回答为什么系数相减比重新作图更稳定。",
+      "independent_self_check": "核对两遍系数和（2 与 7/2），确认末减出方向：EF 从 E 指向 F，末是 F、初是 E；对'更稳定'的解释只写了'不用画图、更快'，没有给出实质几何理由。",
+      "first_breakpoint": "在'为什么系数相减比重新作图更稳定'处卡住：只能写因为不用画图、算得快，不能说明倍面由系数和直接决定、末减出把'层差'变成确定性系数算术（同时给出系数和与方向），而重新作图需要先定位 E、F 两个空间点再比较平行平面的层数，视觉判断容易错；没有可继续的下一步。",
+      "hint_level": "none",
+      "verdict": "PARTIAL",
+      "source_revision": {
+        "generation": "G-20260816-09",
+        "section": "1.1",
+        "source": "data/contexts/1.1.json + data/packets/1.1/learning_packet.json (current no-answer route, status VERIFIED)"
+      },
+      "context_sha256": "f7134202319beade76dd7f8dbbbd07b36613661ffa57b56c17267b7976e50dd2",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    }
+  ],
+  "summary": {
+    "item_count": 3,
+    "method_check_count": 2,
+    "item_verdict_counts": {
+      "PASS": 1,
+      "PARTIAL": 2,
+      "BLOCKED": 0,
+      "FAIL": 0
+    },
+    "method_check_verdict_counts": {
+      "PASS": 0,
+      "PARTIAL": 2,
+      "BLOCKED": 0,
+      "FAIL": 0
+    },
+    "worker_status": "PARTIAL",
+    "pass_note": "唯一 PASS 为例12教学跟随（例题允许跟随完整过程），不构成独立掌握证据；变式与 B9 均独立作答 PARTIAL，停在第一断点，未给提示；循环3两个方法检查点均为 PARTIAL。",
+    "answer_sidecar_read": false,
+    "human_acceptance_not_proven": true,
+    "generation": "G-20260816-09",
+    "section": "1.1"
+  }
+}

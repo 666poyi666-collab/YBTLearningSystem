@@ -1,0 +1,146 @@
+{
+  "worker": "build-ch2",
+  "chapter": "第2章 直线和圆的方程（课程目录 3.2 直线与圆的方程）",
+  "created_at": "2026-08-17T00:00:00+08:00",
+  "stages": {
+    "stage1_course_inventory": "COMPLETED",
+    "stage2_textbook_source": "COMPLETED",
+    "stage2_question_list": "BLOCKED_NEEDS_MANUAL",
+    "stage3_manifest": "COMPLETED_SKELETON",
+    "stage3_packets": "COMPLETED_SKELETON",
+    "stage3_context_and_route": "BLOCKED_BY_OCR",
+    "transcripts": "IN_PROGRESS"
+  },
+  "course_inventory": {
+    "source_dir": "C:\\Users\\poyi\\Downloads\\课程合集\\3.2 直线与圆的方程",
+    "video_count": 22,
+    "total_duration_min": 718.8,
+    "total_size_gb": 4.92,
+    "files": [
+      "3.2.1.1 直线倾斜角与斜率的关系.mp4",
+      "3.2.1.2 动直线与线段区域相交.mp4",
+      "3.2.2.1 直线的五种表示形式及其应用.mp4",
+      "3.2.2.2 直线方程的应用.mp4",
+      "3.2.2.3 直线间的位置关系：平行与垂直.mp4",
+      "3.2.3.1 点到直线以及平行直线距离公式.mp4",
+      "3.2.3.2.a 点线对称（上）.mp4",
+      "3.2.3.2.b 点线对称（下）.mp4",
+      "3.2.3.3.a 线线对称（上）.mp4",
+      "3.2.3.3.b 线线对称（下）.mp4",
+      "3.2.3.4 过定点的直线系与曲线系.mp4",
+      "3.2.4.1 圆的标准方程和一般方程.mp4",
+      "3.2.4.2 圆的确定.mp4",
+      "3.2.5.1 直线与圆位置关系的判定与应用.mp4",
+      "3.2.5.2 相切与求切线.mp4",
+      "3.2.5.3 弦长与垂径定理.mp4",
+      "3.2.5.4 最长弦与最短弦.mp4",
+      "3.2.5.5 线圆相离的最值模型.mp4",
+      "3.2.5.6 圆与圆的五种位置关系判定.mp4",
+      "3.2.5.7 配极与切点弦模型.mp4",
+      "3.2.5.8 圆的等价模型（代数）.mp4",
+      "3.2.5.9 圆的等价模型（几何）.mp4"
+    ],
+    "durations_json": "C:\\开发\\小工具\\一本通学习系统_v7\\tmp\\ch2_durations.json",
+    "sha256_json": "C:\\开发\\小工具\\一本通学习系统_v7\\tmp\\ch2_sha256.json"
+  },
+  "transcript_gaps": {
+    "existing_ch2_transcripts": 0,
+    "missing": 22,
+    "existing_transcripts_are_chapter1_only": true,
+    "tooling": {
+      "project_transcription_tool": "NOT_FOUND",
+      "note": "scripts/deepseek/ 与主 README 均无转写生成工具说明（仅消费探针）；第 1 章转写由外部 ASR 产出",
+      "local_capability": "faster-whisper large-v3 + CUDA (RTX 5070 Ti) + ffmpeg 可用",
+      "fix_applied": "安装 nvidia-cublas-cu12 注入 cublas64_12.dll，修复 ctranslate2 CUDA12 转写崩溃",
+      "batch_script": "C:\\开发\\小工具\\一本通学习系统_v7\\scripts\\ch2_build\\transcribe_ch2.py"
+    },
+    "generation_status": "IN_PROGRESS",
+    "generation_progress": {
+      "first_file_verified": "3.2.1.1 直线倾斜角与斜率的关系.json（2050s 音频 / 381s 转写 ≈ 5.4x 实时；质量与第 1 章转写同级）",
+      "batch_job": "bash-23 全量剩余 21 门，预计约 2 小时",
+      "speed_note": "large-v3 int8_float16 + beam_size=5 + vad_filter；如需提速可降 beam_size=1，但会损失中文专有名词准确度"
+    },
+    "log": "C:\\开发\\小工具\\一本通学习系统_v7\\tmp\\ch2_transcribe.log",
+    "output": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\course_transcripts\\<课程stem>.json"
+  },
+  "textbook_source": {
+    "primary": {
+      "file": "第2章 直线和圆的方程（无答案册）.pdf",
+      "path": "C:\\Users\\poyi\\Downloads\\【2025-2025版】选择性必修第1册\\按章节合并（无答案册）\\第2章 直线和圆的方程（无答案册）.pdf",
+      "pages": 109,
+      "toc": "fitz 书签目录已提取（7 节，页范围确认）",
+      "text_layer": "NONE（扫描件，须 OCR）"
+    },
+    "secondary": {
+      "file": "数学选择性必修1.pdf",
+      "path": "C:\\Users\\poyi\\Downloads\\数学选择性必修1.pdf",
+      "pages": 218,
+      "toc": "NONE（无书签）",
+      "text_layer": "NONE（扫描件）",
+      "verdict": "无法不经 OCR 确认第 2 章页范围；以主源书签目录为准。如主控需要全书页码对照，需先 OCR 该文件"
+    },
+    "section_pages": [
+      {"section": "2.1", "label": "第1节 直线的倾斜角与斜率", "pdf_pages": [1, 13], "pages": 13},
+      {"section": "2.2", "label": "第2节 直线的方程", "pdf_pages": [14, 26], "pages": 13},
+      {"section": "2.3", "label": "第3节 直线的交点坐标与距离公式", "pdf_pages": [27, 44], "pages": 18},
+      {"section": "2.4", "label": "第4节 微专题2：直线有关的对称问题", "pdf_pages": [45, 56], "pages": 12},
+      {"section": "2.5", "label": "第5节 圆的方程", "pdf_pages": [57, 71], "pages": 15},
+      {"section": "2.6", "label": "第6节 直线与圆的位置关系", "pdf_pages": [72, 93], "pages": 22},
+      {"section": "2.7", "label": "第7节 圆与圆的位置关系", "pdf_pages": [94, 109], "pages": 16}
+    ]
+  },
+  "question_list": {
+    "status": "NEEDS_MANUAL",
+    "reason": "PADDLE_OCR_TOKEN 未配置（用户/机器环境变量均无，项目规则拒绝脚本内置凭据）；扫描件无文本层 → 题号/例题/变式/A-B-C 分组无法确认",
+    "needs_manual_pages": "全部 109 页（7 节全部）",
+    "required_ocr_command": "set PADDLE_OCR_TOKEN=<token> && python \"C:\\开发\\ocr本地\\paddleocr_ai_studio.py\" \"C:\\Users\\poyi\\Downloads\\【2025-2025版】选择性必修第1册\\按章节合并（无答案册）\\第2章 直线和圆的方程（无答案册）.pdf\" --out \"C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\"",
+    "ocr_split_note": "109 页接近单文件 100 页建议上限；如遇超限按课程段 3.2.1/3.2.2/3.2.3/3.2.4/3.2.5 分组提交",
+    "fallback": "主控双源核验：视觉模型逐页核对题号/公式/图形后定稿题号清单"
+  },
+  "artifacts": {
+    "manifest": "C:\\开发\\小工具\\一本通学习系统_v7\\chapter2_manifest.json",
+    "packet_skeletons": [
+      "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\2.1",
+      "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\2.2",
+      "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\2.3",
+      "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\2.4",
+      "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\2.5",
+      "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\2.6",
+      "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\2.7"
+    ],
+    "scripts": [
+      "C:\\开发\\小工具\\一本通学习系统_v7\\scripts\\ch2_build\\transcribe_ch2.py",
+      "C:\\开发\\小工具\\一本通学习系统_v7\\scripts\\ch2_build\\rebuild_packet_readmes.py"
+    ],
+    "build_report": "C:\\开发\\小工具\\一本通学习系统_v7\\reports\\builds\\ch2-build.json"
+  },
+  "blocked": [
+    {
+      "item": "题号清单（例题/变式/A-B-C 分组）",
+      "status": "needs_manual",
+      "reason": "无 Paddle OCR token；教材扫描件无文本层"
+    },
+    {
+      "item": "数学选择性必修1.pdf 第 2 章页范围确认",
+      "status": "blocked_secondary",
+      "reason": "无书签、无文本层；以第 2 章无答案册书签目录替代（已确认）"
+    },
+    {
+      "item": "build-deepseek-context / 无题路线导出（export_learning_packet_markdown.py --without-questions）",
+      "status": "blocked",
+      "reason": "依赖 VERIFIED packet 与 learning_cycles；OCR 完成前不可运行"
+    },
+    {
+      "item": "答案侧车",
+      "status": "not_used_by_design",
+      "reason": "第 2 章答案册 PDF 存在但本会话未读取；答案隔离由主控后续独立核验"
+    }
+  ],
+  "next_steps_for_master": [
+    "配置 PADDLE_OCR_TOKEN 后按 required_ocr_command 跑第 2 章无答案册 OCR，产出 data/ocr_live_current/second_chapter_109",
+    "OCR 定稿题号清单后：填充 chapter2_manifest.json 各节 question_groups/learning_item_counts/learning_cycles，再按 1.1 流程生成并 verify-packet",
+    "扩展 ybt_learning/catalog.py：COURSE_IDS 增加 3.2.x 列表、semantic_course_key 增加第 2 章映射、scan_courses 课程根目录参数化",
+    "转写完成后按转写内容核验 manifest 中 course 归属（TITLE_ASSIGNMENT_PENDING_TRANSCRIPT）",
+    "export_learning_packet_markdown.py 的 normalize_embedded_images 硬编码 first_chapter_69 路径，第 2 章导出需参数化"
+  ]
+}

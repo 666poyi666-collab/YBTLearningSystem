@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "round": 4,
+  "worker": 4,
+  "section": "1.1",
+  "assigned_cycles": ["cycle-7-数量积求长度与求角", "cycle-8-二面角平面角前置与应用"],
+  "focus": "复核例15/16变式视觉链、3.1.4.1前置与二面角",
+  "runtime_contract": {
+    "agent_role": "deepseek_worker",
+    "model": "opencode-go/deepseek-v4-flash",
+    "reasoning_effort": "max",
+    "context_window": 1000000,
+    "contract_source": "C:/Users/poyi/.codex/deepseek-mode.json (schema_version=1, active=true, default_count=5)",
+    "note": "配置与本任务契约一致；本worker无自检运行时模型的工具，未发现失配，按要求继续。"
+  },
+  "sources_read": [
+    "data/packets/1.1/learning_path_without_questions.md（当前循环7-8路线、课程顺序、推进门）",
+    "data/packets/1.1/learning_packet.json（question_text/image_refs/visual_status/vision_hint/vision_sidecars/vision_source_provenance/evidence；未读teaching_text与任何解答字段；未读data/vision_sidecar_full.json）",
+    "data/contexts/1.1.json（route_support.learning_plan、question_coverage、instructions）",
+    "data/bridge_supplement_lessons.json（bridge-1.1-dihedral-definition）",
+    "data/course_transcripts/3.1.4.1平行垂直证明.json（full_text，本轮新增前置课程）",
+    "data/course_transcripts/3.1.4.3 向量夹角与直线夹角.json（full_text）",
+    "data/course_transcripts/3.1.4.5 平面与平面的夹角.json（full_text）"
+  ],
+  "forbidden_sources_read": false,
+  "answer_sidecar_read": false,
+  "human_acceptance_not_proven": true,
+  "repair_checks": [
+    {
+      "check": "视觉完整性：每个图形的视觉链已补齐且可独立作答",
+      "result": "PASS_WITH_RESIDUALS",
+      "evidence": "例15/变式1(15)/变式2(15)/变式1(16)/变式2(16) 由 round-3 的 NEEDS_VISION_SIDECAR 全部升级为 VISION_VERIFIED，且各自嵌入 vision_sidecars（含 image_sha256、confidence、结构化字段）；B6/B7/B12 保持 VISION_VERIFIED；所有 image_refs exists=true。",
+      "residuals": ["单项 vision_sidecar 字段为空、内容只存在于复数 vision_sidecars（schema不一致）", "变式2(16) sidecar 仅标签（A,C,B,A1,C1,B1），无objects/relations/coordinates（E2）", "B7 sidecar 与题干冲突：sidecar把A、B放在平面β内、I在棱l上且未列BD/AB线段，而题干明确A、B在棱l上、AC与BD分别垂直于l", "B12 sidecar 关系列表缺 P-B（题干给 ∠BAP=60° 用到PB）", "E2 置信度为主，多数sidecar无度量信息；度量均以题干文字为准"]
+    },
+    {
+      "check": "SOURCE_METHOD_READY 不得放行",
+      "result": "PASS",
+      "evidence": "循环7-8涉及项无 SOURCE_METHOD_READY：二面角桥接 bridge-1.1-dihedral-definition=SUPPLEMENT_READY（无答案补充课，含自造变式与独立检查点）；B6/B7/B12 release_status=READY_FOR_INDEPENDENT_ATTEMPT、blockers=[]、bridge_status=SUPPLEMENT_READY/NOT_REQUIRED。SOURCE_METHOD_READY 单元（极化、四点共面）仅属循环9-10（B8/C13/C14），不在本worker范围。"
+    },
+    {
+      "check": "课程前置必须先于首次使用（3.1.4.1）",
+      "result": "PASS_WITH_RESIDUALS",
+      "evidence": "3.1.4.1 平行垂直证明 已登记为 support course parallel_perpendicular，coverage_status=COVERED，视频声明（Downloads课程合集3.1.4.1平行垂直证明.mp4）且转写存在；循环8在B6/B7首次使用前列出先复习前置课程3.1.4.1，任务34/35对应课程含3.1.4.1；B6/B7 course_keys=parallel_perpendicular,line_line_angle,plane_plane_angle。转写内容覆盖线线垂直（点积=0）、线面垂直（L垂直面内两相交直线）、面面垂直（法向量点积=0），满足桥接前置“线面垂直”。",
+      "residuals": ["全局“全部课程顺序”列表仍未收录3.1.4.1（仅循环8/10小节内路由，展示层不一致）", "3.1.4.1与3.1.4.3转写均假设已会建系/空间直角坐标系（“间隙大家会了”），但声明课程列表无3.1.3.x；该链条属于更深前置风险，非本轮循环7-8首次使用缺陷"]
+    },
+    {
+      "check": "独立推导定位首个真实断点",
+      "result": "PASS（循环7-8均未发现首个断点）",
+      "evidence": "见 cycle_results：全部9项（任务27-33、B6、B7）均可仅凭当前学生侧材料独立推导，无需猜图、无隐藏前置、无答案暴露。"
+    }
+  ],
+  "cycle_results": [
+    {
+      "cycle": "cycle-7/10 数量积求长度与求角",
+      "verdict": "proxy_pass",
+      "first_breakpoint": null,
+      "evidence": [
+        "任务27 例15（VISION_VERIFIED，sidecar E2：P上、B右、C右下、D左下、A中、M左中，PD/PM/MD共线链，ABCD平行四边形顺序一致）：独立完成——PA=a,PB=b,PC=c，|a|=3,|b|=|c|=2，两两夹角60度，a·b=a·c=3,b·c=2；D=A+C-B，BD=PA+PC-2PB，m+n+p=1-2+1=0；BM=(a+c-3b)/2，|BM|^2=25/4，BM=5/2。",
+        "任务28 变式1(15)（VISION_VERIFIED，sidecar E2：平行六面体A-D-C-B前、A1-D1-C1-B1后标注）：独立完成——|AC1|^2=|AB+AD+AA1|^2=11+2cos∠BAD=12，∠BAD=60°。",
+        "任务29 变式2(15)（VISION_VERIFIED，sidecar E1：两正方形ABCD/ABEF共边AB，M在AC、N在BF，uncertainties注明夹角与分点比例以题干为准）：独立完成——建系 A(0,0,0),B(1,0,0),D(0,1,0),C(1,1,0),F(0,0,1)，M=(1-λ)(1,1,0)，N=(1-λ,0,λ)，MN=(0,λ-1,λ)=0·AB+(λ-1)AD+λ·AF，x=0,y=λ-1,z=λ；|MN|^2=2(λ-1/2)^2+1/2，最小值√2/2（λ=1/2）。",
+        "任务30 例16（READY_TEXT_ONLY）：独立完成——c=-(a+b)，16=4+9+2a·b，a·b=3/2，cos<a,b>=1/4，选项D。",
+        "任务31 变式1(16)（VISION_VERIFIED，sidecar E1：正四面体OABC，E在AB、F在OC，uncertainties注明中点以题干为准）：独立完成——OE=(a+b)/2，BF=c/2-b，OE·BF=-1/2，|OE|=|BF|=√3/2，cos(OE,BF)=-2/3。",
+        "任务32 变式2(16)（VISION_VERIFIED，sidecar E2仅标签A,C,B,A1,C1,B1、无结构关系）：独立完成——等棱三棱柱（底面等边），AB1=a+c，BC1=b-a+c，(a+c)·(b-a+c)=a·b+1/2=1，|AB1|=√3，|BC1|=√2，cos=√6/6，选项C；题干度量条件自足，sidecar结构缺失不构成断点但记为质量残留。",
+        "任务33 B12（VISION_VERIFIED，sidecar E2关系缺P-B）：独立完成——以P为原点，|a|=4,|b|=|c|=3，a·b=a·c=6,b·c=9/2；D=(2b+c)/3（CD=2BD），M=a/2+b/3+c/6；PM=√35/2；PM·AC=-5，异面直线PM与AC所成角余弦=10/(3√35)=2√35/21。",
+        "循环7推进门：全部7项独立推导通过，无断点，可进入循环8。"
+      ],
+      "method_models": [
+        {
+          "name": "基底拆分+数量积求长度",
+          "trigger": "三面角/平行六面体/棱锥构型求线段长",
+          "steps": ["公共起点表示目标向量", "|v|^2=v·v 展开", "代入模长与两两夹角", "开方核对"],
+          "checks": ["同起点", "夹角模长齐全", "展开无漏项"]
+        },
+        {
+          "name": "数量积求角（向量角/线线角）",
+          "trigger": "求向量夹角或异面直线所成角",
+          "steps": ["写出方向向量", "cosθ=a·b/(|a||b|)", "向量角不加绝对值、线线角加绝对值"],
+          "checks": ["区分问法", "范围检查"]
+        },
+        {
+          "name": "图形sidecar-题干交叉核对",
+          "trigger": "题目带图且sidecar可用时",
+          "steps": ["读sidecar的objects/relations/coordinates", "与题干度量条件对照", "不一致处以题干为准并标注"],
+          "checks": ["中点/分点等位置以题干为准", "置信度E1/E2区分"]
+        }
+      ],
+      "unresolved_gaps": [
+        "变式2(16) sidecar 无结构信息（E2仅标签）；B12 sidecar 缺P-B边；singular vision_sidecar 字段为空（schema不一致）",
+        "24小时闭卷冷复测未运行",
+        "真人验收未运行（human_acceptance_not_proven=true）"
+      ]
+    },
+    {
+      "cycle": "cycle-8/10 二面角平面角前置与应用",
+      "verdict": "proxy_pass",
+      "first_breakpoint": null,
+      "evidence": [
+        "前置修复确认：3.1.4.1 平行垂直证明（COVERED，视频声明+转写存在）列于循环8先复习前置，先于B6/B7首次使用；转写覆盖线线/线面/面面垂直判定（L垂直面内两相交直线、法向量点积=0），满足二面角桥接的前置“线面垂直”。",
+        "课程 3.1.4.5（COVERED，transcript完整消费）：二面角=两半平面夹角（0-180度）vs 面面角（0-90度）、法向量法 |cosφ|=|n1·n2|/(|n1||n2|)、等角/补角二义性、由几何关系可得+看图定锐钝。",
+        "桥接 bridge-1.1-dihedral-definition（SUPPLEMENT_READY，NO_FINAL_ANSWERS）：同起点+双垂直合法截面、取点无关、平面角vs法向量夹角判断；含自造变式与独立检查点。",
+        "方法检查 二面角平面角识别：通过（画合法截面/取点无关/区分平面角与法向量夹角）。",
+        "任务34 B6（VISION_VERIFIED，sidecar E2关系A-B,B-C,C-D,D-E,B-E）：独立完成——取BC中点O，AC=OC-OA，BD=2OC+CD；|OC|=1，|OA|=√3，|CD|=2，∠(OA,CD)=平面角π/3；AC·BD=2-√3，选项A。",
+        "任务35 B7（VISION_VERIFIED，sidecar E2与题干冲突：sidecar把A、B放入平面β、I在棱l上、未列BD/AB线段；题干明确A、B在棱l上、AC与BD分居两半平面且垂直l）：以题干为准独立完成——CD=CA+AB+BD；CA·AB=0、AB·BD=0，∠(AC,BD)=平面角π/3；|CD|^2=4+1+9-2·2·3·(1/2)=8，CD=2√2，选项B。冲突已记录为残留缺陷，不构成断点（题干自足）。",
+        "循环8推进门：课程+桥接+方法检查+B6/B7 全部独立通过，无断点。"
+      ],
+      "method_models": [
+        {
+          "name": "二面角平面角识别（合法截面）",
+          "trigger": "二面角/面面角题",
+          "steps": ["棱上取同一点O", "两半平面内作垂直棱的射线OA、OB", "∠AOB为平面角；换点平行射线角度不变", "法向量结果结合半平面判等角/补角"],
+          "checks": ["同起点", "双垂直", "取点无关可解释"]
+        },
+        {
+          "name": "平面角+数量积链式求长度/数量积",
+          "trigger": "二面角构型已知平面角求跨面长度或数量积",
+          "steps": ["沿棱与两垂线方向拆分目标向量", "垂直棱项点积为0", "交叉项用平面角余弦（符号由图形判定）", "展开开方"],
+          "checks": ["交叉项符号", "垂直项清零", "结果为正"]
+        },
+        {
+          "name": "法向量求面面角/二面角",
+          "trigger": "求二面角或面面角余弦/正弦",
+          "steps": ["求两法向量n1、n2", "|cosφ|=|n1·n2|/(|n1||n2|)", "面面角取正；二面角由几何关系可得定锐钝"],
+          "checks": ["区分问法", "正弦恒正"]
+        }
+      ],
+      "unresolved_gaps": [
+        "B7 sidecar与题干冲突（A、B位置/线段集不符），需修复sidecar或标注以题干为准；B6/B7符号方向判断依赖已核验图形，本worker为纯文本模型未目视复核",
+        "24小时闭卷冷复测未运行",
+        "真人验收未运行（human_acceptance_not_proven=true）"
+      ]
+    }
+  ],
+  "overall_verdict": "proxy_pass",
+  "summary": "worker4（detailed round 4，post-repair）复核循环7-8。round-3两类阻断均已修复：①例15/变式1(15)/变式2(15)/变式1(16)/变式2(16)全部由 NEEDS_VISION_SIDECAR 升级为 VISION_VERIFIED 并嵌入 vision_sidecars（有image_sha256与结构化字段），B6/B7/B12保持已核验；②3.1.4.1 平行垂直证明登记为COVERED补充课并在循环8先于B6/B7首次使用，转写覆盖线面垂直判定。循环7-8全部9项（任务27-33、B6、B7）仅凭当前学生侧材料独立推导通过：例15 m+n+p=0、BM=5/2；变式1(15) ∠BAD=60°；变式2(15) x=0,y=λ-1,z=λ、|MN|min=√2/2；例16 cos=1/4（D）；变式1(16) cos=-2/3；变式2(16) cos=√6/6（C）；B12 PM=√35/2、异面直线角余弦2√35/21；B6=2-√3（A）；B7=2√2（B）。未发现首个断点，两循环均 proxy_pass，总体 proxy_pass。残留缺陷（不阻断）：singular vision_sidecar字段为空、变式2(16) sidecar无结构（E2）、B7 sidecar与题干冲突（A/B位置）、B12 sidecar缺P-B；全局课程顺序表未收录3.1.4.1；更深的建系（3.1.3.x）前置未在声明课程表内。human_acceptance_not_proven=true，24小时冷复测与真人验收未运行。"
+}

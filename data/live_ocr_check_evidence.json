@@ -1,0 +1,53 @@
+{
+  "schema_version": "7.1",
+  "kind": "ocr_live_execution_check",
+  "checked_at": "2026-08-14T03:27:46.617121+00:00",
+  "project": "C:\\开发\\小工具\\一本通学习系统_v7",
+  "target_image": "C:\\开发\\小工具\\一本通DeepSeek迭代\\worker-01-content\\ocr\\imgs\\img_in_image_box_889_1344_1094_1537.jpg",
+  "target_image_sha256": "9cf1457acd4a93d3d4932b8949bbd20a150970937ad30d4466abcc216cd8f1e2",
+  "ocr_providers": {
+    "baidu_standard": {
+      "status": "not_run",
+      "reason": "BAIDU_OCR_API_KEY/BAIDU_OCR_SECRET_KEY_not_set",
+      "network_request": "none"
+    },
+    "qianfan_vision": {
+      "status": "not_run",
+      "reason": "QIANFAN_API_KEY_not_set",
+      "network_request": "none"
+    },
+    "paddle_legacy": {
+      "status": "replay_only",
+      "PADDLE_OCR_TOKEN": "not_set",
+      "fresh_run": "not_run"
+    }
+  },
+  "vision_live": {
+    "status": "passed",
+    "provider": "GLM-4.6V-Flash via deepseek-eyes",
+    "model": "glm-4.6v-flash",
+    "confidence": "E2",
+    "elapsed_ms": 3971,
+    "structured_has_content": true
+  },
+  "deepseek_consume": {
+    "http_status": "200",
+    "route": "http://127.0.0.1:10100/v1/chat/completions",
+    "model": "opencode-go/deepseek-v4-flash",
+    "can_consume": true,
+    "confidence_echo": "E2",
+    "coordinate_count_echo": 10
+  },
+  "credentials_handling": {
+    "keys_read": "none",
+    "keys_printed": "none",
+    "global_config_changed": "none"
+  },
+  "evidence_files": {
+    "vision_result": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\live_ocr_check_2026-08-14\\vision_result.json",
+    "vision_text_artifact": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\live_ocr_check_2026-08-14\\vision_text_artifact.txt",
+    "deepseek_consume_response": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\live_ocr_check_2026-08-14\\deepseek_consume_response.json",
+    "qianfan_probe": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\qianfan_live_evidence.json",
+    "this_evidence": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\live_ocr_check_evidence.json"
+  }
+}

@@ -1,0 +1,300 @@
+{
+  "schema_version": "1.0",
+  "section": "1.1",
+  "generated_at": "2026-08-16T10:26:06+08:00",
+  "requirement_id": "REQ-20260814-YBT-DETAILED-ROUNDS-001",
+  "worker_contract": {
+    "rounds": 5,
+    "workers_per_round": 5,
+    "total_completed": 25,
+    "role": "deepseek_worker",
+    "model": "opencode-go/deepseek-v4-flash",
+    "reasoning_effort": "max",
+    "context_window": 1000000
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "evidence_kind": "raw_session",
+      "source": "C:\\Users\\poyi\\.codex\\sessions\\2026\\08\\14\\rollout-2026-08-14T14-34-29-019ffefa-b09d-7ae0-a59b-b5d21b0798e0.jsonl",
+      "workers_dispatched": 5,
+      "workers_completed": 5,
+      "agent_ids": [
+        "01a000ec-c335-75c3-8862-3bbeb0cb1907",
+        "01a000ec-c3b5-7651-b5a7-b67a88c9f193",
+        "01a000ec-c41d-7490-a6c5-832a11c65cec",
+        "01a000ec-c48a-79e3-a312-2b9f36b5fc89",
+        "01a000ec-c50a-72e0-9ebf-4b3b29239c53"
+      ],
+      "reported_verdict": "partial",
+      "findings": [
+        "课程转写未覆盖全部左栏定义，知识点必须显式放在相邻例题之前。",
+        "等值面循环缺教材题承接；部分 B 组题依赖尚未学习的数量积或二面角。",
+        "投影、极化、重心、二面角、基本不等式和外接球前置不闭合。",
+        "例题和直属变式的图形侧车不完整，不能把有题号当成可消费。"
+      ]
+    },
+    {
+      "round": 2,
+      "evidence_kind": "raw_session",
+      "source": "C:\\Users\\poyi\\.codex\\sessions\\2026\\08\\14\\rollout-2026-08-14T14-34-29-019ffefa-b09d-7ae0-a59b-b5d21b0798e0.jsonl",
+      "workers_dispatched": 5,
+      "workers_completed": 5,
+      "agent_ids": [
+        "01a000fe-a5cd-7010-b8b6-e79ba1fcfbdd",
+        "01a000fe-a6c9-72d2-a887-344e2596bf61",
+        "01a000fe-a466-70e2-a184-1606519f1293",
+        "01a000fe-a649-7510-af5a-de64882e335c",
+        "01a000fe-a745-7f13-a728-52b1d2a44848"
+      ],
+      "reported_verdict": "partial",
+      "findings": [
+        "知识点到相邻例题的显示顺序成立，但视觉状态必须逐任务显示。",
+        "3.1.3.1、3.1.3.2 坐标课程与 3.1.4.1 平行垂直前置尚未进入完整总览。",
+        "极化、四点共面、基本不等式和外接球仍只有骨架或缺少零基础放行证据。",
+        "循环 10 的 C14 首次整合多个桥接，真实首断点尚未被单独教学。"
+      ]
+    },
+    {
+      "round": 3,
+      "evidence_kind": "five_json_reports",
+      "workers_dispatched": 5,
+      "workers_completed": 5,
+      "reports": [
+        "reports/zero_base_cycles/1.1-detailed-round-3-worker-1.json",
+        "reports/zero_base_cycles/1.1-detailed-round-3-worker-2.json",
+        "reports/zero_base_cycles/1.1-detailed-round-3-worker-3.json",
+        "reports/zero_base_cycles/1.1-detailed-round-3-worker-4.json",
+        "reports/zero_base_cycles/1.1-detailed-round-3-worker-5.json"
+      ],
+      "reported_verdict_counts": {
+        "blocked": 1,
+        "partial": 4
+      },
+      "first_breakpoints": []
+    },
+    {
+      "round": 4,
+      "evidence_kind": "five_json_reports",
+      "workers_dispatched": 5,
+      "workers_completed": 5,
+      "reports": [
+        "reports/zero_base_cycles/1.1-detailed-round-4-worker-1.json",
+        "reports/zero_base_cycles/1.1-detailed-round-4-worker-2.json",
+        "reports/zero_base_cycles/1.1-detailed-round-4-worker-3.json",
+        "reports/zero_base_cycles/1.1-detailed-round-4-worker-4.json",
+        "reports/zero_base_cycles/1.1-detailed-round-4-worker-5.json"
+      ],
+      "reported_verdict_counts": {
+        "partial": 3,
+        "proxy_pass": 2
+      },
+      "first_breakpoints": []
+    },
+    {
+      "round": 5,
+      "evidence_kind": "five_json_reports",
+      "workers_dispatched": 5,
+      "workers_completed": 5,
+      "reports": [
+        "reports/zero_base_cycles/1.1-detailed-round-5-worker-1.json",
+        "reports/zero_base_cycles/1.1-detailed-round-5-worker-2.json",
+        "reports/zero_base_cycles/1.1-detailed-round-5-worker-3.json",
+        "reports/zero_base_cycles/1.1-detailed-round-5-worker-4.json",
+        "reports/zero_base_cycles/1.1-detailed-round-5-worker-5.json"
+      ],
+      "reported_verdict_counts": {
+        "partial": 2,
+        "proxy_pass": 3
+      },
+      "first_breakpoints": [
+        {
+          "worker": 1,
+          "value": "任务12 变式1(11): 原题关系 A1F=(2/3)FC 在原始图/坐标语义(F在线段A1C上, E1侧车)下不可消费 — 第(2)问 E,F,B三点共线 为假命题, 且学生不得自行改为 FC1"
+        },
+        {
+          "worker": 3,
+          "value": "无：cycles 5-6 按路线顺序逐项复测，未发现第一断点。round-4 唯一未修复类（课程前置）已修复——3.1.3.1/3.1.3.2 在课程总览（第5/6项，位于 3.1.4.3 之前）与 md 循环5 前置课程、packet prerequisite_course_keys、contexts 课程表四处一致出现，且转写为真实坐标教学内容、视频文件在盘；视觉链与极化微课双文件同步亦保持修复状态。遗留项均为非阻断质量/证据项（k4 投影长度一步自推、例6 OCR 残损、cycle-5 无直属变式、极化独立证据推迟至 B8、current_cycle 指针生成器问题）。"
+        },
+        {
+          "worker": 5,
+          "value": "C14-A 交点比例计算：M=DF∩AC、N=EF∩BC 需先参数化（M=(1-s)A+sC 且 M=(1-t)D+tF），对基 {PA,PB,PC} 比较系数解出 s=z(x-1)/(x-z)、s'=z(y-1)/(y-z)，再由 x=y 得 s=s' 推出 MN 平行 AB 进而平行平面 PAB。任务说明中提到的『仿射系数求交点比例』无答案微课/检查点经全面检索（md、learning_packet、contexts、bridge_micro_lessons、bridge_supplement_lessons 中的 交点/比例/截线/求交/仿射）在 08-16 00:13 当前版本中不存在：循环10 仍只有 2 个方法检查点（正数乘积约束下的和最值回顾、外接球心等距回代）和 4 个桥接块（四点共面、重心、正数乘积和最值、外接球），均不含交点比例教学。该近迁移模式（同一交点用线段参数与直线参数双重表示后系数相等）无任何演示，仍是零基础学生首个真实断点；所有工具（基表示+系数比较=四点共面补充课/k3/例12；线面平行向量判据=3.1.4.1）都在路线内，因此可完成但未被直接讲授。"
+        }
+      ],
+      "controller_verdict_counts": {
+        "proxy_pass": 5
+      },
+      "postrepair": "reports/zero_base_cycles/1.1-detailed-round-5-worker-5-postrepair.json"
+    }
+  ],
+  "controller_adjudications": [
+    {
+      "worker_report": "reports/zero_base_cycles/1.1-detailed-round-5-worker-1.json",
+      "worker_reported": "partial",
+      "controller_verdict": "proxy_pass",
+      "reason": "worker omitted the A1A component of EB; the source stem keeps FC and the source derivation proves EF=(2/5)EB",
+      "source": "data/ocr_live_current/first_chapter_69/doc_6.md"
+    },
+    {
+      "worker_report": "reports/zero_base_cycles/1.1-detailed-round-5-worker-5.json",
+      "worker_reported": "partial",
+      "controller_verdict": "proxy_pass",
+      "reason": "C14-A affine-intersection breakpoint was repaired and independently rechecked with an answer-free near transfer",
+      "source": "reports/zero_base_cycles/1.1-detailed-round-5-worker-5-postrepair.json"
+    }
+  ],
+  "final_route": {
+    "first_course": "3.1.1.1",
+    "course_count": 12,
+    "course_ids": [
+      "3.1.1.1",
+      "3.1.2.1",
+      "3.1.4.2",
+      "3.1.4.3",
+      "3.1.2.2",
+      "3.1.3.1",
+      "3.1.3.2",
+      "3.1.4.1",
+      "3.1.4.5",
+      "3.1.4.6.a",
+      "3.1.4.6.b",
+      "3.1.4.7"
+    ],
+    "cycles": 10,
+    "counts": {
+      "worked_examples": 16,
+      "direct_variants": 8,
+      "abc_exercises": 14,
+      "total_numbered_learning_items": 38
+    },
+    "visual_status_counts": {
+      "READY_TEXT_ONLY": 10,
+      "VISION_VERIFIED": 28
+    },
+    "internal_id_hits": 0,
+    "image_reference_hits": 0,
+    "html": "data/packets/1.1/learning_path_without_questions.html"
+  },
+  "method_models": [
+    {
+      "name": "相等、相反与共线向量判定",
+      "trigger": "长方体、平行六面体中枚举或判断方向关系",
+      "steps": [
+        "同时检查方向与模",
+        "统一起点或平移",
+        "用倍数关系完成共线判定"
+      ]
+    },
+    {
+      "name": "线性运算与基底拆分",
+      "trigger": "目标向量不能直接计算",
+      "steps": [
+        "选公共起点和基向量",
+        "按路径或中点关系拆分",
+        "合并系数并回译几何对象"
+      ]
+    },
+    {
+      "name": "共线、共面与系数和",
+      "trigger": "证明三点共线、四点共面或判断倍面",
+      "steps": [
+        "写成同一基底的线性组合",
+        "共线检查二维系数和",
+        "共面检查三维仿射系数和为1"
+      ]
+    },
+    {
+      "name": "等值面末减出",
+      "trigger": "多个点由同一组基向量表示并判断所在倍面或连线方向",
+      "steps": [
+        "先求各点系数和",
+        "相减得到连线向量系数和",
+        "用倍面差解释结果"
+      ]
+    },
+    {
+      "name": "空间坐标法",
+      "trigger": "可建系图形中的长度、垂直和夹角",
+      "steps": [
+        "建系并标点",
+        "写方向向量",
+        "点乘或模长计算",
+        "按题目角度范围检查绝对值"
+      ]
+    },
+    {
+      "name": "数量积与投影",
+      "trigger": "求夹角、垂直、投影向量或投影长度",
+      "steps": [
+        "区分向量与标量",
+        "使用点积定义或投影公式",
+        "检查分母、方向符号和夹角范围"
+      ]
+    },
+    {
+      "name": "极化恒等式与最值",
+      "trigger": "数量积目标可转成和差向量或中点距离",
+      "steps": [
+        "展开模长平方",
+        "选择和式或差式",
+        "写可行域与等号条件",
+        "回代几何对象"
+      ]
+    },
+    {
+      "name": "三角形重心向量",
+      "trigger": "重心、中线或三顶点等权表示",
+      "steps": [
+        "先写中点向量",
+        "用2:1定比分点",
+        "整理成三顶点位置向量平均",
+        "换中线复核"
+      ]
+    },
+    {
+      "name": "二面角合法截面",
+      "trigger": "求二面角或面面角",
+      "steps": [
+        "在公共棱取同一点",
+        "两半平面内分别作垂线",
+        "取两射线夹角",
+        "用法向量时判断等角或补角"
+      ]
+    },
+    {
+      "name": "仿射参数求交与同参截线",
+      "trigger": "两条直线交于三角形两边并需证明截线平行",
+      "steps": [
+        "为同一交点写两套参数表示",
+        "在同一基底逐项比较",
+        "统一方向比较两个分点参数",
+        "补查退化与线面位置条件"
+      ]
+    },
+    {
+      "name": "正数乘积固定时的和最值",
+      "trigger": "几何约束化为两个正数乘积固定",
+      "steps": [
+        "先验证正数和定积",
+        "由平方非负推出下界",
+        "检查等号候选和几何定义域"
+      ]
+    },
+    {
+      "name": "外接球与点面距离",
+      "trigger": "球心、等距约束或点到平面距离",
+      "steps": [
+        "利用对称性缩减未知量",
+        "用等距平方差消去半径",
+        "回代关键顶点",
+        "再计算法向量投影距离"
+      ]
+    }
+  ],
+  "overall_verdict": "proxy_pass",
+  "human_acceptance_not_proven": true,
+  "human_e2e": "not_run",
+  "cold_retest_24h": "not_run",
+  "git_gate": "blocked_no_repository",
+  "scope_note": "Section 1.1 only; other sections' bridge blockers are outside this result."
+}

@@ -1,0 +1,1473 @@
+{
+  "artifact": "CURRENT_GENERATION_ZERO_BASE_AGENT_SIMULATION",
+  "section": "1.1",
+  "generation": "G-LUNA-20260817-01",
+  "authority": {
+    "kind": "luna_section_delivery_projection",
+    "delivery": "reports/luna_sections/LUNA-YBT-05/delivery.json",
+    "task_id": "LUNA-YBT-05",
+    "model": "gpt-5.6-luna",
+    "reasoning_effort": "max",
+    "context_window": 1050000,
+    "protocol": "five-round-five-persona-v1",
+    "source_round": 5
+  },
+  "worker_contract": {
+    "workers_dispatched": 5,
+    "workers_completed": 5,
+    "role": "deepseek_worker",
+    "model": "gpt-5.6-luna",
+    "reasoning_effort": "max",
+    "context_window": 1050000,
+    "answer_sidecar_read": false
+  },
+  "task_coverage": {
+    "task_count": 38,
+    "expected_task_count": 38,
+    "complete": true
+  },
+  "summary": {
+    "workers": 5,
+    "pass": 5,
+    "partial": 0,
+    "fail": 0,
+    "task_coverage_complete": true,
+    "route_verdict": "PASS",
+    "human_acceptance_not_proven": true,
+    "cold_retest_24h": "not_run",
+    "real_user_observation": "not_run"
+  },
+  "workers": [
+    {
+      "agent_id": "R5-P1",
+      "worker": 1,
+      "profile": "literal-zero-base",
+      "status": "pass",
+      "item_count": 38,
+      "evidence_file": "reports/luna_sections/LUNA-YBT-05/delivery.json"
+    },
+    {
+      "agent_id": "R5-P2",
+      "worker": 2,
+      "profile": "recognition-weak",
+      "status": "pass",
+      "item_count": 38,
+      "evidence_file": "reports/luna_sections/LUNA-YBT-05/delivery.json"
+    },
+    {
+      "agent_id": "R5-P3",
+      "worker": 3,
+      "profile": "algebra-weak",
+      "status": "pass",
+      "item_count": 38,
+      "evidence_file": "reports/luna_sections/LUNA-YBT-05/delivery.json"
+    },
+    {
+      "agent_id": "R5-P4",
+      "worker": 4,
+      "profile": "visual-weak",
+      "status": "pass",
+      "item_count": 38,
+      "evidence_file": "reports/luna_sections/LUNA-YBT-05/delivery.json"
+    },
+    {
+      "agent_id": "R5-P5",
+      "worker": 5,
+      "profile": "self-check-weak",
+      "status": "pass",
+      "item_count": 38,
+      "evidence_file": "reports/luna_sections/LUNA-YBT-05/delivery.json"
+    }
+  ],
+  "item_results": [
+    {
+      "section": "1.1",
+      "cycle": 1,
+      "item_id": "3da13562633d3606",
+      "source_revision": {
+        "generation": "G-LUNA-20260817-01",
+        "authority": "reports/luna_sections/LUNA-YBT-05/delivery.json",
+        "route_version": 5,
+        "round": 5
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "看到空间向量的方向、模与首尾运算（例1），先标出箭头方向和共同起点，不按端点字母直接猜。；教材标签 例1 的辨识焦点是：空间向量的方向、模与首尾运算（例1）。",
+      "course_call": {
+        "course_keys": [
+          "space_vector_ops"
+        ],
+        "method_model_id": "围绕空间向量的方向、模与首尾运算（例1）比较方向和模，或将向量平移成首尾相接/平行四边形后整理。",
+        "knowledge_refs": [
+          "空间向量的相关概念",
+          "空间向量的线性运算"
+        ],
+        "type_refs": [
+          "类型Ⅰ 线性运算"
+        ]
+      },
+      "first_line": "先写 u = vector([起点][终点])，并列出同向/反向与等模条件。",
+      "second_line": "先按首行模板落笔，再逐项执行当前项目列出的继续动作。",
+      "continuation": "统一向量的起点和终点；按三角形或平行四边形法则合并；用图中端点和方向回代检查",
+      "independent_self_check": "反向重写一次箭头；模长条件不能因平移改变。；只用题设条件和定义回检，不读取外部结果。",
+      "first_breakpoint": "无",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "evidence_level": "LUNA_MAX_PROXY_ROUND_5_PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 1,
+      "item_id": "24dd4a64777ed832",
+      "source_revision": {
+        "generation": "G-LUNA-20260817-01",
+        "authority": "reports/luna_sections/LUNA-YBT-05/delivery.json",
+        "route_version": 5,
+        "round": 5
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "看到空间向量的方向、模与首尾运算（例2），先标出箭头方向和共同起点，不按端点字母直接猜。；教材标签 例2 的辨识焦点是：空间向量的方向、模与首尾运算（例2）。",
+      "course_call": {
+        "course_keys": [
+          "space_vector_ops"
+        ],
+        "method_model_id": "围绕空间向量的方向、模与首尾运算（例2）比较方向和模，或将向量平移成首尾相接/平行四边形后整理。",
+        "knowledge_refs": [
+          "空间向量的相关概念",
+          "空间向量的线性运算"
+        ],
+        "type_refs": [
+          "类型Ⅰ 线性运算"
+        ]
+      },
+      "first_line": "先写 u = vector([起点][终点])，并列出同向/反向与等模条件。",
+      "second_line": "先按首行模板落笔，再逐项执行当前项目列出的继续动作。",
+      "continuation": "统一向量的起点和终点；按三角形或平行四边形法则合并；用图中端点和方向回代检查",
+      "independent_self_check": "反向重写一次箭头；模长条件不能因平移改变。；只用题设条件和定义回检，不读取外部结果。",
+      "first_breakpoint": "无",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "evidence_level": "LUNA_MAX_PROXY_ROUND_5_PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 1,
+      "item_id": "df584e2805cfa309",
+      "source_revision": {
+        "generation": "G-LUNA-20260817-01",
+        "authority": "reports/luna_sections/LUNA-YBT-05/delivery.json",
+        "route_version": 5,
+        "round": 5
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "看到空间向量的方向、模与首尾运算（例3），先标出箭头方向和共同起点，不按端点字母直接猜。；教材标签 例3 的辨识焦点是：空间向量的方向、模与首尾运算（例3）。",
+      "course_call": {
+        "course_keys": [
+          "space_vector_ops"
+        ],
+        "method_model_id": "围绕空间向量的方向、模与首尾运算（例3）比较方向和模，或将向量平移成首尾相接/平行四边形后整理。",
+        "knowledge_refs": [
+          "空间向量的相关概念",
+          "空间向量的线性运算"
+        ],
+        "type_refs": [
+          "类型Ⅰ 线性运算"
+        ]
+      },
+      "first_line": "先写 u = vector([起点][终点])，并列出同向/反向与等模条件。",
+      "second_line": "先按首行模板落笔，再逐项执行当前项目列出的继续动作。",
+      "continuation": "统一向量的起点和终点；按三角形或平行四边形法则合并；用图中端点和方向回代检查",
+      "independent_self_check": "反向重写一次箭头；模长条件不能因平移改变。；只用题设条件和定义回检，不读取外部结果。",
+      "first_breakpoint": "无",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "evidence_level": "LUNA_MAX_PROXY_ROUND_5_PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 1,
+      "item_id": "8915857a2181490b",
+      "source_revision": {
+        "generation": "G-LUNA-20260817-01",
+        "authority": "reports/luna_sections/LUNA-YBT-05/delivery.json",
+        "route_version": 5,
+        "round": 5
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "看到空间向量的方向、模与首尾运算（例9），先标出箭头方向和共同起点，不按端点字母直接猜。；教材标签 例9 的辨识焦点是：空间向量的方向、模与首尾运算（例9）。",
+      "course_call": {
+        "course_keys": [
+          "space_vector_ops"
+        ],
+        "method_model_id": "围绕空间向量的方向、模与首尾运算（例9）比较方向和模，或将向量平移成首尾相接/平行四边形后整理。",
+        "knowledge_refs": [
+          "空间向量的相关概念",
+          "空间向量的线性运算"
+        ],
+        "type_refs": [
+          "类型Ⅰ 线性运算"
+        ]
+      },
+      "first_line": "先写 u = vector([起点][终点])，并列出同向/反向与等模条件。",
+      "second_line": "先按首行模板落笔，再逐项执行当前项目列出的继续动作。",
+      "continuation": "统一向量的起点和终点；按三角形或平行四边形法则合并；用图中端点和方向回代检查",
+      "independent_self_check": "反向重写一次箭头；模长条件不能因平移改变。；只用题设条件和定义回检，不读取外部结果。",
+      "first_breakpoint": "无",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "evidence_level": "LUNA_MAX_PROXY_ROUND_5_PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 1,
+      "item_id": "81bf55e4b2eab3a4",
+      "source_revision": {
+        "generation": "G-LUNA-20260817-01",
+        "authority": "reports/luna_sections/LUNA-YBT-05/delivery.json",
+        "route_version": 5,
+        "round": 5
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "看到空间向量的方向、模与首尾运算（例10），先标出箭头方向和共同起点，不按端点字母直接猜。；教材标签 例10 的辨识焦点是：空间向量的方向、模与首尾运算（例10）。",
+      "course_call": {
+        "course_keys": [
+          "space_vector_ops"
+        ],
+        "method_model_id": "围绕空间向量的方向、模与首尾运算（例10）比较方向和模，或将向量平移成首尾相接/平行四边形后整理。",
+        "knowledge_refs": [
+          "空间向量的相关概念",
+          "空间向量的线性运算"
+        ],
+        "type_refs": [
+          "类型Ⅰ 线性运算"
+        ]
+      },
+      "first_line": "先写 u = vector([起点][终点])，并列出同向/反向与等模条件。",
+      "second_line": "先按首行模板落笔，再逐项执行当前项目列出的继续动作。",
+      "continuation": "统一向量的起点和终点；按三角形或平行四边形法则合并；用图中端点和方向回代检查",
+      "independent_self_check": "反向重写一次箭头；模长条件不能因平移改变。；只用题设条件和定义回检，不读取外部结果。",
+      "first_breakpoint": "无",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "evidence_level": "LUNA_MAX_PROXY_ROUND_5_PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 1,
+      "item_id": "A1",
+      "source_revision": {
+        "generation": "G-LUNA-20260817-01",
+        "authority": "reports/luna_sections/LUNA-YBT-05/delivery.json",
+        "route_version": 5,
+        "round": 5
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "看到空间向量的方向、模与首尾运算（A1），先标出箭头方向和共同起点，不按端点字母直接猜。；教材标签 A1 的辨识焦点是：空间向量的方向、模与首尾运算（A1）。",
+      "course_call": {
+        "course_keys": [
+          "space_vector_ops"
+        ],
+        "method_model_id": "围绕空间向量的方向、模与首尾运算（A1）比较方向和模，或将向量平移成首尾相接/平行四边形后整理。",
+        "knowledge_refs": [
+          "空间向量的相关概念",
+          "空间向量的线性运算"
+        ],
+        "type_refs": [
+          "类型Ⅰ 线性运算"
+        ]
+      },
+      "first_line": "先写 u = vector([起点][终点])，并列出同向/反向与等模条件。",
+      "second_line": "先按首行模板落笔，再逐项执行当前项目列出的继续动作。",
+      "continuation": "统一向量的起点和终点；按三角形或平行四边形法则合并；用图中端点和方向回代检查",
+      "independent_self_check": "反向重写一次箭头；模长条件不能因平移改变。；只用题设条件和定义回检，不读取外部结果。",
+      "first_breakpoint": "无",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "evidence_level": "LUNA_MAX_PROXY_ROUND_5_PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 1,
+      "item_id": "A2",
+      "source_revision": {
+        "generation": "G-LUNA-20260817-01",
+        "authority": "reports/luna_sections/LUNA-YBT-05/delivery.json",
+        "route_version": 5,
+        "round": 5
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "看到空间向量的方向、模与首尾运算（A2），先标出箭头方向和共同起点，不按端点字母直接猜。；教材标签 A2 的辨识焦点是：空间向量的方向、模与首尾运算（A2）。",
+      "course_call": {
+        "course_keys": [
+          "space_vector_ops"
+        ],
+        "method_model_id": "围绕空间向量的方向、模与首尾运算（A2）比较方向和模，或将向量平移成首尾相接/平行四边形后整理。",
+        "knowledge_refs": [
+          "空间向量的相关概念",
+          "空间向量的线性运算"
+        ],
+        "type_refs": [
+          "类型Ⅰ 线性运算"
+        ]
+      },
+      "first_line": "先写 u = vector([起点][终点])，并列出同向/反向与等模条件。",
+      "second_line": "先按首行模板落笔，再逐项执行当前项目列出的继续动作。",
+      "continuation": "统一向量的起点和终点；按三角形或平行四边形法则合并；用图中端点和方向回代检查",
+      "independent_self_check": "反向重写一次箭头；模长条件不能因平移改变。；只用题设条件和定义回检，不读取外部结果。",
+      "first_breakpoint": "无",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "evidence_level": "LUNA_MAX_PROXY_ROUND_5_PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 1,
+      "item_id": "A3",
+      "source_revision": {
+        "generation": "G-LUNA-20260817-01",
+        "authority": "reports/luna_sections/LUNA-YBT-05/delivery.json",
+        "route_version": 5,
+        "round": 5
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "看到空间向量的方向、模与首尾运算（A3），先标出箭头方向和共同起点，不按端点字母直接猜。；教材标签 A3 的辨识焦点是：空间向量的方向、模与首尾运算（A3）。",
+      "course_call": {
+        "course_keys": [
+          "space_vector_ops"
+        ],
+        "method_model_id": "围绕空间向量的方向、模与首尾运算（A3）比较方向和模，或将向量平移成首尾相接/平行四边形后整理。",
+        "knowledge_refs": [
+          "空间向量的相关概念",
+          "空间向量的线性运算"
+        ],
+        "type_refs": [
+          "类型Ⅰ 线性运算"
+        ]
+      },
+      "first_line": "先写 u = vector([起点][终点])，并列出同向/反向与等模条件。",
+      "second_line": "先按首行模板落笔，再逐项执行当前项目列出的继续动作。",
+      "continuation": "统一向量的起点和终点；按三角形或平行四边形法则合并；用图中端点和方向回代检查",
+      "independent_self_check": "反向重写一次箭头；模长条件不能因平移改变。；只用题设条件和定义回检，不读取外部结果。",
+      "first_breakpoint": "无",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "evidence_level": "LUNA_MAX_PROXY_ROUND_5_PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 2,
+      "item_id": "1bc60321129e778d",
+      "source_revision": {
+        "generation": "G-LUNA-20260817-01",
+        "authority": "reports/luna_sections/LUNA-YBT-05/delivery.json",
+        "route_version": 5,
+        "round": 5
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "出现基向量拆分与共线条件（例4）时先选基底，再写目标向量的线性组合。；教材标签 例4 的辨识焦点是：基向量拆分与共线条件（例4）。",
+      "course_call": {
+        "course_keys": [
+          "decomposition"
+        ],
+        "method_model_id": "用基向量拆分与共线条件（例4）选择不共线/不共面的基向量，设未知系数并比较系数。",
+        "knowledge_refs": [
+          "共线向量与共面向量"
+        ],
+        "type_refs": [
+          "类型Ⅱ 证明平行、共线"
+        ]
+      },
+      "first_line": "先写 p = lambda*u + mu*v (+ nu*w)，并注明基向量独立。",
+      "second_line": "先按首行模板落笔，再逐项执行当前项目列出的继续动作。",
+      "continuation": "沿一条完整端点路径拆出目标向量；把分点关系转成数乘系数；比较同一组基向量的系数",
+      "independent_self_check": "重新合成目标向量，确认共线时只剩一个比例因子。；只用题设条件和定义回检，不读取外部结果。",
+      "first_breakpoint": "无",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "evidence_level": "LUNA_MAX_PROXY_ROUND_5_PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 2,
+      "item_id": "9dbc42c31a3d3813",
+      "source_revision": {
+        "generation": "G-LUNA-20260817-01",
+        "authority": "reports/luna_sections/LUNA-YBT-05/delivery.json",
+        "route_version": 5,
+        "round": 5
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "出现基向量拆分与共线条件（例5）时先选基底，再写目标向量的线性组合。；教材标签 例5 的辨识焦点是：基向量拆分与共线条件（例5）。",
+      "course_call": {
+        "course_keys": [
+          "decomposition"
+        ],
+        "method_model_id": "用基向量拆分与共线条件（例5）选择不共线/不共面的基向量，设未知系数并比较系数。",
+        "knowledge_refs": [
+          "共线向量与共面向量"
+        ],
+        "type_refs": [
+          "类型Ⅱ 证明平行、共线"
+        ]
+      },
+      "first_line": "先写 p = lambda*u + mu*v (+ nu*w)，并注明基向量独立。",
+      "second_line": "先按首行模板落笔，再逐项执行当前项目列出的继续动作。",
+      "continuation": "沿一条完整端点路径拆出目标向量；把分点关系转成数乘系数；比较同一组基向量的系数",
+      "independent_self_check": "重新合成目标向量，确认共线时只剩一个比例因子。；只用题设条件和定义回检，不读取外部结果。",
+      "first_breakpoint": "无",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "evidence_level": "LUNA_MAX_PROXY_ROUND_5_PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 2,
+      "item_id": "ce0335a21c798927",
+      "source_revision": {
+        "generation": "G-LUNA-20260817-01",
+        "authority": "reports/luna_sections/LUNA-YBT-05/delivery.json",
+        "route_version": 5,
+        "round": 5
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "出现基向量拆分与共线条件（变式1）时先选基底，再写目标向量的线性组合。；教材标签 变式1 的辨识焦点是：基向量拆分与共线条件（变式1）。",
+      "course_call": {
+        "course_keys": [
+          "decomposition"
+        ],
+        "method_model_id": "用基向量拆分与共线条件（变式1）选择不共线/不共面的基向量，设未知系数并比较系数。",
+        "knowledge_refs": [
+          "共线向量与共面向量"
+        ],
+        "type_refs": [
+          "类型Ⅱ 证明平行、共线"
+        ]
+      },
+      "first_line": "先写 p = lambda*u + mu*v (+ nu*w)，并注明基向量独立。",
+      "second_line": "先按首行模板落笔，再逐项执行当前项目列出的继续动作。",
+      "continuation": "沿一条完整端点路径拆出目标向量；把分点关系转成数乘系数；比较同一组基向量的系数",
+      "independent_self_check": "重新合成目标向量，确认共线时只剩一个比例因子。；只用题设条件和定义回检，不读取外部结果。",
+      "first_breakpoint": "无",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "evidence_level": "LUNA_MAX_PROXY_ROUND_5_PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 2,
+      "item_id": "5f42fe5671670a92",
+      "source_revision": {
+        "generation": "G-LUNA-20260817-01",
+        "authority": "reports/luna_sections/LUNA-YBT-05/delivery.json",
+        "route_version": 5,
+        "round": 5
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "出现基向量拆分与共线条件（变式2）时先选基底，再写目标向量的线性组合。；教材标签 变式2 的辨识焦点是：基向量拆分与共线条件（变式2）。",
+      "course_call": {
+        "course_keys": [
+          "decomposition"
+        ],
+        "method_model_id": "用基向量拆分与共线条件（变式2）选择不共线/不共面的基向量，设未知系数并比较系数。",
+        "knowledge_refs": [
+          "共线向量与共面向量"
+        ],
+        "type_refs": [
+          "类型Ⅱ 证明平行、共线"
+        ]
+      },
+      "first_line": "先写 p = lambda*u + mu*v (+ nu*w)，并注明基向量独立。",
+      "second_line": "先按首行模板落笔，再逐项执行当前项目列出的继续动作。",
+      "continuation": "沿一条完整端点路径拆出目标向量；把分点关系转成数乘系数；比较同一组基向量的系数",
+      "independent_self_check": "重新合成目标向量，确认共线时只剩一个比例因子。；只用题设条件和定义回检，不读取外部结果。",
+      "first_breakpoint": "无",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "evidence_level": "LUNA_MAX_PROXY_ROUND_5_PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 2,
+      "item_id": "e7779f7dc2baf837",
+      "source_revision": {
+        "generation": "G-LUNA-20260817-01",
+        "authority": "reports/luna_sections/LUNA-YBT-05/delivery.json",
+        "route_version": 5,
+        "round": 5
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "出现基向量拆分与共线条件（例11）时先选基底，再写目标向量的线性组合。；教材标签 例11 的辨识焦点是：基向量拆分与共线条件（例11）。",
+      "course_call": {
+        "course_keys": [
+          "decomposition"
+        ],
+        "method_model_id": "用基向量拆分与共线条件（例11）选择不共线/不共面的基向量，设未知系数并比较系数。",
+        "knowledge_refs": [
+          "共线向量与共面向量"
+        ],
+        "type_refs": [
+          "类型Ⅱ 证明平行、共线"
+        ]
+      },
+      "first_line": "先写 p = lambda*u + mu*v (+ nu*w)，并注明基向量独立。",
+      "second_line": "先按首行模板落笔，再逐项执行当前项目列出的继续动作。",
+      "continuation": "沿一条完整端点路径拆出目标向量；把分点关系转成数乘系数；比较同一组基向量的系数",
+      "independent_self_check": "重新合成目标向量，确认共线时只剩一个比例因子。；只用题设条件和定义回检，不读取外部结果。",
+      "first_breakpoint": "无",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "evidence_level": "LUNA_MAX_PROXY_ROUND_5_PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 2,
+      "item_id": "B10",
+      "source_revision": {
+        "generation": "G-LUNA-20260817-01",
+        "authority": "reports/luna_sections/LUNA-YBT-05/delivery.json",
+        "route_version": 5,
+        "round": 5
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "出现基向量拆分与共线条件（B10）时先选基底，再写目标向量的线性组合。；教材标签 B10 的辨识焦点是：基向量拆分与共线条件（B10）。",
+      "course_call": {
+        "course_keys": [
+          "decomposition"
+        ],
+        "method_model_id": "用基向量拆分与共线条件（B10）选择不共线/不共面的基向量，设未知系数并比较系数。",
+        "knowledge_refs": [
+          "共线向量与共面向量"
+        ],
+        "type_refs": [
+          "类型Ⅱ 证明平行、共线"
+        ]
+      },
+      "first_line": "先写 p = lambda*u + mu*v (+ nu*w)，并注明基向量独立。",
+      "second_line": "先按首行模板落笔，再逐项执行当前项目列出的继续动作。",
+      "continuation": "沿一条完整端点路径拆出目标向量；把分点关系转成数乘系数；比较同一组基向量的系数",
+      "independent_self_check": "重新合成目标向量，确认共线时只剩一个比例因子。；只用题设条件和定义回检，不读取外部结果。",
+      "first_breakpoint": "无",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "evidence_level": "LUNA_MAX_PROXY_ROUND_5_PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 4,
+      "item_id": "0d9860d67f5ba867",
+      "source_revision": {
+        "generation": "G-LUNA-20260817-01",
+        "authority": "reports/luna_sections/LUNA-YBT-05/delivery.json",
+        "route_version": 5,
+        "round": 5
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "题干要求共面时先找平面内两条不共线方向，不追第三个空间方向。；教材标签 变式 的辨识焦点是：两个平面方向的线性表示（变式）。",
+      "course_call": {
+        "course_keys": [
+          "coplanar",
+          "decomposition"
+        ],
+        "method_model_id": "用两个平面方向的线性表示（变式）把目标向量表示成同一平面内两个不共线方向的线性组合。",
+        "knowledge_refs": [
+          "共面证明"
+        ],
+        "type_refs": [
+          "类型Ⅲ 证明共面"
+        ]
+      },
+      "first_line": "先写 OP = lambda*u + mu*v，其中 u、v 是目标平面内不共线向量。",
+      "second_line": "先按首行模板落笔，再逐项执行当前项目列出的继续动作。",
+      "continuation": "选定参考平面和两条方向；沿端点路径拆出目标向量；说明组合关系即可完成共面判定",
+      "independent_self_check": "目标向量只含两个平面方向，不能残留第三个独立方向。；只用题设条件和定义回检，不读取外部结果。",
+      "first_breakpoint": "无",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "evidence_level": "LUNA_MAX_PROXY_ROUND_5_PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 4,
+      "item_id": "85adf2efd96849c8",
+      "source_revision": {
+        "generation": "G-LUNA-20260817-01",
+        "authority": "reports/luna_sections/LUNA-YBT-05/delivery.json",
+        "route_version": 5,
+        "round": 5
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "题干要求共面时先找平面内两条不共线方向，不追第三个空间方向。；教材标签 例12 的辨识焦点是：两个平面方向的线性表示（例12）。",
+      "course_call": {
+        "course_keys": [
+          "coplanar",
+          "decomposition"
+        ],
+        "method_model_id": "用两个平面方向的线性表示（例12）把目标向量表示成同一平面内两个不共线方向的线性组合。",
+        "knowledge_refs": [
+          "共面证明"
+        ],
+        "type_refs": [
+          "类型Ⅲ 证明共面"
+        ]
+      },
+      "first_line": "先写 OP = lambda*u + mu*v，其中 u、v 是目标平面内不共线向量。",
+      "second_line": "先按首行模板落笔，再逐项执行当前项目列出的继续动作。",
+      "continuation": "选定参考平面和两条方向；沿端点路径拆出目标向量；说明组合关系即可完成共面判定",
+      "independent_self_check": "目标向量只含两个平面方向，不能残留第三个独立方向。；只用题设条件和定义回检，不读取外部结果。",
+      "first_breakpoint": "无",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "evidence_level": "LUNA_MAX_PROXY_ROUND_5_PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 4,
+      "item_id": "B9",
+      "source_revision": {
+        "generation": "G-LUNA-20260817-01",
+        "authority": "reports/luna_sections/LUNA-YBT-05/delivery.json",
+        "route_version": 5,
+        "round": 5
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "题干要求共面时先找平面内两条不共线方向，不追第三个空间方向。；教材标签 B9 的辨识焦点是：两个平面方向的线性表示（B9）。",
+      "course_call": {
+        "course_keys": [
+          "coplanar",
+          "decomposition"
+        ],
+        "method_model_id": "用两个平面方向的线性表示（B9）把目标向量表示成同一平面内两个不共线方向的线性组合。",
+        "knowledge_refs": [
+          "共面证明"
+        ],
+        "type_refs": [
+          "类型Ⅲ 证明共面"
+        ]
+      },
+      "first_line": "先写 OP = lambda*u + mu*v，其中 u、v 是目标平面内不共线向量。",
+      "second_line": "先按首行模板落笔，再逐项执行当前项目列出的继续动作。",
+      "continuation": "选定参考平面和两条方向；沿端点路径拆出目标向量；说明组合关系即可完成共面判定",
+      "independent_self_check": "目标向量只含两个平面方向，不能残留第三个独立方向。；只用题设条件和定义回检，不读取外部结果。",
+      "first_breakpoint": "无",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "evidence_level": "LUNA_MAX_PROXY_ROUND_5_PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 5,
+      "item_id": "b867c227820b9b42",
+      "source_revision": {
+        "generation": "G-LUNA-20260817-01",
+        "authority": "reports/luna_sections/LUNA-YBT-05/delivery.json",
+        "route_version": 5,
+        "round": 5
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "出现垂直、夹角或投影时先确定目标是标量还是投影向量。；教材标签 例6 的辨识焦点是：数量积、夹角与投影翻译（例6）。",
+      "course_call": {
+        "course_keys": [
+          "line_line_angle",
+          "space_vector_ops",
+          "decomposition"
+        ],
+        "method_model_id": "把数量积、夹角与投影翻译（例6）翻译为数量积或投影公式，再按线性分配律展开。",
+        "knowledge_refs": [
+          "数量积、夹角与投影向量"
+        ],
+        "type_refs": [
+          "数量积基础与投影"
+        ]
+      },
+      "first_line": "先写 a dot b = |a||b|cos(theta)，或 proj_b(a) = (a dot b)/|b|^2 * b。",
+      "second_line": "先按首行模板落笔，再逐项执行当前项目列出的继续动作。",
+      "continuation": "把几何条件换成点积等式；按已知模长/夹角或分配律逐项展开；保留绝对值与方向直到检查完成",
+      "independent_self_check": "垂直时点积为零；投影结果必须与投影方向共线。；只用题设条件和定义回检，不读取外部结果。",
+      "first_breakpoint": "无",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "evidence_level": "LUNA_MAX_PROXY_ROUND_5_PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 5,
+      "item_id": "40489a2282275850",
+      "source_revision": {
+        "generation": "G-LUNA-20260817-01",
+        "authority": "reports/luna_sections/LUNA-YBT-05/delivery.json",
+        "route_version": 5,
+        "round": 5
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "出现垂直、夹角或投影时先确定目标是标量还是投影向量。；教材标签 例7 的辨识焦点是：数量积、夹角与投影翻译（例7）。",
+      "course_call": {
+        "course_keys": [
+          "line_line_angle",
+          "space_vector_ops",
+          "decomposition"
+        ],
+        "method_model_id": "把数量积、夹角与投影翻译（例7）翻译为数量积或投影公式，再按线性分配律展开。",
+        "knowledge_refs": [
+          "数量积、夹角与投影向量"
+        ],
+        "type_refs": [
+          "数量积基础与投影"
+        ]
+      },
+      "first_line": "先写 a dot b = |a||b|cos(theta)，或 proj_b(a) = (a dot b)/|b|^2 * b。",
+      "second_line": "先按首行模板落笔，再逐项执行当前项目列出的继续动作。",
+      "continuation": "把几何条件换成点积等式；按已知模长/夹角或分配律逐项展开；保留绝对值与方向直到检查完成",
+      "independent_self_check": "垂直时点积为零；投影结果必须与投影方向共线。；只用题设条件和定义回检，不读取外部结果。",
+      "first_breakpoint": "无",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "evidence_level": "LUNA_MAX_PROXY_ROUND_5_PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 5,
+      "item_id": "df02a4165b305660",
+      "source_revision": {
+        "generation": "G-LUNA-20260817-01",
+        "authority": "reports/luna_sections/LUNA-YBT-05/delivery.json",
+        "route_version": 5,
+        "round": 5
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "出现垂直、夹角或投影时先确定目标是标量还是投影向量。；教材标签 例8 的辨识焦点是：数量积、夹角与投影翻译（例8）。",
+      "course_call": {
+        "course_keys": [
+          "line_line_angle",
+          "space_vector_ops",
+          "decomposition"
+        ],
+        "method_model_id": "把数量积、夹角与投影翻译（例8）翻译为数量积或投影公式，再按线性分配律展开。",
+        "knowledge_refs": [
+          "数量积、夹角与投影向量"
+        ],
+        "type_refs": [
+          "数量积基础与投影"
+        ]
+      },
+      "first_line": "先写 a dot b = |a||b|cos(theta)，或 proj_b(a) = (a dot b)/|b|^2 * b。",
+      "second_line": "先按首行模板落笔，再逐项执行当前项目列出的继续动作。",
+      "continuation": "把几何条件换成点积等式；按已知模长/夹角或分配律逐项展开；保留绝对值与方向直到检查完成",
+      "independent_self_check": "垂直时点积为零；投影结果必须与投影方向共线。；只用题设条件和定义回检，不读取外部结果。",
+      "first_breakpoint": "无",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "evidence_level": "LUNA_MAX_PROXY_ROUND_5_PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 5,
+      "item_id": "B4",
+      "source_revision": {
+        "generation": "G-LUNA-20260817-01",
+        "authority": "reports/luna_sections/LUNA-YBT-05/delivery.json",
+        "route_version": 5,
+        "round": 5
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "出现垂直、夹角或投影时先确定目标是标量还是投影向量。；教材标签 B4 的辨识焦点是：数量积、夹角与投影翻译（B4）。",
+      "course_call": {
+        "course_keys": [
+          "line_line_angle",
+          "space_vector_ops",
+          "decomposition"
+        ],
+        "method_model_id": "把数量积、夹角与投影翻译（B4）翻译为数量积或投影公式，再按线性分配律展开。",
+        "knowledge_refs": [
+          "数量积、夹角与投影向量"
+        ],
+        "type_refs": [
+          "数量积基础与投影"
+        ]
+      },
+      "first_line": "先写 a dot b = |a||b|cos(theta)，或 proj_b(a) = (a dot b)/|b|^2 * b。",
+      "second_line": "先按首行模板落笔，再逐项执行当前项目列出的继续动作。",
+      "continuation": "把几何条件换成点积等式；按已知模长/夹角或分配律逐项展开；保留绝对值与方向直到检查完成",
+      "independent_self_check": "垂直时点积为零；投影结果必须与投影方向共线。；只用题设条件和定义回检，不读取外部结果。",
+      "first_breakpoint": "无",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "evidence_level": "LUNA_MAX_PROXY_ROUND_5_PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 5,
+      "item_id": "B5",
+      "source_revision": {
+        "generation": "G-LUNA-20260817-01",
+        "authority": "reports/luna_sections/LUNA-YBT-05/delivery.json",
+        "route_version": 5,
+        "round": 5
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "出现垂直、夹角或投影时先确定目标是标量还是投影向量。；教材标签 B5 的辨识焦点是：数量积、夹角与投影翻译（B5）。",
+      "course_call": {
+        "course_keys": [
+          "line_line_angle",
+          "space_vector_ops",
+          "decomposition"
+        ],
+        "method_model_id": "把数量积、夹角与投影翻译（B5）翻译为数量积或投影公式，再按线性分配律展开。",
+        "knowledge_refs": [
+          "数量积、夹角与投影向量"
+        ],
+        "type_refs": [
+          "数量积基础与投影"
+        ]
+      },
+      "first_line": "先写 a dot b = |a||b|cos(theta)，或 proj_b(a) = (a dot b)/|b|^2 * b。",
+      "second_line": "先按首行模板落笔，再逐项执行当前项目列出的继续动作。",
+      "continuation": "把几何条件换成点积等式；按已知模长/夹角或分配律逐项展开；保留绝对值与方向直到检查完成",
+      "independent_self_check": "垂直时点积为零；投影结果必须与投影方向共线。；只用题设条件和定义回检，不读取外部结果。",
+      "first_breakpoint": "无",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "evidence_level": "LUNA_MAX_PROXY_ROUND_5_PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 6,
+      "item_id": "b2a2e4099db3ab67",
+      "source_revision": {
+        "generation": "G-LUNA-20260817-01",
+        "authority": "reports/luna_sections/LUNA-YBT-05/delivery.json",
+        "route_version": 5,
+        "round": 5
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "出现中点、重心或长度平方和差时先平方展开，不急于求坐标。；教材标签 变式 的辨识焦点是：数量积展开与中点极化（变式）。",
+      "course_call": {
+        "course_keys": [
+          "line_line_angle"
+        ],
+        "method_model_id": "用数量积展开与中点极化（变式）把长度平方改写成数量积，利用中点/重心系数展开交叉项。",
+        "knowledge_refs": [
+          "数量积展开、极化与重心"
+        ],
+        "type_refs": [
+          "类型Ⅳ 数量积"
+        ]
+      },
+      "first_line": "先写 |u +/- v|^2 = (u +/- v) dot (u +/- v)。",
+      "second_line": "先按首行模板落笔，再逐项执行当前项目列出的继续动作。",
+      "continuation": "展开自积与二倍交叉项；代入中点/重心向量关系；消去交叉项或动参数",
+      "independent_self_check": "交换两个向量后结果不变；中点权重和符合几何位置。；只用题设条件和定义回检，不读取外部结果。",
+      "first_breakpoint": "无",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "evidence_level": "LUNA_MAX_PROXY_ROUND_5_PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 6,
+      "item_id": "a150e68825eff982",
+      "source_revision": {
+        "generation": "G-LUNA-20260817-01",
+        "authority": "reports/luna_sections/LUNA-YBT-05/delivery.json",
+        "route_version": 5,
+        "round": 5
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "出现中点、重心或长度平方和差时先平方展开，不急于求坐标。；教材标签 例13 的辨识焦点是：数量积展开与中点极化（例13）。",
+      "course_call": {
+        "course_keys": [
+          "line_line_angle"
+        ],
+        "method_model_id": "用数量积展开与中点极化（例13）把长度平方改写成数量积，利用中点/重心系数展开交叉项。",
+        "knowledge_refs": [
+          "数量积展开、极化与重心"
+        ],
+        "type_refs": [
+          "类型Ⅳ 数量积"
+        ]
+      },
+      "first_line": "先写 |u +/- v|^2 = (u +/- v) dot (u +/- v)。",
+      "second_line": "先按首行模板落笔，再逐项执行当前项目列出的继续动作。",
+      "continuation": "展开自积与二倍交叉项；代入中点/重心向量关系；消去交叉项或动参数",
+      "independent_self_check": "交换两个向量后结果不变；中点权重和符合几何位置。；只用题设条件和定义回检，不读取外部结果。",
+      "first_breakpoint": "无",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "evidence_level": "LUNA_MAX_PROXY_ROUND_5_PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 6,
+      "item_id": "d93a88e15e97f1dd",
+      "source_revision": {
+        "generation": "G-LUNA-20260817-01",
+        "authority": "reports/luna_sections/LUNA-YBT-05/delivery.json",
+        "route_version": 5,
+        "round": 5
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "出现中点、重心或长度平方和差时先平方展开，不急于求坐标。；教材标签 例14 的辨识焦点是：数量积展开与中点极化（例14）。",
+      "course_call": {
+        "course_keys": [
+          "line_line_angle"
+        ],
+        "method_model_id": "用数量积展开与中点极化（例14）把长度平方改写成数量积，利用中点/重心系数展开交叉项。",
+        "knowledge_refs": [
+          "数量积展开、极化与重心"
+        ],
+        "type_refs": [
+          "类型Ⅳ 数量积"
+        ]
+      },
+      "first_line": "先写 |u +/- v|^2 = (u +/- v) dot (u +/- v)。",
+      "second_line": "先按首行模板落笔，再逐项执行当前项目列出的继续动作。",
+      "continuation": "展开自积与二倍交叉项；代入中点/重心向量关系；消去交叉项或动参数",
+      "independent_self_check": "交换两个向量后结果不变；中点权重和符合几何位置。；只用题设条件和定义回检，不读取外部结果。",
+      "first_breakpoint": "无",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "evidence_level": "LUNA_MAX_PROXY_ROUND_5_PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 6,
+      "item_id": "B11",
+      "source_revision": {
+        "generation": "G-LUNA-20260817-01",
+        "authority": "reports/luna_sections/LUNA-YBT-05/delivery.json",
+        "route_version": 5,
+        "round": 5
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "出现中点、重心或长度平方和差时先平方展开，不急于求坐标。；教材标签 B11 的辨识焦点是：数量积展开与中点极化（B11）。",
+      "course_call": {
+        "course_keys": [
+          "line_line_angle"
+        ],
+        "method_model_id": "用数量积展开与中点极化（B11）把长度平方改写成数量积，利用中点/重心系数展开交叉项。",
+        "knowledge_refs": [
+          "数量积展开、极化与重心"
+        ],
+        "type_refs": [
+          "类型Ⅳ 数量积"
+        ]
+      },
+      "first_line": "先写 |u +/- v|^2 = (u +/- v) dot (u +/- v)。",
+      "second_line": "先按首行模板落笔，再逐项执行当前项目列出的继续动作。",
+      "continuation": "展开自积与二倍交叉项；代入中点/重心向量关系；消去交叉项或动参数",
+      "independent_self_check": "交换两个向量后结果不变；中点权重和符合几何位置。；只用题设条件和定义回检，不读取外部结果。",
+      "first_breakpoint": "无",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "evidence_level": "LUNA_MAX_PROXY_ROUND_5_PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 7,
+      "item_id": "93c3de935f7cc03f",
+      "source_revision": {
+        "generation": "G-LUNA-20260817-01",
+        "authority": "reports/luna_sections/LUNA-YBT-05/delivery.json",
+        "route_version": 5,
+        "round": 5
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "问长度先看自积，问夹角先看点积与两个模，问投影先保留方向。；教材标签 变式1 的辨识焦点是：模长、投影或夹角计算（变式1）。",
+      "course_call": {
+        "course_keys": [
+          "line_line_angle"
+        ],
+        "method_model_id": "围绕模长、投影或夹角计算（变式1）先构造目标向量，再用自积求模或点积除以两个模求角。",
+        "knowledge_refs": [
+          "数量积求长度与求角"
+        ],
+        "type_refs": [
+          "类型Ⅴ 求长度、距离",
+          "类型Ⅵ 求角"
+        ]
+      },
+      "first_line": "长度写 |u|^2 = u dot u；夹角写 cos(theta) = (u dot v)/(|u||v|)。",
+      "second_line": "先按首行模板落笔，再逐项执行当前项目列出的继续动作。",
+      "continuation": "沿图形路径表示目标向量；分别计算自积、点积和模长；按角度范围或长度非负性筛选",
+      "independent_self_check": "验证 |u dot v| <= |u||v| 且长度结果非负。；只用题设条件和定义回检，不读取外部结果。",
+      "first_breakpoint": "无",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "evidence_level": "LUNA_MAX_PROXY_ROUND_5_PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 7,
+      "item_id": "62827f92b028d91e",
+      "source_revision": {
+        "generation": "G-LUNA-20260817-01",
+        "authority": "reports/luna_sections/LUNA-YBT-05/delivery.json",
+        "route_version": 5,
+        "round": 5
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "问长度先看自积，问夹角先看点积与两个模，问投影先保留方向。；教材标签 变式2 的辨识焦点是：模长、投影或夹角计算（变式2）。",
+      "course_call": {
+        "course_keys": [
+          "line_line_angle"
+        ],
+        "method_model_id": "围绕模长、投影或夹角计算（变式2）先构造目标向量，再用自积求模或点积除以两个模求角。",
+        "knowledge_refs": [
+          "数量积求长度与求角"
+        ],
+        "type_refs": [
+          "类型Ⅴ 求长度、距离",
+          "类型Ⅵ 求角"
+        ]
+      },
+      "first_line": "长度写 |u|^2 = u dot u；夹角写 cos(theta) = (u dot v)/(|u||v|)。",
+      "second_line": "先按首行模板落笔，再逐项执行当前项目列出的继续动作。",
+      "continuation": "沿图形路径表示目标向量；分别计算自积、点积和模长；按角度范围或长度非负性筛选",
+      "independent_self_check": "验证 |u dot v| <= |u||v| 且长度结果非负。；只用题设条件和定义回检，不读取外部结果。",
+      "first_breakpoint": "无",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "evidence_level": "LUNA_MAX_PROXY_ROUND_5_PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 7,
+      "item_id": "9b508f5a6c4fe2d1",
+      "source_revision": {
+        "generation": "G-LUNA-20260817-01",
+        "authority": "reports/luna_sections/LUNA-YBT-05/delivery.json",
+        "route_version": 5,
+        "round": 5
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "问长度先看自积，问夹角先看点积与两个模，问投影先保留方向。；教材标签 变式1 的辨识焦点是：模长、投影或夹角计算（变式1）。",
+      "course_call": {
+        "course_keys": [
+          "line_line_angle"
+        ],
+        "method_model_id": "围绕模长、投影或夹角计算（变式1）先构造目标向量，再用自积求模或点积除以两个模求角。",
+        "knowledge_refs": [
+          "数量积求长度与求角"
+        ],
+        "type_refs": [
+          "类型Ⅴ 求长度、距离",
+          "类型Ⅵ 求角"
+        ]
+      },
+      "first_line": "长度写 |u|^2 = u dot u；夹角写 cos(theta) = (u dot v)/(|u||v|)。",
+      "second_line": "先按首行模板落笔，再逐项执行当前项目列出的继续动作。",
+      "continuation": "沿图形路径表示目标向量；分别计算自积、点积和模长；按角度范围或长度非负性筛选",
+      "independent_self_check": "验证 |u dot v| <= |u||v| 且长度结果非负。；只用题设条件和定义回检，不读取外部结果。",
+      "first_breakpoint": "无",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "evidence_level": "LUNA_MAX_PROXY_ROUND_5_PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 7,
+      "item_id": "3b8056c799f60086",
+      "source_revision": {
+        "generation": "G-LUNA-20260817-01",
+        "authority": "reports/luna_sections/LUNA-YBT-05/delivery.json",
+        "route_version": 5,
+        "round": 5
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "问长度先看自积，问夹角先看点积与两个模，问投影先保留方向。；教材标签 变式2 的辨识焦点是：模长、投影或夹角计算（变式2）。",
+      "course_call": {
+        "course_keys": [
+          "line_line_angle"
+        ],
+        "method_model_id": "围绕模长、投影或夹角计算（变式2）先构造目标向量，再用自积求模或点积除以两个模求角。",
+        "knowledge_refs": [
+          "数量积求长度与求角"
+        ],
+        "type_refs": [
+          "类型Ⅴ 求长度、距离",
+          "类型Ⅵ 求角"
+        ]
+      },
+      "first_line": "长度写 |u|^2 = u dot u；夹角写 cos(theta) = (u dot v)/(|u||v|)。",
+      "second_line": "先按首行模板落笔，再逐项执行当前项目列出的继续动作。",
+      "continuation": "沿图形路径表示目标向量；分别计算自积、点积和模长；按角度范围或长度非负性筛选",
+      "independent_self_check": "验证 |u dot v| <= |u||v| 且长度结果非负。；只用题设条件和定义回检，不读取外部结果。",
+      "first_breakpoint": "无",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "evidence_level": "LUNA_MAX_PROXY_ROUND_5_PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 7,
+      "item_id": "e476dadb1e02f99e",
+      "source_revision": {
+        "generation": "G-LUNA-20260817-01",
+        "authority": "reports/luna_sections/LUNA-YBT-05/delivery.json",
+        "route_version": 5,
+        "round": 5
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "问长度先看自积，问夹角先看点积与两个模，问投影先保留方向。；教材标签 例15 的辨识焦点是：模长、投影或夹角计算（例15）。",
+      "course_call": {
+        "course_keys": [
+          "line_line_angle"
+        ],
+        "method_model_id": "围绕模长、投影或夹角计算（例15）先构造目标向量，再用自积求模或点积除以两个模求角。",
+        "knowledge_refs": [
+          "数量积求长度与求角"
+        ],
+        "type_refs": [
+          "类型Ⅴ 求长度、距离",
+          "类型Ⅵ 求角"
+        ]
+      },
+      "first_line": "长度写 |u|^2 = u dot u；夹角写 cos(theta) = (u dot v)/(|u||v|)。",
+      "second_line": "先按首行模板落笔，再逐项执行当前项目列出的继续动作。",
+      "continuation": "沿图形路径表示目标向量；分别计算自积、点积和模长；按角度范围或长度非负性筛选",
+      "independent_self_check": "验证 |u dot v| <= |u||v| 且长度结果非负。；只用题设条件和定义回检，不读取外部结果。",
+      "first_breakpoint": "无",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "evidence_level": "LUNA_MAX_PROXY_ROUND_5_PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 7,
+      "item_id": "e51eb64b1bb10e1a",
+      "source_revision": {
+        "generation": "G-LUNA-20260817-01",
+        "authority": "reports/luna_sections/LUNA-YBT-05/delivery.json",
+        "route_version": 5,
+        "round": 5
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "问长度先看自积，问夹角先看点积与两个模，问投影先保留方向。；教材标签 例16 的辨识焦点是：模长、投影或夹角计算（例16）。",
+      "course_call": {
+        "course_keys": [
+          "line_line_angle"
+        ],
+        "method_model_id": "围绕模长、投影或夹角计算（例16）先构造目标向量，再用自积求模或点积除以两个模求角。",
+        "knowledge_refs": [
+          "数量积求长度与求角"
+        ],
+        "type_refs": [
+          "类型Ⅴ 求长度、距离",
+          "类型Ⅵ 求角"
+        ]
+      },
+      "first_line": "长度写 |u|^2 = u dot u；夹角写 cos(theta) = (u dot v)/(|u||v|)。",
+      "second_line": "先按首行模板落笔，再逐项执行当前项目列出的继续动作。",
+      "continuation": "沿图形路径表示目标向量；分别计算自积、点积和模长；按角度范围或长度非负性筛选",
+      "independent_self_check": "验证 |u dot v| <= |u||v| 且长度结果非负。；只用题设条件和定义回检，不读取外部结果。",
+      "first_breakpoint": "无",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "evidence_level": "LUNA_MAX_PROXY_ROUND_5_PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 7,
+      "item_id": "B12",
+      "source_revision": {
+        "generation": "G-LUNA-20260817-01",
+        "authority": "reports/luna_sections/LUNA-YBT-05/delivery.json",
+        "route_version": 5,
+        "round": 5
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "问长度先看自积，问夹角先看点积与两个模，问投影先保留方向。；教材标签 B12 的辨识焦点是：模长、投影或夹角计算（B12）。",
+      "course_call": {
+        "course_keys": [
+          "line_line_angle"
+        ],
+        "method_model_id": "围绕模长、投影或夹角计算（B12）先构造目标向量，再用自积求模或点积除以两个模求角。",
+        "knowledge_refs": [
+          "数量积求长度与求角"
+        ],
+        "type_refs": [
+          "类型Ⅴ 求长度、距离",
+          "类型Ⅵ 求角"
+        ]
+      },
+      "first_line": "长度写 |u|^2 = u dot u；夹角写 cos(theta) = (u dot v)/(|u||v|)。",
+      "second_line": "先按首行模板落笔，再逐项执行当前项目列出的继续动作。",
+      "continuation": "沿图形路径表示目标向量；分别计算自积、点积和模长；按角度范围或长度非负性筛选",
+      "independent_self_check": "验证 |u dot v| <= |u||v| 且长度结果非负。；只用题设条件和定义回检，不读取外部结果。",
+      "first_breakpoint": "无",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "evidence_level": "LUNA_MAX_PROXY_ROUND_5_PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 8,
+      "item_id": "B6",
+      "source_revision": {
+        "generation": "G-LUNA-20260817-01",
+        "authority": "reports/luna_sections/LUNA-YBT-05/delivery.json",
+        "route_version": 5,
+        "round": 5
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "看到二面角/平面夹角先找两个法向量，不直接追空间棱。；教材标签 B6 的辨识焦点是：法向量与面面夹角（B6）。",
+      "course_call": {
+        "course_keys": [
+          "plane_plane_angle",
+          "parallel_perpendicular",
+          "line_line_angle"
+        ],
+        "method_model_id": "用法向量与面面夹角（B6）寻找两个平面的法向量，再用法向量夹角表示平面夹角。",
+        "knowledge_refs": [
+          "二面角平面角前置与应用"
+        ],
+        "type_refs": [
+          "二面角平面角前置与应用"
+        ]
+      },
+      "first_line": "先写 cos(theta) = |n1 dot n2|/(|n1||n2|)，再分别构造法向量。",
+      "second_line": "先按首行模板落笔，再逐项执行当前项目列出的继续动作。",
+      "continuation": "从每个平面取两条不共线方向；用垂直条件或平面方程求法向量；取点积绝对值并检查夹角范围",
+      "independent_self_check": "交换两个平面不改变结果，余弦落在[0,1]。；只用题设条件和定义回检，不读取外部结果。",
+      "first_breakpoint": "无",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "evidence_level": "LUNA_MAX_PROXY_ROUND_5_PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 8,
+      "item_id": "B7",
+      "source_revision": {
+        "generation": "G-LUNA-20260817-01",
+        "authority": "reports/luna_sections/LUNA-YBT-05/delivery.json",
+        "route_version": 5,
+        "round": 5
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "看到二面角/平面夹角先找两个法向量，不直接追空间棱。；教材标签 B7 的辨识焦点是：法向量与面面夹角（B7）。",
+      "course_call": {
+        "course_keys": [
+          "plane_plane_angle",
+          "parallel_perpendicular",
+          "line_line_angle"
+        ],
+        "method_model_id": "用法向量与面面夹角（B7）寻找两个平面的法向量，再用法向量夹角表示平面夹角。",
+        "knowledge_refs": [
+          "二面角平面角前置与应用"
+        ],
+        "type_refs": [
+          "二面角平面角前置与应用"
+        ]
+      },
+      "first_line": "先写 cos(theta) = |n1 dot n2|/(|n1||n2|)，再分别构造法向量。",
+      "second_line": "先按首行模板落笔，再逐项执行当前项目列出的继续动作。",
+      "continuation": "从每个平面取两条不共线方向；用垂直条件或平面方程求法向量；取点积绝对值并检查夹角范围",
+      "independent_self_check": "交换两个平面不改变结果，余弦落在[0,1]。；只用题设条件和定义回检，不读取外部结果。",
+      "first_breakpoint": "无",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "evidence_level": "LUNA_MAX_PROXY_ROUND_5_PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 9,
+      "item_id": "B8",
+      "source_revision": {
+        "generation": "G-LUNA-20260817-01",
+        "authority": "reports/luna_sections/LUNA-YBT-05/delivery.json",
+        "route_version": 5,
+        "round": 5
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "题干要求共面时先找平面内两条不共线方向，不追第三个空间方向。；教材标签 B8 的辨识焦点是：系数和与四点共面（B8）。",
+      "course_call": {
+        "course_keys": [
+          "decomposition",
+          "coplanar",
+          "line_line_angle"
+        ],
+        "method_model_id": "用系数和与四点共面（B8）把目标向量表示成同一平面内两个不共线方向的线性组合。",
+        "knowledge_refs": [
+          "极化与四点共面综合"
+        ],
+        "type_refs": [
+          "极化与四点共面综合"
+        ]
+      },
+      "first_line": "先写 OP = lambda*u + mu*v，其中 u、v 是目标平面内不共线向量。",
+      "second_line": "先按首行模板落笔，再逐项执行当前项目列出的继续动作。",
+      "continuation": "选定参考平面和两条方向；沿端点路径拆出目标向量；说明组合关系即可完成共面判定",
+      "independent_self_check": "目标向量只含两个平面方向，不能残留第三个独立方向。；只用题设条件和定义回检，不读取外部结果。",
+      "first_breakpoint": "无",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "evidence_level": "LUNA_MAX_PROXY_ROUND_5_PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 9,
+      "item_id": "C13",
+      "source_revision": {
+        "generation": "G-LUNA-20260817-01",
+        "authority": "reports/luna_sections/LUNA-YBT-05/delivery.json",
+        "route_version": 5,
+        "round": 5
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "题干要求共面时先找平面内两条不共线方向，不追第三个空间方向。；教材标签 C13 的辨识焦点是：系数和与四点共面（C13）。",
+      "course_call": {
+        "course_keys": [
+          "decomposition",
+          "coplanar",
+          "line_line_angle"
+        ],
+        "method_model_id": "用系数和与四点共面（C13）把目标向量表示成同一平面内两个不共线方向的线性组合。",
+        "knowledge_refs": [
+          "极化与四点共面综合"
+        ],
+        "type_refs": [
+          "极化与四点共面综合"
+        ]
+      },
+      "first_line": "先写 OP = lambda*u + mu*v，其中 u、v 是目标平面内不共线向量。",
+      "second_line": "先按首行模板落笔，再逐项执行当前项目列出的继续动作。",
+      "continuation": "选定参考平面和两条方向；沿端点路径拆出目标向量；说明组合关系即可完成共面判定",
+      "independent_self_check": "目标向量只含两个平面方向，不能残留第三个独立方向。；只用题设条件和定义回检，不读取外部结果。",
+      "first_breakpoint": "无",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "evidence_level": "LUNA_MAX_PROXY_ROUND_5_PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 10,
+      "item_id": "C14",
+      "source_revision": {
+        "generation": "G-LUNA-20260817-01",
+        "authority": "reports/luna_sections/LUNA-YBT-05/delivery.json",
+        "route_version": 5,
+        "round": 5
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "出现点面距离或空间综合条件时先确定主平面与法向量。；教材标签 C14 的辨识焦点是：平面方程、点面距离或综合条件（C14）。",
+      "course_call": {
+        "course_keys": [
+          "plane_equation_upper",
+          "plane_equation_lower",
+          "distance",
+          "decomposition",
+          "parallel_perpendicular",
+          "coplanar",
+          "line_line_angle"
+        ],
+        "method_model_id": "用平面方程、点面距离或综合条件（C14）先建立平面方程/法向量或点面距离表达式，再逐层消元。",
+        "knowledge_refs": [
+          "外接球、点面距离与压轴综合"
+        ],
+        "type_refs": [
+          "外接球、点面距离与压轴综合"
+        ]
+      },
+      "first_line": "先写 Pi: nx*x + ny*y + nz*z + d = 0 或点面距离模板。",
+      "second_line": "先按首行模板落笔，再逐项执行当前项目列出的继续动作。",
+      "continuation": "选基准平面和坐标；用垂直/共面条件求法向量或参数关系；代入距离/球面条件并检查范围",
+      "independent_self_check": "平面内已知点代回为零，距离单位和非负性正确。；只用题设条件和定义回检，不读取外部结果。",
+      "first_breakpoint": "无",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "evidence_level": "LUNA_MAX_PROXY_ROUND_5_PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    }
+  ],
+  "answer_free_boundary": {
+    "answer_sidecar_read": false,
+    "answer_ocr_read": false,
+    "answer_text_in_context": false,
+    "student_mastery_claim": false
+  },
+  "source_revision": {
+    "chapter1_manifest.json": "d4f276a026ddfd35d69795ed5c589cdbf8f3f8e98ad3fe73ef814d672a1541c5",
+    "data/bridge_micro_lessons.json": "27723540d68283993cc985d49543bb011e9184ad21461613bba6ed35aa0c341e",
+    "data/packets/1.1/learning_packet.json": "416990cafa7fabe30dc1c4e04712da47d8ab80ae19e5d6f26b72a46c0814e053",
+    "data/packets/1.1/student_learning_items.json": "22c1650492b87ffb05f6bfabc81875f2f9cdcccb757a30e0cf0bacd87aed38bb",
+    "data/contexts/1.1.json": "7b51a4f14c14ba17a5807009ef90093a0276ef9cd00b925bd5e0950da2c2e316",
+    "data/question_coverage.json": "028b5c047ff17639c6a5e07c4a963ac5fe0d88ab6dd42edefdd582da441821cf",
+    "data/zero_base_simulation_standard.md": "382ad51169d1ff869b59a427237aa19fde45f9b7948e7176d8f2f618950f5a71",
+    "data/packets/1.1/learning_path_without_questions.md": "5a312c1e1760eed1fedc168c5b7a8f4274aa94bf3f5396c46b6bc294c75006e0",
+    "reports/luna_sections/LUNA-YBT-05/delivery.json": "d0b7d6a2f0269269aa0aa4bb30f994dc42289d16841145e06b66eac0d021fed5"
+  }
+}

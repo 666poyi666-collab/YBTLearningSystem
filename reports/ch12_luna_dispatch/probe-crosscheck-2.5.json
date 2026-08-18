@@ -1,0 +1,72 @@
+{
+  "schema_version": "ybt-ocr-vision-crosscheck-v1",
+  "mode": "paddle_glm_crosscheck",
+  "source_binding": {
+    "assignment_sha256": "df199a1aecd0e1bb82b27cf163f68d32ee3f5eecc10f24b1a9d8e3a61bbf1fb8",
+    "vision_sidecar_sha256": "ee371622be9032f834480bc8dab3e37e7119f2236081459cf7897065ae1f03fc"
+  },
+  "luna_capability": {
+    "status": "blocked",
+    "blocker": "image content omitted because current luna_worker host does not support image input"
+  },
+  "generated_at": "2026-08-17T10:28:08.900926+00:00",
+  "records": [
+    {
+      "section": "2.5",
+      "item_keys": [
+        "LI:bbd7ba4532eb28a2"
+      ],
+      "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\imgs\\img_in_image_box_889_187_1092_361.jpg",
+      "image_sha256": "66d4828aba05c0fd47ef219de64f8a3b33c9ef814aca35d3caa40aaa5e2a865b",
+      "paddle": {
+        "status": "passed",
+        "artifact": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_63.md",
+        "artifact_sha256": "c7251960850aef5a258df0c6986a865beabbffd487f1b17931206bc0189d2b4c",
+        "text": [],
+        "coordinates": []
+      },
+      "luna": {
+        "status": "blocked",
+        "blocker": "image content omitted because current luna_worker host does not support image input"
+      },
+      "visual": {
+        "status": "passed",
+        "provider": "GLM-4.6V-Flash via deepseek-eyes",
+        "model": "glm-4.6v-flash",
+        "objects": [
+          "圆C",
+          "点P",
+          "点N",
+          "点Q",
+          "点O",
+          "点M"
+        ],
+        "relations": [
+          "点P在圆C内",
+          "点N在y轴上",
+          "点Q在圆C上",
+          "点O在坐标原点",
+          "线段CQ连接点C和点Q",
+          "线段OP连接点O和点P"
+        ],
+        "coordinates": [
+          "圆心C在x轴负半轴",
+          "点O在坐标原点(0,0)",
+          "点N在y轴正半轴",
+          "点P在第一象限",
+          "点Q在y轴负半轴",
+          "点M在x轴下方"
+        ],
+        "ranges": [],
+        "text": [
+          "l"
+        ],
+        "uncertainties": []
+      },
+      "conflicts": [],
+      "adjudication": [],
+      "status": "passed"
+    }
+  ],
+  "status": "passed"
+}

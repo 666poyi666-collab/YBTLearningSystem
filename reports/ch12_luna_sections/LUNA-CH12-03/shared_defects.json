@@ -1,0 +1,33 @@
+{
+  "schema_version": "ybt-luna-shared-defects-v1",
+  "task_id": "LUNA-CH12-03",
+  "defects": [
+    {
+      "id": "PACKET-SOURCE-DOCS-1.4-A2",
+      "status": "worked_around_task_locally",
+      "scope": "shared source packet",
+      "evidence": "build_paddle_glm_crosscheck.py stopped at image SHA 008987a6d646465e5269bc47abafefa8147fdf5bdd2746f12f834e1935382863 because the exercise image has no source_docs entry.",
+      "action": "No shared packet was edited; task-local exact image filename lookup selected the current PaddleOCR doc."
+    },
+    {
+      "id": "LUNA-HOST-IMAGE-INPUT-1.4",
+      "status": "blocked_by_runtime",
+      "scope": "current luna_worker host",
+      "evidence": "image content omitted because current luna_worker host does not support image input",
+      "action": "Preserved luna_status=blocked and used assignment-bound GLM/Paddle fallback; no GLM row was renamed as Luna."
+    },
+    {
+      "id": "COURSE-GAP-1.4-FOLDING-DIhedral",
+      "status": "reported",
+      "scope": "chapter1_manifest course coverage",
+      "target_items": [
+        "C9",
+        "C10",
+        "C11",
+        "C12"
+      ],
+      "evidence": "No dedicated current transcript was found for folding conservation or dynamic dihedral-angle trigonometric parameterization.",
+      "action": "Added explicit bridge units to route version 2 and verified them in the five-round proxy simulation; dedicated MP4 coverage remains unverified."
+    }
+  ]
+}

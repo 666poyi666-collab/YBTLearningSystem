@@ -1,0 +1,955 @@
+{
+  "schema_version": "7.4",
+  "packet_type": "DEEPSEEK_SEQUENTIAL_LEARNING_PACKET",
+  "section": "4.8",
+  "status": "VERIFIED",
+  "source": {
+    "ocr_root": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100",
+    "ocr_docs": [
+      91,
+      99
+    ],
+    "source_file": null
+  },
+  "workflow_order": [
+    "repeat_each_learning_cycle_in_order",
+    "watch_current_courses",
+    "learn_each_current_example_then_attempt_its_direct_variants",
+    "attempt_current_abc_exercises_without_answers",
+    "assess_current_cycle_before_advancing",
+    "unseen_near_transfer",
+    "delayed_closed_book_review"
+  ],
+  "learning_cycles": [
+    {
+      "cycle_id": "4.8-cycle-1",
+      "sequence": 1,
+      "title": "类型I 数列中的添项和去项问题",
+      "course_keys": [
+        "4.4.1.1 累加法与累乘法",
+        "4.4.1.2.a 待定系数法",
+        "4.4.1.2.b 待定系数法",
+        "4.4.1.2.c 待定系数法"
+      ],
+      "prerequisite_course_keys": [],
+      "optional_course_keys": [],
+      "knowledge_refs": [],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [
+        "类型I 数列中的添项和去项问题"
+      ],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [
+        {
+          "item_id": "d5c08f6334ca1638",
+          "kind": "example",
+          "label": "例1",
+          "example_number": 1,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型I 数列中的添项和去项问题",
+          "source_docs": [
+            91,
+            92
+          ],
+          "question_text": "【例 1】已知数列  \\(\\{a_{n}\\}\\) 的前 n 项和为  \\(S_{n}\\)， \\(a_{1}=2\\)，且  \\(a_{n+1}=S_{n}+2\\)。\n（1）求数列 \\(\\{a_{n}\\}\\)的通项公式；\n（2）在  \\(a_n\\) 与  \\(a_{n+1}\\) 之间插入  \\(n\\) 个数，使这  \\(n+2\\) 个数组成一个公差为  \\(d_n\\) 的等差数列，设  \\(T_n = \\frac{1}{d_1} + \\frac{1}{d_2} + \\frac{1}{d_3} + \\cdots + \\frac{1}{d_n}\\)，求  \\(T_n\\)。",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例 1】已知数列  \\(\\{a_{n}\\}\\) 的前 n 项和为  \\(S_{n}\\)， \\(a_{1}=2\\)，且  \\(a_{n+1}=S_{n}+2\\)。\n（1）求数列 \\(\\{a_{n}\\}\\)的通项公式；\n（2）在  \\(a_n\\) 与  \\(a_{n+1}\\) 之间插入  \\(n\\) 个数，使这  \\(n+2\\) 个数组成一个公差为  \\(d_n\\) 的等差数列，设  \\(T_n = \\frac{1}{d_1} + \\frac{1}{d_2} + \\frac{1}{d_3} + \\cdots + \\frac{1}{d_n}\\)，求  \\(T_n\\)。\n解：（1）解法1：（条件给出  \\(a_{n+1}\\) 与  \\(S_n\\) 混搭的关系式，要求的是  \\(a_n\\)，故可考虑退 n 相减，消去  \\(S_n\\)）\n因为  \\(a_{n+1} = S_n + 2\\)，所以当  \\(n \\geq 2\\) 时， \\(a_n = S_{n-1} + 2\\)，两式相减得  \\(a_{n+1} - a_n = S_n + 2 - S_{n-1} - 2 = a_n\\)，所以  \\(a_{n+1} = 2a_n\\)，（上式成立的条件是  \\(n \\geq 2\\)，那么当  \\(n=1\\) 时它是否成立呢？我们单独来看看）\n在  \\(a_{n+1} = S_n + 2\\) 中令  \\(n=1\\) 得  \\(a_2 = S_1 + 2 = a_1 + 2 = 4\\)，所以  \\(a_2 = 2a_1\\)，从而  \\(a_{n+1} = 2a_n\\) 对任意的  \\(n \\in \\mathbb{N}^*\\) 都成立，故  \\(\\{a_n\\}\\) 是首项为 2，公比也为 2 的等比数列，所以  \\(a_n = 2 \\times 2^{n-1} = 2^n\\)。\n解法2：（注意到 \\(a_{n+1}=S_{n+1}-S_n\\)，故也可考虑用它替换题干等式中的 \\(a_{n+1}\\)，先求 \\(S_n\\)，再用 \\(S_n\\)求 \\(a_n\\)）\n将 \\(a_{n+1}=S_{n+1}-S_n\\)代入 \\(a_{n+1}=S_n+2\\)得 \\(S_{n+1}-S_n=S_n+2\\)，所以 \\(S_{n+1}=2S_n+2\\)①，\n（由上式的结构联想到可用待定系数法构造等比数列求 \\(S_n\\)，可先假设 \\(S_{n+1}+\\lambda=2(S_n+\\lambda)\\)，则 \\(S_{n+1}=2S_n+\\lambda\\)，与\n式①对比得 \\(\\lambda=2\\)，构造的方法就有了）由①可得 \\(S_{n+1}+2=2(S_n+2)\\)，又 \\(S_1+2=a_1+2=4\\)，\n所以 \\(\\{S_n+2\\}\\)是首项为4，公比为2的等比数列，从而 \\(S_n+2=4\\times2^{n-1}=2^{n+1}\\)，故 \\(S_n=2^{n+1}-2\\)，\n所以当 \\(n\\geq2\\)时， \\(a_n=S_n-S_{n-1}=2^{n+1}-2-(2^n-2)=2^{n+1}-2^n=2\\times2^n-2^n=2^n\\)，\n又因为 \\(a_1=2\\)也满足上式，所以对任意的 \\(n\\in\\mathbb{N}^*\\)，都有 \\(a_n=2^n\\)。\n（2）（可以想象，在  \\(a_n\\) 和  \\(a_{n+1}\\) 之间插入  \\(n\\) 个数，使它们构成公差为  \\(d_n\\) 的等差数列，则  \\(d_n = \\frac{a_{n+1} - a_n}{n+2-1}\\)，已有  \\(a_n\\)，故由此可得到  \\(d_n\\)）由题意， \\(d_n = \\frac{a_{n+1} - a_n}{n+2-1} = \\frac{2^{n+1} - 2^n}{n+1} = \\frac{2^n}{n+1}\\)，所以  \\(\\frac{1}{d_n} = \\frac{n+1}{2^n} = (n+1) \\cdot \\left(\\frac{1}{2}\\right)^n\\)，\n（这是“等差×等比”结构，可用错位相减法求前n项和）\n \\[\\begin{aligned}& 所以 \\left\\{\\begin{aligned}&T_{n}=2\\times\\left(\\frac{1}{2}\\right)^{1}+3\\times\\left(\\frac{1}{2}\\right)^{2}+4\\times\\left(\\frac{1}{2}\\right)^{3}+\\cdots+(n+1)\\cdot\\left(\\frac{1}{2}\\right)^{n}\\textcircled{2}\\\\ &\\frac{1}{2}T_{n}=\\quad2\\times\\left(\\frac{1}{2}\\right)^{2}+3\\times\\left(\\frac{1}{2}\\right)^{3}+4\\times\\left(\\frac{1}{2}\\right)^{4}+\\cdots+n\\cdot\\left(\\frac{1}{2}\\right)^{n}+(n+1)\\cdot\\left(\\frac{1}{2}\\right)^{n+1}\\textcircled{3}\\end{aligned}\\right.,\\end{aligned}\\] \n \\[\\textcircled{2} - \\textcircled{3}得 \\frac{1}{2}T_{n}=2\\times\\left(\\frac{1}{2}\\right)^{1}+\\left(\\frac{1}{2}\\right)^{2}+\\left(\\frac{1}{2}\\right)^{3}+\\cdots+\\left(\\frac{1}{2}\\right)^{n}-(n+1)\\cdot\\left(\\frac{1}{2}\\right)^{n+1}=1+\\frac{\\left(\\frac{1}{2}\\right)^{2}\\cdot\\left[1-\\left(\\frac{1}{2}\\right)^{n-1}\\right]}{1-\\frac{1}{2}}-(n+1)\\cdot\\left(\\frac{1}{2}\\right)^{n+1}\\] \n\\[=1+\\frac{1}{2}-\\left(\\frac{1}{2}\\right)^n-(n+1)\\cdot\\left(\\frac{1}{2}\\right)^{n+1}=\\frac{3}{2}-2\\left(\\frac{1}{2}\\right)^{n+1}-(n+1)\\cdot\\left(\\frac{1}{2}\\right)^{n+1}=\\frac{3}{2}-(n+3)\\cdot\\left(\\frac{1}{2}\\right)^{n+1}\\]，所以\\[T_n=3-(n+3)\\cdot\\left(\\frac{1}{2}\\right)^n\\]。",
+          "solution_present": true,
+          "vision_hint": "4.8-LId5c08f6334ca1638"
+        }
+      ],
+      "direct_variants": [
+        {
+          "item_id": "49781fe29f674d57",
+          "kind": "direct_variant",
+          "label": "变式",
+          "example_number": null,
+          "parent_example_number": 1,
+          "role": "direct_variant",
+          "role_ref": null,
+          "source_docs": [
+            92
+          ],
+          "question_text": "【变式】已知数列\\[\\{a_n\\}\\]的前\\(n\\)项和为\\[S_n\\(，且\\)n\\(，\\)a_n\\(，\\)S_n\\(成等差数列，已知数列\\]\\{b_n\\}\\[的首项\\]b_1=1\\)，且\\[b_{n+1}=2b_n-2n+3\\]。\n（1）求数列 \\(\\{a_{n}\\}\\)的通项公式；\n（2）若将数列 \\(\\{b_n\\}\\) 中去掉数列 \\(\\{a_n\\}\\) 的项后余下的项按原顺序组成数列 \\(\\{c_n\\}\\)，求 \\(c_1 + c_2 + \\cdots + c_{30}\\) 的值。",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "4.8-LI49781fe29f674d57"
+        }
+      ],
+      "exercise_questions": [],
+      "action_order": [
+        "watch_current_courses",
+        "learn_each_current_example_then_attempt_its_direct_variants",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [],
+      "prerequisite_knowledge_blocks": []
+    },
+    {
+      "cycle_id": "4.8-cycle-2",
+      "sequence": 2,
+      "title": "类型Ⅱ 奇偶数列求和",
+      "course_keys": [
+        "4.4.1.2.d 待定系数法",
+        "4.4.1.2.e 待定系数法",
+        "4.4.1.3 利用辅助数列",
+        "4.4.2.1 利用Sn与an的关系转化为an的递推数列"
+      ],
+      "prerequisite_course_keys": [
+        "4.4.1.1 累加法与累乘法",
+        "4.4.1.2.a 待定系数法",
+        "4.4.1.2.b 待定系数法",
+        "4.4.1.2.c 待定系数法"
+      ],
+      "optional_course_keys": [],
+      "knowledge_refs": [],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 奇偶数列求和"
+      ],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [
+        {
+          "item_id": "12fadb99431fed07",
+          "kind": "example",
+          "label": "例2",
+          "example_number": 2,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型Ⅱ 奇偶数列求和",
+          "source_docs": [
+            92,
+            93
+          ],
+          "question_text": "【例2】设 \\(a_n=(-1)^n\\cdot(2n-1)\\)，则数列 \\(\\{a_n\\}\\)的前 \\(n\\)项和 \\(S_n=\\)___。",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例2】设 \\(a_n=(-1)^n\\cdot(2n-1)\\)，则数列 \\(\\{a_n\\}\\)的前 \\(n\\)项和 \\(S_n=\\)___。\n解析： \\(\\{a_{n}\\}\\) 的通项公式中有  \\((-1)^{n}\\) 这一结构，不便于直接求和，怎么办呢？不妨先列出若干项观察规律，\n数列 \\(\\{a_{n}\\}\\)中的项依次为-1，3，-5，7，-9，11，…\n我们发现，若按 \\(a_{1}+a_{2}\\)， \\(a_{3}+a_{4}\\)， \\(a_{5}+a_{6}\\)，… 来组合，则每组的和均为2，能否恰好分完，由n的奇偶决定，故需讨论，先考虑n为偶数这种简单的情形，\n当 n 为偶数时， \\(S_{n}=(a_{1}+a_{2})+(a_{3}+a_{4})+(a_{5}+a_{6})+\\cdots+(a_{n-1}+a_{n})=\\frac{n}{2}\\times2=n\\)；\n当 n 为奇数时， \\(S_{n}=S_{n+1}-a_{n+1}=(n+1)-(-1)^{n+1}\\cdot[2(n+1)-1]=n+1-(2n+1)=-n\\)；\n综上所述， \\(S_{n}=\\begin{cases}n,n\\text{为偶数}\\\\-n,n\\text{为奇数}\\end{cases}\\)\n答案：\\(\\left\\{\\begin{aligned}&n,n 为偶数 \\\\ &-n,n 为奇数\\end{aligned}\\right.\\)\n【反思】当通项中含有 \\((-1)^{n}\\)时，常按相邻项分组求和。求和时先求n为偶数的情形，此时恰好分为 \\(\\frac{n}{2}\\)组；而对于n为奇数的情形，可通过添项凑成偶数项，再把添的项减掉，即 \\(S_{n}=S_{n+1}-a_{n+1}\\)，其中的 \\(S_{n+1}\\)可以代前面已经求得的n为偶数时的结果，从而简化计算。若是递推公式中含有 \\((-1)^{n}\\)，又怎么处理呢？我们来看下面的变式。",
+          "solution_present": true,
+          "vision_hint": "4.8-LI12fadb99431fed07"
+        }
+      ],
+      "direct_variants": [
+        {
+          "item_id": "e4fcd3b7a99a5191",
+          "kind": "direct_variant",
+          "label": "变式",
+          "example_number": null,
+          "parent_example_number": 2,
+          "role": "direct_variant",
+          "role_ref": null,
+          "source_docs": [
+            93
+          ],
+          "question_text": "【变式】已知数列 \\(\\{a_n\\}\\) 满足 \\(a_1 = 1\\)，\\(a_2 = 2\\)，\\(a_{n+2} - a_n = 2 - (-1)^n (n \\in \\mathbb{N}^*)\\)，求数列 \\(\\{a_n\\}\\) 的前 20 项和。",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "4.8-LIe4fcd3b7a99a5191"
+        }
+      ],
+      "exercise_questions": [],
+      "action_order": [
+        "watch_current_courses",
+        "learn_each_current_example_then_attempt_its_direct_variants",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [],
+      "prerequisite_knowledge_blocks": []
+    },
+    {
+      "cycle_id": "4.8-cycle-3",
+      "sequence": 3,
+      "title": "类型Ⅲ 奇偶数列求通项",
+      "course_keys": [
+        "4.4.2.2 利用Sn与an的关系转化为Sn的递推数列",
+        "4.4.2.3 特殊和问题——类比Sn",
+        "4.4.6.1 数列的单调性与求最值问题",
+        "4.4.6.2 数列的周期性问题"
+      ],
+      "prerequisite_course_keys": [
+        "4.4.1.1 累加法与累乘法",
+        "4.4.1.2.a 待定系数法",
+        "4.4.1.2.b 待定系数法",
+        "4.4.1.2.c 待定系数法",
+        "4.4.1.2.d 待定系数法",
+        "4.4.1.2.e 待定系数法",
+        "4.4.1.3 利用辅助数列",
+        "4.4.2.1 利用Sn与an的关系转化为an的递推数列"
+      ],
+      "optional_course_keys": [],
+      "knowledge_refs": [],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 奇偶数列求通项"
+      ],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [
+        {
+          "item_id": "917037d0dc05383b",
+          "kind": "example",
+          "label": "例3",
+          "example_number": 3,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型Ⅲ 奇偶数列求通项",
+          "source_docs": [
+            93,
+            94
+          ],
+          "question_text": "【例 3】已知数列 \\(\\{a_n\\}\\) 的首项是 1，\\(a_{n+1} = \\begin{cases} a_n + 1, & n = 2k-1 \\\\ a_n + 2, & n = 2k \\end{cases}\\)，其中 \\(k \\in \\mathbb{N}^*\\)。\n（1）证明：数列 \\(\\{a_{n}\\}\\)的奇数项成等差数列；\n（2）求 \\(\\{a_{n}\\}\\)的前n项和 \\(S_{n}\\)",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例 3】已知数列 \\(\\{a_n\\}\\) 的首项是 1，\\(a_{n+1} = \\begin{cases} a_n + 1, & n = 2k-1 \\\\ a_n + 2, & n = 2k \\end{cases}\\)，其中 \\(k \\in \\mathbb{N}^*\\)。\n（1）证明：数列 \\(\\{a_{n}\\}\\)的奇数项成等差数列；\n（2）求 \\(\\{a_{n}\\}\\)的前n项和 \\(S_{n}\\)\n解：（1）（要证结论成立，只需证 \\(a_{2k+1}-a_{2k-1}\\)为常数，怎么证？可先将所给递推式用k表示，再作观察）由题意，当 \\(n=2k-1\\)时， \\(a_{n+1}=a_n+1\\)，所以 \\(a_{2k}=a_{2k-1}+1\\) ①，\n当 \\(n=2k\\)时， \\(a_{n+1}=a_{n}+2\\)，所以 \\(a_{2k+1}=a_{2k}+2\\) ②，（由于要证的是 \\(a_{2k+1}-a_{2k-1}\\)为常数，故考虑消去 \\(a_{2k}\\)）将①代入②得 \\(a_{2k+1}=a_{2k-1}+1+2\\)，所以 \\(a_{2k+1}-a_{2k-1}=3\\)，故数列 \\(\\{a_{n}\\}\\)的奇数项构成公差为3的等差数列.\n（2）（已有 \\(\\{a_n\\}\\)的奇数项的特征，求 \\(S_n\\)还需研究偶数项的特征，于是我们再用①②两式把奇数项消去，得到偶数项的递推关系，怎么消？可先在①中将 \\(k\\)换成 \\(k+1\\)，构造出 \\(a_{2k+1}\\)，再代入②将其消去）\n在①中将 \\(k\\)换成 \\(k+1\\)得 \\(a_{2k+2}=a_{2k+1}+1\\)，所以 \\(a_{2k+1}=a_{2k+2}-1\\)，代入②得 \\(a_{2k+2}-1=a_{2k}+2\\)，故 \\(a_{2k+2}-a_{2k}=3\\)，\n在①中令 \\(k=1\\)得 \\(a_n=a_n+1=1+1=2\\)，所以 \\(\\{a_n\\}\\)的偶数项构成首项为2，公差为3的等差数列，\n（数列\\(\\{a_n\\}\\)的前几项分别为\\(1, 2, 4, 5, 7, 8, \\cdots\\)，不难发现二者合在一起所得的\\(\\{a_n\\}\\)不成等差数列，所以求\\(S_n\\)应按奇数项、偶数项分组求和，且分组情况与\\(n\\)的奇偶有关，故据此讨论，先看\\(n\\)为偶数的简单情况）\n当\\(n\\)为偶数时，设\\(n=2k\\)，则\\(k=\\frac{n}{2}\\)，且\\(S_{2k}=a_1+a_2+\\cdots+a_{2k}=(a_1+a_3+\\cdots+a_{2k-1})+(a_2+a_4+\\cdots+a_{2k})\\)\n\\(=\\frac{k(a_1+a_{2k-1})}{2}+\\frac{k(a_2+a_{2k})}{2}=\\frac{k(1+a_{2k-1})}{2}+\\frac{k(2+a_{2k})}{2}\\) ③，\n（怎样求\\(a_{2k-1}\\)和\\(a_{2k}\\)？以\\(a_{2k-1}\\)为例，\\(\\{a_n\\}\\)的前\\(2k\\)项中奇数项占\\(k\\)项，\\(a_{2k-1}\\)是奇数项的最后一项，所以它是奇数项中的第\\(k\\)项，奇数项又构成等差数列，由此可代等差数列的通项公式求\\(a_{2k-1}\\)）\n又\\(a_{2k-1}=a_1+(k-1)\\cdot3=1+3k-3=3k-2\\)，\\(a_{2k}=a_2+(k-1)\\cdot3=2+3k-3=3k-1\\)，\n所以代入③得\\(S_{2k}=\\frac{k(1+3k-2)}{2}+\\frac{k(2+3k-1)}{2}=3k^2\\)，将\\(k=\\frac{n}{2}\\)代入可得\\(S_n=3\\times\\left(\\frac{n}{2}\\right)^2=\\frac{3}{4}n^2\\)；\n（再看\\(n\\)为奇数的情形，仿照上面\\(n\\)为偶数的情形来计算可行，但偏麻烦，更简单的做法是添一项，凑成偶数项，再把添的这一项单独减去）\n当\\(n\\)为奇数时，设\\(n=2k-1\\)，则\\(k=\\frac{n+1}{2}\\)，且\\(S_{2k-1}=S_{2k}-a_{2k}=3k^2-(3k-1)=3k^2-3k+1\\)，\n将\\(k=\\frac{n+1}{2}\\)代入可得\\(S_n=3\\left(\\frac{n+1}{2}\\right)^2-3\\cdot\\frac{n+1}{2}+1=\\frac{3}{4}n^2+\\frac{1}{4}\\)；综上所述，\\(S_n=\\begin{cases}\\frac{3}{4}n^2,&n为偶数\\\\\\frac{3}{4}n^2+\\frac{1}{4},&n为奇数\\end{cases}\\)。\n【反思】①当递推式分奇偶时，可先把\\(n=2k-1\\)和\\(n=2k\\)分别代入，将下标换成用\\(k\\)表示，建立\\(a_{2k+1},a_{2k},a_{2k-1}\\)的关系式，再消去偶数项（或奇数项），找到奇数项（或偶数项）的关系；②求得\\(S_{2k}\\)和\\(S_{2k-1}\\)后，还原成\\(S_n\\)的方法是分别利用\\(k\\)、\\(n\\)的关系把下标换回式。",
+          "solution_present": true,
+          "vision_hint": "4.8-LI917037d0dc05383b"
+        },
+        {
+          "item_id": "99cd62a1f2f27624",
+          "kind": "example",
+          "label": "例4",
+          "example_number": 4,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型Ⅲ 奇偶数列求通项",
+          "source_docs": [
+            94
+          ],
+          "question_text": "【例4】已知各项均不为0的数列\\(\\{a_n\\}\\)的前\\(n\\)项和为\\(S_n\\)，\\(a_1=2\\)，\\(a_n a_{n+1}=2S_n-2\\)，则\\(a_n=\\)___。",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例4】已知各项均不为0的数列\\(\\{a_n\\}\\)的前\\(n\\)项和为\\(S_n\\)，\\(a_1=2\\)，\\(a_n a_{n+1}=2S_n-2\\)，则\\(a_n=\\)___。\n解析：条件给出\\(a_n\\)与\\(S_n\\)混搭的关系式，所求为\\(a_n\\)，故考虑退\\(n\\)相减，消去\\(S_n\\)，\n由题意，\\(a_n a_{n+1}=2S_n-2\\)，所以当\\(n\\geq2\\)时，\\(a_{n-1}a_n=2S_{n-1}-2\\)，\n两式作差得  \\(a_n a_{n+1} - a_{n-1} a_n = 2S_n - 2 - 2S_{n-1} + 2 = 2a_n\\)，又因为  \\(\\{a_n\\}\\) 的各项都不为 0，所以  \\(a_{n+1} - a_{n-1} = 2\\)，\n由上式能得到什么？若无思路，可代一些值看看，分别取  \\(n = 2, 3, 4, 5, 6, 7\\) 得  \\(\\begin{cases} a_3 - a_1 = 2, a_5 - a_3 = 2, a_7 - a_5 = 2, \\cdots \\\\ a_4 - a_2 = 2, a_6 - a_4 = 2, a_8 - a_6 = 2, \\cdots \\end{cases}\\)，\n我们发现  \\(\\{a_n\\}\\) 的奇数项、偶数项分别构成公差为 2 的等差数列，故求  \\(a_n\\) 应分奇偶讨论，\n当  \\(n\\) 为奇数时，设  \\(n = 2k - 1 (k \\in \\mathbb{N}^*\\))，则  \\(k = \\frac{n+1}{2}\\)，所以  \\(a_n = a_{2k-1} = a_1 + (k-1) \\cdot 2 = 2k = 2 \\cdot \\frac{n+1}{2} = n+1\\)；\n再求  \\(n\\) 为偶数时的  \\(a_n\\)，需要先求  \\(a_2\\)，可在所给关系式中取  \\(n=1\\)，求出  \\(a_2\\)，\n在  \\(a_n a_{n+1} = 2S_n - 2\\) 中取  \\(n=1\\) 得  \\(a_1 a_2 = 2S_1 - 2\\)，结合  \\(S_1 = a_1 = 2\\) 可得  \\(a_2 = 1\\)，\n当  \\(n\\) 为偶数时，设  \\(n=2k\\)，则  \\(k = \\frac{n}{2}\\)，所以  \\(a_n = a_{2k} = a_2 + (k-1) \\cdot 2 = 2k - 1 = 2 \\cdot \\frac{n}{2} - 1 = n-1\\)；\n综上所述， \\(a_{n}=\\left\\{\\begin{aligned}&n+1,n \\text{为奇数}\\\\ &n-1,n \\text{为偶数}\\end{aligned}\\right.\\)\n答案：\\(\\left\\{\\begin{aligned}&n+1,n 为奇数 \\\\ &n-1,n 为偶数 \\end{aligned}\\right.\\)\n【反思】若 \\(\\{a_n\\}\\)满足 \\(a_{n+1} - a_{n-1} = d (n \\geq 2)\\)，则 \\(\\{a_n\\}\\)的奇数项、偶数项各自构成公差为 \\(d\\)的等差数列，所以遇到这类递推式，应分奇偶讨论求通项公式。",
+          "solution_present": true,
+          "vision_hint": "4.8-LI99cd62a1f2f27624"
+        }
+      ],
+      "direct_variants": [
+        {
+          "item_id": "1b2bd227db29dfd4",
+          "kind": "direct_variant",
+          "label": "变式",
+          "example_number": null,
+          "parent_example_number": 4,
+          "role": "direct_variant",
+          "role_ref": null,
+          "source_docs": [
+            94,
+            95
+          ],
+          "question_text": "【变式】已知数列 \\(\\{a_n\\}\\) 满足 \\(a_1 = 1\\)，且 \\(a_na_{n+1} = 3^n (n \\in \\mathbb{N}^*)\\)，求 \\(\\{a_n\\}\\) 的通项公式。",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "4.8-LI1b2bd227db29dfd4"
+        }
+      ],
+      "exercise_questions": [],
+      "action_order": [
+        "watch_current_courses",
+        "learn_each_current_example_then_attempt_its_direct_variants",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [],
+      "prerequisite_knowledge_blocks": []
+    },
+    {
+      "cycle_id": "4.8-cycle-4",
+      "sequence": 4,
+      "title": "类型IV 放缩法证明数列求和不等式",
+      "course_keys": [
+        "4.4.7.1 不等式与恒成立问题",
+        "4.4.8.1 放缩为可裂项的数列",
+        "4.4.8.2 放缩为等比数列求和"
+      ],
+      "prerequisite_course_keys": [
+        "4.4.1.1 累加法与累乘法",
+        "4.4.1.2.a 待定系数法",
+        "4.4.1.2.b 待定系数法",
+        "4.4.1.2.c 待定系数法",
+        "4.4.1.2.d 待定系数法",
+        "4.4.1.2.e 待定系数法",
+        "4.4.1.3 利用辅助数列",
+        "4.4.2.1 利用Sn与an的关系转化为an的递推数列",
+        "4.4.2.2 利用Sn与an的关系转化为Sn的递推数列",
+        "4.4.2.3 特殊和问题——类比Sn",
+        "4.4.6.1 数列的单调性与求最值问题",
+        "4.4.6.2 数列的周期性问题"
+      ],
+      "optional_course_keys": [],
+      "knowledge_refs": [],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [
+        "类型IV 放缩法证明数列求和不等式"
+      ],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [
+        {
+          "item_id": "357652efd1ce7458",
+          "kind": "example",
+          "label": "例5",
+          "example_number": 5,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型IV 放缩法证明数列求和不等式",
+          "source_docs": [
+            95,
+            96
+          ],
+          "question_text": "【例 5】已知  \\(\\{a_n\\}\\) 是正项数列， \\(S_n\\) 为  \\(\\{\\sqrt{a_n}\\}\\) 的前  \\(n\\) 项和，且  \\(\\sqrt{a_n}\\)， \\(S_n\\)， \\(a_n-2\\) 成等差数列.\n（1）求 \\(\\{a_{n}\\}\\)的通项公式；\n（2）求证： \\(\\frac{1}{a_{1}}+\\frac{1}{a_{2}}+\\frac{1}{a_{3}}+\\cdots+\\frac{1}{a_{n}}<\\frac{3}{4}\\)",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例 5】已知  \\(\\{a_n\\}\\) 是正项数列， \\(S_n\\) 为  \\(\\{\\sqrt{a_n}\\}\\) 的前  \\(n\\) 项和，且  \\(\\sqrt{a_n}\\)， \\(S_n\\)， \\(a_n-2\\) 成等差数列.\n（1）求 \\(\\{a_{n}\\}\\)的通项公式；\n（2）求证： \\(\\frac{1}{a_{1}}+\\frac{1}{a_{2}}+\\frac{1}{a_{3}}+\\cdots+\\frac{1}{a_{n}}<\\frac{3}{4}\\)\n解：（1）由题意， \\(\\sqrt{a_n}\\)， \\(S_n\\)， \\(a_n-2\\) 成等差数列，所以 \\(2S_n=\\sqrt{a_n}+a_n-2\\) ①，\n（得到了 \\(a_n\\)与 \\(S_n\\)混搭的关系式，要求的是 \\(a_n\\)，故考虑退 \\(n\\)相减，消去 \\(S_n\\)，但请注意，这里 \\(S_n\\)是数列 \\(\\{\\sqrt{a_n}\\}\\)的前 \\(n\\)项和，不是数列 \\(\\{a_n\\}\\)的前 \\(n\\)项和，所以 \\(S_n-S_{n-1}=\\sqrt{a_n}\\)）\n所以当 \\(n\\geq2\\)时， \\(2S_{n-1}=\\sqrt{a_{n-1}}+a_{n-1}-2\\)，从而 \\(2S_n-2S_{n-1}=\\sqrt{a_n}+a_n-2-\\sqrt{a_{n-1}}-a_{n-1}+2\\)，\n故 \\(2\\sqrt{a_n}=\\sqrt{a_n}+a_n-\\sqrt{a_{n-1}}-a_{n-1}\\)，化简得： \\(a_n-a_{n-1}-(\\sqrt{a_n}+\\sqrt{a_{n-1}})=0\\)，\n所以 \\((\\sqrt{a_n}+\\sqrt{a_{n-1}})(\\sqrt{a_n}-\\sqrt{a_{n-1}})-(\\sqrt{a_n}+\\sqrt{a_{n-1}})=0\\)，故 \\((\\sqrt{a_n}+\\sqrt{a_{n-1}})(\\sqrt{a_n}-\\sqrt{a_{n-1}}-1)=0\\) ②，\n又因为 \\(\\{a_n\\}\\)是正项数列，所以 \\(\\sqrt{a_n}+\\sqrt{a_{n-1}}>0\\)，从而式②可化为 \\(\\sqrt{a_n}-\\sqrt{a_{n-1}}-1=0\\)，故 \\(\\sqrt{a_n}-\\sqrt{a_{n-1}}=1\\)，\n在①中取 \\(n=1\\)得 \\(2S_1=\\sqrt{a_1}+a_1-2\\)，结合 \\(S_1=\\sqrt{a_1}\\)可得 \\(2\\sqrt{a_1}=\\sqrt{a_1}+a_1-2\\)，所以 \\(a_1-\\sqrt{a_1}-2=0\\)，\n从而 \\((\\sqrt{a_1}-2)(\\sqrt{a_1}+1)=0\\)，解得： \\(\\sqrt{a_1}=2\\)，故 \\(\\{\\sqrt{a_n}\\}\\)是首项为2，公差为1的等差数列，\n所以 \\(\\sqrt{a_n}=2+(n-1)\\times1=n+1\\)，故 \\(a_n=(n+1)^2\\)。\n（2）（可以想象， \\(\\frac{1}{a_n}=\\frac{1}{(n+1)^2}=\\frac{1}{n^2+2n+1}\\) 的和无法求出，怎么证明题干的不等式？由其形式联想到可裂项的结构，观察发现丢掉分母上的 1，就能化为可裂项求和结构  \\(\\frac{1}{n(n+2)}\\)，故尝试按此证明结论）\n由（1）可得  \\(\\frac{1}{a_n}=\\frac{1}{(n+1)^2}=\\frac{1}{n^2+2n+1}<\\frac{1}{n^2+2n}=\\frac{1}{n(n+2)}=\\frac{1}{2}\\left(\\frac{1}{n}-\\frac{1}{n+2}\\right)\\)，\n所以 \\(\\frac{1}{a_1}+\\frac{1}{a_2}+\\frac{1}{a_3}+\\cdots+\\frac{1}{a_n}<\\frac{1}{2}\\left(1-\\frac{1}{3}+\\frac{1}{2}-\\frac{1}{4}+\\frac{1}{3}-\\frac{1}{5}+\\cdots+\\frac{1}{n}-\\frac{1}{n+2}\\right)\\)\n \\(=\\frac{1}{2}\\left[\\left(1+\\frac{1}{2}+\\frac{1}{3}+\\cdots+\\frac{1}{n}\\right)-\\left(\\frac{1}{3}+\\frac{1}{4}+\\cdots+\\frac{1}{n}+\\frac{1}{n+1}+\\frac{1}{n+2}\\right)\\right]=\\frac{1}{2}\\left(1+\\frac{1}{2}-\\frac{1}{n+1}-\\frac{1}{n+2}\\right)=\\frac{3}{4}-\\frac{1}{2}\\left(\\frac{1}{n+1}+\\frac{1}{n+2}\\right)\\),\n因为 \\(\\frac{1}{2}\\left(\\frac{1}{n+1}+\\frac{1}{n+2}\\right)>0\\)，所以 \\(\\frac{1}{a_1}+\\frac{1}{a_2}+\\frac{1}{a_3}+\\cdots+\\frac{1}{a_n}<\\frac{3}{4}-\\frac{1}{2}\\left(\\frac{1}{n+1}+\\frac{1}{n+2}\\right)<\\frac{3}{4}\\).\n【反思】①通过丢项将不能求和的结构放缩成可以求和的结构是证明数列求和不等式常用的方法。本题丢项后放缩成了可通过裂项求和的结构，有时也会放缩成其它可求和的结构，比如下面的变式；②放缩的方向可能不唯一，需要尝试。例如本题若改为证明 \\(\\frac{1}{a_1}+\\frac{1}{a_2}+\\cdots+\\frac{1}{a_n}<1\\)，则可按 \\(\\frac{1}{a_n}=\\frac{1}{(n+1)^2}<\\frac{1}{n(n+1)}=\\frac{1}{n}-\\frac{1}{n+1}\\)放缩，进而得到 \\(\\frac{1}{a_1}+\\frac{1}{a_2}+\\cdots+\\frac{1}{a_n}<1-\\frac{1}{2}+\\frac{1}{2}-\\frac{1}{3}+\\cdots+\\frac{1}{n}-\\frac{1}{n+1}=1-\\frac{1}{n+1}<1\\)。",
+          "solution_present": true,
+          "vision_hint": "4.8-LI357652efd1ce7458"
+        }
+      ],
+      "direct_variants": [
+        {
+          "item_id": "8993889b2e20bd2a",
+          "kind": "direct_variant",
+          "label": "变式",
+          "example_number": null,
+          "parent_example_number": 5,
+          "role": "direct_variant",
+          "role_ref": null,
+          "source_docs": [
+            96
+          ],
+          "question_text": "【变式】已知对任意的  \\(n \\in \\mathbb{N}^*\\)，数列  \\(\\{a_n\\}\\) 都满足  \\(\\frac{a_1 - 1}{2^1 + 1} + \\frac{a_2 - 2}{2^2 + 1} + \\cdots + \\frac{a_n - n}{2^n + 1} = n + 1\\)。\n（1）求数列 \\(\\{a_{n}\\}\\)的通项公式；\n（2）求证： \\(\\frac{2}{a_{2}}+\\frac{2}{a_{3}}+\\cdots+\\frac{2}{a_{n+1}}<1-\\frac{1}{2^{n}}\\)",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "4.8-LI8993889b2e20bd2a"
+        }
+      ],
+      "exercise_questions": [],
+      "action_order": [
+        "watch_current_courses",
+        "learn_each_current_example_then_attempt_its_direct_variants",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [],
+      "prerequisite_knowledge_blocks": []
+    },
+    {
+      "cycle_id": "4.8-cycle-5",
+      "sequence": 5,
+      "title": "B组 强化能力",
+      "course_keys": [],
+      "prerequisite_course_keys": [
+        "4.4.1.1 累加法与累乘法",
+        "4.4.1.2.a 待定系数法",
+        "4.4.1.2.b 待定系数法",
+        "4.4.1.2.c 待定系数法",
+        "4.4.1.2.d 待定系数法",
+        "4.4.1.2.e 待定系数法",
+        "4.4.1.3 利用辅助数列",
+        "4.4.2.1 利用Sn与an的关系转化为an的递推数列",
+        "4.4.2.2 利用Sn与an的关系转化为Sn的递推数列",
+        "4.4.2.3 特殊和问题——类比Sn",
+        "4.4.6.1 数列的单调性与求最值问题",
+        "4.4.6.2 数列的周期性问题",
+        "4.4.7.1 不等式与恒成立问题",
+        "4.4.8.1 放缩为可裂项的数列",
+        "4.4.8.2 放缩为等比数列求和"
+      ],
+      "optional_course_keys": [],
+      "knowledge_refs": [],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [
+        "类型I 数列中的添项和去项问题",
+        "类型Ⅱ 奇偶数列求和",
+        "类型Ⅲ 奇偶数列求通项",
+        "类型IV 放缩法证明数列求和不等式"
+      ],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [],
+      "direct_variants": [],
+      "exercise_questions": [
+        {
+          "qid": "Q-b3c3c8c7c7d2442f",
+          "section": "4.8",
+          "group": "B",
+          "number": 1,
+          "kind": "B组",
+          "source_anchor": {
+            "ocr_doc": 96,
+            "pdf_page": 97,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_96.md"
+          },
+          "question_text": "1. (2025·四川成都开学考试)\n\n数列 \\(\\{a_n\\}\\) 满足 \\(a_{n+1} = (-1)^n a_n + n (n \\in \\mathbb{N}^*)\\)，则 \\(\\{a_n\\}\\) 的前 100 项和 \\(S_{100} =\\)___.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1"
+          ]
+        },
+        {
+          "qid": "Q-2ca58b63f35177ca",
+          "section": "4.8",
+          "group": "B",
+          "number": 2,
+          "kind": "B组",
+          "source_anchor": {
+            "ocr_doc": 97,
+            "pdf_page": 98,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_97.md"
+          },
+          "question_text": "### 2. （2025·全国模拟）\n\n已知等差数列 \\(\\{a_{n}\\}\\)的前n项和为 \\(S_{n}\\)，且 \\(S_{5}=4S_{2}\\)， \\(a_{2n}=2a_{n}-1\\)。\n\n（1）求数列 \\(\\{a_{n}\\}\\)的通项公式；\n\n（2）设 \\(b_{n}=(-1)^{n}a_{n}\\)，数列 \\(\\{b_{n}\\}\\)的前n项和为 \\(T_{n}\\)，若 \\(\\left|T_{m}\\right|=50\\)，求m的值.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1"
+          ]
+        },
+        {
+          "qid": "Q-180137687bcc6ed5",
+          "section": "4.8",
+          "group": "B",
+          "number": 3,
+          "kind": "B组",
+          "source_anchor": {
+            "ocr_doc": 97,
+            "pdf_page": 98,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_97.md"
+          },
+          "question_text": "### 3. （2025·北京模拟）\n\n已知等差数列 \\(\\{a_n\\}\\) 满足 \\(a_3 = 5\\)，且 \\(a_5 - 2a_2 = 3\\)，数列 \\(\\{b_n\\}\\) 中，\\(b_1 = 3\\)，且 \\(3b_n - b_{n+1} = 0 (n \\in \\mathbb{N}^*)\\)\n\n（1）求数列 \\(\\{a_{n}\\}\\)， \\(\\{b_{n}\\}\\)的通项公式；\n\n（2）若 \\(a_{i}=b_{j}\\)，则称 \\(a_{i}\\)（或 \\(b_{j}\\)）是 \\(\\{a_{n}\\}\\)， \\(\\{b_{n}\\}\\)的公共项.\n\n（i）直接写出 \\(\\{a_{n}\\}\\)， \\(\\{b_{n}\\}\\)的前4个公共项；\n\n（ii）从数列 \\(\\{a_{n}\\}\\)的前100项中将 \\(\\{a_{n}\\}\\)， \\(\\{b_{n}\\}\\)的公共项去掉后，求剩下所有项的和.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1"
+          ]
+        },
+        {
+          "qid": "Q-f52f56717b3fa483",
+          "section": "4.8",
+          "group": "B",
+          "number": 4,
+          "kind": "B组",
+          "source_anchor": {
+            "ocr_doc": 97,
+            "pdf_page": 98,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_97.md"
+          },
+          "question_text": "### 4. （2025·安徽芜湖二模）\n\n已知数列 \\(\\{a_n\\}\\) 的前 \\(n\\) 项和为 \\(S_n\\)，且 \\(a_1 = 2\\)，\\(a_{n+1} = S_n + 2(n \\in \\mathbb{N}^*)\\)。\n\n（1）求 \\(\\{a_{n}\\}\\)的通项公式；\n\n（2）保持 \\(\\{a_{n}\\}\\)的各项顺序不变，在 \\(a_{k}\\)和 \\(a_{k+1}\\)之间插入k个1，使它们与数列 \\(\\{a_{n}\\}\\)的项组成一个新的数列 \\(\\{b_{n}\\}\\)，记 \\(\\{b_{n}\\}\\)的前n项和为 \\(T_{n}\\)，求 \\(T_{55}\\).",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1"
+          ]
+        },
+        {
+          "qid": "Q-c2d0143105a5eca9",
+          "section": "4.8",
+          "group": "B",
+          "number": 5,
+          "kind": "B组",
+          "source_anchor": {
+            "ocr_doc": 98,
+            "pdf_page": 99,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_98.md"
+          },
+          "question_text": "### 5. （2025·广东省广州市三模）\n\n已知公差不为 0 的等差数列  \\(\\{a_n\\}\\) 和等比数列  \\(\\{b_n\\}\\) 满足  \\(a_1 = b_1 = 1\\)，且  \\(a_1, 2a_2, 4a_4\\) 成等比数列， \\(4b_2, 2b_3, b_4\\) 成等差数列.\n\n（1）求数列 \\(\\{a_{n}\\}\\)和 \\(\\{b_{n}\\}\\)的通项公式；\n\n（2）令  \\(c_n = 3^{a_n}\\)，去掉数列  \\(\\{c_n\\}\\) 中的第 3k 项 ( \\(k \\in\\)\n\nN*），余下的项顺序不变，构成新数列{t_n}，写出{t_n}的前4项，并求{t_n}的前2n项和S_{2n}",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1"
+          ]
+        }
+      ],
+      "action_order": [
+        "attempt_current_abc_exercises_without_answers",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [],
+      "prerequisite_knowledge_blocks": []
+    },
+    {
+      "cycle_id": "4.8-cycle-6",
+      "sequence": 6,
+      "title": "C组 拓展提升",
+      "course_keys": [],
+      "prerequisite_course_keys": [
+        "4.4.1.1 累加法与累乘法",
+        "4.4.1.2.a 待定系数法",
+        "4.4.1.2.b 待定系数法",
+        "4.4.1.2.c 待定系数法",
+        "4.4.1.2.d 待定系数法",
+        "4.4.1.2.e 待定系数法",
+        "4.4.1.3 利用辅助数列",
+        "4.4.2.1 利用Sn与an的关系转化为an的递推数列",
+        "4.4.2.2 利用Sn与an的关系转化为Sn的递推数列",
+        "4.4.2.3 特殊和问题——类比Sn",
+        "4.4.6.1 数列的单调性与求最值问题",
+        "4.4.6.2 数列的周期性问题",
+        "4.4.7.1 不等式与恒成立问题",
+        "4.4.8.1 放缩为可裂项的数列",
+        "4.4.8.2 放缩为等比数列求和"
+      ],
+      "optional_course_keys": [],
+      "knowledge_refs": [],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [
+        "类型I 数列中的添项和去项问题",
+        "类型Ⅱ 奇偶数列求和",
+        "类型Ⅲ 奇偶数列求通项",
+        "类型IV 放缩法证明数列求和不等式"
+      ],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [],
+      "direct_variants": [],
+      "exercise_questions": [
+        {
+          "qid": "Q-6e357bf5d8d599c2",
+          "section": "4.8",
+          "group": "C",
+          "number": 6,
+          "kind": "C组",
+          "source_anchor": {
+            "ocr_doc": 98,
+            "pdf_page": 99,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_98.md"
+          },
+          "question_text": "### 6. （2025·全国模拟）\n\n已知在正项数列 \\(\\{a_{n}\\}\\)中， \\(a_{1}=4\\)，其前n项和 \\(S_{n}\\)满足 \\(S_{n}^{2}-(a_{n+1}+n-1)S_{n}-(a_{n+1}+n)=0\\).\n\n（1）求 \\(a_{n}\\)与 \\(S_{n}\\)\n\n（2）令  \\(b_n = \\frac{2^{n-1} + 1}{(3n-2)a_n}\\)，数列  \\(\\{b_n^2\\}\\) 的前  \\(n\\) 项和为  \\(T_n\\)，求证：对任意的  \\(n \\in \\mathbb{N}^*\\)，都有  \\(T_n < \\frac{5}{12}\\)。",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1"
+          ]
+        },
+        {
+          "qid": "Q-35a21b53e97115da",
+          "section": "4.8",
+          "group": "C",
+          "number": 7,
+          "kind": "C组",
+          "source_anchor": {
+            "ocr_doc": 98,
+            "pdf_page": 99,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_98.md"
+          },
+          "question_text": "### 7. （2025 · 辽宁沈阳期中）\n\n数列\\(\\{a_n\\}\\)的前\\(n\\)项和为\\(S_n\\)，\\(a_1=1\\)，\\(S_n=a_{n+1}\\)，数列\\(\\{b_n\\}\\)中，\\(b_1=\\frac{1}{2}\\)，\\(b_{n+1}=\\begin{cases}b_n+\\frac{n}{2},n\\text{为奇数}\\\\b_n-\\frac{n-1}{2},n\\text{为偶数}\\end{cases}\\)\n\n（1）求 \\(\\{a_{n}\\}\\)， \\(\\{b_{n}\\}\\)的通项公式；\n\n（2）设 \\(c_{n}=a_{n}b_{n}\\)，求数列 \\(\\{c_{n}\\}\\)的前2n项和 \\(T_{2n}\\)",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1"
+          ]
+        },
+        {
+          "qid": "Q-5de9a9b06b54dc22",
+          "section": "4.8",
+          "group": "C",
+          "number": 8,
+          "kind": "C组",
+          "source_anchor": {
+            "ocr_doc": 99,
+            "pdf_page": 100,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_99.md"
+          },
+          "question_text": "### 8. （2025 · 宁夏吴忠二模）\n\n已知数列\\(\\{a_n\\}\\)的前\\(n\\)项和为\\(S_n\\)，且\\(a_n=\\frac{1}{2}(S_n+2)\\)。\n\n（1）求数列 \\(\\{a_{n}\\}\\)的通项公式；\n\n（2）记 \\(b_{n}=\\frac{a_{n}-1}{a_{n+1}-1}\\)，数列 \\(\\{b_{n}\\}\\)的前n项和为 \\(T_{n}\\)，证明： \\(\\frac{n}{2}-\\frac{1}{2}+\\frac{1}{2^{n+1}}<T_{n}<\\frac{n}{2}-\\frac{1}{4}+\\frac{1}{2^{n+2}}\\)；\n\n（3）记 \\(c_{n}=\\frac{2}{3a_{n}+2}\\)，数列 \\(\\{c_{n}\\}\\)的前n项和为 \\(P_{n}\\)，证明： \\(P_{n}<\\frac{4}{7}\\).",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1"
+          ]
+        }
+      ],
+      "action_order": [
+        "attempt_current_abc_exercises_without_answers",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [],
+      "prerequisite_knowledge_blocks": []
+    }
+  ],
+  "knowledge_and_type_pages": [
+    {
+      "ocr_doc": 91,
+      "text": "# 微专题2：数列拔高题型\n\n习题：P1\n\n## 内容提要\n\n本节收录一些数列综合大题，包括数列的添项和去项问题、奇偶数列求和、奇偶数列求通项、放缩法证明数列求和不等式四个类型。本节难度较大，是数列板块的拔高内容。\n\n## 典型例题\n\n## 类型 I：数列中的添项和去项问题",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 92,
+      "text": "## 类型Ⅱ：奇偶数列求和",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 93,
+      "text": "## 类型Ⅲ：奇偶数列求通项",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 95,
+      "text": "## 类型IV：放缩法证明数列求和不等式",
+      "image_refs": [],
+      "math_errors": []
+    }
+  ],
+  "knowledge_blocks": [],
+  "worked_examples": [
+    {
+      "item_id": "d5c08f6334ca1638",
+      "kind": "example",
+      "label": "例1",
+      "example_number": 1,
+      "parent_example_number": null,
+      "role": "type_example",
+      "role_ref": "类型I 数列中的添项和去项问题",
+      "source_docs": [
+        91,
+        92
+      ],
+      "question_text": "【例 1】已知数列  \\(\\{a_{n}\\}\\) 的前 n 项和为  \\(S_{n}\\)， \\(a_{1}=2\\)，且  \\(a_{n+1}=S_{n}+2\\)。\n（1）求数列 \\(\\{a_{n}\\}\\)的通项公式；\n（2）在  \\(a_n\\) 与  \\(a_{n+1}\\) 之间插入  \\(n\\) 个数，使这  \\(n+2\\) 个数组成一个公差为  \\(d_n\\) 的等差数列，设  \\(T_n = \\frac{1}{d_1} + \\frac{1}{d_2} + \\frac{1}{d_3} + \\cdots + \\frac{1}{d_n}\\)，求  \\(T_n\\)。",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "teaching_text": "【例 1】已知数列  \\(\\{a_{n}\\}\\) 的前 n 项和为  \\(S_{n}\\)， \\(a_{1}=2\\)，且  \\(a_{n+1}=S_{n}+2\\)。\n（1）求数列 \\(\\{a_{n}\\}\\)的通项公式；\n（2）在  \\(a_n\\) 与  \\(a_{n+1}\\) 之间插入  \\(n\\) 个数，使这  \\(n+2\\) 个数组成一个公差为  \\(d_n\\) 的等差数列，设  \\(T_n = \\frac{1}{d_1} + \\frac{1}{d_2} + \\frac{1}{d_3} + \\cdots + \\frac{1}{d_n}\\)，求  \\(T_n\\)。\n解：（1）解法1：（条件给出  \\(a_{n+1}\\) 与  \\(S_n\\) 混搭的关系式，要求的是  \\(a_n\\)，故可考虑退 n 相减，消去  \\(S_n\\)）\n因为  \\(a_{n+1} = S_n + 2\\)，所以当  \\(n \\geq 2\\) 时， \\(a_n = S_{n-1} + 2\\)，两式相减得  \\(a_{n+1} - a_n = S_n + 2 - S_{n-1} - 2 = a_n\\)，所以  \\(a_{n+1} = 2a_n\\)，（上式成立的条件是  \\(n \\geq 2\\)，那么当  \\(n=1\\) 时它是否成立呢？我们单独来看看）\n在  \\(a_{n+1} = S_n + 2\\) 中令  \\(n=1\\) 得  \\(a_2 = S_1 + 2 = a_1 + 2 = 4\\)，所以  \\(a_2 = 2a_1\\)，从而  \\(a_{n+1} = 2a_n\\) 对任意的  \\(n \\in \\mathbb{N}^*\\) 都成立，故  \\(\\{a_n\\}\\) 是首项为 2，公比也为 2 的等比数列，所以  \\(a_n = 2 \\times 2^{n-1} = 2^n\\)。\n解法2：（注意到 \\(a_{n+1}=S_{n+1}-S_n\\)，故也可考虑用它替换题干等式中的 \\(a_{n+1}\\)，先求 \\(S_n\\)，再用 \\(S_n\\)求 \\(a_n\\)）\n将 \\(a_{n+1}=S_{n+1}-S_n\\)代入 \\(a_{n+1}=S_n+2\\)得 \\(S_{n+1}-S_n=S_n+2\\)，所以 \\(S_{n+1}=2S_n+2\\)①，\n（由上式的结构联想到可用待定系数法构造等比数列求 \\(S_n\\)，可先假设 \\(S_{n+1}+\\lambda=2(S_n+\\lambda)\\)，则 \\(S_{n+1}=2S_n+\\lambda\\)，与\n式①对比得 \\(\\lambda=2\\)，构造的方法就有了）由①可得 \\(S_{n+1}+2=2(S_n+2)\\)，又 \\(S_1+2=a_1+2=4\\)，\n所以 \\(\\{S_n+2\\}\\)是首项为4，公比为2的等比数列，从而 \\(S_n+2=4\\times2^{n-1}=2^{n+1}\\)，故 \\(S_n=2^{n+1}-2\\)，\n所以当 \\(n\\geq2\\)时， \\(a_n=S_n-S_{n-1}=2^{n+1}-2-(2^n-2)=2^{n+1}-2^n=2\\times2^n-2^n=2^n\\)，\n又因为 \\(a_1=2\\)也满足上式，所以对任意的 \\(n\\in\\mathbb{N}^*\\)，都有 \\(a_n=2^n\\)。\n（2）（可以想象，在  \\(a_n\\) 和  \\(a_{n+1}\\) 之间插入  \\(n\\) 个数，使它们构成公差为  \\(d_n\\) 的等差数列，则  \\(d_n = \\frac{a_{n+1} - a_n}{n+2-1}\\)，已有  \\(a_n\\)，故由此可得到  \\(d_n\\)）由题意， \\(d_n = \\frac{a_{n+1} - a_n}{n+2-1} = \\frac{2^{n+1} - 2^n}{n+1} = \\frac{2^n}{n+1}\\)，所以  \\(\\frac{1}{d_n} = \\frac{n+1}{2^n} = (n+1) \\cdot \\left(\\frac{1}{2}\\right)^n\\)，\n（这是“等差×等比”结构，可用错位相减法求前n项和）\n \\[\\begin{aligned}& 所以 \\left\\{\\begin{aligned}&T_{n}=2\\times\\left(\\frac{1}{2}\\right)^{1}+3\\times\\left(\\frac{1}{2}\\right)^{2}+4\\times\\left(\\frac{1}{2}\\right)^{3}+\\cdots+(n+1)\\cdot\\left(\\frac{1}{2}\\right)^{n}\\textcircled{2}\\\\ &\\frac{1}{2}T_{n}=\\quad2\\times\\left(\\frac{1}{2}\\right)^{2}+3\\times\\left(\\frac{1}{2}\\right)^{3}+4\\times\\left(\\frac{1}{2}\\right)^{4}+\\cdots+n\\cdot\\left(\\frac{1}{2}\\right)^{n}+(n+1)\\cdot\\left(\\frac{1}{2}\\right)^{n+1}\\textcircled{3}\\end{aligned}\\right.,\\end{aligned}\\] \n \\[\\textcircled{2} - \\textcircled{3}得 \\frac{1}{2}T_{n}=2\\times\\left(\\frac{1}{2}\\right)^{1}+\\left(\\frac{1}{2}\\right)^{2}+\\left(\\frac{1}{2}\\right)^{3}+\\cdots+\\left(\\frac{1}{2}\\right)^{n}-(n+1)\\cdot\\left(\\frac{1}{2}\\right)^{n+1}=1+\\frac{\\left(\\frac{1}{2}\\right)^{2}\\cdot\\left[1-\\left(\\frac{1}{2}\\right)^{n-1}\\right]}{1-\\frac{1}{2}}-(n+1)\\cdot\\left(\\frac{1}{2}\\right)^{n+1}\\] \n\\[=1+\\frac{1}{2}-\\left(\\frac{1}{2}\\right)^n-(n+1)\\cdot\\left(\\frac{1}{2}\\right)^{n+1}=\\frac{3}{2}-2\\left(\\frac{1}{2}\\right)^{n+1}-(n+1)\\cdot\\left(\\frac{1}{2}\\right)^{n+1}=\\frac{3}{2}-(n+3)\\cdot\\left(\\frac{1}{2}\\right)^{n+1}\\]，所以\\[T_n=3-(n+3)\\cdot\\left(\\frac{1}{2}\\right)^n\\]。",
+      "solution_present": true,
+      "vision_hint": "4.8-LId5c08f6334ca1638"
+    },
+    {
+      "item_id": "12fadb99431fed07",
+      "kind": "example",
+      "label": "例2",
+      "example_number": 2,
+      "parent_example_number": null,
+      "role": "type_example",
+      "role_ref": "类型Ⅱ 奇偶数列求和",
+      "source_docs": [
+        92,
+        93
+      ],
+      "question_text": "【例2】设 \\(a_n=(-1)^n\\cdot(2n-1)\\)，则数列 \\(\\{a_n\\}\\)的前 \\(n\\)项和 \\(S_n=\\)___。",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "teaching_text": "【例2】设 \\(a_n=(-1)^n\\cdot(2n-1)\\)，则数列 \\(\\{a_n\\}\\)的前 \\(n\\)项和 \\(S_n=\\)___。\n解析： \\(\\{a_{n}\\}\\) 的通项公式中有  \\((-1)^{n}\\) 这一结构，不便于直接求和，怎么办呢？不妨先列出若干项观察规律，\n数列 \\(\\{a_{n}\\}\\)中的项依次为-1，3，-5，7，-9，11，…\n我们发现，若按 \\(a_{1}+a_{2}\\)， \\(a_{3}+a_{4}\\)， \\(a_{5}+a_{6}\\)，… 来组合，则每组的和均为2，能否恰好分完，由n的奇偶决定，故需讨论，先考虑n为偶数这种简单的情形，\n当 n 为偶数时， \\(S_{n}=(a_{1}+a_{2})+(a_{3}+a_{4})+(a_{5}+a_{6})+\\cdots+(a_{n-1}+a_{n})=\\frac{n}{2}\\times2=n\\)；\n当 n 为奇数时， \\(S_{n}=S_{n+1}-a_{n+1}=(n+1)-(-1)^{n+1}\\cdot[2(n+1)-1]=n+1-(2n+1)=-n\\)；\n综上所述， \\(S_{n}=\\begin{cases}n,n\\text{为偶数}\\\\-n,n\\text{为奇数}\\end{cases}\\)\n答案：\\(\\left\\{\\begin{aligned}&n,n 为偶数 \\\\ &-n,n 为奇数\\end{aligned}\\right.\\)\n【反思】当通项中含有 \\((-1)^{n}\\)时，常按相邻项分组求和。求和时先求n为偶数的情形，此时恰好分为 \\(\\frac{n}{2}\\)组；而对于n为奇数的情形，可通过添项凑成偶数项，再把添的项减掉，即 \\(S_{n}=S_{n+1}-a_{n+1}\\)，其中的 \\(S_{n+1}\\)可以代前面已经求得的n为偶数时的结果，从而简化计算。若是递推公式中含有 \\((-1)^{n}\\)，又怎么处理呢？我们来看下面的变式。",
+      "solution_present": true,
+      "vision_hint": "4.8-LI12fadb99431fed07"
+    },
+    {
+      "item_id": "917037d0dc05383b",
+      "kind": "example",
+      "label": "例3",
+      "example_number": 3,
+      "parent_example_number": null,
+      "role": "type_example",
+      "role_ref": "类型Ⅲ 奇偶数列求通项",
+      "source_docs": [
+        93,
+        94
+      ],
+      "question_text": "【例 3】已知数列 \\(\\{a_n\\}\\) 的首项是 1，\\(a_{n+1} = \\begin{cases} a_n + 1, & n = 2k-1 \\\\ a_n + 2, & n = 2k \\end{cases}\\)，其中 \\(k \\in \\mathbb{N}^*\\)。\n（1）证明：数列 \\(\\{a_{n}\\}\\)的奇数项成等差数列；\n（2）求 \\(\\{a_{n}\\}\\)的前n项和 \\(S_{n}\\)",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "teaching_text": "【例 3】已知数列 \\(\\{a_n\\}\\) 的首项是 1，\\(a_{n+1} = \\begin{cases} a_n + 1, & n = 2k-1 \\\\ a_n + 2, & n = 2k \\end{cases}\\)，其中 \\(k \\in \\mathbb{N}^*\\)。\n（1）证明：数列 \\(\\{a_{n}\\}\\)的奇数项成等差数列；\n（2）求 \\(\\{a_{n}\\}\\)的前n项和 \\(S_{n}\\)\n解：（1）（要证结论成立，只需证 \\(a_{2k+1}-a_{2k-1}\\)为常数，怎么证？可先将所给递推式用k表示，再作观察）由题意，当 \\(n=2k-1\\)时， \\(a_{n+1}=a_n+1\\)，所以 \\(a_{2k}=a_{2k-1}+1\\) ①，\n当 \\(n=2k\\)时， \\(a_{n+1}=a_{n}+2\\)，所以 \\(a_{2k+1}=a_{2k}+2\\) ②，（由于要证的是 \\(a_{2k+1}-a_{2k-1}\\)为常数，故考虑消去 \\(a_{2k}\\)）将①代入②得 \\(a_{2k+1}=a_{2k-1}+1+2\\)，所以 \\(a_{2k+1}-a_{2k-1}=3\\)，故数列 \\(\\{a_{n}\\}\\)的奇数项构成公差为3的等差数列.\n（2）（已有 \\(\\{a_n\\}\\)的奇数项的特征，求 \\(S_n\\)还需研究偶数项的特征，于是我们再用①②两式把奇数项消去，得到偶数项的递推关系，怎么消？可先在①中将 \\(k\\)换成 \\(k+1\\)，构造出 \\(a_{2k+1}\\)，再代入②将其消去）\n在①中将 \\(k\\)换成 \\(k+1\\)得 \\(a_{2k+2}=a_{2k+1}+1\\)，所以 \\(a_{2k+1}=a_{2k+2}-1\\)，代入②得 \\(a_{2k+2}-1=a_{2k}+2\\)，故 \\(a_{2k+2}-a_{2k}=3\\)，\n在①中令 \\(k=1\\)得 \\(a_n=a_n+1=1+1=2\\)，所以 \\(\\{a_n\\}\\)的偶数项构成首项为2，公差为3的等差数列，\n（数列\\(\\{a_n\\}\\)的前几项分别为\\(1, 2, 4, 5, 7, 8, \\cdots\\)，不难发现二者合在一起所得的\\(\\{a_n\\}\\)不成等差数列，所以求\\(S_n\\)应按奇数项、偶数项分组求和，且分组情况与\\(n\\)的奇偶有关，故据此讨论，先看\\(n\\)为偶数的简单情况）\n当\\(n\\)为偶数时，设\\(n=2k\\)，则\\(k=\\frac{n}{2}\\)，且\\(S_{2k}=a_1+a_2+\\cdots+a_{2k}=(a_1+a_3+\\cdots+a_{2k-1})+(a_2+a_4+\\cdots+a_{2k})\\)\n\\(=\\frac{k(a_1+a_{2k-1})}{2}+\\frac{k(a_2+a_{2k})}{2}=\\frac{k(1+a_{2k-1})}{2}+\\frac{k(2+a_{2k})}{2}\\) ③，\n（怎样求\\(a_{2k-1}\\)和\\(a_{2k}\\)？以\\(a_{2k-1}\\)为例，\\(\\{a_n\\}\\)的前\\(2k\\)项中奇数项占\\(k\\)项，\\(a_{2k-1}\\)是奇数项的最后一项，所以它是奇数项中的第\\(k\\)项，奇数项又构成等差数列，由此可代等差数列的通项公式求\\(a_{2k-1}\\)）\n又\\(a_{2k-1}=a_1+(k-1)\\cdot3=1+3k-3=3k-2\\)，\\(a_{2k}=a_2+(k-1)\\cdot3=2+3k-3=3k-1\\)，\n所以代入③得\\(S_{2k}=\\frac{k(1+3k-2)}{2}+\\frac{k(2+3k-1)}{2}=3k^2\\)，将\\(k=\\frac{n}{2}\\)代入可得\\(S_n=3\\times\\left(\\frac{n}{2}\\right)^2=\\frac{3}{4}n^2\\)；\n（再看\\(n\\)为奇数的情形，仿照上面\\(n\\)为偶数的情形来计算可行，但偏麻烦，更简单的做法是添一项，凑成偶数项，再把添的这一项单独减去）\n当\\(n\\)为奇数时，设\\(n=2k-1\\)，则\\(k=\\frac{n+1}{2}\\)，且\\(S_{2k-1}=S_{2k}-a_{2k}=3k^2-(3k-1)=3k^2-3k+1\\)，\n将\\(k=\\frac{n+1}{2}\\)代入可得\\(S_n=3\\left(\\frac{n+1}{2}\\right)^2-3\\cdot\\frac{n+1}{2}+1=\\frac{3}{4}n^2+\\frac{1}{4}\\)；综上所述，\\(S_n=\\begin{cases}\\frac{3}{4}n^2,&n为偶数\\\\\\frac{3}{4}n^2+\\frac{1}{4},&n为奇数\\end{cases}\\)。\n【反思】①当递推式分奇偶时，可先把\\(n=2k-1\\)和\\(n=2k\\)分别代入，将下标换成用\\(k\\)表示，建立\\(a_{2k+1},a_{2k},a_{2k-1}\\)的关系式，再消去偶数项（或奇数项），找到奇数项（或偶数项）的关系；②求得\\(S_{2k}\\)和\\(S_{2k-1}\\)后，还原成\\(S_n\\)的方法是分别利用\\(k\\)、\\(n\\)的关系把下标换回式。",
+      "solution_present": true,
+      "vision_hint": "4.8-LI917037d0dc05383b"
+    },
+    {
+      "item_id": "99cd62a1f2f27624",
+      "kind": "example",
+      "label": "例4",
+      "example_number": 4,
+      "parent_example_number": null,
+      "role": "type_example",
+      "role_ref": "类型Ⅲ 奇偶数列求通项",
+      "source_docs": [
+        94
+      ],
+      "question_text": "【例4】已知各项均不为0的数列\\(\\{a_n\\}\\)的前\\(n\\)项和为\\(S_n\\)，\\(a_1=2\\)，\\(a_n a_{n+1}=2S_n-2\\)，则\\(a_n=\\)___。",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "teaching_text": "【例4】已知各项均不为0的数列\\(\\{a_n\\}\\)的前\\(n\\)项和为\\(S_n\\)，\\(a_1=2\\)，\\(a_n a_{n+1}=2S_n-2\\)，则\\(a_n=\\)___。\n解析：条件给出\\(a_n\\)与\\(S_n\\)混搭的关系式，所求为\\(a_n\\)，故考虑退\\(n\\)相减，消去\\(S_n\\)，\n由题意，\\(a_n a_{n+1}=2S_n-2\\)，所以当\\(n\\geq2\\)时，\\(a_{n-1}a_n=2S_{n-1}-2\\)，\n两式作差得  \\(a_n a_{n+1} - a_{n-1} a_n = 2S_n - 2 - 2S_{n-1} + 2 = 2a_n\\)，又因为  \\(\\{a_n\\}\\) 的各项都不为 0，所以  \\(a_{n+1} - a_{n-1} = 2\\)，\n由上式能得到什么？若无思路，可代一些值看看，分别取  \\(n = 2, 3, 4, 5, 6, 7\\) 得  \\(\\begin{cases} a_3 - a_1 = 2, a_5 - a_3 = 2, a_7 - a_5 = 2, \\cdots \\\\ a_4 - a_2 = 2, a_6 - a_4 = 2, a_8 - a_6 = 2, \\cdots \\end{cases}\\)，\n我们发现  \\(\\{a_n\\}\\) 的奇数项、偶数项分别构成公差为 2 的等差数列，故求  \\(a_n\\) 应分奇偶讨论，\n当  \\(n\\) 为奇数时，设  \\(n = 2k - 1 (k \\in \\mathbb{N}^*\\))，则  \\(k = \\frac{n+1}{2}\\)，所以  \\(a_n = a_{2k-1} = a_1 + (k-1) \\cdot 2 = 2k = 2 \\cdot \\frac{n+1}{2} = n+1\\)；\n再求  \\(n\\) 为偶数时的  \\(a_n\\)，需要先求  \\(a_2\\)，可在所给关系式中取  \\(n=1\\)，求出  \\(a_2\\)，\n在  \\(a_n a_{n+1} = 2S_n - 2\\) 中取  \\(n=1\\) 得  \\(a_1 a_2 = 2S_1 - 2\\)，结合  \\(S_1 = a_1 = 2\\) 可得  \\(a_2 = 1\\)，\n当  \\(n\\) 为偶数时，设  \\(n=2k\\)，则  \\(k = \\frac{n}{2}\\)，所以  \\(a_n = a_{2k} = a_2 + (k-1) \\cdot 2 = 2k - 1 = 2 \\cdot \\frac{n}{2} - 1 = n-1\\)；\n综上所述， \\(a_{n}=\\left\\{\\begin{aligned}&n+1,n \\text{为奇数}\\\\ &n-1,n \\text{为偶数}\\end{aligned}\\right.\\)\n答案：\\(\\left\\{\\begin{aligned}&n+1,n 为奇数 \\\\ &n-1,n 为偶数 \\end{aligned}\\right.\\)\n【反思】若 \\(\\{a_n\\}\\)满足 \\(a_{n+1} - a_{n-1} = d (n \\geq 2)\\)，则 \\(\\{a_n\\}\\)的奇数项、偶数项各自构成公差为 \\(d\\)的等差数列，所以遇到这类递推式，应分奇偶讨论求通项公式。",
+      "solution_present": true,
+      "vision_hint": "4.8-LI99cd62a1f2f27624"
+    },
+    {
+      "item_id": "357652efd1ce7458",
+      "kind": "example",
+      "label": "例5",
+      "example_number": 5,
+      "parent_example_number": null,
+      "role": "type_example",
+      "role_ref": "类型IV 放缩法证明数列求和不等式",
+      "source_docs": [
+        95,
+        96
+      ],
+      "question_text": "【例 5】已知  \\(\\{a_n\\}\\) 是正项数列， \\(S_n\\) 为  \\(\\{\\sqrt{a_n}\\}\\) 的前  \\(n\\) 项和，且  \\(\\sqrt{a_n}\\)， \\(S_n\\)， \\(a_n-2\\) 成等差数列.\n（1）求 \\(\\{a_{n}\\}\\)的通项公式；\n（2）求证： \\(\\frac{1}{a_{1}}+\\frac{1}{a_{2}}+\\frac{1}{a_{3}}+\\cdots+\\frac{1}{a_{n}}<\\frac{3}{4}\\)",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "teaching_text": "【例 5】已知  \\(\\{a_n\\}\\) 是正项数列， \\(S_n\\) 为  \\(\\{\\sqrt{a_n}\\}\\) 的前  \\(n\\) 项和，且  \\(\\sqrt{a_n}\\)， \\(S_n\\)， \\(a_n-2\\) 成等差数列.\n（1）求 \\(\\{a_{n}\\}\\)的通项公式；\n（2）求证： \\(\\frac{1}{a_{1}}+\\frac{1}{a_{2}}+\\frac{1}{a_{3}}+\\cdots+\\frac{1}{a_{n}}<\\frac{3}{4}\\)\n解：（1）由题意， \\(\\sqrt{a_n}\\)， \\(S_n\\)， \\(a_n-2\\) 成等差数列，所以 \\(2S_n=\\sqrt{a_n}+a_n-2\\) ①，\n（得到了 \\(a_n\\)与 \\(S_n\\)混搭的关系式，要求的是 \\(a_n\\)，故考虑退 \\(n\\)相减，消去 \\(S_n\\)，但请注意，这里 \\(S_n\\)是数列 \\(\\{\\sqrt{a_n}\\}\\)的前 \\(n\\)项和，不是数列 \\(\\{a_n\\}\\)的前 \\(n\\)项和，所以 \\(S_n-S_{n-1}=\\sqrt{a_n}\\)）\n所以当 \\(n\\geq2\\)时， \\(2S_{n-1}=\\sqrt{a_{n-1}}+a_{n-1}-2\\)，从而 \\(2S_n-2S_{n-1}=\\sqrt{a_n}+a_n-2-\\sqrt{a_{n-1}}-a_{n-1}+2\\)，\n故 \\(2\\sqrt{a_n}=\\sqrt{a_n}+a_n-\\sqrt{a_{n-1}}-a_{n-1}\\)，化简得： \\(a_n-a_{n-1}-(\\sqrt{a_n}+\\sqrt{a_{n-1}})=0\\)，\n所以 \\((\\sqrt{a_n}+\\sqrt{a_{n-1}})(\\sqrt{a_n}-\\sqrt{a_{n-1}})-(\\sqrt{a_n}+\\sqrt{a_{n-1}})=0\\)，故 \\((\\sqrt{a_n}+\\sqrt{a_{n-1}})(\\sqrt{a_n}-\\sqrt{a_{n-1}}-1)=0\\) ②，\n又因为 \\(\\{a_n\\}\\)是正项数列，所以 \\(\\sqrt{a_n}+\\sqrt{a_{n-1}}>0\\)，从而式②可化为 \\(\\sqrt{a_n}-\\sqrt{a_{n-1}}-1=0\\)，故 \\(\\sqrt{a_n}-\\sqrt{a_{n-1}}=1\\)，\n在①中取 \\(n=1\\)得 \\(2S_1=\\sqrt{a_1}+a_1-2\\)，结合 \\(S_1=\\sqrt{a_1}\\)可得 \\(2\\sqrt{a_1}=\\sqrt{a_1}+a_1-2\\)，所以 \\(a_1-\\sqrt{a_1}-2=0\\)，\n从而 \\((\\sqrt{a_1}-2)(\\sqrt{a_1}+1)=0\\)，解得： \\(\\sqrt{a_1}=2\\)，故 \\(\\{\\sqrt{a_n}\\}\\)是首项为2，公差为1的等差数列，\n所以 \\(\\sqrt{a_n}=2+(n-1)\\times1=n+1\\)，故 \\(a_n=(n+1)^2\\)。\n（2）（可以想象， \\(\\frac{1}{a_n}=\\frac{1}{(n+1)^2}=\\frac{1}{n^2+2n+1}\\) 的和无法求出，怎么证明题干的不等式？由其形式联想到可裂项的结构，观察发现丢掉分母上的 1，就能化为可裂项求和结构  \\(\\frac{1}{n(n+2)}\\)，故尝试按此证明结论）\n由（1）可得  \\(\\frac{1}{a_n}=\\frac{1}{(n+1)^2}=\\frac{1}{n^2+2n+1}<\\frac{1}{n^2+2n}=\\frac{1}{n(n+2)}=\\frac{1}{2}\\left(\\frac{1}{n}-\\frac{1}{n+2}\\right)\\)，\n所以 \\(\\frac{1}{a_1}+\\frac{1}{a_2}+\\frac{1}{a_3}+\\cdots+\\frac{1}{a_n}<\\frac{1}{2}\\left(1-\\frac{1}{3}+\\frac{1}{2}-\\frac{1}{4}+\\frac{1}{3}-\\frac{1}{5}+\\cdots+\\frac{1}{n}-\\frac{1}{n+2}\\right)\\)\n \\(=\\frac{1}{2}\\left[\\left(1+\\frac{1}{2}+\\frac{1}{3}+\\cdots+\\frac{1}{n}\\right)-\\left(\\frac{1}{3}+\\frac{1}{4}+\\cdots+\\frac{1}{n}+\\frac{1}{n+1}+\\frac{1}{n+2}\\right)\\right]=\\frac{1}{2}\\left(1+\\frac{1}{2}-\\frac{1}{n+1}-\\frac{1}{n+2}\\right)=\\frac{3}{4}-\\frac{1}{2}\\left(\\frac{1}{n+1}+\\frac{1}{n+2}\\right)\\),\n因为 \\(\\frac{1}{2}\\left(\\frac{1}{n+1}+\\frac{1}{n+2}\\right)>0\\)，所以 \\(\\frac{1}{a_1}+\\frac{1}{a_2}+\\frac{1}{a_3}+\\cdots+\\frac{1}{a_n}<\\frac{3}{4}-\\frac{1}{2}\\left(\\frac{1}{n+1}+\\frac{1}{n+2}\\right)<\\frac{3}{4}\\).\n【反思】①通过丢项将不能求和的结构放缩成可以求和的结构是证明数列求和不等式常用的方法。本题丢项后放缩成了可通过裂项求和的结构，有时也会放缩成其它可求和的结构，比如下面的变式；②放缩的方向可能不唯一，需要尝试。例如本题若改为证明 \\(\\frac{1}{a_1}+\\frac{1}{a_2}+\\cdots+\\frac{1}{a_n}<1\\)，则可按 \\(\\frac{1}{a_n}=\\frac{1}{(n+1)^2}<\\frac{1}{n(n+1)}=\\frac{1}{n}-\\frac{1}{n+1}\\)放缩，进而得到 \\(\\frac{1}{a_1}+\\frac{1}{a_2}+\\cdots+\\frac{1}{a_n}<1-\\frac{1}{2}+\\frac{1}{2}-\\frac{1}{3}+\\cdots+\\frac{1}{n}-\\frac{1}{n+1}=1-\\frac{1}{n+1}<1\\)。",
+      "solution_present": true,
+      "vision_hint": "4.8-LI357652efd1ce7458"
+    }
+  ],
+  "direct_variants": [
+    {
+      "item_id": "49781fe29f674d57",
+      "kind": "direct_variant",
+      "label": "变式",
+      "example_number": null,
+      "parent_example_number": 1,
+      "role": "direct_variant",
+      "role_ref": null,
+      "source_docs": [
+        92
+      ],
+      "question_text": "【变式】已知数列\\[\\{a_n\\}\\]的前\\(n\\)项和为\\[S_n\\(，且\\)n\\(，\\)a_n\\(，\\)S_n\\(成等差数列，已知数列\\]\\{b_n\\}\\[的首项\\]b_1=1\\)，且\\[b_{n+1}=2b_n-2n+3\\]。\n（1）求数列 \\(\\{a_{n}\\}\\)的通项公式；\n（2）若将数列 \\(\\{b_n\\}\\) 中去掉数列 \\(\\{a_n\\}\\) 的项后余下的项按原顺序组成数列 \\(\\{c_n\\}\\)，求 \\(c_1 + c_2 + \\cdots + c_{30}\\) 的值。",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "solution_isolated": true,
+      "vision_hint": "4.8-LI49781fe29f674d57"
+    },
+    {
+      "item_id": "e4fcd3b7a99a5191",
+      "kind": "direct_variant",
+      "label": "变式",
+      "example_number": null,
+      "parent_example_number": 2,
+      "role": "direct_variant",
+      "role_ref": null,
+      "source_docs": [
+        93
+      ],
+      "question_text": "【变式】已知数列 \\(\\{a_n\\}\\) 满足 \\(a_1 = 1\\)，\\(a_2 = 2\\)，\\(a_{n+2} - a_n = 2 - (-1)^n (n \\in \\mathbb{N}^*)\\)，求数列 \\(\\{a_n\\}\\) 的前 20 项和。",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "solution_isolated": true,
+      "vision_hint": "4.8-LIe4fcd3b7a99a5191"
+    },
+    {
+      "item_id": "1b2bd227db29dfd4",
+      "kind": "direct_variant",
+      "label": "变式",
+      "example_number": null,
+      "parent_example_number": 4,
+      "role": "direct_variant",
+      "role_ref": null,
+      "source_docs": [
+        94,
+        95
+      ],
+      "question_text": "【变式】已知数列 \\(\\{a_n\\}\\) 满足 \\(a_1 = 1\\)，且 \\(a_na_{n+1} = 3^n (n \\in \\mathbb{N}^*)\\)，求 \\(\\{a_n\\}\\) 的通项公式。",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "solution_isolated": true,
+      "vision_hint": "4.8-LI1b2bd227db29dfd4"
+    },
+    {
+      "item_id": "8993889b2e20bd2a",
+      "kind": "direct_variant",
+      "label": "变式",
+      "example_number": null,
+      "parent_example_number": 5,
+      "role": "direct_variant",
+      "role_ref": null,
+      "source_docs": [
+        96
+      ],
+      "question_text": "【变式】已知对任意的  \\(n \\in \\mathbb{N}^*\\)，数列  \\(\\{a_n\\}\\) 都满足  \\(\\frac{a_1 - 1}{2^1 + 1} + \\frac{a_2 - 2}{2^2 + 1} + \\cdots + \\frac{a_n - n}{2^n + 1} = n + 1\\)。\n（1）求数列 \\(\\{a_{n}\\}\\)的通项公式；\n（2）求证： \\(\\frac{2}{a_{2}}+\\frac{2}{a_{3}}+\\cdots+\\frac{2}{a_{n+1}}<1-\\frac{1}{2^{n}}\\)",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "solution_isolated": true,
+      "vision_hint": "4.8-LI8993889b2e20bd2a"
+    }
+  ],
+  "deduplicated_learning_items": [],
+  "exercise_questions": [
+    {
+      "qid": "Q-b3c3c8c7c7d2442f",
+      "section": "4.8",
+      "group": "B",
+      "number": 1,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 96,
+        "pdf_page": 97,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_96.md"
+      },
+      "question_text": "1. (2025·四川成都开学考试)\n\n数列 \\(\\{a_n\\}\\) 满足 \\(a_{n+1} = (-1)^n a_n + n (n \\in \\mathbb{N}^*)\\)，则 \\(\\{a_n\\}\\) 的前 100 项和 \\(S_{100} =\\)___.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-2ca58b63f35177ca",
+      "section": "4.8",
+      "group": "B",
+      "number": 2,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 97,
+        "pdf_page": 98,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_97.md"
+      },
+      "question_text": "### 2. （2025·全国模拟）\n\n已知等差数列 \\(\\{a_{n}\\}\\)的前n项和为 \\(S_{n}\\)，且 \\(S_{5}=4S_{2}\\)， \\(a_{2n}=2a_{n}-1\\)。\n\n（1）求数列 \\(\\{a_{n}\\}\\)的通项公式；\n\n（2）设 \\(b_{n}=(-1)^{n}a_{n}\\)，数列 \\(\\{b_{n}\\}\\)的前n项和为 \\(T_{n}\\)，若 \\(\\left|T_{m}\\right|=50\\)，求m的值.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-180137687bcc6ed5",
+      "section": "4.8",
+      "group": "B",
+      "number": 3,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 97,
+        "pdf_page": 98,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_97.md"
+      },
+      "question_text": "### 3. （2025·北京模拟）\n\n已知等差数列 \\(\\{a_n\\}\\) 满足 \\(a_3 = 5\\)，且 \\(a_5 - 2a_2 = 3\\)，数列 \\(\\{b_n\\}\\) 中，\\(b_1 = 3\\)，且 \\(3b_n - b_{n+1} = 0 (n \\in \\mathbb{N}^*)\\)\n\n（1）求数列 \\(\\{a_{n}\\}\\)， \\(\\{b_{n}\\}\\)的通项公式；\n\n（2）若 \\(a_{i}=b_{j}\\)，则称 \\(a_{i}\\)（或 \\(b_{j}\\)）是 \\(\\{a_{n}\\}\\)， \\(\\{b_{n}\\}\\)的公共项.\n\n（i）直接写出 \\(\\{a_{n}\\}\\)， \\(\\{b_{n}\\}\\)的前4个公共项；\n\n（ii）从数列 \\(\\{a_{n}\\}\\)的前100项中将 \\(\\{a_{n}\\}\\)， \\(\\{b_{n}\\}\\)的公共项去掉后，求剩下所有项的和.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-f52f56717b3fa483",
+      "section": "4.8",
+      "group": "B",
+      "number": 4,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 97,
+        "pdf_page": 98,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_97.md"
+      },
+      "question_text": "### 4. （2025·安徽芜湖二模）\n\n已知数列 \\(\\{a_n\\}\\) 的前 \\(n\\) 项和为 \\(S_n\\)，且 \\(a_1 = 2\\)，\\(a_{n+1} = S_n + 2(n \\in \\mathbb{N}^*)\\)。\n\n（1）求 \\(\\{a_{n}\\}\\)的通项公式；\n\n（2）保持 \\(\\{a_{n}\\}\\)的各项顺序不变，在 \\(a_{k}\\)和 \\(a_{k+1}\\)之间插入k个1，使它们与数列 \\(\\{a_{n}\\}\\)的项组成一个新的数列 \\(\\{b_{n}\\}\\)，记 \\(\\{b_{n}\\}\\)的前n项和为 \\(T_{n}\\)，求 \\(T_{55}\\).",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-c2d0143105a5eca9",
+      "section": "4.8",
+      "group": "B",
+      "number": 5,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 98,
+        "pdf_page": 99,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_98.md"
+      },
+      "question_text": "### 5. （2025·广东省广州市三模）\n\n已知公差不为 0 的等差数列  \\(\\{a_n\\}\\) 和等比数列  \\(\\{b_n\\}\\) 满足  \\(a_1 = b_1 = 1\\)，且  \\(a_1, 2a_2, 4a_4\\) 成等比数列， \\(4b_2, 2b_3, b_4\\) 成等差数列.\n\n（1）求数列 \\(\\{a_{n}\\}\\)和 \\(\\{b_{n}\\}\\)的通项公式；\n\n（2）令  \\(c_n = 3^{a_n}\\)，去掉数列  \\(\\{c_n\\}\\) 中的第 3k 项 ( \\(k \\in\\)\n\nN*），余下的项顺序不变，构成新数列{t_n}，写出{t_n}的前4项，并求{t_n}的前2n项和S_{2n}",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-6e357bf5d8d599c2",
+      "section": "4.8",
+      "group": "C",
+      "number": 6,
+      "kind": "C组",
+      "source_anchor": {
+        "ocr_doc": 98,
+        "pdf_page": 99,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_98.md"
+      },
+      "question_text": "### 6. （2025·全国模拟）\n\n已知在正项数列 \\(\\{a_{n}\\}\\)中， \\(a_{1}=4\\)，其前n项和 \\(S_{n}\\)满足 \\(S_{n}^{2}-(a_{n+1}+n-1)S_{n}-(a_{n+1}+n)=0\\).\n\n（1）求 \\(a_{n}\\)与 \\(S_{n}\\)\n\n（2）令  \\(b_n = \\frac{2^{n-1} + 1}{(3n-2)a_n}\\)，数列  \\(\\{b_n^2\\}\\) 的前  \\(n\\) 项和为  \\(T_n\\)，求证：对任意的  \\(n \\in \\mathbb{N}^*\\)，都有  \\(T_n < \\frac{5}{12}\\)。",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-35a21b53e97115da",
+      "section": "4.8",
+      "group": "C",
+      "number": 7,
+      "kind": "C组",
+      "source_anchor": {
+        "ocr_doc": 98,
+        "pdf_page": 99,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_98.md"
+      },
+      "question_text": "### 7. （2025 · 辽宁沈阳期中）\n\n数列\\(\\{a_n\\}\\)的前\\(n\\)项和为\\(S_n\\)，\\(a_1=1\\)，\\(S_n=a_{n+1}\\)，数列\\(\\{b_n\\}\\)中，\\(b_1=\\frac{1}{2}\\)，\\(b_{n+1}=\\begin{cases}b_n+\\frac{n}{2},n\\text{为奇数}\\\\b_n-\\frac{n-1}{2},n\\text{为偶数}\\end{cases}\\)\n\n（1）求 \\(\\{a_{n}\\}\\)， \\(\\{b_{n}\\}\\)的通项公式；\n\n（2）设 \\(c_{n}=a_{n}b_{n}\\)，求数列 \\(\\{c_{n}\\}\\)的前2n项和 \\(T_{2n}\\)",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-5de9a9b06b54dc22",
+      "section": "4.8",
+      "group": "C",
+      "number": 8,
+      "kind": "C组",
+      "source_anchor": {
+        "ocr_doc": 99,
+        "pdf_page": 100,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_99.md"
+      },
+      "question_text": "### 8. （2025 · 宁夏吴忠二模）\n\n已知数列\\(\\{a_n\\}\\)的前\\(n\\)项和为\\(S_n\\)，且\\(a_n=\\frac{1}{2}(S_n+2)\\)。\n\n（1）求数列 \\(\\{a_{n}\\}\\)的通项公式；\n\n（2）记 \\(b_{n}=\\frac{a_{n}-1}{a_{n+1}-1}\\)，数列 \\(\\{b_{n}\\}\\)的前n项和为 \\(T_{n}\\)，证明： \\(\\frac{n}{2}-\\frac{1}{2}+\\frac{1}{2^{n+1}}<T_{n}<\\frac{n}{2}-\\frac{1}{4}+\\frac{1}{2^{n+2}}\\)；\n\n（3）记 \\(c_{n}=\\frac{2}{3a_{n}+2}\\)，数列 \\(\\{c_{n}\\}\\)的前n项和为 \\(P_{n}\\)，证明： \\(P_{n}<\\frac{4}{7}\\).",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    }
+  ],
+  "counts": {
+    "worked_examples": 5,
+    "direct_variants": 4,
+    "abc_exercises": 8,
+    "total_numbered_learning_items": 17
+  },
+  "answer_policy": {
+    "worked_examples": "teaching solutions allowed",
+    "direct_variants": "question only; solution isolated",
+    "abc_exercises": "question only; answer sidecar forbidden"
+  },
+  "unresolved": []
+}

@@ -1,0 +1,182 @@
+{
+  "schema_version": "7.1",
+  "section": "1.1",
+  "round": 4,
+  "worker": 5,
+  "assigned_cycles": [
+    "1.1-cycle-9",
+    "1.1-cycle-10"
+  ],
+  "focus": "复核极化/四点共面/基本不等式/外接球/C14 的修复效果",
+  "runtime_contract": {
+    "role": "deepseek_worker",
+    "model": "opencode-go/deepseek-v4-flash",
+    "reasoning_effort": "max",
+    "context_window": 1000000,
+    "match": true
+  },
+  "sources_read": [
+    "data/packets/1.1/learning_path_without_questions.md (08-16 00:03 版)",
+    "data/packets/1.1/learning_packet.json (含 C14 内嵌 vision_sidecar)",
+    "data/contexts/1.1.json",
+    "data/bridge_micro_lessons.json (08-15 23:10 版)",
+    "data/bridge_supplement_lessons.json (08-15 23:10 版)",
+    "data/course_transcripts (15 个关键词扫描 + 3.1.4.1 全文)"
+  ],
+  "forbidden_sources_read": false,
+  "answer_sidecar_read": false,
+  "human_acceptance_not_proven": true,
+  "repair_checks": [
+    {
+      "defect_class": "SOURCE_METHOD_READY 不能放行",
+      "result": "REPAIRED",
+      "evidence": "bridge_micro_lessons.json 中 micro-four-point-coplanar 与 bridge-1.1-polarization 均由 SOURCE_METHOD_READY 升级为 SUPPLEMENT_READY；bridge_supplement_lessons.json 新增两者的完整无答案补充课（四点共面含双向证明 OP=xOA+yOB+zOC 且 x+y+z=1 当且仅当 P 在平面 ABC 内；极化含 2a·b=|a+b|^2-|a|^2-|b|^2 及差向量形式的展开步骤、自造变式与独立检查）。learning_path_without_questions.md 循环9/10 桥接状态行均已改为 SUPPLEMENT_READY｜已有无答案补充课。",
+      "prior_round_finding": "第3轮：极化/四点共面为骨架，B8/C13 依赖例14 文本补全"
+    },
+    {
+      "defect_class": "基本不等式（AM-GM）缺失导致 1.1-inequality-check-1 阻断",
+      "result": "REPAIRED",
+      "evidence": "新增桥接单元 bridge-1.1-positive-product-sum（SUPPLEMENT_READY，服务 C14）：完整无答案课讲授正数条件先验、由 (x-y)^2>=0 推出 x+y>=2sqrt(xy) 的下界来源、等号条件 x=y、以及乘积非恒定/变量非正时改用配方或边界检查；检查点文本未变（仍要求用基本不等式），但现在可由路线内补充课独立完成。C14-C 依此可解：1/x+1/y=1 推出 x+y=xy>=2sqrt(xy)，sqrt(xy)>=2，x+y>=4，x=y=2 取等，均在定义域（D,E 在延长线上 x,y>1）内。",
+      "prior_round_finding": "第3轮：0/15 转写含基本不等式，检查点无工具可过"
+    },
+    {
+      "defect_class": "课程前置必须先于首次使用（3.1.4.1 线面平行/垂直缺失）",
+      "result": "REPAIRED",
+      "evidence": "learning_path_without_questions.md 中 3.1.4.1 平行垂直证明首次出现在 568 行（循环8 先复习，B6/B7 任务对应课程），早于循环10 的 700/790 行（C14 对应课程），前置顺序正确。3.1.4.1 转写实际讲授线面平行/线面垂直的向量判据（方向向量垂直法向量推出线面平行），可支撑 C14-A 的 MN 平行平面 PAB 判定。",
+      "prior_round_finding": "第3轮：3.1.4.1 未映射到 1.1，B6/B7 二面角与 C14-A 线面平行无课程支撑"
+    },
+    {
+      "defect_class": "视觉完整性（每张图都要有可消费证据）",
+      "result": "PASS_WITH_NOTE",
+      "evidence": "C14 为循环9-10 唯一带图题目（imgs=1），learning_packet.json 内嵌 vision_sidecar 1 个、confidence=E2，坐标覆盖图中全部 11 个点（P,D,A,C,B,E,F,M,G,O,N），evidence=E1,E2，md 标注图形状态：视觉已核验；B8/C13 无图（imgs=0、sidecars=0、READY_TEXT_ONLY、evidence=E1），题面纯文字可作答，不存在未覆盖的图片。注：B8/C13 仍无 sidecar，但因无图不构成视觉缺口。",
+      "prior_round_finding": "第3轮：B8/C13 无任何视觉证据；本轮确认二者无图，C14 已带 E2 侧车"
+    }
+  ],
+  "cycle_results": [
+    {
+      "cycle": "1.1-cycle-9",
+      "title": "极化与四点共面综合",
+      "verdict": "proxy_pass",
+      "first_breakpoint": "无阻断断点。最接近风险点：B8 中 P 在盒内（含表面）时 |PM|^2 最大点取顶点 (0,0,2) 的顶点枚举推理没有专门教学，但极化补充课已明确要求最大值、最小值必须连同端点、内部点和等号成立条件一起检查，且正方体顶点检查是初等计算，路线内可完成。",
+      "evidence": [
+        "B8 独立解算：M=AC 中点=(1,1,0)，PA·PC=|PM|^2-|MA|^2=|PM|^2-2；P=(0,0,2) 时 |PM|^2=6，答案 4。",
+        "C13 独立解算：O,A,B,C 共面 推出 OB=λOA+μOC，对基 {a,b,c} 比较系数：λ+2μ=p、-2λ+μ=1、λ-2μ=q，消去 λ,μ 得 3p+5q=-4。",
+        "检查点 1.1-polarization-check-1：PA·PB=(PM+MA)·(PM-MA)=|PM|^2-|MA|^2，可由补充课恒等式加 k4 分配律独立完成。",
+        "检查点 1.1-four-point-check-1：补充课给出双向证明，自造变式可独立完成。",
+        "例14 teaching_text 仍含恒等式完整推导（反思段），与新增补充课互为备份。",
+        "md 循环9 桥接状态：SUPPLEMENT_READY（2 个桥接均升级）；B8/C13 图形状态：纯文字可作答（无图，E1 锚定）。"
+      ],
+      "method_models": [
+        {
+          "name": "极化恒等式与数量积最值",
+          "status": "SUPPLEMENT_READY (was SOURCE_METHOD_READY)",
+          "trigger": "B8；检查点 1.1-polarization-check-1",
+          "steps": [
+            "从 |a+b|^2=(a+b)·(a+b) 与 |a-b|^2 展开得到 2a·b 的两种恒等式形式",
+            "按题目给的是和/差/中点距离选择一种形式替换目标数量积",
+            "把几何限制翻译成模长平方或单变量可行范围",
+            "最大值/最小值连同端点、内部点、等号条件一起检查，最后回代原几何对象"
+          ],
+          "checks": [
+            "能独立展开两种恒等式",
+            "能说明选择哪一种形式",
+            "能写出定义域和等号条件"
+          ]
+        },
+        {
+          "name": "四点共面的仿射系数判定（系数和=1）",
+          "status": "SUPPLEMENT_READY (was SOURCE_METHOD_READY)",
+          "trigger": "C13、C14；检查点 1.1-four-point-check-1",
+          "steps": [
+            "固定公共起点 O，写 OP=xOA+yOB+zOC",
+            "P 在平面 ABC 内 推出 AP=uAB+vAC 推出 x+y+z=1（双向证明）",
+            "区分点的位置向量系数和与自由向量的线性组合",
+            "换公共起点必须重新推导"
+          ],
+          "checks": [
+            "能正向推出系数和为 1",
+            "能完成逆向证明",
+            "能区分点共面与向量共面"
+          ]
+        }
+      ],
+      "unresolved_gaps": [
+        "B8 顶点枚举推理无专门教学（靠补充课的端点/等号检查纪律加初等几何）。",
+        "B8/C13 无图形证据（无图，纯文字 E1），不构成视觉缺口但需保持标注。",
+        "C13 的向量共面（OB=λOA+μOC）相对补充课的点共面系数和是近迁移，依赖 k3+例12 支撑。",
+        "proxy_pass 仅为模拟判定，human_acceptance_not_proven=true。"
+      ]
+    },
+    {
+      "cycle": "1.1-cycle-10",
+      "title": "外接球、点面距离与压轴综合",
+      "verdict": "partial",
+      "first_breakpoint": "C14-A：M=DF∩AC、N=EF∩BC 的交点比例计算（s=z(x-1)/(x-z)，s'=z(y-1)/(y-z)，x=y 推出 s=s' 推出 MN 平行 AB 推出 MN 平行平面 PAB）。路线内没有任何课程或桥接演示『直线与线段求交点并用仿射系数比较』这一模式：四点共面补充课教仿射组合与系数比较，3.1.4.1 教线面平行向量判据，但把两者组合成交点比例推导需要学生自行综合，是 C14 中最接近真实断点的一步（可完成，但无直接教学示范）。",
+      "evidence": [
+        "1.1-inequality-check-1 现可由 bridge-1.1-positive-product-sum 补充课独立完成（正数门、平方非负推导、等号回代），不再阻断。",
+        "1.1-sphere-check-1 由外接球补充课支撑（等距平方差消半径、回代三顶点），可独立完成。",
+        "C14-A 独立解算：M=(1-s)A+sC 且 M 在直线 DF 上 推出 s=z(x-1)/(x-z)；N=(1-s')B+s'C 推出 s'=z(y-1)/(y-z)；x=y 推出 s=s' 推出 MN 平行 AB；AB 在平面 PAB 内且 MN 不在平面 PAB 内，推出 MN 平行平面 PAB（A 真）。",
+        "C14-B 独立判定为假：重心 PO=(PA+PB+PC)/3 不等于 1/2 PA+1/3 PB+1/6 PC（重心补充课在路线内）。",
+        "C14-C 独立解算：z=1/2、O 在平面 DEF 内 推出 1/x+1/y=1 推出 x+y=xy>=4（AM-GM，现由补充课讲授），x=y=2 取等且符合延长线定义域（C 真）。",
+        "C14-D 独立解算：外接球心 G 在 PO 上，等距条件得 PG=(3/4)PO；x=y=2、平面 DEF 过 G 推出 z=1/3；F 到平面 PDE（=平面 PAB）距离=(1/3)·正四面体高=√6/9（D 真；依赖球心补充课加 3.1.4.7 点面距离）。",
+        "视觉：C14 内嵌 E2 sidecar（11 点坐标齐全），md 标注视觉已核验；上下文 1.1.json VERIFIED、unresolved 为空。",
+        "前置顺序：3.1.4.1 首现循环8（568 行），早于循环10 使用（700/790 行）。"
+      ],
+      "method_models": [
+        {
+          "name": "正数乘积固定时的和最值（基本不等式）",
+          "status": "SUPPLEMENT_READY (新增)",
+          "trigger": "C14-C；检查点 1.1-inequality-check-1",
+          "steps": [
+            "先确认 x>0、y>0 且乘积为正常数（缺少正数条件不得直接用）",
+            "由 (x-y)^2>=0 推出 x+y>=2sqrt(xy)=2sqrt(k)",
+            "等号只在 x=y=sqrt(k)，回代题目真实定义域与几何范围",
+            "乘积非恒定/变量非正/求最大值时改用配方、单调性或边界检查"
+          ],
+          "checks": [
+            "正数条件先于套式",
+            "能从平方非负推出不等式",
+            "能回代等号候选"
+          ]
+        },
+        {
+          "name": "外接球球心的垂直平分面法",
+          "status": "SUPPLEMENT_READY",
+          "trigger": "C14-D；检查点 1.1-sphere-check-1",
+          "steps": [
+            "由对称性固定球心部分分量",
+            "对不共线顶点写等距平方差消去半径",
+            "解出球心候选后回代全部关键顶点",
+            "与平面 DEF 过 G 的仿射条件联立求 z"
+          ],
+          "checks": [
+            "能解释等距关系给出垂直平分面",
+            "能选独立约束避免重复方程",
+            "回代至少三个顶点并说明唯一性"
+          ]
+        },
+        {
+          "name": "三角形重心的向量表示",
+          "status": "SUPPLEMENT_READY",
+          "trigger": "C14-B（重心公式验证）",
+          "steps": [
+            "取中线 AM，由 AG:GM=2:1 推出 OG=(OA+OB+OC)/3",
+            "以 P 为公共起点写 PO=(PA+PB+PC)/3"
+          ],
+          "checks": [
+            "能由 2:1 独立推出公式",
+            "换公共起点仍成立"
+          ]
+        }
+      ],
+      "unresolved_gaps": [
+        "C14-A 的交点比例计算（仿射求交）无直接教学示范，需学生综合四点共面技术加线面平行判据自行推导——本轮第一真实断点（可完成，近迁移）。",
+        "外接球仍无视频课程，仅补充课文本；PG=(3/4)PO 需学生自行用等距法推出。",
+        "C14 为四方法多选压轴，单题整合四个桥接单元，任何一步失误影响整题。",
+        "human_acceptance_not_proven=true。"
+      ]
+    }
+  ],
+  "overall_verdict": "partial",
+  "summary": "详细第4轮（post-repair）worker-5（循环9-10）：第3轮四类缺陷均已复核修复——(1) 极化与四点共面桥接由 SOURCE_METHOD_READY 升级为 SUPPLEMENT_READY 并补齐完整无答案课；(2) 新增 bridge-1.1-positive-product-sum 讲授基本不等式（(x-y)^2>=0 推导、正数门、等号条件），1.1-inequality-check-1 不再阻断；(3) 3.1.4.1 平行垂直证明已前置到循环8（先于循环10 的 C14 使用），转写含线面平行/垂直向量判据；(4) C14 内嵌 E2 sidecar（11 点），B8/C13 确认无图（纯文字 E1），视觉完整性达标。独立重解：B8=4、C13=3p+5q=-4、C14 四选项 A(真)/B(假)/C(真)/D(真,√6/9) 全部可由路线内材料推导。循环9 判 proxy_pass（无阻断断点）；循环10 判 partial——唯一真实断点风险为 C14-A 的『直线与线段求交点并用仿射系数比较』模式无直接教学示范（近迁移），但所有工具均在路线内、可完成。未读答案侧车/解法侧车/历史报告/验收报告/他人输出；未修改任何源文件、题包、测试、清单或总结；human_acceptance_not_proven=true。"
+}

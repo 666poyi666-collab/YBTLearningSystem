@@ -1,0 +1,77 @@
+# LUNA-YBT-05 证据
+
+只记录当前源快照、课程正文哈希、覆盖和验证状态；不包含题面或结果文本。
+
+## 源快照
+
+- READY.json：f451e81c86e520577e176b12b73702945fdbf5cbac341ba9e4a93fa046a8c267；status=ready。
+- assignments.json：d9136bd27b2bf2e660e70c2ea34a044dd4225b2afa46b871700a429ac5c4cb8a。
+- packet-build-current.json：848c158cfe8dc8ab3b0ce49bc5ce50b0ba17ead8f85e7c34ccda530b282c8884；status=passed；全书实际学习项=1209。
+- all_chapters_course_catalog.json：fd5a35abb8d8471a975089c9af44b2284ae4ca295e54f6d294cc37c26339c048；课程数=170。
+- vision_sidecar_all_chapters.json：ee371622be9032f834480bc8dab3e37e7119f2236081459cf7897065ae1f03fc。
+- visual-inventory-source-question-only.json：6a74378730c450904fa22221df46560c99022b94eee7161b16f2cda67ae21ebf；READY 视觉门=127/127，未绑定项=0。
+
+## 分节覆盖
+
+- 2.3：45/45；packet=0c505a8b150cf44ef107dcb42b8c6cb6a520f4b67065e5672c7f246e10dbf654；learning_packet=6adc3f0358eed0e55dca74cc25ca4c856537f48e74962a46c7c29f5671e839b9；route versions=1-5；final route=a12d878868eb60d1d42e60d496b8f61a0308df187a9459c5de396dc74c3fd7a2。
+  - transcript 文件数=3；视觉引用摘要数=1。
+- 1.1：38/38；packet=4564da9a6081b033188a418d480cef3532b9aa0ed0c56a01f66042229e22df54；learning_packet=416990cafa7fabe30dc1c4e04712da47d8ab80ae19e5d6f26b72a46c0814e053；route versions=1-5；final route=0ff7a94a2d233c726a2391e2a753f7d516d263a01f8dff3347f388362e8ec9b3。
+  - transcript 文件数=10；视觉引用摘要数=22。
+- ch3.s6：27/27；packet=35fc4b35d19fc356281742d1e1a8698b8db16f74303140eb320b37efb2a702a8；learning_packet=90029f2940ffc6934f267937dedb2e2f92f5a35579b7481e0aec43b8c54054a7；route versions=1-5；final route=75e4fa14242219c3fb6fd71517425f5d28646368c51b34b6e11e4f2529976566。
+  - transcript 文件数=8；视觉引用摘要数=0。
+- ch3.s11：12/12；packet=c25939804e5881612b2bc006d8f794564a03ac762f999ca350475b9a5c2144b5；learning_packet=2dd297b0a148809eb2230250b2920acdf4621a9f75a41e49b5f272e16a8e4686；route versions=1-5；final route=14068641f1d36a7b64b15face334586ed9d55146c87715812d52d6309bd1fc21。
+  - transcript 文件数=9；视觉引用摘要数=1。
+
+## 课程正文
+
+已读取 catalog 绑定的 transcript JSON 正文；课程调用依据正文方法，不以标题单独作为覆盖证明。
+
+- point_line_distance：点到直线以及平行直线距离公式；transcript_sha256=f7c3476688d9b1cefeaf7bb1b26a9795cae56340dd11fa481c0ce1d3a04b2b57；sentence_count=0；timestamp_status=not_available_legacy_full_text。
+- line_parallel_perpendicular：直线间的位置关系：平行与垂直；transcript_sha256=3b46fa4a9dc9ee83b68c439688f5f5025b94815946b4902a0aeff244e1e6848e；sentence_count=0；timestamp_status=not_available_legacy_full_text。
+- line_family_fixed_point：过定点的直线系与曲线系；transcript_sha256=bed2ae00832196b4573532519c10d2989c40101b40f52e778fab98a0d43d5648；sentence_count=0；timestamp_status=not_available_legacy_full_text。
+- space_vector_ops：空间向量的运算；transcript_sha256=c8dfcf931ec6071453e1afa28945010d26313e416ea035ad7c575703fa544071；sentence_count=578；timestamp_status=available。
+- decomposition：空间向量拆分法；transcript_sha256=d9f8ca061da9af709e21d69b5638da42aab0149041bc03a5237518f3799d785c；sentence_count=635；timestamp_status=available。
+- equal_surface：空间向量等值面法；transcript_sha256=77a6408700cd958c33c768d5c55916f164022298f6d09c802ffc073db5422e62；sentence_count=536；timestamp_status=available。
+- coplanar：证明共面；transcript_sha256=968ae0a27d2627b307951e3d537fde7d5bc00cd45066ae86151d31bf7282a325；sentence_count=441；timestamp_status=available。
+- line_line_angle：向量夹角与直线夹角；transcript_sha256=0be63e83adac131e7f4e0cf99d0424f23b1981ee3a446d5b2fa6029733311147；sentence_count=815；timestamp_status=available。
+- plane_plane_angle：平面与平面的夹角；transcript_sha256=5a01b37ad36ed0c8aed759b8b3f58ca2dbf7beb9c0aa1f9de4ee8b42f9afe23b；sentence_count=622；timestamp_status=available。
+- parallel_perpendicular：3.1.4.1平行垂直证明；transcript_sha256=94c0581735e82edeb9613c4adfa25230e22ca40b1d563b007099c54c0ee2a0bc；sentence_count=869；timestamp_status=available。
+- plane_equation_upper：平面方程与法向量（上）；transcript_sha256=54de6ddd1117713ce8a28e33374ad3cb7c868b4c74f36dc99fd65b67727c2f0a；sentence_count=809；timestamp_status=available。
+- plane_equation_lower：平面方程与法向量（下）；transcript_sha256=361496fd36e353ab29fed41acc0a6642c023bee9e8cfbd25aab463a0296d7412；sentence_count=699；timestamp_status=available。
+- distance：距离问题；transcript_sha256=a476ddac1a574d6a287f789a2fd29600be72a04c67330998e26888dedc96d410；sentence_count=475；timestamp_status=available。
+- focus_triangle_perimeter_area：焦点三角形周长与面积；transcript_sha256=d193d2c256425606c87ad5d5f6896b6200074c08a3a68d1a42d579c35780c785；sentence_count=600；timestamp_status=available。
+- midpoint_idea：中位线思想；transcript_sha256=e1f3282a57280d15a82bf60a6ccc1c220991d11b468a2fc49fd57ca1efce3211；sentence_count=528；timestamp_status=available。
+- focal_radius_formula：焦半径公式；transcript_sha256=253d8ad5351c9d80bb35a4992e7ee210ea2826aa4dba49738fecaec30d837f6d；sentence_count=637；timestamp_status=available。
+- focal_chord_area：焦点弦公式与面积；transcript_sha256=121e9d2de02f6625b4b06ebc4172ae2fd426da2d07284ec74e8f9964edc558bf；sentence_count=353；timestamp_status=available。
+- chord_midpoint_slope_constant：弦中点与斜率积为定值；transcript_sha256=97eea122c34c1f070be0832109c84d083de86d172166b6278baf452b7e9630c6；sentence_count=646；timestamp_status=available。
+- chord_midpoint_extended：弦中点引申与抛物线弦中点；transcript_sha256=4e623baf37695b4902ce904bc59761fcc22bceb11fa2ffc577c3ddca9b2bcd63；sentence_count=609；timestamp_status=available。
+- intersection_algebra_upper：交点问题的基本代数处理（上·题型辨识）；transcript_sha256=2f46b402bada83b4d4ea8be2a5291fd6a2d7ea3cb49132942a91c6f6a14e1cf7；sentence_count=458；timestamp_status=available。
+- intersection_algebra_lower：交点问题的基本代数处理（下·点线设法与处理）；transcript_sha256=a859f016e8348c40ec820756baa1c33636a784cc77dcdd4c71576e0353a49f92；sentence_count=423；timestamp_status=available。
+- constant_value_1：第一类定值问题；transcript_sha256=06000766bca52ba95330aa96dc5063daabe93b3fde32577b3920d368e582207c；sentence_count=684；timestamp_status=available。
+- constant_value_2：第二类定值问题；transcript_sha256=956f7c44c1ff7327921487bfd8d75b401180c86aa9e4683fe68f4c7f96168d21；sentence_count=770；timestamp_status=available。
+- fixed_point_1：第一类定点问题；transcript_sha256=1f535e2d05664d41914e9953cb6bd57b6535334f9e71bfde197efdffd45a116a；sentence_count=779；timestamp_status=available。
+- fixed_point_2_upper：第二类定点问题（上）；transcript_sha256=0615ee77a5f8f2f6fd06c66c70223081dc34de1fe6cbd891634a329902a67814；sentence_count=415；timestamp_status=available。
+- fixed_point_2_lower：第二类定点问题（下）；transcript_sha256=39f8082a32322f7cf3d64e648755964e9a7771066dbc29a4445e8ccdc2382eef；sentence_count=401；timestamp_status=available。
+- pole_polar_upper：极点极线模型（上）；transcript_sha256=a1291d808e3bc226485b57dc2f71abd95d48cea154e74e58ef4fb0e6ca3bf29f；sentence_count=593；timestamp_status=available。
+- pole_polar_lower：极点极线模型（下）；transcript_sha256=3c9239ff12e50f5bb47a553be6182ca5a62dc2f4d230b76dd5a2f9c55f248a8d；sentence_count=781；timestamp_status=available。
+
+## 验证命令
+
+python C:\Users\poyi\.codex\skills\ybt-all-chapters-learning-path\scripts\validate_section_delivery.py --project-root C:\开发\小工具\一本通学习系统_v7 --assignment reports\luna_dispatch\assignments.json --task-id LUNA-YBT-05 --delivery reports\luna_sections\LUNA-YBT-05\delivery.json
+
+实际 validator stdout：
+
+{
+  "status": "passed",
+  "assignment": "C:\\开发\\小工具\\一本通学习系统_v7\\reports\\luna_dispatch\\assignments.json",
+  "task_id": "LUNA-YBT-05",
+  "errors": []
+}
+
+## 状态
+
+- proxy_simulation=passed；五轮、五人格、每项25次记录，第五轮绑定 final_route_hash。
+- independent_acceptance=not_run。
+- human_acceptance=not_run。
+- cold_24h_retest=not_run。
+- shared_defects：未发现需修改共享源的缺陷。

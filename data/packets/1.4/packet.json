@@ -1,0 +1,2605 @@
+{
+  "schema_version": "7.1",
+  "packet_type": "DEEPSEEK_TEXT_PACKET",
+  "section": "1.4",
+  "label": "第3节 空间向量的应用",
+  "source": {
+    "ocr_root": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69",
+    "ocr_docs": [
+      33,
+      54
+    ],
+    "source_file": null
+  },
+  "manifest": {
+    "page_count": 22,
+    "question_count": 12,
+    "expected_question_count": 12,
+    "expected_groups": {
+      "A": [
+        1,
+        2
+      ],
+      "B": [
+        3,
+        8
+      ],
+      "C": [
+        9,
+        12
+      ]
+    },
+    "derived_question_correction_count": 0
+  },
+  "status": "VERIFIED",
+  "consumer_guard": "Only consume when status=VERIFIED; UNVERIFIED packets are diagnostic evidence only.",
+  "pages": [
+    {
+      "ocr_doc": 33,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_33.md",
+      "text": "# 1.4 空间向量的应用\n\n习题：P1\n\n## 知识梳理\n\n## 知识点 1：空间中点、直线和平面的向量表示\n\n### 1. 点的位置向量\n\n在空间中，我们取一定点 O 作为基点，那么空间中任意一点 P 就可以用向量  \\(\\overrightarrow{OP}\\) 来表示。我们把向量  \\(\\overrightarrow{OP}\\) 称为点 P 的位置向量。\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_285_481_494_579.jpg\" alt=\"Image\" width=\"17%\" /></div>\n\n\n### 2. 直线的向量表示\n\n用向量表示直线 \\(l\\)，就是利用点 \\(A\\) 和直线 \\(l\\) 的方向向量\n\n表示直线上的任意一点。如图 1，\\(a\\) 是直线 \\(l\\) 的方向向量，\n\n在直线 \\(l\\) 上取 \\(\\overrightarrow{AB} = a\\)，设 \\(P\\) 是直线 \\(l\\) 上的任意一点，由向\n\n量共线的条件可知，点 \\(P\\) 在直线 \\(l\\) 上的充要条件是存在实\n\n数 \\(t\\)，使得 \\(\\overrightarrow{AP} = t\\boldsymbol{a}\\)，即 \\(\\overrightarrow{AP} = t\\overrightarrow{AB}\\)。进一步地，如图 2，取\n\n定空间中的任意一点 \\(O\\)，可以得到点 \\(P\\) 在直线 \\(l\\) 上的充要\n\n条件是存在实数 \\(t\\)，使 \\(\\overrightarrow{OP} = \\overrightarrow{OA} + t\\boldsymbol{a}\\) (i)，\n\n将  \\(\\overrightarrow{AB} = \\boldsymbol{a}\\) 代入式(i)得  \\(\\overrightarrow{OP} = \\overrightarrow{OA} + t\\overrightarrow{AB}\\) (ii),\n\n式(i)和式(ii)都称为空间直线的向量表达式.\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_213_1098_333_1253.jpg\" alt=\"Image\" width=\"10%\" /></div>\n\n\n<div style=\"text-align: center;\">图1</div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_388_1080_568_1267.jpg\" alt=\"Image\" width=\"15%\" /></div>\n\n\n<div style=\"text-align: center;\">图2</div>\n\n\n注：由此可知，空间任意直线都可由直线上一点及直线的方向向量唯一确定，反之只要确定了直线上某点的位置和直线的方向向量就可以唯一确定空间中的直线。\n\n### 3. 空间平面的向量表示\n\n如图1，设平面 \\(\\alpha\\)内的两条直线相交于点O，它们的\n\n## 知识点1\n\n【例 1】（多选）已知点 A(-1,0,4)，B(3,2,-1)，则直线 AB 的方向向量可以为（）\n\nA. \\((-4,-2,5)\\) B. \\((8,4,-10)\\) C. \\((6,3,-7)\\) D. \\((-3,5,4)\\)\n\n解析：所有与 \\(\\overrightarrow{AB}\\)共线的非零向量，都可以作为直线AB的方向向量，故先求 \\(\\overrightarrow{AB}\\)， \\(\\overrightarrow{AB}=(3-(-1),2-0,-1-4)=(4,2,-5)\\)，A项， \\((-4,-2,5)=-(4,2,-5)=-\\overrightarrow{AB}\\)，所以 \\((-4,-2,5)\\)是直线AB的一个方向向量，故A项正确；B项， \\((8,4,-10)=2(4,2,-5)=2\\overrightarrow{AB}\\)，所以 \\((8,4,-10)\\)是直线AB的一个方向向量，故B项正确；C项， \\(\\frac{6}{4}=\\frac{3}{2}\\neq\\frac{-7}{-5}\\)，所以 \\((6,3,-7)\\)与 \\(\\overrightarrow{AB}\\)不共线，不能作为直线AB的方向向量，故C项错误；D项， \\(\\frac{-3}{4}\\neq\\frac{5}{2}\\neq\\frac{4}{-5}\\)，所以 \\((-3,5,4)\\)与 \\(\\overrightarrow{AB}\\)不共线，不能作为直线AB的方向向量，故D项错误.\n\n答案：AB\n\n【例2】若点P位于平面ABC内，点O是平面外一点，证明：存在实数x，y，z，使得 \\(\\overrightarrow{OP}=x\\overrightarrow{OA}+y\\overrightarrow{OB}+z\\overrightarrow{OC}\\)，且 \\(x+y+z=1\\)。\n\n证明：因为点 \\(P\\) 在平面 \\(ABC\\) 内，所以由知识点1第3点空间平面的向量表示可知存在实数 \\(a\\)，\\(b\\)，使 \\(\\overrightarrow{OP} = \\overrightarrow{OA} + a\\overrightarrow{AB} + b\\overrightarrow{AC} = \\overrightarrow{OA} + a(\\overrightarrow{OB} - \\overrightarrow{OA}) + b(\\overrightarrow{OC} - \\overrightarrow{OA})\\)\n\n\\((1 - a - b)\\overrightarrow{OA} + a\\overrightarrow{OB} + b\\overrightarrow{OC}\\) ①，\n\n令 \\(x = 1 - a - b\\)，\\(y = a\\)，\\(z = b\\)，",
+      "text_sha256": "8fc87c6768df2f7b1f6ae129a9ade267b7f3d19a9005120fbdbf292fbc1b1f1d",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_285_481_494_579.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_285_481_494_579.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_213_1098_333_1253.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_213_1098_333_1253.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_388_1080_568_1267.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_388_1080_568_1267.jpg",
+          "exists": true
+        }
+      ],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 34,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_34.md",
+      "text": "方向向量分别为  \\(\\boldsymbol{a}\\) 和  \\(\\boldsymbol{b}\\)， \\(P\\) 为平面  \\(\\alpha\\) 内任意一点，由平面向量基本定理可知，存在唯一的有序实数对  \\((x,y)\\)，使得  \\(\\overrightarrow{OP} = x\\boldsymbol{a} + y\\boldsymbol{b}\\)。这样，点  \\(O\\) 与向量  \\(\\boldsymbol{a}\\)， \\(\\boldsymbol{b}\\) 不仅可以确定平面  \\(\\alpha\\)，还可以具体表示出  \\(\\alpha\\) 内的任意一点。\n\n如图2，取定空间任意一点O，可以得到空间一点P位于平面ABC内的充要条件是存在实数x，y，使 \\(\\overrightarrow{OP} = \\overrightarrow{OA} + x\\overrightarrow{AB} + y\\overrightarrow{AC}\\)。我们把此式称为空间平面ABC的向量表示式。由此可知，空间中任意平面由空间一点及两个不共线的向量唯一确定。\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_158_580_364_654.jpg\" alt=\"Image\" width=\"17%\" /></div>\n\n\n<div style=\"text-align: center;\">图1</div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_416_552_619_659.jpg\" alt=\"Image\" width=\"17%\" /></div>\n\n\n<div style=\"text-align: center;\">图2</div>\n\n\n## 知识点2：平面的法向量\n\n### 1. 平面法向量的定义\n\n如图，直线  \\(l \\perp \\alpha\\)，取直线  \\(l\\) 的方向向量  \\(\\boldsymbol{a}\\)，我们称向量  \\(\\boldsymbol{a}\\) 为平面  \\(\\alpha\\) 的法向量。给定一个点  \\(A\\) 和一个向量  \\(\\boldsymbol{a}\\)，那么过点  \\(A\\)，且以向量  \\(\\boldsymbol{a}\\) 为法向量的平面完全确定，可以表示为集合  \\(\\{P \\mid \\boldsymbol{a} \\cdot \\overrightarrow{AP} = 0\\}\\)。\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_287_1004_530_1090.jpg\" alt=\"Image\" width=\"20%\" /></div>\n\n\n2. 平面法向量的性质\n\n①平面 \\(\\alpha\\)的一个法向量垂直于平面 \\(\\alpha\\)内的所有向量；\n\n②一个平面的法向量有无数个，这些法向量互相平行.\n\n注：由于零向量的方向不确定，因此零向量不能作为直线的方向向量和平面的法向量.\n\n3. 平面法向量的求法\n\n①直接寻找：可以看看有没有已知直线与要求法向量的平面是互相垂直的，若有，则任取该直线的一个方向向量，即为平面的一个法向量；\n\n②待定系数法：\n\n则式①可改写为  \\(\\overrightarrow{OP} = x\\overrightarrow{OA} + y\\overrightarrow{OB} + z\\overrightarrow{OC}\\)，\n\n且  \\(x + y + z = 1 - a - b + a + b = 1\\)。\n\n## 知识点2\n\n【例3】正方体 \\(ABCD-A_{1}B_{1}C_{1}D_{1}\\)的棱长为1，以A为坐标原点，建立如图所示的空间直角坐标系，分别求平面ABCD与平面 \\(BDA_{1}\\)的一个法向量.\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_802_466_1008_646.jpg\" alt=\"Image\" width=\"17%\" /></div>\n\n\n解：（由正方体的性质容易找到平面ABCD的垂线，所以该平面的法向量无需计算，可直接写出）\n\n由题意， \\(AA_1 \\perp\\) 平面ABCD，所以 \\(\\overrightarrow{AA_1} = (0,0,1)\\)是平面ABCD的一个法向量，（再求平面 \\(BDA_1\\)的法向量m，需先写出该平面内两个不共线的向量，不妨选取 \\(\\overrightarrow{BD}\\)和 \\(\\overrightarrow{A_1D}\\)，由 \\(\\begin{cases} m \\cdot \\overrightarrow{BD} = 0 \\\\ m \\cdot \\overrightarrow{A_1D} = 0 \\end{cases}\\)求m）\n\n由图可知， \\(B(0,1,0)\\)， \\(D(1,0,0)\\)， \\(A_1(0,0,1)\\)，所以 \\(\\overrightarrow{BD} = (1,-1,0)\\)， \\(\\overrightarrow{A_1D} = (1,0,-1)\\)，\n\n设平面 \\(BDA_1\\)的法向量为 \\(m = (x,y,z)\\)，\n\n则 \\(\\begin{cases} m \\cdot \\overrightarrow{BD} = x - y = 0 \\\\ m \\cdot \\overrightarrow{A_1D} = x - z = 0 \\end{cases}\\)，令 \\(x=1\\)，则 \\(\\begin{cases} y = 1 \\\\ z = 1 \\end{cases}\\)，\n\n所以 \\(m = (1,1,1)\\)是平面 \\(BDA_1\\)的一个法向量。\n\n【反思】求平面法向量时，先写出该平面内两个不共线的向量，再由法向量与此二向量数量积分别为0建立方程组，最后通过对法向量的一个未知数赋非零值，求出所得方程组的一组非零解，即得平面的一个法向量。\n\n## 知识点3\n\n【例4】设平面 \\(\\alpha\\)和平面 \\(\\beta\\)的法向量分别为 \\(\\boldsymbol{m}=(1,2,-3)\\)， \\(\\boldsymbol{n}=(-2,k,6)\\)，若 \\(\\alpha\\parallel\\beta\\)，则 \\(k=\\)（ ）\n\nA. 4  B. -4\n\nC. 10  D. -10\n\n解析：因为 \\(\\alpha\\parallel\\beta\\)，所以 \\(m\\parallel n\\)，故 \\(\\frac{1}{-2}=\\frac{2}{k}=\\frac{-3}{6}\\)，解得：\\(k=-4\\)。\n\n答案：B",
+      "text_sha256": "7a01023103a3e3e46ff78842a94494b0faaafd722fffc14b641504fdd31f1af8",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_158_580_364_654.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_158_580_364_654.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_416_552_619_659.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_416_552_619_659.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_287_1004_530_1090.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_287_1004_530_1090.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_802_466_1008_646.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_802_466_1008_646.jpg",
+          "exists": true
+        }
+      ],
+      "math_errors": [],
+      "derived_corrections": [
+        {
+          "from": "，若",
+          "to": "，若",
+          "reason": "source PDF pages 35-36 visual review E1; example 4 continues in the right column of the next printed page"
+        }
+      ]
+    },
+    {
+      "ocr_doc": 35,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_35.md",
+      "text": "<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_139_114_629_549.jpg\" alt=\"Image\" width=\"41%\" /></div>\n\n\n## 知识点 3：向量方法在立体几何中的应用\n\n1\\. 利用向量方法判断立体几何中的位置关系\n\n直线的方向向量和平面的法向量对于确定空间中的直线和平面起了关键作用，所以我们可以利用直线的方向向量和平面的法向量来表示空间中直线、平面间的平行、垂直等位置关系.\n\n \\(\\alpha \\parallel \\beta\\)，则k=（ ）\n\n<table border=1 style='margin: auto; word-wrap: break-word;'><tr><td style='text-align: center; word-wrap: break-word;'>位置关系</td><td style='text-align: center; word-wrap: break-word;'>符号表示</td><td style='text-align: center; word-wrap: break-word;'>图形表示</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>线线平行</td><td style='text-align: center; word-wrap: break-word;'>\\(l_1 \\parallel l_2 \\Leftrightarrow m_1 \\parallel m_2 \\Leftrightarrow \\exists \\lambda \\in \\mathbb{R}\\)，使得 \\(m_1 = \\lambda m_2\\)</td><td style='text-align: center; word-wrap: break-word;'><img src=\"imgs/img_in_image_box_553_920_658_992.jpg\" alt=\"Image\"\" /></td></tr><tr><td style='text-align: center; word-wrap: break-word;'>线面平行</td><td style='text-align: center; word-wrap: break-word;'>若 \\(l \\subset \\alpha\\)，则 \\(l \\parallel \\alpha \\Leftrightarrow m \\perp n \\Leftrightarrow m \\cdot n = 0\\)</td><td style='text-align: center; word-wrap: break-word;'><img src=\"imgs/img_in_image_box_544_1011_664_1089.jpg\" alt=\"Image\"\" /></td></tr><tr><td style='text-align: center; word-wrap: break-word;'>面面平行</td><td style='text-align: center; word-wrap: break-word;'>\\(\\alpha \\parallel \\beta \\Leftrightarrow n_1 \\parallel n_2 \\Leftrightarrow \\exists \\lambda \\in \\mathbb{R}\\)，使得 \\(n_1 = \\lambda n_2\\)</td><td style='text-align: center; word-wrap: break-word;'><img src=\"imgs/img_in_image_box_548_1106_661_1164.jpg\" alt=\"Image\"\" /><img src=\"imgs/img_in_image_box_549_1169_661_1219.jpg\" alt=\"Image\"\" /></td></tr><tr><td style='text-align: center; word-wrap: break-word;'>线线垂直</td><td style='text-align: center; word-wrap: break-word;'>\\(l_1 \\perp l_2 \\Leftrightarrow m_1 \\perp m_2 \\Leftrightarrow m_1 \\cdot m_2 = 0\\)</td><td style='text-align: center; word-wrap: break-word;'><img src=\"imgs/img_in_image_box_556_1227_646_1309.jpg\" alt=\"Image\"\" /></td></tr><tr><td style='text-align: center; word-wrap: break-word;'>线面垂直</td><td style='text-align: center; word-wrap: break-word;'>\\(l \\perp \\alpha \\Leftrightarrow m \\parallel n \\Leftrightarrow \\exists \\lambda \\in \\mathbb{R}\\)，使得 \\(m = \\lambda n\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(\\alpha \\nparallel n_1 \\nparallel m_1 \\nparallel n_2 \\nparallel n_1 \\nparallel n_2 \\nparallel \\alpha\\)</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>面面垂直</td><td style='text-align: center; word-wrap: break-word;'>\\(\\alpha \\perp \\beta \\Leftrightarrow n_1 \\perp n_2 \\Leftrightarrow n_1 \\cdot n_2 = 0\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(\\beta \\nparallel n_2 \\nparallel n_1 \\nparallel n_2 \\nparallel n_1 \\nparallel n_2\\)</td></tr></table>\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_532_1323_679_1422.jpg\" alt=\"Image\" width=\"12%\" /></div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_532_1429_680_1544.jpg\" alt=\"Image\" width=\"12%\" /></div>\n\n\n解析：因为 \\(\\alpha \\parallel \\beta\\)，所以 \\(m \\parallel n\\)，\n\n故 \\(\\frac{1}{-2} = \\frac{2}{k} = \\frac{-3}{6}\\)，解得：k = -4。\n\n【例 5】（多选）已知直线  \\(l\\) 的一个方向向量为  \\(\\boldsymbol{a} = (m, 1, 3)\\)，平面  \\(\\alpha\\) 的一个法向量为  \\(\\boldsymbol{b} = (-2, n, 1)\\)，则（ ）\n\nA. 若  \\(l \\parallel \\alpha\\)，则  \\(2m - n = 3\\)\n\nB. 若  \\(l \\perp \\alpha\\)，则  \\(2m - n = 3\\)\n\nC. 若  \\(l \\parallel \\alpha\\)，则  \\(mn + 2 = 0\\)\n\nD. 若  \\(l \\perp \\alpha\\)，则  \\(mn + 2 = 0\\)\n\n解析：若  \\(l \\parallel \\alpha\\)，则  \\(a \\perp b\\)，\n\n所以  \\(a \\cdot b = m \\times (-2) + 1 \\times n + 3 \\times 1 = 0\\)，\n\n整理得： \\(2m - n = 3\\)，\n\n故 A 项正确，C 项错误；\n\n若  \\(l \\perp \\alpha\\)，则  \\(a \\parallel b\\)，所以  \\(\\frac{m}{-2} = \\frac{1}{n} = \\frac{3}{1}\\)，\n\n解得： \\(m = -6\\)， \\(n = \\frac{1}{3}\\)，\n\n所以  \\(mn + 2 = 0\\)，故 B 项错误，D 项正确。\n\n答案：AD\n\n【例 6】已知直线  \\(l_{1}\\) 的方向向量  \\(\\vec{s_{1}} = (1,0,1)\\)，直线  \\(l_{2}\\) 的方向向量  \\(\\vec{s_{2}} = (-1,2,-2)\\)，则  \\(l_{1}\\) 和  \\(l_{2}\\) 夹角的余弦值为（）\n\nA.  \\(\\frac{\\sqrt{2}}{4}\\) B.  \\(\\frac{1}{2}\\)\n\nC.  \\(\\frac{\\sqrt{2}}{2}\\) D.  \\(\\frac{\\sqrt{3}}{2}\\)\n\n解析：设 \\(l_1\\)与 \\(l_2\\)所成角为 \\(\\theta\\)，则 \\(\\cos\\theta = \\frac{|\\vec{s}_1 \\cdot \\vec{s}_2|}{|\\vec{s}_1| \\cdot |\\vec{s}_2|} = \\frac{|1 \\times (-1) + 0 \\times 2 + 1 \\times (-2)|}{\\sqrt{1^2 + 0^2 + 1^2} \\cdot \\sqrt{(-1)^2 + 2^2 + (-2)^2}} = \\frac{\\sqrt{2}}{2}\\)，所以 \\(l_1\\)和 \\(l_2\\)夹角的余弦值为 \\(\\frac{\\sqrt{2}}{2}\\)。",
+      "text_sha256": "854f48c14757057cab207e4669816a5ab4d97b4f9d12111c028e6c29b4fb1c2f",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_139_114_629_549.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_139_114_629_549.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_553_920_658_992.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_553_920_658_992.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_544_1011_664_1089.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_544_1011_664_1089.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_548_1106_661_1164.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_548_1106_661_1164.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_549_1169_661_1219.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_549_1169_661_1219.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_556_1227_646_1309.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_556_1227_646_1309.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_532_1323_679_1422.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_532_1323_679_1422.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_532_1429_680_1544.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_532_1429_680_1544.jpg",
+          "exists": true
+        }
+      ],
+      "math_errors": [],
+      "derived_corrections": [
+        {
+          "from": "\\( \\alpha \\parallel \\beta \\)，则k=（ ）",
+          "to": "",
+          "reason": "source PDF page 36 visual review E1; remove example 4 right-column fragments after restoring them to doc 34"
+        }
+      ]
+    },
+    {
+      "ocr_doc": 36,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_36.md",
+      "text": "2. 利用向量方法解决立体几何中的求距离问题\n\n①点到直线的距离\n\n①点到直线的距离\n\n如图，\\(\\overrightarrow{AP}\\) 在直线 \\(l\\) 上的投影向量为 \\(\\overrightarrow{AQ}\\)，则 \\(\\triangle APQ\\) 为直角三角形，直线 \\(l\\) 的方向向量为 \\(\\boldsymbol{a}\\)，单位方向向量为 \\(\\boldsymbol{u}\\)，则向量 \\(\\overrightarrow{AP}\\) 在直线 \\(l\\) 上的投影向量为 \\(\\overrightarrow{AQ} = \\frac{\\boldsymbol{a} \\cdot \\overrightarrow{AP}}{|\\boldsymbol{a}|^2} \\boldsymbol{a}\\)，所以\n\n\\(\\left|\\overrightarrow{AQ}\\right|^2 = \\left(\\frac{\\boldsymbol{a} \\cdot \\overrightarrow{AP}}{|\\boldsymbol{a}|^2} \\boldsymbol{a}\\right)^2 = \\frac{(\\boldsymbol{a} \\cdot \\overrightarrow{AP})^2}{|\\boldsymbol{a}|^4} \\left|\\boldsymbol{a}^2\\right| = \\left(\\frac{\\boldsymbol{a} \\cdot \\overrightarrow{AP}}{|\\boldsymbol{a}|}\\right)^2 = \\left(\\frac{\\boldsymbol{a}}{|\\boldsymbol{a}|} \\cdot \\overrightarrow{AP}\\right)^2\\)\n\n\\(= (\\boldsymbol{u} \\cdot \\overrightarrow{AP})^2\\)，由勾股定理可得点 \\(P\\) 到直线 \\(l\\) 的距离 \\(d = PQ\\)\n\n\\(= \\sqrt{|\\overrightarrow{AP}|^2 - |\\overrightarrow{AQ}|^2} = \\sqrt{\\overrightarrow{AP}^2 - (\\boldsymbol{u} \\cdot \\overrightarrow{AP})^2}\\)。\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_302_679_515_797.jpg\" alt=\"Image\" width=\"17%\" /></div>\n\n\n②点到平面的距离\n\n如图，设平面\\(\\alpha\\)的法向量为\\(\\boldsymbol{n}\\)，\\(A\\)是平面\\(\\alpha\\)内的任意一点，\\(P\\)是平面\\(\\alpha\\)外一点，过点\\(P\\)作平面\\(\\alpha\\)的垂线交平面\\(\\alpha\\)于点\\(Q\\)，则\\(\\boldsymbol{n}\\)是直线\\(PQ\\)的方向向量，且点\\(P\\)到平面\\(\\alpha\\)的距离就是\\(\\overrightarrow{AP}\\)在直线\\(PQ\\)上的投影向量的长度，该投影向量为\\(\\frac{\\overrightarrow{AP}\\cdot\\boldsymbol{n}}{|\\boldsymbol{n}|^2}\\boldsymbol{n}\\)，故\\(P\\)到\\(\\alpha\\)的距离\\(d=\\left|\\frac{\\overrightarrow{AP}\\cdot\\boldsymbol{n}}{|\\boldsymbol{n}|^2}\\boldsymbol{n}\\right|=\\frac{\\left|\\overrightarrow{AP}\\cdot\\boldsymbol{n}\\right|}{|\\boldsymbol{n}|}\\)。\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_299_1172_517_1278.jpg\" alt=\"Image\" width=\"18%\" /></div>\n\n\n③直线到平面、平面到平面的距离\n\n若直线与平面平行，平面与平面平行，则直线到平面、平面到平面的距离可转化为点到平面的距离来计算.\n\n3. 利用向量方法求立体几何中的空间角\n\n①异面直线所成角\n\n【例7】若平面 \\(\\alpha\\)的一个法向量为 \\(\\boldsymbol{n}=(1,2,1)\\)，已知 \\(\\overrightarrow{AB}=(-1,-1,2)\\)， \\(A \\notin \\alpha\\)， \\(B \\in \\alpha\\)，则点 \\(A\\)到平面 \\(\\alpha\\)的距离为（ ）\n\nA. 1 \\quad B.  \\(\\frac{\\sqrt{6}}{6}\\)\n\nC.  \\(\\frac{\\sqrt{3}}{3}\\) \\quad D.  \\(\\frac{\\sqrt{2}}{3}\\)\n\n答案：C\n\n解析：求点到平面的距离，可代知识点3第2点②的公式计算，这里已有 \\(\\alpha\\)的法向量 \\(n\\)和 \\(\\overrightarrow{AB}\\)的坐标，可直接代公式，\n\n由题意，点 \\(A\\)到平面 \\(\\alpha\\)的距离 \\(d=\\frac{|\\overrightarrow{BA}\\cdot\\boldsymbol{n}|}{|\\boldsymbol{n}|}\\)\n\n \\(=\\frac{|\\overrightarrow{AB}\\cdot\\boldsymbol{n}|}{|\\boldsymbol{n}|}=\\frac{|-1\\times1+(-1)\\times2+2\\times1|}{\\sqrt{1^2+2^2+1^2}}=\\frac{\\sqrt{6}}{6}\\).\n\n答案：B\n\n【例8】已知直线 \\(l\\) 的一个方向向量为 \\(\\boldsymbol{m}=(1,1,0)\\)，平面 \\(\\alpha\\) 的一个法向量为 \\(\\boldsymbol{n}=(0,-\\sqrt{2},\\sqrt{2})\\)，则直线 \\(l\\) 与平面 \\(\\alpha\\) 所成的角为（ ）\n\nA. \\(\\frac{\\pi}{6}\\)  B. \\(\\frac{\\pi}{4}\\)  \n\nC. \\(\\frac{\\pi}{6}\\) 或 \\(\\frac{5\\pi}{6}\\)  D. \\(\\frac{\\pi}{4}\\) 或 \\(\\frac{3\\pi}{4}\\)\n\n解析：设直线 \\(l\\) 与平面 \\(\\alpha\\) 所成角为 \\(\\theta\\)，其中 \\(0 \\leq \\theta \\leq \\frac{\\pi}{2}\\)，则 \\(\\sin \\theta = |\\cos < m, n>| = \\frac{|m \\cdot n|}{|m| \\cdot |n|}\\)\n\n\\(= \\frac{|1 \\times 0 + 1 \\times (-\\sqrt{2}) + 0 \\times \\sqrt{2}|}{\\sqrt{1^2 + 1^2 + 0^2} \\cdot \\sqrt{0^2 + (-\\sqrt{2})^2 + (\\sqrt{2})^2}}\\)\n\n\\(= \\frac{1}{2}\\)，结合 \\(0 \\leq \\theta \\leq \\frac{\\pi}{2}\\) 可得 \\(\\theta = \\frac{\\pi}{6}\\)。\n\n答案：A\n\n答案：A\n\n【例9】在空间直角坐标系中，已知平面 \\(\\alpha\\)， \\(\\beta\\)的一个法向量分别为 \\(m=\\)",
+      "text_sha256": "51b27509844c114f515af34e88cf923538cadd5dd619133bfd7f4ff7bd74000c",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_302_679_515_797.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_302_679_515_797.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_299_1172_517_1278.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_299_1172_517_1278.jpg",
+          "exists": true
+        }
+      ],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 37,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_37.md",
+      "text": "若异面直线  \\(l_1\\)， \\(l_2\\) 所成的角为  \\(\\theta\\) ( \\(0 < \\theta \\leq \\frac{\\pi}{2}\\))，其方向向量分别是  \\(\\boldsymbol{u}\\)， \\(\\boldsymbol{v}\\)，则  \\(\\cos \\theta = |\\cos \\langle \\boldsymbol{u}, \\boldsymbol{v} \\rangle| = \\frac{|\\boldsymbol{u} \\cdot \\boldsymbol{v}|}{|\\boldsymbol{u}| \\cdot |\\boldsymbol{v}|}\\)。\n\n如图，直线 \\(l\\) 与平面 \\(\\alpha\\) 相交于点 \\(B\\)，\\(A\\) 为 \\(l\\) 上的另外一点，过 \\(A\\) 作 \\(\\alpha\\) 的垂线，垂足为 \\(P\\)，设直线 \\(l\\) 与平面 \\(\\alpha\\) 所成的角为 \\(\\theta\\left(0 < \\theta \\leq \\frac{\\pi}{2}\\right)\\)，平面 \\(\\alpha\\) 的法向量为 \\(\\boldsymbol{n}\\)，则由图可知，\\(\\theta = \\frac{\\pi}{2} - \\angle BAP\\)，而 \\(\\cos \\angle BAP = \\left|\\cos \\langle \\overrightarrow{AB}, \\boldsymbol{n} \\rangle\\right| = \\frac{\\left|\\overrightarrow{AB} \\cdot \\boldsymbol{n}\\right|}{\\left|\\overrightarrow{AB}\\right| \\cdot \\left|\\boldsymbol{n}\\right|}\\)，所以 \\(\\sin \\theta = \\sin\\left(\\frac{\\pi}{2} - \\angle BAP\\right) = \\cos \\angle BAP = \\frac{\\left|\\overrightarrow{AB} \\cdot \\boldsymbol{n}\\right|}{\\left|\\overrightarrow{AB}\\right| \\cdot \\left|\\boldsymbol{n}\\right|}\\)。\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_286_730_475_878.jpg\" alt=\"Image\" width=\"15%\" /></div>\n\n\n③平面与平面的夹角\n\n平面  \\(\\alpha\\) 与平面  \\(\\beta\\) 相交，形成四个二面角，我们把这四个二面角中不大于  \\(90^{\\circ}\\) 的二面角称为平面  \\(\\alpha\\) 与平面  \\(\\beta\\) 的夹角.\n\n类似于两条异面直线所成的角，若平面  \\(\\alpha\\)， \\(\\beta\\) 的法向量分别是  \\(m_1\\)， \\(m_2\\)，则平面  \\(\\alpha\\) 与平面  \\(\\beta\\) 的夹角即为向量  \\(m_1\\) 和  \\(m_2\\) 的夹角或其补角。设平面  \\(\\alpha\\) 与平面  \\(\\beta\\) 的夹角为  \\(\\theta\\)，则  \\(\\cos\\theta = |\\cos\\langle m_1, m_2 \\rangle| = \\frac{|m_1 \\cdot m_2|}{|m_1| \\cdot |m_2|}\\)。\n\n注：①平面与平面的夹角的取值范围是  \\(\\left[0, \\frac{\\pi}{2}\\right]\\)，二面角的取值范围是  \\([0, \\pi]\\)；\n\n②如图 1，二面角  \\(\\alpha - l - \\beta\\) 的余弦值  \\(\\cos\\theta = \\pm\\cos\\langle m_1, (0, -1, -1), n = (-2, 1, 2)\\)，则  \\(\\alpha\\) 与  \\(\\beta\\) 的夹角的余弦值为（ ）\n\nA.  \\(\\frac{2}{3}\\)\n\nB.  \\(\\frac{\\sqrt{2}}{3}\\)\n\nC.  \\(-\\frac{\\sqrt{2}}{2}\\)\n\nD.  \\(\\frac{\\sqrt{2}}{2}\\)\n\n\n\n解析：已知两个平面的法向量，可直接代公式  \\(\\cos\\theta = |\\cos\\langle\\mathbf{m}, \\mathbf{n}\\rangle| = \\frac{|\\mathbf{m} \\cdot \\mathbf{n}|}{|\\mathbf{m}| \\cdot |\\mathbf{n}|}\\) 来求平面  \\(\\alpha\\) 与平面  \\(\\beta\\) 的夹角的余弦值，设平面  \\(\\alpha\\) 与平面  \\(\\beta\\) 的夹角为  \\(\\theta\\)，则  \\(\\cos\\theta = |\\cos\\langle\\mathbf{m}, \\mathbf{n}\\rangle| = \\frac{|\\mathbf{m} \\cdot \\mathbf{n}|}{|\\mathbf{m}| \\cdot |\\mathbf{n}|}\\)\n\n \\(= \\frac{|0 \\times (-2) + (-1) \\times 1 + (-1) \\times 2|}{\\sqrt{(-1)^2 + (-1)^2} \\cdot \\sqrt{(-2)^2 + 1^2 + 2^2}} = \\frac{\\sqrt{2}}{2}\\)，所以平面  \\(\\alpha\\) 与  \\(\\beta\\) 的夹角的余弦值为  \\(\\frac{\\sqrt{2}}{2}\\)。\n\n答案：D\n\n【例 10】如图，四棱锥  \\(P-ABCD\\) 中，底面  \\(ABCD\\) 为矩形， \\(PA \\perp\\) 平面  \\(ABCD\\)， \\(PA = AB = 1\\)， \\(AD = \\sqrt{3}\\)， \\(E\\) 为  \\(PD\\) 的中点，求二面角  \\(D-AE-C\\) 的余弦值.\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_798_999_1012_1136.jpg\" alt=\"Image\" width=\"17%\" /></div>\n\n\n解：（求二面角，考虑建系，用向量法来处理，这里已有PA，AB，AD两两垂直，可直接建系）以A为原点建立如图所示的空间直角坐标系，则 \\(A(0,0,0)\\)， \\(D(0,\\sqrt{3},0)\\)， \\(C(1,\\sqrt{3},0)\\)， \\(P(0,0,1)\\)，\n\n因为 E 为 PD 的中点，所以  \\(E\\left(0,\\frac{\\sqrt{3}}{2},\\frac{1}{2}\\right)\\)\n\n（求二面角 D-AE-C 的余弦值需要平面 DAE 和平面 AEC 的法向量，前者可直接写出，后者需要计算，故先写出平面 ACE 内两个不共线的向量，用于求它的法向量）",
+      "text_sha256": "ff0fa721d43a0e8bd8dba68c0dac9aee7cf5f26df084a7d6bdf585334d1723ef",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_286_730_475_878.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_286_730_475_878.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_798_999_1012_1136.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_798_999_1012_1136.jpg",
+          "exists": true
+        }
+      ],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 38,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_38.md",
+      "text": " \\(m_2 \\geq \\pm \\frac{m_1 \\cdot m_2}{|m_1| \\cdot |m_2|}\\)，若是求  \\(\\sin \\theta\\)，则可由  \\(\\sin \\theta = \\sqrt{1 - \\cos^2 \\theta}\\) 来算， \\(\\cos \\theta\\) 取正取负不影响结果；若是求  \\(\\cos \\theta\\)，则最终结果取正还是取负，需考虑二面角的锐钝，一般可通过观察图形，直观想象来判断，若图形不易判断，则可通过法向量的指向来判断。若两个法向量都朝内或朝外，如图1，则  \\(\\cos \\theta = -\\cos < m_1, m_2>\\)；若一个朝内，一个朝外，如图2，则  \\(\\cos \\theta = \\cos < m_1, m_2>\\)。\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_168_497_361_617.jpg\" alt=\"Image\" width=\"16%\" /></div>\n\n\n<div style=\"text-align: center;\">图1</div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_417_511_609_615.jpg\" alt=\"Image\" width=\"16%\" /></div>\n\n\n<div style=\"text-align: center;\">图2</div>\n\n\n4. 利用空间向量解决立体几何问题的一般步骤\n\n①转化：将立体几何问题中涉及的距离、角度等利用空间向量进行表示，把立体几何问题转化为向量问题；\n\n②运算：将向量问题的结果运算出来；\n\n③翻译：把向量问题的结果“翻译”成对应的几何结论。\n\n \\(\\overrightarrow{AC} = (1, \\sqrt{3}, 0)\\)， \\(\\overrightarrow{AE} = \\left(0, \\frac{\\sqrt{3}}{2}, \\frac{1}{2}\\right)\\)，\n\n设平面  \\(ACE\\) 的法向量为  \\(\\boldsymbol{m} = (x, y, z)\\)，\n\n则  \\(\\begin{cases} \\boldsymbol{m} \\cdot \\overrightarrow{AC} = x + \\sqrt{3}y = 0 \\\\ \\boldsymbol{m} \\cdot \\overrightarrow{AE} = \\frac{\\sqrt{3}}{2}y + \\frac{1}{2}z = 0 \\end{cases}\\)，\n\n令  \\(x = \\sqrt{3}\\)，则  \\(y = -1\\)， \\(z = \\sqrt{3}\\)，\n\n所以  \\(\\boldsymbol{m} = (\\sqrt{3}, -1, \\sqrt{3})\\) 是平面  \\(ACE\\) 的一个法向量，又  \\(x\\) 轴perp 平面  \\(DAE\\)，所以  \\(\\boldsymbol{n} = (1, 0, 0)\\) 是平面  \\(DAE\\) 的一个法向量，\n\n所以  \\(\\cos \\langle \\boldsymbol{m}, \\boldsymbol{n} \\rangle = \\frac{\\boldsymbol{m} \\cdot \\boldsymbol{n}}{|\\boldsymbol{m}| \\cdot |\\boldsymbol{n}|}\\)\n\n \\(= \\frac{\\sqrt{3} \\times 1 + (-1) \\times 0 + \\sqrt{3} \\times 0}{\\sqrt{(\\sqrt{3})^2 + (-1)^2 + (\\sqrt{3})^2} \\times 1} = \\frac{\\sqrt{21}}{7}\\)，\n\n（最终答案是  \\(\\frac{\\sqrt{21}}{7}\\)，还是  \\(-\\frac{\\sqrt{21}}{7}\\)？这由二面角  \\(D-AE-C\\) 的锐钝决定，可直接观察图形，通过直观想象作出判断）\n\n由图可知，二面角  \\(D-AE-C\\) 为锐角，所以其余弦值为  \\(\\frac{\\sqrt{21}}{7}\\)。\n\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_782_810_1028_972.jpg\" alt=\"Image\" width=\"20%\" /></div>\n\n\n## 本节核心题型\n\n空间向量作为非常强大的工具，可以解决立体几何中的诸多问题。本节我们通过四组题来为同学们梳理一些立体几何常见题型的向量处理方法，包括用空间向量研究平行关系、垂直关系、求空间角和求空间距离，请大家跟着例题和反思去学习、总结每种题型的向量处理方法吧。\n\n类型 I：利用空间向量研究平行关系\n\n【例 11】如图，在长方体  \\(ABCD-A_1B_1C_1D_1\\) 中， \\(AB = 4\\)， \\(BC = CC_1 = 2\\)，线段  \\(B_1C\\) 的中点为  \\(P\\)，证明： \\(A_1P \\parallel\\) 平面  \\(ACD_1\\)。\n\n证法1：（怎样证  \\(A_1P \\parallel\\) 平面  \\(ACD_1\\)？只需证  \\(\\overrightarrow{A_1P}\\) 是平面  \\(ACD_1\\) 内的向量，即证存在实数  \\(\\lambda\\)， \\(\\mu\\)，使  \\(\\overrightarrow{A_1P} = \\lambda \\overrightarrow{AD_1} + \\mu \\overrightarrow{AC}\\)，下面我们按此建立方程组，求解  \\(\\lambda\\) 和  \\(\\mu\\)）\n\n由题意， \\(A_1(2,0,2)\\)， \\(P(1,4,1)\\)， \\(A(2,0,0)\\)， \\(C(0,4,0)\\)， \\(D_1(0,0,2)\\)，\n\n所以  \\(\\overrightarrow{A_1P} = (-1,4,-1)\\)， \\(\\overrightarrow{AD_1} = (-2,0,2)\\)， \\(\\overrightarrow{AC} = (-2,4,0)\\)，设  \\(\\overrightarrow{A_1P} = \\lambda \\overrightarrow{AD_1} + \\mu \\overrightarrow{AC}\\)，\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_842_1277_1092_1455.jpg\" alt=\"Image\" width=\"20%\" /></div>\n",
+      "text_sha256": "697142d3ccc3a7f28340ac84de539eabc03a346aab27fe63ec431468b93835ce",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_168_497_361_617.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_168_497_361_617.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_417_511_609_615.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_417_511_609_615.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_782_810_1028_972.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_782_810_1028_972.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_842_1277_1092_1455.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_842_1277_1092_1455.jpg",
+          "exists": true
+        }
+      ],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 39,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_39.md",
+      "text": "则  \\((-1,4,-1)=\\lambda(-2,0,2)+\\mu(-2,4,0)\\)，所以  \\(\\begin{cases} 4\\mu=4 \\\\ 2\\lambda=-1 \\end{cases}\\)，解得： \\(\\lambda=-\\frac{1}{2}\\)， \\(\\mu=1\\)，\n\n所以  \\(\\overrightarrow{A_1P}=-\\frac{1}{2}\\overrightarrow{AD_1}+\\overrightarrow{AC}\\)，故  \\(\\overrightarrow{A_1P}\\) 是平面  \\(ACD_1\\) 内的向量，又  \\(A_1P\\not\\subset\\) 平面  \\(ACD_1\\)，所以  \\(A_1P\\parallel\\) 平面  \\(ACD_1\\)。\n\n证法 2：（由知识点 3 第 1 点的表格，要证  \\(A_1P\\parallel\\) 平面  \\(ACD_1\\)，也可转化为证  \\(\\overrightarrow{A_1P}\\) 与平面  \\(ACD_1\\) 的法向量垂直）\n\n求  \\(\\overrightarrow{A_1P}\\)， \\(\\overrightarrow{AD_1}\\)， \\(\\overrightarrow{AC}\\) 坐标的过程同解法 1，此处不再赘述，设平面  \\(ACD_1\\) 的法向量为  \\(\\boldsymbol{m}=(x,y,z)\\)，\n\n则  \\(\\begin{cases} \\boldsymbol{m}\\cdot\\overrightarrow{AD_1}=-2x+2z=0 \\\\ \\boldsymbol{m}\\cdot\\overrightarrow{AC}=-2x+4y=0 \\end{cases}\\)，令  \\(x=2\\) 得  \\(y=1\\)， \\(z=2\\)，所以  \\(\\boldsymbol{m}=(2,1,2)\\) 是平面  \\(ACD_1\\) 的一个法向量，\n\n因为  \\(\\overrightarrow{A_1P}\\cdot\\boldsymbol{m}=-1\\times2+4\\times1+(-1)\\times2=0\\)，所以  \\(\\overrightarrow{A_1P}\\perp\\boldsymbol{m}\\)，结合  \\(A_1P\\not\\subset\\) 平面  \\(ACD_1\\) 可得  \\(A_1P\\parallel\\) 平面  \\(ACD_1\\)。\n\n【反思】上面的两个证法都能证明线面平行，但证法2通过证明直线上的一个向量与平面的法向量垂直来证线面平行，计算量稍小一些，所以后续有关问题中，我们都采用证法2来证线面平行。\n\n【例12】在直四棱柱 \\(ABCD-A_1B_1C_1D_1\\) 中，底面 \\(ABCD\\) 为等腰梯形，\\(AB\\)\n\n\\(\\parallel CD\\)，\\(AB=4\\)，\\(BC=CD=AA_1=2\\)，\\(F\\) 是棱 \\(AB\\) 的中点，用向量的方法\n\n证明：平面 \\(ADD_1A_1\\) // 平面 \\(FCC_1\\)。\n\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_874_533_1093_722.jpg\" alt=\"Image\" width=\"18%\" /></div>\n\n\n证明：（既然要求用向量的方法证明平面  \\(ADD_1A_1\\) // 平面  \\(FCC_1\\)，那么先建系）\n\n由题意可知， \\(CD = AF = 2\\)，且  \\(CD \\parallel AF\\)，所以四边形 AFCD 是平行四边形，故  \\(CF = AD = 2\\)，\n\n又  \\(BC = BF = 2\\)，所以  \\(\\triangle BCF\\) 是正三角形，取 BF 中点  \\(E\\)，连接  \\(CE\\)，则  \\(CE \\perp BF\\)，\n\n因为  \\(CD \\parallel AB\\)，所以  \\(CE \\perp CD\\)，因为  \\(ABCD - A_1B_1C_1D_1\\) 是直四棱柱，所以  \\(CC_1 \\perp\\) 平面  \\(ABCD\\)，\n\n又  \\(CD\\)， \\(CE \\subset\\) 平面  \\(ABCD\\)，所以  \\(CC_1 \\perp CD\\)， \\(CC_1 \\perp CE\\)，\n\n故  \\(CC_1\\)， \\(CD\\)， \\(CE\\) 两两垂直，以  \\(C\\) 为原点建立如图 1 所示的空间直角坐标系，\n\n（怎样用向量的方法证明平面  \\(ADD_1A_1\\) // 平面  \\(FCC_1\\)？如图 2，可以想象，若两个平面互相平行，则其中一个平面  \\(\\alpha\\) 的法向量应与另一个平面  \\(\\beta\\) 垂直，即它也是平面  \\(\\beta\\) 的法向量，故按此证明）\n\n由图 1 可知， \\(CE = BC \\cdot \\sin \\angle CBE = 2\\sin 60^\\circ = \\sqrt{3}\\)， \\(BE = \\frac{1}{2}BF = 1\\)， \\(AE = AB - BE = 3\\)，\n\n所以  \\(A(3, \\sqrt{3}, 0)\\)， \\(D(2, 0, 0)\\)， \\(D_1(2, 0, 2)\\)， \\(F(1, \\sqrt{3}, 0)\\)， \\(C(0, 0, 0)\\)， \\(C_1(0, 0, 2)\\)，\n\n故  \\(\\overrightarrow{DA} = (1, \\sqrt{3}, 0)\\)， \\(\\overrightarrow{DD_1} = (0, 0, 2)\\)， \\(\\overrightarrow{CF} = (1, \\sqrt{3}, 0)\\)， \\(\\overrightarrow{CC_1} = (0, 0, 2)\\)，\n\n设平面  \\(ADD_1A_1\\) 的法向量为  \\(\\boldsymbol{m} = (x, y, z)\\)，则  \\(\\begin{cases} \\boldsymbol{m} \\cdot \\overrightarrow{DA} = x + \\sqrt{3}y = 0 \\\\ \\boldsymbol{m} \\cdot \\overrightarrow{DD_1} = 2z = 0 \\end{cases}\\)，\n\n令  \\(x = \\sqrt{3}\\)，则  \\(y = -1\\)， \\(z = 0\\)，所以  \\(\\boldsymbol{m} = (\\sqrt{3}, -1, 0)\\) 是平面  \\(ADD_1A_1\\) 的一个法向量，\n\n因为  \\(\\begin{cases} \\boldsymbol{m} \\cdot \\overrightarrow{CF} = \\sqrt{3} \\times 1 + (-1) \\times \\sqrt{3} + 0 \\times 0 = 0 \\\\ \\boldsymbol{m} \\cdot \\overrightarrow{CC_1} = \\sqrt{3} \\times 0 + (-1) \\times 0 + 0 \\times 2 = 0 \\end{cases}\\)，所以  \\(\\boldsymbol{m}\\) 也是平面  \\(FCC_1\\) 的一个法向量，故平面  \\(ADD_1A_1\\) // 平面  \\(FCC_1\\)。\n\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_346_1282_590_1524.jpg\" alt=\"Image\" width=\"20%\" /></div>\n\n\n<div style=\"text-align: center;\">图1</div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_648_1311_849_1485.jpg\" alt=\"Image\" width=\"16%\" /></div>\n\n\n<div style=\"text-align: center;\">图2</div>\n",
+      "text_sha256": "27f1aaa5193535c5457d1d85eed543c7b51998b01580c149fb6059269312ad21",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_874_533_1093_722.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_874_533_1093_722.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_346_1282_590_1524.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_346_1282_590_1524.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_648_1311_849_1485.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_648_1311_849_1485.jpg",
+          "exists": true
+        }
+      ],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 40,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_40.md",
+      "text": "【反思】用向量法证明两个平面平行，只需求出其中一个平面的法向量，再证明它也是另一个平面的法向量.\n\n## 类型Ⅱ：利用空间向量研究垂直关系\n\n【例 13】如图，在四棱锥  \\(P-ABCD\\) 中， \\(PA \\perp\\) 平面  \\(ABCD\\)， \\(AD \\perp AB\\)， \\(AB \\parallel DC\\)， \\(AD = DC = AP = 2\\)， \\(AB = 1\\)，求证：平面  \\(PCD \\perp\\) 平面 PBC。\n\n证明：（不难发现图中本身有 3 条两两垂直的直线，故可考虑建系处理）\n\n因为  \\(PA \\perp\\) 平面  \\(ABCD\\)， \\(AB\\)， \\(AD \\subset\\) 平面  \\(ABCD\\)，所以  \\(PA \\perp AB\\)， \\(PA \\perp AD\\)，\n\n又  \\(AD \\perp AB\\)，所以  \\(PA\\)， \\(AB\\)， \\(AD\\) 两两垂直，以  \\(A\\) 为原点建立如\n\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_886_251_1092_401.jpg\" alt=\"Image\" width=\"17%\" /></div>\n\n\n（怎样证平面 \\(PCD \\perp\\) 平面 \\(PBC\\)？如图2，可以想象，互相垂直的两个平面 \\(\\alpha\\)，\\(\\beta\\) 的法向量 \\(m\\)，\\(n\\) 也互相垂直故可通过证明两个平面的法向量垂直来证明这两个平面垂直）\n\n由图1可知，\\(P(0,0,2)\\)，\\(C(2,2,0)\\)，\\(D(0,2,0)\\)，\\(B(1,0,0)\\)，所以 \\(\\overrightarrow{DC}=(2,0,0)\\)，\\(\\overrightarrow{PC}=(2,2,-2)\\)，\\(\\overrightarrow{BC}=(1,2,0)\\)，设平面 \\(PCD\\) 和平面 \\(PBC\\) 的法向量分别为 \\(\\boldsymbol{m}=(x_1,y_1,z_1)\\)，\\(\\boldsymbol{n}=(x_2,y_2,z_2)\\)，\n\n则 \\(\\begin{cases} \\boldsymbol{m} \\cdot \\overrightarrow{DC} = 2x_1 = 0 \\\\ \\boldsymbol{m} \\cdot \\overrightarrow{PC} = 2x_1 + 2y_1 - 2z_1 = 0 \\end{cases}\\)，令 \\(y_1 = 1\\)，则 \\(\\begin{cases} x_1 = 0 \\\\ z_1 = 1 \\end{cases}\\)，所以 \\(\\boldsymbol{m} = (0,1,1)\\) 是平面 \\(PCD\\) 的一个法向量，\n\n同理，\\(\\begin{cases} \\boldsymbol{n} \\cdot \\overrightarrow{PC} = 2x_2 + 2y_2 - 2z_2 = 0 \\\\ \\boldsymbol{n} \\cdot \\overrightarrow{BC} = x_2 + 2y_2 = 0 \\end{cases}\\)，令 \\(x_2 = 2\\)，则 \\(\\begin{cases} y_2 = -1 \\\\ z_2 = 1 \\end{cases}\\)，所以 \\(\\boldsymbol{n} = (2,-1,1)\\) 是平面 \\(PBC\\) 的一个法向量，\n\n因为 \\(\\boldsymbol{m} \\cdot \\boldsymbol{n} = 0 \\times 2 + 1 \\times (-1) + 1 \\times 1 = 0\\)，所以 \\(\\boldsymbol{m} \\perp \\boldsymbol{n}\\)，故平面 \\(PCD\\) ⊥ 平面 \\(PBC\\)。\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_345_771_584_943.jpg\" alt=\"Image\" width=\"20%\" /></div>\n\n\n<div style=\"text-align: center;\">图1</div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_646_779_826_928.jpg\" alt=\"Image\" width=\"15%\" /></div>\n\n\n<div style=\"text-align: center;\">图2</div>\n\n\n【反思】用向量法证面面垂直，只需求出两个平面的法向量，再证明两个法向量垂直。但有的题不方便建系，这种情况下证明垂直关系，可以不建系，直接使用拆解法，我们来看下面的例14。\n\n【例14】如图，平行六面体  \\(ABCD-A_1B_1C_1D_1\\) 的底面  \\(ABCD\\) 是菱形，且  \\(CD=CC_1=2\\)， \\(\\angle C_1CB=\\angle C_1CD=\\angle BCD=60^\\circ\\)，证明： \\(CA_1 \\perp\\) 平面  \\(C_1BD\\)。\n\n证明：（要证结论成立，只需证  \\(\\overrightarrow{CA_1}\\) 是平面  \\(C_1BD\\) 的法向量，即证  \\(\\overrightarrow{CA_1} \\cdot \\overrightarrow{BC_1}=0\\) 和  \\(\\overrightarrow{CA_1} \\cdot \\overrightarrow{BD}=0\\)，怎么证？图中没有三条两两垂直的直线，建系比较麻烦，但注意到  \\(\\overrightarrow{CB}\\)， \\(\\overrightarrow{CD}\\)， \\(\\overrightarrow{CC_1}\\) 这三个向量既知道长度，又知道两两夹角，故可用它们表示上述有关向量，再求数量积）\n\n\n\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_870_1074_1094_1245.jpg\" alt=\"Image\" width=\"18%\" /></div>\n\n\n由图可知，\\(\\overrightarrow{CA_1}=\\overrightarrow{CB}+\\overrightarrow{CD}+\\overrightarrow{CC_1}\\)，\\(\\overrightarrow{BC_1}=\\overrightarrow{CC_1}-\\overrightarrow{CB}\\)，\\(\\overrightarrow{BD}=\\overrightarrow{CD}-\\overrightarrow{CB}\\)。因此\\(\\overrightarrow{CA_1}\\cdot\\overrightarrow{BC_1}=(\\overrightarrow{CB}+\\overrightarrow{CD}+\\overrightarrow{CC_1})\\cdot(\\overrightarrow{CC_1}-\\overrightarrow{CB})=|\\overrightarrow{CC_1}|^2-|\\overrightarrow{CB}|^2+\\overrightarrow{CD}\\cdot\\overrightarrow{CC_1}-\\overrightarrow{CD}\\cdot\\overrightarrow{CB}=2^2-2^2+2\\times2\\times\\cos60^\\circ-2\\times2\\times\\cos60^\\circ=0\\)；\\(\\overrightarrow{CA_1}\\cdot\\overrightarrow{BD}=(\\overrightarrow{CB}+\\overrightarrow{CD}+\\overrightarrow{CC_1})\\cdot(\\overrightarrow{CD}-\\overrightarrow{CB})=|\\overrightarrow{CD}|^2-|\\overrightarrow{CB}|^2+\\overrightarrow{CC_1}\\cdot\\overrightarrow{CD}-\\overrightarrow{CC_1}\\cdot\\overrightarrow{CB}=2^2-2^2+2\\times2\\times\\cos60^\\circ-2\\times2\\times\\cos60^\\circ=0\\)。从而  \\(\\overrightarrow{CA_{1}}\\) 是平面  \\(C_{1}BD\\) 的法向量，故  \\(CA_{1}\\perp\\) 平面  \\(C_{1}BD\\)\n\n【反思】用向量法证明直线与平面垂直，只需证直线上的一个向量u是平面的法向量，即证u与该平面内两个",
+      "text_sha256": "319f27a945cfdb70282507cf2bf946b0ccea6fd181ec9a51de74e82c39327ded",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_886_251_1092_401.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_886_251_1092_401.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_345_771_584_943.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_345_771_584_943.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_646_779_826_928.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_646_779_826_928.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_870_1074_1094_1245.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_870_1074_1094_1245.jpg",
+          "exists": true
+        }
+      ],
+      "math_errors": [],
+      "derived_corrections": [
+        {
+          "from": "由图可知，",
+          "to": "由图可知，",
+          "reason": "doc_40 visual review anchor; the OCR expansion below is replaced by a transcribed dot-product derivation"
+        }
+      ]
+    },
+    {
+      "ocr_doc": 41,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_41.md",
+      "text": "不共线的向量数量积为0.\n\n## 类型Ⅲ：利用空间向量求空间角\n\n【例 15】如图，在空间直角坐标系中有直三棱柱  \\(ABC-A_1B_1C_1\\)， \\(CA=CC_1=2CB=2\\)，则直线  \\(BC_1\\) 与  \\(AB_1\\) 所成角的正弦值为（ ）\n\nA.  \\(\\frac{\\sqrt{5}}{5}\\) B.  \\(\\frac{\\sqrt{5}}{3}\\) C.  \\(\\frac{2\\sqrt{5}}{5}\\) D.  \\(\\frac{3}{5}\\)\n\n解析：求线线角，可在两条直线上各取一个向量，计算它们的夹角余弦，进而得到线线角的正弦值，由图可知， \\(B(0,0,1)\\)， \\(C_1(0,2,0)\\)， \\(A(2,0,0)\\)， \\(B_1(0,2,1)\\)，所以  \\(\\overrightarrow{BC_1} = (0,2,-1)\\)， \\(\\overrightarrow{AB_1} = (-2,2,1)\\)，\n\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_854_237_1088_414.jpg\" alt=\"Image\" width=\"19%\" /></div>\n\n\n设直线 \\(BC_1\\) 与 \\(AB_1\\) 所成的角为 \\(\\theta\\)，则 \\(\\cos\\theta = \\left|\\cos<\\overrightarrow{BC_1},\\overrightarrow{AB_1}>\\right| = \\frac{\\left|\\overrightarrow{BC_1}\\cdot\\overrightarrow{AB_1}\\right|}{\\left|\\overrightarrow{BC_1}\\right|\\cdot\\left|\\overrightarrow{AB_1}\\right|} = \\frac{\\left|0\\times(-2)+2\\times2+(-1)\\times1\\right|}{\\sqrt{0^2+2^2+(-1)^2}\\times\\sqrt{(-2)^2+2^2+1^2}} = \\frac{\\sqrt{5}}{5}\\)，所以直线 \\(BC_1\\) 与 \\(AB_1\\) 所成角的正弦值为 \\(\\sin\\theta = \\sqrt{1-\\cos^2\\theta} = \\sqrt{1-\\left(\\frac{\\sqrt{5}}{5}\\right)^2} = \\frac{2\\sqrt{5}}{5}\\)。\n\n答案：C\n\n【反思】对于两条异面直线所成的角\\(\\theta\\)，可在两直线上各取一个向量\\(a\\)，\\(b\\)，按\\(\\cos\\theta=\\left|\\cos\\langle a,b\\rangle\\right|\\)求\\(\\cos\\theta\\)。\n\n【例16】（2021·天津卷（节选））如图，在棱长为2的正方体$ABCD-$$A_1B_1C_1D_1\\(中，\\)E\\(，\\)F\\(分别为棱\\)BC\\(，\\)CD\\(的中点，求直线\\)AC_1\\(与平面\\)A_1EC_1$所成角的正弦值。\n\n\n\n解：（正方体容易建系，可考虑建系处理，那建系后怎样用向量法求线面角？需要先求\n\n直线上的一个向量，以及平面的法向量，再求二者的夹角余弦值）\n\n以  \\(A\\) 为原点建立如图所示的空间直角坐标系，则  \\(A(0,0,0)\\)， \\(A_1(0,0,2)\\)， \\(E(2,1,0)\\)， \\(C_1(2,2,2)\\)，\n\n所以  \\(\\overrightarrow{AC_1} = (2,2,2)\\)， \\(\\overrightarrow{A_1C_1} = (2,2,0)\\)， \\(\\overrightarrow{EC_1} = (0,1,2)\\)，\n\n设平面  \\(A_1EC_1\\) 的法向量为  \\(\\boldsymbol{n} = (x,y,z)\\)，则  \\(\\begin{cases} \\boldsymbol{n} \\cdot \\overrightarrow{A_1C_1} = 2x + 2y = 0 \\\\ \\boldsymbol{n} \\cdot \\overrightarrow{EC_1} = y + 2z = 0 \\end{cases}\\)，令  \\(x = 2\\)，则  \\(y = -2\\)， \\(z = 1\\)，\n\n所以  \\(\\boldsymbol{n} = (2,-2,1)\\) 是平面  \\(A_1EC_1\\) 的一个法向量，\n\n\n\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_896_783_1093_962.jpg\" alt=\"Image\" width=\"16%\" /></div>\n\n\n设直线  \\(AC_1\\) 与平面  \\(A_1EC_1\\) 所成的角为  \\(\\theta\\)，则  \\(\\sin \\theta = |\\cos < \\overrightarrow{AC_1}, \\boldsymbol{n} > |\\) =  \\(\\frac{|AC_1 \\cdot \\boldsymbol{n}|}{|AC_1| \\cdot |\\boldsymbol{n}|}\\)\n\n \\(= \\frac{|2 \\times 2 + 2 \\times (-2) + 2 \\times 1|}{\\sqrt{2^2 + 2^2 + 2^2} \\times \\sqrt{2^2 + (-2)^2 + 1^2}} = \\frac{\\sqrt{3}}{9}\\)，\n\n所以直线  \\(AC_1\\) 与平面  \\(A_1EC_1\\) 所成角的正弦值为  \\(\\frac{\\sqrt{3}}{9}\\)。\n\n【反思】设直线  \\(l\\) 与平面  \\(\\alpha\\) 所成的角为  \\(\\theta\\)，则可按以下步骤用向量法求  \\(\\sin \\theta\\)：先在直线  \\(l\\) 上取一个向量  \\(\\boldsymbol{u}\\)，再求出平面  \\(\\alpha\\) 的法向量  \\(\\boldsymbol{n}\\)，则  \\(\\sin \\theta = |\\cos < \\boldsymbol{u}, \\boldsymbol{n} > |\\)。\n\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_850_1143_1090_1352.jpg\" alt=\"Image\" width=\"20%\" /></div>\n\n\n【例 17】如图，在四棱锥 P-ABCD 中，平面  \\(PAD \\perp\\) 平面 ABCD，底面\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_853_1486_1092_1663.jpg\" alt=\"Image\" width=\"20%\" /></div>\n",
+      "text_sha256": "fbba35217e88fe6a786acfd22a7773f7760958126dbb7f82efa1b36705396af2",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_854_237_1088_414.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_854_237_1088_414.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_896_783_1093_962.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_896_783_1093_962.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_850_1143_1090_1352.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_850_1143_1090_1352.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_853_1486_1092_1663.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_853_1486_1092_1663.jpg",
+          "exists": true
+        }
+      ],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 42,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_42.md",
+      "text": "ABCD 是菱形， \\(\\triangle PAD\\) 是正三角形， \\(\\angle ABC = \\frac{2\\pi}{3}\\)，E 是 AB 的中点.\n\n（1）证明： \\(AC \\perp PE\\)；\n\n（2）求平面 ACE 与平面 PCE 的夹角的余弦值.\n\n解：（1）证法1：（证线线垂直，需找线面垂直，若无思路，可尝试逆推．假设AC⊥PE，若能再找一个与AC或PE有关的线线垂直与之组合，就能得到线面垂直，找谁呢？看到面PAD⊥面ABCD，想到最常见的辅助线：过P作AD的垂线PO，得到PO⊥底面ABCD，于是PO⊥该面内所有直线，哪条有用呢？显然是AC，故可通过证AC⊥面POE来证本题的结论）\n\n如图，取  \\(AD\\) 中点  \\(O\\)，连接  \\(PO\\)， \\(OE\\)， \\(BD\\)，因为  \\(\\triangle PAD\\) 是正三角形， \\(O\\) 是  \\(AD\\) 的中点，所以  \\(PO \\perp AD\\)，因为平面  \\(PAD \\perp\\) 平面  \\(ABCD\\)，且平面  \\(PAD \\cap\\) 平面  \\(ABCD = AD\\)， \\(PO \\subset\\) 平面  \\(PAD\\)，所以  \\(PO \\perp\\) 平面  \\(ABCD\\)，因为  \\(AC \\subset\\) 平面  \\(ABCD\\)，所以  \\(AC \\perp PO\\) ①，\n\n因为  \\(ABCD\\) 是菱形，所以  \\(AC \\perp BD\\)，又因为  \\(O\\)， \\(E\\) 分别为  \\(AD\\)， \\(AB\\) 的中点，所以  \\(OE \\parallel BD\\)，故  \\(AC \\perp OE\\)，结合①以及  \\(PO\\)， \\(OE \\subset\\) 平面  \\(POE\\)， \\(PO \\cap OE = O\\) 可得  \\(AC \\perp\\) 平面  \\(POE\\)，因为  \\(PE \\subset\\) 平面  \\(POE\\)，所以  \\(AC \\perp PE\\)。\n\n证法2：（由题设条件容易找到三条两两垂直的直线，故也可建系，通过证明  \\(\\overrightarrow{AC} \\cdot \\overrightarrow{PE} = 0\\) 来证  \\(AC \\perp PE\\)）\n\n证明  \\(PO \\perp\\) 平面  \\(ABCD\\) 的过程同证法1，此处不再赘述，因为  \\(ABCD\\) 是菱形，所以  \\(AB = AD\\)，\n\n又  \\(\\angle ABC = \\frac{2\\pi}{3}\\)，所以  \\(\\angle BAD = \\frac{\\pi}{3}\\)，从而  \\(\\triangle ABD\\) 是正三角形，故  \\(OB \\perp AD\\)，\n\n以 \\(O\\) 为原点建立如图所示的空间直角坐标系，不妨设 \\(AD=4\\)，则 \\(OA=OD=2\\)，\\(OP=OB=2\\sqrt{3}\\)，所以 \\(A(2,0,0)\\)，\\(C(-4,2\\sqrt{3},0)\\)，\\(P(0,0,2\\sqrt{3})\\)，\\(E(1,\\sqrt{3},0)\\)，从而 \\(\\overrightarrow{AC}=(-6,2\\sqrt{3},0)\\)，\\(\\overrightarrow{PE}=(1,\\sqrt{3},-2\\sqrt{3})\\)，故 \\(\\overrightarrow{AC}\\cdot\\overrightarrow{PE}=-6\\times1+2\\sqrt{3}\\times\\sqrt{3}+0\\times(-2\\sqrt{3})=0\\)，所以 \\(\\overrightarrow{AC}\\perp\\overrightarrow{PE}\\)，故 \\(AC\\perp PE\\)。\n\n（2）（求二面角可用向量法，需要先求两个平面的法向量，我们沿用第（1）问证法2建立的坐标系，观察图形可发现平面ACE的法向量可直接获得，故只需求平面PCE的法向量）\n\n由（1）可得  \\(\\overrightarrow{PE}=(1,\\sqrt{3},-2\\sqrt{3})\\)， \\(\\overrightarrow{CE}=(5,-\\sqrt{3},0)\\)，\n\n由 (1) 可得  \\(PE = (1, \\sqrt{3}, -2\\sqrt{3})\\)， \\(CE = (5, -\\sqrt{3}, 0)\\)，\n\n设平面 PCE 的法向量为  \\(\\boldsymbol{m} = (x, y, z)\\)，则  \\(\\begin{cases} \\boldsymbol{m} \\cdot \\overrightarrow{PE} = x + \\sqrt{3}y - 2\\sqrt{3}z = 0 \\\\ \\boldsymbol{m} \\cdot \\overrightarrow{CE} = 5x - \\sqrt{3}y = 0 \\end{cases}\\)，\n\n令  \\(x = \\sqrt{3}\\)，则  \\(\\begin{cases} y = 5 \\\\ z = 3 \\end{cases}\\)，所以  \\(\\boldsymbol{m} = (\\sqrt{3}, 5, 3)\\) 是平面 PCE 的一个法向量，\n\n由图可知， \\(\\boldsymbol{n} = (0, 0, 1)\\) 是平面 ACE 的一个法向量，\n\n设平面 ACE 与平面 PCE 的夹角为  \\(\\theta\\)，则  \\(\\cos\\theta = |\\cos\\langle \\boldsymbol{m}, \\boldsymbol{n} \\rangle| = \\frac{|\\boldsymbol{m} \\cdot \\boldsymbol{n}|}{|\\boldsymbol{m}| \\cdot |\\boldsymbol{n}|} = \\frac{3\\sqrt{37}}{37}\\)，\n\n所以平面 ACE 与平面 PCE 的夹角的余弦值为  \\(\\frac{3\\sqrt{37}}{37}\\)。\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_833_948_1093_1146.jpg\" alt=\"Image\" width=\"21%\" /></div>\n\n\n所以平面 ACE 与平面 PCE 的夹角的余弦值为  \\(\\frac{3\\sqrt{37}}{37}\\).\n\n【反思】①不平行的平面 \\(\\alpha\\)与平面 \\(\\beta\\)的夹角 \\(\\theta\\in\\left(0,\\frac{\\pi}{2}\\right]\\)，要求其余弦值，可先求出两个平面的法向量 \\(m,n\\)，再按 \\(\\cos\\theta=\\left|\\cos\\langle m,n\\rangle\\right|\\)求 \\(\\alpha\\)与 \\(\\beta\\)的夹角余弦；\n\n②对于二面角  \\(\\alpha-l-\\beta\\)，其大小的取值范围是  \\([0,\\pi]\\)，且它与  \\(\\alpha\\)， \\(\\beta\\) 的夹角  \\(\\theta\\) 要么相等，要么互补，故若是让求二面角  \\(\\alpha-l-\\beta\\) 的余弦值，则我们常先求  \\(\\cos <m,n>\\)，再结合图形观察二面角  \\(\\alpha-l-\\beta\\) 的锐钝，决定该取正还是取负。比如下面的变式 1：\n\n③若由图不易看出二面角 \\(\\alpha-l-\\beta\\)的锐钝，还可通过法向量的指向来判断法向量的夹角与二面角 \\(\\alpha-l-\\beta\\)的大小关系。如图1，若两个法向量一个朝内，一个朝外，则它们的夹角等于二面角 \\(\\alpha-l-\\beta\\)；如图2，若两个法向量均朝内（或均朝外），则它们的夹角等于二面角 \\(\\alpha-l-\\beta\\)的补角，比如后面的变式2.",
+      "text_sha256": "ff93bf3046c59e59229f49a1a8989024a1c029bdbb1a9251ce8277415ee45e91",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_833_948_1093_1146.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_833_948_1093_1146.jpg",
+          "exists": true
+        }
+      ],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 43,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_43.md",
+      "text": "<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_410_133_577_227.jpg\" alt=\"Image\" width=\"14%\" /></div>\n\n\n<div style=\"text-align: center;\">图1</div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_617_116_778_227.jpg\" alt=\"Image\" width=\"13%\" /></div>\n\n\n<div style=\"text-align: center;\">图2</div>\n\n\n【变式1】如图1，在直角梯形EFBC中，BF∥CE，EC⊥EF，EF=1，FB=2，EC=3，现沿平行于EF的AD折叠，使得 \\(ED \\perp DC\\)且BC⊥平面BDE，如图2所示.\n\n（1）求AB的长度；\n\n（2）求二面角 F-EB-C 的大小.\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_352_499_584_606.jpg\" alt=\"Image\" width=\"19%\" /></div>\n\n\n<div style=\"text-align: center;\">图1</div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_622_457_836_610.jpg\" alt=\"Image\" width=\"17%\" /></div>\n\n\n<div style=\"text-align: center;\">图2</div>\n\n\n解：（1）（由 \\(BC \\perp\\) 面 \\(BDE\\) 可得到 \\(BC \\perp BD\\)，故翻折前的图 1 中也应有 \\(BC \\perp BD\\)，点 \\(D\\) 的位置就确定了，分析图 1 即可算出 \\(AB\\)）因为 \\(BC \\perp\\) 平面 \\(BDE\\)，\\(BD \\subset\\) 平面 \\(BDE\\)，所以 \\(BC \\perp BD\\)，由题意，\\(AD \\perp AB\\)，\n\n如图 3，作 \\(BG \\perp CD\\) 于点 \\(G\\)，则 \\(BG = AD = EF = 1\\)，设 \\(AB = a (a > 0)\\)，则 \\(BD = \\sqrt{AB^2 + AD^2} = \\sqrt{a^2 + 1}\\)，\n\n\\(CG = CE - EG = CE - FB = 1\\)，\\(BC = \\sqrt{BG^2 + CG^2} = \\sqrt{2}\\)，\\(CD = DG + CG = AB + CG = a + 1\\)，\n\n由 \\(BC \\perp BD\\) 可得 \\(BC^2 + BD^2 = CD^2\\)，所以 \\(2 + a^2 + 1 = (a + 1)^2\\)，解得：\\(a = 1\\)，故 \\(AB = 1\\)。\n\n（2）（观察图2，结合条件 \\(ED \\perp DC\\)可发现几何体本身就有三条两两垂直的直线，故直接建系处理）由题意， \\(ED \\perp DC\\)， \\(ED \\perp AD\\)， \\(AD \\perp DC\\)，所以DA，DC，DE两两垂直，\n\n \\[\\overrightarrow{EF}=(1,0,0)\\] \n\n \\[\\overrightarrow{EB}=(1,1,-1)\\] \n\n \\[\\overrightarrow{BC}=(-1,1,0)\\] \n\n设平面 FEB 和平面 EBC 的法向量分别为  \\(\\boldsymbol{m} = (x_1, y_1, z_1)\\)， \\(\\boldsymbol{n} = (x_2, y_2, z_2)\\)，则  \\(\\begin{cases} \\boldsymbol{m} \\cdot \\overrightarrow{EF} = x_1 = 0 \\\\ \\boldsymbol{m} \\cdot \\overrightarrow{EB} = x_1 + y_1 - z_1 = 0 \\end{cases}\\)，令  \\(y_1 = 1\\)，则  \\(x_1 = 0\\)， \\(z_1 = 1\\)，所以  \\(\\boldsymbol{m} = (0, 1, 1)\\) 是平面 FEB 的一个法向量，又  \\(\\begin{cases} \\boldsymbol{n} \\cdot \\overrightarrow{EB} = x_2 + y_2 - z_2 = 0 \\\\ \\boldsymbol{n} \\cdot \\overrightarrow{BC} = -x_2 + y_2 = 0 \\end{cases}\\)，令  \\(x_2 = 1\\)，则  \\(y_2 = 1\\)， \\(z_2 = 2\\)，所以  \\(\\boldsymbol{n} = (1, 1, 2)\\) 是平面 EBC 的一个法向量，故  \\(\\cos \\langle \\boldsymbol{m}, \\boldsymbol{n} \\rangle = \\frac{\\boldsymbol{m} \\cdot \\boldsymbol{n}}{|\\boldsymbol{m}| \\cdot |\\boldsymbol{n}|} = \\frac{0 \\times 1 + 1 \\times 1 + 1 \\times 2}{\\sqrt{0^2 + 1^2 + 1^2} \\times \\sqrt{1^2 + 1^2 + 2^2}} = \\frac{\\sqrt{3}}{2}\\)，\n\n由图4可知二面角 F-EB-C 为钝角，所以其余弦值为  \\(-\\frac{\\sqrt{3}}{2}\\)，故其大小为  \\(\\frac{5\\pi}{6}\\).\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_326_1344_565_1460.jpg\" alt=\"Image\" width=\"20%\" /></div>\n\n\n<div style=\"text-align: center;\">图3</div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_619_1281_862_1477.jpg\" alt=\"Image\" width=\"20%\" /></div>\n\n\n<div style=\"text-align: center;\">图4</div>\n",
+      "text_sha256": "36625d26198eeacbf6cddcf8e0e63709afe47bdfb82b17cac9bd33f10b317ebd",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_410_133_577_227.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_410_133_577_227.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_617_116_778_227.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_617_116_778_227.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_352_499_584_606.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_352_499_584_606.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_622_457_836_610.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_622_457_836_610.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_326_1344_565_1460.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_326_1344_565_1460.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_619_1281_862_1477.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_619_1281_862_1477.jpg",
+          "exists": true
+        }
+      ],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 44,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_44.md",
+      "text": "【变式2】如图，四面体ABCD的顶点都在以AB为直径的球面上，底面BCD是边长为 \\(\\sqrt{3}\\)的等边三角形，球心O到底面的距离为1.\n\n（1）求球O的表面积；\n\n（2）求二面角 B-AC-D 的余弦值.\n\n解：（1）（已知球心 \\(O\\) 到底面的距离 \\(d\\)，只需求出底面 \\(\\triangle BCD\\) 的外接圆半径 \\(r\\)，就能按 \\(R = \\sqrt{r^2 + d^2}\\) 算球 \\(O\\) 的半径 \\(R\\)，故先求 \\(r\\)，涉及外接圆半径，可考虑正弦定理）\n\n在 \\(\\triangle BCD\\) 中，由正弦定理，\\(2r = \\frac{BC}{\\sin \\angle BDC} = \\frac{\\sqrt{3}}{\\sin 60^\\circ} = 2\\)，所以 \\(r = 1\\)，\n\n又球心 \\(O\\) 到平面 \\(BCD\\) 的距离 \\(d = 1\\)，所以球 \\(O\\) 的半径 \\(R = \\sqrt{r^2 + d^2} = \\sqrt{2}\\)，故球 \\(O\\) 的表面积 \\(S = 4\\pi R^2 = 8\\pi\\)。\n\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_865_113_1099_343.jpg\" alt=\"Image\" width=\"19%\" /></div>\n\n\n（2）（求二面角，考虑建系. 注意到\\(\\triangle BCD\\)为正三角形，其中心与\\(O\\)的连线与平面\\(BCD\\)垂直，故不妨以该直线为\\(z\\)轴建系）设\\(I\\)为\\(\\triangle BCD\\)的中心，以\\(I\\)为原点建立如图所示的空间直角坐标系，则\\(B(1,0,0)\\)，\\(C\\left(-\\frac{1}{2},\\frac{\\sqrt{3}}{2},0\\right)\\)，\\(D\\left(-\\frac{1}{2},-\\frac{\\sqrt{3}}{2},0\\right)\\)，（算平面\\(ACB\\)和\\(ACD\\)的法向量还需要点\\(A\\)的坐标，怎么写？注意到\\(O\\)为\\(AB\\)中点，而\\(O\\)的坐标容易写出，故先写\\(O\\)的坐标，再结合中点公式求\\(A\\)的坐标）\n\n由图可知， \\(O(0,0,1)\\)，设  \\(A(a,b,c)\\)，则由中点公式， \\(\\left\\{\\begin{aligned}\\frac{a+1}{2}&=0\\\\ \\frac{b}{2}&=0\\\\ \\frac{c}{2}&=1\\end{aligned}\\right.\\)，解得： \\(\\left\\{\\begin{aligned}a&=-1\\\\ b&=0\\\\ c&=2\\end{aligned}\\right.\\)，所以  \\(A(-1,0,2)\\)，\n\n \\[\\overrightarrow{CB}=\\left(\\frac{3}{2},-\\frac{\\sqrt{3}}{2},0\\right),\\quad\\overrightarrow{CA}=\\left(-\\frac{1}{2},-\\frac{\\sqrt{3}}{2},2\\right),\\quad\\overrightarrow{DC}=(0,\\sqrt{3},0)\\] \n\n设平面 ACB 和平面 ACD 的法向量分别为  \\(\\boldsymbol{m}=(x_{1},y_{1},z_{1})\\)， \\(\\boldsymbol{n}=(x_{2},y_{2},z_{2})\\)。\n\n则\\(\\left\\{\\begin{array}{l}\\boldsymbol{m}\\cdot\\overrightarrow{CB}=\\frac{3}{2}x_{1}-\\frac{\\sqrt{3}}{2}y_{1}=0\\\\\\boldsymbol{m}\\cdot\\overrightarrow{CA}=-\\frac{1}{2}x_{1}-\\frac{\\sqrt{3}}{2}y_{1}+2z_{1}=0\\end{array}\\right.\\)，令\\(x_{1}=1\\)，则\\(y_{1}=\\sqrt{3}\\)，\\(z_{1}=1\\)，\n\n所以  \\(m = (1, \\sqrt{3}, 1)\\) 是平面 ACB 的一个法向量，\n\n同理， \\(\\begin{cases} \\boldsymbol{n} \\cdot \\overrightarrow{CA} = -\\frac{1}{2}x_2 - \\frac{\\sqrt{3}}{2}y_2 + 2z_2 = 0 \\\\ \\boldsymbol{n} \\cdot \\overrightarrow{DC} = \\sqrt{3}y_2 = 0 \\end{cases}\\)，令 \\(x_2 = 4\\)，则 \\(y_2 = 0\\)， \\(z_2 = 1\\)，\n\n所以  \\(\\boldsymbol{n}=(4,0,1)\\) 是平面 ACD 的一个法向量，\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_848_928_1100_1220.jpg\" alt=\"Image\" width=\"21%\" /></div>\n\n\n \\[\\cos<\\boldsymbol{m},\\boldsymbol{n}>=\\frac{\\boldsymbol{m}\\cdot\\boldsymbol{n}}{\\left|\\boldsymbol{m}\\right|\\cdot\\left|\\boldsymbol{n}\\right|}=\\frac{1\\times4+\\sqrt{3}\\times0+1\\times1}{\\sqrt{1^{2}+(\\sqrt{3})^{2}+1^{2}}\\times\\sqrt{4^{2}+0^{2}+1^{2}}}=\\frac{\\sqrt{85}}{17}\\] \n\n（由图不易看出二面角 B-AC-D 的锐钝，可考虑通过分析法向量的指向来判断取正还是取负。如图，直观想象可发现法向量 m 朝外，法向量 n 朝内，所以它们的夹角等于二面角的平面角，作答的时候，由于不方便严谨地阐述法向量的指向，所以我们还是直接说“由图可知，…”，而省略具体的判断过程）\n\n由图可知，二面角 B-AC-D 为锐角，所以其余弦值为  \\(\\frac{\\sqrt{85}}{17}\\).\n\n类型IV：利用空间向量求空间距离\n\n【例 18】已知点  \\(A(2,1,1)\\)，若点  \\(B(1,0,0)\\) 和点  \\(C(1,1,1)\\) 在直线 l 上，则点 A 到直线 l 的距离为 ___.",
+      "text_sha256": "ce16a532e8e3e44a9b60bc59d88b1bb17a46a8689b8364abf558a2da548b04f4",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_865_113_1099_343.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_865_113_1099_343.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_848_928_1100_1220.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_848_928_1100_1220.jpg",
+          "exists": true
+        }
+      ],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 45,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_45.md",
+      "text": "解析：求点  \\(A\\) 到直线  \\(l\\) 的距离，考虑代公式  \\(d = \\sqrt{AB}^2 - (AB \\cdot u)^2\\)，下面先求直线  \\(l\\) 的单位方向向量  \\(\\boldsymbol{u}\\)，由题意， \\(\\overrightarrow{BC} = (0, 1, 1)\\)，所以直线  \\(l\\) 的一个单位方向量为  \\(\\boldsymbol{u} = \\frac{\\overrightarrow{BC}}{\\left|\\overrightarrow{BC}\\right|} = \\frac{\\overrightarrow{BC}}{\\sqrt{0^2 + 1^2 + 1^2}} = \\frac{\\overrightarrow{BC}}{\\sqrt{2}} = \\left(0, \\frac{\\sqrt{2}}{2}, \\frac{\\sqrt{2}}{2}\\right)\\)，又因为  \\(\\overrightarrow{AB} = (-1, -1, -1)\\)，所以由点到直线的距离公式，点  \\(A\\) 到直线  \\(l\\) 的距离  \\(d = \\sqrt{AB^2 - (\\overrightarrow{AB} \\cdot \\boldsymbol{u})^2} = \\sqrt{(-1)^2 + (-1)^2 + (-1)^2} - \\left[-1 \\times 0 + (-1) \\times \\frac{\\sqrt{2}}{2} + (-1) \\times \\frac{\\sqrt{2}}{2}\\right]^2} = 1\\)。\n\n答案：1\n\n【反思】设  \\(A\\) 为直线  \\(l\\) 外一点， \\(B\\) 为直线  \\(l\\) 上任意一点， \\(u\\) 为直线  \\(l\\) 的一个单位方向向量，则点  \\(A\\) 到直线  \\(l\\) 的距离  \\(d = \\sqrt{AB}^2 - (\\overrightarrow{AB} \\cdot u)^2\\)。\n\n【例 19】如图，在三棱锥  \\(P-ABC\\) 中， \\(PA \\perp\\) 底面  \\(ABC\\)， \\(\\angle BAC = 90^\\circ\\)。点  \\(D\\)， \\(E\\)， \\(N\\) 分别为棱  \\(PA\\)， \\(PC\\)， \\(BC\\) 的中点， \\(M\\) 是线段  \\(AD\\) 的中点， \\(PA = AC = 2\\)， \\(AB = 1\\)。\n\n（1）求证：MN//平面BDE；\n\n（2）求点N到直线ME的距离.\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_882_521_1093_717.jpg\" alt=\"Image\" width=\"17%\" /></div>\n\n\n解：（1）证法1：（若用几何法证线面平行，需先找线线平行，怎么找？若无思路，可尝试逆推，假设\\(MN//\\)平面\\(BDE\\)，则经过直线\\(MN\\)的某平面与平面\\(BDE\\)相交，交线应与\\(MN\\)平行，观察发现\\(MN\\)和点\\(P\\)位于平面\\(BDE\\)的两侧，平面\\(PMN\\)与平面\\(BDE\\)的交线容易作出，于是先作出该交线，它就是我们要找的与\\(MN\\)平行的直线）如图，连接\\(PN\\)交\\(BE\\)于点\\(G\\)，连接\\(DG\\)，因为\\(E\\)，\\(N\\)分别为\\(PC\\)，\\(BC\\)的中点，所以\\(G\\)为\\(\\triangle PBC\\)的重心，故\\(\\frac{PG}{PN}=\\frac{2}{3}\\)，又由题意，\\(PD=\\frac{1}{2}PA=1\\)，\\(PM=\\frac{3}{4}PA=\\frac{3}{2}\\)，所以\\(\\frac{PD}{PM}=\\frac{2}{3}=\\frac{PG}{PN}\\)，故\\(DG\\parallel MN\\)，结合\\(DG\\subset\\)平面\\(BDE\\)，\\(MN\\not\\subset\\)平面\\(BDE\\)可得\\(MN//\\)平面\\(BDE\\)。\n\n证法2：（三棱锥中本身就有三条两两垂直的直线，故也可考虑建立坐标系，用向量法证 \\(MN \\parallel\\) 平面 \\(BDE\\)）\n\n以 \\(A\\) 为原点建立如图所示的空间直角坐标系，则 \\(M\\left(0,0,\\frac{1}{2}\\right)\\)，\\(N\\left(\\frac{1}{2},1,0\\right)\\)，\\(B(1,0,0)\\)，\\(D(0,0,1)\\)，\\(E(0,1,1)\\)，\n\n所以 \\(\\overrightarrow{MN}=\\left(\\frac{1}{2},1,-\\frac{1}{2}\\right)\\)，\\(\\overrightarrow{BD}=(-1,0,1)\\)，\\(\\overrightarrow{DE}=(0,1,0)\\)，设平面 \\(BDE\\) 的法向量为 \\(\\boldsymbol{m}=(x,y,z)\\)，\n\n则 \\(\\begin{cases}\\boldsymbol{m}\\cdot\\overrightarrow{BD}=-x+z=0\\\\ \\boldsymbol{m}\\cdot\\overrightarrow{DE}=y=0\\end{cases}\\)，令 \\(x=1\\)，则 \\(y=0\\)，\\(z=1\\)，所以 \\(\\boldsymbol{m}=(1,0,1)\\) 是平面 \\(BDE\\) 的一个法向量，\n\n因为 \\(\\overrightarrow{MN}\\cdot\\boldsymbol{m}=\\frac{1}{2}\\times1+1\\times0+\\left(-\\frac{1}{2}\\right)\\times1=0\\)，所以 \\(\\overrightarrow{MN}\\perp\\boldsymbol{m}\\)，又 \\(MN\\not\\subset\\) 平面 \\(BDE\\)，所以 \\(MN\\parallel\\) 平面 \\(BDE\\)。\n\n（2）（求点 \\(N\\) 到直线 \\(ME\\) 的距离，考虑代公式 \\(d=\\sqrt{MN}^2-(\\overrightarrow{MN}\\cdot\\boldsymbol{u})^2\\)，下面先求直线 \\(ME\\) 的单位方向向量 \\(\\boldsymbol{u}\\)）\n\n由（1）可得 \\(\\overrightarrow{ME}=\\left(0,1,\\frac{1}{2}\\right)\\)，所以直线 \\(ME\\) 的一个单位方向向量为\n\n\n\n \\[\\boldsymbol{u}=\\frac{\\overrightarrow{ME}}{\\left|\\overrightarrow{ME}\\right|}=\\frac{\\overrightarrow{ME}}{\\sqrt{1^{2}+\\left(\\frac{1}{2}\\right)^{2}}}=\\frac{2}{\\sqrt{5}}\\overrightarrow{ME}=\\left(0,\\frac{2}{\\sqrt{5}},\\frac{1}{\\sqrt{5}}\\right),\\] \n\n由点到直线的距离公式，点 \\(N\\) 到直线 \\(ME\\) 的距离 \\(d = \\sqrt{\\overrightarrow{MN}^2 - (\\overrightarrow{MN} \\cdot \\boldsymbol{u})^2}\\)\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_843_1341_1092_1553.jpg\" alt=\"Image\" width=\"20%\" /></div>\n",
+      "text_sha256": "66ccc59f82c379d4096e46f4bf9d34aee88aafc97f18e9a4630c8066e1ec8dbd",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_882_521_1093_717.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_882_521_1093_717.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_843_1341_1092_1553.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_843_1341_1092_1553.jpg",
+          "exists": true
+        }
+      ],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 46,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_46.md",
+      "text": " \\[=\\sqrt{\\left(\\frac{1}{2}\\right)^{2}+1^{2}+\\left(-\\frac{1}{2}\\right)^{2}-\\left[\\frac{1}{2}\\times0+1\\times\\frac{2}{\\sqrt{5}}+\\left(-\\frac{1}{2}\\right)\\times\\frac{1}{\\sqrt{5}}\\right]^{2}}=\\frac{\\sqrt{105}}{10}.\\] \n\n【反思】设 \\(N\\) 为直线 \\(l\\) 外一点，\\(M\\) 为直线 \\(l\\) 上任意一点，\\(u\\) 为直线 \\(l\\) 的一个单位方向向量，则点 \\(N\\) 到直线 \\(l\\) 的距离 \\(d = \\sqrt{\\overrightarrow{MN}^2 - (\\overrightarrow{MN} \\cdot \\boldsymbol{u})^2}\\)。\n\n【例 20】在四棱柱 \\(ABCD - A_1B_1C_1D_1\\) 中，底面 \\(ABCD\\) 为梯形，\\(AB \\parallel CD\\)，\\(A_1A\\) ⊥ 平面 \\(ABCD\\)，\\(AD \\perp AB\\)，且 \\(AB = AA_1 = 2\\)，\\(AD = DC = 1\\)，\\(M\\)，\\(N\\) 分别是 \\(DD_1\\)，\\(B_1C_1\\) 的中点。\n\n\n\n（1）求证： \\(D_{1}N\\) //平面 \\(CB_{1}M\\)；\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_915_306_1093_526.jpg\" alt=\"Image\" width=\"14%\" /></div>\n\n\n（2）求点B到平面 \\(CB_{1}M\\)的距离.\n\n解：（1）证法1：（证线面平行，先找线线平行．观察图形可发现过M容易作 \\(D_1N\\)的平行线，且作出来的D像平行四边形，且G像 \\(B_1C\\)的中点，思路就有了）\n\n如图，取 \\(B_1C\\)中点G，连接NG，MG，因为N为 \\(B_1C_1\\)的中点，所以 \\(NG \\parallel CC_1\\)且 \\(NG = \\frac{1}{2}CC_1\\)，\n\n又M为 \\(DD_1\\)的中点，所以由棱柱的性质， \\(D_1M \\parallel CC_1\\)且 \\(D_1M = \\frac{1}{2}CC_1\\)，从而 \\(NG \\parallel D_1M\\)且 \\(NG = D_1M\\)，\n\n故四边形 \\(D_1MGN\\)是平行四边形，所以 \\(D_1N \\parallel MG\\)，\n\n结合 \\(D_1N \\not\\subset\\)平面 \\(CB_1M\\)， \\(MG \\subset\\)平面 \\(CB_1M\\)可得 \\(D_1N \\parallel\\)平面 \\(CB_1M\\)。\n\n \\[D_{1}NGM\\] \n\n证法2：（由题设条件可发现，图中本身就有三条两两垂直的直线，故也可考虑建系，用向量法处理）\n\n以  \\(A\\) 为原点建立如图所示的空间直角坐标系，则  \\(D_1(0,1,2)\\)， \\(B_1(2,0,2)\\)， \\(C_1(1,1,2)\\)， \\(C(1,1,0)\\)， \\(M(0,1,1)\\)，\n\n因为  \\(N\\) 是  \\(B_1C_1\\) 的中点，所以  \\(N\\left(\\frac{3}{2},\\frac{1}{2},2\\right)\\)，\n\n故  \\(\\overrightarrow{D_1N} = \\left(\\frac{3}{2},-\\frac{1}{2},0\\right)\\)， \\(\\overrightarrow{B_1C} = (-1,1,-2)\\)， \\(\\overrightarrow{MC} = (1,0,-1)\\)，\n\n\n\n设平面 \\(CB_1M\\) 的法向量为 \\(\\boldsymbol{m} = (x, y, z)\\)，则 \\(\\begin{cases} \\boldsymbol{m} \\cdot \\overrightarrow{B_1C} = -x + y - 2z = 0 \\\\ \\boldsymbol{m} \\cdot \\overrightarrow{MC} = x - z = 0 \\end{cases}\\)，\n\n令 \\(x=1\\)，则 \\(y=3\\)，\\(z=1\\)，所以 \\(\\boldsymbol{m} = (1, 3, 1)\\) 是平面 \\(CB_1M\\) 的一个法向量，\n\n因为 \\(\\overrightarrow{D_1N} \\cdot \\boldsymbol{m} = \\frac{3}{2} \\times 1 + \\left(-\\frac{1}{2}\\right) \\times 3 + 0 \\times 1 = 0\\)，所以 \\(\\overrightarrow{D_1N} \\perp \\boldsymbol{m}\\)，\n\n又 \\(D_1N \\not\\subset\\) 平面 \\(CB_1M\\)，所以 \\(D_1N \\parallel\\) 平面 \\(CB_1M\\)。\n\n（2）（求点 \\(B\\) 到平面 \\(CB_1M\\) 的距离，可以套用公式 \\(d = \\frac{|BC \\cdot m|}{|m|}\\)，已有 \\(m\\) 的坐标，下面先求 \\(\\overrightarrow{BC}\\)）\n\n由图可知，\\(B(2,0,0)\\)，所以 \\(\\overrightarrow{BC} = (-1,1,0)\\)，由（1）的证法 2 可知平面 \\(CB_1M\\) 的一个法向量为 \\(\\boldsymbol{m} = (1,3,1)\\)，\n\n所以由点到平面的距离公式，点 \\(B\\) 到平面 \\(CB_1M\\) 的距离 \\(d = \\frac{| \\overrightarrow{BC} \\cdot \\boldsymbol{m} |}{| \\boldsymbol{m} |} = \\frac{| -1 \\times 1 + 1 \\times 3 + 0 \\times 1 |}{\\sqrt{1^2 + 3^2 + 1^2}} = \\frac{2\\sqrt{11}}{11}\\)。\n\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_884_901_1092_1159.jpg\" alt=\"Image\" width=\"17%\" /></div>\n\n\n【反思】设 \\(P\\) 在平面 \\(\\alpha\\) 外，\\(Q\\) 在 \\(\\alpha\\) 内，\\(n\\) 为 \\(\\alpha\\) 的法向量，则 \\(P\\) 到 \\(\\alpha\\) 的距离 \\(d = \\frac{|PQ \\cdot n|}{|n}\\)，我们常用此公式来求点到平面的距离。除此之外，异面直线的距离（公垂线段的长）也可用此公式计算，我们来看下面的变式。\n\n【变式】在长方体 \\(ABCD-A_1B_1C_1D_1\\) 中，\\(AA_1=1\\)，\\(AB=2\\)，\\(AD=3\\)，\\(E\\) 为 \\(AB\\) 的中点，则异面直线",
+      "text_sha256": "948e05cf707769df7586784d3ce2375b6c7a0df93e0ea6d5e1c378c03a7d82e2",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_915_306_1093_526.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_915_306_1093_526.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_884_901_1092_1159.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_884_901_1092_1159.jpg",
+          "exists": true
+        }
+      ],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 47,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_47.md",
+      "text": "DE 与  \\(D_{1}C\\) 的距离为 ___.\n\n解析：如图1，可以想象，不方便作出异面直线DE与 \\(D_1C\\)的公垂线段，再计算其长度，怎么办呢？我们把问题的模型单独拿出来看看。如图2，设异面直线 \\(a\\)， \\(b\\)的公垂线段是 \\(PQ\\)，过 \\(P\\)作 \\(a\\)的平行线 \\(a'\\)，由相交直线 \\(a'\\)和 \\(b\\)确定的平面记作 \\(\\alpha\\)，则异面直线 \\(a\\)， \\(b\\)之间的距离 \\(PQ\\)等于直线 \\(a\\)上任意一点到平面 \\(\\alpha\\)的距离，故可由此将异面直线之间的距离转化为点到平面的距离来算。下面我们套用此方法计算 \\(DE\\)与 \\(D_1C\\)的距离，\n\n如图1建系，则 \\(D(0,0,0)\\)， \\(E(3,1,0)\\)， \\(D_1(0,0,1)\\)， \\(C(0,2,0)\\)，所以 \\(\\overrightarrow{DE}=(3,1,0)\\)， \\(\\overrightarrow{D_1C}=(0,2,-1)\\)，\n\n在图2中，计算直线 \\(a\\)上的点到平面 \\(\\alpha\\)的距离需要 \\(\\alpha\\)的法向量 \\(n\\)，怎么求？由图2可知法向量 \\(n\\)与直线 \\(a'\\)和 \\(b\\)的方向向量都垂直，而 \\(a'\\)的方向向量显然也是 \\(a\\)的方向向量，故可由 \\(\\begin{cases}n\\cdot u=0\\\\n\\cdot v=0\\end{cases}\\)求 \\(n\\)，于是在图1中，也应寻找与直线 \\(DE\\)和 \\(D_1C\\)的方向向量都垂直的向量 \\(m\\)，\n\n设与 \\(\\overrightarrow{DE}\\)， \\(\\overrightarrow{D_1C}\\)都垂直的向量为 \\(\\boldsymbol{m}=(x,y,z)\\)，则 \\(\\begin{cases}\\boldsymbol{m}\\cdot\\overrightarrow{DE}=3x+y=0\\\\\\boldsymbol{m}\\cdot\\overrightarrow{D_1C}=2y-z=0\\end{cases}\\)，令 \\(x=1\\)，则 \\(y=-3\\)， \\(z=-6\\)，\n\n所以与 \\(\\overrightarrow{DE}\\)， \\(\\overrightarrow{D_1C}\\)都垂直的一个向量为 \\(\\boldsymbol{m}=(1,-3,-6)\\)，\n\n有了向量 \\(m\\) 的坐标，再到两直线上各选一个点，构造一个向量，就能代点到平面的距离公式了，\n\n又 \\(\\overrightarrow{DC} = (0,2,0)\\)，所以异面直线 \\(DE\\) 与 \\(D_1C\\) 之间的距离 \\(d = \\frac{|\\overrightarrow{DC} \\cdot \\boldsymbol{m}|}{|\\boldsymbol{m}|} = \\frac{|0 \\times 1 + 2 \\times (-3) + 0 \\times (-6)|}{\\sqrt{1^2 + (-3)^2 + (-6)^2}} = \\frac{3\\sqrt{46}}{23}\\)。\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_346_691_586_882.jpg\" alt=\"Image\" width=\"20%\" /></div>\n\n\n<div style=\"text-align: center;\">图1</div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_622_721_840_870.jpg\" alt=\"Image\" width=\"18%\" /></div>\n\n\n<div style=\"text-align: center;\">图2</div>\n\n\n答案： \\(\\frac{3\\sqrt{46}}{23}\\)\n\n【反思】求异面直线  \\(a\\),  \\(b\\) 之间距离的步骤是：①在直线  \\(a\\),  \\(b\\) 上各取 1 个向量  \\(u\\),  \\(v\\)，求出一个满足  \\(\\begin{cases} m \\cdot u = 0 \\\\ m \\cdot v = 0 \\end{cases}\\) 的非零向量  \\(m\\)；②在  \\(a\\),  \\(b\\) 上分别任取一点  \\(P\\),  \\(Q\\)，求出  \\(\\overrightarrow{PQ}\\)；③按  \\(d = \\frac{|\\overrightarrow{PQ} \\cdot m|}{|m|}\\) 计算  \\(a\\),  \\(b\\) 之间的距离。\n\n## 补充、拓展\n\n除了本节前面那几类常见的立体几何问题外，利用空间向量还能解决一些其它问题，下面我们给大家拓展判断点、直线是否在平面内这类问题的向量处理方法。\n\n类型V：用向量方法判断点、直线是否在平面内\n\n\n\n【例 21】（2020·新课标Ⅲ卷（节选））如图，在长方体 \\(ABCD-A_1B_1C_1D_1\\) 中，点 \\(E\\)，\\(F\\) 分别在棱 \\(DD_1\\)，\\(BB_1\\) 上，且 \\(2DE = ED_1\\)，\\(BF = 2FB_1\\)，证明：点 \\(C_1\\) 在平面 \\(AEF\\) 内。\n\n证法1：（观察图形发现  \\(EC_1 \\parallel AF\\)，故可通过证明这一平行关系来证结论成立）\n\n如图，在  \\(AA_1\\) 上取点  \\(G\\)，使得  \\(A_1G = 2AG\\)，连接  \\(B_1G\\)， \\(EG\\)， \\(EC_1\\)，\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_912_1316_1094_1635.jpg\" alt=\"Image\" width=\"15%\" /></div>\n",
+      "text_sha256": "b72e10d25d20567b1efb130adfc9cc3d053fc59451bdd6b053010ab5a224d250",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_346_691_586_882.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_346_691_586_882.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_622_721_840_870.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_622_721_840_870.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_912_1316_1094_1635.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_912_1316_1094_1635.jpg",
+          "exists": true
+        }
+      ],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 48,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_48.md",
+      "text": "则  \\(AG \\parallel B_{1}F\\) 且  \\(AG = B_{1}F\\)，所以四边形  \\(AGB_{1}F\\) 为平行四边形，故  \\(AF \\parallel B_{1}G\\)，\n\n又  \\(2DE = ED_{1}\\)，所以  \\(EG \\parallel A_{1}D_{1} \\parallel B_{1}C_{1}\\) 且  \\(EG = A_{1}D_{1} = B_{1}C_{1}\\)，故  \\(EGB_{1}C_{1}\\) 为平行四边形，\n\n所以  \\(EC_{1} \\parallel B_{1}G\\) ，从而  \\(EC_{1} \\parallel AF\\) ，故 A，E， \\(C_{1}\\)，F 四点共面，\n\n所以点  \\(C_{1}\\) 在平面 AEF 内.\n\n证法2：（点 \\(C_1\\)在平面 \\(AEF\\)内 \\(\\Leftrightarrow C_1\\overrightarrow{A}\\)是平面 \\(AEF\\)内的向量 \\(\\Leftrightarrow \\overrightarrow{C_1A}\\perp\\)平面 \\(AEF\\)的法向量，故也可通过证明 \\(\\overrightarrow{C_1A}\\perp\\)平面 \\(AEF\\)的法向量来证点 \\(C_1\\)在平面 \\(AEF\\)内）\n\n以 \\(C_1\\)为原点建立如图所示的空间直角坐标系，设 \\(AD=1\\)， \\(CD=a\\)， \\(CC_1=3b\\)，\n\n则 \\(A(a,1,3b)\\)， \\(E(a,0,2b)\\)， \\(F(0,1,b)\\)， \\(C_1(0,0,0)\\)，\n\n所以 \\(\\overrightarrow{C_1A}=(a,1,3b)\\)， \\(\\overrightarrow{EA}=(0,1,b)\\)， \\(\\overrightarrow{FA}=(a,0,2b)\\)，\n\n设平面 \\(AEF\\)的法向量为 \\(\\boldsymbol{m}=(x,y,z)\\)，则 \\(\\begin{cases}\\boldsymbol{m}\\cdot\\overrightarrow{EA}=y+bz=0\\\\\\boldsymbol{m}\\cdot\\overrightarrow{FA}=ax+2bz=0\\end{cases}\\)，\n\n令 \\(x=2b\\)，则 \\(\\begin{cases}y=ab\\\\z=-a\\end{cases}\\)，所以 \\(\\boldsymbol{m}=(2b,ab,-a)\\)是平面 \\(AEF\\)的一个法向量，\n\n从而 \\(\\overrightarrow{C_1A}\\cdot\\boldsymbol{m}=a\\cdot2b+1\\cdot ab+3b\\cdot(-a)=0\\)，故点 \\(C_1\\)在平面 \\(AEF\\)内.\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_882_281_1091_646.jpg\" alt=\"Image\" width=\"17%\" /></div>\n\n\n【反思】判断空间中的点 \\(P\\) 是否在平面 \\(\\alpha\\) 内，可在 \\(\\alpha\\) 内另取一点 \\(Q\\)，看看 \\(\\overrightarrow{PQ}\\) 是不是 \\(x\\) 是 \\(\\alpha\\) 内的向量。若是，则应有 \\(\\overrightarrow{PQ} \\cdot n = 0\\)；否则，\\(\\overrightarrow{PQ} \\cdot n \\neq 0\\)，其中 \\(n\\) 为平面 \\(\\alpha\\) 的法向量。\n\n【例 22】（2018·北京卷）如图，三棱柱 \\(ABC-A_1B_1C_1\\) 中，\\(CC_1 \\perp\\) 平面 \\(ABC\\)，\\(D\\)，\\(E\\)，\\(F\\)，\\(G\\) 分别为 \\(AA_1\\)，\\(AC\\)，\\(A_1C_1\\)，\\(BB_1\\) 的中点，\\(AB = BC = \\sqrt{5}\\)，\\(AC = AA_1 = 2\\)。\n\n\n\n（1）求证： \\(AC \\perp\\) 平面 BEF；\n\n（2）求二面角 B-CD-C_{1} 的余弦值：\n\n（3）证明：直线FG与平面BCD相交.\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_894_798_1093_1015.jpg\" alt=\"Image\" width=\"16%\" /></div>\n\n\n解：(1)（证 \\(AC \\perp\\) 面 \\(BEF\\)，需要证明 \\(AC\\) 垂直于面 \\(BEF\\) 内的两条相交直线，选哪两条？\n\n结合图形和已知条件可发现，容易证明 \\(AC \\perp EF\\) 和 \\(AC \\perp BE\\)，故选 \\(EF\\) 和 \\(BE\\)）\n\n在三棱柱 \\(ABC-A_1B_1C_1\\) 中，\\(E\\)，\\(F\\) 分别为 \\(AC\\)，\\(A_1C_1\\) 的中点，所以 \\(EF \\parallel CC_1\\)，\n\n因为 \\(CC_1 \\perp\\) 平面 \\(ABC\\)，所以 \\(EF \\perp\\) 平面 \\(ABC\\)，又 \\(AC \\subset\\) 平面 \\(ABC\\)，所以 \\(AC \\perp EF\\)，\n\n因为 \\(AB = BC = \\sqrt{5}\\)，所以 \\(AC \\perp BE\\)，因为 \\(BE\\)，\\(EF \\subset\\) 平面 \\(BEF\\) 且 \\(BE \\cap EF = E\\)，所以 \\(AC \\perp\\) 平面 \\(BEF\\)\n\n（2）（求二面角，考虑建系。已有 \\(EA\\)，\\(EB\\)，\\(EF\\) 两两垂直，可直接建系处理）\n\n以 \\(E\\) 为原点建立如图所示的空间直角坐标系，则 \\(C(-1,0,0)\\)，\\(D(1,0,1)\\)，\n\n在 \\(\\triangle AEB\\) 中，\\(EB = \\sqrt{AB^2 - AE^2} = \\sqrt{(\\sqrt{5})^2 - 1^2} = 2\\)，所以 \\(B(0,2,0)\\)，故 \\(\\overrightarrow{CB} = (1,2,0)\\)，\\(\\overrightarrow{CD} = (2,0,1)\\)，\n\n设平面 \\(BCD\\) 的法向量为 \\(\\boldsymbol{m} = (x,y,z)\\)，则 \\(\\begin{cases} \\boldsymbol{m} \\cdot \\overrightarrow{CB} = x + 2y = 0 \\\\ \\boldsymbol{m} \\cdot \\overrightarrow{CD} = 2x + z = 0 \\end{cases}\\)，令 \\(x = 2\\)，则 \\(y = -1\\)，\\(z = -4\\)，\n\n所以 \\(\\boldsymbol{m} = (2, -1, -4)\\) 是平面 \\(BCD\\) 的一个法向量，由图可知 \\(\\boldsymbol{n} = (0,1,0)\\) 是平面 \\(CDC\\) 的一个法向量，\n\n \\[\\cos<\\boldsymbol{m},\\boldsymbol{n}>=\\frac{\\boldsymbol{m}\\cdot\\boldsymbol{n}}{\\left|\\boldsymbol{m}\\right|\\cdot\\left|\\boldsymbol{n}\\right|}=\\frac{2\\times0+(-1)\\times1+(-4)\\times0}{\\sqrt{2^{2}+(-1)^{2}+(-4)^{2}}\\times1}=-\\frac{\\sqrt{21}}{21}.\\] \n\n由图可知，二面角 B-CD-C_{1} 为钝角，故其余弦值为  \\(-\\frac{\\sqrt{21}}{21}\\)\n\n（3）（怎样证直线与平面相交？直线与平面相交意味着直线上的向量不在平面内，那么它与平面的法向量不垂直，故可按此证明直线与平面相交）\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_835_1385_1091_1640.jpg\" alt=\"Image\" width=\"21%\" /></div>\n",
+      "text_sha256": "9f87297eb240268b13c49198bed0c0be0a8ea1ded91c80fb4ea46f943b7686a3",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_882_281_1091_646.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_882_281_1091_646.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_894_798_1093_1015.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_894_798_1093_1015.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_835_1385_1091_1640.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_835_1385_1091_1640.jpg",
+          "exists": true
+        }
+      ],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 49,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_49.md",
+      "text": "由图可知， \\(F(0,0,2)\\)， \\(G(0,2,1)\\)，所以 \\(\\overrightarrow{FG}=(0,2,-1)\\)，\n\n由（2）可知 \\(m=(2,-1,-4)\\)是平面 \\(BCD\\)的一个法向量，\n\n因为 \\(\\overrightarrow{FG}\\cdot m=2\\neq0\\)，所以 \\(\\overrightarrow{FG}\\)与 \\(m\\)不垂直，故 \\(FG\\)与平面 \\(BCD\\)相交.\n\n【反思】直线与平面有线在面内、线面平行、线面相交三种位置关系，可通过计算直线的方向向量  \\(\\boldsymbol{s}\\) 与平面法向量  \\(\\boldsymbol{n}\\) 的数量积来判断二者的位置关系， \\(\\boldsymbol{s} \\cdot \\boldsymbol{n} = 0 \\Leftrightarrow\\) 线面平行或线在面内， \\(\\boldsymbol{s} \\cdot \\boldsymbol{n} \\neq 0 \\Leftrightarrow\\) 线面相交。\n\n## 强化训练\n\n## A 组 夯实基础\n\n已知直线  \\(l_{1}\\) 的方向向量  \\(\\boldsymbol{\\bar{s}}_{1}=(1,0,1)\\) 与直线  \\(l_{2}\\) 的方向向量  \\(\\boldsymbol{\\bar{s}}_{2}=(-1,2,-2)\\)，则  \\(l_{1}\\) 和  \\(l_{2}\\) 夹角的余弦值为（）\n\nA.  \\(\\frac{\\sqrt{2}}{4}\\) B.  \\(\\frac{1}{2}\\) C.  \\(\\frac{\\sqrt{2}}{2}\\) D.  \\(\\frac{\\sqrt{3}}{2}\\)\n\n2.（2025·福建厦门期中）\n\n如图，正方体  \\(ABCD-A_{1}B_{1}C_{1}D_{1}\\) 的棱长为 2，E，F，G 分别为  \\(BB_{1}\\)， \\(B_{1}D_{1}\\)，AB 的中点.\n\n（1）求证： \\(EF \\perp A_{1}D\\)；\n\n（2）求证：EF//平面 \\(A_{1}DG\\)\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_894_850_1093_1040.jpg\" alt=\"Image\" width=\"16%\" /></div>\n\n\n## B 组 强化能力\n\n3.（2025·广东深圳期末）\n\n长方体  \\(ABCD-A_{1}B_{1}C_{1}D_{1}\\) 中，底面 ABCD 是边长为 2 的正方形，若直线  \\(AB_{1}\\) 与  \\(BD_{1}\\) 所成角的余弦值为  \\(\\frac{\\sqrt{5}}{5}\\)，则  \\(AA_{1}\\) 的长为（）\n\nA.  \\(2\\sqrt{3}\\) B. 1 或  \\(2\\sqrt{3}\\)\n\nC. 12 D. 1 或 12",
+      "text_sha256": "e152cd2ed998d960357ce77c905920af6b2e3e2af281bf7a0891118fd50cbae4",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_894_850_1093_1040.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_894_850_1093_1040.jpg",
+          "exists": true
+        }
+      ],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 50,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_50.md",
+      "text": "### 4. （2025·新疆模拟）\n\n如图，在四棱锥  \\(P-ABCD\\) 中， \\(PD \\perp\\) 平面  \\(ABCD\\)，底面  \\(ABCD\\) 为菱形，且  \\(\\angle ABC = 60^\\circ\\)\n\n（1）求证： \\(AC \\perp PB\\)；\n\n（2）若 AB = 2，当平面  \\(PAB \\perp\\) 平面 PBC 时，求 PD 的长.\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_896_353_1093_566.jpg\" alt=\"Image\" width=\"16%\" /></div>\n\n\n## 一 数·高中数学一本通\n\n### 5. （2025·浙江温州期末）\n\n如图，在平行六面体  \\(ABCD-A_{1}B_{1}C_{1}D_{1}\\) 中，\\(AB=AD=AA_{1}=1，\\angle A_{1}AB=\\angle A_{1}AD=\\angle BAD=60^{\\circ}\\)． \n\n（1）求 \\(AC_{1}\\)的长；\n\n（2）求证： \\(A_{1}C\\perp\\) 平面 \\(BDD_{1}B_{1}\\)\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_833_1138_1095_1313.jpg\" alt=\"Image\" width=\"21%\" /></div>\n",
+      "text_sha256": "360c3146b6c136ec2de61d0caba041dccc4ce8564d99739e77d81e0e941fb777",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_896_353_1093_566.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_896_353_1093_566.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_833_1138_1095_1313.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_833_1138_1095_1313.jpg",
+          "exists": true
+        }
+      ],
+      "math_errors": [],
+      "derived_corrections": [
+        {
+          "from": "中，AB=",
+          "to": "中，AB=",
+          "reason": "source PDF page 51 visual review E1; rejoin the B5 equality split across OCR lines"
+        }
+      ]
+    },
+    {
+      "ocr_doc": 51,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_51.md",
+      "text": "### 6. （2025·天津期末）\n\n如图，在四棱锥  \\(P-ABCD\\) 中，平面  \\(PAD \\perp\\) 平面  \\(ABCD\\)， \\(\\triangle PAD\\) 是以  \\(AD\\) 为斜边的等腰直角三角形，底面  \\(ABCD\\) 为直角梯形， \\(BC \\parallel AD\\)， \\(CD \\perp AD\\)，且  \\(2BC = AD = 4\\)， \\(CD = 1\\)， \\(E\\)， \\(O\\) 分别是  \\(PD\\)， \\(AD\\) 的中点。\n\n（1）求证： \\(PO \\perp\\) 平面 ABCD；\n\n（2）求平面 PAB 与平面 PBC 夹角的余弦值；\n\n（3）求点E到平面PAB的距离.\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_846_360_1093_546.jpg\" alt=\"Image\" width=\"20%\" /></div>\n\n\n### 7. （2024·安徽合肥二模）\n\n如图，在四棱锥 P-ABCD 中，底面 ABCD 是边长为 2 的菱形， \\(\\angle BAD = 60^{\\circ}\\)，M 是侧棱 PC 的中点，侧面 PAD 为正三角形，侧面  \\(PAD \\perp\\) 底面 ABCD.\n\n（1）求三棱锥 M-ABC 的体积；\n\n（2）求 AM 与平面 PBC 所成角的正弦值.\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_848_1062_1094_1228.jpg\" alt=\"Image\" width=\"20%\" /></div>\n",
+      "text_sha256": "acb00491a81788e3f424d4484e2a3a48dbb3b613904ae653f744efbe8e087133",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_846_360_1093_546.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_846_360_1093_546.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_848_1062_1094_1228.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_848_1062_1094_1228.jpg",
+          "exists": true
+        }
+      ],
+      "math_errors": [],
+      "derived_corrections": [
+        {
+          "from": "（2024·安徽合肥二模）数·高中数学一本通",
+          "to": "（2024·安徽合肥二模）",
+          "reason": "source PDF page 52 visual review E1; remove the running header fused into B7"
+        }
+      ]
+    },
+    {
+      "ocr_doc": 52,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_52.md",
+      "text": "8.（2025 · 重庆模拟）\n\n如图，在三棱柱  \\(ABC-A_{1}B_{1}C_{1}\\) 中，平面  \\(A_{1}B_{1}BA\\) ⊥ 平面 ABC，侧面  \\(A_{1}B_{1}BA\\) 为菱形， \\(\\angle ABB_{1}=\\frac{\\pi}{3}\\)， \\(AB_{1}\\perp AC\\)，AB=AC=2。\n\n（1）求证： \\(A_{1}B\\perp\\) 平面 \\(AB_{1}C\\)\n\n（2）求直线 \\(BB_{1}\\)与 \\(CC_{1}\\)的距离；\n\n（3）求平面 \\(CC_{1}B_{1}\\)与平面 \\(AA_{1}B_{1}\\)所成二面角的平面角的正弦值.\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_836_403_1094_599.jpg\" alt=\"Image\" width=\"21%\" /></div>\n\n\n## 一 数·高中数学一本通\n\n## C 组 拓展提升\n\n### 9. （2024·陕西模拟）\n\n正四棱锥 S-ABCD 中，O 为顶点 S 在底面 ABCD 内的射影，P 为侧棱 SD 的中点，且  \\(SO = OD = \\sqrt{2}\\)，则异面直线 PC 与 BD 的距离为（ ）\n\nA.  \\(\\frac{\\sqrt{10}}{10}\\) B.  \\(\\frac{\\sqrt{10}}{5}\\) C.  \\(\\frac{\\sqrt{5}}{10}\\) D.  \\(\\frac{\\sqrt{5}}{5}\\)",
+      "text_sha256": "3672a640cee03789d26fb5604bfd5d9fb4c430324d0aff52fedc5b3bdb368bac",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_836_403_1094_599.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_836_403_1094_599.jpg",
+          "exists": true
+        }
+      ],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 53,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_53.md",
+      "text": "### 10. （2024·陕西模拟）\n\n已知边长为4的菱形 \\(ABCD\\)（如图1），\\(\\angle BAD=\\frac{\\pi}{3}\\)，\\(AC\\) 与 \\(BD\\) 相交于点 \\(O\\)，\\(E\\) 为线段 \\(AO\\) 上一点，将 \\(\\triangle ABD\\) 沿 \\(BD\\) 折叠成三棱锥 \\(A-BCD\\)（如图2）。\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_383_282_622_439.jpg\" alt=\"Image\" width=\"20%\" /></div>\n\n\n<div style=\"text-align: center;\">图1</div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_638_267_835_434.jpg\" alt=\"Image\" width=\"16%\" /></div>\n\n\n<div style=\"text-align: center;\">图2</div>\n\n\n（1）证明： \\(BD \\perp CE\\)；\n\n（2）若三棱锥 A-BCD 的体积为 8，二面角 B-CE-O 的余弦值为  \\(\\frac{\\sqrt{15}}{10}\\)，求 OE 的长.\n\n## 一 数·高中数学一本通\n\n### 11. (2019 · 北京卷)\n\n如图，在四棱锥 P-ABCD 中， \\(PA \\perp\\) 平面 ABCD， \\(AD \\perp CD\\)， \\(AD \\parallel BC\\)，PA = AD = CD = 2，BC = 3，E 为 PD 的中点，点 F 在 PC 上，且  \\(\\frac{PF}{PC} = \\frac{1}{3}\\).\n\n（1）求证： \\(CD \\perp\\) 平面 PAD；\n\n（2）求二面角 F-AE-P 的余弦值；\n\n（3）设点 G 在 PB 上，且  \\(\\frac{PG}{PB} = \\frac{2}{3}\\)，判断直线 AG 是否在平面 AEF 内，说明理由.\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_871_1163_1093_1335.jpg\" alt=\"Image\" width=\"18%\" /></div>\n",
+      "text_sha256": "e7f106b522ffb5d8ca233fff85504cfc5d70fbd4d9ec924a300cd9beeab4fbfc",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_383_282_622_439.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_383_282_622_439.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_638_267_835_434.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_638_267_835_434.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_871_1163_1093_1335.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_871_1163_1093_1335.jpg",
+          "exists": true
+        }
+      ],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 54,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_54.md",
+      "text": "### 12. （2024·新疆乌鲁木齐一模）\n\n如图，在四棱锥 P-ABCD 中，底面 ABCD 为正方形， \\(PA \\perp\\) 平面 ABCD，PA = AB，点 E，F 分别是棱 PB，BC 的中点.\n\n（1）求直线 AF 与平面 PBC 所成角的正弦值；\n\n（2）在截面 AEF 内是否存在点 G，使 DG ⊥ 平面 AEF？说明理由.\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_891_353_1093_547.jpg\" alt=\"Image\" width=\"16%\" /></div>\n",
+      "text_sha256": "f5ca47f132ec0c2e6d4c81e4c16a7b36d99fe623ad4680202f480647c392c515",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_891_353_1093_547.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_891_353_1093_547.jpg",
+          "exists": true
+        }
+      ],
+      "math_errors": []
+    }
+  ],
+  "questions": [
+    {
+      "qid": "Q-9b09a35af11358ea",
+      "section": "1.4",
+      "group": "A",
+      "number": 1,
+      "kind": "A组",
+      "source_anchor": {
+        "ocr_doc": 49,
+        "pdf_page": 50,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_49.md",
+        "recovery": "primary_ocr_question_recovery",
+        "recovery_source_kind": "primary_ocr"
+      },
+      "question_text": "已知直线  \\(l_{1}\\) 的方向向量  \\(\\boldsymbol{\\bar{s}}_{1}=(1,0,1)\\) 与直线  \\(l_{2}\\) 的方向向量  \\(\\boldsymbol{\\bar{s}}_{2}=(-1,2,-2)\\)，则  \\(l_{1}\\) 和  \\(l_{2}\\) 夹角的余弦值为（）\n\nA.  \\(\\frac{\\sqrt{2}}{4}\\) B.  \\(\\frac{1}{2}\\) C.  \\(\\frac{\\sqrt{2}}{2}\\) D.  \\(\\frac{\\sqrt{3}}{2}\\)",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1",
+        "primary_ocr_question_recovery"
+      ],
+      "recovery_reason": "正册 OCR 题号丢失；章节合并无答案册 doc_49 有完整题干和选项"
+    },
+    {
+      "qid": "Q-d9a94e1764dd378e",
+      "section": "1.4",
+      "group": "A",
+      "number": 2,
+      "kind": "A组",
+      "source_anchor": {
+        "ocr_doc": 49,
+        "pdf_page": 50,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_49.md"
+      },
+      "question_text": "2.（2025·福建厦门期中）\n\n如图，正方体  \\(ABCD-A_{1}B_{1}C_{1}D_{1}\\) 的棱长为 2，E，F，G 分别为  \\(BB_{1}\\)， \\(B_{1}D_{1}\\)，AB 的中点.\n\n（1）求证： \\(EF \\perp A_{1}D\\)；\n\n（2）求证：EF//平面 \\(A_{1}DG\\)\n\n",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_894_850_1093_1040.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_894_850_1093_1040.jpg",
+          "exists": true
+        }
+      ],
+      "visual_status": "VISION_VERIFIED",
+      "math_errors": [],
+      "evidence": [
+        "E1",
+        "E1"
+      ],
+      "vision_sidecars": [
+        {
+          "image": "C:\\开发\\小工具\\一本通DeepSeek迭代\\worker-01-content\\ocr\\imgs\\img_in_image_box_894_850_1093_1040.jpg",
+          "image_sha256": null,
+          "confidence": "E1",
+          "structured": {
+            "points": [
+              "A",
+              "B",
+              "C",
+              "A1",
+              "B1",
+              "C1",
+              "D",
+              "E",
+              "F",
+              "G"
+            ],
+            "relations": {
+              "parallel": [
+                [
+                  "AA1",
+                  "BB1"
+                ],
+                [
+                  "AB",
+                  "A1B1"
+                ]
+              ]
+            },
+            "text": "正方体图，E/F/G 为图中标出的点。",
+            "uncertainties": [
+              "视觉模型对部分虚线和垂直关系不确定，必须回看页图。"
+            ]
+          },
+          "source_provenance": null
+        }
+      ],
+      "vision_sidecar": {
+        "points": [
+          "A",
+          "B",
+          "C",
+          "A1",
+          "B1",
+          "C1",
+          "D",
+          "E",
+          "F",
+          "G"
+        ],
+        "relations": {
+          "parallel": [
+            [
+              "AA1",
+              "BB1"
+            ],
+            [
+              "AB",
+              "A1B1"
+            ]
+          ]
+        },
+        "text": "正方体图，E/F/G 为图中标出的点。",
+        "uncertainties": [
+          "视觉模型对部分虚线和垂直关系不确定，必须回看页图。"
+        ]
+      },
+      "vision_source_provenance": []
+    },
+    {
+      "qid": "Q-62bc7d912b6b829d",
+      "section": "1.4",
+      "group": "B",
+      "number": 3,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 49,
+        "pdf_page": 50,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_49.md"
+      },
+      "question_text": "3.（2025·广东深圳期末）\n\n长方体  \\(ABCD-A_{1}B_{1}C_{1}D_{1}\\) 中，底面 ABCD 是边长为 2 的正方形，若直线  \\(AB_{1}\\) 与  \\(BD_{1}\\) 所成角的余弦值为  \\(\\frac{\\sqrt{5}}{5}\\)，则  \\(AA_{1}\\) 的长为（）\n\nA.  \\(2\\sqrt{3}\\) B. 1 或  \\(2\\sqrt{3}\\)\n\nC. 12 D. 1 或 12",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-ad1c7fa22101c9cc",
+      "section": "1.4",
+      "group": "B",
+      "number": 4,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 50,
+        "pdf_page": 51,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_50.md"
+      },
+      "question_text": "### 4. （2025·新疆模拟）\n\n如图，在四棱锥  \\(P-ABCD\\) 中， \\(PD \\perp\\) 平面  \\(ABCD\\)，底面  \\(ABCD\\) 为菱形，且  \\(\\angle ABC = 60^\\circ\\)\n\n（1）求证： \\(AC \\perp PB\\)；\n\n（2）若 AB = 2，当平面  \\(PAB \\perp\\) 平面 PBC 时，求 PD 的长.\n\n",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_896_353_1093_566.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_896_353_1093_566.jpg",
+          "exists": true
+        }
+      ],
+      "visual_status": "VISION_VERIFIED",
+      "math_errors": [],
+      "evidence": [
+        "E1",
+        "E2"
+      ],
+      "vision_sidecars": [
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\reports\\source_visuals2\\pyramid_b4_source_page_051_crop.png",
+          "image_sha256": "b446d89d90d6b99b6980fde4f4cffdc0a44479e04130bfae048e87551297045a",
+          "confidence": "E2",
+          "structured": {
+            "objects": [
+              "点P",
+              "点D",
+              "点A",
+              "点B",
+              "点C",
+              "线段PD",
+              "线段DA",
+              "线段AB",
+              "线段BC",
+              "线段PC",
+              "线段PB",
+              "线段DC"
+            ],
+            "relations": [
+              "点D在PD上",
+              "点A在DA上",
+              "点B在AB上",
+              "点C在BC上",
+              "点P在PC上",
+              "点P在PB上",
+              "点D在DC上",
+              "线段DC是虚线",
+              "线段PD连接点P和D",
+              "线段DA连接点D和A",
+              "线段AB连接点A和B",
+              "线段BC连接点B和C",
+              "线段PC连接点P和C",
+              "线段PB连接点P和B",
+              "线段DC连接点D和C"
+            ],
+            "coordinates": [
+              {
+                "point": "P",
+                "position": "上方偏左"
+              },
+              {
+                "point": "D",
+                "position": "左下方"
+              },
+              {
+                "point": "A",
+                "position": "左下方偏右"
+              },
+              {
+                "point": "B",
+                "position": "右下方"
+              },
+              {
+                "point": "C",
+                "position": "中间偏右"
+              }
+            ],
+            "ranges": [],
+            "text": {
+              "point_labels": {
+                "P": "P",
+                "D": "D",
+                "A": "A",
+                "B": "B",
+                "C": "C"
+              }
+            },
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": {
+            "source_kind": "high_resolution_source_pdf_crop",
+            "source_pdf": "C:\\Users\\poyi\\Downloads\\【2025-2025版】选择性必修第1册\\按章节合并（无答案册）\\第1章 空间向量与立体几何（无答案册）.pdf",
+            "source_pdf_sha256": "9d3f38a7591742e22282490256a5c6bef8f644abc0e65db06f3dceb0251894ff",
+            "pdf_page": 51,
+            "crop_rect": [
+              420,
+              145,
+              595,
+              390
+            ],
+            "derived_from_image_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_full\\imgs\\img_in_image_box_896_353_1093_566.jpg",
+            "derived_from_image_sha256": "4f72deff759fe90b3bcef3bf221ffa4494bbc2275f05f4bea830fa6692b4815b"
+          }
+        }
+      ],
+      "vision_sidecar": {
+        "objects": [
+          "点P",
+          "点D",
+          "点A",
+          "点B",
+          "点C",
+          "线段PD",
+          "线段DA",
+          "线段AB",
+          "线段BC",
+          "线段PC",
+          "线段PB",
+          "线段DC"
+        ],
+        "relations": [
+          "点D在PD上",
+          "点A在DA上",
+          "点B在AB上",
+          "点C在BC上",
+          "点P在PC上",
+          "点P在PB上",
+          "点D在DC上",
+          "线段DC是虚线",
+          "线段PD连接点P和D",
+          "线段DA连接点D和A",
+          "线段AB连接点A和B",
+          "线段BC连接点B和C",
+          "线段PC连接点P和C",
+          "线段PB连接点P和B",
+          "线段DC连接点D和C"
+        ],
+        "coordinates": [
+          {
+            "point": "P",
+            "position": "上方偏左"
+          },
+          {
+            "point": "D",
+            "position": "左下方"
+          },
+          {
+            "point": "A",
+            "position": "左下方偏右"
+          },
+          {
+            "point": "B",
+            "position": "右下方"
+          },
+          {
+            "point": "C",
+            "position": "中间偏右"
+          }
+        ],
+        "ranges": [],
+        "text": {
+          "point_labels": {
+            "P": "P",
+            "D": "D",
+            "A": "A",
+            "B": "B",
+            "C": "C"
+          }
+        },
+        "uncertainties": [],
+        "confidence": "E2"
+      },
+      "vision_source_provenance": [
+        {
+          "source_kind": "high_resolution_source_pdf_crop",
+          "source_pdf": "C:\\Users\\poyi\\Downloads\\【2025-2025版】选择性必修第1册\\按章节合并（无答案册）\\第1章 空间向量与立体几何（无答案册）.pdf",
+          "source_pdf_sha256": "9d3f38a7591742e22282490256a5c6bef8f644abc0e65db06f3dceb0251894ff",
+          "pdf_page": 51,
+          "crop_rect": [
+            420,
+            145,
+            595,
+            390
+          ],
+          "derived_from_image_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_full\\imgs\\img_in_image_box_896_353_1093_566.jpg",
+          "derived_from_image_sha256": "4f72deff759fe90b3bcef3bf221ffa4494bbc2275f05f4bea830fa6692b4815b"
+        }
+      ]
+    },
+    {
+      "qid": "Q-f8084477ad48d541",
+      "section": "1.4",
+      "group": "B",
+      "number": 5,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 50,
+        "pdf_page": 51,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_50.md"
+      },
+      "question_text": "### 5. （2025·浙江温州期末）\n\n如图，在平行六面体  \\(ABCD-A_{1}B_{1}C_{1}D_{1}\\) 中，\\(AB=AD=AA_{1}=1，\\angle A_{1}AB=\\angle A_{1}AD=\\angle BAD=60^{\\circ}\\)． \n\n（1）求 \\(AC_{1}\\)的长；\n\n（2）求证： \\(A_{1}C\\perp\\) 平面 \\(BDD_{1}B_{1}\\)\n\n",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_833_1138_1095_1313.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_833_1138_1095_1313.jpg",
+          "exists": true
+        }
+      ],
+      "visual_status": "VISION_VERIFIED",
+      "math_errors": [],
+      "evidence": [
+        "E1",
+        "E2"
+      ],
+      "vision_sidecars": [
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_full\\imgs\\img_in_image_box_833_1138_1095_1313.jpg",
+          "image_sha256": "65c773278b5de0c868bf52682d7ffc1e9a2b45d7e5e6651be470287276151e8a",
+          "confidence": "E2",
+          "structured": {
+            "objects": [],
+            "relations": [],
+            "coordinates": [
+              {
+                "name": "A",
+                "position": "底面左下"
+              },
+              {
+                "name": "B",
+                "position": "底面右下"
+              },
+              {
+                "name": "C",
+                "position": "底面右中"
+              },
+              {
+                "name": "D",
+                "position": "底面左中"
+              },
+              {
+                "name": "A1",
+                "position": "顶面左上（A上方）"
+              },
+              {
+                "name": "D1",
+                "position": "顶面左上"
+              },
+              {
+                "name": "B1",
+                "position": "顶面右中"
+              },
+              {
+                "name": "C1",
+                "position": "顶面右中"
+              }
+            ],
+            "ranges": [],
+            "text": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "A1",
+              "D1",
+              "B1",
+              "C1"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        }
+      ],
+      "vision_sidecar": {
+        "objects": [],
+        "relations": [],
+        "coordinates": [
+          {
+            "name": "A",
+            "position": "底面左下"
+          },
+          {
+            "name": "B",
+            "position": "底面右下"
+          },
+          {
+            "name": "C",
+            "position": "底面右中"
+          },
+          {
+            "name": "D",
+            "position": "底面左中"
+          },
+          {
+            "name": "A1",
+            "position": "顶面左上（A上方）"
+          },
+          {
+            "name": "D1",
+            "position": "顶面左上"
+          },
+          {
+            "name": "B1",
+            "position": "顶面右中"
+          },
+          {
+            "name": "C1",
+            "position": "顶面右中"
+          }
+        ],
+        "ranges": [],
+        "text": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "A1",
+          "D1",
+          "B1",
+          "C1"
+        ],
+        "uncertainties": [],
+        "confidence": "E2"
+      },
+      "vision_source_provenance": []
+    },
+    {
+      "qid": "Q-32a73bd226631d35",
+      "section": "1.4",
+      "group": "B",
+      "number": 6,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 51,
+        "pdf_page": 52,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_51.md"
+      },
+      "question_text": "### 6. （2025·天津期末）\n\n如图，在四棱锥  \\(P-ABCD\\) 中，平面  \\(PAD \\perp\\) 平面  \\(ABCD\\)， \\(\\triangle PAD\\) 是以  \\(AD\\) 为斜边的等腰直角三角形，底面  \\(ABCD\\) 为直角梯形， \\(BC \\parallel AD\\)， \\(CD \\perp AD\\)，且  \\(2BC = AD = 4\\)， \\(CD = 1\\)， \\(E\\)， \\(O\\) 分别是  \\(PD\\)， \\(AD\\) 的中点。\n\n（1）求证： \\(PO \\perp\\) 平面 ABCD；\n\n（2）求平面 PAB 与平面 PBC 夹角的余弦值；\n\n（3）求点E到平面PAB的距离.\n\n",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_846_360_1093_546.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_846_360_1093_546.jpg",
+          "exists": true
+        }
+      ],
+      "visual_status": "VISION_VERIFIED",
+      "math_errors": [],
+      "evidence": [
+        "E1",
+        "E2"
+      ],
+      "vision_sidecars": [
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_full\\imgs\\img_in_image_box_846_360_1093_546.jpg",
+          "image_sha256": "c09e41cc475cb8810754adbeee86eefaf54481b2c69a5693a85f8681d27bcb26",
+          "confidence": "E2",
+          "structured": {
+            "objects": [
+              [
+                "点",
+                "P"
+              ],
+              [
+                "点",
+                "A"
+              ],
+              [
+                "点",
+                "B"
+              ],
+              [
+                "点",
+                "C"
+              ],
+              [
+                "点",
+                "D"
+              ],
+              [
+                "点",
+                "O"
+              ],
+              [
+                "点",
+                "E"
+              ],
+              [
+                "线段",
+                "PA"
+              ],
+              [
+                "线段",
+                "PB"
+              ],
+              [
+                "线段",
+                "PC"
+              ],
+              [
+                "线段",
+                "PD"
+              ],
+              [
+                "线段",
+                "AB"
+              ],
+              [
+                "线段",
+                "BC"
+              ],
+              [
+                "线段",
+                "CD"
+              ],
+              [
+                "线段",
+                "DA"
+              ],
+              [
+                "线段",
+                "PO"
+              ],
+              [
+                "线段",
+                "DE"
+              ]
+            ],
+            "relations": [
+              [
+                "垂直",
+                "PO",
+                "平面ABCD"
+              ],
+              [
+                "在...上",
+                "E",
+                "PD"
+              ],
+              [
+                "平行",
+                "AD",
+                "BC"
+              ],
+              [
+                "交于",
+                "PO",
+                "AD",
+                "O"
+              ]
+            ],
+            "coordinates": [],
+            "ranges": [],
+            "text": [
+              "P",
+              "A",
+              "B",
+              "C",
+              "D",
+              "O",
+              "E"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        }
+      ],
+      "vision_sidecar": {
+        "objects": [
+          [
+            "点",
+            "P"
+          ],
+          [
+            "点",
+            "A"
+          ],
+          [
+            "点",
+            "B"
+          ],
+          [
+            "点",
+            "C"
+          ],
+          [
+            "点",
+            "D"
+          ],
+          [
+            "点",
+            "O"
+          ],
+          [
+            "点",
+            "E"
+          ],
+          [
+            "线段",
+            "PA"
+          ],
+          [
+            "线段",
+            "PB"
+          ],
+          [
+            "线段",
+            "PC"
+          ],
+          [
+            "线段",
+            "PD"
+          ],
+          [
+            "线段",
+            "AB"
+          ],
+          [
+            "线段",
+            "BC"
+          ],
+          [
+            "线段",
+            "CD"
+          ],
+          [
+            "线段",
+            "DA"
+          ],
+          [
+            "线段",
+            "PO"
+          ],
+          [
+            "线段",
+            "DE"
+          ]
+        ],
+        "relations": [
+          [
+            "垂直",
+            "PO",
+            "平面ABCD"
+          ],
+          [
+            "在...上",
+            "E",
+            "PD"
+          ],
+          [
+            "平行",
+            "AD",
+            "BC"
+          ],
+          [
+            "交于",
+            "PO",
+            "AD",
+            "O"
+          ]
+        ],
+        "coordinates": [],
+        "ranges": [],
+        "text": [
+          "P",
+          "A",
+          "B",
+          "C",
+          "D",
+          "O",
+          "E"
+        ],
+        "uncertainties": [],
+        "confidence": "E2"
+      },
+      "vision_source_provenance": []
+    },
+    {
+      "qid": "Q-d6655acfdb49915f",
+      "section": "1.4",
+      "group": "B",
+      "number": 7,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 51,
+        "pdf_page": 52,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_51.md"
+      },
+      "question_text": "### 7. （2024·安徽合肥二模）\n\n如图，在四棱锥 P-ABCD 中，底面 ABCD 是边长为 2 的菱形， \\(\\angle BAD = 60^{\\circ}\\)，M 是侧棱 PC 的中点，侧面 PAD 为正三角形，侧面  \\(PAD \\perp\\) 底面 ABCD.\n\n（1）求三棱锥 M-ABC 的体积；\n\n（2）求 AM 与平面 PBC 所成角的正弦值.\n\n",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_848_1062_1094_1228.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_848_1062_1094_1228.jpg",
+          "exists": true
+        }
+      ],
+      "visual_status": "VISION_VERIFIED",
+      "math_errors": [],
+      "evidence": [
+        "E1",
+        "E2"
+      ],
+      "vision_sidecars": [
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_full\\imgs\\img_in_image_box_848_1062_1094_1228.jpg",
+          "image_sha256": "34903c45a8282d1d387f953e3186d4cd9059444f78847e67c0cd37316d1a3672",
+          "confidence": "E2",
+          "structured": {
+            "objects": [
+              [
+                "P",
+                "M",
+                "C",
+                "D",
+                "A",
+                "B"
+              ]
+            ],
+            "relations": [
+              [
+                "P",
+                "A"
+              ],
+              [
+                "P",
+                "M"
+              ],
+              [
+                "P",
+                "C"
+              ],
+              [
+                "P",
+                "D"
+              ],
+              [
+                "A",
+                "D"
+              ],
+              [
+                "A",
+                "B"
+              ],
+              [
+                "B",
+                "C"
+              ],
+              [
+                "C",
+                "M"
+              ],
+              [
+                "D",
+                "M"
+              ],
+              [
+                "B",
+                "M"
+              ]
+            ],
+            "coordinates": [
+              [
+                [
+                  "P",
+                  [
+                    0,
+                    2
+                  ]
+                ],
+                [
+                  [
+                    "M",
+                    [
+                      0.5,
+                      1
+                    ]
+                  ],
+                  [
+                    [
+                      "C",
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    [
+                      [
+                        "D",
+                        [
+                          0,
+                          0.5
+                        ]
+                      ],
+                      [
+                        [
+                          "A",
+                          [
+                            0,
+                            0
+                          ]
+                        ],
+                        [
+                          [
+                            "B",
+                            [
+                              1,
+                              0
+                            ]
+                          ]
+                        ]
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ],
+            "text": [],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        }
+      ],
+      "vision_sidecar": {
+        "objects": [
+          [
+            "P",
+            "M",
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        ],
+        "relations": [
+          [
+            "P",
+            "A"
+          ],
+          [
+            "P",
+            "M"
+          ],
+          [
+            "P",
+            "C"
+          ],
+          [
+            "P",
+            "D"
+          ],
+          [
+            "A",
+            "D"
+          ],
+          [
+            "A",
+            "B"
+          ],
+          [
+            "B",
+            "C"
+          ],
+          [
+            "C",
+            "M"
+          ],
+          [
+            "D",
+            "M"
+          ],
+          [
+            "B",
+            "M"
+          ]
+        ],
+        "coordinates": [
+          [
+            [
+              "P",
+              [
+                0,
+                2
+              ]
+            ],
+            [
+              [
+                "M",
+                [
+                  0.5,
+                  1
+                ]
+              ],
+              [
+                [
+                  "C",
+                  [
+                    1,
+                    1
+                  ]
+                ],
+                [
+                  [
+                    "D",
+                    [
+                      0,
+                      0.5
+                    ]
+                  ],
+                  [
+                    [
+                      "A",
+                      [
+                        0,
+                        0
+                      ]
+                    ],
+                    [
+                      [
+                        "B",
+                        [
+                          1,
+                          0
+                        ]
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ]
+          ]
+        ],
+        "text": [],
+        "uncertainties": [],
+        "confidence": "E2"
+      },
+      "vision_source_provenance": []
+    },
+    {
+      "qid": "Q-e7250f74deb9c419",
+      "section": "1.4",
+      "group": "B",
+      "number": 8,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 52,
+        "pdf_page": 53,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_52.md"
+      },
+      "question_text": "8.（2025 · 重庆模拟）\n\n如图，在三棱柱  \\(ABC-A_{1}B_{1}C_{1}\\) 中，平面  \\(A_{1}B_{1}BA\\) ⊥ 平面 ABC，侧面  \\(A_{1}B_{1}BA\\) 为菱形， \\(\\angle ABB_{1}=\\frac{\\pi}{3}\\)， \\(AB_{1}\\perp AC\\)，AB=AC=2。\n\n（1）求证： \\(A_{1}B\\perp\\) 平面 \\(AB_{1}C\\)\n\n（2）求直线 \\(BB_{1}\\)与 \\(CC_{1}\\)的距离；\n\n（3）求平面 \\(CC_{1}B_{1}\\)与平面 \\(AA_{1}B_{1}\\)所成二面角的平面角的正弦值.\n\n",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_836_403_1094_599.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_836_403_1094_599.jpg",
+          "exists": true
+        }
+      ],
+      "visual_status": "VISION_VERIFIED",
+      "math_errors": [],
+      "evidence": [
+        "E1",
+        "E2"
+      ],
+      "vision_sidecars": [
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_full\\imgs\\img_in_image_box_836_403_1094_599.jpg",
+          "image_sha256": "8c901a0abedad0a569ef2ab5d792cc95bafa4bdc24401e6685eda89cc91ede37",
+          "confidence": "E2",
+          "structured": {
+            "objects": [],
+            "relations": [],
+            "coordinates": [
+              {
+                "name": "A",
+                "pos": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              {
+                "name": "A1",
+                "pos": [
+                  0.5,
+                  0,
+                  1
+                ]
+              },
+              {
+                "name": "B",
+                "pos": [
+                  1,
+                  0,
+                  0
+                ]
+              },
+              {
+                "name": "B1",
+                "pos": [
+                  1,
+                  0.5,
+                  1
+                ]
+              },
+              {
+                "name": "C",
+                "pos": [
+                  2,
+                  1,
+                  0
+                ]
+              },
+              {
+                "name": "C1",
+                "pos": [
+                  2,
+                  1.5,
+                  1
+                ]
+              }
+            ],
+            "ranges": [],
+            "text": [
+              "A",
+              "A1",
+              "B",
+              "B1",
+              "C",
+              "C1"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        }
+      ],
+      "vision_sidecar": {
+        "objects": [],
+        "relations": [],
+        "coordinates": [
+          {
+            "name": "A",
+            "pos": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "A1",
+            "pos": [
+              0.5,
+              0,
+              1
+            ]
+          },
+          {
+            "name": "B",
+            "pos": [
+              1,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "B1",
+            "pos": [
+              1,
+              0.5,
+              1
+            ]
+          },
+          {
+            "name": "C",
+            "pos": [
+              2,
+              1,
+              0
+            ]
+          },
+          {
+            "name": "C1",
+            "pos": [
+              2,
+              1.5,
+              1
+            ]
+          }
+        ],
+        "ranges": [],
+        "text": [
+          "A",
+          "A1",
+          "B",
+          "B1",
+          "C",
+          "C1"
+        ],
+        "uncertainties": [],
+        "confidence": "E2"
+      },
+      "vision_source_provenance": []
+    },
+    {
+      "qid": "Q-d6f69ebd40b88e4f",
+      "section": "1.4",
+      "group": "C",
+      "number": 9,
+      "kind": "C组",
+      "source_anchor": {
+        "ocr_doc": 52,
+        "pdf_page": 53,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_52.md"
+      },
+      "question_text": "### 9. （2024·陕西模拟）\n\n正四棱锥 S-ABCD 中，O 为顶点 S 在底面 ABCD 内的射影，P 为侧棱 SD 的中点，且  \\(SO = OD = \\sqrt{2}\\)，则异面直线 PC 与 BD 的距离为（ ）\n\nA.  \\(\\frac{\\sqrt{10}}{10}\\) B.  \\(\\frac{\\sqrt{10}}{5}\\) C.  \\(\\frac{\\sqrt{5}}{10}\\) D.  \\(\\frac{\\sqrt{5}}{5}\\)",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-780c7beb8c7dca80",
+      "section": "1.4",
+      "group": "C",
+      "number": 10,
+      "kind": "C组",
+      "source_anchor": {
+        "ocr_doc": 53,
+        "pdf_page": 54,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_53.md"
+      },
+      "question_text": "### 10. （2024·陕西模拟）\n\n已知边长为4的菱形 \\(ABCD\\)（如图1），\\(\\angle BAD=\\frac{\\pi}{3}\\)，\\(AC\\) 与 \\(BD\\) 相交于点 \\(O\\)，\\(E\\) 为线段 \\(AO\\) 上一点，将 \\(\\triangle ABD\\) 沿 \\(BD\\) 折叠成三棱锥 \\(A-BCD\\)（如图2）。\n\n\n\n\n图1\n\n\n\n\n\n图2\n\n\n（1）证明： \\(BD \\perp CE\\)；\n\n（2）若三棱锥 A-BCD 的体积为 8，二面角 B-CE-O 的余弦值为  \\(\\frac{\\sqrt{15}}{10}\\)，求 OE 的长.",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_383_282_622_439.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_383_282_622_439.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_638_267_835_434.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_638_267_835_434.jpg",
+          "exists": true
+        }
+      ],
+      "visual_status": "VISION_VERIFIED",
+      "math_errors": [],
+      "evidence": [
+        "E1",
+        "E2"
+      ],
+      "vision_sidecars": [
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_full\\imgs\\img_in_image_box_383_282_622_439.jpg",
+          "image_sha256": "e028e49fb9240af2c72fc50b6f90d0acf4b54d7a9baa58d530a52130161b886c",
+          "confidence": "E2",
+          "structured": {
+            "objects": [
+              [
+                "平行四边形",
+                "ABCD"
+              ],
+              [
+                "对角线",
+                "AC"
+              ],
+              [
+                "对角线",
+                "BD"
+              ],
+              [
+                "点",
+                "E"
+              ],
+              [
+                "交点",
+                "O"
+              ]
+            ],
+            "relations": [
+              [
+                "A",
+                "连接",
+                "B"
+              ],
+              [
+                "B",
+                "连接",
+                "C"
+              ],
+              [
+                "C",
+                "连接",
+                "D"
+              ],
+              [
+                "D",
+                "连接",
+                "A"
+              ],
+              [
+                "A",
+                "连接",
+                "C"
+              ],
+              [
+                "B",
+                "连接",
+                "D"
+              ],
+              [
+                "A",
+                "E",
+                "O",
+                "C",
+                "共线"
+              ],
+              [
+                "B",
+                "D",
+                "交",
+                "A",
+                "C",
+                "于",
+                "O"
+              ]
+            ],
+            "coordinates": [
+              [
+                "A",
+                "(0, 2)"
+              ],
+              [
+                "B",
+                "(-1, 0)"
+              ],
+              [
+                "C",
+                "(2, 0)"
+              ],
+              [
+                "D",
+                "(1, 2)"
+              ],
+              [
+                "E",
+                "(0.5, 1.5)"
+              ],
+              [
+                "O",
+                "(1, 1)"
+              ]
+            ],
+            "ranges": [],
+            "text": [
+              [
+                "点",
+                "A"
+              ],
+              [
+                "点",
+                "B"
+              ],
+              [
+                "点",
+                "C"
+              ],
+              [
+                "点",
+                "D"
+              ],
+              [
+                "点",
+                "E"
+              ],
+              [
+                "点",
+                "O"
+              ]
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        },
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_full\\imgs\\img_in_image_box_638_267_835_434.jpg",
+          "image_sha256": "66fee4503a25f8d7803ac95c879be8dec9ed66cb230ddd2e890de22c32128e16",
+          "confidence": "E2",
+          "structured": {
+            "objects": [],
+            "relations": [
+              "line segment AB",
+              "line segment AC",
+              "line segment BC",
+              "line segment AD",
+              "line segment AE",
+              "line segment ED",
+              "line segment EO",
+              "line segment BD",
+              "line segment CD",
+              "line segment BO",
+              "line segment CO"
+            ],
+            "coordinates": [
+              {
+                "name": "A",
+                "position": "top vertex"
+              },
+              {
+                "name": "B",
+                "position": "bottom left"
+              },
+              {
+                "name": "C",
+                "position": "bottom right"
+              },
+              {
+                "name": "O",
+                "position": "mid BC, below center"
+              },
+              {
+                "name": "E",
+                "position": "on AB, near A"
+              },
+              {
+                "name": "D",
+                "position": "on AC, near A"
+              }
+            ],
+            "ranges": [],
+            "text": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E",
+              "O"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        }
+      ],
+      "vision_sidecar": {
+        "objects": [
+          [
+            "平行四边形",
+            "ABCD"
+          ],
+          [
+            "对角线",
+            "AC"
+          ],
+          [
+            "对角线",
+            "BD"
+          ],
+          [
+            "点",
+            "E"
+          ],
+          [
+            "交点",
+            "O"
+          ]
+        ],
+        "relations": [
+          [
+            "A",
+            "连接",
+            "B"
+          ],
+          [
+            "B",
+            "连接",
+            "C"
+          ],
+          [
+            "C",
+            "连接",
+            "D"
+          ],
+          [
+            "D",
+            "连接",
+            "A"
+          ],
+          [
+            "A",
+            "连接",
+            "C"
+          ],
+          [
+            "B",
+            "连接",
+            "D"
+          ],
+          [
+            "A",
+            "E",
+            "O",
+            "C",
+            "共线"
+          ],
+          [
+            "B",
+            "D",
+            "交",
+            "A",
+            "C",
+            "于",
+            "O"
+          ]
+        ],
+        "coordinates": [
+          [
+            "A",
+            "(0, 2)"
+          ],
+          [
+            "B",
+            "(-1, 0)"
+          ],
+          [
+            "C",
+            "(2, 0)"
+          ],
+          [
+            "D",
+            "(1, 2)"
+          ],
+          [
+            "E",
+            "(0.5, 1.5)"
+          ],
+          [
+            "O",
+            "(1, 1)"
+          ]
+        ],
+        "ranges": [],
+        "text": [
+          [
+            "点",
+            "A"
+          ],
+          [
+            "点",
+            "B"
+          ],
+          [
+            "点",
+            "C"
+          ],
+          [
+            "点",
+            "D"
+          ],
+          [
+            "点",
+            "E"
+          ],
+          [
+            "点",
+            "O"
+          ]
+        ],
+        "uncertainties": [],
+        "confidence": "E2"
+      },
+      "vision_source_provenance": []
+    },
+    {
+      "qid": "Q-6e744cefbdce3233",
+      "section": "1.4",
+      "group": "C",
+      "number": 11,
+      "kind": "C组",
+      "source_anchor": {
+        "ocr_doc": 53,
+        "pdf_page": 54,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_53.md"
+      },
+      "question_text": "### 11. (2019 · 北京卷)\n\n如图，在四棱锥 P-ABCD 中， \\(PA \\perp\\) 平面 ABCD， \\(AD \\perp CD\\)， \\(AD \\parallel BC\\)，PA = AD = CD = 2，BC = 3，E 为 PD 的中点，点 F 在 PC 上，且  \\(\\frac{PF}{PC} = \\frac{1}{3}\\).\n\n（1）求证： \\(CD \\perp\\) 平面 PAD；\n\n（2）求二面角 F-AE-P 的余弦值；\n\n（3）设点 G 在 PB 上，且  \\(\\frac{PG}{PB} = \\frac{2}{3}\\)，判断直线 AG 是否在平面 AEF 内，说明理由.\n\n",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_871_1163_1093_1335.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_871_1163_1093_1335.jpg",
+          "exists": true
+        }
+      ],
+      "visual_status": "VISION_VERIFIED",
+      "math_errors": [],
+      "evidence": [
+        "E1",
+        "E2"
+      ],
+      "vision_sidecars": [
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_full\\imgs\\img_in_image_box_871_1163_1093_1335.jpg",
+          "image_sha256": "0920f7b8980cf8cf4a9cdee4eaf6dba9e2074e85a56a10cd7c2324f9e5f41c91",
+          "confidence": "E2",
+          "structured": {
+            "objects": [
+              [
+                "点",
+                "P"
+              ],
+              [
+                "点",
+                "E"
+              ],
+              [
+                "点",
+                "F"
+              ],
+              [
+                "点",
+                "G"
+              ],
+              [
+                "点",
+                "A"
+              ],
+              [
+                "点",
+                "D"
+              ],
+              [
+                "点",
+                "C"
+              ],
+              [
+                "点",
+                "B"
+              ]
+            ],
+            "relations": [
+              [
+                "线段",
+                [
+                  "P",
+                  "B"
+                ]
+              ],
+              [
+                "线段",
+                [
+                  "P",
+                  "D"
+                ]
+              ],
+              [
+                "线段",
+                [
+                  "B",
+                  "C"
+                ]
+              ],
+              [
+                "线段",
+                [
+                  "C",
+                  "D"
+                ]
+              ],
+              [
+                "线段",
+                [
+                  "D",
+                  "B"
+                ]
+              ],
+              [
+                "线段",
+                [
+                  "P",
+                  "A"
+                ]
+              ],
+              [
+                "线段",
+                [
+                  "A",
+                  "D"
+                ]
+              ],
+              [
+                "线段",
+                [
+                  "A",
+                  "C"
+                ]
+              ],
+              [
+                "线段",
+                [
+                  "A",
+                  "B"
+                ]
+              ],
+              [
+                "线段",
+                [
+                  "P",
+                  "E"
+                ]
+              ],
+              [
+                "线段",
+                [
+                  "E",
+                  "D"
+                ]
+              ],
+              [
+                "线段",
+                [
+                  "P",
+                  "F"
+                ]
+              ],
+              [
+                "线段",
+                [
+                  "F",
+                  "E"
+                ]
+              ],
+              [
+                "线段",
+                [
+                  "P",
+                  "G"
+                ]
+              ],
+              [
+                "线段",
+                [
+                  "G",
+                  "B"
+                ]
+              ],
+              [
+                "线段",
+                [
+                  "A",
+                  "F"
+                ]
+              ]
+            ],
+            "coordinates": [
+              [
+                "P",
+                null,
+                null
+              ],
+              [
+                "E",
+                null,
+                null
+              ],
+              [
+                "F",
+                null,
+                null
+              ],
+              [
+                "G",
+                null,
+                null
+              ],
+              [
+                "A",
+                null,
+                null
+              ],
+              [
+                "D",
+                null,
+                null
+              ],
+              [
+                "C",
+                null,
+                null
+              ],
+              [
+                "B",
+                null,
+                null
+              ]
+            ],
+            "ranges": [],
+            "text": [],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        }
+      ],
+      "vision_sidecar": {
+        "objects": [
+          [
+            "点",
+            "P"
+          ],
+          [
+            "点",
+            "E"
+          ],
+          [
+            "点",
+            "F"
+          ],
+          [
+            "点",
+            "G"
+          ],
+          [
+            "点",
+            "A"
+          ],
+          [
+            "点",
+            "D"
+          ],
+          [
+            "点",
+            "C"
+          ],
+          [
+            "点",
+            "B"
+          ]
+        ],
+        "relations": [
+          [
+            "线段",
+            [
+              "P",
+              "B"
+            ]
+          ],
+          [
+            "线段",
+            [
+              "P",
+              "D"
+            ]
+          ],
+          [
+            "线段",
+            [
+              "B",
+              "C"
+            ]
+          ],
+          [
+            "线段",
+            [
+              "C",
+              "D"
+            ]
+          ],
+          [
+            "线段",
+            [
+              "D",
+              "B"
+            ]
+          ],
+          [
+            "线段",
+            [
+              "P",
+              "A"
+            ]
+          ],
+          [
+            "线段",
+            [
+              "A",
+              "D"
+            ]
+          ],
+          [
+            "线段",
+            [
+              "A",
+              "C"
+            ]
+          ],
+          [
+            "线段",
+            [
+              "A",
+              "B"
+            ]
+          ],
+          [
+            "线段",
+            [
+              "P",
+              "E"
+            ]
+          ],
+          [
+            "线段",
+            [
+              "E",
+              "D"
+            ]
+          ],
+          [
+            "线段",
+            [
+              "P",
+              "F"
+            ]
+          ],
+          [
+            "线段",
+            [
+              "F",
+              "E"
+            ]
+          ],
+          [
+            "线段",
+            [
+              "P",
+              "G"
+            ]
+          ],
+          [
+            "线段",
+            [
+              "G",
+              "B"
+            ]
+          ],
+          [
+            "线段",
+            [
+              "A",
+              "F"
+            ]
+          ]
+        ],
+        "coordinates": [
+          [
+            "P",
+            null,
+            null
+          ],
+          [
+            "E",
+            null,
+            null
+          ],
+          [
+            "F",
+            null,
+            null
+          ],
+          [
+            "G",
+            null,
+            null
+          ],
+          [
+            "A",
+            null,
+            null
+          ],
+          [
+            "D",
+            null,
+            null
+          ],
+          [
+            "C",
+            null,
+            null
+          ],
+          [
+            "B",
+            null,
+            null
+          ]
+        ],
+        "ranges": [],
+        "text": [],
+        "uncertainties": [],
+        "confidence": "E2"
+      },
+      "vision_source_provenance": []
+    },
+    {
+      "qid": "Q-dfe3e5777ade5c55",
+      "section": "1.4",
+      "group": "C",
+      "number": 12,
+      "kind": "C组",
+      "source_anchor": {
+        "ocr_doc": 54,
+        "pdf_page": 55,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_54.md"
+      },
+      "question_text": "### 12. （2024·新疆乌鲁木齐一模）\n\n如图，在四棱锥 P-ABCD 中，底面 ABCD 为正方形， \\(PA \\perp\\) 平面 ABCD，PA = AB，点 E，F 分别是棱 PB，BC 的中点.\n\n（1）求直线 AF 与平面 PBC 所成角的正弦值；\n\n（2）在截面 AEF 内是否存在点 G，使 DG ⊥ 平面 AEF？说明理由.\n\n",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_891_353_1093_547.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_891_353_1093_547.jpg",
+          "exists": true
+        }
+      ],
+      "visual_status": "VISION_VERIFIED",
+      "math_errors": [],
+      "evidence": [
+        "E1",
+        "E2"
+      ],
+      "vision_sidecars": [
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_full\\imgs\\img_in_image_box_891_353_1093_547.jpg",
+          "image_sha256": "c487b6528512e8ce8a24d76bf2505d3fcdcac23db2b756e2bc26a055b70b34e9",
+          "confidence": "E2",
+          "structured": {
+            "objects": [],
+            "relations": [],
+            "coordinates": [],
+            "ranges": [],
+            "text": [
+              "P",
+              "E",
+              "A",
+              "B",
+              "F",
+              "C",
+              "D"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        }
+      ],
+      "vision_sidecar": {
+        "objects": [],
+        "relations": [],
+        "coordinates": [],
+        "ranges": [],
+        "text": [
+          "P",
+          "E",
+          "A",
+          "B",
+          "F",
+          "C",
+          "D"
+        ],
+        "uncertainties": [],
+        "confidence": "E2"
+      },
+      "vision_source_provenance": []
+    }
+  ],
+  "unresolved": []
+}

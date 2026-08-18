@@ -1,0 +1,324 @@
+{
+  "report_type": "1.1_zero_basis_sequential_learning_immediate_acceptance",
+  "session": "phase2_final",
+  "date": "2026-08-14",
+  "packet_version": "data/packets/1.1/learning_packet.json (117816B, 2026-08-14 16:45:26)",
+  "files_read": [
+    "C:/开发/小工具/一本通学习系统_v7/data/packets/1.1/learning_packet.json",
+    "C:/开发/小工具/一本通学习系统_v7/data/contexts/1.1.json"
+  ],
+  "forbidden_sources_declaration": {
+    "answer_sidecar": "not_read",
+    "answer_booklet_pdf": "not_read",
+    "old_simulation_reports": "not_read",
+    "direct_variants_solution_isolated": "not_read"
+  },
+  "counts_verified": {
+    "worked_examples": 16,
+    "direct_variants": 8,
+    "abc_exercises": 14,
+    "total_numbered_learning_items": 38,
+    "packet_counts_match": true,
+    "pdf_phase1_audit_match": true
+  },
+  "knowledge_pages_audit": {
+    "total": 8,
+    "solution_fragments": "none",
+    "neutral_anchor_stubs": "none",
+    "example_markers": "none",
+    "fixes_confirmed": [
+      "类型I标题恢复（knowledge[4]: ## 类型 I：空间向量的线性运算）",
+      "三点共线/四点共面推论补全（x+y=1 / x+y+z=1）",
+      "数量积注释改为「a·b=b·c 不能推出 a=c」",
+      "图注伪影「u+v=AD+BC=AC」已删除"
+    ]
+  },
+  "worked_examples_learning": [
+    {
+      "label": "例1",
+      "status": "understood",
+      "key": "相等向量看方向+模：DC/A1B1/D1C1；相反向量：A1A/B1B/C1C/D1D"
+    },
+    {
+      "label": "例2",
+      "status": "understood",
+      "key": "AB+AD=AC(平行四边形)，AC+CC1=AC1→C；解析完整，知识表污染已移除"
+    },
+    {
+      "label": "例3",
+      "status": "understood",
+      "key": "DF=DA+AF=-AD+(1/4)AE，AE=(1/2)(AB+AC)→(1/8)AB+(1/8)AC-AD→B"
+    },
+    {
+      "label": "例4",
+      "status": "understood",
+      "key": "A错(b=0反例)；B对(相反向量平行)；C对(零向量共线)；D错(单位向量方向不定)→BC"
+    },
+    {
+      "label": "例5",
+      "status": "understood",
+      "key": "一向量能否用另两向量表出：A/B/C均可表出，D中c不能由a+b、a-b表出→D"
+    },
+    {
+      "label": "例6",
+      "status": "understood",
+      "key": "平移共面求角：45°/135°/60°/120°/90°"
+    },
+    {
+      "label": "例7",
+      "status": "understood",
+      "key": "EF=(1/2)AC，EF·AB=(1/2)·1·1·cos60°=1/4"
+    },
+    {
+      "label": "例8",
+      "status": "understood",
+      "key": "AB⊥BC⇒AC在AB上投影AB；C1C⊥平面ABCD⇒AC1投影AC"
+    },
+    {
+      "label": "例9",
+      "status": "understood",
+      "key": "(1)展开合并→2a+5b-24c；(2)平移首尾相接→CA"
+    },
+    {
+      "label": "例10",
+      "status": "understood",
+      "key": "(1)设P为CC1中点→AP；(2)提取1/2，O为A1C1中点→AO"
+    },
+    {
+      "label": "例11",
+      "status": "understood",
+      "key": "BC=-2a-2b-2c，CD=4a+4b+4c=-2BC⇒B,C,D共线"
+    },
+    {
+      "label": "例12",
+      "status": "understood",
+      "key": "OM拆三项消O⇒MA=-MB-MC⇒共面；系数和x+y+z=1"
+    },
+    {
+      "label": "例13",
+      "status": "understood",
+      "key": "拆解法：AE=(1/2)(AB+AC)，AE·AD=1/2"
+    },
+    {
+      "label": "例14",
+      "status": "understood",
+      "key": "PB+PC=2PD；极化恒等式PA·PD=PG²-3/4≥-3/4⇒min=-3/2→A"
+    },
+    {
+      "label": "例15",
+      "status": "understood",
+      "key": "BD=PA-2PB+PC⇒m+n+p=0；BM²=25/4⇒BM=5/2"
+    },
+    {
+      "label": "例16",
+      "status": "understood",
+      "key": "a+b=-c平方：a·b=3/2⇒cos=1/4→D"
+    }
+  ],
+  "worked_examples_summary": {
+    "understood": 16,
+    "unclear": 0,
+    "all_solution_present": true,
+    "teaching_text_defects_remaining": 0
+  },
+  "direct_variants_solutions": [
+    {
+      "item_id": "ce0335a21c798927",
+      "item": "变式1(例11)",
+      "status": "pass",
+      "independent_start": "以A1为原点建基a=A1A,b=A1B1,d=A1D1，先由比例定位E、F",
+      "key_reasoning": "E=(2/3)d；F=(2/5)(a+b+d)；EF=(2/5)a+(2/5)b-(4/15)d；EB=a+b-(2/3)d",
+      "result": "(1) EF=(2/5)A1A+(2/5)A1B1-(4/15)A1D1；(2) EF=(2/5)EB⇒E,F,B共线"
+    },
+    {
+      "item_id": "5f42fe5671670a92",
+      "item": "变式2(例11)",
+      "status": "pass",
+      "independent_start": "仿例11把EG化为以O为起点的向量组合",
+      "key_reasoning": "EH=kAD，EF=kAB；EG=EH+mEF=kAD+mkAB=kAC",
+      "result": "EG=kAC⇒AC∥EG"
+    },
+    {
+      "item_id": "0d9860d67f5ba867",
+      "item": "变式(例12)",
+      "status": "pass",
+      "independent_start": "以A为原点建基b=AB,d=AD,a=AA1，写出E,F,G,H坐标",
+      "key_reasoning": "EG=b+(1/2)d-(1/2)a；EG=(3/2)EF+(1/2)EH",
+      "result": "(1) x=1,y=1/2,z=-1/2；(2) E,F,G,H共面"
+    },
+    {
+      "item_id": "b2a2e4099db3ab67",
+      "item": "变式(例13)",
+      "status": "pass",
+      "independent_start": "基a,b,d模1两两60°，直接展开点积",
+      "key_reasoning": "BD1=-b+d+a，AC=b+d；BD1·AC=-1-1/2+1/2+1+1/2+1/2=1",
+      "result": "1 → A"
+    },
+    {
+      "item_id": "93c3de935f7cc03f",
+      "item": "变式1(例15)",
+      "status": "pass",
+      "independent_start": "|AC1|²=|b+d+a|²用已知夹角展开，反解cos∠BAD",
+      "key_reasoning": "|AC1|²=11+2cosθ=12⇒cosθ=1/2",
+      "result": "∠BAD=60°"
+    },
+    {
+      "item_id": "62827f92b028d91e",
+      "item": "变式2(例15)",
+      "status": "pass",
+      "independent_start": "b=AB,d=AD,f=AF两两正交；由比例定M,N",
+      "key_reasoning": "MN=-(1-λ)d+λf；|MN|²=(1-λ)²+λ²，λ=1/2最小",
+      "result": "(1) x=0,y=λ-1,z=λ；(2) |MN|min=√2/2"
+    },
+    {
+      "item_id": "9b508f5a6c4fe2d1",
+      "item": "变式1(例16)",
+      "status": "pass",
+      "independent_start": "设棱长2：OE=(1/2)(a+b)，BF=(1/2)c-b，定义法",
+      "key_reasoning": "OE·BF=-2；|OE|=|BF|=√3",
+      "result": "cos⟨OE,BF⟩=-2/3"
+    },
+    {
+      "item_id": "3b8056c799f60086",
+      "item": "变式2(例16)",
+      "status": "pass",
+      "independent_start": "设棱长2：AB1=a+b，BC1=a-b+c",
+      "key_reasoning": "AB1·BC1=4；|AB1|=2√3，|BC1|=2√2；线线角取锐",
+      "result": "cos=√6/6 → C"
+    }
+  ],
+  "direct_variants_summary": {
+    "pass": 8,
+    "partial": 0,
+    "blocked": 0
+  },
+  "exercises_solutions": [
+    {
+      "qid": "Q-84442c12da683ad3",
+      "item": "A1",
+      "status": "pass",
+      "key_reasoning": "AN=ON-OA=(1/2)(b+c)-a",
+      "result": "-a+(1/2)b+(1/2)c → C"
+    },
+    {
+      "qid": "Q-1727695600a57e80",
+      "item": "A2",
+      "status": "pass",
+      "key_reasoning": "(1)展开合并；(2)AB-DB=AD，AD-AC=CD",
+      "result": "(1) -a-10b-3c；(2) CD"
+    },
+    {
+      "qid": "Q-7370f2df587a419e",
+      "item": "A3",
+      "status": "prompted_correction_pass",
+      "key_reasoning": "基u,v,w：u-v=DB；u+v-w=AC1；(3)=-u-v+(1/2)w",
+      "result": "(1) DB；(2) AC1；(3) 从C指向AA1中点M的向量",
+      "original_result": "(1) DB；(2) AC1；(3) 从C指向AA1中点M的向量",
+      "original_status": "pass",
+      "prompted_correction": true,
+      "prompted_correction_note": "教师提示A3(2)书写向量与标准向量的方向/端点不一致，回题面重新推导",
+      "corrected_reasoning": [
+        "以A为原点，u=AB, v=AD, w=AA1（正交基）",
+        "A1B1 = B1-A1 = u；A1D1 = D1-A1 = v；C1C = C-C1 = -w",
+        "A1B1+A1D1+C1C = u+v-w",
+        "u+v-w = (u+v)-w = C - A1 = 向量A1C（起点A1、终点C）",
+        "原答AC1 = C1-A = u+v+w，与u+v-w相差2w：方向与端点均错误",
+        "(1)(3)复核不变：AB-BC = u-v = DB；(1/2)(GD+GB)-A1O = -(u+v)+w/2 = 从C指向AA1中点M"
+      ],
+      "corrected_result": "(1) DB；(2) A1C；(3) 从C指向AA1中点M的向量（CM）",
+      "independent_first_attempt": "false_for_part_2（(2)经教师提示后修正，不冒充首次独立；(1)(3)为原独立结果且未变）"
+    },
+    {
+      "qid": "Q-f15b941e305191d5",
+      "item": "B4",
+      "status": "pass",
+      "key_reasoning": "AB·CD=AB·(AD-AC)=2-2=0",
+      "result": "0 → D"
+    },
+    {
+      "qid": "Q-8dd0fc02442f324f",
+      "item": "B5",
+      "status": "pass",
+      "key_reasoning": "EB1=u-(1/2)v，EB=u-(1/2)v-w；点积=4+1=5",
+      "result": "5 → B"
+    },
+    {
+      "qid": "Q-a5a0d0efe5d430ca",
+      "item": "B6",
+      "status": "pass",
+      "key_reasoning": "坐标：A=(1,√3/2,3/2)；AC=(1,-√3/2,-3/2)，BD=(2,2,0)",
+      "result": "AC·BD=2-√3 → A"
+    },
+    {
+      "qid": "Q-c541e3eee1efc530",
+      "item": "B7",
+      "status": "pass",
+      "key_reasoning": "CD²=AB²+AC²+BD²-2·AC·BD·cos(π/3)=8",
+      "result": "2√2 → B"
+    },
+    {
+      "qid": "Q-9d766f3ecd1ae46e",
+      "item": "B8",
+      "status": "pass",
+      "key_reasoning": "PA·PC=(x-1)²+(y-1)²+z²-2，x,y,z∈[0,2]取角点",
+      "result": "最大值4"
+    },
+    {
+      "qid": "Q-2191f72b893e2bf4",
+      "item": "B9",
+      "status": "pass",
+      "key_reasoning": "G=(1/3)D+(2/3)P；BG=(2/3)BE+(2/3)BF",
+      "result": "(1) x=y=1/3,z=2/3；(2) B,E,G,F共面"
+    },
+    {
+      "qid": "Q-c71c166fd308bd39",
+      "item": "B10",
+      "status": "pass",
+      "key_reasoning": "FG=(1/4)(b-c+d)，FH=(1/2)(b-c+d)",
+      "result": "FG=(1/2)FH⇒G,F,H共线"
+    },
+    {
+      "qid": "Q-443c567c45c66273",
+      "item": "B11",
+      "status": "pass",
+      "key_reasoning": "OM=(1/2)a+(1/6)b+(1/6)c；|OM|²=2；OM·BC=0",
+      "result": "(1) OM=(1/2)OA+(1/6)OB+(1/6)OC，|OM|=√2；(2) OM⊥BC"
+    },
+    {
+      "qid": "Q-65729f8347757586",
+      "item": "B12",
+      "status": "pass",
+      "key_reasoning": "M=(1/3)b+(1/6)c；|PM|²=47/4；PM·AC=-3",
+      "result": "(1) PM=√47/2；(2) cos=2/√47"
+    },
+    {
+      "qid": "Q-32207093b5cdcaee",
+      "item": "C13",
+      "status": "pass",
+      "key_reasoning": "O,A,B,C共面⇔系数行列式=0：det=-3p-5q-4",
+      "result": "3p+5q=-4"
+    },
+    {
+      "qid": "Q-5bf035885c806a48",
+      "item": "C14",
+      "status": "pass",
+      "key_reasoning": "A对：MN∥AB⊂面PAB；B错：PO=(1/3)(a+b+c)；C对：x+y≥4；D对：z=1/3，距离=√6/9",
+      "result": "ACD"
+    }
+  ],
+  "exercises_summary": {
+    "pass": 13,
+    "prompted_correction_pass": 1,
+    "partial": 0,
+    "blocked": 0
+  },
+  "mastery": {
+    "same_session": {
+      "direct_variants": "8/8 pass",
+      "abc_exercises": "13/14 pass + 1/14 prompted_correction_pass（A3(2)经提示修正）",
+      "worked_examples_excluded_from_mastery": true,
+      "note": "教学例题仅计学习理解（16/16 understood），不计独立掌握；A3(2)为提示后修正，不按首次独立掌握计"
+    },
+    "24h_cold_retest": "not_run"
+  }
+}

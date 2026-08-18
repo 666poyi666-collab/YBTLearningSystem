@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0",
+  "agent_id": "deepseek_worker/opencode-go-deepseek-v4-flash-max-1M",
+  "section": "1.2+1.3",
+  "phase": "unseen_near_transfer",
+  "generated_on": "2026-08-14",
+  "question": "已知 a=(1,2,-1)，b=(2,-1,3)，c=(x,1,2)，且 c⊥a。(1) 求 x；(2) 求 c·b；(3) 求向量 c 在 a 方向上的投影向量。",
+  "forbidden_sources": [
+    "reports/ 目录下任何文件",
+    "data/packets/*/answer_sidecar.json",
+    "任何答案册 PDF",
+    "搜索/查阅原题来源（2025·某地试卷）"
+  ],
+  "clean_unseen": true,
+  "methods_used": [
+    "垂直 ⇔ 数量积为 0（例10/例11 方法）",
+    "坐标数量积计算 a·b = x1*x2 + y1*y2 + z1*z2（知识点3 公式③，例4教学文本）",
+    "投影向量公式 proj_b(a) = (a·b/|b|^2) * b（例9/例3 方法）"
+  ],
+  "reasoning": {
+    "step1_x": "c⊥a → c·a = x*1 + 1*2 + 2*(-1) = x + 2 - 2 = x = 0，故 x=0，c=(0,1,2)",
+    "step2_c_dot_b": "c·b = 0*2 + 1*(-1) + 2*3 = 0 - 1 + 6 = 5",
+    "step3_projection": "c 在 a 方向上的投影向量 = (c·a/|a|^2) * a；由 (1) 已知 c·a=0，故投影向量 = 0 向量 = (0,0,0)（c 与 a 垂直时投影退化为零向量）"
+  },
+  "answer": {
+    "part1_x": 0,
+    "part2_c_dot_b": 5,
+    "part3_projection_vector": "(0,0,0)",
+    "note": "因 c⊥a，c 在 a 方向上的投影向量为零向量"
+  },
+  "status": "pass",
+  "self_check": "x=0 代回验证 c·a=0 成立；c·b=5 直接计算；投影向量公式代入 c·a=0 得零向量，三步互相一致",
+  "answer_side_declaration": {
+    "reports_read": false,
+    "answer_sidecar_read": false,
+    "answer_book_read": false,
+    "original_problem_search": false
+  }
+}

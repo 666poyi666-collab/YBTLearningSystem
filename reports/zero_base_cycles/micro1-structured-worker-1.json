@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0",
+  "section": "micro专题1",
+  "worker": "worker-1",
+  "generation": "G-CH1-MICRO-01",
+  "worker_status": "PARTIAL",
+  "item_results": [
+    {
+      "section": "micro专题1",
+      "cycle": "micro-cycle-1",
+      "item_id": "micro-cycle-1-例1",
+      "source_revision": {
+        "generation": "G-CH1-MICRO-01"
+      },
+      "context_sha256": "3893aba77597e51b7941015bbd7ef52ea476de47cd349e1f6ddf61386aa8f031",
+      "observation_signal": "类型Ⅰ 线上动点：目标=动点 P 在线段上运动时的距离/线面角相关量",
+      "course_call": {
+        "course_id": "3.1.4.8",
+        "method_model_id": "moving_point_axis_param",
+        "appears_before_first_use": true,
+        "linkage": "线上动点：轴上/线段上动点直接设坐标（如 P=(0,0,h)），列方程求瞬间",
+        "first_use_location": "3.1.4.8 视频轴上动点段（P 在 DG 上运动设 00H，由线面角 60° 反解 h）"
+      },
+      "first_line": "第一行：目标=所求量（距离/线面角）；设动点坐标（含参数）并写定义域",
+      "second_line": "第二行：用参数表示目标向量及其模；依据：动点=单变量参数化（P=A+λv）",
+      "continuation": "继续：列方程（如线面角正弦=定值）→解参数→检查定义域→答题（图形未核验：本记录为教学阶段方法层跟随，未对题图做任何猜测）",
+      "independent_self_check": "核对：参数在线段含端点；解落在定义域内；距离非负",
+      "first_breakpoint": "",
+      "hint_level": "full",
+      "verdict": "PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "micro专题1",
+      "cycle": "micro-cycle-1",
+      "item_id": "micro-cycle-1-变式1",
+      "source_revision": {
+        "generation": "G-CH1-MICRO-01"
+      },
+      "context_sha256": "3893aba77597e51b7941015bbd7ef52ea476de47cd349e1f6ddf61386aa8f031",
+      "observation_signal": "直属变式：检验同一类型方法能否独立迁移（模板：复述模型+指出变更）",
+      "course_call": {
+        "course_id": "3.1.4.8",
+        "method_model_id": "moving_point_line_param",
+        "appears_before_first_use": true,
+        "linkage": "直属例1变式：独立迁移线上动点模型（先复述母题模型，再指出变更条件）",
+        "first_use_location": "3.1.4.8 视频斜线设参段（AP=λ·AB 表示斜线上动点）"
+      },
+      "first_line": "第一行：复述例1通用模型（线上动点设参→列方程→定义域检查）",
+      "second_line": "第二行：指出本变式相对母题改动的条件并只替换该处 —— 卡点：变式题面不可见，无法确知变更内容",
+      "continuation": "继续：若知变更则重列参数式与方程 —— 停在题面不可见",
+      "independent_self_check": "核对：参数方向与范围；变动条件是否同步传递到后续各行 —— 无法完成",
+      "first_breakpoint": "变式题面不可见：无法确认相对母题改动的具体条件（对象/系数/位置），独立重建仅到通用模型层",
+      "hint_level": "none",
+      "verdict": "PARTIAL",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "micro专题1",
+      "cycle": "micro-cycle-1",
+      "item_id": "micro-cycle-1-B1",
+      "source_revision": {
+        "generation": "G-CH1-MICRO-01"
+      },
+      "context_sha256": "3893aba77597e51b7941015bbd7ef52ea476de47cd349e1f6ddf61386aa8f031",
+      "observation_signal": "目标=距离/线面角相关结论（模板级观察信号，无题干）",
+      "course_call": {
+        "course_id": "3.1.4.8",
+        "method_model_id": "moving_point_single_var_solve",
+        "appears_before_first_use": true,
+        "linkage": "B 组强化题：线上动点（模板：向量模/垂直分解/距离公式；题前复述桥接'空间动点单变量化配方'）",
+        "first_use_location": "3.1.4.8 视频轴上动点段（P=A+λv 表示、定义域）"
+      },
+      "first_line": "第一行：目标=…；设动点 P=A+λv 并写 λ 的几何定义域",
+      "second_line": "第二行：把距离/数量积/夹角条件逐一化为 λ 的表达式",
+      "continuation": "继续：配方/判别式/单调性求值 —— 卡点：①题面不可见 ②桥接'空间动点单变量化配方'SOURCE_METHOD_READY 未补微课",
+      "independent_self_check": "模板检查：参数零点/端点含义、函数极值与存在性区分、线段范围回检 —— 无法闭合",
+      "first_breakpoint": "题面不可见 + 桥接未闭合（空间动点单变量化配方：SOURCE_METHOD_READY，仅方法骨架未补完整无答案微课）",
+      "hint_level": "none",
+      "verdict": "BLOCKED",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    }
+  ],
+  "method_check_results": [
+    {
+      "section": "micro专题1",
+      "cycle": "micro-cycle-1",
+      "method_check_id": "micro-moving-point-check-1",
+      "method_model_id": "moving_point_collinear_param",
+      "result": "BLOCKED",
+      "evidence": "共线设参主体由 3.1.4.8 覆盖，但检查链含课程外桥接'空间动点单变量化配方'（SOURCE_METHOD_READY 仅方法骨架，未补完整无答案微课），桥接未闭合不能放行"
+    }
+  ],
+  "first_breakpoints": [
+    {
+      "item_id": "micro-cycle-1-变式1",
+      "cycle": "micro-cycle-1",
+      "first_breakpoint": "变式题面不可见：无法确认相对母题改动的具体条件（对象/系数/位置），独立重建仅到通用模型层"
+    },
+    {
+      "item_id": "micro-cycle-1-B1",
+      "cycle": "micro-cycle-1",
+      "first_breakpoint": "题面不可见 + 桥接未闭合（空间动点单变量化配方：SOURCE_METHOD_READY，仅方法骨架未补完整无答案微课）"
+    }
+  ],
+  "answer_sidecar_read": false,
+  "human_acceptance_not_proven": true
+}

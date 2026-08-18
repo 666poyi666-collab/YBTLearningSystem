@@ -1,0 +1,205 @@
+{
+  "schema_version": "7.1",
+  "section": "1.1",
+  "round": 5,
+  "worker": 5,
+  "assigned_cycles": [
+    "1.1-cycle-9",
+    "1.1-cycle-10"
+  ],
+  "runtime_contract": {
+    "role": "deepseek_worker",
+    "model": "opencode-go/deepseek-v4-flash",
+    "reasoning_effort": "max",
+    "context_window": 1000000,
+    "match": true
+  },
+  "sources_read": [
+    "data/packets/1.1/learning_path_without_questions.md (08-16 00:13 版)",
+    "data/packets/1.1/learning_packet.json (08-16 00:13 版，含 C14 内嵌 vision_sidecar)",
+    "data/contexts/1.1.json (08-16 00:13 版)",
+    "data/bridge_micro_lessons.json (08-16 00:11 版)",
+    "data/bridge_supplement_lessons.json (08-15 23:10 版)",
+    "data/course_transcripts (3.1.4.1 线面平行判据确认；15 个关键词扫描)"
+  ],
+  "forbidden_sources_read": false,
+  "answer_sidecar_read": false,
+  "human_acceptance_not_proven": true,
+  "cold_retest_24h": "not_run",
+  "first_breakpoint": "C14-A 交点比例计算：M=DF∩AC、N=EF∩BC 需先参数化（M=(1-s)A+sC 且 M=(1-t)D+tF），对基 {PA,PB,PC} 比较系数解出 s=z(x-1)/(x-z)、s'=z(y-1)/(y-z)，再由 x=y 得 s=s' 推出 MN 平行 AB 进而平行平面 PAB。任务说明中提到的『仿射系数求交点比例』无答案微课/检查点经全面检索（md、learning_packet、contexts、bridge_micro_lessons、bridge_supplement_lessons 中的 交点/比例/截线/求交/仿射）在 08-16 00:13 当前版本中不存在：循环10 仍只有 2 个方法检查点（正数乘积约束下的和最值回顾、外接球心等距回代）和 4 个桥接块（四点共面、重心、正数乘积和最值、外接球），均不含交点比例教学。该近迁移模式（同一交点用线段参数与直线参数双重表示后系数相等）无任何演示，仍是零基础学生首个真实断点；所有工具（基表示+系数比较=四点共面补充课/k3/例12；线面平行向量判据=3.1.4.1）都在路线内，因此可完成但未被直接讲授。",
+  "cycle_results": [
+    {
+      "cycle": "1.1-cycle-9",
+      "title": "极化与四点共面综合",
+      "verdict": "proxy_pass",
+      "first_breakpoint": "无阻断断点。最接近风险点仍是 B8 的顶点枚举（P 在盒内时 |PM|^2 最大点取顶点 (0,0,2)，答案 4），极化补充课已要求端点/内部点/等号条件检查，属初等计算。",
+      "evidence": [
+        "极化桥接 SUPPLEMENT_READY：补充课含 2a·b=|a+b|^2-|a|^2-|b|^2 与差向量形式的展开、选择规则、定义域与等号条件；md 循环9 渲染为 SUPPLEMENT_READY｜已有无答案补充课。",
+        "四点共面桥接 SUPPLEMENT_READY 且 00:11 升级为双向证明（正向 AP=uAB+vAC 推出 x+y+z=1；逆向 x+y+z=1 推出 P 在平面 ABC 内），并明确区分点的系数和与自由向量系数。",
+        "B8 独立解算（重测）：M=AC 中点，PA·PC=|PM|^2-|MA|^2=|PM|^2-2，max|PM|^2=6（P=(0,0,2)），答案 4。",
+        "C13 独立解算（重测）：OB=λOA+μOC 对基 {a,b,c} 比较系数，λ+2μ=p、-2λ+μ=1、λ-2μ=q，3p+5q=-4。",
+        "检查点 1.1-polarization-check-1：PA·PB=(PM+MA)·(PM-MA)=|PM|^2-|MA|^2，补充课+k4 分配律可独立完成；检查点 1.1-four-point-check-1 由双向证明直接支撑。",
+        "B8/C13 图形状态：纯文字可作答（无图、无 sidecar、E1 锚定，视觉无缺口）。"
+      ],
+      "method_models": [
+        {
+          "name": "极化恒等式与数量积最值",
+          "status": "SUPPLEMENT_READY",
+          "trigger": "B8；1.1-polarization-check-1",
+          "steps": [
+            "从 |a+b|^2 与 |a-b|^2 展开得到 2a·b 的两种恒等式",
+            "按和/差/中点距离选择替换形式",
+            "几何限制翻译成模长平方/单变量可行范围",
+            "端点、内部点、等号条件一并检查后回代"
+          ],
+          "checks": [
+            "独立展开两种恒等式",
+            "说明选择依据",
+            "写出定义域与等号条件"
+          ]
+        },
+        {
+          "name": "四点共面系数和=1（仿射系数判定）",
+          "status": "SUPPLEMENT_READY",
+          "trigger": "C13、C14；1.1-four-point-check-1",
+          "steps": [
+            "固定公共起点 O 写 OP=xOA+yOB+zOC",
+            "正向：AP=uAB+vAC 推出 x+y+z=1",
+            "逆向：x+y+z=1 推出 P 在平面 ABC 内",
+            "区分点系数和与自由向量系数，换公共起点重推"
+          ],
+          "checks": [
+            "正向证明",
+            "逆向证明",
+            "区分点共面与向量共面"
+          ]
+        }
+      ],
+      "unresolved_gaps": [
+        "B8 顶点枚举推理仍无专门教学（依赖补充课端点检查纪律）。",
+        "C13 的向量共面（OB=λOA+μOC）相对点共面系数和是近迁移，靠 k3+例12 支撑。",
+        "proxy_pass 仅为模拟判定；human_acceptance_not_proven=true；24h 冷复测 not_run。"
+      ]
+    },
+    {
+      "cycle": "1.1-cycle-10",
+      "title": "外接球、点面距离与压轴综合",
+      "verdict": "partial",
+      "first_breakpoint": "C14-A 交点比例计算（同顶层 first_breakpoint）：任务要求的『仿射系数求交点比例』补充课/检查点在 08-16 00:13 当前所有 student-facing 输入中不存在；循环10 检查点清单未变（正数乘积最值回顾、外接球心等距回代），C14 任务行仍只挂 4 个桥接。因此 C14-A 的『线段参数+直线参数双重表示求交点』模式仍无教学演示，为本轮第一真实断点（可完成，近迁移）。",
+      "evidence": [
+        "C14-A 独立近迁移推导（本轮给出）：以 P 为原点、{PA,PB,PC} 为基；D=x·PA、E=y·PB、F=z·PC。M∈AC 写 M=(1-s)A+sC，M∈DF 写 M=(1-t)D+tF=x(1-t)A+zt·C；基独立 ⟹ x(1-t)=1-s 且 zt=s ⟹ s=z(x-1)/(x-z)。同理 N=(1-s')B+s'C、s'=z(y-1)/(y-z)。x=y ⟹ s=s' ⟹ MN=(1-s)(B-A) ⟹ MN∥AB；AB⊂平面PAB、MN⊄平面PAB ⟹ MN∥平面PAB（A 真）。域检查：x>1、0<z<1 时 0<s<1 成立。",
+        "C14-B 独立判定为假：重心 PO=(PA+PB+PC)/3（重心补充课在路线内）。",
+        "C14-C 独立解算为真：O∈平面DEF ⟹ 1/x+1/y=1 ⟹ x+y=xy≥4（AM-GM，positive-product-sum 补充课），x=y=2 取等，符合 x,y>1 定义域。",
+        "C14-D 独立解算为真：外接球心 G 在 PO 上，等距条件 PG=(3/4)PO；x=y=2、平面 DEF 过 G ⟹ z=1/3；F 到平面 PDE(=平面 PAB) 距离=(1/3)·(√6/3)=√6/9（外接球补充课+3.1.4.7 点面距离）。",
+        "视觉复核：C14 VISION_VERIFIED、imgs=1、内嵌 sidecar=1（E2，11 点坐标 P,D,A,C,B,E,F,M,G,O,N 齐全）、evidence=E1,E2，md 标注视觉已核验。",
+        "前置顺序复核：3.1.4.1 首现循环8（md 568/608 行），先于循环10（700/790 行）；3.1.4.1 转写含线面平行向量判据（方向向量⊥法向量 ⟹ 线∥面）。",
+        "修复未落地证据：对 md/learning_packet/contexts/bridge_micro/bridge_supplement 检索 交点|比例|截线|交线|求交|仿射，无任何 C14-A 交点比例教学；bridge_micro 00:11 的改动仅为四点共面单元增加双向证明步骤；bridge_supplement 未更新（23:10）。"
+      ],
+      "method_models": [
+        {
+          "name": "正数乘积固定时的和最值（基本不等式）",
+          "status": "SUPPLEMENT_READY",
+          "trigger": "C14-C；1.1-inequality-check-1",
+          "steps": [
+            "先确认 x>0、y>0 且乘积正常数",
+            "由 (x-y)^2>=0 推出 x+y>=2sqrt(xy)",
+            "等号 x=y 回代定义域",
+            "条件不满足时改用配方/单调性/边界"
+          ],
+          "checks": [
+            "正数先于套式",
+            "能从平方非负推出",
+            "回代等号候选"
+          ]
+        },
+        {
+          "name": "外接球球心的垂直平分面法",
+          "status": "SUPPLEMENT_READY",
+          "trigger": "C14-D；1.1-sphere-check-1",
+          "steps": [
+            "对称性固定球心分量",
+            "等距平方差消半径",
+            "回代关键顶点",
+            "与平面过 G 的仿射条件联立求 z"
+          ],
+          "checks": [
+            "解释垂直平分面来源",
+            "选独立约束",
+            "回代验证唯一性"
+          ]
+        },
+        {
+          "name": "三角形重心的向量表示",
+          "status": "SUPPLEMENT_READY",
+          "trigger": "C14-B",
+          "steps": [
+            "中线 2:1 推出 OG=(OA+OB+OC)/3",
+            "换公共起点写 PO=(PA+PB+PC)/3"
+          ],
+          "checks": [
+            "独立推出",
+            "换起点仍成立"
+          ]
+        },
+        {
+          "name": "仿射系数求交点比例（C14-A 所需，缺位）",
+          "status": "NOT_PRESENT_IN_CURRENT_INPUTS",
+          "trigger": "C14-A（M=DF∩AC、N=EF∩BC 比例）",
+          "steps": [
+            "应含：交点双参数化 M=(1-s)A+sC 与 M=(1-t)D+tF，基独立后系数相等，解 s",
+            "应含：x=y 时 s=s' ⟹ MN∥AB 的域检查"
+          ],
+          "checks": [
+            "当前无任何 lesson/checkpoint 承载；检查点清单仍为 inequality+sphere 两项"
+          ]
+        }
+      ],
+      "unresolved_gaps": [
+        "『仿射系数求交点比例』无答案微课/检查点未交付：这是任务明确要求验证的修复项，当前输入中不存在，C14-A 近迁移缺口维持（第4轮同款断点）。",
+        "外接球无视频课程，PG=(3/4)PO 需学生自行等距推导。",
+        "C14 四选项整合四个方法域，多选压轴容错低。",
+        "human_acceptance_not_proven=true；24h 冷复测 not_run。"
+      ]
+    }
+  ],
+  "method_models": [
+    {
+      "name": "极化恒等式与数量积最值",
+      "status": "SUPPLEMENT_READY",
+      "trigger": "B8",
+      "checks": "独立展开两种恒等式/说明选择依据/定义域与等号条件"
+    },
+    {
+      "name": "四点共面系数和=1",
+      "status": "SUPPLEMENT_READY",
+      "trigger": "C13、C14",
+      "checks": "正逆向证明/区分点共面与向量共面"
+    },
+    {
+      "name": "正数乘积固定时的和最值",
+      "status": "SUPPLEMENT_READY",
+      "trigger": "C14-C",
+      "checks": "正数门/平方非负推导/等号回代"
+    },
+    {
+      "name": "外接球球心的垂直平分面法",
+      "status": "SUPPLEMENT_READY",
+      "trigger": "C14-D",
+      "checks": "等距消半径/回代三顶点"
+    },
+    {
+      "name": "三角形重心的向量表示",
+      "status": "SUPPLEMENT_READY",
+      "trigger": "C14-B",
+      "checks": "2:1 独立推导/换公共起点"
+    },
+    {
+      "name": "仿射系数求交点比例",
+      "status": "NOT_PRESENT_IN_CURRENT_INPUTS",
+      "trigger": "C14-A",
+      "checks": "缺位——当前无对应 lesson/checkpoint"
+    }
+  ],
+  "overall_verdict": "partial",
+  "summary": "详细第5轮 worker-5（循环9-10）：任务要求验证的『仿射系数求交点比例』无答案微课/检查点在 08-16 00:13 当前所有 student-facing 输入（md/learning_packet/contexts/bridge_micro/bridge_supplement）中不存在——循环10 检查点仍只有正数乘积最值回顾与外接球回代两项，C14 任务行仍挂 4 个桥接，bridge_micro 00:11 仅把四点共面单元升级为双向证明。因此该修复项无法通过验证，C14-A 交点比例近迁移缺口与第4轮相同，仍是第一真实断点；已给出完整独立推导（双参数化+系数相等：s=z(x-1)/(x-z)、s'=z(y-1)/(y-z)，x=y ⟹ MN∥AB ⟹ MN∥平面PAB），证明路线内工具（基表示/系数比较/线面平行向量判据）足以完成但无直接教学。其余复核全部通过：极化/四点共面/基本不等式/外接球桥接均 SUPPLEMENT_READY 且内容完整，B8=4、C13=3p+5q=-4、C14 B(假)/C(真)/D(真,√6/9) 独立重解一致，C14 内嵌 E2 sidecar 11 点齐全，3.1.4.1 前置顺序正确。循环9 proxy_pass、循环10 partial、总评 partial。未读答案/解法侧车、vision_sidecar_full、历史报告、验收报告、他人输出；仅写入本报告文件；human_acceptance_not_proven=true；24h 冷复测 not_run。"
+}

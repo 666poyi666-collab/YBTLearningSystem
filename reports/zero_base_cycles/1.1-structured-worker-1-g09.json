@@ -1,0 +1,563 @@
+{
+  "schema_version": "1.1",
+  "artifact": "CURRENT_GENERATION_ZERO_BASE_AGENT_SIMULATION",
+  "generation": "G-20260816-09",
+  "section": "1.1",
+  "worker": 1,
+  "worker_status": "PARTIAL",
+  "worker_contract": {
+    "workers_dispatched": 5,
+    "workers_completed": 5,
+    "role": "deepseek_worker",
+    "model": "opencode-go/deepseek-v4-flash",
+    "reasoning_effort": "max",
+    "context_window": 1000000,
+    "answer_sidecar_read": false
+  },
+  "runtime_contract": {
+    "agent_role": "deepseek_worker",
+    "model": "opencode-go/deepseek-v4-flash",
+    "reasoning_effort": "max",
+    "context_window": 1000000,
+    "contract_check": "runtime resolves to deepseek_worker / opencode-go/deepseek-v4-flash / max / 1000000; mismatch would stop this worker"
+  },
+  "answer_sidecar_read": false,
+  "human_acceptance_not_proven": true,
+  "role": "zero_base_student_simulation",
+  "student_profile": "零基础学生模拟：按《一本通》顺序先看完对应课程，再按无题路线任务逐题独立书写；例题允许跟随教学过程，直属变式与 A/B/C 题独立作答（不读答案）",
+  "scope": {
+    "tasks": ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14"],
+    "cycles": [1, 2],
+    "cycle1": "空间向量概念与线性运算（主课 3.1.1.1 空间向量的运算）",
+    "cycle2": "共线概念与向量拆分（主课 3.1.2.1 空间向量拆分法）"
+  },
+  "source_revision": {
+    "generation": "G-20260816-09",
+    "section": "1.1",
+    "context_sha256": "f7134202319beade76dd7f8dbbbd07b36613661ffa57b56c17267b7976e50dd2"
+  },
+  "context_sha256_declared": "f7134202319beade76dd7f8dbbbd07b36613661ffa57b56c17267b7976e50dd2",
+  "context_file_raw_sha256_note": "按指令逐项使用 evidence.context_sha256（声明值）；对文件原始字节重算为 2b2145f52f0c99fc1bf69e72764ff67e20e79c5ca485295a1c27ab0b03abd84b，与声明值不一致，已如实标记供主控核验",
+  "probe_evidence": {
+    "canary": "9aa133e8105f3e95",
+    "binding": "worker must echo canary and answer derived probes from this exact context",
+    "probes": [
+      { "qid": "Q-84442c12da683ad3", "sha256_prefix_8": "bb957c78", "match": true },
+      { "qid": "Q-1727695600a57e80", "sha256_prefix_8": "8af98ec5", "match": true },
+      { "qid": "Q-7370f2df587a419e", "sha256_prefix_8": "474ad3ed", "match": true }
+    ]
+  },
+  "input_boundary": {
+    "consumed": [
+      "data/contexts/1.1.json（当前学生上下文，status=VERIFIED，含题面与已验证视觉侧车）",
+      "data/zero_base_simulation_standard.md",
+      "data/packets/1.1/learning_path_without_questions.md（当前无题路线，循环1-2 任务 01-14）"
+    ],
+    "schema_reference_only": [
+      "reports/zero_base_cycles/1.1-structured-worker-1-g08.json 仅核对 merge schema 字段形状，未复制其作答内容"
+    ],
+    "forbidden_not_read": [
+      "data/packets/1.1/answer_sidecar.json",
+      "答案 OCR/答案正文",
+      "teaching_text/答案字段",
+      "历史 simulation 报告的作答内容"
+    ],
+    "visual_rule": "VISION_VERIFIED 项目仅使用上下文内已验证视觉侧车；READY_TEXT_ONLY 项目纯文字作答；无 NEEDS_VISION_SIDECAR/MISSING_OCR_ANCHOR/UNVERIFIED 阻断"
+  },
+  "boundary": {
+    "section": "1.1",
+    "generation": "G-20260816-09",
+    "cycles_in_scope": [1, 2],
+    "tasks_in_scope": "01-14",
+    "context_sha256": "f7134202319beade76dd7f8dbbbd07b36613661ffa57b56c17267b7976e50dd2",
+    "packet_type": "DEEPSEEK_STUDENT_CONTEXT",
+    "packet_status": "VERIFIED",
+    "answer_sidecar_read": false,
+    "answer_ocr_read": false,
+    "historical_simulation_consumed": false,
+    "item_boundary": "item_results 只包含当前 packet 的题项：教学例题/直属变式用 learning item_id，教材习题用 A1/A2/A3/B10；方法检查（如有）放在 method_check_results",
+    "note": "任务 01-14 对应当前路线的循环 1-2，该范围没有方法检查点，method_check_results 为空数组"
+  },
+  "method_check_results": [],
+  "first_breakpoints": [
+    "81bf55e4b2eab3a4: (2) AA1+(1/2)AC 的图中终点定位：需把 (1/2)AC 平移为从 A1 出发、沿 A1C1 方向的一半（A1C1 中点）才能标注结果向量，零基础无法独立完成平移定位",
+    "Q-7370f2df587a419e: (3) 合并 GD+GB 需先确认 O 是 BD 中点（平行四边形对角线互相平分），课程与题面均未直接给出该依据，GO-A1O 的变号随之中断",
+    "1bc60321129e778d: 判断 A（a∥b 且 b∥c 则 a∥c）需构造 b 为零向量的反例并论证传递性失效，零基础只能复述零向量共线规定，不能独立完成反例构造",
+    "ce0335a21c798927: (1) 拆 A1C 时漏掉 A1A 分量（只写成 A1B1+A1D1 的上底面对角线），EF 表达式缺竖棱项，无法继续与 EB 对照倍数",
+    "5f42fe5671670a92: 把 OE=kOA、OF=kOB、OH=kOD 代入 EG=EH+mEF 后，k 与 m 两个参数同时出现，提取公因子 k 时不确定哪些项保留 m，无法完成与 AC=AD+mAB 展开式的逐项对照"
+  ],
+  "closure": {
+    "item_count": 14,
+    "worked_examples": 8,
+    "direct_variants": 2,
+    "abc_questions": 4,
+    "note": "任务 01-14 与当前 packet 题项闭合：学习项用 item_id（3da13562633d3606/24dd4a64777ed832/df584e2805cfa309/8915857a2181490b/81bf55e4b2eab3a4/1bc60321129e778d/9dbc42c31a3d3813/e7779f7dc2baf837/ce0335a21c798927/5f42fe5671670a92），教材习题用 A1/A2/A3/B10，全部来自当前上下文与当前无题路线，未引入包外题项；任务 01-14 对应循环 1-2，当前路线未安排方法检查点，method_check_results 为空数组"
+  },
+  "verdicts": {
+    "PASS": 9,
+    "PARTIAL": 5,
+    "BLOCKED": 0,
+    "FAIL": 0,
+    "note": "PARTIAL 均在未获提示时停于第一断点（hint_level=none），按标准不能视为掌握；提示后项需未见迁移/延迟复测补证"
+  },
+  "item_results": [    {
+      "task": "01",
+      "cycle": 1,
+      "item_id": "3da13562633d3606",
+      "label": "教材例1",
+      "kind": "worked_example",
+      "group": null,
+      "section": "1.1",
+      "visual_status": "VISION_VERIFIED",
+      "source_revision": {
+        "generation": "G-20260816-09",
+        "source_packet_type": "DEEPSEEK_STUDENT_CONTEXT",
+        "packet_status": "VERIFIED"
+      },
+      "context_sha256": "f7134202319beade76dd7f8dbbbd07b36613661ffa57b56c17267b7976e50dd2",
+      "observation_signal": "长方体 ABCD-A1B1C1D1，以八个顶点中两点为起点和终点取向量，问(1)与 AB 相等的所有向量、(2)与 AA1 相反的所有向量；信号词『相等』『相反』『所有』，需按方向与模逐条核对并全列；视觉侧车给出 A/B/C/D 在下底面四角、A1B1C1D1 在上底面的方位",
+      "course_call": {
+        "course_key": "space_vector_ops",
+        "course_id": "3.1.1.1",
+        "course_name": "空间向量的运算",
+        "method_model_id": "3.1.1.1:equal_opposite_vectors",
+        "note": "调用课程定义：相等向量=方向相同且模相等；相反向量=方向相反且模相等；用长方体对棱平行且等长逐条核对方向"
+      },
+      "first_line": "目标量：(1) 与 AB 同向且等长的所有向量；(2) 与 AA1 反向且等长的所有向量；先固定长方体八个顶点的相对方位",
+      "second_line": "依据定义：a=b 当且仅当方向相同且 |a|=|b|；相反向量方向相反且模相等；长方体中平行且等长的棱作为有向线段只是起终点不同",
+      "continuation": "(1) 与 AB 同向等长的棱：AB 本身、DC、A1B1、D1C1，共 4 个；(2) 与 AA1 反向等长的棱：A1A、B1B、C1C、D1D，共 4 个；逐条写出并核对模长",
+      "independent_self_check": "核对方向没有写反（是 DC 不是 CD、是 D1C1 不是 C1D1）；核对没有漏掉与 AB 平行的上底面棱；本题不涉及零向量/单位向量的特殊规定",
+      "first_breakpoint": "none",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "task": "02",
+      "cycle": 1,
+      "item_id": "24dd4a64777ed832",
+      "label": "教材例2",
+      "kind": "worked_example",
+      "group": null,
+      "section": "1.1",
+      "visual_status": "VISION_VERIFIED",
+      "source_revision": {
+        "generation": "G-20260816-09",
+        "source_packet_type": "DEEPSEEK_STUDENT_CONTEXT",
+        "packet_status": "VERIFIED"
+      },
+      "context_sha256": "f7134202319beade76dd7f8dbbbd07b36613661ffa57b56c17267b7976e50dd2",
+      "observation_signal": "平行六面体 ABCD-A1B1C1D1，选择题：AB+AD+CC1 等于哪个向量；信号词：加法、首尾相接/平行四边形法则；视觉侧车给出底面 A-D-C-B 的棱线关系",
+      "course_call": {
+        "course_key": "space_vector_ops",
+        "course_id": "3.1.1.1",
+        "course_name": "空间向量的运算",
+        "method_model_id": "3.1.1.1:parallelogram_triangle_rule",
+        "note": "调用课程加法法则：共起点用平行四边形法则，首尾相接用三角形法则，逐段合并"
+      },
+      "first_line": "目标：化简 AB+AD+CC1；先看底面两向量 AB、AD 的起点关系",
+      "second_line": "AB 与 AD 共起点 A，按平行四边形法则 AB+AD=AC（底面另一条对角线）",
+      "continuation": "再合并 AC+CC1：AC 的终点是 C，CC1 的起点是 C，首尾相接得 AC1；对照选项选出结果",
+      "independent_self_check": "检查首尾方向：AC 的终点 C 确实是 CC1 的起点；结果是从 A 出发指向 C1 的体对角线；没有把加法的方向写反",
+      "first_breakpoint": "none",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "task": "03",
+      "cycle": 1,
+      "item_id": "df584e2805cfa309",
+      "label": "教材例3",
+      "kind": "worked_example",
+      "group": null,
+      "section": "1.1",
+      "visual_status": "VISION_VERIFIED",
+      "source_revision": {
+        "generation": "G-20260816-09",
+        "source_packet_type": "DEEPSEEK_STUDENT_CONTEXT",
+        "packet_status": "VERIFIED"
+      },
+      "context_sha256": "f7134202319beade76dd7f8dbbbd07b36613661ffa57b56c17267b7976e50dd2",
+      "observation_signal": "四面体 ABCD，E 是 BC 的中点，AE=4AF，选择题用 AB、AC、AD 表示 DF；信号词：中点、比例点、基底表示；视觉侧车：E 在线段 BC 上、F 在线段 AE 上",
+      "course_call": {
+        "course_key": "space_vector_ops",
+        "course_id": "3.1.1.1",
+        "course_name": "空间向量的运算",
+        "method_model_id": "3.1.1.1:midpoint_and_scalar_ratio",
+        "note": "调用课程中点公式与数乘：AE=(AB+AC)/2；AE=4AF 即 AF=(1/4)AE；DF 用 DA+AF 首尾相接"
+      },
+      "first_line": "目标：把 DF 写成 AB、AC、AD 的线性组合；先确定 E、F 两个分点的位置",
+      "second_line": "E 为 BC 中点：AE=(AB+AC)/2；由 AE=4AF 得 AF=(1/4)AE=(AB+AC)/8",
+      "continuation": "DF=DA+AF=-AD+(1/8)AB+(1/8)AC，整理后与选项逐项比对，确认 AB、AC 系数各 1/8、AD 系数为 -1",
+      "independent_self_check": "检查 AE=4AF 的方向：F 在 AE 上且 AF 是 AE 的 1/4 而不是 4 倍；DF 的起终点顺序（D 到 F）与 DA+AF 一致；中点 1/2 再乘 1/4 得 1/8 没有算错",
+      "first_breakpoint": "none",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },    {
+      "task": "04",
+      "cycle": 1,
+      "item_id": "8915857a2181490b",
+      "label": "教材例9",
+      "kind": "worked_example",
+      "group": null,
+      "section": "1.1",
+      "visual_status": "READY_TEXT_ONLY",
+      "source_revision": {
+        "generation": "G-20260816-09",
+        "source_packet_type": "DEEPSEEK_STUDENT_CONTEXT",
+        "packet_status": "VERIFIED"
+      },
+      "context_sha256": "f7134202319beade76dd7f8dbbbd07b36613661ffa57b56c17267b7976e50dd2",
+      "observation_signal": "纯文字化简两式：(1) 3(2a-b-4c)-4(a-2b+3c)；(2) OA-[OB-(AB-AC)]；信号词：分配律、括号变号、向量线性合并",
+      "course_call": {
+        "course_key": "space_vector_ops",
+        "course_id": "3.1.1.1",
+        "course_name": "空间向量的运算",
+        "method_model_id": "3.1.1.1:linear_combination_simplify",
+        "note": "调用课程运算律：数乘分配律逐项展开，括号前负号逐项变号，同类向量按系数合并"
+      },
+      "first_line": "目标：把两式化简到最简线性组合；(1) 先展开外层数乘",
+      "second_line": "(1) 3(2a-b-4c)=6a-3b-12c，-4(a-2b+3c)=-4a+8b-12c，相加合并系数得 2a+5b-24c",
+      "continuation": "(2) 先处理内层括号：OB-(AB-AC)=OB-AB+AC；再算 OA-[...]=OA-OB+AB-AC；OA-OB=BA，BA+AB=0，剩下 -AC 即 CA",
+      "independent_self_check": "检查 (1) 各项系数：a 系数 6-4=2、b 系数 -3+8=5、c 系数 -12-12=-24；(2) 括号变号只作用于括号内每一项，AB 前负号与 AC 前负负得正都核对过；结果仍然是向量",
+      "first_breakpoint": "none",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "task": "05",
+      "cycle": 1,
+      "item_id": "81bf55e4b2eab3a4",
+      "label": "教材例10",
+      "kind": "worked_example",
+      "group": null,
+      "section": "1.1",
+      "visual_status": "VISION_VERIFIED",
+      "source_revision": {
+        "generation": "G-20260816-09",
+        "source_packet_type": "DEEPSEEK_STUDENT_CONTEXT",
+        "packet_status": "VERIFIED"
+      },
+      "context_sha256": "f7134202319beade76dd7f8dbbbd07b36613661ffa57b56c17267b7976e50dd2",
+      "observation_signal": "平行六面体 ABCD-A1B1C1D1，化简并在图中标出结果向量：(1) DC+A1D1+(1/2)CC1；(2) AA1+(1/2)AB+(1/2)AD；信号词：化简、图中标出结果；视觉侧车：AA1/BB1/CC1/DD1 为对应棱、ABCD 为下底面、A1B1C1D1 为上底面",
+      "course_call": {
+        "course_key": "space_vector_ops",
+        "course_id": "3.1.1.1",
+        "course_name": "空间向量的运算",
+        "method_model_id": "3.1.1.1:parallelogram_triangle_rule",
+        "note": "调用课程加法合并：平移相等向量换名（DC=AB、A1D1=AD），共起点用平行四边形法则，再首尾相接定位终点"
+      },
+      "first_line": "目标：分别化简两个表达式，并在图中标出结果向量的起点和终点",
+      "second_line": "(1) 平移换名：DC=AB、A1D1=AD，故 DC+A1D1=AB+AD=AC；再加 (1/2)CC1",
+      "continuation": "(1) AC+(1/2)CC1：从 C 沿 CC1 方向取一半，终点是 CC1 的中点，结果是从 A 指向该中点的向量；(2) (1/2)AB+(1/2)AD=(1/2)(AB+AD)=(1/2)AC，再与 AA1 合并",
+      "independent_self_check": "(1) 检查 DC 与 AB 方向一致（都是前底边方向）、A1D1 与 AD 方向一致；(2) 检查 (1/2)AC 需要平移成从 A1 出发、沿 A1C1 方向的一半才能定位终点，起终点标注是否与图一致",
+      "first_breakpoint": "(2) 的图中定位卡住：AA1+(1/2)AC 需要把 (1/2)AC 平移为从 A1 出发、沿 A1C1 方向取一半的向量才能标出终点（A1C1 的中点），零基础不能独立完成该平移定位，未获提示前停在图中标注这一步",
+      "hint_level": "none",
+      "verdict": "PARTIAL",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "task": "06",
+      "cycle": 1,
+      "item_id": "A1",
+      "label": "A1",
+      "kind": "abc_question",
+      "group": "A",
+      "section": "1.1",
+      "visual_status": "VISION_VERIFIED",
+      "source_revision": {
+        "generation": "G-20260816-09",
+        "source_packet_type": "DEEPSEEK_STUDENT_CONTEXT",
+        "packet_status": "VERIFIED"
+      },
+      "context_sha256": "f7134202319beade76dd7f8dbbbd07b36613661ffa57b56c17267b7976e50dd2",
+      "observation_signal": "四面体 OABC（2025 新疆巴音郭楞期末），N 是 BC 的中点，OA=a、OB=b、OC=c，用基底表示 AN；选项式；信号词：中点、基底表示；视觉侧车：三棱锥 O-ABC、N 在 BC 上、连接 AN",
+      "course_call": {
+        "course_key": "space_vector_ops",
+        "course_id": "3.1.1.1",
+        "course_name": "空间向量的运算",
+        "method_model_id": "3.1.1.1:midpoint_split",
+        "note": "调用课程中点公式 ON=(OB+OC)/2 与反向向量 AO=-OA，按首尾相接 AN=AO+ON 拆分"
+      },
+      "first_line": "目标：把 AN 用 a、b、c 表示；先把 AN 拆成从 A 出发首尾相接的两段",
+      "second_line": "AN=AO+ON；AO=-OA=-a；N 是 BC 中点，ON=(OB+OC)/2=(b+c)/2",
+      "continuation": "AN=-a+(1/2)b+(1/2)c，与四个选项比对，确认 a 的系数为 -1、b 与 c 的系数各为 1/2",
+      "independent_self_check": "检查 AO 方向：A 到 O 与 O 到 A 反向所以是 -a；N 是 BC 中点所以 b、c 各 1/2；没有把加法写成减法",
+      "first_breakpoint": "none",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "task": "07",
+      "cycle": 1,
+      "item_id": "A2",
+      "label": "A2",
+      "kind": "abc_question",
+      "group": "A",
+      "section": "1.1",
+      "visual_status": "READY_TEXT_ONLY",
+      "source_revision": {
+        "generation": "G-20260816-09",
+        "source_packet_type": "DEEPSEEK_STUDENT_CONTEXT",
+        "packet_status": "VERIFIED"
+      },
+      "context_sha256": "f7134202319beade76dd7f8dbbbd07b36613661ffa57b56c17267b7976e50dd2",
+      "observation_signal": "纯文字化简（2025 全国模拟）：(1) 2(a-2b-3c)-3(a+2b-c)；(2) AB-DB-AC；信号词：分配律、双重负号、向量加减",
+      "course_call": {
+        "course_key": "space_vector_ops",
+        "course_id": "3.1.1.1",
+        "course_name": "空间向量的运算",
+        "method_model_id": "3.1.1.1:linear_combination_simplify",
+        "note": "调用课程运算律：数乘分配律展开、括号负号逐项变号、共起点减法末减出"
+      },
+      "first_line": "目标：把两式化简到最简；(1) 逐项展开数乘",
+      "second_line": "(1) 2(a-2b-3c)=2a-4b-6c，-3(a+2b-c)=-3a-6b+3c，合并系数得 -a-10b-3c",
+      "continuation": "(2) AB-DB-AC=AB+BD-AC=AD-AC；AD 与 AC 共起点 A，末减出得 CD",
+      "independent_self_check": "(1) 检查各项系数：a 系数 2-3=-1、b 系数 -4-6=-10、c 系数 -6+3=-3；(2) 检查 -DB 变号成 +BD、AD-AC 的末减出方向（终点 D 减终点 C 得 CD）",
+      "first_breakpoint": "none",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },    {
+      "task": "08",
+      "cycle": 1,
+      "item_id": "A3",
+      "label": "A3",
+      "kind": "abc_question",
+      "group": "A",
+      "section": "1.1",
+      "visual_status": "VISION_VERIFIED",
+      "source_revision": {
+        "generation": "G-20260816-09",
+        "source_packet_type": "DEEPSEEK_STUDENT_CONTEXT",
+        "packet_status": "VERIFIED"
+      },
+      "context_sha256": "f7134202319beade76dd7f8dbbbd07b36613661ffa57b56c17267b7976e50dd2",
+      "observation_signal": "正方体 ABCD-A1B1C1D1（2025 山东菏泽模拟），G 为 CC1 的中点，O 为 AC 与 BD 的交点；化简：(1) AB-BC；(2) A1B1+A1D1+C1C；(3) (1/2)(GD+GB)-A1O；信号词：中点、对角线交点、化简；视觉侧车：G 在线段 CC1 上且为中点、O 为底面对角线 AC 与 BD 的交点",
+      "course_call": {
+        "course_key": "space_vector_ops",
+        "course_id": "3.1.1.1",
+        "course_name": "空间向量的运算",
+        "method_model_id": "3.1.1.1:midpoint_split",
+        "note": "调用课程加法/中点/共起点减法：平行四边形法则合并共起点向量；合并 GD+GB 需借助 BD 的中点，O 作为对角线交点应是 BD 中点"
+      },
+      "first_line": "目标：逐式化简；(1) 先统一 AB 与 BC 的起点",
+      "second_line": "(1) AB-BC=AB+CB，首尾相接得 AC；(2) A1B1=AB、A1D1=AD，A1B1+A1D1=A1C1，再加 C1C 得 A1C",
+      "continuation": "(3) 想用中点公式合并 GD+GB，需要知道 BD 的中点；O 是 AC 与 BD 的交点，若 O 是 BD 中点则 GD+GB=2GO，(1/2)(GD+GB)=GO",
+      "independent_self_check": "(1)(2) 的方向与终点核对过；(3) 检查 O 是 BD 中点这一步的依据（平行四边形对角线互相平分）是否由课程或题面直接给出；GO-A1O 的减号处理（A1O 反向成 OA1）尚未完成",
+      "first_breakpoint": "(3) 卡在合并 GD+GB：要写 GD+GB=2GO 必须先确认 O 是 BD 中点，而『平行四边形对角线互相平分』这一事实课程与题面都没有直接给出，零基础无法独立补上该依据，GO-A1O 的变号也随之中断",
+      "hint_level": "none",
+      "verdict": "PARTIAL",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "task": "09",
+      "cycle": 2,
+      "item_id": "1bc60321129e778d",
+      "label": "教材例4",
+      "kind": "worked_example",
+      "group": null,
+      "section": "1.1",
+      "visual_status": "READY_TEXT_ONLY",
+      "source_revision": {
+        "generation": "G-20260816-09",
+        "source_packet_type": "DEEPSEEK_STUDENT_CONTEXT",
+        "packet_status": "VERIFIED"
+      },
+      "context_sha256": "f7134202319beade76dd7f8dbbbd07b36613661ffa57b56c17267b7976e50dd2",
+      "observation_signal": "多选判断共线概念（纯文字）：A 若 a 与 b 共线、b 与 c 共线则 a 与 c 共线；B 两个非零向量 AB、CD 满足 AB+CD=0 则 AB∥CD；C 零向量与任何向量都共线；D 两个单位向量一定是相等向量；信号词：共线、零向量、单位向量、多选",
+      "course_call": {
+        "course_key": "decomposition",
+        "course_id": "3.1.2.1",
+        "course_name": "空间向量拆分法",
+        "method_model_id": "3.1.2.1:collinearity_criterion",
+        "note": "调用课程共线向量定理：a∥b（b 非零）当且仅当存在实数 λ 使 a=λb；规定零向量与任意向量共线；方向向量不能取零向量"
+      },
+      "first_line": "目标：逐条判断 A-D 的真假；先写出共线判据：a∥b 当且仅当存在 λ 使 a=λb（b 非零）",
+      "second_line": "B：AB+CD=0 得 CD=-AB，是数乘关系且题面已给非零前提，AB∥CD 成立；C：零向量与任何向量都共线，课程明确规定，成立；D：单位向量只规定模为 1，方向可以不同，不一定相等，不成立",
+      "continuation": "回到 A：若 b 是零向量，b 与任何向量共线，但 a 与 c 之间没有传递关系；题目没有说明 a、b、c 非零，A 是否成立需要单独检查非零条件",
+      "independent_self_check": "检查 B 的非零前提（题面已给非零向量）；C 是课程明确规定的结论；D 用单位向量方向不定说明；A 的非零条件检查无法从题面或课程中直接找到依据",
+      "first_breakpoint": "判断 A 时卡住：要否定『a∥b 且 b∥c 则 a∥c』需要自己构造 b 为零向量的反例并说明此时 a、c 可以任意，零基础只能复述『零向量与任何向量共线』的规定，不能独立完成反例构造与传递性失效的论证",
+      "hint_level": "none",
+      "verdict": "PARTIAL",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "task": "10",
+      "cycle": 2,
+      "item_id": "9dbc42c31a3d3813",
+      "label": "教材例5",
+      "kind": "worked_example",
+      "group": null,
+      "section": "1.1",
+      "visual_status": "READY_TEXT_ONLY",
+      "source_revision": {
+        "generation": "G-20260816-09",
+        "source_packet_type": "DEEPSEEK_STUDENT_CONTEXT",
+        "packet_status": "VERIFIED"
+      },
+      "context_sha256": "f7134202319beade76dd7f8dbbbd07b36613661ffa57b56c17267b7976e50dd2",
+      "observation_signal": "a、b、c 是一组不共面的向量，判断下列各项中一定不共面的一组：A a-b、b+c、c+a；B -a+c、-b-c、a+b；C a+b、b-c、a+c；D a+b、a-b、c；信号词：不共面、线性组合、共面向量判定",
+      "course_call": {
+        "course_key": "decomposition",
+        "course_id": "3.1.2.1",
+        "course_name": "空间向量拆分法",
+        "method_model_id": "3.1.2.1:coplanarity_coefficient_test",
+        "note": "调用课程共面向量定理与拆分法：p 与不共线 a、b 共面当且仅当 p=xa+yb；对候选组写线性关系，用基底系数唯一性判断"
+      },
+      "first_line": "目标：对每组判断是否存在不全为零的系数使线性组合为零；先对 A、B 试凑可见的系数关系",
+      "second_line": "A：(a-b)+(b+c)-(c+a)=0，线性相关，共面；B：(-a+c)+(-b-c)+(a+b)=0，线性相关，共面",
+      "continuation": "C：(a+b)-(b-c)=a+c，第三项可由前两项线性表示，共面；D：设 x(a+b)+y(a-b)+zc=0，展开得 (x+y)a+(x-y)b+zc=0，由 a、b、c 不共面知 x+y=0、x-y=0、z=0，解得 x=y=z=0，D 线性无关，一定不共面",
+      "independent_self_check": "检查 C 的线性关系方向（用差而不是用和）；D 中系数比较依赖『不共面则基底表示唯一』；确认题目问的是『一定不共面』即线性无关的那一组",
+      "first_breakpoint": "none",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "task": "11",
+      "cycle": 2,
+      "item_id": "e7779f7dc2baf837",
+      "label": "教材例11",
+      "kind": "worked_example",
+      "group": null,
+      "section": "1.1",
+      "visual_status": "READY_TEXT_ONLY",
+      "source_revision": {
+        "generation": "G-20260816-09",
+        "source_packet_type": "DEEPSEEK_STUDENT_CONTEXT",
+        "packet_status": "VERIFIED"
+      },
+      "context_sha256": "f7134202319beade76dd7f8dbbbd07b36613661ffa57b56c17267b7976e50dd2",
+      "observation_signal": "a、b、c 不共面，AB=4a+5b+3c、AC=2a+3b+c、AD=6a+7b+5c，求证 B、C、D 三点共线；信号词：三点共线、公共起点 A、系数比较",
+      "course_call": {
+        "course_key": "decomposition",
+        "course_id": "3.1.2.1",
+        "course_name": "空间向量拆分法",
+        "method_model_id": "3.1.2.1:common_start_difference_collinear",
+        "note": "调用课程拆分法：以 A 为公共起点作差得到 BC、BD，再按共线向量定理检查是否为实数倍"
+      },
+      "first_line": "目标：证明 B、C、D 三点共线，即证明 BC 与 BD 共线；先取两个方向向量",
+      "second_line": "BC=AC-AB=(2a+3b+c)-(4a+5b+3c)=-2a-2b-2c；BD=AD-AB=(6a+7b+5c)-(4a+5b+3c)=2a+2b+2c",
+      "continuation": "对照系数得 BC=-BD，即存在实数 λ=-1 使 BC=λBD，且 BC、BD 均非零（a、b、c 不共面），B 是两条向量的公共起点，所以 B、C、D 三点共线",
+      "independent_self_check": "检查作差方向：AC-AB 得 BC 而不是 CB；BC、BD 非零的依据（不共面基底下系数不全为零的组合不为零）；λ=-1 说明 C、D 在 B 的两侧，共线结论不受影响",
+      "first_breakpoint": "none",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },    {
+      "task": "12",
+      "cycle": 2,
+      "item_id": "ce0335a21c798927",
+      "label": "变式1(11)",
+      "kind": "direct_variant",
+      "group": null,
+      "section": "1.1",
+      "visual_status": "VISION_VERIFIED",
+      "source_revision": {
+        "generation": "G-20260816-09",
+        "source_packet_type": "DEEPSEEK_STUDENT_CONTEXT",
+        "packet_status": "VERIFIED"
+      },
+      "context_sha256": "f7134202319beade76dd7f8dbbbd07b36613661ffa57b56c17267b7976e50dd2",
+      "observation_signal": "正方体 ABCD-A1B1C1D1，A1E=2ED1、A1F=(2/3)FC；(1) 用 A1A、A1B1、A1D1 表示 EF；(2) 证明 E、F、B 三点共线；信号词：分点比例、体对角线、基底表示、共线证明；视觉侧车：E 在线段 A1D1 上、F 在线段 A1C 上、A1/F/C 共线",
+      "course_call": {
+        "course_key": "decomposition",
+        "course_id": "3.1.2.1",
+        "course_name": "空间向量拆分法",
+        "method_model_id": "3.1.2.1:common_start_difference_collinear",
+        "note": "调用课程拆分法与共线定理（例11 模型迁移）：把分点比例转成数乘，以 A1 为公共起点拆分 EF，再与 EB 对照倍数关系"
+      },
+      "first_line": "目标：(1) 把 EF 拆成以 A1 为起点的两段并用三个基向量表示；(2) 证明 EF 与 EB 共线；先处理两个分点比例",
+      "second_line": "A1E=2ED1 得 A1E=(2/3)A1D1；A1F=(2/3)FC 得 A1F=(2/5)A1C；EF=EA1+A1F=-(2/3)A1D1+(2/5)A1C",
+      "continuation": "把 A1C 沿三条棱拆分：A1C=A1A+A1B1+A1D1，代入后合并 A1D1 的系数，得到 EF 的三项表达式，再与 EB 的表达式对照倍数",
+      "independent_self_check": "检查 A1F=(2/3)FC 转成 A1F=(2/5)A1C 的比例方向（A1F:FC=2:3 而非 2/3 全程）；A1C 的拆分必须带 A1A 分量；EB 用 A1B 与 A1E 作差时的符号",
+      "first_breakpoint": "(1) 拆 A1C 时漏掉 A1A 分量：只把 A1C 写成 A1B1+A1D1（上底面对角线），没有加入竖棱 A1A，导致 EF 的表达式缺少 A1A 项，后续无法与 EB 建立倍数关系",
+      "hint_level": "none",
+      "verdict": "PARTIAL",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "task": "13",
+      "cycle": 2,
+      "item_id": "5f42fe5671670a92",
+      "label": "变式2(11)",
+      "kind": "direct_variant",
+      "group": null,
+      "section": "1.1",
+      "visual_status": "VISION_VERIFIED",
+      "source_revision": {
+        "generation": "G-20260816-09",
+        "source_packet_type": "DEEPSEEK_STUDENT_CONTEXT",
+        "packet_status": "VERIFIED"
+      },
+      "context_sha256": "f7134202319beade76dd7f8dbbbd07b36613661ffa57b56c17267b7976e50dd2",
+      "observation_signal": "O、A、B、C、D、E、F、G、H 为空间 9 个点（如图所示），OE=kOA、OF=kOB、OH=kOD、AC=AD+mAB、EG=EH+mEF，求证 AC∥EG；信号词：参数 k、m、双参数、平行证明；视觉侧车：O 在顶部、E 左下、F 右下、G 右中",
+      "course_call": {
+        "course_key": "decomposition",
+        "course_id": "3.1.2.1",
+        "course_name": "空间向量拆分法",
+        "method_model_id": "3.1.2.1:common_start_difference_collinear",
+        "note": "调用课程拆分法（例11 模型迁移）：把 EG 沿 EH、EF 拆分后代入 k 参数关系，再与 AC 的展开对照，找出实数倍"
+      },
+      "first_line": "目标：证明 AC 与 EG 共线，即找到实数 λ 使 EG=λAC；先把 AC 展开成 AD、AB 的组合，把 EG 展开成 EH、EF 的组合",
+      "second_line": "AC=AD+mAB=(OD-OA)+m(OB-OA)=OD-OA+mOB-mOA；EG=EH+mEF=(OH-OE)+m(OF-OE)",
+      "continuation": "代入 OE=kOA、OF=kOB、OH=kOD：EG=(kOD-kOA)+m(kOB-kOA)，尝试提取公因子 k 并与 AC 的展开式对照",
+      "independent_self_check": "检查 m 只乘在 EF 项上、k 需要从三个差项中分别提出；对照 EG 括号内与 AC 展开是否逐项一致；k 的取值（零与非零）对平行结论的影响",
+      "first_breakpoint": "代入参数后卡住：把 OE=kOA、OF=kOB、OH=kOD 代入 EG=EH+mEF 后，k 与 m 两个参数同时出现，提取公因子 k 时不确定哪些项该保留 m，无法独立完成与 AC=AD+mAB 展开式的逐项对照",
+      "hint_level": "none",
+      "verdict": "PARTIAL",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "task": "14",
+      "cycle": 2,
+      "item_id": "B10",
+      "label": "B10",
+      "kind": "abc_question",
+      "group": "B",
+      "section": "1.1",
+      "visual_status": "VISION_VERIFIED",
+      "source_revision": {
+        "generation": "G-20260816-09",
+        "source_packet_type": "DEEPSEEK_STUDENT_CONTEXT",
+        "packet_status": "VERIFIED"
+      },
+      "context_sha256": "f7134202319beade76dd7f8dbbbd07b36613661ffa57b56c17267b7976e50dd2",
+      "observation_signal": "四面体 ABCD（2025 上海模拟），E、F、I、H 分别是 AB、AC、CD、BD 的中点，G 为 EI 的中点，判断 G、F、H 三点是否共线并说明理由；信号词：中点、共线判断；视觉侧车：E 为 AB 中点、F 为 AC 中点、I 为 CD 中点、H 为 BD 中点",
+      "course_call": {
+        "course_key": "decomposition",
+        "course_id": "3.1.2.1",
+        "course_name": "空间向量拆分法",
+        "method_model_id": "3.1.2.1:midpoint_composition_collinear",
+        "note": "调用课程中点公式与共线定理：以 A 为公共起点写各中点向量，把 G 展开成四顶点组合，再与 F、H 对照"
+      },
+      "first_line": "目标：判断 G、F、H 是否共线；以 A 为公共起点表示 E、F、I、H，再组合出 G",
+      "second_line": "E=(A+B)/2、F=(A+C)/2、I=(C+D)/2、H=(B+D)/2（均以 A 为公共起点的位置向量形式）",
+      "continuation": "G=(E+I)/2=((A+B)/2+(C+D)/2)/2=(A+B+C+D)/4；又 (F+H)/2=((A+C)/2+(B+D)/2)/2=(A+B+C+D)/4=G，所以 G 是 FH 的中点，G、F、H 三点共线",
+      "independent_self_check": "检查 I 是 CD 的中点：I=(C+D)/2；G=(E+I)/2 展开后四个顶点的系数各为 1/4；G=(F+H)/2 说明 G 是 FH 的中点而不是 F、H 重合的退化情形",
+      "first_breakpoint": "none",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    }
+  ]
+}

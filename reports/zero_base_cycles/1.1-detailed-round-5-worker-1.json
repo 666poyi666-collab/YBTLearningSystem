@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "section": "1.1",
+  "round": 5,
+  "worker": 1,
+  "assigned_cycles": [
+    "1.1-cycle-1",
+    "1.1-cycle-2"
+  ],
+  "runtime_contract": {
+    "role": "deepseek_worker",
+    "model": "opencode-go/deepseek-v4-flash",
+    "reasoning_effort": "max",
+    "context_window": 1000000,
+    "contract_met": true
+  },
+  "sources_read": [
+    "data/packets/1.1/learning_packet.json",
+    "data/packets/1.1/learning_path_without_questions.md",
+    "data/contexts/1.1.json",
+    "data/bridge_micro_lessons.json",
+    "data/bridge_supplement_lessons.json",
+    "data/course_transcripts/3.1.1.1 空间向量的运算.json",
+    "data/course_transcripts/3.1.2.1 空间向量拆分法.json"
+  ],
+  "forbidden_sources_read": false,
+  "answer_sidecar_read": false,
+  "human_acceptance_not_proven": true,
+  "cold_retest_24h": "not_run",
+  "cycle_results": [
+    {
+      "cycle": "1.1-cycle-1",
+      "title": "空间向量概念与线性运算",
+      "verdict": "proxy_pass",
+      "item_conclusions": [
+        "任务01 例1 (VISION_VERIFIED, sidecar=标准长方体八顶点坐标): 知识点1+解法齐备; 与AB相等: DC/A1B1/D1C1; AA1相反: A1A/B1B/C1C/D1D. 可消费.",
+        "任务02 例2 (VISION_VERIFIED, sidecar=平行六面体6面+12棱): AB+AD=AC, +CC1=AC1 -> C. 可消费.",
+        "任务03 例3 (VISION_VERIFIED, sidecar: E在BC上, F在AE上, BD虚线): AE=1/2(AB+AC), DF=DA+AF=-AD+1/4AE -> B. 可消费.",
+        "任务04 例9 (READY_TEXT_ONLY): (1) 2a+5b-24c; (2) CA. 可消费.",
+        "任务05 例10 (VISION_VERIFIED, 3侧车: 主图+图1 P在CC1上向量A->P高亮+图2 上底面中心): (1) AP(P=CC1中点); (2) AO(O=A1C1∩B1D1). 可消费; 图2 侧车点名 Q 与解题文本 O 不一致(角色相同, 轻微).",
+        "任务06 A1 (VISION_VERIFIED, sidecar: N在BC上, 连AN/ON): AN=-a+1/2b+1/2c -> C. 独立完成.",
+        "任务07 A2 (READY_TEXT_ONLY): (1) -a-10b-3c; (2) AB-DB-AC=CD. 独立完成.",
+        "任务08 A3 (VISION_VERIFIED, sidecar 本轮已修复: G为CC1中点, O=AC∩BD, 连GD/GB/A1O, E1): (1) DB; (2) A1C; (3) 1/2(GD+GB)-A1O=GO+OA1=GA1. 独立完成, 侧车与题干完全一致."
+      ],
+      "first_breakpoint": null,
+      "sticking_points": [
+        "本轮无卡点; 上一轮遗留的 A3 侧车 G 坐标错误已修复 (现 E1: G在线段CC1上且图示为中点).",
+        "例10 图2 侧车点名为 Q, 解题文本为 O=A1C1∩B1D1, 仅标签不一致."
+      ],
+      "evidence": [
+        "每张图都有可消费嵌入式侧车: 例1/2/3/10 为 1/1/1/3, A1/A3 各1, 例9/A2 无图; route md 任务01/05/08 已标 视觉已核验.",
+        "知识前置: k1(相关概念)/k2(线性运算) 先于所有例题与 A/B/C; 课程 3.1.1.1 先于首次使用; 无桥接无隐藏前置 (bridge_unit_ids 空, prerequisite_course_keys 空).",
+        "无答案暴露: 循环1 无变式, A1-A3 条目无 solution/answer/解析/答案 字段; context A1/A2/A3: visual_ready=true, blockers=[]."
+      ]
+    },
+    {
+      "cycle": "1.1-cycle-2",
+      "title": "共线概念与向量拆分",
+      "verdict": "blocked",
+      "item_conclusions": [
+        "任务09 例4 (READY_TEXT_ONLY): 答案 BC (A项零向量陷阱). 可消费.",
+        "任务10 例5 (READY_TEXT_ONLY): 答案 D. 可消费.",
+        "任务11 例11 (READY_TEXT_ONLY): BC=-2a-2b-2c, CD=4a+4b+4c=-2BC, B,C,D 共线. 可消费.",
+        "任务12 变式1(11) (VISION_VERIFIED, sidecar E1): 题干 A1F=(2/3)FC 未改; 侧车关系: F在线段A1C上, A1、F、C共线, E、F、B共线, A1C 以虚线表示. 坐标语义推导: E=(2/3)A1D1, F=(2/5)(A1B1+A1D1+A1A), EF=(2/5)A1B1-(4/15)A1D1+(2/5)A1A, EB=A1B1-(2/3)A1D1; {A1B1,A1D1,A1A} 线性无关, EF 的 A1A 分量无法消除 => EF 与 EB 不平行 => E,F,B 不共线. 线段 A1C 上除 A1 外没有任何点位于平面 A1B1D1, 故任何比例下都不共线. 第(1)问可作答(上式), 第(2)问要求证明一个在既定语义下为假命题. 不可消费.",
+        "任务13 变式2(11) (VISION_VERIFIED, sidecar E2 仅点位): 题干纯代数, EG=EH+mEF=kAD+mkAB=k(AD+mAB)=kAC => AC∥EG. 可独立完成, 但顺序上位于变式1 之后, 不可达.",
+        "任务14 B10 (VISION_VERIFIED, sidecar 本轮已修复: E/F/I/H 分别为 AB/AC/CD/BD 中点, G 为 EI 中点, 图中连接 EI、FH, E1): G=1/4(b+c+d)=FH 中点 => G,F,H 共线. 独立完成, 侧车与题干完全一致."
+      ],
+      "first_breakpoint": "任务12 变式1(11) (item_id ce0335a21c798927): 原题关系 A1F=(2/3)FC 在侧车坐标语义(F在线段A1C上, E1, A1C虚线)下使第(2)问 E,F,B三点共线 为假; 学生无法在不改题、不猜图的前提下完成本项",
+      "sticking_points": [
+        "变式1(11) 图文矛盾(卡点): 题干 FC 与侧车 F在A1C上 共同决定 E,F,B 不共线, 与第(2)问互斥; 侧车 uncertainty 把分点比例推给题干, 未提供可消解矛盾的图形信息.",
+        "变式2(11) 侧车仅 E2 点位无关系, 质量弱; 题干不依赖图, 非阻断.",
+        "例10 图2 侧车 Q/O 标签不一致(轻微, 循环1)."
+      ],
+      "evidence": [
+        "按指令未自行把 FC 改成 FC1; 明确结论: 需由源材料修复(题干字母或图形读取), 学生侧不可自行消解.",
+        "B10 上下文放行口径: unlock=METHOD_BRIDGE, visual_ready=true, bridge=NOT_REQUIRED, blockers=[] — 只证明可消费, 不覆盖变式1 的图文矛盾.",
+        "每张图都有可消费嵌入侧车(变式1/变式2/B10 各1), route md 任务12/13/14 已标 视觉已核验; 但 '有侧车' 不等于 '侧车正确': 变式1 侧车内容自相矛盾.",
+        "课程前置: 3.1.2.1 先于本循环首次使用; k3(共线/共面向量+系数和推论) 完整且先于 例4/5/11/变式/B10; 无桥接依赖."
+      ]
+    }
+  ],
+  "method_models": [
+    {
+      "name": "相等/相反向量判定",
+      "trigger": "在长方体/平行六面体中找与给定向量相等或相反的向量 (例1, A1)",
+      "steps": [
+        "平移比较方向与模长",
+        "利用平行且相等的棱/对边枚举候选",
+        "相反向量反向等模 (AB 的相反向量为 BA)"
+      ],
+      "checks": [
+        "方向+模双条件",
+        "零向量方向任意、与任意向量共线"
+      ]
+    },
+    {
+      "name": "空间向量线性运算化简",
+      "trigger": "化简加/减/数乘表达式或选择题求等值向量 (例2/例9/例10, A2/A3)",
+      "steps": [
+        "首尾相接连链, 封闭图形和为0",
+        "共起点用平行四边形法则; a-b 为 b 终点指向 a 终点",
+        "提公因子合并同类向量",
+        "用平行关系平移成可相加形态"
+      ],
+      "checks": [
+        "结果仍是向量",
+        "符号方向一致 (AB-DB=AB+BD)",
+        "系数逐项验算"
+      ]
+    },
+    {
+      "name": "中点向量表示与基底拆分",
+      "trigger": "中点/定比分点出现, 目标向量写成基向量组合 (例3, A1, A3(3), B10)",
+      "steps": [
+        "统一公共起点",
+        "中点公式 ON=(OB+OC)/2、AE=(AB+AC)/2、G=1/2(F+H)",
+        "沿图形路径逐段拆分并回代中点公式",
+        "合并系数"
+      ],
+      "checks": [
+        "系数核对 (1/8,1/8,-1 等)",
+        "结果与题设几何位置一致",
+        "B10 类题: 得 G=FH 中点即完成共线证明"
+      ]
+    },
+    {
+      "name": "共线判定（向量共线定理 + 系数和）",
+      "trigger": "证三点共线或两向量平行 (例11, 变式1(2), 变式2, B10)",
+      "steps": [
+        "公共起点下写成同一组基的线性组合",
+        "找 λ 使 v1=λv2, 或 OP=xOA+yOB 且 x+y=1",
+        "零向量例外单独处理 (例4 A 项)"
+      ],
+      "checks": [
+        "λ 存在且唯一",
+        "系数和=1 须回到几何位置",
+        "若题干与图形语义互斥: 以向量推导为准并上报, 不猜图、不改题"
+      ]
+    },
+    {
+      "name": "共面判定（共面向量定理 + 系数和）",
+      "trigger": "证三向量共面或四点共面 (例5, 后续 C13/C14)",
+      "steps": [
+        "确认基向量不共面",
+        "第三向量写成 p=xa+yb",
+        "四点情形: OP=xOA+yOB+zOC 且 x+y+z=1"
+      ],
+      "checks": [
+        "二维/三维条件区分",
+        "回代几何位置, 排除向量共面与点共面混淆"
+      ]
+    }
+  ],
+  "first_breakpoint": "任务12 变式1(11): 原题关系 A1F=(2/3)FC 在原始图/坐标语义(F在线段A1C上, E1侧车)下不可消费 — 第(2)问 E,F,B三点共线 为假命题, 且学生不得自行改为 FC1",
+  "overall_verdict": "partial",
+  "summary": "Round 5, worker 1 (cycles 1-2), 详细零基础模拟. 逐项复测结论: 循环1 全部 8 项 (例1/2/3/9/10 + A1/A2/A3) 可消费且独立可完成 (A1=C; A2=-a-10b-3c 与 CD; A3=DB/A1C/GA1), 无断点, proxy_pass. 循环2: 例4/例5/例11 及 B10 可消费 (B10: G=FH 中点故 G,F,H 共线), 但任务12 变式1(11) 仍是首断点 — 题干 A1F=(2/3)FC 在 E1 侧车 'F在线段A1C上' 的坐标语义下使 E,F,B 不共线 (EF 含 A1A 分量, EB 不含), 第(2)问为假; 已按指令不自行改为 FC1, 需源材料修复. 本轮修复确认: A3 侧车 (G=CC1中点, O=AC∩BD, E1) 与 B10 侧车 (E/F/I/H 各边中点, G=EI中点, E1) 已与题干完全一致; 所有有图条目均有可消费嵌入侧车 (例1/2/3/10=1/1/1/3, A1/A3/变式1/变式2/B10 各1); 课程 3.1.1.1→3.1.2.1 与知识 k1/k2→k3 均先于首次使用, 转写 SHA 未变, 无 SOURCE_METHOD_READY 依赖. 遗留: 变式1 图文矛盾 (阻塞), 变式2 侧车仅 E2 点位 (弱, 非阻断), 例10 图2 标签 Q/O 不一致 (轻微). proxy_pass 不代表真人掌握; human_acceptance_not_proven=true; 24h 冷复测 not_run."
+}

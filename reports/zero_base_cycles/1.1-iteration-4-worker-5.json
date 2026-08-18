@@ -1,0 +1,326 @@
+{
+  "schema_version": "1.0",
+  "iteration": 4,
+  "worker_id": "worker-5",
+  "prior_agent_id": "Z5",
+  "role": "zero_base_high_school_student_simulation_retest",
+  "cycle_scope": "只测 1.1-cycle-10（外接球、点面距离与压轴综合）：重心/共面/外接球桥接 + 基本不等式检查点 + 外接球自造回代检查点 + C14 四项独立判断",
+  "generated_at": "2026-08-14",
+  "project_root": "C:\\开发\\小工具\\一本通学习系统_v7",
+  "assigned_items": [
+    {
+      "item": "checkpoint-1.1-inequality-check-1",
+      "kind": "method_checkpoint",
+      "answer_policy": "NO_ANSWER"
+    },
+    {
+      "item": "checkpoint-1.1-sphere-check-1",
+      "kind": "method_checkpoint",
+      "answer_policy": "NO_ANSWER",
+      "label": "外接球心等距回代（自造长方体）"
+    },
+    {
+      "item": "C14-A",
+      "kind": "abc_exercise_option"
+    },
+    {
+      "item": "C14-B",
+      "kind": "abc_exercise_option"
+    },
+    {
+      "item": "C14-C",
+      "kind": "abc_exercise_option"
+    },
+    {
+      "item": "C14-D",
+      "kind": "abc_exercise_option"
+    }
+  ],
+  "course_evidence": {
+    "watched_transcripts": [
+      {
+        "course_key": "plane_equation_upper",
+        "course_id": "3.1.4.6.a",
+        "title": "平面方程与法向量（上）",
+        "transcript_file": "data\\course_transcripts\\3.1.4.6.a 平面方程与法向量（上）.json",
+        "text_chars": 14031,
+        "text_sha256": "332ccf31cca3c5d25ad7188d05f172d4353ac3c575f6d0b5bc49e98acd966da4",
+        "note": "19:26:21 重新生成，长度与 iteration 3 通读一致，关键段落抽查一致；全文于本会话 iteration 3 通读。内容：平面方程类比直线一般式，AX+BY+CZ+D=0 法向量即系数；截距式 X/a+Y/b+Z/c=1；截距不存在则延长或延展平面找截距；截距式与一般式拼接待定系数；例法向量 (1,1,1)、(2,2,1)、(1/2,2,1)、(1,√3,1)"
+      },
+      {
+        "course_key": "plane_equation_lower",
+        "course_id": "3.1.4.6.b",
+        "title": "平面方程与法向量（下）",
+        "transcript_file": "data\\course_transcripts\\3.1.4.6.b 平面方程与法向量（下）.json",
+        "text_chars": 12086,
+        "text_sha256": "ec22383743f2fd496535d458698e0a7edd7cbaa7ac364557d3a99dddfb7f6cd5",
+        "note": "同上重新校验。内容：截距不存在即平行某轴该轴系数为 0；平面过原点：换原点建系或一般式 D=0；点到平面距离公式 D=|Ax0+By0+Cz0+D|/√(A²+B²+C²)；例 C 到 C1DE 距离 根号17分之4、A 到 A1MC 距离 3分之10"
+      },
+      {
+        "course_key": "distance",
+        "course_id": "3.1.4.7",
+        "title": "距离问题",
+        "transcript_file": "data\\course_transcripts\\3.1.4.7 距离问题.json",
+        "text_chars": 8605,
+        "text_sha256": "4f7e6326ed6757f8e7c3cbcdd7b36b2d4806443f1bbf37ff444d6aeaa93fe6d1",
+        "note": "同上重新校验。内容：点面距离 d=|AP·n|/|n|（P 面外点，A 面内任意点）；线面/面面距离转点面距离；异面直线距离：公垂向量 n 与两方向向量垂直，d=|BD·n|/|n|；例 √3A/3（两题）、异面距离 1"
+      }
+    ],
+    "bridge_read": [
+      {
+        "id": "micro-four-point-coplanar",
+        "status": "SOURCE_METHOD_READY",
+        "source": "learning_packet.md 循环10 + bridge_micro_lessons.json",
+        "lesson": "公共起点写线性组合；平面内条件翻成向量等式；系数和=1 检查；自造变式"
+      },
+      {
+        "id": "bridge-1.1-centroid",
+        "status": "SUPPLEMENT_READY",
+        "source": "learning_packet.md 循环10 + bridge_micro_lessons.json + bridge_supplement_lessons.json",
+        "lesson": "取 BC 中点 M 写 OM=(OB+OC)/2；重心 G 在中线 AM 上且 AG:GM=2:1，OG=OA+(2/3)AM；代入 AM=OM-OA 整理得 OG=(OA+OB+OC)/3；换 A、B、C 或换公共起点再推一次确认等权；release：重心检查点独立推导、换公共起点复述"
+      },
+      {
+        "id": "bridge-micro-sphere",
+        "status": "SUPPLEMENT_READY",
+        "source": "learning_packet.md 循环10 + bridge_supplement_lessons.json",
+        "lesson": "对称性先写球心分量（注明依据）；对不共线顶点写 OA²=OB²、OA²=OC² 等距关系并相减消半径；选独立约束解候选；回代至少三个关键顶点，检查空间位置、半径为正与唯一性"
+      }
+    ],
+    "checkpoints_read": [
+      {
+        "id": "1.1-inequality-check-1",
+        "label": "正数乘积约束下的和最值回顾",
+        "answer_policy": "NO_ANSWER",
+        "question": "设 x、y 为正数且 xy=k（k>0）。请用基本不等式求 x+y 的下界并写出等号条件；再说明若题目只给出一个向量共面方程，怎样先确认它确实能化成正数乘积约束。",
+        "knowledge_refs": [
+          "1.1-k3"
+        ]
+      },
+      {
+        "id": "1.1-sphere-check-1",
+        "label": "外接球心等距回代",
+        "answer_policy": "NO_ANSWER",
+        "question": "在坐标系中自取一个长方体的四个不共面顶点，设球心坐标未知。请用三组等距平方差消去半径，求出球心候选，并至少回代三个顶点验证等距；不得引用对称性直接跳到结论。",
+        "knowledge_refs": [
+          "1.1-k4"
+        ]
+      }
+    ],
+    "left_column_blocks": [
+      "1.1-k3（共线/共面向量+系数和推论补全）",
+      "1.1-k4（数量积、夹角与投影向量；本迭代确认 k4 已补全：钝角判定、数量积性质表、投影向量定义与公式 (a·b/|b|²)b）"
+    ],
+    "context_release_status": {
+      "C14": "READY_FOR_INDEPENDENT_ATTEMPT",
+      "C14_bridge_status": "SUPPLEMENT_READY",
+      "C14_bridge_units": [
+        "micro-four-point-coplanar(SOURCE_METHOD_READY)",
+        "bridge-1.1-centroid(SUPPLEMENT_READY)",
+        "bridge-micro-sphere(SUPPLEMENT_READY)"
+      ],
+      "missing_course_keys": []
+    }
+  },
+  "attempts": [
+    {
+      "item": "checkpoint-1.1-inequality-check-1",
+      "kind": "method_checkpoint",
+      "process": "第一部分：x,y 为正数，基本不等式 x+y 大于等于 2√(xy) = 2√k，等号当且仅当 x = y = √k。第二部分：共面方程先整理为代数等式（系数和=1 展开得 1/x+1/y=1 即 xy=x+y），改写为两个正数之积 (x-1)(y-1)=1；逐项确认正性：由 D、E 在 PA、PB 延长线上得 x>1、y>1，故 u=x-1、v=y-1 均为正；确认后才套基本不等式，并写等号条件（x-1=y-1，即 x=y）",
+      "conclusion": "x+y 下界 2√k，等号 x=y=√k；共面方程经代数变形与正性确认后可化成正数乘积约束",
+      "first_breakpoint": null,
+      "note": "iteration 3 已通过本检查点；复测无断点",
+      "hint_used": false,
+      "confidence": 0.85
+    },
+    {
+      "item": "checkpoint-1.1-sphere-check-1",
+      "kind": "method_checkpoint",
+      "process": "自取长方体顶点：A(0,0,0)、B(2,0,0)、C(2,2,0)、D(0,0,4)（四点不共面）。设球心 O=(u,v,w)、半径 R，写等距平方关系并相减消 R：OA²=OB² 得 u²=(u-2)² 即 u=1；OA²=OC² 得 u²+v²=(u-2)²+(v-2)²，代 u=1 得 v²=(v-2)² 即 v=1；OA²=OD² 得 w²=(w-4)² 即 w=2。球心候选 O=(1,1,2)，R²=OA²=1+1+4=6，R=√6。回代验证：OB²=(-1)²+(-1)²+(-2)²=6，OC²=1+1+4=6，OD²=1+1+(2-4)²=6，三顶点等距全部成立；O 位于长方体内部，半径为正，三组独立方程唯一确定。说明：u、v、w 全部由等距平方差消元解出，未直接用对称性跳到体心结论",
+      "conclusion": "球心候选 (1,1,2)、半径 √6，回代三个顶点等距验证通过",
+      "first_breakpoint": "选三组独立等距约束避免重复方程（如 OA²=OB² 与 OB²=OC² 与 OC²=OA² 中第三式是前两式的线性组合）；回代至少三个顶点是强制步骤",
+      "hint_used": false,
+      "confidence": 0.85
+    },
+    {
+      "item": "C14-A",
+      "kind": "abc_exercise_option",
+      "question": "若 x=y，则 MN 平行平面 PAB",
+      "process": "设 e1=PA、e2=PB、e3=PC。M 在 AC 上：M=(1-t)e1+t·e3；M 在 DF 上：M=x(1-s)e1+sz·e3；分量对齐得 t=z(1-x)/(z-x)。N 在 BC 上：N=(1-u)e2+u·e3；N 在 EF 上：N=y(1-v)e2+vz·e3，x=y 时得 u 与 t 同参数。MN=(1-t)(e2-e1) 平行 AB；AB 在平面 PAB 内，故 MN 平行平面 PAB，成立",
+      "conclusion": "A 成立",
+      "first_breakpoint": "参数 t 的双重线性表示对齐（零基础首次易漏 (1-s)x 系数）",
+      "hint_used": false,
+      "confidence": 0.8
+    },
+    {
+      "item": "C14-B",
+      "kind": "abc_exercise_option",
+      "question": "PO=(1/2)PA+(1/3)PB+(1/6)PC",
+      "process": "用 bridge-1.1-centroid 推导：取 BC 中点 M，OM=(OB+OC)/2；重心 O 在 AM 上且 AO:OM=2:1，AO=(2/3)AM，PO=PA+(2/3)(PM-PA)=(1/3)PA+(2/3)PM=(1/3)PA+(1/3)PB+(1/3)PC。题给系数 (1/2,1/3,1/6) 与 (1/3,1/3,1/3) 不同；e1,e2,e3 不共面系数唯一，不成立",
+      "conclusion": "B 不成立",
+      "first_breakpoint": null,
+      "note": "重心向量式已由桥接显式推导；iteration 3 的隐性前置缺口消失",
+      "hint_used": false,
+      "confidence": 0.9
+    },
+    {
+      "item": "C14-C",
+      "kind": "abc_exercise_option",
+      "question": "z=1/2 且平面 DEF 过点 O 时，x+y 的最小值为 4",
+      "process": "平面 DEF 过 O 等价于 O=αD+βE+γF 且 α+β+γ=1。O=(e1+e2+e3)/3，D=x·e1、E=y·e2、F=(1/2)e3：αx=1/3、βy=1/3、γ·(1/2)=1/3，得 α=1/(3x)、β=1/(3y)、γ=2/3；α+β+γ=1 得 1/x+1/y=1，即 (x-1)(y-1)=1。按检查点流程：x>1、y>1（延长线上），u=x-1、v=y-1 为正且 uv=1；x+y=(x-1)+(y-1)+2 大于等于 2√(uv)+2=4，等号 x=y=2。最小值 4 成立",
+      "conclusion": "C 成立",
+      "first_breakpoint": null,
+      "note": "检查点 1.1-inequality-check-1 已覆盖变形与正性确认；iteration 3 断点保持消失",
+      "hint_used": false,
+      "confidence": 0.8
+    },
+    {
+      "item": "C14-D",
+      "kind": "abc_exercise_option",
+      "question": "G 为外接球心且 x=y=2、平面 DEF 过 G 时，F 到平面 PDE 的距离为 √6/9",
+      "process": "第一步（外接球，bridge-micro-sphere 加检查点流程）：设 G=αe1+βe2+γe3，写等距平方关系 |G|²=|G-e1|²=|G-e2|²=|G-e3|²，相减消半径得 G·e1=G·e2=G·e3=1/2；展开 G·e1=α+β/2+γ/2 等三式解得 α=β=γ=1/4，即 G=(1/4)(e1+e2+e3)；回代验证 |G|²=3/8 且与三顶点等距（半径 √6/4 为正）。第二步（共面）：G=αD+βE+γF，α+β+γ=1；D=2e1、E=2e2、F=z·e3：2α=1/4、2β=1/4、γz=1/4，得 α=β=1/8、γ=1/(4z)；1/8+1/8+1/(4z)=1 得 z=1/3。第三步（点面距离，3.1.4.7）：平面 PDE 即平面 PAB；d=|PF·n|/|n|，n=e1×e2，|n|=√3/2；PF=(1/3)e3，e3·(e1×e2)=√2/2，d=(1/3)(√2/2)/(√3/2)=√6/9。交叉验证（3.1.4.6 平面方程）：取坐标 e1=(1,0,0)、e2=(1/2,√3/2,0)、e3=(1/2,√3/6,√6/3)，平面 PAB 为 z=0，F 的 z 坐标=(1/3)(√6/3)=√6/9。成立",
+      "conclusion": "D 成立；C14 综合结论 ACD",
+      "first_breakpoint": null,
+      "note": "外接球与点面距离知识已由桥接加检查点加课程显式覆盖；iteration 3 断点消失",
+      "hint_used": false,
+      "confidence": 0.75
+    }
+  ],
+  "comparison_to_iteration_3": {
+    "gaps_fixed": [
+      "重心向量式（iteration 3 最小缺口，C14-B 隐性前置）到新增 bridge-1.1-centroid（SUPPLEMENT_READY，md 循环10 四步推导：中点 M、AG:GM=2:1、OG=OA+(2/3)AM、OG=(OA+OB+OC)/3，换公共起点复述要求；supplement 课含 2:1 系数方向检查）到缺口消失，B 项首次使用知识显式化",
+      "外接球自造回代证据（iteration 3 remaining_gaps 第 2 项）到新增检查点 1.1-sphere-check-1（NO_ANSWER），本轮独立完成长方体四顶点等距回代，缺口消失",
+      "投影向量 k4 左栏缺段（iteration 1-3 结构观察）到 k4 知识块已补全：钝角判定 a·b<0、数量积性质表（a·a=|a|²、cos 公式、|a·b|≤|a||b|）、投影向量定义与公式 (a·b/|b|²)b、直线与平面投影，结构闭合（范围外但记录）",
+      "二面角桥接（iteration 2 记录 B6/B7 隐性前置）到新增 bridge-1.1-dihedral-definition（SUPPLEMENT_READY，target B6/B7）已补（范围外记录）"
+    ],
+    "breakpoint_comparison": [
+      {
+        "item": "C14-B",
+        "iteration_3": "断点：重心向量式隐性前置",
+        "iteration_4": "断点消失：bridge-1.1-centroid 显式推导",
+        "status": "fixed"
+      },
+      {
+        "item": "C14-D",
+        "iteration_3": "置信 0.7，依赖补充课文本",
+        "iteration_4": "置信 0.75，外接球检查点自造回代完成",
+        "status": "improved"
+      },
+      {
+        "item": "checkpoint-1.1-sphere-check-1",
+        "iteration_3": "不存在",
+        "iteration_4": "新增检查点，独立完成无提示",
+        "status": "new_and_passed"
+      },
+      {
+        "item": "C14-A/C",
+        "iteration_3": "置信 0.75",
+        "iteration_4": "置信 0.8，断点保持无",
+        "status": "improved"
+      }
+    ],
+    "status_progression": "iteration 1 partial → iteration 2 partial → iteration 3 partial（重心最小缺口+外接球回代证据缺失）→ iteration 4 proxy_pass（路径层面：全部缺口闭合，全部直属项独立完成）",
+    "note": "真人隔天冷复测与未见近迁移仍未执行，按任务书不降级路径状态，单列 human_evidence_not_run"
+  },
+  "knowledge_order_assessment": {
+    "method": "对每个首次用到的知识检查其是否在 C14 或检查点之前已按路径顺序显式出现（课程转写、左栏 knowledge/prerequisite blocks、bridge_micro_lessons/bridge_supplement_lessons、方法检查点），不凭模型先验补洞",
+    "findings": [
+      {
+        "knowledge": "重心向量式 PO=(PA+PB+PC)/3",
+        "first_used_in": "C14-B",
+        "explicit_before": true,
+        "source": "bridge-1.1-centroid（md 循环10 四步推导 + supplement 课；target 含 C14）",
+        "note": "iteration 4 新增，缺口消失"
+      },
+      {
+        "knowledge": "四点共面系数和=1",
+        "first_used_in": "C14-A/C/D",
+        "explicit_before": true,
+        "source": "prerequisite_knowledge_blocks 1.1-k3（含推论补全）+ micro-four-point-coplanar（SOURCE_METHOD_READY）",
+        "note": "保持"
+      },
+      {
+        "knowledge": "基本不等式与正数乘积约束确认",
+        "first_used_in": "C14-C",
+        "explicit_before": true,
+        "source": "检查点 1.1-inequality-check-1（NO_ANSWER，在 C14 之前）",
+        "note": "保持"
+      },
+      {
+        "knowledge": "外接球心等距回代",
+        "first_used_in": "C14-D",
+        "explicit_before": true,
+        "source": "bridge-micro-sphere（SUPPLEMENT_READY）+ 检查点 1.1-sphere-check-1（NO_ANSWER，在 C14 之前）",
+        "note": "iteration 4 新增检查点"
+      },
+      {
+        "knowledge": "点面距离 d=|AP·n|/|n|",
+        "first_used_in": "C14-D",
+        "explicit_before": true,
+        "source": "课程 3.1.4.7 距离问题",
+        "note": "保持"
+      },
+      {
+        "knowledge": "平面方程/法向量",
+        "first_used_in": "C14-D（交叉验证）",
+        "explicit_before": true,
+        "source": "课程 3.1.4.6.a/3.1.4.6.b",
+        "note": "保持"
+      },
+      {
+        "knowledge": "数量积性质与投影（k4 补全）",
+        "first_used_in": "例6-8（前置循环）",
+        "explicit_before": true,
+        "source": "k4 知识块已补全钝角判定、性质表、投影向量公式",
+        "note": "iteration 4 结构闭合"
+      }
+    ],
+    "conclusion": "cycle-10 路径内所有首次使用知识均在 C14 之前显式出现，无隐性前置；iteration 3 的最小缺口（重心）已由 bridge-1.1-centroid 闭合。"
+  },
+  "status": "proxy_pass",
+  "status_reasons": [
+    "路径材料足够：3 门课程转写（3.1.4.6.a/3.1.4.6.b/3.1.4.7）+ 3 个桥接（micro-four-point-coplanar、bridge-1.1-centroid、bridge-micro-sphere）+ 2 个无答案检查点（基本不等式、外接球等距回代）覆盖 C14 全部首次使用知识",
+    "全部直属项独立完成：2 个检查点 + C14 四项，均写出完整过程，hint_used 全为 false，无未解决断点",
+    "C14 综合结论 ACD（A 成立、B 不成立、C 成立、D 成立），各选项置信 0.75-0.9",
+    "iteration 3 的所有结构性缺口（重心、外接球回代证据、k4 投影段）已闭合",
+    "代理路径结论仅针对模拟学生；真人掌握证据单列（human_evidence_not_run），不降级路径状态"
+  ],
+  "structural_gaps": {
+    "cycle_10_internal": "无未闭合结构缺口：全部首次使用知识显式出现，全部检查点独立通过",
+    "method_release_forms": [
+      "bridge-1.1-centroid 为 SUPPLEMENT_READY 文本桥接（无专门视频），release_requirements（重心检查点独立推导、换公共起点复述）本轮已完成推导与换起点检查",
+      "bridge-micro-sphere 为 SUPPLEMENT_READY 文本补充课（无专门视频），本轮通过 1.1-sphere-check-1 完成自造回代",
+      "micro-four-point-coplanar 为 SOURCE_METHOD_READY 文本方法卡"
+    ],
+    "out_of_scope_observations": [
+      "B8 极化恒等式桥接仍 NO_DEDICATED_VIDEO / REQUIRED_SUPPLEMENT_NOT_VERIFIED（其他循环范围）",
+      "B6/B7 二面角桥接 bridge-1.1-dihedral-definition 已 SUPPLEMENT_READY（其他循环已补）",
+      "桥接文本形态到视频/检查点全通过后应升级 VERIFIED（编排侧建议）"
+    ]
+  },
+  "human_evidence_not_run": [
+    "真人隔天闭卷冷复测（exit_gate：至少间隔 24 小时后执行闭卷复测）未执行",
+    "未见近迁移（unseen_near_transfer）未执行",
+    "真人学习者本体未参与本路径；本报告为代理模型模拟证据",
+    "按任务书：not_run 单列，不把模拟路径本身降为 partial"
+  ],
+  "answer_sources_read": [
+    "data/packets/1.1/learning_packet.md（循环 10/10 全文：课程清单、k3/k4 前置知识块、三个桥接骨架、两个方法检查点、C14 题干）",
+    "data/packets/1.1/learning_packet.json（cycle-10 条目：course_keys、prerequisite_knowledge_blocks k3/k4 全文（k4 已补全）、method_checkpoints 两个、exercise_questions C14 与 vision sidecar 坐标、bridge_unit_ids）",
+    "data/course_transcripts/3.1.4.6.a 平面方程与法向量（上）.json（19:26:21 重新生成；本迭代重算文本哈希 332ccf31... 并抽查关键段落，长度 14031 与 iteration 3 通读一致；全文于本会话 iteration 3 通读）",
+    "data/course_transcripts/3.1.4.6.b 平面方程与法向量（下）.json（哈希 ec223837...，长度 12086，同上）",
+    "data/course_transcripts/3.1.4.7 距离问题.json（哈希 4f7e6326...，长度 8605，同上）",
+    "data/bridge_micro_lessons.json（13 个桥接微单元：micro-four-point-coplanar、bridge-1.1-centroid、bridge-1.1-dihedral-definition、bridge-micro-sphere 等状态与 lesson_steps）",
+    "data/bridge_supplement_lessons.json（bridge-1.1-centroid、bridge-1.1-projection、bridge-1.1-dihedral-definition、bridge-micro-sphere 补充课全文）",
+    "data/contexts/1.1.json（更新版：C14 question_coverage 释放状态、bridge_units 状态）",
+    "reports/zero_base_cycles/1.1-iteration-3-worker-5.json（本人 iteration 3 报告，仅用于对比）"
+  ],
+  "forbidden_answer_sources_read": [],
+  "honesty_boundary": [
+    "未读取 data/packets/1.1/answer_sidecar.json、任何答案册、其他代理报告或其他循环的作答；forbidden_answer_sources_read 为空",
+    "所有结论为独立推导：外接球检查点用自取长方体四顶点完整消元；C14-D 用点面距离公式与平面方程 z 坐标双路径自洽交叉验证；未与答案册比对（被禁止）",
+    "三份转写为重新校验（文本哈希+长度+关键段落抽查一致），全文通读在本会话 iteration 3 完成；如后续发现内容差异以本迭代哈希为准",
+    "status=proxy_pass 仅指模拟路径层面：路径材料足够且全部直属项独立完成；不构成真人掌握证据",
+    "human_evidence_not_run：真人隔天冷复测与未见近迁移未执行，单列不降级",
+    "仅创建 reports/zero_base_cycles/1.1-iteration-4-worker-5.json，未修改 manifest、packet、代码、测试或其他报告"
+  ]
+}

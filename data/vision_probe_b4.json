@@ -1,0 +1,91 @@
+{
+  "schema_version": "7.1",
+  "status": "passed",
+  "provider": "GLM-4.6V-Flash via deepseek-eyes",
+  "results": [
+    {
+      "status": "passed",
+      "question_hint": "1.1-B4",
+      "image": "C:\\开发\\小工具\\一本通DeepSeek迭代\\worker-01-content\\ocr\\imgs\\img_in_image_box_517_434_698_617.jpg",
+      "confidence": "E2",
+      "model": "glm-4.6v-flash",
+      "elapsed_ms": 64320,
+      "structured": {
+        "objects": [],
+        "relations": [
+          {
+            "type": "line",
+            "start": "A",
+            "end": "B"
+          },
+          {
+            "type": "line",
+            "start": "A",
+            "end": "D"
+          },
+          {
+            "type": "line",
+            "start": "A",
+            "end": "C"
+          },
+          {
+            "type": "line",
+            "start": "B",
+            "end": "C"
+          },
+          {
+            "type": "line",
+            "start": "C",
+            "end": "D"
+          },
+          {
+            "type": "line",
+            "start": "B",
+            "end": "D",
+            "style": "dashed"
+          }
+        ],
+        "coordinates": [
+          {
+            "label": "A",
+            "position": {
+              "x": 0,
+              "y": 2
+            }
+          },
+          {
+            "label": "B",
+            "position": {
+              "x": -1,
+              "y": 0
+            }
+          },
+          {
+            "label": "D",
+            "position": {
+              "x": 1,
+              "y": 0
+            }
+          },
+          {
+            "label": "C",
+            "position": {
+              "x": 0,
+              "y": -1
+            }
+          }
+        ],
+        "ranges": [],
+        "text": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "uncertainties": [],
+        "confidence": "E2"
+      }
+    }
+  ],
+  "consumer_guard": "Only passed results with structured content and pure E1/E2 confidence may enter a packet."
+}

@@ -1,0 +1,247 @@
+{
+  "schema_version": "7.4",
+  "iteration": 2,
+  "report_type": "zero_base_cycle_simulation_iteration2",
+  "cycle_id": "1.1-cycle-4",
+  "cycle_title": "共面证明",
+  "agent_id": "Z4",
+  "identity": "零基础高中生代理 Z4：只负责 cycle 4，不处理其他循环，不宣称真人掌握",
+  "generated_at": "2026-08-14T23:30:00+08:00",
+  "assumption": "学生已按顺序看完本循环视频（course_key=coplanar, 3.1.4.2 证明共面）并读完路径显式展示的左栏知识与教学例题（例12），然后在不看答案下独立作答",
+  "sources_reread": {
+    "packet": {
+      "path": "data/packets/1.1/learning_packet.json",
+      "last_write": "2026-08-14T19:02:12",
+      "schema_version": "7.4",
+      "note": "cycle-4 结构已更新：新增 prerequisite_knowledge_refs=[1.1-k3] 与内嵌 prerequisite_knowledge_blocks（含完整左栏知识块文本，answer_free=true）；例12、例12变式、B9 仍在本循环名下，未被移走"
+    },
+    "deepseek_context": {
+      "path": "data/contexts/1.1.json",
+      "last_write": "2026-08-14T19:02:13",
+      "schema_version": "7.1",
+      "context_sha256": "ce7abf173a52ec2d114923f545d1868c7a11656d8cce58aadbd4126c527fa4e1",
+      "canary": "8291db915b349d86",
+      "note": "左栏知识页 ocr_doc 2 = 知识点3 共线向量与共面向量，与 packet 内嵌 prerequisite_knowledge_blocks[1.1-k3] 文本一致；evidence.probe_qids 为 A1-A3（属 cycle-1），不在本循环任务范围，未作答探针；只消费与本循环相关的知识页"
+    },
+    "left_column_knowledge": {
+      "id": "1.1-k3",
+      "label": "共线向量与共面向量",
+      "example_labels": ["例4", "例5"],
+      "read": true,
+      "answer_free": true,
+      "content_summary": [
+        "直线的方向向量：与直线平行的非零向量；零向量不可作方向向量",
+        "共面向量定义：平行于同一个平面的向量",
+        "共面向量定理：向量 p 与两个不共线向量 a, b 共面的充要条件是存在唯一有序实数对 (x,y) 使 p = xa + yb",
+        "三点共线系数和结论：O,A,B 不共线，OP = xOA + yOB，则 A,P,B 共线当且仅当 x+y=1",
+        "四点共面系数和结论：O,A,B,C 不共面，OP = xOA + yOB + zOC，则 P,A,B,C 共面当且仅当 x+y+z=1"
+      ],
+      "example_notes": "k3 的教学例题例4、例5 属 cycle-2 的 worked_examples，本循环未读取其解答（跨循环边界）"
+    }
+  },
+  "assigned_items": [
+    {
+      "item": "例12变式(1)",
+      "kind": "direct_variant",
+      "task": "平行六面体 ABCD-A1B1C1D1 中 E,F,G,H 分别为 A1D1, C1D1, CC1, AB 的中点；EG=x·AB+y·AD+z·AA1 求 x,y,z",
+      "still_assigned": true
+    },
+    {
+      "item": "例12变式(2)",
+      "kind": "direct_variant",
+      "task": "证明 E,F,G,H 四点共面",
+      "still_assigned": true
+    },
+    {
+      "item": "B9(1)",
+      "kind": "exercise_B",
+      "task": "正四棱锥 P-ABCD，E,F 为 PA,PC 中点，DG=2GP；BG=x·BA+y·BC+z·BP 求 x,y,z",
+      "still_assigned": true
+    },
+    {
+      "item": "B9(2)",
+      "kind": "exercise_B",
+      "task": "证明 B,E,G,F 四点共面",
+      "still_assigned": true
+    },
+    {
+      "item": "检查点：显式 prerequisite 1.1-k3",
+      "kind": "knowledge_checkpoint",
+      "task": "核对左栏知识块 1.1-k3 是否在首次用到前出现、是否与题目显式相连（不能只看视频）",
+      "still_assigned": true
+    }
+  ],
+  "attempts": [
+    {
+      "item": "例12变式(1)",
+      "result": "x=1, y=1/2, z=-1/2",
+      "key_derivation": "以 A 为原点，取不共面基 u=AB, v=AD, w=AA1（u,v,w 构成基底，k3 四点共面定理的前提 O,A,B,C 不共面成立）。中点位置向量=两端位置向量平均：E=(A1+D1)/2=(w+v+w)/2=v/2+w；F=(C1+D1)/2=u/2+v+w；G=(C+C1)/2=u+v+w/2。EG=G-E=(u+v+w/2)-(v/2+w)=u+v/2-w/2。由基分解唯一性（共面向量定理的对偶：三维基底分解唯一）得 x=1, y=1/2, z=-1/2",
+      "verification": "单位立方体数值：u=(1,0,0),v=(0,1,0),w=(0,0,1) 时 E=(0,0.5,1), F=(0.5,1,1), G=(1,1,0.5)，EG=(1,0.5,-0.5) ✓",
+      "first_breakpoint": "中点写成两端点位置向量的平均（符号式）——本路径仍无符号式中点示范（课程只有坐标式；k3 左栏亦未给中点表示），属高一平面向量前置残留",
+      "hint_needed": false,
+      "confidence": 0.8
+    },
+    {
+      "item": "例12变式(2)",
+      "result": "E,F,G,H 共面",
+      "key_derivation": "路径A（拆分，课程主法）：公共起点 E，EF=F-E=u/2+v/2，EH=H-E=u/2-v/2-w；设 EG=αEF+βEH：w 分量 -β=-1/2 ⇒ β=1/2；v 分量 (α-β)/2=1/2 ⇒ α=3/2；验 u 分量 (α+β)/2=(3/2+1/2)/2=1 ✓ ⇒ 有解 ⇒ EF,EH,EG 共面 ⇒ E,F,G,H 共面。路径B（k3 显式定理，交叉验证）：以 A 为原点，H=αE+βF+γG 且 α+β+γ=1：u: β/2+γ=1/2；v: α/2+β+γ=0；w: α+β+γ/2=0；由 β+γ=1-α 代入 v 得 α=2；解得 β=-3, γ=2；α+β+γ=1 ✓ 且三方程全满足 ⇒ H∈平面EFG ⇒ 四点共面。两路径一致（iteration 1 中系数和路径首轮符号错误 α=-2，本次以显式定理重走未再出错）",
+      "verification": "单位立方体数值：(3/2)EF+(1/2)EH=(0.75+0.25, 0.75-0.25, 0-0.5)=(1,0.5,-0.5)=EG ✓；H=2E-3F+2G=(0.5,0,0) ✓",
+      "first_breakpoint": "公共起点的选择（以 E 还是 A 为起点）——两条路径分别以 E、A 为起点，均可行；本次未再出现系数和=1 的符号错误（iteration 1 首轮 α=-2 错误已消失）",
+      "hint_needed": false,
+      "confidence": 0.8
+    },
+    {
+      "item": "B9(1)",
+      "result": "x=1/3, y=1/3, z=2/3",
+      "key_derivation": "以 B 为原点。正方形底面 ⇒ BD=BA+BC（平行四边形法则）。G 在 DP 上且 DG=2GP（DG:GP=2:1，离 P 近系数大）⇒ G=(1/3)D+(2/3)P ⇒ BG=(1/3)(BA+BC)+(2/3)BP ⇒ x=1/3, y=1/3, z=2/3",
+      "verification": "正四棱锥坐标：A=(-1,-1,0), B=(1,-1,0), C=(1,1,0), D=(-1,1,0), P=(0,0,2)；G=(1/3)D+(2/3)P=(-1/3,1/3,4/3)；BG=(-4/3,4/3,4/3)=(1/3)(-2,0,0)+(1/3)(0,2,0)+(2/3)(-1,1,2) ✓",
+      "first_breakpoint": "把 2:1 分点 DG=2GP 写成系数 (1/3,2/3)（课程示范为三等分点；现凭‘系数与距离成反比’迁移，成本低于 iteration 1）",
+      "hint_needed": false,
+      "confidence": 0.85
+    },
+    {
+      "item": "B9(2)",
+      "result": "B,E,G,F 共面",
+      "key_derivation": "路径A（拆分）：以 B 为公共起点，BE=(BA+BP)/2，BF=(BC+BP)/2；设 BG=αBE+βBF：BA: α/2=1/3 ⇒ α=2/3；BC: β/2=1/3 ⇒ β=2/3；验 BP: (α+β)/2=2/3 ✓ ⇒ 有解 ⇒ 共面。路径B（k3 系数和=1）：B 原点下 G=(2/3)E+(2/3)F+z·B 中隐含第三系数 z=1-4/3=-1/3，系数和 2/3+2/3-1/3=1 ✓ ⇒ G∈平面BEF ⇒ B,E,G,F 共面（此处正好用到 k3 method_check 提示的‘回代几何位置，不把向量共面误写成点共面’）",
+      "verification": "同坐标数值：(2/3)BE+(2/3)BF=(-4/3,4/3,4/3)=BG ✓",
+      "first_breakpoint": "三系数展开中隐含的第三系数 z=-1/3（直接写 G=(2/3)E+(2/3)F 时易误以为系数和=4/3；须补上 B 点系数使和为 1）——这是 iteration 2 新增的细粒度断点，源于使用 k3 定理时对‘参考点 B=O 为原点’的处理",
+      "hint_needed": false,
+      "confidence": 0.75
+    }
+  ],
+  "first_breakpoints": [
+    {
+      "item": "例12变式(1)",
+      "first_breakpoint": "中点向量的符号式表示（两端点位置向量平均）无本路径示范",
+      "hint_used": false,
+      "confidence": 0.8,
+      "kind": "操作断点（高一前置残留）",
+      "vs_iteration_1": "仍存在，但已从‘不知道怎么写’降级为‘写法需迁移’（学生已掌握位置向量线性表示）"
+    },
+    {
+      "item": "例12变式(2)",
+      "first_breakpoint": "公共起点选择；iteration 1 的系数和=1 符号错误（α=-2）本次未再出现",
+      "hint_used": false,
+      "confidence": 0.8,
+      "kind": "操作断点",
+      "vs_iteration_1": "符号错误断点消失；公共起点选择仍需两路径试错"
+    },
+    {
+      "item": "B9(1)",
+      "first_breakpoint": "2:1 分点系数迁移（课程只示范三等分点）",
+      "hint_used": false,
+      "confidence": 0.85,
+      "kind": "迁移断点",
+      "vs_iteration_1": "仍存在但迁移成本降低（同一定比分点规则，仅比例数字变化）"
+    },
+    {
+      "item": "B9(2)",
+      "first_breakpoint": "NEW：使用 k3 系数和=1 定理时，以 B 为原点展开的第三系数 z=-1/3 是隐含项，直接写 G=(2/3)E+(2/3)F 会误判系数和=4/3",
+      "hint_used": false,
+      "confidence": 0.75,
+      "kind": "概念断点（新增，因 iteration 2 引入了显式定理工具）"
+    }
+  ],
+  "comparison_to_iteration_1": {
+    "fixed_misalignments": [
+      {
+        "issue": "iteration 1 gap#1：cycle-4 knowledge_refs 为空，k3 未被路径显式连接",
+        "status": "已修复",
+        "evidence": "packet 7.4 cycle-4 新增 prerequisite_knowledge_refs=[1.1-k3] 且 prerequisite_knowledge_blocks 内嵌完整左栏知识块（answer_free=true）；contexts/1.1.json ocr_doc 2 同文本"
+      },
+      {
+        "issue": "iteration 1 gap#2：四点共面系数和=1 在课程中仅‘前面讲过’未推导",
+        "status": "已修复（定理显式化）",
+        "evidence": "k3 左栏以‘推论补全’形式给出 x+y+z=1 充要条件；本代理另独立给出 2 行推导：P∈平面ABC ⇔ AP=αAB+βAC ⇔ OP=(1-α-β)OA+αOB+βOC ⇒ 系数和=1（桥接 method_check 第 1 条代理满足）"
+      },
+      {
+        "issue": "iteration 1 gap#3：B9 无显式解锁/连接，桥接单元错位",
+        "status": "部分修复",
+        "evidence": "question_coverage B9: unlock_class=METHOD_BRIDGE, course_keys=[decomposition, coplanar], bridge_status=NOT_REQUIRED, release_status=READY_FOR_INDEPENDENT_ATTEMPT；但 micro-four-point-coplanar 桥接的 target 仍为 C13/C14（属 cycle-5），本循环直属题仍无专属桥接单元"
+      }
+    ],
+    "first_breakpoint_changes": [
+      {
+        "item": "例12变式(2)",
+        "old": "系数和=1 路径首轮符号错误（α=-2）",
+        "now": "消失（k3 定理显式可用，双路径交叉一致）"
+      },
+      {
+        "item": "B9(2)",
+        "old": "复用 (1) 的 B 原点分解不自然",
+        "now": "减弱（k3 系数和=1 定理可直接判定，复用分解成为自然路径）；同时新增细粒度断点：原点参考点隐含第三系数"
+      },
+      {
+        "item": "例12变式(1) 中点符号表示",
+        "old": "无示范",
+        "now": "仍存在但降级（属高一前置，本路径仍未补齐）"
+      },
+      {
+        "item": "B9(1) 2:1 分点迁移",
+        "old": "迁移断点",
+        "now": "仍存在但成本降低"
+      }
+    ],
+    "still_open_from_iteration_1": [
+      "例12变式图形 visual_status=NEEDS_VISION_SIDECAR：视觉核验缺口未解决",
+      "decomposition 课程转写未读（cycle-2 前置课程，跨循环边界）",
+      "k3 教学例题例4、例5 未读（属 cycle-2）",
+      "桥接单元 release_requirements（自造变式、口述系数和理由）未以独立产物完成（本报告含口述理由的文本版）",
+      "exit_gate：知识点闭卷复述、隔天冷重做未执行"
+    ]
+  },
+  "knowledge_integration_assessment": {
+    "timing": "k3 左栏知识块在本循环 packet 的 prerequisite_knowledge_blocks 与 contexts pages（ocr_doc 2）中，先于变式/B9 独立作答出现（按 action_order：看课→学例12→变式→习题→验收），满足‘首次用到前出现’",
+    "explicit_connection": {
+      "cycle_to_knowledge": "cycle-4.prerequisite_knowledge_refs=[1.1-k3] 显式连接",
+      "knowledge_to_problem": "类型Ⅲ 证明共面直接调用共面向量定理（k3 核心）；例12 反思中的系数和结论现由 k3 推论补全直接支撑；B9(2) 与变式(2) 均显式使用该定理",
+      "not_only_video": "判定不依赖视频：即使不看 3.1.4.2 转写，仅凭 k3 左栏（共面向量定理+系数和推论）即可完成全部四小题的独立推导（本报告两路径均以此验证）"
+    },
+    "residual": {
+      "knowledge_refs": "cycle-4 的直接 knowledge_refs 仍为空（类型Ⅲ 无专属左栏块，工具性知识全在 k3 前置内）",
+      "k3_examples": "例4、例5 属于 cycle-2 范围，本循环路径只给出块文本未给出例题演示",
+      "proof_depth": "k3 推论以‘补全’形式陈述，无证明；本代理自证 2 行完成，但路径本身未提供证明教学"
+    }
+  },
+  "status": "partial",
+  "status_rationale": {
+    "why_not_blocked": "无硬阻断：四项直属小题全部独立完成，双路径交叉验证与数值复核一致，未使用提示、未读答案；iteration 1 的核心错位（k3 显式连接、系数和=1 定理）已被 packet 7.4 修复",
+    "why_not_proxy_pass": "循环级放行证据仍缺：①例12变式图形 NEEDS_VISION_SIDECAR 未做视觉核验；②桥接 micro-four-point-coplanar 的 release（自造变式、口述理由）未以独立产物完成；③exit_gate 的闭卷复述与隔天冷重做未执行；④decomposition 前置课程与 k3 例题演示跨循环未读",
+    "mastery": "代理能独立解出不等于真人掌握；status 仅描述代理路径上的材料可用性与作答质量"
+  },
+  "remaining_gaps": [
+    {
+      "gap": "变式图形视觉核验",
+      "detail": "例12变式 image_refs 存在但 visual_status=NEEDS_VISION_SIDECAR，本循环未分配视觉侧车；文本自足但仍需 E1/E2 视觉证据才可完全放行",
+      "owner": "编排器/视觉通道"
+    },
+    {
+      "gap": "桥接单元未闭环",
+      "detail": "micro-four-point-coplanar 的 target_questions 仍为 C13/C14（cycle-5 习题），本循环直属题 B9 无专属桥接；桥接 release（方法题+同构变式+口述理由）未完成，需在 cycle-5 前闭环",
+      "owner": "路径规划"
+    },
+    {
+      "gap": "跨循环前置未验证",
+      "detail": "decomposition（3.1.2.1）转写与 k3 例题（例4、例5）属 cycle-2 范围，本循环未读；顺序路径中应由 cycle-2 提供证据",
+      "owner": "cycle-2 代理/顺序路径"
+    },
+    {
+      "gap": "exit_gate 证据",
+      "detail": "知识点闭卷复述、隔天冷重做未执行；iteration 2 仅承担‘复测’角色的部分证据",
+      "owner": "后续验收轮次"
+    },
+    {
+      "gap": "高一前置残留",
+      "detail": "中点向量符号式表示无路径教学（课程与 k3 左栏均未示范），零基础学生仍需外部补齐或接受降级断点",
+      "owner": "课程/桥接补充"
+    }
+  ],
+  "answer_sources_read": [],
+  "honesty_boundary": {
+    "answer_isolation": "未读取任何答案源：data/packets/1.1/answer_sidecar.json、例12变式答案（solution_isolated=true）、B9 答案、其他代理报告（含同目录 1.1-cycle-2.json，仅见过文件名）、其他循环作答均未读取；answer_sources_read=[]",
+    "self_reference": "comparison_to_iteration_1 基于本人（Z4）上一轮生成的 1.1-cycle-4.json（iteration 1 报告），非他人报告",
+    "proxy_vs_human": "本代理独立解出 ≠ 零基础真人学生可独立解出；first_breakpoint、hint_needed、confidence 均为模拟记录，未经真人观测校准",
+    "verification_scope": "全部代数结论用单位立方体/正四棱锥具体坐标独立数值复核；未做视觉核验的项目已单独标注（NEEDS_VISION_SIDECAR）",
+    "modification_scope": "仅原位改写 reports/zero_base_cycles/1.1-cycle-4.json；未修改 manifest、packet、上下文、代码或测试，未触碰其他代理文件"
+  }
+}

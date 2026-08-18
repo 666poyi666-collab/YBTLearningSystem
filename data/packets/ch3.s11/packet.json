@@ -1,0 +1,312 @@
+{
+  "schema_version": "7.1",
+  "packet_type": "DEEPSEEK_TEXT_PACKET",
+  "section": "ch3.s11",
+  "label": "第11节 微专题7：解析几何大题——定值与定点",
+  "source": {
+    "ocr_root": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180",
+    "ocr_docs": [
+      151,
+      162
+    ],
+    "source_file": null
+  },
+  "manifest": {
+    "page_count": 12,
+    "question_count": 6,
+    "expected_question_count": 6,
+    "expected_groups": {
+      "B": [
+        1,
+        2
+      ],
+      "C": [
+        3,
+        6
+      ]
+    },
+    "derived_question_correction_count": 0
+  },
+  "status": "VERIFIED",
+  "consumer_guard": "Only consume when status=VERIFIED; UNVERIFIED packets are diagnostic evidence only.",
+  "pages": [
+    {
+      "ocr_doc": 151,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_151.md",
+      "text": "# 微专题7：解析几何大题——定值与定点\n\n习题：P1\n\n## 内容提要\n\n1\\. 定值问题：在一些特定的情况下，图形在运动的过程中，某些量（如周长、面积、斜率的和或积等）不随图形的运动而改变，由此而设计的问题常被称为定值问题。定值问题主要有证明类定值问题、探究类定值问题两类，解题的一般步骤为：\n\n①设出直线的方程  \\(y = kx + b\\) 或 x = my + t 、点的坐标；\n\n②通过题干所给的已知条件，进行正确的运算，将需要用到的所有中间结果（如长度、面积、斜率等）用引入的参数（k，b，m，t等）表示出来；\n\n③将上述中间结果代入目标量，通过计算化简得出目标量与引入的参数无关，是一个常数.\n\n注：对于探究类定值问题，在参数关系复杂，不好直接正面计算时，可考虑先用特值探路，猜出问题的答案，再进行证明，从而将探究类定值问题转化成证明类定值问题处理。\n\n2. 定点问题：证明动直线在一定条件下过定点是解析几何中的一类重要题型，这类问题有两种常用的解题方法.\n\n方法1：设直线，求解参数关系．一般的解题步骤为：\n\n①设出直线的方程  \\(y = kx + b\\) 或 x = my + t；\n\n②通过题干所给的已知条件，进行正确的运算，找到 k 和 b，m 和 t 的关系，或者解出 b，t 的值；\n\n③根据②中得出的结果，找出直线过的定点.\n\n方法2：求两点，猜定点，证向量共线．一般的解题步骤为：\n\n①通过题干条件，求出直线上的两个点A，B的坐标（含参）；\n\n②取两个具体的参数值，分别求出对应的直线AB，并求出它们的交点P，该点即为直线过的定点；\n\n③证明 \\(\\overrightarrow{PA}\\)与 \\(\\overrightarrow{PB}\\)共线，得出直线AB过定点P.\n\n注：上面的两个方法中，解法2的计算量通常要大一些，故一般首选解法1.\n\n## 典型例题\n\n## 类型 I：证明类定值问题\n\n【例 1】在平面直角坐标系 xOy 中，点 A，B 分别是椭圆  \\(C:\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1 (a>b>0)\\) 的右顶点，上顶点，若 C 的离心率为  \\(\\frac{\\sqrt{3}}{2}\\)，且 O 到直线 AB 的距离为  \\(\\frac{2\\sqrt{5}}{5}\\).\n\n（1）求椭圆 C 的标准方程；",
+      "text_sha256": "b8762ca424c6701771731f332e13a2864051b37cb48f90ba1a5ea0e879ab3df8",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 152,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_152.md",
+      "text": "（2）过点  \\(P(2,1)\\) 的直线 l 与椭圆 C 交于 M, N 两点，其中点 M 在第一象限，点 N 在 x 轴下方且不在 y 轴上，设直线 BM，BN 的斜率分别为  \\(k_1\\)， \\(k_2\\)，求证： \\(\\frac{1}{k_1} + \\frac{1}{k_2}\\) 为定值，并求出该定值.\n\n解：（1）由题意，椭圆 C 的离心率  \\(e = \\frac{c}{a} = \\frac{\\sqrt{a^{2} - b^{2}}}{a} = \\frac{\\sqrt{3}}{2}\\)，化简得：a = 2b ①，\n\n（求 \\(a\\)，\\(b\\) 还差 1 个方程，题干还给出了 \\(O\\) 到直线 \\(AB\\) 的距离，如图 1，该距离即为 \\(\\text{Rt}\\triangle AOB\\) 斜边上的高，可由“等面积法”计算，结果用 \\(a\\)，\\(b\\) 表示，故由此能建立第二个方程）\n\n由题意，\\(O\\) 到直线 \\(AB\\) 的距离 \\(d = \\frac{2\\sqrt{5}}{5}\\)，因为 \\(S_{\\triangle AOB} = \\frac{1}{2}|OA| \\cdot |OB| = \\frac{1}{2}|AB| \\cdot d\\)，故 \\(|OA| \\cdot |OB| = |AB| \\cdot d\\)，\n\n又 \\(|OA| = a\\)，\\(|OB| = b\\)，\\(|AB| = \\sqrt{a^2 + b^2}\\)，所以 \\(ab = \\sqrt{a^2 + b^2} \\cdot \\frac{2\\sqrt{5}}{5}\\)，结合式①解得：\\(b=1\\)，\\(a=2\\)，\n\n所以椭圆 \\(C\\) 的标准方程为 \\(\\frac{x^2}{4} + y^2 = 1\\)。\n\n（2）（表示 \\(k_{1}\\)， \\(k_{2}\\)需要M，N的坐标，故先设坐标）设 \\(M(x_{1},y_{1})\\)， \\(N(x_{2},y_{2})\\)，由（1）可得 \\(B(0,1)\\)，所以 \\(k_{1}=\\frac{y_{1}-1}{x_{1}}\\)， \\(k_{2}=\\frac{y_{2}-1}{x_{2}}\\)，故 \\(\\frac{1}{k_{1}}+\\frac{1}{k_{2}}=\\frac{x_{1}}{y_{1}-1}+\\frac{x_{2}}{y_{2}-1}\\)②，\n\n（上式关于  \\(x_{1}\\) 和  \\(x_{2}\\)， \\(y_{1}\\) 和  \\(y_{2}\\) 的结构是对称的，可以想象，若将其通分，应该可以化出包含  \\(x_{1}+x_{2}\\)， \\(x_{1}x_{2}\\) 等系数对称的可用韦达定理计算的结构，故考虑设直线 l 的方程，并与椭圆联立）\n\n如图2，直线\\(l\\)过点\\(P(2,1)\\)与椭圆\\(C\\)交于\\(M,N\\)两点，则直线\\(l\\)的斜率存在，可设其方程为\\(y-1=k(x-2)\\)，即\\(y=kx+1-2k\\)，记椭圆的左顶点为\\(D(-2,0)\\)，下顶点为\\(E(0,-1)\\)，\n\n因为\\(M\\)在第一象限，\\(N\\)在\\(x\\)轴下方且不在\\(y\\)轴上，所以\\(k>k_{PD}=\\frac{1-0}{2-(-2)}=\\frac{1}{4}\\)，且\\(k\\neq k_{PE}=\\frac{1-(-1)}{2-0}=1\\)，\n\n联立\\(\\begin{cases}y=kx+1-2k\\\\\\dfrac{x^2}{4}+y^2=1\\end{cases}\\)消去\\(y\\)整理得：\\((4k^2+1)x^2-(16k^2-8k)x+16k^2-16k=0\\)，\n\n由韦达定理， \\(x_{1}+x_{2}=\\frac{16k^{2}-8k}{4k^{2}+1}\\)， \\(x_{1}x_{2}=\\frac{16k^{2}-16k}{4k^{2}+1}\\)，\n\n由②可知 \\(\\frac{1}{k_1}+\\frac{1}{k_2}=\\frac{x_1}{y_1-1}+\\frac{x_2}{y_2-1}=\\frac{x_1}{k(x_1-2)}+\\frac{x_2}{k(x_2-2)}=\\frac{1}{k}\\left(\\frac{x_1-2+2}{x_1-2}+\\frac{x_2-2+2}{x_2-2}\\right)=\\frac{1}{k}\\left(1+\\frac{2}{x_1-2}+1+\\frac{2}{x_2-2}\\right)\\)\n\n \\(=\\frac{1}{k}\\left[2+\\frac{2(x_2-2)+2(x_1-2)}{(x_1-2)(x_2-2)}\\right]=\\frac{1}{k}\\left[2+\\frac{2(x_1+x_2)-8}{x_1x_2-2(x_1+x_2)+4}\\right]=\\frac{1}{k}\\left(2+\\frac{2\\cdot\\frac{16k^2-8k}{4k^2+1}-8}{\\frac{16k^2-16k}{4k^2+1}-2\\cdot\\frac{16k^2-8k}{4k^2+1}+4}\\right)\\)\n\n \\(=\\frac{1}{k}\\left[2+\\frac{32k^2-16k-8(4k^2+1)}{16k^2-16k-2(16k^2-8k)+4(4k^2+1)}\\right]=\\frac{1}{k}\\left(2+\\frac{-16k-8}{4}\\right)=\\frac{1}{k}\\cdot(-4k)=-4\\)，所以 \\(\\frac{1}{k_1}+\\frac{1}{k_2}\\)为定值 \\(-4\\)。\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_302_1246_572_1408.jpg\" alt=\"Image\" width=\"22%\" /></div>\n\n\n<div style=\"text-align: center;\">图1</div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_614_1245_890_1407.jpg\" alt=\"Image\" width=\"23%\" /></div>\n\n\n<div style=\"text-align: center;\">图2</div>\n\n\n【反思】解决证明类定值问题，核心是选择合适的设法（设点或设线）来计算目标量。本题只需设斜率 k 这一个变量，就能证明目标量为定值，有时可能需要设两个变量，此时就得利用已知条件建立变量间的关系，并用该关系化简目标量，才能证明目标量为定值，我们来看一个变式。",
+      "text_sha256": "011cd90fb660a23c5f9f97dc6332593c743d40540404565d8a67acdba65b2994",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_302_1246_572_1408.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\imgs\\img_in_image_box_302_1246_572_1408.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_614_1245_890_1407.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\imgs\\img_in_image_box_614_1245_890_1407.jpg",
+          "exists": true
+        }
+      ],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 153,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_153.md",
+      "text": "【变式】已知双曲线  \\(E:\\frac{x^{2}}{a^{2}}-\\frac{y^{2}}{b^{2}}=1(a>0,b>0)\\) 的两条渐近线所成的锐角为  \\(60^{\\circ}\\)，且点  \\(P(2,3)\\) 为 E 上一点.\n\n（1）求双曲线E的方程；\n\n（2）设 M 为 E 在第一象限的动点，过 M 的直线与 E 恰有一个公共点，且分别与 E 的两条渐近线交于点 A 和 B，设 O 为原点，证明： \\(\\triangle AOB\\) 的面积为定值，并求此定值.\n\n解：（1）（条件给出双曲线的两条渐近线所成的角，有如图1和图2所示的两种情况，故讨论）\n\n双曲线  \\(E\\) 的两条渐近线所成的锐角为  \\(60^\\circ\\)，渐近线只能为  \\(y = \\pm \\frac{\\sqrt{3}}{3}x\\) 或  \\(y = \\pm \\sqrt{3}x\\)，\n\n若双曲线  \\(E\\) 的渐近线为  \\(y = \\pm \\frac{\\sqrt{3}}{3}x\\)，注意到点  \\(P(2,3)\\) 在  \\(y = \\frac{\\sqrt{3}}{3}x\\) 的上方，\n\n而双曲线 \\(E\\) 的焦点在 \\(x\\) 轴上，所以双曲线 \\(E\\) 不可能过点 \\(P\\)，故双曲线 \\(E\\) 的渐近线为 \\(y = \\pm \\sqrt{3}x\\)，故 \\(\\frac{b}{a} = \\sqrt{3}\\) ①，\n\n又双曲线 \\(E\\) 过点 \\(P(2,3)\\)，所以 \\(\\frac{4}{a^2} - \\frac{9}{b^2} = 1\\)，结合①解得：\\(a = 1\\)，\\(b = \\sqrt{3}\\)，故双曲线 \\(E\\) 的方程为 \\(x^2 - \\frac{y^2}{3} = 1\\)。\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_233_694_527_917.jpg\" alt=\"Image\" width=\"24%\" /></div>\n\n\n<div style=\"text-align: center;\">图1</div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_576_691_749_916.jpg\" alt=\"Image\" width=\"14%\" /></div>\n\n\n<div style=\"text-align: center;\">图2</div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_787_689_961_912.jpg\" alt=\"Image\" width=\"14%\" /></div>\n\n\n<div style=\"text-align: center;\">图3</div>\n\n\n（2）（如图3，已有\\(\\angle AOB\\)，只需求出\\(|OA|\\)和\\(|OB|\\)，就能计算\\(S_{\\triangle AOB}\\)，而求\\(|OA|\\)和\\(|OB|\\)需要\\(A\\)，\\(B\\)的坐标，故考虑设出双曲线的切线方程，与两条渐近线联立求\\(A\\)，\\(B\\)的坐标）\n\n因为点 \\(M\\) 在第一象限，双曲线 \\(E\\) 在点 \\(M\\) 处的切线斜率存在，所以可设直线 \\(AB\\) 的方程为 \\(y = kx + m (k > \\sqrt{3})\\)，联立 \\(\\begin{cases} y = kx + m \\\\ y = \\sqrt{3}x \\end{cases}\\) 解得：\\(x = \\frac{m}{\\sqrt{3} - k}\\)，所以 \\(x_A = \\frac{m}{\\sqrt{3} - k}\\)，故由弦长公式，\\(|OA| = \\sqrt{1 + (\\sqrt{3})^2} \\cdot \\left| \\frac{m}{\\sqrt{3} - k} - 0 \\right| = 2 \\left| \\frac{m}{\\sqrt{3} - k} \\right|\\)，联立 \\(\\begin{cases} y = kx + m \\\\ y = -\\sqrt{3}x \\end{cases}\\) 解得：\\(x = -\\frac{m}{\\sqrt{3} + k}\\)，所以 \\(x_B = -\\frac{m}{\\sqrt{3} + k}\\)，故 \\(|OB| = \\sqrt{1 + (-\\sqrt{3})^2} \\cdot \\left| -\\frac{m}{\\sqrt{3} + k} - 0 \\right| = 2 \\left| \\frac{m}{\\sqrt{3} + k} \\right|\\)，所以 \\(S_{\\triangle AOB} = \\frac{1}{2} |OA| \\cdot |OB| \\cdot \\sin \\angle AOB = \\frac{1}{2} \\times 2 \\left| \\frac{m}{\\sqrt{3} - k} \\right| \\cdot 2 \\left| \\frac{m}{\\sqrt{3} + k} \\right| \\times \\sin 120^\\circ = \\sqrt{3} \\cdot \\left| \\frac{m^2}{3 - k^2} \\right|\\) ②，\n\n（表面上看式②不是定值，但别忘了，直线 AB 与双曲线 E 相切，翻译此条件可建立 k 与 m 的关系，将该关系代入式②消元，也许就能得到式②为定值了）\n\n联立 \\(\\begin{cases} y = kx + m \\\\ 3x^2 - y^2 = 3 \\end{cases}\\)消去 y 整理得： \\((3 - k^2)x^2 - 2kmx - m^2 - 3 = 0\\)，\n\n因为直线  \\(AB\\) 与双曲线  \\(E\\) 相切，所以判别式  \\(\\Delta = 4k^2m^2 - 4(3 - k^2)(-m^2 - 3) = 0\\)，整理得： \\(m^2 = k^2 - 3\\) ③，将式③代入式②可得  \\(S_{\\triangle AOB} = \\sqrt{3} \\cdot \\left| \\frac{k^2 - 3}{3 - k^2} \\right| = \\sqrt{3}\\)，所以  \\(\\triangle AOB\\) 的面积为定值  \\(\\sqrt{3}\\)。\n\n类型Ⅱ：探究类定值问题",
+      "text_sha256": "7b067126044413840e53169643f9270f3e083788c97d10f7406b8aef44aeaf9c",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_233_694_527_917.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\imgs\\img_in_image_box_233_694_527_917.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_576_691_749_916.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\imgs\\img_in_image_box_576_691_749_916.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_787_689_961_912.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\imgs\\img_in_image_box_787_689_961_912.jpg",
+          "exists": true
+        }
+      ],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 154,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_154.md",
+      "text": "【例 2】已知椭圆  \\(C: \\frac{x^{2}}{a^{2}} + \\frac{y^{2}}{b^{2}} = 1 (a > b > 0)\\) 的离心率为  \\(\\frac{\\sqrt{3}}{2}\\)，短轴长为 2.\n\n（1）求椭圆 C 的方程；\n\n(2)过椭圆 C 的右焦点 F 的直线 l 交椭圆 C 于 A, B 两点，在 x 轴上是否存在定点 P，使得  \\(\\overrightarrow{PA} \\cdot \\overrightarrow{PB}\\) 为定值？若存在，求出点 P 的坐标和  \\(\\overrightarrow{PA} \\cdot \\overrightarrow{PB}\\) 的值；若不存在，请说明理由.\n\n解：（1）由题意，椭圆 C 的短轴长 2b=2，所以 b=1，\n\n又因为椭圆 C 的离心率  \\(e = \\frac{\\sqrt{a^2 - b^2}}{a} = \\frac{\\sqrt{3}}{2}\\)，所以  \\(a = 2\\)，故椭圆 C 的方程为  \\(\\frac{x^2}{4} + y^2 = 1\\)。\n\n（2）由（1）可得椭圆 C 的半焦距  \\(c=\\sqrt{a^{2}-b^{2}}=\\sqrt{3}\\)，所以  \\(F(\\sqrt{3},0)\\)，\n\n（要研究  \\(\\overrightarrow{PA} \\cdot \\overrightarrow{PB}\\) 是否为定值，需先计算它，这会用到  \\(P, A, B\\) 的坐标，故先把它们的坐标设出来）设  \\(P(t,0)\\)， \\(A(x_1,y_1)\\)， \\(B(x_2,y_2)\\)，则  \\(\\overrightarrow{PA} = (x_1 - t, y_1)\\)， \\(\\overrightarrow{PB} = (x_2 - t, y_2)\\)，所以  \\(\\overrightarrow{PA} \\cdot \\overrightarrow{PB} = (x_1 - t)(x_2 - t) + y_1x_2 = x_1x_2 - t(x_1 + x_2) + t^2 + y_1y_2\\) ①，\n\n（涉及  \\(x_1x_2\\)， \\(x_1 + x_2\\)， \\(y_1y_2\\)，想到设直线  \\(l\\) 的方程，与椭圆方程联立，结合韦达定理计算它们。直线  \\(l\\) 过  \\(x\\) 轴上的定点  \\(F\\)，考虑设横截式方程）当直线  \\(l\\) 不与  \\(x\\) 轴重合时，设直线  \\(l\\) 的方程为  \\(x = my + \\sqrt{3}\\)，将  \\(x = my + \\sqrt{3}\\) 代入  \\(\\frac{x^2}{4} + y^2 = 1\\) 消去  \\(x\\) 整理得： \\((m^2 + 4)y^2 + 2\\sqrt{3}my - 1 = 0\\)，\n\n判别式  \\(\\Delta = (2\\sqrt{3}m)^2 - 4(m^2 + 4) \\cdot (-1) = 16(m^2 + 1) > 0\\)，由韦达定理， \\(y_1 + y_2 = -\\frac{2\\sqrt{3}m}{m^2 + 4}\\)， \\(y_1 y_2 = -\\frac{1}{m^2 + 4}\\)，\n\n \\[x_{1}+x_{2}=my_{1}+\\sqrt{3}+my_{2}+\\sqrt{3}=m(y_{1}+y_{2})+2\\sqrt{3}=m\\cdot\\left(-\\frac{2\\sqrt{3}m}{m^{2}+4}\\right)+2\\sqrt{3}=\\frac{8\\sqrt{3}}{m^{2}+4}\\] \n\n \\[x_{1}x_{2}=(my_{1}+\\sqrt{3})(my_{2}+\\sqrt{3})=m^{2}y_{1}y_{2}+\\sqrt{3}m(y_{1}+y_{2})+3=m^{2}\\cdot\\left(-\\frac{1}{m^{2}+4}\\right)+\\sqrt{3}m\\cdot\\left(-\\frac{2\\sqrt{3}m}{m^{2}+4}\\right)+3=\\frac{12-4m^{2}}{m^{2}+4}\\] \n\n将上述结果代入①得  \\(\\overrightarrow{PA} \\cdot \\overrightarrow{PB} = \\frac{12 - 4m^2}{m^2 + 4} - t \\cdot \\frac{8\\sqrt{3}}{m^2 + 4} + t^2 - \\frac{1}{m^2 + 4} = \\frac{-4m^2 + 11 - 8\\sqrt{3}t}{m^2 + 4} + t^2\\) ②，\n\n（怎样能使式②不随 \\(m\\) 的变化而改变？注意到分式的分子分母都为关于 \\(m\\) 的二次函数，故要使其为定值，只需各项系数对应成比例。举个例子，\\(\\frac{2m^2+2}{m^2+1}\\) 为定值 2，这是因为分子分母各项系数对应成比例，即 \\(\\frac{2}{1}=\\frac{2}{1}\\)）要使式②为定值，应有 \\(\\frac{-4}{1}=\\frac{11-8\\sqrt{3}t}{4}\\)，解得：\\(t=\\frac{9\\sqrt{3}}{8}\\)，此时 \\(\\overrightarrow{PA}\\cdot\\overrightarrow{PB}=-\\frac{13}{64}\\)；\n\n（还有直线 \\(l\\) 与 \\(y\\) 轴垂直的情况没考虑，故还应检验这种特殊情况下，\\(\\overrightarrow{PA}\\cdot\\overrightarrow{PB}\\) 是否也为 \\(-\\frac{13}{64}\\)）当直线 \\(l\\) 与 \\(x\\) 轴重合且 \\(t=\\frac{9\\sqrt{3}}{8}\\) 时，\\(P\\left(\\frac{9\\sqrt{3}}{8},0\\right)\\)，不妨设 \\(A(-2,0)\\)，\\(B(2,0)\\)，\n\n则 \\(\\overrightarrow{PA}=\\left(-2-\\frac{9\\sqrt{3}}{8},0\\right)\\)，\\(\\overrightarrow{PB}=\\left(2-\\frac{9\\sqrt{3}}{8},0\\right)\\)，所以 \\(\\overrightarrow{PA}\\cdot\\overrightarrow{PB}=\\left(-2-\\frac{9\\sqrt{3}}{8}\\right)\\times\\left(2-\\frac{9\\sqrt{3}}{8}\\right)=\\left(-\\frac{9\\sqrt{3}}{8}\\right)^2-2^2=-\\frac{13}{64}\\)；\n\n综上所述，存在点 \\(P\\left(\\frac{9\\sqrt{3}}{8},0\\right)\\)，使得 \\(\\overrightarrow{PA}\\cdot\\overrightarrow{PB}\\) 为定值 \\(-\\frac{13}{64}\\)。\n\n【反思】对于探究类定值问题，若定值的目标式容易计算，则先计算该式，再分析怎样能使其为定值。常见的定值模型有分式型  \\(f(m)=\\frac{a_0+a_1m+a_2m^2+\\cdots+a_nm^n}{b_0+b_1m+b_2m^2+\\cdots+b_nm^n}\\) 和多项式型  \\(f(m)=a_0+a_1m+a_2m^2+\\cdots+a_nm^n\\)。\n\n对于分式型，要使  \\(f(m)\\) 不随  \\(m\\) 的变化而改变，应有  \\(\\frac{a_0}{b_0}=\\frac{a_1}{b_1}=\\frac{a_2}{b_2}=\\cdots=\\frac{a_n}{b_n}=t\\)（这里面如果有系数为 0 的，则另",
+      "text_sha256": "777664c44a2bdfb81ca9bcf6d26c358b24f91bca4e5c83948d8ece1b90afe7a6",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 155,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_155.md",
+      "text": "一个对应系数也为 0. 例如，若  \\(b_2 = 0\\)，则  \\(a_2 = 0\\)），且此时  \\(f(m) = t\\)。\n\n对于多项式型，要使  \\(f(m)\\) 不随  \\(m\\) 的变化而改变，只能  \\(a_1 = a_2 = \\cdots = a_n = 0\\)，且此时  \\(f(m) = a_0\\)。\n\n## 类型III：定点问题\n\n【例 3】（2017·新课标Ⅰ卷）已知椭圆  \\(C: \\frac{x^{2}}{a^{2}} + \\frac{y^{2}}{b^{2}} = 1 (a > b > 0)\\)，四点  \\(P_{1}(1,1)\\)， \\(P_{2}(0,1)\\)， \\(P_{3}(-1, \\frac{\\sqrt{3}}{2})\\)， \\(P_{4}(1, \\frac{\\sqrt{3}}{2})\\) 中恰有三点在椭圆 C 上.\n\n（1）求 C 的方程：\n\n（2）设直线 l 不经过点  \\(P_{2}\\) 且与 C 相交于 A，B 两点。若直线  \\(P_{2}A\\) 与直线  \\(P_{2}B\\) 的斜率的和为 -1，证明：l 过定点。\n\n解：（1）（条件给出四点中恰有三点在椭圆 C 上，应先判断是哪三点．若逐一讨论，则需考虑较多情况，比较烦，不妨先看看给出的四点有何特征．观察发现  \\(P_{3}\\)， \\(P_{4}\\) 关于 y 轴对称，故可由此结合椭圆的对称性来分析）题设所给的四点中， \\(P_{3}\\) 和  \\(P_{4}\\) 关于 y 轴对称，所以它们要么都在椭圆 C 上，要么都不在椭圆 C 上，结合所给四点恰有三点在椭圆 C 上可得  \\(P_{3}\\) 和  \\(P_{4}\\) 必定都在椭圆 C 上，又由  \\(P_{4}\\left(1,\\frac{\\sqrt{3}}{2}\\right)\\) 在椭圆上可得  \\(P_{1}(1,1)\\) 不在椭圆 C 上，所以在椭圆 C 上的三个点是  \\(P_{2}\\)， \\(P_{3}\\)， \\(P_{4}\\)，由  \\(P_{2}(0,1)\\) 在椭圆 C 上可得 b=1，由  \\(P_{3}\\) 在椭圆 C 上可得  \\(\\frac{1}{a^{2}}+\\frac{3}{4b^{2}}=1\\)，结合 b=1 可得 a=2，所以椭圆 C 的方程为  \\(\\frac{x^{2}}{4}+y^{2}=1\\)。\n\n（2）解法1：（条件涉及直线 \\(P_{2}A\\)和 \\(P_{2}B\\)的斜率，表示这两个斜率需要A，B的坐标，故先设坐标）\n\n设  \\(A(x_{1},y_{1})\\)， \\(B(x_{2},y_{2})\\)，则  \\(k_{P_{2}A} + k_{P_{2}B} = \\frac{y_{1}-1}{x_{1}} + \\frac{y_{2}-1}{x_{2}}\\)，\n\n（上式关于  \\(x_{1}\\) 和  \\(x_{2}\\)， \\(y_{1}\\) 和  \\(y_{2}\\) 的结构是对称的，可以想象，若将其通分，应该可以化出包含  \\(x_{1}+x_{2}\\)， \\(x_{1}x_{2}\\) 等系数对称的可用韦达定理计算的结构，故先通分，再设直线 l 的方程，并与椭圆联立）\n\n所以  \\(k_{P_{2}A} + k_{P_{2}B} = \\frac{y_{1}-1}{x_{1}} + \\frac{y_{2}-1}{x_{2}} = \\frac{x_{1}y_{2} + x_{2}y_{1} - (x_{1} + x_{2})}{x_{1}x_{2}}\\) ①，\n\n（式①涉及的变量较多，考虑消元，可设直线 \\(l\\) 的方程，并用于消元，怎么设？题干没给直线 \\(l\\) 过 \\(x\\) 轴上或 \\(y\\) 轴上定点，设横截式或斜截式均可，不妨设横截式，别忘了单独考虑 \\(l \\perp y\\) 轴的情况）\n\n如图1，当 \\(l \\perp y\\) 轴时，由对称性，直线 \\(P_2A\\) 与直线 \\(P_2B\\) 的斜率之和为 0，不合题意，\n\n所以如图2，直线 \\(l\\) 不与 \\(y\\) 轴垂直，故可设其方程为 \\(x = my + t\\)，由直线 \\(l\\) 不过点 \\(P_2(0,1)\\) 可得 \\(t \\ne -m\\)，\n\n因为 \\(A\\)，\\(B\\) 两点在直线 \\(l\\) 上，所以 \\(x_1 = my_1 + t\\)，\\(x_2 = my_2 + t\\)，\n\n代入①得 \\(k_{P_2A} + k_{P_2B} = \\frac{(my_1 + t)y_2 + (my_2 + t)y_1 - (my_1 + t + my_2 + t)}{x_1 x_2} = \\frac{2my_1 y_2 + (t - m)(y_1 + y_2) - 2t}{x_1 x_2}\\) ②，\n\n（看到  \\(y_1, y_2\\)， \\(y_1 + y_2\\) 和  \\(x_1 x_2\\)，想到联立直线 l 和椭圆的方程，结合韦达定理计算它们联立  \\(\\left\\{\\begin{aligned}x &= my + t\\\\ \\frac{x^2}{4} + y^2 &= 1\\end{aligned}\\right.\\) 消去 x 整理得： \\((m^2 + 4)y^2 + 2mty + t^2 - 4 = 0\\)，\n\n判别式  \\(\\Delta = 4m^{2}t^{2} - 4(m^{2} + 4)(t^{2} - 4) > 0\\)，所以\n\n由韦达定理， \\(y_{1}+y_{2}=-\\frac{2mt}{m^{2}+4}\\)， \\(y_{1}y_{2}=\\frac{t^{2}-4}{m^{2}+4}\\)，所以 \\(x_{1}x_{2}=m^{2}y_{1}y_{2}+mt(y_{1}+y_{2})+t^{2}=\\frac{4t^{2}-4m^{2}}{m^{2}+4}\\)，",
+      "text_sha256": "100d2010ab74654beaf08ba3ec769db1b2fefea0faaa8ff66f4c0b2dd11844d6",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 156,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_156.md",
+      "text": "代入②得  \\(k_{P_{2}A} + k_{P_{2}B} = \\frac{2m \\cdot \\frac{t^{2} - 4}{m^{2} + 4} + (t - m) \\left( -\\frac{2mt}{m^{2} + 4} \\right) - 2t}{\\frac{4t^{2} - 4m^{2}}{m^{2} + 4}} = \\frac{2mt^{2} - 8m - 2mt^{2} + 2m^{2}t - 2m^{2}t - 8t}{4t^{2} - 4m^{2}}}\\)\n\n \\(= -\\frac{2(m + t)}{t^{2} - m^{2}} = -\\frac{2(m + t)}{(t - m)(t + m)} = \\frac{2}{m - t}\\)，由题意， \\(k_{P_{2}A} + k_{P_{2}B} = -1\\)，所以  \\(\\frac{2}{m - t} = -1\\)，故  \\(t = m + 2\\)，\n\n代入③得  \\(m < 0\\)，又  \\(t \\neq -m\\)，所以  \\(m \\neq -1\\)，故  \\(m \\in (-\\infty, -1) \\cup (-1, 0)\\)，\n\n所以直线  \\(l\\) 的方程为  \\(x = my + m + 2\\)，即  \\(x = m(y + 1) + 2\\)，故直线  \\(l\\) 过定点  \\((2, -1)\\)。\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_327_362_563_505.jpg\" alt=\"Image\" width=\"19%\" /></div>\n\n\n<div style=\"text-align: center;\">图1</div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_623_360_865_505.jpg\" alt=\"Image\" width=\"20%\" /></div>\n\n\n<div style=\"text-align: center;\">图2</div>\n\n\n解法2：（解法1中计算 \\(k_{P_{2}A}+k_{P_{2}B}\\)比较麻烦，能否简化？我们知道，若能在联立直线l和椭圆C的方程时，将其化为 \\(p\\left(\\frac{y-1}{x}\\right)^{2}+q\\frac{y-1}{x}+r=0\\)这种关于 \\(\\frac{y-1}{x}\\)的一元二次方程，就能直接用韦达定理计算 \\(\\frac{y_{1}-1}{x_{1}}+\\frac{y_{2}-1}{x_{2}}\\)，故按此尝试.既然我们需要的是 \\(\\frac{y-1}{x}\\)这一结构，那在椭圆和直线l的方程中，都把y凑成y-1）\n\n设出 \\(A\\)，\\(B\\) 的坐标、直线 \\(l\\) 的方程为 \\(x = my + t\\) 和得到 \\(k_{P_2A} + k_{P_2B} = \\frac{y_1 - 1}{x_1} + \\frac{y_2 - 1}{x_2}\\) 的过程同解法 \\(1\\)，此处不再赘述，直线 \\(l\\) 的方程可化为 \\(x = m(y - 1) + t + m\\)，即 \\(x - m(y - 1) = t + m\\) ④，\n\n椭圆 \\(C\\) 的方程可化为 \\(\\frac{x^2}{4} + [(y - 1) + 1]^2 = 1\\)，将平方展开整理得：\\(4(y - 1)^2 + 8(y - 1) + x^2 = 0\\) ⑤，\n\n（可以想象，若能将式⑤化为形如  \\(p(y-1)^2 + qx(y-1) + rx^2 = 0\\) 的关于 x 和 y-1 的二次齐次式，就能通过同除以  \\(x^2\\) 得到关于  \\(\\frac{y-1}{x}\\) 的一元二次方程  \\(p\\left(\\frac{y-1}{x}\\right)^2 + q \\cdot \\frac{y-1}{x} + r = 0\\)，怎么化？观察发现式⑤只有中间的  \\(8(y-1)\\) 这一项不是二次的，故考虑将它化为二次的，可利用直线的方程来实现）\n\n在⑤两端乘以  \\(t+m\\) 得  \\(4(t+m)(y-1)^{2}+8(t+m)(y-1)+(t+m)x^{2}=0\\) ⑥，\n\n由④得  \\(t + m = x - m(y - 1)\\)，用它替换式⑥里  \\(8(t + m)(y - 1)\\) 这一项中的  \\(t + m\\) 得\n\n \\(4(t+m)(y-1)^{2}+8[x-m(y-1)](y-1)+(t+m)x^{2}=0\\)，化简得： \\(4(t-m)(y-1)^{2}+8x(y-1)+(t+m)x^{2}=0\\)，\n\n两端同除以  \\(x^{2}\\) 得  \\(4(t-m)\\left(\\frac{y-1}{x}\\right)^{2}+8\\cdot\\frac{y-1}{x}+t+m=0\\) ⑦，\n\n因为 A，B 是直线 l 与椭圆 C 的两个交点，所以 A，B 的坐标满足方程⑦，即  \\(4(t-m)\\left(\\frac{y_{1}-1}{x_{1}}\\right)^{2}+8\\cdot\\frac{y_{1}-1}{x_{1}}+t+m=0\\) 且  \\(4(t-m)\\left(\\frac{y_{2}-1}{x_{2}}\\right)^{2}+8\\cdot\\frac{y_{2}-1}{x_{2}}+t+m=0\\)。所以  \\(\\frac{y_{1}-1}{x_{1}}\\) 和  \\(\\frac{y_{2}-1}{x_{2}}\\) 是上述关于  \\(\\frac{y-1}{x}\\) 的一元二次方程⑦的两个不相等的实根，故由韦达定理， \\(\\frac{y_{1}-1}{x_{1}}+\\frac{y_{2}-1}{x_{2}}=-\\frac{8}{4(t-m)}=\\frac{2}{m-t}\\)，接下来同解法 1.\n\n【反思】①对于直线过定点问题，当容易设直线方程处理时，可考虑设直线的方程，翻译已知条件，寻找所设方程中参数的关系，从而找到直线所过的定点。有时也会遇到不方便设直线方程的情况，比如下面的变式；②定点问题与定值问题有着天然的联系。例如本题若将条件和结论互换，变成已知过点 \\((2,-1)\\)的直线与椭圆交于A，B两点，让证明 \\(P_{2}A\\)与 \\(P_{2}B\\)的斜率之和为定值，它就变成了一道典型的定值问题；\n\n③当斜率之和、斜率之积为定值时，直线常过定点，这是典型的定点模型，后面还会遇到：",
+      "text_sha256": "fdb08d29535359555d32a097ec5dda8da6418a291ecc84509e9a31236d80db8b",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_327_362_563_505.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\imgs\\img_in_image_box_327_362_563_505.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_623_360_865_505.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\imgs\\img_in_image_box_623_360_865_505.jpg",
+          "exists": true
+        }
+      ],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 157,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_157.md",
+      "text": "④计算 \\(\\frac{y_{1}-b}{x_{1}-a}+\\frac{y_{2}-b}{x_{2}-a}\\)或 \\(\\frac{y_{1}-b}{x_{1}-a}\\cdot\\frac{y_{2}-b}{x_{2}-a}\\)这类结构，可考虑齐次化思想，其核心是在联立直线和椭圆（双曲线、抛物线）的方程时，将其化为关于x-a和y-b的二次齐次式 \\(A(y-b)^{2}+B(x-a)(y-b)+C(x-a)^{2}=0\\)，再同除以 \\((x-a)^{2}\\)化为 \\(A\\left(\\frac{y-b}{x-a}\\right)^{2}+B\\cdot\\frac{y-b}{x-a}+C=0\\)，这样可直接由韦达定理求得 \\(\\frac{y_{1}-b}{x_{1}-a}+\\frac{y_{2}-b}{x_{2}-a}=-\\frac{B}{A}\\)和 \\(\\frac{y_{1}-b}{x_{1}-a}\\cdot\\frac{y_{2}-b}{x_{2}-a}=\\frac{C}{A}\\)。\n\n【变式】已知椭圆 \\(\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1(a>b>0)\\)的右焦点为 \\(F(1,0)\\)，离心率为 \\(\\frac{\\sqrt{2}}{2}\\)，过 \\(F\\)作两条互相垂直的弦 \\(AB\\)， \\(CD\\)，设 \\(AB\\)， \\(CD\\)的中点分别为 \\(M\\)， \\(N\\)。\n\n（1）求椭圆的标准方程：\n\n（2）证明：直线 MN 必过定点，并求出此定点的坐标.\n\n解：（1）因为椭圆的右焦点为 \\(F(1,0)\\)，所以椭圆的半焦距 \\(c=1\\)，故 \\(a^2-b^2=c^2=1\\)①，\n\n又椭圆的离心率 \\(e=\\frac{c}{a}=\\frac{\\sqrt{2}}{2}\\)，所以 \\(a=\\sqrt{2}c=\\sqrt{2}\\)，结合①得 \\(b=1\\)，故椭圆的标准方程为 \\(\\frac{x^2}{2}+y^2=1\\)。\n\n（2）（如图1，这里M，N不在椭圆上，不方便像上面例3那样通过设MN的方程来找定点，怎么办呢？注意到M，N是弦中点，可通过联立对应直线和椭圆的方程，结合韦达定理求出它们的坐标，故考虑先求坐标）当直线AB，CD中一条与x轴垂直，另一条与y轴垂直时，M，N一个为O，一个为F，直线MN即为x轴；当直线AB，CD均不与坐标轴垂直时，可设AB的方程为 \\(x=my+1(m\\neq0)\\)，设 \\(A(x_{1},y_{1})\\)， \\(B(x_{2},y_{2})\\)，\n\n联立 \\(\\left\\{\\begin{array}{l}x=my+1\\\\\\frac{x^{2}}{2}+y^{2}=1\\end{array}\\right.\\)消去x整理得： \\((m^{2}+2)y^{2}+2my-1=0\\)，\n\n判别式 \\(\\Delta=(2m)^2-4(m^2+2)\\cdot(-1)=8(m^2+1)>0\\)，由韦达定理， \\(y_1+y_2=-\\frac{2m}{m^2+2}\\)\n\n所以 \\(x_1+x_2=my_1+1+my_2+1=m(y_1+y_2)+2=m\\cdot\\left(-\\frac{2m}{m^2+2}\\right)+2=\\frac{4}{m^2+2}\\)，\n\n故 \\(AB\\)的中点 \\(M\\)的坐标为 \\(\\left(\\frac{2}{m^2+2},-\\frac{m}{m^2+2}\\right)\\)，\n\n（再求 \\(N\\) 的坐标，要像上面那样再算一遍吗？不用，注意到 \\(N\\) 和 \\(M\\) 的产生方法类似，只是把 \\(AB:x=my+1\\) 换成了 \\(CD:x=-\\frac{1}{m}y+1\\)，所以直接在 \\(M\\) 的坐标中将 \\(m\\) 换成 \\(-\\frac{1}{m}\\)，就能得到 \\(N\\) 的坐标）\n\n同理可得，\\(CD\\) 的中点 \\(N\\) 的坐标为 \\(\\left(\\frac{2m^2}{1+2m^2},\\frac{m}{1+2m^2}\\right)\\)，\n\n（经尝试，由 \\(M\\)，\\(N\\) 的坐标写出的直线 \\(MN\\) 的方程较复杂，不易寻找定点，怎么办呢？如图2，可以想象，若直线 \\(MN\\) 过定点 \\(P\\)，则从所有的直线 \\(MN\\) 中任选两条出来（如图2中的 \\(l_1\\) 和 \\(l_2\\)），它们的交点就是 \\(P\\)，于是我们可以采用特值探路的方法，即先找两条特殊的直线，求出交点 \\(P\\)，再证明一般情况下，直线 \\(MN\\) 也过定点 \\(P\\)。前面已经得到当 \\(AB\\)，\\(CD\\) 分别与 \\(x\\) 轴和 \\(y\\) 轴垂直时，直线 \\(MN\\) 即为 \\(x\\) 轴，所以 \\(l_1\\) 可取 \\(x\\) 轴，那 \\(l_2\\) 呢？令 \\(m=1\\) 可求得此时直线 \\(MN\\) 即为 \\(l_2: x = \\frac{2}{3}\\)，它与 \\(l_1\\) 的交点是 \\(P\\left(\\frac{2}{3}, 0\\right)\\)，直线 \\(MN\\) 所过的定点就找到了，如何证明所有情况下直线 \\(MN\\) 都过点 \\(P\\)？这其实也就是证明 \\(M\\)，\\(N\\)，\\(P\\) 三点总是共线，证三点共线，可通过证向量共线来完成）\n\n记 \\(P\\left(\\frac{2}{3}, 0\\right)\\)，则 \\(\\overrightarrow{PM} = \\left(\\frac{2 - 2m^2}{3(m^2 + 2)}, -\\frac{m}{m^2 + 2}\\right)\\)，\\(\\overrightarrow{PN} = \\left(\\frac{2m^2 - 2}{3(1 + 2m^2)}, \\frac{m}{1 + 2m^2}\\right)\\)，\n\n所以 \\(\\overrightarrow{PM} = -\\frac{1 + 2m^2}{2}\\overrightarrow{PN}\\)，从而 \\(\\overrightarrow{PM} \\parallel \\overrightarrow{PN}\\)，故 \\(P\\)，\\(M\\)，\\(N\\) 三点共线，即直线 \\(MN\\) 过点 \\(P\\)；\n\n所以  \\(\\overrightarrow{PM} = -\\frac{1+2m^2}{m^2+2}\\overrightarrow{PN}\\)，从而  \\(\\overrightarrow{PM} \\parallel \\overrightarrow{PN}\\)，故  \\(P, M, N\\) 三点共线，即直线  \\(MN\\) 过点  \\(P\\)；",
+      "text_sha256": "b4543621ec352af27d401024af3265634d4b7f157dc3d7fc203aafcfc6c17253",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 158,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_158.md",
+      "text": "因为 x 轴也过点 P，所以直线 MN 总是经过定点  \\(P\\left(\\frac{2}{3},0\\right)\\).\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_360_181_587_339.jpg\" alt=\"Image\" width=\"19%\" /></div>\n\n\n<div style=\"text-align: center;\">图1</div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_634_191_836_339.jpg\" alt=\"Image\" width=\"16%\" /></div>\n\n\n<div style=\"text-align: center;\">图2</div>\n\n\n【反思】像本题这样不方便设直线  \\(MN\\) 的方程处理时，可考虑先求出  \\(M\\),  \\(N\\) 两点的坐标，用特值探路找到直线  \\(MN\\) 过的定点  \\(P\\)，再用向量法证明  \\(M\\),  \\(N\\),  \\(P\\) 三点共线，就能得到直线  \\(MN\\) 过定点  \\(P\\)。\n\n【例 4】已知双曲线  \\(C: \\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1 (a > 0, b > 0)\\) 的左顶点为  \\(A\\)，过其左焦点  \\(F\\) 的直线与双曲线  \\(C\\) 交于  \\(P\\)， \\(Q\\) 两点。当  \\(PQ \\perp x\\) 轴时， \\(|PA| = \\sqrt{10}\\)， \\(\\triangle PAQ\\) 的面积为 3。\n\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_889_502_1093_723.jpg\" alt=\"Image\" width=\"17%\" /></div>\n\n\n（1）求双曲线 C 的方程；\n\n（2）证明：以 PQ 为直径的圆经过定点.\n\n解：（1）设  \\(F(-c,0)\\)，当  \\(PQ \\perp x\\) 轴时，如图1，直线  \\(PQ\\) 的方程为  \\(x = -c\\)，代入  \\(\\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1\\) 可得  \\(\\frac{c^2}{a^2} - \\frac{y^2}{b^2} = 1\\)，所以  \\(y^2 = \\left(\\frac{c^2}{a^2} - 1\\right)b^2 = \\frac{c^2 - a^2}{a^2} \\cdot b^2 = \\frac{b^2}{a^2} \\cdot b^2 = \\frac{b^4}{a^2}\\)，解得： \\(y = \\pm \\frac{b^2}{a}\\)，故  \\(|PF| = \\frac{b^2}{a}\\)，又  \\(|AF| = c - a\\)，所以  \\(|PA| = \\sqrt{|PF|^2 + |AF|^2} = \\sqrt{\\frac{b^4}{a^2} + (c - a)^2}\\)，由题意， \\(|PA| = \\sqrt{10}\\)，所以  \\(\\sqrt{\\frac{b^4}{a^2} + (c - a)^2} = \\sqrt{10}\\) ①由题意， \\(S_{\\triangle PAQ} = \\frac{1}{2}|PQ| \\cdot |AF| = \\frac{1}{2} \\times \\frac{2b^2}{a} \\times (c - a) = \\frac{b^2(c - a)}{a} = 3\\) ②，\n\n（方程①②都较复杂，怎么解呢？观察发现字母以 \\(\\frac{b^2}{a}\\)和 \\(c-a\\)整体出现，可将它们换元，化简两个方程）设 \\(u=\\frac{b^2}{a}\\)， \\(v=c-a\\)，则由①②可得 \\(\\begin{cases}\\sqrt{u^2+v^2}=\\sqrt{10}\\textcircled{3}\\\\uv=3\\textcircled{4}\\end{cases}\\)，由④得 \\(v=\\frac{3}{u}\\)，\n\n代入③得  \\(\\sqrt{u^{2}+\\frac{9}{u^{2}}}=\\sqrt{10}\\)，解得：u=1或3，\n\n若u=1，则 \\(v=\\frac{3}{u}=3\\)，此时 \\(\\left\\{\\begin{aligned}&\\frac{b^{2}}{a}=1\\textcircled{5}\\\\&c-a=3\\textcircled{6}\\end{aligned}\\right.\\)，由⑤可得 \\(a=b^{2}=c^{2}-a^{2}=(c+a)(c-a)\\)，\n\n结合⑥得  \\(a=3(c+a)\\)，所以  \\(2a+3c=0\\)，因为 a>0，c>0，所以此方程无解；\n\n若  \\(u=3\\)，则  \\(v=\\frac{3}{u}=1\\)，此时  \\(\\left\\{\\begin{aligned}&\\frac{b^{2}}{a}=3\\textcircled{7}\\\\&c-a=1\\textcircled{8}\\end{aligned}\\right.\\)，由⑦可得  \\(3a=b^{2}=c^{2}-a^{2}=(c+a)(c-a)\\)\n\n结合⑧得  \\(3a = c + a\\)，所以  \\(c = 2a\\)，代入⑧解得： \\(a = 1\\)，所以  \\(c = 2a = 2\\)， \\(b = \\sqrt{c^2 - a^2} = \\sqrt{3}\\)，故双曲线 C 的方程为  \\(x^2 - \\frac{y^2}{3} = 1\\)。\n\n(2) (怎样翻译以  \\(P\\ov)Q\\) 为直径的圆过定点？不妨设定点为 T，则可翻译为  \\(\\overrightarrow{TP}\\cdot\\overrightarrow{TQ}=0\\) 。求数量积需要坐标，若直",
+      "text_sha256": "6bf5d6499519b78c1cd6cd0635cb6d607e5a16fe368630b07660f4ac461e98bd",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_360_181_587_339.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\imgs\\img_in_image_box_360_181_587_339.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_634_191_836_339.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\imgs\\img_in_image_box_634_191_836_339.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_889_502_1093_723.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\imgs\\img_in_image_box_889_502_1093_723.jpg",
+          "exists": true
+        }
+      ],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 159,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_159.md",
+      "text": "得到了两个圆，直径分别为  \\(PQ\\) 和  \\(P'Q'\\)，这两个圆也关于  \\(x\\) 轴对称，故它们的交点在  \\(x\\) 轴上，所以若题设的圆过定点，定点只能在  \\(x\\) 轴上）\n\n由对称性，以  \\(PQ\\) 为直径的圆所过的定点只可能在  \\(x\\) 轴上，设  \\(T(t,0)\\)， \\(P(x_1,y_1)\\)， \\(Q(x_2,y_2)\\)，\n\n则  \\(\\overrightarrow{TP} = (x_1 - t, y_1)\\)， \\(\\overrightarrow{TQ} = (x_2 - t, y_2)\\)，所以  \\(\\overrightarrow{TP} \\cdot \\overrightarrow{TQ} = (x_1 - t)(x_2 - t) + y_1y_2 = x_1x_2 - t(x_1 + x_2) + t^2 + y_1y_2\\) ⑨，\n\n（观察发现有  \\(x_1x_2\\)， \\(x_1 + x_2\\)， \\(y_1y_2\\) 这些结构，故又设直线  \\(PQ\\) 的方程，并代入双曲线，结合韦达定理计算它们）\n\n由（1）知  \\(F(-2,0)\\)，当  \\(PQ\\) 不与  \\(y\\) 轴垂直时，可设其方程为  \\(x = my - 2\\)，\n\n代入  \\(x^2 - \\frac{y^2}{3} = 1\\) 整理得： \\((3m^2 - 1)y^2 - 12my + 9 = 0\\)，\n\n因为直线  \\(PQ\\) 与双曲线  \\(C\\) 有两个交点，所以  \\(\\begin{cases} 3m^2 - 1 \\neq 0 \\\\ \\Delta = 144m^2 - 4(3m^2 - 1) \\times 9 > 0 \\end{cases}\\)，故  \\(m \\neq \\pm \\frac{\\sqrt{3}}{3}\\)，\n\n由韦达定理， \\(y_1 + y_2 = \\frac{12m}{3m^2 - 1}\\)， \\(y_1y_2 = \\frac{9}{3m^2 - 1}\\)，所以  \\(x_1 + x_2 = my_1 - 2 + my_2 - 2 = m(y_1 + y_2) - 4 = \\frac{4}{3m^2 - 1}\\)，\n\n \\(x_1x_2 = (my_1 - 2)(my_2 - 2) = m^2y_1y_2 - 2m(y_1 + y_2) + 4 = -\\frac{3m^2 + 4}{3m^2 - 1}\\)，\n\n代入⑨得  \\(\\overrightarrow{TP} \\cdot \\overrightarrow{TQ} = -\\frac{3m^2 + 4}{3m^2 - 1} - \\frac{4t}{3m^2 - 1} + t^2 + \\frac{9}{3m^2 - 1} = \\frac{(3t^2 - 3)m^2 - t^2 - 4t + 5}{3m^2 - 1}\\)，（注意上式的变量是  \\(m\\)，而  \\(t\\) 是我们要求的常数，所以要使上式恒为 0，不随  \\(m\\) 的改变而变化，只能分子的两个系数同时为 0）\n\n令  \\(\\begin{cases} 3t^2 - 3 = 0 \\\\ -t^2 - 4t + 5 = 0 \\end{cases}\\) 可得  \\(t = 1\\)，所以当且仅当  \\(t = 1\\) 时，总有  \\(\\overrightarrow{TP} \\cdot \\overrightarrow{TQ} = 0\\)，故以  \\(PQ\\) 为直径的圆始终过点  \\(T(1,0)\\)；\n\n（前面设了  \\(PQ\\) 的横截式方程，它不能表示垂直于  \\(y\\) 轴的情形，所以还需单独验证这种情况得到的圆是否也过上述定点  \\(T\\)）\n\n当  \\(PQ \\perp y\\) 轴时， \\(P\\)， \\(Q\\) 分别为双曲线的两个顶点，故以  \\(PQ\\) 为直径的圆为  \\(x^2 + y^2 = 1\\)，该圆也过点  \\(T(1,0)\\)；\n\n综上所述，以  \\(PQ\\) 为直径的圆过定点  \\(T(1,0)\\)。\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_359_890_540_1150.jpg\" alt=\"Image\" width=\"15%\" /></div>\n\n\n<div style=\"text-align: center;\">图1</div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_603_891_836_1150.jpg\" alt=\"Image\" width=\"19%\" /></div>\n\n\n<div style=\"text-align: center;\">图2</div>\n\n\n【反思】①利用图形的对称性来缩窄搜索的范围，这是解析几何大题中常用的高阶思维方法。例如本题我们利用图形的对称性，把点T的搜索范围从整个平面内缩窄到了x轴上，从而使问题明朗化；\n\n②对于圆过定点问题，不一定要先求出圆的方程，再找定点。例如本题的以  \\(PQ\\) 为直径的圆过定点  \\(T\\)，可以直接按  \\(\\overrightarrow{TP} \\cdot \\overrightarrow{TQ} = 0\\) 来翻译，从而建立方程求解定点  \\(T\\) 的坐标，无需求出该圆的方程。当然，如果圆的方程本身并不难求，结果也不复杂，那么也可以考虑先求圆的方程，再找定点，在练习题中我们会举相关的例子。",
+      "text_sha256": "e2582e724d3f7d6b900889426f6dd99ccd603620cb9386c6973d8a587ad16522",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_359_890_540_1150.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\imgs\\img_in_image_box_359_890_540_1150.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_603_891_836_1150.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\imgs\\img_in_image_box_603_891_836_1150.jpg",
+          "exists": true
+        }
+      ],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 160,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_160.md",
+      "text": "## 强化训练\n\n考虑到本节涉及的题型都有一定的综合性和难度，故不设 A 组题，只设计了 B 组和 C 组题.\n\n## B 组 强化能力\n\n### 1. (2025 · 甘肃模拟)\n\n已知点  \\(P(2,2)\\) 在抛物线  \\(C: x^{2}=2py (p>0)\\) 上.\n\n（1）求抛物线 C 的方程：\n\n（2）若 A，B 为抛物线 C 上不与 P 重合的两点，且  \\(PA \\perp PB\\)，证明：直线 AB 过定点.\n\n## 一 数·高中数学一本通\n\n### 2. （2024·安徽合肥二模）\n\n已知椭圆  \\(C: \\frac{x^{2}}{a^{2}} + \\frac{y^{2}}{b^{2}} = 1 (a > b > 0)\\) 的右焦点为 F，左顶点为 A，短轴长为  \\(2\\sqrt{3}\\)，且经过点  \\(\\left(1, \\frac{3}{2}\\right)\\).\n\n（1）求椭圆 C 的方程；\n\n（2）过点 F 的直线 l（不与 x 轴重合）与 C 交于 P，Q 两点，直线 AP，AQ 与直线 x=4 的交点分别为 M，N，记直线 MF，NF 的斜率分别为  \\(k_{1}\\)， \\(k_{2}\\)，证明： \\(k_{1}k_{2}\\) 为定值.",
+      "text_sha256": "bb4e050d50809463f695e72acb6265b0321fe0b7512390bc54362eb61d0551da",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 161,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_161.md",
+      "text": "## C组 拓展提升\n\n### 3. （2024·新疆乌鲁木齐一模）\n\n已知椭圆 C： \\(\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1(a>b>0)\\) 的离心率为  \\(\\frac{\\sqrt{6}}{3}\\)，点 P(0,2) 在椭圆 C 上，过点 P 的两条直线 PA，PB 分别与椭圆 C 交于另一点 A，B，且直线 PA，PB，AB 的斜率满足  \\(k_{PA}+k_{PB}=4k_{AB}(k_{AB}\\neq0)\\).\n\n（1）求椭圆 C 的方程；\n\n（2）证明直线AB过定点.\n\n4.（2025·四川模拟）\n\n已知点  \\(P(2,a)\\) 在抛物线  \\(C: y^{2}=2px (p>0)\\) 上，抛物线 C 的焦点为 F，且  \\(|PF|=3\\)。\n\n（1）求抛物线 C 的方程：\n\n（2）过点 \\((-1,0)\\)的动直线l与C交于A，B两点，C上是否存在定点M，使直线MA和MB的斜率之和为定值？若存在，求出M的坐标；若不存在，说明理由.",
+      "text_sha256": "93ce75bc343d5e1fe4102fe8473281e08b6a602128fad80ad6f1d85a7fac8514",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 162,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_162.md",
+      "text": "### 5. （2023·河北衡水期末）\n\n已知点  \\(T_1(3,-\\sqrt{5})\\) 和点  \\(T_2(-5,\\sqrt{21})\\) 在双曲线  \\(C:\\frac{x^2}{a^2}-\\frac{y^2}{b^2}=1(a>0,b>0)\\) 上，双曲线  \\(C\\) 的左顶点为  \\(A\\)，过点  \\(L(a^2,0)\\) 且不与  \\(x\\) 轴重合的直线  \\(l\\) 与双曲线  \\(C\\) 交于  \\(P\\)， \\(Q\\) 两点，直线  \\(AP\\)， \\(AQ\\) 与圆  \\(O:x^2+y^2=a^2\\) 分别交于  \\(M\\)， \\(N\\) 两点。\n\n（1）求双曲线 C 的标准方程；\n\n（2）设直线 AP，AQ 的斜率分别为  \\(k_{1}\\)， \\(k_{2}\\)，求  \\(k_{1}k_{2}\\) 的值；\n\n（3）证明：直线 MN 过定点.\n\n### 6. （2024·湖北模拟）\n\n平面内一动圆过点 \\(P(2,0)\\)，且在y轴上截得的弦长为4，动圆圆心的轨迹为曲线C.\n\n（1）求曲线 C 的方程：\n\n（2）若过点  \\(Q(4,0)\\) 的直线 l 与曲线 C 交于点 M, N，问：以 MN 为直径的圆是否过定点？若过定点，求出这个定点；若不过定点，请说明理由.",
+      "text_sha256": "cf8846b2b62512880b52e1151315958813a8c90fe5e7e45b1867d3518f99185b",
+      "image_refs": [],
+      "math_errors": []
+    }
+  ],
+  "questions": [
+    {
+      "qid": "Q-6f8ae2be50adc062",
+      "section": "ch3.s11",
+      "group": "B",
+      "number": 1,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 160,
+        "pdf_page": 161,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_160.md"
+      },
+      "question_text": "### 1. (2025 · 甘肃模拟)\n\n已知点  \\(P(2,2)\\) 在抛物线  \\(C: x^{2}=2py (p>0)\\) 上.\n\n（1）求抛物线 C 的方程：\n\n（2）若 A，B 为抛物线 C 上不与 P 重合的两点，且  \\(PA \\perp PB\\)，证明：直线 AB 过定点.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-29d22dfabc2b6953",
+      "section": "ch3.s11",
+      "group": "B",
+      "number": 2,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 160,
+        "pdf_page": 161,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_160.md"
+      },
+      "question_text": "### 2. （2024·安徽合肥二模）\n\n已知椭圆  \\(C: \\frac{x^{2}}{a^{2}} + \\frac{y^{2}}{b^{2}} = 1 (a > b > 0)\\) 的右焦点为 F，左顶点为 A，短轴长为  \\(2\\sqrt{3}\\)，且经过点  \\(\\left(1, \\frac{3}{2}\\right)\\).\n\n（1）求椭圆 C 的方程；\n\n（2）过点 F 的直线 l（不与 x 轴重合）与 C 交于 P，Q 两点，直线 AP，AQ 与直线 x=4 的交点分别为 M，N，记直线 MF，NF 的斜率分别为  \\(k_{1}\\)， \\(k_{2}\\)，证明： \\(k_{1}k_{2}\\) 为定值.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-428ecc6fe82d4a88",
+      "section": "ch3.s11",
+      "group": "C",
+      "number": 3,
+      "kind": "C组",
+      "source_anchor": {
+        "ocr_doc": 161,
+        "pdf_page": 162,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_161.md"
+      },
+      "question_text": "### 3. （2024·新疆乌鲁木齐一模）\n\n已知椭圆 C： \\(\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1(a>b>0)\\) 的离心率为  \\(\\frac{\\sqrt{6}}{3}\\)，点 P(0,2) 在椭圆 C 上，过点 P 的两条直线 PA，PB 分别与椭圆 C 交于另一点 A，B，且直线 PA，PB，AB 的斜率满足  \\(k_{PA}+k_{PB}=4k_{AB}(k_{AB}\\neq0)\\).\n\n（1）求椭圆 C 的方程；\n\n（2）证明直线AB过定点.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-91628accc9eb7bef",
+      "section": "ch3.s11",
+      "group": "C",
+      "number": 4,
+      "kind": "C组",
+      "source_anchor": {
+        "ocr_doc": 161,
+        "pdf_page": 162,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_161.md"
+      },
+      "question_text": "4.（2025·四川模拟）\n\n已知点  \\(P(2,a)\\) 在抛物线  \\(C: y^{2}=2px (p>0)\\) 上，抛物线 C 的焦点为 F，且  \\(|PF|=3\\)。\n\n（1）求抛物线 C 的方程：\n\n（2）过点 \\((-1,0)\\)的动直线l与C交于A，B两点，C上是否存在定点M，使直线MA和MB的斜率之和为定值？若存在，求出M的坐标；若不存在，说明理由.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-7684fcbf5cb3efb2",
+      "section": "ch3.s11",
+      "group": "C",
+      "number": 5,
+      "kind": "C组",
+      "source_anchor": {
+        "ocr_doc": 162,
+        "pdf_page": 163,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_162.md"
+      },
+      "question_text": "### 5. （2023·河北衡水期末）\n\n已知点  \\(T_1(3,-\\sqrt{5})\\) 和点  \\(T_2(-5,\\sqrt{21})\\) 在双曲线  \\(C:\\frac{x^2}{a^2}-\\frac{y^2}{b^2}=1(a>0,b>0)\\) 上，双曲线  \\(C\\) 的左顶点为  \\(A\\)，过点  \\(L(a^2,0)\\) 且不与  \\(x\\) 轴重合的直线  \\(l\\) 与双曲线  \\(C\\) 交于  \\(P\\)， \\(Q\\) 两点，直线  \\(AP\\)， \\(AQ\\) 与圆  \\(O:x^2+y^2=a^2\\) 分别交于  \\(M\\)， \\(N\\) 两点。\n\n（1）求双曲线 C 的标准方程；\n\n（2）设直线 AP，AQ 的斜率分别为  \\(k_{1}\\)， \\(k_{2}\\)，求  \\(k_{1}k_{2}\\) 的值；\n\n（3）证明：直线 MN 过定点.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-18a7ede2949aa8e9",
+      "section": "ch3.s11",
+      "group": "C",
+      "number": 6,
+      "kind": "C组",
+      "source_anchor": {
+        "ocr_doc": 162,
+        "pdf_page": 163,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_162.md"
+      },
+      "question_text": "### 6. （2024·湖北模拟）\n\n平面内一动圆过点 \\(P(2,0)\\)，且在y轴上截得的弦长为4，动圆圆心的轨迹为曲线C.\n\n（1）求曲线 C 的方程：\n\n（2）若过点  \\(Q(4,0)\\) 的直线 l 与曲线 C 交于点 M, N，问：以 MN 为直径的圆是否过定点？若过定点，求出这个定点；若不过定点，请说明理由.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    }
+  ],
+  "unresolved": []
+}

@@ -1,0 +1,100 @@
+{
+  "worker": "build-1.4-micro",
+  "section": "micro专题1",
+  "label": "第4节 微专题1：立体几何综合题",
+  "objective": "把 micro专题1 从旧整节六阶段重构为循环式学习包，按讲义布局（约7例题+1变式+8练习，无 A 组、无知识点左栏）对齐 1.1 循环结构",
+  "completed_at": "2026-08-16T22:10:00+08:00",
+  "hard_constraint": "题目数量不得增减",
+  "question_counts": {
+    "worked_examples": 7,
+    "direct_variants": 1,
+    "abc_exercises": 8,
+    "total_numbered_learning_items": 16,
+    "old": "7/1/8/16",
+    "new": "7/1/8/16",
+    "unchanged": true
+  },
+  "old_new_mapping": {
+    "examples": [
+      {"label": "例1", "old_cycle": "micro-cycle-3", "new_cycle": "micro-cycle-1", "note": "类型Ⅰ 线上动点，带直属变式"},
+      {"label": "例2", "old_cycle": "micro-cycle-1", "new_cycle": "micro-cycle-2", "note": "类型Ⅱ 向量线性回避坐标"},
+      {"label": "例3", "old_cycle": "micro-cycle-1", "new_cycle": "micro-cycle-2", "note": "类型Ⅱ 向量线性回避坐标"},
+      {"label": "例4", "old_cycle": "micro-cycle-2", "new_cycle": "micro-cycle-3", "note": "类型Ⅲ 立体几何综合题（线线角最值）"},
+      {"label": "例5", "old_cycle": "micro-cycle-3", "new_cycle": "micro-cycle-3", "note": "类型Ⅲ 立体几何综合题（正方体动点多选）"},
+      {"label": "例6", "old_cycle": "micro-cycle-4", "new_cycle": "micro-cycle-4", "note": "类型Ⅳ 动态二面角三角方法（矩形翻折）"},
+      {"label": "例7", "old_cycle": "micro-cycle-4", "new_cycle": "micro-cycle-4", "note": "类型Ⅳ 动态二面角三角方法（正方形折叠）"}
+    ],
+    "direct_variants": [
+      {"label": "变式", "parent_example": 1, "old_cycle": "micro-cycle-3", "new_cycle": "micro-cycle-1", "note": "正四棱柱线上动点最值，随例1进入线上动点循环"}
+    ],
+    "exercises": [
+      {"key": "B1", "old_cycle": "micro-cycle-3", "new_cycle": "micro-cycle-1", "note": "正方体 C1E⊥EF 求 AF 最大值→类型Ⅰ 线上动点（桥接 bridge-1.2-single-variable）"},
+      {"key": "B2", "old_cycle": "micro-cycle-4", "new_cycle": "micro-cycle-4", "note": "菱形折起多选→动态二面角（桥接 folding/dihedral-trig）"},
+      {"key": "B3", "old_cycle": "micro-cycle-1", "new_cycle": "micro-cycle-2", "note": "四棱锥 AM⊥平面PBD、AO=2OM→类型Ⅱ 向量线性回避坐标"},
+      {"key": "B4", "old_cycle": "micro-cycle-2", "new_cycle": "micro-cycle-3", "note": "三棱柱 A1D⊥平面A1BC+二面角→类型Ⅲ 综合题"},
+      {"key": "C5", "old_cycle": "micro-cycle-3", "new_cycle": "micro-cycle-5", "note": "正方体动点多选→轨迹/外接球综合（桥接 apollonius/skew-distance/sphere）"},
+      {"key": "C6", "old_cycle": "micro-cycle-3", "new_cycle": "micro-cycle-5", "note": "四棱锥梯形+存在性→动点存在性综合（桥接 single-variable/existence）"},
+      {"key": "C7", "old_cycle": "micro-cycle-4", "new_cycle": "micro-cycle-6", "note": "三棱柱体积+二面角→翻折/补形综合（桥接 dihedral-trig/folding/existence）"},
+      {"key": "C8", "old_cycle": "micro-cycle-4", "new_cycle": "micro-cycle-6", "note": "三棱台平行证明+面面垂直→补形综合（桥接 completion/dihedral-trig）"}
+    ]
+  },
+  "new_cycle_structure": [
+    {"cycle_id": "micro-cycle-1", "sequence": 1, "title": "线上动点", "course_keys": ["moving_point"], "type_refs": ["类型Ⅰ 线上动点"], "examples": [1], "variants": ["变式"], "exercises": ["B1"], "method_checkpoints": ["micro-moving-point-check-1"], "bridge_unit_ids": ["bridge-1.2-single-variable"]},
+    {"cycle_id": "micro-cycle-2", "sequence": 2, "title": "向量线性回避坐标", "course_keys": ["direction_normal", "parallel_perpendicular"], "type_refs": ["类型Ⅱ 向量线性回避坐标"], "examples": [2, 3], "exercises": ["B3"], "method_checkpoints": ["micro-vector-linear-check-1"], "bridge_unit_ids": []},
+    {"cycle_id": "micro-cycle-3", "sequence": 3, "title": "立体几何综合题", "course_keys": ["line_line_angle", "line_plane_angle", "plane_plane_angle"], "prerequisite_course_keys": ["parallel_perpendicular", "direction_normal"], "type_refs": ["类型Ⅲ 立体几何综合题"], "examples": [4, 5], "exercises": ["B4"], "method_checkpoints": ["micro-comprehensive-check-1"], "bridge_unit_ids": []},
+    {"cycle_id": "micro-cycle-4", "sequence": 4, "title": "动态二面角三角方法", "prerequisite_course_keys": ["moving_point", "plane_plane_angle", "direction_normal"], "type_refs": ["类型Ⅳ 动态二面角三角方法"], "examples": [6, 7], "exercises": ["B2"], "method_checkpoints": ["micro-dihedral-trig-check-1", "micro-dihedral-trig-check-2"], "bridge_unit_ids": ["bridge-1.4-folding", "bridge-1.4-dihedral-trig"]},
+    {"cycle_id": "micro-cycle-5", "sequence": 5, "title": "动点轨迹与存在性综合", "prerequisite_course_keys": ["moving_point", "distance", "plane_plane_angle"], "exercises": ["C5", "C6"], "method_checkpoints": ["micro-sphere-check-1", "micro-existence-check-1"], "bridge_unit_ids": ["bridge-1.2-apollonius", "bridge-1.2-single-variable", "bridge-micro-sphere", "bridge-micro-existence"]},
+    {"cycle_id": "micro-cycle-6", "sequence": 6, "title": "翻折、补形与综合压轴", "prerequisite_course_keys": ["moving_point", "plane_plane_angle", "direction_normal"], "exercises": ["C7", "C8"], "method_checkpoints": ["micro-completion-check-1", "micro-final-check-1"], "bridge_unit_ids": ["bridge-1.4-dihedral-trig", "bridge-1.4-folding", "bridge-micro-completion"]}
+  ],
+  "layout_kind": "content_outline_then_typical_examples（无 A 组；讲义按 类型Ⅰ→类型Ⅱ→类型Ⅲ→类型Ⅳ 排布，其后 B 组 1-4、C 组 5-8；循环严格按该讲义顺序推进）",
+  "book_order": "类型Ⅰ(例1+变式)→类型Ⅱ(例2,3)→类型Ⅲ(例4,5)→类型Ⅳ(例6,7)→B组(1-4)→C组(5-8)；循环内题号全部按讲义顺序递增",
+  "gaps": {
+    "missing_questions": [],
+    "note": "OCR 全页扫描（doc_55-68）与 manifest question_groups（B[1,4] C[5,8]）完全一致，无漏题；B1 为既有 primary_ocr 恢复题（known_visual_recoveries，来源 doc_64/PDF页65），已在包内且视觉已核验（VISION_VERIFIED）。",
+    "source_pages": "类型例题区 doc_55-63（PDF页56-64）；强化训练 B/C 组 doc_64-68（PDF页65-69）；doc_64 注明本节不设 A 组"
+  },
+  "artifacts": [
+    "chapter1_manifest.json",
+    "data/packets/micro专题1/learning_packet.json",
+    "data/packets/micro专题1/learning_packet.md",
+    "data/packets/micro专题1/learning_path_without_questions.md",
+    "data/packets/micro专题1/learning_path_without_questions.html",
+    "data/packets/micro专题1/student_learning_items.json",
+    "data/packets/micro专题1/packet.json",
+    "data/packets/micro专题1/student_packet.json",
+    "data/packets/micro专题1/answer_sidecar.json (未改动，重建自答案OCR)",
+    "data/contexts/micro专题1.json",
+    "data/question_coverage.json",
+    "reports/build-result.json",
+    "tmp/rewrite_cycles_1.4_micro.py"
+  ],
+  "build_steps": [
+    "python -B -m ybt_learning.cli --help",
+    "python -B tmp/rewrite_cycles_1.4_micro.py（只写 1.4/micro 两个 section 的 learning_cycles 键，重读后写、写后校验 JSON）",
+    "python -B -m ybt_learning.cli build-chapter1（重建派生包/计划/覆盖账本/上下文/student_learning_items）",
+    "python -B -m ybt_learning.cli build-deepseek-context --student-packet data/packets/micro专题1/student_packet.json --out tmp/context-micro.json",
+    "python -B -m ybt_learning.cli verify-packet --packet data/packets/micro专题1/packet.json",
+    "python -B scripts/export_learning_packet_markdown.py --section micro专题1 --without-questions",
+    "python -B scripts/export_learning_packet_markdown.py --section micro专题1（含题路线）",
+    "python -B scripts/export_learning_preview_html.py --section micro专题1"
+  ],
+  "test_results": {
+    "suite": "python -B -m unittest discover -s tests -t .",
+    "total": 106,
+    "passed": 105,
+    "failed": 1,
+    "failures": [
+      {
+        "test": "test_current_zero_base_simulation_is_the_only_authoritative_source",
+        "cause": "零基础仿真验收快照（G-20260816-09）记录源文件哈希；manifest 修订（本 worker 与 1.2-1.3 worker 的合法改动均会触发）使其 source_revision_match=False。属预期失效，非内容回归；需重跑零基础仿真重新冻结。",
+        "classification": "expected_invalidation_not_regression"
+      }
+    ],
+    "note": "1.1 回归全部通过（learning_cycles 全覆盖、课程/桥接引用、markdown 确定性导出、完整性盘点 124 项）；期间用官方导出脚本刷新了 1.1 陈旧派生 .md/.html（未改 1.1 源数据）。",
+    "packet_verification": {"micro_packet": "VERIFIED", "micro_context": "passed", "questions": 8, "unresolved": 0},
+    "completeness_audit": "scripts/verify_learning_completeness.py 通过；仅存既有警告（OCR 题号缺失项均有 verified primary OCR recovery anchors）"
+  },
+  "concurrency": {
+    "note": "chapter1_manifest.json 写前重读、仅替换 1.4 与 micro专题1 两节的 learning_cycles 键、写后 JSON 校验通过；未触碰其他 section。"
+  }
+}

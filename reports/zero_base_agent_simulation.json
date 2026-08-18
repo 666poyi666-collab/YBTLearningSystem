@@ -1,0 +1,110 @@
+{
+  "schema_version": "7.3",
+  "created_at": "2026-08-14T18:08:00+08:00",
+  "type": "five_deepseek_zero_base_agent_simulation",
+  "model_contract": {
+    "agent_type": "deepseek_worker",
+    "model": "opencode-go/deepseek-v4-flash",
+    "reasoning_effort": "max",
+    "context_window": 1000000
+  },
+  "scope": {
+    "course_source": "C:\\Users\\poyi\\Downloads\\课程合集",
+    "browser_references": ["8.5", "8.5课程"],
+    "ocr_provider": "paddle_ai_studio",
+    "answer_sidecars_available_to_students": false,
+    "worked_examples_counted_as_mastery": false,
+    "claimed_video_watching": false
+  },
+  "learning_item_inventory": {
+    "worked_examples": 58,
+    "direct_variants": 16,
+    "abc_exercises": 50,
+    "total_numbered_learning_items": 124,
+    "note": "旧的50题只统计A/B/C习题；第一章完整学习题项为124。"
+  },
+  "rows": [
+    {
+      "agent_id": "019fff31-4ee0-7860-9be8-2f0631c07d09",
+      "section": "1.1",
+      "status": "pass",
+      "worked_examples_understood": "16/16",
+      "independent_items_final_correct": "22/22",
+      "prompted_corrections": ["A3(2)"],
+      "unseen_transfer": "pass",
+      "artifacts": ["reports/student-1.1-current.json", "reports/student-1.1-unseen-transfer-current.json"]
+    },
+    {
+      "agent_id": "019fff31-51e2-74e2-96f6-af2233769641",
+      "section": "1.2+1.3",
+      "status": "pass",
+      "worked_examples_understood": "13/13",
+      "independent_items_final_correct": "20/20",
+      "prompted_corrections": ["B5"],
+      "source_ambiguity_pass": ["B12: a·c in {13,19}"],
+      "unseen_transfer": "pass",
+      "artifacts": ["reports/student-1.2_1.3-current.json", "reports/student-1.2_1.3-unseen-transfer-current.json"]
+    },
+    {
+      "agent_id": "019fff31-512b-7c70-93e6-84b14b4b505b",
+      "section": "1.4",
+      "status": "pass",
+      "worked_examples_understood": "22/22",
+      "independent_items_final_correct": "15/15",
+      "prompted_corrections": ["C11(3)", "C12(2)"],
+      "unseen_transfer": "pass",
+      "artifacts": ["reports/student-1.4-current.json", "reports/student-1.4-unseen-transfer-current.json"]
+    },
+    {
+      "agent_id": "019fff31-52ad-7450-b086-68c5380f23e1",
+      "section": "micro专题1",
+      "status": "pass",
+      "worked_examples_understood": "7/7",
+      "independent_items_final_correct": "9/9",
+      "prompted_corrections": ["B2", "B4", "C7"],
+      "c7_final": "sin in {sqrt(3)/2, sqrt(3)/4}; prompted correction, not clean first attempt",
+      "direct_variant_exposure_caveat": true,
+      "unseen_transfer": "pass",
+      "artifacts": ["reports/student-micro-current.json", "reports/student-micro-unseen-transfer-current.json", "reports/c7-independent-crosscheck.json"]
+    },
+    {
+      "agent_id": "019fff31-5375-7070-823b-be36a5b35959",
+      "section": "全章",
+      "role": "independent_final_judge",
+      "status": "pass",
+      "judge_status": "same_session_workflow_pass",
+      "variant_math_check": "16/16 agreed",
+      "independent_items_final_correct": "66/66",
+      "unseen_transfer": "4/4 pass",
+      "artifacts": ["reports/final-teacher-judge-current.json", "reports/variant-independent-check-current.json"]
+    }
+  ],
+  "same_session": {
+    "worked_examples_understood": 58,
+    "independent_items_total": 66,
+    "final_correct": 66,
+    "clean_first_attempt": 57,
+    "prompted_correction": 7,
+    "source_ambiguity": 1,
+    "exposure_caveat_not_first_attempt": 1,
+    "disputed": 0,
+    "unverifiable": 0,
+    "status": "pass"
+  },
+  "unseen_transfer": {
+    "status": "pass",
+    "total": 4,
+    "passed": 4,
+    "cleanliness_basis": "student forbidden-source declarations; independent exposure audit not performed"
+  },
+  "summary": {
+    "total": 5,
+    "pass": 5,
+    "partial": 0,
+    "fail": 0
+  },
+  "workflow_verdict": "SAME_SESSION_WORKFLOW_PASS",
+  "mastery_verdict": "NOT_24H_MASTERED",
+  "cold_review_24h": "not_run",
+  "honesty_boundary": "本轮证明同会话教学流程最终完成与四道新题近迁移通过。7个提示后修正项、1个教材源歧义项和1个暴露说明均单独保留；24小时冷复测未运行。"
+}

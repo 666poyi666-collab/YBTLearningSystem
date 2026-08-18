@@ -1,0 +1,146 @@
+{
+  "report_id": "1.2_1.3-build",
+  "worker": "build-1.2-1.3",
+  "built_at": "2026-08-16T22:10:00+08:00",
+  "objective": "把 1.2+1.3 节从旧整节六阶段结构重构为循环式学习包，完全对齐 1.1 现行结构（learning_cycles：course_keys/knowledge_blocks/worked_examples/direct_variants/exercise_questions/method_checkpoints/bridge_unit_ids）",
+  "hard_constraint": {
+    "rule": "例题/直属变式/A/B/C 习题数量不得增减",
+    "result": "保持不变",
+    "old_counts": {"worked_examples": 13, "direct_variants": 4, "abc_exercises": 16, "total_numbered_learning_items": 33},
+    "new_counts": {"worked_examples": 13, "direct_variants": 4, "abc_exercises": 16, "total_numbered_learning_items": 33},
+    "global_sum_check": "source_evidence.learning_item_counts = 58/16/50/124 全章总数未被破坏（tests/test_manifest_fidelity 全章校验通过）"
+  },
+  "source_order_evidence": {
+    "ocr_docs": [18, 32],
+    "book_order": [
+      "知识点1 空间向量基本定理(1.2-k1) -> 例1",
+      "知识点2 空间向量的坐标表示(1.3-k1) -> 例2、例3",
+      "知识点3 空间向量的坐标运算(1.3-k2) -> 例4",
+      "类型Ⅰ 空间向量的基底表示 -> 例5 + 变式",
+      "类型Ⅱ 线性运算坐标表示 -> 例6、例7",
+      "类型Ⅲ 数量积坐标表示 -> 例8、例9",
+      "类型Ⅳ 平行垂直 -> 例10 + 变式1、变式2",
+      "类型Ⅴ 夹角与模 -> 例11、例12(+变式)、例13",
+      "强化训练 A组1-4 / B组5-13 / C组14-16"
+    ]
+  },
+  "old_vs_new_question_mapping": {
+    "note": "题目本身零改动（同一 item_id/qid 复用）；以下为旧 4 循环 -> 新 10 循环的归属对照",
+    "worked_examples": [
+      {"item": "例1", "old_cycle": "1.2_1.3-cycle-1", "new_cycle": "1.2_1.3-cycle-1", "new_title": "空间向量基本定理与基底判断"},
+      {"item": "例2", "old_cycle": "1.2_1.3-cycle-2", "new_cycle": "1.2_1.3-cycle-2", "new_title": "空间直角坐标系与点的坐标"},
+      {"item": "例3", "old_cycle": "1.2_1.3-cycle-2", "new_cycle": "1.2_1.3-cycle-2", "new_title": "空间直角坐标系与点的坐标"},
+      {"item": "例4", "old_cycle": "1.2_1.3-cycle-3", "new_cycle": "1.2_1.3-cycle-3", "new_title": "空间向量的坐标运算"},
+      {"item": "例5", "old_cycle": "1.2_1.3-cycle-1", "new_cycle": "1.2_1.3-cycle-4", "new_title": "类型Ⅰ 基底表示与分解"},
+      {"item": "例6", "old_cycle": "1.2_1.3-cycle-3", "new_cycle": "1.2_1.3-cycle-5", "new_title": "类型Ⅱ 线性运算的坐标表示"},
+      {"item": "例7", "old_cycle": "1.2_1.3-cycle-3", "new_cycle": "1.2_1.3-cycle-5", "new_title": "类型Ⅱ 线性运算的坐标表示"},
+      {"item": "例8", "old_cycle": "1.2_1.3-cycle-3", "new_cycle": "1.2_1.3-cycle-6", "new_title": "类型Ⅲ 数量积的坐标表示"},
+      {"item": "例9", "old_cycle": "1.2_1.3-cycle-3", "new_cycle": "1.2_1.3-cycle-6", "new_title": "类型Ⅲ 数量积的坐标表示"},
+      {"item": "例10", "old_cycle": "1.2_1.3-cycle-3", "new_cycle": "1.2_1.3-cycle-7", "new_title": "类型Ⅳ 平行与垂直的坐标判定"},
+      {"item": "例11", "old_cycle": "1.2_1.3-cycle-3", "new_cycle": "1.2_1.3-cycle-8", "new_title": "类型Ⅴ 夹角与模"},
+      {"item": "例12", "old_cycle": "1.2_1.3-cycle-3", "new_cycle": "1.2_1.3-cycle-8", "new_title": "类型Ⅴ 夹角与模"},
+      {"item": "例13", "old_cycle": "1.2_1.3-cycle-3", "new_cycle": "1.2_1.3-cycle-8", "new_title": "类型Ⅴ 夹角与模"}
+    ],
+    "direct_variants": [
+      {"item": "变式(例5)", "old_cycle": "1.2_1.3-cycle-1", "new_cycle": "1.2_1.3-cycle-4"},
+      {"item": "变式1(例10)", "old_cycle": "1.2_1.3-cycle-3", "new_cycle": "1.2_1.3-cycle-7"},
+      {"item": "变式2(例10)", "old_cycle": "1.2_1.3-cycle-3", "new_cycle": "1.2_1.3-cycle-7"},
+      {"item": "变式(例12)", "old_cycle": "1.2_1.3-cycle-3", "new_cycle": "1.2_1.3-cycle-8"}
+    ],
+    "abc_exercises": [
+      {"item": "A1", "old_cycle": "1.2_1.3-cycle-3", "new_cycle": "1.2_1.3-cycle-3"},
+      {"item": "A2", "old_cycle": "1.2_1.3-cycle-3", "new_cycle": "1.2_1.3-cycle-3"},
+      {"item": "A3", "old_cycle": "1.2_1.3-cycle-3", "new_cycle": "1.2_1.3-cycle-3"},
+      {"item": "A4", "old_cycle": "1.2_1.3-cycle-3", "new_cycle": "1.2_1.3-cycle-3"},
+      {"item": "B5", "old_cycle": "1.2_1.3-cycle-1", "new_cycle": "1.2_1.3-cycle-4"},
+      {"item": "B6", "old_cycle": "1.2_1.3-cycle-3", "new_cycle": "1.2_1.3-cycle-8"},
+      {"item": "B7", "old_cycle": "1.2_1.3-cycle-3", "new_cycle": "1.2_1.3-cycle-6"},
+      {"item": "B8", "old_cycle": "1.2_1.3-cycle-3", "new_cycle": "1.2_1.3-cycle-1"},
+      {"item": "B9", "old_cycle": "1.2_1.3-cycle-1", "new_cycle": "1.2_1.3-cycle-4"},
+      {"item": "B10", "old_cycle": "1.2_1.3-cycle-3", "new_cycle": "1.2_1.3-cycle-6"},
+      {"item": "B11", "old_cycle": "1.2_1.3-cycle-3", "new_cycle": "1.2_1.3-cycle-8"},
+      {"item": "B12", "old_cycle": "1.2_1.3-cycle-3", "new_cycle": "1.2_1.3-cycle-7"},
+      {"item": "B13", "old_cycle": "1.2_1.3-cycle-3", "new_cycle": "1.2_1.3-cycle-7"},
+      {"item": "C14", "old_cycle": "1.2_1.3-cycle-4", "new_cycle": "1.2_1.3-cycle-9"},
+      {"item": "C15", "old_cycle": "1.2_1.3-cycle-4", "new_cycle": "1.2_1.3-cycle-10"},
+      {"item": "C16", "old_cycle": "1.2_1.3-cycle-4", "new_cycle": "1.2_1.3-cycle-10"}
+    ]
+  },
+  "cycle_structure_summary": {
+    "cycle_count": 10,
+    "cycles": [
+      {"id": "1.2_1.3-cycle-1", "title": "空间向量基本定理与基底判断", "course_keys": ["decomposition"], "prerequisite_course_keys": ["space_vector_ops"], "knowledge_blocks": ["1.2-k1"], "examples": [1], "exercises": ["B8"], "method_checkpoints": 0, "bridge_units": []},
+      {"id": "1.2_1.3-cycle-2", "title": "空间直角坐标系与点的坐标", "course_keys": ["coordinate_system"], "prerequisite_course_keys": ["space_vector_ops"], "knowledge_blocks": ["1.3-k1"], "examples": [2, 3], "exercises": [], "method_checkpoints": 0, "bridge_units": []},
+      {"id": "1.2_1.3-cycle-3", "title": "空间向量的坐标运算", "course_keys": ["coordinate_ops"], "prerequisite_course_keys": ["coordinate_system"], "knowledge_blocks": ["1.3-k2"], "examples": [4], "exercises": ["A1", "A2", "A3", "A4"], "method_checkpoints": 0, "bridge_units": []},
+      {"id": "1.2_1.3-cycle-4", "title": "类型Ⅰ 基底表示与分解", "course_keys": ["decomposition"], "prerequisite_course_keys": ["space_vector_ops", "equal_surface"], "knowledge_blocks": [], "prerequisite_knowledge_blocks": ["1.2-k1"], "type_refs": ["类型Ⅰ 基底表示"], "examples": [5], "direct_variants": ["变式(例5)"], "exercises": ["B5", "B9"], "method_checkpoints": 0, "bridge_units": ["micro-four-point-coplanar"]},
+      {"id": "1.2_1.3-cycle-5", "title": "类型Ⅱ 线性运算的坐标表示", "course_keys": ["coordinate_ops"], "prerequisite_course_keys": ["coordinate_system"], "knowledge_blocks": [], "prerequisite_knowledge_blocks": ["1.3-k2"], "type_refs": ["类型Ⅱ 线性运算坐标表示"], "examples": [6, 7], "exercises": [], "method_checkpoints": 0, "bridge_units": []},
+      {"id": "1.2_1.3-cycle-6", "title": "类型Ⅲ 数量积的坐标表示", "course_keys": ["coordinate_ops"], "prerequisite_course_keys": ["coordinate_system"], "knowledge_blocks": [], "prerequisite_knowledge_blocks": ["1.3-k2"], "type_refs": ["类型Ⅲ 数量积坐标表示"], "examples": [8, 9], "exercises": ["B7", "B10"], "method_checkpoints": 0, "bridge_units": []},
+      {"id": "1.2_1.3-cycle-7", "title": "类型Ⅳ 平行与垂直的坐标判定", "course_keys": ["coordinate_ops"], "prerequisite_course_keys": ["coordinate_system"], "knowledge_blocks": [], "prerequisite_knowledge_blocks": ["1.3-k2"], "type_refs": ["类型Ⅳ 平行垂直"], "examples": [10], "direct_variants": ["变式1、变式2(例10)"], "exercises": ["B12", "B13"], "method_checkpoints": 0, "bridge_units": []},
+      {"id": "1.2_1.3-cycle-8", "title": "类型Ⅴ 夹角与模", "course_keys": ["coordinate_ops"], "prerequisite_course_keys": ["coordinate_system"], "knowledge_blocks": [], "prerequisite_knowledge_blocks": ["1.3-k2"], "type_refs": ["类型Ⅴ 夹角与模"], "examples": [11, 12, 13], "direct_variants": ["变式(例12)"], "exercises": ["B6", "B11"], "method_checkpoints": 0, "bridge_units": []},
+      {"id": "1.2_1.3-cycle-9", "title": "四点共面与截线系数综合（C14）", "course_keys": [], "prerequisite_course_keys": ["decomposition", "equal_surface", "coordinate_ops"], "prerequisite_knowledge_blocks": ["1.2-k1", "1.3-k2"], "examples": [], "exercises": ["C14"], "method_checkpoints": ["1.2_1.3-coplanar-check-1", "1.2_1.3-coplanar-check-2"], "bridge_units": ["micro-four-point-coplanar"]},
+      {"id": "1.2_1.3-cycle-10", "title": "动点单变量化与阿波罗尼斯球综合（C15、C16）", "course_keys": [], "prerequisite_course_keys": ["coordinate_ops"], "prerequisite_knowledge_blocks": ["1.3-k1", "1.3-k2"], "examples": [], "exercises": ["C15", "C16"], "method_checkpoints": ["1.2_1.3-single-variable-check-1", "1.2_1.3-apollonius-check-1"], "bridge_units": ["bridge-1.2-single-variable", "bridge-1.2-apollonius", "bridge-1.1-polarization"]}
+    ],
+    "course_key_source": "data/course_catalog.json 的 3.1 目录 15 门真实课程；required=decomposition/coordinate_system/coordinate_ops，support=equal_surface+space_vector_ops（新增，作基底/建系循环前置），全部有 data/course_transcripts/*.json 文稿"
+  },
+  "manifest_change_scope": {
+    "changed_keys": ["learning_cycles", "support_course_ids", "support_course_keys"],
+    "other_sections_untouched": "写入前重新读取 chapter1_manifest.json，仅替换 id=1.2+1.3 的节；写入后 JSON 校验合法；与并发 worker build-1.4-micro 的 1.4/micro专题1 最新内容互不覆盖（已用哈希比对确认 1.1 节与 source_evidence 与备份一致）",
+    "backup": "tmp/_manifest_backup_before_1.2_1.3.json"
+  },
+  "generated_artifacts": [
+    "chapter1_manifest.json（1.2+1.3 节 learning_cycles 10 循环）",
+    "data/chapter1_learning_plan.json（build-chapter1 重建）",
+    "data/packets/1.2_1.3/learning_packet.json（schema 7.4，10 循环，13 例题+4 变式+16 习题内联对象，counts=33）",
+    "data/packets/1.2_1.3/student_learning_items.json（13 例题+4 变式，无教学解答）",
+    "data/packets/1.2_1.3/student_packet.json / packet.json / lesson_packet.json / manifest.json / answer_sidecar.json（答案侧车 16/16 非空，answer-status passed）",
+    "data/contexts/1.2_1.3.json（build-deepseek-context，status=VERIFIED，validate passed，17 learning_items + 16 questions）",
+    "data/packets/1.2_1.3/learning_packet.md（export_learning_packet_markdown.py）",
+    "data/packets/1.2_1.3/learning_path_without_questions.md（--without-questions，33 任务连续编号，10 循环）",
+    "data/packets/1.2_1.3/learning_path_without_questions.html（export_learning_preview_html.py，92KB）",
+    "data/question_coverage.json（重建）",
+    "reports/build-result.json（build-chapter1 结果：四节全部 VERIFIED）"
+  ],
+  "gap_list": {
+    "question_gaps": "无：对照《一本通》原文 doc_18–doc_32 逐页核验，现有包 13 例题+4 变式+16 习题无缺号、无漏题，无需补题",
+    "course_coverage_gaps": [
+      "bridge-1.2-single-variable（空间动点单变量化配方）release_status=SOURCE_METHOD_READY，无专门课程视频，C15/C16 依赖；覆盖账本中 C15/C16 为 BLOCKED_BRIDGE（既有状态，未在本轮改变）",
+      "bridge-1.2-apollonius（阿波罗尼斯球）SUPPLEMENT_READY，C16 依赖；需补充无答案微课后再放行独立作答",
+      "既有 coverage_gaps 文案（manifest 1.2+1.3 节）保持原样：C15-C16 不能把现有三门课标为完整覆盖"
+    ]
+  },
+  "test_results": {
+    "suite": "python -B -m unittest discover -s tests（106 tests）",
+    "passed": 104,
+    "failed": 2,
+    "section_specific_passed": [
+      "test_learning_cycles_cover_every_item_exactly_once（含 1.2_1.3：10 循环恰好覆盖 13/4/16，变式父例号在循环内）",
+      "test_learning_cycle_course_and_bridge_references_resolve（1.2_1.3 课程键/桥接/知识点引用全部可解析）",
+      "test_section_12_example3_cross_column_solution_is_rejoined",
+      "test_section_12_exercise_provenance_is_restored",
+      "test_sequential_learning_packet_teaches_example_before_answer_free_variant",
+      "test_student_learning_items_project_examples_and_variants_without_teaching_text",
+      "test_current_plan_listens_to_every_coverage_course_dependency",
+      "test_bridge_targets_are_consistent_across_manifest_plan_and_coverage",
+      "test_markdown_export_is_cycle_ordered_answer_safe_and_deterministic（1.1、1.2_1.3、micro专题1 通过，见下）",
+      "test_without_questions_export_keeps_route_and_omits_question_content（1.1 未破坏）"
+    ],
+    "failures_unrelated_to_1_2_1_3": [
+      {
+        "test": "test_markdown_export_is_cycle_ordered_answer_safe_and_deterministic",
+        "failing_section": "1.4",
+        "root_cause": "并发 worker build-1.4-micro 当前 manifest 的 1.4 learning_cycles 中 1.4-k3 出现在 4 个循环（7 循环新结构），知识块标记渲染 4 次（须恰好 1 次）。1.4 节的进行中状态，非本 worker 改动；1.1/1.2_1.3/micro专题1 该测试项均通过",
+        "evidence": "1.4 节 learning_cycles: cycle-2/3/4/5 knowledge_refs 均含 1.4-k3"
+      },
+      {
+        "test": "test_current_zero_base_simulation_is_the_only_authoritative_source",
+        "root_cause": "reports/zero_base_cycles/1.1-current-agent-simulation.json（1.1 零基础模拟台账）记录的源哈希与磁盘文件不一致：manifest=f70468…（我编辑前的哈希，与台账一致），但 1.1 packet 台账记录 ddfaba0c… 而构建前磁盘已是 1604e1b1…（本 worker 构建前即失配，非本 worker 造成）；zero_base_simulation_standard.md 台账记录 58383347… 当前 382ad511…（本 worker 未碰过该文件）；question_coverage.json 每次构建 created_at 都变。台账需由 1.1 模拟流程重新生成",
+        "evidence": "构建前 tmp/_packet_1.1.json（1604e1b1）即与台账（ddfaba0c）不一致；1.1 节 manifest 与备份字节一致（未被我改动）"
+      }
+    ],
+    "cli_validations": [
+      "verify-packet data/packets/1.2_1.3/packet.json -> status=passed",
+      "validate-deepseek-context data/contexts/1.2_1.3.json -> status=passed, route_status=passed",
+      "answer-status -> 四节全部 passed（1.2+1.3: 16/16 非空）"
+    ]
+  }
+}

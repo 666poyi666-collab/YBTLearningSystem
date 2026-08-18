@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0",
+  "section": "1.4",
+  "worker": "worker-5",
+  "generation": "G-CH1-S14-01",
+  "worker_status": "BLOCKED",
+  "item_results": [
+    {
+      "section": "1.4",
+      "cycle": "1.4-cycle-7",
+      "item_id": "1.4-cycle-7-C10",
+      "source_revision": {
+        "generation": "G-CH1-S14-01"
+      },
+      "context_sha256": "d638b3d2dd2364a3e89da9fb90cab36005e9cc2a132cbbdc9bac599e579a69a6",
+      "observation_signal": "目标=翻折后角度/距离相关结论（模板级观察信号，无题干）",
+      "course_call": {
+        "course_id": "3.1.4.5",
+        "method_model_id": "folding_invariance",
+        "appears_before_first_use": true,
+        "linkage": "C 组拓展题：翻折守恒综合（模板：方法族归型；题前复述桥接'翻折守恒与折后平面角'）",
+        "first_use_location": "3.1.4.5 视频二面角定义段（两个半平面、棱、平面角）"
+      },
+      "first_line": "第一行：标折痕、折前/折后平面；列翻折保持的长度与角度（不变量表）",
+      "second_line": "第二行：在过折痕且垂直折痕的截面中构造平面角；把折后条件翻译为点积/法向量/三角关系",
+      "continuation": "继续：保留参数范围求解 —— 卡点：①题面不可见 ②桥接'翻折守恒与折后平面角'SOURCE_METHOD_READY 未闭合",
+      "independent_self_check": "模板检查：折痕不变量/刚性面内不变量/折后新角度区分；截面正确性；锐角约定不靠图猜符号 —— 无法闭合",
+      "first_breakpoint": "题面不可见 + 桥接未闭合（翻折守恒与折后平面角：SOURCE_METHOD_READY，仅方法骨架未补完整无答案微课）",
+      "hint_level": "none",
+      "verdict": "BLOCKED",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.4",
+      "cycle": "1.4-cycle-7",
+      "item_id": "1.4-cycle-7-C12",
+      "source_revision": {
+        "generation": "G-CH1-S14-01"
+      },
+      "context_sha256": "d638b3d2dd2364a3e89da9fb90cab36005e9cc2a132cbbdc9bac599e579a69a6",
+      "observation_signal": "目标=动态二面角/存在性相关结论（模板级观察信号，无题干）",
+      "course_call": {
+        "course_id": "3.1.4.4",
+        "method_model_id": "dihedral_trig_param",
+        "appears_before_first_use": true,
+        "linkage": "C 组拓展题：动态二面角三角参数化+存在性双参数化（模板；题前复述两桥接）",
+        "first_use_location": "3.1.4.4 视频线面角段 + 3.1.4.5 反求动点段"
+      },
+      "first_line": "第一行：固定公共棱，选垂直棱截面，动点参数化并写定义域",
+      "second_line": "第二行：两平面在截面内方向；用 sin/cos 或点积得到参数方程",
+      "continuation": "继续：解方程→多解位置筛选→原始几何关系回代 —— 卡点：①题面不可见 ②桥接'动态二面角三角参数化'SOURCE_METHOD_READY 未闭合",
+      "independent_self_check": "模板检查：参数变化时棱/截面有效；余弦符号分支；'存在一点'→'存在参数满足方程组与定义域' —— 无法闭合",
+      "first_breakpoint": "题面不可见 + 桥接未闭合（动态二面角三角参数化：SOURCE_METHOD_READY 仅方法骨架；存在性双参数化：SUPPLEMENT_READY 未验证）",
+      "hint_level": "none",
+      "verdict": "BLOCKED",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    }
+  ],
+  "method_check_results": [
+    {
+      "section": "1.4",
+      "cycle": "1.4-cycle-7",
+      "method_check_id": "1.4-folding-check-1",
+      "method_model_id": "folding_invariance",
+      "result": "BLOCKED",
+      "evidence": "翻折守恒方法无专门课程，课程外桥接'翻折守恒与折后平面角'仅 SOURCE_METHOD_READY 方法骨架，无法按检查标准复述完整方法链"
+    },
+    {
+      "section": "1.4",
+      "cycle": "1.4-cycle-7",
+      "method_check_id": "1.4-existence-check-1",
+      "method_model_id": "existence_two_param",
+      "result": "BLOCKED",
+      "evidence": "检查链含'翻折守恒与折后平面角''动态二面角三角参数化'（均 SOURCE_METHOD_READY），桥接未闭合不能放行"
+    }
+  ],
+  "first_breakpoints": [
+    {
+      "item_id": "1.4-cycle-7-C10",
+      "cycle": "1.4-cycle-7",
+      "first_breakpoint": "题面不可见 + 桥接未闭合（翻折守恒与折后平面角：SOURCE_METHOD_READY，仅方法骨架未补完整无答案微课）"
+    },
+    {
+      "item_id": "1.4-cycle-7-C12",
+      "cycle": "1.4-cycle-7",
+      "first_breakpoint": "题面不可见 + 桥接未闭合（动态二面角三角参数化：SOURCE_METHOD_READY 仅方法骨架；存在性双参数化：SUPPLEMENT_READY 未验证）"
+    }
+  ],
+  "answer_sidecar_read": false,
+  "human_acceptance_not_proven": true
+}

@@ -1,0 +1,474 @@
+{
+  "schema_version": "1.1",
+  "artifact": "ZERO_BASE_AGENT_SIMULATION_WORKER_RESULT",
+  "worker": 1,
+  "agent_id": "01a00a58-1d1f-7f33-82c6-e00110e00e06",
+  "role": "deepseek_worker",
+  "model_contract": {
+    "model": "opencode-go/deepseek-v4-flash",
+    "reasoning_effort": "max",
+    "context_window": 1000000
+  },
+  "section": "1.1",
+  "generation": "G-20260816-07",
+  "worker_status": "PASS",
+  "scope": {
+    "cycles": "1-2",
+    "tasks": "01-14",
+    "task_count": 14
+  },
+  "answer_sidecar_read": false,
+  "human_acceptance_not_proven": true,
+  "source_revision": {
+    "generation": "G-20260816-07",
+    "context_sha256": "2ba656cf38a3581aab11d3f5e04967018ef5be9be0af7de6cd59309abbd67119"
+  },
+  "consumed_inputs": [
+    "data/contexts/1.1.json",
+    "data/zero_base_simulation_standard.md",
+    "data/packets/1.1/learning_path_without_questions.md",
+    "data/course_transcripts/3.1.1.1 空间向量的运算.json",
+    "data/course_transcripts/3.1.2.1 空间向量拆分法.json"
+  ],
+  "item_results": [
+    {
+      "section": "1.1",
+      "cycle": "1.1-cycle-1",
+      "task_id": "任务01",
+      "item_id": "3da13562633d3606",
+      "kind": "example",
+      "label": "例1",
+      "source_revision": {"generation": "G-20260816-07"},
+      "context_sha256": "2ba656cf38a3581aab11d3f5e04967018ef5be9be0af7de6cd59309abbd67119",
+      "observation_signal": "长方体八个顶点中的两点为起点和终点作向量，第一问找与 AB 相等的所有向量，第二问找 AA1 的所有相反向量；信号是向量相等与相反的定义（方向加长度）。",
+      "course_call": {
+        "method_model_id": "vector_equality_direction_and_length",
+        "course_id": "3.1.1.1",
+        "course_title": "空间向量的运算",
+        "method_name": "向量相等/相反的判定：方向相同且长度相等 / 方向相反且长度相等",
+        "called_basis": "课程强调空间向量本质同平面向量、可平移；任务01 防卡动作要求先把题目翻译成方向、长度、相等或相反"
+      },
+      "first_line": "按防卡骨架第一行：写要比较的向量及其起点终点——与 AB 同方向的棱向量为 DC、A1B1、D1C1，并计入 AB 自身。",
+      "second_line": "第二行按定义逐项核对方向和模：长方体相对棱平行且等长，方向相同的四条均满足相等向量定义。",
+      "continuation": [
+        "与 AA1 方向相反且长度相等的向量为 A1A、B1B、C1C、D1D；按防卡检查点核对没有漏掉背面棱，也没有把方向写反。"
+      ],
+      "independent_self_check": "按检查点逐项核对：向量方向是否写反、是否漏掉同方向且等长的对象（D1C1）、零向量与单位向量的特殊规定不涉及本题。",
+      "first_breakpoint": "none",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "anti_stall_action": "路线任务01 方法族防卡动作：先把向量关系翻译成方向/长度/相等或相反；骨架要求第一行写比较向量及起点终点、第二行逐项核对方向和模；检查点要求查方向写反、漏同向等长对象及零向量/单位向量规定",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": "1.1-cycle-1",
+      "task_id": "任务02",
+      "item_id": "24dd4a64777ed832",
+      "kind": "example",
+      "label": "例2",
+      "source_revision": {"generation": "G-20260816-07"},
+      "context_sha256": "2ba656cf38a3581aab11d3f5e04967018ef5be9be0af7de6cd59309abbd67119",
+      "observation_signal": "平行六面体 ABCD-A1B1C1D1 中 AB + AD + CC1 等于哪个选项向量；信号是三个向量连加，图形合成（平行四边形法则加首尾相连）。",
+      "course_call": {
+        "method_model_id": "polygon_rule_and_parallelogram_diagonal",
+        "course_id": "3.1.1.1",
+        "course_title": "空间向量的运算",
+        "method_name": "三角形法则（首尾相连消中间字母）与平行四边形法则（邻边合成对角线）",
+        "called_basis": "课程明确：AB 与 AD 邻边用平行四边形法则得对角线，AC 与 CC1 首尾相连直接消去中间字母 C；任务02 防卡动作要求先判断合并还是拆分"
+      },
+      "first_line": "先判断是做向量合并：AB + AD 共起点 A，按平行四边形法则得底面对角线 AC。",
+      "second_line": "依据平行四边形法则：AB、AD 为邻边的和向量是对角线 AC。",
+      "continuation": [
+        "AC + CC1 首尾相连（中间字母 C 消去），起点 A 终点 C1，得 AC1，对照选项选 C；按检查点核对起终点与方向。"
+      ],
+      "independent_self_check": "按检查点核对：中间字母消去后起点 A 终点 C1；对照选项方向，AC1 与 C1A 相反；结果仍是向量。",
+      "first_breakpoint": "none",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "anti_stall_action": "路线任务02 方法族防卡动作：先判断题目在做向量合并还是拆分；遇到减号和括号先逐项写出变号后的向量；检查点核对方向、正负号、起终点、系数与中点/分点比例",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": "1.1-cycle-1",
+      "task_id": "任务03",
+      "item_id": "df584e2805cfa309",
+      "kind": "example",
+      "label": "例3",
+      "source_revision": {"generation": "G-20260816-07"},
+      "context_sha256": "2ba656cf38a3581aab11d3f5e04967018ef5be9be0af7de6cd59309abbd67119",
+      "observation_signal": "四面体 ABCD，E 是 BC 中点，AE = 4AF，四个选项给出 DF 用 AB、AC、AD 的表示；信号是中点向量与比例分点，目标是把 DF 换成公共起点 A 的表示。",
+      "course_call": {
+        "method_model_id": "midpoint_parallelogram_diagonal_and_scalar_ratio",
+        "course_id": "3.1.1.1",
+        "course_title": "空间向量的运算",
+        "method_name": "中点向量公式（平行四边形对角线的一半）与数乘比例换算",
+        "called_basis": "课程讲平行四边形法则可推对角线性质；任务03 防卡动作要求遇到中点或分点先核对比例关系，AE=4AF 按向量等式处理"
+      },
+      "first_line": "按防卡动作先核对中点比例：E 为 BC 中点，用平行四边形法则写 AE = (AB + AC) / 2。",
+      "second_line": "由 AE = 4AF（向量等式，方向同向）得 AF = AE / 4 = (AB + AC) / 8；依据数乘运算与比例换算。",
+      "continuation": [
+        "DF = AF - AD（统一起点 A 作减法，末减初），代入得 DF = (1/8)AB + (1/8)AC - AD，对照选项选 B；按检查点核对方向与系数。"
+      ],
+      "independent_self_check": "按检查点核对：4 倍方向（AF 是 AE 的四分之一而不是四倍）、DF 的方向（D 到 F）、AD 前为负号、结论仍是向量而非数。",
+      "first_breakpoint": "none",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "anti_stall_action": "路线任务03 方法族防卡动作：同类型Ⅰ骨架——统一终点或首尾相接、遇到减号和括号先逐项变号；检查点明确遇到中点或分点先核对比例关系",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": "1.1-cycle-1",
+      "task_id": "任务04",
+      "item_id": "8915857a2181490b",
+      "kind": "example",
+      "label": "例9",
+      "source_revision": {"generation": "G-20260816-07"},
+      "context_sha256": "2ba656cf38a3581aab11d3f5e04967018ef5be9be0af7de6cd59309abbd67119",
+      "observation_signal": "化简两个算式：第一式是数乘分配后合并同类项，第二式是含双重括号的向量加减；信号是类型Ⅰ线性运算的字母计算。",
+      "course_call": {
+        "method_model_id": "linear_op_expand_and_chain_letter_cancel",
+        "course_id": "3.1.1.1",
+        "course_title": "空间向量的运算",
+        "method_name": "数乘分配律展开、合并同类项、减法变加法、首尾相连消中间字母",
+        "called_basis": "课程演示了 AB 减 AC 可写成加 CA、中间同字母首尾相连直接消去；任务04 防卡动作要求出现括号先保留外层正负号再展开"
+      },
+      "first_line": "按防卡动作先保留外层负号再展开：(1) 3(2a-b-4c) = 6a-3b-12c，-4(a-2b+3c) = -4a+8b-12c；(2) OA - [OB - (AB - AC)] = OA - OB + AB - AC。",
+      "second_line": "(1) 合并同类项得 2a + 5b - 24c；(2) 把 -OB、-AC 换成 +BO、+CA，依据减法变加法与逐项变号。",
+      "continuation": [
+        "(2) 先做首尾相连 OA + AB = OB，原式变为 OB - OB - AC = -AC，即向量 CA；按检查点核对括号内每项已变号。"
+      ],
+      "independent_self_check": "按检查点核对：括号前是减号时括号内每一项都变号、方向一致（CA 从 C 指向 A）、结论仍是向量。",
+      "first_breakpoint": "none",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "anti_stall_action": "路线任务04 方法族防卡动作：归入类型Ⅰ线性运算；出现括号先保留外层正负号再展开；骨架要求逐项处理减号和括号、按系数合并；检查点含括号内每一项是否正确变号",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": "1.1-cycle-1",
+      "task_id": "任务05",
+      "item_id": "81bf55e4b2eab3a4",
+      "kind": "example",
+      "label": "例10",
+      "source_revision": {"generation": "G-20260816-07"},
+      "context_sha256": "2ba656cf38a3581aab11d3f5e04967018ef5be9be0af7de6cd59309abbd67119",
+      "observation_signal": "平行六面体中化简两个表达式并在图中标出结果向量；信号是自由向量平移后合成，并要求把合成终点定位到图上。",
+      "course_call": {
+        "method_model_id": "free_vector_translation_and_diagonal_synthesis",
+        "course_id": "3.1.1.1",
+        "course_title": "空间向量的运算",
+        "method_name": "自由向量可平移；平行四边形法则与首尾相连合成，再定位终点",
+        "called_basis": "课程强调空间向量可平移；任务05 防卡动作要求图形终点不清时先固定一个公共起点再定位终点"
+      },
+      "first_line": "(1) A1D1 与 AD 平行且相等，平移替换后 DC + AD = AD + DC = AC（首尾相连）。",
+      "second_line": "(1) AC + (1/2)CC1：从 A 到 C 再沿 CC1 走一半，终点是 CC1 的中点 M，结果向量为 AM；依据首尾相连与数乘。",
+      "continuation": [
+        "(2) 按防卡动作固定公共起点 A：(1/2)AB + (1/2)AD = (1/2)(AB + AD) = AO（O 为底面对角线 AC 的交点）；AA1 + AO 合成后把终点定位到上底面中心 O1，结果向量为 AO1。"
+      ],
+      "independent_self_check": "按检查点核对：统一了起点 A、每个方向一致、图中标出的向量箭头起点均为 A、结论仍是向量；M 是 CC1 中点而非 C。",
+      "first_breakpoint": "none",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "anti_stall_action": "路线任务05 方法族防卡动作：同类型Ⅰ骨架；明确‘图形终点不清时先固定一个公共起点再定位终点’；检查点含统一起点与方向一致",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": "1.1-cycle-1",
+      "task_id": "任务06",
+      "item_id": "A1",
+      "kind": "abc_exercise",
+      "label": "A1",
+      "qid": "Q-84442c12da683ad3",
+      "source_revision": {"generation": "G-20260816-07"},
+      "context_sha256": "2ba656cf38a3581aab11d3f5e04967018ef5be9be0af7de6cd59309abbd67119",
+      "observation_signal": "四面体 OABC，N 是 BC 中点，给出 OA=a、OB=b、OC=c，求 AN；信号是已知公共起点 O 的三个向量，求其他向量用统一起点作减法。",
+      "course_call": {
+        "method_model_id": "common_origin_subtraction_and_midpoint",
+        "course_id": "3.1.1.1",
+        "course_title": "空间向量的运算",
+        "method_name": "统一起点减法（末减初）与中点向量公式（平行四边形法则）",
+        "called_basis": "课程讲减法末减初、共起点；任务06 防卡动作要求先问是否需要统一起点、方向和基向量再决定合并或拆分"
+      },
+      "first_line": "按防卡动作先决定：需要统一起点——把 AN 换成公共起点 O 表示：AN = ON - OA。",
+      "second_line": "N 为 BC 中点，由平行四边形法则 ON = (OB + OC) / 2 = (b + c) / 2。",
+      "continuation": [
+        "AN = (b + c)/2 - a = -a + (1/2)b + (1/2)c，对照选项选 C；按检查点核对符号与系数。"
+      ],
+      "independent_self_check": "按检查点核对：减法方向（终点 N 的向量减起点 A 的向量，末减初）、a 的符号为负、b、c 系数为二分之一。",
+      "first_breakpoint": "none",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "anti_stall_action": "路线任务06 方法族防卡动作：先问自己是否需要统一起点、方向和基向量，再决定合并还是拆分；骨架为类型Ⅰ三行书写",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": "1.1-cycle-1",
+      "task_id": "任务07",
+      "item_id": "A2",
+      "kind": "abc_exercise",
+      "label": "A2",
+      "qid": "Q-1727695600a57e80",
+      "source_revision": {"generation": "G-20260816-07"},
+      "context_sha256": "2ba656cf38a3581aab11d3f5e04967018ef5be9be0af7de6cd59309abbd67119",
+      "observation_signal": "化简两个算式：第一式系数展开合并，第二式三个向量连减；信号是类型Ⅰ线性运算分配律与中间字母消去。",
+      "course_call": {
+        "method_model_id": "linear_op_expand_and_chain_letter_cancel",
+        "course_id": "3.1.1.1",
+        "course_title": "空间向量的运算",
+        "method_name": "数乘分配律展开合并；减法变加法后用首尾相连消中间字母",
+        "called_basis": "课程演示 AB - AC 变 AB + CA、首尾相连消中间字母的字母计算；任务07 防卡动作同类型Ⅰ骨架"
+      },
+      "first_line": "(1) 2(a-2b-3c) - 3(a+2b-c) = 2a-4b-6c - 3a-6b+3c。",
+      "second_line": "(1) 合并同类项得 -a - 10b - 3c；(2) 逐项变号：-DB 换成 +BD、-AC 换成 +CA。",
+      "continuation": [
+        "(2) AB + BD = AD（首尾相连），AD + CA = CD，结果 CD；按检查点核对变号与方向。"
+      ],
+      "independent_self_check": "按检查点核对：括号内每一项变号、每个方向一致、最终方向是 C 到 D、结论仍是向量。",
+      "first_breakpoint": "none",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "anti_stall_action": "路线任务07 方法族防卡动作：同类型Ⅰ——统一起点、逐项处理减号和括号、按系数合并；检查点含括号内每项变号",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": "1.1-cycle-1",
+      "task_id": "任务08",
+      "item_id": "A3",
+      "kind": "abc_exercise",
+      "label": "A3",
+      "qid": "Q-7370f2df587a419e",
+      "source_revision": {"generation": "G-20260816-07"},
+      "context_sha256": "2ba656cf38a3581aab11d3f5e04967018ef5be9be0af7de6cd59309abbd67119",
+      "observation_signal": "正方体 ABCD-A1B1C1D1，G 为 CC1 中点、O 为 AC 与 BD 交点，化简三个式子；信号是棱向量合成配合中点与对角线交点。",
+      "course_call": {
+        "method_model_id": "chain_letter_cancel_and_midpoint_diagonal",
+        "course_id": "3.1.1.1",
+        "course_title": "空间向量的运算",
+        "method_name": "首尾相连消中间字母；平行四边形法则中点公式（GD+GB=2GO）",
+        "called_basis": "课程讲首尾相连消中间字母与平行四边形对角线；任务02/03 检查点要求遇到中点先核对比例关系，任务08 检查点要求分点比例写在正确方向"
+      },
+      "first_line": "(1) BC 与 AD 平行且相等，AB - BC = AB - AD = DB。",
+      "second_line": "(2) A1B1 + A1D1 = A1C1（平行四边形法则），再 A1C1 + C1C = A1C。",
+      "continuation": [
+        "(3) 按防卡动作先核对中点比例：O 为 BD 中点，GD + GB = 2GO，所以 (GD + GB)/2 = GO；再逐项变号 GO - A1O = GO + OA1 = GA1。"
+      ],
+      "independent_self_check": "按检查点核对：分点比例方向（O 是 BD 中点故 2 倍）、括号与减号逐项变号（-A1O 变 +OA1）、(1) 结果是 DB 而非 BD。",
+      "first_breakpoint": "none",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "anti_stall_action": "路线任务08 方法族防卡动作：类型Ⅰ骨架与检查点（括号内每项变号、分点比例写在正确方向）；承接任务02/03 检查点‘遇到中点或分点先核对比例关系’，直接覆盖 GD+GB=2GO 与 -A1O 变号",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": "1.1-cycle-2",
+      "task_id": "任务09",
+      "item_id": "1bc60321129e778d",
+      "kind": "example",
+      "label": "例4",
+      "source_revision": {"generation": "G-20260816-07"},
+      "context_sha256": "2ba656cf38a3581aab11d3f5e04967018ef5be9be0af7de6cd59309abbd67119",
+      "observation_signal": "多选题：判断共线、平行、相等几个说法的正误；信号是共线与相等的定义边界，特别是零向量与单位向量。",
+      "course_call": {
+        "method_model_id": "collinearity_zero_vector_edge_case",
+        "course_id": "3.1.2.1",
+        "course_title": "空间向量拆分法",
+        "method_name": "共线定义与零向量边界（零向量与任何向量共线）",
+        "called_basis": "知识点3 对比表显式规定零向量与任意向量共线；知识点1 注②规定单位向量方向不作规定；任务01 检查点要求查零向量/单位向量特殊规定"
+      },
+      "first_line": "按防卡动作先判断本题是共线/平行概念判断：对 A 选项检查 b 为零向量的边界——b = 0 时 a 与 b 共线、b 与 c 共线均成立，但 a、c 未必共线，所以 A 错。",
+      "second_line": "依据知识点3 的共线定义规定：零向量与任意向量共线，共线不是无条件传递关系。",
+      "continuation": [
+        "B 对：AB + CD = 0 得 CD = -AB，方向相反故 AB ∥ CD；C 对：零向量与任何向量都共线；D 错：按知识点1 规定单位向量方向不作规定，两个单位向量方向可不同，不一定是相等向量。"
+      ],
+      "independent_self_check": "按检查点核对：所选基向量/对象的非零条件、零向量与单位向量的特殊规定、几何结论回到题目对象（B、C 正确）。",
+      "first_breakpoint": "none",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "anti_stall_action": "路线任务09 方法族防卡动作：先判断共线/平行还是共面，回到方向向量或系数和判据；知识点3 显式规定零向量与任意向量共线，任务01 检查点覆盖零向量/单位向量特殊规定，直接覆盖 A 选项零向量反例与 D 选项单位向量陷阱",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": "1.1-cycle-2",
+      "task_id": "任务10",
+      "item_id": "9dbc42c31a3d3813",
+      "kind": "example",
+      "label": "例5",
+      "source_revision": {"generation": "G-20260816-07"},
+      "context_sha256": "2ba656cf38a3581aab11d3f5e04967018ef5be9be0af7de6cd59309abbd67119",
+      "observation_signal": "a、b、c 是空间不共面向量，判断哪一组向量一定不共面；信号是共面向量判定：一个向量能否由另两个线性表示。",
+      "course_call": {
+        "method_model_id": "coplane_linear_combination_check",
+        "course_id": "3.1.2.1",
+        "course_title": "空间向量拆分法",
+        "method_name": "共面向量定理：向量 p 与两个不共线向量 a、b 共面当且仅当存在唯一有序实数对 (x,y) 使 p = xa + yb",
+        "called_basis": "知识点3 显式给出共面向量定理的充要条件；任务10 防卡动作要求把目标向量表示成基向量的线性组合并写出系数关系"
+      },
+      "first_line": "按防卡骨架选定基向量并逐项表示：对 A 选项设 c + a = λ(a - b) + μ(b + c)，对照系数得 λ = 1、μ = 1，成立，所以 A 组共面。",
+      "second_line": "依据共面向量定理：能拆成另两个向量的线性组合即共面；逐个选项写系数关系。",
+      "continuation": [
+        "B 组：(-a+c) + (-b-c) = -a-b，即 a+b 是前两者之和的相反数，共面；C 组：(a+b) - (b-c) = a+c，共面；D 组：λ(a+b) + μ(a-b) 只能生成 a、b 的线性组合，c 与 a、b 不共面故系数无解，所以选 D。"
+      ],
+      "independent_self_check": "按检查点核对：所选基向量满足不共线条件、每个选项的系数关系写对、几何结论回到题目对象（D 组不共面）。",
+      "first_breakpoint": "none",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "anti_stall_action": "路线任务10 方法族防卡动作：第一行选定一组基向量，第二行把目标向量表示成它们的线性组合，第三行写出系数关系并说明判据；检查点含基向量非零/不共线条件——直接提供系统检验法",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": "1.1-cycle-2",
+      "task_id": "任务11",
+      "item_id": "e7779f7dc2baf837",
+      "kind": "example",
+      "label": "例11",
+      "source_revision": {"generation": "G-20260816-07"},
+      "context_sha256": "2ba656cf38a3581aab11d3f5e04967018ef5be9be0af7de6cd59309abbd67119",
+      "observation_signal": "a、b、c 不共面，给出 AB、AC、AD 的线性表示，求证 B、C、D 三点共线；信号是类型Ⅱ证明平行共线：用不共面基底唯一拆分后比系数判共线。",
+      "course_call": {
+        "method_model_id": "basis_unique_decomposition_and_collinear_ratio",
+        "course_id": "3.1.2.1",
+        "course_title": "空间向量拆分法",
+        "method_name": "空间向量基本定理（不共面基底唯一拆分）与共线向量定理（a∥b 当且仅当存在实数 λ 使 a = λb）",
+        "called_basis": "课程讲不共面基底唯一拆分；知识点3 给出共线向量定理；任务11 防卡动作要求统一到同一基向量或公共起点、设一个等于另一个的实数倍并说明回到三点共线"
+      },
+      "first_line": "按防卡骨架先写两条目标向量并统一到公共起点 A：BD = AD - AB、BC = AC - AB。",
+      "second_line": "代入表示：BD = (6a+7b+5c) - (4a+5b+3c) = 2a + 2b + 2c；BC = (2a+3b+c) - (4a+5b+3c) = -2a - 2b - 2c。",
+      "continuation": [
+        "设 BD = λ·BC 并写系数关系：λ = -1 使 BD = -BC；按防卡动作第三行说明该倍数关系：两向量共起点 B 且成实数倍，故 B、C、D 三点共线。"
+      ],
+      "independent_self_check": "按检查点核对：方向向量非零（BC 非零，a、b、c 不共面且系数不成比例）、不把共线当无条件传递（此处由 λ 存在且起点相同保证）、证明对象是 B、C、D。",
+      "first_breakpoint": "none",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "anti_stall_action": "路线任务11 方法族防卡动作：找两条直线各取非零方向向量；统一到同一基向量或公共起点，设其中一个等于另一个的实数倍；第三行说明倍数关系回到平行或三点共线；检查点含不能把共线关系当作无条件传递——直接覆盖系数成比例到共线结论的衔接",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": "1.1-cycle-2",
+      "task_id": "任务12",
+      "item_id": "ce0335a21c798927",
+      "kind": "direct_variant",
+      "label": "变式1",
+      "source_revision": {"generation": "G-20260816-07"},
+      "context_sha256": "2ba656cf38a3581aab11d3f5e04967018ef5be9be0af7de6cd59309abbd67119",
+      "observation_signal": "正方体中 E、F 为棱上分点（A1E=2ED1、A1F=(2/3)FC），用 A1A、A1B1、A1D1 表示 EF 并证 E、F、B 共线；信号是分点比例换算成系数后再基底拆分。",
+      "course_call": {
+        "method_model_id": "segment_ratio_to_coefficient_and_basis_split",
+        "course_id": "3.1.2.1",
+        "course_title": "空间向量拆分法",
+        "method_name": "通用分点比例动作：整段 t 倍 + 剩余 (1-t) 倍 + 解参数；再按空间向量基本定理拆分",
+        "called_basis": "任务12 防卡骨架新增：若题设给同一直线上的分点比例，先设整段向量为 t 倍，再把剩余段写成 (1-t) 倍并解 t；检查点含分点比例的方向与参数范围"
+      },
+      "first_line": "按防卡动作先复述母题模型：统一公共起点 A1 作减法 EF = A1F - A1E，再比系数；A1E = (2/3)A1D1（2:1 分点）。",
+      "second_line": "按新增分点比例动作处理 F：设整段 A1C 的 t 倍为 A1F = t·A1C，剩余段 FC = (1-t)·A1C；代入条件 t·A1C = (2/3)(1-t)·A1C，解参数得 t = 2/5，故 A1F = (2/5)A1C = (2/5)(A1A + A1B1 + A1D1)。",
+      "continuation": [
+        "EF = A1F - A1E = (2/5)(A1A+A1B1+A1D1) - (2/3)A1D1 = (2/5)A1A + (2/5)A1B1 - (4/15)A1D1；",
+        "(2) 再算 FB = B - F = (3/5)A1A + (3/5)A1B1 - (2/5)A1D1 = (3/2)·EF，起点同为 F，故 E、F、B 共线。"
+      ],
+      "independent_self_check": "按检查点核对：分点比例方向（A1E 指向 D1）与参数范围（t = 2/5 在 0 到 1 之间，F 在线段 A1C 上）、(2) 统一以 A1 为起点表示 B、E、F 后再比系数、(3/2) 倍关系而非相等。",
+      "first_breakpoint": "none",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "anti_stall_action": "路线任务12 新增通用分点比例动作：先设整段向量为 t 倍，再把剩余段写成 (1-t) 倍并解 t；检查点含分点比例方向与参数范围。该动作直接覆盖‘A1F=(2/3)FC 换算为 A1F=(2/5)A1C’的比例方程步骤，原首断点已消除",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true,
+      "variant_relative_delta": "母题例11 直接给出 AB、AC、AD 的表示；变式改为先由棱上分点比例换算系数，新增动作‘整段 t 倍 + 剩余 (1-t) 倍 + 解参数’覆盖了 t=2/5 的换算，再统一到 A1 起点拆分判共线。"
+    },
+    {
+      "section": "1.1",
+      "cycle": "1.1-cycle-2",
+      "task_id": "任务13",
+      "item_id": "5f42fe5671670a92",
+      "kind": "direct_variant",
+      "label": "变式2",
+      "source_revision": {"generation": "G-20260816-07"},
+      "context_sha256": "2ba656cf38a3581aab11d3f5e04967018ef5be9be0af7de6cd59309abbd67119",
+      "observation_signal": "空间 9 点 O、A、B、C、D、E、F、G、H，OE=kOA、OF=kOB、OH=kOD，且 AC=AD+mAB、EG=EH+mEF，求证 AC ∥ EG；信号是类型Ⅱ变式：把不共起点的向量统一换到公共起点 O 再比系数。",
+      "course_call": {
+        "method_model_id": "change_origin_to_common_point_and_ratio",
+        "course_id": "3.1.2.1",
+        "course_title": "空间向量拆分法",
+        "method_name": "统一起点作减法与换起点表示（OC=OA+AC），再按基底收集系数",
+        "called_basis": "课程讲两个点都不是基底起点时先换到公共起点再作减法；任务13 防卡动作要求复述例11 模型并替换对象/系数，类型Ⅱ骨架明确‘统一到同一基向量或公共起点’"
+      },
+      "first_line": "按防卡动作复述母题模型并替换：模型是统一到公共起点再比系数——把 AC 换成以 O 为起点：OC = OA + AC = OA + (OD - OA) + m(OB - OA) = (1-m)OA + mOB + OD。",
+      "second_line": "同样统一到 O 起点表示 G：OG = OE + EG = kOA + (OH - OE) + m(OF - OE)，代入得 OG = k[(1-m)OA + mOB + OD] = k·OC。",
+      "continuation": [
+        "于是 EG = OG - OE = k·OC - k·OA = k(OC - OA) = k·AC；k 为实数，AC 与 EG 方向相同，故 AC ∥ EG；按检查点核对倍数关系与证明对象。"
+      ],
+      "independent_self_check": "按检查点核对：方向向量非零、系数收集（OA 的系数 1-m 与 k(1-m) 对应）、k 为实数只证平行不断言长度相等、证明对象是 AC 与 EG；本题无同一直线分点比例条件，新增分点比例动作不触发。",
+      "first_breakpoint": "none",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "anti_stall_action": "路线任务13 方法族防卡动作：复述例11 的平行共线模型后只替换改变的对象、系数或位置；类型Ⅱ骨架明确‘统一到同一基向量或公共起点’，直接覆盖换公共起点 O 的动作；新增分点比例动作（t 倍 + (1-t) 倍 + 解 t）在本变式无同一直线分点条件，不触发",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true,
+      "variant_relative_delta": "母题例11 是已知具体表示证三点共线；变式把系数换成参数 k、m，并要求先由平行/分点条件重建 OC、OG 的表示，再整体换起点 O 后证平行。"
+    },
+    {
+      "section": "1.1",
+      "cycle": "1.1-cycle-2",
+      "task_id": "任务14",
+      "item_id": "B10",
+      "kind": "abc_exercise",
+      "label": "B10",
+      "qid": "Q-c71c166fd308bd39",
+      "source_revision": {"generation": "G-20260816-07"},
+      "context_sha256": "2ba656cf38a3581aab11d3f5e04967018ef5be9be0af7de6cd59309abbd67119",
+      "observation_signal": "四面体 ABCD 中 E、F、I、H 分别是 AB、AC、CD、BD 的中点，G 为 EI 的中点，判断 G、F、H 三点是否共线并说明理由；信号是类型Ⅱ：连续中点向量表示后比系数。",
+      "course_call": {
+        "method_model_id": "midpoint_vector_chain_and_collinearity",
+        "course_id": "3.1.2.1",
+        "course_title": "空间向量拆分法",
+        "method_name": "中点向量公式链式表示各点，再按共线定理比系数",
+        "called_basis": "课程讲中点向量与终点性质；任务14 防卡动作要求统一到同一基向量或公共起点、设一个等于另一个的实数倍；中点比例核对承接自循环1 检查点"
+      },
+      "first_line": "按防卡骨架统一到公共起点 A 表示各点：E = (1/2)AB，F = (1/2)AC，I = (1/2)(AC + AD)（I 是 CD 中点），H = (1/2)(AB + AD)。",
+      "second_line": "G 为 EI 中点：AG = (AE + AI)/2 = (1/4)(AB + AC + AD)；依据中点向量公式。",
+      "continuation": [
+        "写两条目标向量并比系数：FG = G - F = (1/4)(AB - AC + AD)；FH = H - F = (1/2)(AB - AC + AD) = 2·FG；设 FH = 2·FG，两向量起点同为 F，故 G、F、H 三点共线，且 G 是 FH 的中点。"
+      ],
+      "independent_self_check": "按检查点核对：起终点与证明对象对应（I 是 CD 中点而非 BD 中点）、倍数关系（1:2）与起点（同为 F）、方向向量非零。",
+      "first_breakpoint": "none",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "anti_stall_action": "路线任务14 方法族防卡动作：类型Ⅱ骨架——第一行写两条目标向量，第二行统一到同一基向量或公共起点并设一个等于另一个的实数倍，第三行说明倍数关系回到三点共线；检查点含起终点与证明对象对应；中点比例核对承接循环1 检查点，覆盖连续中点表示的步骤",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    }
+  ],
+  "method_check_results": [],
+  "first_breakpoints": [],
+  "summary": {
+    "items": 14,
+    "pass": 14,
+    "partial": 0,
+    "blocked": 0,
+    "fail": 0,
+    "task_coverage_complete": true,
+    "answer_sidecar_read": false,
+    "human_acceptance_not_proven": true
+  }
+}

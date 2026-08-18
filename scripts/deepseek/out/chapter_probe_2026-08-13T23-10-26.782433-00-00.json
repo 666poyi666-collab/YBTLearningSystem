@@ -1,0 +1,1059 @@
+{
+  "schema_version": "7.1",
+  "kind": "CHAPTER_DEEPSEEK_CONSUMPTION_PROBE",
+  "checked_at": "2026-08-13T23:10:26.782433+00:00",
+  "endpoint": "http://127.0.0.1:10100/v1/chat/completions",
+  "requested_model": "opencode-go/deepseek-v4-flash",
+  "requested_reasoning_effort": "max",
+  "configured_context_window": 1000000,
+  "gate_policy": "validate_context 门禁原样执行；被门禁拦下的节不派发 HTTP、只记录缺口；不降低门禁、不把单节通过扩大为全章。",
+  "sections": [
+    {
+      "section": "1.1",
+      "context_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\contexts\\1.1.json",
+      "status": "passed",
+      "gate": {
+        "status": "passed",
+        "errors": [],
+        "route_status": "passed",
+        "route_errors": [],
+        "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\contexts\\1.1.json"
+      },
+      "dispatch": true,
+      "errors": [],
+      "attempts": [
+        {
+          "attempt": 1,
+          "transport_status": "completed",
+          "raw_path": "C:\\开发\\小工具\\一本通学习系统_v7\\scripts\\deepseek\\out\\raw_1.1_attempt1.json",
+          "response_text_present": true,
+          "parse_error": null,
+          "response_path": "C:\\开发\\小工具\\一本通学习系统_v7\\scripts\\deepseek\\out\\response_1.1_attempt1.json",
+          "verification_status": "passed",
+          "verification_errors": []
+        }
+      ],
+      "transport": {
+        "id": "chatcmpl-4a9fc9fe51e546b9a18839ea",
+        "object": "chat.completion",
+        "status": "completed",
+        "returned_model": "opencode-go/deepseek-v4-flash",
+        "usage": {
+          "prompt_tokens": 2358,
+          "completion_tokens": 7925,
+          "total_tokens": 10283,
+          "prompt_tokens_details": {
+            "cached_tokens": 384
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 5651
+          }
+        },
+        "raw_path": "C:\\开发\\小工具\\一本通学习系统_v7\\scripts\\deepseek\\out\\raw_1.1_attempt1.json",
+        "response_contract": "chat_completions_completed_or_incomplete_recorded",
+        "projection_sha256": "ffb036e89a74430a4fdca6304cae9fd516709c4352fc4b9709994d2b1dd8e0b5",
+        "request_attempts": 1,
+        "probe_attempt": 1
+      },
+      "response": {
+        "runtime": {
+          "model": "opencode-go/deepseek-v4-flash",
+          "reasoning_effort": "max",
+          "context_window": 1000000
+        },
+        "context_sha256": "5d6aaf160907460a13b8c0d511e822b374713aba5cbb6e0e395f9ff2c7a40908",
+        "canary": "803d39e715afe48b",
+        "probe_tokens": {
+          "Q-898523c513a8b29a": "9ae2e5a9",
+          "Q-6ce8264d983a858c": "2dfdb225",
+          "Q-fe6dd2e1ff436d64": "86062a52"
+        },
+        "question_echo": {
+          "Q-898523c513a8b29a": {
+            "qid": "Q-898523c513a8b29a",
+            "question_key": "A1",
+            "group": "A",
+            "number": 1,
+            "question_text_prefix": "1. (2025 • 新疆巴音郭楞斯坦) 如图，在四面体 OABC 中，N 是 BC 的中点，设 \\(\\overrightarrow{OA} = a\\)， \\(",
+            "visual_status": "VISION_VERIFIED"
+          },
+          "Q-6ce8264d983a858c": {
+            "qid": "Q-6ce8264d983a858c",
+            "question_key": "A2",
+            "group": "A",
+            "number": 2,
+            "question_text_prefix": "2.（2025·全国模拟） 化简下列算式： （1） \\(2(a-2b-3c)-3(a+2b-c)\\)； （2） \\(\\overrightarrow{AB}-\\o",
+            "visual_status": "READY_TEXT_ONLY"
+          },
+          "Q-fe6dd2e1ff436d64": {
+            "qid": "Q-fe6dd2e1ff436d64",
+            "question_key": "A3",
+            "group": "A",
+            "number": 3,
+            "question_text_prefix": "3.（2025 · 山东菏泽模拟） 如图，在正方体 \\(ABCD-A_1B_1C_1D_1\\) 中，G 为 \\(CC_1\\) 中点，O 为 AC 与 BD 的交",
+            "visual_status": "VISION_VERIFIED"
+          },
+          "Q-6513d8c486c1c04d": {
+            "qid": "Q-6513d8c486c1c04d",
+            "question_key": "B4",
+            "group": "B",
+            "number": 4,
+            "question_text_prefix": "4.（2025·四川内江期末） 如图，已知三棱锥 \\(A-BCD\\) 的每条棱长都为 2，则 \\(\\overrightarrow{AB} \\cdot \\over",
+            "visual_status": "VISION_VERIFIED"
+          },
+          "Q-d81b063e40102a13": {
+            "qid": "Q-d81b063e40102a13",
+            "question_key": "B5",
+            "group": "B",
+            "number": 5,
+            "question_text_prefix": "### 5. （2025·新疆博尔塔拉期末） 如图，在棱长为2的正方体 \\(ABCD-A_{1}B_{1}C_{1}D_{1}\\) 中，E 是棱 \\(A_{1}",
+            "visual_status": "VISION_VERIFIED"
+          },
+          "Q-f6fb66a4ecb38a68": {
+            "qid": "Q-f6fb66a4ecb38a68",
+            "question_key": "B6",
+            "group": "B",
+            "number": 6,
+            "question_text_prefix": "6.（2025·山东菏泽期末） 如图，已知正三角形 ABC 和正方形 BCDE 的边长均为 2，且二面角 A-BC-D 的大小为 \\(\\frac{\\pi}{3}",
+            "visual_status": "VISION_VERIFIED"
+          },
+          "Q-870029d2572394b5": {
+            "qid": "Q-870029d2572394b5",
+            "question_key": "B7",
+            "group": "B",
+            "number": 7,
+            "question_text_prefix": "### 7. （2025·四川成都期末） 如图，二面角 \\(\\alpha-l-\\beta\\) 的棱上有两个点 \\(A\\)， \\(B\\)，线段 \\(AC\\) 与 ",
+            "visual_status": "VISION_VERIFIED"
+          },
+          "Q-200b0783bb2dbf45": {
+            "qid": "Q-200b0783bb2dbf45",
+            "question_key": "B8",
+            "group": "B",
+            "number": 8,
+            "question_text_prefix": "### 8. （2025·上海模拟） 已知 \\(P\\) 是棱长为 2 的正方体 \\(ABCD-A_1B_1C_1D_1\\) 内（含正方体表面）任意一点，则 \\(",
+            "visual_status": "READY_TEXT_ONLY"
+          },
+          "Q-215cfb5e2e2a9761": {
+            "qid": "Q-215cfb5e2e2a9761",
+            "question_key": "B9",
+            "group": "B",
+            "number": 9,
+            "question_text_prefix": "### 9. （2025·河北模拟） 如图，在正四棱锥 \\(P-ABCD\\) 中， \\(E\\)， \\(F\\) 分别为 \\(PA\\)， \\(PC\\) 的中点， \\",
+            "visual_status": "VISION_VERIFIED"
+          },
+          "Q-e059773ac9b297fc": {
+            "qid": "Q-e059773ac9b297fc",
+            "question_key": "B10",
+            "group": "B",
+            "number": 10,
+            "question_text_prefix": "### 10. （2025·上海模拟） 如图，在四面体 \\(ABCD\\) 中，点 \\(E, F, I, H\\) 分别是 \\(AB, AC, CD, BD\\) 的",
+            "visual_status": "VISION_VERIFIED"
+          },
+          "Q-55721055a4275230": {
+            "qid": "Q-55721055a4275230",
+            "question_key": "B11",
+            "group": "B",
+            "number": 11,
+            "question_text_prefix": "11.（2025·山东模拟） 已知正四面体 OABC 的棱长为 2，点 G 是 \\(\\triangle OBC\\) 的重心，M 是线段 AG 的中点. （1）用",
+            "visual_status": "VISION_VERIFIED"
+          },
+          "Q-7ef92b168cb1da62": {
+            "qid": "Q-7ef92b168cb1da62",
+            "question_key": "B12",
+            "group": "B",
+            "number": 12,
+            "question_text_prefix": "12\\. （2025·浙江台州模拟） 如图，在三棱锥 \\(P-ABC\\) 中，若 \\(AB = AC = 3\\)， \\(AP = 4\\)， \\(\\angle B",
+            "visual_status": "VISION_VERIFIED"
+          },
+          "Q-4b64e44d56d7b597": {
+            "qid": "Q-4b64e44d56d7b597",
+            "question_key": "C13",
+            "group": "C",
+            "number": 13,
+            "question_text_prefix": "13\\. (2025 · 安徽模拟) 已知 \\(a\\), \\(b\\), \\(c\\) 是空间中不共面的三个向量, \\(\\overrightarrow{OA}\\) ",
+            "visual_status": "READY_TEXT_ONLY"
+          },
+          "Q-b57617d1ae494d55": {
+            "qid": "Q-b57617d1ae494d55",
+            "question_key": "C14",
+            "group": "C",
+            "number": 14,
+            "question_text_prefix": "14.（2025·重庆模拟）（多选） 如图，在棱长为1的正四面体 \\(P-ABC\\) 中， \\(O\\) 为底面 \\(ABC\\) 的重心， \\(G\\)， \\(F\\",
+            "visual_status": "VISION_VERIFIED"
+          }
+        },
+        "understanding_summary": {
+          "section": "1.1",
+          "question_count": 14,
+          "expected_groups": {
+            "A": [
+              1,
+              3
+            ],
+            "B": [
+              4,
+              12
+            ],
+            "C": [
+              13,
+              14
+            ]
+          },
+          "must_listen_course_keys": [
+            "space_vector_ops",
+            "decomposition",
+            "equal_surface"
+          ],
+          "knowledge_point_ids": [
+            "1.1-k1",
+            "1.1-k2",
+            "1.1-k3",
+            "1.1-k4"
+          ],
+          "type_training": [
+            "类型Ⅰ 线性运算",
+            "类型Ⅱ 证明平行、共线",
+            "类型Ⅲ 证明共面",
+            "类型Ⅳ 数量积",
+            "类型Ⅴ 求长度、距离",
+            "类型Ⅵ 求角"
+          ],
+          "exercise_order": [
+            {
+              "group": "A",
+              "numbers": [
+                1,
+                2,
+                3
+              ]
+            },
+            {
+              "group": "B",
+              "numbers": [
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ]
+            },
+            {
+              "group": "C",
+              "numbers": [
+                13,
+                14
+              ]
+            }
+          ],
+          "mastery_not_assessed": true
+        }
+      },
+      "response_normalization": [
+        "question_echo[Q-898523c513a8b29a].qid_to_group_key",
+        "question_echo[Q-6ce8264d983a858c].qid_to_group_key",
+        "question_echo[Q-fe6dd2e1ff436d64].qid_to_group_key",
+        "question_echo[Q-6513d8c486c1c04d].qid_to_group_key",
+        "question_echo[Q-d81b063e40102a13].qid_to_group_key",
+        "question_echo[Q-f6fb66a4ecb38a68].qid_to_group_key",
+        "question_echo[Q-870029d2572394b5].qid_to_group_key",
+        "question_echo[Q-200b0783bb2dbf45].qid_to_group_key",
+        "question_echo[Q-215cfb5e2e2a9761].qid_to_group_key",
+        "question_echo[Q-e059773ac9b297fc].qid_to_group_key",
+        "question_echo[Q-55721055a4275230].qid_to_group_key",
+        "question_echo[Q-7ef92b168cb1da62].qid_to_group_key",
+        "question_echo[Q-4b64e44d56d7b597].qid_to_group_key",
+        "question_echo[Q-b57617d1ae494d55].qid_to_group_key",
+        "question_echo:list_to_qid_map"
+      ],
+      "verification": {
+        "status": "passed",
+        "errors": [],
+        "context": {
+          "status": "passed",
+          "errors": [],
+          "route_status": "passed",
+          "route_errors": [],
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\contexts\\1.1.json"
+        },
+        "path": "C:\\开发\\小工具\\一本通学习系统_v7\\scripts\\deepseek\\out\\response_1.1_attempt1.json",
+        "verification_kind": "standalone_understanding_receipt"
+      }
+    },
+    {
+      "section": "1.2+1.3",
+      "context_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\contexts\\1.2_1.3.json",
+      "status": "passed",
+      "gate": {
+        "status": "passed",
+        "errors": [],
+        "route_status": "passed",
+        "route_errors": [],
+        "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\contexts\\1.2_1.3.json"
+      },
+      "dispatch": true,
+      "errors": [],
+      "attempts": [
+        {
+          "attempt": 1,
+          "transport_status": "completed",
+          "raw_path": "C:\\开发\\小工具\\一本通学习系统_v7\\scripts\\deepseek\\out\\raw_1.2_1.3_attempt1.json",
+          "response_text_present": true,
+          "parse_error": null,
+          "response_path": "C:\\开发\\小工具\\一本通学习系统_v7\\scripts\\deepseek\\out\\response_1.2_1.3_attempt1.json",
+          "verification_status": "passed",
+          "verification_errors": []
+        }
+      ],
+      "transport": {
+        "id": "chatcmpl-45bfbe0cec7f44afa014f85e",
+        "object": "chat.completion",
+        "status": "completed",
+        "returned_model": "opencode-go/deepseek-v4-flash",
+        "usage": {
+          "prompt_tokens": 2562,
+          "completion_tokens": 12058,
+          "total_tokens": 14620,
+          "prompt_tokens_details": {
+            "cached_tokens": 384
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 9922
+          }
+        },
+        "raw_path": "C:\\开发\\小工具\\一本通学习系统_v7\\scripts\\deepseek\\out\\raw_1.2_1.3_attempt1.json",
+        "response_contract": "chat_completions_completed_or_incomplete_recorded",
+        "projection_sha256": "e116ddce96292a9ee31ab859ae6c300c827ddd626a90f3235f0748771aefdf88",
+        "request_attempts": 1,
+        "probe_attempt": 1
+      },
+      "response": {
+        "runtime": {
+          "model": "opencode-go/deepseek-v4-flash",
+          "reasoning_effort": "max",
+          "context_window": 1000000
+        },
+        "context_sha256": "d4421b9975f2156f9b54f89f50c815502e9d942df8a3db5bb0fe6e5e1b8f0428",
+        "canary": "d3b519fa8dec6884",
+        "probe_tokens": {
+          "Q-694e2556faaa1ab8": "34fdfcf7",
+          "Q-baaa7682de420284": "840f7429",
+          "Q-2f46594efb92dcb1": "88e03275"
+        },
+        "question_echo": {
+          "Q-694e2556faaa1ab8": {
+            "question_key": "A1",
+            "group": "A",
+            "number": 1,
+            "question_text_prefix": "1.（2025·重庆长寿期末） 若 \\(\\bar{a}=(1,-2,1)\\)， \\(\\bar{b}=(-2,1,-2)\\)，则 \\(\\bar{a}-\\bar{b",
+            "visual_status": "READY_TEXT_ONLY",
+            "qid": "Q-694e2556faaa1ab8"
+          },
+          "Q-baaa7682de420284": {
+            "question_key": "A2",
+            "group": "A",
+            "number": 2,
+            "question_text_prefix": "2.（2025·福建福州期末） 已知向量 \\(\\overrightarrow{a} = (x, 1, 1)\\)， \\(\\overrightarrow{b} = ",
+            "visual_status": "READY_TEXT_ONLY",
+            "qid": "Q-baaa7682de420284"
+          },
+          "Q-2f46594efb92dcb1": {
+            "question_key": "A3",
+            "group": "A",
+            "number": 3,
+            "question_text_prefix": "3.（2025·河南安阳期末） 已知向量 \\(\\boldsymbol{a}=(-1,0,-1)\\)， \\(\\boldsymbol{b}=(1,x,y)\\)，且 ",
+            "visual_status": "READY_TEXT_ONLY",
+            "qid": "Q-2f46594efb92dcb1"
+          },
+          "Q-f8c5e74691bbb5a4": {
+            "question_key": "A4",
+            "group": "A",
+            "number": 4,
+            "question_text_prefix": "4.（2025·河北邯郸期末） 已知空间向量 \\(\\boldsymbol{m} = (2, 1, 1)\\)， \\(\\boldsymbol{n} = (0, 2,",
+            "visual_status": "READY_TEXT_ONLY",
+            "qid": "Q-f8c5e74691bbb5a4"
+          },
+          "Q-30f65500e1924d09": {
+            "question_key": "B5",
+            "group": "B",
+            "number": 5,
+            "question_text_prefix": "如图，在三棱锥 \\(O-ABC\\) 中，\\(\\overrightarrow{OA}=\\vec{a}\\)，\\(\\overrightarrow{OB}=\\vec{b",
+            "visual_status": "VISION_VERIFIED",
+            "qid": "Q-30f65500e1924d09"
+          },
+          "Q-b574216ce8dfea0a": {
+            "question_key": "B6",
+            "group": "B",
+            "number": 6,
+            "question_text_prefix": "6. (2025·贵州安顺期中) 设 \\(x, y \\in \\mathbb{R}\\)，向量 \\(\\boldsymbol{a} = (x, 1, 1)\\)， \\(",
+            "visual_status": "READY_TEXT_ONLY",
+            "qid": "Q-b574216ce8dfea0a"
+          },
+          "Q-117a513a4f8d3718": {
+            "question_key": "B7",
+            "group": "B",
+            "number": 7,
+            "question_text_prefix": "7.（2025·江苏苏州开学考试） 已知向量 \\(\\boldsymbol{a} = (0, 1, 0)\\)， \\(\\boldsymbol{b} = (0, -1",
+            "visual_status": "READY_TEXT_ONLY",
+            "qid": "Q-117a513a4f8d3718"
+          },
+          "Q-d851f3981faa08db": {
+            "question_key": "B8",
+            "group": "B",
+            "number": 8,
+            "question_text_prefix": "8.（2025·北京期末） 已知\\(\\{a,b,c\\}\\)为空间的一组基底，则下列向量也能构成空间的一组基底的是（ ） A. \\(a+b\\)，\\(b-c\\)，\\",
+            "visual_status": "READY_TEXT_ONLY",
+            "qid": "Q-d851f3981faa08db"
+          },
+          "Q-e142614c7ff81695": {
+            "question_key": "B9",
+            "group": "B",
+            "number": 9,
+            "question_text_prefix": "如图，\\(M\\) 是三棱锥 \\(P-ABC\\) 的底面 \\(\\triangle ABC\\) 的重心，若 \\(\\overrightarrow{PM} = x\\ov",
+            "visual_status": "VISION_VERIFIED",
+            "qid": "Q-e142614c7ff81695"
+          },
+          "Q-6d14f9455831f0d9": {
+            "question_key": "B10",
+            "group": "B",
+            "number": 10,
+            "question_text_prefix": "10.（2025·江西上饶期末） 已知向量 \\(\\boldsymbol{a}=(-2,1,-5)\\)， \\(3\\boldsymbol{a}-2\\boldsymb",
+            "visual_status": "READY_TEXT_ONLY",
+            "qid": "Q-6d14f9455831f0d9"
+          },
+          "Q-24e92fa370d4e421": {
+            "question_key": "B11",
+            "group": "B",
+            "number": 11,
+            "question_text_prefix": "三棱锥 A-BCD 中， \\(AB = AC = AD = 2\\)，AB，AC，AD 两两垂直，M，N 分别为 BC，AD 的中点，则异面直线 AM 和 CN ",
+            "visual_status": "READY_TEXT_ONLY",
+            "qid": "Q-24e92fa370d4e421"
+          },
+          "Q-678cf303db4db51b": {
+            "question_key": "B12",
+            "group": "B",
+            "number": 12,
+            "question_text_prefix": "### 12 \\. （2025·浙江杭州模拟） 已知向量 \\(\\boldsymbol{a}=(1,3,-2)\\)， \\(\\boldsymbol{b}=(1,0,",
+            "visual_status": "READY_TEXT_ONLY",
+            "qid": "Q-678cf303db4db51b"
+          },
+          "Q-0b9899dd462c0221": {
+            "question_key": "B13",
+            "group": "B",
+            "number": 13,
+            "question_text_prefix": "### 13 \\.（2025·内蒙古通辽期末） 如图，在棱长为4的正方体中，E，F分别为 \\(DD_{1}\\)，BD的中点. （1）求证： \\(EF \\perp",
+            "visual_status": "VISION_VERIFIED",
+            "qid": "Q-0b9899dd462c0221"
+          },
+          "Q-3742fb84e0b1f5ea": {
+            "question_key": "C14",
+            "group": "C",
+            "number": 14,
+            "question_text_prefix": "### 14. （2025·福建南平期末） 如图，在三棱锥 S-ABC 中，点 G 为 \\(\\triangle ABC\\) 的重心，点 M 是线段 SG 的中点",
+            "visual_status": "VISION_VERIFIED",
+            "qid": "Q-3742fb84e0b1f5ea"
+          },
+          "Q-d4024df7c68b06a3": {
+            "question_key": "C15",
+            "group": "C",
+            "number": 15,
+            "question_text_prefix": "### 15. （2025·上海期末） 若 \\(a\\)， \\(b\\) 是空间互相垂直的单位向量，且 \\(|c|=8\\)， \\(c \\cdot a = c \\cd",
+            "visual_status": "READY_TEXT_ONLY",
+            "qid": "Q-d4024df7c68b06a3"
+          },
+          "Q-98e3c5968daa027b": {
+            "question_key": "C16",
+            "group": "C",
+            "number": 16,
+            "question_text_prefix": "### 16. （2025·河南模拟） 在棱长为 3 的正方体 \\(ABCD-A_1B_1C_1D_1\\) 中， \\(E\\)， \\(F\\) 为线段 \\(BD_1",
+            "visual_status": "READY_TEXT_ONLY",
+            "qid": "Q-98e3c5968daa027b"
+          }
+        },
+        "understanding_summary": {
+          "section": "1.2+1.3",
+          "question_count": 16,
+          "expected_groups": {
+            "A": [
+              1,
+              4
+            ],
+            "B": [
+              5,
+              13
+            ],
+            "C": [
+              14,
+              16
+            ]
+          },
+          "must_listen_course_keys": [
+            "decomposition",
+            "coordinate_system",
+            "coordinate_ops",
+            "equal_surface"
+          ],
+          "knowledge_point_ids": [
+            "1.2-k1",
+            "1.3-k1",
+            "1.3-k2"
+          ],
+          "type_training": [
+            "类型Ⅰ 基底表示",
+            "类型Ⅱ 线性运算坐标表示",
+            "类型Ⅲ 数量积坐标表示",
+            "类型Ⅳ 平行垂直",
+            "类型Ⅴ 夹角与模"
+          ],
+          "exercise_order": [
+            {
+              "group": "A",
+              "numbers": [
+                1,
+                2,
+                3,
+                4
+              ]
+            },
+            {
+              "group": "B",
+              "numbers": [
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13
+              ]
+            },
+            {
+              "group": "C",
+              "numbers": [
+                14,
+                15,
+                16
+              ]
+            }
+          ],
+          "mastery_not_assessed": true
+        }
+      },
+      "response_normalization": [
+        "question_echo[Q-694e2556faaa1ab8].qid_to_group_key",
+        "question_echo[Q-baaa7682de420284].qid_to_group_key",
+        "question_echo[Q-2f46594efb92dcb1].qid_to_group_key",
+        "question_echo[Q-f8c5e74691bbb5a4].qid_to_group_key",
+        "question_echo[Q-30f65500e1924d09].qid_to_group_key",
+        "question_echo[Q-b574216ce8dfea0a].qid_to_group_key",
+        "question_echo[Q-117a513a4f8d3718].qid_to_group_key",
+        "question_echo[Q-d851f3981faa08db].qid_to_group_key",
+        "question_echo[Q-e142614c7ff81695].qid_to_group_key",
+        "question_echo[Q-6d14f9455831f0d9].qid_to_group_key",
+        "question_echo[Q-24e92fa370d4e421].qid_to_group_key",
+        "question_echo[Q-678cf303db4db51b].qid_to_group_key",
+        "question_echo[Q-0b9899dd462c0221].qid_to_group_key",
+        "question_echo[Q-3742fb84e0b1f5ea].qid_to_group_key",
+        "question_echo[Q-d4024df7c68b06a3].qid_to_group_key",
+        "question_echo[Q-98e3c5968daa027b].qid_to_group_key",
+        "question_echo:list_to_qid_map"
+      ],
+      "verification": {
+        "status": "passed",
+        "errors": [],
+        "context": {
+          "status": "passed",
+          "errors": [],
+          "route_status": "passed",
+          "route_errors": [],
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\contexts\\1.2_1.3.json"
+        },
+        "path": "C:\\开发\\小工具\\一本通学习系统_v7\\scripts\\deepseek\\out\\response_1.2_1.3_attempt1.json",
+        "verification_kind": "standalone_understanding_receipt"
+      }
+    },
+    {
+      "section": "1.4",
+      "context_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\contexts\\1.4.json",
+      "status": "passed",
+      "gate": {
+        "status": "passed",
+        "errors": [],
+        "route_status": "passed",
+        "route_errors": [],
+        "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\contexts\\1.4.json"
+      },
+      "dispatch": true,
+      "errors": [],
+      "attempts": [
+        {
+          "attempt": 1,
+          "transport_status": "completed",
+          "raw_path": "C:\\开发\\小工具\\一本通学习系统_v7\\scripts\\deepseek\\out\\raw_1.4_attempt1.json",
+          "response_text_present": true,
+          "parse_error": null,
+          "response_path": "C:\\开发\\小工具\\一本通学习系统_v7\\scripts\\deepseek\\out\\response_1.4_attempt1.json",
+          "verification_status": "passed",
+          "verification_errors": []
+        }
+      ],
+      "transport": {
+        "id": "chatcmpl-997f4a94cc4c41c4b8def142",
+        "object": "chat.completion",
+        "status": "completed",
+        "returned_model": "opencode-go/deepseek-v4-flash",
+        "usage": {
+          "prompt_tokens": 2203,
+          "completion_tokens": 1671,
+          "total_tokens": 3874,
+          "prompt_tokens_details": {
+            "cached_tokens": 384
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 54
+          }
+        },
+        "raw_path": "C:\\开发\\小工具\\一本通学习系统_v7\\scripts\\deepseek\\out\\raw_1.4_attempt1.json",
+        "response_contract": "chat_completions_completed_or_incomplete_recorded",
+        "projection_sha256": "dab09445053afcc091b69f55992bd1d7cdc5aeb70989a0a35c98870627c6ff9e",
+        "request_attempts": 1,
+        "probe_attempt": 1
+      },
+      "response": {
+        "runtime": {
+          "model": "opencode-go/deepseek-v4-flash",
+          "reasoning_effort": "max",
+          "context_window": 1000000
+        },
+        "context_sha256": "acb5a0812afdc61acb86ef378c5793948701d2f5f9dc39f710a69fa8c528ba58",
+        "canary": "fcb98fc01c16b94f",
+        "probe_tokens": {
+          "Q-a57f6b6532267d79": "09b923be",
+          "Q-558d2abc48a7160b": "3ec35e76",
+          "Q-3c27b74d5d28db8b": "cd948140"
+        },
+        "question_echo": {
+          "Q-a57f6b6532267d79": {
+            "qid": "Q-a57f6b6532267d79",
+            "question_key": "A1",
+            "group": "A",
+            "number": 1,
+            "question_text_prefix": "已知直线 \\(l_{1}\\) 的方向向量 \\(\\boldsymbol{\\bar{s}}_{1}=(1,0,1)\\) 与直线 \\(l_{2}\\) 的方向向量 \\(",
+            "visual_status": "READY_TEXT_ONLY"
+          },
+          "Q-558d2abc48a7160b": {
+            "qid": "Q-558d2abc48a7160b",
+            "question_key": "A2",
+            "group": "A",
+            "number": 2,
+            "question_text_prefix": "2.（2025·福建厦门期中） 如图，正方体 \\(ABCD-A_{1}B_{1}C_{1}D_{1}\\) 的棱长为 2，E，F，G 分别为 \\(BB_{1}\\)",
+            "visual_status": "VISION_VERIFIED"
+          },
+          "Q-3c27b74d5d28db8b": {
+            "qid": "Q-3c27b74d5d28db8b",
+            "question_key": "B3",
+            "group": "B",
+            "number": 3,
+            "question_text_prefix": "3.（2025·广东深圳期末） 长方体 \\(ABCD-A_{1}B_{1}C_{1}D_{1}\\) 中，底面 ABCD 是边长为 2 的正方形，若直线 \\(AB",
+            "visual_status": "READY_TEXT_ONLY"
+          },
+          "Q-600b1406480e8a36": {
+            "qid": "Q-600b1406480e8a36",
+            "question_key": "B4",
+            "group": "B",
+            "number": 4,
+            "question_text_prefix": "### 4. （2025·新疆模拟） 如图，在四棱锥 \\(P-ABCD\\) 中， \\(PD \\perp\\) 平面 \\(ABCD\\)，底面 \\(ABCD\\) 为菱",
+            "visual_status": "VISION_VERIFIED"
+          },
+          "Q-818e72c221bff583": {
+            "qid": "Q-818e72c221bff583",
+            "question_key": "B5",
+            "group": "B",
+            "number": 5,
+            "question_text_prefix": "### 5. （2025·浙江温州期末） 如图，在平行六面体 \\(ABCD-A_{1}B_{1}C_{1}D_{1}\\) 中，AB= \\[AD=AA_{1}=1",
+            "visual_status": "VISION_VERIFIED"
+          },
+          "Q-7b8e6e166002b719": {
+            "qid": "Q-7b8e6e166002b719",
+            "question_key": "B6",
+            "group": "B",
+            "number": 6,
+            "question_text_prefix": "### 6. （2025·天津期末） 如图，在四棱锥 \\(P-ABCD\\) 中，平面 \\(PAD \\perp\\) 平面 \\(ABCD\\)， \\(\\triangl",
+            "visual_status": "VISION_VERIFIED"
+          },
+          "Q-7e9496a7e7fcaf10": {
+            "qid": "Q-7e9496a7e7fcaf10",
+            "question_key": "B7",
+            "group": "B",
+            "number": 7,
+            "question_text_prefix": "### 7. （2024·安徽合肥二模）数·高中数学一本通 如图，在四棱锥 P-ABCD 中，底面 ABCD 是边长为 2 的菱形， \\(\\angle BAD ",
+            "visual_status": "VISION_VERIFIED"
+          },
+          "Q-b70ffbcb8e3980bd": {
+            "qid": "Q-b70ffbcb8e3980bd",
+            "question_key": "B8",
+            "group": "B",
+            "number": 8,
+            "question_text_prefix": "8.（2025 · 重庆模拟） 如图，在三棱柱 \\(ABC-A_{1}B_{1}C_{1}\\) 中，平面 \\(A_{1}B_{1}BA\\) ⊥ 平面 ABC，侧",
+            "visual_status": "VISION_VERIFIED"
+          },
+          "Q-ce7e91d758fdf7b8": {
+            "qid": "Q-ce7e91d758fdf7b8",
+            "question_key": "C9",
+            "group": "C",
+            "number": 9,
+            "question_text_prefix": "### 9. （2024·陕西模拟） 正四棱锥 S-ABCD 中，O 为顶点 S 在底面 ABCD 内的射影，P 为侧棱 SD 的中点，且 \\(SO = OD ",
+            "visual_status": "READY_TEXT_ONLY"
+          },
+          "Q-6ac6a1466782d62f": {
+            "qid": "Q-6ac6a1466782d62f",
+            "question_key": "C10",
+            "group": "C",
+            "number": 10,
+            "question_text_prefix": "### 10. （2024·陕西模拟） 已知边长为4的菱形 \\(ABCD\\)（如图1），\\(\\angle BAD=\\frac{\\pi}{3}\\)，\\(AC\\) ",
+            "visual_status": "VISION_VERIFIED"
+          },
+          "Q-e5a27ac70dddc153": {
+            "qid": "Q-e5a27ac70dddc153",
+            "question_key": "C11",
+            "group": "C",
+            "number": 11,
+            "question_text_prefix": "### 11. (2019 · 北京卷) 如图，在四棱锥 P-ABCD 中， \\(PA \\perp\\) 平面 ABCD， \\(AD \\perp CD\\)， \\(",
+            "visual_status": "VISION_VERIFIED"
+          },
+          "Q-9776fcffc71288a7": {
+            "qid": "Q-9776fcffc71288a7",
+            "question_key": "C12",
+            "group": "C",
+            "number": 12,
+            "question_text_prefix": "### 12. （2024·新疆乌鲁木齐一模） 如图，在四棱锥 P-ABCD 中，底面 ABCD 为正方形， \\(PA \\perp\\) 平面 ABCD，PA =",
+            "visual_status": "VISION_VERIFIED"
+          }
+        },
+        "understanding_summary": {
+          "section": "1.4",
+          "question_count": 12,
+          "expected_groups": {
+            "A": [
+              1,
+              2
+            ],
+            "B": [
+              3,
+              8
+            ],
+            "C": [
+              9,
+              12
+            ]
+          },
+          "must_listen_course_keys": [
+            "coordinate_ops",
+            "direction_normal",
+            "parallel_perpendicular",
+            "coplanar",
+            "line_line_angle",
+            "line_plane_angle",
+            "plane_plane_angle",
+            "distance",
+            "plane_equation_upper",
+            "plane_equation_lower",
+            "moving_point"
+          ],
+          "knowledge_point_ids": [
+            "1.4-k1",
+            "1.4-k2",
+            "1.4-k3"
+          ],
+          "type_training": [
+            "类型Ⅰ 研究平行关系",
+            "类型Ⅱ 研究垂直关系",
+            "类型Ⅲ 求空间角",
+            "类型Ⅳ 求距离",
+            "类型Ⅴ 点线在面内判断"
+          ],
+          "exercise_order": [
+            {
+              "group": "A",
+              "numbers": [
+                1,
+                2
+              ]
+            },
+            {
+              "group": "B",
+              "numbers": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ]
+            },
+            {
+              "group": "C",
+              "numbers": [
+                9,
+                10,
+                11,
+                12
+              ]
+            }
+          ],
+          "mastery_not_assessed": true
+        }
+      },
+      "response_normalization": [
+        "question_echo[Q-a57f6b6532267d79].qid_to_group_key",
+        "question_echo[Q-558d2abc48a7160b].qid_to_group_key",
+        "question_echo[Q-3c27b74d5d28db8b].qid_to_group_key",
+        "question_echo[Q-600b1406480e8a36].qid_to_group_key",
+        "question_echo[Q-818e72c221bff583].qid_to_group_key",
+        "question_echo[Q-7b8e6e166002b719].qid_to_group_key",
+        "question_echo[Q-7e9496a7e7fcaf10].qid_to_group_key",
+        "question_echo[Q-b70ffbcb8e3980bd].qid_to_group_key",
+        "question_echo[Q-ce7e91d758fdf7b8].qid_to_group_key",
+        "question_echo[Q-6ac6a1466782d62f].qid_to_group_key",
+        "question_echo[Q-e5a27ac70dddc153].qid_to_group_key",
+        "question_echo[Q-9776fcffc71288a7].qid_to_group_key",
+        "question_echo:list_to_qid_map"
+      ],
+      "verification": {
+        "status": "passed",
+        "errors": [],
+        "context": {
+          "status": "passed",
+          "errors": [],
+          "route_status": "passed",
+          "route_errors": [],
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\contexts\\1.4.json"
+        },
+        "path": "C:\\开发\\小工具\\一本通学习系统_v7\\scripts\\deepseek\\out\\response_1.4_attempt1.json",
+        "verification_kind": "standalone_understanding_receipt"
+      }
+    },
+    {
+      "section": "micro专题1",
+      "context_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\contexts\\micro专题1.json",
+      "status": "passed",
+      "gate": {
+        "status": "passed",
+        "errors": [],
+        "route_status": "passed",
+        "route_errors": [],
+        "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\contexts\\micro专题1.json"
+      },
+      "dispatch": true,
+      "errors": [],
+      "attempts": [
+        {
+          "attempt": 1,
+          "transport_status": "completed",
+          "raw_path": "C:\\开发\\小工具\\一本通学习系统_v7\\scripts\\deepseek\\out\\raw_micro专题1_attempt1.json",
+          "response_text_present": true,
+          "parse_error": null,
+          "response_path": "C:\\开发\\小工具\\一本通学习系统_v7\\scripts\\deepseek\\out\\response_micro专题1_attempt1.json",
+          "verification_status": "passed",
+          "verification_errors": []
+        }
+      ],
+      "transport": {
+        "id": "chatcmpl-b25f1381e6984957a83f8a30",
+        "object": "chat.completion",
+        "status": "completed",
+        "returned_model": "opencode-go/deepseek-v4-flash",
+        "usage": {
+          "prompt_tokens": 1847,
+          "completion_tokens": 25942,
+          "total_tokens": 27789,
+          "prompt_tokens_details": {
+            "cached_tokens": 384
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 24459
+          }
+        },
+        "raw_path": "C:\\开发\\小工具\\一本通学习系统_v7\\scripts\\deepseek\\out\\raw_micro专题1_attempt1.json",
+        "response_contract": "chat_completions_completed_or_incomplete_recorded",
+        "projection_sha256": "936e2b0aecdfd10cfb6fb749dc848361660212cb1787172191c6b7f6cd49f79f",
+        "request_attempts": 1,
+        "probe_attempt": 1
+      },
+      "response": {
+        "runtime": {
+          "model": "opencode-go/deepseek-v4-flash",
+          "reasoning_effort": "max",
+          "context_window": 1000000
+        },
+        "context_sha256": "598df64bd1837c5722c58be3adf0191bacefc90db63602ac675fee4073742a1b",
+        "canary": "35babe6daa02a890",
+        "probe_tokens": {
+          "Q-5fed3a3ee0428312": "d269e2a8",
+          "Q-0077d6cb187646ba": "6236fcaa",
+          "Q-782a4cef08739bfc": "577e3380"
+        },
+        "question_echo": {
+          "Q-5fed3a3ee0428312": {
+            "qid": "Q-5fed3a3ee0428312",
+            "question_key": "B1",
+            "group": "B",
+            "number": 1,
+            "question_text_prefix": "如图，在棱长为4的正方体 \\(ABCD-A_{1}B_{1}C_{1}D_{1}\\) 中，点 E，F 分别在棱 \\(AA_{1}\\) 和 AB 上，且 \\(C_",
+            "visual_status": "VISION_VERIFIED"
+          },
+          "Q-0077d6cb187646ba": {
+            "qid": "Q-0077d6cb187646ba",
+            "question_key": "B2",
+            "group": "B",
+            "number": 2,
+            "question_text_prefix": "2.（2024·山东模拟）（多选） 如图所示，在菱形 \\(ABCD\\) 中， \\(\\angle BAD = \\frac{\\pi}{3}\\)， \\(E\\)， \\(",
+            "visual_status": "VISION_VERIFIED"
+          },
+          "Q-782a4cef08739bfc": {
+            "qid": "Q-782a4cef08739bfc",
+            "question_key": "B3",
+            "group": "B",
+            "number": 3,
+            "question_text_prefix": "3.（2025·福建泉州期中） 如图，四棱锥 P-ABCD 的底面为正方形，PA⊥平面 ABCD，M 是 PC 的中点，PA=AB. （1）求证： \\(AM \\",
+            "visual_status": "VISION_VERIFIED"
+          },
+          "Q-5a4561f30ce0989a": {
+            "qid": "Q-5a4561f30ce0989a",
+            "question_key": "B4",
+            "group": "B",
+            "number": 4,
+            "question_text_prefix": "4.（2015·浙江卷） 如图，在三棱柱 \\(ABC-A_1B_1C_1\\) 中， \\(\\angle BAC=90^\\circ\\)， \\(AB=AC=2\\)， ",
+            "visual_status": "VISION_VERIFIED"
+          },
+          "Q-4e7e31eea300a394": {
+            "qid": "Q-4e7e31eea300a394",
+            "question_key": "C5",
+            "group": "C",
+            "number": 5,
+            "question_text_prefix": "5.（2024·江苏南通三模）（多选） 在棱长为2的正方体 \\(ABCD-A_{1}B_{1}C_{1}D_{1}\\) 中，点 E 是棱 \\(BB_{1}\\) ",
+            "visual_status": "READY_TEXT_ONLY"
+          },
+          "Q-d0efe310daeea705": {
+            "qid": "Q-d0efe310daeea705",
+            "question_key": "C6",
+            "group": "C",
+            "number": 6,
+            "question_text_prefix": "6.（2025·河北模拟） 如图，在四棱锥 \\(P-ABCD\\) 中， \\(PA \\perp\\) 平面 \\(ABCD\\)， \\(PB\\) 与底面 \\(ABCD\\",
+            "visual_status": "VISION_VERIFIED"
+          },
+          "Q-3e2f37b79a218176": {
+            "qid": "Q-3e2f37b79a218176",
+            "question_key": "C7",
+            "group": "C",
+            "number": 7,
+            "question_text_prefix": "### 7. （2025·陕西模拟）数·高中数学一本通 如图，三棱柱 \\(ABC-A_{1}B_{1}C_{1}\\) 中， \\(\\triangle ABC\\) ",
+            "visual_status": "VISION_VERIFIED"
+          },
+          "Q-59a20f5f7bb4f513": {
+            "qid": "Q-59a20f5f7bb4f513",
+            "question_key": "C8",
+            "group": "C",
+            "number": 8,
+            "question_text_prefix": "8.（2024·浙江模拟） 如图，已知三棱台 \\(ABC-A_1B_1C_1\\) 中， \\(AB=BC=CA=AA_1=BB_1=2\\)， \\(A_1B_1=4",
+            "visual_status": "VISION_VERIFIED"
+          }
+        },
+        "understanding_summary": {
+          "section": "micro专题1",
+          "question_count": 8,
+          "expected_groups": {
+            "B": [
+              1,
+              4
+            ],
+            "C": [
+              5,
+              8
+            ]
+          },
+          "must_listen_course_keys": [
+            "parallel_perpendicular",
+            "coplanar",
+            "line_line_angle",
+            "line_plane_angle",
+            "plane_plane_angle",
+            "plane_equation_upper",
+            "plane_equation_lower",
+            "distance",
+            "moving_point"
+          ],
+          "knowledge_point_ids": [
+            "micro-k1",
+            "micro-k2",
+            "micro-k3"
+          ],
+          "type_training": [
+            "类型Ⅰ 线上动点",
+            "类型Ⅱ 向量线性回避坐标",
+            "类型Ⅲ 立体几何综合题",
+            "类型Ⅳ 动态二面角三角方法"
+          ],
+          "exercise_order": [
+            {
+              "group": "B",
+              "numbers": [
+                1,
+                2,
+                3,
+                4
+              ]
+            },
+            {
+              "group": "C",
+              "numbers": [
+                5,
+                6,
+                7,
+                8
+              ]
+            }
+          ],
+          "mastery_not_assessed": true
+        }
+      },
+      "response_normalization": [
+        "question_echo[Q-5fed3a3ee0428312].qid_to_group_key",
+        "question_echo[Q-0077d6cb187646ba].qid_to_group_key",
+        "question_echo[Q-782a4cef08739bfc].qid_to_group_key",
+        "question_echo[Q-5a4561f30ce0989a].qid_to_group_key",
+        "question_echo[Q-4e7e31eea300a394].qid_to_group_key",
+        "question_echo[Q-d0efe310daeea705].qid_to_group_key",
+        "question_echo[Q-3e2f37b79a218176].qid_to_group_key",
+        "question_echo[Q-59a20f5f7bb4f513].qid_to_group_key",
+        "question_echo:list_to_qid_map"
+      ],
+      "verification": {
+        "status": "passed",
+        "errors": [],
+        "context": {
+          "status": "passed",
+          "errors": [],
+          "route_status": "passed",
+          "route_errors": [],
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\contexts\\micro专题1.json"
+        },
+        "path": "C:\\开发\\小工具\\一本通学习系统_v7\\scripts\\deepseek\\out\\response_micro专题1_attempt1.json",
+        "verification_kind": "standalone_understanding_receipt"
+      }
+    }
+  ],
+  "summary": {
+    "total_sections": 4,
+    "gate_passed": 4,
+    "dispatched": 4,
+    "consumption_passed": 4,
+    "chapter_consumption_ready": true
+  },
+  "gaps": []
+}

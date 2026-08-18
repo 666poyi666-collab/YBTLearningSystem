@@ -1,0 +1,339 @@
+{
+  "schema_version": "1.1",
+  "artifact": "ZERO_BASE_STUDENT_SIMULATION_WORKER",
+  "generation": "G-20260816-09",
+  "section": "1.1",
+  "worker": 5,
+  "worker_status": "BLOCKED",
+  "cycles": "9-10",
+  "tasks": "36-38",
+  "task_count": 3,
+  "answer_sidecar_read": false,
+  "answer_ocr_read": false,
+  "answer_text_in_context": false,
+  "human_acceptance_not_proven": true,
+  "worker_contract": {
+    "role": "deepseek_worker",
+    "model": "opencode-go/deepseek-v4-flash",
+    "reasoning_effort": "max",
+    "context_window": 1000000,
+    "contract_source": [
+      "C:/Users/poyi/.codex/deepseek-mode.json",
+      "C:/Users/poyi/.codex/agents/deepseek-worker.toml",
+      "data/contexts/1.1.json model_contract"
+    ]
+  },
+  "context_sha256": "f7134202319beade76dd7f8dbbbd07b36613661ffa57b56c17267b7976e50dd2",
+  "source_revision": {
+    "generation": "G-20260816-09",
+    "section": "1.1",
+    "packet": "1.1",
+    "packet_status": "VERIFIED",
+    "context_file": "data/contexts/1.1.json"
+  },
+  "item_results": [
+    {
+      "section": "1.1",
+      "cycle": "9",
+      "task": "36",
+      "item_id": "B8",
+      "source_revision": {
+        "generation": "G-20260816-09",
+        "section": "1.1",
+        "packet": "1.1",
+        "packet_status": "VERIFIED",
+        "context_file": "data/contexts/1.1.json"
+      },
+      "context_sha256": "f7134202319beade76dd7f8dbbbd07b36613661ffa57b56c17267b7976e50dd2",
+      "observation_signal": "题面 Q-9d766f3ecd1ae46e（B组第8题，visual_status=READY_TEXT_ONLY，无 math_errors）：已知 P 是棱长为 2 的正方体 ABCD-A1B1C1D1 内（含正方体表面）任意一点，求 PA·PC 的最大值。信号是数量积最值 + 区域型动点；A、C 为固定顶点，PA 与 PC 共享端点 P，取 AC 中点 M 可引极化恒等式把目标量改写为 PM² 减常数。",
+      "course_call": {
+        "method_model_id": "3.1.4.3 向量夹角与直线夹角（必听主课）+ 知识点4 数量积、夹角与投影向量（复习）+ bridge-1.1-polarization 极化恒等式与数量积最值 lesson_steps 与无答案自造变式（先做任意点数量积最值，再把同一动点限制在长方体内，只写『恒等式选择—可行域—等号/边界检查』三栏）",
+        "course_keys": [
+          "line_line_angle"
+        ],
+        "bridge_units": [
+          "bridge-1.1-polarization"
+        ],
+        "bridge_status": "SUPPLEMENT_READY",
+        "release_status": "READY_FOR_INDEPENDENT_ATTEMPT"
+      },
+      "first_line": "设 M 为 AC 的中点（正方体中心），把 PA、PC 换成以 M 为起点的表示：PA=PM+MA，PC=PM+MC=PM-MA（MC=-MA）。目标量 PA·PC 改写为只含 PM 与固定常数 MA 的式子。",
+      "second_line": "展开 PA·PC=(PM+MA)·(PM-MA)=PM·PM-PM·MA+MA·PM-MA·MA=PM²-MA²；依据是数量积分配律与交换律；MA² 是固定常数（棱长 2 时 AC²=8，MA²=AC²/4=2）。",
+      "continuation": "把求 PA·PC 的最大值等价化为求 PM² 的最大值：P 遍历含表面的正方体，属于区域型最值而非全空间型，下一步需按顶点/棱/面/内部逐类回代检查 PM² 的最大值点并验证等号条件落在区域内。",
+      "independent_self_check": "检查符号：PC 换成 PM-MA 的分解方向是否正确（MC=-MA）；MA² 是否为常数；PM² 的可行域是否真的是含表面的正方体而非全空间；等号成立点是否落在区域内；区域型与全空间型最值分开记录，猜中的数值与有过程的通过分开记录。",
+      "first_breakpoint": "区域型最值定义域回代处断住：把『P 在含表面正方体内』翻译成可验证步骤时，零基础学生没有『闭凸多面体上平方距离最大值必在顶点』的理论支撑，只能逐个枚举 8 个顶点距离，且不确定是否还必须检查棱、面与内部点，卡在顶点/棱/面/内部逐类回代清单上；极化桥自造变式三栏中的『可行域—等号/边界检查』栏只能列出检查项，不能独立闭合。",
+      "hint_level": "none",
+      "verdict": "PARTIAL",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": "9",
+      "task": "37",
+      "item_id": "C13",
+      "source_revision": {
+        "generation": "G-20260816-09",
+        "section": "1.1",
+        "packet": "1.1",
+        "packet_status": "VERIFIED",
+        "context_file": "data/contexts/1.1.json"
+      },
+      "context_sha256": "f7134202319beade76dd7f8dbbbd07b36613661ffa57b56c17267b7976e50dd2",
+      "observation_signal": "题面 Q-32207093b5cdcaee（C组第13题，visual_status=READY_TEXT_ONLY，无 math_errors）：a、b、c 是空间中不共面的三个向量，OA=a-2b+c，OB=pa+b+qc，OC=2a+b-2c，若 O、A、B、C 共面，则 3p+5q=___。信号是四点共面判据 + 基底下唯一拆分与系数比较；O 是公共起点，A、B、C 的坐标都在同一不共面基底给出，目标量 3p+5q 应由共面条件唯一确定。",
+      "course_call": {
+        "method_model_id": "3.1.2.1 空间向量拆分法（基底唯一拆分、比较系数）+ 3.1.4.2 证明共面（共面向量定理 OC=λOA+μOB）+ micro-four-point-coplanar 四点共面系数和=1（公共起点情形必须重新推导，不能直接套 x+y+z=1）",
+        "course_keys": [
+          "decomposition",
+          "coplanar"
+        ],
+        "bridge_units": [
+          "micro-four-point-coplanar"
+        ],
+        "bridge_status": "SUPPLEMENT_READY",
+        "release_status": "READY_FOR_INDEPENDENT_ATTEMPT"
+      },
+      "first_line": "以不共面的 a,b,c 为基底写出 OA=(1,-2,1)、OB=(p,1,q)、OC=(2,1,-2)；目标量 3p+5q 应被『O,A,B,C 共面』这一条件唯一确定。",
+      "second_line": "O 是四个共面点之一（公共起点），把共面条件翻译为 OA、OB、OC 三个位置向量线性相关：存在不全为零的 x,y,z 使 xOA+yOB+zOC=0；等价地用共面向量定理写 OC=λOA+μOB（四点共面系数和=1 在公共起点情形重新推导，不把自由点系数和条件直接套到位置向量上）。",
+      "continuation": "选 OC=λOA+μOB，按基底逐坐标比较得到：2=λ+μp、1=-2λ+μ、-2=λ+μq 三个等式；下一步需要消去 λ、μ 得到 p、q 的关系式，再凑出 3p+5q。",
+      "independent_self_check": "检查共面判据用在『公共起点 O』而非自由点 P 上是否成立；系数和=1 的结论是否被错误套用；比较系数是否在同一不共面基底 a,b,c 下进行；A、B、C 是否可能共线（退化情形）未排除。",
+      "first_breakpoint": "消元步断住：三个等式含 λ、μ、p、q 四个未知数，零基础学生不知道应把 μ=1+2λ（由第二式）代回并约去公共因子来凑出 3p+5q，也不掌握行列式 det(OA,OB,OC)=0 直接给出 p,q 线性式的工具，卡在『四个未知数三个方程如何仍能唯一确定 3p+5q』的消元选择上。",
+      "hint_level": "none",
+      "verdict": "PARTIAL",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": "10",
+      "task": "38",
+      "item_id": "C14",
+      "source_revision": {
+        "generation": "G-20260816-09",
+        "section": "1.1",
+        "packet": "1.1",
+        "packet_status": "VERIFIED",
+        "context_file": "data/contexts/1.1.json"
+      },
+      "context_sha256": "f7134202319beade76dd7f8dbbbd07b36613661ffa57b56c17267b7976e50dd2",
+      "observation_signal": "题面 Q-5bf035885c806a48（C组第14题，多选，visual_status=VISION_VERIFIED，无 math_errors）：棱长为 1 的正四面体 P-ABC 中，O 为底面 ABC 的重心，G、F 分别为线段 PO、PC 上的点（不含端点），D、E 分别为 PA、PB 延长线上的点，PD=xPA、PE=yPB、PF=zPC，DF 交 AC 于 M，EF 交 BC 于 N；多选涉及：A. x=y 时 MN∥平面 PAB；B. PO 的重心向量表示；C. z=1/2 且平面 DEF 过 O 时 x+y 的最小值；D. G 为外接球心且 x=y=2、平面 DEF 过 G 时 F 到平面 PDE 的距离。需要仿射求交、重心、四点共面、正数乘积最值、外接球心、点面距离多个桥接方法。",
+      "course_call": {
+        "method_model_id": "阻断于桥接门禁：bridge-1.1-positive-product-sum zero_base_status=NOT_CLOSED（新增无教材数据自造变式素材已具备，但基本不等式检查点、自造变式独立完成与几何定义域回代仍未闭合），整体 bridge_status=NOT_CLOSED、release_status=BLOCKED_BRIDGE，禁止进入独立作答；课程键 decomposition/parallel_perpendicular/coplanar/plane_equation_upper/plane_equation_lower/distance 及循环10视频 3.1.4.6.a/3.1.4.6.b/3.1.4.7 均不足以替代桥接闭合证据",
+        "course_keys": [
+          "decomposition",
+          "parallel_perpendicular",
+          "coplanar",
+          "plane_equation_upper",
+          "plane_equation_lower",
+          "distance"
+        ],
+        "bridge_units": [
+          "micro-four-point-coplanar",
+          "bridge-1.1-affine-intersection-ratio",
+          "bridge-1.1-centroid",
+          "bridge-1.1-positive-product-sum",
+          "bridge-micro-sphere"
+        ],
+        "bridge_status": "NOT_CLOSED",
+        "release_status": "BLOCKED_BRIDGE",
+        "blockers": [
+          "bridge_unit_not_verified"
+        ]
+      },
+      "first_line": "不进入作答：当前题包 release_status=BLOCKED_BRIDGE、blockers=[bridge_unit_not_verified]，学生不能把 C14 当作可独立作答题，先停留在桥接检查层面。",
+      "second_line": "按无答案方法检查自检桥接清单：四点共面（NOT_VERIFIED）、仿射求交（NOT_VERIFIED）、重心（NOT_VERIFIED）、正数乘积（NOT_CLOSED：自造变式四栏中『定义域回代』栏无法用 C14 参数数据闭合）、外接球（NOT_VERIFIED）。",
+      "continuation": "在检查点层面推进正数乘积四栏自造变式与仿射求交无答案变式；C14 原题数据不代入；等桥接全部真实闭合后再独立作答并记录首断点。",
+      "independent_self_check": "确认未读取答案侧车/答案 OCR/历史模拟；确认 NOT_CLOSED 桥不能被自造变式素材升级为已闭合；确认视觉状态 VISION_VERIFIED 与题面完整只证明可读，不构成方法放行依据；mastery 保持 NOT_ASSESSED。",
+      "first_breakpoint": "桥接未闭合：bridge-1.1-positive-product-sum zero_base_status=NOT_CLOSED（新增无教材数据自造变式使方法检查点首断点下移，但几何定义域回代必须回代 C14 参数域：x,y 同号为正、不含端点、延长线范围，而 C14 数据仍被桥接门禁禁止代入，桥不能闭合），C14 bridge_status=NOT_CLOSED、release_status=BLOCKED_BRIDGE；按规则该桥不能升级，C14 停留在桥接前，无法给出任何选项判定。",
+      "hint_level": "none",
+      "verdict": "BLOCKED",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    }
+  ],
+  "method_check_results": [
+    {
+      "section": "1.1",
+      "cycle": "9",
+      "checkpoint_id": "1.1-polarization-check-1",
+      "label": "极化恒等式近迁移",
+      "source_revision": {
+        "generation": "G-20260816-09",
+        "section": "1.1",
+        "packet": "1.1",
+        "packet_status": "VERIFIED",
+        "context_file": "data/contexts/1.1.json"
+      },
+      "context_sha256": "f7134202319beade76dd7f8dbbbd07b36613661ffa57b56c17267b7976e50dd2",
+      "observation_signal": "设 M 是线段 AB 中点，P 为空间任意点；从 PA=PM+MA、PB=PM+MB、MB=-MA 出发独立推出 PA·PB 的表达式，并说明 P 被限制在长方体内时求最值还须检查的几何条件。",
+      "course_call": {
+        "method_model_id": "3.1.4.3 向量夹角与直线夹角（必听主课）+ bridge-1.1-polarization lesson_steps：先展开 |a+b|² 与 |a-b|²，再区分全空间型与区域型最值；自造变式先做任意点数量积最值，再把同一动点限制在长方体内，只写『恒等式选择—可行域—等号/边界检查』三栏"
+      },
+      "first_line": "PA·PB=(PM+MA)·(PM+MB)，且 MB=-MA。",
+      "second_line": "展开 (PM+MA)·(PM-MA)=PM²-PM·MA+MA·PM-MA²=PM²-MA²，依据为数量积分配律与交换律。",
+      "continuation": "得到 PA·PB=PM²-MA²；P 限制在长方体内时 PM² 不能取全空间值，必须检查端点、顶点、边界和内部点，并验证等号条件落在可行域内。",
+      "independent_self_check": "确认恒等式方向选择（只套一套，不同时套两套）；确认 MA² 固定；确认『区域型最值』与『全空间型』分开记录，猜中数值与有过程通过分开记录。",
+      "first_breakpoint": "说明『还必须检查什么几何条件』时断住：需逐类检查长方体 8 个顶点、12 条棱、6 个面与内部，零基础缺少闭凸集区域型最值的系统论证，只能枚举回代，不能独立证明最大值点集合；三栏自造变式只完成『恒等式选择』栏，后两栏只能列检查项。",
+      "hint_level": "none",
+      "verdict": "PARTIAL",
+      "bridge_closure_unchanged": null,
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": "9",
+      "checkpoint_id": "1.1-four-point-check-1",
+      "label": "四点共面自造变式",
+      "source_revision": {
+        "generation": "G-20260816-09",
+        "section": "1.1",
+        "packet": "1.1",
+        "packet_status": "VERIFIED",
+        "context_file": "data/contexts/1.1.json"
+      },
+      "context_sha256": "f7134202319beade76dd7f8dbbbd07b36613661ffa57b56c17267b7976e50dd2",
+      "observation_signal": "O、A、B、C 不共面，自取一组系数和为 1 的数定义 OP=xOA+yOB+zOC，说明 P 为何在平面 ABC 内；再只改一个系数构造不在该平面内的点，口述系数和判据来源。",
+      "course_call": {
+        "method_model_id": "micro-four-point-coplanar lesson_steps：固定公共起点 O，写 AP=uAB+vAC 换回公共起点得 x+y+z=1；逆向由系数和=1 得 P 在平面内；换公共起点必须重新推导"
+      },
+      "first_line": "取 x+y+z=1，令 OP=xOA+yOB+zOC。",
+      "second_line": "AP=OP-OA=(x-1)OA+yOB+zOC；由 x+y+z=1 得 x-1=-(y+z)，故 AP=y(OB-OA)+z(OC-OA)=yAB+zAC。",
+      "continuation": "P 可由 A 沿平面内两个不共线方向 AB、AC 到达，所以 P 在平面 ABC 内；只改一个系数使 x+y+z≠1 构造反例，并口述系数和判据的来源。",
+      "independent_self_check": "检查 A、B、C 不共线前提；检查换公共起点时系数是否重新推导；区分点的位置向量系数与自由向量系数；回代几何位置排除把向量共面误写成点共面。",
+      "first_breakpoint": "口述『系数和判据的来源』并论证『系数和≠1 时 P 一定不在平面 ABC 内』时断住：需要完整基底唯一性论证（AP 无法只用 yAB+zAC 表示的原因），零基础只能复述正向推导，不能独立给出逆向唯一性证明。",
+      "hint_level": "none",
+      "verdict": "PARTIAL",
+      "bridge_closure_unchanged": null,
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": "10",
+      "checkpoint_id": "bridge-1.1-centroid",
+      "label": "三角形重心的向量表示（自造变式：换公共起点/换中线重推）",
+      "source_revision": {
+        "generation": "G-20260816-09",
+        "section": "1.1",
+        "packet": "1.1",
+        "packet_status": "VERIFIED",
+        "context_file": "data/contexts/1.1.json"
+      },
+      "context_sha256": "f7134202319beade76dd7f8dbbbd07b36613661ffa57b56c17267b7976e50dd2",
+      "observation_signal": "自造变式：更换公共起点并改取另一条中线，重新推出重心向量，不直接引用公式；检查标准要求能解释三个系数为何相同、能在任意公共起点下使用。",
+      "course_call": {
+        "method_model_id": "bridge-1.1-centroid lesson_steps：取 BC 中点 M 写 OM=(OB+OC)/2；重心 G 在中线 AM 上且 AG:GM=2:1，写 OG=OA+(2/3)AM；代入 AM=OM-OA 整理；交换 A、B、C 再推一次"
+      },
+      "first_line": "取 BC 中点 M：OM=(OB+OC)/2。",
+      "second_line": "重心 G 在中线 AM 上且 AG:GM=2:1：OG=OA+(2/3)AM，AM=OM-OA。",
+      "continuation": "OG=OA+(2/3)((OB+OC)/2-OA)=(OA+OB+OC)/3；换公共起点并改取另一条中线后结论形式不变，交换 A、B、C 验证三顶点等权。",
+      "independent_self_check": "检查 2:1 分割方向（AG:GM=2:1 对应系数 2/3）；检查换公共起点后三个系数是否仍相同；交换 A、B、C 验证三顶点等权；区分中点向量与定比分点参数。",
+      "first_breakpoint": "说明『三个系数相同且与公共起点无关』的几何依据时断住：零基础能完成代数代入，但不能独立论证中点→2:1 分割→三顶点等权地位的几何解释，交换顶点重推时只能照抄步骤。",
+      "hint_level": "none",
+      "verdict": "PARTIAL",
+      "bridge_closure_unchanged": null,
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": "10",
+      "checkpoint_id": "1.1-affine-intersection-check-1",
+      "label": "双参数求交与同比分点截线（方法链，不代入 C14 数据）",
+      "source_revision": {
+        "generation": "G-20260816-09",
+        "section": "1.1",
+        "packet": "1.1",
+        "packet_status": "VERIFIED",
+        "context_file": "data/contexts/1.1.json"
+      },
+      "context_sha256": "f7134202319beade76dd7f8dbbbd07b36613661ffa57b56c17267b7976e50dd2",
+      "observation_signal": "四面体 OUVW 中 X、Y、Z 在从 O 出发的三条射线上；M 是 XZ 与 UW 交点，N 是 YZ 与 VW 交点；要求两套参数表示、比较系数求分点参数，并列出 MN∥UV 的条件与退化检查（换字母近迁移，不代入 C14 数据）。",
+      "course_call": {
+        "method_model_id": "bridge-1.1-affine-intersection-ratio lesson_steps：同一交点分别按两条所在直线参数化；展开到同一不共面基底逐项比较系数并检查分母与定义域；两边分点参数相等时截线平行于第三边；线线平行转线面平行前补查第三边在目标平面内且截线不在该平面内"
+      },
+      "first_line": "M 是 XZ 与 UW 的交点：M=X+s(Z-X)=U+t(W-U)，参数 s、t 分开记录。",
+      "second_line": "把两式展开到 OUVW 基底，逐项比较 OU、OV、OW 系数，得到关于 s、t 的方程并解出分点参数（检查分母与定义域）。",
+      "continuation": "对 N 同样写 YZ 与 VW 的双参数表示；两边分点参数相等推出 MN∥UV；由线线平行转线面平行前补查第三边在目标平面内且截线不在该平面内。",
+      "independent_self_check": "检查同一起点方向约定；检查分母为零与交点在延长线（参数越界）的退化情形；区分线线平行与线面平行的判定条件；保持两交点相同的起终点方向。",
+      "first_breakpoint": "检查清单闭合处断住：分母为零、交点在延长线、以及『MN∥UV 转成 MN∥平面 PAB』前必须补查的条件只能列出检查项，零基础没有数据回代验证（C14 数据被桥接门禁禁止代入），无法确认该方法链在本题可用。",
+      "hint_level": "none",
+      "verdict": "PARTIAL",
+      "bridge_closure_unchanged": null,
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": "10",
+      "checkpoint_id": "1.1-inequality-check-1",
+      "label": "正数乘积约束下的和最值回顾（新增无教材数据自造变式四栏）",
+      "source_revision": {
+        "generation": "G-20260816-09",
+        "section": "1.1",
+        "packet": "1.1",
+        "packet_status": "VERIFIED",
+        "context_file": "data/contexts/1.1.json"
+      },
+      "context_sha256": "f7134202319beade76dd7f8dbbbd07b36613661ffa57b56c17267b7976e50dd2",
+      "observation_signal": "本代新增桥接自造变式：设 x、y 为正数且 xy=k（k 为正常数），只写『使用条件—平方非负—等号条件—定义域回代』四栏方法，不填入任何教材数据或结论；检查标准为能先写使用条件、能推出下界而非只背结论、能回代等号条件。",
+      "course_call": {
+        "method_model_id": "bridge-1.1-positive-product-sum lesson_steps 与新增 self_made_variant：第一栏确认 x>0、y>0、xy=k>0；第二栏由 (x-y)²≥0 推出 (x+y)²≥4xy=4k 得 x+y≥2√k；第三栏写等号条件 x=y=√k；第四栏回代几何定义域"
+      },
+      "first_line": "第一栏（使用条件）：x>0、y>0、xy=k>0（k 为正常数），两变量均为正且乘积为正常数，才可用平方非负推下界。",
+      "second_line": "第二栏（平方非负）：由 (x-y)²≥0 得 x²+y²≥2xy，故 (x+y)²=x²+2xy+y²≥4xy=4k，正数下取正根得 x+y≥2√k，乘积常数 k 已代回。",
+      "continuation": "第三栏（等号条件）：等号当且仅当 x=y=√k；第四栏（定义域回代）：列出必须检查的项目——等号点 x=y=√k 是否落在几何定义域内、定义域是否不含端点、乘积约束是否由某个向量共面方程导出且两参数同号为正；本变式不填入教材数据，只能给出检查清单。",
+      "independent_self_check": "检查正数条件与乘积为正是否成立；检查等号条件是否在几何定义域内；区分『背结论』与『由平方非负推出下界』；确认四栏均不填入教材数据或结论。",
+      "first_breakpoint": "第四栏断住：『定义域回代』必须用 C14 的具体参数数据确认 x,y>0、不含端点、延长线范围以及等号点是否可达，而 C14 仍被 NOT_CLOSED 桥阻断禁止代入；本代自造变式使前三栏（使用条件/平方非负/等号条件）可独立完成，首断点已从上一代的『无法组织一般形式』下移至『第四栏无法用 C14 参数数据闭合』，但 bridge-1.1-positive-product-sum 的几何定义域回代仍未闭合，桥保持 NOT_CLOSED，不升级。",
+      "hint_level": "none",
+      "verdict": "PARTIAL",
+      "bridge_closure_unchanged": "bridge-1.1-positive-product-sum zero_base_status=NOT_CLOSED（新增无教材数据自造变式使检查点首断点下移，但桥未闭合，不升级）",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": "10",
+      "checkpoint_id": "1.1-sphere-check-1",
+      "label": "外接球心等距回代",
+      "source_revision": {
+        "generation": "G-20260816-09",
+        "section": "1.1",
+        "packet": "1.1",
+        "packet_status": "VERIFIED",
+        "context_file": "data/contexts/1.1.json"
+      },
+      "context_sha256": "f7134202319beade76dd7f8dbbbd07b36613661ffa57b56c17267b7976e50dd2",
+      "observation_signal": "在坐标系中自取长方体四个不共面顶点，设球心坐标未知；用三组等距平方差消去半径求球心候选，并回代至少三个顶点验证等距；不得用对称性直接跳结论（对称体自造变式：选约束—消元—回代）。",
+      "course_call": {
+        "method_model_id": "bridge-micro-sphere lesson_steps：先由对称性确定部分分量；对三个以上不共线顶点写等距平方关系消去半径；解出候选后回代全部关键顶点，最后才讨论半径或距离"
+      },
+      "first_line": "自取长方体四个不共面顶点 A、B、C、D，设球心 G=(u,v,w)，半径 r 未知。",
+      "second_line": "写等距平方差 |G-A|²=|G-B|²、|G-B|²=|G-C|²：展开后 r² 消去，得到 u、v、w 的线性方程（每个等式对应一个垂直平分面）。",
+      "continuation": "解线性组得球心候选，再回代第四个（及更多）顶点验证等距；最后才讨论半径或距离，并说明球心唯一性或对称性依据。",
+      "independent_self_check": "检查约束是否独立（避免重复方程）；检查退化（顶点共面、分母为零、线性组无解/多解）；回代至少三个顶点并说明球心唯一性或对称性；不用对称性直接跳结论。",
+      "first_breakpoint": "解出候选后断住：零基础能列方程并解线性组，但不能独立论证球心唯一性/退化分支（四个顶点共面时无外接球、方程重复时缺约束），回代不一致时的处理只能按检查清单机械执行。",
+      "hint_level": "none",
+      "verdict": "PARTIAL",
+      "bridge_closure_unchanged": null,
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    }
+  ],
+  "first_breakpoints": [
+    "B8: 区域型最值定义域回代——无法独立论证 PM² 最大值只需检查顶点，枚举 8 顶点后仍不确定是否需检查棱/面/内部点",
+    "C13: 共面条件消元——λ、μ、p、q 四未知数三方程，不知道如何消元凑出 3p+5q（行列式或代回约分）",
+    "C14: bridge_unit_not_verified——bridge-1.1-positive-product-sum zero_base_status=NOT_CLOSED（新增自造变式素材已具备但定义域回代未闭合），C14 bridge_status=NOT_CLOSED，禁止升级桥、禁止进入独立作答"
+  ],
+  "notes": {
+    "input_boundary": "只消费 data/contexts/1.1.json（student context，status=VERIFIED，无 answer_text）、learning_packet 循环 9-10（B8/C13/C14）、learning_path_without_questions.md 循环 9-10、data/bridge_micro_lessons.json（含本代新增 self_made_variant）、data/zero_base_simulation_standard.md 与 merge 合约脚本；未读取 answer_sidecar.json、答案 OCR、教师判卷、历史模拟报告；未输出任何选项/数值答案。",
+    "context_canary": "evidence.canary=9aa133e8105f3e95 已回显；探针 sha256(canary+qid) 前 8 位：Q-84442c12da683ad3=bb957c78、Q-1727695600a57e80=8af98ec5、Q-7370f2df587a419e=474ad3ed，与 evidence.probe_tokens 一致；探针题（A1-A3）不在本 worker 题项范围，只回显 token 不复述题面正文。",
+    "context_hash": "merge 合约取 evidence.context_sha256=f7134202319beade76dd7f8dbbbd07b36613661ffa57b56c17267b7976e50dd2（已写入各 source_revision/context_sha256）；原始文件字节 SHA-256=2b2145f52f0c99fc1bf69e72764ff67e20e79c5ca485295a1c27ab0b03abd84b 与声明值不一致，疑似哈希计算后文件被重新序列化，提请主控复核代次是否 STALE（g08 亦存在同类差异）。",
+    "new_variant_assessment": "bridge-1.1-positive-product-sum 本代新增 self_made_variant（设 x、y 为正数且 xy=k，只写『使用条件—平方非负—等号条件—定义域回代』四栏，不填入教材数据）：验证结论为——自造变式使方法检查点 1.1-inequality-check-1 的首断点从『无法组织一般形式』下移至『第四栏定义域回代无法用 C14 参数数据闭合』，即检查点首断点降低；但桥 zero_base_status 仍为 NOT_CLOSED（bridge_micro_lessons.json 与路线文本均标注『零基础放行未闭合』），C14 的首断点仍为桥接门禁 bridge_unit_not_verified，C14 verdict=BLOCKED、不升级。",
+    "c14_bridge_rule": "四点共面/仿射求交/重心/外接球方法检查点均保持 PARTIAL（NOT_VERIFIED）；正数乘积桥未闭合（NOT_CLOSED）；C14 release_status=BLOCKED_BRIDGE、blockers=[bridge_unit_not_verified]、mastery_status=NOT_ASSESSED；只有在所有桥接真实闭合后才能升级 C14，任何单桥素材（含本代新增自造变式）不构成放行证据。",
+    "cycle_action_order": "循环9（无新增视频）：复习 3.1.2.1/3.1.4.2/3.1.4.3 → 方法检查（极化恒等式近迁移、四点共面自造变式）→ 任务36 B8、任务37 C13 独立作答 → 验收；循环10：新增视频 3.1.4.6.a/3.1.4.6.b/3.1.4.7 → 复习前置课程 → 方法检查（双参数求交与同比分点截线、正数乘积约束下的和最值回顾、外接球心等距回代）→ 任务38 C14（被桥接门禁阻断）→ 验收。",
+    "evidence_level": "全部为 SAME_SESSION_WORKFLOW 模拟，最多 PARTIAL；UNSEEN_TRANSFER/COLD_RETEST/真人观察均 not_run；human_acceptance_not_proven=true。",
+    "worker_contract_check": "data/contexts/1.1.json model_contract={model: opencode-go/deepseek-v4-flash, reasoning_effort: max, context_window: 1000000}，与本 worker 运行契约一致；deepseek-mode.json active=true 且 default_count=3，但本 worker 任务明确不调用子代理，作为单 worker 执行。"
+  }
+}

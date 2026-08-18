@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "section": "1.1",
+  "round": 3,
+  "worker": 1,
+  "assigned_cycles": [
+    "1.1-cycle-1",
+    "1.1-cycle-2"
+  ],
+  "focus": "空间向量概念、线性运算、共线共面与拆分",
+  "runtime_contract": {
+    "role": "deepseek_worker",
+    "model": "opencode-go/deepseek-v4-flash",
+    "reasoning_effort": "max",
+    "context_window": 1000000,
+    "contract_met": true
+  },
+  "sources_read": [
+    "data/packets/1.1/learning_path_without_questions.md",
+    "data/packets/1.1/learning_packet.json",
+    "data/contexts/1.1.json",
+    "data/course_transcripts/3.1.1.1 空间向量的运算.json",
+    "data/course_transcripts/3.1.2.1 空间向量拆分法.json"
+  ],
+  "forbidden_sources_read": false,
+  "answer_sidecar_read": false,
+  "human_acceptance_not_proven": true,
+  "cycle_results": [
+    {
+      "cycle": "1.1-cycle-1",
+      "title": "空间向量概念与线性运算",
+      "verdict": "proxy_pass",
+      "first_breakpoint": null,
+      "evidence": [
+        "Teaching items 例1/例2/例3/例9/例10 all present in learning_packet.json with complete teaching_text+solution (solution_present=true); knowledge blocks 1.1-k1/1.1-k2 are full answer-free lessons (definitions, special vectors, triangle/parallelogram laws, scalar multiplication, laws of linear ops).",
+        "Course 3.1.1.1 transcript present (SHA f5636082dc0cf8a16188af3bb4f1ab8fd79570ebf8b01c95db01ce77556705e0, 2029s, provenance byte-identical to Downloads/课程合集) teaches triangle/parallelogram rules, subtraction, carry-over of plane-vector rules to space; no hidden prerequisite.",
+        "Independent A1 (Q-84442c12da683ad3, VISION_VERIFIED, sidecar consistent): AN = -a + (1/2)b + (1/2)c -> C, solved from stem alone (N midpoint of BC).",
+        "Independent A2 (Q-1727695600a57e80, READY_TEXT_ONLY): (1) -a-10b-3c; (2) CD. Pure algebra per k2.",
+        "Independent A3 (Q-7370f2df587a419e, VISION_VERIFIED): (1) DB; (2) A1C; (3) GA1 (1/2(GD+GB)=GO, GO+OA1=GA1). Stem fully specifies G (midpoint of CC1) and O (AC∩BD), so no figure needed.",
+        "Zero direct variants in this cycle; ABC entries carry no solution/answer fields (key inspection: no solution/answer/解析/答案); no answer exposure.",
+        "Context route_support: A1/A2/A3 unlock COURSE_DIRECT, bridge_status NOT_REQUIRED, blockers []."
+      ],
+      "method_models": [
+        {
+          "name": "相等/相反向量判定",
+          "trigger": "在长方体/平行六面体中找出与给定向量相等或相反的向量",
+          "steps": [
+            "平移比较方向与模长（相等向量：方向相同、模相等，起点可不同）",
+            "利用平行且相等的棱/对边枚举候选",
+            "相反向量：反向且等模，AB 的相反向量为 BA"
+          ],
+          "checks": [
+            "方向与模双条件缺一不可",
+            "零向量特殊情形（与任意向量共线、方向任意）"
+          ]
+        },
+        {
+          "name": "空间向量线性运算化简",
+          "trigger": "化简含加、减、数乘的向量表达式或选择题求等值向量",
+          "steps": [
+            "首尾相接连链：封闭图形和为 0",
+            "共起点用平行四边形法则；a-b 为 b 终点指向 a 终点",
+            "先提公因子再合并同类向量",
+            "用平行关系平移向量成可相加形态"
+          ],
+          "checks": [
+            "结果仍是向量而非标量",
+            "负号与方向一致（AB-DB=AB+BD）",
+            "系数合并可逐项验算"
+          ]
+        },
+        {
+          "name": "中点向量表示与基底拆分",
+          "trigger": "出现中点/定比分点，需把目标向量写成基向量的线性组合",
+          "steps": [
+            "统一公共起点",
+            "中点公式 ON=(OB+OC)/2、AE=(AB+AC)/2",
+            "沿图形路径逐段拆分（D→A→F 等）并回代中点公式",
+            "按基向量合并系数"
+          ],
+          "checks": [
+            "系数可核对（如 1/8,1/8,-1）",
+            "最终向量与题设几何位置一致"
+          ]
+        }
+      ],
+      "unresolved_gaps": [
+        "例1/例2/例3/例10 carry NEEDS_VISION_SIDECAR with 0 vision sidecars in the packet (route md: 未完成视觉核验,禁止猜图). Non-blocking for the teaching phase since solutions are fully textual, but 例10's 在图中标出 sub-step is not textually verifiable and example figures remain unverified.",
+        "A3 vision sidecar coordinates list G=(1,1,1)=C1, contradicting the stem 'G 为 CC1 中点' (E2 confidence). Stem is self-contained and the answer (GA1) is unaffected, but the contradictory sidecar could mislead a student who trusts it over the stem."
+      ]
+    },
+    {
+      "cycle": "1.1-cycle-2",
+      "title": "共线概念与向量拆分",
+      "verdict": "blocked",
+      "first_breakpoint": "任务 12 变式1(11) (item_id ce0335a21c798927): stem as packaged is internally inconsistent - E,F,B are NOT collinear under the OCR'd condition A1F=(2/3)FC, and no vision sidecar exists to resolve the figure",
+      "evidence": [
+        "Teaching items 例4/例5/例11 complete (READY_TEXT_ONLY, solution_present=true); knowledge block 1.1-k3 is a full answer-free lesson (direction vectors, 共线定理, 共面向量定理, 系数和推论 x+y=1 / x+y+z=1).",
+        "Course 3.1.2.1 transcript present (SHA 08db2676d2f5ff7bb78aa2ac57126bc840de2b0524d7e24c9de09b8b20904dc7, 1973s) teaches basis decomposition, 共线系数和=1, midpoint splitting (PE=1/2PD), coplanarity - sufficient for 例4/5/11, 变式2, B10.",
+        "变式1(11) independent work (cube, A1E=2ED1, A1F=(2/3)FC): with F on space diagonal A1C, F=(2/5)(A1B1+A1D1+A1A) and EF=(2/5)A1B1-(4/15)A1D1+(2/5)A1A while EB=A1B1-(2/3)A1D1; EF has an A1A component so EF is NOT parallel to EB - part (2) 证明E,F,B三点共线 is false as packaged. Collinearity holds only if F lies on A1C1 (top-face diagonal), i.e. the ratio letter should be FC1 not FC.",
+        "变式1 vision_sidecars count=0; route md marks it 未完成视觉核验禁止猜图先补视觉侧车再作答; context instructions state question_text/page text/vision sidecar are the ONLY inputs and forbid assuming the original image - the student cannot resolve the ambiguity and must stop at 任务 12.",
+        "变式2(11) (5f42fe5671670a92) is algebraically complete without the figure: EG=EH+mEF=k*AD+m*k*AB=k(AD+mAB)=k*AC, so AC∥EG. Unreachable in sequence until 变式1 is resolved.",
+        "B10 (Q-c71c166fd308bd39, VISION_VERIFIED, visual_ready=true, blockers []): solvable from stem alone - E,F,I,H midpoints of AB,AC,CD,BD and G midpoint of EI give G=(1/4)(b+c+d)=midpoint of FH, so G,F,H are collinear (G is the midpoint of FH).",
+        "No bridge required for this cycle (bridge_unit_ids empty; B10 bridge_status NOT_REQUIRED); SOURCE_METHOD_READY bridges (四点共面系数和=1, 极化恒等式) serve C13/C14/B8 in later cycles only, not cycles 1-2."
+      ],
+      "method_models": [
+        {
+          "name": "共线判定（向量共线定理 + 系数和）",
+          "trigger": "证三点共线或两向量平行（例11、变式1(2)、变式2、B10）",
+          "steps": [
+            "选公共起点，把相关向量写成同一组基的线性组合",
+            "找实数 λ 使 v1=λv2，或 OP=xOA+yOB 且 x+y=1",
+            "零向量例外单独处理（例4 A 项：b=0 时共线传递性失效）"
+          ],
+          "checks": [
+            "λ 存在且唯一",
+            "三点共线须回到几何位置（系数和=1），不能只证向量平行"
+          ]
+        },
+        {
+          "name": "共面判定（共面向量定理 + 系数和）",
+          "trigger": "证三向量共面或四点共面（例5，后续 C13/C14）",
+          "steps": [
+            "确认基 a,b,c 不共面",
+            "把第三个向量写成另两个向量的线性组合 p=xa+yb",
+            "四点情形：OP=xOA+yOB+zOC 且 x+y+z=1"
+          ],
+          "checks": [
+            "二维（共线）与三维（共面）系数条件区分",
+            "回代几何位置，排除向量共面误写成点共面"
+          ]
+        },
+        {
+          "name": "向量拆分（基底表示）",
+          "trigger": "把未知向量表示为已知基向量组合（变式1(1)、B10）",
+          "steps": [
+            "确定基底与公共起点",
+            "按图形路径逐段拆分并利用中点/定比分点公式",
+            "合并系数并核对每个基向量的系数"
+          ],
+          "checks": [
+            "定比分点比例换算正确（A1F=(2/3)FC -> 系数 2/5 而非 2/3）",
+            "拆分结果与题设条件自洽"
+          ]
+        }
+      ],
+      "unresolved_gaps": [
+        "变式1(11) material defect: OCR stem A1F=(2/3)FC contradicts the required conclusion E,F,B共线; the figure would disambiguate (likely FC1) but the packet has no vision sidecar (count=0) and the route forbids guessing - blocking until a corrected stem or sidecar is supplied.",
+        "变式1/变式2 both remain NEEDS_VISION_SIDECAR with 0 sidecars; route visual gate unmet even though both stems are textually near-complete (变式2 fully, 变式1 pending the FC/FC1 fix).",
+        "B10 vision sidecar is inconsistent with the stem: sidecar says F on AD and G=EF∩BD; stem says F is midpoint of AC and G is midpoint of EI (E2 confidence). Stem is self-contained so the answer (G,F,H collinear, G midpoint of FH) is unaffected, but the sidecar should not be trusted as-is."
+      ]
+    }
+  ],
+  "overall_verdict": "partial",
+  "summary": "Round 3, worker 1 (cycles 1-2). Cycle 1 (概念与线性运算) proxy_pass: all 8 tasks (例1/2/3/9/10 + A1/A2/A3) independently completable from the packet's knowledge blocks and worked examples; A1=C, A2=(-a-10b-3c; CD), A3=(DB; A1C; GA1); no hidden prerequisites, no answer exposure. Cycle 2 (共线概念与向量拆分) blocked at 任务 12 变式1(11): the packaged stem A1F=(2/3)FC makes E,F,B non-collinear, contradicting the question's own demand, and no vision sidecar exists to resolve the figure (route forbids guessing); 例4/5/11 and B10 are otherwise consumable (B10 solved independently: G is midpoint of FH). Secondary: cycle-1 example figures lack sidecars (teaching-phase only), and two E2 sidecars (A3 G-coordinate, B10 figure) contradict their stems. No SOURCE_METHOD_READY bridge affects cycles 1-2. human_acceptance_not_proven=true."
+}

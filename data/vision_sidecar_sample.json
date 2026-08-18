@@ -1,0 +1,33 @@
+{
+  "schema_version": "7.1",
+  "status": "partial",
+  "provider": "GLM-4.6V-Flash",
+  "source": "deepseek-eyes describe.py",
+  "results": [
+    {
+      "status": "passed",
+      "section": "1.1",
+      "image": "C:\\开发\\小工具\\一本通DeepSeek迭代\\worker-01-content\\ocr\\imgs\\img_in_image_box_523_429_694_610.jpg",
+      "question_hint": "1.1-A1",
+      "confidence": "E2",
+      "structured": {"points": ["O", "A", "B", "C", "N"], "relations": {"collinear": [["B", "N", "C"]], "intersection": [["OA", "AB"], ["OB", "BC"], ["OC", "AC"]]}, "text": "三棱锥 O-ABC，N 在 BC 上，连接 AN、ON。", "uncertainties": []}
+    },
+    {
+      "status": "passed",
+      "section": "1.4",
+      "image": "C:\\开发\\小工具\\一本通DeepSeek迭代\\worker-01-content\\ocr\\imgs\\img_in_image_box_894_850_1093_1040.jpg",
+      "question_hint": "1.4-A2",
+      "confidence": "E1",
+      "structured": {"points": ["A", "B", "C", "A1", "B1", "C1", "D", "E", "F", "G"], "relations": {"parallel": [["AA1", "BB1"], ["AB", "A1B1"]]}, "text": "正方体图，E/F/G 为图中标出的点。", "uncertainties": ["视觉模型对部分虚线和垂直关系不确定，必须回看页图。"]}
+    },
+    {
+      "status": "rate_limited",
+      "section": "1.4",
+      "image": "C:\\开发\\小工具\\一本通DeepSeek迭代\\worker-01-content\\ocr\\imgs\\img_in_image_box_876_1100_1093_1291.jpg",
+      "question_hint": "待核验",
+      "confidence": "E0",
+      "error": "HTTP 429 code 1305，模型当前访问量过大；未将该图标记为已理解。"
+    }
+  ],
+  "consumer_guard": "仅 passed 且 confidence=E2/E1 的侧车可作为辅助；rate_limited/E0 必须阻止完整题面放行。"
+}

@@ -1,0 +1,67 @@
+{
+  "schema_version": "ybt-ocr-vision-crosscheck-v1",
+  "mode": "paddle_glm_crosscheck",
+  "source_binding": {
+    "assignment_sha256": "6f7abf010749227f718026e2231b69e742c68505563caa2973ca9ac151daffdc",
+    "vision_sidecar_sha256": "ee371622be9032f834480bc8dab3e37e7119f2236081459cf7897065ae1f03fc"
+  },
+  "luna_capability": {
+    "status": "blocked",
+    "blocker": "image content omitted because current luna_worker host does not support image input"
+  },
+  "generated_at": "2026-08-17T10:30:02.242159+00:00",
+  "records": [
+    {
+      "section": "2.3",
+      "item_keys": [
+        "LI:ceb2438651fc30e2"
+      ],
+      "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\imgs\\img_in_image_box_881_1016_1093_1231.jpg",
+      "image_sha256": "9f060fdbb6c15360043bc80731ad21db63a376932a0674dfed0b81e2bf168de7",
+      "paddle": {
+        "status": "passed",
+        "artifact": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_34.md",
+        "artifact_sha256": "efb4dfe9e9ed1be5ef1cef90f8817b49a8f1d344db4623ef3c65f99e195aa178",
+        "text": [],
+        "coordinates": []
+      },
+      "luna": {
+        "status": "blocked",
+        "blocker": "image content omitted because current luna_worker host does not support image input"
+      },
+      "visual": {
+        "status": "passed",
+        "provider": "GLM-4.6V-Flash via deepseek-eyes",
+        "model": "glm-4.6v-flash",
+        "objects": [
+          "坐标轴Ox,Oy",
+          "抛物线",
+          "直线",
+          "点Q",
+          "点P",
+          "垂线段d"
+        ],
+        "relations": [
+          "点Q在抛物线上",
+          "点P在直线上",
+          "垂线段d连接Q和P",
+          "d垂直于直线"
+        ],
+        "coordinates": [
+          "O(0,0)"
+        ],
+        "ranges": [],
+        "text": [
+          "y",
+          "x",
+          "O"
+        ],
+        "uncertainties": []
+      },
+      "conflicts": [],
+      "adjudication": [],
+      "status": "passed"
+    }
+  ],
+  "status": "passed"
+}

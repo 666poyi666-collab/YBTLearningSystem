@@ -1,0 +1,31 @@
+{
+  "agent_id": "opencode-go/deepseek-v4-flash",
+  "section": "1.4",
+  "phase": "unseen_near_transfer",
+  "clean_unseen": true,
+  "question": "棱长为2的正方体 ABCD-A1B1C1D1 中，取 A(0,0,0)、B(2,0,0)、D(0,2,0)、A1(0,0,2)。求直线 B1D 与平面 ABCD 所成角的正弦值。",
+  "forbidden_sources": [
+    "reports/*（未读取任何报告）",
+    "answer_sidecar.json（未读取）",
+    "答案册 PDF（未读取）",
+    "原题搜索（未执行任何 web/本地搜索）"
+  ],
+  "learned_method_applied": "线面角公式（本会话例8/例16 已学）：sinθ = |v·n|/(|v|·|n|)，其中 v 为直线方向向量，n 为平面法向量",
+  "reasoning": [
+    "由正方体棱长2补全坐标：C(2,2,0)、B1(2,0,2)、D1(0,2,2)；平面 ABCD 即 z=0 平面，其法向量 n=(0,0,1)",
+    "直线 B1D 的方向向量：v = D - B1 = (0-2, 2-0, 0-2) = (-2, 2, -2)",
+    "计算 |v·n| = |(-2)·0 + 2·0 + (-2)·1| = 2",
+    "计算 |v| = sqrt((-2)^2 + 2^2 + (-2)^2) = sqrt(12) = 2√3，|n| = 1",
+    "sinθ = |v·n|/(|v|·|n|) = 2/(2√3) = 1/√3 = √3/3"
+  ],
+  "answer": {
+    "sin_value": "√3/3",
+    "decimal": 0.5773502691896258,
+    "theta": "arcsin(√3/3) ≈ 35.26°",
+    "latex_escaped": "\\sin\\theta=\\frac{|\\mathbf{v}\\cdot\\mathbf{n}|}{|\\mathbf{v}|\\cdot|\\mathbf{n}|}=\\frac{2}{2\\sqrt{3}}=\\frac{\\sqrt{3}}{3}"
+  },
+  "status": "pass",
+  "same_session_note": "独立推导，未回看例题解法、未读取答案侧；方法为本会话已学线面角公式，属近迁移",
+  "cold_retest_24h": "not_run"
+}
+

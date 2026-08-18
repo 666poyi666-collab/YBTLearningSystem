@@ -1,0 +1,243 @@
+{
+  "report_type": "zero_base_cycle_proxy_report",
+  "schema_version": "2.0",
+  "iteration": 3,
+  "worker_id": "Z2",
+  "cycle_scope": ["1.1-cycle-4", "1.1-cycle-5"],
+  "cycle_scope_note": "cycle-4：例12 直属变式 + B9（课程 coplanar=3.1.4.2）；cycle-5：k4 左栏 + 例6/例7/例8 + 投影检查点 1.1-projection-check-1 + B4/B5（课程 line_line_angle=3.1.4.3）。与 iteration-2（cycle-2/B10）无重叠。",
+  "agent_role": "零基础高中生代理（只负责分配的 cycle-4/cycle-5 范围）",
+  "generated_at": "2026-08-14T19:19:33+08:00",
+  "runtime_contract": "opencode-go/deepseek-v4-flash / context_window=1000000 / reasoning_effort=max（与 deepseek-mode.json worker 契约一致；Z2 为已派发子代理，不派生下级代理）",
+  "dispatch_context": "deepseek-mode.json: schema_version=1, active=true, default_count=5（父代理侧处理级联派发）。contexts/1.1.json 重建于 19:14:55，current_cycle 仍指向 1.1-cycle-1（与本次分配 cycle-4/5 不一致，已记录，见 remaining_gaps）。",
+  "assigned_items": {
+    "cycle_4": {
+      "course_keys": ["coplanar"],
+      "prerequisite_course_keys": ["decomposition"],
+      "prerequisite_knowledge_blocks": ["1.1-k3"],
+      "bridge_units": ["micro-four-point-coplanar"],
+      "worked_examples": ["例12（类型Ⅲ 证明共面）"],
+      "direct_variants": ["例12变式"],
+      "method_checkpoints": [],
+      "exercises": ["B9"]
+    },
+    "cycle_5": {
+      "course_keys": ["line_line_angle"],
+      "prerequisite_course_keys": ["space_vector_ops", "decomposition"],
+      "knowledge_blocks": ["1.1-k4"],
+      "worked_examples": ["例6", "例7", "例8"],
+      "direct_variants": [],
+      "method_checkpoints": ["1.1-projection-check-1（投影向量方向与长度检查，NO_ANSWER）"],
+      "exercises": ["B4", "B5"]
+    },
+    "coverage_status": {
+      "B4": {"qid": "Q-f15b941e305191d5", "unlock_class": "METHOD_BRIDGE", "course_keys": ["line_line_angle"], "release_status": "READY_FOR_INDEPENDENT_ATTEMPT"},
+      "B5": {"qid": "Q-8dd0fc02442f324f", "unlock_class": "COURSE_DIRECT", "course_keys": ["line_line_angle"], "release_status": "COURSE_READY_NOT_MASTERY"},
+      "B9": {"qid": "Q-2191f72b893e2bf4", "unlock_class": "METHOD_BRIDGE", "course_keys": ["decomposition", "coplanar"], "release_status": "READY_FOR_INDEPENDENT_ATTEMPT"}
+    }
+  },
+  "course_evidence": {
+    "transcripts_read": [
+      {"file": "data/course_transcripts/3.1.4.2 证明共面.json", "source_sha256": "a28bbadd4dc086fe59de15486f2253228ee8d3563b81a5c0d616a1f804f515c4", "duration_s": 1441.45, "content_learned": "共面证明=向量拆分有解（AD=xAB+yAC）；四点共面系数和=1 复习；定比分点坐标/近大远小复习；三个例题（含坐标法示范）"},
+      {"file": "data/course_transcripts/3.1.4.3 向量夹角与直线夹角.json", "source_sha256": "217ed9c3aa54de5c8303973bae4f5e539867a6652bb66798dfdb300be7273014", "duration_s": 2452.66, "content_learned": "向量夹角∈[0,π] 与直线夹角（线线角）∈[0,π/2] 的区别；线线角余弦=|a·b|/(|a||b|) 恒加绝对值；点乘/模长/建系书写规范；动态点最值（函数化）", "projection_mentioned": false},
+      {"note": "line_line_angle 转写全篇使用建系+坐标点乘，坐标方法属 1.3 内容（cycle-5 前未学）；转写中未出现『投影』讲解（HAS_PROJECTION=False），未讲解数量积定义（HAS_DOTPRODUCT_DEF=False）"}
+    ],
+    "packet": {
+      "learning_packet_json": "data/packets/1.1/learning_packet.json, schema_version=7.4, status=VERIFIED（19:14:54 重建）",
+      "manifest": "data/packets/1.1/manifest.json status=VERIFIED, unresolved_count=0",
+      "answer_policy": "worked_examples=teaching solutions allowed; direct_variants=question only; abc_exercises=question only; answer sidecar forbidden; 检查点=NO_ANSWER"
+    },
+    "bridge_text": {
+      "micro-four-point-coplanar": "四点共面系数和=1 无答案方法骨架（公共起点写线性组合、点面条件翻译、系数和检查、自造变式复核）；status=SOURCE_METHOD_READY；target_questions=[C13,C14,1.2+1.3-C14]（不在本 worker 范围）"
+    },
+    "context_probe": {
+      "context_file": "data/contexts/1.1.json (19:14:55)",
+      "canary": "a972a22b47339758",
+      "canary_echoed": true,
+      "binding_function": "sha256(canary+qid) 取前 8 位十六进制",
+      "probe_tokens_verified": {
+        "Q-84442c12da683ad3": "8a3edd42",
+        "Q-1727695600a57e80": "4d0774ff",
+        "Q-7370f2df587a419e": "ea198e77"
+      },
+      "item_probe_prefixes": {"B4": "38f8c23d", "B5": "cd4a77fd", "B9": "8bf57047"},
+      "restatement_rule_ok": "只复述各题当前可见字段（question_text），未输出任何答案册内容"
+    }
+  },
+  "attempts": [
+    {
+      "item": "例12变式（cycle-4 直属变式）",
+      "item_type": "direct_variant",
+      "question": "平行六面体 ABCD-A1B1C1D1 中，E,F,G,H 分别是棱 A1D1、C1D1、CC1、AB 的中点。（1）设 EG=xAB+yAD+zAA1，求 x,y,z；（2）证明 E,F,G,H 四点共面",
+      "process": [
+        "以 A 为原点、b=AB、d=AD、a=AA1 为基底；写出顶点向量：A1=a、D1=a+d、C1=a+b+d、C=b+d、B=b",
+        "中点平均：E=(A1+D1)/2=a+d/2；F=(C1+D1)/2=a+b/2+d；G=(C+C1)/2=a/2+b+d；H=b/2",
+        "（1）EG=G-E=(a/2+b+d)-(a+d/2)=-a/2+b+d/2，故 x=1，y=1/2，z=-1/2",
+        "（2）以 H 为公共起点：HE=E-H=a-d/2-b/2；HF=F-H=a+d；HG=G-H=a/2+b/2+d",
+        "解线性表示 HG=αHE+βHF：α+β=1/2，-α/2=1/2，α/2+β=1 → α=-1，β=3/2（回代验证 α+β=1/2 成立）",
+        "故 HG=-HE+(3/2)HF，由共面向量定理（k3 前置块）得 E,F,G,H 共面；另可观察 EF=HG=(b+d)/2 为平行四边形，更直接"
+      ],
+      "result": "（1）x=1，y=1/2，z=-1/2；（2）HG=-HE+(3/2)HF（或 EF=HG 平行四边形）→ E,F,G,H 共面",
+      "first_breakpoint": "把 A1D1/C1D1/CC1/AB 的中点写成向量平均前，需先写出平行六面体各顶点向量（A1=a、D1=a+d、C1=a+b+d）；此步由 decomposition 视频（BD1 拆分例）与例10 支持，零基础学生仍需自己完成顶点→中点映射",
+      "hint_used": false,
+      "hint_needed": false,
+      "confidence": 0.8,
+      "verification": "数值实例 b=(1,0,0),d=(0,1,0),a=(0,0,1)：E=(0,1/2,1),F=(1/2,1,1),G=(1,1,1/2),H=(1/2,0,0)；EG=(1,1/2,-1/2) 与系数一致；HG=(1/2,1,1/2)=-HE+(3/2)HF 逐坐标成立（本次推演复核）"
+    },
+    {
+      "item": "B9（cycle-4 直属习题）",
+      "item_type": "abc_exercise",
+      "question": "正四棱锥 P-ABCD 中，E,F 分别为 PA、PC 的中点，DG=2GP。（1）BG=xBA+yBC+zBP，求 x,y,z；（2）证明 B,E,G,F 四点共面",
+      "process": [
+        "以 B 为原点、BA=a、BC=c、BP=p 为基底（D=a+c，正方形底面）",
+        "由 DG=2GP 解 G：G-D=2(P-G) → 3G=D+2P → G=(1/3)(a+c)+(2/3)p（视频『近大远小/系数和』可直接验证）",
+        "（1）BG=G-B=G=(1/3)a+(1/3)c+(2/3)p，故 x=1/3，y=1/3，z=2/3",
+        "（2）E=(P+A)/2=(p+a)/2=BE；F=(P+C)/2=(p+c)/2=BF；设 BG=αBE+βBF",
+        "展开比较：α/2=1/3，β/2=1/3，且(α+β)/2=2/3 → α=β=2/3 全部满足",
+        "故 BG=(2/3)BE+(2/3)BF，B,E,G,F 共面（例12 同法：一个向量用另两个线性表示）"
+      ],
+      "result": "（1）x=1/3，y=1/3，z=2/3；（2）BG=(2/3)BE+(2/3)BF → B,E,G,F 共面",
+      "first_breakpoint": "把 DG=2GP 翻译成 G=(1/3)D+(2/3)P（比例→向量系数），与 B11 重心分点同类；随后选择以 B 为公共起点统一 BE/BF/BG",
+      "hint_used": false,
+      "hint_needed": false,
+      "confidence": 0.8,
+      "verification": "数值实例 B=(0,0,0),A=(1,0,0),C=(0,1,0),D=(1,1,0),P=(1/2,1/2,1)：G=(2/3,2/3,2/3)，BE=(3/4,1/4,1/2)，BF=(1/4,3/4,1/2)，(2/3)BE+(2/3)BF=(2/3,2/3,2/3) 逐坐标成立"
+    },
+    {
+      "item": "1.1-projection-check-1（cycle-5 投影检查点，NO_ANSWER）",
+      "item_type": "method_checkpoint",
+      "question": "在正方体中自选一条面对角线和一条棱，先画出面对角线在该棱所在直线上的投影方向，再用数量积写出投影长度；最后说明投影向量与投影长度为什么不是同一个量",
+      "process": [
+        "自选：正方体棱长 s=2，面对角线 AC（底面），棱 AB（直线 AB）",
+        "投影方向：C 在直线 AB 上的垂足为 B（BC⊥AB），故 AC 在直线 AB 上的投影方向为 AB 方向，投影向量为 AB（长度 s=2）",
+        "投影长度（用数量积）：由 k4 数量积定义 a·b=|a||b|cosθ 推出 投影长度=|a|cosθ=a·b/|b|=AC·AB/|AB|=(2√2·2·cos45°)/2=2（与 |AB| 一致，验证方向判断正确）",
+        "投影向量 = 投影长度 × 单位方向向量 = (a·b/|b|²)·b = AB",
+        "区别：投影向量是向量（含方向与大小），投影长度是标量（带符号的长度数值）；二者在本题数值恰好都等于 2，但一个是向量一个是数，概念不同"
+      ],
+      "result": "投影方向=AB 方向，投影长度=|AC|cos45°=2（=AC·AB/|AB|），投影向量=AB；投影向量与投影长度是向量与标量之别，不是同一个量",
+      "first_breakpoint": "k4 知识块只有『夹角+数量积+锐直钝』，没有『投影向量』小节（块标签含投影向量但文本缺失）；投影长度公式 |a|cosθ=a·b/|b| 需学生自己从数量积定义推出，投影向量定义只能从例8 两个实例归纳",
+      "hint_used": false,
+      "hint_needed": false,
+      "confidence": 0.65,
+      "note": "检查点可完成，但其中『投影向量』概念在路径中无显式定义文本——属知识顺序缺口，见 knowledge_order_assessment 与 remaining_gaps"
+    },
+    {
+      "item": "B4（cycle-5 直属习题）",
+      "item_type": "abc_exercise",
+      "question": "三棱锥 A-BCD 每条棱长都为 2，求 AB·CD（A.2√3 B.√3 C.2 D.0）",
+      "process": [
+        "正四面体：任意两棱夹角 60°（每个面为等边三角形，例7 已示范）",
+        "以 A 为公共起点：CD=AD-AC",
+        "AB·CD=AB·(AD-AC)=AB·AD-AB·AC（k4 分配律）",
+        "AB·AD=|AB||AD|cos60°=2·2·(1/2)=2；AB·AC 同理=2",
+        "结果 2-2=0，选 D"
+      ],
+      "result": "AB·CD=0，选 D",
+      "first_breakpoint": "把 CD 拆成 AD-AC（公共起点 A 的末减初）——decomposition 视频方法；正四面体 60° 夹角事实来自例7 教学",
+      "hint_used": false,
+      "hint_needed": false,
+      "confidence": 0.85,
+      "verification": "数值实例 A=(0,0,0),B=(2,0,0),C=(1,√3,0),D=(1,√3/3,2√6/3)：AB=(2,0,0)，CD=(0,-2√3/3,2√6/3)，点积=0"
+    },
+    {
+      "item": "B5（cycle-5 直属习题）",
+      "item_type": "abc_exercise",
+      "question": "棱长为 2 的正方体 ABCD-A1B1C1D1 中，E 是棱 A1D1 的中点，求 EB1·EB（A.4 B.5 C.6 D.4√2）",
+      "process": [
+        "以 A 为原点，b=AB、d=AD、a=AA1 为基底，|a|=|b|=|d|=2 且两两垂直（例6/例8 用过的正方体结构）",
+        "顶点向量：A1=a，D1=a+d，B=b，B1=a+b；E=(A1+D1)/2=a+d/2",
+        "EB1=B1-E=(a+b)-(a+d/2)=b-d/2；EB=B-E=b-(a+d/2)=b-a-d/2",
+        "EB1·EB=(b-d/2)·(b-a-d/2)=|b|²-b·a-b·d/2-d/2·b+d/2·a+|d|²/4",
+        "垂直棱点积为 0：=4-0-0-0+0+1=5，选 B"
+      ],
+      "result": "EB1·EB=5，选 B",
+      "first_breakpoint": "写出 E=a+d/2（需先写 A1、D1 顶点向量再取中点）；随后展开点积时依赖『正方体棱两两垂直→交叉项为零』（例6/例8 已示范）",
+      "hint_used": false,
+      "hint_needed": false,
+      "confidence": 0.85,
+      "verification": "数值实例 A=(0,0,0),B=(2,0,0),A1=(0,0,2),D1=(0,2,2),B1=(2,0,2)：E=(0,1,2)，EB1=(2,-1,0)，EB=(2,-1,-2)，点积=4+1+0=5"
+    }
+  ],
+  "first_breakpoints": [
+    {"item": "例12变式", "breakpoint": "先写出平行六面体顶点向量（A1=a、D1=a+d、C1=a+b+d、C=b+d）再用中点平均", "resolved": "独立解决", "severity": "minor", "knowledge_support": "decomposition 视频（BD1 拆分例）+ 例10 平行六面体"},
+    {"item": "B9", "breakpoint": "DG=2GP 翻译为 G=(1/3)D+(2/3)P 分点向量式；以 B 为公共起点统一向量", "resolved": "独立解决", "severity": "minor", "knowledge_support": "视频近大远小/系数和 + 例12 线性表示法"},
+    {"item": "投影检查点", "breakpoint": "投影长度=|a|cosθ=a·b/|b| 需自推（k4 文本无投影小节）；投影向量定义需从例8 归纳", "resolved": "完成但依赖自推/归纳，路径显式缺口", "severity": "moderate", "knowledge_support": "k4 数量积定义（可推）+ 例8 实例（归纳）"},
+    {"item": "B4", "breakpoint": "CD 拆为 AD-AC（公共起点 A）", "resolved": "独立解决", "severity": "minor", "knowledge_support": "decomposition 视频 + 例7"},
+    {"item": "B5", "breakpoint": "E=a+d/2 的中点向量书写（A1、D1 顶点向量）", "resolved": "独立解决", "severity": "minor", "knowledge_support": "decomposition 视频 + 例6/例8 正方体垂直结构"}
+  ],
+  "knowledge_order_assessment": [
+    {
+      "item": "例12变式",
+      "first_use_knowledge": ["顶点向量表示", "中点平均", "共面向量定理", "一个向量用另两个线性表示"],
+      "appeared_before_first_use": {"顶点向量表示": "是（decomposition 视频 BD1 例）", "中点平均": "是（视频 AM=1/2AB+1/2AD）", "共面向量定理": "是（cycle-4 前置块 1.1-k3）", "线性表示判定": "是（例12 教学）"},
+      "explicit_connection": "cycle-4 定义指向类型Ⅲ/1.1-k3（前置块），例题-变式-习题顺序承接；pass"
+    },
+    {
+      "item": "B9",
+      "first_use_knowledge": ["分点比例→系数", "共面向量定理应用（BG=αBE+βBF）"],
+      "appeared_before_first_use": {"分点比例": "是（视频近大远小/系数和）", "线性表示法": "是（例12 教学 + 例12变式先行）"},
+      "explicit_connection": "coverage course_keys=[decomposition,coplanar] 显式解锁；pass"
+    },
+    {
+      "item": "投影检查点",
+      "first_use_knowledge": ["投影方向", "投影长度=|a|cosθ=a·b/|b|", "投影向量定义（含方向）", "投影向量 vs 投影长度"],
+      "appeared_before_first_use": {"投影方向": "部分（例8 两例示范，无定义）", "投影长度公式": "否（需从 k4 数量积定义自推，k4 文本无投影小节）", "投影向量定义": "否（只能从例8 实例归纳）", "向量vs标量区别": "否（无显式文本）"},
+      "explicit_connection": "检查点 knowledge_refs=[1.1-k4]，但 k4 块标签含『投影向量』而文本缺该小节——最小缺口",
+      "assessment": "FAIL（路径显式供给不足；学生靠自推/归纳完成，不能把自推算作路径已覆盖）"
+    },
+    {
+      "item": "B4",
+      "first_use_knowledge": ["数量积定义与分配律", "正四面体棱夹角 60°", "减法拆分"],
+      "appeared_before_first_use": {"数量积": "是（k4 块 + 例7）", "60° 夹角": "是（例7 教学）", "拆分": "是（视频）"},
+      "explicit_connection": "coverage course_keys=[line_line_angle] 解锁（B4 实际用例7 路线，不依赖建系）；pass"
+    },
+    {
+      "item": "B5",
+      "first_use_knowledge": ["中点向量", "正方体棱两两垂直", "数量积分配律展开"],
+      "appeared_before_first_use": {"中点向量": "是（视频）", "棱垂直": "是（例6/例8）", "分配律": "是（k4 块）"},
+      "explicit_connection": "coverage unlock_class=COURSE_DIRECT（line_line_angle 课程直接解锁）；pass"
+    },
+    {
+      "item": "cycle-5 课程方法顺序观察",
+      "observation": "line_line_angle 视频全篇默认『建系+坐标点乘』，而空间直角坐标系（1.3）在 cycle-5 前未出现；B4/B5 用例7 的『定义/拆分』路线即可绕过坐标，但视频示范方法本身超前于路径知识顺序",
+      "assessment": "WARN（方法顺序错位；最小缺口：视频方法依赖 1.3 坐标前置，或限定本循环只取『向量角 vs 线线角、绝对值』结论）"
+    }
+  ],
+  "comparison_to_iteration_2": {
+    "scope_change": "iteration-2 仅 cycle-2/B10；iteration-3 覆盖 cycle-4/cycle-5（分配的非重叠范围），cycle-2 结论不受影响",
+    "improved": [
+      "cycle-5 现含显式无答案检查点（1.1-projection-check-1, NO_ANSWER）——iteration-2 观察到的 cycle-2 无检查点属结构差异，非回归",
+      "coplanar 视频（3.1.4.2）确实讲解了共面证明=向量拆分有解的方法（iteration-2 时 k3 定理无视频讲解的缺口在 cycle-4 得到部分弥补）",
+      "k4 块在 cycle-5 循环级嵌入（与 iteration-2 保持），例6/7/8 均 role_ref=1.1-k4，例题-知识连接明确"
+    ],
+    "persisted": [
+      "contexts/1.1.json current_cycle 仍指向 1.1-cycle-1（连续第三次观察，未推进）",
+      "line_line_angle 视频不讲解数量积定义/投影（转写 HAS_PROJECTION=False、HAS_DOTPRODUCT_DEF=False），k4 定理讲解由知识块+例题承担",
+      "旧 manifest（18:35）cycle-2 习题归属 [B6,B10,B11] 与新包不一致问题仍在（本迭代未复检 manifest 是否更新，按 iteration-2 记录延续）"
+    ],
+    "new": [
+      "k4 知识块『投影向量』标签与文本内容不符：标签含投影向量，文本只有夹角+数量积+锐直钝判定——直接影响投影检查点",
+      "line_line_angle 视频默认建系坐标法，与 cycle-5 路径知识顺序（1.3 坐标未学）错位",
+      "例12变式/B9 的桥接单元 micro-four-point-coplanar 目标题是 C13/C14，不在本 worker 范围——桥接文本已读但未使用（无需）"
+    ],
+    "resolved_since_iteration_2": "cycle-4 的『证明共面方法』现在有视频直接支撑（3.1.4.2 整讲共面拆分），不再只依赖例题解析"
+  },
+  "status": "partial",
+  "status_detail": "逐项：例12变式 proxy_pass（0.8）、B9 proxy_pass（0.8）、B4 proxy_pass（0.85）、B5 proxy_pass（0.85）、投影检查点 partial（0.65，可完成但依赖自推公式与例8 归纳）。整体 partial：所有直属题独立解出且数值复核通过，但投影检查点存在路径显式供给缺口（k4 块缺投影向量小节），且 line_line_angle 视频方法（建系）超前于知识顺序。代理解出不等于真人掌握，未作任何 FULL_PASS/掌握声明",
+  "remaining_gaps": [
+    "k4 知识块缺少『投影向量』小节（块标签含投影向量，文本缺失）：投影长度公式 |a|cosθ=a·b/|b| 需学生自推，投影向量定义需从例8 归纳——最小缺口：在 k4 块补投影向量定义与公式，或在检查点前增加无答案投影微讲解",
+    "line_line_angle 视频默认建系坐标法，坐标（1.3）未在 cycle-5 前出现：视频方法超前于路径顺序——最小缺口：标注该视频方法需 1.3 坐标前置，本循环只取『向量角 vs 线线角、绝对值』结论，或用无坐标示范补充",
+    "contexts/1.1.json current_cycle 指针连续三次停在 1.1-cycle-1，未随重建推进",
+    "（延续）旧 chapter1_manifest.json 的 cycle-2 习题归属 [B6,B10,B11] 与新 learning_packet.json 不一致，需更新 manifest",
+    "（延续）k3/k4 定理讲解依赖知识块+例题，视频不承担（cycle-4 的共面方法已由 3.1.4.2 弥补，k4 数量积定义仍无视频讲解）"
+  ],
+  "answer_sources_read": [
+    "data/packets/1.1/learning_packet.json（cycle-4/cycle-5 全部相关条目：k3 前置块、k4 块、例12/例6/例7/例8 teaching_text、例12变式与 B4/B5/B9 的 question_text、检查点文本、answer_policy、schema/status）",
+    "data/contexts/1.1.json（instructions、route_support 的 learning_plan/question_coverage(B4/B5/B9)/sequential_learning_packet/bridge_micro_lessons、evidence 探针字段）",
+    "data/course_transcripts/3.1.4.2 证明共面.json（full_text）",
+    "data/course_transcripts/3.1.4.3 向量夹角与直线夹角.json（full_text + 投影/数量积关键词检索）",
+    "C:/Users/poyi/.codex/deepseek-mode.json（契约状态）",
+    "迭代内文件目录清单（仅文件名与时间戳，不含内容）"
+  ],
+  "forbidden_answer_sources_read": [],
+  "honesty_boundary": "本报告是模型代理按零基础身份模拟的 iteration-3 学习记录，不宣称任何真人掌握 cycle-4/cycle-5 内容。未读取 data/packets/1.1/answer_sidecar.json、lesson_packet.json、packet.json、student_packet.json、任何答案册、其他代理报告或其他循环作答（forbidden_answer_sources_read=[]）。上下文探针：canary=a972a22b47339758 已回显，三个 probe token 全部匹配，B4/B5/B9 绑定前缀已计算，仅复述可见字段。例题解析按教学阶段允许阅读；变式/检查点/习题均为独立作答并当轮数值复核。投影检查点的完成依赖学生自推公式与例8 归纳，已在 knowledge_order_assessment 中如实标为路径缺口，不把自推冒充路径覆盖。断点、信心、缺口均为代理估计，需真人按 exit_gate（知识点闭卷复述、独立复测、隔天冷重做）另行验证。"
+}

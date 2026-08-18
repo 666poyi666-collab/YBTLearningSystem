@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第5节 圆的方程</title>
+<style>:root{color-scheme:light;--ink:#1f2933;--muted:#5b6773;--line:#d9e0e6;--blue:#1d4e89;--green:#176b4d;--amber:#8a5a00;--paper:#f7f9fb}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.65 system-ui,-apple-system,Segoe UI,sans-serif}main{max-width:1120px;margin:0 auto;padding:28px 18px 52px}header{border-bottom:3px solid var(--blue);padding-bottom:18px;margin-bottom:22px}h1{font-size:clamp(1.6rem,4vw,2.25rem);margin:0 0 10px}h2{font-size:1.35rem;margin:28px 0 12px;color:var(--blue)}h3{font-size:1.05rem;margin:20px 0 8px}.summary{background:#fff;border:1px solid var(--line);padding:14px 16px;margin:14px 0 22px}.cycle{border-top:1px solid var(--line);padding-top:8px}.item{background:#fff;border:1px solid var(--line);border-left:4px solid var(--green);padding:14px 16px;margin:12px 0}.item.variant{border-left-color:var(--amber)}.item.exercise{border-left-color:var(--blue)}.tag{display:inline-block;color:var(--muted);font-size:.9rem;margin-bottom:4px}.field{margin:5px 0}.label{font-weight:700;color:#304455}code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;white-space:normal;overflow-wrap:anywhere;background:#f1f4f6;padding:2px 4px}@media(max-width:520px){main{padding:18px 12px 38px}.item{padding:12px}.summary{padding:12px}.field{overflow-wrap:anywhere}}</style>
+</head>
+<body><main><header><h1>第5节 圆的方程</h1><div class="summary">第一门课程：圆的标准方程和一般方程（3.2.4.1 圆的标准方程和一般方程.mp4）<br>后续课程：圆的确定（3.2.4.2 圆的确定.mp4）；圆的等价模型（代数）（3.2.5.8 圆的等价模型（代数）.mp4）；圆的等价模型（几何）（3.2.5.9 圆的等价模型（几何）.mp4）<br>本节学习顺序：知识点、紧邻例题、直属变式、类型题、A/B/C习题、循环验收。</div></header>
+<section class="cycle"><h2>循环1：圆的标准方程</h2>
+<div class="field"><span class="label">新课程：</span>圆的标准方程和一般方程（3.2.4.1 圆的标准方程和一般方程.mp4）；圆的确定（3.2.4.2 圆的确定.mp4）</div>
+<div class="field"><span class="label">知识点：</span>圆的标准方程</div>
+<article class="item"><div class="tag">知识点右侧例题</div><h3>例1</h3>
+<div class="field"><span class="label">课程调用：</span>圆的标准方程和一般方程（3.2.4.1 圆的标准方程和一般方程.mp4）</div>
+<div class="field"><span class="label">识别入口：</span>圆心已给出，另给一个圆周点（例1：已知圆心和圆上一点）</div>
+<div class="field"><span class="label">方法模型：</span>圆心半径式</div>
+<div class="field"><span class="label">符号化首行：</span><code>设圆为 (x-a)^2+(y-b)^2=r^2，并把已知圆心放入(a,b)</code></div>
+<div class="field"><span class="label">继续动作：</span>把已知圆周点代入距离关系；保留半径平方的表达式并整理成标准式；检查右侧严格为正</div>
+<div class="field"><span class="label">首断点：</span>把圆心坐标写成相反号；把圆周点误当成圆心；先算数值而漏写符号模板</div>
+<div class="field"><span class="label">最小提示：</span>先固定 (x-a)^2+(y-b)^2=r^2，再代圆心；只算到 r^2 的表达式，暂不化出结果</div>
+<div class="field"><span class="label">独立自检：</span>圆心代回后中心项为零；圆周点代回左右相等</div>
+<div class="field"><span class="label">视觉状态：</span>无图像依赖</div></article>
+<article class="item"><div class="tag">知识点右侧例题</div><h3>例2</h3>
+<div class="field"><span class="label">课程调用：</span>圆的标准方程和一般方程（3.2.4.1 圆的标准方程和一般方程.mp4）；圆的确定（3.2.4.2 圆的确定.mp4）</div>
+<div class="field"><span class="label">识别入口：</span>出现直径两端点，圆心由中点确定（例2：线段AB为直径）</div>
+<div class="field"><span class="label">方法模型：</span>中点求圆心与直径关系</div>
+<div class="field"><span class="label">符号化首行：</span><code>先设圆心 C=((x_A+x_B)/2,(y_A+y_B)/2)</code></div>
+<div class="field"><span class="label">继续动作：</span>用端点距离或直径点积式建立半径/方程；按题目要求整理为标准式或一般式；分别代回两个端点核对</div>
+<div class="field"><span class="label">首断点：</span>把直径长度当成半径；中点横纵坐标漏括号；展开一般式时符号错位</div>
+<div class="field"><span class="label">最小提示：</span>先写中点模板，再写 r^2 或点积式；保留端点字母直到展开前</div>
+<div class="field"><span class="label">独立自检：</span>A、B 都满足方程；圆心确为AB中点且半径不取负</div>
+<div class="field"><span class="label">视觉状态：</span>无图像依赖</div></article>
+<div class="field"><span class="label">循环验收：</span>能从圆心和半径写出标准式；能用直径中点或端点关系建立圆式</div></section>
+<section class="cycle"><h2>循环2：圆的一般方程</h2>
+<div class="field"><span class="label">新课程：</span>圆的等价模型（代数）（3.2.5.8 圆的等价模型（代数）.mp4）</div>
+<div class="field"><span class="label">已学课程调用：</span>圆的标准方程和一般方程（3.2.4.1 圆的标准方程和一般方程.mp4）；圆的确定（3.2.4.2 圆的确定.mp4）</div>
+<div class="field"><span class="label">知识点：</span>圆的一般方程</div>
+<article class="item"><div class="tag">知识点右侧例题</div><h3>例3</h3>
+<div class="field"><span class="label">课程调用：</span>圆的标准方程和一般方程（3.2.4.1 圆的标准方程和一般方程.mp4）；圆的等价模型（代数）（3.2.5.8 圆的等价模型（代数）.mp4）</div>
+<div class="field"><span class="label">识别入口：</span>要先判断是否含交叉项、二次项系数是否同形（例3：判断四个二元二次方程）</div>
+<div class="field"><span class="label">方法模型：</span>结构筛选后配方判别</div>
+<div class="field"><span class="label">符号化首行：</span><code>逐式写成 x^2+y^2+Dx+Ey+F=0（能归一化时）</code></div>
+<div class="field"><span class="label">继续动作：</span>先查二次项比例和 xy 项；对可归一者比较 D^2+E^2-4F 的符号；配方读取圆心半径或区分退化情形</div>
+<div class="field"><span class="label">首断点：</span>只看形式不查半径平方正性；把点或无图形也叫圆；四个小问混用D、E、F</div>
+<div class="field"><span class="label">最小提示：</span>先圈出 xy 和二次项系数，再决定是否配方；把每个小问的D、E、F分栏记录</div>
+<div class="field"><span class="label">独立自检：</span>将配方式重新展开；区分圆、单点和无实点</div>
+<div class="field"><span class="label">视觉状态：</span>无图像依赖</div></article>
+<div class="field"><span class="label">循环验收：</span>能先筛二次项结构，再用配方和判别量判断</div></section>
+<section class="cycle"><h2>循环3：点与圆的位置关系、求圆、对称、轨迹与最值</h2>
+<div class="field"><span class="label">新课程：</span>圆的等价模型（几何）（3.2.5.9 圆的等价模型（几何）.mp4）</div>
+<div class="field"><span class="label">已学课程调用：</span>圆的标准方程和一般方程（3.2.4.1 圆的标准方程和一般方程.mp4）；圆的确定（3.2.4.2 圆的确定.mp4）；圆的等价模型（代数）（3.2.5.8 圆的等价模型（代数）.mp4）</div>
+<div class="field"><span class="label">知识点：</span>点与圆的位置关系</div>
+<div class="field"><span class="label">知识点：</span>求圆的方程</div>
+<div class="field"><span class="label">知识点：</span>圆相关的对称问题</div>
+<div class="field"><span class="label">知识点：</span>与圆有关的求轨迹方程问题</div>
+<div class="field"><span class="label">知识点：</span>定点与圆上动点之间距离的最值问题</div>
+<div class="field"><span class="label">知识点：</span>圆过定点问题</div>
+<article class="item"><div class="tag">知识点右侧例题</div><h3>例4</h3>
+<div class="field"><span class="label">课程调用：</span>圆的等价模型（几何）（3.2.5.9 圆的等价模型（几何）.mp4）</div>
+<div class="field"><span class="label">识别入口：</span>题目给一个点并问内、上、外（例4：定点代入圆方程）</div>
+<div class="field"><span class="label">方法模型：</span>代点比较符号</div>
+<div class="field"><span class="label">符号化首行：</span><code>把给定点写成 (x_0,y_0)，代入圆的左侧表达式 P(x_0,y_0)</code></div>
+<div class="field"><span class="label">继续动作：</span>整理成一般式或标准式对应的比较量；比较与0或r^2的大小关系；最后再对应位置语言</div>
+<div class="field"><span class="label">首断点：</span>一般式符号与标准式比较方向混淆；把代入值当成距离本身；只看选项不写比较量</div>
+<div class="field"><span class="label">最小提示：</span>先写 P(x_0,y_0) 的代入式，不先选项；只判断符号，不做多余开方</div>
+<div class="field"><span class="label">独立自检：</span>用另一种方程形式复核符号；确认圆的判别条件成立</div>
+<div class="field"><span class="label">视觉状态：</span>无图像依赖</div></article>
+<article class="item"><div class="tag">知识点右侧例题</div><h3>例5</h3>
+<div class="field"><span class="label">课程调用：</span>圆的标准方程和一般方程（3.2.4.1 圆的标准方程和一般方程.mp4）；圆的等价模型（代数）（3.2.5.8 圆的等价模型（代数）.mp4）</div>
+<div class="field"><span class="label">识别入口：</span>同一题含无交叉项、退化和含参等多类结构（例5：多种方程的图形判断）</div>
+<div class="field"><span class="label">方法模型：</span>结构筛选与配方分类</div>
+<div class="field"><span class="label">符号化首行：</span><code>逐小题对照 x^2+y^2+Dx+Ey+F=0，先标二次项和常数</code></div>
+<div class="field"><span class="label">继续动作：</span>不满足圆的形式时按题意继续配方判型；满足形式时检查判别量并配方；含参小问保留参数条件直到正性检查</div>
+<div class="field"><span class="label">首断点：</span>看到平方和就跳过结构检查；把等号为零的退化式当圆；参数项整理时漏乘系数</div>
+<div class="field"><span class="label">最小提示：</span>每个小问先写结构标签：同系数/有xy/判别量；配方只走到可判型的等式</div>
+<div class="field"><span class="label">独立自检：</span>配方后展开核对；判别量和右端符号分别复查</div>
+<div class="field"><span class="label">视觉状态：</span>无图像依赖</div></article>
+<article class="item"><div class="tag">知识点右侧例题</div><h3>例6</h3>
+<div class="field"><span class="label">课程调用：</span>圆的等价模型（几何）（3.2.5.9 圆的等价模型（几何）.mp4）；圆的等价模型（代数）（3.2.5.8 圆的等价模型（代数）.mp4）</div>
+<div class="field"><span class="label">识别入口：</span>点的位置可能依赖参数，且圆本身也有存在条件（例6：含参圆中的定点位置）</div>
+<div class="field"><span class="label">方法模型：</span>代点不等式与圆存在条件并行</div>
+<div class="field"><span class="label">符号化首行：</span><code>把 M 坐标代入一般式并保留参数项</code></div>
+<div class="field"><span class="label">继续动作：</span>先判断代入式的符号是否被参数范围锁定；另写圆的判别量正性条件；将不等式方向与 a^2 非负条件分开</div>
+<div class="field"><span class="label">首断点：</span>只代点不检查方程是否真为圆；a^2非负条件被漏掉；不等式严格性丢失</div>
+<div class="field"><span class="label">最小提示：</span>先把代点式单独记为 P(a)；再另起一行检查圆的判别量</div>
+<div class="field"><span class="label">独立自检：</span>代点式与标准式距离比较一致；边界参数代回后不产生退化圆</div>
+<div class="field"><span class="label">视觉状态：</span>无图像依赖</div></article>
+<article class="item"><div class="tag">知识点右侧例题</div><h3>例7</h3>
+<div class="field"><span class="label">课程调用：</span>圆的确定（3.2.4.2 圆的确定.mp4）；圆的标准方程和一般方程（3.2.4.1 圆的标准方程和一般方程.mp4）</div>
+<div class="field"><span class="label">识别入口：</span>两个圆周点提供等距条件，圆心还有直线约束（例7：过两点且圆心在线上）</div>
+<div class="field"><span class="label">方法模型：</span>圆心参数化后消半径</div>
+<div class="field"><span class="label">符号化首行：</span><code>设圆心 C=(u,v)，先写其满足给定直线</code></div>
+<div class="field"><span class="label">继续动作：</span>把两个已知点分别代入距离平方并相减；联立得到圆心坐标；选一个圆周点求半径平方并写标准式</div>
+<div class="field"><span class="label">首断点：</span>直接求斜率导致特殊情形丢失；三元未知量联立顺序混乱；半径写成距离而未平方</div>
+<div class="field"><span class="label">最小提示：</span>先写两个距离平方相等式，再消去r；把直线约束单独保留</div>
+<div class="field"><span class="label">独立自检：</span>两点到圆心距离相等；圆心代回给定直线</div>
+<div class="field"><span class="label">视觉状态：</span>无图像依赖</div></article>
+<article class="item"><div class="tag">知识点右侧例题</div><h3>例8</h3>
+<div class="field"><span class="label">课程调用：</span>圆的等价模型（几何）（3.2.5.9 圆的等价模型（几何）.mp4）；圆的标准方程和一般方程（3.2.4.1 圆的标准方程和一般方程.mp4）</div>
+<div class="field"><span class="label">识别入口：</span>圆的对称轴必过圆心（例8：圆关于直线对称）</div>
+<div class="field"><span class="label">方法模型：</span>读取圆心后代入对称轴</div>
+<div class="field"><span class="label">符号化首行：</span><code>配方读取圆心 C=(u,v)，再写轴方程在C处为零</code></div>
+<div class="field"><span class="label">继续动作：</span>将圆心代入含参直线；解参数而不改动半径；回代确认直线确过圆心</div>
+<div class="field"><span class="label">首断点：</span>把对称轴误当切线；配方中心符号错；把圆上点代入轴方程</div>
+<div class="field"><span class="label">最小提示：</span>只做圆心代入，不展开整圆；检查轴方程的未知参数位置</div>
+<div class="field"><span class="label">独立自检：</span>圆心满足轴方程；半径平方仍为正</div>
+<div class="field"><span class="label">视觉状态：</span>无图像依赖</div></article>
+<article class="item"><div class="tag">知识点右侧例题</div><h3>例9</h3>
+<div class="field"><span class="label">课程调用：</span>圆的等价模型（几何）（3.2.5.9 圆的等价模型（几何）.mp4）</div>
+<div class="field"><span class="label">识别入口：</span>动点在圆上，目标点是动点和定点的中点（例9：圆上动点与定点的中点轨迹）</div>
+<div class="field"><span class="label">方法模型：</span>中点仿射变换</div>
+<div class="field"><span class="label">符号化首行：</span><code>设 P=(x,y)，由中点关系先表示动点 M=(2x-x_N,2y-y_N)</code></div>
+<div class="field"><span class="label">继续动作：</span>把M坐标代回原圆条件；整理为P的轨迹方程；反向检查仿射变换的中心和尺度</div>
+<div class="field"><span class="label">首断点：</span>中点公式方向写反；平移量和二倍因子混淆；只写出包含轨迹而不检查反向可达</div>
+<div class="field"><span class="label">最小提示：</span>先写 2P=M+N，再解M；保留向量中点关系到最后</div>
+<div class="field"><span class="label">独立自检：</span>把轨迹点反推回原圆；检查圆心平移和半径缩放关系</div>
+<div class="field"><span class="label">视觉状态：</span>无图像依赖</div></article>
+<article class="item"><div class="tag">知识点右侧例题</div><h3>例10</h3>
+<div class="field"><span class="label">课程调用：</span>圆的等价模型（几何）（3.2.5.9 圆的等价模型（几何）.mp4）</div>
+<div class="field"><span class="label">识别入口：</span>定点与圆上动点之间出现最大/最小距离（例10：定点到圆上动点距离极值）</div>
+<div class="field"><span class="label">方法模型：</span>圆心距离与半径的三角不等式模型</div>
+<div class="field"><span class="label">符号化首行：</span><code>先读圆心 C 和半径 r，再写 |PA| 与 |CA|、r 的关系</code></div>
+<div class="field"><span class="label">继续动作：</span>判断定点在圆内外；沿定点和圆心连线取远近方向；按题目要求保留长度或平方层次</div>
+<div class="field"><span class="label">首断点：</span>最大最小方向取反；把半径和圆心距直接相加减但未判断位置；开平方层次混乱</div>
+<div class="field"><span class="label">最小提示：</span>先画出圆心到定点的连线方向；只写上/下界表达式，不代出最终值</div>
+<div class="field"><span class="label">独立自检：</span>用三角不等式复核上下界；检查极值点确在圆周上</div>
+<div class="field"><span class="label">视觉状态：</span>无图像依赖</div></article>
+<article class="item"><div class="tag">知识点右侧例题</div><h3>例11</h3>
+<div class="field"><span class="label">课程调用：</span>圆的等价模型（几何）（3.2.5.9 圆的等价模型（几何）.mp4）；圆的等价模型（代数）（3.2.5.8 圆的等价模型（代数）.mp4）</div>
+<div class="field"><span class="label">识别入口：</span>方程可拆成不含参部分与参数倍数部分（例11：含参圆族的定点）</div>
+<div class="field"><span class="label">方法模型：</span>参数分离找公共点</div>
+<div class="field"><span class="label">符号化首行：</span><code>把方程写成 F(x,y)+aG(x,y)=0 的结构</code></div>
+<div class="field"><span class="label">继续动作：</span>让参数系数和不含参部分同时满足；筛掉不满足圆定义域的候选；代回整族方程做全参数检查</div>
+<div class="field"><span class="label">首断点：</span>把某个参数下的点误当定点；只令参数项为零而不检查F；忘记公共点必须对所有允许参数成立</div>
+<div class="field"><span class="label">最小提示：</span>先分离F与G，再分别写等式；候选点只做符号/结构检验</div>
+<div class="field"><span class="label">独立自检：</span>候选点不含参数；F和G两部分同时核对</div>
+<div class="field"><span class="label">视觉状态：</span>无图像依赖</div></article>
+<article class="item variant"><div class="tag">直属变式</div><h3>变式1（承接例5）</h3>
+<div class="field"><span class="label">课程调用：</span>圆的等价模型（代数）（3.2.5.8 圆的等价模型（代数）.mp4）</div>
+<div class="field"><span class="label">识别入口：</span>已知二元方程表示圆并要求参数范围（例5直属变式1：含参方程表示圆的范围）</div>
+<div class="field"><span class="label">方法模型：</span>系数条件与半径正性</div>
+<div class="field"><span class="label">符号化首行：</span><code>先写D、E、F关于a的表达式并检查二次项结构</code></div>
+<div class="field"><span class="label">继续动作：</span>利用判别量大于零建立严格条件；解参数不等式；单独检查边界是否退化</div>
+<div class="field"><span class="label">首断点：</span>把非严格不等号带入；忽略二次项系数已归一化；只写一个必要条件</div>
+<div class="field"><span class="label">最小提示：</span>先标出圆的一般式三项条件；最后一步才合并不等式</div>
+<div class="field"><span class="label">独立自检：</span>边界代回判别量；取区间内部试值检查结构</div>
+<div class="field"><span class="label">视觉状态：</span>无图像依赖</div></article>
+<article class="item variant"><div class="tag">直属变式</div><h3>变式2（承接例5）</h3>
+<div class="field"><span class="label">课程调用：</span>圆的等价模型（代数）（3.2.5.8 圆的等价模型（代数）.mp4）</div>
+<div class="field"><span class="label">识别入口：</span>x^2与y^2系数都含参数且题干已给圆（例5直属变式2：二次项含参表示圆）</div>
+<div class="field"><span class="label">方法模型：</span>先相等再验圆</div>
+<div class="field"><span class="label">符号化首行：</span><code>令两个二次项系数进入同一比例并保留特殊分支</code></div>
+<div class="field"><span class="label">继续动作：</span>解出参数候选；逐候选归一化为一般式；检查判别量和半径正性</div>
+<div class="field"><span class="label">首断点：</span>只解系数相等不验候选；a=0等特殊分支被除法漏掉；归一化时忘记除公共系数</div>
+<div class="field"><span class="label">最小提示：</span>不要先除以含参量，先列系数关系；候选逐个代回原式</div>
+<div class="field"><span class="label">独立自检：</span>每个候选都做一次判别量检查；核对x^2、y^2最终系数</div>
+<div class="field"><span class="label">视觉状态：</span>无图像依赖</div></article>
+<article class="item variant"><div class="tag">直属变式</div><h3>变式（承接例6）</h3>
+<div class="field"><span class="label">课程调用：</span>圆的等价模型（几何）（3.2.5.9 圆的等价模型（几何）.mp4）；圆的等价模型（代数）（3.2.5.8 圆的等价模型（代数）.mp4）</div>
+<div class="field"><span class="label">识别入口：</span>两条切线等价于点在圆外，同时圆必须存在（例6直属变式：过点作两条切线）</div>
+<div class="field"><span class="label">方法模型：</span>外部条件与圆存在条件取交集</div>
+<div class="field"><span class="label">符号化首行：</span><code>把定点代入圆一般式写成外部不等式</code></div>
+<div class="field"><span class="label">继续动作：</span>另写圆存在判别量；求两组参数条件的交集；排除相切和非圆边界</div>
+<div class="field"><span class="label">首断点：</span>把两条切线误写成不小于；只用外部条件漏掉圆存在；开区间端点处理错</div>
+<div class="field"><span class="label">最小提示：</span>先写外部，再单独写圆存在；最后才取交集</div>
+<div class="field"><span class="label">独立自检：</span>端点逐个检查相切/退化；任选允许值验证两条条件</div>
+<div class="field"><span class="label">视觉状态：</span>无图像依赖</div></article>
+<article class="item variant"><div class="tag">直属变式</div><h3>变式1（承接例7）</h3>
+<div class="field"><span class="label">课程调用：</span>圆的确定（3.2.4.2 圆的确定.mp4）；圆的标准方程和一般方程（3.2.4.1 圆的标准方程和一般方程.mp4）</div>
+<div class="field"><span class="label">识别入口：</span>三点确定一个圆，适合一般式待定系数（例7直属变式1：过三点求圆）</div>
+<div class="field"><span class="label">方法模型：</span>一般式三点代入</div>
+<div class="field"><span class="label">符号化首行：</span><code>设圆为 x^2+y^2+Dx+Ey+F=0</code></div>
+<div class="field"><span class="label">继续动作：</span>三点逐一代入形成线性方程组；解D、E、F；配方或代点复核</div>
+<div class="field"><span class="label">首断点：</span>三点坐标抄错；线性方程组常数项符号错；只验证两点</div>
+<div class="field"><span class="label">最小提示：</span>三行只写代入，不展开最终数值；先保留D、E、F作为未知量</div>
+<div class="field"><span class="label">独立自检：</span>三点全部代回；判别量大于零</div>
+<div class="field"><span class="label">视觉状态：</span>无图像依赖</div></article>
+<article class="item variant"><div class="tag">直属变式</div><h3>变式2（承接例7）</h3>
+<div class="field"><span class="label">课程调用：</span>圆的确定（3.2.4.2 圆的确定.mp4）；圆的等价模型（代数）（3.2.5.8 圆的等价模型（代数）.mp4）</div>
+<div class="field"><span class="label">识别入口：</span>两点在圆上且给出与坐标轴的弦长（例7直属变式2：两点与x轴截弦长）</div>
+<div class="field"><span class="label">方法模型：</span>一般式加坐标轴截线判别式</div>
+<div class="field"><span class="label">符号化首行：</span><code>设圆一般式并令 y=0 得 x^2+Dx+F=0</code></div>
+<div class="field"><span class="label">继续动作：</span>把两根差与弦长条件建立关系；将两个已知点代入；解D、E、F并保留候选验证</div>
+<div class="field"><span class="label">首断点：</span>把弦长当根和；绝对值/判别式关系写错；候选圆未回代两点</div>
+<div class="field"><span class="label">最小提示：</span>先只处理x轴截线，再接点代入方程；用平方形式避免提前开方</div>
+<div class="field"><span class="label">独立自检：</span>两轴交点满足截线方程；弦长条件重新代入</div>
+<div class="field"><span class="label">视觉状态：</span>无图像依赖</div></article>
+<article class="item variant"><div class="tag">直属变式</div><h3>变式1（承接例8）</h3>
+<div class="field"><span class="label">课程调用：</span>圆的等价模型（几何）（3.2.5.9 圆的等价模型（几何）.mp4）</div>
+<div class="field"><span class="label">识别入口：</span>圆关于点对称时圆心关于该点对称，半径不变（例8直属变式1：关于点的圆对称）</div>
+<div class="field"><span class="label">方法模型：</span>中心对称变换</div>
+<div class="field"><span class="label">符号化首行：</span><code>配方读原圆心 C=(u,v)，设新圆心 C&#x27;=(s,t)</code></div>
+<div class="field"><span class="label">继续动作：</span>把指定点写成CC&#x27;中点坐标；解出新圆心位置；沿用原半径写新圆方程</div>
+<div class="field"><span class="label">首断点：</span>中点坐标分母漏掉2；只移动圆心不保持半径；对称点方向写反</div>
+<div class="field"><span class="label">最小提示：</span>先写 (C+C&#x27;)/2=P 的两个坐标式；半径单独保留为同一符号</div>
+<div class="field"><span class="label">独立自检：</span>指定点确为两心中点；新圆心到原圆心距离满足中心对称</div>
+<div class="field"><span class="label">视觉状态：</span>无图像依赖</div></article>
+<article class="item variant"><div class="tag">直属变式</div><h3>变式2（承接例8）</h3>
+<div class="field"><span class="label">课程调用：</span>圆的等价模型（几何）（3.2.5.9 圆的等价模型（几何）.mp4）</div>
+<div class="field"><span class="label">识别入口：</span>两圆关于直线对称时两圆心互为点关于直线的对称（例8直属变式2：关于直线的两圆对称）</div>
+<div class="field"><span class="label">方法模型：</span>圆心反射与半径保持</div>
+<div class="field"><span class="label">符号化首行：</span><code>先读圆D的圆心，再设所求圆心为其关于直线的对称点</code></div>
+<div class="field"><span class="label">继续动作：</span>用中点在直线上和连线垂直于直线列关系；求新圆心；保持半径并写标准式</div>
+<div class="field"><span class="label">首断点：</span>把直线对称误当中心对称；法向量方向错；忽略半径相等</div>
+<div class="field"><span class="label">最小提示：</span>只列中点共线与连线垂直两个事实；不要从图形外观猜斜率</div>
+<div class="field"><span class="label">独立自检：</span>两心中点在轴上；两心连线与轴垂直</div>
+<div class="field"><span class="label">视觉状态：</span>无图像依赖</div></article>
+<article class="item variant"><div class="tag">直属变式</div><h3>变式1（承接例9）</h3>
+<div class="field"><span class="label">课程调用：</span>圆的等价模型（几何）（3.2.5.9 圆的等价模型（几何）.mp4）</div>
+<div class="field"><span class="label">识别入口：</span>动直线过定点并截圆，目标是弦中点轨迹（例9直属变式1：过定点的动弦中点）</div>
+<div class="field"><span class="label">方法模型：</span>圆心到弦中点垂弦</div>
+<div class="field"><span class="label">符号化首行：</span><code>设弦中点 Q=(x,y)，先写 CQ 垂直于动弦</code></div>
+<div class="field"><span class="label">继续动作：</span>把动弦过定点条件翻译为Q与圆心的关系；得到包含轨迹的圆/曲线条件；检查Q在圆内的可达范围</div>
+<div class="field"><span class="label">首断点：</span>把弦所在直线和半径方向混淆；只列垂直不列过定点；忘记轨迹的可达范围</div>
+<div class="field"><span class="label">最小提示：</span>先写圆心到弦中点垂直弦，再写定点共线；轨迹式先保留为条件</div>
+<div class="field"><span class="label">独立自检：</span>反向构造一条过定点的弦；检查中点落在原圆内</div>
+<div class="field"><span class="label">视觉状态：</span>无图像依赖</div></article>
+<article class="item variant"><div class="tag">直属变式</div><h3>变式2（承接例9）</h3>
+<div class="field"><span class="label">课程调用：</span>圆的等价模型（几何）（3.2.5.9 圆的等价模型（几何）.mp4）</div>
+<div class="field"><span class="label">识别入口：</span>题图只用于确认圆、原点、割线与弦中点的可见布置；方法由题干给出（例9直属变式2：过原点的动弦中点及轨迹长度）</div>
+<div class="field"><span class="label">方法模型：</span>弦中点垂径加可达弧段裁剪</div>
+<div class="field"><span class="label">符号化首行：</span><code>设D=(x,y)，先写圆心到弦中点垂直弦的关系</code></div>
+<div class="field"><span class="label">继续动作：</span>利用过原点的动弦把D约束到以OC为直径的辅助轨迹；再裁剪D必须位于原圆内部的可达部分；最后用圆心角与弧长公式写长度表达式，停在待验边界</div>
+<div class="field"><span class="label">首断点：</span>把辅助整圆误当完整轨迹；忽略D为弦中点必须在原圆内；图中透视位置被误读为比例</div>
+<div class="field"><span class="label">最小提示：</span>只使用已核验的点线标签，不从图形读数；先区分整条辅助轨迹与原圆内可达部分</div>
+<div class="field"><span class="label">独立自检：</span>检查D在原圆内部；用端点/边界条件复核弧段范围</div>
+<div class="field"><span class="label">视觉状态：</span>已完成图像交叉核验</div></article>
+<article class="item variant"><div class="tag">直属变式</div><h3>变式1（承接例10）</h3>
+<div class="field"><span class="label">课程调用：</span>圆的等价模型（几何）（3.2.5.9 圆的等价模型（几何）.mp4）</div>
+<div class="field"><span class="label">识别入口：</span>Q被限制在x轴，目标是两段距离和的最小值（例10直属变式1：轴上动点到定点与圆上点距离和）</div>
+<div class="field"><span class="label">方法模型：</span>反射/折线最短路</div>
+<div class="field"><span class="label">符号化首行：</span><code>先写Q在x轴上的约束和两段距离之和</code></div>
+<div class="field"><span class="label">继续动作：</span>把圆上点或定点关于x轴反射以拉直折线；求候选交点满足的轴约束；再检查动点确在圆周上</div>
+<div class="field"><span class="label">首断点：</span>反射对象选错；最短路交点不在x轴；把圆上动点当成固定点</div>
+<div class="field"><span class="label">最小提示：</span>先画出Q的运动直线，再决定反射哪一端；只写折线到直线距离关系</div>
+<div class="field"><span class="label">独立自检：</span>反射前后长度相等；候选点满足x轴约束和圆约束</div>
+<div class="field"><span class="label">视觉状态：</span>无图像依赖</div></article>
+<article class="item variant"><div class="tag">直属变式</div><h3>变式2（承接例10）</h3>
+<div class="field"><span class="label">课程调用：</span>圆的等价模型（几何）（3.2.5.9 圆的等价模型（几何）.mp4）</div>
+<div class="field"><span class="label">识别入口：</span>方程给出圆，根式目标是定点到圆上动点距离（例10直属变式2：圆上点到定点的最小距离）</div>
+<div class="field"><span class="label">方法模型：</span>圆心距与半径的下界</div>
+<div class="field"><span class="label">符号化首行：</span><code>配方读取圆心C和半径r，目标点写成固定坐标</code></div>
+<div class="field"><span class="label">继续动作：</span>比较目标点到圆心的距离与半径；用三角不等式写最小距离表达式；确认极值点沿心点连线方向可达</div>
+<div class="field"><span class="label">首断点：</span>根式平方展开错；最小距离方向反；只算圆心距没有处理半径</div>
+<div class="field"><span class="label">最小提示：</span>先把根式看成距离，再写三角不等式；保留符号表达式到最后</div>
+<div class="field"><span class="label">独立自检：</span>用几何图形复核内外关系；极值点代回圆方程</div>
+<div class="field"><span class="label">视觉状态：</span>无图像依赖</div></article>
+<article class="item variant"><div class="tag">直属变式</div><h3>变式（承接例11）</h3>
+<div class="field"><span class="label">课程调用：</span>圆的等价模型（几何）（3.2.5.9 圆的等价模型（几何）.mp4）；圆的等价模型（代数）（3.2.5.8 圆的等价模型（代数）.mp4）</div>
+<div class="field"><span class="label">识别入口：</span>先处理抛物线与坐标轴交点，再判断圆的直径/定点结构（例11直属变式：抛物线三交点与圆族）</div>
+<div class="field"><span class="label">方法模型：</span>根与系数关系结合圆的一般式</div>
+<div class="field"><span class="label">符号化首行：</span><code>为与x轴交点设根并保留根和、积，直接读y轴交点</code></div>
+<div class="field"><span class="label">继续动作：</span>先用三点不同确定参数范围；设过三点圆的一般式并用根关系消元；分别检查直径圆过点与圆族公共点条件</div>
+<div class="field"><span class="label">首断点：</span>把二次函数的根条件和圆条件混在一起；忘记三交点不同的限制；固定点只对一个参数成立</div>
+<div class="field"><span class="label">最小提示：</span>先分两问写变量表；根和积只在需要消元处使用</div>
+<div class="field"><span class="label">独立自检：</span>三点逐个回代圆方程；定点检验对所有允许参数成立</div>
+<div class="field"><span class="label">视觉状态：</span>无图像依赖</div></article>
+<div class="field"><span class="label">循环验收：</span>能在一般式、标准式、几何定义之间切换；能把对称、轨迹和最值条件拆成可检查的几何关系</div></section>
+<section class="cycle"><h2>循环4：A组 夯实基础</h2>
+<div class="field"><span class="label">已学课程调用：</span>圆的标准方程和一般方程（3.2.4.1 圆的标准方程和一般方程.mp4）；圆的确定（3.2.4.2 圆的确定.mp4）；圆的等价模型（代数）（3.2.5.8 圆的等价模型（代数）.mp4）；圆的等价模型（几何）（3.2.5.9 圆的等价模型（几何）.mp4）</div>
+<article class="item exercise"><div class="tag">A/B/C习题</div><h3>A1</h3>
+<div class="field"><span class="label">课程调用：</span>圆的标准方程和一般方程（3.2.4.1 圆的标准方程和一般方程.mp4）；圆的等价模型（代数）（3.2.5.8 圆的等价模型（代数）.mp4）</div>
+<div class="field"><span class="label">识别入口：</span>给出圆的一般式和面积条件（A1：圆面积给半径平方）</div>
+<div class="field"><span class="label">方法模型：</span>配方读r^2后用面积关系</div>
+<div class="field"><span class="label">符号化首行：</span><code>将圆方程配成标准式并写 πr^2=给定面积</code></div>
+<div class="field"><span class="label">继续动作：</span>保留a&gt;0；由面积关系建立参数方程；回代检查圆的判别条件</div>
+<div class="field"><span class="label">首断点：</span>面积和半径混淆；参数正性忘记带回；配方常数项符号错</div>
+<div class="field"><span class="label">最小提示：</span>先写πr^2，再处理a；只保留参数关系不提前化出结果</div>
+<div class="field"><span class="label">独立自检：</span>半径平方与面积关系一致；a&gt;0和圆存在条件同时满足</div>
+<div class="field"><span class="label">视觉状态：</span>无图像依赖</div></article>
+<article class="item exercise"><div class="tag">A/B/C习题</div><h3>A2</h3>
+<div class="field"><span class="label">课程调用：</span>圆的标准方程和一般方程（3.2.4.1 圆的标准方程和一般方程.mp4）；圆的确定（3.2.4.2 圆的确定.mp4）</div>
+<div class="field"><span class="label">识别入口：</span>直径端点和一般式选项同时出现（A2：AB为直径的一般式辨认）</div>
+<div class="field"><span class="label">方法模型：</span>中点/点积式建立后逐项验证</div>
+<div class="field"><span class="label">符号化首行：</span><code>写直径圆的中点或点积起式，不直接看选项</code></div>
+<div class="field"><span class="label">继续动作：</span>展开到一般式的同次项结构；把两个端点分别代入候选形式；检查常数与线性项符号</div>
+<div class="field"><span class="label">首断点：</span>选项诱导导致漏验；端点顺序改变时符号误判；标准式与一般式混看</div>
+<div class="field"><span class="label">最小提示：</span>先用结构模板写一行；选项只作为最后的核对对象</div>
+<div class="field"><span class="label">独立自检：</span>A、B均满足；x^2与y^2系数同为1</div>
+<div class="field"><span class="label">视觉状态：</span>无图像依赖</div></article>
+<article class="item exercise"><div class="tag">A/B/C习题</div><h3>A3</h3>
+<div class="field"><span class="label">课程调用：</span>圆的等价模型（代数）（3.2.5.8 圆的等价模型（代数）.mp4）</div>
+<div class="field"><span class="label">识别入口：</span>题目同时出现命题条件和参数条件（A3：表示圆条件与参数不等式的逻辑关系）</div>
+<div class="field"><span class="label">方法模型：</span>先得到表示圆的参数集合，再做充分必要比较</div>
+<div class="field"><span class="label">符号化首行：</span><code>把表示圆写成关于a的严格不等式，不先判断选项</code></div>
+<div class="field"><span class="label">继续动作：</span>分别测试a&gt;2能否推出表示圆；再测试表示圆能否推出a&gt;2；按条件命题定义归类</div>
+<div class="field"><span class="label">首断点：</span>把一个方向当成双向；忽略严格边界；直接凭选项语感判断</div>
+<div class="field"><span class="label">最小提示：</span>先写两个蕴含方向的检查表；只使用条件集合关系</div>
+<div class="field"><span class="label">独立自检：</span>边界参数单独检验；两个方向分别写出反例或证明链</div>
+<div class="field"><span class="label">视觉状态：</span>无图像依赖</div></article>
+<div class="field"><span class="label">循环验收：</span>每题先写入口条件，再独立核对参数/位置关系</div></section>
+<section class="cycle"><h2>循环5：B组 强化能力</h2>
+<div class="field"><span class="label">已学课程调用：</span>圆的标准方程和一般方程（3.2.4.1 圆的标准方程和一般方程.mp4）；圆的确定（3.2.4.2 圆的确定.mp4）；圆的等价模型（代数）（3.2.5.8 圆的等价模型（代数）.mp4）；圆的等价模型（几何）（3.2.5.9 圆的等价模型（几何）.mp4）</div>
+<article class="item exercise"><div class="tag">A/B/C习题</div><h3>B4</h3>
+<div class="field"><span class="label">课程调用：</span>圆的等价模型（代数）（3.2.5.8 圆的等价模型（代数）.mp4）</div>
+<div class="field"><span class="label">识别入口：</span>x^2、y^2系数含a且题干已给圆（B4：二次项含参且表示圆）</div>
+<div class="field"><span class="label">方法模型：</span>系数相等候选加判别量筛选</div>
+<div class="field"><span class="label">符号化首行：</span><code>先列x^2与y^2系数相等的候选关系</code></div>
+<div class="field"><span class="label">继续动作：</span>保留不允许直接除a的特殊分支；代候选归一化为一般式；检查判别量严格为正</div>
+<div class="field"><span class="label">首断点：</span>只解系数相等不验；除掉a=0分支；候选两侧符号漏记</div>
+<div class="field"><span class="label">最小提示：</span>先列候选，不马上舍弃；逐候选写判别量</div>
+<div class="field"><span class="label">独立自检：</span>候选逐个回代；排除点/空集退化</div>
+<div class="field"><span class="label">视觉状态：</span>无图像依赖</div></article>
+<article class="item exercise"><div class="tag">A/B/C习题</div><h3>B5</h3>
+<div class="field"><span class="label">课程调用：</span>圆的等价模型（几何）（3.2.5.9 圆的等价模型（几何）.mp4）；圆的等价模型（代数）（3.2.5.8 圆的等价模型（代数）.mp4）</div>
+<div class="field"><span class="label">识别入口：</span>圆外条件和圆存在条件并列（B5：定点在圆外求参数范围）</div>
+<div class="field"><span class="label">方法模型：</span>代点不等式与判别量交集</div>
+<div class="field"><span class="label">符号化首行：</span><code>把(2,0)代入圆方程写外部比较式</code></div>
+<div class="field"><span class="label">继续动作：</span>配方或判别量写圆存在约束；求两组参数条件交集；检查开闭端点的几何意义</div>
+<div class="field"><span class="label">首断点：</span>外部符号方向反；漏写圆存在约束；把切点边界放入外部范围</div>
+<div class="field"><span class="label">最小提示：</span>先分别写外部/圆存在两行；只在最后一步取交集</div>
+<div class="field"><span class="label">独立自检：</span>端点逐一代回；任选交集内参数做位置复核</div>
+<div class="field"><span class="label">视觉状态：</span>无图像依赖</div></article>
+<article class="item exercise"><div class="tag">A/B/C习题</div><h3>B6</h3>
+<div class="field"><span class="label">课程调用：</span>圆的等价模型（几何）（3.2.5.9 圆的等价模型（几何）.mp4）；圆的标准方程和一般方程（3.2.4.1 圆的标准方程和一般方程.mp4）</div>
+<div class="field"><span class="label">识别入口：</span>轴对称圆的圆心必在该直线上（B6：给定直线是圆的对称轴）</div>
+<div class="field"><span class="label">方法模型：</span>读圆心后代入轴方程</div>
+<div class="field"><span class="label">符号化首行：</span><code>先配方读取圆心，再写直线在该圆心处的值</code></div>
+<div class="field"><span class="label">继续动作：</span>解a并保留原圆方程；回代判别圆是否存在；用轴过圆心而非过圆上点复核</div>
+<div class="field"><span class="label">首断点：</span>把对称轴当切线；圆心符号读反；忽略a导致的半径条件</div>
+<div class="field"><span class="label">最小提示：</span>只做圆心代入；将半径检查放在最后</div>
+<div class="field"><span class="label">独立自检：</span>圆心满足直线；判别量/半径平方为正</div>
+<div class="field"><span class="label">视觉状态：</span>无图像依赖</div></article>
+<article class="item exercise"><div class="tag">A/B/C习题</div><h3>B7</h3>
+<div class="field"><span class="label">课程调用：</span>圆的等价模型（几何）（3.2.5.9 圆的等价模型（几何）.mp4）</div>
+<div class="field"><span class="label">识别入口：</span>关于坐标轴的圆对称只改变圆心的对应坐标（B7：圆关于x轴对称）</div>
+<div class="field"><span class="label">方法模型：</span>中心坐标变换与半径保持</div>
+<div class="field"><span class="label">符号化首行：</span><code>先写原圆心 (u,v) 关于x轴的变换模板</code></div>
+<div class="field"><span class="label">继续动作：</span>保留半径；将新圆心写成标准方程；代入轴上/对应点做变换核对</div>
+<div class="field"><span class="label">首断点：</span>把y坐标变换方向写错；修改了半径；一般式变换与标准式不一致</div>
+<div class="field"><span class="label">最小提示：</span>只写坐标变换，不从图形猜；半径单独保留</div>
+<div class="field"><span class="label">独立自检：</span>圆心成轴对称点；新方程展开后能还原坐标变换</div>
+<div class="field"><span class="label">视觉状态：</span>无图像依赖</div></article>
+<article class="item exercise"><div class="tag">A/B/C习题</div><h3>B8</h3>
+<div class="field"><span class="label">课程调用：</span>圆的等价模型（几何）（3.2.5.9 圆的等价模型（几何）.mp4）</div>
+<div class="field"><span class="label">识别入口：</span>两个圆心互为关于轴的对称点（B8：两圆关于未知直线对称）</div>
+<div class="field"><span class="label">方法模型：</span>两心中点与连线垂直构造对称轴</div>
+<div class="field"><span class="label">符号化首行：</span><code>分别配方读取两圆心，设轴为待定直线</code></div>
+<div class="field"><span class="label">继续动作：</span>写两心中点在轴上；写两心连线与轴垂直；用候选方程回代两心互换</div>
+<div class="field"><span class="label">首断点：</span>只用中点共线少了垂直条件；法向量/方向向量混淆；忘记半径也应相等</div>
+<div class="field"><span class="label">最小提示：</span>先列几何两条件，再整理直线；选项只在最后验证</div>
+<div class="field"><span class="label">独立自检：</span>两心中点在轴上；两心到轴距离相等且连线垂直</div>
+<div class="field"><span class="label">视觉状态：</span>无图像依赖</div></article>
+<article class="item exercise"><div class="tag">A/B/C习题</div><h3>B9</h3>
+<div class="field"><span class="label">课程调用：</span>圆的等价模型（几何）（3.2.5.9 圆的等价模型（几何）.mp4）</div>
+<div class="field"><span class="label">识别入口：</span>目标是距离平方而动点在圆周上（B9：圆上动点到定点的距离平方最大）</div>
+<div class="field"><span class="label">方法模型：</span>圆心距与半径给出上界</div>
+<div class="field"><span class="label">符号化首行：</span><code>把目标式识别为固定点到P的距离平方，并读圆心半径</code></div>
+<div class="field"><span class="label">继续动作：</span>用三角不等式建立最大距离的平方表达式；确认取远端方向；最后才与选项的平方量比较</div>
+<div class="field"><span class="label">首断点：</span>先开方后平方造成层次错；最大方向取近端；把圆心坐标读错</div>
+<div class="field"><span class="label">最小提示：</span>先写距离平方的几何上界；不在中途选择项</div>
+<div class="field"><span class="label">独立自检：</span>远端点代回圆方程；平方表达式与长度关系一致</div>
+<div class="field"><span class="label">视觉状态：</span>无图像依赖</div></article>
+<article class="item exercise"><div class="tag">A/B/C习题</div><h3>B10</h3>
+<div class="field"><span class="label">课程调用：</span>圆的确定（3.2.4.2 圆的确定.mp4）；圆的等价模型（代数）（3.2.5.8 圆的等价模型（代数）.mp4）</div>
+<div class="field"><span class="label">识别入口：</span>前三点先确定圆，第四点提供a关系（B10：四点共圆与含参点）</div>
+<div class="field"><span class="label">方法模型：</span>先定圆再代入动点</div>
+<div class="field"><span class="label">符号化首行：</span><code>设过前三点的圆一般式并逐点代入</code></div>
+<div class="field"><span class="label">继续动作：</span>解出圆方程参数；将M=(a,2)代入形成a的关系；检查M不是额外的重复点</div>
+<div class="field"><span class="label">首断点：</span>直接对四点列过多未知量；前三点圆方程常数符号错；只验证共线而非共圆</div>
+<div class="field"><span class="label">最小提示：</span>先只用前三点；第二阶段才把M带入</div>
+<div class="field"><span class="label">独立自检：</span>前三点逐个回代；M代入后关系与圆方程一致</div>
+<div class="field"><span class="label">视觉状态：</span>无图像依赖</div></article>
+<article class="item exercise"><div class="tag">A/B/C习题</div><h3>B11</h3>
+<div class="field"><span class="label">课程调用：</span>圆的确定（3.2.4.2 圆的确定.mp4）；圆的等价模型（几何）（3.2.5.9 圆的等价模型（几何）.mp4）</div>
+<div class="field"><span class="label">识别入口：</span>先确定C，再把圆心关于m反射（B11：圆心在线、过两点后再关于直线对称）</div>
+<div class="field"><span class="label">方法模型：</span>圆的确定加圆心反射</div>
+<div class="field"><span class="label">符号化首行：</span><code>设圆心 C=(u,v)，同时写直线l约束和到A、B等距</code></div>
+<div class="field"><span class="label">继续动作：</span>消去半径求C；按直线m反射C得到C&#x27;；半径不变写C&#x27;标准式并复核</div>
+<div class="field"><span class="label">首断点：</span>先反射错误的点；两条直线l、m混用；反射后半径被改动</div>
+<div class="field"><span class="label">最小提示：</span>把第一阶段圆心和第二阶段对称轴分开记；反射只处理中心坐标</div>
+<div class="field"><span class="label">独立自检：</span>C满足l且过A、B；C与C&#x27;中点在m上、连线垂直m</div>
+<div class="field"><span class="label">视觉状态：</span>无图像依赖</div></article>
+<article class="item exercise"><div class="tag">A/B/C习题</div><h3>B12</h3>
+<div class="field"><span class="label">课程调用：</span>圆的等价模型（几何）（3.2.5.9 圆的等价模型（几何）.mp4）</div>
+<div class="field"><span class="label">识别入口：</span>P受直线约束，M受圆周约束，目标是距离和（B12：直线动点与圆上动点的两段距离和）</div>
+<div class="field"><span class="label">方法模型：</span>先最小化圆上点到P的距离再做直线上的一维最短路</div>
+<div class="field"><span class="label">符号化首行：</span><code>把P在直线l上的约束写出，并保留 |PM|+|PO|</code></div>
+<div class="field"><span class="label">继续动作：</span>把M到P的最小关系写成圆心距与半径的边界表达；结合P到O的距离使用反射或三角不等式；检查候选P与M同时可达</div>
+<div class="field"><span class="label">首断点：</span>把M当作圆心；先求单段最小却忘记P还在直线；反射后交点不满足约束</div>
+<div class="field"><span class="label">最小提示：</span>先分清P、M各自的运动集合；只写两段距离的边界关系</div>
+<div class="field"><span class="label">独立自检：</span>候选点分别满足直线/圆；用三角不等式复核总长度下界</div>
+<div class="field"><span class="label">视觉状态：</span>无图像依赖</div></article>
+<article class="item exercise"><div class="tag">A/B/C习题</div><h3>B13</h3>
+<div class="field"><span class="label">课程调用：</span>圆的确定（3.2.4.2 圆的确定.mp4）；圆的等价模型（几何）（3.2.5.9 圆的等价模型（几何）.mp4）；圆的等价模型（代数）（3.2.5.8 圆的等价模型（代数）.mp4）</div>
+<div class="field"><span class="label">识别入口：</span>先把平行条件翻译成圆的参数结构，再做中点仿射变换（B13：平行直线族、圆和中点轨迹）</div>
+<div class="field"><span class="label">方法模型：</span>根与系数/圆的一般式/中点轨迹串联</div>
+<div class="field"><span class="label">符号化首行：</span><code>先写圆一般式并用过O、平行于直线族的条件建立参数关系</code></div>
+<div class="field"><span class="label">继续动作：</span>用P在圆上和M为DP中点写仿射关系；把P的圆条件转成M的轨迹条件；最后判别轨迹类型并检查参数范围</div>
+<div class="field"><span class="label">首断点：</span>平行条件翻译成错误的法向关系；中点坐标方向写反；忽略轨迹的可达范围</div>
+<div class="field"><span class="label">最小提示：</span>先把圆确定和轨迹转换分成两段；用向量式记录M与P、D关系</div>
+<div class="field"><span class="label">独立自检：</span>圆方程过O；反向代回P并核对平行条件</div>
+<div class="field"><span class="label">视觉状态：</span>无图像依赖</div></article>
+<article class="item exercise"><div class="tag">A/B/C习题</div><h3>B14</h3>
+<div class="field"><span class="label">课程调用：</span>圆的等价模型（几何）（3.2.5.9 圆的等价模型（几何）.mp4）</div>
+<div class="field"><span class="label">识别入口：</span>动直线过定点并与圆交于两点，目标是弦中点（B14：过定点动弦的中点轨迹）</div>
+<div class="field"><span class="label">方法模型：</span>垂径定理和定点约束</div>
+<div class="field"><span class="label">符号化首行：</span><code>先配方读C1圆心半径，再设弦中点M=(x,y)</code></div>
+<div class="field"><span class="label">继续动作：</span>写圆心到弦中点垂直动弦；用动直线过定点限制M；检查两交点不同对应的内部范围</div>
+<div class="field"><span class="label">首断点：</span>把动直线方向写成弦中点方向；轨迹整圆未裁剪；忽略相交于不同两点</div>
+<div class="field"><span class="label">最小提示：</span>先写垂径，再写过定点；边界条件最后处理</div>
+<div class="field"><span class="label">独立自检：</span>轨迹点反向生成动弦；M在圆内且不在禁止边界</div>
+<div class="field"><span class="label">视觉状态：</span>无图像依赖</div></article>
+<article class="item exercise"><div class="tag">A/B/C习题</div><h3>B15</h3>
+<div class="field"><span class="label">课程调用：</span>圆的确定（3.2.4.2 圆的确定.mp4）；圆的等价模型（几何）（3.2.5.9 圆的等价模型（几何）.mp4）</div>
+<div class="field"><span class="label">识别入口：</span>几何图形给出定比分点、两条交线和共圆结论（B15：正方形交点、长度与四点共圆）</div>
+<div class="field"><span class="label">方法模型：</span>坐标/向量建模后做交点与圆判定</div>
+<div class="field"><span class="label">符号化首行：</span><code>选定正方形坐标系，写E、F坐标和两条直线的参数式</code></div>
+<div class="field"><span class="label">继续动作：</span>联立直线得到M的参数；用参数/距离关系处理EM；用圆方程或直角/对径关系证明四点共圆</div>
+<div class="field"><span class="label">首断点：</span>正方形顶点坐标方向错；延长线上的点参数符号错；只验证三点共圆未处理第四点</div>
+<div class="field"><span class="label">最小提示：</span>先固定坐标系和点序；每条直线只保留一个参数</div>
+<div class="field"><span class="label">独立自检：</span>M满足两条直线；四点代入同一圆条件</div>
+<div class="field"><span class="label">视觉状态：</span>无图像依赖</div></article>
+<div class="field"><span class="label">循环验收：</span>完成对称、轨迹、最值和求圆综合链，不依赖选项猜测</div></section>
+<section class="cycle"><h2>循环6：C组 拓展提升</h2>
+<div class="field"><span class="label">已学课程调用：</span>圆的标准方程和一般方程（3.2.4.1 圆的标准方程和一般方程.mp4）；圆的确定（3.2.4.2 圆的确定.mp4）；圆的等价模型（代数）（3.2.5.8 圆的等价模型（代数）.mp4）；圆的等价模型（几何）（3.2.5.9 圆的等价模型（几何）.mp4）</div>
+<article class="item exercise"><div class="tag">A/B/C习题</div><h3>C16</h3>
+<div class="field"><span class="label">课程调用：</span>圆的确定（3.2.4.2 圆的确定.mp4）；圆的等价模型（代数）（3.2.5.8 圆的等价模型（代数）.mp4）</div>
+<div class="field"><span class="label">识别入口：</span>二次函数与两坐标轴有三个不同交点，要求圆的范围和公共点（C16：二次函数三交点的圆族定点）</div>
+<div class="field"><span class="label">方法模型：</span>根与系数结合圆的一般式</div>
+<div class="field"><span class="label">符号化首行：</span><code>设与x轴交点为两根并保留根和、积，写y轴交点</code></div>
+<div class="field"><span class="label">继续动作：</span>先用三点不同写参数范围；设过三点圆的一般式并用根关系消元；把参数项分离后检查公共定点</div>
+<div class="field"><span class="label">首断点：</span>三交点条件只写判别式不查坐标轴交点；圆族参数消元过早；把单个参数点当成公共点</div>
+<div class="field"><span class="label">最小提示：</span>先完成三点存在性，再进入圆方程；公共点必须对所有允许参数检验</div>
+<div class="field"><span class="label">独立自检：</span>三点分别回代；公共点代入后参数项恒消失</div>
+<div class="field"><span class="label">视觉状态：</span>无图像依赖</div></article>
+<div class="field"><span class="label">循环验收：</span>先闭合三点存在性，再验证圆族的公共性质</div></section>
+</main></body></html>

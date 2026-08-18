@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0",
+  "section": "micro专题1",
+  "worker": "worker-5",
+  "generation": "G-CH1-MICRO-01",
+  "worker_status": "BLOCKED",
+  "item_results": [
+    {
+      "section": "micro专题1",
+      "cycle": "micro-cycle-6",
+      "item_id": "micro-cycle-6-C7",
+      "source_revision": {
+        "generation": "G-CH1-MICRO-01"
+      },
+      "context_sha256": "3893aba77597e51b7941015bbd7ef52ea476de47cd349e1f6ddf61386aa8f031",
+      "observation_signal": "目标=翻折/存在性综合结论（模板级观察信号，无题干）",
+      "course_call": {
+        "course_id": "3.1.4.8",
+        "method_model_id": "folding_invariance",
+        "appears_before_first_use": true,
+        "linkage": "C 组拓展题：翻折/补形/压轴（模板；题前复述桥接'翻折守恒与折后平面角；动态二面角三角参数化；存在性双参数化'）",
+        "first_use_location": "3.1.4.8 视频动点设参段（AP=λ·AB）"
+      },
+      "first_line": "第一行：标折痕/动点参数（λ、μ）与范围",
+      "second_line": "第二行：不变量表+截面平面角+参数方程",
+      "continuation": "继续：解方程组→筛选 —— 卡点：①题面不可见 ②桥接'翻折守恒与折后平面角''动态二面角三角参数化'均 SOURCE_METHOD_READY 未闭合",
+      "independent_self_check": "模板检查：折前折后不变量表；截面构造；锐角约定；存在性判断 —— 无法闭合",
+      "first_breakpoint": "题面不可见 + 桥接未闭合（翻折守恒与折后平面角、动态二面角三角参数化：均 SOURCE_METHOD_READY 仅方法骨架；存在性双参数化：SUPPLEMENT_READY 未验证）",
+      "hint_level": "none",
+      "verdict": "BLOCKED",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "micro专题1",
+      "cycle": "micro-cycle-6",
+      "item_id": "micro-cycle-6-C8",
+      "source_revision": {
+        "generation": "G-CH1-MICRO-01"
+      },
+      "context_sha256": "3893aba77597e51b7941015bbd7ef52ea476de47cd349e1f6ddf61386aa8f031",
+      "observation_signal": "目标=补形/动态二面角综合结论（模板级观察信号，无题干）",
+      "course_call": {
+        "course_id": "3.1.3.3",
+        "method_model_id": "completion_parallelepiped",
+        "appears_before_first_use": true,
+        "linkage": "C 组拓展题：动态二面角+补形压轴（模板；题前复述桥接'动态二面角三角参数化；补形与辅助平行体'）",
+        "first_use_location": "3.1.3.3 视频方向向量段"
+      },
+      "first_line": "第一行：识别题目缺少的平行边/平行面/公共顶点，写补形目标",
+      "second_line": "第二行：证明补出的线/面确实存在，把新增关系写成向量等式或比例；依据：平行线面关系",
+      "continuation": "继续：用补形后的平行体统一处理长度/角度/法向量 —— 卡点：①题面不可见 ②桥接'动态二面角三角参数化'SOURCE_METHOD_READY 未闭合",
+      "independent_self_check": "模板检查：补形依据而非凭图；辅助构造与题设事实区分；向量/平行四边形闭合复核 —— 无法闭合",
+      "first_breakpoint": "题面不可见 + 桥接未闭合（动态二面角三角参数化：SOURCE_METHOD_READY 仅方法骨架；补形与辅助平行体：SUPPLEMENT_READY 未验证）",
+      "hint_level": "none",
+      "verdict": "BLOCKED",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    }
+  ],
+  "method_check_results": [
+    {
+      "section": "micro专题1",
+      "cycle": "micro-cycle-6",
+      "method_check_id": "micro-completion-check-1",
+      "method_model_id": "completion_parallelepiped",
+      "result": "BLOCKED",
+      "evidence": "检查链含'动态二面角三角参数化''翻折守恒与折后平面角'（均 SOURCE_METHOD_READY），桥接未闭合不能放行"
+    },
+    {
+      "section": "micro专题1",
+      "cycle": "micro-cycle-6",
+      "method_check_id": "micro-final-check-1",
+      "method_model_id": "final_backcheck_list",
+      "result": "BLOCKED",
+      "evidence": "检查链含'动态二面角三角参数化''翻折守恒与折后平面角'（均 SOURCE_METHOD_READY），桥接未闭合不能放行"
+    }
+  ],
+  "first_breakpoints": [
+    {
+      "item_id": "micro-cycle-6-C7",
+      "cycle": "micro-cycle-6",
+      "first_breakpoint": "题面不可见 + 桥接未闭合（翻折守恒与折后平面角、动态二面角三角参数化：均 SOURCE_METHOD_READY 仅方法骨架；存在性双参数化：SUPPLEMENT_READY 未验证）"
+    },
+    {
+      "item_id": "micro-cycle-6-C8",
+      "cycle": "micro-cycle-6",
+      "first_breakpoint": "题面不可见 + 桥接未闭合（动态二面角三角参数化：SOURCE_METHOD_READY 仅方法骨架；补形与辅助平行体：SUPPLEMENT_READY 未验证）"
+    }
+  ],
+  "answer_sidecar_read": false,
+  "human_acceptance_not_proven": true
+}

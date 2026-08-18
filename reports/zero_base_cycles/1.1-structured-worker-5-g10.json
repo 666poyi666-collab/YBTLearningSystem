@@ -1,0 +1,240 @@
+{
+  "schema_version": "1.1",
+  "worker": "5",
+  "generation": "G-20260816-10",
+  "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+  "canary": "f53604ed66007c04",
+  "worker_status": "PASS",
+  "item_results": [
+    {
+      "section": "1.1",
+      "cycle": 9,
+      "task": 36,
+      "item_id": "B8",
+      "qid": "Q-9d766f3ecd1ae46e",
+      "source_revision": {
+        "generation": "G-20260816-10",
+        "source": "data/packets/1.1/learning_path_without_questions.md",
+        "context": "data/contexts/1.1.json"
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "题干信号：正方体棱长 2，点 P 在正方体内（含表面）任意，求数量积 PA·PC 的最大值。这是「动点受限在长方体区域」的区域型数量积最值：A、C 是底面一条面对角线的两端点，P 的可行域是整个正方体闭区域。",
+      "course_call": {
+        "method_model_id": "3.1.4.3 向量夹角与直线夹角/数量积坐标公式与直线夹角；bridge-1.1-polarization 极化恒等式与数量积最值（2a·b=|a|²+|b|²−|a−b|²；全空间型 vs 区域型最值）",
+        "course_keys": [
+          "line_line_angle"
+        ],
+        "recited_bridge": "复述桥接：先展开 |a+b|² 与 |a−b|² 得 2a·b 的两种恒等式；动点被限制在长方体/正方体内时，必须在真实定义域内检查顶点、边界与内部点，不能当全空间最值处理。"
+      },
+      "first_line": "设正方体棱长 2，建系 A=(0,0,0)、C=(2,2,0)、P=(x,y,z)，0≤x,y,z≤2；目标量 f=PA·PC。",
+      "second_line": "PA=A−P=(−x,−y,−z)，PC=C−P=(2−x,2−y,−z)；由数量积坐标公式（3.1.4.3）f=(−x)(2−x)+(−y)(2−y)+(−z)(−z)。",
+      "continuation": "f=x²−2x+y²−2y+z²=(x−1)²+(y−1)²+z²−2。在闭区域 0≤x,y,z≤2 内 (x−1)²≤1、(y−1)²≤1、z²≤4，故 f≤1+1+4−2=4；P=A₁(0,0,2)（或 B₁、C₁、D₁）时取等号，f=4。极化校验：PA·PC=(|PA|²+|PC|²−|AC|²)/2，|AC|²=8，|PA|²+|PC|²=x²+(x−2)²+y²+(y−2)²+2z²≤4+4+8=16（各顶角取到），故 f_max=(16−8)/2=4，两法一致。",
+      "independent_self_check": "① 等号点 P=A₁ 在可行域内（含表面）✓；② 方向核对：PA、PC 均为终点减起点，未反号 ✓；③ 极化回代 P=A₁：|PA|²=4、|PC|²=12，(4+12−8)/2=4 ✓；④ 明确这是区域型最值：若 P 不受区域限制则 f 无上界，正方体闭域与配方平方项才是关键，等号条件解释完整 ✓。",
+      "first_breakpoint": "无",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "evidence_level": "SAME_SESSION_WORKFLOW_PASS",
+      "answer_value": "4",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 9,
+      "task": 37,
+      "item_id": "C13",
+      "qid": "Q-32207093b5cdcaee",
+      "source_revision": {
+        "generation": "G-20260816-10",
+        "source": "data/packets/1.1/learning_path_without_questions.md",
+        "context": "data/contexts/1.1.json"
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "题干信号：a、b、c 为空间中不共面（即基底）的三个向量；OA、OB、OC 给出坐标式含参数 p、q；条件 O、A、B、C 四点共面；求 3p+5q。信号=四点共面+参数求值。",
+      "course_call": {
+        "method_model_id": "3.1.2.1 空间向量拆分法/基底唯一拆分与系数比较；3.1.4.2 证明共面/共面⇔向量可拆有解；micro-four-point-coplanar 四点共面系数和=1（区分「公共起点本身是四点之一」与「公共起点在四点之外」）",
+        "course_keys": [
+          "decomposition",
+          "coplanar"
+        ],
+        "recited_bridge": "复述桥接：四点共面系数和=1 适用于 OP=xOA+yOB+zOC（公共起点 O 是第五点）；当公共起点本身是四点之一时，平面过起点，条件是三个位置向量线性相关（行列式=0），两者不能混用。"
+      },
+      "first_line": "公共起点 O 本身就是四点之一 → 平面过 O → OA、OB、OC 三个位置向量同落在过 O 的二维平面内 → 三向量线性相关 → det(OA,OB,OC)=0。",
+      "second_line": "以 a,b,c 为坐标基：OA=(1,−2,1)，OB=(p,1,q)，OC=(2,1,−2)；三点共线用二维系数条件、四点共面用三维线性相关（桥接方法检查点）。",
+      "continuation": "det = 1·(1·(−2)−q·1) − (−2)·(p·(−2)−q·2) + 1·(p·1−1·2) = (−2−q) + 2·(−2p−2q) + (p−2) = −3p−5q−4。det=0 → 3p+5q=−4。交叉验证：令 OB=α·OA+β·OC，系数比较得 p=5α+2、q=−3α−2，3p+5q=15α+6−15α−10=−4，一致。",
+      "independent_self_check": "① 起点 O 是四点之一 → 用线性相关而非口诀 x+y+z=1（桥接要求：能区分位置向量系数与自由向量系数）✓；② a,b,c 不共面保证基底合法、系数比较唯一 ✓；③ 几何回代：A、B、C 落在过 O 的平面，四点共面成立 ✓；④ 行列式展开符号逐项核对（含 −(−2) 前的负号）无错 ✓。",
+      "first_breakpoint": "无",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "evidence_level": "SAME_SESSION_WORKFLOW_PASS",
+      "answer_value": "−4",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 10,
+      "task": 38,
+      "item_id": "C14",
+      "qid": "Q-5bf035885c806a48",
+      "source_revision": {
+        "generation": "G-20260816-10",
+        "source": "data/packets/1.1/learning_path_without_questions.md",
+        "context": "data/contexts/1.1.json"
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "题干信号（多选）：正四面体 P-ABC 棱长 1，O 为底面 ABC 重心，G∈PO、F∈PC（不含端点），D、E 在 PA、PB 延长线上且 PD=xPA、PE=yPB、PF=zPC，M=DF∩AC、N=EF∩BC。四个选项分别考：A 线面平行（仿射求交）、B 重心向量表示、C 四点共面+正数乘积固定时的和最值、D 外接球心（垂直平分面/等距回代）+点面距离。",
+      "course_call": {
+        "method_model_id": "3.1.2.1 拆分法/仿射坐标与系数比较；3.1.4.1 平行垂直/线面平行判定（方向∥面且线不⊂面）；3.1.4.2 共面；3.1.4.6.a/b 平面方程截距式；3.1.4.7 距离/点面距离投影公式；桥接 bridge-1.1-affine-intersection-ratio、bridge-1.1-centroid、bridge-1.1-positive-product-sum、bridge-micro-sphere",
+        "course_keys": [
+          "decomposition",
+          "parallel_perpendicular",
+          "coplanar",
+          "plane_equation_upper",
+          "plane_equation_lower",
+          "distance"
+        ],
+        "recited_bridge": "复述桥接：① 四点共面系数和=1（此处公共起点 P 是四点 D、E、F、O 之外的第五点，适用系数和=1）；② 仿射求交：同一交点双参数化、同一基底系数比较、检查分母与定义域；③ 重心：OG=(OA+OB+OC)/3 由中点与 2:1 推出；④ 正数乘积固定→和最值：先写使用条件、平方非负推下界、等号条件、定义域回代（xy=k 四栏）；⑤ 外接球：等距关系=垂直平分面，选独立约束、消元、回代关键顶点。"
+      },
+      "first_line": "建仿射坐标系：P 为原点，{PA,PB,PC} 为不共面基 → P=(0,0,0)、A=(1,0,0)、B=(0,1,0)、C=(0,0,1)、O=(1/3,1/3,1/3)（重心桥接：O=(A+B+C)/3）、D=(x,0,0)、E=(0,y,0)、F=(0,0,z)；延长线→x,y>1，线段内→0<z<1，G∈PO → G=(g,g,g) 且 0<g<1/3。",
+      "second_line": "A：M=DF∩AC 双参数化：M=D+t(F−D)=(x(1−t),0,zt) 与 M=A+s(C−A)=(1−s,0,s) 逐项比较 → t=(x−1)/(x−z)、s=z(x−1)/(x−z)，M=(x(1−z)/(x−z), 0, z(x−1)/(x−z))；同理 N=(0, y(1−z)/(y−z), z(y−1)/(y−z))。B：PO=O−P=(PA+PB+PC)/3（重心推导：取 BC 中点 M′，OM′=(OB+OC)/2，AG:GM′=2:1 → OG=(OA+OB+OC)/3，公共起点换为 P 即 PO=(PA+PB+PC)/3）。C：z=1/2 且平面 DEF 过 O。D：正四面体对称轴 PO，外接球心 G 在轴上。",
+      "continuation": "A：N−M 的 z 分量 = z[(y−1)/(y−z)−(x−1)/(x−z)]；x=y 时 =0 → MN 方向∥平面 PAB（w=0 面）；且 0<s=z(x−1)/(x−z)<1（由 z<1、x>1）→ M 在 AC 内部、M∉平面PAB → MN⊄平面PAB → MN∥平面PAB 成立，A 正确。B：{PA,PB,PC} 是基 → 表示唯一；(1/2,1/3,1/6)≠(1/3,1/3,1/3)，B 错误（数值验证：PO=(0,0,−√6/3)，选项组合=(−1/12,−√3/12,−√6/3)，不等）。C：O∈平面DEF，公共起点 P 在四点之外 → 四点共面系数和=1：O=λD+μE+νF，λ=1/(3x)、μ=1/(3y)、ν=1/(3z)，λ+μ+ν=1 → 1/(3x)+1/(3y)+1/(3z)=1；z=1/2 → 1/x+1/y=1 → xy=x+y → (x−1)(y−1)=1；x+y=(x−1)+(y−1)+2 ≥ 2√[(x−1)(y−1)]+2=4（平方非负推下界），等号 x−1=y−1=1 → x=y=2，满足 x,y>1 定义域 → min(x+y)=4，C 正确。D：等距回代求球心——对称性设 G=(g,g,g)；在基 {PA,PB,PC} 中 |PA|=|PB|=|PC|=1 且两两夹角 60°（点积 1/2），|G−P|²=g²(3+2·3·(1/2))=6g²；|G−A|²=|(g−1)PA+gPB+gPC|²=(g−1)²+2g²+2[(g−1)g·(1/2)+(g−1)g·(1/2)+g²·(1/2)]=6g²−4g+1；|GA|²=|GP|² → 6g²−4g+1=6g² → g=1/4 → G=(1/4,1/4,1/4)，回代 A、B、C、P：|G−A|²=6/16−1+1=3/8、|G−P|²=6/16=3/8 等距成立（半径²=3/8）✓；x=y=2 → D=(2,0,0)、E=(0,2,0)，平面 DEF 截距式 u/2+v/2+w/z=1 过 G → 1/8+1/8+1/(4z)=1 → z=1/3；平面 PDE 由 PA、PB 张成=平面PAB，F=P+(1/3)PC → d(F,平面PAB)=(1/3)·d(C,平面PAB)=(1/3)·(√6/3)=√6/9（正四面体高 √6/3，点面距离随线段线性缩放）✓。答案：ACD。",
+      "independent_self_check": "① A：分母 x−z、y−z 非零（x,y>1>z>0）✓；线面平行补查 MN⊄平面PAB，两条件齐全 ✓；② B：重心系数 1/3 由三条中线等权推出，基表示唯一性排除 (1/2,1/3,1/6) ✓；③ C：等号点 x=y=2 回代 1/x+1/y=1 成立且在定义域（延长线要求 x,y>1）✓；④ D：球心等距回代全部四顶点、三条独立垂直平分面交于一点说明唯一性；距离线性比例与 √6/3 来源核对 ✓；⑤ 多选漏选/错选排查：B 用坐标数值否定 ✓。",
+      "first_breakpoint": "无",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "evidence_level": "SAME_SESSION_WORKFLOW_PASS",
+      "answer_value": "ACD",
+      "ledger_note": "question_coverage.json 中 C14 为 BLOCKED_BRIDGE、bridge-1.1-positive-product-sum zero_base_status=NOT_CLOSED；本代已按放行要求先完成方法检查 2（xy=k 四栏，含基本不等式检查点与几何定义域回代），并在 C14 过程中独立使用全部五个桥接（四点共面系数和、仿射求交、重心、正数乘积最值、外接球垂直平分面），任一桥接均独立通过，故 C14 判 PASS；账本闭合判定归主控，本结果仅为会话内 SAME_SESSION_WORKFLOW_PASS 证据，不构成掌握声明。",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    }
+  ],
+  "method_check_results": [
+    {
+      "section": "1.1",
+      "cycle": 10,
+      "task": "method_check",
+      "item_id": "MC-双参数求交与同比分点截线",
+      "qid": "N/A",
+      "source_revision": {
+        "generation": "G-20260816-10",
+        "source": "data/packets/1.1/learning_path_without_questions.md",
+        "context": "data/contexts/1.1.json"
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "方法检查信号：同一交点分别按两条所在直线参数化、展开到同一不共面基底逐项比较系数、检查分母与定义域、由线线平行转线面平行前补查线面位置。自造无答案变式：换字母近迁移（Q 在 PA 延长线、R 在 PB 延长线、S 在 PC 上，U=QS∩AC、V=RS∩BC）。",
+      "course_call": {
+        "method_model_id": "3.1.2.1 拆分法/基底系数比较；bridge-1.1-affine-intersection-ratio 仿射参数求交与同比分点截线",
+        "course_keys": [
+          "decomposition"
+        ],
+        "recited_bridge": "复述桥接：同一点双参数表示→同一基底系数逐项比较→检查分母与定义域（交点不得与参数端点重合）→线面平行前补查「第三边在目标平面内且截线不在该平面内」。"
+      },
+      "first_line": "自造变式（不填任何教材数据）：Q=(m,0,0)（m>1）、R=(0,n,0)（n>1）、S=(0,0,t)（0<t<1）；U=QS∩AC、V=RS∩BC，求 U、V 并判定 UV 与平面 PAB 的关系。",
+      "second_line": "U：Q+t₁(S−Q)=(m(1−t₁),0,tt₁) 与 A+s₁(C−A)=(1−s₁,0,s₁) → t₁=(m−1)/(m−t)、s₁=t(m−1)/(m−t)；U=(m(1−t)/(m−t), 0, t(m−1)/(m−t))。V：同理 V=(0, n(1−t)/(n−t), t(n−1)/(n−t))。",
+      "continuation": "UV 方向 z 分量 = t[(n−1)/(n−t)−(m−1)/(m−t)]；m=n 时 =0 → UV∥平面PAB；且 U 在 AC 内部（0<s₁<1）→ U∉平面PAB → UV⊄平面PAB → UV∥平面PAB 成立。分母检查：m−t≠0、n−t≠0（m,n>1，0<t<1）✓；退化条件：m≠n 时 UV 不平行于平面 PAB（z 分量≠0）——结论依赖截线端点位置，不是套口号。结构探针：若改取 U′=QR∩AB、V′=RS∩BC，则 V′−U′ 的 z 分量 = t(n−1)/(n−t) 在 n>1 时不恒为 0，UV′ 与平面 PAB 不平行，验证「同比分点」结论必须逐题重推。",
+      "independent_self_check": "① 双参数各自命名（t₁ 与 s₁）不混淆 ✓；② 系数比较覆盖三个分量、z 分量关键项单独核对 ✓；③ 分母非零与参数范围（m,n>1、0<t<1）逐项检查 ✓；④ 线面平行补查了 UV⊄平面PAB ✓；⑤ 结构探针反例说明方法不是记忆结论，理解成立 ✓。",
+      "first_breakpoint": "无",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "evidence_level": "SAME_SESSION_WORKFLOW_PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 10,
+      "task": "method_check",
+      "item_id": "MC-正数乘积约束下的和最值回顾",
+      "qid": "N/A",
+      "source_revision": {
+        "generation": "G-20260816-10",
+        "source": "data/packets/1.1/learning_path_without_questions.md",
+        "context": "data/contexts/1.1.json"
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "方法检查信号：bridge-1.1-positive-product-sum 零基础放行未闭合，须先完成基本不等式检查点、无答案自造变式 xy=k 四栏（使用条件—平方非负—等号条件—定义域回代）、几何定义域回代，且不填入任何教材数据或结论。",
+      "course_call": {
+        "method_model_id": "bridge-1.1-positive-product-sum 正数乘积固定时的和最值（前置：正数、乘积固定、平方非负）",
+        "course_keys": [],
+        "recited_bridge": "复述桥接：先确认两变量均为正且乘积为正常数；由平方非负推出和的下界并把乘积常数代回；写两变量相等的等号条件，再检查候选是否符合几何定义域；若正数或乘积固定条件不成立，改用函数或边界方法。"
+      },
+      "first_line": "基本不等式检查点（独立推导）：对任意正数 u、v，(√u−√v)²≥0 → u+v−2√(uv)≥0 → u+v≥2√(uv)，等号当且仅当 u=v。自造变式：设 x、y 为正数且 xy=k（k 为正常数），四栏如下。",
+      "second_line": "四栏①使用条件：x>0、y>0 且 xy=k（k>0 固定常数）；②平方非负：x+y=(√x)²+(√y)² ≥ 2√(xy)=2√k，即和的下界 x+y≥2√k（推导而非背结论）；③等号条件：√x=√y 即 x=y=√k，代入 xy=k 自动满足；④定义域回代：若几何定义域要求 x≥x₀>√k 或 y≥y₀>√k 而等号点 (√k,√k) 不在域内，则不能取等号，改用函数 x+k/x（x≥√k 时单调递增）在边界 x=x₀ 处取最小值并回代验证；若等号点在域内，直接取等号并回代原几何条件。",
+      "continuation": "四栏方法完整落地（不填任何教材数据）：使用条件先行 → 平方非负推出下界 → 等号条件与乘积约束相容 → 定义域回代分支（等号点出域→边界取值；等号点在域→直接取等号）。该四栏即 C14 中「1/x+1/y=1 → (x−1)(y−1)=1 → x+y≥4，等号 x=y=2 且 2>1 在域内」所用方法的无数据抽象。",
+      "independent_self_check": "① 先写使用条件（正数+乘积固定），不满足时明确弃用本方法改函数/边界 ✓；② 下界由 (√x−√y)²≥0 推出而非背诵 a+b≥2√ab ✓；③ 等号条件 x=y=√k 与乘积约束相容 ✓；④ 定义域回代演示了「等号点出域→边界取值」的完整分支，覆盖 C14 几何（x,y>1 且 (x−1)(y−1)=1 时等号点 x=y=2 在域内）所需的全部检查动作 ✓。",
+      "first_breakpoint": "无",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "evidence_level": "SAME_SESSION_WORKFLOW_PASS",
+      "ledger_note": "本检查点补齐 bridge-1.1-positive-product-sum 放行所需的「基本不等式检查点+无答案自造变式 xy=k 四栏+几何定义域回代」三项证据；账本 zero_base_status 的闭合判定归主控。",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 10,
+      "task": "method_check",
+      "item_id": "MC-外接球心等距回代",
+      "qid": "N/A",
+      "source_revision": {
+        "generation": "G-20260816-10",
+        "source": "data/packets/1.1/learning_path_without_questions.md",
+        "context": "data/contexts/1.1.json"
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "方法检查信号：外接球心=到各顶点等距；等距关系为何给出垂直平分面；选独立约束避免重复方程；回代至少三个顶点并说明唯一性/对称性。自造对称体变式：长方体棱 a,b,c 的外接球心（选约束—消元—回代），再迁移到正四面体。",
+      "course_call": {
+        "method_model_id": "bridge-micro-sphere 外接球球心的垂直平分面法（前置：空间坐标、垂直平分面、球面等距条件）",
+        "course_keys": [],
+        "recited_bridge": "复述桥接：等距 |X−A|²=|X−B|² ⟺ (X−A)·(B−A)=|B−A|²/2，是 AB 的垂直平分面方程；先找对称性定部分分量，再选独立约束消元求球心，最后回代全部关键顶点才谈半径。"
+      },
+      "first_line": "长方体变式（只用符号 a,b,c）：取一顶点 O₀=(0,0,0)，三对顶点给出三条垂直平分面约束：x=a/2、y=b/2、z=c/2 → 球心 G=(a/2,b/2,c/2)。",
+      "second_line": "选约束：只用三组独立约束（同一方向的多个等距对给出同一平面，如 (O₀,B₁) 与 (A₁,D₁) 都给出 x=a/2，属重复方程，必须避免）；消元：三条垂直平分面两两垂直、交于唯一一点 G；回代：8 个顶点 |G−V|²=(a²+b²+c²)/4 全等 → 外接球半径 √(a²+b²+c²)/2。",
+      "continuation": "迁移到正四面体（C14 所需）：对称轴 PO 上设 G=(g,g,g)；基 {PA,PB,PC} 中 |PA|=|PB|=|PC|=1、两两点积 1/2，|G−P|²=6g²，|G−A|²=6g²−4g+1；|GA|²=|GP|² → g=1/4 → G=(1/4,1/4,1/4)；回代 A、B、C、P：|G−A|²=3/8、|G−P|²=3/8 等距成立；唯一性：三条垂直平分面（PA、PB、PC 的中垂面）交于一点，对称性给出球心在轴上，两者一致。",
+      "independent_self_check": "① 解释了等距→垂直平分面（点乘展开推导）而非背结论 ✓；② 明确哪些等距对是重复方程（同方向对棱）并只选独立约束 ✓；③ 回代了全部 8 个/4 个顶点并给出半径 ✓；④ 长方体与正四面体两个变式分别覆盖「对称性定分量」与「轴上设参消元」两种选约束路径 ✓。",
+      "first_breakpoint": "无",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "evidence_level": "SAME_SESSION_WORKFLOW_PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    }
+  ],
+  "first_breakpoints": [
+    {
+      "item_id": "1.1-B8",
+      "first_breakpoint": "无",
+      "hint_level": "NONE"
+    },
+    {
+      "item_id": "1.1-C13",
+      "first_breakpoint": "无",
+      "hint_level": "NONE"
+    },
+    {
+      "item_id": "1.1-C14",
+      "first_breakpoint": "无",
+      "hint_level": "NONE"
+    },
+    {
+      "item_id": "MC-双参数求交与同比分点截线",
+      "first_breakpoint": "无",
+      "hint_level": "NONE"
+    },
+    {
+      "item_id": "MC-正数乘积约束下的和最值回顾",
+      "first_breakpoint": "无",
+      "hint_level": "NONE"
+    },
+    {
+      "item_id": "MC-外接球心等距回代",
+      "first_breakpoint": "无",
+      "hint_level": "NONE"
+    }
+  ],
+  "answer_sidecar_read": false,
+  "human_acceptance_not_proven": true,
+  "section": "1.1"
+}

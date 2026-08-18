@@ -1,0 +1,126 @@
+{
+  "schema_version": "1",
+  "section": "1.1",
+  "round": 3,
+  "worker": 2,
+  "assigned_cycles": [
+    "1.1-cycle-3",
+    "1.1-cycle-4"
+  ],
+  "focus": "等值面法与共面证明",
+  "runtime_contract": {
+    "agent_role": "deepseek_worker",
+    "model": "opencode-go/deepseek-v4-flash",
+    "reasoning_effort": "max",
+    "context_window": 1000000,
+    "contract_honored": true,
+    "note": "按控制器指派契约执行; 未使用 Kimi, 未派生子代理; 环境内无法自证模型身份, 未观察到偏离信号。"
+  },
+  "sources_read": [
+    "data/packets/1.1/learning_path_without_questions.md (循环3-4节; mtime 2026-08-15 22:41:47, 含图形状态标注)",
+    "data/packets/1.1/learning_packet.json (cycles 2/3/4: course_keys, knowledge_refs, method_checkpoints, worked_examples, direct_variants, exercise_questions, action_order, 1.1-k3 知识块)",
+    "data/contexts/1.1.json (instructions, route_support, manifest, unresolved=[])",
+    "data/bridge_micro_lessons.json (unit micro-four-point-coplanar)",
+    "data/bridge_supplement_lessons.json (7 个 lesson, 不含 micro-four-point-coplanar)",
+    "data/course_transcripts/3.1.2.1 空间向量拆分法.json (仅 provenance)",
+    "data/course_transcripts/3.1.2.2 空间向量等值面法.json (536 句, 1868s, sha 0e23bed10706347c)",
+    "data/course_transcripts/3.1.4.2 证明共面.json (441 句, 1441s, sha a28bbadd4dc086fe)",
+    "data/course_catalog.json (课程键存在; 字段名与预期不同, 视频路径以 route md 为准)",
+    "声明视频文件存在性: 3.1.2.1/3.1.2.2/3.1.4.2 mp4 均 Test-Path=True"
+  ],
+  "forbidden_sources_read": false,
+  "answer_sidecar_read": false,
+  "human_acceptance_not_proven": true,
+  "cycle_results": [
+    {
+      "cycle": "1.1-cycle-3",
+      "title": "空间向量等值面法",
+      "verdict": "proxy_pass",
+      "first_breakpoint": null,
+      "evidence": [
+        "循环结构: course_keys=[equal_surface](3.1.2.2 补充课程), 前置课程 decomposition(3.1.2.1); 无教材例题/变式/习题, 仅 2 个方法检查点; action_order=watch_current_courses→attempt_current_method_checkpoints_without_answers→assess_current_cycle",
+        "知识 1.1-k3 (prerequisite_knowledge_blocks, answer_free=true) 直接给出: O,A,B,C 不共面, OP=xOA+yOB+zOC 时 P,A,B,C 共面 ⟺ x+y+z=1; 二维对照 三点共线 ⟺ x+y=1",
+        "3.1.2.2 转写通篇教系数和: S2 系数和必然为一, S3 X加Y加Z, S4 三点共线系数和为一/四点共面, S5-S7 0倍线/2分之1倍线/一倍面/2分之1倍面, S9 末减出系数和",
+        "检查点1 独立作答: P∈面ABC ⟺ x+y+z=1; 自造例 (1/3,1/3,1/3) 和=1 在面内; 反例 (1,1,1) 和=3 落在平行于 ABC 的 3 倍面, 故不能只检查三个系数都非零",
+        "检查点2 独立作答: E 系数和=2 → 2倍面; F 系数和=7/2 → 7/2倍面; EF=OF-OE 系数和 = 7/2-2 = 3/2; 系数相减为纯算术, 比重新作 3D 图更稳定, 不依赖作图精度",
+        "两个检查点 visual=None, 纯文字, 无需看图; 视频文件存在, 转写 provenance 完整"
+      ],
+      "method_models": [
+        {
+          "name": "等值面法（系数和速解）",
+          "trigger": "以不共面 O,A,B,C 为基, 点 P 表示为 OP=xOA+yOB+zOC; 需判断 P 与面/倍面的位置关系或求差向量系数和",
+          "steps": [
+            "选公共起点 O, 把目标点写成三条不共面基向量的线性组合",
+            "按系数和 x+y+z 定位等值面: 1倍面为面 ABC, 0倍面过 O, k倍面为平行面",
+            "点共面判定: P,A,B,C 共面 ⟺ x+y+z=1; 二维退化: 三点共线 ⟺ x+y=1",
+            "差向量: OF-OE 的系数和 = 各自系数和相减, 免作图"
+          ],
+          "checks": [
+            "能说明为什么是系数和=1 而不是系数都非零",
+            "能区分二维(三点共线)与三维(四点共面)的系数条件",
+            "能用系数相减直接算 EF 的系数和并说明稳定性"
+          ]
+        }
+      ],
+      "unresolved_gaps": [
+        "系数和=1 的推导(为什么成立)在书面材料只有结论(1.1-k3 推论补全), 推导依赖 3.1.2.2 视频白板; 转写为 ASR 噪声文本(S2 PAB3点光线 等), 无法从转写复核推导",
+        "本循环无教材例题/变式作脚手架, 方法完全依赖视频+知识结论, 零基础学生缺一步书面示范",
+        "若按桥接 method_check 更高标准(口述为什么系数和为1)验收, 书面材料不完整"
+      ]
+    },
+    {
+      "cycle": "1.1-cycle-4",
+      "title": "共面证明",
+      "verdict": "blocked",
+      "first_breakpoint": "任务16 变式(12): 例12 直属变式 visual_status=NEEDS_VISION_SIDECAR, img_refs=1, 题干含 如图 依赖未核验图形; 路线 md 明确 图形状态: 未完成视觉核验, 禁止猜图; 先补视觉侧车再作答 → 零基础学生在此停住, 本循环推进门无法满足",
+      "evidence": [
+        "例12 (READY_TEXT_ONLY, img_refs=0) 教学完整: 题干+解法均在 teaching_text(判断 MA,MB,MC 是否共面, 就看能否找到 λ,μ 使 MA=λMB+μMC; 消去 O), 纯文字可学",
+        "变式(12): NEEDS_VISION_SIDECAR; 平行六面体 A1D1/C1D1/CC1/AB 中点 E,F,G,H; (1) 求 EG=xAB+yAD+zAA1 的 x,y,z — 文字层面可推 x=1,y=1/2,z=-1/2, 但图形未核验按协议不得猜图; (2) 证 E,F,G,H 四点共面",
+        "B9 (VISION_VERIFIED, 2025·河北模拟): 正四棱锥 P-ABCD, E,F 为 PA,PC 中点, DG=2GP; (1) BG=xBA+yBC+zBP → x=1/3,y=1/3,z=2/3 (D=BA+BC, G=D/3+2P/3); (2) 证 B,E,G,F 共面: E=(a+p)/2, F=(c+p)/2, G=(a+c+2p)/3=(2/3)E+(2/3)F; 但放行条件=完成本批方法桥接后",
+        "桥接 micro-four-point-coplanar: status=SOURCE_METHOD_READY, 仅 lesson_steps 骨架+method_check+release_requirements; bridge_supplement_lessons.json 的 7 个 lesson 均不含该单元 → 无学生侧完整无答案微课; source_evidence 指向 worker-02-solutions/worker-05-synthesis 内部文档(非学生材料)",
+        "方法内容实际覆盖: 1.1-k3 推论(系数和=1, answer_free) + 3.1.2.2 视频(系数和/倍面) + 3.1.4.2 视频(证明共面就是向量拆分 S20-S23; 系数和代表 P 与 ABC 共面, 这是前面讲过的 S14)",
+        "3.1.4.2 转写教学主线 = 共面 ⇔ 同起点向量可拆(有解), 但系数和=1 被引用为前面讲过的, 依赖 3.1.2.2 白板; 视频文件存在 (Test-Path True)"
+      ],
+      "method_models": [
+        {
+          "name": "向量共面判定（拆分法）",
+          "trigger": "证明四点共面或向量共面, 例: 证 D 与 A,B,C 共面 / 证 MA,MB,MC 共面",
+          "steps": [
+            "选公共起点(如 A 或 O), 把目标向量写成该起点到面内点的向量",
+            "用面内两个不共线向量作基, 线性表示目标向量: 目标 = λ(基1)+μ(基2)",
+            "有解(λ,μ 存在) ⟺ 向量共面; 四点共面 ⟺ 同一起点下第四点向量可被前三点中两向量拆分",
+            "或套系数和: O,A,B,C 不共面, OP=xOA+yOB+zOC, P∈面ABC ⟺ x+y+z=1"
+          ],
+          "checks": [
+            "能区分向量共面(可拆)与点共面(同面)并回代几何位置",
+            "能用例12 的消 O 技巧把题设条件翻译成同一基底等式",
+            "三点共线(x+y=1)与四点共面(x+y+z=1)不混淆"
+          ]
+        },
+        {
+          "name": "四点共面系数和=1（桥接方法, SOURCE_METHOD_READY）",
+          "trigger": "目标题 B6/B7/B8/B11/C13/C14 及本循环 B9 (放行条件=完成本批方法桥接后)",
+          "steps": [
+            "选公共起点, 目标点写成三条不共面基向量的线性组合",
+            "把点在平面内条件翻译成同一向量等式",
+            "比较公共起点与三顶点系数, 检查系数和是否满足平面约束",
+            "自造变式: 只改一个点位置, 重新判断系数和条件"
+          ],
+          "checks": [
+            "口述为什么系数和为1 而非记忆口号(书面未给推导, 依赖视频白板)",
+            "区分二维/三维系数条件",
+            "回代几何位置, 排除向量共面误写为点共面"
+          ]
+        }
+      ],
+      "unresolved_gaps": [
+        "变式(12) 图形未视觉核验 (NEEDS_VISION_SIDECAR): 本循环第一断点, 需先补 vision sidecar 才能放行",
+        "桥接 micro-four-point-coplanar 为 SOURCE_METHOD_READY: 无学生侧完整无答案微课与检查点; release_requirements(方法题1+同构变式1+口述理由)无法仅凭骨架满足; 按必须先补成完整无答案微课的字面要求, B9 及后续 C13/C14 放行受阻",
+        "系数和=1 为什么成立的推导在书面只有结论, 视频白板不可从转写复核",
+        "例12 教学含完整解法(教学阶段允许), 但变式/B9 为无答案独立作答; 零基础学生若依赖例12 解法模式迁移, 独立掌握证据需未见题复测"
+      ]
+    }
+  ],
+  "overall_verdict": "partial",
+  "summary": "Cycle 3 (等值面法): 无教材题, 仅 2 个纯文字方法检查点; 知识 1.1-k3 书面给出系数和=1 判定, 3.1.2.2 视频(转写 536 句)通篇教系数和/倍面/末减出, 两检查点均可独立作答, 无隐藏前置或答案暴露 → proxy_pass。Cycle 4 (共面证明): 例12 纯文字教学完整可学; 但直属变式(任务16)为 NEEDS_VISION_SIDECAR, 图形未核验按路线禁止猜图, 为第一断点; 桥接 micro-four-point-coplanar 为 SOURCE_METHOD_READY 且无 supplement 微课, 方法内容虽被知识+两视频实际覆盖, 桥接 release 无法仅凭骨架满足; B9 文字可解但放行依赖桥接 → blocked。两循环均无需读取答案 sidecar; 系数和=1 推导是两循环共同的书面缺口(依赖视频白板)。human_acceptance_not_proven=true。仅写入本报告文件, 未创建 1.1-iteration-5-worker-2.json。"
+}

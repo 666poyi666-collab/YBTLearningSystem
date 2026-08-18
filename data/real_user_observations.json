@@ -1,0 +1,82 @@
+{
+  "schema_version": "7.3",
+  "status": "not_run",
+  "title": "第一章零基础真实用户观察记录",
+  "purpose": "为五名真实零基础用户的听课、逐题作答、知识点复述和冷复测留存可审计记录；代理模拟不得填充此文件。",
+  "required_zero_base_users": 5,
+  "records": [
+    {
+      "slot": "real-user-01",
+      "status": "not_run",
+      "participant_id": null,
+      "session_artifacts": [],
+      "observed_questions": [],
+      "knowledge_point_checks": [],
+      "mastery_result": "not_assessed",
+      "issues": [
+        "not_registered"
+      ]
+    },
+    {
+      "slot": "real-user-02",
+      "status": "not_run",
+      "participant_id": null,
+      "session_artifacts": [],
+      "observed_questions": [],
+      "knowledge_point_checks": [],
+      "mastery_result": "not_assessed",
+      "issues": [
+        "not_registered"
+      ]
+    },
+    {
+      "slot": "real-user-03",
+      "status": "not_run",
+      "participant_id": null,
+      "session_artifacts": [],
+      "observed_questions": [],
+      "knowledge_point_checks": [],
+      "mastery_result": "not_assessed",
+      "issues": [
+        "not_registered"
+      ]
+    },
+    {
+      "slot": "real-user-04",
+      "status": "not_run",
+      "participant_id": null,
+      "session_artifacts": [],
+      "observed_questions": [],
+      "knowledge_point_checks": [],
+      "mastery_result": "not_assessed",
+      "issues": [
+        "not_registered"
+      ]
+    },
+    {
+      "slot": "real-user-05",
+      "status": "not_run",
+      "participant_id": null,
+      "session_artifacts": [],
+      "observed_questions": [],
+      "knowledge_point_checks": [],
+      "mastery_result": "not_assessed",
+      "issues": [
+        "not_registered"
+      ]
+    }
+  ],
+  "minimum_evidence": [
+    "每名用户首次听课前记录 baseline_check=zero_base，并附不含答案的抽样证据",
+    "每名用户实际听完该批次必听课程并留存批次与时间",
+    "按知识点讲解、右侧例题、类型题、A/B/C习题顺序逐题记录",
+    "每道题保留独立作答结果，视觉题保留当次图像证据",
+    "全节完成后进行不看答案的知识点复述与冷复测",
+    "记录只能证明观察到的行为，不把建议流程或代理轨迹记为掌握"
+  ],
+  "answer_policy": "NO_FINAL_ANSWERS_IN_STUDENT_OBSERVATION_RECORDS",
+  "verification_engine": "python scripts/real_user_collect.py verify --all",
+  "protocol": "data/real_user_protocol.md",
+  "schema_file": "data/real_user_schema.json",
+  "note": "本文件由采集 harness 根据 data/real_user_records/（注册真人后创建）中的真实事件导出；无真人事件时保持 not_run，代理轨迹不得写入。"
+}

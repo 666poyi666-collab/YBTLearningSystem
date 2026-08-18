@@ -1,0 +1,434 @@
+{
+  "schema_version": "1.1",
+  "worker": 3,
+  "section": "1.1",
+  "generation": "G-20260816-07",
+  "item_results": [
+    {
+      "section": "1.1",
+      "cycle": "1.1-cycle-5",
+      "item_id": "b867c227820b9b42",
+      "task_number": 18,
+      "kind": "example",
+      "label": "例6",
+      "source_revision": {
+        "generation": "G-20260816-07"
+      },
+      "context_sha256": "2ba656cf38a3581aab11d3f5e04967018ef5be9be0af7de6cd59309abbd67119",
+      "observation_signal": "正方体 ABCD-A1B1C1D1 中求向量 AC 与 A1B1、B1A1、AD1、CD1、B1D1 的夹角——目标是夹角；信号：A1B1∥AB、B1A1 反向、B1D1∥BD、棱互相垂直；选数量积定义 cos<a,b>=a·b/(|a||b|) 或建系坐标点乘。",
+      "course_call": {
+        "method_model_id": "1.1-k4-向量夹角-数量积定义-建系坐标法",
+        "course_ids": [
+          "3.1.4.3",
+          "3.1.1.1"
+        ],
+        "course_keys": [
+          "line_line_angle",
+          "space_vector_ops"
+        ],
+        "appears_before_first_use": true,
+        "linkage": "3.1.4.3 教向量夹角 cos=a·b/(|a||b|)、向量角[0,π]与线线角[0,90°]加绝对值区别、建系坐标点乘；3.1.1.1 教平行六面体对应边平行与模长平方。两垂直平面规则核验：本题无'两垂直平面'题设（正方体/正四面体/平行六面体/三棱锥均不以此为前提推理），规则 N/A，无正交条件可猜。",
+        "first_use_location": "1.1-cycle-5 任务18 教材例6（知识点4 首次例题）"
+      },
+      "first_line": "设棱长 a，建系 A(0,0,0)、B(a,0,0)、C(a,a,0)、D(0,a,0)、A1(0,0,a)、B1(a,0,a)、D1(0,a,a)；目标：求 <AC,A1B1>、<AC,B1A1>、<AC,AD1>、<AC,CD1>、<AC,B1D1>。",
+      "second_line": "坐标向量：AC=(a,a,0)；A1B1=(a,0,0)；B1A1=(-a,0,0)；AD1=D1-A=(0,a,a)；CD1=D1-C=(-a,0,a)；B1D1=D1-B1=(-a,a,0)。cos<a,b>=a·b/(|a||b|)。",
+      "continuation": "逐项代入：AC·A1B1=a²，|AC|=√2a，|A1B1|=a → cos=1/√2 → 45°；AC·B1A1=-a² → cos=-1/√2 → 135°；AC·AD1=a² → cos=1/2 → 60°；AC·CD1=-a² → cos=-1/2 → 120°；AC·B1D1=-a²+a²+0=0 → 90°。",
+      "independent_self_check": "五个向量均非零；结果都在[0,π]；B1A1 反向夹角=π-45°=135°；CD1 末减初方向正确；B1D1∥BD 点乘 0；无投影/模长混淆；两垂直平面规则核验：本题无'两垂直平面'题设（正方体/正四面体/平行六面体/三棱锥均不以此为前提推理），规则 N/A，无正交条件可猜。",
+      "first_breakpoint": null,
+      "hint_level": "none",
+      "verdict": "PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": "1.1-cycle-5",
+      "item_id": "40489a2282275850",
+      "task_number": 19,
+      "kind": "example",
+      "label": "例7",
+      "source_revision": {
+        "generation": "G-20260816-07"
+      },
+      "context_sha256": "2ba656cf38a3581aab11d3f5e04967018ef5be9be0af7de6cd59309abbd67119",
+      "observation_signal": "正四面体 ABCD 棱长 1，E、F 分别是 AD、CD 的中点，求 EF·AB——目标是数量积；信号：两个中点 → 中点分点规则（EF 末减初化成 (C-A)/2），正四面体相邻棱夹角 60°。",
+      "course_call": {
+        "method_model_id": "1.1-k4-数量积定义-中点分点拆分",
+        "course_ids": [
+          "3.1.2.1",
+          "3.1.1.1"
+        ],
+        "course_keys": [
+          "decomposition",
+          "space_vector_ops"
+        ],
+        "appears_before_first_use": true,
+        "linkage": "3.1.2.1 教中点拆分（ON=(OB+OC)/2 型）与末减初；3.1.1.1 教数量积定义与 60° 余弦。两垂直平面规则核验：本题无'两垂直平面'题设（正方体/正四面体/平行六面体/三棱锥均不以此为前提推理），规则 N/A，无正交条件可猜。",
+        "first_use_location": "1.1-cycle-5 任务19 教材例7（知识点4 第二例题）"
+      },
+      "first_line": "目标 EF·AB；中点分点：EF = OF-OE = (C+D)/2 - (A+D)/2 = (C-A)/2 = (1/2)AC。",
+      "second_line": "代入数量积定义：EF·AB = (1/2)AC·AB = (1/2)|AC||AB|cos<AC,AB>；正四面体棱长 1 → |AC|=|AB|=1，<AC,AB>=60°。",
+      "continuation": "EF·AB = (1/2)·1·1·cos60° = 1/4。",
+      "independent_self_check": "中点差末减初方向正确；AC 与 AB 共起点夹角 60° 而非 120°；结果为标量 1/4；两垂直平面规则核验：本题无'两垂直平面'题设（正方体/正四面体/平行六面体/三棱锥均不以此为前提推理），规则 N/A，无正交条件可猜。",
+      "first_breakpoint": null,
+      "hint_level": "none",
+      "verdict": "PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": "1.1-cycle-5",
+      "item_id": "df02a4165b305660",
+      "task_number": 20,
+      "kind": "example",
+      "label": "例8",
+      "source_revision": {
+        "generation": "G-20260816-07"
+      },
+      "context_sha256": "2ba656cf38a3581aab11d3f5e04967018ef5be9be0af7de6cd59309abbd67119",
+      "observation_signal": "正方体中求向量 AC 在直线 AB 上的投影向量、AC1 在平面 ABCD 上的投影向量——目标是投影向量（向量）；信号：向直线投影=平移起点后终点作垂线，向平面投影=起点终点分别投影；投影与模长防卡规则：同时写投影向量与投影长度，不混淆类型。",
+      "course_call": {
+        "method_model_id": "1.1-k4-投影向量-向直线与向平面投影",
+        "course_ids": [
+          "3.1.4.3"
+        ],
+        "course_keys": [
+          "line_line_angle"
+        ],
+        "appears_before_first_use": true,
+        "linkage": "依据为教材知识点4 正文投影定义表（(a·b/|b|²)b、向直线/向平面投影图形法）；3.1.4.3 转写对'投影'0 命中；补充桥接 bridge-1.1-projection（SUPPLEMENT_READY，零基础放行仍须通过其检查标准）方法链与知识点正文一致，仅复核、不参与判级。两垂直平面规则核验：本题无'两垂直平面'题设（正方体/正四面体/平行六面体/三棱锥均不以此为前提推理），规则 N/A，无正交条件可猜。",
+        "first_use_location": "1.1-cycle-5 任务20 教材例8（投影首次例题）"
+      },
+      "first_line": "目标1：AC 在直线 AB 上的投影向量。AC 起点 A 已在直线 AB 上；终点 C 向 AB 作垂线，正方体中 CB⊥AB，垂足为 B → 投影向量为 AB。",
+      "second_line": "公式复核：投影向量 = (AC·AB/|AB|²)·AB；设棱长 a：AC·AB = √2a·a·cos45° = a² = |AB|² → 投影向量 = AB。分行：有向投影长度 = AC·AB/|AB| = a（标量）。",
+      "continuation": "目标2：AC1 在平面 ABCD 上的投影向量：起点 A 投影为自身 A，终点 C1 向底面作垂线，垂足为 C → 投影向量 = AC；AC1 的投影长度 = |AC1·AC|/|AC| = √2a（标量）。",
+      "independent_self_check": "投影向量（向量）与投影长度（标量，可负）分行核对不混写；|b|² 与 |b| 位置正确；垂足图形法与公式法一致；两垂直平面规则核验：本题无'两垂直平面'题设（正方体/正四面体/平行六面体/三棱锥均不以此为前提推理），规则 N/A，无正交条件可猜。",
+      "first_breakpoint": null,
+      "hint_level": "none",
+      "verdict": "PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": "1.1-cycle-5",
+      "item_id": "B4",
+      "task_number": 21,
+      "kind": "exercise",
+      "label": "B4",
+      "source_revision": {
+        "generation": "G-20260816-07"
+      },
+      "context_sha256": "2ba656cf38a3581aab11d3f5e04967018ef5be9be0af7de6cd59309abbd67119",
+      "observation_signal": "三棱锥 A-BCD 每条棱长都为 2，求 AB·CD——目标是数量积；信号：所有棱等长 → 相邻棱夹角 60°；AB 与 CD 异面 → 拆 CD=AD-AC（末减初）转共起点。放行条件：本循环投影方法检查已通过（模拟内）。",
+      "course_call": {
+        "method_model_id": "1.1-k4-数量积定义-异面向量拆分-逐项展开",
+        "course_ids": [
+          "3.1.2.1",
+          "3.1.1.1"
+        ],
+        "course_keys": [
+          "decomposition",
+          "space_vector_ops"
+        ],
+        "appears_before_first_use": true,
+        "linkage": "3.1.2.1 教基底拆分与末减初；3.1.1.1 教数量积定义与 60° 夹角；question_coverage：bridge_status=NOT_REQUIRED、release=READY_FOR_INDEPENDENT_ATTEMPT。G-07 方法族规则：第二行写数量积定义/分配律/极化恒等式，非平方型乘积也要逐项展开；若平方展开，先列三个自项和三个交叉项再合并；检查'乘积展开是否漏项'。两垂直平面规则核验：本题无'两垂直平面'题设（正方体/正四面体/平行六面体/三棱锥均不以此为前提推理），规则 N/A，无正交条件可猜。",
+        "first_use_location": "1.1-cycle-5 任务21 B4（独立作答）"
+      },
+      "first_line": "目标 AB·CD；把 CD 拆成共起点差：CD = AD - AC。",
+      "second_line": "按'非平方型乘积逐项展开'规则：AB·CD = AB·(AD-AC) = AB·AD - AB·AC（两项，无自项）；棱长 2：AB·AD = 2·2·cos60° = 2，AB·AC = 2·2·cos60° = 2。",
+      "continuation": "AB·CD = 2 - 2 = 0，选 D。",
+      "independent_self_check": "展开两项逐项列出无遗漏；CD=AD-AC 末减初方向正确；相邻棱两两夹角 60°；结果 0 对应 AB⊥CD（异面棱垂直，与视觉侧车虚线 BD 一致）；两垂直平面规则核验：本题无'两垂直平面'题设（正方体/正四面体/平行六面体/三棱锥均不以此为前提推理），规则 N/A，无正交条件可猜。",
+      "first_breakpoint": null,
+      "hint_level": "none",
+      "verdict": "PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": "1.1-cycle-5",
+      "item_id": "B5",
+      "task_number": 22,
+      "kind": "exercise",
+      "label": "B5",
+      "source_revision": {
+        "generation": "G-20260816-07"
+      },
+      "context_sha256": "2ba656cf38a3581aab11d3f5e04967018ef5be9be0af7de6cd59309abbd67119",
+      "observation_signal": "棱长 2 的正方体 ABCD-A1B1C1D1 中 E 是棱 A1D1 的中点，求 EB1·EB——目标是数量积；信号：正方体+中点 → 建系坐标法，中点坐标=两端点平均，坐标点乘。",
+      "course_call": {
+        "method_model_id": "1.1-k4-数量积-建系坐标法",
+        "course_ids": [
+          "3.1.4.3"
+        ],
+        "course_keys": [
+          "line_line_angle"
+        ],
+        "appears_before_first_use": true,
+        "linkage": "3.1.4.3 教建系标点坐标与坐标点乘（转写原文：设棱长为 2 防止出分数、E 点坐标可直接写）；question_coverage：COURSE_DIRECT、转写 PRESENT。G-07 方法族规则：第二行写数量积定义/分配律/极化恒等式，非平方型乘积也要逐项展开；若平方展开，先列三个自项和三个交叉项再合并；检查'乘积展开是否漏项'。两垂直平面规则核验：本题无'两垂直平面'题设（正方体/正四面体/平行六面体/三棱锥均不以此为前提推理），规则 N/A，无正交条件可猜。",
+        "first_use_location": "1.1-cycle-5 任务22 B5（独立作答）"
+      },
+      "first_line": "建系 A(0,0,0)、B(2,0,0)、C(2,2,0)、D(0,2,0)、A1(0,0,2)、B1(2,0,2)、D1(0,2,2)；中点分点：E 为 A1D1 中点 → E=(0,1,2)。",
+      "second_line": "向量箭头末减初：EB1 = B1-E = (2,-1,0)；EB = B-E = (2,-1,-2)。坐标点乘逐项：2·2 + (-1)(-1) + 0·(-2)。",
+      "continuation": "EB1·EB = 4+1+0 = 5，选 B。",
+      "independent_self_check": "中点坐标=端点平均核对；两向量均以 E 为起点（末减初）方向正确；坐标点乘三行逐项核对无漏；结果 5 在选项集内；两垂直平面规则核验：本题无'两垂直平面'题设（正方体/正四面体/平行六面体/三棱锥均不以此为前提推理），规则 N/A，无正交条件可猜。",
+      "first_breakpoint": null,
+      "hint_level": "none",
+      "verdict": "PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": "1.1-cycle-6",
+      "item_id": "a150e68825eff982",
+      "task_number": 23,
+      "kind": "example",
+      "label": "例13",
+      "source_revision": {
+        "generation": "G-20260816-07"
+      },
+      "context_sha256": "2ba656cf38a3581aab11d3f5e04967018ef5be9be0af7de6cd59309abbd67119",
+      "observation_signal": "棱长为 1 的正四面体 ABCD 中，E 是 BC 的中点，求 AE·AD——类型Ⅳ 数量积标准模型；信号：目标数量积、出现中点 → 中点分点：AE=(AB+AC)/2（方向 A→BC 中点），正四面体相邻棱夹角 60°。",
+      "course_call": {
+        "method_model_id": "类型Ⅳ-数量积-中点分点-非平方型逐项展开",
+        "course_ids": [
+          "3.1.2.1",
+          "3.1.1.1"
+        ],
+        "course_keys": [
+          "decomposition",
+          "space_vector_ops"
+        ],
+        "appears_before_first_use": true,
+        "linkage": "3.1.2.1 教中点拆分；3.1.1.1 教数量积定义与 60° 余弦；READY_TEXT_ONLY 纯文字。G-07 方法族规则：第二行写数量积定义/分配律/极化恒等式，非平方型乘积也要逐项展开；若平方展开，先列三个自项和三个交叉项再合并；检查'乘积展开是否漏项'。两垂直平面规则核验：本题无'两垂直平面'题设（正方体/正四面体/平行六面体/三棱锥均不以此为前提推理），规则 N/A，无正交条件可猜。",
+        "first_use_location": "1.1-cycle-6 任务23 教材例13（类型Ⅳ 首次例题）"
+      },
+      "first_line": "目标 AE·AD；中点分点：E 为 BC 中点 → AE = (AB+AC)/2。",
+      "second_line": "按'非平方型乘积逐项展开'规则：AE·AD = (1/2)(AB·AD + AC·AD)（两项）；棱长 1、相邻棱夹角 60°：AB·AD = AC·AD = 1·1·cos60° = 1/2。",
+      "continuation": "AE·AD = (1/2)(1/2+1/2) = 1/2。",
+      "independent_self_check": "中点公式方向正确（A→BC 中点）；乘积展开两项逐项列出无遗漏；AB、AC、AD 两两夹角 60°；结果为标量 1/2；两垂直平面规则核验：本题无'两垂直平面'题设（正方体/正四面体/平行六面体/三棱锥均不以此为前提推理），规则 N/A，无正交条件可猜。",
+      "first_breakpoint": null,
+      "hint_level": "none",
+      "verdict": "PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": "1.1-cycle-6",
+      "item_id": "d93a88e15e97f1dd",
+      "task_number": 25,
+      "kind": "example",
+      "label": "例14",
+      "source_revision": {
+        "generation": "G-20260816-07"
+      },
+      "context_sha256": "2ba656cf38a3581aab11d3f5e04967018ef5be9be0af7de6cd59309abbd67119",
+      "observation_signal": "正三棱锥 S-ABC 底面 ABC 边长为 2，P 是空间中任意一点，求 PA·(PB+PC) 的最小值（选择题）——目标是数量积最值；信号：出现和向量 PB+PC → 把向量和改写成中点关系（取 BC 中点 M，PB+PC=2PM）；P 为全空间任意点 → 全空间型最值，第三行说明等号条件。",
+      "course_call": {
+        "method_model_id": "类型Ⅳ-数量积最值-中点改写-极化恒等式-全空间型",
+        "course_ids": [
+          "3.1.4.3"
+        ],
+        "course_keys": [
+          "line_line_angle"
+        ],
+        "appears_before_first_use": true,
+        "linkage": "3.1.4.3 转写对'极化'0 命中，课程未教极化恒等式；方法仅由补充桥接 bridge-1.1-polarization（SUPPLEMENT_READY）提供。G-07 全局门禁声明：SUPPLEMENT_READY 只表示补充文字已准备；零基础能否放行还要看每个补充前置自己的检查标准。 桥接检查标准（写出恒等式来源、几何约束限制模长平方、猜中与完整过程分开记录）当前无零基础闭合证据；不因 SUPPLEMENT_READY 猜测放行。两垂直平面规则核验：本题无'两垂直平面'题设（正方体/正四面体/平行六面体/三棱锥均不以此为前提推理），规则 N/A，无正交条件可猜。",
+        "first_use_location": "1.1-cycle-6 任务25 教材例14（类型Ⅳ 数量积最值）"
+      },
+      "first_line": "第一行：取 BC 中点 M：PB+PC = 2PM，原式 = 2PA·PM。",
+      "second_line": "第二行：展开/极化把目标化成模长平方：2PA·PM = |PA|²+|PM|²-|AM|²（2a·b=|a|²+|b|²-|a-b|²，a=PA、b=PM、a-b=MA）；底面等边三角形边长 2 → AM=√3。",
+      "continuation": "第三行+等号条件：全空间型配方法：2PA·PM = |PA|²+|PM|²-3 = 2[(x-√3/2)²+y²+z²]+3/2-3 ≥ -3/2，等号在 P 为 AM 中点时取得（等号点在定义域内）→ 选 A。",
+      "independent_self_check": "中点向量方向正确（PM 由 P 指向 M）；全空间型判定：P 无区域限制，无需边界检查；恒等式来源只能依据桥接文本复述（课程转写无极化），桥接检查标准无零基础闭合证据；未把猜测数值当完整过程。",
+      "first_breakpoint": {
+        "stage": "method_source",
+        "reason": "bridge_not_closed",
+        "detail": "书写骨架齐备（中点改写→恒等式→等号条件→全空间型）；但极化恒等式来源仅 bridge-1.1-polarization（SUPPLEMENT_READY），G-07 全局声明明确 SUPPLEMENT_READY 不等于零基础放行，桥接检查标准无闭合证据，课程转写 0 命中极化；按证据不猜测放行，判 PARTIAL。"
+      },
+      "hint_level": "none",
+      "verdict": "PARTIAL",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": "1.1-cycle-6",
+      "item_id": "b2a2e4099db3ab67",
+      "task_number": 24,
+      "kind": "direct_variant",
+      "label": "变式(13)",
+      "source_revision": {
+        "generation": "G-20260816-07"
+      },
+      "context_sha256": "2ba656cf38a3581aab11d3f5e04967018ef5be9be0af7de6cd59309abbd67119",
+      "observation_signal": "变式规则：先不看母题过程，一句话复述例13'数量积'模型，再指出相对母题改变的条件，随后只替换改变对象/系数/位置。变化点：由'正四面体棱长1+中点连线数量积'变为'平行六面体三棱等长两两 60°+两条对角线数量积'；核心仍是选基底+分配律+60° 余弦。分点比例规则核验：本题无'同一直线上的分点比例'题设，t/(1-t) 规则 N/A。",
+      "course_call": {
+        "method_model_id": "类型Ⅳ-数量积-平行六面体基底展开-逐项展开",
+        "course_ids": [
+          "3.1.1.1",
+          "3.1.2.1"
+        ],
+        "course_keys": [
+          "space_vector_ops",
+          "decomposition"
+        ],
+        "appears_before_first_use": true,
+        "linkage": "3.1.1.1 转写含同构计算（棱长 1、两两 60° 平方展开=6）与平行六面体对应棱平行；3.1.2.1 教基底拆分；课程直接覆盖，无需桥接。G-07 方法族规则：第二行写数量积定义/分配律/极化恒等式，非平方型乘积也要逐项展开；若平方展开，先列三个自项和三个交叉项再合并；检查'乘积展开是否漏项'。两垂直平面规则核验：本题无'两垂直平面'题设（正方体/正四面体/平行六面体/三棱锥均不以此为前提推理），规则 N/A，无正交条件可猜。分点比例规则核验：本题无'同一直线上的分点比例'题设，t/(1-t) 规则 N/A。",
+        "first_use_location": "1.1-cycle-6 任务24 变式(13)（独立作答）"
+      },
+      "first_line": "先复述母题模型：例13=中点拆分单条向量+数量积定义代入 60° 余弦。本变式替换：无中点，改为两条对角线的基底线性组合。目标 BD1·AC；拆基底：BD1 = BA+AD+DD1 = -AB+AD+AA1，AC = AB+AD。",
+      "second_line": "按'非平方型乘积逐项展开'规则列全六项（含三个交叉项）：BD1·AC = (-AB+AD+AA1)·(AB+AD) = -AB·AB - AB·AD + AD·AB + AD·AD + AA1·AB + AA1·AD。",
+      "continuation": "模长均为 1、两两夹角 60°：AB·AD=AD·AA1=AA1·AB=1/2，AB·AB=AD·AD=1 → 原式 = -1 -1/2 +1/2 +1 +1/2 +1/2 = 1，选 A。",
+      "independent_self_check": "变式重建核对：只替换对象（对角线替代中点连线），通用关系保持；展开六项逐项列全无遗漏（-AB·AD 与 +AD·AB 抵消核对）；BD1 拆分方向（BA+AD+DD1，DD1=AA1）正确；结论满足题意；两垂直平面规则核验：本题无'两垂直平面'题设（正方体/正四面体/平行六面体/三棱锥均不以此为前提推理），规则 N/A，无正交条件可猜。分点比例规则核验：本题无'同一直线上的分点比例'题设，t/(1-t) 规则 N/A。",
+      "first_breakpoint": null,
+      "hint_level": "none",
+      "verdict": "PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": "1.1-cycle-6",
+      "item_id": "B11",
+      "task_number": 26,
+      "kind": "exercise",
+      "label": "B11",
+      "source_revision": {
+        "generation": "G-20260816-07"
+      },
+      "context_sha256": "2ba656cf38a3581aab11d3f5e04967018ef5be9be0af7de6cd59309abbd67119",
+      "observation_signal": "正四面体 OABC 棱长 2，G 是 △OBC 的重心，M 是线段 AG 的中点：（1）用 OA、OB、OC 表示 OM 并求 |OM|；（2）证明 OM⊥BC——目标是基底表示+模长+垂直证明；信号：重心在中线 2:1 处、出现中点；题目前先复述重心向量表示，|OM|² 平方展开按'三自项+三交叉项'列全。",
+      "course_call": {
+        "method_model_id": "类型Ⅲ-基底拆分-重心复述-模长平方六项-垂直点乘为0",
+        "course_ids": [
+          "3.1.2.1",
+          "3.1.1.1",
+          "3.1.4.3"
+        ],
+        "course_keys": [
+          "decomposition",
+          "space_vector_ops",
+          "line_line_angle"
+        ],
+        "appears_before_first_use": true,
+        "linkage": "3.1.2.1 教 OA/OB/OC 基底+中点拆分（ON=(OB+OC)/2、MG=2/3MN 同构例）；3.1.1.1 教模长平方；3.1.4.3 点乘与垂直判据。G-07 全局门禁声明：SUPPLEMENT_READY 只表示补充文字已准备；零基础能否放行还要看每个补充前置自己的检查标准。 放行桥接 bridge-1.1-centroid 在 question_coverage 中 zero_base_status=NOT_VERIFIED；不因 SUPPLEMENT_READY/NOT_VERIFIED 猜测放行。G-07 方法族规则：第二行写数量积定义/分配律/极化恒等式，非平方型乘积也要逐项展开；若平方展开，先列三个自项和三个交叉项再合并；检查'乘积展开是否漏项'。两垂直平面规则核验：本题无'两垂直平面'题设（正方体/正四面体/平行六面体/三棱锥均不以此为前提推理），规则 N/A，无正交条件可猜。",
+        "first_use_location": "1.1-cycle-6 任务26 B11（独立作答）"
+      },
+      "first_line": "先复述重心：取 BC 中点 N，ON=(OB+OC)/2，重心 2:1 得 OG=(2/3)ON=(OB+OC)/3。M 为 AG 中点 → OM=(OA+OG)/2 = (1/2)OA+(1/6)OB+(1/6)OC。",
+      "second_line": "|OM|² 平方展开按六项列全：三个自项 (1/4)|OA|²+(1/36)|OB|²+(1/36)|OC|²，三个交叉项 2·(1/2)(1/6)(OA·OB)+2·(1/2)(1/6)(OA·OC)+2·(1/36)(OB·OC)。",
+      "continuation": "代入棱长 2：OA·OB=OA·OC=OB·OC=2·2·cos60°=2 → |OM|² = 1+1/9+1/9+1/3+1/3+1/9 = 2 → |OM|=√2。(2) OM·BC = ((1/2)OA+(1/6)OB+(1/6)OC)·(OC-OB) = (1/2)(OA·OC-OA·OB)+(1/6)(OB·OC-OB·OB+OC·OC-OC·OB) = (1/2)(2-2)+(1/6)(2-4+4-2)=0 → OM⊥BC。",
+      "independent_self_check": "重心复述完整（系数 1/3 由三顶点等权决定）；平方展开自项 3+交叉项 3 逐项列出无漏；交叉项系数 2·(1/2)(1/6) 等核对；垂直判据 a·b=0 且 OM、BC 非零；|OM|=√2 量级合理；两垂直平面规则核验：本题无'两垂直平面'题设（正方体/正四面体/平行六面体/三棱锥均不以此为前提推理），规则 N/A，无正交条件可猜。",
+      "first_breakpoint": {
+        "stage": "bridge_gate",
+        "reason": "bridge_not_closed",
+        "detail": "过程与骨架齐备；但放行桥接 bridge-1.1-centroid 的 zero_base_status=NOT_VERIFIED（G-07 全局声明：SUPPLEMENT_READY 不等于零基础放行），桥接未闭合；模拟内推导不替代桥接闭合证据，不猜测放行，判 PARTIAL。"
+      },
+      "hint_level": "none",
+      "verdict": "PARTIAL",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    }
+  ],
+  "method_check_results": [
+    {
+      "section": "1.1",
+      "cycle": "1.1-cycle-5",
+      "check_id": "1.1-projection-check-1",
+      "label": "投影向量方向与长度检查",
+      "source_revision": {
+        "generation": "G-20260816-07"
+      },
+      "context_sha256": "2ba656cf38a3581aab11d3f5e04967018ef5be9be0af7de6cd59309abbd67119",
+      "observation_signal": "自选面对角线与棱：取正方体面对角线 AC 与棱 AB；目标=投影方向、投影长度，并区分投影向量与投影长度（投影与模长规则）。",
+      "course_call": {
+        "method_model_id": "1.1-k4-投影向量-方向与标量长度检查",
+        "course_ids": [
+          "3.1.4.3"
+        ],
+        "course_keys": [
+          "line_line_angle"
+        ],
+        "appears_before_first_use": true,
+        "linkage": "依据教材知识点4 正文投影定义表与补充桥接 bridge-1.1-projection（SUPPLEMENT_READY）方法链一致；课程转写无投影教学。G-07 全局门禁声明：SUPPLEMENT_READY 只表示补充文字已准备；零基础能否放行还要看每个补充前置自己的检查标准。 本检查即桥接检查标准的载体：通过它才具备 B4 放行条件（模拟内完成，human_acceptance_not_proven=true）。",
+        "first_use_location": "1.1-cycle-5 循环验收前方法检查（B4 放行条件）"
+      },
+      "first_line": "投影方向：AC 起点 A 已在直线 AB 上，终点 C 向 AB 作垂线，正方体中 CB⊥AB，垂足为 B → 投影方向沿 AB。",
+      "second_line": "分行写：投影向量 = (AC·AB/|AB|²)·AB = AB；有向投影长度 = AC·AB/|AB| = a；无向投影线段长度 = |AC·AB|/|AB| = a。",
+      "continuation": "反向复核：A1B1 在 AB 上的投影向量 = -AB，有向投影长度 = -a，无向长度 = a。",
+      "independent_self_check": "检查标准三项齐备：区分向量/有向/无向（类型不混写）、解释 |b|² 与 |b| 的位置、处理反向投影；垂足图形法与公式法一致。",
+      "first_breakpoint": null,
+      "hint_level": "none",
+      "verdict": "PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": "1.1-cycle-6",
+      "check_id": "1.1-centroid-check-1",
+      "label": "三角形重心向量回顾",
+      "source_revision": {
+        "generation": "G-20260816-07"
+      },
+      "context_sha256": "2ba656cf38a3581aab11d3f5e04967018ef5be9be0af7de6cd59309abbd67119",
+      "observation_signal": "G 为 △ABC 重心、O 为任意公共起点，从 OG=OA+AG 与 AG=(2/3)AM 推出 OG 的表示并解释系数对称；中点分点：先取 BC 中点 M 写 OM=(OB+OC)/2，再用 2:1 比例。",
+      "course_call": {
+        "method_model_id": "1.1-k3-重心向量-中点分点推导",
+        "course_ids": [
+          "3.1.2.1"
+        ],
+        "course_keys": [
+          "decomposition"
+        ],
+        "appears_before_first_use": true,
+        "linkage": "3.1.2.1 教中点拆分与定比分点（MG=2/3MN 同构例），可独立推导；bridge-1.1-centroid（SUPPLEMENT_READY）在 question_coverage 中 zero_base_status=NOT_VERIFIED。G-07 全局门禁声明：SUPPLEMENT_READY 只表示补充文字已准备；零基础能否放行还要看每个补充前置自己的检查标准。 桥接检查标准（重心检查点独立推导、换公共起点复述）当前无闭合证据。",
+        "first_use_location": "1.1-cycle-6 任务26 B11 前置方法检查"
+      },
+      "first_line": "取 BC 中点 M：OM=(OB+OC)/2；由重心 2:1 得 AG=(2/3)AM。",
+      "second_line": "OG = OA + AG = OA + (2/3)AM = OA + (2/3)(OM-OA) = (1/3)OA + (2/3)OM = (1/3)OA + (1/3)OB + (1/3)OC。",
+      "continuation": "换公共起点（O' 为另一起点）或改取 AC 中点再推一次：三顶点系数仍为 1/3 → 系数由顶点等权地位决定。",
+      "independent_self_check": "2:1 比例方向正确（AG=(2/3)AM 而非 1/3）；中点分点规则核对；展开无符号错误；系数对称性解释完整；未直接引用现成公式。",
+      "first_breakpoint": {
+        "stage": "bridge_gate",
+        "reason": "bridge_not_closed",
+        "detail": "推导可由课程 3.1.2.1 完成；但 question_coverage 中 bridge-1.1-centroid.zero_base_status=NOT_VERIFIED，桥接检查标准无闭合证据（G-07 声明 SUPPLEMENT_READY 不等于零基础放行）；不猜测放行，判 PARTIAL。"
+      },
+      "hint_level": "none",
+      "verdict": "PARTIAL",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    }
+  ],
+  "worker_status": "PARTIAL",
+  "first_breakpoints": [
+    {
+      "item_id": "d93a88e15e97f1dd",
+      "task_number": 25,
+      "label": "教材例14",
+      "stage": "method_source",
+      "reason": "bridge_not_closed",
+      "detail": "极化恒等式来源仅 bridge-1.1-polarization（SUPPLEMENT_READY）；G-07 全局声明 SUPPLEMENT_READY 不等于零基础放行，桥接检查标准无闭合证据；不猜测放行，判 PARTIAL。"
+    },
+    {
+      "item_id": "B11",
+      "task_number": 26,
+      "label": "B11",
+      "stage": "bridge_gate",
+      "reason": "bridge_not_closed",
+      "detail": "放行桥接 bridge-1.1-centroid 的 zero_base_status=NOT_VERIFIED；桥接未闭合，不猜测放行，判 PARTIAL。"
+    },
+    {
+      "check_id": "1.1-centroid-check-1",
+      "label": "三角形重心向量回顾",
+      "stage": "bridge_gate",
+      "reason": "bridge_not_closed",
+      "detail": "推导齐备但目标桥接 zero_base_status=NOT_VERIFIED，检查点判 PARTIAL。"
+    }
+  ],
+  "answer_sidecar_read": false,
+  "human_acceptance_not_proven": true
+}

@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0",
+  "iteration": 2,
+  "report_type": "zero_base_cycle_simulation_iteration2",
+  "cycle_id": "1.1-cycle-3",
+  "cycle_title": "空间向量等值面法",
+  "agent_id": "Z3",
+  "role": "零基础高中生代理模拟（仅限 1.1-cycle-3，iteration 2）",
+  "generated_at": "2026-08-14T19:06:50+08:00",
+  "parent_task": "iteration 2 直属任务：新增 equal-surface method checkpoint（本循环无教材习题，exercise_keys=[]）",
+  "scope_declaration": "仅处理 1.1-cycle-3；未回滚或修改 manifest/packet/代码/测试/他人文件；唯一写入文件为本报告（原位改写）。",
+  "assumption": "按任务约定假设学生已按顺序看完本循环视频（3.1.2.2 空间向量等值面法，iteration 1 已全文阅读其转写 9618 字符并核对哈希）并读完路径显式展示的左栏知识（本循环前置块 1.1-k3）与教学例题；本循环无教学例题（example_numbers=[]），无直属变式，无 A/B/C 习题。",
+  "evidence_read_this_iteration": [
+    "chapter1_manifest.json（2026-08-14 19:00:53 更新）：cycle-3 新增 prerequisite_knowledge_refs=[1.1-k3]、method_checkpoints=[1.1-equal-surface-check-1]、exercise_keys=[]；B7 现归 1.1-cycle-5（exercise_keys=[B4,B5,B6,B7,B8,B11,B12,C13,C14]）",
+    "data/packets/1.1/learning_packet.json（19:02:12 更新）：cycle-3 含 prerequisite_knowledge_blocks=[1.1-k3 全文]、method_checkpoints、worked_examples/direct_variants/exercise_questions 全空",
+    "data/packets/1.1/learning_packet.md（19:02:25 更新）：循环 3/5 原文『本批复用的左侧知识点（前置循环必须已通过）：1.1-k3』『当前覆盖账本没有为本批单独分配 A/B/C 题』及方法检查文本",
+    "data/contexts/1.1.json（DeepSeek 当前循环上下文，schema 7.1，status=VERIFIED，canary=8291db915b349d86）：其 sequential_learning_packet.current_cycle 指针仍为 1.1-cycle-1，全文 0 处 equal-surface-check 引用，1 处 1.1-k3 引用；cycle-3 的结构与检查点以最新 manifest+packet 为准；question_coverage 中 B7（Q-c541e3eee1efc530）unlock_class=METHOD_BRIDGE、course_keys=[decomposition]、release=READY_FOR_INDEPENDENT_ATTEMPT（路由元数据，与 manifest 的 cycle-5 归属存在轻微不同步，仅记录）"
+  ],
+  "assigned_items": [
+    {
+      "item_id": "1.1-equal-surface-check-1",
+      "label": "等值面法方法检查",
+      "question_text": "设 O、A、B、C 四点不共面，点 P 满足 OP=xOA+yOB+zOC。请只用等值面法回答：P 在平面 ABC 内时 x、y、z 应满足什么关系？再自取一组三个非零系数构造一个满足条件的 P，并说明为什么不能只检查三个系数都非零。",
+      "knowledge_refs": ["1.1-k3"],
+      "answer_policy": "NO_ANSWER"
+    }
+  ],
+  "attempts": [
+    {
+      "item_id": "1.1-equal-surface-check-1",
+      "kind": "method_checkpoint",
+      "hint_used": false,
+      "confidence": 0.9,
+      "confidence_note": "结论来自显式前置知识 1.1-k3（四点共面系数和=1 推论）与本循环课程的 1 倍面概念，不依赖路径外知识；正例+两个反例互证，逻辑自洽。扣分点：answer_policy=NO_ANSWER 无答案可对照，只能自洽验证。",
+      "first_breakpoint": "第 3 问（说明为什么不能只检查三个系数都非零）：前两问（系数和=1；构造例子）由 k3 推论与 1 倍面直接给出无断点；第一处真实断点在论证部分——学生容易把『非零系数』误当作『P 是空间一般位置点所以可能在平面内』，需要把判定条件收敛到『系数和=点所在倍面编号』并构造反例才能过关",
+      "independent_solution": {
+        "part_a_answer": "x+y+z=1",
+        "part_a_derivation": "只用等值面法：以 O 为起点、A/B/C 为基底末端，平面 ABC 就是 1 倍面（等值面法把平行于 ABC 的平面族按间距编号：0 倍面过 O，1 倍面过 A、B、C）；点 P 在平面 ABC 内即 P 落在 1 倍面上，而 P 所在倍面编号恰为 OP=xOA+yOB+zOC 的系数和 x+y+z，故 x+y+z=1。对应教材依据：1.1-k3 推论『O、A、B、C 不共面，OP=xOA+yOB+zOC，则 P、A、B、C 共面当且仅当 x+y+z=1』（系数由基底唯一确定）。",
+        "part_b_example": "取 x=1，y=2，z=−2：三个系数全非零，x+y+z=1，故 OP=OA+2OB−2OC 的终点 P 在平面 ABC 内。",
+        "part_b_why_not_nonzero": "① 判据只看系数和（点所在倍面编号），与单个系数是否为零无关。② 反例 A（全非零但不在平面内）：x=y=z=1，系数和=3，P=OA+OB+OC 落在 3 倍面（体对角线 O→(A+B+C) 的远端顶点所在的平行面；体对角线被 1 倍面、2 倍面三等分），P 不在平面 ABC 内——三个系数都非零推不出共面。③ 反例 B（含零系数反在平面内）：x=y=1/2，z=0，系数和=1，P 为 AB 中点，在平面 ABC 内——非零既非充分也非必要。④ 三个系数都非零只保证 P 不在坐标平面 OAB/OAC/OBC 上（空间一般位置），与『P∈平面 ABC』无关。",
+        "self_check": "正例 (1,2,−2) 系数和=1 ✓；反例 A (1,1,1) 系数和=3 落在 3 倍面（1+1+1 恰为体对角线远端顶点）✓；反例 B (1/2,1/2,0) 系数和=1 且为 AB 中点 ✓；三者与 k3 推论完全一致。"
+      },
+      "conclusion": "P∈平面 ABC ⟺ x+y+z=1；反例表明『三个系数都非零』既不充分也不必要。"
+    }
+  ],
+  "first_breakpoints": [
+    {
+      "item": "1.1-equal-surface-check-1",
+      "breakpoint_stage": "第 3 问论证：为什么不能只检查三个系数都非零",
+      "breakpoint": "学生需从『系数和=倍面编号』的几何判据中抽出充要条件，并识别『非零系数』直觉陷阱；卡点是构造全非零但系数和≠1 的反例（(1,1,1)→3 倍面）",
+      "hint_used": false,
+      "resolved": true,
+      "resolution_note": "模拟中学生自行用试算-反例法解决（先代 (1,1,1) 得和=3，再反向验证含零系数情形），未用提示；真人学生此处最可能需要最小提示『把 (1,1,1) 代进去，系数和是多少？P 在哪倍面上？』"
+    }
+  ],
+  "comparison_to_iteration_1": {
+    "fixed": [
+      "k3→cycle-3 显式连接已修复：manifest 新增 prerequisite_knowledge_refs=[1.1-k3]，learning_packet cycle-3 新增 prerequisite_knowledge_blocks（含 k3 全文），检查点 knowledge_refs=[1.1-k3]——iteration 1 的 mapping gap 1（k3 无显式边）消失。",
+      "B7 已移出本循环：exercise_keys=[]，learning_packet.md 明示『当前覆盖账本没有为本批单独分配 A/B/C 题』；manifest 显示 B7 现归 1.1-cycle-5——iteration 1 的 mapping gap 3（B7 缺前置知识/时机过早）消失，且落实了 iteration 1 建议的『重挂 cycle-5』方向。",
+      "验收对象已补：新增方法检查点 1.1-equal-surface-check-1 作为本循环唯一直属任务——iteration 1 的『循环无验收对象』缺口部分缓解（现可独立作答，但无例题/变式/习题）。"
+    ],
+    "first_breakpoint_changes": {
+      "disappeared": "iteration 1 的 B7 断点（等值面法与二面角长度题方法错位、需路径外数量积/二面角概念）已随 B7 移出本循环而消失。",
+      "new": "新检查点第 3 问（为什么不能只检查非零）成为本循环第一个真实断点候选，属概念论证型断点，与旧断点无关。",
+      "remains": "结构性事实仍存在：knowledge_refs=[]、type_refs=[]、example_numbers=[]（本循环仍是纯方法课+检查点结构，无教材例题与习题）。"
+    },
+    "old_mapping_gaps_status": [
+      {"gap": "k3→cycle-3 无显式知识连接", "status": "FIXED"},
+      {"gap": "cycle-3 无知识点/例题/变式，仅挂课程+B7", "status": "PARTIALLY_FIXED（检查点已补，例题/变式/习题仍无）"},
+      {"gap": "B7 缺前置知识（数量积、二面角平面角）", "status": "FIXED（B7 移至 cycle-5）"}
+    ]
+  },
+  "knowledge_integration_assessment": {
+    "question": "左栏知识是否在首次用到前出现且与题目显式相连？",
+    "answer": "是（对 1.1-k3 而言）：k3『共线向量与共面向量』作为左栏知识在 cycle-2 已讲授（例 4、例 5），本循环首次使用时以 prerequisite_knowledge_blocks 显式前置（packet JSON 附全文、md 标注『前置循环必须已通过』），检查点又以 knowledge_refs=[1.1-k3] 显式相连——出现时机与连接均满足。",
+    "not_video_only": "显式连接证据来自 manifest/packet 的元数据（prerequisite_knowledge_refs、prerequisite_knowledge_blocks、knowledge_refs），非仅凭视频内容推断。",
+    "remaining_integration_gaps": [
+      "等值面法课程的独有技巧（倍面编号、末减出求 PQ 系数和、体对角线三等分定 2 倍面、重心 1/3→1/4 类比）没有对应左栏知识点，也未与任何题目显式相连；",
+      "检查点只检验 k3 的 x+y+z=1 判定，未检验课程核心速算『末减出』，即检查点与课程方法覆盖不匹配；",
+      "课程口播依赖高一平面向量等值线（路径内无显式前置课或桥接标注）。"
+    ]
+  },
+  "status": "partial",
+  "assigned_item_status": "proxy_pass",
+  "status_rationale": "直属检查点独立完成、无需提示、confidence 0.9（代理层面通过）；但不能给 proxy_pass：检查点未覆盖课程核心技巧（倍面/末减出），本循环无教材习题可验证方法迁移，answer_policy=NO_ANSWER 无答案对照，且代理解出不等于真人掌握。无阻塞项，故亦非 blocked。",
+  "real_mastery": false,
+  "remaining_gaps": [
+    "检查点覆盖不匹配：等值面法课程核心是倍面编号+末减出速算（2 倍面、3/4 倍面、EF 系数和 1/3、BE 系数和 −1/2 等），检查点只测 k3 系数和=1 判定；建议补一个『末减出』型自造变式（如平行六面体中给出 E、F 位置求 EF 系数和）作为检查点 2。",
+    "无教材例题/变式/习题：learning_packet.md 的验收指引『用本批例题过程与未见变式验收』与本循环实际（无例题无变式）自相矛盾；建议为 cycle-3 明确自造变式来源或引用课程内例题（F 在二倍面、N 中点 3/2 倍面等）作为验收素材。",
+    "高一平面向量等值线依赖无显式桥接（课程口播自述），对完整掌握构成未验证项，建议路径内标注或提供桥接微课。",
+    "路由元数据轻微不同步：data/contexts/1.1.json 的 question_coverage 中 B7 标注 course_keys=[decomposition]，而 manifest 已将 B7 归入 1.1-cycle-5；不影响本循环任务，但建议同步。"
+  ],
+  "answer_sources_read": [],
+  "honesty_boundary": "iteration 2 严格未读取 data/packets/1.1/answer_sidecar.json、任何答案册、其他代理报告（reports/zero_base_cycles 下其他文件仅列名未读内容）或其他循环的作答；检查点 answer_policy=NO_ANSWER，无答案可读。本轮读取：chapter1_manifest.json、data/packets/1.1/learning_packet.json、learning_packet.md、data/contexts/1.1.json（含 canary 8291db915b349d86 回显）；视频转写全文已于 iteration 1 完整阅读（3.1.2.2，9618 字符，哈希核对一致），本轮未重复读取，按任务假设学生已按顺序看完视频。仅原位改写 reports/zero_base_cycles/1.1-cycle-3.json，未修改 manifest/packet/代码/测试/他人文件。不宣称真人掌握。"
+}
+

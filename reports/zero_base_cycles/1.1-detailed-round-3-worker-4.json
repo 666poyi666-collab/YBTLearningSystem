@@ -1,0 +1,112 @@
+ {
+   "schema_version": 1,
+   "round": 3,
+   "worker": 4,
+   "section": "1.1",
+   "assigned_cycles": ["cycle-7-数量积求长度与求角", "cycle-8-二面角平面角前置与应用"],
+   "focus": "长度/角度、二面角平面角",
+   "runtime_contract": {
+     "agent_role": "deepseek_worker",
+     "model": "opencode-go/deepseek-v4-flash",
+     "reasoning_effort": "max",
+     "context_window": 1000000,
+     "contract_source": "C:/Users/poyi/.codex/deepseek-mode.json (schema_version=1, active=true, default_count=5)",
+     "note": "配置与本任务契约一致；本worker无自检运行时模型的工具，未发现失配，按要求继续。"
+   },
+   "sources_read": [
+     "data/packets/1.1/learning_path_without_questions.md (循环7-8路线、知识点4、推进门)",
+     "data/packets/1.1/learning_packet.json (仅question_text/image_refs/visual_status/answer_policy；未读teaching_text与任何解答字段)",
+     "data/contexts/1.1.json (route_support、question_coverage、instructions；未读vision_sidecar字段)",
+     "data/bridge_supplement_lessons.json (bridge-1.1-dihedral-definition 完整无答案补充课)",
+     "data/course_transcripts/3.1.4.3 向量夹角与直线夹角.json (full_text)",
+     "data/course_transcripts/3.1.4.5 平面与平面的夹角.json (full_text)",
+     "声明课程视频元数据 source_video_file（未播放视频）",
+     "B6/B7图形文件存在性检查（image_refs exists=true；纯文本worker未目视图形内容）"
+   ],
+   "forbidden_sources_read": false,
+   "answer_sidecar_read": false,
+   "human_acceptance_not_proven": true,
+   "cycle_results": [
+     {
+       "cycle": "cycle-7/10 数量积求长度与求角",
+       "verdict": "blocked",
+       "first_breakpoint": "任务27 教材例15（类型Ⅴ）：图形状态 NEEDS_VISION_SIDECAR，路线明令禁止猜图、先补视觉侧车再作答；学生无法独立完成该题，本循环推进门卡在此处。",
+       "evidence": [
+         "任务27 例15（图形未核验）：题干文字可完整推导——设 PA=a, PB=b, PC=c，|a|=3, |b|=|c|=2，两两夹角60度，a·b=a·c=3, b·c=2；平行四边形 D=A+C-B 得 BD=PA+PC-2PB，故 m+n+p=1-2+1=0；BM=(a+c-3b)/2，|BM|^2=(9+4+36+6-18-12)/4=25/4，BM=5/2。推导自洽，但路线禁止在视觉侧车补齐前作答，独立完成不成立。",
+         "任务28 变式1(15)（图形未核验）：|AC1|^2=|AB+AD+AA1|^2=1+1+3+2cos∠BAD+3+3=11+2cos∠BAD=12，cos∠BAD=1/2，∠BAD=60°；受同一图形门禁阻断。",
+         "任务29 变式2(15)（图形未核验）：双垂直正方形建系 A(0,0,0), B(1,0,0), D(0,1,0), C(1,1,0), F(0,0,1)，M=(1-λ)(1,1,0)，N=(1-λ,0,λ)，MN=(0,λ-1,λ)=0·AB+(λ-1)AD+λ·AF，故 x=0, y=λ-1, z=λ；|MN|^2=2λ^2-2λ+1=2(λ-1/2)^2+1/2，最小值√2/2（λ=1/2）。可推导但受同一图形门禁阻断。",
+         "任务30 例16（READY_TEXT_ONLY，纯文字可作答）：独立完成——c=-(a+b)，16=|c|^2=|a|^2+|b|^2+2a·b=4+9+2a·b，a·b=3/2，cos<a,b>=(3/2)/(2·3)=1/4，选项 D。",
+         "任务31 变式1(16)（图形未核验）：正四面体（棱长1，两两夹角60度），OE=(a+b)/2，BF=c/2-b，OE·BF=1/8-1/4+1/8-1/2=-1/2，|OE|=|BF|=√3/2，cos(OE,BF)=-2/3；可推导但受同一图形门禁阻断。",
+         "任务32 变式2(16)（图形未核验）：等棱三棱柱（底面等边，∠BAA1=∠CAA1=60度），AB1=a+c，BC1=b-a+c，(a+c)·(b-a+c)=a·b+1/2=1，|AB1|=√3，|BC1|=√2，cos=1/√6=√6/6，选项 C；可推导但受同一图形门禁阻断。",
+         "任务33 B12（VISION_VERIFIED；context manifest release_status=READY_FOR_INDEPENDENT_ATTEMPT）：独立完成——以P为原点，|a|=4, |b|=|c|=3，两两60度，a·b=a·c=6, b·c=9/2；D=(2b+c)/3（CD=2BD），M=a/2+b/3+c/6；PM^2=35/4，PM=√35/2；PM·AC=-5，异面直线PM与AC所成角余弦=|PM·AC|/(|PM||AC|)=10/(3√35)=2√35/21。",
+         "推进门未通过：任务27-29、31-32 共5题均因 NEEDS_VISION_SIDECAR 被路线禁止作答，本循环无法完成，不能进入循环8。"
+       ],
+       "method_models": [
+         {
+           "name": "基底拆分+数量积求长度",
+           "trigger": "三面角/平行六面体/棱锥等构型中求线段长度或向量长度",
+           "steps": ["选公共起点，把目标向量写成三条不共面向量的线性组合", "用 |v|^2=v·v 展开", "代入已知模长与两两夹角数量积", "开方得长度并核对正数"],
+           "checks": ["所有向量同一起点", "两两夹角与模长必须全部已知", "展开无漏项（系数分配律）"]
+         },
+         {
+           "name": "数量积求角（向量角/线线角）",
+           "trigger": "求向量夹角或异面直线所成角",
+           "steps": ["写出两方向向量", "cosθ=a·b/(|a||b|)", "向量夹角不加绝对值；直线夹角必须加绝对值"],
+           "checks": ["区分向量角与直线角", "结果范围（向量角0-180度，线线角0-90度）"]
+         },
+         {
+           "name": "平行四边形/平行六面体对角线分解",
+           "trigger": "平行四边形或平行六面体中向量等式定系数",
+           "steps": ["由 A+C=B+D 得到目标向量组合", "与目标表达式比较系数", "求和得 m+n+p"],
+           "checks": ["顶点顺序正确", "系数逐项核对"]
+         }
+       ],
+       "unresolved_gaps": [
+         "例15及其两个变式、例16的两个变式共5题 NEEDS_VISION_SIDECAR：视觉侧车未补齐，路线禁止猜图作答，需先补侧车后重跑",
+         "零基础独立完成证据仅覆盖例16与B12（2/7任务）",
+         "24小时闭卷冷复测未运行",
+         "真人验收未运行（human_acceptance_not_proven=true）"
+       ]
+     },
+     {
+       "cycle": "cycle-8/10 二面角平面角前置与应用",
+       "verdict": "proxy_pass",
+       "first_breakpoint": null,
+       "evidence": [
+         "课程 3.1.4.5 平面与平面的夹角（补充课，context coverage_status=COVERED，transcript已完整消费）：讲授二面角=两个半平面所成角（0-180度）与面面角（0-90度）的区别、法向量法 cosφ=|n1·n2|/(|n1||n2|)、法向量夹角与二面角等角或补角二义性、由几何关系可得+看图判定锐/钝。",
+         "桥接 bridge-1.1-dihedral-definition（SUPPLEMENT_READY，answer_policy=NO_FINAL_ANSWERS）：完整无答案补充课——同起点+双垂直的合法截面定义、换棱上点取平行射线角度不变、法向量夹角需结合半平面判断补角；含自造变式与独立检查点（同起点/双垂直/取点无关）。",
+         "方法检查 二面角平面角识别：通过——按桥接内容可独立画合法截面、说明取点无关、区分平面角与法向量夹角。",
+         "任务34 B6（VISION_VERIFIED）：独立完成——正三角形ABC与正方形BCDE边长2，二面角A-BC-D=π/3。取BC中点O：AC=OC-OA，BD=2OC+CD；|OC|=1，|OA|=√3，|CD|=2，∠(OA,CD)=平面角π/3（取点无关）；AC·BD=2|OC|^2+OC·CD-2OA·OC-OA·CD=2-√3，选项 A。",
+         "任务35 B7（VISION_VERIFIED）：独立完成——二面角α-l-β，AC⊥l、BD⊥l，AB=1，AC=2，BD=3，平面角π/3。CD=CA+AB+BD；CA·AB=0，AB·BD=0，∠(AC,BD)=平面角π/3（取点无关平移）；|CD|^2=4+1+9-2·2·3·cos(π/3)=8，CD=2√2，选项 B。",
+         "本循环全部环节（课程+无答案桥接+方法检查+B6/B7）构成完整无答案学习单元与检查点；独立推导未发现隐藏前置知识或答案暴露。"
+       ],
+       "method_models": [
+         {
+           "name": "二面角平面角识别（合法截面）",
+           "trigger": "二面角/面面角相关题（含求平面角、跨面数量积）",
+           "steps": ["棱 l 上取同一点 O", "两半平面内分别作垂直于棱的射线 OA、OB", "∠AOB 即平面角；换棱上点作平行射线，角度不变", "法向量计算结果须结合半平面方向判断等角/补角"],
+           "checks": ["同起点", "两射线均垂直棱", "能解释取点无关性"]
+         },
+         {
+           "name": "平面角+数量积链式求长度/数量积",
+           "trigger": "二面角构型中已知平面角求跨面线段长度或数量积",
+           "steps": ["把目标向量沿棱方向与两垂线方向拆分", "垂直于棱的项点积为0", "交叉项用平面角余弦（符号由图形/半平面方向判定）", "|v|^2 展开后开方"],
+           "checks": ["交叉项符号正确", "垂直项清零", "长度结果为正"]
+         },
+         {
+           "name": "法向量求面面角/二面角",
+           "trigger": "求二面角或面面角的余弦/正弦",
+           "steps": ["求两平面法向量 n1、n2", "|cosφ|=|n1·n2|/(|n1||n2|)", "面面角取正值；二面角由几何关系可得+看图定锐/钝"],
+           "checks": ["区分题目问法（面面角恒锐角，二面角可为钝角）", "正弦恒正"]
+         }
+       ],
+       "unresolved_gaps": [
+         "B6/B7 的符号与方向判断依赖已核验图形（manifest VISION_VERIFIED、图形文件存在）；本worker为纯文本模型未目视复核图形，保留视觉复核缺口",
+         "24小时闭卷冷复测未运行",
+         "真人验收未运行（human_acceptance_not_proven=true）"
+       ]
+     }
+   ],
+   "overall_verdict": "blocked",
+   "summary": "worker4（detailed round 3）完成循环7-8零基础模拟。循环7（数量积求长度与求角）在任务27（教材例15）即被 NEEDS_VISION_SIDECAR 图形门禁阻断：5/7任务（例15及两变式、例16两变式）路线明令禁止猜图、先补视觉侧车再作答，仅例16（cos<a,b>=1/4，选D）与B12（PM=√35/2，异面直线角余弦2√35/21）可独立完成，故 blocked，推进门未过。循环8（二面角平面角前置与应用）课程3.1.4.5、无答案桥接（SUPPLEMENT_READY）、方法检查与B6/B7构成完整无答案学习单元：B6=2-√3（选A）、B7=2√2（选B）独立推导通过，无隐藏前置或答案暴露，判定 proxy_pass。总体 blocked：需先补齐例15/变式(15)/变式(16)的视觉侧车并重跑循环7；human_acceptance_not_proven=true，24小时冷复测与真人验收均未运行。"
+ }

@@ -1,0 +1,155 @@
+{
+  "package_type": "project-resume-v1",
+  "authority": {
+    "user_words": "我想到一个方法：不要调用这个子智能体，你直接在会话里面派发新建聊天给模型，强度为 Luna max。当然，在此之前，你要把整个满足我需求的流程内化成一个 skill 和详细的文档，然后由他们负责每一节，这样会更快。",
+    "interpreted_goal": "先将全书来源审计、教材顺序学习路径、逐题零基础模拟、多代修正与验收流程固化为可复用 Codex skill 和项目详细文档；不调用子智能体，改为创建 10 个独立 Codex 任务，固定 gpt-5.6-luna 与 max 推理，按互不重叠的章节分片处理全部 38 节，主任务统一核验、合并和裁决。",
+    "acceptance": [
+      "skill 通过 quick_validate 且详细文档包含来源边界、逐题输出合同、5轮模拟、失败回修、哈希和状态门禁",
+      "10 个新建 Codex 任务均真实创建为 gpt-5.6-luna + max，并覆盖全部 38 节且无重叠遗漏",
+      "每个任务只写自己分片目录，输出能由主任务机器校验并汇总，任何未跑模拟或视觉缺口保持 not_run/blocked"
+    ],
+    "requirement_status": "in_progress"
+  },
+  "project": {
+    "id": "PRJ-13f98c42e166",
+    "name": "一本通学习系统_v7",
+    "path": "C:\\开发\\小工具\\一本通学习系统_v7",
+    "kind": "unknown",
+    "git_state": "none",
+    "branch": null,
+    "parent_sha": null,
+    "tech_stack": [],
+    "run_commands": [],
+    "test_commands": []
+  },
+  "continuity": {
+    "latest_checkpoint": null,
+    "recent_checkpoints": [],
+    "checkpoint_required_before_compaction": true,
+    "checkpoint_required_before_provider_switch": true
+  },
+  "open_or_unverified_bugs": [],
+  "open_blockers": [],
+  "verified_memories": [
+    {
+      "id": "MEM-da96fc7cc832",
+      "scope": "global",
+      "kind": "semantic",
+      "content": "BetterGI.exe, childSession, 每日-委托（蒙德）, READY, Session 1, Session 2, ExecutionRecords, DAILY_COMMISSION_SUCCESS, RunLevel=Highest, MultipleInstances=IgnoreNew",
+      "valid_until": null
+    },
+    {
+      "id": "MEM-88a4f70f3b79",
+      "scope": "global",
+      "kind": "semantic",
+      "content": "C:\\开发\\二游辅助, BrowserPage, GuideStore.last_url, legacy_original, build-local.ps1, MIGRATING, particle_splash.py, 82 tests, ABI_OK, visual acceptance, user installation",
+      "valid_until": null
+    },
+    {
+      "id": "MEM-6e3c0b1dbcb4",
+      "scope": "global",
+      "kind": "procedural",
+      "content": "when the user says “界面可以，但我项目程序的功能呢，保证所有功能都复刻过来啊，一次性完成”, treat real business behavior and a feature-by-feature acceptance matrix as completion criteria; UI, navigation, placeholders, packaging, and installation are not enough. [Task 2]",
+      "valid_until": null
+    },
+    {
+      "id": "MEM-73faea0ce6a5",
+      "scope": "global",
+      "kind": "procedural",
+      "content": "when the user asks for a Release, create the actual GitHub Release and provide its page and direct download URL; a repository URL alone is not completion. [Task 3]",
+      "valid_until": null
+    },
+    {
+      "id": "MEM-48904cbf9b90",
+      "scope": "global",
+      "kind": "procedural",
+      "content": "when the user asks to delete “不重要的” workspace changes, first classify files and explain recoverability; do not interpret it as permission for unconditional `git clean`/reset. [Task 3]",
+      "valid_until": null
+    },
+    {
+      "id": "MEM-7a131b531772",
+      "scope": "global",
+      "kind": "procedural",
+      "content": "for BetterGI work the user required “without computer-use” and completion of the whole startup -> clone -> game -> task flow; use native interfaces and continue through live execution/evidence instead of stopping at feasibility research. [Task 1]",
+      "valid_until": null
+    },
+    {
+      "id": "MEM-418c164698e9",
+      "scope": "global",
+      "kind": "semantic",
+      "content": "The native BetterGI task path is `BetterGI.exe --instance childSession --startGroups \"每日-委托（蒙德）\"`. Require dynamic session/PID discovery, exactly one child Explorer/BetterGI/game, fresh child logs/captures, and no Session 1 game before dispatching. [Task 1]",
+      "valid_until": null
+    },
+    {
+      "id": "MEM-53774e470625",
+      "scope": "global",
+      "kind": "semantic",
+      "content": "A successful native commission run produced `status=success`, `reasonCode=DAILY_COMMISSION_SUCCESS`, fresh ExecutionRecords, and exact group/task markers, but ran 3/4 commissions after one OCR-location skip. The repaired scheduled task still needed its first real trigger and non-duplication check. [Task 1]",
+      "valid_until": null
+    },
+    {
+      "id": "MEM-b1f3031548b5",
+      "scope": "global",
+      "kind": "semantic",
+      "content": "The BetterGI scheduler repair was backed up and applied in place with `RunLevel=Highest`, `ExecutionTimeLimit=PT4H`, and `MultipleInstances=IgnoreNew`; preserve the backup and verify the next trigger independently. [Task 1]",
+      "valid_until": null
+    },
+    {
+      "id": "MEM-734a25a93431",
+      "scope": "global",
+      "kind": "semantic",
+      "content": "The original `C:\\开发\\二游自动` workspace had no remote or stash and unique tracked/untracked documents and scripts; candidate/GitHub cannot restore those unique files. Ignored runtime directories may be large and partly rebuildable, but evidence/screenshots may not be. [Task 3]",
+      "valid_until": null
+    },
+    {
+      "id": "MEM-7ea7506e76a2",
+      "scope": "global",
+      "kind": "episodic",
+      "content": "Symptom: `dispatched`, stale logs/screenshots, or a worker `delivered=true` is treated as end-to-end success -> cause: current process isolation and fresh terminal evidence were not checked -> require current child/session state, fresh log transition, completion markers, ExecutionRecords, and task progress. [Task 1]",
+      "valid_until": null
+    },
+    {
+      "id": "MEM-ee47197ef177",
+      "scope": "global",
+      "kind": "episodic",
+      "content": "Symptom: monitor fixture passes but real BetterGI path yields no terminal JSON -> cause: `C:\\Program Files\\BetterGI\\log\\ExecutionRecords` was split on spaces -> quote real Windows paths and test path construction with spaces. [Task 1]",
+      "valid_until": null
+    }
+  ],
+  "accepted_decisions": [],
+  "project_documents": [
+    {
+      "source": "C:\\开发\\小工具\\一本通学习系统_v7\\README.md"
+    }
+  ],
+  "rules": {
+    "manager_retains_global_control": true,
+    "overlapping_writes_require_lock": true,
+    "verified_requires_git_test_and_acceptance_evidence": true,
+    "unknown_blocked_stale_are_not_success": true,
+    "load_checkpoint_before_replanning": true,
+    "do_not_claim_missing_history_is_deleted": true,
+    "read_original_sources_on_demand": true
+  },
+  "resume_contract": {
+    "source_context_hash": "570bbb3694b492279c0d396bc6b0f5c5ab9b20c60397791a7a5afedfbca31e48",
+    "load_order": [
+      "authority",
+      "latest_checkpoint",
+      "open_blockers",
+      "open_bugs",
+      "verified_memories",
+      "source_refs"
+    ],
+    "next_action": [],
+    "context_budget": {
+      "context_window": null,
+      "auto_compact_token_limit": null,
+      "recommended_checkpoint_before_tokens": null,
+      "package_max_chars": 32000,
+      "status": "unknown"
+    }
+  },
+  "package_hash": "2b44e4b48d2db560812ec7c5b0c8ed1170b23a4194ca6a03e79df09e60fa5733",
+  "serialized_chars": 5929
+}

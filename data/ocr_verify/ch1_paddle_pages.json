@@ -1,0 +1,1130 @@
+{
+  "meta": {
+    "task": "核验第1章69页PaddleOCR输出完整性",
+    "source_dir": "C:/开发/小工具/一本通学习系统_v7\\data/ocr_live_current\\first_chapter_69",
+    "expected_pages": 69,
+    "checked": 69,
+    "page_image_correspondence": {
+      "each_doc_i_pairs_with_layout_det_res_i_jpg": true,
+      "missing_images": [],
+      "extra_files": []
+    },
+    "vision_spot_check": {
+      "method": "glm-4.6v-flash(deepseek-eyes skill)",
+      "pages_checked": [
+        0,
+        31
+      ],
+      "result": "doc_0↔layout_det_res_0、doc_31↔layout_det_res_31 图文内容一致",
+      "not_run": [
+        68
+      ],
+      "not_run_reason": "视觉接口限流(HTTP 429 code 1302/1305)，重试2次仍失败，未阻塞结构性核验"
+    },
+    "order_notes": []
+  },
+  "pages": [
+    {
+      "page_index": 0,
+      "image": "layout_det_res_0.jpg",
+      "doc_file": "doc_0.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 3944,
+      "has_text": true,
+      "question_refs": [
+        "例x2",
+        "习题x1",
+        "题号x3"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 1,
+      "image": "layout_det_res_1.jpg",
+      "doc_file": "doc_1.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 5011,
+      "has_text": true,
+      "question_refs": [
+        "例x2",
+        "题号x3"
+      ],
+      "status": "suspect",
+      "notes": [
+        "HTML实体:2处",
+        "$数量为奇数x121(疑似公式截断)",
+        "实体明细:&gt;,&lt;(位于数学公式内,如<,>,')",
+        "非页面截断:孤立$位于解答行内(公式LaTeX语法瑕疵),页面正文完整"
+      ],
+      "known_issues": []
+    },
+    {
+      "page_index": 2,
+      "image": "layout_det_res_2.jpg",
+      "doc_file": "doc_2.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 3440,
+      "has_text": true,
+      "question_refs": [
+        "例x1",
+        "一组x2",
+        "题号x3"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 3,
+      "image": "layout_det_res_3.jpg",
+      "doc_file": "doc_3.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 4127,
+      "has_text": true,
+      "question_refs": [
+        "例x2",
+        "题号x2"
+      ],
+      "status": "suspect",
+      "notes": [
+        "HTML实体:5处",
+        "实体明细:&gt;,&lt;(位于数学公式内,如<,>,')"
+      ],
+      "known_issues": []
+    },
+    {
+      "page_index": 4,
+      "image": "layout_det_res_4.jpg",
+      "doc_file": "doc_4.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 3981,
+      "has_text": true,
+      "question_refs": [
+        "例x1",
+        "题号x2"
+      ],
+      "status": "suspect",
+      "notes": [
+        "HTML实体:10处",
+        "实体明细:&#x27;,&gt;,&lt;(位于数学公式内,如<,>,')"
+      ],
+      "known_issues": []
+    },
+    {
+      "page_index": 5,
+      "image": "layout_det_res_5.jpg",
+      "doc_file": "doc_5.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 2785,
+      "has_text": true,
+      "question_refs": [
+        "例x2",
+        "类型x5"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 6,
+      "image": "layout_det_res_6.jpg",
+      "doc_file": "doc_6.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 5101,
+      "has_text": true,
+      "question_refs": [
+        "例x1",
+        "变式x3"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 7,
+      "image": "layout_det_res_7.jpg",
+      "doc_file": "doc_7.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 5049,
+      "has_text": true,
+      "question_refs": [
+        "例x1"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 8,
+      "image": "layout_det_res_8.jpg",
+      "doc_file": "doc_8.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 4841,
+      "has_text": true,
+      "question_refs": [
+        "例x3"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 9,
+      "image": "layout_det_res_9.jpg",
+      "doc_file": "doc_9.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 4980,
+      "has_text": true,
+      "question_refs": [
+        "例x2",
+        "变式x1"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 10,
+      "image": "layout_det_res_10.jpg",
+      "doc_file": "doc_10.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 3622,
+      "has_text": true,
+      "question_refs": [
+        "例x1",
+        "变式x2"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 11,
+      "image": "layout_det_res_11.jpg",
+      "doc_file": "doc_11.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 4477,
+      "has_text": true,
+      "question_refs": [
+        "变式x1"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 12,
+      "image": "layout_det_res_12.jpg",
+      "doc_file": "doc_12.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 1018,
+      "has_text": true,
+      "question_refs": [
+        "A组x1",
+        "题号x3"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 13,
+      "image": "layout_det_res_13.jpg",
+      "doc_file": "doc_13.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 973,
+      "has_text": true,
+      "question_refs": [
+        "B组x1",
+        "题号x4"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 14,
+      "image": "layout_det_res_14.jpg",
+      "doc_file": "doc_14.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 945,
+      "has_text": true,
+      "question_refs": [
+        "题号x3"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 15,
+      "image": "layout_det_res_15.jpg",
+      "doc_file": "doc_15.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 623,
+      "has_text": true,
+      "question_refs": [
+        "题号x2"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 16,
+      "image": "layout_det_res_16.jpg",
+      "doc_file": "doc_16.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 612,
+      "has_text": true,
+      "question_refs": [
+        "C组x1",
+        "题号x2"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 17,
+      "image": "layout_det_res_17.jpg",
+      "doc_file": "doc_17.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 869,
+      "has_text": true,
+      "question_refs": [
+        "题号x1"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 18,
+      "image": "layout_det_res_18.jpg",
+      "doc_file": "doc_18.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 2582,
+      "has_text": true,
+      "question_refs": [
+        "例x1",
+        "习题x1",
+        "题号x6"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 19,
+      "image": "layout_det_res_19.jpg",
+      "doc_file": "doc_19.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 2091,
+      "has_text": true,
+      "question_refs": [
+        "例x2",
+        "题号x3"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 20,
+      "image": "layout_det_res_20.jpg",
+      "doc_file": "doc_20.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 4719,
+      "has_text": true,
+      "question_refs": [
+        "例x1",
+        "题号x1"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 21,
+      "image": "layout_det_res_21.jpg",
+      "doc_file": "doc_21.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 3553,
+      "has_text": true,
+      "question_refs": [
+        "类型x2",
+        "一组x1",
+        "题号x3"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 22,
+      "image": "layout_det_res_22.jpg",
+      "doc_file": "doc_22.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 3284,
+      "has_text": true,
+      "question_refs": [
+        "例x2",
+        "类型x1"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 23,
+      "image": "layout_det_res_23.jpg",
+      "doc_file": "doc_23.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 2929,
+      "has_text": true,
+      "question_refs": [
+        "例x3",
+        "类型x1"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 24,
+      "image": "layout_det_res_24.jpg",
+      "doc_file": "doc_24.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 3338,
+      "has_text": true,
+      "question_refs": [
+        "例x1",
+        "变式x1"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 25,
+      "image": "layout_det_res_25.jpg",
+      "doc_file": "doc_25.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 4019,
+      "has_text": true,
+      "question_refs": [
+        "变式x2"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 26,
+      "image": "layout_det_res_26.jpg",
+      "doc_file": "doc_26.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 2825,
+      "has_text": true,
+      "question_refs": [
+        "例x4"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 27,
+      "image": "layout_det_res_27.jpg",
+      "doc_file": "doc_27.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 3486,
+      "has_text": true,
+      "question_refs": [
+        "例x1"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 28,
+      "image": "layout_det_res_28.jpg",
+      "doc_file": "doc_28.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 1472,
+      "has_text": true,
+      "question_refs": [
+        "A组x1",
+        "题号x4"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 29,
+      "image": "layout_det_res_29.jpg",
+      "doc_file": "doc_29.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 1128,
+      "has_text": true,
+      "question_refs": [
+        "B组x1",
+        "题号x2"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 30,
+      "image": "layout_det_res_30.jpg",
+      "doc_file": "doc_30.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 893,
+      "has_text": true,
+      "question_refs": [
+        "一组x2",
+        "题号x2"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 31,
+      "image": "layout_det_res_31.jpg",
+      "doc_file": "doc_31.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 461,
+      "has_text": true,
+      "question_refs": [
+        "题号x2"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 32,
+      "image": "layout_det_res_32.jpg",
+      "doc_file": "doc_32.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 855,
+      "has_text": true,
+      "question_refs": [
+        "C组x1",
+        "题号x3"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 33,
+      "image": "layout_det_res_33.jpg",
+      "doc_file": "doc_33.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 2529,
+      "has_text": true,
+      "question_refs": [
+        "例x2",
+        "习题x1",
+        "题号x4"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 34,
+      "image": "layout_det_res_34.jpg",
+      "doc_file": "doc_34.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 2725,
+      "has_text": true,
+      "question_refs": [
+        "例x2",
+        "一组x1",
+        "题号x3"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 35,
+      "image": "layout_det_res_35.jpg",
+      "doc_file": "doc_35.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 4477,
+      "has_text": true,
+      "question_refs": [
+        "例x2",
+        "题号x1"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 36,
+      "image": "layout_det_res_36.jpg",
+      "doc_file": "doc_36.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 3119,
+      "has_text": true,
+      "question_refs": [
+        "例x3",
+        "题号x2"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 37,
+      "image": "layout_det_res_37.jpg",
+      "doc_file": "doc_37.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 2975,
+      "has_text": true,
+      "question_refs": [
+        "例x1"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 38,
+      "image": "layout_det_res_38.jpg",
+      "doc_file": "doc_38.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 2892,
+      "has_text": true,
+      "question_refs": [
+        "例x1",
+        "一组x1",
+        "题号x1"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 39,
+      "image": "layout_det_res_39.jpg",
+      "doc_file": "doc_39.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 3427,
+      "has_text": true,
+      "question_refs": [
+        "例x1"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 40,
+      "image": "layout_det_res_40.jpg",
+      "doc_file": "doc_40.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 4228,
+      "has_text": true,
+      "question_refs": [
+        "例x3",
+        "类型x1"
+      ],
+      "status": "suspect",
+      "notes": [
+        "$数量为奇数x193(疑似公式截断)",
+        "非页面截断:孤立$位于解答行内(公式LaTeX语法瑕疵),页面正文完整"
+      ],
+      "known_issues": []
+    },
+    {
+      "page_index": 41,
+      "image": "layout_det_res_41.jpg",
+      "doc_file": "doc_41.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 2935,
+      "has_text": true,
+      "question_refs": [
+        "例x3",
+        "类型x1"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 42,
+      "image": "layout_det_res_42.jpg",
+      "doc_file": "doc_42.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 3297,
+      "has_text": true,
+      "question_refs": [
+        "变式x2"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 43,
+      "image": "layout_det_res_43.jpg",
+      "doc_file": "doc_43.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 2799,
+      "has_text": true,
+      "question_refs": [
+        "变式x1"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 44,
+      "image": "layout_det_res_44.jpg",
+      "doc_file": "doc_44.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 2715,
+      "has_text": true,
+      "question_refs": [
+        "例x1",
+        "变式x1"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 45,
+      "image": "layout_det_res_45.jpg",
+      "doc_file": "doc_45.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 3113,
+      "has_text": true,
+      "question_refs": [
+        "例x1"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 46,
+      "image": "layout_det_res_46.jpg",
+      "doc_file": "doc_46.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 2899,
+      "has_text": true,
+      "question_refs": [
+        "例x1"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 47,
+      "image": "layout_det_res_47.jpg",
+      "doc_file": "doc_47.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 2506,
+      "has_text": true,
+      "question_refs": [
+        "例x1"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 48,
+      "image": "layout_det_res_48.jpg",
+      "doc_file": "doc_48.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 3366,
+      "has_text": true,
+      "question_refs": [
+        "例x1"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 49,
+      "image": "layout_det_res_49.jpg",
+      "doc_file": "doc_49.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 1267,
+      "has_text": true,
+      "question_refs": [
+        "A组x1",
+        "B组x1",
+        "题号x2"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 50,
+      "image": "layout_det_res_50.jpg",
+      "doc_file": "doc_50.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 659,
+      "has_text": true,
+      "question_refs": [
+        "题号x2"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 51,
+      "image": "layout_det_res_51.jpg",
+      "doc_file": "doc_51.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 760,
+      "has_text": true,
+      "question_refs": [
+        "题号x2"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 52,
+      "image": "layout_det_res_52.jpg",
+      "doc_file": "doc_52.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 682,
+      "has_text": true,
+      "question_refs": [
+        "C组x1",
+        "题号x2"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 53,
+      "image": "layout_det_res_53.jpg",
+      "doc_file": "doc_53.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 1032,
+      "has_text": true,
+      "question_refs": [
+        "题号x2"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 54,
+      "image": "layout_det_res_54.jpg",
+      "doc_file": "doc_54.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 297,
+      "has_text": true,
+      "question_refs": [
+        "题号x1"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 55,
+      "image": "layout_det_res_55.jpg",
+      "doc_file": "doc_55.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 2483,
+      "has_text": true,
+      "question_refs": [
+        "例x1",
+        "类型x1",
+        "习题x1"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 56,
+      "image": "layout_det_res_56.jpg",
+      "doc_file": "doc_56.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 3625,
+      "has_text": true,
+      "question_refs": [],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 57,
+      "image": "layout_det_res_57.jpg",
+      "doc_file": "doc_57.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 3706,
+      "has_text": true,
+      "question_refs": [
+        "例x1",
+        "类型x1"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": [
+        "已知识别误差:例2解答中分母π应为5,已由派生层修正,原始OCR保留为历史证据(见manifest manual_review_resolutions)"
+      ]
+    },
+    {
+      "page_index": 58,
+      "image": "layout_det_res_58.jpg",
+      "doc_file": "doc_58.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 2853,
+      "has_text": true,
+      "question_refs": [
+        "例x2"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 59,
+      "image": "layout_det_res_59.jpg",
+      "doc_file": "doc_59.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 3571,
+      "has_text": true,
+      "question_refs": [
+        "例x2"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 60,
+      "image": "layout_det_res_60.jpg",
+      "doc_file": "doc_60.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 2357,
+      "has_text": true,
+      "question_refs": [
+        "例x1"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 61,
+      "image": "layout_det_res_61.jpg",
+      "doc_file": "doc_61.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 4804,
+      "has_text": true,
+      "question_refs": [],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 62,
+      "image": "layout_det_res_62.jpg",
+      "doc_file": "doc_62.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 2827,
+      "has_text": true,
+      "question_refs": [
+        "例x1"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 63,
+      "image": "layout_det_res_63.jpg",
+      "doc_file": "doc_63.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 2878,
+      "has_text": true,
+      "question_refs": [
+        "例x1"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 64,
+      "image": "layout_det_res_64.jpg",
+      "doc_file": "doc_64.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 1847,
+      "has_text": true,
+      "question_refs": [
+        "A组x1",
+        "B组x2",
+        "C组x1"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 65,
+      "image": "layout_det_res_65.jpg",
+      "doc_file": "doc_65.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 774,
+      "has_text": true,
+      "question_refs": [
+        "题号x2"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 66,
+      "image": "layout_det_res_66.jpg",
+      "doc_file": "doc_66.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 728,
+      "has_text": true,
+      "question_refs": [
+        "C组x1",
+        "题号x2"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 67,
+      "image": "layout_det_res_67.jpg",
+      "doc_file": "doc_67.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 864,
+      "has_text": true,
+      "question_refs": [
+        "题号x2"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    },
+    {
+      "page_index": 68,
+      "image": "layout_det_res_68.jpg",
+      "doc_file": "doc_68.md",
+      "image_exists": true,
+      "doc_exists": true,
+      "char_count": 391,
+      "has_text": true,
+      "question_refs": [
+        "题号x1"
+      ],
+      "status": "ok",
+      "notes": [],
+      "known_issues": []
+    }
+  ],
+  "summary": {
+    "total": 69,
+    "ok": 65,
+    "suspect": 4,
+    "empty": 0,
+    "missing_md": [],
+    "empty_pages": []
+  }
+}

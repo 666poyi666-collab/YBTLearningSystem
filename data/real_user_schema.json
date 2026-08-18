@@ -1,0 +1,90 @@
+{
+  "schema_version": "7.3",
+  "kind": "real_user_observation_event_schema",
+  "purpose": "五名真实零基础用户观察记录的机器可校验事件契约。事件只能由采集 harness 追加；任何代理轨迹、改名合成结果或凭空生成的 participant_id 一律拒绝。",
+  "event_kinds": {
+    "baseline_check": {
+      "required": ["baseline_status", "answer_free"],
+      "optional": ["sample_question_keys"],
+      "note": "首次听课前的零基础基线；只能记录空白/错误抽样与证据，不得携带答案。"
+    },
+    "course_listened": {
+      "required": ["course_key"],
+      "optional": ["role", "batch_id", "course_variant"],
+      "note": "听课证据：course_key 必须在对应节 must_listen 集合内；建议附带播放截图/转写日志类 artifact。"
+    },
+    "knowledge_point_study": {
+      "required": ["knowledge_point_id"],
+      "optional": ["label"],
+      "note": "知识点讲解证据：knowledge_point_id 必须属于该节 knowledge_points。"
+    },
+    "example_solved": {
+      "required": ["example_labels"],
+      "optional": [],
+      "note": "右侧例题证据：example_labels 必须来自该节知识点 examples 集合。"
+    },
+    "type_training": {
+      "required": ["type_label"],
+      "optional": ["example_numbers", "focus"],
+      "note": "类型题训练证据：type_label 必须匹配该节 type_training 的 type。"
+    },
+    "question_attempt": {
+      "required": ["question_key", "result", "independent"],
+      "optional": ["hint_level", "process_verified", "first_break", "visual_evidence_required", "visual_evidence_present"],
+      "note": "逐题独立作答证据：result 枚举；视觉题必须带当次图形证据 artifact。"
+    },
+    "review": {
+      "required": ["question_key", "result"],
+      "optional": ["answer_free"],
+      "note": "同日/任意间隔重做：不满足冷复测间隔时使用，不计入冷复测门槛。"
+    },
+    "recap": {
+      "required": ["answer_free"],
+      "optional": ["knowledge_point_ids"],
+      "note": "全节完成后的知识点闭卷复述：answer_free 恒为 true，须附录音/录像/照片类 artifact。"
+    },
+    "cold_review": {
+      "required": ["question_key", "result", "answer_free", "gap_hours"],
+      "optional": [],
+      "note": "到期冷复测：gap_hours 必须 >= cold_review_min_gap_hours，answer_free 恒为 true。"
+    },
+    "near_variant": {
+      "required": ["question_key", "variant_question_key", "result"],
+      "optional": ["independent"],
+      "note": "近迁移：原题与变式题都必须属于该节题目集合。"
+    },
+    "section_complete": {
+      "required": ["section", "exit_gate"],
+      "optional": ["items_full_pass"],
+      "note": "小节完成声明：exit_gate 必须逐字匹配该节计划 exit_gate；完成资格由 verify 门禁决定，不因本事件自动成立。"
+    }
+  },
+  "enums": {
+    "result": ["correct", "incorrect", "partial", "guess"],
+    "hint_level": ["H0", "H1", "H2", "H3", "H4"],
+    "independent": [true, false],
+    "process_verified": [true, false],
+    "answer_free": [true],
+    "baseline_status": ["zero_base"]
+  },
+  "rules": {
+    "cold_review_min_gap_hours": 24,
+    "answer_free_kinds": ["recap", "cold_review"],
+    "forbidden_fields": ["final_answer", "answer_text", "solution", "answer_content"],
+    "visual_evidence_required_statuses": ["VISION_VERIFIED"],
+    "required_zero_base_users": 5,
+    "slot_ids": ["real-user-01", "real-user-02", "real-user-03", "real-user-04", "real-user-05"],
+    "required_sections": ["1.1", "1.2+1.3", "1.4", "micro专题1"],
+    "artifact_required_kinds": ["baseline_check", "course_listened", "knowledge_point_study", "example_solved", "type_training", "question_attempt", "recap", "cold_review", "section_complete"]
+  },
+  "verify_gates": {
+    "identity": ["participant_id 非空", "consent_artifact 存在且 SHA-256 一致", "baseline_check 在首次听课前"],
+    "per_section_course": ["must_listen 全部课程有 course_listened 事件"],
+    "per_section_knowledge": ["每个知识点有 knowledge_point_study", "每个知识点至少一个 example_solved"],
+    "per_section_type": ["每个类型题标签有 type_training 事件"],
+    "per_section_questions": ["exercise_order 内全部题目有 question_attempt", "首次作答时间符合 A/B/C 顺序", "视觉题有当次图形证据"],
+    "per_section_recap": ["全节作答完成后有 answer_free 的知识点复述 recap"],
+    "per_section_cold_review": ["至少一题 cold_review 且间隔 >= 24 小时"],
+    "answer_policy": ["任何事件不得携带 forbidden_fields 内容"]
+  }
+}

@@ -1,0 +1,295 @@
+{
+  "schema_version": "7.1",
+  "kind": "runtime_evidence_sidecar_audit",
+  "audited_at": "2026-08-14T04:34:51+08:00",
+  "auditor": "bounded child worker (ocr/baidu/reward/acceptance chain)",
+  "purpose": "独立只读快照：核验 ocr.py/vision.py/state.py、第一张图奖励、百度 AI API 配置与 live evidence、generate_acceptance_report.py 的当前运行证据。不修改核心代码或门禁，只做旁证记录。",
+  "environment_credentials": {
+    "BAIDU_OCR_API_KEY": "NOT_SET",
+    "BAIDU_OCR_SECRET_KEY": "NOT_SET",
+    "BAIDU_OCR_TOKEN_URL": "NOT_SET",
+    "BAIDU_OCR_ENDPOINT": "NOT_SET",
+    "YBT_OCR_PROVIDER": "NOT_SET",
+    "PADDLE_OCR_TOKEN": "NOT_SET",
+    "GLM_VISION_API_KEY": "NOT_SET",
+    "GLM_VISION_BASE_URL": "NOT_SET",
+    "glm_vision_config_json_present": true,
+    "glm_vision_script_present": true,
+    "paddle_ai_studio_script_present": true
+  },
+  "evidence_files": [
+    {
+      "path": "data/ocr_live_evidence.json",
+      "sha256": "289AB3B13F726EF0715601F723C040D42FC9B4441DCF2ADB538649791D284512",
+      "size": 1027,
+      "mtime": "2026-08-14T02:25:06+08:00"
+    },
+    {
+      "path": "data/vision_live_evidence.json",
+      "sha256": "7AB647BF0FFC78A3B3449C9BF673CAC52C01B3A2E0A90241C821F7BD5FFB0289",
+      "size": 43862,
+      "mtime": "2026-08-14T03:40:24+08:00"
+    },
+    {
+      "path": "data/vision_sidecar_full.json",
+      "sha256": "52036775FF17D1BBEB9CE2AF7304FDC1B5E8F90F76DFD2846B241B2413A4EC3D",
+      "size": 54997,
+      "mtime": "2026-08-14T03:40:24+08:00"
+    },
+    {
+      "path": "data/vision_sidecar_sample.json",
+      "sha256": "177B8F45C5AEF45D70A4B1C2BC58991867301AC5B2A01ED420ED529485D37114",
+      "size": 1708,
+      "mtime": "2026-08-13T21:18:07+08:00"
+    },
+    {
+      "path": "data/deepseek_http_probe_1.1.json",
+      "sha256": "8E5A84DB6E26182BD0B8616DEA04C82F40BD22D9E06D5ACB20773D50B0714E36",
+      "size": 9765,
+      "mtime": "2026-08-14T04:27:15+08:00"
+    },
+    {
+      "path": "data/deepseek_http_probe_1.1.raw.json",
+      "sha256": "B5429915AF50203D6A0B957FE1F19B55F78F5DBA648286E118AC7573B2A4008E",
+      "size": 7494,
+      "mtime": "2026-08-14T04:27:15+08:00"
+    },
+    {
+      "path": "data/browser_evidence.json",
+      "sha256": "82AA580226A1BE8C7C3E115F89EA63CBBDCA16710D1E379B412CF1D202CFAB3B",
+      "size": 2154,
+      "mtime": "2026-08-14T04:25:49+08:00"
+    },
+    {
+      "path": "data/real_user_observations.json",
+      "sha256": "F0791825263A5733691B8383F823B7C93D04FB81C05680CB35ED7425DA7A3924",
+      "size": 1773,
+      "mtime": "2026-08-14T04:25:21+08:00"
+    },
+    {
+      "path": "reports/simulation_matrix_current.json",
+      "sha256": "614C9490FA3EEBDA5104CDDD21928BD119C3EF6C66643024F93CF7B8A1428E32",
+      "size": 335516,
+      "mtime": "2026-08-14T04:27:44+08:00"
+    },
+    {
+      "path": "reports/final-acceptance.json",
+      "sha256": "471ABE89170554CDE37EB98B875035D48E03297B47B581CB35AD67AB30E46EBD",
+      "size": 24751,
+      "mtime": "2026-08-14T04:27:52+08:00"
+    },
+    {
+      "path": "data/first-image-reward-test-state.json",
+      "sha256": "2979F91CD5672E34E62A317C59CA8A7E500E0519F814E1051349A65018A44E82",
+      "size": 3437,
+      "mtime": "2026-08-14T04:27:51+08:00"
+    },
+    {
+      "path": "data/reward-test-state.json",
+      "sha256": "4CF592349E57E27E0D5035FF0FC4C5AFE8252FA83DAF8F08E188649018BB947C",
+      "size": 7070,
+      "mtime": "2026-08-14T04:27:51+08:00"
+    },
+    {
+      "path": "data/question_coverage.json",
+      "sha256": "77F5EFD6D608CC5026F4D1BF5DD7A8A20BCC0248E893DBB99E83FD8FC411AEF1",
+      "size": 47461,
+      "mtime": "2026-08-14T04:25:49+08:00"
+    }
+  ],
+  "live_replay_spot_checks": {
+    "ocr_live_full_total_files": 289,
+    "ocr_live_full_doc_md_count": 69,
+    "first_image_sha256_live_root": "626F9E0D2A7887DB60B76F9E4B0B4005CAB06F0A447AD99C4C527E40C934F172",
+    "first_image_sha256_historical_root": "626F9E0D2A7887DB60B76F9E4B0B4005CAB06F0A447AD99C4C527E40C934F172",
+    "first_image_byte_identical_across_roots": true
+  },
+  "first_image_reward_chain": {
+    "question_hint": "1.1-A1",
+    "image_historical": "C:\\开发\\小工具\\一本通DeepSeek迭代\\worker-01-content\\ocr\\imgs\\img_in_image_box_523_429_694_610.jpg",
+    "image_live_root": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_full\\imgs\\img_in_image_box_523_429_694_610.jpg",
+    "sample_sidecar_entry": {
+      "status": "passed",
+      "confidence": "E2",
+      "note": "vision_sidecar_sample.json 中的 1.1-A1 条目；structured 为旧式点/关系/文字 schema，但绑定走真实图片路径+内容哈希，奖励链只检查结果级 status/confidence/精确路径"
+    },
+    "packet_1_1_A1_visual_status": "VISION_VERIFIED",
+    "packet_1_1_A1_binding": "content-hash based (PacketBuilder._sidecar_matches_question)",
+    "committed_grant": {
+      "idempotency_key": "54ab0ee02c69395c",
+      "item_id": "1.1-A1",
+      "milestone": "full_pass",
+      "points": 10,
+      "badge": "第一章·独立完整",
+      "evidence": [
+        "independent_process",
+        "uncontaminated",
+        "visual_verified"
+      ]
+    },
+    "chain_ok": true
+  },
+  "command_rechecks": {
+    "unittest": {
+      "command": "python -B -m unittest discover -s tests",
+      "result": "Ran 51 tests, OK"
+    },
+    "ocr_config_status": {
+      "command": "python -m ybt_learning.cli ocr-config-status",
+      "result": "active_provider=paddle_legacy, active_provider_live_verified=true; baidu_qianfan configured=false live_verified=false status=not_run; safe_for_new_run=false; fresh_api_run=not_run"
+    },
+    "vision_config_test": {
+      "command": "python -m ybt_learning.cli vision-config-test",
+      "result": "status=passed, key_source=config (deepseek-eyes config.json), model=glm-4.6v-flash, live_verified=true"
+    },
+    "deepseek_status": {
+      "command": "python -m ybt_learning.cli deepseek-status",
+      "result": "status=failed (contexts 1.2_1.3/1.4/micro专题1 fail: visual_not_consumable/unresolved), route_status=passed, independent_probe=passed"
+    },
+    "verify_packet": {
+      "data/packets/1.1/student_packet.json": {
+        "status": "passed"
+      },
+      "data/packets/1.2_1.3/student_packet.json": {
+        "status": "failed",
+        "errors": [
+          "Q-0b9899dd462c0221:visual_not_consumable",
+          "packet_status_not_verified",
+          "unresolved_items"
+        ]
+      },
+      "data/packets/1.4/student_packet.json": {
+        "status": "failed",
+        "errors": [
+          "Q-600b1406480e8a36:visual_not_consumable",
+          "packet_status_not_verified",
+          "unresolved_items"
+        ]
+      },
+      "data/packets/micro专题1/student_packet.json": {
+        "status": "failed",
+        "errors": [
+          "Q-5a4561f30ce0989a:visual_not_consumable",
+          "Q-a216f4f643221e77:visual_not_consumable",
+          "packet_status_not_verified",
+          "unresolved_items"
+        ]
+      }
+    }
+  },
+  "cross_checks_against_final_acceptance": [
+    {
+      "item": "runtime_regression 51 tests",
+      "ok": true
+    },
+    {
+      "item": "reward_protocol 50 points; first-image=1.1-A1 real_file_present",
+      "ok": true
+    },
+    {
+      "item": "ocr_live_replay 69 docs / 289 files / exact_match",
+      "ok": true
+    },
+    {
+      "item": "baidu_standard_ocr_aksk not_run (configured=false, live_verified=false)",
+      "ok": true
+    },
+    {
+      "item": "visual_probe passed (GLM E1/E2 structured)",
+      "ok": true
+    },
+    {
+      "item": "packet_verification 1/4 VERIFIED",
+      "ok": true
+    },
+    {
+      "item": "visual_sidecars 4 blocked (1.2+1.3-B13, 1.4-B4, micro专题1-B1, micro专题1-B4)",
+      "ok": true
+    },
+    {
+      "item": "browser_8_5 passed / 8.5g unknown 0 matches",
+      "ok": true
+    },
+    {
+      "item": "simulation pass=0 fail=5 partial=5 total=10",
+      "ok": true
+    },
+    {
+      "item": "real_user_e2e not_run recorded=0 required=5",
+      "ok": true
+    },
+    {
+      "item": "deepseek_independent_probe passed (chatcmpl-82a96a9a6cdb4aef8a711883, returned_model=opencode-go/deepseek-v4-flash, usage 2345/11228/13573)",
+      "ok": true
+    }
+  ],
+  "gap_register": [
+    {
+      "requirement": "百度 AI OCR 调用链 live 证据（用户：正式百度 OCR / 千帆 OCR）",
+      "current": "配置中的 PaddleOCR AI Studio 客户端回放有强证据（job 81451507704512512，69/69 文档块、289/289 文件逐 SHA-256 与历史语料一致）；百度/千帆标准 AK/SK 适配器从未 live 调用，configured=false、live_verified=false、status=not_run；当前环境也无 PADDLE_OCR_TOKEN，fresh_api_run=not_run",
+      "evidence_strength": "回放证据强（哈希级），百度标准 AK/SK 与新鲜 API 运行证据缺失",
+      "fix": "保持 fail-closed 不降真实性；不需要改代码，需要凭据后补真实调用并落证据文件",
+      "rerun_commands": [
+        "$env:BAIDU_OCR_API_KEY='...'; $env:BAIDU_OCR_SECRET_KEY='...'; python -m ybt_learning.cli ocr-config-status",
+        "python -c \"from ybt_learning.ocr import run_baidu_ocr; import json; print(json.dumps(run_baidu_ocr(r'C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_full\\imgs\\img_in_image_box_523_429_694_610.jpg', r'C:\\开发\\小工具\\一本通学习系统_v7\\data\\baidu_ocr_live'), ensure_ascii=False))\"",
+        "$env:PADDLE_OCR_TOKEN='...'; python -m ybt_learning.cli ocr-config-status"
+      ]
+    },
+    {
+      "requirement": "视觉侧车全量补齐（4 道题仍 BLOCKED_VISUAL）",
+      "current": "1.2+1.3-B13、1.4-B4、micro专题1-B1、micro专题1-B4 为 NEEDS_VISION_SIDECAR/E0；vision_sidecar_full.json 32 条中 4 条 unverified",
+      "evidence_strength": "阻塞状态真实；无可用证据",
+      "fix": "对阻塞题调用 GLM 视觉批量入口（真实 API 调用，可能遇 429 则保持阻塞）",
+      "rerun_commands": [
+        "python -m ybt_learning.cli vision-question-batch --out data/vision_sidecar_round2.json --start 0 --count 4",
+        "python scripts/merge_vision_probe.py --sidecar data/vision_sidecar_round2.json --out data/vision_sidecar_full.json",
+        "python -m ybt_learning.cli build-chapter1",
+        "python scripts/generate_acceptance_report.py"
+      ]
+    },
+    {
+      "requirement": "DeepSeek 独立消费覆盖四节（当前仅 1.1）",
+      "current": "1.1 独立 HTTP 探针 passed（真实 chatcmpl 回执）；1.2_1.3/1.4/micro专题1 上下文因视觉/未决项 fail-closed",
+      "evidence_strength": "1.1 强；其余三节无独立消费证据（正确阻塞）",
+      "fix": "先补视觉侧车与题包 VERIFIED，再对每节跑 HTTP 探针",
+      "rerun_commands": [
+        "python scripts/run_deepseek_http_probe.py",
+        "python scripts/verify_saved_deepseek_http_probe.py"
+      ]
+    },
+    {
+      "requirement": "8.5g 数据（用户：8.5 与 8.5g 均已读取，缺失标 unknown）",
+      "current": "8.5 passed（Edge 采集器可见页面+历史 URL/标题命中）；8.5g unknown、matches=0，未用 8.5 替代",
+      "evidence_strength": "8.5 中等；8.5g 诚实 unknown",
+      "fix": "需在浏览器采集器中实际发现 8.5g 资料后才可更新；无发现则保持 unknown",
+      "rerun_commands": [
+        "Edge 采集器重新读取数学项目页面与浏览历史，命中后更新 data/browser_evidence.json"
+      ]
+    },
+    {
+      "requirement": "真实用户观察 5 人（用户：5 个零基础真实用户）",
+      "current": "data/real_user_observations.json 全部 not_run（0/5），代理模拟明确不填充",
+      "evidence_strength": "无运行证据（契约为空）",
+      "fix": "必须由真实用户完成听课/逐题/复述/冷复测并记录；无法用命令替代",
+      "rerun_commands": [
+        "人工五名真实用户观察并回填 data/real_user_observations.json（含每用户批次/时间/逐题结果/图像证据）"
+      ]
+    },
+    {
+      "requirement": "5+5 模拟逐题/知识点验证",
+      "current": "simulate-ten 已运行：total=10, pass=0, fail=5, partial=5（矩阵 335KB 保留失败与阻塞）；0 通过源于题包/视觉/8.5g 缺口",
+      "evidence_strength": "运行证据存在；通过数=0 是真实状态",
+      "fix": "补齐上游缺口后重跑模拟，通过数才会上升；当前不允许宣称掌握",
+      "rerun_commands": [
+        "python -m ybt_learning.cli simulate-ten"
+      ]
+    }
+  ],
+  "observations": [
+    "generate_acceptance_report.py 中 deepseek_independent_probe 的 evidence 文案写的是 Responses API，实际传输是 127.0.0.1:10100/v1/chat/completions（Chat Completions）；仅措辞问题，不影响判据",
+    "visual_probe evidence 文案说 one complete GLM E2 result，实际 vision_live_evidence.json verified_count=27；属最小口径表述，非虚假",
+    "vision_sidecar_sample.json 是旧式 schema（structured 无 confidence/objects 字段），但被 build-chapter1 合并逻辑与 run_reward_test 消费；1.1-A1 绑定依赖真实图片路径与内容哈希，未发现伪造路径",
+    "data/events.jsonl 为追加式累积（194 条 ITEM_ATTEMPT 等），reward-test 每次运行追加事件而状态文件覆盖；不是当前状态的单一权威账本，但奖励账本本身以 state.rewards.grants 幂等键为准",
+    "本侧车只记录审计快照；补 live 证据或改核心文件的动作都需另行授权"
+  ]
+}

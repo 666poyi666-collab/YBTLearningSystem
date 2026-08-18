@@ -1,0 +1,116 @@
+{
+  "schema_version": "7.1",
+  "packet_type": "DEEPSEEK_STUDENT_LEARNING_ITEMS",
+  "section": "4.6",
+  "status": "VERIFIED",
+  "source": {
+    "ocr_root": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100",
+    "ocr_docs": [
+      77,
+      81
+    ],
+    "source_file": null
+  },
+  "consumer_guard": "Student/DeepSeek input only; teaching text, solutions and answer sidecars are excluded.",
+  "worked_examples": [
+    {
+      "item_id": "2ded18214d55a0fc",
+      "kind": "example",
+      "label": "例1",
+      "example_number": 1,
+      "parent_example_number": null,
+      "role": "type_example",
+      "role_ref": "类型I 用数学归纳法证明等式",
+      "source_docs": [
+        77,
+        78
+      ],
+      "vision_hint": "4.6-LI2ded18214d55a0fc",
+      "question_text": "【例 1】用数学归纳法证明： \\(1^3 + 2^3 + 3^3 + \\cdots + n^3 = \\left[\\frac{n(n+1)}{2}\\right]^2\\)。",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "evidence": []
+    },
+    {
+      "item_id": "669339f1ad2e10ee",
+      "kind": "example",
+      "label": "例2",
+      "example_number": 2,
+      "parent_example_number": null,
+      "role": "type_example",
+      "role_ref": "类型Ⅱ 用数学归纳法证明不等式",
+      "source_docs": [
+        78,
+        79
+      ],
+      "vision_hint": "4.6-LI669339f1ad2e10ee",
+      "question_text": "【例 2】当  \\(n \\geq 2\\) 且  \\(n \\in \\mathbb{N}^*\\) 时，求证： \\(1 + \\frac{1}{2^2} + \\frac{1}{3^2} + \\cdots + \\frac{1}{n^2} < 2 - \\frac{1}{n}\\).",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "evidence": []
+    },
+    {
+      "item_id": "acffc7a955085168",
+      "kind": "example",
+      "label": "例3",
+      "example_number": 3,
+      "parent_example_number": null,
+      "role": "type_example",
+      "role_ref": "类型Ⅲ 用数学归纳法证明整除有关的结论",
+      "source_docs": [
+        80
+      ],
+      "vision_hint": "4.6-LIacffc7a955085168",
+      "question_text": "【例 3】用数学归纳法证明：对任意的正整数 n，数  \\(A_{n}=5^{n}+2\\times3^{n-1}+1\\) 都能被 8 整除.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "evidence": []
+    }
+  ],
+  "direct_variants": [
+    {
+      "item_id": "5ab0419a737b7a51",
+      "kind": "direct_variant",
+      "label": "变式",
+      "example_number": null,
+      "parent_example_number": 1,
+      "role": "direct_variant",
+      "role_ref": null,
+      "source_docs": [
+        78
+      ],
+      "vision_hint": "4.6-LI5ab0419a737b7a51",
+      "question_text": "【变式】是否存在常数 \\(a\\), \\(b\\), 使 \\(1 \\times n + 2 \\times (n-1) + 3 \\times (n-2) + \\cdots + (n-1) \\times 2 + n \\times 1 = \\frac{1}{6}n(n+a)(n+b)\\) 对任意的 \\(n \\in \\mathbb{N}^*\\) 都成立？若存在，求出 \\(a\\), \\(b\\) 的值，并用数学归纳法证明你的结论；若不存在，请说明理由。",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "evidence": []
+    },
+    {
+      "item_id": "c7a1f7856662363b",
+      "kind": "direct_variant",
+      "label": "变式",
+      "example_number": null,
+      "parent_example_number": 2,
+      "role": "direct_variant",
+      "role_ref": null,
+      "source_docs": [
+        79,
+        80
+      ],
+      "vision_hint": "4.6-LIc7a1f7856662363b",
+      "question_text": "【变式】已知数列 \\(\\{a_n\\}\\) 满足 \\(a_1 = \\frac{1}{2}\\)，且 \\(a_{n+1} = \\frac{1}{3}a_n^3 + \\frac{2}{3}a_n\\)，求证：\\(\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^{n+1} \\leq a_n \\leq \\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^{n+1}\\)。\n证法1：(i) 当 \\(n=1\\) 时，结论即为 \\(\\frac{1}{2} \\leq a_1 \\leq \\frac{1}{2}\\)，也即 \\(a_1 = \\frac{1}{2}\\)，由所给条件可知结论成立；\n(ii) 假设当 \\(n=k\\) (\\(k \\geq 1\\)) 时结论成立，即 \\(\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^{k-1} \\leq a_k \\leq \\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}\\) ①，（怎样证当 \\(n=k+1\\) 时结论也成立？只需证 \\(\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^k \\leq a_{k+1} \\leq \\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\)，条件给出了 \\(a_{n+1}\\) 与 \\(a_n\\) 的关系式，故运用该关系式，结合上面的假设来证明）\n由①可知 \\(a_k \\geq \\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^{k-1}\\)，所以 \\(a_{k+1} = \\frac{1}{3}a_k^3 + \\frac{2}{3}a_k \\geq \\frac{1}{3} \\times \\left[\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^{k-1}\\right]^{3} + \\frac{2}{3} \\times \\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^{k-1} = \\frac{1}{24}\\cdot\\left(\\frac{2}{3}\\right)^{3k-3} + \\frac{1}{3}\\cdot\\left(\\frac{2}{3}\\right)^{k-1}\\)\n\\(= \\frac{1}{24}\\cdot\\left(\\frac{2}{3}\\right)^{3k-3} + \\frac{1}{3}\\cdot\\left(\\frac{2}{3}\\right)^k \\cdot \\frac{3}{2} = \\frac{1}{24}\\cdot\\left(\\frac{2}{3}\\right)^{3k-3} + \\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^k \\geq \\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^k\\)，\n由①可知 \\(a_k \\leq \\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}\\)，所以 \\(a_{k+1} = \\frac{1}{3}a_k^3 + \\frac{2}{3}a_k \\leq \\frac{1}{3}\\cdot\\left[\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}\\right]^{3} + \\frac{2}{3} \\times \\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^{k-1} = \\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{3k-3} + \\frac{1}{3}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}\\) ②，\n（接下来只需证明 \\(\\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{3k-3} + \\frac{1}{3}\\cdot\\left(\\frac{3}{4}\\right)^{k-1} \\leq \\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\)，就能得出 \\(a_{k+1} \\leq \\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\)，怎么证？可尝试作差比较）\n\\(\\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{3k-3} + \\frac{1}{3}\\cdot\\left(\\frac{3}{4}\\right)^{k-1} - \\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k = \\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{3k-3} + \\frac{1}{3}\\cdot\\left(\\frac{3}{4}\\right)^{k-1} - \\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^{k-1} \\cdot \\frac{3}{4} = \\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{3k-3} + \\frac{1}{3}\\cdot\\left(\\frac{3}{4}\\right)^{k-1} - \\frac{3}{8}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}\\)\n\\(= \\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{3k-3} - \\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{k-1} = \\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}\\left[\\left(\\frac{3}{4}\\right)^{2k-2} - 1\\right]\\)，\n因为 \\(k \\geq 1\\)，所以 \\(\\left(\\frac{3}{4}\\right)^{2k-2} \\leq 1\\)，从而 \\(\\left(\\frac{3}{4}\\right)^{2k-2} - 1 \\leq 0\\)，故 \\(\\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}\\left[\\left(\\frac{3}{4}\\right)^{2k-2} - 1\\right] \\leq 0\\)，\n所以 \\(\\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{3k-3}+\\frac{1}{3}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}-\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\leq0\\)，故 \\(\\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{3k-3}+\\frac{1}{3}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}\\leq\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\)，\n结合②可得 \\(a_{k+1}\\leq\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\)，综上所述， \\(\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^k\\leq a_{k+1}\\leq\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\)，即当 \\(n=k+1\\)时结论也成立；\n由(i)(ii)结合数学归纳法原理可知对任意的 \\(n\\in\\mathbb{N}^*\\)，都有 \\(\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^{n-1}\\leq a_n\\leq\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^{n-1}\\)。\n证法2：（前面过程同证法1，得到不等式①后，要证当\\(n=k+1\\)时结论也成立，即证\\(\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^k\\leq a_{k+1}\\leq\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\)也成立，注意到递推公式\\(a_{k+1}=\\frac{1}{3}a_k^3+\\frac{2}{3}a_k\\)中\\(\\frac{1}{3}a_k^3\\)这部分较复杂，故也可尝试将其放缩掉）\n由①可知\\(a_k\\geq\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^{k-1}\\)，所以\\(a_{k+1}=\\frac{1}{3}a_k^3+\\frac{2}{3}a_k\\geq\\frac{2}{3}a_k\\geq\\frac{2}{3}\\times\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^{k-1}=\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^k\\)，\n由①可知\\(a_k\\leq\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}\\)，又因为\\(k\\geq1\\)，所以\\(\\left(\\frac{3}{4}\\right)^{k-1}\\leq1\\)，故\\(a_k\\leq\\frac{1}{2}\\)，\n所以\\(a_{k+1}=\\frac{1}{3}a_k^3+\\frac{2}{3}a_k=\\frac{1}{3}a_k^2\\cdot a_k+\\frac{2}{3}a_k\\leq\\frac{1}{3}\\times\\left(\\frac{1}{2}\\right)^2a_k+\\frac{2}{3}a_k=\\frac{3}{4}a_k\\leq\\frac{3}{4}\\times\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}=\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\)，\n综上所述，\\(\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^k\\leq a_{k+1}\\leq\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\)，接下来同证法1.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "evidence": []
+    }
+  ],
+  "counts": {
+    "worked_examples": 3,
+    "direct_variants": 2,
+    "total": 5
+  },
+  "answer_policy": {
+    "worked_examples": "question only; complete teaching remains in learning_packet.json",
+    "direct_variants": "question only; solution isolated in answer-free build boundary"
+  }
+}

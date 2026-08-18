@@ -1,0 +1,2295 @@
+{
+  "schema_version": "7.4",
+  "packet_type": "DEEPSEEK_SEQUENTIAL_LEARNING_PACKET",
+  "section": "5.6",
+  "status": "VERIFIED",
+  "source": {
+    "ocr_root": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95",
+    "ocr_docs": [
+      75,
+      94
+    ],
+    "source_file": null
+  },
+  "workflow_order": [
+    "repeat_each_learning_cycle_in_order",
+    "watch_current_courses",
+    "learn_each_current_example_then_attempt_its_direct_variants",
+    "attempt_current_abc_exercises_without_answers",
+    "assess_current_cycle_before_advancing",
+    "unseen_near_transfer",
+    "delayed_closed_book_review"
+  ],
+  "learning_cycles": [
+    {
+      "cycle_id": "5.6-cycle-1",
+      "sequence": 1,
+      "title": "类型I 导数的计算",
+      "course_keys": [
+        "4.2.6.1 求和型放缩（上）"
+      ],
+      "prerequisite_course_keys": [],
+      "optional_course_keys": [],
+      "knowledge_refs": [],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [
+        "类型I 导数的计算"
+      ],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [
+        {
+          "item_id": "65d48ba8ed18c7eb",
+          "kind": "example",
+          "label": "例1",
+          "example_number": 1,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型I 导数的计算",
+          "source_docs": [
+            75
+          ],
+          "question_text": "【例1】（2018·天津卷）已知函数  \\(f(x)=\\mathrm{e}^x \\ln x\\)， \\(f'(x)\\) 为  \\(f(x)\\) 的导函数，则  \\(f'(1)\\) 的值为___。",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例1】（2018·天津卷）已知函数  \\(f(x)=\\mathrm{e}^x \\ln x\\)， \\(f'(x)\\) 为  \\(f(x)\\) 的导函数，则  \\(f'(1)\\) 的值为___。\n解析：由题意， \\(f'(x)=(\\mathrm{e}^x)' \\ln x + \\mathrm{e}^x (\\ln x)'=\\mathrm{e}^x \\ln x + \\frac{1}{x} \\cdot \\mathrm{e}^x\\)，所以  \\(f'(1)=\\mathrm{e}\\)。\n答案：e",
+          "solution_present": true,
+          "vision_hint": "5.6-LI65d48ba8ed18c7eb"
+        }
+      ],
+      "direct_variants": [
+        {
+          "item_id": "df2b1ac00bf2f701",
+          "kind": "direct_variant",
+          "label": "变式",
+          "example_number": null,
+          "parent_example_number": 1,
+          "role": "direct_variant",
+          "role_ref": null,
+          "source_docs": [
+            75
+          ],
+          "question_text": "【变式】（2020·新课标Ⅲ卷）设函数  \\(f(x)=\\frac{e^x}{x+a}\\)，若  \\(f'(1)=\\frac{e}{4}\\)，则  \\(a=\\)___。",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "5.6-LIdf2b1ac00bf2f701"
+        }
+      ],
+      "exercise_questions": [],
+      "action_order": [
+        "watch_current_courses",
+        "learn_each_current_example_then_attempt_its_direct_variants",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [],
+      "prerequisite_knowledge_blocks": []
+    },
+    {
+      "cycle_id": "5.6-cycle-2",
+      "sequence": 2,
+      "title": "类型Ⅱ 切线的计算及应用",
+      "course_keys": [],
+      "prerequisite_course_keys": [
+        "4.2.6.1 求和型放缩（上）"
+      ],
+      "optional_course_keys": [],
+      "knowledge_refs": [],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 切线的计算及应用"
+      ],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [
+        {
+          "item_id": "8cc0df82fb29f514",
+          "kind": "example",
+          "label": "例2",
+          "example_number": 2,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型Ⅱ 切线的计算及应用",
+          "source_docs": [
+            75
+          ],
+          "question_text": "【例2】（2018·新课标Ⅱ卷）曲线  \\(y=2\\ln x\\) 在点  \\((1,0)\\) 处的切线方程为 ___.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例2】（2018·新课标Ⅱ卷）曲线  \\(y=2\\ln x\\) 在点  \\((1,0)\\) 处的切线方程为 ___.\n解析：由题意， \\(y' = \\frac{2}{x}\\)，所以曲线  \\(y = 2\\ln x\\) 在  \\((1,0)\\) 处的切线斜率  \\(k = y'|_{x=1} = 2\\)，\n故切线方程为  \\(y=2(x-1)\\)，整理得：2x-y-2=0.\n答案：2x-y-2=0",
+          "solution_present": true,
+          "vision_hint": "5.6-LI8cc0df82fb29f514"
+        }
+      ],
+      "direct_variants": [
+        {
+          "item_id": "97362f898184b4d7",
+          "kind": "direct_variant",
+          "label": "变式1",
+          "example_number": null,
+          "parent_example_number": 2,
+          "role": "direct_variant",
+          "role_ref": null,
+          "source_docs": [
+            75
+          ],
+          "question_text": "【变式1】（2023·全国甲卷）曲线 \\(y=\\frac{e^{x}}{x+1}\\)在点 \\(\\left(1,\\frac{e}{2}\\right)\\)处的切线方程为（）\nA.  \\(y = \\frac{e}{4} x\\) B.  \\(y = \\frac{e}{2} x\\) C.  \\(y = \\frac{e}{4} x + \\frac{e}{4}\\) D.  \\(y = \\frac{e}{2} x + \\frac{3 e}{4}\\)",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "5.6-LI97362f898184b4d7"
+        },
+        {
+          "item_id": "96ba4cb8767a5c8b",
+          "kind": "direct_variant",
+          "label": "变式2",
+          "example_number": null,
+          "parent_example_number": 2,
+          "role": "direct_variant",
+          "role_ref": null,
+          "source_docs": [
+            75,
+            76
+          ],
+          "question_text": "【变式2】（2018·新课标Ⅰ卷）设函数  \\(f(x)=x^{3}+(a-1)x^{2}+ax\\) ，若  \\(f(x)\\) 为奇函数，则曲线 y=\n \\(f(x)\\) 在点  \\((0,0)\\) 处的切线方程为（）\nA. y = -2x B. y = -x C. y = 2x D. y = x",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "5.6-LI96ba4cb8767a5c8b"
+        },
+        {
+          "item_id": "9015508f30f49ddd",
+          "kind": "direct_variant",
+          "label": "变式3",
+          "example_number": null,
+          "parent_example_number": 2,
+          "role": "direct_variant",
+          "role_ref": null,
+          "source_docs": [
+            76
+          ],
+          "question_text": "【变式 3】（2016·新课标Ⅲ卷）已知  \\(f(x)\\) 为偶函数，当 x < 0 时， \\(f(x) = \\ln(-x) + 3x\\)，则曲线  \\(y = f(x)\\) 在点  \\((1, -3)\\) 处的切线方程是___。",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "5.6-LI9015508f30f49ddd"
+        },
+        {
+          "item_id": "89178ddf0d4a8766",
+          "kind": "direct_variant",
+          "label": "变式4",
+          "example_number": null,
+          "parent_example_number": 2,
+          "role": "direct_variant",
+          "role_ref": null,
+          "source_docs": [
+            76
+          ],
+          "question_text": "【变式4】（2019·江苏卷）在平面直角坐标系xOy中，点A在曲线 \\(y=\\ln x\\)上，且该曲线在点A处的切线经过点 \\((-e,-1)(e\\)为自然对数的底数 \\()\\)，则点A的坐标是___。",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "5.6-LI89178ddf0d4a8766"
+        },
+        {
+          "item_id": "50ceb76c09ec09a2",
+          "kind": "direct_variant",
+          "label": "变式5",
+          "example_number": null,
+          "parent_example_number": 2,
+          "role": "direct_variant",
+          "role_ref": null,
+          "source_docs": [
+            76,
+            77
+          ],
+          "question_text": "【变式 5】（2015 · 新课标Ⅱ卷）已知曲线  \\(y = x + \\ln x\\) 在点  \\((1,1)\\) 处的切线与曲线  \\(y = ax^{2} + (a+2)x + 1\\)\n相切，则 \\(a=\\)___.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "5.6-LI50ceb76c09ec09a2"
+        },
+        {
+          "item_id": "6d1510b6259bdc46",
+          "kind": "direct_variant",
+          "label": "变式6",
+          "example_number": null,
+          "parent_example_number": 2,
+          "role": "direct_variant",
+          "role_ref": null,
+          "source_docs": [
+            77
+          ],
+          "question_text": "【变式 6】（2019·江苏卷）在平面直角坐标系 xOy 中，P 是曲线  \\(y = x + \\frac{4}{x}(x > 0)\\) 上的一个动点，则点 P 到直线  \\(x + y = 0\\) 的距离的最小值是___.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "5.6-LI6d1510b6259bdc46"
+        }
+      ],
+      "exercise_questions": [],
+      "action_order": [
+        "learn_each_current_example_then_attempt_its_direct_variants",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [],
+      "prerequisite_knowledge_blocks": []
+    },
+    {
+      "cycle_id": "5.6-cycle-3",
+      "sequence": 3,
+      "title": "类型Ⅲ 单调性、极值、最值的分析",
+      "course_keys": [],
+      "prerequisite_course_keys": [
+        "4.2.6.1 求和型放缩（上）"
+      ],
+      "optional_course_keys": [],
+      "knowledge_refs": [],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 单调性、极值、最值的分析"
+      ],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [
+        {
+          "item_id": "2339a7d2a78cc9ea",
+          "kind": "example",
+          "label": "例3",
+          "example_number": 3,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型Ⅲ 单调性、极值、最值的分析",
+          "source_docs": [
+            77
+          ],
+          "question_text": "【例 3】（2015·安徽卷）函数  \\(f(x)=ax^3+bx^2+cx+d\\) 的图象如图所示，则下列结论成立的是（ ）\nA.  \\(a>0\\)， \\(b<0\\)， \\(c>0\\)， \\(d>0\\)  \nB.  \\(a>0\\)， \\(b<0\\)， \\(c<0\\)， \\(d>0\\)  \nC.  \\(a<0\\)， \\(b<0\\)， \\(c<0\\)， \\(d>0\\)  \nD.  \\(a>0\\)， \\(b>0\\)， \\(c>0\\)， \\(d<0\\)",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例 3】（2015·安徽卷）函数  \\(f(x)=ax^3+bx^2+cx+d\\) 的图象如图所示，则下列结论成立的是（ ）\nA.  \\(a>0\\)， \\(b<0\\)， \\(c>0\\)， \\(d>0\\)  \nB.  \\(a>0\\)， \\(b<0\\)， \\(c<0\\)， \\(d>0\\)  \nC.  \\(a<0\\)， \\(b<0\\)， \\(c<0\\)， \\(d>0\\)  \nD.  \\(a>0\\)， \\(b>0\\)， \\(c>0\\)， \\(d<0\\)\n解析：图中标注的  \\(x_1\\)， \\(x_2\\) 是  \\(f(x)\\) 的两个极值点，故考虑结合  \\(f'(x)\\) 来分析，由题意， \\(f'(x) = 3ax^2 + 2bx + c\\)，根据  \\(f(x)\\) 的图象可画出  \\(f'(x)\\) 的草图如图，由图可知， \\(f'(x)\\) 是开口向上的二次函数，所以  \\(a > 0\\)，\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_897_1043_1093_1190.jpg\" alt=\"Image\" width=\"16%\" /></div>\n且  \\(f'(x)\\) 的两个零点  \\(x_{1}\\) 和  \\(x_{2}\\) 均为正数，\n所以  \\(x_1 + x_2 = -\\frac{2b}{3a} > 0\\)， \\(x_1 x_2 = \\frac{c}{3a} > 0\\)，故  \\(b < 0\\)， \\(c > 0\\)，\n还差 d 的正负，如何判断？所给图象中专门标了个点 P，由它可以得出  \\(f(0) > 0\\)，而  \\(f(0)\\) 恰好为 d，于是 d 的正负就有了，由  \\(f(x)\\) 的图象上的点 P 可知  \\(f(0) = d > 0\\)。\n答案：A\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_885_1257_1089_1508.jpg\" alt=\"Image\" width=\"17%\" /></div>",
+          "solution_present": true,
+          "vision_hint": "5.6-LI2339a7d2a78cc9ea"
+        },
+        {
+          "item_id": "931382f3dd54ac7d",
+          "kind": "example",
+          "label": "例4",
+          "example_number": 4,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型Ⅲ 单调性、极值、最值的分析",
+          "source_docs": [
+            78
+          ],
+          "question_text": "【例4】（2023·全国甲卷（节选））已知函数  \\(f(x)=ax-\\frac{\\sin x}{\\cos^2 x}\\)， \\(x\\in\\left(0,\\frac{\\pi}{2}\\right)\\)，当 a=1 时，讨论  \\(f(x)\\) 的单调性.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例4】（2023·全国甲卷（节选））已知函数  \\(f(x)=ax-\\frac{\\sin x}{\\cos^2 x}\\)， \\(x\\in\\left(0,\\frac{\\pi}{2}\\right)\\)，当 a=1 时，讨论  \\(f(x)\\) 的单调性.\n解：当 \\(a=1\\) 时，\\(f(x)=x-\\frac{\\sin x}{\\cos^2 x}\\)，\\(f'(x)=1-\\frac{\\cos x\\cdot\\cos^2 x-2\\cos x\\cdot(-\\sin x)\\cdot\\sin x}{\\cos^4 x}\\)\n\\(=1-\\frac{\\cos^2 x+2\\sin^2 x}{\\cos^3 x}=\\frac{\\cos^3 x-\\cos^2 x-2\\sin^2 x}{\\cos^3 x}\\)，（观察发现将 \\(\\sin^2 x\\) 换成 \\(1-\\cos^2 x\\)，可将函数名统一成余弦）\n所以 \\(f'(x)=\\frac{\\cos^3 x-\\cos^2 x-2(1-\\cos^2 x)}{\\cos^3 x}=\\frac{\\cos^2 x(\\cos x-1)-2(1+\\cos x)(1-\\cos x)}{\\cos^3 x}\\)\n\\(=\\frac{(\\cos x-1)(\\cos^2 x+2\\cos x+2)}{\\cos^3 x}=\\frac{(\\cos x-1)[(\\cos x+1)^2+1]}{\\cos^3 x}\\)，\n当 \\(x\\in\\left(0,\\frac{\\pi}{2}\\right)\\) 时，\\(\\cos x-1<0\\)，\\((\\cos x+1)^2+1>0\\)，\\(\\cos^3 x>0\\)，所以 \\(f'(x)<0\\)，故 \\(f(x)\\) 在 \\(\\left(0,\\frac{\\pi}{2}\\right)\\) 上单调递减。",
+          "solution_present": true,
+          "vision_hint": "5.6-LI931382f3dd54ac7d"
+        },
+        {
+          "item_id": "566a99b0465a521c",
+          "kind": "example",
+          "label": "例5",
+          "example_number": 5,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型Ⅲ 单调性、极值、最值的分析",
+          "source_docs": [
+            78,
+            79
+          ],
+          "question_text": "【例 5】(2013·浙江卷)已知 e 为自然对数的底数，设函数  \\(f(x)=(\\mathrm{e}^{x}-1)(x-1)^{k}(k=1,2)\\)，则（ ）\nA. 当 k=1 时， \\(f(x)\\) 在 x=1 处取到极小值\nB. 当 k=1 时， \\(f(x)\\) 在 x=1 处取到极大值\nC. 当 k=2 时， \\(f(x)\\) 在 x=1 处取到极小值\nD. 当 k=2 时， \\(f(x)\\) 在 x=1 处取到极大值",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例 5】(2013·浙江卷)已知 e 为自然对数的底数，设函数  \\(f(x)=(\\mathrm{e}^{x}-1)(x-1)^{k}(k=1,2)\\)，则（ ）\nA. 当 k=1 时， \\(f(x)\\) 在 x=1 处取到极小值\nB. 当 k=1 时， \\(f(x)\\) 在 x=1 处取到极大值\nC. 当 k=2 时， \\(f(x)\\) 在 x=1 处取到极小值\nD. 当 k=2 时， \\(f(x)\\) 在 x=1 处取到极大值\n解析：当 k=1 时，  \\(f(x)=(\\mathrm{e}^{x}-1)(x-1)\\)，  \\(f'(x)=\\mathrm{e}^{x}(x-1)+\\mathrm{e}^{x}-1\\)，\n所以  \\(f'(1)=\\mathrm{e}-1 \\neq 0\\)，从而 x=1 不是  \\(f(x)\\) 的极值点，故 A 项、B 项均错误；\n当 \\(k=2\\) 时，\\(f(x)=(\\mathrm{e}^x-1)(x-1)^2\\)，\\(f'(x)=\\mathrm{e}^x(x-1)^2+2(x-1)(\\mathrm{e}^x-1)=(x-1)[(x+1)\\mathrm{e}^x-2]\\)，\n结合选项知只需判断 \\(x=1\\) 的极值情况，可只考虑 \\(f'(x)\\) 在 1 附近的正负情况，观察发现当 \\(x\\to1\\) 时，\\((x+1)\\mathrm{e}^x-2\\to2\\mathrm{e}-2>0\\)，所以 \\(f'(x)\\) 的正负由 \\(x-1\\) 决定，下面通过简单的放缩来严格论证，\n在 \\(\\left(\\frac{1}{2},1\\right)\\) 上，\\((x+1)\\mathrm{e}^x-2>\\frac{3}{2}\\sqrt{\\mathrm{e}}-2>0\\)，\\(x-1<0\\)，所以 \\(f'(x)<0\\)，\n在 \\((1,+\\infty)\\) 上，\\((x+1)\\mathrm{e}^x-2>2\\mathrm{e}-2>0\\)，\\(x-1>0\\)，所以 \\(f'(x)>0\\)，\n从而 \\(f(x)\\) 在 \\(\\left(\\frac{1}{2},1\\right)\\) 上 \\(\\searrow\\)，在 \\((1,+\\infty)\\) 上 \\(\\nearrow\\)，故 \\(f(x)\\) 在 \\(x=1\\) 处取到极小值。\n答案：C",
+          "solution_present": true,
+          "vision_hint": "5.6-LI566a99b0465a521c"
+        },
+        {
+          "item_id": "6b5bc0bdaaf0109c",
+          "kind": "example",
+          "label": "例6",
+          "example_number": 6,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型Ⅲ 单调性、极值、最值的分析",
+          "source_docs": [
+            79
+          ],
+          "question_text": "【例 6】（2021·新高考Ⅰ卷）函数  \\(f(x)=\\left|2x-1\\right|-2\\ln x\\) 的最小值为___.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例 6】（2021·新高考Ⅰ卷）函数  \\(f(x)=\\left|2x-1\\right|-2\\ln x\\) 的最小值为___.\n解法1：由题意， \\(f(x)=\\begin{cases}1-2x-2\\ln x,0<x\\leq\\frac{1}{2}\\\\2x-1-2\\ln x,x>\\frac{1}{2}\\end{cases}\\)，分段函数求最值，应分段考虑，再比较各段的最值，\n显然 \\(f(x)\\)在 \\(\\left(0,\\frac{1}{2}\\right]\\)上 \\(\\searrow\\)，所以 \\(f(x)\\)在 \\(\\left(0,\\frac{1}{2}\\right]\\)上的最小值为 \\(f\\left(\\frac{1}{2}\\right)=1-2\\times\\frac{1}{2}-2\\ln\\frac{1}{2}=2\\ln2\\)；\n当 \\(x>\\frac{1}{2}\\)时， \\(f'(x)=2-\\frac{2}{x}=\\frac{2(x-1)}{x}\\)，所以 \\(f'(x)>0\\Leftrightarrow x>1\\)， \\(f'(x)<0\\Leftrightarrow\\frac{1}{2}<x<1\\)，\n从而 \\(f(x)\\)在 \\(\\left(\\frac{1}{2},1\\right)\\)上 \\(\\searrow\\)，在 \\((1,+\\infty)\\)上 \\(\\nearrow\\)，故 \\(f(x)\\)在 \\(\\left(\\frac{1}{2},+\\infty\\right)\\)上的最小值为 \\(f(1)=1\\)；\n因为 \\(1<2\\ln2\\)，所以 \\(f(x)\\)的最小值为1\n因为 \\(1<2\\ln2\\)，所以 \\(f(x)\\)的最小值为1.\n解法2：解析式中有  \\(2x\\) 和  \\(2\\ln x\\)，由此可联想到经典切线放缩不等式  \\(\\ln x \\leq x-1\\)，故也可尝试直接用此不等式将解析式进行放缩，看能否凑成定值，由经典切线放缩不等式， \\(\\ln x \\leq x-1\\)，所以  \\(2\\ln x \\leq 2(x-1)\\)，故  \\(f(x)=|2x-1|-2\\ln x \\geq 2x-1-2\\ln x \\geq 2x-1-2(x-1)=1\\)，又  \\(f(1)=1\\)，所以  \\(f(x)_{\\min}=1\\)。\n答案：1",
+          "solution_present": true,
+          "vision_hint": "5.6-LI6b5bc0bdaaf0109c"
+        }
+      ],
+      "direct_variants": [
+        {
+          "item_id": "ccc49d82555c4377",
+          "kind": "direct_variant",
+          "label": "变式",
+          "example_number": null,
+          "parent_example_number": 4,
+          "role": "direct_variant",
+          "role_ref": null,
+          "source_docs": [
+            78
+          ],
+          "question_text": "【变式】（2016·新课标Ⅰ卷）若函数  \\(f(x)=x-\\frac{1}{3}\\sin 2x+a\\sin x\\) 在  \\(\\mathbb{R}\\) 上单调递增，则  \\(a\\) 的取值范围是（ ）\nA.  \\([-1,1]\\) \\quad B.  \\(\\left[-1,\\frac{1}{3}\\right]\\) \\quad C.  \\(\\left[-\\frac{1}{3},\\frac{1}{3}\\right]\\) \\quad D.  \\(\\left[-1,-\\frac{1}{3}\\right]\\)",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "5.6-LIccc49d82555c4377"
+        }
+      ],
+      "exercise_questions": [],
+      "action_order": [
+        "learn_each_current_example_then_attempt_its_direct_variants",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [],
+      "prerequisite_knowledge_blocks": []
+    },
+    {
+      "cycle_id": "5.6-cycle-4",
+      "sequence": 4,
+      "title": "类型IV 讨论单调性",
+      "course_keys": [
+        "4.2.6.1 求和型放缩（下）"
+      ],
+      "prerequisite_course_keys": [
+        "4.2.6.1 求和型放缩（上）"
+      ],
+      "optional_course_keys": [],
+      "knowledge_refs": [],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [
+        "类型IV 讨论单调性"
+      ],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [
+        {
+          "item_id": "674b20f557bb03ca",
+          "kind": "example",
+          "label": "例7",
+          "example_number": 7,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型IV 讨论单调性",
+          "source_docs": [
+            79
+          ],
+          "question_text": "【例 7】（2017 • 新课标 I 卷（节选））已知函数  \\(f(x) = a\\mathrm{e}^{2x} + (a-2)\\mathrm{e}^x - x\\)，讨论  \\(f(x)\\) 的单调性。",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例 7】（2017 • 新课标 I 卷（节选））已知函数  \\(f(x) = a\\mathrm{e}^{2x} + (a-2)\\mathrm{e}^x - x\\)，讨论  \\(f(x)\\) 的单调性。\n解：由题意， \\(f(x)\\) 的定义域为  \\(\\mathbb{R}\\)，且  \\(f'(x) = 2a\\mathrm{e}^{2x} + (a-2)\\mathrm{e}^x - 1 = (2\\mathrm{e}^x + 1)(a\\mathrm{e}^x - 1)\\)，\n（只需看  \\(a\\mathrm{e}^x - 1\\) 这部分，它是否变号由  \\(a\\) 的正负决定，故据此讨论）\n当  \\(a \\leq 0\\) 时， \\(2\\mathrm{e}^x + 1 > 0\\)， \\(a\\mathrm{e}^x - 1 < 0\\)，所以  \\(f'(x) < 0\\) 恒成立，故  \\(f(x)\\) 在  \\(\\mathbb{R}\\) 上单调递减；\n当  \\(a > 0\\) 时， \\(f'(x) > 0 \\Leftrightarrow x > \\ln\\frac{1}{a}\\)， \\(f'(x) < 0 \\Leftrightarrow x < \\ln\\frac{1}{a}\\)，\n所以  \\(f(x)\\) 在  \\(\\left(-\\infty, \\ln\\frac{1}{a}\\right)\\) 上单调递减，在  \\(\\left(\\ln\\frac{1}{a}, +\\infty\\right)\\) 上单调递增。",
+          "solution_present": true,
+          "vision_hint": "5.6-LI674b20f557bb03ca"
+        }
+      ],
+      "direct_variants": [
+        {
+          "item_id": "1aced95c1fb17689",
+          "kind": "direct_variant",
+          "label": "变式",
+          "example_number": null,
+          "parent_example_number": 7,
+          "role": "direct_variant",
+          "role_ref": null,
+          "source_docs": [
+            79,
+            80
+          ],
+          "question_text": "【变式】（2016·山东卷（节选））已知  \\(f(x)=a(x-\\ln x)+\\frac{2x-1}{x^2}\\)， \\(a\\in\\mathbb{R}\\)，讨论  \\(f(x)\\) 的单调性.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "5.6-LI1aced95c1fb17689"
+        }
+      ],
+      "exercise_questions": [],
+      "action_order": [
+        "watch_current_courses",
+        "learn_each_current_example_then_attempt_its_direct_variants",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [],
+      "prerequisite_knowledge_blocks": []
+    },
+    {
+      "cycle_id": "5.6-cycle-5",
+      "sequence": 5,
+      "title": "类型V 不等式证明",
+      "course_keys": [],
+      "prerequisite_course_keys": [
+        "4.2.6.1 求和型放缩（上）",
+        "4.2.6.1 求和型放缩（下）"
+      ],
+      "optional_course_keys": [],
+      "knowledge_refs": [],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [
+        "类型V 不等式证明"
+      ],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [
+        {
+          "item_id": "4de21b0cdecbde16",
+          "kind": "example",
+          "label": "例8",
+          "example_number": 8,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型V 不等式证明",
+          "source_docs": [
+            80
+          ],
+          "question_text": "【例 8】（2018·新课标Ⅱ卷（节选））已知  \\(f(x) = \\mathrm{e}^x - ax^2\\)，若  \\(a=1\\)，证明：当  \\(x \\geq 0\\) 时， \\(f(x) \\geq 1\\)。\n证法1：若  \\(a=1\\)，则  \\(f(x) = \\mathrm{e}^x - x^2\\)，要证  \\(f(x) \\geq 1\\)，只需证  \\(\\mathrm{e}^x - x^2 \\geq 1\\) ①，\n（上述不等式中有  \\(\\mathrm{e}^x\\)，考虑变形成  \\(\\varphi(x)\\mathrm{e}^x\\) 或  \\(\\frac{\\varphi(x)}{\\mathrm{e}^x}\\) 这种结构，求导分析可能更容易）\n要证不等式①成立，只需证  \\(\\mathrm{e}^x \\geq x^2 + 1\\)，即证  \\(\\frac{x^2 + 1}{\\mathrm{e}^x} \\leq 1\\)，\n令  \\(g(x) = \\frac{x^2 + 1}{\\mathrm{e}^x}\\)， \\(x \\geq 0\\)，则  \\(g'(x) = \\frac{2x\\mathrm{e}^x - \\mathrm{e}^x(x^2 + 1)}{(\\mathrm{e}^x)^2} = -\\frac{(x - 1)^2}{\\mathrm{e}^x} \\leq 0\\)，当且仅当  \\(x=1\\) 时  \\(g'(x) = 0\\)，\n所以  \\(g(x)\\) 在  \\([0, +\\infty)\\) 上单调递减，又  \\(g(0) = 1\\)，所以  \\(g(x) \\leq 1\\)，即  \\(\\frac{x^2 + 1}{x^2} \\leq 1\\)，故  \\(f(x) \\geq 1\\) 成立。\n证法2：（按证法1得到要证目标不等式成立，只需证①成立后，考虑到不等式①不算复杂，故也可尝试直接移项，构造函数求导分析）要证不等式①成立，只需证 \\(e^x - x^2 - 1 \\geq 0\\)，设 \\(h(x) = e^x - x^2 - 1\\)， \\(x \\geq 0\\)，则 \\(h'(x) = e^x - 2x\\)，（不易直接判断正负，可继续求导） \\(h''(x) = e^x - 2\\)，\n所以  \\(h''(x) < 0 \\Leftrightarrow 0 \\leq x < \\ln 2\\)， \\(h''(x) > 0 \\Leftrightarrow x > \\ln 2\\)，从而  \\(h'(x)\\) 在  \\([0, \\ln 2)\\) 上单调递减，在  \\((\\ln 2, +\\infty)\\) 上单调递增，故  \\(h'(x) \\geq h'(\\ln 2) = \\mathrm{e}^{\\ln 2} - 2 \\ln 2 = 2 - 2 \\ln 2 > 0\\)，所以  \\(h(x)\\) 在  \\([0, +\\infty)\\) 上单调递增，又  \\(h(0) = \\mathrm{e}^0 - 0^2 - 1 = 0\\)，所以  \\(h(x) \\geq 0\\)，即  \\(\\mathrm{e}^x - x^2 - 1 \\geq 0\\)，故当  \\(x \\geq 0\\) 时， \\(f(x) \\geq 1\\) 成立。",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例 8】（2018·新课标Ⅱ卷（节选））已知  \\(f(x) = \\mathrm{e}^x - ax^2\\)，若  \\(a=1\\)，证明：当  \\(x \\geq 0\\) 时， \\(f(x) \\geq 1\\)。\n证法1：若  \\(a=1\\)，则  \\(f(x) = \\mathrm{e}^x - x^2\\)，要证  \\(f(x) \\geq 1\\)，只需证  \\(\\mathrm{e}^x - x^2 \\geq 1\\) ①，\n（上述不等式中有  \\(\\mathrm{e}^x\\)，考虑变形成  \\(\\varphi(x)\\mathrm{e}^x\\) 或  \\(\\frac{\\varphi(x)}{\\mathrm{e}^x}\\) 这种结构，求导分析可能更容易）\n要证不等式①成立，只需证  \\(\\mathrm{e}^x \\geq x^2 + 1\\)，即证  \\(\\frac{x^2 + 1}{\\mathrm{e}^x} \\leq 1\\)，\n令  \\(g(x) = \\frac{x^2 + 1}{\\mathrm{e}^x}\\)， \\(x \\geq 0\\)，则  \\(g'(x) = \\frac{2x\\mathrm{e}^x - \\mathrm{e}^x(x^2 + 1)}{(\\mathrm{e}^x)^2} = -\\frac{(x - 1)^2}{\\mathrm{e}^x} \\leq 0\\)，当且仅当  \\(x=1\\) 时  \\(g'(x) = 0\\)，\n所以  \\(g(x)\\) 在  \\([0, +\\infty)\\) 上单调递减，又  \\(g(0) = 1\\)，所以  \\(g(x) \\leq 1\\)，即  \\(\\frac{x^2 + 1}{x^2} \\leq 1\\)，故  \\(f(x) \\geq 1\\) 成立。\n证法2：（按证法1得到要证目标不等式成立，只需证①成立后，考虑到不等式①不算复杂，故也可尝试直接移项，构造函数求导分析）要证不等式①成立，只需证 \\(e^x - x^2 - 1 \\geq 0\\)，设 \\(h(x) = e^x - x^2 - 1\\)， \\(x \\geq 0\\)，则 \\(h'(x) = e^x - 2x\\)，（不易直接判断正负，可继续求导） \\(h''(x) = e^x - 2\\)，\n所以  \\(h''(x) < 0 \\Leftrightarrow 0 \\leq x < \\ln 2\\)， \\(h''(x) > 0 \\Leftrightarrow x > \\ln 2\\)，从而  \\(h'(x)\\) 在  \\([0, \\ln 2)\\) 上单调递减，在  \\((\\ln 2, +\\infty)\\) 上单调递增，故  \\(h'(x) \\geq h'(\\ln 2) = \\mathrm{e}^{\\ln 2} - 2 \\ln 2 = 2 - 2 \\ln 2 > 0\\)，所以  \\(h(x)\\) 在  \\([0, +\\infty)\\) 上单调递增，又  \\(h(0) = \\mathrm{e}^0 - 0^2 - 1 = 0\\)，所以  \\(h(x) \\geq 0\\)，即  \\(\\mathrm{e}^x - x^2 - 1 \\geq 0\\)，故当  \\(x \\geq 0\\) 时， \\(f(x) \\geq 1\\) 成立。",
+          "solution_present": false,
+          "vision_hint": "5.6-LI4de21b0cdecbde16"
+        },
+        {
+          "item_id": "01ebe3f5cc1b7a54",
+          "kind": "example",
+          "label": "例9",
+          "example_number": 9,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型V 不等式证明",
+          "source_docs": [
+            81
+          ],
+          "question_text": "【例 9】（2015·北京卷（节选））已知函数  \\(f(x)=\\ln\\frac{1+x}{1-x}\\).\n（1）求曲线  \\(y = f(x)\\) 在点  \\((0, f(0))\\) 处的切线方程；\n（2）求证：当 \\(x\\in(0,1)\\)时， \\(f(x)>2\\left(x+\\frac{x^3}{3}\\right)\\).",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例 9】（2015·北京卷（节选））已知函数  \\(f(x)=\\ln\\frac{1+x}{1-x}\\).\n（1）求曲线  \\(y = f(x)\\) 在点  \\((0, f(0))\\) 处的切线方程；\n（2）求证：当 \\(x\\in(0,1)\\)时， \\(f(x)>2\\left(x+\\frac{x^3}{3}\\right)\\).\n解：（1）由题意， \\(f'(x)=\\frac{1-x}{1+x}\\cdot\\left(\\frac{1+x}{1-x}\\right)'=\\frac{1-x}{1+x}\\cdot\\frac{1-x-(-1)\\cdot(1+x)}{(1-x)^2}=\\frac{2}{1-x^2}\\)，\n所以  \\(f'(0)=2\\)，又  \\(f(0)=0\\)，所以曲线  \\(y=f(x)\\) 在点  \\((0,f(0))\\) 处的切线方程为 y=2x。\n（2）要证  \\(f(x)>2\\left(x+\\frac{x^{3}}{3}\\right)\\)，即证  \\(\\ln\\frac{1+x}{1-x}>2\\left(x+\\frac{x^{3}}{3}\\right)\\) ①，\n（不等式 \\(\\textcircled{1}\\)结构不复杂，且其中的 \\(\\ln\\frac{1+x}{1-x}\\)是孤立的，故可考虑直接移项，构造函数求导分析）\n令 \\(F(x)=\\ln\\frac{1+x}{1-x}-2\\left(x+\\frac{x^3}{3}\\right)\\)， \\(x\\in(0,1)\\)，则 \\(F'(x)=\\frac{2}{1-x^2}-2(1+x^2)=\\frac{2x^4}{1-x^2}>0\\)，\n所以 \\(F(x)\\)在 \\((0,1)\\)上单调递增，从而 \\(F(x)>F(0)=0\\)，即 \\(\\ln\\frac{1+x}{1-x}-2\\left(x+\\frac{x^3}{3}\\right)>0\\)，故 \\(\\ln\\frac{1+x}{1-x}>2\\left(x+\\frac{x^3}{3}\\right)\\)，\n所以不等式 \\(\\textcircled{1}\\)成立，故不等式 \\(f(x)>2\\left(x+\\frac{x^3}{3}\\right)\\)成立.",
+          "solution_present": true,
+          "vision_hint": "5.6-LI01ebe3f5cc1b7a54"
+        },
+        {
+          "item_id": "ecef4fdbd1a6adac",
+          "kind": "example",
+          "label": "例10",
+          "example_number": 10,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型V 不等式证明",
+          "source_docs": [
+            81
+          ],
+          "question_text": "【例 10】（2018·新课标Ⅲ卷）已知函数  \\(f(x)=\\frac{ax^2+x-1}{e^x}\\).\n（1）求曲线  \\(y = f(x)\\) 在点  \\((0, -1)\\) 处的切线方程；\n（2）证明：当 \\(a \\geq 1\\)时， \\(f(x) + e \\geq 0\\)。",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例 10】（2018·新课标Ⅲ卷）已知函数  \\(f(x)=\\frac{ax^2+x-1}{e^x}\\).\n（1）求曲线  \\(y = f(x)\\) 在点  \\((0, -1)\\) 处的切线方程；\n（2）证明：当 \\(a \\geq 1\\)时， \\(f(x) + e \\geq 0\\)。\n解：（1）由题意， \\(f'(x)=\\frac{(2ax+1)\\mathrm{e}^x-(ax^2+x-1)\\mathrm{e}^x}{(\\mathrm{e}^x)^2}=\\frac{-ax^2+(2a-1)x+2}{\\mathrm{e}^x}\\)，所以 \\(f'(0)=2\\)，故所求切线方程为 \\(y-(-1)=2(x-0)\\)，整理得： \\(y=2x-1\\)。\n（2）（尽管 \\(f(x)\\)含参，但给了参数范围，可先用它进行放缩，转化为不含参的不等式来证）\n当\\(a\\geq1\\)时，\\(f(x)+\\mathrm{e}=\\frac{ax^2+x-1}{\\mathrm{e}^x}+\\mathrm{e}\\geq\\frac{x^2+x-1}{\\mathrm{e}^x}+\\mathrm{e}\\)①，（于是要证\\(f(x)+\\mathrm{e}\\geq0\\)，只需证\\(\\frac{x^2+x-1}{\\mathrm{e}^x}+\\mathrm{e}\\geq0\\)）令\\(g(x)=\\frac{x^2+x-1}{\\mathrm{e}^x}+\\mathrm{e}\\)，则\\(g'(x)=-\\frac{(x+1)(x-2)}{\\mathrm{e}^x}\\)，所以\\(g'(x)<0\\Leftrightarrow x<-1\\)或\\(x>2\\)，\\(g'(x)>0\\Leftrightarrow-1<x<2\\)，故\\(g(x)\\)在\\((-\\infty,-1)\\)上单调递减，在\\((-1,2)\\)上单调递增，在\\((2,+\\infty)\\)上单调递减，\n如图，由  \\(g(-1)=0\\) 知当  \\(x\\in(-\\infty,2]\\) 时， \\(g(x)\\geq0\\)，\n（还需论证当 \\(x>2\\) 时 \\(g(x)\\geq0\\)，此时观察 \\(g(x)\\) 的解析式发现两部分都为正，故可直接得到 \\(g(x)>0\\)）另一方面，当 \\(x>2\\) 时，\\(g(x)=\\frac{x^2+x-1}{e^x}+e>0\\)，所以 \\(g(x)\\geq0\\) 对 \\(\\forall x\\in\\mathbb{R}\\) 恒成立，又由①知 \\(f(x)+e\\geq g(x)\\)，所以 \\(f(x)+e\\geq0\\)。\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_885_1234_1093_1379.jpg\" alt=\"Image\" width=\"17%\" /></div>",
+          "solution_present": true,
+          "vision_hint": "5.6-LIecef4fdbd1a6adac"
+        }
+      ],
+      "direct_variants": [],
+      "exercise_questions": [],
+      "action_order": [
+        "learn_each_current_example_then_attempt_its_direct_variants",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [],
+      "prerequisite_knowledge_blocks": []
+    },
+    {
+      "cycle_id": "5.6-cycle-6",
+      "sequence": 6,
+      "title": "类型VI 三次函数",
+      "course_keys": [],
+      "prerequisite_course_keys": [
+        "4.2.6.1 求和型放缩（上）",
+        "4.2.6.1 求和型放缩（下）"
+      ],
+      "optional_course_keys": [],
+      "knowledge_refs": [],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [
+        "类型VI 三次函数"
+      ],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [
+        {
+          "item_id": "3c09a7bbb2d09996",
+          "kind": "example",
+          "label": "例11",
+          "example_number": 11,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型VI 三次函数",
+          "source_docs": [
+            81,
+            82,
+            83
+          ],
+          "question_text": "【例 11】（2015·安徽卷）设  \\(x^3 + ax + b = 0\\)，其中  \\(a, b\\) 均为实数，下列条件中，使得该三次方程仅有一个实根的是___。（写出所有正确条件的编号）\n① \\(a=-3,\\quad b=-3\\); ② \\(a=-3,\\quad b=2\\); ③ \\(a=-3,\\quad b>2\\); ④ \\(a=0,\\quad b=2\\); ⑤ \\(a=1,\\quad b=2\\)",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例 11】（2015·安徽卷）设  \\(x^3 + ax + b = 0\\)，其中  \\(a, b\\) 均为实数，下列条件中，使得该三次方程仅有一个实根的是___。（写出所有正确条件的编号）\n① \\(a=-3,\\quad b=-3\\); ② \\(a=-3,\\quad b=2\\); ③ \\(a=-3,\\quad b>2\\); ④ \\(a=0,\\quad b=2\\); ⑤ \\(a=1,\\quad b=2\\)\n解析：前三个选项给出的  \\(a\\) 都为 -3， \\(b\\) 不同，故可先研究当  \\(a = -3\\) 时，原方程仅有一个实根的充要条件，当  \\(a = -3\\) 时，原方程即为  \\(x^3 - 3x + b = 0\\)，设  \\(f(x) = x^3 - 3x + b\\)，则  \\(f'(x) = 3x^2 - 3 = 3(x + 1)(x - 1)\\)，\n所以  \\(f'(x) < 0 \\Leftrightarrow -1 < x < 1\\)， \\(f'(x) > 0 \\Leftrightarrow x < -1\\) 或  \\(x > 1\\)。\n故  \\(f(x)\\) 在  \\((-\\infty,-1)\\) 上  \\(\\nearrow\\)，在  \\((-1,1)\\) 上  \\(\\searrow\\)，在  \\((1,+\\infty)\\) 上  \\(\\nearrow\\)。\n怎样能使  \\(f(x)\\) 仅有 1 个零点？如图，只需两个极值同号，\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_375_331_578_450.jpg\" alt=\"Image\" width=\"17%\" /></div>\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_617_330_818_450.jpg\" alt=\"Image\" width=\"16%\" /></div>\n又  \\(f(-1)=b+2\\)， \\(f(1)=b-2\\)，所以  \\(f(x)\\) 仅有 1 个零点的充要条件是  \\(f(-1)f(1)>0\\)，\n即 \\((b+2)(b-2)>0\\)，解得：b>2或b<-2，故①③正确，②错误；\n对于④，当 \\(a=0\\)， \\(b=2\\)时，原方程即为 \\(x^3+2=0\\)，解得： \\(x=-\\sqrt[3]{2}\\)，原方程仅有一根，故④正确；对于⑤，当 \\(a=1\\)， \\(b=2\\)时，原方程即为 \\(x^3+x+2=0\\)，注意到函数 \\(y=x^3+x+2\\)在 \\(\\mathbb{R}\\)上为增函数，\n结合三次函数值域必为  \\(\\mathbb{R}\\) 知方程  \\(x^{3} + x + 2 = 0\\) 仅有一根，故⑤正确.\n答案：①③④⑤\n【反思】形如  \\(f(x)=ax^{3}+bx^{2}+cx+d(a\\neq0)\\) 的函数叫做三次函数，三次函数有以下常用性质：\n1. 三次函数有以下6种可能的图象：\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_272_726_906_983.jpg\" alt=\"Image\" width=\"53%\" /></div>\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_334_1008_513_1238.jpg\" alt=\"Image\" width=\"15%\" /></div>\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_527_1017_706_1240.jpg\" alt=\"Image\" width=\"15%\" /></div>\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_718_1015_895_1240.jpg\" alt=\"Image\" width=\"14%\" /></div>\n2. 三次函数的零点个数\n①若方程  \\(f'(x) = 0\\) 的判别式  \\(\\Delta \\leq 0\\)，则  \\(f(x)\\) 在  \\(\\mathbb{R}\\) 上是单调函数，无极值，值域为  \\((-\\infty, +\\infty)\\)，函数  \\(f(x)\\) 在  \\(\\mathbb{R}\\) 上有唯一的零点。\n②若方程  \\(f'(x)=0\\) 的判别式  \\(\\Delta>0\\)，则  \\(f'(x)\\) 有两个零点：\n(i)  \\(f(x)\\) 有一个零点  \\(\\Leftrightarrow f(x_1) \\cdot f(x_2) > 0\\)，如下图所示：\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_223_1420_966_1507.jpg\" alt=\"Image\" width=\"62%\" /></div>\n(ii)  \\(f(x)\\) 有两个零点  \\(\\Leftrightarrow f(x_1) \\cdot f(x_2) = 0\\)，如下图所示：\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_217_112_974_201.jpg\" alt=\"Image\" width=\"63%\" /></div>\n(iii)  \\(f(x)\\) 有三个零点  \\(\\Leftrightarrow f(x_1) \\cdot f(x_2) < 0\\)，如下图所示：\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_371_243_583_348.jpg\" alt=\"Image\" width=\"17%\" /></div>\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_609_241_823_341.jpg\" alt=\"Image\" width=\"17%\" /></div>\n3. 对称中心：三次函数的图象一定是中心对称图形，对称中心是 \\(\\left(-\\frac{b}{3a}, f\\left(-\\frac{b}{3a}\\right)\\right)\\).",
+          "solution_present": true,
+          "vision_hint": "5.6-LI3c09a7bbb2d09996"
+        }
+      ],
+      "direct_variants": [],
+      "exercise_questions": [],
+      "action_order": [
+        "learn_each_current_example_then_attempt_its_direct_variants",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [],
+      "prerequisite_knowledge_blocks": []
+    },
+    {
+      "cycle_id": "5.6-cycle-7",
+      "sequence": 7,
+      "title": "类型Ⅶ 综合大题",
+      "course_keys": [],
+      "prerequisite_course_keys": [
+        "4.2.6.1 求和型放缩（上）",
+        "4.2.6.1 求和型放缩（下）"
+      ],
+      "optional_course_keys": [],
+      "knowledge_refs": [],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅶ 综合大题"
+      ],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [
+        {
+          "item_id": "642a1de018578b0f",
+          "kind": "example",
+          "label": "例12",
+          "example_number": 12,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型Ⅶ 综合大题",
+          "source_docs": [
+            83,
+            84
+          ],
+          "question_text": "【例 12】（2019·新课标Ⅱ卷）已知函数  \\(f(x)=\\ln x-\\frac{x+1}{x-1}\\).\n（1）讨论  \\(f(x)\\) 的单调性，并证明  \\(f(x)\\) 有且仅有两个零点；\n（2）设 \\(x_{0}\\)是 \\(f(x)\\)的一个零点，证明曲线 \\(y=\\ln x\\)在点 \\(A(x_{0},\\ln x_{0})\\)处的切线也是曲线 \\(y=e^{x}\\)的切线.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例 12】（2019·新课标Ⅱ卷）已知函数  \\(f(x)=\\ln x-\\frac{x+1}{x-1}\\).\n（1）讨论  \\(f(x)\\) 的单调性，并证明  \\(f(x)\\) 有且仅有两个零点；\n（2）设 \\(x_{0}\\)是 \\(f(x)\\)的一个零点，证明曲线 \\(y=\\ln x\\)在点 \\(A(x_{0},\\ln x_{0})\\)处的切线也是曲线 \\(y=e^{x}\\)的切线.\n解：（1）由题意， \\(f(x)\\)的定义域为 \\((0,1)\\cup(1,+\\infty)\\)， \\(f'(x)=\\frac{1}{x}-\\frac{x-1-(x+1)}{(x-1)^2}=\\frac{1}{x}+\\frac{2}{(x-1)^2}>0\\)，\n所以  \\(f(x)\\) 在  \\((0,1)\\) 上单调递增，在  \\((1,+\\infty)\\) 上单调递增，\n（要证明 \\(f(x)\\) 有 2 个零点，需要取点，结合解析式中有 \\(\\ln x\\) 这一项，可考虑取 \\(e^{-2}\\)，\\(e^{-1}\\)，\\(e\\)，\\(e^2\\) 这些点因为 \\(f(e^{-2})=-2-\\frac{e^{-2}+1}{e^{-2}-1}=\\frac{3-e^2}{e^2-1}<0\\)，\\(f(e^{-1})=-1-\\frac{e^{-1}+1}{e^{-1}-1}=\\frac{2}{e-1}>0\\)，所以 \\(f(x)\\) 在 \\((0,1)\\) 上有一个零点，又 \\(f(e)=1-\\frac{e+1}{e-1}=-\\frac{2}{e-1}<0\\)，\\(f(e^2)=2-\\frac{e^2+1}{e^2-1}=\\frac{e^2-3}{e^2-1}>0\\)，所以 \\(f(x)\\) 在 \\((1,+\\infty)\\) 上有一个零点，综上所述，\\(f(x)\\) 有且仅有两个零点\n综上所述， \\(f(x)\\) 有且仅有两个零点.\n（2）证法1：曲线  \\(y = \\ln x\\) 在点  \\(A(x_0, \\ln x_0)\\) 处的切线为  \\(y - \\ln x_0 = \\frac{1}{x_0}(x - x_0)\\)，即  \\(y = \\frac{1}{x_0}x + \\ln x_0 - 1\\)，\n（下面证明此直线与曲线  \\(y = e^x\\) 也相切，由于不知道切点，可先设切点）\n设  \\(P(x_1, e^{x_1})\\) 为曲线  \\(y = e^x\\) 上一点，则该曲线在点  \\(P\\) 处的切线为  \\(y - e^{x_1} = e^{x_1}(x - x_1)\\)，即  \\(y = e^{x_1}x + (1 - x_1)e^{x_1}\\)，\n问题等价于证明存在实数  \\(x_1\\)，使得  \\(\\begin{cases} \\frac{1}{x_0} = e^{x_1} \\\\ \\ln x_0 - 1 = (1 - x_1)e^{x_1} \\end{cases}\\) ①，\n（上述方程组中  \\(x_0\\) 是  \\(f(x)\\) 的零点，是已知量，所以要解的其实是  \\(x_1\\)，可由①求出  \\(x_1\\)，再验证它满足②）由①可得  \\(x_1 = -\\ln x_0\\)，代入②得  \\(\\ln x_0 - 1 = (1 + \\ln x_0) \\cdot \\frac{1}{x_0}\\)，整理得： \\(\\ln x_0 - \\frac{x_0 + 1}{x_0 - 1} = 0\\) ③，\n结合  \\(x_0\\) 是  \\(f(x)\\) 的一个零点可知式③成立，即存在实数  \\(x_1\\) 使得  \\(\\begin{cases} \\dfrac{1}{x_0} = e^{x_1} \\\\ \\ln x_0 - 1 = (1 - x_1)e^{x_1} \\end{cases}\\) 成立，\n所以曲线  \\(y = \\ln x\\) 在点  \\(A(x_{0}, \\ln x_{0})\\) 处的切线也是曲线  \\(y = e^{x}\\) 的切线.\n证法2：（先写出  \\(y = \\ln x\\) 在点 A 处的切线方程，再来进一步分析）\n证法2：（先写出  \\(y = \\ln x\\) 在点 A 处的切线方程，再求进一步分析）\n曲线  \\(y = \\ln x\\) 在点  \\(A(x_{0}, \\ln x_{0})\\) 处的切线为  \\(y - \\ln x_{0} = \\frac{1}{x_{0}}(x - x_{0})\\)，即  \\(y = \\frac{1}{x_{0}}x + \\ln x_{0} - 1\\) ④\n（要证直线④与  \\(y = e^x\\) 也相切，我们自然会想，切点是谁？为了探究问题的答案，可设出切点  \\(B(x_2, e^{x_2})\\)，写出  \\(y = e^x\\) 在  \\(B\\) 处的切线方程，并与④比较，找到  \\(x_2\\) 和  \\(x_0\\) 的关系，从而得出切点就是下面的点  \\(B\\)，上述探究的过程\n在草稿纸上完成即可，正式作答时我们直接给出\\(B\\)，并加以证明）\n取点\\(B\\left(\\ln\\frac{1}{x_0},\\frac{1}{x_0}\\right)\\)，则点\\(B\\)在曲线\\(y=e^x\\)上，\n（有了上面的分析，我们心中已经知道\\(y=e^x\\)在点\\(B\\)处的切线就是直线④，接下来只需证明这一结论）\n因为\\((e^x)'=e^x\\)，所以曲线\\(y=e^x\\)在点\\(B\\)处的切线方程为\\(y-\\frac{1}{x_0}=e^{\\ln\\frac{1}{x_0}}\\left(x-\\ln\\frac{1}{x_0}\\right)\\)，\n化简得：\\(y=\\frac{1}{x_0}x+\\frac{1+\\ln x_0}{x_0}\\) ⑤，（下面证明④和⑤是同一条直线，只需证两直线在\\(y\\)轴上截距相等）\n\\(\\ln x_0-1-\\frac{1+\\ln x_0}{x_0}=\\frac{1}{x_0}(x_0\\ln x_0-x_0-1-\\ln x_0)=\\frac{1}{x_0}[(x_0-1)\\ln x_0-(x_0+1)]=\\frac{x_0-1}{x_0}\\left(\\ln x_0-\\frac{x_0+1}{x_0-1}\\right)\\)，\n因为\\(x_0\\)是\\(f(x)\\)的零点，所以\\(f(x_0)=\\ln x_0-\\frac{x_0+1}{x_0-1}=0\\)，从而\\(\\ln x_0-1-\\frac{1+\\ln x_0}{x_0}=0\\)，故\\(\\ln x_0-1=\\frac{1+\\ln x_0}{x_0}\\)，\n所以④和⑤是同一条直线，故曲线\\(y=\\ln x\\)在点\\(A(x_0,\\ln x_0)\\)处的切线也是曲线\\(y=e^x\\)的切线。",
+          "solution_present": true,
+          "vision_hint": "5.6-LI642a1de018578b0f"
+        },
+        {
+          "item_id": "f9b04feb4e35b426",
+          "kind": "example",
+          "label": "例13",
+          "example_number": 13,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型Ⅶ 综合大题",
+          "source_docs": [
+            84,
+            85
+          ],
+          "question_text": "【例 13】（2022·全国甲卷）已知函数  \\(f(x)=\\frac{e^{x}}{x}-\\ln x+x-a\\)\n（1）若  \\(f(x) \\geq 0\\)，求实数 a 的取值范围；\n（2）证明：若  \\(f(x)\\) 有两个零点  \\(x_{1}\\)， \\(x_{2}\\)，则  \\(x_{1}x_{2}<1\\).",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例 13】（2022·全国甲卷）已知函数  \\(f(x)=\\frac{e^{x}}{x}-\\ln x+x-a\\)\n（1）若  \\(f(x) \\geq 0\\)，求实数 a 的取值范围；\n（2）证明：若  \\(f(x)\\) 有两个零点  \\(x_{1}\\)， \\(x_{2}\\)，则  \\(x_{1}x_{2}<1\\).\n解法 1：（1）（观察发现 \\(f(x)\\) 解析式中的参数 \\(a\\) 是孤立的，求导后不含参，故可直接对 \\(f(x)\\) 求导分析）\n由题意，\\(f(x)\\) 的定义域为 \\((0,+\\infty)\\)，且 \\(f'(x)=\\frac{(x-1)\\mathrm{e}^x}{x^2}-\\frac{1}{x}+1=\\frac{(x-1)(\\mathrm{e}^x+x)}{x^2}\\)，\n所以 \\(f'(x)>0 \\Leftrightarrow x>1\\)，\\(f'(x)<0 \\Leftrightarrow 0<x<1\\)，从而 \\(f(x)\\) 在 \\((0,1)\\) 上单调递减，在 \\((1,+\\infty)\\) 上单调递增，\n故 \\(f(x)_{\\min}=f(1)=\\mathrm{e}+1-a\\)，因为 \\(f(x)\\geq0\\)，所以 \\(\\mathrm{e}+1-a\\geq0\\)，解得：\\(a\\leq\\mathrm{e}+1\\)，\n故实数 \\(a\\) 的取值范围是 \\((-\\infty,\\mathrm{e}+1]\\).\n（2）由（1）可得当  \\(f(x)\\) 有两个零点时， \\(f(1)=e+1-a<0\\)，所以  \\(a>e+1\\)，\n（2）由（1）可得当  \\(f(x)\\) 有两个零点时， \\(f(1)=e+1-a<0\\)，所以  \\(a>e+1\\)，\n（怎样证  \\(x_1x_2<1\\)？可以这么想， \\(x_1\\)， \\(x_2\\) 是自变量的取值，证明自变量的大小关系，可尝试利用单调性转化为函数值的大小关系来证，于是我们先把  \\(x_1x_2<1\\) 转化为  \\(f(x)\\) 的同一单调区间上的两个数的大小关系）\n不妨设  \\(x_1<x_2\\)，则  \\(0<x_1<1<x_2\\)，要证  \\(x_1x_2<1\\)，只需证  \\(x_2<\\frac{1}{x_1}\\)，注意到  \\(f(x)\\) 在  \\((1,+\\infty)\\) 上单调递增，\n且  \\(x_2>1\\)， \\(\\frac{1}{x_1}>1\\)，所以要证  \\(x_2<\\frac{1}{x_1}\\)，只需证  \\(f(x_2)<f\\left(\\frac{1}{x_1}\\right)\\) ①，\n（不等式①中有  \\(x_1\\)， \\(x_2\\) 两个变量，考虑消元，注意到  \\(f(x_1)=f(x_2)=0\\)，故由此将  \\(f(x_2)\\) 替换成  \\(f(x_1)\\)，就能实\n现消元）因为  \\(f(x_2)=f(x_1)=0\\)，所以要证不等式①成立，只需证  \\(f(x_1)<f\\left(\\frac{1}{x_1}\\right)\\)，即证  \\(f(x_1)-f\\left(\\frac{1}{x_1}\\right)<0\\)，\n设  \\(F(x)=f(x)-f\\left(\\frac{1}{x}\\right)\\)， \\(0<x<1\\)，则  \\(F'(x)=f'(x)-f'\\left(\\frac{1}{x}\\right)\\cdot\\left(-\\frac{1}{x^2}\\right)=f'(x)+\\frac{1}{x^2}f'\\left(\\frac{1}{x}\\right)\\)\n \\(\\frac{(x-1)(\\mathrm{e}^x+x)}{x^2}+\\frac{1}{x^2}\\cdot\\frac{\\left(\\frac{1}{x}-1\\right)\\left(\\mathrm{e}^{\\frac{1}{x}}+\\frac{1}{x}\\right)}{\\frac{1}{x^2}}=\\frac{(x-1)\\left(\\mathrm{e}^x+x-x\\mathrm{e}^{\\frac{1}{x}}-1\\right)}{x^2}\\)，\n（分母始终为正，分子的 x-1 正负情况也很明显，那  \\(e^x + x - x e^{\\frac{1}{x}} - 1\\) 呢？这部分的正负情况无法直接看出，可考虑构造函数求导分析）\n设  \\(r(x) = \\mathrm{e}^x + x - x \\mathrm{e}^{\\frac{1}{x}} - 1\\)， \\(0 < x < 1\\)，则  \\(r'(x) = \\mathrm{e}^x + 1 - \\left[ \\mathrm{e}^{\\frac{1}{x}} + x \\mathrm{e}^{\\frac{1}{x}} \\cdot \\left( -\\frac{1}{x^2} \\right) \\right] = \\mathrm{e}^x + 1 + \\left( \\frac{1}{x} - 1 \\right) \\mathrm{e}^{\\frac{1}{x}} > 0\\)，\n所以  \\(r(x)\\) 在  \\((0,1)\\) 上单调递增，又  \\(r(1) = 0\\)，所以  \\(r(x) < 0\\)，从而  \\(F'(x) = \\frac{(x-1)r(x)}{x^2} > 0\\)，\n故  \\(F(x)\\) 在  \\((0,1)\\) 上单调递增，又  \\(F(1) = 0\\)，所以  \\(F(x) < 0\\)，故  \\(F(x_1) = f(x_1) - f\\left( \\frac{1}{x_1} \\right) < 0\\)，所以  \\(x_1 x_2 < 1\\)。\n解法2：（1）（注意到 \\(\\frac{e^x}{x} = \\frac{e^x}{e^{\\ln x}} = e^{x-\\ln x}\\)，于是 \\(f(x)\\)的解析式中含 \\(x\\)的部分以 \\(x - \\ln x\\)这一结构整体出现，可考虑将该结构换元，简化 \\(f(x)\\)的解析式，再求导分析）\n由题意， \\(f(x)\\)的定义域为 \\((0,+\\infty)\\)，且 \\(f(x)=\\frac{e^x}{x}-\\ln x+x-a=e^{x-\\ln x}+x-\\ln x-a\\)，\n令  \\(u = x - \\ln x\\)，则  \\(f(x) = \\mathrm{e}^u + u - a\\)，设  \\(\\varphi(x) = x - \\ln x\\)， \\(x > 0\\)，则  \\(\\varphi'(x) = 1 - \\frac{1}{x} = \\frac{x - 1}{x}\\)，\n所以  \\(\\varphi'(x) > 0 \\Leftrightarrow x > 1\\)， \\(\\varphi'(x) < 0 \\Leftrightarrow 0 < x < 1\\)，从而  \\(\\varphi(x)\\) 在  \\((0,1)\\) 上单调递减，在  \\((1,+\\infty)\\) 上单调递增，\n故  \\(\\varphi(x)_{\\min} = \\varphi(1) = 1\\)，所以  \\(u \\geq 1\\)，因为函数  \\(y = \\mathrm{e}^u + u - a\\) 为增函数，\n所以当  \\(u = 1\\) 时， \\(f(x)\\) 取得最小值  \\(\\mathrm{e} + 1 - a\\)，因为  \\(f(x) \\geq 0\\)，所以  \\(\\mathrm{e} + 1 - a \\geq 0\\)，解得： \\(a \\leq \\mathrm{e} + 1\\)，\n故实数  \\(a\\) 的取值范围是  \\((-\\infty, \\mathrm{e} + 1]\\)。\n（2）由（1）知  \\(f(x)=0 \\Leftrightarrow e^u + u - a = 0\\)，其中  \\(u = x - \\ln x\\)，由（1）可得要使  \\(f(x)\\) 有两个零点  \\(x_1\\)， \\(x_2\\)，则  \\(f(x)_{\\min} = e + 1 - a < 0\\)，此时  \\(a > e + 1\\)，且  \\(x_1\\)， \\(x_2\\) 是方程  \\(u = x - \\ln x\\) 的两根，不妨设  \\(x_1 < x_2\\)，\n \\[x_{1}x_{2}<1\\text{？}\\] \n \\[x_{1},x_{2}\\] \n \\[0<x_{1}<1<x_{2}\\] \n \\[\\left\\{\\begin{aligned}x_{1}-\\ln x_{1}&=u\\\\ x_{2}-\\ln x_{2}&=u\\end{aligned}\\right.\\] \n \\[x_{1},x_{2}\\] \n两式作差得： \\(x_1 - x_2 - \\ln\\frac{x_1}{x_2} = 0\\) ②，（式②中有两个变量，考虑消元，如何消元？经尝试，由式②无法直接反解\n \\[x_{1}\\] \n \\[x_{2}\\] \n \\[\\frac{x_{1}}{x_{2}}\\] \n \\[x_{1},x_{2}\\] \n设  \\(t = \\frac{x_1}{x_2}\\)，则  \\(0 < t < 1\\)，且  \\(x_1 = tx_2\\)，代入②可得  \\(tx_2 - x_2 - \\ln t = 0\\)，所以  \\(x_2 = \\frac{\\ln t}{t-1}\\)， \\(x_1 = tx_2 = \\frac{t \\ln t}{t-1}\\)，从而  \\(x_1 x_2 = \\frac{t \\ln^2 t}{(t-1)^2}\\)，故要证  \\(x_1 x_2 < 1\\)，只需证  \\(\\frac{t \\ln^2 t}{(t-1)^2} < 1\\)，即证  \\(\\ln^2 t < \\frac{(t-1)^2}{t}\\)，也即证  \\(-\\ln t < \\frac{1-t}{\\sqrt{t}}\\)，所以只需证  \\(-2 \\ln \\sqrt{t} < \\frac{1}{\\sqrt{t}} - \\sqrt{t}\\)，即证  \\(2 \\ln \\sqrt{t} + \\frac{1}{\\sqrt{t}} - \\sqrt{t} > 0\\)，令  \\(m = \\sqrt{t}\\)，则  \\(0 < m < 1\\)，\n且 \\(2\\ln\\sqrt{t}+\\frac{1}{\\sqrt{t}}-\\sqrt{t}>0\\)即为 \\(2\\ln m+\\frac{1}{m}-m>0\\)，（只有一个变量m了，且此不等式不算复杂，可直接构造函数求导分析）设 \\(p(m)=2\\ln m+\\frac{1}{m}-m\\)， \\(0<m<1\\)，则 \\(p'(m)=\\frac{2}{m}-\\frac{1}{m^2}-1=-\\frac{(m-1)^2}{m^2}<0\\)，\n所以 \\(p(m)\\)在 \\((0,1)\\)上单调递减，又 \\(p(1)=0\\)，所以 \\(p(m)>0\\)，即 \\(2\\ln m+\\frac{1}{m}-m>0\\)，故 \\(x_1x_2<1\\)成立。",
+          "solution_present": true,
+          "vision_hint": "5.6-LIf9b04feb4e35b426"
+        },
+        {
+          "item_id": "8be3804c0082ca8e",
+          "kind": "example",
+          "label": "例14",
+          "example_number": 14,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型Ⅶ 综合大题",
+          "source_docs": [
+            85,
+            86,
+            87
+          ],
+          "question_text": "【例 14】（2022·新课标Ⅱ卷）已知函数  \\(f(x)=xe^{ax}-e^x\\)\n（1）当a=1时，讨论 \\(f(x)\\)的单调性；\n（2）当x>0时， \\(f(x)<-1\\)，求a的取值范围；\n（3）设  \\(n \\in \\mathbb{N}^*\\)，证明： \\(\\frac{1}{\\sqrt{1^2 + 1}} + \\frac{1}{\\sqrt{2^2 + 2}} + \\cdots + \\frac{1}{\\sqrt{n^2 + n}} > \\ln(n + 1)\\).",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例 14】（2022·新课标Ⅱ卷）已知函数  \\(f(x)=xe^{ax}-e^x\\)\n（1）当a=1时，讨论 \\(f(x)\\)的单调性；\n（2）当x>0时， \\(f(x)<-1\\)，求a的取值范围；\n（3）设  \\(n \\in \\mathbb{N}^*\\)，证明： \\(\\frac{1}{\\sqrt{1^2 + 1}} + \\frac{1}{\\sqrt{2^2 + 2}} + \\cdots + \\frac{1}{\\sqrt{n^2 + n}} > \\ln(n + 1)\\).\n解：（1）当 \\(a=1\\)时， \\(f(x)=(x-1)e\\)， \\(x\\in\\mathbb{R}\\)，所以 \\(f(x)=xe\\)，从而 \\(f(x)>0<x>0\\)， \\(f(x)<0<x<0\\)，故 \\(f(x)\\)在 \\((-\\infty,0)\\)上单调递减，在 \\((0,+\\infty)\\)上单调递增。\n（2）因为当 \\(x>0\\)时， \\(f(x)<-1\\)，所以 \\(xe^{\\omega x}-e^x+1<0\\) ①，\n（经尝试，直接构造函数求导分析较困难，且造成困难的原因主要是无论求多少次导，式子中总会同时有 \\(e^{\\omega x}\\)和 \\(e^x\\)，于是可考虑将 \\(e^x\\)换元成 \\(t\\)，这样求两次导后就不再含有 \\(t\\)这一项的残留了）\n令 \\(t=e^x\\)，则 \\(t>1\\)，且 \\(x=\\ln t\\)，不等式①即为 \\(t^a\\ln t-t+1<0\\)，\n设 \\(g(t)=t^a\\ln t-t+1\\)， \\(t>1\\)，则 \\(g(t)<0\\)，且 \\(g'(t)=at^{a-1}\\ln t+t^{a-1}-1\\)，\n \\(g''(t)=a(a-1)t^{a-2}\\ln t+at^{a-1}\\cdot\\frac{1}{t}+(a-1)t^{a-2}=a(a-1)t^{a-2}\\ln t+at^{a-2}+(a-1)t^{a-2}=t^{a-2}[a(a-1)\\ln t+2a-1]\\)，\n（到此可发现只要有 \\(a\\)的范围，就能判断 \\(g''(t)\\)的正负，故不用再求导了。接下来对参数进行讨论，讨论的分界点怎么找呢？观察可得 \\(g(1)=g'(1)=0\\)，有端点效应，故要使 \\(g(t)<0\\)，应有 \\(g''(1)=2a-1\\leq0\\)，据此可找到讨论的分界点）\n当 \\(a\\leq\\frac{1}{2}\\)时，（此时可猜测 \\(g(t)<0\\)是恒成立的，故先将参数进行放缩，转化为无参的不等式来证明）\n \\(g(t)\\leq\\sqrt{t}\\ln t-t+1=\\sqrt{t}\\left(\\ln t-\\sqrt{t}+\\frac{1}{\\sqrt{t}}\\right)=\\sqrt{t}\\left(2\\ln\\sqrt{t}-\\sqrt{t}+\\frac{1}{\\sqrt{t}}\\right)\\)，设 \\(\\varphi(u)=2\\ln u-u+\\frac{1}{u}\\)， \\(u>1\\)，\n则 \\(\\varphi'(u)=\\frac{2}{u}-1-\\frac{1}{u^2}=-\\frac{(u-1)^2}{u^2}<0\\)，所以 \\(\\varphi(u)\\)在 \\((1,+\\infty)\\)上单调递减，又 \\(\\varphi(1)=0\\)，所以 \\(\\varphi(u)<0\\)，\n取 \\(u=\\sqrt{t}\\)可得 \\(2\\ln\\sqrt{t}-\\sqrt{t}+\\frac{1}{\\sqrt{t}}<0\\)，所以 \\(g(t)\\leq\\sqrt{t}\\left(2\\ln\\sqrt{t}-\\sqrt{t}+\\frac{1}{\\sqrt{t}}\\right)<0\\)，满足题意；\n（还需论证当 \\(a>\\frac{1}{2}\\)时， \\(g(t)<0\\)不能恒成立，观察 \\(g'(t)\\)的解析式可发现在 \\(a\\geq1\\)时，容易得出 \\(g'(t)>0\\)，故接下来先考虑这种简单的情况）\n当 \\(a\\geq1\\)时， \\(g'(t)=at^{a-1}\\ln t+t^{a-1}-1>t^{a-1}-1\\geq0\\)，所以 \\(g(t)\\)在 \\((1,+\\infty)\\)上单调递增，\n又 \\(g(1)=0\\)，所以 \\(g(t)>0\\)恒成立，不合题意；\n \\[a=1\\] \n \\[f(x)=(x-1)\\mathrm{e}^{x},\\quad x\\in\\mathbf{R}\\] \n \\[f^{\\prime}(x)=x\\mathrm{e}^{x}\\] \n \\[f^{\\prime}(x)>0\\Leftrightarrow x>0,\\quad f^{\\prime}(x)<0\\Leftrightarrow x<0\\] \n（最后再看 \\(\\frac{1}{2}<a<1\\)时的情形，此时 \\(g'(t)\\)不易直接判断正负，但 \\(g''(t)\\)可以，故先判断 \\(g''(t)\\)的正负）当 \\(\\frac{1}{2}<a<1\\)时， \\(g''(t)>0\\Leftrightarrow a(a-1)\\ln t+2a-1>0\\Leftrightarrow a(1-a)\\ln t<2a-1\\Leftrightarrow\\ln t<\\frac{2a-1}{a(1-a)}\\Leftrightarrow1<t<\\mathrm{e}^{\\frac{2a-1}{a(1-a)}}\\)，所以 \\(g'(t)\\)在 \\(\\left(1,\\mathrm{e}^{\\frac{2a-1}{a(1-a)}}\\right)\\)上单调递增，又 \\(g'(1)=0\\)，所以 \\(g'(t)>0\\)在 \\(\\left(1,\\mathrm{e}^{\\frac{2a-1}{a(1-a)}}\\right)\\)上恒成立，故 \\(g(t)\\)在 \\(\\left(1,\\mathrm{e}^{\\frac{2a-1}{a(1-a)}}\\right)\\)上单调递增，因为 \\(g(1)=0\\)，所以当 \\(t\\in\\left(1,\\mathrm{e}^{\\frac{2a-1}{a(1-a)}}\\right)\\)时， \\(g(t)>0\\)，不合题意；综上所述，实数 \\(a\\)的取值范围是 \\(\\left(-\\infty,\\frac{1}{2}\\right]\\)。\n（3）（目标不等式左侧为求和结构，且无法直接求和，故考虑将右侧也化为求和结构，通过比较左右两侧的通项来证明目标不等式，可按 \\(\\ln(n+1)=[\\ln(n+1)-\\ln n]+[\\ln n-\\ln(n-1)]+\\cdots+(\\ln 3-\\ln 2)+(\\ln 2-\\ln 1)\\)来化，此式右侧可写成 \\(\\sum_{k=1}^{n}[\\ln(k+1)-\\ln k]\\)，即 \\(\\sum_{k=1}^{n}\\ln\\frac{k+1}{k}\\)，目标不等式左侧为 \\(\\sum_{k=1}^{n}\\frac{1}{\\sqrt{k^2+k}}\\)，故只需证 \\(\\frac{1}{\\sqrt{k^2+k}}>\\ln\\frac{k+1}{k}\\)，直接构造函数求导来证可行，但第（2）问我们得到了不等式 \\(2\\ln u-u+\\frac{1}{u}<0(u>1)\\)，所以先试试看能否由它直接变出 \\(\\frac{1}{\\sqrt{k^2+k}}>\\ln\\frac{k+1}{k}\\)，为了产生 \\(\\ln\\frac{k+1}{k}\\)，可取 \\(u=\\sqrt{\\frac{k+1}{k}}\\)）\n由（2）可得当 \\(u>1\\)时， \\(2\\ln u-u+\\frac{1}{u}<0\\)，取 \\(u=\\sqrt{\\frac{k+1}{k}}(k\\in\\mathbb{N}^*)\\)可得 \\(2\\ln\\sqrt{\\frac{k+1}{k}}-\\sqrt{\\frac{k+1}{k}}+\\frac{1}{\\sqrt{\\frac{k+1}{k}}}<0\\)，\n所以 \\(\\sqrt{\\frac{k+1}{k}}-\\frac{1}{\\sqrt{\\frac{k+1}{k}}}>\\ln\\frac{k+1}{k}\\)，又 \\(\\sqrt{\\frac{k+1}{k}}-\\frac{1}{\\sqrt{\\frac{k+1}{k}}}=\\frac{\\sqrt{k+1}}{\\sqrt{k}}-\\frac{\\sqrt{k}}{\\sqrt{k+1}}=\\frac{1}{\\sqrt{k^2+k}}\\)，所以 \\(\\frac{1}{\\sqrt{k^2+k}}>\\ln\\frac{k+1}{k}\\)，分别取 \\(k=1,2,\\cdots,n\\)可得 \\(\\frac{1}{\\sqrt{1^2+1}}>\\ln\\frac{2}{1}\\)， \\(\\frac{1}{\\sqrt{2^2+2}}>\\ln\\frac{3}{2}\\)， \\(\\cdots\\)， \\(\\frac{1}{\\sqrt{n^2+n}}>\\ln\\frac{n+1}{n}\\)，以上各式相加得 \\(\\frac{1}{\\sqrt{1^2+1}}+\\frac{1}{\\sqrt{2^2+2}}+\\cdots+\\frac{1}{\\sqrt{n^2+n}}>\\ln\\frac{2}{1}+\\ln\\frac{3}{2}+\\cdots+\\ln\\frac{n+1}{n}=\\ln\\left(\\frac{2}{1}\\times\\frac{3}{2}\\times\\cdots\\times\\frac{n+1}{n}\\right)=\\ln(n+1)\\)。",
+          "solution_present": true,
+          "vision_hint": "5.6-LI8be3804c0082ca8e"
+        }
+      ],
+      "direct_variants": [],
+      "exercise_questions": [],
+      "action_order": [
+        "learn_each_current_example_then_attempt_its_direct_variants",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [],
+      "prerequisite_knowledge_blocks": []
+    },
+    {
+      "cycle_id": "5.6-cycle-8",
+      "sequence": 8,
+      "title": "A组 夯实基础",
+      "course_keys": [],
+      "prerequisite_course_keys": [
+        "4.2.6.1 求和型放缩（上）",
+        "4.2.6.1 求和型放缩（下）"
+      ],
+      "optional_course_keys": [],
+      "knowledge_refs": [],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [
+        "类型I 导数的计算",
+        "类型Ⅱ 切线的计算及应用",
+        "类型Ⅲ 单调性、极值、最值的分析",
+        "类型IV 讨论单调性",
+        "类型V 不等式证明",
+        "类型VI 三次函数",
+        "类型Ⅶ 综合大题"
+      ],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [],
+      "direct_variants": [],
+      "exercise_questions": [
+        {
+          "qid": "Q-af889f3ae9f464fb",
+          "section": "5.6",
+          "group": "A",
+          "number": 1,
+          "kind": "A组",
+          "source_anchor": {
+            "ocr_doc": 87,
+            "pdf_page": 88,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_87.md"
+          },
+          "question_text": "1. (2016 · 天津卷)\n\n已知函数  \\(f(x)=(2x+1)\\mathrm{e}^{x}\\)， \\(f'(x)\\) 为  \\(f(x)\\) 的导函数，则  \\(f'(0)\\) 的值为 ___.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1"
+          ]
+        },
+        {
+          "qid": "Q-ed2d2039c4a9538a",
+          "section": "5.6",
+          "group": "A",
+          "number": 2,
+          "kind": "A组",
+          "source_anchor": {
+            "ocr_doc": 87,
+            "pdf_page": 88,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_87.md"
+          },
+          "question_text": "2.（2015·天津卷）\n\n已知函数  \\(f(x)=ax\\ln x\\)， \\(x\\in(0,+\\infty)\\)，其中  \\(a\\) 为实数， \\(f'(x)\\) 为  \\(f(x)\\) 的导函数，若  \\(f'(1)=3\\)，则  \\(a\\) 的值为___。",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1"
+          ]
+        },
+        {
+          "qid": "Q-c8c173d25713e529",
+          "section": "5.6",
+          "group": "A",
+          "number": 3,
+          "kind": "A组",
+          "source_anchor": {
+            "ocr_doc": 87,
+            "pdf_page": 88,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_87.md"
+          },
+          "question_text": "3.（2018·新课标Ⅱ卷）\n\n曲线  \\(y = 2\\ln(x+1)\\) 在点  \\((0,0)\\) 处的切线方程为 ___.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1"
+          ]
+        },
+        {
+          "qid": "Q-ef9fc5cfdd68e7ce",
+          "section": "5.6",
+          "group": "A",
+          "number": 4,
+          "kind": "A组",
+          "source_anchor": {
+            "ocr_doc": 87,
+            "pdf_page": 88,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_87.md"
+          },
+          "question_text": "4.（2021·新课标Ⅱ卷）\n\n曲线  \\(y=\\frac{2x-1}{x+2}\\) 在点  \\((-1,-3)\\) 处的切线方程为 ___.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1"
+          ]
+        },
+        {
+          "qid": "Q-0a94bea0e48f78a9",
+          "section": "5.6",
+          "group": "A",
+          "number": 5,
+          "kind": "A组",
+          "source_anchor": {
+            "ocr_doc": 87,
+            "pdf_page": 88,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_87.md"
+          },
+          "question_text": "5.（2019·新课标Ⅰ卷）\n\n曲线  \\(y = 3(x^2 + x)e^x\\) 在点  \\((0,0)\\) 处的切线方程为 ___.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1"
+          ]
+        }
+      ],
+      "action_order": [
+        "attempt_current_abc_exercises_without_answers",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [],
+      "prerequisite_knowledge_blocks": []
+    },
+    {
+      "cycle_id": "5.6-cycle-9",
+      "sequence": 9,
+      "title": "B组 强化能力",
+      "course_keys": [],
+      "prerequisite_course_keys": [
+        "4.2.6.1 求和型放缩（上）",
+        "4.2.6.1 求和型放缩（下）"
+      ],
+      "optional_course_keys": [],
+      "knowledge_refs": [],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [
+        "类型I 导数的计算",
+        "类型Ⅱ 切线的计算及应用",
+        "类型Ⅲ 单调性、极值、最值的分析",
+        "类型IV 讨论单调性",
+        "类型V 不等式证明",
+        "类型VI 三次函数",
+        "类型Ⅶ 综合大题"
+      ],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [],
+      "direct_variants": [],
+      "exercise_questions": [
+        {
+          "qid": "Q-54a579e8e9e0acdd",
+          "section": "5.6",
+          "group": "B",
+          "number": 6,
+          "kind": "B组",
+          "source_anchor": {
+            "ocr_doc": 87,
+            "pdf_page": 88,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_87.md"
+          },
+          "question_text": "6.（2015·新课标Ⅰ卷）\n\n已知函数  \\(f(x)=ax^3 + x + 1\\) 的图象在点  \\((1,f(1))\\) 处的切线过点  \\((2,7)\\)，则  \\(a=\\) ___.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1"
+          ]
+        },
+        {
+          "qid": "Q-0583c37fa6361567",
+          "section": "5.6",
+          "group": "B",
+          "number": 7,
+          "kind": "B组",
+          "source_anchor": {
+            "ocr_doc": 88,
+            "pdf_page": 89,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_88.md"
+          },
+          "question_text": "### 7. （2020·新课标Ⅰ卷）\n\n曲线  \\(y = \\ln x + x + 1\\) 的一条切线的斜率为 2，则该切线的方程为 ___.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1"
+          ]
+        },
+        {
+          "qid": "Q-a10113fea4b87024",
+          "section": "5.6",
+          "group": "B",
+          "number": 8,
+          "kind": "B组",
+          "source_anchor": {
+            "ocr_doc": 88,
+            "pdf_page": 89,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_88.md"
+          },
+          "question_text": "### 8. （2016·新课标Ⅲ卷）\n\n已知  \\(f(x)\\) 为偶函数，当  \\(x \\leq 0\\) 时， \\(f(x) = e^{-x-1} - x\\)，则曲线  \\(y = f(x)\\) 在点  \\((1,2)\\) 处的切线方程是 ___.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1"
+          ]
+        },
+        {
+          "qid": "Q-32b0f32bdea7d20f",
+          "section": "5.6",
+          "group": "B",
+          "number": 9,
+          "kind": "B组",
+          "source_anchor": {
+            "ocr_doc": 88,
+            "pdf_page": 89,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_88.md",
+            "recovery": "PADDLE_OCR_TEXT_NEIGHBOR_SEQUENCE_B8_B9_B10",
+            "recovery_source_kind": "primary_ocr"
+          },
+          "question_text": "已知曲线  \\(y = ae^{x} + x \\ln x\\) 在点  \\((1, ae)\\) 处的切线方程为  \\(y = 2x + b\\)，则（）\n\nA. a = e, b = -1\n\nB. a = e, b = 1\n\nC.  \\(a = e^{-1}\\), b = 1\n\nD.  \\(a = e^{-1}\\), b = -1",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1",
+            "PADDLE_OCR_TEXT_NEIGHBOR_SEQUENCE_B8_B9_B10"
+          ],
+          "recovery_reason": "printed_number_missing_from_paddle_ocr"
+        },
+        {
+          "qid": "Q-82f4aabc46e65d80",
+          "section": "5.6",
+          "group": "B",
+          "number": 10,
+          "kind": "B组",
+          "source_anchor": {
+            "ocr_doc": 88,
+            "pdf_page": 89,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_88.md"
+          },
+          "question_text": "### 10. （2022·新课标Ⅰ卷）\n\n若曲线  \\(y=(x+a)e^{x}\\) 有两条过坐标原点的切线，则 a 的取值范围为 ___.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1"
+          ]
+        },
+        {
+          "qid": "Q-1e46b9bf6d41ea5f",
+          "section": "5.6",
+          "group": "B",
+          "number": 11,
+          "kind": "B组",
+          "source_anchor": {
+            "ocr_doc": 89,
+            "pdf_page": 90,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_89.md",
+            "recovery": "PADDLE_OCR_TEXT_NEIGHBOR_SEQUENCE_B10_B11_B12",
+            "recovery_source_kind": "primary_ocr"
+          },
+          "question_text": "若 x=-2 是函数  \\(f(x)=(x^{2}+ax-1)\\mathrm{e}^{x-1}\\) 的极值点，则  \\(f(x)\\) 的极小值为（）\n\nA. -1 B.  \\(-2e^{-3}\\)\n\nC.  \\(5e^{-3}\\) D. 1",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1",
+            "PADDLE_OCR_TEXT_NEIGHBOR_SEQUENCE_B10_B11_B12"
+          ],
+          "recovery_reason": "printed_number_missing_from_paddle_ocr"
+        },
+        {
+          "qid": "Q-771a4bf7c5797261",
+          "section": "5.6",
+          "group": "B",
+          "number": 12,
+          "kind": "B组",
+          "source_anchor": {
+            "ocr_doc": 89,
+            "pdf_page": 90,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_89.md"
+          },
+          "question_text": "12.（2022·全国已卷）\n\n函数  \\(f(x) = \\cos x + (x+1)\\sin x + 1\\) 在区间  \\([0,2\\pi]\\) 的最小值，最大值分别为（ ）\n\nA.  \\(-\\frac{\\pi}{2}\\)， \\(\\frac{\\pi}{2}\\)  \n\nB.  \\(-\\frac{3\\pi}{2}\\)， \\(\\frac{\\pi}{2}\\)  \n\nC.  \\(-\\frac{\\pi}{2}\\)， \\(\\frac{\\pi}{2}+2\\)  \n\nD.  \\(-\\frac{3\\pi}{2}\\)， \\(\\frac{\\pi}{2}+2\\)",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1"
+          ]
+        },
+        {
+          "qid": "Q-2faf3eb148c1b958",
+          "section": "5.6",
+          "group": "B",
+          "number": 13,
+          "kind": "B组",
+          "source_anchor": {
+            "ocr_doc": 89,
+            "pdf_page": 90,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_89.md",
+            "recovery": "PADDLE_OCR_TEXT_AFTER_B12_BEFORE_B14",
+            "recovery_source_kind": "primary_ocr"
+          },
+          "question_text": "函数  \\(f'(x)\\) 是奇函数  \\(f(x)(x \\in \\mathbb{R})\\) 的导函数， \\(f(-1) = 0\\)，当  \\(x > 0\\) 时， \\(xf'(x) - f(x) < 0\\)，则使得  \\(f(x) > 0\\) 成立的  \\(x\\) 的取值范围是（ ）\n\nA.  \\((-\\infty, -1) \\cup (0, 1)\\)\n\nB.  \\((-1, 0) \\cup (1, +\\infty)\\)\n\nC.  \\((-\\infty, -1) \\cup (-1, 0)\\)\n\nD.  \\((0, 1) \\cup (1, +\\infty)\\)",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1",
+            "PADDLE_OCR_TEXT_AFTER_B12_BEFORE_B14"
+          ],
+          "recovery_reason": "printed_number_missing_from_paddle_ocr"
+        },
+        {
+          "qid": "Q-36b8717898801d52",
+          "section": "5.6",
+          "group": "B",
+          "number": 14,
+          "kind": "B组",
+          "source_anchor": {
+            "ocr_doc": 90,
+            "pdf_page": 91,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_90.md"
+          },
+          "question_text": "14.（2015·福建卷）\n\n若定义在  \\(\\mathbb{R}\\) 上的函数  \\(f(x)\\) 满足  \\(f(0) = -1\\)，其导函数  \\(f'(x)\\) 满足  \\(f'(x) > k > 1\\)，则下列结论中一定错误的是（ ）\n\nA.  \\(f\\left(\\frac{1}{k}\\right) < \\frac{1}{k}\\)\n\nB.  \\(f\\left(\\frac{1}{k}\\right) > \\frac{1}{k-1}\\)\n\nC.  \\(f\\left(\\frac{1}{k-1}\\right) < \\frac{1}{k-1}\\)\n\nD.  \\(f\\left(\\frac{1}{k-1}\\right) > \\frac{k}{k-1}\\)",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1"
+          ]
+        },
+        {
+          "qid": "Q-b736e09b4ba1b71c",
+          "section": "5.6",
+          "group": "B",
+          "number": 15,
+          "kind": "B组",
+          "source_anchor": {
+            "ocr_doc": 90,
+            "pdf_page": 91,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_90.md"
+          },
+          "question_text": "### 15. （2015·新课标Ⅰ卷（节选））\n\n已知函数  \\(f(x)=x^{3}+ax+\\frac{1}{4}\\). 当 a 为何值时，x 轴为曲线  \\(y=f(x)\\) 的切线？",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1"
+          ]
+        },
+        {
+          "qid": "Q-f1288ddc793c655f",
+          "section": "5.6",
+          "group": "B",
+          "number": 16,
+          "kind": "B组",
+          "source_anchor": {
+            "ocr_doc": 90,
+            "pdf_page": 91,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_90.md"
+          },
+          "question_text": "16.（2017·北京卷）\n\n已知函数  \\(f(x)=\\mathrm{e}^{x}\\cos x-x\\)\n\n（1）求曲线  \\(y = f(x)\\) 在点  \\((0, f(0))\\) 处的切线方程；\n\n（2）求函数  \\(f(x)\\) 在区间  \\(\\left[0,\\frac{\\pi}{2}\\right]\\) 上的最大值和最小值.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1"
+          ]
+        },
+        {
+          "qid": "Q-20960139622898f5",
+          "section": "5.6",
+          "group": "B",
+          "number": 17,
+          "kind": "B组",
+          "source_anchor": {
+            "ocr_doc": 91,
+            "pdf_page": 92,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_91.md"
+          },
+          "question_text": "17.（2016·四川卷（节选））\n\n设函数  \\(f(x) = ax^2 - a - \\ln x\\)，其中  \\(a \\in \\mathbb{R}\\)，讨论  \\(f(x)\\) 的单调性.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1"
+          ]
+        },
+        {
+          "qid": "Q-8041115b94a252fe",
+          "section": "5.6",
+          "group": "B",
+          "number": 18,
+          "kind": "B组",
+          "source_anchor": {
+            "ocr_doc": 91,
+            "pdf_page": 92,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_91.md"
+          },
+          "question_text": "18.（2017·新课标Ⅰ卷（节选））\n\n已知函数  \\(f(x)=\\mathrm{e}^{x}(\\mathrm{e}^{x}-a)-a^{2}x\\)，讨论  \\(f(x)\\) 的单调性.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1"
+          ]
+        },
+        {
+          "qid": "Q-56eb4da28d4f438f",
+          "section": "5.6",
+          "group": "B",
+          "number": 19,
+          "kind": "B组",
+          "source_anchor": {
+            "ocr_doc": 91,
+            "pdf_page": 92,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_91.md"
+          },
+          "question_text": "19.（2021·北京卷）数·高中数学一本通已知函数 \\(f(x)=\\frac{3-2x}{x^{2}+a}\\).\n\n（1）若 a=0，求曲线  \\(y=f(x)\\) 在点  \\((1,f(1))\\) 处的切线方程；\n\n（2）若函数  \\(f(x)\\) 在 x = -1 处取得极值，求  \\(f(x)\\) 的单调区间，以及最大值与最小值.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1"
+          ]
+        },
+        {
+          "qid": "Q-c2953a33eed28e38",
+          "section": "5.6",
+          "group": "B",
+          "number": 20,
+          "kind": "B组",
+          "source_anchor": {
+            "ocr_doc": 91,
+            "pdf_page": 92,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_91.md"
+          },
+          "question_text": "20.（2016·新课标Ⅰ卷（节选））\n\n已知函数  \\(f(x)=(x-2)e^{x}+a(x-1)^{2}\\)，讨论  \\(f(x)\\) 的单调性.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1"
+          ]
+        }
+      ],
+      "action_order": [
+        "attempt_current_abc_exercises_without_answers",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [],
+      "prerequisite_knowledge_blocks": []
+    },
+    {
+      "cycle_id": "5.6-cycle-10",
+      "sequence": 10,
+      "title": "C组 拓展提升",
+      "course_keys": [],
+      "prerequisite_course_keys": [
+        "4.2.6.1 求和型放缩（上）",
+        "4.2.6.1 求和型放缩（下）"
+      ],
+      "optional_course_keys": [],
+      "knowledge_refs": [],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [
+        "类型I 导数的计算",
+        "类型Ⅱ 切线的计算及应用",
+        "类型Ⅲ 单调性、极值、最值的分析",
+        "类型IV 讨论单调性",
+        "类型V 不等式证明",
+        "类型VI 三次函数",
+        "类型Ⅶ 综合大题"
+      ],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [],
+      "direct_variants": [],
+      "exercise_questions": [
+        {
+          "qid": "Q-020f7c4b8d20e44c",
+          "section": "5.6",
+          "group": "C",
+          "number": 21,
+          "kind": "C组",
+          "source_anchor": {
+            "ocr_doc": 92,
+            "pdf_page": 93,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_92.md"
+          },
+          "question_text": "21.（2023·新课标Ⅱ卷）（多选）\n\n若函数  \\(f(x) = a \\ln x + \\frac{b}{x} + \\frac{c}{x^2} (a \\neq 0)\\) 既有极大值也有极小值，则（ ）\n\nA.  \\(bc > 0\\) B.  \\(ab > 0\\)\n\nC.  \\(b^2 + 8ac > 0\\) D.  \\(ac < 0\\)",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1"
+          ]
+        },
+        {
+          "qid": "Q-baa7730064fb3c5a",
+          "section": "5.6",
+          "group": "C",
+          "number": 22,
+          "kind": "C组",
+          "source_anchor": {
+            "ocr_doc": 92,
+            "pdf_page": 93,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_92.md",
+            "recovery": "PADDLE_OCR_TEXT_ORDER_C21_C22_C23_C24",
+            "recovery_source_kind": "primary_ocr"
+          },
+          "question_text": "设  \\(a \\neq 0\\)，若 x = a 是函数  \\(f(x) = a(x - a)^{2}(x - b)\\) 的极大值点，则（）\n\nA. a < b B. a > b\n\nC.  \\(ab < a^{2}\\) D.  \\(ab > a^{2}\\)",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1",
+            "PADDLE_OCR_TEXT_ORDER_C21_C22_C23_C24"
+          ],
+          "recovery_reason": "printed_number_missing_from_paddle_ocr"
+        },
+        {
+          "qid": "Q-4a17bdf22e888ae5",
+          "section": "5.6",
+          "group": "C",
+          "number": 23,
+          "kind": "C组",
+          "source_anchor": {
+            "ocr_doc": 92,
+            "pdf_page": 93,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_92.md",
+            "recovery": "PADDLE_OCR_TEXT_ORDER_C21_C22_C23_C24",
+            "recovery_source_kind": "primary_ocr"
+          },
+          "question_text": "设直线  \\(l_{1}\\)， \\(l_{2}\\) 分别是函数  \\(f(x)=\\left\\{\\begin{aligned}&-\\ln x,0<x<1\\\\ &\\ln x,x>1\\end{aligned}\\right.\\) 图象上点  \\(P_{1}\\)， \\(P_{2}\\) 处的切线， \\(l_{1}\\) 与  \\(l_{2}\\) 垂直相交于点 P，且  \\(l_{1}\\)， \\(l_{2}\\) 分别与 y 轴相交于点 A，B，则  \\(\\triangle PAB\\) 的面积的取值范围是（）\n\nA.  \\((0,1)\\) B.  \\((0,2)\\) C.  \\((0,+\\infty)\\) D.  \\((1,+\\infty)\\)",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1",
+            "PADDLE_OCR_TEXT_ORDER_C21_C22_C23_C24"
+          ],
+          "recovery_reason": "printed_number_missing_from_paddle_ocr"
+        },
+        {
+          "qid": "Q-65eb7b10d76735f4",
+          "section": "5.6",
+          "group": "C",
+          "number": 24,
+          "kind": "C组",
+          "source_anchor": {
+            "ocr_doc": 93,
+            "pdf_page": 94,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_93.md"
+          },
+          "question_text": "### 24. （2023·新课标Ⅰ卷）\n\n已知函数  \\(f(x)=a(\\mathrm{e}^{x}+a)-x\\)\n\n（1）讨论  \\(f(x)\\) 的单调性；\n\n（2）证明：当a>0时， \\(f(x)>2\\ln a+\\frac{3}{2}\\)",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1"
+          ]
+        },
+        {
+          "qid": "Q-7d11f8c76e49ff57",
+          "section": "5.6",
+          "group": "C",
+          "number": 25,
+          "kind": "C组",
+          "source_anchor": {
+            "ocr_doc": 93,
+            "pdf_page": 94,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_93.md"
+          },
+          "question_text": "### 25. （2021·全国乙卷）\n\n设函数  \\(f(x)=\\ln(a-x)\\)，已知 x=0 是函数 y=\n\n \\(x f(x)\\) 的极值点.\n\n（1）求a;\n\n（2）设函数  \\(g(x)=\\frac{x+f(x)}{xf(x)}\\)，证明： \\(g(x)<1\\)。",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1"
+          ]
+        },
+        {
+          "qid": "Q-748f74324e972ac7",
+          "section": "5.6",
+          "group": "C",
+          "number": 26,
+          "kind": "C组",
+          "source_anchor": {
+            "ocr_doc": 93,
+            "pdf_page": 94,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_93.md"
+          },
+          "question_text": "### 26. （2019·新课标Ⅲ卷）\n\n已知函数  \\(f(x)=2x^{3}-ax^{2}+b\\).\n\n（1）讨论  \\(f(x)\\) 的单调性；\n\n（2）是否存在 a，b，使得  \\(f(x)\\) 在区间  \\([0,1]\\) 的最小值为 -1 且最大值为 1？若存在，求出 a，b 的所有值；若不存在，说明理由.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1"
+          ]
+        },
+        {
+          "qid": "Q-a94544781ea2d0e4",
+          "section": "5.6",
+          "group": "C",
+          "number": 27,
+          "kind": "C组",
+          "source_anchor": {
+            "ocr_doc": 94,
+            "pdf_page": 95,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_94.md"
+          },
+          "question_text": "27.（2024·新课标Ⅰ卷）\n\n已知函数  \\(f(x)=\\ln\\frac{x}{2-x}+ax+b(x-1)^{3}\\).\n\n（1）若 b=0，且  \\(f'(x)\\geq0\\)，求 a 的最小值；\n\n（2）证明：曲线  \\(y = f(x)\\) 是中心对称图形；\n\n（3）若  \\(f(x) > -2\\) 当且仅当 1 < x < 2，求 b 的取值范围.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1"
+          ]
+        }
+      ],
+      "action_order": [
+        "attempt_current_abc_exercises_without_answers",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [],
+      "prerequisite_knowledge_blocks": []
+    }
+  ],
+  "knowledge_and_type_pages": [
+    {
+      "ocr_doc": 75,
+      "text": "# 微专题4：导数复习课——真题集训\n\n习题：P1\n\n## 内容提要\n\n考虑到导数的整体难度较高，在高考中所占的比重又比较大，在同步学习阶段需要打下坚实的基础，所以在本章最后额外给大家设置了一节复习课。这一节我们精选了近几年的真题卷中与导数有关、且难度合适的题，希望大家通过本节的学习，能够大致了解导数在高考中是如何考查的，同时巩固对一些常考题型的解题方法的理解。\n\n## 典型例题\n\n类型 I：导数的计算\n\n类型Ⅱ：切线的计算及应用",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 77,
+      "text": "## 类型Ⅲ：单调性、极值、最值的分析",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 79,
+      "text": "类型IV：讨论单调性",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 80,
+      "text": "## 类型V：不等式证明",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 81,
+      "text": "## 类型VI：三次函数",
+      "image_refs": [],
+      "math_errors": []
+    }
+  ],
+  "knowledge_blocks": [],
+  "worked_examples": [
+    {
+      "item_id": "65d48ba8ed18c7eb",
+      "kind": "example",
+      "label": "例1",
+      "example_number": 1,
+      "parent_example_number": null,
+      "role": "type_example",
+      "role_ref": "类型I 导数的计算",
+      "source_docs": [
+        75
+      ],
+      "question_text": "【例1】（2018·天津卷）已知函数  \\(f(x)=\\mathrm{e}^x \\ln x\\)， \\(f'(x)\\) 为  \\(f(x)\\) 的导函数，则  \\(f'(1)\\) 的值为___。",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "teaching_text": "【例1】（2018·天津卷）已知函数  \\(f(x)=\\mathrm{e}^x \\ln x\\)， \\(f'(x)\\) 为  \\(f(x)\\) 的导函数，则  \\(f'(1)\\) 的值为___。\n解析：由题意， \\(f'(x)=(\\mathrm{e}^x)' \\ln x + \\mathrm{e}^x (\\ln x)'=\\mathrm{e}^x \\ln x + \\frac{1}{x} \\cdot \\mathrm{e}^x\\)，所以  \\(f'(1)=\\mathrm{e}\\)。\n答案：e",
+      "solution_present": true,
+      "vision_hint": "5.6-LI65d48ba8ed18c7eb"
+    },
+    {
+      "item_id": "8cc0df82fb29f514",
+      "kind": "example",
+      "label": "例2",
+      "example_number": 2,
+      "parent_example_number": null,
+      "role": "type_example",
+      "role_ref": "类型Ⅱ 切线的计算及应用",
+      "source_docs": [
+        75
+      ],
+      "question_text": "【例2】（2018·新课标Ⅱ卷）曲线  \\(y=2\\ln x\\) 在点  \\((1,0)\\) 处的切线方程为 ___.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "teaching_text": "【例2】（2018·新课标Ⅱ卷）曲线  \\(y=2\\ln x\\) 在点  \\((1,0)\\) 处的切线方程为 ___.\n解析：由题意， \\(y' = \\frac{2}{x}\\)，所以曲线  \\(y = 2\\ln x\\) 在  \\((1,0)\\) 处的切线斜率  \\(k = y'|_{x=1} = 2\\)，\n故切线方程为  \\(y=2(x-1)\\)，整理得：2x-y-2=0.\n答案：2x-y-2=0",
+      "solution_present": true,
+      "vision_hint": "5.6-LI8cc0df82fb29f514"
+    },
+    {
+      "item_id": "2339a7d2a78cc9ea",
+      "kind": "example",
+      "label": "例3",
+      "example_number": 3,
+      "parent_example_number": null,
+      "role": "type_example",
+      "role_ref": "类型Ⅲ 单调性、极值、最值的分析",
+      "source_docs": [
+        77
+      ],
+      "question_text": "【例 3】（2015·安徽卷）函数  \\(f(x)=ax^3+bx^2+cx+d\\) 的图象如图所示，则下列结论成立的是（ ）\nA.  \\(a>0\\)， \\(b<0\\)， \\(c>0\\)， \\(d>0\\)  \nB.  \\(a>0\\)， \\(b<0\\)， \\(c<0\\)， \\(d>0\\)  \nC.  \\(a<0\\)， \\(b<0\\)， \\(c<0\\)， \\(d>0\\)  \nD.  \\(a>0\\)， \\(b>0\\)， \\(c>0\\)， \\(d<0\\)",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "teaching_text": "【例 3】（2015·安徽卷）函数  \\(f(x)=ax^3+bx^2+cx+d\\) 的图象如图所示，则下列结论成立的是（ ）\nA.  \\(a>0\\)， \\(b<0\\)， \\(c>0\\)， \\(d>0\\)  \nB.  \\(a>0\\)， \\(b<0\\)， \\(c<0\\)， \\(d>0\\)  \nC.  \\(a<0\\)， \\(b<0\\)， \\(c<0\\)， \\(d>0\\)  \nD.  \\(a>0\\)， \\(b>0\\)， \\(c>0\\)， \\(d<0\\)\n解析：图中标注的  \\(x_1\\)， \\(x_2\\) 是  \\(f(x)\\) 的两个极值点，故考虑结合  \\(f'(x)\\) 来分析，由题意， \\(f'(x) = 3ax^2 + 2bx + c\\)，根据  \\(f(x)\\) 的图象可画出  \\(f'(x)\\) 的草图如图，由图可知， \\(f'(x)\\) 是开口向上的二次函数，所以  \\(a > 0\\)，\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_897_1043_1093_1190.jpg\" alt=\"Image\" width=\"16%\" /></div>\n且  \\(f'(x)\\) 的两个零点  \\(x_{1}\\) 和  \\(x_{2}\\) 均为正数，\n所以  \\(x_1 + x_2 = -\\frac{2b}{3a} > 0\\)， \\(x_1 x_2 = \\frac{c}{3a} > 0\\)，故  \\(b < 0\\)， \\(c > 0\\)，\n还差 d 的正负，如何判断？所给图象中专门标了个点 P，由它可以得出  \\(f(0) > 0\\)，而  \\(f(0)\\) 恰好为 d，于是 d 的正负就有了，由  \\(f(x)\\) 的图象上的点 P 可知  \\(f(0) = d > 0\\)。\n答案：A\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_885_1257_1089_1508.jpg\" alt=\"Image\" width=\"17%\" /></div>",
+      "solution_present": true,
+      "vision_hint": "5.6-LI2339a7d2a78cc9ea"
+    },
+    {
+      "item_id": "931382f3dd54ac7d",
+      "kind": "example",
+      "label": "例4",
+      "example_number": 4,
+      "parent_example_number": null,
+      "role": "type_example",
+      "role_ref": "类型Ⅲ 单调性、极值、最值的分析",
+      "source_docs": [
+        78
+      ],
+      "question_text": "【例4】（2023·全国甲卷（节选））已知函数  \\(f(x)=ax-\\frac{\\sin x}{\\cos^2 x}\\)， \\(x\\in\\left(0,\\frac{\\pi}{2}\\right)\\)，当 a=1 时，讨论  \\(f(x)\\) 的单调性.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "teaching_text": "【例4】（2023·全国甲卷（节选））已知函数  \\(f(x)=ax-\\frac{\\sin x}{\\cos^2 x}\\)， \\(x\\in\\left(0,\\frac{\\pi}{2}\\right)\\)，当 a=1 时，讨论  \\(f(x)\\) 的单调性.\n解：当 \\(a=1\\) 时，\\(f(x)=x-\\frac{\\sin x}{\\cos^2 x}\\)，\\(f'(x)=1-\\frac{\\cos x\\cdot\\cos^2 x-2\\cos x\\cdot(-\\sin x)\\cdot\\sin x}{\\cos^4 x}\\)\n\\(=1-\\frac{\\cos^2 x+2\\sin^2 x}{\\cos^3 x}=\\frac{\\cos^3 x-\\cos^2 x-2\\sin^2 x}{\\cos^3 x}\\)，（观察发现将 \\(\\sin^2 x\\) 换成 \\(1-\\cos^2 x\\)，可将函数名统一成余弦）\n所以 \\(f'(x)=\\frac{\\cos^3 x-\\cos^2 x-2(1-\\cos^2 x)}{\\cos^3 x}=\\frac{\\cos^2 x(\\cos x-1)-2(1+\\cos x)(1-\\cos x)}{\\cos^3 x}\\)\n\\(=\\frac{(\\cos x-1)(\\cos^2 x+2\\cos x+2)}{\\cos^3 x}=\\frac{(\\cos x-1)[(\\cos x+1)^2+1]}{\\cos^3 x}\\)，\n当 \\(x\\in\\left(0,\\frac{\\pi}{2}\\right)\\) 时，\\(\\cos x-1<0\\)，\\((\\cos x+1)^2+1>0\\)，\\(\\cos^3 x>0\\)，所以 \\(f'(x)<0\\)，故 \\(f(x)\\) 在 \\(\\left(0,\\frac{\\pi}{2}\\right)\\) 上单调递减。",
+      "solution_present": true,
+      "vision_hint": "5.6-LI931382f3dd54ac7d"
+    },
+    {
+      "item_id": "566a99b0465a521c",
+      "kind": "example",
+      "label": "例5",
+      "example_number": 5,
+      "parent_example_number": null,
+      "role": "type_example",
+      "role_ref": "类型Ⅲ 单调性、极值、最值的分析",
+      "source_docs": [
+        78,
+        79
+      ],
+      "question_text": "【例 5】(2013·浙江卷)已知 e 为自然对数的底数，设函数  \\(f(x)=(\\mathrm{e}^{x}-1)(x-1)^{k}(k=1,2)\\)，则（ ）\nA. 当 k=1 时， \\(f(x)\\) 在 x=1 处取到极小值\nB. 当 k=1 时， \\(f(x)\\) 在 x=1 处取到极大值\nC. 当 k=2 时， \\(f(x)\\) 在 x=1 处取到极小值\nD. 当 k=2 时， \\(f(x)\\) 在 x=1 处取到极大值",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "teaching_text": "【例 5】(2013·浙江卷)已知 e 为自然对数的底数，设函数  \\(f(x)=(\\mathrm{e}^{x}-1)(x-1)^{k}(k=1,2)\\)，则（ ）\nA. 当 k=1 时， \\(f(x)\\) 在 x=1 处取到极小值\nB. 当 k=1 时， \\(f(x)\\) 在 x=1 处取到极大值\nC. 当 k=2 时， \\(f(x)\\) 在 x=1 处取到极小值\nD. 当 k=2 时， \\(f(x)\\) 在 x=1 处取到极大值\n解析：当 k=1 时，  \\(f(x)=(\\mathrm{e}^{x}-1)(x-1)\\)，  \\(f'(x)=\\mathrm{e}^{x}(x-1)+\\mathrm{e}^{x}-1\\)，\n所以  \\(f'(1)=\\mathrm{e}-1 \\neq 0\\)，从而 x=1 不是  \\(f(x)\\) 的极值点，故 A 项、B 项均错误；\n当 \\(k=2\\) 时，\\(f(x)=(\\mathrm{e}^x-1)(x-1)^2\\)，\\(f'(x)=\\mathrm{e}^x(x-1)^2+2(x-1)(\\mathrm{e}^x-1)=(x-1)[(x+1)\\mathrm{e}^x-2]\\)，\n结合选项知只需判断 \\(x=1\\) 的极值情况，可只考虑 \\(f'(x)\\) 在 1 附近的正负情况，观察发现当 \\(x\\to1\\) 时，\\((x+1)\\mathrm{e}^x-2\\to2\\mathrm{e}-2>0\\)，所以 \\(f'(x)\\) 的正负由 \\(x-1\\) 决定，下面通过简单的放缩来严格论证，\n在 \\(\\left(\\frac{1}{2},1\\right)\\) 上，\\((x+1)\\mathrm{e}^x-2>\\frac{3}{2}\\sqrt{\\mathrm{e}}-2>0\\)，\\(x-1<0\\)，所以 \\(f'(x)<0\\)，\n在 \\((1,+\\infty)\\) 上，\\((x+1)\\mathrm{e}^x-2>2\\mathrm{e}-2>0\\)，\\(x-1>0\\)，所以 \\(f'(x)>0\\)，\n从而 \\(f(x)\\) 在 \\(\\left(\\frac{1}{2},1\\right)\\) 上 \\(\\searrow\\)，在 \\((1,+\\infty)\\) 上 \\(\\nearrow\\)，故 \\(f(x)\\) 在 \\(x=1\\) 处取到极小值。\n答案：C",
+      "solution_present": true,
+      "vision_hint": "5.6-LI566a99b0465a521c"
+    },
+    {
+      "item_id": "6b5bc0bdaaf0109c",
+      "kind": "example",
+      "label": "例6",
+      "example_number": 6,
+      "parent_example_number": null,
+      "role": "type_example",
+      "role_ref": "类型Ⅲ 单调性、极值、最值的分析",
+      "source_docs": [
+        79
+      ],
+      "question_text": "【例 6】（2021·新高考Ⅰ卷）函数  \\(f(x)=\\left|2x-1\\right|-2\\ln x\\) 的最小值为___.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "teaching_text": "【例 6】（2021·新高考Ⅰ卷）函数  \\(f(x)=\\left|2x-1\\right|-2\\ln x\\) 的最小值为___.\n解法1：由题意， \\(f(x)=\\begin{cases}1-2x-2\\ln x,0<x\\leq\\frac{1}{2}\\\\2x-1-2\\ln x,x>\\frac{1}{2}\\end{cases}\\)，分段函数求最值，应分段考虑，再比较各段的最值，\n显然 \\(f(x)\\)在 \\(\\left(0,\\frac{1}{2}\\right]\\)上 \\(\\searrow\\)，所以 \\(f(x)\\)在 \\(\\left(0,\\frac{1}{2}\\right]\\)上的最小值为 \\(f\\left(\\frac{1}{2}\\right)=1-2\\times\\frac{1}{2}-2\\ln\\frac{1}{2}=2\\ln2\\)；\n当 \\(x>\\frac{1}{2}\\)时， \\(f'(x)=2-\\frac{2}{x}=\\frac{2(x-1)}{x}\\)，所以 \\(f'(x)>0\\Leftrightarrow x>1\\)， \\(f'(x)<0\\Leftrightarrow\\frac{1}{2}<x<1\\)，\n从而 \\(f(x)\\)在 \\(\\left(\\frac{1}{2},1\\right)\\)上 \\(\\searrow\\)，在 \\((1,+\\infty)\\)上 \\(\\nearrow\\)，故 \\(f(x)\\)在 \\(\\left(\\frac{1}{2},+\\infty\\right)\\)上的最小值为 \\(f(1)=1\\)；\n因为 \\(1<2\\ln2\\)，所以 \\(f(x)\\)的最小值为1\n因为 \\(1<2\\ln2\\)，所以 \\(f(x)\\)的最小值为1.\n解法2：解析式中有  \\(2x\\) 和  \\(2\\ln x\\)，由此可联想到经典切线放缩不等式  \\(\\ln x \\leq x-1\\)，故也可尝试直接用此不等式将解析式进行放缩，看能否凑成定值，由经典切线放缩不等式， \\(\\ln x \\leq x-1\\)，所以  \\(2\\ln x \\leq 2(x-1)\\)，故  \\(f(x)=|2x-1|-2\\ln x \\geq 2x-1-2\\ln x \\geq 2x-1-2(x-1)=1\\)，又  \\(f(1)=1\\)，所以  \\(f(x)_{\\min}=1\\)。\n答案：1",
+      "solution_present": true,
+      "vision_hint": "5.6-LI6b5bc0bdaaf0109c"
+    },
+    {
+      "item_id": "674b20f557bb03ca",
+      "kind": "example",
+      "label": "例7",
+      "example_number": 7,
+      "parent_example_number": null,
+      "role": "type_example",
+      "role_ref": "类型IV 讨论单调性",
+      "source_docs": [
+        79
+      ],
+      "question_text": "【例 7】（2017 • 新课标 I 卷（节选））已知函数  \\(f(x) = a\\mathrm{e}^{2x} + (a-2)\\mathrm{e}^x - x\\)，讨论  \\(f(x)\\) 的单调性。",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "teaching_text": "【例 7】（2017 • 新课标 I 卷（节选））已知函数  \\(f(x) = a\\mathrm{e}^{2x} + (a-2)\\mathrm{e}^x - x\\)，讨论  \\(f(x)\\) 的单调性。\n解：由题意， \\(f(x)\\) 的定义域为  \\(\\mathbb{R}\\)，且  \\(f'(x) = 2a\\mathrm{e}^{2x} + (a-2)\\mathrm{e}^x - 1 = (2\\mathrm{e}^x + 1)(a\\mathrm{e}^x - 1)\\)，\n（只需看  \\(a\\mathrm{e}^x - 1\\) 这部分，它是否变号由  \\(a\\) 的正负决定，故据此讨论）\n当  \\(a \\leq 0\\) 时， \\(2\\mathrm{e}^x + 1 > 0\\)， \\(a\\mathrm{e}^x - 1 < 0\\)，所以  \\(f'(x) < 0\\) 恒成立，故  \\(f(x)\\) 在  \\(\\mathbb{R}\\) 上单调递减；\n当  \\(a > 0\\) 时， \\(f'(x) > 0 \\Leftrightarrow x > \\ln\\frac{1}{a}\\)， \\(f'(x) < 0 \\Leftrightarrow x < \\ln\\frac{1}{a}\\)，\n所以  \\(f(x)\\) 在  \\(\\left(-\\infty, \\ln\\frac{1}{a}\\right)\\) 上单调递减，在  \\(\\left(\\ln\\frac{1}{a}, +\\infty\\right)\\) 上单调递增。",
+      "solution_present": true,
+      "vision_hint": "5.6-LI674b20f557bb03ca"
+    },
+    {
+      "item_id": "4de21b0cdecbde16",
+      "kind": "example",
+      "label": "例8",
+      "example_number": 8,
+      "parent_example_number": null,
+      "role": "type_example",
+      "role_ref": "类型V 不等式证明",
+      "source_docs": [
+        80
+      ],
+      "question_text": "【例 8】（2018·新课标Ⅱ卷（节选））已知  \\(f(x) = \\mathrm{e}^x - ax^2\\)，若  \\(a=1\\)，证明：当  \\(x \\geq 0\\) 时， \\(f(x) \\geq 1\\)。\n证法1：若  \\(a=1\\)，则  \\(f(x) = \\mathrm{e}^x - x^2\\)，要证  \\(f(x) \\geq 1\\)，只需证  \\(\\mathrm{e}^x - x^2 \\geq 1\\) ①，\n（上述不等式中有  \\(\\mathrm{e}^x\\)，考虑变形成  \\(\\varphi(x)\\mathrm{e}^x\\) 或  \\(\\frac{\\varphi(x)}{\\mathrm{e}^x}\\) 这种结构，求导分析可能更容易）\n要证不等式①成立，只需证  \\(\\mathrm{e}^x \\geq x^2 + 1\\)，即证  \\(\\frac{x^2 + 1}{\\mathrm{e}^x} \\leq 1\\)，\n令  \\(g(x) = \\frac{x^2 + 1}{\\mathrm{e}^x}\\)， \\(x \\geq 0\\)，则  \\(g'(x) = \\frac{2x\\mathrm{e}^x - \\mathrm{e}^x(x^2 + 1)}{(\\mathrm{e}^x)^2} = -\\frac{(x - 1)^2}{\\mathrm{e}^x} \\leq 0\\)，当且仅当  \\(x=1\\) 时  \\(g'(x) = 0\\)，\n所以  \\(g(x)\\) 在  \\([0, +\\infty)\\) 上单调递减，又  \\(g(0) = 1\\)，所以  \\(g(x) \\leq 1\\)，即  \\(\\frac{x^2 + 1}{x^2} \\leq 1\\)，故  \\(f(x) \\geq 1\\) 成立。\n证法2：（按证法1得到要证目标不等式成立，只需证①成立后，考虑到不等式①不算复杂，故也可尝试直接移项，构造函数求导分析）要证不等式①成立，只需证 \\(e^x - x^2 - 1 \\geq 0\\)，设 \\(h(x) = e^x - x^2 - 1\\)， \\(x \\geq 0\\)，则 \\(h'(x) = e^x - 2x\\)，（不易直接判断正负，可继续求导） \\(h''(x) = e^x - 2\\)，\n所以  \\(h''(x) < 0 \\Leftrightarrow 0 \\leq x < \\ln 2\\)， \\(h''(x) > 0 \\Leftrightarrow x > \\ln 2\\)，从而  \\(h'(x)\\) 在  \\([0, \\ln 2)\\) 上单调递减，在  \\((\\ln 2, +\\infty)\\) 上单调递增，故  \\(h'(x) \\geq h'(\\ln 2) = \\mathrm{e}^{\\ln 2} - 2 \\ln 2 = 2 - 2 \\ln 2 > 0\\)，所以  \\(h(x)\\) 在  \\([0, +\\infty)\\) 上单调递增，又  \\(h(0) = \\mathrm{e}^0 - 0^2 - 1 = 0\\)，所以  \\(h(x) \\geq 0\\)，即  \\(\\mathrm{e}^x - x^2 - 1 \\geq 0\\)，故当  \\(x \\geq 0\\) 时， \\(f(x) \\geq 1\\) 成立。",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "teaching_text": "【例 8】（2018·新课标Ⅱ卷（节选））已知  \\(f(x) = \\mathrm{e}^x - ax^2\\)，若  \\(a=1\\)，证明：当  \\(x \\geq 0\\) 时， \\(f(x) \\geq 1\\)。\n证法1：若  \\(a=1\\)，则  \\(f(x) = \\mathrm{e}^x - x^2\\)，要证  \\(f(x) \\geq 1\\)，只需证  \\(\\mathrm{e}^x - x^2 \\geq 1\\) ①，\n（上述不等式中有  \\(\\mathrm{e}^x\\)，考虑变形成  \\(\\varphi(x)\\mathrm{e}^x\\) 或  \\(\\frac{\\varphi(x)}{\\mathrm{e}^x}\\) 这种结构，求导分析可能更容易）\n要证不等式①成立，只需证  \\(\\mathrm{e}^x \\geq x^2 + 1\\)，即证  \\(\\frac{x^2 + 1}{\\mathrm{e}^x} \\leq 1\\)，\n令  \\(g(x) = \\frac{x^2 + 1}{\\mathrm{e}^x}\\)， \\(x \\geq 0\\)，则  \\(g'(x) = \\frac{2x\\mathrm{e}^x - \\mathrm{e}^x(x^2 + 1)}{(\\mathrm{e}^x)^2} = -\\frac{(x - 1)^2}{\\mathrm{e}^x} \\leq 0\\)，当且仅当  \\(x=1\\) 时  \\(g'(x) = 0\\)，\n所以  \\(g(x)\\) 在  \\([0, +\\infty)\\) 上单调递减，又  \\(g(0) = 1\\)，所以  \\(g(x) \\leq 1\\)，即  \\(\\frac{x^2 + 1}{x^2} \\leq 1\\)，故  \\(f(x) \\geq 1\\) 成立。\n证法2：（按证法1得到要证目标不等式成立，只需证①成立后，考虑到不等式①不算复杂，故也可尝试直接移项，构造函数求导分析）要证不等式①成立，只需证 \\(e^x - x^2 - 1 \\geq 0\\)，设 \\(h(x) = e^x - x^2 - 1\\)， \\(x \\geq 0\\)，则 \\(h'(x) = e^x - 2x\\)，（不易直接判断正负，可继续求导） \\(h''(x) = e^x - 2\\)，\n所以  \\(h''(x) < 0 \\Leftrightarrow 0 \\leq x < \\ln 2\\)， \\(h''(x) > 0 \\Leftrightarrow x > \\ln 2\\)，从而  \\(h'(x)\\) 在  \\([0, \\ln 2)\\) 上单调递减，在  \\((\\ln 2, +\\infty)\\) 上单调递增，故  \\(h'(x) \\geq h'(\\ln 2) = \\mathrm{e}^{\\ln 2} - 2 \\ln 2 = 2 - 2 \\ln 2 > 0\\)，所以  \\(h(x)\\) 在  \\([0, +\\infty)\\) 上单调递增，又  \\(h(0) = \\mathrm{e}^0 - 0^2 - 1 = 0\\)，所以  \\(h(x) \\geq 0\\)，即  \\(\\mathrm{e}^x - x^2 - 1 \\geq 0\\)，故当  \\(x \\geq 0\\) 时， \\(f(x) \\geq 1\\) 成立。",
+      "solution_present": false,
+      "vision_hint": "5.6-LI4de21b0cdecbde16"
+    },
+    {
+      "item_id": "01ebe3f5cc1b7a54",
+      "kind": "example",
+      "label": "例9",
+      "example_number": 9,
+      "parent_example_number": null,
+      "role": "type_example",
+      "role_ref": "类型V 不等式证明",
+      "source_docs": [
+        81
+      ],
+      "question_text": "【例 9】（2015·北京卷（节选））已知函数  \\(f(x)=\\ln\\frac{1+x}{1-x}\\).\n（1）求曲线  \\(y = f(x)\\) 在点  \\((0, f(0))\\) 处的切线方程；\n（2）求证：当 \\(x\\in(0,1)\\)时， \\(f(x)>2\\left(x+\\frac{x^3}{3}\\right)\\).",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "teaching_text": "【例 9】（2015·北京卷（节选））已知函数  \\(f(x)=\\ln\\frac{1+x}{1-x}\\).\n（1）求曲线  \\(y = f(x)\\) 在点  \\((0, f(0))\\) 处的切线方程；\n（2）求证：当 \\(x\\in(0,1)\\)时， \\(f(x)>2\\left(x+\\frac{x^3}{3}\\right)\\).\n解：（1）由题意， \\(f'(x)=\\frac{1-x}{1+x}\\cdot\\left(\\frac{1+x}{1-x}\\right)'=\\frac{1-x}{1+x}\\cdot\\frac{1-x-(-1)\\cdot(1+x)}{(1-x)^2}=\\frac{2}{1-x^2}\\)，\n所以  \\(f'(0)=2\\)，又  \\(f(0)=0\\)，所以曲线  \\(y=f(x)\\) 在点  \\((0,f(0))\\) 处的切线方程为 y=2x。\n（2）要证  \\(f(x)>2\\left(x+\\frac{x^{3}}{3}\\right)\\)，即证  \\(\\ln\\frac{1+x}{1-x}>2\\left(x+\\frac{x^{3}}{3}\\right)\\) ①，\n（不等式 \\(\\textcircled{1}\\)结构不复杂，且其中的 \\(\\ln\\frac{1+x}{1-x}\\)是孤立的，故可考虑直接移项，构造函数求导分析）\n令 \\(F(x)=\\ln\\frac{1+x}{1-x}-2\\left(x+\\frac{x^3}{3}\\right)\\)， \\(x\\in(0,1)\\)，则 \\(F'(x)=\\frac{2}{1-x^2}-2(1+x^2)=\\frac{2x^4}{1-x^2}>0\\)，\n所以 \\(F(x)\\)在 \\((0,1)\\)上单调递增，从而 \\(F(x)>F(0)=0\\)，即 \\(\\ln\\frac{1+x}{1-x}-2\\left(x+\\frac{x^3}{3}\\right)>0\\)，故 \\(\\ln\\frac{1+x}{1-x}>2\\left(x+\\frac{x^3}{3}\\right)\\)，\n所以不等式 \\(\\textcircled{1}\\)成立，故不等式 \\(f(x)>2\\left(x+\\frac{x^3}{3}\\right)\\)成立.",
+      "solution_present": true,
+      "vision_hint": "5.6-LI01ebe3f5cc1b7a54"
+    },
+    {
+      "item_id": "ecef4fdbd1a6adac",
+      "kind": "example",
+      "label": "例10",
+      "example_number": 10,
+      "parent_example_number": null,
+      "role": "type_example",
+      "role_ref": "类型V 不等式证明",
+      "source_docs": [
+        81
+      ],
+      "question_text": "【例 10】（2018·新课标Ⅲ卷）已知函数  \\(f(x)=\\frac{ax^2+x-1}{e^x}\\).\n（1）求曲线  \\(y = f(x)\\) 在点  \\((0, -1)\\) 处的切线方程；\n（2）证明：当 \\(a \\geq 1\\)时， \\(f(x) + e \\geq 0\\)。",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "teaching_text": "【例 10】（2018·新课标Ⅲ卷）已知函数  \\(f(x)=\\frac{ax^2+x-1}{e^x}\\).\n（1）求曲线  \\(y = f(x)\\) 在点  \\((0, -1)\\) 处的切线方程；\n（2）证明：当 \\(a \\geq 1\\)时， \\(f(x) + e \\geq 0\\)。\n解：（1）由题意， \\(f'(x)=\\frac{(2ax+1)\\mathrm{e}^x-(ax^2+x-1)\\mathrm{e}^x}{(\\mathrm{e}^x)^2}=\\frac{-ax^2+(2a-1)x+2}{\\mathrm{e}^x}\\)，所以 \\(f'(0)=2\\)，故所求切线方程为 \\(y-(-1)=2(x-0)\\)，整理得： \\(y=2x-1\\)。\n（2）（尽管 \\(f(x)\\)含参，但给了参数范围，可先用它进行放缩，转化为不含参的不等式来证）\n当\\(a\\geq1\\)时，\\(f(x)+\\mathrm{e}=\\frac{ax^2+x-1}{\\mathrm{e}^x}+\\mathrm{e}\\geq\\frac{x^2+x-1}{\\mathrm{e}^x}+\\mathrm{e}\\)①，（于是要证\\(f(x)+\\mathrm{e}\\geq0\\)，只需证\\(\\frac{x^2+x-1}{\\mathrm{e}^x}+\\mathrm{e}\\geq0\\)）令\\(g(x)=\\frac{x^2+x-1}{\\mathrm{e}^x}+\\mathrm{e}\\)，则\\(g'(x)=-\\frac{(x+1)(x-2)}{\\mathrm{e}^x}\\)，所以\\(g'(x)<0\\Leftrightarrow x<-1\\)或\\(x>2\\)，\\(g'(x)>0\\Leftrightarrow-1<x<2\\)，故\\(g(x)\\)在\\((-\\infty,-1)\\)上单调递减，在\\((-1,2)\\)上单调递增，在\\((2,+\\infty)\\)上单调递减，\n如图，由  \\(g(-1)=0\\) 知当  \\(x\\in(-\\infty,2]\\) 时， \\(g(x)\\geq0\\)，\n（还需论证当 \\(x>2\\) 时 \\(g(x)\\geq0\\)，此时观察 \\(g(x)\\) 的解析式发现两部分都为正，故可直接得到 \\(g(x)>0\\)）另一方面，当 \\(x>2\\) 时，\\(g(x)=\\frac{x^2+x-1}{e^x}+e>0\\)，所以 \\(g(x)\\geq0\\) 对 \\(\\forall x\\in\\mathbb{R}\\) 恒成立，又由①知 \\(f(x)+e\\geq g(x)\\)，所以 \\(f(x)+e\\geq0\\)。\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_885_1234_1093_1379.jpg\" alt=\"Image\" width=\"17%\" /></div>",
+      "solution_present": true,
+      "vision_hint": "5.6-LIecef4fdbd1a6adac"
+    },
+    {
+      "item_id": "3c09a7bbb2d09996",
+      "kind": "example",
+      "label": "例11",
+      "example_number": 11,
+      "parent_example_number": null,
+      "role": "type_example",
+      "role_ref": "类型VI 三次函数",
+      "source_docs": [
+        81,
+        82,
+        83
+      ],
+      "question_text": "【例 11】（2015·安徽卷）设  \\(x^3 + ax + b = 0\\)，其中  \\(a, b\\) 均为实数，下列条件中，使得该三次方程仅有一个实根的是___。（写出所有正确条件的编号）\n① \\(a=-3,\\quad b=-3\\); ② \\(a=-3,\\quad b=2\\); ③ \\(a=-3,\\quad b>2\\); ④ \\(a=0,\\quad b=2\\); ⑤ \\(a=1,\\quad b=2\\)",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "teaching_text": "【例 11】（2015·安徽卷）设  \\(x^3 + ax + b = 0\\)，其中  \\(a, b\\) 均为实数，下列条件中，使得该三次方程仅有一个实根的是___。（写出所有正确条件的编号）\n① \\(a=-3,\\quad b=-3\\); ② \\(a=-3,\\quad b=2\\); ③ \\(a=-3,\\quad b>2\\); ④ \\(a=0,\\quad b=2\\); ⑤ \\(a=1,\\quad b=2\\)\n解析：前三个选项给出的  \\(a\\) 都为 -3， \\(b\\) 不同，故可先研究当  \\(a = -3\\) 时，原方程仅有一个实根的充要条件，当  \\(a = -3\\) 时，原方程即为  \\(x^3 - 3x + b = 0\\)，设  \\(f(x) = x^3 - 3x + b\\)，则  \\(f'(x) = 3x^2 - 3 = 3(x + 1)(x - 1)\\)，\n所以  \\(f'(x) < 0 \\Leftrightarrow -1 < x < 1\\)， \\(f'(x) > 0 \\Leftrightarrow x < -1\\) 或  \\(x > 1\\)。\n故  \\(f(x)\\) 在  \\((-\\infty,-1)\\) 上  \\(\\nearrow\\)，在  \\((-1,1)\\) 上  \\(\\searrow\\)，在  \\((1,+\\infty)\\) 上  \\(\\nearrow\\)。\n怎样能使  \\(f(x)\\) 仅有 1 个零点？如图，只需两个极值同号，\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_375_331_578_450.jpg\" alt=\"Image\" width=\"17%\" /></div>\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_617_330_818_450.jpg\" alt=\"Image\" width=\"16%\" /></div>\n又  \\(f(-1)=b+2\\)， \\(f(1)=b-2\\)，所以  \\(f(x)\\) 仅有 1 个零点的充要条件是  \\(f(-1)f(1)>0\\)，\n即 \\((b+2)(b-2)>0\\)，解得：b>2或b<-2，故①③正确，②错误；\n对于④，当 \\(a=0\\)， \\(b=2\\)时，原方程即为 \\(x^3+2=0\\)，解得： \\(x=-\\sqrt[3]{2}\\)，原方程仅有一根，故④正确；对于⑤，当 \\(a=1\\)， \\(b=2\\)时，原方程即为 \\(x^3+x+2=0\\)，注意到函数 \\(y=x^3+x+2\\)在 \\(\\mathbb{R}\\)上为增函数，\n结合三次函数值域必为  \\(\\mathbb{R}\\) 知方程  \\(x^{3} + x + 2 = 0\\) 仅有一根，故⑤正确.\n答案：①③④⑤\n【反思】形如  \\(f(x)=ax^{3}+bx^{2}+cx+d(a\\neq0)\\) 的函数叫做三次函数，三次函数有以下常用性质：\n1. 三次函数有以下6种可能的图象：\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_272_726_906_983.jpg\" alt=\"Image\" width=\"53%\" /></div>\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_334_1008_513_1238.jpg\" alt=\"Image\" width=\"15%\" /></div>\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_527_1017_706_1240.jpg\" alt=\"Image\" width=\"15%\" /></div>\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_718_1015_895_1240.jpg\" alt=\"Image\" width=\"14%\" /></div>\n2. 三次函数的零点个数\n①若方程  \\(f'(x) = 0\\) 的判别式  \\(\\Delta \\leq 0\\)，则  \\(f(x)\\) 在  \\(\\mathbb{R}\\) 上是单调函数，无极值，值域为  \\((-\\infty, +\\infty)\\)，函数  \\(f(x)\\) 在  \\(\\mathbb{R}\\) 上有唯一的零点。\n②若方程  \\(f'(x)=0\\) 的判别式  \\(\\Delta>0\\)，则  \\(f'(x)\\) 有两个零点：\n(i)  \\(f(x)\\) 有一个零点  \\(\\Leftrightarrow f(x_1) \\cdot f(x_2) > 0\\)，如下图所示：\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_223_1420_966_1507.jpg\" alt=\"Image\" width=\"62%\" /></div>\n(ii)  \\(f(x)\\) 有两个零点  \\(\\Leftrightarrow f(x_1) \\cdot f(x_2) = 0\\)，如下图所示：\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_217_112_974_201.jpg\" alt=\"Image\" width=\"63%\" /></div>\n(iii)  \\(f(x)\\) 有三个零点  \\(\\Leftrightarrow f(x_1) \\cdot f(x_2) < 0\\)，如下图所示：\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_371_243_583_348.jpg\" alt=\"Image\" width=\"17%\" /></div>\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_609_241_823_341.jpg\" alt=\"Image\" width=\"17%\" /></div>\n3. 对称中心：三次函数的图象一定是中心对称图形，对称中心是 \\(\\left(-\\frac{b}{3a}, f\\left(-\\frac{b}{3a}\\right)\\right)\\).",
+      "solution_present": true,
+      "vision_hint": "5.6-LI3c09a7bbb2d09996"
+    },
+    {
+      "item_id": "642a1de018578b0f",
+      "kind": "example",
+      "label": "例12",
+      "example_number": 12,
+      "parent_example_number": null,
+      "role": "type_example",
+      "role_ref": "类型Ⅶ 综合大题",
+      "source_docs": [
+        83,
+        84
+      ],
+      "question_text": "【例 12】（2019·新课标Ⅱ卷）已知函数  \\(f(x)=\\ln x-\\frac{x+1}{x-1}\\).\n（1）讨论  \\(f(x)\\) 的单调性，并证明  \\(f(x)\\) 有且仅有两个零点；\n（2）设 \\(x_{0}\\)是 \\(f(x)\\)的一个零点，证明曲线 \\(y=\\ln x\\)在点 \\(A(x_{0},\\ln x_{0})\\)处的切线也是曲线 \\(y=e^{x}\\)的切线.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "teaching_text": "【例 12】（2019·新课标Ⅱ卷）已知函数  \\(f(x)=\\ln x-\\frac{x+1}{x-1}\\).\n（1）讨论  \\(f(x)\\) 的单调性，并证明  \\(f(x)\\) 有且仅有两个零点；\n（2）设 \\(x_{0}\\)是 \\(f(x)\\)的一个零点，证明曲线 \\(y=\\ln x\\)在点 \\(A(x_{0},\\ln x_{0})\\)处的切线也是曲线 \\(y=e^{x}\\)的切线.\n解：（1）由题意， \\(f(x)\\)的定义域为 \\((0,1)\\cup(1,+\\infty)\\)， \\(f'(x)=\\frac{1}{x}-\\frac{x-1-(x+1)}{(x-1)^2}=\\frac{1}{x}+\\frac{2}{(x-1)^2}>0\\)，\n所以  \\(f(x)\\) 在  \\((0,1)\\) 上单调递增，在  \\((1,+\\infty)\\) 上单调递增，\n（要证明 \\(f(x)\\) 有 2 个零点，需要取点，结合解析式中有 \\(\\ln x\\) 这一项，可考虑取 \\(e^{-2}\\)，\\(e^{-1}\\)，\\(e\\)，\\(e^2\\) 这些点因为 \\(f(e^{-2})=-2-\\frac{e^{-2}+1}{e^{-2}-1}=\\frac{3-e^2}{e^2-1}<0\\)，\\(f(e^{-1})=-1-\\frac{e^{-1}+1}{e^{-1}-1}=\\frac{2}{e-1}>0\\)，所以 \\(f(x)\\) 在 \\((0,1)\\) 上有一个零点，又 \\(f(e)=1-\\frac{e+1}{e-1}=-\\frac{2}{e-1}<0\\)，\\(f(e^2)=2-\\frac{e^2+1}{e^2-1}=\\frac{e^2-3}{e^2-1}>0\\)，所以 \\(f(x)\\) 在 \\((1,+\\infty)\\) 上有一个零点，综上所述，\\(f(x)\\) 有且仅有两个零点\n综上所述， \\(f(x)\\) 有且仅有两个零点.\n（2）证法1：曲线  \\(y = \\ln x\\) 在点  \\(A(x_0, \\ln x_0)\\) 处的切线为  \\(y - \\ln x_0 = \\frac{1}{x_0}(x - x_0)\\)，即  \\(y = \\frac{1}{x_0}x + \\ln x_0 - 1\\)，\n（下面证明此直线与曲线  \\(y = e^x\\) 也相切，由于不知道切点，可先设切点）\n设  \\(P(x_1, e^{x_1})\\) 为曲线  \\(y = e^x\\) 上一点，则该曲线在点  \\(P\\) 处的切线为  \\(y - e^{x_1} = e^{x_1}(x - x_1)\\)，即  \\(y = e^{x_1}x + (1 - x_1)e^{x_1}\\)，\n问题等价于证明存在实数  \\(x_1\\)，使得  \\(\\begin{cases} \\frac{1}{x_0} = e^{x_1} \\\\ \\ln x_0 - 1 = (1 - x_1)e^{x_1} \\end{cases}\\) ①，\n（上述方程组中  \\(x_0\\) 是  \\(f(x)\\) 的零点，是已知量，所以要解的其实是  \\(x_1\\)，可由①求出  \\(x_1\\)，再验证它满足②）由①可得  \\(x_1 = -\\ln x_0\\)，代入②得  \\(\\ln x_0 - 1 = (1 + \\ln x_0) \\cdot \\frac{1}{x_0}\\)，整理得： \\(\\ln x_0 - \\frac{x_0 + 1}{x_0 - 1} = 0\\) ③，\n结合  \\(x_0\\) 是  \\(f(x)\\) 的一个零点可知式③成立，即存在实数  \\(x_1\\) 使得  \\(\\begin{cases} \\dfrac{1}{x_0} = e^{x_1} \\\\ \\ln x_0 - 1 = (1 - x_1)e^{x_1} \\end{cases}\\) 成立，\n所以曲线  \\(y = \\ln x\\) 在点  \\(A(x_{0}, \\ln x_{0})\\) 处的切线也是曲线  \\(y = e^{x}\\) 的切线.\n证法2：（先写出  \\(y = \\ln x\\) 在点 A 处的切线方程，再来进一步分析）\n证法2：（先写出  \\(y = \\ln x\\) 在点 A 处的切线方程，再求进一步分析）\n曲线  \\(y = \\ln x\\) 在点  \\(A(x_{0}, \\ln x_{0})\\) 处的切线为  \\(y - \\ln x_{0} = \\frac{1}{x_{0}}(x - x_{0})\\)，即  \\(y = \\frac{1}{x_{0}}x + \\ln x_{0} - 1\\) ④\n（要证直线④与  \\(y = e^x\\) 也相切，我们自然会想，切点是谁？为了探究问题的答案，可设出切点  \\(B(x_2, e^{x_2})\\)，写出  \\(y = e^x\\) 在  \\(B\\) 处的切线方程，并与④比较，找到  \\(x_2\\) 和  \\(x_0\\) 的关系，从而得出切点就是下面的点  \\(B\\)，上述探究的过程\n在草稿纸上完成即可，正式作答时我们直接给出\\(B\\)，并加以证明）\n取点\\(B\\left(\\ln\\frac{1}{x_0},\\frac{1}{x_0}\\right)\\)，则点\\(B\\)在曲线\\(y=e^x\\)上，\n（有了上面的分析，我们心中已经知道\\(y=e^x\\)在点\\(B\\)处的切线就是直线④，接下来只需证明这一结论）\n因为\\((e^x)'=e^x\\)，所以曲线\\(y=e^x\\)在点\\(B\\)处的切线方程为\\(y-\\frac{1}{x_0}=e^{\\ln\\frac{1}{x_0}}\\left(x-\\ln\\frac{1}{x_0}\\right)\\)，\n化简得：\\(y=\\frac{1}{x_0}x+\\frac{1+\\ln x_0}{x_0}\\) ⑤，（下面证明④和⑤是同一条直线，只需证两直线在\\(y\\)轴上截距相等）\n\\(\\ln x_0-1-\\frac{1+\\ln x_0}{x_0}=\\frac{1}{x_0}(x_0\\ln x_0-x_0-1-\\ln x_0)=\\frac{1}{x_0}[(x_0-1)\\ln x_0-(x_0+1)]=\\frac{x_0-1}{x_0}\\left(\\ln x_0-\\frac{x_0+1}{x_0-1}\\right)\\)，\n因为\\(x_0\\)是\\(f(x)\\)的零点，所以\\(f(x_0)=\\ln x_0-\\frac{x_0+1}{x_0-1}=0\\)，从而\\(\\ln x_0-1-\\frac{1+\\ln x_0}{x_0}=0\\)，故\\(\\ln x_0-1=\\frac{1+\\ln x_0}{x_0}\\)，\n所以④和⑤是同一条直线，故曲线\\(y=\\ln x\\)在点\\(A(x_0,\\ln x_0)\\)处的切线也是曲线\\(y=e^x\\)的切线。",
+      "solution_present": true,
+      "vision_hint": "5.6-LI642a1de018578b0f"
+    },
+    {
+      "item_id": "f9b04feb4e35b426",
+      "kind": "example",
+      "label": "例13",
+      "example_number": 13,
+      "parent_example_number": null,
+      "role": "type_example",
+      "role_ref": "类型Ⅶ 综合大题",
+      "source_docs": [
+        84,
+        85
+      ],
+      "question_text": "【例 13】（2022·全国甲卷）已知函数  \\(f(x)=\\frac{e^{x}}{x}-\\ln x+x-a\\)\n（1）若  \\(f(x) \\geq 0\\)，求实数 a 的取值范围；\n（2）证明：若  \\(f(x)\\) 有两个零点  \\(x_{1}\\)， \\(x_{2}\\)，则  \\(x_{1}x_{2}<1\\).",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "teaching_text": "【例 13】（2022·全国甲卷）已知函数  \\(f(x)=\\frac{e^{x}}{x}-\\ln x+x-a\\)\n（1）若  \\(f(x) \\geq 0\\)，求实数 a 的取值范围；\n（2）证明：若  \\(f(x)\\) 有两个零点  \\(x_{1}\\)， \\(x_{2}\\)，则  \\(x_{1}x_{2}<1\\).\n解法 1：（1）（观察发现 \\(f(x)\\) 解析式中的参数 \\(a\\) 是孤立的，求导后不含参，故可直接对 \\(f(x)\\) 求导分析）\n由题意，\\(f(x)\\) 的定义域为 \\((0,+\\infty)\\)，且 \\(f'(x)=\\frac{(x-1)\\mathrm{e}^x}{x^2}-\\frac{1}{x}+1=\\frac{(x-1)(\\mathrm{e}^x+x)}{x^2}\\)，\n所以 \\(f'(x)>0 \\Leftrightarrow x>1\\)，\\(f'(x)<0 \\Leftrightarrow 0<x<1\\)，从而 \\(f(x)\\) 在 \\((0,1)\\) 上单调递减，在 \\((1,+\\infty)\\) 上单调递增，\n故 \\(f(x)_{\\min}=f(1)=\\mathrm{e}+1-a\\)，因为 \\(f(x)\\geq0\\)，所以 \\(\\mathrm{e}+1-a\\geq0\\)，解得：\\(a\\leq\\mathrm{e}+1\\)，\n故实数 \\(a\\) 的取值范围是 \\((-\\infty,\\mathrm{e}+1]\\).\n（2）由（1）可得当  \\(f(x)\\) 有两个零点时， \\(f(1)=e+1-a<0\\)，所以  \\(a>e+1\\)，\n（2）由（1）可得当  \\(f(x)\\) 有两个零点时， \\(f(1)=e+1-a<0\\)，所以  \\(a>e+1\\)，\n（怎样证  \\(x_1x_2<1\\)？可以这么想， \\(x_1\\)， \\(x_2\\) 是自变量的取值，证明自变量的大小关系，可尝试利用单调性转化为函数值的大小关系来证，于是我们先把  \\(x_1x_2<1\\) 转化为  \\(f(x)\\) 的同一单调区间上的两个数的大小关系）\n不妨设  \\(x_1<x_2\\)，则  \\(0<x_1<1<x_2\\)，要证  \\(x_1x_2<1\\)，只需证  \\(x_2<\\frac{1}{x_1}\\)，注意到  \\(f(x)\\) 在  \\((1,+\\infty)\\) 上单调递增，\n且  \\(x_2>1\\)， \\(\\frac{1}{x_1}>1\\)，所以要证  \\(x_2<\\frac{1}{x_1}\\)，只需证  \\(f(x_2)<f\\left(\\frac{1}{x_1}\\right)\\) ①，\n（不等式①中有  \\(x_1\\)， \\(x_2\\) 两个变量，考虑消元，注意到  \\(f(x_1)=f(x_2)=0\\)，故由此将  \\(f(x_2)\\) 替换成  \\(f(x_1)\\)，就能实\n现消元）因为  \\(f(x_2)=f(x_1)=0\\)，所以要证不等式①成立，只需证  \\(f(x_1)<f\\left(\\frac{1}{x_1}\\right)\\)，即证  \\(f(x_1)-f\\left(\\frac{1}{x_1}\\right)<0\\)，\n设  \\(F(x)=f(x)-f\\left(\\frac{1}{x}\\right)\\)， \\(0<x<1\\)，则  \\(F'(x)=f'(x)-f'\\left(\\frac{1}{x}\\right)\\cdot\\left(-\\frac{1}{x^2}\\right)=f'(x)+\\frac{1}{x^2}f'\\left(\\frac{1}{x}\\right)\\)\n \\(\\frac{(x-1)(\\mathrm{e}^x+x)}{x^2}+\\frac{1}{x^2}\\cdot\\frac{\\left(\\frac{1}{x}-1\\right)\\left(\\mathrm{e}^{\\frac{1}{x}}+\\frac{1}{x}\\right)}{\\frac{1}{x^2}}=\\frac{(x-1)\\left(\\mathrm{e}^x+x-x\\mathrm{e}^{\\frac{1}{x}}-1\\right)}{x^2}\\)，\n（分母始终为正，分子的 x-1 正负情况也很明显，那  \\(e^x + x - x e^{\\frac{1}{x}} - 1\\) 呢？这部分的正负情况无法直接看出，可考虑构造函数求导分析）\n设  \\(r(x) = \\mathrm{e}^x + x - x \\mathrm{e}^{\\frac{1}{x}} - 1\\)， \\(0 < x < 1\\)，则  \\(r'(x) = \\mathrm{e}^x + 1 - \\left[ \\mathrm{e}^{\\frac{1}{x}} + x \\mathrm{e}^{\\frac{1}{x}} \\cdot \\left( -\\frac{1}{x^2} \\right) \\right] = \\mathrm{e}^x + 1 + \\left( \\frac{1}{x} - 1 \\right) \\mathrm{e}^{\\frac{1}{x}} > 0\\)，\n所以  \\(r(x)\\) 在  \\((0,1)\\) 上单调递增，又  \\(r(1) = 0\\)，所以  \\(r(x) < 0\\)，从而  \\(F'(x) = \\frac{(x-1)r(x)}{x^2} > 0\\)，\n故  \\(F(x)\\) 在  \\((0,1)\\) 上单调递增，又  \\(F(1) = 0\\)，所以  \\(F(x) < 0\\)，故  \\(F(x_1) = f(x_1) - f\\left( \\frac{1}{x_1} \\right) < 0\\)，所以  \\(x_1 x_2 < 1\\)。\n解法2：（1）（注意到 \\(\\frac{e^x}{x} = \\frac{e^x}{e^{\\ln x}} = e^{x-\\ln x}\\)，于是 \\(f(x)\\)的解析式中含 \\(x\\)的部分以 \\(x - \\ln x\\)这一结构整体出现，可考虑将该结构换元，简化 \\(f(x)\\)的解析式，再求导分析）\n由题意， \\(f(x)\\)的定义域为 \\((0,+\\infty)\\)，且 \\(f(x)=\\frac{e^x}{x}-\\ln x+x-a=e^{x-\\ln x}+x-\\ln x-a\\)，\n令  \\(u = x - \\ln x\\)，则  \\(f(x) = \\mathrm{e}^u + u - a\\)，设  \\(\\varphi(x) = x - \\ln x\\)， \\(x > 0\\)，则  \\(\\varphi'(x) = 1 - \\frac{1}{x} = \\frac{x - 1}{x}\\)，\n所以  \\(\\varphi'(x) > 0 \\Leftrightarrow x > 1\\)， \\(\\varphi'(x) < 0 \\Leftrightarrow 0 < x < 1\\)，从而  \\(\\varphi(x)\\) 在  \\((0,1)\\) 上单调递减，在  \\((1,+\\infty)\\) 上单调递增，\n故  \\(\\varphi(x)_{\\min} = \\varphi(1) = 1\\)，所以  \\(u \\geq 1\\)，因为函数  \\(y = \\mathrm{e}^u + u - a\\) 为增函数，\n所以当  \\(u = 1\\) 时， \\(f(x)\\) 取得最小值  \\(\\mathrm{e} + 1 - a\\)，因为  \\(f(x) \\geq 0\\)，所以  \\(\\mathrm{e} + 1 - a \\geq 0\\)，解得： \\(a \\leq \\mathrm{e} + 1\\)，\n故实数  \\(a\\) 的取值范围是  \\((-\\infty, \\mathrm{e} + 1]\\)。\n（2）由（1）知  \\(f(x)=0 \\Leftrightarrow e^u + u - a = 0\\)，其中  \\(u = x - \\ln x\\)，由（1）可得要使  \\(f(x)\\) 有两个零点  \\(x_1\\)， \\(x_2\\)，则  \\(f(x)_{\\min} = e + 1 - a < 0\\)，此时  \\(a > e + 1\\)，且  \\(x_1\\)， \\(x_2\\) 是方程  \\(u = x - \\ln x\\) 的两根，不妨设  \\(x_1 < x_2\\)，\n \\[x_{1}x_{2}<1\\text{？}\\] \n \\[x_{1},x_{2}\\] \n \\[0<x_{1}<1<x_{2}\\] \n \\[\\left\\{\\begin{aligned}x_{1}-\\ln x_{1}&=u\\\\ x_{2}-\\ln x_{2}&=u\\end{aligned}\\right.\\] \n \\[x_{1},x_{2}\\] \n两式作差得： \\(x_1 - x_2 - \\ln\\frac{x_1}{x_2} = 0\\) ②，（式②中有两个变量，考虑消元，如何消元？经尝试，由式②无法直接反解\n \\[x_{1}\\] \n \\[x_{2}\\] \n \\[\\frac{x_{1}}{x_{2}}\\] \n \\[x_{1},x_{2}\\] \n设  \\(t = \\frac{x_1}{x_2}\\)，则  \\(0 < t < 1\\)，且  \\(x_1 = tx_2\\)，代入②可得  \\(tx_2 - x_2 - \\ln t = 0\\)，所以  \\(x_2 = \\frac{\\ln t}{t-1}\\)， \\(x_1 = tx_2 = \\frac{t \\ln t}{t-1}\\)，从而  \\(x_1 x_2 = \\frac{t \\ln^2 t}{(t-1)^2}\\)，故要证  \\(x_1 x_2 < 1\\)，只需证  \\(\\frac{t \\ln^2 t}{(t-1)^2} < 1\\)，即证  \\(\\ln^2 t < \\frac{(t-1)^2}{t}\\)，也即证  \\(-\\ln t < \\frac{1-t}{\\sqrt{t}}\\)，所以只需证  \\(-2 \\ln \\sqrt{t} < \\frac{1}{\\sqrt{t}} - \\sqrt{t}\\)，即证  \\(2 \\ln \\sqrt{t} + \\frac{1}{\\sqrt{t}} - \\sqrt{t} > 0\\)，令  \\(m = \\sqrt{t}\\)，则  \\(0 < m < 1\\)，\n且 \\(2\\ln\\sqrt{t}+\\frac{1}{\\sqrt{t}}-\\sqrt{t}>0\\)即为 \\(2\\ln m+\\frac{1}{m}-m>0\\)，（只有一个变量m了，且此不等式不算复杂，可直接构造函数求导分析）设 \\(p(m)=2\\ln m+\\frac{1}{m}-m\\)， \\(0<m<1\\)，则 \\(p'(m)=\\frac{2}{m}-\\frac{1}{m^2}-1=-\\frac{(m-1)^2}{m^2}<0\\)，\n所以 \\(p(m)\\)在 \\((0,1)\\)上单调递减，又 \\(p(1)=0\\)，所以 \\(p(m)>0\\)，即 \\(2\\ln m+\\frac{1}{m}-m>0\\)，故 \\(x_1x_2<1\\)成立。",
+      "solution_present": true,
+      "vision_hint": "5.6-LIf9b04feb4e35b426"
+    },
+    {
+      "item_id": "8be3804c0082ca8e",
+      "kind": "example",
+      "label": "例14",
+      "example_number": 14,
+      "parent_example_number": null,
+      "role": "type_example",
+      "role_ref": "类型Ⅶ 综合大题",
+      "source_docs": [
+        85,
+        86,
+        87
+      ],
+      "question_text": "【例 14】（2022·新课标Ⅱ卷）已知函数  \\(f(x)=xe^{ax}-e^x\\)\n（1）当a=1时，讨论 \\(f(x)\\)的单调性；\n（2）当x>0时， \\(f(x)<-1\\)，求a的取值范围；\n（3）设  \\(n \\in \\mathbb{N}^*\\)，证明： \\(\\frac{1}{\\sqrt{1^2 + 1}} + \\frac{1}{\\sqrt{2^2 + 2}} + \\cdots + \\frac{1}{\\sqrt{n^2 + n}} > \\ln(n + 1)\\).",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "teaching_text": "【例 14】（2022·新课标Ⅱ卷）已知函数  \\(f(x)=xe^{ax}-e^x\\)\n（1）当a=1时，讨论 \\(f(x)\\)的单调性；\n（2）当x>0时， \\(f(x)<-1\\)，求a的取值范围；\n（3）设  \\(n \\in \\mathbb{N}^*\\)，证明： \\(\\frac{1}{\\sqrt{1^2 + 1}} + \\frac{1}{\\sqrt{2^2 + 2}} + \\cdots + \\frac{1}{\\sqrt{n^2 + n}} > \\ln(n + 1)\\).\n解：（1）当 \\(a=1\\)时， \\(f(x)=(x-1)e\\)， \\(x\\in\\mathbb{R}\\)，所以 \\(f(x)=xe\\)，从而 \\(f(x)>0<x>0\\)， \\(f(x)<0<x<0\\)，故 \\(f(x)\\)在 \\((-\\infty,0)\\)上单调递减，在 \\((0,+\\infty)\\)上单调递增。\n（2）因为当 \\(x>0\\)时， \\(f(x)<-1\\)，所以 \\(xe^{\\omega x}-e^x+1<0\\) ①，\n（经尝试，直接构造函数求导分析较困难，且造成困难的原因主要是无论求多少次导，式子中总会同时有 \\(e^{\\omega x}\\)和 \\(e^x\\)，于是可考虑将 \\(e^x\\)换元成 \\(t\\)，这样求两次导后就不再含有 \\(t\\)这一项的残留了）\n令 \\(t=e^x\\)，则 \\(t>1\\)，且 \\(x=\\ln t\\)，不等式①即为 \\(t^a\\ln t-t+1<0\\)，\n设 \\(g(t)=t^a\\ln t-t+1\\)， \\(t>1\\)，则 \\(g(t)<0\\)，且 \\(g'(t)=at^{a-1}\\ln t+t^{a-1}-1\\)，\n \\(g''(t)=a(a-1)t^{a-2}\\ln t+at^{a-1}\\cdot\\frac{1}{t}+(a-1)t^{a-2}=a(a-1)t^{a-2}\\ln t+at^{a-2}+(a-1)t^{a-2}=t^{a-2}[a(a-1)\\ln t+2a-1]\\)，\n（到此可发现只要有 \\(a\\)的范围，就能判断 \\(g''(t)\\)的正负，故不用再求导了。接下来对参数进行讨论，讨论的分界点怎么找呢？观察可得 \\(g(1)=g'(1)=0\\)，有端点效应，故要使 \\(g(t)<0\\)，应有 \\(g''(1)=2a-1\\leq0\\)，据此可找到讨论的分界点）\n当 \\(a\\leq\\frac{1}{2}\\)时，（此时可猜测 \\(g(t)<0\\)是恒成立的，故先将参数进行放缩，转化为无参的不等式来证明）\n \\(g(t)\\leq\\sqrt{t}\\ln t-t+1=\\sqrt{t}\\left(\\ln t-\\sqrt{t}+\\frac{1}{\\sqrt{t}}\\right)=\\sqrt{t}\\left(2\\ln\\sqrt{t}-\\sqrt{t}+\\frac{1}{\\sqrt{t}}\\right)\\)，设 \\(\\varphi(u)=2\\ln u-u+\\frac{1}{u}\\)， \\(u>1\\)，\n则 \\(\\varphi'(u)=\\frac{2}{u}-1-\\frac{1}{u^2}=-\\frac{(u-1)^2}{u^2}<0\\)，所以 \\(\\varphi(u)\\)在 \\((1,+\\infty)\\)上单调递减，又 \\(\\varphi(1)=0\\)，所以 \\(\\varphi(u)<0\\)，\n取 \\(u=\\sqrt{t}\\)可得 \\(2\\ln\\sqrt{t}-\\sqrt{t}+\\frac{1}{\\sqrt{t}}<0\\)，所以 \\(g(t)\\leq\\sqrt{t}\\left(2\\ln\\sqrt{t}-\\sqrt{t}+\\frac{1}{\\sqrt{t}}\\right)<0\\)，满足题意；\n（还需论证当 \\(a>\\frac{1}{2}\\)时， \\(g(t)<0\\)不能恒成立，观察 \\(g'(t)\\)的解析式可发现在 \\(a\\geq1\\)时，容易得出 \\(g'(t)>0\\)，故接下来先考虑这种简单的情况）\n当 \\(a\\geq1\\)时， \\(g'(t)=at^{a-1}\\ln t+t^{a-1}-1>t^{a-1}-1\\geq0\\)，所以 \\(g(t)\\)在 \\((1,+\\infty)\\)上单调递增，\n又 \\(g(1)=0\\)，所以 \\(g(t)>0\\)恒成立，不合题意；\n \\[a=1\\] \n \\[f(x)=(x-1)\\mathrm{e}^{x},\\quad x\\in\\mathbf{R}\\] \n \\[f^{\\prime}(x)=x\\mathrm{e}^{x}\\] \n \\[f^{\\prime}(x)>0\\Leftrightarrow x>0,\\quad f^{\\prime}(x)<0\\Leftrightarrow x<0\\] \n（最后再看 \\(\\frac{1}{2}<a<1\\)时的情形，此时 \\(g'(t)\\)不易直接判断正负，但 \\(g''(t)\\)可以，故先判断 \\(g''(t)\\)的正负）当 \\(\\frac{1}{2}<a<1\\)时， \\(g''(t)>0\\Leftrightarrow a(a-1)\\ln t+2a-1>0\\Leftrightarrow a(1-a)\\ln t<2a-1\\Leftrightarrow\\ln t<\\frac{2a-1}{a(1-a)}\\Leftrightarrow1<t<\\mathrm{e}^{\\frac{2a-1}{a(1-a)}}\\)，所以 \\(g'(t)\\)在 \\(\\left(1,\\mathrm{e}^{\\frac{2a-1}{a(1-a)}}\\right)\\)上单调递增，又 \\(g'(1)=0\\)，所以 \\(g'(t)>0\\)在 \\(\\left(1,\\mathrm{e}^{\\frac{2a-1}{a(1-a)}}\\right)\\)上恒成立，故 \\(g(t)\\)在 \\(\\left(1,\\mathrm{e}^{\\frac{2a-1}{a(1-a)}}\\right)\\)上单调递增，因为 \\(g(1)=0\\)，所以当 \\(t\\in\\left(1,\\mathrm{e}^{\\frac{2a-1}{a(1-a)}}\\right)\\)时， \\(g(t)>0\\)，不合题意；综上所述，实数 \\(a\\)的取值范围是 \\(\\left(-\\infty,\\frac{1}{2}\\right]\\)。\n（3）（目标不等式左侧为求和结构，且无法直接求和，故考虑将右侧也化为求和结构，通过比较左右两侧的通项来证明目标不等式，可按 \\(\\ln(n+1)=[\\ln(n+1)-\\ln n]+[\\ln n-\\ln(n-1)]+\\cdots+(\\ln 3-\\ln 2)+(\\ln 2-\\ln 1)\\)来化，此式右侧可写成 \\(\\sum_{k=1}^{n}[\\ln(k+1)-\\ln k]\\)，即 \\(\\sum_{k=1}^{n}\\ln\\frac{k+1}{k}\\)，目标不等式左侧为 \\(\\sum_{k=1}^{n}\\frac{1}{\\sqrt{k^2+k}}\\)，故只需证 \\(\\frac{1}{\\sqrt{k^2+k}}>\\ln\\frac{k+1}{k}\\)，直接构造函数求导来证可行，但第（2）问我们得到了不等式 \\(2\\ln u-u+\\frac{1}{u}<0(u>1)\\)，所以先试试看能否由它直接变出 \\(\\frac{1}{\\sqrt{k^2+k}}>\\ln\\frac{k+1}{k}\\)，为了产生 \\(\\ln\\frac{k+1}{k}\\)，可取 \\(u=\\sqrt{\\frac{k+1}{k}}\\)）\n由（2）可得当 \\(u>1\\)时， \\(2\\ln u-u+\\frac{1}{u}<0\\)，取 \\(u=\\sqrt{\\frac{k+1}{k}}(k\\in\\mathbb{N}^*)\\)可得 \\(2\\ln\\sqrt{\\frac{k+1}{k}}-\\sqrt{\\frac{k+1}{k}}+\\frac{1}{\\sqrt{\\frac{k+1}{k}}}<0\\)，\n所以 \\(\\sqrt{\\frac{k+1}{k}}-\\frac{1}{\\sqrt{\\frac{k+1}{k}}}>\\ln\\frac{k+1}{k}\\)，又 \\(\\sqrt{\\frac{k+1}{k}}-\\frac{1}{\\sqrt{\\frac{k+1}{k}}}=\\frac{\\sqrt{k+1}}{\\sqrt{k}}-\\frac{\\sqrt{k}}{\\sqrt{k+1}}=\\frac{1}{\\sqrt{k^2+k}}\\)，所以 \\(\\frac{1}{\\sqrt{k^2+k}}>\\ln\\frac{k+1}{k}\\)，分别取 \\(k=1,2,\\cdots,n\\)可得 \\(\\frac{1}{\\sqrt{1^2+1}}>\\ln\\frac{2}{1}\\)， \\(\\frac{1}{\\sqrt{2^2+2}}>\\ln\\frac{3}{2}\\)， \\(\\cdots\\)， \\(\\frac{1}{\\sqrt{n^2+n}}>\\ln\\frac{n+1}{n}\\)，以上各式相加得 \\(\\frac{1}{\\sqrt{1^2+1}}+\\frac{1}{\\sqrt{2^2+2}}+\\cdots+\\frac{1}{\\sqrt{n^2+n}}>\\ln\\frac{2}{1}+\\ln\\frac{3}{2}+\\cdots+\\ln\\frac{n+1}{n}=\\ln\\left(\\frac{2}{1}\\times\\frac{3}{2}\\times\\cdots\\times\\frac{n+1}{n}\\right)=\\ln(n+1)\\)。",
+      "solution_present": true,
+      "vision_hint": "5.6-LI8be3804c0082ca8e"
+    }
+  ],
+  "direct_variants": [
+    {
+      "item_id": "df2b1ac00bf2f701",
+      "kind": "direct_variant",
+      "label": "变式",
+      "example_number": null,
+      "parent_example_number": 1,
+      "role": "direct_variant",
+      "role_ref": null,
+      "source_docs": [
+        75
+      ],
+      "question_text": "【变式】（2020·新课标Ⅲ卷）设函数  \\(f(x)=\\frac{e^x}{x+a}\\)，若  \\(f'(1)=\\frac{e}{4}\\)，则  \\(a=\\)___。",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "solution_isolated": true,
+      "vision_hint": "5.6-LIdf2b1ac00bf2f701"
+    },
+    {
+      "item_id": "97362f898184b4d7",
+      "kind": "direct_variant",
+      "label": "变式1",
+      "example_number": null,
+      "parent_example_number": 2,
+      "role": "direct_variant",
+      "role_ref": null,
+      "source_docs": [
+        75
+      ],
+      "question_text": "【变式1】（2023·全国甲卷）曲线 \\(y=\\frac{e^{x}}{x+1}\\)在点 \\(\\left(1,\\frac{e}{2}\\right)\\)处的切线方程为（）\nA.  \\(y = \\frac{e}{4} x\\) B.  \\(y = \\frac{e}{2} x\\) C.  \\(y = \\frac{e}{4} x + \\frac{e}{4}\\) D.  \\(y = \\frac{e}{2} x + \\frac{3 e}{4}\\)",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "solution_isolated": true,
+      "vision_hint": "5.6-LI97362f898184b4d7"
+    },
+    {
+      "item_id": "96ba4cb8767a5c8b",
+      "kind": "direct_variant",
+      "label": "变式2",
+      "example_number": null,
+      "parent_example_number": 2,
+      "role": "direct_variant",
+      "role_ref": null,
+      "source_docs": [
+        75,
+        76
+      ],
+      "question_text": "【变式2】（2018·新课标Ⅰ卷）设函数  \\(f(x)=x^{3}+(a-1)x^{2}+ax\\) ，若  \\(f(x)\\) 为奇函数，则曲线 y=\n \\(f(x)\\) 在点  \\((0,0)\\) 处的切线方程为（）\nA. y = -2x B. y = -x C. y = 2x D. y = x",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "solution_isolated": true,
+      "vision_hint": "5.6-LI96ba4cb8767a5c8b"
+    },
+    {
+      "item_id": "9015508f30f49ddd",
+      "kind": "direct_variant",
+      "label": "变式3",
+      "example_number": null,
+      "parent_example_number": 2,
+      "role": "direct_variant",
+      "role_ref": null,
+      "source_docs": [
+        76
+      ],
+      "question_text": "【变式 3】（2016·新课标Ⅲ卷）已知  \\(f(x)\\) 为偶函数，当 x < 0 时， \\(f(x) = \\ln(-x) + 3x\\)，则曲线  \\(y = f(x)\\) 在点  \\((1, -3)\\) 处的切线方程是___。",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "solution_isolated": true,
+      "vision_hint": "5.6-LI9015508f30f49ddd"
+    },
+    {
+      "item_id": "89178ddf0d4a8766",
+      "kind": "direct_variant",
+      "label": "变式4",
+      "example_number": null,
+      "parent_example_number": 2,
+      "role": "direct_variant",
+      "role_ref": null,
+      "source_docs": [
+        76
+      ],
+      "question_text": "【变式4】（2019·江苏卷）在平面直角坐标系xOy中，点A在曲线 \\(y=\\ln x\\)上，且该曲线在点A处的切线经过点 \\((-e,-1)(e\\)为自然对数的底数 \\()\\)，则点A的坐标是___。",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "solution_isolated": true,
+      "vision_hint": "5.6-LI89178ddf0d4a8766"
+    },
+    {
+      "item_id": "50ceb76c09ec09a2",
+      "kind": "direct_variant",
+      "label": "变式5",
+      "example_number": null,
+      "parent_example_number": 2,
+      "role": "direct_variant",
+      "role_ref": null,
+      "source_docs": [
+        76,
+        77
+      ],
+      "question_text": "【变式 5】（2015 · 新课标Ⅱ卷）已知曲线  \\(y = x + \\ln x\\) 在点  \\((1,1)\\) 处的切线与曲线  \\(y = ax^{2} + (a+2)x + 1\\)\n相切，则 \\(a=\\)___.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "solution_isolated": true,
+      "vision_hint": "5.6-LI50ceb76c09ec09a2"
+    },
+    {
+      "item_id": "6d1510b6259bdc46",
+      "kind": "direct_variant",
+      "label": "变式6",
+      "example_number": null,
+      "parent_example_number": 2,
+      "role": "direct_variant",
+      "role_ref": null,
+      "source_docs": [
+        77
+      ],
+      "question_text": "【变式 6】（2019·江苏卷）在平面直角坐标系 xOy 中，P 是曲线  \\(y = x + \\frac{4}{x}(x > 0)\\) 上的一个动点，则点 P 到直线  \\(x + y = 0\\) 的距离的最小值是___.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "solution_isolated": true,
+      "vision_hint": "5.6-LI6d1510b6259bdc46"
+    },
+    {
+      "item_id": "ccc49d82555c4377",
+      "kind": "direct_variant",
+      "label": "变式",
+      "example_number": null,
+      "parent_example_number": 4,
+      "role": "direct_variant",
+      "role_ref": null,
+      "source_docs": [
+        78
+      ],
+      "question_text": "【变式】（2016·新课标Ⅰ卷）若函数  \\(f(x)=x-\\frac{1}{3}\\sin 2x+a\\sin x\\) 在  \\(\\mathbb{R}\\) 上单调递增，则  \\(a\\) 的取值范围是（ ）\nA.  \\([-1,1]\\) \\quad B.  \\(\\left[-1,\\frac{1}{3}\\right]\\) \\quad C.  \\(\\left[-\\frac{1}{3},\\frac{1}{3}\\right]\\) \\quad D.  \\(\\left[-1,-\\frac{1}{3}\\right]\\)",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "solution_isolated": true,
+      "vision_hint": "5.6-LIccc49d82555c4377"
+    },
+    {
+      "item_id": "1aced95c1fb17689",
+      "kind": "direct_variant",
+      "label": "变式",
+      "example_number": null,
+      "parent_example_number": 7,
+      "role": "direct_variant",
+      "role_ref": null,
+      "source_docs": [
+        79,
+        80
+      ],
+      "question_text": "【变式】（2016·山东卷（节选））已知  \\(f(x)=a(x-\\ln x)+\\frac{2x-1}{x^2}\\)， \\(a\\in\\mathbb{R}\\)，讨论  \\(f(x)\\) 的单调性.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "solution_isolated": true,
+      "vision_hint": "5.6-LI1aced95c1fb17689"
+    }
+  ],
+  "deduplicated_learning_items": [],
+  "exercise_questions": [
+    {
+      "qid": "Q-af889f3ae9f464fb",
+      "section": "5.6",
+      "group": "A",
+      "number": 1,
+      "kind": "A组",
+      "source_anchor": {
+        "ocr_doc": 87,
+        "pdf_page": 88,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_87.md"
+      },
+      "question_text": "1. (2016 · 天津卷)\n\n已知函数  \\(f(x)=(2x+1)\\mathrm{e}^{x}\\)， \\(f'(x)\\) 为  \\(f(x)\\) 的导函数，则  \\(f'(0)\\) 的值为 ___.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-ed2d2039c4a9538a",
+      "section": "5.6",
+      "group": "A",
+      "number": 2,
+      "kind": "A组",
+      "source_anchor": {
+        "ocr_doc": 87,
+        "pdf_page": 88,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_87.md"
+      },
+      "question_text": "2.（2015·天津卷）\n\n已知函数  \\(f(x)=ax\\ln x\\)， \\(x\\in(0,+\\infty)\\)，其中  \\(a\\) 为实数， \\(f'(x)\\) 为  \\(f(x)\\) 的导函数，若  \\(f'(1)=3\\)，则  \\(a\\) 的值为___。",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-c8c173d25713e529",
+      "section": "5.6",
+      "group": "A",
+      "number": 3,
+      "kind": "A组",
+      "source_anchor": {
+        "ocr_doc": 87,
+        "pdf_page": 88,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_87.md"
+      },
+      "question_text": "3.（2018·新课标Ⅱ卷）\n\n曲线  \\(y = 2\\ln(x+1)\\) 在点  \\((0,0)\\) 处的切线方程为 ___.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-ef9fc5cfdd68e7ce",
+      "section": "5.6",
+      "group": "A",
+      "number": 4,
+      "kind": "A组",
+      "source_anchor": {
+        "ocr_doc": 87,
+        "pdf_page": 88,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_87.md"
+      },
+      "question_text": "4.（2021·新课标Ⅱ卷）\n\n曲线  \\(y=\\frac{2x-1}{x+2}\\) 在点  \\((-1,-3)\\) 处的切线方程为 ___.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-0a94bea0e48f78a9",
+      "section": "5.6",
+      "group": "A",
+      "number": 5,
+      "kind": "A组",
+      "source_anchor": {
+        "ocr_doc": 87,
+        "pdf_page": 88,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_87.md"
+      },
+      "question_text": "5.（2019·新课标Ⅰ卷）\n\n曲线  \\(y = 3(x^2 + x)e^x\\) 在点  \\((0,0)\\) 处的切线方程为 ___.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-54a579e8e9e0acdd",
+      "section": "5.6",
+      "group": "B",
+      "number": 6,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 87,
+        "pdf_page": 88,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_87.md"
+      },
+      "question_text": "6.（2015·新课标Ⅰ卷）\n\n已知函数  \\(f(x)=ax^3 + x + 1\\) 的图象在点  \\((1,f(1))\\) 处的切线过点  \\((2,7)\\)，则  \\(a=\\) ___.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-0583c37fa6361567",
+      "section": "5.6",
+      "group": "B",
+      "number": 7,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 88,
+        "pdf_page": 89,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_88.md"
+      },
+      "question_text": "### 7. （2020·新课标Ⅰ卷）\n\n曲线  \\(y = \\ln x + x + 1\\) 的一条切线的斜率为 2，则该切线的方程为 ___.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-a10113fea4b87024",
+      "section": "5.6",
+      "group": "B",
+      "number": 8,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 88,
+        "pdf_page": 89,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_88.md"
+      },
+      "question_text": "### 8. （2016·新课标Ⅲ卷）\n\n已知  \\(f(x)\\) 为偶函数，当  \\(x \\leq 0\\) 时， \\(f(x) = e^{-x-1} - x\\)，则曲线  \\(y = f(x)\\) 在点  \\((1,2)\\) 处的切线方程是 ___.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-32b0f32bdea7d20f",
+      "section": "5.6",
+      "group": "B",
+      "number": 9,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 88,
+        "pdf_page": 89,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_88.md",
+        "recovery": "PADDLE_OCR_TEXT_NEIGHBOR_SEQUENCE_B8_B9_B10",
+        "recovery_source_kind": "primary_ocr"
+      },
+      "question_text": "已知曲线  \\(y = ae^{x} + x \\ln x\\) 在点  \\((1, ae)\\) 处的切线方程为  \\(y = 2x + b\\)，则（）\n\nA. a = e, b = -1\n\nB. a = e, b = 1\n\nC.  \\(a = e^{-1}\\), b = 1\n\nD.  \\(a = e^{-1}\\), b = -1",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1",
+        "PADDLE_OCR_TEXT_NEIGHBOR_SEQUENCE_B8_B9_B10"
+      ],
+      "recovery_reason": "printed_number_missing_from_paddle_ocr"
+    },
+    {
+      "qid": "Q-82f4aabc46e65d80",
+      "section": "5.6",
+      "group": "B",
+      "number": 10,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 88,
+        "pdf_page": 89,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_88.md"
+      },
+      "question_text": "### 10. （2022·新课标Ⅰ卷）\n\n若曲线  \\(y=(x+a)e^{x}\\) 有两条过坐标原点的切线，则 a 的取值范围为 ___.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-1e46b9bf6d41ea5f",
+      "section": "5.6",
+      "group": "B",
+      "number": 11,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 89,
+        "pdf_page": 90,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_89.md",
+        "recovery": "PADDLE_OCR_TEXT_NEIGHBOR_SEQUENCE_B10_B11_B12",
+        "recovery_source_kind": "primary_ocr"
+      },
+      "question_text": "若 x=-2 是函数  \\(f(x)=(x^{2}+ax-1)\\mathrm{e}^{x-1}\\) 的极值点，则  \\(f(x)\\) 的极小值为（）\n\nA. -1 B.  \\(-2e^{-3}\\)\n\nC.  \\(5e^{-3}\\) D. 1",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1",
+        "PADDLE_OCR_TEXT_NEIGHBOR_SEQUENCE_B10_B11_B12"
+      ],
+      "recovery_reason": "printed_number_missing_from_paddle_ocr"
+    },
+    {
+      "qid": "Q-771a4bf7c5797261",
+      "section": "5.6",
+      "group": "B",
+      "number": 12,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 89,
+        "pdf_page": 90,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_89.md"
+      },
+      "question_text": "12.（2022·全国已卷）\n\n函数  \\(f(x) = \\cos x + (x+1)\\sin x + 1\\) 在区间  \\([0,2\\pi]\\) 的最小值，最大值分别为（ ）\n\nA.  \\(-\\frac{\\pi}{2}\\)， \\(\\frac{\\pi}{2}\\)  \n\nB.  \\(-\\frac{3\\pi}{2}\\)， \\(\\frac{\\pi}{2}\\)  \n\nC.  \\(-\\frac{\\pi}{2}\\)， \\(\\frac{\\pi}{2}+2\\)  \n\nD.  \\(-\\frac{3\\pi}{2}\\)， \\(\\frac{\\pi}{2}+2\\)",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-2faf3eb148c1b958",
+      "section": "5.6",
+      "group": "B",
+      "number": 13,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 89,
+        "pdf_page": 90,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_89.md",
+        "recovery": "PADDLE_OCR_TEXT_AFTER_B12_BEFORE_B14",
+        "recovery_source_kind": "primary_ocr"
+      },
+      "question_text": "函数  \\(f'(x)\\) 是奇函数  \\(f(x)(x \\in \\mathbb{R})\\) 的导函数， \\(f(-1) = 0\\)，当  \\(x > 0\\) 时， \\(xf'(x) - f(x) < 0\\)，则使得  \\(f(x) > 0\\) 成立的  \\(x\\) 的取值范围是（ ）\n\nA.  \\((-\\infty, -1) \\cup (0, 1)\\)\n\nB.  \\((-1, 0) \\cup (1, +\\infty)\\)\n\nC.  \\((-\\infty, -1) \\cup (-1, 0)\\)\n\nD.  \\((0, 1) \\cup (1, +\\infty)\\)",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1",
+        "PADDLE_OCR_TEXT_AFTER_B12_BEFORE_B14"
+      ],
+      "recovery_reason": "printed_number_missing_from_paddle_ocr"
+    },
+    {
+      "qid": "Q-36b8717898801d52",
+      "section": "5.6",
+      "group": "B",
+      "number": 14,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 90,
+        "pdf_page": 91,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_90.md"
+      },
+      "question_text": "14.（2015·福建卷）\n\n若定义在  \\(\\mathbb{R}\\) 上的函数  \\(f(x)\\) 满足  \\(f(0) = -1\\)，其导函数  \\(f'(x)\\) 满足  \\(f'(x) > k > 1\\)，则下列结论中一定错误的是（ ）\n\nA.  \\(f\\left(\\frac{1}{k}\\right) < \\frac{1}{k}\\)\n\nB.  \\(f\\left(\\frac{1}{k}\\right) > \\frac{1}{k-1}\\)\n\nC.  \\(f\\left(\\frac{1}{k-1}\\right) < \\frac{1}{k-1}\\)\n\nD.  \\(f\\left(\\frac{1}{k-1}\\right) > \\frac{k}{k-1}\\)",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-b736e09b4ba1b71c",
+      "section": "5.6",
+      "group": "B",
+      "number": 15,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 90,
+        "pdf_page": 91,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_90.md"
+      },
+      "question_text": "### 15. （2015·新课标Ⅰ卷（节选））\n\n已知函数  \\(f(x)=x^{3}+ax+\\frac{1}{4}\\). 当 a 为何值时，x 轴为曲线  \\(y=f(x)\\) 的切线？",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-f1288ddc793c655f",
+      "section": "5.6",
+      "group": "B",
+      "number": 16,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 90,
+        "pdf_page": 91,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_90.md"
+      },
+      "question_text": "16.（2017·北京卷）\n\n已知函数  \\(f(x)=\\mathrm{e}^{x}\\cos x-x\\)\n\n（1）求曲线  \\(y = f(x)\\) 在点  \\((0, f(0))\\) 处的切线方程；\n\n（2）求函数  \\(f(x)\\) 在区间  \\(\\left[0,\\frac{\\pi}{2}\\right]\\) 上的最大值和最小值.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-20960139622898f5",
+      "section": "5.6",
+      "group": "B",
+      "number": 17,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 91,
+        "pdf_page": 92,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_91.md"
+      },
+      "question_text": "17.（2016·四川卷（节选））\n\n设函数  \\(f(x) = ax^2 - a - \\ln x\\)，其中  \\(a \\in \\mathbb{R}\\)，讨论  \\(f(x)\\) 的单调性.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-8041115b94a252fe",
+      "section": "5.6",
+      "group": "B",
+      "number": 18,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 91,
+        "pdf_page": 92,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_91.md"
+      },
+      "question_text": "18.（2017·新课标Ⅰ卷（节选））\n\n已知函数  \\(f(x)=\\mathrm{e}^{x}(\\mathrm{e}^{x}-a)-a^{2}x\\)，讨论  \\(f(x)\\) 的单调性.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-56eb4da28d4f438f",
+      "section": "5.6",
+      "group": "B",
+      "number": 19,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 91,
+        "pdf_page": 92,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_91.md"
+      },
+      "question_text": "19.（2021·北京卷）数·高中数学一本通已知函数 \\(f(x)=\\frac{3-2x}{x^{2}+a}\\).\n\n（1）若 a=0，求曲线  \\(y=f(x)\\) 在点  \\((1,f(1))\\) 处的切线方程；\n\n（2）若函数  \\(f(x)\\) 在 x = -1 处取得极值，求  \\(f(x)\\) 的单调区间，以及最大值与最小值.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-c2953a33eed28e38",
+      "section": "5.6",
+      "group": "B",
+      "number": 20,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 91,
+        "pdf_page": 92,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_91.md"
+      },
+      "question_text": "20.（2016·新课标Ⅰ卷（节选））\n\n已知函数  \\(f(x)=(x-2)e^{x}+a(x-1)^{2}\\)，讨论  \\(f(x)\\) 的单调性.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-020f7c4b8d20e44c",
+      "section": "5.6",
+      "group": "C",
+      "number": 21,
+      "kind": "C组",
+      "source_anchor": {
+        "ocr_doc": 92,
+        "pdf_page": 93,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_92.md"
+      },
+      "question_text": "21.（2023·新课标Ⅱ卷）（多选）\n\n若函数  \\(f(x) = a \\ln x + \\frac{b}{x} + \\frac{c}{x^2} (a \\neq 0)\\) 既有极大值也有极小值，则（ ）\n\nA.  \\(bc > 0\\) B.  \\(ab > 0\\)\n\nC.  \\(b^2 + 8ac > 0\\) D.  \\(ac < 0\\)",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-baa7730064fb3c5a",
+      "section": "5.6",
+      "group": "C",
+      "number": 22,
+      "kind": "C组",
+      "source_anchor": {
+        "ocr_doc": 92,
+        "pdf_page": 93,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_92.md",
+        "recovery": "PADDLE_OCR_TEXT_ORDER_C21_C22_C23_C24",
+        "recovery_source_kind": "primary_ocr"
+      },
+      "question_text": "设  \\(a \\neq 0\\)，若 x = a 是函数  \\(f(x) = a(x - a)^{2}(x - b)\\) 的极大值点，则（）\n\nA. a < b B. a > b\n\nC.  \\(ab < a^{2}\\) D.  \\(ab > a^{2}\\)",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1",
+        "PADDLE_OCR_TEXT_ORDER_C21_C22_C23_C24"
+      ],
+      "recovery_reason": "printed_number_missing_from_paddle_ocr"
+    },
+    {
+      "qid": "Q-4a17bdf22e888ae5",
+      "section": "5.6",
+      "group": "C",
+      "number": 23,
+      "kind": "C组",
+      "source_anchor": {
+        "ocr_doc": 92,
+        "pdf_page": 93,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_92.md",
+        "recovery": "PADDLE_OCR_TEXT_ORDER_C21_C22_C23_C24",
+        "recovery_source_kind": "primary_ocr"
+      },
+      "question_text": "设直线  \\(l_{1}\\)， \\(l_{2}\\) 分别是函数  \\(f(x)=\\left\\{\\begin{aligned}&-\\ln x,0<x<1\\\\ &\\ln x,x>1\\end{aligned}\\right.\\) 图象上点  \\(P_{1}\\)， \\(P_{2}\\) 处的切线， \\(l_{1}\\) 与  \\(l_{2}\\) 垂直相交于点 P，且  \\(l_{1}\\)， \\(l_{2}\\) 分别与 y 轴相交于点 A，B，则  \\(\\triangle PAB\\) 的面积的取值范围是（）\n\nA.  \\((0,1)\\) B.  \\((0,2)\\) C.  \\((0,+\\infty)\\) D.  \\((1,+\\infty)\\)",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1",
+        "PADDLE_OCR_TEXT_ORDER_C21_C22_C23_C24"
+      ],
+      "recovery_reason": "printed_number_missing_from_paddle_ocr"
+    },
+    {
+      "qid": "Q-65eb7b10d76735f4",
+      "section": "5.6",
+      "group": "C",
+      "number": 24,
+      "kind": "C组",
+      "source_anchor": {
+        "ocr_doc": 93,
+        "pdf_page": 94,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_93.md"
+      },
+      "question_text": "### 24. （2023·新课标Ⅰ卷）\n\n已知函数  \\(f(x)=a(\\mathrm{e}^{x}+a)-x\\)\n\n（1）讨论  \\(f(x)\\) 的单调性；\n\n（2）证明：当a>0时， \\(f(x)>2\\ln a+\\frac{3}{2}\\)",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-7d11f8c76e49ff57",
+      "section": "5.6",
+      "group": "C",
+      "number": 25,
+      "kind": "C组",
+      "source_anchor": {
+        "ocr_doc": 93,
+        "pdf_page": 94,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_93.md"
+      },
+      "question_text": "### 25. （2021·全国乙卷）\n\n设函数  \\(f(x)=\\ln(a-x)\\)，已知 x=0 是函数 y=\n\n \\(x f(x)\\) 的极值点.\n\n（1）求a;\n\n（2）设函数  \\(g(x)=\\frac{x+f(x)}{xf(x)}\\)，证明： \\(g(x)<1\\)。",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-748f74324e972ac7",
+      "section": "5.6",
+      "group": "C",
+      "number": 26,
+      "kind": "C组",
+      "source_anchor": {
+        "ocr_doc": 93,
+        "pdf_page": 94,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_93.md"
+      },
+      "question_text": "### 26. （2019·新课标Ⅲ卷）\n\n已知函数  \\(f(x)=2x^{3}-ax^{2}+b\\).\n\n（1）讨论  \\(f(x)\\) 的单调性；\n\n（2）是否存在 a，b，使得  \\(f(x)\\) 在区间  \\([0,1]\\) 的最小值为 -1 且最大值为 1？若存在，求出 a，b 的所有值；若不存在，说明理由.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-a94544781ea2d0e4",
+      "section": "5.6",
+      "group": "C",
+      "number": 27,
+      "kind": "C组",
+      "source_anchor": {
+        "ocr_doc": 94,
+        "pdf_page": 95,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_94.md"
+      },
+      "question_text": "27.（2024·新课标Ⅰ卷）\n\n已知函数  \\(f(x)=\\ln\\frac{x}{2-x}+ax+b(x-1)^{3}\\).\n\n（1）若 b=0，且  \\(f'(x)\\geq0\\)，求 a 的最小值；\n\n（2）证明：曲线  \\(y = f(x)\\) 是中心对称图形；\n\n（3）若  \\(f(x) > -2\\) 当且仅当 1 < x < 2，求 b 的取值范围.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    }
+  ],
+  "counts": {
+    "worked_examples": 14,
+    "direct_variants": 9,
+    "abc_exercises": 27,
+    "total_numbered_learning_items": 50
+  },
+  "answer_policy": {
+    "worked_examples": "teaching solutions allowed",
+    "direct_variants": "question only; solution isolated",
+    "abc_exercises": "question only; answer sidecar forbidden"
+  },
+  "unresolved": []
+}

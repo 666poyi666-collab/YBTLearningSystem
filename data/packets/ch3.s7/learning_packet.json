@@ -1,0 +1,1995 @@
+{
+  "schema_version": "7.4",
+  "packet_type": "DEEPSEEK_SEQUENTIAL_LEARNING_PACKET",
+  "section": "ch3.s7",
+  "status": "VERIFIED",
+  "source": {
+    "ocr_root": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180",
+    "ocr_docs": [
+      105,
+      116
+    ],
+    "source_file": null
+  },
+  "workflow_order": [
+    "repeat_each_learning_cycle_in_order",
+    "watch_current_courses",
+    "learn_each_current_example_then_attempt_its_direct_variants",
+    "attempt_current_abc_exercises_without_answers",
+    "assess_current_cycle_before_advancing",
+    "unseen_near_transfer",
+    "delayed_closed_book_review"
+  ],
+  "learning_cycles": [
+    {
+      "cycle_id": "ch3.s7-cycle-1",
+      "sequence": 1,
+      "title": "抛物线的定义",
+      "course_keys": [
+        "parabola_definition_equation"
+      ],
+      "prerequisite_course_keys": [],
+      "optional_course_keys": [],
+      "knowledge_refs": [
+        "ch3.s7-k1"
+      ],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [
+        {
+          "item_id": "76e9608cab0edca8",
+          "kind": "example",
+          "label": "例1",
+          "example_number": 1,
+          "parent_example_number": null,
+          "role": "knowledge_example",
+          "role_ref": "ch3.s7-k1",
+          "source_docs": [
+            105
+          ],
+          "question_text": "【例 1】若动点 P 到点 (3,0) 的距离和它到直线 x = -1 的距离相等，则动点 P 的轨迹是（）\nA. 椭圆 B. 抛物线 C. 直线 D. 双曲线",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例 1】若动点 P 到点 (3,0) 的距离和它到直线 x = -1 的距离相等，则动点 P 的轨迹是（）\nA. 椭圆 B. 抛物线 C. 直线 D. 双曲线\n解析：由题意，点 P 到定点与定直线的距离相等，且该定点不在定直线上，所以点 P 轨迹为抛物线.\n答案：B",
+          "solution_present": true,
+          "vision_hint": "ch3.s7-LI76e9608cab0edca8"
+        }
+      ],
+      "direct_variants": [],
+      "exercise_questions": [],
+      "action_order": [
+        "watch_current_courses",
+        "learn_each_current_example_then_attempt_its_direct_variants",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [
+        {
+          "id": "ch3.s7-k1",
+          "label": "抛物线的定义",
+          "example_labels": [
+            "例1"
+          ],
+          "text": "## 知识点1：抛物线的定义\n\n我们把平面内与一个定点 F 和一条定直线 l（l 不经过点 F）的距离相等的点的轨迹叫做抛物线。点 F 叫做抛物线的焦点，直线 l 叫做抛物线的准线。\n\n抛物线的定义可用集合作如下表示：设 \\(M\\) 是抛物线上一点，抛物线的焦点为 \\(F\\)，准线为 \\(l\\)，点 \\(M\\) 到准线 \\(l\\) 的距离为 \\(d\\)，则抛物线可视为动点 \\(M\\) 的集合 \\(\\{M \\mid |MF| = d\\}\\).\n\n##",
+          "answer_free": true
+        }
+      ],
+      "prerequisite_knowledge_blocks": []
+    },
+    {
+      "cycle_id": "ch3.s7-cycle-2",
+      "sequence": 2,
+      "title": "抛物线的标准方程",
+      "course_keys": [
+        "intersection_algebra_upper"
+      ],
+      "prerequisite_course_keys": [
+        "parabola_definition_equation"
+      ],
+      "optional_course_keys": [],
+      "knowledge_refs": [
+        "ch3.s7-k2"
+      ],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [
+        {
+          "item_id": "ca336811597133fe",
+          "kind": "example",
+          "label": "例2",
+          "example_number": 2,
+          "parent_example_number": null,
+          "role": "knowledge_example",
+          "role_ref": "ch3.s7-k2",
+          "source_docs": [
+            105
+          ],
+          "question_text": "【例2】抛物线 \\(x=-\\frac{1}{4}y^{2}\\)的准线方程为（）\nA. x = -1 B. x = 1\nC. y = -1 D. y = 1",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例2】抛物线 \\(x=-\\frac{1}{4}y^{2}\\)的准线方程为（）\nA. x = -1 B. x = 1\nC. y = -1 D. y = 1\n解析：抛物线的方程不是标准形式，先化为标准形式，再观察准线，\n \\(x = -\\frac{1}{4}y^2 \\Leftrightarrow y^2 = -4x\\)，所以抛物线开口向左，其标准方程为  \\(y^2 = -2px (p > 0)\\)，两者对比可得  \\(2p = 4 \\Rightarrow p = 2\\)，所以  \\(\\frac{p}{2} = 1\\)，故  \\(x = -\\frac{1}{4}y^2\\) 的准线方程为  \\(x = 1\\)。\n答案：B",
+          "solution_present": true,
+          "vision_hint": "ch3.s7-LIca336811597133fe"
+        },
+        {
+          "item_id": "e7c3c730e1eec0cf",
+          "kind": "example",
+          "label": "例3",
+          "example_number": 3,
+          "parent_example_number": null,
+          "role": "knowledge_example",
+          "role_ref": "ch3.s7-k2",
+          "source_docs": [
+            105
+          ],
+          "question_text": "【例3】已知抛物线  \\(y=2x^{2}\\)，则抛物线的焦点到准线的距离为（）\nA.  \\(\\frac{1}{4}\\) B.  \\(\\frac{1}{2}\\) C. 1 D. 2",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例3】已知抛物线  \\(y=2x^{2}\\)，则抛物线的焦点到准线的距离为（）\nA.  \\(\\frac{1}{4}\\) B.  \\(\\frac{1}{2}\\) C. 1 D. 2\n解析： \\(y=2x^2 \\Leftrightarrow x^2=\\frac{1}{2}y\\)，抛物线的开口",
+          "solution_present": true,
+          "vision_hint": "ch3.s7-LIe7c3c730e1eec0cf"
+        }
+      ],
+      "direct_variants": [],
+      "exercise_questions": [],
+      "action_order": [
+        "watch_current_courses",
+        "learn_each_current_example_then_attempt_its_direct_variants",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [
+        {
+          "id": "ch3.s7-k2",
+          "label": "抛物线的标准方程",
+          "example_labels": [
+            "例2",
+            "例3"
+          ],
+          "text": "## 知识点2：抛物线的标准方程\n\n1. 抛物线的标准方程（表中的 p 都满足 p > 0）\n\n\n<table border=1 style='margin: auto; word-wrap: break-word;'><tr><td style='text-align: center; word-wrap: break-word;'>标准方程</td><td style='text-align: center; word-wrap: break-word;'>\\(y^{2}=2px\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(y^{2}=-2px\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(x^{2}=2py\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(x^{2}=-2py\\)</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>图形</td><td style='text-align: center; word-wrap: break-word;'></td><td style='text-align: center; word-wrap: break-word;'></td><td style='text-align: center; word-wrap: break-word;'></td><td style='text-align: center; word-wrap: break-word;'></td></tr><tr><td style='text-align: center; word-wrap: break-word;'>焦点</td><td style='text-align: center; word-wrap: break-word;'>\\(F\\left(\\frac{p}{2},0\\right)\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(F\\left(-\\frac{p}{2},0\\right)\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(F\\left(0,\\frac{p}{2}\\right)\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(F\\left(0,-\\frac{p}{2}\\right)\\)</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>准线</td><td style='text-align: center; word-wrap: break-word;'>\\(l:x=-\\frac{p}{2}\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(l:x=\\frac{p}{2}\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(l:y=-\\frac{p}{2}\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(l:y=\\frac{p}{2}\\)</td></tr></table>\n\n注：①抛物线的标准方程指的是抛物线与对称轴的交点是坐标原点，且焦点在坐标轴上的抛物线的方程。抛物线的标准方程、焦点坐标、准线方程三者之中只要确定其中一个，另外两个也就确定了。\n\n②焦点在y轴的抛物线的方程 \\(x^2 = \\pm 2py\\)经过变形就是 \\(y = \\pm \\frac{1}{2p}x^2\\)，也就是我们以前所学习的二次函数，所以对形如 \\(y = ax^2 (a \\neq 0)\\)的二次函数，要求其焦点与准线，需先变形为抛物线的标准方程的形式。\n\n2. 参数 p 的几何意义\n\n抛物线的标准方程中参数 p 的几何意义是抛物线的焦点到准线的距离，所以抛物线的方程中恒有 p > 0.",
+          "answer_free": true
+        }
+      ],
+      "prerequisite_knowledge_blocks": []
+    },
+    {
+      "cycle_id": "ch3.s7-cycle-3",
+      "sequence": 3,
+      "title": "抛物线的焦半径公式",
+      "course_keys": [
+        "intersection_algebra_lower"
+      ],
+      "prerequisite_course_keys": [
+        "parabola_definition_equation",
+        "intersection_algebra_upper"
+      ],
+      "optional_course_keys": [],
+      "knowledge_refs": [
+        "ch3.s7-k3"
+      ],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [
+        {
+          "item_id": "adeb7084cf3fe24c",
+          "kind": "example",
+          "label": "例4",
+          "example_number": 4,
+          "parent_example_number": null,
+          "role": "knowledge_example",
+          "role_ref": "ch3.s7-k3",
+          "source_docs": [
+            106
+          ],
+          "question_text": "【例4】已知抛物线 \\(y^{2}=4x\\)上一点A的横坐标为4，则点A到抛物线焦点F的距离为（）\nA. 5 B. 6 C.  \\(\\frac{17}{16}\\) D.  \\(4\\sqrt{2}\\)",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例4】已知抛物线 \\(y^{2}=4x\\)上一点A的横坐标为4，则点A到抛物线焦点F的距离为（）\nA. 5 B. 6 C.  \\(\\frac{17}{16}\\) D.  \\(4\\sqrt{2}\\)\n解析：抛物线开口向右，要求\\(|AF|\\)，只需\n要点 \\(A\\) 的横坐标，题干恰好给了点 \\(A\\) 的横\n坐标，\n将 \\(y^2 = 4x\\) 与 \\(y^2 = 2px\\) (\\(p > 0\\)) 对比，\n可得 \\(2p = 4\\)，所以 \\(p = 2\\)，\n故由焦半径公式，\\(|AF| = x_A + \\frac{p}{2} = 4 + 1 = 5\\)。\n答案：A\n## 本节核心题型\n本节的核心知识主要有两个：抛物线的定义和抛物线的标准方程、焦点坐标、准线方程，其中抛物线定义是难点（定义本身不难，难的是灵活应用定义解决综合性的问题）。为此我们首先设计了类型Ⅰ这组题来强化同学们对抛物线的标准方程、焦点坐标、准线方程这些基本概念的理解；又设计了类型Ⅱ、Ⅲ、Ⅳ三组题来归纳抛物线定义在一些具体题型中的应用；最后，抛物线还可能结合实际背景来考查，于是我们又通过类型V来给大家举了个例子。",
+          "solution_present": true,
+          "vision_hint": "ch3.s7-LIadeb7084cf3fe24c"
+        },
+        {
+          "item_id": "0eb69ef5bbe1b581",
+          "kind": "example",
+          "label": "例5",
+          "example_number": 5,
+          "parent_example_number": null,
+          "role": "knowledge_example",
+          "role_ref": "ch3.s7-k3",
+          "source_docs": [
+            106,
+            107
+          ],
+          "question_text": "【例 5】已知抛物线  \\(y^{2}=2px (p>0)\\) 的焦点在圆  \\(x^{2}+y^{2}=4\\) 上，则该抛物线的焦点到准线的距离为（）\nA. 1 B. 2 C. 4 D. 8",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例 5】已知抛物线  \\(y^{2}=2px (p>0)\\) 的焦点在圆  \\(x^{2}+y^{2}=4\\) 上，则该抛物线的焦点到准线的距离为（）\nA. 1 B. 2 C. 4 D. 8\n解析：抛物线的焦点 \\(\\left(\\frac{p}{2},0\\right)\\)到准线 \\(x=-\\frac{p}{2}\\)的距离为p，怎样求p？可将焦点坐标代入圆的方程，建立方程求p。\n抛物线 \\(y^2=2px(p>0)\\)的焦点为 \\(\\left(\\frac{p}{2},0\\right)\\)，代入 \\(x^2+y^2=4\\)可得 \\(\\frac{p^2}{4}=4\\)，结合 \\(p>0\\)解得： \\(p=4\\)，\n所以该抛物线的焦点到准线的距离为4.\n答案：C",
+          "solution_present": true,
+          "vision_hint": "ch3.s7-LI0eb69ef5bbe1b581"
+        },
+        {
+          "item_id": "5da9e9f4344dbfd5",
+          "kind": "example",
+          "label": "例6",
+          "example_number": 6,
+          "parent_example_number": null,
+          "role": "knowledge_example",
+          "role_ref": "ch3.s7-k3",
+          "source_docs": [
+            107,
+            108
+          ],
+          "question_text": "【例6】在平面直角坐标系 xOy 中，一动圆 M 经过点  \\(F(1,0)\\)，且与直线  \\(l: x = -1\\) 相切，则动圆圆心 M 的轨迹方程为 ___.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例6】在平面直角坐标系 xOy 中，一动圆 M 经过点  \\(F(1,0)\\)，且与直线  \\(l: x = -1\\) 相切，则动圆圆心 M 的轨迹方程为 ___.\n解析：条件涉及直线与圆相切，可按圆心到直线的距离等于半径来翻译，\n如图，设圆  \\(M\\) 的半径为  \\(r\\)，则由题意，点  \\(M\\) 到直线  \\(l\\) 的距离  \\(d = r\\) ①，\n又因为圆  \\(M\\) 过点  \\(F\\)，所以  \\(\\left|MF\\right| = r\\)，结合①可得  \\(\\left|MF\\right| = d\\)，\n所以点  \\(M\\) 到定点  \\(F(1,0)\\) 与到定直线  \\(l: x = -1\\) 的距离相等，\n故点  \\(M\\) 的轨迹是以  \\(F\\) 为焦点， \\(l\\) 为准线的抛物线，其方程为  \\(y^2 = 4x\\)。\n答案： \\(y^2 = 4x\\)\n【反思】遇到动点到定点和定直线之间距离相等，要想到动点的轨迹是抛物线。很多时候这一等量关系给得比较隐蔽，需要翻译已知条件才能发现，我们来看一个变式。",
+          "solution_present": true,
+          "vision_hint": "ch3.s7-LI5da9e9f4344dbfd5"
+        },
+        {
+          "item_id": "2fb96088301fc158",
+          "kind": "example",
+          "label": "例7",
+          "example_number": 7,
+          "parent_example_number": null,
+          "role": "knowledge_example",
+          "role_ref": "ch3.s7-k3",
+          "source_docs": [
+            108,
+            109
+          ],
+          "question_text": "【例 7】已知点  \\(P(x_0,2)\\) 在抛物线  \\(C: y^2 = 4x\\) 上，抛物线  \\(C\\) 的焦点为  \\(F\\)，则  \\(|PF| =\\) （ ）\nA. 4       B. 3       C. 2       D. 1",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例 7】已知点  \\(P(x_0,2)\\) 在抛物线  \\(C: y^2 = 4x\\) 上，抛物线  \\(C\\) 的焦点为  \\(F\\)，则  \\(|PF| =\\) （ ）\nA. 4       B. 3       C. 2       D. 1\n解析：求抛物线上的点到其焦点的距离，考虑用定义转化为它到准线的距离，\n如图，抛物线 \\(C\\) 的准线为 \\(l: x = -1\\)，由抛物线定义，\\(|PF|\\) 等于点 \\(P\\) 到准线的距离，所以 \\(|PF| = x_0 - (-1) = x_0 + 1\\) ①，故只需求 \\(x_0\\)，可将点 \\(P\\) 代入抛物线 \\(C\\) 的方程求 \\(x_0\\)，将 \\(P(x_0, 2)\\) 代入 \\(y^2 = 4x\\) 可得 \\(2^2 = 4x_0\\)，解得： \\(x_0 = 1\\)，代入①得 \\(|PF| = 2\\)。\n答案：C\n【反思】涉及抛物线上的点到其焦点的距离，常用焦半径公式来计算，该公式的本质是抛物线的定义．对于开口向右的抛物线，其焦半径公式是 \\(|PF|=x_0+\\frac{p}{2}\\)，所以核心是求点P的横坐标 \\(x_0\\)．本题 \\(x_0\\)容易求出，我们来看一个稍复杂一点的变式．",
+          "solution_present": true,
+          "vision_hint": "ch3.s7-LI2fb96088301fc158"
+        },
+        {
+          "item_id": "f54abf3acf1232de",
+          "kind": "example",
+          "label": "例8",
+          "example_number": 8,
+          "parent_example_number": null,
+          "role": "knowledge_example",
+          "role_ref": "ch3.s7-k3",
+          "source_docs": [
+            109
+          ],
+          "question_text": "【例 8】已知点 P 在抛物线  \\(C: y^2 = 2px\\) ( \\(p > 0\\)) 上，过 P 作 C 的准线的垂线，垂足为 H，点 F 为 C 的焦点。若  \\(\\angle HPF = 60^\\circ\\)，点 P 的横坐标为 1，则  \\(p =\\) ___。",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例 8】已知点 P 在抛物线  \\(C: y^2 = 2px\\) ( \\(p > 0\\)) 上，过 P 作 C 的准线的垂线，垂足为 H，点 F 为 C 的焦点。若  \\(\\angle HPF = 60^\\circ\\)，点 P 的横坐标为 1，则  \\(p =\\) ___。\n解析：抛物线的准线方程为  \\(x = -\\frac{p}{2}\\)，如图，因为点  \\(P\\) 的横坐标为 1，所以由抛物线定义， \\(|PF| = |PH| = 1 + \\frac{p}{2}\\)，又  \\(\\angle HPF = 60^\\circ\\)，所以  \\(\\triangle HPF\\) 是正三角形，故  \\(|HF| = 1 + \\frac{p}{2}\\)，且\n求 \\(p\\) 需建立关于 \\(p\\) 的方程，\\(\\triangle HPF\\) 已翻译完毕，可尝试到 \\(\\triangle HGF\\) 中找等量关系，\n由图知 \\(HP \\parallel x\\) 轴，所以 \\(\\angle HFG = \\angle PHF = 60^\\circ\\)，故 \\(|GF| = |HF| \\cdot \\cos \\angle HFG = \\frac{1}{2}\\left(1 + \\frac{p}{2}\\right)\\)，\n又 \\(|GF| = p\\)，所以 \\(\\frac{1}{2}\\left(1 + \\frac{p}{2}\\right) = p\\)，解得： \\(p = \\frac{2}{3}\\)。\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_904_1176_1090_1374.jpg\" alt=\"Image\" width=\"15%\" /></div>\n答案： \\(\\frac{2}{3}\\)\n【反思】过抛物线上一点  \\(P\\) 向其准线作垂线，设垂足为  \\(H\\)，则  \\(\\triangle PFH\\) 天然就是等腰三角形  \\((|PF|=|PH|)\\)，有关问题常由此出发，结合  \\(\\triangle HGF(G\\) 为准线与坐标轴的交点 \\()\\) 分析几何关系。本题天然就有准线的垂线  \\(PH\\)，有时这个垂线需要自己作辅助线，我们来看三个变式。",
+          "solution_present": true,
+          "vision_hint": "ch3.s7-LIf54abf3acf1232de"
+        },
+        {
+          "item_id": "a215ddfe943e1ba2",
+          "kind": "example",
+          "label": "例9",
+          "example_number": 9,
+          "parent_example_number": null,
+          "role": "knowledge_example",
+          "role_ref": "ch3.s7-k3",
+          "source_docs": [
+            111
+          ],
+          "question_text": "【例9】截至2023年2月，“中国天眼”发现的脉冲星总数已经达到740颗以上。被称为“中国天眼”的500米口径球面射电望远镜（FAST），是目前世界上口径最大，灵敏度最高的单口径射电望远镜（图1）。观测时它可以通过4450块三角形面板及2225个触控器完成向抛物面的转化，此时轴截面可以看作抛物线的一部分。某学校科技小组制作了一个FAST模型，观测时呈口径为4米，高为1米的抛物面，则其轴截面所在的抛物线（图2）的顶点到焦点的距离为（）\nA. 1 B. 2 C. 4 D. 8\n\n图1\n\n图2",
+          "image_refs": [
+            {
+              "ref": "imgs/img_in_image_box_375_859_542_970.jpg",
+              "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\imgs\\img_in_image_box_375_859_542_970.jpg",
+              "exists": true
+            },
+            {
+              "ref": "imgs/img_in_image_box_577_858_810_968.jpg",
+              "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\imgs\\img_in_image_box_577_858_810_968.jpg",
+              "exists": true
+            }
+          ],
+          "visual_status": "VISION_VERIFIED",
+          "teaching_text": "【例9】截至2023年2月，“中国天眼”发现的脉冲星总数已经达到740颗以上。被称为“中国天眼”的500米口径球面射电望远镜（FAST），是目前世界上口径最大，灵敏度最高的单口径射电望远镜（图1）。观测时它可以通过4450块三角形面板及2225个触控器完成向抛物面的转化，此时轴截面可以看作抛物线的一部分。某学校科技小组制作了一个FAST模型，观测时呈口径为4米，高为1米的抛物面，则其轴截面所在的抛物线（图2）的顶点到焦点的距离为（）\nA. 1 B. 2 C. 4 D. 8\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_375_859_542_970.jpg\" alt=\"Image\" width=\"14%\" /></div>\n<div style=\"text-align: center;\">图1</div>\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_577_858_810_968.jpg\" alt=\"Image\" width=\"19%\" /></div>\n<div style=\"text-align: center;\">图2</div>\n解析：抛物线的顶点到焦点的距离可由其标准方程求得，观察发现只要建系，就能由所给数据写出点A（如图）的坐标，代入抛物线即可求得其标准方程，\n如图建系，设抛物线的方程为  \\(x^{2}=2py(p>0)\\)，则由所给数据，\n图中点 A 的坐标为  \\((2,1)\\)，代入  \\(x^{2}=2py\\) 可得  \\(2^{2}=2p\\cdot1\\)，解得：p=2，所以抛物线的焦点为  \\(F(0,1)\\)，故抛物线的焦点 F 到顶点 O 的距离为 1.\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_837_1079_1091_1182.jpg\" alt=\"Image\" width=\"21%\" /></div>\n答案：A\n【反思】在实际背景下求解与抛物线有关的问题，核心是建立适当的平面直角坐标系，将实际问题与数学模型对应起来，再分析求解.这类题没有固定的套路，我们只举一个例题.\n## 补充、拓展\n在椭圆、双曲线中，都有基于它们的定义衍生出的最值问题，抛物线中也有类似的问题，我们通过下面的类型VI来给大家拓展.",
+          "solution_present": true,
+          "vision_hint": "ch3.s7-LIa215ddfe943e1ba2",
+          "vision_sidecars": [
+            {
+              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\imgs\\img_in_image_box_375_859_542_970.jpg",
+              "image_sha256": "d8a6ed486c8f6bdbc181ba60b836c79f493b9af1a93cbdf8dc8bf989ba340e1d",
+              "confidence": "E2",
+              "structured": {
+                "objects": [
+                  {
+                    "name": "射电望远镜",
+                    "description": "大型抛物面天线"
+                  },
+                  {
+                    "name": "支撑结构",
+                    "description": "天线周围的多根立柱"
+                  },
+                  {
+                    "name": "建筑主体",
+                    "description": "抛物面下方连接的矩形建筑"
+                  },
+                  {
+                    "name": "周围植被",
+                    "description": "望远镜下方的树木和植被"
+                  }
+                ],
+                "relations": [],
+                "coordinates": [],
+                "ranges": [],
+                "text": [],
+                "uncertainties": [],
+                "confidence": "E2"
+              },
+              "source_provenance": null
+            },
+            {
+              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\imgs\\img_in_image_box_577_858_810_968.jpg",
+              "image_sha256": "7049c94cb3fafec628ff7bfb2fbd426153f7654847283b97a1a485da3a3a7def",
+              "confidence": "E2",
+              "structured": {
+                "objects": [],
+                "relations": [],
+                "coordinates": [],
+                "ranges": [],
+                "text": [
+                  "4",
+                  "1"
+                ],
+                "uncertainties": [],
+                "confidence": "E2"
+              },
+              "source_provenance": null
+            }
+          ],
+          "vision_sidecar": {
+            "objects": [
+              {
+                "name": "射电望远镜",
+                "description": "大型抛物面天线"
+              },
+              {
+                "name": "支撑结构",
+                "description": "天线周围的多根立柱"
+              },
+              {
+                "name": "建筑主体",
+                "description": "抛物面下方连接的矩形建筑"
+              },
+              {
+                "name": "周围植被",
+                "description": "望远镜下方的树木和植被"
+              }
+            ],
+            "relations": [],
+            "coordinates": [],
+            "ranges": [],
+            "text": [],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "vision_source_provenance": [],
+          "evidence": [
+            "E1",
+            "E2"
+          ]
+        },
+        {
+          "item_id": "f8fe53b636f57231",
+          "kind": "example",
+          "label": "例10",
+          "example_number": 10,
+          "parent_example_number": null,
+          "role": "knowledge_example",
+          "role_ref": "ch3.s7-k3",
+          "source_docs": [
+            111,
+            112
+          ],
+          "question_text": "【例 10】已知抛物线  \\(x^2 = 4y\\) 的焦点为  \\(F\\)， \\(P\\) 是该抛物线上一动点，点  \\(A(2,3)\\)，则  \\(|PA| + |PF|\\) 的最\n小值为（ ）\nA.  \\(\\sqrt{10}\\) B. 4 C. 2 D.  \\(2\\sqrt{10}\\)",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例 10】已知抛物线  \\(x^2 = 4y\\) 的焦点为  \\(F\\)， \\(P\\) 是该抛物线上一动点，点  \\(A(2,3)\\)，则  \\(|PA| + |PF|\\) 的最\n小值为（ ）\nA.  \\(\\sqrt{10}\\) B. 4 C. 2 D.  \\(2\\sqrt{10}\\)\n解析：如图，直接分析何时  \\(|PA| + |PF|\\) 最小不易，涉及  \\(|PF|\\)，可尝试用抛物线定义转化为 P 到准线的距离来看，\n抛物线的焦点为  \\(F(0,1)\\)，准线为  \\(l: y = -1\\)，作  \\(PD \\perp l\\) 于点  \\(D\\)，则  \\(|PF| = |PD|\\)，\n解析：如图，直接分析何时  \\(|PA| + |PF|\\) 最小不易，涉及  \\(|PF|\\)，可尝试用抛物线\n抛物线的焦点为  \\(F(0,1)\\)，准线为  \\(l: y = -1\\)，作  \\(PD \\perp l\\) 于点  \\(D\\)，则  \\(|PF| = |PD|\\)，\n所以  \\(|PA| + |PF| = |PA| + |PD|\\)，由图可知，当 P 在抛物线上运动时，\n \\(|PA| + |PD| \\geq |AB| = 3 - (-1) = 4\\)，其中  \\(AB \\perp l\\) 于点  \\(B\\)，\n当且仅当  \\(P\\) 为线段  \\(AB\\) 与抛物线交点  \\(P_0\\) 时取等号，\n又  \\(|PA| + |PF| = |PA| + |PD|\\)，所以  \\(|PA| + |PF|\\) 的最小值为 4.\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_878_268_1092_416.jpg\" alt=\"Image\" width=\"17%\" /></div>\n答案：B\n【反思】在与抛物线有关的最值问题中，若目标量涉及抛物线上的点P到焦点F的距离，且不易直接看出最值在何时取得，可考虑利用定义，将|PF|转化为P到准线的距离d来分析. 类似的，在有些情况下，也需要将d转化为|PF|来看，比如下面的变式.",
+          "solution_present": true,
+          "vision_hint": "ch3.s7-LIf8fe53b636f57231"
+        }
+      ],
+      "direct_variants": [
+        {
+          "item_id": "e378ae2b1b64e57f",
+          "kind": "direct_variant",
+          "label": "变式1",
+          "example_number": null,
+          "parent_example_number": 5,
+          "role": "direct_variant",
+          "role_ref": null,
+          "source_docs": [
+            107
+          ],
+          "question_text": "【变式1】抛物线  \\(y=-4x^{2}\\) 的准线方程是 ___.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "ch3.s7-LIe378ae2b1b64e57f"
+        },
+        {
+          "item_id": "5ba69d1b3039afab",
+          "kind": "direct_variant",
+          "label": "变式2",
+          "example_number": null,
+          "parent_example_number": 5,
+          "role": "direct_variant",
+          "role_ref": null,
+          "source_docs": [
+            107
+          ],
+          "question_text": "【变式2】以(1,0)为焦点，y轴为准线的抛物线的方程是（ ）\nA.  \\(y^2 = x - \\frac{1}{2}\\) B.  \\(y^2 = x + \\frac{1}{2}\\) C.  \\(y^2 = 2x - 1\\) D.  \\(y^2 = 2x + 1\\)",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "ch3.s7-LI5ba69d1b3039afab"
+        },
+        {
+          "item_id": "1110316c7adf2824",
+          "kind": "direct_variant",
+          "label": "变式",
+          "example_number": null,
+          "parent_example_number": 6,
+          "role": "direct_variant",
+          "role_ref": null,
+          "source_docs": [
+            108
+          ],
+          "question_text": "【变式】已知圆  \\(N: x^2 + (y-3)^2 = 4\\)，直线  \\(l: y = -1\\)，圆  \\(M\\) 与圆  \\(N\\) 外切，且与直线  \\(l\\) 相切，则点  \\(M\\) 的轨迹方程是___。",
+          "image_refs": [
+            {
+              "ref": "imgs/img_in_image_box_917_116_1095_295.jpg",
+              "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\imgs\\img_in_image_box_917_116_1095_295.jpg",
+              "exists": true
+            }
+          ],
+          "visual_status": "VISION_VERIFIED",
+          "solution_isolated": true,
+          "vision_hint": "ch3.s7-LI1110316c7adf2824",
+          "vision_sidecars": [
+            {
+              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\imgs\\img_in_image_box_917_116_1095_295.jpg",
+              "image_sha256": "e120b45f067a49e667c92107023414214b6caab5d8541c280f6d969e63885203",
+              "confidence": "E2",
+              "structured": {
+                "objects": [
+                  "坐标轴Ox,Oy",
+                  "直线l",
+                  "点O,F,M",
+                  "圆M"
+                ],
+                "relations": [
+                  "点F在Ox上，点M在Ox上方",
+                  "圆M与Ox相切于点F",
+                  "点M在直线l的右侧",
+                  "直线l与Oy相切",
+                  "点d在Oy上，点M在点d右侧",
+                  "线段Md垂直于Oy"
+                ],
+                "coordinates": [
+                  "O(0,0)",
+                  "F(?,0)",
+                  "M(?,?)",
+                  "d(0,?)"
+                ],
+                "ranges": [
+                  "r为圆M的半径，r>0",
+                  "d为点M到Oy的距离，d>0",
+                  "圆M与Ox相切，切点为F，故MF垂直Ox"
+                ],
+                "text": [
+                  "l",
+                  "y",
+                  "x",
+                  "d",
+                  "M",
+                  "r",
+                  "F"
+                ],
+                "uncertainties": [],
+                "confidence": "E2"
+              },
+              "source_provenance": null
+            }
+          ],
+          "vision_sidecar": {
+            "objects": [
+              "坐标轴Ox,Oy",
+              "直线l",
+              "点O,F,M",
+              "圆M"
+            ],
+            "relations": [
+              "点F在Ox上，点M在Ox上方",
+              "圆M与Ox相切于点F",
+              "点M在直线l的右侧",
+              "直线l与Oy相切",
+              "点d在Oy上，点M在点d右侧",
+              "线段Md垂直于Oy"
+            ],
+            "coordinates": [
+              "O(0,0)",
+              "F(?,0)",
+              "M(?,?)",
+              "d(0,?)"
+            ],
+            "ranges": [
+              "r为圆M的半径，r>0",
+              "d为点M到Oy的距离，d>0",
+              "圆M与Ox相切，切点为F，故MF垂直Ox"
+            ],
+            "text": [
+              "l",
+              "y",
+              "x",
+              "d",
+              "M",
+              "r",
+              "F"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "vision_source_provenance": [],
+          "evidence": [
+            "E1",
+            "E2"
+          ]
+        },
+        {
+          "item_id": "d78cc13a85a64cad",
+          "kind": "direct_variant",
+          "label": "变式",
+          "example_number": null,
+          "parent_example_number": 7,
+          "role": "direct_variant",
+          "role_ref": null,
+          "source_docs": [
+            109
+          ],
+          "question_text": "【变式】（2025·全国Ⅱ卷）设抛物线 \\(C:y^2=2px(p>0)\\)的焦点为F，点A在C上，过A作C的准线的垂线，垂足为B，若直线BF的方程为 \\(y=-2x+2\\)，则 \\(|AF|=\\)（　　）\nA. 3\nB. 4\nC. 5\nD. 6",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "ch3.s7-LId78cc13a85a64cad"
+        },
+        {
+          "item_id": "609b92217658091b",
+          "kind": "direct_variant",
+          "label": "变式1",
+          "example_number": null,
+          "parent_example_number": 8,
+          "role": "direct_variant",
+          "role_ref": null,
+          "source_docs": [
+            110
+          ],
+          "question_text": "【变式 1】抛物线  \\(y^2 = 2px\\) ( \\(p > 0\\)) 的焦点为  \\(F\\)，点  \\(M\\) 在抛物线上，且  \\(|MF| = 3\\)， \\(FM\\) 的延长线交  \\(y\\) 轴于点  \\(N\\)，若  \\(M\\) 为线段  \\(FN\\) 的中点，则  \\(p =\\)（ ）\nA. 2\nB.  \\(2\\sqrt{2}\\)\nC. 4\nD. 6",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "ch3.s7-LI609b92217658091b"
+        },
+        {
+          "item_id": "bee968a42f7d4325",
+          "kind": "direct_variant",
+          "label": "变式2",
+          "example_number": null,
+          "parent_example_number": 8,
+          "role": "direct_variant",
+          "role_ref": null,
+          "source_docs": [
+            110
+          ],
+          "question_text": "【变式 2】（2015·浙江卷）设抛物线  \\(y^2 = 4x\\) 的焦点为  \\(F\\)，不经过焦点的直线上有三个不同的点  \\(A\\)， \\(B\\)， \\(C\\)，其中点  \\(A\\)， \\(B\\) 在抛物线上，点  \\(C\\) 在  \\(y\\) 轴上， \\(B\\) 在线段  \\(AC\\) 上，则  \\(\\triangle BCF\\) 与  \\(\\triangle ACF\\) 的面积之比是（ ）\nA.  \\(\\frac{|BF|-1}{|AF|-1}\\) B.  \\(\\frac{|BF|^2-1}{|AF|^2-1}\\) C.  \\(\\frac{|BF|+1}{|AF|+1}\\) D.  \\(\\frac{|BF|^2+1}{|AF|^2+1}\\)",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "ch3.s7-LIbee968a42f7d4325"
+        },
+        {
+          "item_id": "cfa0b66be896c44a",
+          "kind": "direct_variant",
+          "label": "变式3",
+          "example_number": null,
+          "parent_example_number": 8,
+          "role": "direct_variant",
+          "role_ref": null,
+          "source_docs": [
+            110,
+            111
+          ],
+          "question_text": "【变式3】如图，过抛物线  \\(y^2 = 4x\\) 的焦点  \\(F\\) 作直线与抛物线及其准线分别交于  \\(A\\)， \\(B\\)， \\(C\\) 三点，若  \\(\\overrightarrow{FC} = 3\\overrightarrow{FB}\\)，则  \\(|AB| =\\) ___.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "ch3.s7-LIcfa0b66be896c44a"
+        },
+        {
+          "item_id": "7384f92b50d73ba8",
+          "kind": "direct_variant",
+          "label": "变式",
+          "example_number": null,
+          "parent_example_number": 10,
+          "role": "direct_variant",
+          "role_ref": null,
+          "source_docs": [
+            112
+          ],
+          "question_text": "【变式】已知点 \\(P\\) 是抛物线 \\(C: y^2 = 4x\\) 上任意一点，若点 \\(P\\) 到抛物线 \\(C\\) 的准线的距离为 \\(d_1\\)，到直线 \\(l: 2x - y + 3 = 0\\) 的距离为 \\(d_2\\)，则 \\(d_1 + d_2\\) 的最小值是（ ）\nA. \\(1 + \\frac{3\\sqrt{5}}{5}\\)      B. \\(\\sqrt{5}\\)      C. \\(\\frac{3\\sqrt{5}}{5}\\)      D. \\(\\frac{7\\sqrt{5}}{5}\\)",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "ch3.s7-LI7384f92b50d73ba8"
+        }
+      ],
+      "exercise_questions": [],
+      "action_order": [
+        "watch_current_courses",
+        "learn_each_current_example_then_attempt_its_direct_variants",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [
+        {
+          "id": "ch3.s7-k3",
+          "label": "抛物线的焦半径公式",
+          "example_labels": [
+            "例4",
+            "例5",
+            "例6",
+            "例7",
+            "例8",
+            "例9",
+            "例10"
+          ],
+          "text": "知识点 3：抛物线的焦半径公式\n\n### 1. 抛物线的焦半径\n\n若点 M 是抛物线上一点，抛物线的焦点为 F，准线为 l，则线段 MF 叫做抛物线的焦半径.\n\n2. 坐标形式的焦半径公式\n\n如图，设  \\(M(x_0, y_0)\\) 是抛物线  \\(y^2 = 2px\\) ( \\(p > 0\\)) 上任意一点，过  \\(M\\) 作  \\(MH \\perp l\\) 于点  \\(H\\)，交  \\(y\\) 轴于点  \\(N\\)，由抛物线的定义可知  \\(|MF| = |MH|\\)，而  \\(|MH| = |MN| + |NH| = x_0 + \\frac{p}{2}\\)，所以  \\(|MF| = x_0 + \\frac{p}{2}\\)。\n\n\n\n\n同理可知其他形式标准方程下的焦半径公式，汇总如下表（表中的p均满足p>0)：\n\n向上，与 \\(x^{2}=2py(p>0)\\)对比得 \\(p=\\frac{1}{4}\\)\n\n所以抛物线的焦点到准线的距离为 \\(\\frac{1}{4}\\).\n\n\n\n\n<table border=1 style='margin: auto; word-wrap: break-word;'><tr><td style='text-align: center; word-wrap: break-word;'>抛物线</td><td style='text-align: center; word-wrap: break-word;'>\\(y^{2}=2px\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(y^{2}=-2px\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(x^{2}=2py\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(x^{2}=-2py\\)</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>焦半径公式</td><td style='text-align: center; word-wrap: break-word;'>\\(x_{0}+\\frac{p}{2}\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(-x_{0}+\\frac{p}{2}\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(y_{0}+\\frac{p}{2}\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(-y_{0}+\\frac{p}{2}\\)</td></tr></table>\n\n\n\n类型 I：抛物线的标准方程有关概念题\n\n类型Ⅱ：定义法求抛物线的轨迹方程\n\n类型Ⅲ：用抛物线定义计算焦半径\n\n## 类型IV：抛物线定义与几何性质综合题\n\n## 类型V：抛物线的实际应用\n\n类型VI：基于抛物线定义的一类最值问题",
+          "answer_free": true
+        }
+      ],
+      "prerequisite_knowledge_blocks": []
+    },
+    {
+      "cycle_id": "ch3.s7-cycle-4",
+      "sequence": 4,
+      "title": "A组 夯实基础",
+      "course_keys": [],
+      "prerequisite_course_keys": [
+        "parabola_definition_equation",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "optional_course_keys": [],
+      "knowledge_refs": [],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [
+        "类型I 抛物线的标准方程有关概念题",
+        "类型Ⅱ 定义法求抛物线的轨迹方程",
+        "类型Ⅲ 用抛物线定义计算焦半径",
+        "类型IV 抛物线定义与几何性质综合题",
+        "类型V 抛物线的实际应用",
+        "类型VI 基于抛物线定义的一类最值问题"
+      ],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [],
+      "direct_variants": [],
+      "exercise_questions": [
+        {
+          "qid": "Q-21bdec0c085628ba",
+          "section": "ch3.s7",
+          "group": "A",
+          "number": 1,
+          "kind": "A组",
+          "source_anchor": {
+            "ocr_doc": 112,
+            "pdf_page": 113,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_112.md"
+          },
+          "question_text": "1\\. (2024 · 北京卷)\n\n抛物线  \\(y^{2}=16x\\) 的焦点坐标为 ___.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1"
+          ]
+        },
+        {
+          "qid": "Q-f186e83b1cb2e479",
+          "section": "ch3.s7",
+          "group": "A",
+          "number": 2,
+          "kind": "A组",
+          "source_anchor": {
+            "ocr_doc": 113,
+            "pdf_page": 114,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_113.md"
+          },
+          "question_text": "2.（2020·北京卷）\n\n设抛物线的顶点为 O，焦点为 F，准线为 l，P 是抛物线上异于 O 的一点，过 P 作  \\(PQ \\perp l\\) 于 Q，则线段 FQ 的垂直平分线（）\n\nA. 经过点 O\n\nB. 经过点 P\n\nC. 平行于直线 OP\n\nD. 垂直于直线 OP",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1"
+          ]
+        },
+        {
+          "qid": "Q-4455888532a14d4e",
+          "section": "ch3.s7",
+          "group": "A",
+          "number": 3,
+          "kind": "A组",
+          "source_anchor": {
+            "ocr_doc": 113,
+            "pdf_page": 114,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_113.md"
+          },
+          "question_text": "### 3. （2021·新高考Ⅱ卷）\n\n抛物线  \\(y^{2}=2px(p>0)\\) 的焦点到直线 y=x+1 的距离为  \\(\\sqrt{2}\\)，则 p=（）\n\nA. 1 B. 2 C.  \\(2\\sqrt{2}\\) D. 4",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1"
+          ]
+        },
+        {
+          "qid": "Q-7c52d208acbf05bf",
+          "section": "ch3.s7",
+          "group": "A",
+          "number": 4,
+          "kind": "A组",
+          "source_anchor": {
+            "ocr_doc": 113,
+            "pdf_page": 114,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_113.md"
+          },
+          "question_text": "4.（2023·全国乙卷）\n\n已知点  \\(A(1, \\sqrt{5})\\) 在抛物线  \\(C: y^{2} = 2px (p > 0)\\) 上，则 A 到 C 的准线的距离为 ___.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1"
+          ]
+        },
+        {
+          "qid": "Q-8ef78031b397b9fd",
+          "section": "ch3.s7",
+          "group": "A",
+          "number": 5,
+          "kind": "A组",
+          "source_anchor": {
+            "ocr_doc": 113,
+            "pdf_page": 114,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_113.md"
+          },
+          "question_text": "5.（2024·上海卷）\n\n已知抛物线  \\(y^2 = 4x\\) 上有一点  \\(P\\) 到准线的距离为 9，那么  \\(P\\) 到  \\(x\\) 轴的距离为 ___.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1"
+          ]
+        },
+        {
+          "qid": "Q-516d31855089e024",
+          "section": "ch3.s7",
+          "group": "A",
+          "number": 6,
+          "kind": "A组",
+          "source_anchor": {
+            "ocr_doc": 113,
+            "pdf_page": 114,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_113.md",
+            "recovery": "PADDLE_OCR_TEXT_AFTER_A5_BEFORE_B_GROUP",
+            "recovery_source_kind": "primary_ocr"
+          },
+          "question_text": "已知 A 为抛物线  \\(C: y^{2} = 2px (p > 0)\\) 上一点，点 A 到 C 的焦点的距离为 12，到 y 轴的距离为 9，则 p = （）\n\nA. 2 B. 3 C. 6 D. 9",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1",
+            "PADDLE_OCR_TEXT_AFTER_A5_BEFORE_B_GROUP"
+          ],
+          "recovery_reason": "printed_number_missing_from_paddle_ocr_before_b_group_header"
+        }
+      ],
+      "action_order": [
+        "attempt_current_abc_exercises_without_answers",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [],
+      "prerequisite_knowledge_blocks": []
+    },
+    {
+      "cycle_id": "ch3.s7-cycle-5",
+      "sequence": 5,
+      "title": "B组 强化能力",
+      "course_keys": [],
+      "prerequisite_course_keys": [
+        "parabola_definition_equation",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "optional_course_keys": [],
+      "knowledge_refs": [],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [
+        "类型I 抛物线的标准方程有关概念题",
+        "类型Ⅱ 定义法求抛物线的轨迹方程",
+        "类型Ⅲ 用抛物线定义计算焦半径",
+        "类型IV 抛物线定义与几何性质综合题",
+        "类型V 抛物线的实际应用",
+        "类型VI 基于抛物线定义的一类最值问题"
+      ],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [],
+      "direct_variants": [],
+      "exercise_questions": [
+        {
+          "qid": "Q-b22147c427beea22",
+          "section": "ch3.s7",
+          "group": "B",
+          "number": 7,
+          "kind": "B组",
+          "source_anchor": {
+            "ocr_doc": 114,
+            "pdf_page": 115,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_114.md"
+          },
+          "question_text": "### 7. （2025 · 保定一模）\n\n已知抛物线  \\(y^{2}=2px(p>0)\\) 的焦点为 F，点 A，B，C 在抛物线上，F 为  \\(\\triangle ABC\\) 的重心，且  \\(\\left|\\overrightarrow{FA}\\right|+\\left|\\overrightarrow{FB}\\right|+\\left|\\overrightarrow{FC}\\right|=12\\)，则 p 的值为（ ）\n\nA. 3\n\nB. 4\n\nC. 5\n\nD. 6",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1"
+          ]
+        },
+        {
+          "qid": "Q-a899b3ee3e7e5098",
+          "section": "ch3.s7",
+          "group": "B",
+          "number": 8,
+          "kind": "B组",
+          "source_anchor": {
+            "ocr_doc": 114,
+            "pdf_page": 115,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_114.md"
+          },
+          "question_text": "### 8. （2025 · 重庆模拟）\n\n已知抛物线  \\(C: y^2 = 8x\\) 的焦点为  \\(F\\)，准线为  \\(l\\)， \\(P\\) 为  \\(C\\) 上位于第一象限的点， \\(PQ\\) 垂直  \\(l\\) 于点  \\(\\underline{Q}\\)， \\(\\triangle PQF\\) 为正三角形，过  \\(PQ\\) 的中点  \\(M\\) 作直线  \\(MR \\parallel QF\\)，交  \\(x\\) 轴于点  \\(R\\)，则直线  \\(MR\\) 的方程为（ ）\n\nA.  \\(x + \\sqrt{3}y - 14 = 0\\)\n\nB.  \\(x + \\sqrt{3}y - 10 = 0\\)\n\nC.  \\(\\sqrt{3}x + y - 6\\sqrt{3} = 0\\)\n\nD.  \\(\\sqrt{3}x + y - 2\\sqrt{3} = 0\\)",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1"
+          ]
+        },
+        {
+          "qid": "Q-ee6a61ac6a2ff30c",
+          "section": "ch3.s7",
+          "group": "B",
+          "number": 9,
+          "kind": "B组",
+          "source_anchor": {
+            "ocr_doc": 114,
+            "pdf_page": 115,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_114.md"
+          },
+          "question_text": "### 9. （2023·浙江温州二模）\n\n已知一个抛物线形拱桥在一次暴雨前后的水位之差是 1.5m，暴雨后的水面宽为 2m，暴雨来临之前的水面宽为 4m，暴雨后的水面离桥拱顶的距离为（）\n\nA. 0.5m B. 1m C. 1.5m D. 2m",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1"
+          ]
+        },
+        {
+          "qid": "Q-6af17971ea117f4b",
+          "section": "ch3.s7",
+          "group": "B",
+          "number": 10,
+          "kind": "B组",
+          "source_anchor": {
+            "ocr_doc": 114,
+            "pdf_page": 115,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_114.md"
+          },
+          "question_text": "10.（2021·新高考Ⅰ卷）\n\n已知 \\(O\\) 为坐标原点，抛物线 \\(C: y^2 = 2px\\) (\\(p > 0\\)) 的焦点为 \\(F\\)，\\(P\\) 为 \\(C\\) 上一点，\\(PF\\) 与 \\(x\\) 轴垂直，\\(Q\\) 为 \\(x\\) 轴上一点，且 \\(PQ \\perp OP\\)。若 \\(|FQ| = 6\\)，则 \\(C\\) 的准线方程为___。",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1"
+          ]
+        },
+        {
+          "qid": "Q-29f6db06254f27af",
+          "section": "ch3.s7",
+          "group": "B",
+          "number": 11,
+          "kind": "B组",
+          "source_anchor": {
+            "ocr_doc": 115,
+            "pdf_page": 116,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_115.md"
+          },
+          "question_text": "11.（2023·山东·青岛模拟）\n\n已知抛物线  \\(C: y^2 = 2px (p > 0)\\) 的焦点为  \\(F\\)， \\(C\\) 的准线与  \\(x\\) 轴交于点  \\(A\\)， \\(C\\) 上一点  \\(P\\) 满足  \\(|PA| = \\sqrt{7}\\)， \\(|PF| = 2\\)，则  \\(\\tan \\angle PAF =\\)（ ）\n\nA.  \\(\\frac{2\\sqrt{3}}{3}\\) B.  \\(\\frac{\\sqrt{3}}{2}\\) C.  \\(\\frac{\\sqrt{7}}{2}\\) D.  \\(\\frac{2\\sqrt{7}}{7}\\)",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1"
+          ]
+        },
+        {
+          "qid": "Q-a85eafd321931210",
+          "section": "ch3.s7",
+          "group": "B",
+          "number": 12,
+          "kind": "B组",
+          "source_anchor": {
+            "ocr_doc": 115,
+            "pdf_page": 116,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_115.md"
+          },
+          "question_text": "### 12 \\. （2024·福建福州模拟）\n\n倾斜角为 \\(\\frac{\\pi}{3}\\)的直线经过抛物线 \\(C:y^{2}=12x\\)的焦点F，且与C交于A，B两点，Q为线段AB的中点，P为C上一点，则 \\(|PF|+|PQ|\\)的最小值为___.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1"
+          ]
+        },
+        {
+          "qid": "Q-302b94870fd61394",
+          "section": "ch3.s7",
+          "group": "B",
+          "number": 13,
+          "kind": "B组",
+          "source_anchor": {
+            "ocr_doc": 115,
+            "pdf_page": 116,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_115.md"
+          },
+          "question_text": "### 13. （2021·上海卷）\n\n已知抛物线  \\(y^2 = 2px (p > 0)\\)，位于第一象限的  \\(A, B\\) 两点在抛物线上，焦点为  \\(F\\)， \\(|AF| = 2\\)， \\(|BF| = 4\\)， \\(|AB| = 3\\)，则直线  \\(AB\\) 的斜率为___。",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1"
+          ]
+        },
+        {
+          "qid": "Q-ee03974f3c8dce94",
+          "section": "ch3.s7",
+          "group": "B",
+          "number": 14,
+          "kind": "B组",
+          "source_anchor": {
+            "ocr_doc": 115,
+            "pdf_page": 116,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_115.md"
+          },
+          "question_text": "### 14. （2025·河北张家口期末）\n\n已知点  \\(O(0,0)\\)，点  \\(F(0,1)\\)，点 M 是 x 轴上的动点，点 N 在 y 轴上，直线  \\(MN \\perp MF\\)，点 N 关于 M 的对称点为 P，求点 P 的轨迹方程.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1"
+          ]
+        }
+      ],
+      "action_order": [
+        "attempt_current_abc_exercises_without_answers",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [],
+      "prerequisite_knowledge_blocks": []
+    },
+    {
+      "cycle_id": "ch3.s7-cycle-6",
+      "sequence": 6,
+      "title": "C组 拓展提升",
+      "course_keys": [],
+      "prerequisite_course_keys": [
+        "parabola_definition_equation",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "optional_course_keys": [],
+      "knowledge_refs": [],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [
+        "类型I 抛物线的标准方程有关概念题",
+        "类型Ⅱ 定义法求抛物线的轨迹方程",
+        "类型Ⅲ 用抛物线定义计算焦半径",
+        "类型IV 抛物线定义与几何性质综合题",
+        "类型V 抛物线的实际应用",
+        "类型VI 基于抛物线定义的一类最值问题"
+      ],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [],
+      "direct_variants": [],
+      "exercise_questions": [
+        {
+          "qid": "Q-0480684276bb16b9",
+          "section": "ch3.s7",
+          "group": "C",
+          "number": 15,
+          "kind": "C组",
+          "source_anchor": {
+            "ocr_doc": 116,
+            "pdf_page": 117,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_116.md"
+          },
+          "question_text": "### 15. （2025 · 福建漳州模拟）\n\n已知 P 为抛物线  \\(y^{2}=4x\\) 上一动点，点 P 到直线  \\(l_{1}:4x-3y+6=0\\) 的距离为  \\(d_{1}\\)，到直线  \\(l_{2}:x+4=0\\) 的距离为  \\(d_{2}\\)，则  \\(d_{1}+d_{2}\\) 的最小值为 ___.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1"
+          ]
+        },
+        {
+          "qid": "Q-cb94bd4a6d6b6dca",
+          "section": "ch3.s7",
+          "group": "C",
+          "number": 16,
+          "kind": "C组",
+          "source_anchor": {
+            "ocr_doc": 116,
+            "pdf_page": 117,
+            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_116.md"
+          },
+          "question_text": "### 16. （2024·东北三校联考）（多选）\n\n在平面直角坐标系 xOy 中，抛物线  \\(C: y^{2} = 4x\\) 的焦点为 F，点 P 在抛物线 C 上，点 Q 在抛物线 C 的准线上，则以下命题正确的是（ ）\n\nA.  \\(|PQ| + |PF|\\) 的最小值是 2\n\nB.  \\(|PQ| \\geq |PF|\\)\n\nC. 当点 P 的纵坐标为 4 时，存在点 Q，使得  \\(\\overrightarrow{QF} = 3\\overrightarrow{FP}\\)\n\nD. 若  \\(\\triangle PQF\\) 是等边三角形，则点 P 的横坐标是 3",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "math_errors": [],
+          "evidence": [
+            "E1"
+          ]
+        }
+      ],
+      "action_order": [
+        "attempt_current_abc_exercises_without_answers",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [],
+      "prerequisite_knowledge_blocks": []
+    }
+  ],
+  "knowledge_and_type_pages": [
+    {
+      "ocr_doc": 105,
+      "text": "# 3.3.1 抛物线及其标准方程\n\n习题：P1\n\n## 知识梳理\n\n## 知识点1：抛物线的定义\n\n我们把平面内与一个定点 F 和一条定直线 l（l 不经过点 F）的距离相等的点的轨迹叫做抛物线。点 F 叫做抛物线的焦点，直线 l 叫做抛物线的准线。\n\n抛物线的定义可用集合作如下表示：设 \\(M\\) 是抛物线上一点，抛物线的焦点为 \\(F\\)，准线为 \\(l\\)，点 \\(M\\) 到准线 \\(l\\) 的距离为 \\(d\\)，则抛物线可视为动点 \\(M\\) 的集合 \\(\\{M \\mid |MF| = d\\}\\).\n\n## 知识点2：抛物线的标准方程\n\n1. 抛物线的标准方程（表中的 p 都满足 p > 0）\n\n\n<table border=1 style='margin: auto; word-wrap: break-word;'><tr><td style='text-align: center; word-wrap: break-word;'>标准方程</td><td style='text-align: center; word-wrap: break-word;'>\\(y^{2}=2px\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(y^{2}=-2px\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(x^{2}=2py\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(x^{2}=-2py\\)</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>图形</td><td style='text-align: center; word-wrap: break-word;'></td><td style='text-align: center; word-wrap: break-word;'></td><td style='text-align: center; word-wrap: break-word;'></td><td style='text-align: center; word-wrap: break-word;'></td></tr><tr><td style='text-align: center; word-wrap: break-word;'>焦点</td><td style='text-align: center; word-wrap: break-word;'>\\(F\\left(\\frac{p}{2},0\\right)\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(F\\left(-\\frac{p}{2},0\\right)\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(F\\left(0,\\frac{p}{2}\\right)\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(F\\left(0,-\\frac{p}{2}\\right)\\)</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>准线</td><td style='text-align: center; word-wrap: break-word;'>\\(l:x=-\\frac{p}{2}\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(l:x=\\frac{p}{2}\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(l:y=-\\frac{p}{2}\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(l:y=\\frac{p}{2}\\)</td></tr></table>\n\n注：①抛物线的标准方程指的是抛物线与对称轴的交点是坐标原点，且焦点在坐标轴上的抛物线的方程。抛物线的标准方程、焦点坐标、准线方程三者之中只要确定其中一个，另外两个也就确定了。\n\n②焦点在y轴的抛物线的方程 \\(x^2 = \\pm 2py\\)经过变形就是 \\(y = \\pm \\frac{1}{2p}x^2\\)，也就是我们以前所学习的二次函数，所以对形如 \\(y = ax^2 (a \\neq 0)\\)的二次函数，要求其焦点与准线，需先变形为抛物线的标准方程的形式。\n\n2. 参数 p 的几何意义\n\n抛物线的标准方程中参数 p 的几何意义是抛物线的焦点到准线的距离，所以抛物线的方程中恒有 p > 0.\n\n## 知识点1\n\n## 知识点2",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 106,
+      "text": "知识点 3：抛物线的焦半径公式\n\n### 1. 抛物线的焦半径\n\n若点 M 是抛物线上一点，抛物线的焦点为 F，准线为 l，则线段 MF 叫做抛物线的焦半径.\n\n2. 坐标形式的焦半径公式\n\n如图，设  \\(M(x_0, y_0)\\) 是抛物线  \\(y^2 = 2px\\) ( \\(p > 0\\)) 上任意一点，过  \\(M\\) 作  \\(MH \\perp l\\) 于点  \\(H\\)，交  \\(y\\) 轴于点  \\(N\\)，由抛物线的定义可知  \\(|MF| = |MH|\\)，而  \\(|MH| = |MN| + |NH| = x_0 + \\frac{p}{2}\\)，所以  \\(|MF| = x_0 + \\frac{p}{2}\\)。\n\n\n\n\n同理可知其他形式标准方程下的焦半径公式，汇总如下表（表中的p均满足p>0)：\n\n向上，与 \\(x^{2}=2py(p>0)\\)对比得 \\(p=\\frac{1}{4}\\)\n\n所以抛物线的焦点到准线的距离为 \\(\\frac{1}{4}\\).\n\n\n\n\n<table border=1 style='margin: auto; word-wrap: break-word;'><tr><td style='text-align: center; word-wrap: break-word;'>抛物线</td><td style='text-align: center; word-wrap: break-word;'>\\(y^{2}=2px\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(y^{2}=-2px\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(x^{2}=2py\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(x^{2}=-2py\\)</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>焦半径公式</td><td style='text-align: center; word-wrap: break-word;'>\\(x_{0}+\\frac{p}{2}\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(-x_{0}+\\frac{p}{2}\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(y_{0}+\\frac{p}{2}\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(-y_{0}+\\frac{p}{2}\\)</td></tr></table>\n\n\n## 知识点3\n\n类型 I：抛物线的标准方程有关概念题",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 107,
+      "text": "类型Ⅱ：定义法求抛物线的轨迹方程",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 108,
+      "text": "类型Ⅲ：用抛物线定义计算焦半径",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 109,
+      "text": "## 类型IV：抛物线定义与几何性质综合题",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 111,
+      "text": "## 类型V：抛物线的实际应用\n\n类型VI：基于抛物线定义的一类最值问题",
+      "image_refs": [],
+      "math_errors": []
+    }
+  ],
+  "knowledge_blocks": [
+    {
+      "id": "ch3.s7-k1",
+      "label": "抛物线的定义",
+      "example_labels": [
+        "例1"
+      ],
+      "text": "## 知识点1：抛物线的定义\n\n我们把平面内与一个定点 F 和一条定直线 l（l 不经过点 F）的距离相等的点的轨迹叫做抛物线。点 F 叫做抛物线的焦点，直线 l 叫做抛物线的准线。\n\n抛物线的定义可用集合作如下表示：设 \\(M\\) 是抛物线上一点，抛物线的焦点为 \\(F\\)，准线为 \\(l\\)，点 \\(M\\) 到准线 \\(l\\) 的距离为 \\(d\\)，则抛物线可视为动点 \\(M\\) 的集合 \\(\\{M \\mid |MF| = d\\}\\).\n\n##",
+      "answer_free": true
+    },
+    {
+      "id": "ch3.s7-k2",
+      "label": "抛物线的标准方程",
+      "example_labels": [
+        "例2",
+        "例3"
+      ],
+      "text": "## 知识点2：抛物线的标准方程\n\n1. 抛物线的标准方程（表中的 p 都满足 p > 0）\n\n\n<table border=1 style='margin: auto; word-wrap: break-word;'><tr><td style='text-align: center; word-wrap: break-word;'>标准方程</td><td style='text-align: center; word-wrap: break-word;'>\\(y^{2}=2px\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(y^{2}=-2px\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(x^{2}=2py\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(x^{2}=-2py\\)</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>图形</td><td style='text-align: center; word-wrap: break-word;'></td><td style='text-align: center; word-wrap: break-word;'></td><td style='text-align: center; word-wrap: break-word;'></td><td style='text-align: center; word-wrap: break-word;'></td></tr><tr><td style='text-align: center; word-wrap: break-word;'>焦点</td><td style='text-align: center; word-wrap: break-word;'>\\(F\\left(\\frac{p}{2},0\\right)\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(F\\left(-\\frac{p}{2},0\\right)\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(F\\left(0,\\frac{p}{2}\\right)\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(F\\left(0,-\\frac{p}{2}\\right)\\)</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>准线</td><td style='text-align: center; word-wrap: break-word;'>\\(l:x=-\\frac{p}{2}\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(l:x=\\frac{p}{2}\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(l:y=-\\frac{p}{2}\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(l:y=\\frac{p}{2}\\)</td></tr></table>\n\n注：①抛物线的标准方程指的是抛物线与对称轴的交点是坐标原点，且焦点在坐标轴上的抛物线的方程。抛物线的标准方程、焦点坐标、准线方程三者之中只要确定其中一个，另外两个也就确定了。\n\n②焦点在y轴的抛物线的方程 \\(x^2 = \\pm 2py\\)经过变形就是 \\(y = \\pm \\frac{1}{2p}x^2\\)，也就是我们以前所学习的二次函数，所以对形如 \\(y = ax^2 (a \\neq 0)\\)的二次函数，要求其焦点与准线，需先变形为抛物线的标准方程的形式。\n\n2. 参数 p 的几何意义\n\n抛物线的标准方程中参数 p 的几何意义是抛物线的焦点到准线的距离，所以抛物线的方程中恒有 p > 0.",
+      "answer_free": true
+    },
+    {
+      "id": "ch3.s7-k3",
+      "label": "抛物线的焦半径公式",
+      "example_labels": [
+        "例4",
+        "例5",
+        "例6",
+        "例7",
+        "例8",
+        "例9",
+        "例10"
+      ],
+      "text": "知识点 3：抛物线的焦半径公式\n\n### 1. 抛物线的焦半径\n\n若点 M 是抛物线上一点，抛物线的焦点为 F，准线为 l，则线段 MF 叫做抛物线的焦半径.\n\n2. 坐标形式的焦半径公式\n\n如图，设  \\(M(x_0, y_0)\\) 是抛物线  \\(y^2 = 2px\\) ( \\(p > 0\\)) 上任意一点，过  \\(M\\) 作  \\(MH \\perp l\\) 于点  \\(H\\)，交  \\(y\\) 轴于点  \\(N\\)，由抛物线的定义可知  \\(|MF| = |MH|\\)，而  \\(|MH| = |MN| + |NH| = x_0 + \\frac{p}{2}\\)，所以  \\(|MF| = x_0 + \\frac{p}{2}\\)。\n\n\n\n\n同理可知其他形式标准方程下的焦半径公式，汇总如下表（表中的p均满足p>0)：\n\n向上，与 \\(x^{2}=2py(p>0)\\)对比得 \\(p=\\frac{1}{4}\\)\n\n所以抛物线的焦点到准线的距离为 \\(\\frac{1}{4}\\).\n\n\n\n\n<table border=1 style='margin: auto; word-wrap: break-word;'><tr><td style='text-align: center; word-wrap: break-word;'>抛物线</td><td style='text-align: center; word-wrap: break-word;'>\\(y^{2}=2px\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(y^{2}=-2px\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(x^{2}=2py\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(x^{2}=-2py\\)</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>焦半径公式</td><td style='text-align: center; word-wrap: break-word;'>\\(x_{0}+\\frac{p}{2}\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(-x_{0}+\\frac{p}{2}\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(y_{0}+\\frac{p}{2}\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(-y_{0}+\\frac{p}{2}\\)</td></tr></table>\n\n\n\n类型 I：抛物线的标准方程有关概念题\n\n类型Ⅱ：定义法求抛物线的轨迹方程\n\n类型Ⅲ：用抛物线定义计算焦半径\n\n## 类型IV：抛物线定义与几何性质综合题\n\n## 类型V：抛物线的实际应用\n\n类型VI：基于抛物线定义的一类最值问题",
+      "answer_free": true
+    }
+  ],
+  "worked_examples": [
+    {
+      "item_id": "76e9608cab0edca8",
+      "kind": "example",
+      "label": "例1",
+      "example_number": 1,
+      "parent_example_number": null,
+      "role": "knowledge_example",
+      "role_ref": "ch3.s7-k1",
+      "source_docs": [
+        105
+      ],
+      "question_text": "【例 1】若动点 P 到点 (3,0) 的距离和它到直线 x = -1 的距离相等，则动点 P 的轨迹是（）\nA. 椭圆 B. 抛物线 C. 直线 D. 双曲线",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "teaching_text": "【例 1】若动点 P 到点 (3,0) 的距离和它到直线 x = -1 的距离相等，则动点 P 的轨迹是（）\nA. 椭圆 B. 抛物线 C. 直线 D. 双曲线\n解析：由题意，点 P 到定点与定直线的距离相等，且该定点不在定直线上，所以点 P 轨迹为抛物线.\n答案：B",
+      "solution_present": true,
+      "vision_hint": "ch3.s7-LI76e9608cab0edca8"
+    },
+    {
+      "item_id": "ca336811597133fe",
+      "kind": "example",
+      "label": "例2",
+      "example_number": 2,
+      "parent_example_number": null,
+      "role": "knowledge_example",
+      "role_ref": "ch3.s7-k2",
+      "source_docs": [
+        105
+      ],
+      "question_text": "【例2】抛物线 \\(x=-\\frac{1}{4}y^{2}\\)的准线方程为（）\nA. x = -1 B. x = 1\nC. y = -1 D. y = 1",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "teaching_text": "【例2】抛物线 \\(x=-\\frac{1}{4}y^{2}\\)的准线方程为（）\nA. x = -1 B. x = 1\nC. y = -1 D. y = 1\n解析：抛物线的方程不是标准形式，先化为标准形式，再观察准线，\n \\(x = -\\frac{1}{4}y^2 \\Leftrightarrow y^2 = -4x\\)，所以抛物线开口向左，其标准方程为  \\(y^2 = -2px (p > 0)\\)，两者对比可得  \\(2p = 4 \\Rightarrow p = 2\\)，所以  \\(\\frac{p}{2} = 1\\)，故  \\(x = -\\frac{1}{4}y^2\\) 的准线方程为  \\(x = 1\\)。\n答案：B",
+      "solution_present": true,
+      "vision_hint": "ch3.s7-LIca336811597133fe"
+    },
+    {
+      "item_id": "e7c3c730e1eec0cf",
+      "kind": "example",
+      "label": "例3",
+      "example_number": 3,
+      "parent_example_number": null,
+      "role": "knowledge_example",
+      "role_ref": "ch3.s7-k2",
+      "source_docs": [
+        105
+      ],
+      "question_text": "【例3】已知抛物线  \\(y=2x^{2}\\)，则抛物线的焦点到准线的距离为（）\nA.  \\(\\frac{1}{4}\\) B.  \\(\\frac{1}{2}\\) C. 1 D. 2",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "teaching_text": "【例3】已知抛物线  \\(y=2x^{2}\\)，则抛物线的焦点到准线的距离为（）\nA.  \\(\\frac{1}{4}\\) B.  \\(\\frac{1}{2}\\) C. 1 D. 2\n解析： \\(y=2x^2 \\Leftrightarrow x^2=\\frac{1}{2}y\\)，抛物线的开口",
+      "solution_present": true,
+      "vision_hint": "ch3.s7-LIe7c3c730e1eec0cf"
+    },
+    {
+      "item_id": "adeb7084cf3fe24c",
+      "kind": "example",
+      "label": "例4",
+      "example_number": 4,
+      "parent_example_number": null,
+      "role": "knowledge_example",
+      "role_ref": "ch3.s7-k3",
+      "source_docs": [
+        106
+      ],
+      "question_text": "【例4】已知抛物线 \\(y^{2}=4x\\)上一点A的横坐标为4，则点A到抛物线焦点F的距离为（）\nA. 5 B. 6 C.  \\(\\frac{17}{16}\\) D.  \\(4\\sqrt{2}\\)",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "teaching_text": "【例4】已知抛物线 \\(y^{2}=4x\\)上一点A的横坐标为4，则点A到抛物线焦点F的距离为（）\nA. 5 B. 6 C.  \\(\\frac{17}{16}\\) D.  \\(4\\sqrt{2}\\)\n解析：抛物线开口向右，要求\\(|AF|\\)，只需\n要点 \\(A\\) 的横坐标，题干恰好给了点 \\(A\\) 的横\n坐标，\n将 \\(y^2 = 4x\\) 与 \\(y^2 = 2px\\) (\\(p > 0\\)) 对比，\n可得 \\(2p = 4\\)，所以 \\(p = 2\\)，\n故由焦半径公式，\\(|AF| = x_A + \\frac{p}{2} = 4 + 1 = 5\\)。\n答案：A\n## 本节核心题型\n本节的核心知识主要有两个：抛物线的定义和抛物线的标准方程、焦点坐标、准线方程，其中抛物线定义是难点（定义本身不难，难的是灵活应用定义解决综合性的问题）。为此我们首先设计了类型Ⅰ这组题来强化同学们对抛物线的标准方程、焦点坐标、准线方程这些基本概念的理解；又设计了类型Ⅱ、Ⅲ、Ⅳ三组题来归纳抛物线定义在一些具体题型中的应用；最后，抛物线还可能结合实际背景来考查，于是我们又通过类型V来给大家举了个例子。",
+      "solution_present": true,
+      "vision_hint": "ch3.s7-LIadeb7084cf3fe24c"
+    },
+    {
+      "item_id": "0eb69ef5bbe1b581",
+      "kind": "example",
+      "label": "例5",
+      "example_number": 5,
+      "parent_example_number": null,
+      "role": "knowledge_example",
+      "role_ref": "ch3.s7-k3",
+      "source_docs": [
+        106,
+        107
+      ],
+      "question_text": "【例 5】已知抛物线  \\(y^{2}=2px (p>0)\\) 的焦点在圆  \\(x^{2}+y^{2}=4\\) 上，则该抛物线的焦点到准线的距离为（）\nA. 1 B. 2 C. 4 D. 8",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "teaching_text": "【例 5】已知抛物线  \\(y^{2}=2px (p>0)\\) 的焦点在圆  \\(x^{2}+y^{2}=4\\) 上，则该抛物线的焦点到准线的距离为（）\nA. 1 B. 2 C. 4 D. 8\n解析：抛物线的焦点 \\(\\left(\\frac{p}{2},0\\right)\\)到准线 \\(x=-\\frac{p}{2}\\)的距离为p，怎样求p？可将焦点坐标代入圆的方程，建立方程求p。\n抛物线 \\(y^2=2px(p>0)\\)的焦点为 \\(\\left(\\frac{p}{2},0\\right)\\)，代入 \\(x^2+y^2=4\\)可得 \\(\\frac{p^2}{4}=4\\)，结合 \\(p>0\\)解得： \\(p=4\\)，\n所以该抛物线的焦点到准线的距离为4.\n答案：C",
+      "solution_present": true,
+      "vision_hint": "ch3.s7-LI0eb69ef5bbe1b581"
+    },
+    {
+      "item_id": "5da9e9f4344dbfd5",
+      "kind": "example",
+      "label": "例6",
+      "example_number": 6,
+      "parent_example_number": null,
+      "role": "knowledge_example",
+      "role_ref": "ch3.s7-k3",
+      "source_docs": [
+        107,
+        108
+      ],
+      "question_text": "【例6】在平面直角坐标系 xOy 中，一动圆 M 经过点  \\(F(1,0)\\)，且与直线  \\(l: x = -1\\) 相切，则动圆圆心 M 的轨迹方程为 ___.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "teaching_text": "【例6】在平面直角坐标系 xOy 中，一动圆 M 经过点  \\(F(1,0)\\)，且与直线  \\(l: x = -1\\) 相切，则动圆圆心 M 的轨迹方程为 ___.\n解析：条件涉及直线与圆相切，可按圆心到直线的距离等于半径来翻译，\n如图，设圆  \\(M\\) 的半径为  \\(r\\)，则由题意，点  \\(M\\) 到直线  \\(l\\) 的距离  \\(d = r\\) ①，\n又因为圆  \\(M\\) 过点  \\(F\\)，所以  \\(\\left|MF\\right| = r\\)，结合①可得  \\(\\left|MF\\right| = d\\)，\n所以点  \\(M\\) 到定点  \\(F(1,0)\\) 与到定直线  \\(l: x = -1\\) 的距离相等，\n故点  \\(M\\) 的轨迹是以  \\(F\\) 为焦点， \\(l\\) 为准线的抛物线，其方程为  \\(y^2 = 4x\\)。\n答案： \\(y^2 = 4x\\)\n【反思】遇到动点到定点和定直线之间距离相等，要想到动点的轨迹是抛物线。很多时候这一等量关系给得比较隐蔽，需要翻译已知条件才能发现，我们来看一个变式。",
+      "solution_present": true,
+      "vision_hint": "ch3.s7-LI5da9e9f4344dbfd5"
+    },
+    {
+      "item_id": "2fb96088301fc158",
+      "kind": "example",
+      "label": "例7",
+      "example_number": 7,
+      "parent_example_number": null,
+      "role": "knowledge_example",
+      "role_ref": "ch3.s7-k3",
+      "source_docs": [
+        108,
+        109
+      ],
+      "question_text": "【例 7】已知点  \\(P(x_0,2)\\) 在抛物线  \\(C: y^2 = 4x\\) 上，抛物线  \\(C\\) 的焦点为  \\(F\\)，则  \\(|PF| =\\) （ ）\nA. 4       B. 3       C. 2       D. 1",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "teaching_text": "【例 7】已知点  \\(P(x_0,2)\\) 在抛物线  \\(C: y^2 = 4x\\) 上，抛物线  \\(C\\) 的焦点为  \\(F\\)，则  \\(|PF| =\\) （ ）\nA. 4       B. 3       C. 2       D. 1\n解析：求抛物线上的点到其焦点的距离，考虑用定义转化为它到准线的距离，\n如图，抛物线 \\(C\\) 的准线为 \\(l: x = -1\\)，由抛物线定义，\\(|PF|\\) 等于点 \\(P\\) 到准线的距离，所以 \\(|PF| = x_0 - (-1) = x_0 + 1\\) ①，故只需求 \\(x_0\\)，可将点 \\(P\\) 代入抛物线 \\(C\\) 的方程求 \\(x_0\\)，将 \\(P(x_0, 2)\\) 代入 \\(y^2 = 4x\\) 可得 \\(2^2 = 4x_0\\)，解得： \\(x_0 = 1\\)，代入①得 \\(|PF| = 2\\)。\n答案：C\n【反思】涉及抛物线上的点到其焦点的距离，常用焦半径公式来计算，该公式的本质是抛物线的定义．对于开口向右的抛物线，其焦半径公式是 \\(|PF|=x_0+\\frac{p}{2}\\)，所以核心是求点P的横坐标 \\(x_0\\)．本题 \\(x_0\\)容易求出，我们来看一个稍复杂一点的变式．",
+      "solution_present": true,
+      "vision_hint": "ch3.s7-LI2fb96088301fc158"
+    },
+    {
+      "item_id": "f54abf3acf1232de",
+      "kind": "example",
+      "label": "例8",
+      "example_number": 8,
+      "parent_example_number": null,
+      "role": "knowledge_example",
+      "role_ref": "ch3.s7-k3",
+      "source_docs": [
+        109
+      ],
+      "question_text": "【例 8】已知点 P 在抛物线  \\(C: y^2 = 2px\\) ( \\(p > 0\\)) 上，过 P 作 C 的准线的垂线，垂足为 H，点 F 为 C 的焦点。若  \\(\\angle HPF = 60^\\circ\\)，点 P 的横坐标为 1，则  \\(p =\\) ___。",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "teaching_text": "【例 8】已知点 P 在抛物线  \\(C: y^2 = 2px\\) ( \\(p > 0\\)) 上，过 P 作 C 的准线的垂线，垂足为 H，点 F 为 C 的焦点。若  \\(\\angle HPF = 60^\\circ\\)，点 P 的横坐标为 1，则  \\(p =\\) ___。\n解析：抛物线的准线方程为  \\(x = -\\frac{p}{2}\\)，如图，因为点  \\(P\\) 的横坐标为 1，所以由抛物线定义， \\(|PF| = |PH| = 1 + \\frac{p}{2}\\)，又  \\(\\angle HPF = 60^\\circ\\)，所以  \\(\\triangle HPF\\) 是正三角形，故  \\(|HF| = 1 + \\frac{p}{2}\\)，且\n求 \\(p\\) 需建立关于 \\(p\\) 的方程，\\(\\triangle HPF\\) 已翻译完毕，可尝试到 \\(\\triangle HGF\\) 中找等量关系，\n由图知 \\(HP \\parallel x\\) 轴，所以 \\(\\angle HFG = \\angle PHF = 60^\\circ\\)，故 \\(|GF| = |HF| \\cdot \\cos \\angle HFG = \\frac{1}{2}\\left(1 + \\frac{p}{2}\\right)\\)，\n又 \\(|GF| = p\\)，所以 \\(\\frac{1}{2}\\left(1 + \\frac{p}{2}\\right) = p\\)，解得： \\(p = \\frac{2}{3}\\)。\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_904_1176_1090_1374.jpg\" alt=\"Image\" width=\"15%\" /></div>\n答案： \\(\\frac{2}{3}\\)\n【反思】过抛物线上一点  \\(P\\) 向其准线作垂线，设垂足为  \\(H\\)，则  \\(\\triangle PFH\\) 天然就是等腰三角形  \\((|PF|=|PH|)\\)，有关问题常由此出发，结合  \\(\\triangle HGF(G\\) 为准线与坐标轴的交点 \\()\\) 分析几何关系。本题天然就有准线的垂线  \\(PH\\)，有时这个垂线需要自己作辅助线，我们来看三个变式。",
+      "solution_present": true,
+      "vision_hint": "ch3.s7-LIf54abf3acf1232de"
+    },
+    {
+      "item_id": "a215ddfe943e1ba2",
+      "kind": "example",
+      "label": "例9",
+      "example_number": 9,
+      "parent_example_number": null,
+      "role": "knowledge_example",
+      "role_ref": "ch3.s7-k3",
+      "source_docs": [
+        111
+      ],
+      "question_text": "【例9】截至2023年2月，“中国天眼”发现的脉冲星总数已经达到740颗以上。被称为“中国天眼”的500米口径球面射电望远镜（FAST），是目前世界上口径最大，灵敏度最高的单口径射电望远镜（图1）。观测时它可以通过4450块三角形面板及2225个触控器完成向抛物面的转化，此时轴截面可以看作抛物线的一部分。某学校科技小组制作了一个FAST模型，观测时呈口径为4米，高为1米的抛物面，则其轴截面所在的抛物线（图2）的顶点到焦点的距离为（）\nA. 1 B. 2 C. 4 D. 8\n\n图1\n\n图2",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_375_859_542_970.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\imgs\\img_in_image_box_375_859_542_970.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_577_858_810_968.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\imgs\\img_in_image_box_577_858_810_968.jpg",
+          "exists": true
+        }
+      ],
+      "visual_status": "VISION_VERIFIED",
+      "teaching_text": "【例9】截至2023年2月，“中国天眼”发现的脉冲星总数已经达到740颗以上。被称为“中国天眼”的500米口径球面射电望远镜（FAST），是目前世界上口径最大，灵敏度最高的单口径射电望远镜（图1）。观测时它可以通过4450块三角形面板及2225个触控器完成向抛物面的转化，此时轴截面可以看作抛物线的一部分。某学校科技小组制作了一个FAST模型，观测时呈口径为4米，高为1米的抛物面，则其轴截面所在的抛物线（图2）的顶点到焦点的距离为（）\nA. 1 B. 2 C. 4 D. 8\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_375_859_542_970.jpg\" alt=\"Image\" width=\"14%\" /></div>\n<div style=\"text-align: center;\">图1</div>\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_577_858_810_968.jpg\" alt=\"Image\" width=\"19%\" /></div>\n<div style=\"text-align: center;\">图2</div>\n解析：抛物线的顶点到焦点的距离可由其标准方程求得，观察发现只要建系，就能由所给数据写出点A（如图）的坐标，代入抛物线即可求得其标准方程，\n如图建系，设抛物线的方程为  \\(x^{2}=2py(p>0)\\)，则由所给数据，\n图中点 A 的坐标为  \\((2,1)\\)，代入  \\(x^{2}=2py\\) 可得  \\(2^{2}=2p\\cdot1\\)，解得：p=2，所以抛物线的焦点为  \\(F(0,1)\\)，故抛物线的焦点 F 到顶点 O 的距离为 1.\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_837_1079_1091_1182.jpg\" alt=\"Image\" width=\"21%\" /></div>\n答案：A\n【反思】在实际背景下求解与抛物线有关的问题，核心是建立适当的平面直角坐标系，将实际问题与数学模型对应起来，再分析求解.这类题没有固定的套路，我们只举一个例题.\n## 补充、拓展\n在椭圆、双曲线中，都有基于它们的定义衍生出的最值问题，抛物线中也有类似的问题，我们通过下面的类型VI来给大家拓展.",
+      "solution_present": true,
+      "vision_hint": "ch3.s7-LIa215ddfe943e1ba2",
+      "vision_sidecars": [
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\imgs\\img_in_image_box_375_859_542_970.jpg",
+          "image_sha256": "d8a6ed486c8f6bdbc181ba60b836c79f493b9af1a93cbdf8dc8bf989ba340e1d",
+          "confidence": "E2",
+          "structured": {
+            "objects": [
+              {
+                "name": "射电望远镜",
+                "description": "大型抛物面天线"
+              },
+              {
+                "name": "支撑结构",
+                "description": "天线周围的多根立柱"
+              },
+              {
+                "name": "建筑主体",
+                "description": "抛物面下方连接的矩形建筑"
+              },
+              {
+                "name": "周围植被",
+                "description": "望远镜下方的树木和植被"
+              }
+            ],
+            "relations": [],
+            "coordinates": [],
+            "ranges": [],
+            "text": [],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        },
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\imgs\\img_in_image_box_577_858_810_968.jpg",
+          "image_sha256": "7049c94cb3fafec628ff7bfb2fbd426153f7654847283b97a1a485da3a3a7def",
+          "confidence": "E2",
+          "structured": {
+            "objects": [],
+            "relations": [],
+            "coordinates": [],
+            "ranges": [],
+            "text": [
+              "4",
+              "1"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        }
+      ],
+      "vision_sidecar": {
+        "objects": [
+          {
+            "name": "射电望远镜",
+            "description": "大型抛物面天线"
+          },
+          {
+            "name": "支撑结构",
+            "description": "天线周围的多根立柱"
+          },
+          {
+            "name": "建筑主体",
+            "description": "抛物面下方连接的矩形建筑"
+          },
+          {
+            "name": "周围植被",
+            "description": "望远镜下方的树木和植被"
+          }
+        ],
+        "relations": [],
+        "coordinates": [],
+        "ranges": [],
+        "text": [],
+        "uncertainties": [],
+        "confidence": "E2"
+      },
+      "vision_source_provenance": [],
+      "evidence": [
+        "E1",
+        "E2"
+      ]
+    },
+    {
+      "item_id": "f8fe53b636f57231",
+      "kind": "example",
+      "label": "例10",
+      "example_number": 10,
+      "parent_example_number": null,
+      "role": "knowledge_example",
+      "role_ref": "ch3.s7-k3",
+      "source_docs": [
+        111,
+        112
+      ],
+      "question_text": "【例 10】已知抛物线  \\(x^2 = 4y\\) 的焦点为  \\(F\\)， \\(P\\) 是该抛物线上一动点，点  \\(A(2,3)\\)，则  \\(|PA| + |PF|\\) 的最\n小值为（ ）\nA.  \\(\\sqrt{10}\\) B. 4 C. 2 D.  \\(2\\sqrt{10}\\)",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "teaching_text": "【例 10】已知抛物线  \\(x^2 = 4y\\) 的焦点为  \\(F\\)， \\(P\\) 是该抛物线上一动点，点  \\(A(2,3)\\)，则  \\(|PA| + |PF|\\) 的最\n小值为（ ）\nA.  \\(\\sqrt{10}\\) B. 4 C. 2 D.  \\(2\\sqrt{10}\\)\n解析：如图，直接分析何时  \\(|PA| + |PF|\\) 最小不易，涉及  \\(|PF|\\)，可尝试用抛物线定义转化为 P 到准线的距离来看，\n抛物线的焦点为  \\(F(0,1)\\)，准线为  \\(l: y = -1\\)，作  \\(PD \\perp l\\) 于点  \\(D\\)，则  \\(|PF| = |PD|\\)，\n解析：如图，直接分析何时  \\(|PA| + |PF|\\) 最小不易，涉及  \\(|PF|\\)，可尝试用抛物线\n抛物线的焦点为  \\(F(0,1)\\)，准线为  \\(l: y = -1\\)，作  \\(PD \\perp l\\) 于点  \\(D\\)，则  \\(|PF| = |PD|\\)，\n所以  \\(|PA| + |PF| = |PA| + |PD|\\)，由图可知，当 P 在抛物线上运动时，\n \\(|PA| + |PD| \\geq |AB| = 3 - (-1) = 4\\)，其中  \\(AB \\perp l\\) 于点  \\(B\\)，\n当且仅当  \\(P\\) 为线段  \\(AB\\) 与抛物线交点  \\(P_0\\) 时取等号，\n又  \\(|PA| + |PF| = |PA| + |PD|\\)，所以  \\(|PA| + |PF|\\) 的最小值为 4.\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_878_268_1092_416.jpg\" alt=\"Image\" width=\"17%\" /></div>\n答案：B\n【反思】在与抛物线有关的最值问题中，若目标量涉及抛物线上的点P到焦点F的距离，且不易直接看出最值在何时取得，可考虑利用定义，将|PF|转化为P到准线的距离d来分析. 类似的，在有些情况下，也需要将d转化为|PF|来看，比如下面的变式.",
+      "solution_present": true,
+      "vision_hint": "ch3.s7-LIf8fe53b636f57231"
+    }
+  ],
+  "direct_variants": [
+    {
+      "item_id": "e378ae2b1b64e57f",
+      "kind": "direct_variant",
+      "label": "变式1",
+      "example_number": null,
+      "parent_example_number": 5,
+      "role": "direct_variant",
+      "role_ref": null,
+      "source_docs": [
+        107
+      ],
+      "question_text": "【变式1】抛物线  \\(y=-4x^{2}\\) 的准线方程是 ___.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "solution_isolated": true,
+      "vision_hint": "ch3.s7-LIe378ae2b1b64e57f"
+    },
+    {
+      "item_id": "5ba69d1b3039afab",
+      "kind": "direct_variant",
+      "label": "变式2",
+      "example_number": null,
+      "parent_example_number": 5,
+      "role": "direct_variant",
+      "role_ref": null,
+      "source_docs": [
+        107
+      ],
+      "question_text": "【变式2】以(1,0)为焦点，y轴为准线的抛物线的方程是（ ）\nA.  \\(y^2 = x - \\frac{1}{2}\\) B.  \\(y^2 = x + \\frac{1}{2}\\) C.  \\(y^2 = 2x - 1\\) D.  \\(y^2 = 2x + 1\\)",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "solution_isolated": true,
+      "vision_hint": "ch3.s7-LI5ba69d1b3039afab"
+    },
+    {
+      "item_id": "1110316c7adf2824",
+      "kind": "direct_variant",
+      "label": "变式",
+      "example_number": null,
+      "parent_example_number": 6,
+      "role": "direct_variant",
+      "role_ref": null,
+      "source_docs": [
+        108
+      ],
+      "question_text": "【变式】已知圆  \\(N: x^2 + (y-3)^2 = 4\\)，直线  \\(l: y = -1\\)，圆  \\(M\\) 与圆  \\(N\\) 外切，且与直线  \\(l\\) 相切，则点  \\(M\\) 的轨迹方程是___。",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_917_116_1095_295.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\imgs\\img_in_image_box_917_116_1095_295.jpg",
+          "exists": true
+        }
+      ],
+      "visual_status": "VISION_VERIFIED",
+      "solution_isolated": true,
+      "vision_hint": "ch3.s7-LI1110316c7adf2824",
+      "vision_sidecars": [
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\imgs\\img_in_image_box_917_116_1095_295.jpg",
+          "image_sha256": "e120b45f067a49e667c92107023414214b6caab5d8541c280f6d969e63885203",
+          "confidence": "E2",
+          "structured": {
+            "objects": [
+              "坐标轴Ox,Oy",
+              "直线l",
+              "点O,F,M",
+              "圆M"
+            ],
+            "relations": [
+              "点F在Ox上，点M在Ox上方",
+              "圆M与Ox相切于点F",
+              "点M在直线l的右侧",
+              "直线l与Oy相切",
+              "点d在Oy上，点M在点d右侧",
+              "线段Md垂直于Oy"
+            ],
+            "coordinates": [
+              "O(0,0)",
+              "F(?,0)",
+              "M(?,?)",
+              "d(0,?)"
+            ],
+            "ranges": [
+              "r为圆M的半径，r>0",
+              "d为点M到Oy的距离，d>0",
+              "圆M与Ox相切，切点为F，故MF垂直Ox"
+            ],
+            "text": [
+              "l",
+              "y",
+              "x",
+              "d",
+              "M",
+              "r",
+              "F"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        }
+      ],
+      "vision_sidecar": {
+        "objects": [
+          "坐标轴Ox,Oy",
+          "直线l",
+          "点O,F,M",
+          "圆M"
+        ],
+        "relations": [
+          "点F在Ox上，点M在Ox上方",
+          "圆M与Ox相切于点F",
+          "点M在直线l的右侧",
+          "直线l与Oy相切",
+          "点d在Oy上，点M在点d右侧",
+          "线段Md垂直于Oy"
+        ],
+        "coordinates": [
+          "O(0,0)",
+          "F(?,0)",
+          "M(?,?)",
+          "d(0,?)"
+        ],
+        "ranges": [
+          "r为圆M的半径，r>0",
+          "d为点M到Oy的距离，d>0",
+          "圆M与Ox相切，切点为F，故MF垂直Ox"
+        ],
+        "text": [
+          "l",
+          "y",
+          "x",
+          "d",
+          "M",
+          "r",
+          "F"
+        ],
+        "uncertainties": [],
+        "confidence": "E2"
+      },
+      "vision_source_provenance": [],
+      "evidence": [
+        "E1",
+        "E2"
+      ]
+    },
+    {
+      "item_id": "d78cc13a85a64cad",
+      "kind": "direct_variant",
+      "label": "变式",
+      "example_number": null,
+      "parent_example_number": 7,
+      "role": "direct_variant",
+      "role_ref": null,
+      "source_docs": [
+        109
+      ],
+      "question_text": "【变式】（2025·全国Ⅱ卷）设抛物线 \\(C:y^2=2px(p>0)\\)的焦点为F，点A在C上，过A作C的准线的垂线，垂足为B，若直线BF的方程为 \\(y=-2x+2\\)，则 \\(|AF|=\\)（　　）\nA. 3\nB. 4\nC. 5\nD. 6",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "solution_isolated": true,
+      "vision_hint": "ch3.s7-LId78cc13a85a64cad"
+    },
+    {
+      "item_id": "609b92217658091b",
+      "kind": "direct_variant",
+      "label": "变式1",
+      "example_number": null,
+      "parent_example_number": 8,
+      "role": "direct_variant",
+      "role_ref": null,
+      "source_docs": [
+        110
+      ],
+      "question_text": "【变式 1】抛物线  \\(y^2 = 2px\\) ( \\(p > 0\\)) 的焦点为  \\(F\\)，点  \\(M\\) 在抛物线上，且  \\(|MF| = 3\\)， \\(FM\\) 的延长线交  \\(y\\) 轴于点  \\(N\\)，若  \\(M\\) 为线段  \\(FN\\) 的中点，则  \\(p =\\)（ ）\nA. 2\nB.  \\(2\\sqrt{2}\\)\nC. 4\nD. 6",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "solution_isolated": true,
+      "vision_hint": "ch3.s7-LI609b92217658091b"
+    },
+    {
+      "item_id": "bee968a42f7d4325",
+      "kind": "direct_variant",
+      "label": "变式2",
+      "example_number": null,
+      "parent_example_number": 8,
+      "role": "direct_variant",
+      "role_ref": null,
+      "source_docs": [
+        110
+      ],
+      "question_text": "【变式 2】（2015·浙江卷）设抛物线  \\(y^2 = 4x\\) 的焦点为  \\(F\\)，不经过焦点的直线上有三个不同的点  \\(A\\)， \\(B\\)， \\(C\\)，其中点  \\(A\\)， \\(B\\) 在抛物线上，点  \\(C\\) 在  \\(y\\) 轴上， \\(B\\) 在线段  \\(AC\\) 上，则  \\(\\triangle BCF\\) 与  \\(\\triangle ACF\\) 的面积之比是（ ）\nA.  \\(\\frac{|BF|-1}{|AF|-1}\\) B.  \\(\\frac{|BF|^2-1}{|AF|^2-1}\\) C.  \\(\\frac{|BF|+1}{|AF|+1}\\) D.  \\(\\frac{|BF|^2+1}{|AF|^2+1}\\)",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "solution_isolated": true,
+      "vision_hint": "ch3.s7-LIbee968a42f7d4325"
+    },
+    {
+      "item_id": "cfa0b66be896c44a",
+      "kind": "direct_variant",
+      "label": "变式3",
+      "example_number": null,
+      "parent_example_number": 8,
+      "role": "direct_variant",
+      "role_ref": null,
+      "source_docs": [
+        110,
+        111
+      ],
+      "question_text": "【变式3】如图，过抛物线  \\(y^2 = 4x\\) 的焦点  \\(F\\) 作直线与抛物线及其准线分别交于  \\(A\\)， \\(B\\)， \\(C\\) 三点，若  \\(\\overrightarrow{FC} = 3\\overrightarrow{FB}\\)，则  \\(|AB| =\\) ___.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "solution_isolated": true,
+      "vision_hint": "ch3.s7-LIcfa0b66be896c44a"
+    },
+    {
+      "item_id": "7384f92b50d73ba8",
+      "kind": "direct_variant",
+      "label": "变式",
+      "example_number": null,
+      "parent_example_number": 10,
+      "role": "direct_variant",
+      "role_ref": null,
+      "source_docs": [
+        112
+      ],
+      "question_text": "【变式】已知点 \\(P\\) 是抛物线 \\(C: y^2 = 4x\\) 上任意一点，若点 \\(P\\) 到抛物线 \\(C\\) 的准线的距离为 \\(d_1\\)，到直线 \\(l: 2x - y + 3 = 0\\) 的距离为 \\(d_2\\)，则 \\(d_1 + d_2\\) 的最小值是（ ）\nA. \\(1 + \\frac{3\\sqrt{5}}{5}\\)      B. \\(\\sqrt{5}\\)      C. \\(\\frac{3\\sqrt{5}}{5}\\)      D. \\(\\frac{7\\sqrt{5}}{5}\\)",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "solution_isolated": true,
+      "vision_hint": "ch3.s7-LI7384f92b50d73ba8"
+    }
+  ],
+  "deduplicated_learning_items": [],
+  "exercise_questions": [
+    {
+      "qid": "Q-21bdec0c085628ba",
+      "section": "ch3.s7",
+      "group": "A",
+      "number": 1,
+      "kind": "A组",
+      "source_anchor": {
+        "ocr_doc": 112,
+        "pdf_page": 113,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_112.md"
+      },
+      "question_text": "1\\. (2024 · 北京卷)\n\n抛物线  \\(y^{2}=16x\\) 的焦点坐标为 ___.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-f186e83b1cb2e479",
+      "section": "ch3.s7",
+      "group": "A",
+      "number": 2,
+      "kind": "A组",
+      "source_anchor": {
+        "ocr_doc": 113,
+        "pdf_page": 114,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_113.md"
+      },
+      "question_text": "2.（2020·北京卷）\n\n设抛物线的顶点为 O，焦点为 F，准线为 l，P 是抛物线上异于 O 的一点，过 P 作  \\(PQ \\perp l\\) 于 Q，则线段 FQ 的垂直平分线（）\n\nA. 经过点 O\n\nB. 经过点 P\n\nC. 平行于直线 OP\n\nD. 垂直于直线 OP",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-4455888532a14d4e",
+      "section": "ch3.s7",
+      "group": "A",
+      "number": 3,
+      "kind": "A组",
+      "source_anchor": {
+        "ocr_doc": 113,
+        "pdf_page": 114,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_113.md"
+      },
+      "question_text": "### 3. （2021·新高考Ⅱ卷）\n\n抛物线  \\(y^{2}=2px(p>0)\\) 的焦点到直线 y=x+1 的距离为  \\(\\sqrt{2}\\)，则 p=（）\n\nA. 1 B. 2 C.  \\(2\\sqrt{2}\\) D. 4",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-7c52d208acbf05bf",
+      "section": "ch3.s7",
+      "group": "A",
+      "number": 4,
+      "kind": "A组",
+      "source_anchor": {
+        "ocr_doc": 113,
+        "pdf_page": 114,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_113.md"
+      },
+      "question_text": "4.（2023·全国乙卷）\n\n已知点  \\(A(1, \\sqrt{5})\\) 在抛物线  \\(C: y^{2} = 2px (p > 0)\\) 上，则 A 到 C 的准线的距离为 ___.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-8ef78031b397b9fd",
+      "section": "ch3.s7",
+      "group": "A",
+      "number": 5,
+      "kind": "A组",
+      "source_anchor": {
+        "ocr_doc": 113,
+        "pdf_page": 114,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_113.md"
+      },
+      "question_text": "5.（2024·上海卷）\n\n已知抛物线  \\(y^2 = 4x\\) 上有一点  \\(P\\) 到准线的距离为 9，那么  \\(P\\) 到  \\(x\\) 轴的距离为 ___.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-516d31855089e024",
+      "section": "ch3.s7",
+      "group": "A",
+      "number": 6,
+      "kind": "A组",
+      "source_anchor": {
+        "ocr_doc": 113,
+        "pdf_page": 114,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_113.md",
+        "recovery": "PADDLE_OCR_TEXT_AFTER_A5_BEFORE_B_GROUP",
+        "recovery_source_kind": "primary_ocr"
+      },
+      "question_text": "已知 A 为抛物线  \\(C: y^{2} = 2px (p > 0)\\) 上一点，点 A 到 C 的焦点的距离为 12，到 y 轴的距离为 9，则 p = （）\n\nA. 2 B. 3 C. 6 D. 9",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1",
+        "PADDLE_OCR_TEXT_AFTER_A5_BEFORE_B_GROUP"
+      ],
+      "recovery_reason": "printed_number_missing_from_paddle_ocr_before_b_group_header"
+    },
+    {
+      "qid": "Q-b22147c427beea22",
+      "section": "ch3.s7",
+      "group": "B",
+      "number": 7,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 114,
+        "pdf_page": 115,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_114.md"
+      },
+      "question_text": "### 7. （2025 · 保定一模）\n\n已知抛物线  \\(y^{2}=2px(p>0)\\) 的焦点为 F，点 A，B，C 在抛物线上，F 为  \\(\\triangle ABC\\) 的重心，且  \\(\\left|\\overrightarrow{FA}\\right|+\\left|\\overrightarrow{FB}\\right|+\\left|\\overrightarrow{FC}\\right|=12\\)，则 p 的值为（ ）\n\nA. 3\n\nB. 4\n\nC. 5\n\nD. 6",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-a899b3ee3e7e5098",
+      "section": "ch3.s7",
+      "group": "B",
+      "number": 8,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 114,
+        "pdf_page": 115,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_114.md"
+      },
+      "question_text": "### 8. （2025 · 重庆模拟）\n\n已知抛物线  \\(C: y^2 = 8x\\) 的焦点为  \\(F\\)，准线为  \\(l\\)， \\(P\\) 为  \\(C\\) 上位于第一象限的点， \\(PQ\\) 垂直  \\(l\\) 于点  \\(\\underline{Q}\\)， \\(\\triangle PQF\\) 为正三角形，过  \\(PQ\\) 的中点  \\(M\\) 作直线  \\(MR \\parallel QF\\)，交  \\(x\\) 轴于点  \\(R\\)，则直线  \\(MR\\) 的方程为（ ）\n\nA.  \\(x + \\sqrt{3}y - 14 = 0\\)\n\nB.  \\(x + \\sqrt{3}y - 10 = 0\\)\n\nC.  \\(\\sqrt{3}x + y - 6\\sqrt{3} = 0\\)\n\nD.  \\(\\sqrt{3}x + y - 2\\sqrt{3} = 0\\)",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-ee6a61ac6a2ff30c",
+      "section": "ch3.s7",
+      "group": "B",
+      "number": 9,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 114,
+        "pdf_page": 115,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_114.md"
+      },
+      "question_text": "### 9. （2023·浙江温州二模）\n\n已知一个抛物线形拱桥在一次暴雨前后的水位之差是 1.5m，暴雨后的水面宽为 2m，暴雨来临之前的水面宽为 4m，暴雨后的水面离桥拱顶的距离为（）\n\nA. 0.5m B. 1m C. 1.5m D. 2m",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-6af17971ea117f4b",
+      "section": "ch3.s7",
+      "group": "B",
+      "number": 10,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 114,
+        "pdf_page": 115,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_114.md"
+      },
+      "question_text": "10.（2021·新高考Ⅰ卷）\n\n已知 \\(O\\) 为坐标原点，抛物线 \\(C: y^2 = 2px\\) (\\(p > 0\\)) 的焦点为 \\(F\\)，\\(P\\) 为 \\(C\\) 上一点，\\(PF\\) 与 \\(x\\) 轴垂直，\\(Q\\) 为 \\(x\\) 轴上一点，且 \\(PQ \\perp OP\\)。若 \\(|FQ| = 6\\)，则 \\(C\\) 的准线方程为___。",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-29f6db06254f27af",
+      "section": "ch3.s7",
+      "group": "B",
+      "number": 11,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 115,
+        "pdf_page": 116,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_115.md"
+      },
+      "question_text": "11.（2023·山东·青岛模拟）\n\n已知抛物线  \\(C: y^2 = 2px (p > 0)\\) 的焦点为  \\(F\\)， \\(C\\) 的准线与  \\(x\\) 轴交于点  \\(A\\)， \\(C\\) 上一点  \\(P\\) 满足  \\(|PA| = \\sqrt{7}\\)， \\(|PF| = 2\\)，则  \\(\\tan \\angle PAF =\\)（ ）\n\nA.  \\(\\frac{2\\sqrt{3}}{3}\\) B.  \\(\\frac{\\sqrt{3}}{2}\\) C.  \\(\\frac{\\sqrt{7}}{2}\\) D.  \\(\\frac{2\\sqrt{7}}{7}\\)",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-a85eafd321931210",
+      "section": "ch3.s7",
+      "group": "B",
+      "number": 12,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 115,
+        "pdf_page": 116,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_115.md"
+      },
+      "question_text": "### 12 \\. （2024·福建福州模拟）\n\n倾斜角为 \\(\\frac{\\pi}{3}\\)的直线经过抛物线 \\(C:y^{2}=12x\\)的焦点F，且与C交于A，B两点，Q为线段AB的中点，P为C上一点，则 \\(|PF|+|PQ|\\)的最小值为___.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-302b94870fd61394",
+      "section": "ch3.s7",
+      "group": "B",
+      "number": 13,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 115,
+        "pdf_page": 116,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_115.md"
+      },
+      "question_text": "### 13. （2021·上海卷）\n\n已知抛物线  \\(y^2 = 2px (p > 0)\\)，位于第一象限的  \\(A, B\\) 两点在抛物线上，焦点为  \\(F\\)， \\(|AF| = 2\\)， \\(|BF| = 4\\)， \\(|AB| = 3\\)，则直线  \\(AB\\) 的斜率为___。",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-ee03974f3c8dce94",
+      "section": "ch3.s7",
+      "group": "B",
+      "number": 14,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 115,
+        "pdf_page": 116,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_115.md"
+      },
+      "question_text": "### 14. （2025·河北张家口期末）\n\n已知点  \\(O(0,0)\\)，点  \\(F(0,1)\\)，点 M 是 x 轴上的动点，点 N 在 y 轴上，直线  \\(MN \\perp MF\\)，点 N 关于 M 的对称点为 P，求点 P 的轨迹方程.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-0480684276bb16b9",
+      "section": "ch3.s7",
+      "group": "C",
+      "number": 15,
+      "kind": "C组",
+      "source_anchor": {
+        "ocr_doc": 116,
+        "pdf_page": 117,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_116.md"
+      },
+      "question_text": "### 15. （2025 · 福建漳州模拟）\n\n已知 P 为抛物线  \\(y^{2}=4x\\) 上一动点，点 P 到直线  \\(l_{1}:4x-3y+6=0\\) 的距离为  \\(d_{1}\\)，到直线  \\(l_{2}:x+4=0\\) 的距离为  \\(d_{2}\\)，则  \\(d_{1}+d_{2}\\) 的最小值为 ___.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-cb94bd4a6d6b6dca",
+      "section": "ch3.s7",
+      "group": "C",
+      "number": 16,
+      "kind": "C组",
+      "source_anchor": {
+        "ocr_doc": 116,
+        "pdf_page": 117,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\doc_116.md"
+      },
+      "question_text": "### 16. （2024·东北三校联考）（多选）\n\n在平面直角坐标系 xOy 中，抛物线  \\(C: y^{2} = 4x\\) 的焦点为 F，点 P 在抛物线 C 上，点 Q 在抛物线 C 的准线上，则以下命题正确的是（ ）\n\nA.  \\(|PQ| + |PF|\\) 的最小值是 2\n\nB.  \\(|PQ| \\geq |PF|\\)\n\nC. 当点 P 的纵坐标为 4 时，存在点 Q，使得  \\(\\overrightarrow{QF} = 3\\overrightarrow{FP}\\)\n\nD. 若  \\(\\triangle PQF\\) 是等边三角形，则点 P 的横坐标是 3",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    }
+  ],
+  "counts": {
+    "worked_examples": 10,
+    "direct_variants": 8,
+    "abc_exercises": 16,
+    "total_numbered_learning_items": 34
+  },
+  "answer_policy": {
+    "worked_examples": "teaching solutions allowed",
+    "direct_variants": "question only; solution isolated",
+    "abc_exercises": "question only; answer sidecar forbidden"
+  },
+  "unresolved": []
+}

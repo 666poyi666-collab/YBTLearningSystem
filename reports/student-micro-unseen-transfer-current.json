@@ -1,0 +1,22 @@
+{
+ "agent_id": "deepseek_worker-opencode-go-deepseek-v4-flash-micro1-unseen-20260814",
+ "section": "micro专题1（第4节 微专题1：立体几何综合题，类型Ⅰ/Ⅱ/Ⅲ方法）",
+ "question": "四面体 P-ABC 中，A(0,0,0)、B(2,0,0)、C(0,2,0)、P(0,0,2)。(1) 证明 PA⊥平面ABC；(2) 求点 A 到平面 PBC 的距离。",
+ "forbidden_sources": [
+  "reports/ 全部未读",
+  "answer_sidecar 未读",
+  "答案册 PDF 未读",
+  "原题搜索 未执行",
+  "learning_packet/context 本轮未读（仅使用本消息题面与本会话已学方法）"
+ ],
+ "method_sources": "本会话已学的微专题1方法：例1（线面垂直判定：方向向量平行平面法向量；点到平面距离公式 d=|AM·m|/|m|）、例3（建系+叉乘求法向量）、例2（向量法验证垂直）",
+ "reasoning": "(1) 由坐标得 PA=P-A=(0,0,2)（方向向量，|PA|=2），AB=B-A=(2,0,0)，AC=C-A=(0,2,0)。平面 ABC 由 A、B、C 决定，AB×AC=(0,0,4)，故平面 ABC 的法向量可取 n_ABC=(0,0,1)。PA 方向向量 (0,0,2) 与 n_ABC 平行（(0,0,2)=2(0,0,1)），等价地 PA·AB=0 且 PA·AC=0（PA 与平面内两条不共线向量都垂直），且 A∈平面 ABC，故 PA⊥平面 ABC。\n(2) 平面 PBC 过 P(0,0,2)、B(2,0,0)、C(0,2,0)。PB=B-P=(2,0,-2)，PC=C-P=(0,2,-2)，法向量 n=PB×PC=(4,4,4)，取 m=(1,1,1)。平面方程 m·(X-P)=0 即 x+y+z-2=0（截距式 x/2+y/2+z/2=1 等价）。点 A(0,0,0) 到平面 PBC 的距离 d=|m·A-2|/|m|=|0+0+0-2|/\\sqrt{1^2+1^2+1^2}=2/\\sqrt{3}=2\\sqrt{3}/3。\n交叉验证（体积法）：S_ABC=(1/2)·2·2=2，V=(1/3)·S_ABC·|PA|=(1/3)·2·2=4/3；S_PBC=(1/2)|PB×PC|=(1/2)·4\\sqrt{3}=2\\sqrt{3}；d=3V/S_PBC=4/(2\\sqrt{3})=2/\\sqrt{3}=2\\sqrt{3}/3，两法一致。",
+ "answer": "(1) PA⊥平面ABC（PA 方向 (0,0,2) 平行于平面 ABC 的法向量 (0,0,1)，且 PA·AB=PA·AC=0）；(2) 点 A 到平面 PBC 的距离 d=2\\sqrt{3}/3。",
+ "status": "pass",
+ "clean_unseen": true,
+ "meta": {
+  "mode": "unseen near transfer（新题面，仅本消息题面+已学方法，未回看任何解法/答案）",
+  "same_session_groups_unchanged": "本文件独立于 same_session 验收；同会话审计轮暴露仅影响该轮记录，不影响本题 clean_unseen（本题题面与解答此前从未出现于任何已读材料）",
+  "24h_cold_retest": "not_run"
+ }
+}

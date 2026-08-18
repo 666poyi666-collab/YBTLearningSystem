@@ -1,0 +1,556 @@
+{
+  "schema_version": "7.1",
+  "packet_type": "DEEPSEEK_STUDENT_PACKET",
+  "section": "4.3",
+  "label": "第3节 等差数列的前n项和公式",
+  "source": {
+    "ocr_root": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100",
+    "ocr_docs": [
+      34,
+      50
+    ],
+    "source_file": null
+  },
+  "manifest": {
+    "page_count": 17,
+    "question_count": 19,
+    "expected_question_count": 19,
+    "expected_groups": {
+      "A": [
+        1,
+        4
+      ],
+      "B": [
+        5,
+        17
+      ],
+      "C": [
+        18,
+        19
+      ]
+    },
+    "derived_question_correction_count": 1
+  },
+  "status": "VERIFIED",
+  "consumer_guard": "Student/DeepSeek context: no answers. Consume only when status=VERIFIED.",
+  "pages": [
+    {
+      "ocr_doc": 34,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_34.md",
+      "text": "# 4.2.2 等差数列的前 n 项和公式\n\n习题：P1\n\n知识梳理\n\n## 知识点 1：等差数列的前 n 项和公式及其推导\n\n1. 等差数列的前 \\(n\\) 项和公式\n\n首项为 \\(a_1\\)，末项为 \\(a_n\\)，项数为 \\(n\\) 的等差数列 \\(\\{a_n\\}\\) 的前 \\(n\\) 项和为 \\(S_n = \\frac{n(a_1 + a_n)}{2}\\)。\n\n设 \\(\\{a_n\\}\\) 的公差为 \\(d\\)，将 \\(a_n = a_1 + (n-1)d\\) 代入上式整理可得 \\(S_n = na_1 + \\frac{n(n-1)}{2}d\\)。\n\n注：两个求和公式涉及的量不同，因此需要根据实际情况选择适当的公式解题，不难发现，通常已知 \\(a_{1}\\)， \\(a_{n}\\)， \\(S_{n}\\)，n，d这五个量中的三个量，就能求出另外两个量.\n\n2. 等差数列的前 \\(n\\) 项和公式 \\(S_n = \\frac{n(a_1 + a_n)}{2}\\) 的推导\n\n设 \\(S_n = a_1 + a_2 + \\cdots + a_{n-1} + a_n\\) ①，\n\n则 \\(S_n = a_n + a_{n-1} + \\cdots + a_2 + a_1\\) ②，\n\n① + ② 可得 \\(2S_n = (a_1 + a_n) + (a_2 + a_{n-1}) + \\cdots + (a_{n-1} + a_2)\\)\n\n\\(+(a_n + a_1)\\)，\n\n由等差数列的性质，\\(a_1 + a_n = a_2 + a_{n-1} = \\cdots = a_n + a_1\\)，\n\n所以 \\(2S_n = n(a_1 + a_n)\\)，故 \\(S_n = \\frac{n(a_1 + a_n)}{2}\\)。\n\n## 知识点 2：等差数列的前 n 项和公式与二次函数\n\n1. 等差数列的前 \\(n\\) 项和公式与二次函数的关系\n\n在等差数列 \\(\\{a_n\\}\\) 中，\\(S_n = na_1 + \\frac{n(n-1)}{2}d = \\frac{d}{2}n^2 + \\left(a_1 - \\frac{d}{2}\\right)n\\)，令 \\(A = \\frac{d}{2}\\)，\\(B = a_1 - \\frac{d}{2}\\)，则 \\(S_n = An^2 + Bn\\)。\n\n当 \\(A \\ne 0\\)（即 \\(d \\ne 0\\)）时，\\(S_n\\) 是关于 \\(n\\) 的“二次函数”，那么点 \\((n, S_n)\\) 在二次函数 \\(y = Ax^2 + Bx\\) 的图象上。\n\n当 \\(A = 0\\)（即 \\(d = 0\\)）时，若 \\(B \\ne 0\\)（即 \\(a_1 \\ne 0\\)），则 \\(S_n\\) 是\n\n## 知识点1\n",
+      "text_sha256": "cd52698fdcd31b1dd19de97e301c65793075c7e261453dc34efaced0e8c27343",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 35,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_35.md",
+      "text": "## 知识点 3：等差数列的前 n 项和的性质\n\n1. 设等差数列 \\(\\{a_{n}\\}\\)的前n项和为 \\(S_{n}\\)，则\n\n \\[S_{2n-1}=\\frac{(2n-1)(a_{1}+a_{2n-1})}{2}=\\frac{(2n-1)\\cdot2a_{n}}{2}=(2n-1)a_{n},\\] \n\n \\[S_{2n}=\\frac{2n(a_{1}+a_{2n})}{2}=n(a_{1}+a_{2n})=n(a_{n}+a_{n+1}).\\] \n\n2. 片段和性质：等差数列 \\(\\{a_{n}\\}\\)中，公差为d，前k项的和为 \\(S_{k}\\)，则 \\(S_{k}\\)， \\(S_{2k}-S_{k}\\)， \\(S_{3k}-S_{2k}\\)， \\(\\cdots\\)， \\(S_{mk}-S_{(m-1)k}\\)， \\(\\cdots\\)构成公差为 \\(k^{2}d\\)的等差数列.\n\n3. 由  \\(S_{n}=na_{1}+\\frac{n(n-1)}{2}d\\) 可知， \\(\\frac{S_{n}}{n}=a_{1}+\\frac{n-1}{2}d=\\frac{d}{2}n+a_{1}-\\frac{d}{2}\\)，所以  \\(\\left\\{\\frac{S_{n}}{n}\\right\\}\\) 是等差数列，首项为  \\(a_{1}\\)，公差为  \\(\\frac{d}{2}\\).\n\n## 知识点2\n\n## 知识点3\n\n类型 I：求等差数列的前 n 项和",
+      "text_sha256": "5b095988b6f69c7e2d62b5ecdc6fa0f681874428331a4621a29dda52b818912c",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 36,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_36.md",
+      "text": "（ocr_doc 36 为方法册教学续页；完整教学内容已进入 learning_packet.json，独立作答上下文仅保留此中性锚点。）",
+      "text_sha256": "26d4487b72081a0bd6c3913de1de7575eb4e7002b53c11a8c484b835de71fa55",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 37,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_37.md",
+      "text": "（ocr_doc 37 为方法册教学续页；完整教学内容已进入 learning_packet.json，独立作答上下文仅保留此中性锚点。）",
+      "text_sha256": "5d56a5f7b91a495871efadddf37c728938de848cef9cb25b89edf999387f9059",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 38,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_38.md",
+      "text": "## 类型Ⅱ：等差数列前 n 项和有关性质的应用\n",
+      "text_sha256": "75a8d7876373a043ba7aff18634015a42abe53477f82f90cb853e8ee1be8f7f7",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 39,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_39.md",
+      "text": "（ocr_doc 39 为方法册教学续页；完整教学内容已进入 learning_packet.json，独立作答上下文仅保留此中性锚点。）",
+      "text_sha256": "5b86fb8245d84c29707b64ea41b4bd5e76cb1d532483724d282f7cae99ac2065",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 40,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_40.md",
+      "text": "（ocr_doc 40 为方法册教学续页；完整教学内容已进入 learning_packet.json，独立作答上下文仅保留此中性锚点。）",
+      "text_sha256": "fb29b414cfbd8d7fb83ff67fb4b20bcadbc582b99922b294cb08bcc53befc31b",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 41,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_41.md",
+      "text": "## 类型Ⅲ：等差数列前 n 项和的最值问题\n",
+      "text_sha256": "1855872f67a921a7c2080262baea87a5133a92d29e854a1cd8e6aa3e2f678b61",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 42,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_42.md",
+      "text": "## 类型IV：等差数列前 n 项和的实际应用\n",
+      "text_sha256": "63c56f72fcf63e21231711eb842ba9390fa8e080de9f8930728ea8335b387b0b",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 43,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_43.md",
+      "text": "## 类型V：等差数列综合题\n",
+      "text_sha256": "0ad056c515fffc39a75dfe42fb7bc47bc0e6ad2804025a9252699ece903629ee",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 44,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_44.md",
+      "text": "## 类型VI：等差数列有关的新定义问题\n",
+      "text_sha256": "1f5fc92e28abd52f71a57c17dbdb6aa31f2d053d9ea90ba4e187e31de9e726a1",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 45,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_45.md",
+      "text": "## 强化训练\n\n## A 组 夯实基础\n\n### 1. (2025 · 湖南模拟)\n\n已知等差数列 \\(\\{a_n\\}\\) 的首项为 1，公差为 2，前 \\(n\\) 项和为 \\(S_n\\)，则 \\(a_3 + S_6 =\\)___。\n\n### 2. （2025·贵州六盘水期末）\n\n记等差数列  \\(\\{a_{n}\\}\\) 的前 n 项和为  \\(S_{n}\\)，已知  \\(a_{2}=4\\)， \\(S_{7}=0\\)，则  \\(\\{a_{n}\\}\\) 的公差为 ___.\n\n3.（2024·广东惠州模拟）\n\n已知等差数列  \\(\\{a_{n}\\}\\) 前 9 项和为 27， \\(a_{10}=8\\)，则  \\(a_{100}=\\) （）\n\nA. 100 B. 99 C. 98 D. 97",
+      "text_sha256": "92b527334ed2c539828372edc06b1fcf6bcd997189f6940d24ee69b16255364f",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 46,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_46.md",
+      "text": "4.（2025·湖南长沙一模）\n\n已知等差数列 \\(\\{a_n\\}\\) 的前 \\(n\\) 项和为 \\(S_n\\)，若 \\(a_4 + a_{12} = a_8 + 2\\)，则 \\(S_{15} =\\) ___。\n\n## B 组 强化能力\n\n5.（2025·广东韶光期末）\n\n若等差数列 \\(\\{a_{n}\\}\\)的前n项和为 \\(S_{n}\\)， \\(S_{3}=2S_{6}=6\\)，则 \\(S_{9}=\\)（）\n\nA. -9 B. -6\n\nC. -3 D. 9\n\n \\[(2025\\cdot 山西二模 )\\] \n\n已知等差数列\\(\\{a_{n}\\}\\) 公差不为0，记其前\\(n\\)项和为\\(S_{n}\\)，若\\(a_{6}=a_{5}+a_{7}\\)，\\(S_{2k}=a_{2k}\\)，则正整数\\(k\\)的值为（）\n\nA. 3 B. 6 C. 8 D. 12\n\n7.（2025·河北沧州模拟）\n\n记  \\(S_n\\) 为等差数列  \\(\\{a_n\\}\\) 的前  \\(n\\) 项和，若公差  \\(d = \\frac{1}{2}\\)，且  \\(S_{100} = 145\\)，则  \\(a_1 + a_3 + a_5 + \\cdots + a_{97} + a_{99}\\) 的值为（ ）\n\nA. 60          B. 70          C. 75          D. 85\n\n8.（2025·河南模拟）\n\n已知等差数列 \\(\\{a_{n}\\}\\)的前n项和为 \\(S_{n}\\)，且 \\(\\frac{S_{7}}{7}-\\frac{S_{3}}{3}=4\\)，则 \\(a_{9}-a_{6}=\\)（）\n\nA. 2 B. 3 C. 4 D. 6",
+      "text_sha256": "41a273f302b3ac3e0b9479a03f9756c42d660af163558b8293674125e6caaf59",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 47,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_47.md",
+      "text": "9.（2024·陕西开学考试）（多选）\n\n已知数列\\(\\{a_n\\}\\)满足\\(2a_{n+1}=a_n+a_{n+2}\\)，其中\\(a_1=21\\)，\\(a_2=19\\)，设\\(S_n\\)为数列\\(\\{a_n\\}\\)的前\\(n\\)项和，则下列选项正确的是（ ）\n\nA. \\(\\{a_n\\}\\)为等差数列\n\nB. \\(a_n=2n+19\\)\n\nC. \\(\\frac{S_n}{n}=20+n\\)\n\nD. 当\\(n=11\\)时，\\(S_n\\)有最大值\n\n10.（2025·广西开学考试）（多选）\n\n已知等差数列 \\(\\{a_{n}\\}\\)的前 \\(n\\)项和为 \\(S_{n}\\)，若 \\(S_{3}=18\\)， \\(a_{3}+a_{5}=28\\)，则（ ）\n\nA.  \\(S_{11}=11a_{6}\\) B.  \\(a_{6}=20\\)\n\nC.  \\(S_{5}=50\\) D.  \\(a_{n}+S_{n}\\) 的最小值是 4\n\n11.（2025·湖北武汉开学考试）\n\n记 \\(S_{n}\\)为等差数列 \\(\\{a_{n}\\}\\)的前n项和，若 \\(S_{3}=6\\)， \\(S_{5}=-10\\)，则 \\(S_{8}=\\)（）\n\nA. -4 B. -16 C. -32 D. -64",
+      "text_sha256": "5c9cc396bafbdeb943131d188e95225910ed83d2986a2b297b30dad7e07c4dc5",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 48,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_48.md",
+      "text": "12\\. (2024·东北三校联考) (多选)\n\n等差数列  \\(\\{a_{n}\\}\\) 的前 n 项和为  \\(S_{n}\\)，下列命题正确的是（）\n\nA. 若  \\(a_{3}+a_{7}=4\\)，则  \\(S_{9}=18\\)\n\nB. 若  \\(S_{15}>0\\)， \\(S_{16}<0\\)，则  \\(a_{8}^{2}>a_{9}^{2}\\)\n\nC. 若  \\(a_{1}+a_{2}=1\\)， \\(a_{3}+a_{4}=9\\)，则  \\(a_{7}+a_{8}=25\\)\n\nD. 若  \\(a_{1}>0\\)， \\(a_{8}=S_{10}\\)，则  \\(S_{9}>0\\)， \\(S_{10}<0\\)\n\n13.（2025·黑龙江哈尔滨模拟）\n\n若  \\(S_n\\)， \\(T_n\\) 分别是等差数列  \\(\\{a_n\\}\\)， \\(\\{b_n\\}\\) 的前  \\(n\\) 项和，且  \\(\\frac{S_n}{T_n} = \\frac{2n+1}{4n-2} (n \\in \\mathbf{N}^*)\\)，则  \\(\\frac{a_3}{b_4 + b_7} + \\frac{a_8}{b_5 + b_6} =\\)（ ）\n\nA.  \\(\\frac{7}{10}\\)          B.  \\(\\frac{11}{18}\\)\n\nC.  \\(\\frac{21}{38}\\)          D.  \\(\\frac{17}{30}\\)\n\n14.（2025·海南模拟）（多选）\n\n设等差数列\\(\\{a_n\\}\\)的前\\(n\\)项和为\\(S_n\\)，已知\\(a_3 = -10\\)，\\(a_6 < 0\\)，\\(S_{12} > 0\\)，则（ ）\n\nA. \\(S_5 = -50\\)\n\nB. \\(a_7 > 0\\)\n\nC. \\(S_n \\geq S_{11}\\)\n\nD. \\(|a_3| < |a_{10}|\\)\n\n15.（2025·四川凉州期中）\n\n记 \\(S_{n}\\)是公差不为0的等差数列 \\(\\{a_{n}\\}\\)的前n项和，若 \\(S_{5}=a_{7}\\)， \\(S_{8}=a_{4}a_{7}\\)\n\n（1）求数列 \\(\\{a_{n}\\}\\)的通项公式；\n\n（2）求使  \\(S_{n} > a_{n}\\) 成立的 n 的最小值.",
+      "text_sha256": "fa4858f41de3afcfb1455054feb587c43e200f3b7c7e997aff7c8a1aaaa267b0",
+      "image_refs": [],
+      "math_errors": [],
+      "derived_question_corrections": [
+        {
+          "id": "DQC-4.3-B13-OCR-READ-AS-B15",
+          "action": "replace_line",
+          "evidence": "SOURCE_PAGE_VISUAL_CONFIRMS_PRINTED_B13_2025_HEILONGJIANG_HARBIN",
+          "reason": "paddle_ocr_read_printed_13_as_15_and_misread_location_text"
+        }
+      ]
+    },
+    {
+      "ocr_doc": 49,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_49.md",
+      "text": "### 16. （2025·上海开学考试）\n\n某公司今年初用 25 万元引进一种新的设备，投入设备后每年收益为 21 万元。同时，公司每年需要付出设备的维修和工人工资等费用，第一年各种费用 2 万元，第二年各种费用 4 万元，以后每年各种费用都增加 2 万元。\n\n（1）引进这种设备后，求该公司使用这种设备后第 \\(n(n \\leq 18)\\)年所获利润 \\(f(n)\\);\n\n（2）这种设备使用多少年，该公司的年平均获利最大？\n\n在等差数列 \\(\\{a_{n}\\}\\)中， \\(a_{3}=7\\)， \\(a_{9}=-5\\)， \\(\\{a_{n}\\}\\)的前n项和为 \\(S_{n}\\)。\n\n（1）求数列 \\(\\{a_{n}\\}\\)的通项公式；\n\n（2）设 \\(T_{n}=\\left|a_{1}\\right|+\\left|a_{2}\\right|+\\left|a_{3}\\right|+\\cdots+\\left|a_{n}\\right|\\)，求 \\(T_{n}\\)\n\n## C组 拓展提升\n\n18.（2025·安徽六安模拟）（多选）\n\n已知等差数列 \\(\\{a_{n}\\}\\)的首项为 \\(a_{1}\\)，公差为d，前n项和为 \\(S_{n}\\)，若 \\(S_{10}<S_{8}<S_{9}\\)，则下列说法正确的是（）\n\nA. 当n=9时， \\(S_{n}\\)最大\n\nB. 使得 \\(S_{n}<0\\)成立的最小自然数n=18\n\nC.  \\(\\left|a_{8}+a_{9}\\right|>\\left|a_{10}+a_{11}\\right|\\)\n\nD. 数列 \\(\\left\\{\\frac{S_{n}}{a_{n}}\\right\\}\\)中的最小项为 \\(\\frac{S_{10}}{a_{10}}\\)",
+      "text_sha256": "d58d18db74192998cbff5c601f032e0f4cb05d87f100abbd62e78dc624a83e5a",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 50,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_50.md",
+      "text": "### 19. （2025 · 江苏苏州模拟）\n\n若数列 \\(\\{a_n\\}\\) 满足 \\(a_{n+2} - a_{n+1} \\geq a_{n+1} - a_n (n \\in \\mathbb{N}^*)\\)，则称 \\(\\{a_n\\}\\) 为“阶跃数列”。\n\n（1）若 \\(a_{n}=n^{2}+2n\\)，判断 \\(\\{a_{n}\\}\\)是否为“阶跃数列”；\n\n（2）在“阶跃数列” \\(\\{a_{n}\\}\\)中，若 \\(a_{n}=\\lambda\\cdot2^{n}-\\frac{n(n-1)(n+1)}{6}\\)，求实数 \\(\\lambda\\)的取值范围.",
+      "text_sha256": "53a3111ce0a220882ea9a1cc00b0f6768f5158b3009e1bdf40b252d478c5de4d",
+      "image_refs": [],
+      "math_errors": []
+    }
+  ],
+  "questions": [
+    {
+      "qid": "Q-4c084fcd3a99cffd",
+      "section": "4.3",
+      "group": "A",
+      "number": 1,
+      "kind": "A组",
+      "source_anchor": {
+        "ocr_doc": 45,
+        "pdf_page": 46,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_45.md"
+      },
+      "question_text": "### 1. (2025 · 湖南模拟)\n\n已知等差数列 \\(\\{a_n\\}\\) 的首项为 1，公差为 2，前 \\(n\\) 项和为 \\(S_n\\)，则 \\(a_3 + S_6 =\\)___。",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-eee9811d3dea294c",
+      "section": "4.3",
+      "group": "A",
+      "number": 2,
+      "kind": "A组",
+      "source_anchor": {
+        "ocr_doc": 45,
+        "pdf_page": 46,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_45.md"
+      },
+      "question_text": "### 2. （2025·贵州六盘水期末）\n\n记等差数列  \\(\\{a_{n}\\}\\) 的前 n 项和为  \\(S_{n}\\)，已知  \\(a_{2}=4\\)， \\(S_{7}=0\\)，则  \\(\\{a_{n}\\}\\) 的公差为 ___.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-e5aed3805a738cab",
+      "section": "4.3",
+      "group": "A",
+      "number": 3,
+      "kind": "A组",
+      "source_anchor": {
+        "ocr_doc": 45,
+        "pdf_page": 46,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_45.md"
+      },
+      "question_text": "3.（2024·广东惠州模拟）\n\n已知等差数列  \\(\\{a_{n}\\}\\) 前 9 项和为 27， \\(a_{10}=8\\)，则  \\(a_{100}=\\) （）\n\nA. 100 B. 99 C. 98 D. 97",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-7be460450d85e930",
+      "section": "4.3",
+      "group": "A",
+      "number": 4,
+      "kind": "A组",
+      "source_anchor": {
+        "ocr_doc": 46,
+        "pdf_page": 47,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_46.md"
+      },
+      "question_text": "4.（2025·湖南长沙一模）\n\n已知等差数列 \\(\\{a_n\\}\\) 的前 \\(n\\) 项和为 \\(S_n\\)，若 \\(a_4 + a_{12} = a_8 + 2\\)，则 \\(S_{15} =\\) ___。",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-523489579c350424",
+      "section": "4.3",
+      "group": "B",
+      "number": 5,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 46,
+        "pdf_page": 47,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_46.md"
+      },
+      "question_text": "5.（2025·广东韶光期末）\n\n若等差数列 \\(\\{a_{n}\\}\\)的前n项和为 \\(S_{n}\\)， \\(S_{3}=2S_{6}=6\\)，则 \\(S_{9}=\\)（）\n\nA. -9 B. -6\n\nC. -3 D. 9\n\n \\[(2025\\cdot 山西二模 )\\]",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-fee791ac4fe5ea34",
+      "section": "4.3",
+      "group": "B",
+      "number": 6,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 46,
+        "pdf_page": 47,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_46.md",
+        "recovery": "PADDLE_OCR_TEXT_NEIGHBOR_SEQUENCE_B5_B6_B7",
+        "recovery_source_kind": "primary_ocr"
+      },
+      "question_text": "已知等差数列\\(\\{a_{n}\\}\\) 公差不为0，记其前\\(n\\)项和为\\(S_{n}\\)，若\\(a_{6}=a_{5}+a_{7}\\)，\\(S_{2k}=a_{2k}\\)，则正整数\\(k\\)的值为（）\n\nA. 3 B. 6 C. 8 D. 12",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1",
+        "PADDLE_OCR_TEXT_NEIGHBOR_SEQUENCE_B5_B6_B7"
+      ],
+      "recovery_reason": "printed_number_missing_from_paddle_ocr"
+    },
+    {
+      "qid": "Q-7f3d8d366b0e9233",
+      "section": "4.3",
+      "group": "B",
+      "number": 7,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 46,
+        "pdf_page": 47,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_46.md"
+      },
+      "question_text": "7.（2025·河北沧州模拟）\n\n记  \\(S_n\\) 为等差数列  \\(\\{a_n\\}\\) 的前  \\(n\\) 项和，若公差  \\(d = \\frac{1}{2}\\)，且  \\(S_{100} = 145\\)，则  \\(a_1 + a_3 + a_5 + \\cdots + a_{97} + a_{99}\\) 的值为（ ）\n\nA. 60          B. 70          C. 75          D. 85",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-60d288ccf1e5f69b",
+      "section": "4.3",
+      "group": "B",
+      "number": 8,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 46,
+        "pdf_page": 47,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_46.md"
+      },
+      "question_text": "8.（2025·河南模拟）\n\n已知等差数列 \\(\\{a_{n}\\}\\)的前n项和为 \\(S_{n}\\)，且 \\(\\frac{S_{7}}{7}-\\frac{S_{3}}{3}=4\\)，则 \\(a_{9}-a_{6}=\\)（）\n\nA. 2 B. 3 C. 4 D. 6",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-1d5a1d0310c6fcc6",
+      "section": "4.3",
+      "group": "B",
+      "number": 9,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 47,
+        "pdf_page": 48,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_47.md"
+      },
+      "question_text": "9.（2024·陕西开学考试）（多选）\n\n已知数列\\(\\{a_n\\}\\)满足\\(2a_{n+1}=a_n+a_{n+2}\\)，其中\\(a_1=21\\)，\\(a_2=19\\)，设\\(S_n\\)为数列\\(\\{a_n\\}\\)的前\\(n\\)项和，则下列选项正确的是（ ）\n\nA. \\(\\{a_n\\}\\)为等差数列\n\nB. \\(a_n=2n+19\\)\n\nC. \\(\\frac{S_n}{n}=20+n\\)\n\nD. 当\\(n=11\\)时，\\(S_n\\)有最大值",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-1dfaefcc3fa512c2",
+      "section": "4.3",
+      "group": "B",
+      "number": 10,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 47,
+        "pdf_page": 48,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_47.md"
+      },
+      "question_text": "10.（2025·广西开学考试）（多选）\n\n已知等差数列 \\(\\{a_{n}\\}\\)的前 \\(n\\)项和为 \\(S_{n}\\)，若 \\(S_{3}=18\\)， \\(a_{3}+a_{5}=28\\)，则（ ）\n\nA.  \\(S_{11}=11a_{6}\\) B.  \\(a_{6}=20\\)\n\nC.  \\(S_{5}=50\\) D.  \\(a_{n}+S_{n}\\) 的最小值是 4",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-3b138b9d89ec009f",
+      "section": "4.3",
+      "group": "B",
+      "number": 11,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 47,
+        "pdf_page": 48,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_47.md"
+      },
+      "question_text": "11.（2025·湖北武汉开学考试）\n\n记 \\(S_{n}\\)为等差数列 \\(\\{a_{n}\\}\\)的前n项和，若 \\(S_{3}=6\\)， \\(S_{5}=-10\\)，则 \\(S_{8}=\\)（）\n\nA. -4 B. -16 C. -32 D. -64",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-51bc8f26adbaf1a6",
+      "section": "4.3",
+      "group": "B",
+      "number": 12,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 48,
+        "pdf_page": 49,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_48.md"
+      },
+      "question_text": "12\\. (2024·东北三校联考) (多选)\n\n等差数列  \\(\\{a_{n}\\}\\) 的前 n 项和为  \\(S_{n}\\)，下列命题正确的是（）\n\nA. 若  \\(a_{3}+a_{7}=4\\)，则  \\(S_{9}=18\\)\n\nB. 若  \\(S_{15}>0\\)， \\(S_{16}<0\\)，则  \\(a_{8}^{2}>a_{9}^{2}\\)\n\nC. 若  \\(a_{1}+a_{2}=1\\)， \\(a_{3}+a_{4}=9\\)，则  \\(a_{7}+a_{8}=25\\)\n\nD. 若  \\(a_{1}>0\\)， \\(a_{8}=S_{10}\\)，则  \\(S_{9}>0\\)， \\(S_{10}<0\\)",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-40a0f6f417708284",
+      "section": "4.3",
+      "group": "B",
+      "number": 13,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 48,
+        "pdf_page": 49,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_48.md"
+      },
+      "question_text": "13.（2025·黑龙江哈尔滨模拟）\n\n若  \\(S_n\\)， \\(T_n\\) 分别是等差数列  \\(\\{a_n\\}\\)， \\(\\{b_n\\}\\) 的前  \\(n\\) 项和，且  \\(\\frac{S_n}{T_n} = \\frac{2n+1}{4n-2} (n \\in \\mathbf{N}^*)\\)，则  \\(\\frac{a_3}{b_4 + b_7} + \\frac{a_8}{b_5 + b_6} =\\)（ ）\n\nA.  \\(\\frac{7}{10}\\)          B.  \\(\\frac{11}{18}\\)\n\nC.  \\(\\frac{21}{38}\\)          D.  \\(\\frac{17}{30}\\)",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-f0fc6a07d7e7bfd3",
+      "section": "4.3",
+      "group": "B",
+      "number": 14,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 48,
+        "pdf_page": 49,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_48.md"
+      },
+      "question_text": "14.（2025·海南模拟）（多选）\n\n设等差数列\\(\\{a_n\\}\\)的前\\(n\\)项和为\\(S_n\\)，已知\\(a_3 = -10\\)，\\(a_6 < 0\\)，\\(S_{12} > 0\\)，则（ ）\n\nA. \\(S_5 = -50\\)\n\nB. \\(a_7 > 0\\)\n\nC. \\(S_n \\geq S_{11}\\)\n\nD. \\(|a_3| < |a_{10}|\\)",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-0efbfa0520ad897b",
+      "section": "4.3",
+      "group": "B",
+      "number": 15,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 48,
+        "pdf_page": 49,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_48.md"
+      },
+      "question_text": "15.（2025·四川凉州期中）\n\n记 \\(S_{n}\\)是公差不为0的等差数列 \\(\\{a_{n}\\}\\)的前n项和，若 \\(S_{5}=a_{7}\\)， \\(S_{8}=a_{4}a_{7}\\)\n\n（1）求数列 \\(\\{a_{n}\\}\\)的通项公式；\n\n（2）求使  \\(S_{n} > a_{n}\\) 成立的 n 的最小值.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-85deed10c42cc126",
+      "section": "4.3",
+      "group": "B",
+      "number": 16,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 49,
+        "pdf_page": 50,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_49.md"
+      },
+      "question_text": "### 16. （2025·上海开学考试）\n\n某公司今年初用 25 万元引进一种新的设备，投入设备后每年收益为 21 万元。同时，公司每年需要付出设备的维修和工人工资等费用，第一年各种费用 2 万元，第二年各种费用 4 万元，以后每年各种费用都增加 2 万元。\n\n（1）引进这种设备后，求该公司使用这种设备后第 \\(n(n \\leq 18)\\)年所获利润 \\(f(n)\\);\n\n（2）这种设备使用多少年，该公司的年平均获利最大？",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-daee9aa0fdfe8f59",
+      "section": "4.3",
+      "group": "B",
+      "number": 17,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 49,
+        "pdf_page": 50,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_49.md",
+        "recovery": "SOURCE_PAGE_VISUAL_CONFIRMS_PRINTED_B17",
+        "recovery_source_kind": "primary_ocr"
+      },
+      "question_text": "在等差数列 \\(\\{a_{n}\\}\\)中， \\(a_{3}=7\\)， \\(a_{9}=-5\\)， \\(\\{a_{n}\\}\\)的前n项和为 \\(S_{n}\\)。\n\n（1）求数列 \\(\\{a_{n}\\}\\)的通项公式；\n\n（2）设 \\(T_{n}=\\left|a_{1}\\right|+\\left|a_{2}\\right|+\\left|a_{3}\\right|+\\cdots+\\left|a_{n}\\right|\\)，求 \\(T_{n}\\)",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1",
+        "SOURCE_PAGE_VISUAL_CONFIRMS_PRINTED_B17"
+      ],
+      "recovery_reason": "printed_number_missing_from_paddle_ocr"
+    },
+    {
+      "qid": "Q-0c07582401e9fa14",
+      "section": "4.3",
+      "group": "C",
+      "number": 18,
+      "kind": "C组",
+      "source_anchor": {
+        "ocr_doc": 49,
+        "pdf_page": 50,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_49.md"
+      },
+      "question_text": "18.（2025·安徽六安模拟）（多选）\n\n已知等差数列 \\(\\{a_{n}\\}\\)的首项为 \\(a_{1}\\)，公差为d，前n项和为 \\(S_{n}\\)，若 \\(S_{10}<S_{8}<S_{9}\\)，则下列说法正确的是（）\n\nA. 当n=9时， \\(S_{n}\\)最大\n\nB. 使得 \\(S_{n}<0\\)成立的最小自然数n=18\n\nC.  \\(\\left|a_{8}+a_{9}\\right|>\\left|a_{10}+a_{11}\\right|\\)\n\nD. 数列 \\(\\left\\{\\frac{S_{n}}{a_{n}}\\right\\}\\)中的最小项为 \\(\\frac{S_{10}}{a_{10}}\\)",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-9ec1c8b5e296aa35",
+      "section": "4.3",
+      "group": "C",
+      "number": 19,
+      "kind": "C组",
+      "source_anchor": {
+        "ocr_doc": 50,
+        "pdf_page": 51,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_50.md"
+      },
+      "question_text": "### 19. （2025 · 江苏苏州模拟）\n\n若数列 \\(\\{a_n\\}\\) 满足 \\(a_{n+2} - a_{n+1} \\geq a_{n+1} - a_n (n \\in \\mathbb{N}^*)\\)，则称 \\(\\{a_n\\}\\) 为“阶跃数列”。\n\n（1）若 \\(a_{n}=n^{2}+2n\\)，判断 \\(\\{a_{n}\\}\\)是否为“阶跃数列”；\n\n（2）在“阶跃数列” \\(\\{a_{n}\\}\\)中，若 \\(a_{n}=\\lambda\\cdot2^{n}-\\frac{n(n-1)(n+1)}{6}\\)，求实数 \\(\\lambda\\)的取值范围.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    }
+  ],
+  "unresolved": [],
+  "answer_sidecar": null,
+  "student_page_text_redacted": true
+}

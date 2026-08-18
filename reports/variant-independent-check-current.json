@@ -1,0 +1,83 @@
+﻿{
+  "report": "variant-independent-check-current",
+  "schema_version": "1.0",
+  "checked_at": "2026-08-14T17:50:00+08:00",
+  "judge_role": "final_teacher_grader",
+  "inputs": [
+    "data/packets/1.1/learning_packet.json (direct_variants 题面)",
+    "data/packets/1.2_1.3/learning_packet.json (direct_variants 题面)",
+    "reports/student-1.1-current.json (学生推导)",
+    "reports/student-1.2_1.3-current.json (学生推导)"
+  ],
+  "answer_side_note": "直接变式无独立答案侧（learning_packet 设计为仅题干、解答隔离）；以下裁决全部来自判卷员独立完整数学推导，未假称存在答案侧。",
+  "results": [
+    {
+      "item_id": "ce0335a21c798927",
+      "section": "1.1",
+      "label": "变式1(例11)",
+      "question": "正方体 ABCD-A1B1C1D1 中，A1E=2ED1，A1F=(2/3)FC。(1) 用 A1A、A1B1、A1D1 表示 EF；(2) 证 E,F,B 三点共线。",
+      "judge_derivation": "取基 a=A1A, b=A1B1, d=A1D1，以 A1 为原点：A=a, B=a+b, C=a+b+d, D=a+d, D1=d。A1E=2ED1 ⇒ A1E=(2/3)A1D1 ⇒ E=(2/3)d。A1F=(2/3)FC ⇒ A1F=(2/5)A1C ⇒ F=(2/5)(a+b+d)。(1) EF=F-E=(2/5)a+(2/5)b+[(2/5)-(2/3)]d=(2/5)a+(2/5)b-(4/15)d。(2) EB=B-E=a+b-(2/3)d，故 EF=(2/5)[a+b-(2/3)d]=(2/5)EB ⇒ E,F,B 共线。",
+      "student_result": "EF=(2/5)A1A+(2/5)A1B1-(4/15)A1D1；EF=(2/5)EB ⇒ E,F,B共线",
+      "verdict": "agreed",
+      "note": "判卷员推导与学生结果逐项一致"
+    },
+    {
+      "item_id": "5f42fe5671670a92",
+      "section": "1.1",
+      "label": "变式2(例11)",
+      "question": "9 点 O,A,B,C,D,E,F,G,H，OE=kOA, OF=kOB, OH=kOD, AC=AD+mAB, EG=EH+mEF，求证 AC∥EG。",
+      "judge_derivation": "OE=kOA, OF=kOB ⇒ EF=OF-OE=k(OB-OA)=kAB；同理 EH=OH-OE=k(OD-OA)=kAD。代入 EG=EH+mEF=kAD+mkAB=k(AD+mAB)=kAC。EG 为 AC 的实数倍 ⇒ AC∥EG。",
+      "student_result": "EH=kAD，EF=kAB；EG=EH+mEF=kAD+mkAB=kAC ⇒ AC∥EG",
+      "verdict": "agreed",
+      "note": "判卷员推导与学生一致（学生未显式写出 EF=kAB/EH=kAD 的中间一步，结论正确）"
+    },
+    {
+      "item_id": "0d9860d67f5ba867",
+      "section": "1.1",
+      "label": "变式(例12)",
+      "question": "平行六面体 ABCD-A1B1C1D1，E,F,G,H 分别为棱 A1D1, C1D1, CC1, AB 的中点。(1) EG=xAB+yAD+zAA1 求 x,y,z；(2) 证 E,F,G,H 共面。",
+      "judge_derivation": "以 A 为原点，基 b=AB, d=AD, a=AA1。E=A1+(1/2)A1D1=a+(1/2)d；F=C1+(1/2)C1D1=(b+d+a)+(1/2)(-b)=(1/2)b+d+a；G=C+(1/2)CC1=b+d+(1/2)a；H=(1/2)b。(1) EG=G-E=[b+d+(1/2)a]-[a+(1/2)d]=b+(1/2)d-(1/2)a ⇒ x=1, y=1/2, z=-1/2。(2) EF=F-E=(1/2)b+(1/2)d；EH=H-E=(1/2)b-a-(1/2)d；验算 (3/2)EF+(1/2)EH=(3/4)b+(3/4)d+(1/4)b-(1/2)a-(1/4)d=b+(1/2)d-(1/2)a=EG ⇒ EG=(3/2)EF+(1/2)EH ⇒ E,F,G,H 共面。",
+      "student_result": "(1) x=1, y=1/2, z=-1/2；(2) EG=(3/2)EF+(1/2)EH ⇒ E,F,G,H共面",
+      "verdict": "agreed",
+      "note": "判卷员推导与学生一致"
+    },
+    {
+      "item_id": "93c3de935f7cc03f",
+      "section": "1.1",
+      "label": "变式1(例15)",
+      "question": "平行六面体 ABCD-A1B1C1D1，∠BAA1=∠DAA1=30°，AB=AD=1，AA1=√3，若 AC1=2√3，求 ∠BAD。",
+      "judge_derivation": "基 b=AB(|b|=1), d=AD(|d|=1), a=AA1(|a|=√3)。a·b=|a||b|cos30°=√3·(√3/2)=3/2，a·d=3/2，b·d=cosθ(θ=∠BAD)。AC1=b+d+a ⇒ |AC1|²=1+1+3+2b·d+2a·b+2a·d=5+2cosθ+3+3=11+2cosθ。AC1=2√3 ⇒ 12=11+2cosθ ⇒ cosθ=1/2 ⇒ θ=60°。",
+      "student_result": "|AC1|²=11+2cosθ=12 ⇒ cosθ=1/2 ⇒ ∠BAD=60°",
+      "verdict": "agreed",
+      "note": "判卷员推导与学生一致（11+2cosθ 展开含 a·b、a·d 各 3/2 两项）"
+    },
+    {
+      "item_id": "bcfdff63c5c01bf4",
+      "section": "1.2+1.3",
+      "label": "变式1(例10) [DV1]",
+      "question": "三棱柱 ABC-A1B1C1，CC1⊥面ABC，AC⊥BC，AC=BC=2，CC1=3；D 在 AA1 上 AD=1，E 在 CC1 上 CE=2，M 为 A1B1 中点。(1) 证 C1M⊥B1D；(2) 证 C1M∥面B1DE。",
+      "judge_derivation": "建系 C 为原点：C(0,0,0), A(2,0,0), B(0,2,0), C1(0,0,3), A1(2,0,3), B1(0,2,3)。D=A+(1/3)AA1=(2,0,1)；E=(0,0,2)；M=(A1+B1)/2=(1,1,3)。(1) C1M=(1,1,0)，B1D=D-B1=(2,-2,-2)；C1M·B1D=2-2+0=0 ⇒ 垂直。(2) B1E=E-B1=(0,-2,-1)；解 C1M=αB1D+βB1E：2α=1, -2α-2β=1, -2α-β=0 ⇒ α=1/2, β=-1 ⇒ C1M=(1/2)B1D-B1E∈面B1DE 方向；且 C1-B1=(0,-2,0) 不满足 -2β 分量（α=0,β=1 时 z 分量 -1≠0）⇒ C1∉面B1DE ⇒ C1M∥面B1DE。等价形式：C1M=(1/2)ED+(1/2)EB1（ED=D-E=(2,0,-1), EB1=B1-E=(0,2,1)）。",
+      "student_result": "建系 C 为原点：C1M=(1,1,0), B1D=(2,-2,-2)，点积 0→垂直；(2) C1M=(1/2)ED+(1/2)EB1 且 C1∉面B1DE→线面平行；两问均证毕",
+      "verdict": "agreed",
+      "note": "判卷员完整推导确认 (1)(2)；学生 ED/EB1 表达式验证正确（(1/2)(2,0,-1)+(1/2)(0,2,1)=(1,1,0)=C1M）"
+    },
+    {
+      "item_id": "d085ad01a858870d",
+      "section": "1.2+1.3",
+      "label": "变式2(例10) [DV2]",
+      "question": "四棱锥 S-ABCD，底面正方形，侧棱均为底面边长的 √2 倍，P 为侧棱 SD 上的点。(1) 证 AC⊥SD；(2) 若 SD⊥面PAC，SC 上是否存在点 E 使 BE∥面PAC？若存在求 SE:EC。",
+      "judge_derivation": "底面边长 2，中心 O 为原点：A(-1,-1,0), B(1,-1,0), C(1,1,0), D(-1,1,0), S(0,0,√6)（SA²=1+1+6=8=2√2²）。(1) AC=(2,2,0)，SD=D-S=(-1,1,-√6)；AC·SD=-2+2+0=0 ⇒ AC⊥SD。(2) P=S+λ(D-S)=(-λ,λ,√6(1-λ))。SD⊥面PAC ⇔ SD·PA=0：PA=A-P=(-1+λ,-1-λ,-√6(1-λ))；SD·PA=-(1-λ)+(-1-λ)+6(1-λ)=6-8λ=0 ⇒ λ=3/4（验 PC：PC=(7/4,1/4,-√6/4)，SD·PC=-7/4+1/4+6/4=0 ✓）。E=S+μ(C-S)=(μ,μ,√6(1-μ))，BE=E-B=(μ-1,μ+1,√6(1-μ))。BE∥面PAC ⇔ BE∈span{AP,AC}：用基 AP=(1/4,7/4,√6/4), AC=(2,2,0) 解 BE=xAP+yAC：z: 1-μ=x/4 ⇒ x=4(1-μ)；y-x 分量相减得 2=6x/4 ⇒ x=4/3 ⇒ μ=2/3；y 分量回代 -1/3=1/3+2y ⇒ y=-1/3 ✓。故 E 存在，SE:EC=μ:(1-μ)=2:1。",
+      "student_result": "正四棱锥建系 A(0,-√2,0),C(0,√2,0),S(0,0,√6),D(-√2,0,0)；AC·SD=0；(2) SD⊥面PAC→SD⊥PC→λ=3/4 定 P；设 BE=x·AP+y·AC 解得 μ=2/3；AC⊥SD 证毕；E 存在，SE:EC=2:1",
+      "verdict": "agreed",
+      "note": "判卷员完整推导确认两问；λ=3/4 与 μ=2/3（SE:EC=2:1）与学生一致（坐标架等价）"
+    }
+  ],
+  "summary": {
+    "total": 6,
+    "agreed": 6,
+    "disputed": 0,
+    "unverifiable": 0
+  },
+  "impact": "final-teacher-judge-current.json 中 6 个 unverifiable 直接变式全部经独立数学推导转为 agreed；按指令暂不覆盖 final-teacher-judge-current.json，待父控决定是否并账。",
+  "verdict_text": "六题独立推导全部与学生结果一致，无分歧；变式总数 16 中现已 16/16 有裁决（10 项先前已核 + 6 项本轮转 agreed）。"
+}

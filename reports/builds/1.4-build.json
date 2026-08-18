@@ -1,0 +1,121 @@
+{
+  "worker": "build-1.4-micro",
+  "section": "1.4",
+  "label": "第3节 空间向量的应用",
+  "objective": "把 1.4 从旧整节六阶段重构为循环式学习包，对齐 1.1 结构（知识点→右侧例题→直属变式→类型题→A/B/C）",
+  "completed_at": "2026-08-16T22:10:00+08:00",
+  "hard_constraint": "题目数量不得增减",
+  "question_counts": {
+    "worked_examples": 22,
+    "direct_variants": 3,
+    "abc_exercises": 12,
+    "total_numbered_learning_items": 37,
+    "old": "22/3/12/37",
+    "new": "22/3/12/37",
+    "unchanged": true
+  },
+  "old_new_mapping": {
+    "examples": [
+      {"label": "例1", "old_cycle": "1.4-cycle-1", "new_cycle": "1.4-cycle-1", "note": "知识点1 方向向量"},
+      {"label": "例2", "old_cycle": "1.4-cycle-1", "new_cycle": "1.4-cycle-1", "note": "知识点1 点在平面内/系数和=1"},
+      {"label": "例3", "old_cycle": "1.4-cycle-1", "new_cycle": "1.4-cycle-1", "note": "知识点2 法向量"},
+      {"label": "例4", "old_cycle": "1.4-cycle-2", "new_cycle": "1.4-cycle-2", "note": "知识点3 面面平行"},
+      {"label": "例5", "old_cycle": "1.4-cycle-2", "new_cycle": "1.4-cycle-2", "note": "知识点3 线面位置判断"},
+      {"label": "例6", "old_cycle": "1.4-cycle-2", "new_cycle": "1.4-cycle-2", "note": "知识点3 线线角"},
+      {"label": "例7", "old_cycle": "1.4-cycle-2", "new_cycle": "1.4-cycle-2", "note": "知识点3 点面距"},
+      {"label": "例8", "old_cycle": "1.4-cycle-2", "new_cycle": "1.4-cycle-2", "note": "知识点3 线面角"},
+      {"label": "例9", "old_cycle": "1.4-cycle-2", "new_cycle": "1.4-cycle-2", "note": "知识点3 面面角"},
+      {"label": "例10", "old_cycle": "1.4-cycle-2", "new_cycle": "1.4-cycle-2", "note": "知识点3 二面角综合"},
+      {"label": "例11", "old_cycle": "1.4-cycle-2", "new_cycle": "1.4-cycle-3", "note": "类型Ⅰ 平行"},
+      {"label": "例12", "old_cycle": "1.4-cycle-2", "new_cycle": "1.4-cycle-3", "note": "类型Ⅰ 平行"},
+      {"label": "例13", "old_cycle": "1.4-cycle-2", "new_cycle": "1.4-cycle-3", "note": "类型Ⅱ 垂直"},
+      {"label": "例14", "old_cycle": "1.4-cycle-2", "new_cycle": "1.4-cycle-3", "note": "类型Ⅱ 垂直"},
+      {"label": "例15", "old_cycle": "1.4-cycle-3", "new_cycle": "1.4-cycle-4", "note": "类型Ⅲ 线线角"},
+      {"label": "例16", "old_cycle": "1.4-cycle-3", "new_cycle": "1.4-cycle-4", "note": "类型Ⅲ 线面角"},
+      {"label": "例17", "old_cycle": "1.4-cycle-3", "new_cycle": "1.4-cycle-4", "note": "类型Ⅲ 二面角，带变式1/变式2"},
+      {"label": "例18", "old_cycle": "1.4-cycle-4", "new_cycle": "1.4-cycle-5", "note": "类型Ⅳ 点线距"},
+      {"label": "例19", "old_cycle": "1.4-cycle-4", "new_cycle": "1.4-cycle-5", "note": "类型Ⅳ 点面距"},
+      {"label": "例20", "old_cycle": "1.4-cycle-4", "new_cycle": "1.4-cycle-5", "note": "类型Ⅳ 异面距离，带变式"},
+      {"label": "例21", "old_cycle": "1.4-cycle-5", "new_cycle": "1.4-cycle-6", "note": "类型Ⅴ 点线在面内判断"},
+      {"label": "例22", "old_cycle": "1.4-cycle-5", "new_cycle": "1.4-cycle-6", "note": "类型Ⅴ 点线在面内判断"}
+    ],
+    "direct_variants": [
+      {"label": "变式1", "parent_example": 17, "old_cycle": "1.4-cycle-3", "new_cycle": "1.4-cycle-4", "note": "直属例17，随例17进入空间角循环"},
+      {"label": "变式2", "parent_example": 17, "old_cycle": "1.4-cycle-3", "new_cycle": "1.4-cycle-4", "note": "直属例17，随例17进入空间角循环"},
+      {"label": "变式", "parent_example": 20, "old_cycle": "1.4-cycle-4", "new_cycle": "1.4-cycle-5", "note": "直属例20，随例20进入距离循环"}
+    ],
+    "exercises": [
+      {"key": "A1", "old_cycle": "1.4-cycle-3", "new_cycle": "1.4-cycle-4", "note": "线线角余弦→类型Ⅲ 空间角"},
+      {"key": "A2", "old_cycle": "1.4-cycle-1", "new_cycle": "1.4-cycle-1", "note": "正方体平行垂直→方向向量/法向量基础"},
+      {"key": "B3", "old_cycle": "1.4-cycle-3", "new_cycle": "1.4-cycle-4", "note": "异面直线所成角→类型Ⅲ"},
+      {"key": "B4", "old_cycle": "1.4-cycle-3", "new_cycle": "1.4-cycle-3", "note": "菱形底面垂直证明+面面垂直→类型ⅠⅡ"},
+      {"key": "B5", "old_cycle": "1.4-cycle-1", "new_cycle": "1.4-cycle-1", "note": "平行六面体模长+垂直→基础"},
+      {"key": "B6", "old_cycle": "1.4-cycle-4", "new_cycle": "1.4-cycle-4", "note": "垂直+面面角+点面距→类型Ⅲ 空间角"},
+      {"key": "B7", "old_cycle": "1.4-cycle-3", "new_cycle": "1.4-cycle-4", "note": "体积+线面角→类型Ⅲ"},
+      {"key": "B8", "old_cycle": "1.4-cycle-5", "new_cycle": "1.4-cycle-5", "note": "垂直+异面直线距离+二面角→类型Ⅳ（桥接 micro-skew-distance）"},
+      {"key": "C9", "old_cycle": "1.4-cycle-5", "new_cycle": "1.4-cycle-5", "note": "异面直线距离→类型Ⅳ（桥接 micro-skew-distance）"},
+      {"key": "C10", "old_cycle": "1.4-cycle-5", "new_cycle": "1.4-cycle-7", "note": "菱形折叠→翻折守恒综合（桥接 bridge-1.4-folding）"},
+      {"key": "C11", "old_cycle": "1.4-cycle-5", "new_cycle": "1.4-cycle-6", "note": "动点分点+二面角+AG在面内判断→类型Ⅴ（桥接 dihedral-trig/completion）"},
+      {"key": "C12", "old_cycle": "1.4-cycle-5", "new_cycle": "1.4-cycle-7", "note": "线面角+截面内存在点G→存在性综合（桥接 bridge-micro-existence）"}
+    ]
+  },
+  "new_cycle_structure": [
+    {"cycle_id": "1.4-cycle-1", "sequence": 1, "title": "方向向量与平面的法向量", "course_keys": ["coordinate_ops", "direction_normal"], "knowledge_refs": ["1.4-k1", "1.4-k2"], "examples": [1, 2, 3], "exercises": ["A2", "B5"], "method_checkpoints": ["1.4-direction-normal-check-1"], "bridge_unit_ids": []},
+    {"cycle_id": "1.4-cycle-2", "sequence": 2, "title": "向量方法在立体几何中的应用", "course_keys": ["parallel_perpendicular", "coplanar", "line_line_angle", "line_plane_angle", "plane_plane_angle", "distance"], "prerequisite_course_keys": ["direction_normal"], "knowledge_refs": ["1.4-k3"], "examples": [4, 5, 6, 7, 8, 9, 10], "exercises": [], "method_checkpoints": ["1.4-application-check-1"], "bridge_unit_ids": []},
+    {"cycle_id": "1.4-cycle-3", "sequence": 3, "title": "类型ⅠⅡ 平行与垂直证明", "prerequisite_course_keys": ["parallel_perpendicular", "coplanar"], "type_refs": ["类型Ⅰ 研究平行关系", "类型Ⅱ 研究垂直关系"], "examples": [11, 12, 13, 14], "exercises": ["B4"], "method_checkpoints": ["1.4-parallel-perp-check-1"], "bridge_unit_ids": []},
+    {"cycle_id": "1.4-cycle-4", "sequence": 4, "title": "类型Ⅲ 求空间角", "prerequisite_course_keys": ["line_line_angle", "line_plane_angle", "plane_plane_angle"], "type_refs": ["类型Ⅲ 求空间角"], "examples": [15, 16, 17], "variants": ["变式1", "变式2"], "exercises": ["A1", "B3", "B6", "B7"], "method_checkpoints": ["1.4-line-plane-angle-check-1", "1.4-dihedral-check-1"], "bridge_unit_ids": []},
+    {"cycle_id": "1.4-cycle-5", "sequence": 5, "title": "类型Ⅳ 距离问题", "course_keys": ["plane_equation_upper", "plane_equation_lower"], "prerequisite_course_keys": ["distance", "direction_normal", "line_plane_angle"], "type_refs": ["类型Ⅳ 求距离"], "examples": [18, 19, 20], "variants": ["变式"], "exercises": ["B8", "C9"], "method_checkpoints": ["1.4-distance-check-1"], "bridge_unit_ids": ["micro-skew-distance"]},
+    {"cycle_id": "1.4-cycle-6", "sequence": 6, "title": "类型Ⅴ 动点与点线在面内判断", "course_keys": ["moving_point"], "prerequisite_course_keys": ["direction_normal", "line_plane_angle", "plane_plane_angle", "distance"], "type_refs": ["类型Ⅴ 点线在面内判断"], "examples": [21, 22], "exercises": ["C11"], "method_checkpoints": ["1.4-in-plane-check-1"], "bridge_unit_ids": ["bridge-1.4-dihedral-trig", "bridge-micro-completion"]},
+    {"cycle_id": "1.4-cycle-7", "sequence": 7, "title": "翻折守恒与存在性综合", "prerequisite_course_keys": ["moving_point", "plane_plane_angle", "distance"], "exercises": ["C10", "C12"], "method_checkpoints": ["1.4-folding-check-1", "1.4-existence-check-1"], "bridge_unit_ids": ["bridge-1.4-folding", "bridge-1.4-dihedral-trig", "bridge-micro-existence"]}
+  ],
+  "book_order": "知识点1(例1,2)→知识点2(例3)→知识点3(例4-10)→类型Ⅰ/Ⅱ(例11-14)→类型Ⅲ(例15-17+变式1,2)→类型Ⅳ(例18-20+变式)→类型Ⅴ(例21,22)→A/B/C 习题；循环内题号全部按《一本通》顺序递增",
+  "gaps": {
+    "missing_questions": [],
+    "note": "OCR 全页扫描（doc_33-54）与 manifest question_groups（A[1,2] B[3,8] C[9,12]）完全一致，无漏题；A1 为既有 primary_ocr 恢复题（known_visual_recoveries，来源 doc_49/PDF页50），已在包内且可作答（READY_TEXT_ONLY）。",
+    "source_pages": "A/B/C 习题区位于 doc_49-54（PDF页50-55）；例题区 doc_33-49"
+  },
+  "artifacts": [
+    "chapter1_manifest.json",
+    "data/packets/1.4/learning_packet.json",
+    "data/packets/1.4/learning_packet.md",
+    "data/packets/1.4/learning_path_without_questions.md",
+    "data/packets/1.4/learning_path_without_questions.html",
+    "data/packets/1.4/student_learning_items.json",
+    "data/packets/1.4/packet.json",
+    "data/packets/1.4/student_packet.json",
+    "data/packets/1.4/answer_sidecar.json (未改动，重建自答案OCR)",
+    "data/contexts/1.4.json",
+    "data/question_coverage.json",
+    "reports/build-result.json",
+    "tmp/rewrite_cycles_1.4_micro.py"
+  ],
+  "build_steps": [
+    "python -B -m ybt_learning.cli --help",
+    "python -B tmp/rewrite_cycles_1.4_micro.py（只写 1.4/micro 两个 section 的 learning_cycles 键，重读后写、写后校验 JSON）",
+    "python -B -m ybt_learning.cli build-chapter1（重建派生包/计划/覆盖账本/上下文/student_learning_items）",
+    "python -B -m ybt_learning.cli build-deepseek-context --student-packet data/packets/1.4/student_packet.json --out tmp/context-1.4.json",
+    "python -B -m ybt_learning.cli verify-packet --packet data/packets/1.4/packet.json",
+    "python -B scripts/export_learning_packet_markdown.py --section 1.4 --without-questions",
+    "python -B scripts/export_learning_packet_markdown.py --section 1.4（含题路线）",
+    "python -B scripts/export_learning_preview_html.py --section 1.4"
+  ],
+  "test_results": {
+    "suite": "python -B -m unittest discover -s tests -t .",
+    "total": 106,
+    "passed": 105,
+    "failed": 1,
+    "failures": [
+      {
+        "test": "test_current_zero_base_simulation_is_the_only_authoritative_source",
+        "cause": "零基础仿真验收快照（reports/zero_base_cycles/1.1-current-agent-simulation.json, G-20260816-09）记录源文件哈希；任何 manifest 修订（本 worker 或 1.2-1.3 worker 的合法改动）都会使 source_revision_match=False。属预期失效，不是内容回归；需重跑零基础仿真重新冻结验收后才能恢复通过。",
+        "classification": "expected_invalidation_not_regression"
+      }
+    ],
+    "note": "期间发现并修复：data/packets/1.1/learning_packet.md 等派生导出与重建后的 1.1 json 不一致（陈旧导出，manifest 与派生包重建所致）；用官方导出脚本刷新 1.1 派生 .md/.html，未改任何 1.1 源数据。并发说明：另一 worker 曾于 22:01-22:02 修改共享 ybt_learning/deepseek_context.py 导致一次构建上下文 canary 失效，代码修复后重建全部通过。",
+    "packet_verification": {"1.4_packet": "VERIFIED", "1.4_context": "passed", "questions": 12, "unresolved": 0},
+    "completeness_audit": "scripts/verify_learning_completeness.py 通过；仅存既有警告（OCR 题号缺失项均有 verified primary OCR recovery anchors）"
+  },
+  "concurrency": {
+    "note": "chapter1_manifest.json 写前重读、仅替换 1.4 与 micro专题1 两节的 learning_cycles 键、写后 JSON 校验通过；1.1 与 1.2+1.3 节未被本 worker 触碰（1.2+1.3 的循环数变化来自 build-1.2-1.3 worker 自身）。"
+  }
+}

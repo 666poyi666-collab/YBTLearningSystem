@@ -1,0 +1,2815 @@
+{
+  "schema_version": "7.1",
+  "consumer": "deepseek_worker",
+  "packet_type": "DEEPSEEK_STUDENT_CONTEXT",
+  "model_contract": {
+    "model": "opencode-go/deepseek-v4-flash",
+    "reasoning_effort": "max",
+    "context_window": 1000000
+  },
+  "section": "1.2+1.3",
+  "evidence": {
+    "canary": "14e5b52615677d51",
+    "binding": "worker must echo canary and answer derived probes from this exact context",
+    "probe_qids": [
+      "Q-6ed7e46c02ea0cbe",
+      "Q-9dc59a76b39b51c2",
+      "Q-8937bea007e341dc"
+    ],
+    "probe_tokens": {
+      "Q-6ed7e46c02ea0cbe": "510625e4",
+      "Q-9dc59a76b39b51c2": "7e4f9e62",
+      "Q-8937bea007e341dc": "4f75e4f8"
+    },
+    "context_sha256": "5747dad98fce7b027b62db1efdee69fe403828af1e9e6ab7b30b7456e087dc39"
+  },
+  "status": "VERIFIED",
+  "manifest": {
+    "page_count": 15,
+    "question_count": 16,
+    "expected_question_count": 16,
+    "expected_groups": {
+      "A": [
+        1,
+        4
+      ],
+      "B": [
+        5,
+        13
+      ],
+      "C": [
+        14,
+        16
+      ]
+    }
+  },
+  "pages": [
+    {
+      "ocr_doc": 18,
+      "text": "# 1.2 空间向量基本定理\n\n# 1.3 空间向量及其运算的坐标表示\n\n习题：P1\n\n知识梳理\n\n## 知识点 1：空间向量基本定理\n\n### 1. 空间向量基本定理\n\n如果空间中三个向量  \\(a\\),  \\(b\\),  \\(c\\) 不共面，那么对于任意一个空间向量  \\(p\\)，存在唯一的有序实数组  \\((x, y, z)\\)，使得  \\(p = x a + y b + z c\\)。\n\n### 2. 基底与基向量\n\n如果三个向量  \\(a\\),  \\(b\\),  \\(c\\) 不共面，那么所有空间向量组成的集合就是  \\(\\{p \\mid p = x a + y b + z c, x, y, z \\in \\mathbb{R}\\}\\)。这个集合可看作由向量  \\(a\\),  \\(b\\),  \\(c\\) 生成的，我们把  \\(\\{a, b, c\\}\\) 叫做空间的一个基底， \\(a\\),  \\(b\\),  \\(c\\) 都叫做基向量。空间中任意三个不共面的向量都可以构成空间的一个基底。\n\n注：①基底不是唯一的，只要三个向量不共面，它们就能作为空间中的一个基底；\n\n②一般情况下，同一向量在不同基底下的表示结果不同.\n\n### 3. 单位正交基底\n\n若空间中一个基底的三个基向量两两垂直，且长度都为1，则该基底叫做单位正交基底，常用 \\(\\{i,j,k\\}\\)表示.\n\n由空间向量基本定理可知，对空间中的任意一个向量  \\(a\\)，均能找到唯一的有序实数组  \\((x, y, z)\\)，使  \\(a = x\\mathbf{i} + y\\mathbf{j} + z\\mathbf{k}\\)。像这样，把一个空间向量分解为三个两两垂直的向量，叫做把空间向量进行正交分解。\n\n## 知识点2：空间向量的坐标表示\n\n### 1. 空间直角坐标系\n\n在空间选定一点 O 和一个单位正交基底  \\(\\{i, j, k\\}\\)。如图，以点 O 为原点，分别以  \\(i, j, k\\) 的方向为正方向，以它们的长为单位长度建立三条数轴：x 轴，y 轴，z 轴，它\n\n## 知识点1\n",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 19,
+      "text": "## 知识点2\n",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 20,
+      "text": "知识点 3：空间向量的坐标运算\n\n1. 与空间向量运算有关的坐标表示\n\n设  \\(\\boldsymbol{a}=(x_{1},y_{1},z_{1})\\)， \\(\\boldsymbol{b}=(x_{2},y_{2},z_{2})\\)，则：\n\n①加减法： \\(a \\pm b = (x_1 \\pm x_2, y_1 \\pm y_2, z_1 \\pm z_2)\\)；\n\n②数乘： \\(\\lambda a=(\\lambda x_1, \\lambda y_1, \\lambda z_1)\\)， \\(\\lambda \\in \\mathbb{R}\\)；\n\n的射影来寻找向量  \\(a\\) 在平面  \\(Oyz\\) 上的投影向量。而找一个点在平面  \\(Oyz\\) 上的射影，只需将该点的横坐标改为 0 即可，设  \\(A(1,2,-3)\\)，则  \\(a = \\overrightarrow{OA} = (1,2,-3)\\)，点  \\(A\\) 在平面  \\(Oyz\\) 上的射影为  \\(A'(0,2,-3)\\)，所以向量  \\(a\\) 在坐标平面  \\(Oyz\\) 上的投影向量为  \\(\\overrightarrow{OA'} = (0,2,-3)\\)。\n\n\n## 知识点3\n",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 21,
+      "text": "（ocr_doc 21 为方法册教学续页；完整教学内容已进入 learning_packet.json，独立作答上下文仅保留此中性锚点。）",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 22,
+      "text": "类型 I：空间向量的基底表示\n\n类型Ⅱ：空间向量线性运算的坐标表示\n",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 23,
+      "text": "## 类型Ⅲ：空间向量数量积的坐标表示\n",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 24,
+      "text": "类型IV：用空间向量的坐标运算处理平行、垂直问题\n",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 25,
+      "text": "（ocr_doc 25 为方法册教学续页；完整教学内容已进入 learning_packet.json，独立作答上下文仅保留此中性锚点。）",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 26,
+      "text": "类型V：用空间向量的坐标运算处理夹角、模的问题\n",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 27,
+      "text": "（ocr_doc 27 为方法册教学续页；完整教学内容已进入 learning_packet.json，独立作答上下文仅保留此中性锚点。）",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 28,
+      "text": "## 强化训练\n\n## A 组 夯实基础\n\n1.（2025·重庆长寿期末）\n\n若  \\(\\bar{a}=(1,-2,1)\\)， \\(\\bar{b}=(-2,1,-2)\\)，则  \\(\\bar{a}-\\bar{b}=\\)（）\n\nA. \\((-1,-1,-1)\\) B. \\((3,-3,3)\\) C. \\((3,3,3)\\) D. \\((-2,-2,-2)\\)\n\n2.（2025·福建福州期末）\n\n已知向量  \\(\\overrightarrow{a} = (x, 1, 1)\\)， \\(\\overrightarrow{b} = (1, -2, 1)\\)，且  \\(\\overrightarrow{a} \\perp \\overrightarrow{b}\\)，则\n\nx = （ ）\n\nA. -2 B. -1 C. 1 D. 2\n\n3.（2025·河南安阳期末）\n\n已知向量  \\(\\boldsymbol{a}=(-1,0,-1)\\)， \\(\\boldsymbol{b}=(1,x,y)\\)，且  \\(\\boldsymbol{a} \\parallel \\boldsymbol{b}\\)，则  \\(x + y =\\) （ ）\n\nA. 1 B. 0 C. -1 D. -2\n\n4.（2025·河北邯郸期末）\n\n已知空间向量  \\(\\boldsymbol{m} = (2, 1, 1)\\)， \\(\\boldsymbol{n} = (0, 2, 1)\\)，则 m 与 n 的夹角的余弦值为（）\n\nA.  \\(\\frac{\\sqrt{30}}{30}\\) B.  \\(\\frac{\\sqrt{30}}{10}\\) C.  \\(\\frac{\\sqrt{6}}{5}\\) D.  \\(\\frac{\\sqrt{5}}{6}\\)",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 29,
+      "text": "## B 组 强化能力\n\n5.（2025·广东清远期末）\n\n如图，在三棱锥 \\(O-ABC\\) 中，\\(\\overrightarrow{OA}=\\vec{a}\\)，\\(\\overrightarrow{OB}=\\vec{b}\\)，\\(\\overrightarrow{OC}=\\vec{c}\\)。若点 \\(M\\)，\\(N\\) 分别在棱 \\(OA\\)，\\(BC\\) 上，且 \\(\\overrightarrow{OM}+3\\overrightarrow{AM}=2\\overrightarrow{BN}+\\overrightarrow{CN}=\\vec{0}\\)，则 \\(\\overrightarrow{MN}=\\)（ ）\n\n\n\n\nA.  \\(-\\frac{3}{4}\\vec{a}+\\frac{2}{3}\\vec{b}-\\frac{1}{3}\\vec{c}\\)\n\nB.  \\(\\frac{3}{4}\\vec{a}-\\frac{2}{3}\\vec{b}-\\frac{1}{3}\\vec{c}\\)\n\nC.  \\(-\\frac{3}{4}\\vec{a}+\\frac{2}{3}\\vec{b}+\\frac{1}{3}\\vec{c}\\)\n\nD.  \\(\\frac{3}{4}\\vec{a}+\\frac{2}{3}\\vec{b}+\\frac{1}{3}\\vec{c}\\)\n\n6. (2025·贵州安顺期中)\n\n设  \\(x, y \\in \\mathbb{R}\\)，向量  \\(\\boldsymbol{a} = (x, 1, 1)\\)， \\(\\boldsymbol{b} = (1, y, 1)\\)， \\(\\boldsymbol{c} = (2, -4, 2)\\)，且  \\(\\boldsymbol{a} \\perp \\boldsymbol{b}\\)， \\(\\boldsymbol{b} \\parallel \\boldsymbol{c}\\)，则  \\(|\\boldsymbol{a} + \\boldsymbol{b}| =\\) （ ）\n\nA.  \\(2\\sqrt{2}\\) B.  \\(\\sqrt{10}\\) C. 3 D. 4\n\n7.（2025·江苏苏州开学考试）\n\n已知向量  \\(\\boldsymbol{a} = (0, 1, 0)\\)， \\(\\boldsymbol{b} = (0, -1, 1)\\)，则 b 在 a 上的投影向量为（）\n\nA. a B. -a C. -b D. b",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 30,
+      "text": "8.（2025·北京期末）\n\n已知\\(\\{a,b,c\\}\\)为空间的一组基底，则下列向量也能构成空间的一组基底的是（ ）\n\nA. \\(a+b\\)，\\(b-c\\)，\\(a+c\\)\n\nB. \\(-a+b+2c\\)，\\(b+c\\)，\\(a+b\\)\n\nC. \\(a+2b\\)，\\(a+2c\\)，\\(a+b+c\\)\n\nD. \\(a+c\\)，\\(a-b\\)，\\(b-c\\)\n\n9.（2025·安徽阜阳期末）\n\n如图，\\(M\\) 是三棱锥 \\(P-ABC\\) 的底面 \\(\\triangle ABC\\) 的重心，若 \\(\\overrightarrow{PM} = x\\overrightarrow{PA} + y\\overrightarrow{PB} + 2z\\overrightarrow{PC}(x, y, z \\in \\mathbf{R})\\)，则 \\(x + y - z\\) 的值为（ ）\n\nA. 1\n\nB. \\(\\frac{1}{2}\\)\n\nC. \\(-\\frac{1}{3}\\)\n\nD. \\(-\\frac{1}{2}\\)\n\n\n\n\n10.（2025·江西上饶期末）\n\n已知向量  \\(\\boldsymbol{a}=(-2,1,-5)\\)， \\(3\\boldsymbol{a}-2\\boldsymbol{b}=(-10,5,-13)\\)，则  \\(\\boldsymbol{a}\\cdot\\boldsymbol{b}=\\)（）\n\nA. 10 B. 2 C. 0 D. -2\n\n11.（2025·河北廊坊期末）\n\n三棱锥 A-BCD 中， \\(AB = AC = AD = 2\\)，AB，AC，AD 两两垂直，M，N 分别为 BC，AD 的中点，则异面直线 AM 和 CN 夹角的余弦值为（）\n\nA.  \\(-\\frac{\\sqrt{5}}{5}\\) B.  \\(\\frac{\\sqrt{5}}{5}\\) C.  \\(\\frac{\\sqrt{3}}{3}\\) D.  \\(\\frac{\\sqrt{10}}{5}\\)",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 31,
+      "text": "### 12 \\. （2025·浙江杭州模拟）\n\n已知向量  \\(\\boldsymbol{a}=(1,3,-2)\\)， \\(\\boldsymbol{b}=(1,0,2)\\)， \\(\\boldsymbol{c}=(m,n,-4)\\)。\n\n（1）若  \\(a \\parallel c\\)，求  \\(\\left|b + c\\right|\\) 的值；\n\n（2）若 \\(b \\perp c\\)， \\(|c|=9\\)，求 \\(a \\cdot c\\)的值.\n\n### 13 \\.（2025·内蒙古通辽期末）\n\n如图，在棱长为4的正方体中，E，F分别为 \\(DD_{1}\\)，BD的中点.\n\n（1）求证： \\(EF \\perp B_{1}C\\)；\n\n（2）求 EF 与 DC 所成角的余弦值.\n\n",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 32,
+      "text": "## C组 拓展提升\n\n### 14. （2025·福建南平期末）\n\n如图，在三棱锥 S-ABC 中，点 G 为  \\(\\triangle ABC\\) 的重心，点 M 是线段 SG 的中点，过点 M 的平面分别交 SA，SB，SC 于点 D，E，F，若  \\(\\overrightarrow{SD}=k\\overrightarrow{SA}\\)， \\(\\overrightarrow{SE}=m\\overrightarrow{SB}\\)， \\(\\overrightarrow{SF}=n\\overrightarrow{SC}\\)，则  \\(\\frac{1}{k}+\\frac{1}{m}+\\frac{1}{n}=\\)（ ）\n\nA. 3\n\nB. 6\n\nC. 9\n\nD. 12\n\n\n\n\n### 15. （2025·上海期末）\n\n若  \\(a\\)， \\(b\\) 是空间互相垂直的单位向量，且  \\(|c|=8\\)， \\(c \\cdot a = c \\cdot b = 2\\sqrt{6}\\)，则  \\(|c - ma - nb|\\) 的最小值是___。\n\n### 16. （2025·河南模拟）\n\n在棱长为 3 的正方体  \\(ABCD-A_1B_1C_1D_1\\) 中， \\(E\\)， \\(F\\) 为线段  \\(BD_1\\) 的三等分点（ \\(E\\) 在  \\(B\\)， \\(F\\) 之间），一动点  \\(P\\) 满足  \\(PF = 2PE\\)，则  \\((\\overrightarrow{PA} + \\overrightarrow{PA_1}) \\cdot (\\overrightarrow{PC} + \\overrightarrow{PC_1})\\) 的取值范围是___。",
+      "image_refs": [],
+      "math_errors": []
+    }
+  ],
+  "questions": [
+    {
+      "qid": "Q-6ed7e46c02ea0cbe",
+      "section": "1.2+1.3",
+      "group": "A",
+      "number": 1,
+      "kind": "A组",
+      "source_anchor": {
+        "ocr_doc": 28,
+        "pdf_page": 29,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_28.md"
+      },
+      "question_text": "1.（2025·重庆长寿期末）\n\n若  \\(\\bar{a}=(1,-2,1)\\)， \\(\\bar{b}=(-2,1,-2)\\)，则  \\(\\bar{a}-\\bar{b}=\\)（）\n\nA. \\((-1,-1,-1)\\) B. \\((3,-3,3)\\) C. \\((3,3,3)\\) D. \\((-2,-2,-2)\\)",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-9dc59a76b39b51c2",
+      "section": "1.2+1.3",
+      "group": "A",
+      "number": 2,
+      "kind": "A组",
+      "source_anchor": {
+        "ocr_doc": 28,
+        "pdf_page": 29,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_28.md"
+      },
+      "question_text": "2.（2025·福建福州期末）\n\n已知向量  \\(\\overrightarrow{a} = (x, 1, 1)\\)， \\(\\overrightarrow{b} = (1, -2, 1)\\)，且  \\(\\overrightarrow{a} \\perp \\overrightarrow{b}\\)，则\n\nx = （ ）\n\nA. -2 B. -1 C. 1 D. 2",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-8937bea007e341dc",
+      "section": "1.2+1.3",
+      "group": "A",
+      "number": 3,
+      "kind": "A组",
+      "source_anchor": {
+        "ocr_doc": 28,
+        "pdf_page": 29,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_28.md"
+      },
+      "question_text": "3.（2025·河南安阳期末）\n\n已知向量  \\(\\boldsymbol{a}=(-1,0,-1)\\)， \\(\\boldsymbol{b}=(1,x,y)\\)，且  \\(\\boldsymbol{a} \\parallel \\boldsymbol{b}\\)，则  \\(x + y =\\) （ ）\n\nA. 1 B. 0 C. -1 D. -2",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-e3eea135920d1de5",
+      "section": "1.2+1.3",
+      "group": "A",
+      "number": 4,
+      "kind": "A组",
+      "source_anchor": {
+        "ocr_doc": 28,
+        "pdf_page": 29,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_28.md"
+      },
+      "question_text": "4.（2025·河北邯郸期末）\n\n已知空间向量  \\(\\boldsymbol{m} = (2, 1, 1)\\)， \\(\\boldsymbol{n} = (0, 2, 1)\\)，则 m 与 n 的夹角的余弦值为（）\n\nA.  \\(\\frac{\\sqrt{30}}{30}\\) B.  \\(\\frac{\\sqrt{30}}{10}\\) C.  \\(\\frac{\\sqrt{6}}{5}\\) D.  \\(\\frac{\\sqrt{5}}{6}\\)",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-ca47ddb3109b2aa7",
+      "section": "1.2+1.3",
+      "group": "B",
+      "number": 5,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 29,
+        "pdf_page": 30,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_29.md"
+      },
+      "question_text": "5.（2025·广东清远期末）\n\n如图，在三棱锥 \\(O-ABC\\) 中，\\(\\overrightarrow{OA}=\\vec{a}\\)，\\(\\overrightarrow{OB}=\\vec{b}\\)，\\(\\overrightarrow{OC}=\\vec{c}\\)。若点 \\(M\\)，\\(N\\) 分别在棱 \\(OA\\)，\\(BC\\) 上，且 \\(\\overrightarrow{OM}+3\\overrightarrow{AM}=2\\overrightarrow{BN}+\\overrightarrow{CN}=\\vec{0}\\)，则 \\(\\overrightarrow{MN}=\\)（ ）\n\n\n\n\nA.  \\(-\\frac{3}{4}\\vec{a}+\\frac{2}{3}\\vec{b}-\\frac{1}{3}\\vec{c}\\)\n\nB.  \\(\\frac{3}{4}\\vec{a}-\\frac{2}{3}\\vec{b}-\\frac{1}{3}\\vec{c}\\)\n\nC.  \\(-\\frac{3}{4}\\vec{a}+\\frac{2}{3}\\vec{b}+\\frac{1}{3}\\vec{c}\\)\n\nD.  \\(\\frac{3}{4}\\vec{a}+\\frac{2}{3}\\vec{b}+\\frac{1}{3}\\vec{c}\\)",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_522_288_695_483.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_522_288_695_483.jpg",
+          "exists": true
+        }
+      ],
+      "visual_status": "VISION_VERIFIED",
+      "math_errors": [],
+      "evidence": [
+        "E1",
+        "E2"
+      ],
+      "vision_sidecars": [
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\reports\\source_visuals2\\b5_source_page_030_crop.png",
+          "image_sha256": "9d33042e72b337fb3c709ad14bf8723853989f4d28da433ce8a2b6e3c381f659",
+          "confidence": "E2",
+          "structured": {
+            "objects": [
+              "点O",
+              "点A",
+              "点B",
+              "点C",
+              "点M",
+              "点N",
+              "线段OA",
+              "线段OB",
+              "线段OC",
+              "线段AB",
+              "线段AC",
+              "线段BC",
+              "线段OM",
+              "线段ON",
+              "线段MN"
+            ],
+            "relations": [
+              "点M在线段OA上",
+              "点N在线段BC上",
+              "线段MN是虚线",
+              "线段AC是虚线",
+              "线段OM和线段ON是实线",
+              "线段OA、OB、OC构成三棱锥的棱",
+              "线段AB、BC、AC构成底面三角形的边"
+            ],
+            "coordinates": [
+              {
+                "point": "O",
+                "position": "顶部顶点"
+              },
+              {
+                "point": "A",
+                "position": "左下方顶点"
+              },
+              {
+                "point": "B",
+                "position": "底部顶点"
+              },
+              {
+                "point": "C",
+                "position": "右下方顶点"
+              },
+              {
+                "point": "M",
+                "position": "OA上靠近A的点"
+              },
+              {
+                "point": "N",
+                "position": "BC上靠近B的点"
+              }
+            ],
+            "ranges": [],
+            "text": {
+              "labels": [
+                "O",
+                "A",
+                "B",
+                "C",
+                "M",
+                "N"
+              ]
+            },
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": {
+            "source_kind": "high_resolution_source_pdf_crop",
+            "source_pdf": "C:\\Users\\poyi\\Downloads\\【2025-2025版】选择性必修第1册\\按章节合并（无答案册）\\第1章 空间向量与立体几何（无答案册）.pdf",
+            "source_pdf_sha256": "9d3f38a7591742e22282490256a5c6bef8f644abc0e65db06f3dceb0251894ff",
+            "pdf_page": 30,
+            "crop_rect": [
+              250,
+              145,
+              370,
+              300
+            ],
+            "derived_from_image_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_full\\imgs\\img_in_image_box_522_288_695_483.jpg",
+            "derived_from_image_sha256": "ef6c606cd550c2ab7ee964d03e6ff07d3a3c43e8a93fa9f422f0e2a016eccd83"
+          }
+        }
+      ],
+      "vision_sidecar": {
+        "objects": [
+          "点O",
+          "点A",
+          "点B",
+          "点C",
+          "点M",
+          "点N",
+          "线段OA",
+          "线段OB",
+          "线段OC",
+          "线段AB",
+          "线段AC",
+          "线段BC",
+          "线段OM",
+          "线段ON",
+          "线段MN"
+        ],
+        "relations": [
+          "点M在线段OA上",
+          "点N在线段BC上",
+          "线段MN是虚线",
+          "线段AC是虚线",
+          "线段OM和线段ON是实线",
+          "线段OA、OB、OC构成三棱锥的棱",
+          "线段AB、BC、AC构成底面三角形的边"
+        ],
+        "coordinates": [
+          {
+            "point": "O",
+            "position": "顶部顶点"
+          },
+          {
+            "point": "A",
+            "position": "左下方顶点"
+          },
+          {
+            "point": "B",
+            "position": "底部顶点"
+          },
+          {
+            "point": "C",
+            "position": "右下方顶点"
+          },
+          {
+            "point": "M",
+            "position": "OA上靠近A的点"
+          },
+          {
+            "point": "N",
+            "position": "BC上靠近B的点"
+          }
+        ],
+        "ranges": [],
+        "text": {
+          "labels": [
+            "O",
+            "A",
+            "B",
+            "C",
+            "M",
+            "N"
+          ]
+        },
+        "uncertainties": [],
+        "confidence": "E2"
+      },
+      "vision_source_provenance": [
+        {
+          "source_kind": "high_resolution_source_pdf_crop",
+          "source_pdf": "C:\\Users\\poyi\\Downloads\\【2025-2025版】选择性必修第1册\\按章节合并（无答案册）\\第1章 空间向量与立体几何（无答案册）.pdf",
+          "source_pdf_sha256": "9d3f38a7591742e22282490256a5c6bef8f644abc0e65db06f3dceb0251894ff",
+          "pdf_page": 30,
+          "crop_rect": [
+            250,
+            145,
+            370,
+            300
+          ],
+          "derived_from_image_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_full\\imgs\\img_in_image_box_522_288_695_483.jpg",
+          "derived_from_image_sha256": "ef6c606cd550c2ab7ee964d03e6ff07d3a3c43e8a93fa9f422f0e2a016eccd83"
+        }
+      ]
+    },
+    {
+      "qid": "Q-a0ac3d3dec067140",
+      "section": "1.2+1.3",
+      "group": "B",
+      "number": 6,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 29,
+        "pdf_page": 30,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_29.md"
+      },
+      "question_text": "6. (2025·贵州安顺期中)\n\n设  \\(x, y \\in \\mathbb{R}\\)，向量  \\(\\boldsymbol{a} = (x, 1, 1)\\)， \\(\\boldsymbol{b} = (1, y, 1)\\)， \\(\\boldsymbol{c} = (2, -4, 2)\\)，且  \\(\\boldsymbol{a} \\perp \\boldsymbol{b}\\)， \\(\\boldsymbol{b} \\parallel \\boldsymbol{c}\\)，则  \\(|\\boldsymbol{a} + \\boldsymbol{b}| =\\) （ ）\n\nA.  \\(2\\sqrt{2}\\) B.  \\(\\sqrt{10}\\) C. 3 D. 4",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-c0fa068ea13aa8b0",
+      "section": "1.2+1.3",
+      "group": "B",
+      "number": 7,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 29,
+        "pdf_page": 30,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_29.md"
+      },
+      "question_text": "7.（2025·江苏苏州开学考试）\n\n已知向量  \\(\\boldsymbol{a} = (0, 1, 0)\\)， \\(\\boldsymbol{b} = (0, -1, 1)\\)，则 b 在 a 上的投影向量为（）\n\nA. a B. -a C. -b D. b",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-491d3349a231a63f",
+      "section": "1.2+1.3",
+      "group": "B",
+      "number": 8,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 30,
+        "pdf_page": 31,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_30.md"
+      },
+      "question_text": "8.（2025·北京期末）\n\n已知\\(\\{a,b,c\\}\\)为空间的一组基底，则下列向量也能构成空间的一组基底的是（ ）\n\nA. \\(a+b\\)，\\(b-c\\)，\\(a+c\\)\n\nB. \\(-a+b+2c\\)，\\(b+c\\)，\\(a+b\\)\n\nC. \\(a+2b\\)，\\(a+2c\\)，\\(a+b+c\\)\n\nD. \\(a+c\\)，\\(a-b\\)，\\(b-c\\)",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-0e25875e8ce0e2b0",
+      "section": "1.2+1.3",
+      "group": "B",
+      "number": 9,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 30,
+        "pdf_page": 31,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_30.md"
+      },
+      "question_text": "9.（2025·安徽阜阳期末）\n\n如图，\\(M\\) 是三棱锥 \\(P-ABC\\) 的底面 \\(\\triangle ABC\\) 的重心，若 \\(\\overrightarrow{PM} = x\\overrightarrow{PA} + y\\overrightarrow{PB} + 2z\\overrightarrow{PC}(x, y, z \\in \\mathbf{R})\\)，则 \\(x + y - z\\) 的值为（ ）\n\nA. 1\n\nB. \\(\\frac{1}{2}\\)\n\nC. \\(-\\frac{1}{3}\\)\n\nD. \\(-\\frac{1}{2}\\)\n\n",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_521_674_697_871.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_521_674_697_871.jpg",
+          "exists": true
+        }
+      ],
+      "visual_status": "VISION_VERIFIED",
+      "math_errors": [],
+      "evidence": [
+        "E1",
+        "E2"
+      ],
+      "vision_sidecars": [
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_full\\imgs\\img_in_image_box_521_674_697_871.jpg",
+          "image_sha256": "4bea76413e3227a932c8d08183ec2282079bb4242867a18f1268d91f6a3af61b",
+          "confidence": "E2",
+          "structured": {
+            "objects": [],
+            "relations": [
+              "点M在AC上",
+              "线段PM连接点P和点M",
+              "AC为底面边，PB与AC交于点M"
+            ],
+            "coordinates": [
+              "点P在图形上方，点A在左，点C在右，点B在右下方，点M在AC中点位置"
+            ],
+            "ranges": [],
+            "text": [
+              "P",
+              "A",
+              "B",
+              "C",
+              "M"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        }
+      ],
+      "vision_sidecar": {
+        "objects": [],
+        "relations": [
+          "点M在AC上",
+          "线段PM连接点P和点M",
+          "AC为底面边，PB与AC交于点M"
+        ],
+        "coordinates": [
+          "点P在图形上方，点A在左，点C在右，点B在右下方，点M在AC中点位置"
+        ],
+        "ranges": [],
+        "text": [
+          "P",
+          "A",
+          "B",
+          "C",
+          "M"
+        ],
+        "uncertainties": [],
+        "confidence": "E2"
+      },
+      "vision_source_provenance": []
+    },
+    {
+      "qid": "Q-4cc4fab641617085",
+      "section": "1.2+1.3",
+      "group": "B",
+      "number": 10,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 30,
+        "pdf_page": 31,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_30.md"
+      },
+      "question_text": "10.（2025·江西上饶期末）\n\n已知向量  \\(\\boldsymbol{a}=(-2,1,-5)\\)， \\(3\\boldsymbol{a}-2\\boldsymbol{b}=(-10,5,-13)\\)，则  \\(\\boldsymbol{a}\\cdot\\boldsymbol{b}=\\)（）\n\nA. 10 B. 2 C. 0 D. -2",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-bba50604ebcccacf",
+      "section": "1.2+1.3",
+      "group": "B",
+      "number": 11,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 30,
+        "pdf_page": 31,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_30.md"
+      },
+      "question_text": "11.（2025·河北廊坊期末）\n\n三棱锥 A-BCD 中， \\(AB = AC = AD = 2\\)，AB，AC，AD 两两垂直，M，N 分别为 BC，AD 的中点，则异面直线 AM 和 CN 夹角的余弦值为（）\n\nA.  \\(-\\frac{\\sqrt{5}}{5}\\) B.  \\(\\frac{\\sqrt{5}}{5}\\) C.  \\(\\frac{\\sqrt{3}}{3}\\) D.  \\(\\frac{\\sqrt{10}}{5}\\)",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-16e242b54c60a9aa",
+      "section": "1.2+1.3",
+      "group": "B",
+      "number": 12,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 31,
+        "pdf_page": 32,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_31.md"
+      },
+      "question_text": "### 12 \\. （2025·浙江杭州模拟）\n\n已知向量  \\(\\boldsymbol{a}=(1,3,-2)\\)， \\(\\boldsymbol{b}=(1,0,2)\\)， \\(\\boldsymbol{c}=(m,n,-4)\\)。\n\n（1）若  \\(a \\parallel c\\)，求  \\(\\left|b + c\\right|\\) 的值；\n\n（2）若 \\(b \\perp c\\)， \\(|c|=9\\)，求 \\(a \\cdot c\\)的值.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-3b98ee5668cad691",
+      "section": "1.2+1.3",
+      "group": "B",
+      "number": 13,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 31,
+        "pdf_page": 32,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_31.md"
+      },
+      "question_text": "### 13 \\.（2025·内蒙古通辽期末）\n\n如图，在棱长为4的正方体中，E，F分别为 \\(DD_{1}\\)，BD的中点.\n\n（1）求证： \\(EF \\perp B_{1}C\\)；\n\n（2）求 EF 与 DC 所成角的余弦值.\n\n",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_897_830_1094_1011.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_897_830_1094_1011.jpg",
+          "exists": true
+        }
+      ],
+      "visual_status": "VISION_VERIFIED",
+      "math_errors": [],
+      "evidence": [
+        "E1",
+        "E2"
+      ],
+      "vision_sidecars": [
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\reports\\source_visuals2\\b13_source_page_032_crop.png",
+          "image_sha256": "3e9439131755f391f946ec4df858fe28e113464d9e8ba51373365edb4c411fb9",
+          "confidence": "E2",
+          "structured": {
+            "objects": [
+              "正方体",
+              "点A",
+              "点B",
+              "点C",
+              "点D",
+              "点A1",
+              "点D1",
+              "点C1",
+              "点B1",
+              "点E",
+              "点F"
+            ],
+            "relations": [
+              "A连接B",
+              "B连接C",
+              "C连接D",
+              "D连接A",
+              "A1连接B1",
+              "B1连接C1",
+              "C1连接D1",
+              "D1连接A1",
+              "A连接A1",
+              "B连接B1",
+              "C连接C1",
+              "D连接D1",
+              "A1连接D1",
+              "B1连接C1",
+              "D连接E",
+              "E连接D1",
+              "B连接F",
+              "F连接D",
+              "E连接F",
+              "B1连接C",
+              "B1连接C1",
+              "C1连接C"
+            ],
+            "coordinates": [
+              {
+                "name": "A",
+                "x": 0.2,
+                "y": 0.6,
+                "z": 0.2
+              },
+              {
+                "name": "B",
+                "x": 0.55,
+                "y": 0.6,
+                "z": 0.2
+              },
+              {
+                "name": "C",
+                "x": 0.65,
+                "y": 0.7,
+                "z": 0.2
+              },
+              {
+                "name": "D",
+                "x": 0.2,
+                "y": 0.7,
+                "z": 0.2
+              },
+              {
+                "name": "A1",
+                "x": 0.2,
+                "y": 0.7,
+                "z": 0.85
+              },
+              {
+                "name": "D1",
+                "x": 0.2,
+                "y": 0.7,
+                "z": 0.85
+              },
+              {
+                "name": "C1",
+                "x": 0.65,
+                "y": 0.8,
+                "z": 0.85
+              },
+              {
+                "name": "B1",
+                "x": 0.55,
+                "y": 0.8,
+                "z": 0.85
+              },
+              {
+                "name": "E",
+                "x": 0.27,
+                "y": 0.7,
+                "z": 0.85
+              },
+              {
+                "name": "F",
+                "x": 0.38,
+                "y": 0.65,
+                "z": 0.2
+              }
+            ],
+            "ranges": [],
+            "text": {
+              "A": "A",
+              "B": "B",
+              "C": "C",
+              "D": "D",
+              "A1": "A1",
+              "D1": "D1",
+              "C1": "C1",
+              "B1": "B1",
+              "E": "E",
+              "F": "F"
+            },
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": {
+            "source_kind": "high_resolution_source_pdf_crop",
+            "source_pdf": "C:\\Users\\poyi\\Downloads\\【2025-2025版】选择性必修第1册\\按章节合并（无答案册）\\第1章 空间向量与立体几何（无答案册）.pdf",
+            "source_pdf_sha256": "9d3f38a7591742e22282490256a5c6bef8f644abc0e65db06f3dceb0251894ff",
+            "pdf_page": 32,
+            "crop_rect": [
+              420,
+              360,
+              595,
+              530
+            ],
+            "derived_from_image_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_full\\imgs\\img_in_image_box_897_830_1094_1011.jpg",
+            "derived_from_image_sha256": "aaeb4b3e6c5f479f9892831dc13fb6d04c2c9ea1d00867e1d5032cb46a0d471c"
+          }
+        }
+      ],
+      "vision_sidecar": {
+        "objects": [
+          "正方体",
+          "点A",
+          "点B",
+          "点C",
+          "点D",
+          "点A1",
+          "点D1",
+          "点C1",
+          "点B1",
+          "点E",
+          "点F"
+        ],
+        "relations": [
+          "A连接B",
+          "B连接C",
+          "C连接D",
+          "D连接A",
+          "A1连接B1",
+          "B1连接C1",
+          "C1连接D1",
+          "D1连接A1",
+          "A连接A1",
+          "B连接B1",
+          "C连接C1",
+          "D连接D1",
+          "A1连接D1",
+          "B1连接C1",
+          "D连接E",
+          "E连接D1",
+          "B连接F",
+          "F连接D",
+          "E连接F",
+          "B1连接C",
+          "B1连接C1",
+          "C1连接C"
+        ],
+        "coordinates": [
+          {
+            "name": "A",
+            "x": 0.2,
+            "y": 0.6,
+            "z": 0.2
+          },
+          {
+            "name": "B",
+            "x": 0.55,
+            "y": 0.6,
+            "z": 0.2
+          },
+          {
+            "name": "C",
+            "x": 0.65,
+            "y": 0.7,
+            "z": 0.2
+          },
+          {
+            "name": "D",
+            "x": 0.2,
+            "y": 0.7,
+            "z": 0.2
+          },
+          {
+            "name": "A1",
+            "x": 0.2,
+            "y": 0.7,
+            "z": 0.85
+          },
+          {
+            "name": "D1",
+            "x": 0.2,
+            "y": 0.7,
+            "z": 0.85
+          },
+          {
+            "name": "C1",
+            "x": 0.65,
+            "y": 0.8,
+            "z": 0.85
+          },
+          {
+            "name": "B1",
+            "x": 0.55,
+            "y": 0.8,
+            "z": 0.85
+          },
+          {
+            "name": "E",
+            "x": 0.27,
+            "y": 0.7,
+            "z": 0.85
+          },
+          {
+            "name": "F",
+            "x": 0.38,
+            "y": 0.65,
+            "z": 0.2
+          }
+        ],
+        "ranges": [],
+        "text": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "A1": "A1",
+          "D1": "D1",
+          "C1": "C1",
+          "B1": "B1",
+          "E": "E",
+          "F": "F"
+        },
+        "uncertainties": [],
+        "confidence": "E2"
+      },
+      "vision_source_provenance": [
+        {
+          "source_kind": "high_resolution_source_pdf_crop",
+          "source_pdf": "C:\\Users\\poyi\\Downloads\\【2025-2025版】选择性必修第1册\\按章节合并（无答案册）\\第1章 空间向量与立体几何（无答案册）.pdf",
+          "source_pdf_sha256": "9d3f38a7591742e22282490256a5c6bef8f644abc0e65db06f3dceb0251894ff",
+          "pdf_page": 32,
+          "crop_rect": [
+            420,
+            360,
+            595,
+            530
+          ],
+          "derived_from_image_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_full\\imgs\\img_in_image_box_897_830_1094_1011.jpg",
+          "derived_from_image_sha256": "aaeb4b3e6c5f479f9892831dc13fb6d04c2c9ea1d00867e1d5032cb46a0d471c"
+        }
+      ]
+    },
+    {
+      "qid": "Q-8bc83f44a0a18ca0",
+      "section": "1.2+1.3",
+      "group": "C",
+      "number": 14,
+      "kind": "C组",
+      "source_anchor": {
+        "ocr_doc": 32,
+        "pdf_page": 33,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_32.md"
+      },
+      "question_text": "### 14. （2025·福建南平期末）\n\n如图，在三棱锥 S-ABC 中，点 G 为  \\(\\triangle ABC\\) 的重心，点 M 是线段 SG 的中点，过点 M 的平面分别交 SA，SB，SC 于点 D，E，F，若  \\(\\overrightarrow{SD}=k\\overrightarrow{SA}\\)， \\(\\overrightarrow{SE}=m\\overrightarrow{SB}\\)， \\(\\overrightarrow{SF}=n\\overrightarrow{SC}\\)，则  \\(\\frac{1}{k}+\\frac{1}{m}+\\frac{1}{n}=\\)（ ）\n\nA. 3\n\nB. 6\n\nC. 9\n\nD. 12\n\n",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_510_395_708_552.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_510_395_708_552.jpg",
+          "exists": true
+        }
+      ],
+      "visual_status": "VISION_VERIFIED",
+      "math_errors": [],
+      "evidence": [
+        "E1",
+        "E2"
+      ],
+      "vision_sidecars": [
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_full\\imgs\\img_in_image_box_510_395_708_552.jpg",
+          "image_sha256": "36272820a82dd013e4ea9c35660eb1eee35c267a8a0b54fc3fb7d051957a9842",
+          "confidence": "E2",
+          "structured": {
+            "objects": [
+              "S",
+              "F",
+              "C",
+              "D",
+              "M",
+              "E",
+              "A",
+              "B",
+              "G"
+            ],
+            "relations": [
+              "SA",
+              "SB",
+              "SC",
+              "AB",
+              "CD",
+              "SF",
+              "FC",
+              "SE",
+              "EB",
+              "DM",
+              "EM",
+              "AG",
+              "BG"
+            ],
+            "coordinates": [
+              {
+                "name": "S",
+                "position": "顶部"
+              },
+              {
+                "name": "F",
+                "position": "SC上"
+              },
+              {
+                "name": "C",
+                "position": "A上方偏左"
+              },
+              {
+                "name": "D",
+                "position": "C与A之间"
+              },
+              {
+                "name": "M",
+                "position": "中间"
+              },
+              {
+                "name": "E",
+                "position": "SB上"
+              },
+              {
+                "name": "A",
+                "position": "左下"
+              },
+              {
+                "name": "B",
+                "position": "右下"
+              },
+              {
+                "name": "G",
+                "position": "AB下方偏左"
+              }
+            ],
+            "ranges": [],
+            "text": [],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        }
+      ],
+      "vision_sidecar": {
+        "objects": [
+          "S",
+          "F",
+          "C",
+          "D",
+          "M",
+          "E",
+          "A",
+          "B",
+          "G"
+        ],
+        "relations": [
+          "SA",
+          "SB",
+          "SC",
+          "AB",
+          "CD",
+          "SF",
+          "FC",
+          "SE",
+          "EB",
+          "DM",
+          "EM",
+          "AG",
+          "BG"
+        ],
+        "coordinates": [
+          {
+            "name": "S",
+            "position": "顶部"
+          },
+          {
+            "name": "F",
+            "position": "SC上"
+          },
+          {
+            "name": "C",
+            "position": "A上方偏左"
+          },
+          {
+            "name": "D",
+            "position": "C与A之间"
+          },
+          {
+            "name": "M",
+            "position": "中间"
+          },
+          {
+            "name": "E",
+            "position": "SB上"
+          },
+          {
+            "name": "A",
+            "position": "左下"
+          },
+          {
+            "name": "B",
+            "position": "右下"
+          },
+          {
+            "name": "G",
+            "position": "AB下方偏左"
+          }
+        ],
+        "ranges": [],
+        "text": [],
+        "uncertainties": [],
+        "confidence": "E2"
+      },
+      "vision_source_provenance": []
+    },
+    {
+      "qid": "Q-3e85a8a45c48effa",
+      "section": "1.2+1.3",
+      "group": "C",
+      "number": 15,
+      "kind": "C组",
+      "source_anchor": {
+        "ocr_doc": 32,
+        "pdf_page": 33,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_32.md"
+      },
+      "question_text": "### 15. （2025·上海期末）\n\n若  \\(a\\)， \\(b\\) 是空间互相垂直的单位向量，且  \\(|c|=8\\)， \\(c \\cdot a = c \\cdot b = 2\\sqrt{6}\\)，则  \\(|c - ma - nb|\\) 的最小值是___。",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-9e0354161f002565",
+      "section": "1.2+1.3",
+      "group": "C",
+      "number": 16,
+      "kind": "C组",
+      "source_anchor": {
+        "ocr_doc": 32,
+        "pdf_page": 33,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_32.md"
+      },
+      "question_text": "### 16. （2025·河南模拟）\n\n在棱长为 3 的正方体  \\(ABCD-A_1B_1C_1D_1\\) 中， \\(E\\)， \\(F\\) 为线段  \\(BD_1\\) 的三等分点（ \\(E\\) 在  \\(B\\)， \\(F\\) 之间），一动点  \\(P\\) 满足  \\(PF = 2PE\\)，则  \\((\\overrightarrow{PA} + \\overrightarrow{PA_1}) \\cdot (\\overrightarrow{PC} + \\overrightarrow{PC_1})\\) 的取值范围是___。",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    }
+  ],
+  "learning_items": [
+    {
+      "item_id": "fcfa77372aee59c2",
+      "kind": "example",
+      "label": "例1",
+      "example_number": 1,
+      "parent_example_number": null,
+      "role": "knowledge_example",
+      "role_ref": "1.2-k1",
+      "source_docs": [
+        18,
+        19
+      ],
+      "vision_hint": "1.2+1.3-LIfcfa77372aee59c2",
+      "question_text": "【例 1】平行六面体  \\(ABCD-A_1B_1C_1D_1\\) 中，下面一定能作为空间中的一个基底的是（ ）\n\nA.  \\(\\{\\overrightarrow{AB}, \\overrightarrow{AD}, \\overrightarrow{B_1D_1}\\}\\)\n\nB.  \\(\\{\\overrightarrow{AB}, \\overrightarrow{AA_1}, \\overrightarrow{C_1D_1}\\}\\)\n\nC.  \\(\\{\\overrightarrow{AB}, \\overrightarrow{A_1A}, \\overrightarrow{A_1D_1}\\}\\)\n\nD.  \\(\\{\\overrightarrow{AA_1}, \\overrightarrow{AC}, \\overrightarrow{CC_1}\\}\\)",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_804_1346_1008_1516.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_804_1346_1008_1516.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_313_304_466_434.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_313_304_466_434.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_272_1140_506_1310.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_272_1140_506_1310.jpg",
+          "exists": true
+        }
+      ],
+      "visual_status": "NEEDS_VISION_SIDECAR",
+      "evidence": []
+    },
+    {
+      "item_id": "cfccea517f624ccf",
+      "kind": "example",
+      "label": "例2",
+      "example_number": 2,
+      "parent_example_number": null,
+      "role": "knowledge_example",
+      "role_ref": "1.3-k1",
+      "source_docs": [
+        19
+      ],
+      "vision_hint": "1.2+1.3-LIcfccea517f624ccf",
+      "question_text": "【例2】如图所示，以长方体 \\(ABCD-A_{1}B_{1}C_{1}D_{1}\\)的顶点A为坐标原点，过A的三条棱所在的直线为坐标轴，建立空间直角坐标系.若AB=4，AD=3， \\(AA_{1}=2\\)，写出长方体各顶点的坐标.",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_778_407_1031_589.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_778_407_1031_589.jpg",
+          "exists": true
+        }
+      ],
+      "visual_status": "NEEDS_VISION_SIDECAR",
+      "evidence": []
+    },
+    {
+      "item_id": "9069871239ce9982",
+      "kind": "example",
+      "label": "例3",
+      "example_number": 3,
+      "parent_example_number": null,
+      "role": "knowledge_example",
+      "role_ref": "1.3-k1",
+      "source_docs": [
+        19,
+        20
+      ],
+      "vision_hint": "1.2+1.3-LI9069871239ce9982",
+      "question_text": "【例3】若向量 \\(\\boldsymbol{a}=(1,2,-3)\\)，则a在坐标平面Oyz上的投影向量是（）\n\nA.  \\((0,2,3)\\) B.  \\((0,2,-3)\\)\n\nC.  \\((1,2,0)\\) D.  \\((1,2,-3)\\)",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_272_322_503_510.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_272_322_503_510.jpg",
+          "exists": true
+        }
+      ],
+      "visual_status": "NEEDS_VISION_SIDECAR",
+      "evidence": []
+    },
+    {
+      "item_id": "ced7480896c3ecc3",
+      "kind": "example",
+      "label": "例4",
+      "example_number": 4,
+      "parent_example_number": null,
+      "role": "knowledge_example",
+      "role_ref": "1.3-k2",
+      "source_docs": [
+        20,
+        21
+      ],
+      "vision_hint": "1.2+1.3-LIced7480896c3ecc3",
+      "question_text": "【例4】已知四棱锥P-ABCD的底面ABCD是正方形， \\(PA\\perp\\)平面ABCD，PA=AB=2，M，N分别为PB，CD的中点，如图建系，解答下列问题：\n\n（1）求 \\(\\overrightarrow{DM}+\\overrightarrow{BP}\\)的坐标；\n\n(2) 求  \\(\\overrightarrow{DM} \\cdot \\overrightarrow{PC}\\);\n\n（3）求MN的长；\n\n（4）判断 MN 与 BD 是否垂直；\n\n（5）求 \\(\\overrightarrow{BD}\\)与 \\(\\overrightarrow{PN}\\)的夹角余弦值；\n\n(6) 求  \\(\\triangle PMN\\) 的重心 G 的坐标.",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_785_951_1026_1173.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_785_951_1026_1173.jpg",
+          "exists": true
+        }
+      ],
+      "visual_status": "NEEDS_VISION_SIDECAR",
+      "evidence": []
+    },
+    {
+      "item_id": "85160af783cfe7ee",
+      "kind": "example",
+      "label": "例5",
+      "example_number": 5,
+      "parent_example_number": null,
+      "role": "type_example",
+      "role_ref": "类型Ⅰ 基底表示",
+      "source_docs": [
+        22
+      ],
+      "vision_hint": "1.2+1.3-LI85160af783cfe7ee",
+      "question_text": "【例 5】如图，空间四边形 \\(OABC\\) 中，\\(\\overrightarrow{OA}=a\\)，\\(\\overrightarrow{OB}=b\\)，\\(\\overrightarrow{OC}=c\\)\n\n则 \\(\\overrightarrow{MN}=\\)（ ）\n\nA. \\(-\\frac{1}{2}a+\\frac{1}{2}b+\\frac{1}{2}c\\) B. \\(\\frac{1}{2}a+\\frac{1}{2}b+\\frac{1}{2}c\\)\n\nC. \\(\\frac{1}{2}a+\\frac{1}{2}b-\\frac{1}{2}c\\) D. \\(\\frac{1}{2}a-\\frac{1}{2}b+\\frac{1}{2}c\\)",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_896_221_1093_390.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_896_221_1093_390.jpg",
+          "exists": true
+        }
+      ],
+      "visual_status": "NEEDS_VISION_SIDECAR",
+      "evidence": []
+    },
+    {
+      "item_id": "8398d10a7994f7f5",
+      "kind": "example",
+      "label": "例6",
+      "example_number": 6,
+      "parent_example_number": null,
+      "role": "type_example",
+      "role_ref": "类型Ⅱ 线性运算坐标表示",
+      "source_docs": [
+        22,
+        23
+      ],
+      "vision_hint": "1.2+1.3-LI8398d10a7994f7f5",
+      "question_text": "【例 6】（1）已知向量  \\(\\boldsymbol{a} = (1, -3, 2)\\)， \\(\\boldsymbol{b} = (1, 1, 0)\\)，则  \\(2\\boldsymbol{a} - 3\\boldsymbol{b} =\\) ___；\n\n（2）若  \\(a = (2,3,5)\\)， \\(b = (3,1,-4)\\)，则  \\(|a-2b|=\\)___；\n\n（3）平行于向量  \\(\\boldsymbol{a}=(-1,2,1)\\) 的单位向量为 ___.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "evidence": []
+    },
+    {
+      "item_id": "1a9c42257c66649e",
+      "kind": "example",
+      "label": "例7",
+      "example_number": 7,
+      "parent_example_number": null,
+      "role": "type_example",
+      "role_ref": "类型Ⅱ 线性运算坐标表示",
+      "source_docs": [
+        23
+      ],
+      "vision_hint": "1.2+1.3-LI1a9c42257c66649e",
+      "question_text": "【例 7】（1）已知空间四点  \\(A(1,2,3)\\)， \\(B(1,1,2)\\)， \\(C(2,1,1)\\)， \\(D(1,1,1)\\)，则  \\(\\overrightarrow{AB} - 2\\overrightarrow{CD} =\\) ___；\n\n（2）在空间四边形 \\(ABCD\\) 中，\\(\\overrightarrow{AB}=(1,3,2)\\)，\\(\\overrightarrow{BC}=(-2,-3,1)\\)，\\(\\overrightarrow{AD}=(3,1,2)\\)，则 \\(\\overrightarrow{CD}=\\)___。",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "evidence": []
+    },
+    {
+      "item_id": "c77cbbb7b8837fc7",
+      "kind": "example",
+      "label": "例8",
+      "example_number": 8,
+      "parent_example_number": null,
+      "role": "type_example",
+      "role_ref": "类型Ⅲ 数量积坐标表示",
+      "source_docs": [
+        23
+      ],
+      "vision_hint": "1.2+1.3-LIc77cbbb7b8837fc7",
+      "question_text": "【例 8】若向量  \\(\\boldsymbol{a} = (2, -3, 1)\\)， \\(\\boldsymbol{b} = (2, 0, 3)\\)， \\(\\boldsymbol{c} = (1, 2, 2)\\)，则  \\(\\boldsymbol{a} \\cdot (\\boldsymbol{b} + \\boldsymbol{c})\\) 的值为（）\n\nA. 4 B. 5 C. 6 D. 7",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "evidence": []
+    },
+    {
+      "item_id": "a463b65df011512d",
+      "kind": "example",
+      "label": "例9",
+      "example_number": 9,
+      "parent_example_number": null,
+      "role": "type_example",
+      "role_ref": "类型Ⅲ 数量积坐标表示",
+      "source_docs": [
+        23
+      ],
+      "vision_hint": "1.2+1.3-LIa463b65df011512d",
+      "question_text": "【例 9】已知点  \\(A(2,-1,1)\\)， \\(B(3,-2,1)\\)， \\(C(0,1,-1)\\)，则  \\(\\overrightarrow{AB}\\) 在  \\(\\overrightarrow{AC}\\) 上的投影向量的坐标为 ___.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "evidence": []
+    },
+    {
+      "item_id": "0cc4d4ebec2bcaeb",
+      "kind": "example",
+      "label": "例10",
+      "example_number": 10,
+      "parent_example_number": null,
+      "role": "type_example",
+      "role_ref": "类型Ⅳ 平行垂直",
+      "source_docs": [
+        24
+      ],
+      "vision_hint": "1.2+1.3-LI0cc4d4ebec2bcaeb",
+      "question_text": "【例 10】（1）已知向量  \\(\\boldsymbol{a}=(-1,0,-1)\\)， \\(\\boldsymbol{b}=(1,x,y)\\)，且  \\(\\boldsymbol{a} \\parallel \\boldsymbol{b}\\)，则  \\(x + y =\\) ___.\n\n（2）已知  \\(\\boldsymbol{a}=(2,-1,3)\\)， \\(\\boldsymbol{b}=(-4,2,x)\\)，且  \\(\\boldsymbol{a} \\perp \\boldsymbol{b}\\)，则  \\(x\\) 的值为 ___.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "evidence": []
+    },
+    {
+      "item_id": "94d4c82f6d2171e2",
+      "kind": "example",
+      "label": "例11",
+      "example_number": 11,
+      "parent_example_number": null,
+      "role": "type_example",
+      "role_ref": "类型Ⅴ 夹角与模",
+      "source_docs": [
+        26
+      ],
+      "vision_hint": "1.2+1.3-LI94d4c82f6d2171e2",
+      "question_text": "【例 11】设  \\(y, z \\in \\mathbb{R}\\)，向量  \\(\\boldsymbol{a} = (1, 1, 1)\\)， \\(\\boldsymbol{b} = (1, y, 1)\\)， \\(\\boldsymbol{c} = (z, -4, 2)\\)，且  \\(\\boldsymbol{a} \\perp \\boldsymbol{b}\\)， \\(\\boldsymbol{b} \\parallel \\boldsymbol{c}\\)。\n\n（1）求  \\(|\\boldsymbol{a} + \\boldsymbol{b}|\\)；（2）求向量  \\(\\boldsymbol{a} + \\boldsymbol{b}\\) 与  \\(\\boldsymbol{b} - \\boldsymbol{c}\\) 的夹角的余弦值。",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "evidence": []
+    },
+    {
+      "item_id": "590da6bc5e5f4e4b",
+      "kind": "example",
+      "label": "例12",
+      "example_number": 12,
+      "parent_example_number": null,
+      "role": "type_example",
+      "role_ref": "类型Ⅴ 夹角与模",
+      "source_docs": [
+        26
+      ],
+      "vision_hint": "1.2+1.3-LI590da6bc5e5f4e4b",
+      "question_text": "【例12】已知长方体 \\(ABCD-A_1B_1C_1D_1\\) 中，\\(AB=2\\)，\\(BC=AA_1=1\\)，若 \\(E\\) 为 \\(A_1C\\) 的中点，则异面直线 \\(AD_1\\) 与 \\(BE\\) 所成角的余弦值为___。",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_863_744_1095_881.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_863_744_1095_881.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_828_1092_1090_1262.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_828_1092_1090_1262.jpg",
+          "exists": true
+        }
+      ],
+      "visual_status": "NEEDS_VISION_SIDECAR",
+      "evidence": []
+    },
+    {
+      "item_id": "57b57c8f53fc2c69",
+      "kind": "example",
+      "label": "例13",
+      "example_number": 13,
+      "parent_example_number": null,
+      "role": "type_example",
+      "role_ref": "类型Ⅴ 夹角与模",
+      "source_docs": [
+        27,
+        28
+      ],
+      "vision_hint": "1.2+1.3-LI57b57c8f53fc2c69",
+      "question_text": "【例 13】如图，正三棱柱  \\(ABC-A_1B_1C_1\\) 的底面边长为 2，侧棱长为 3， \\(D\\) 为  \\(BC\\) 的中点，若  \\(\\overrightarrow{A_1P}=\\lambda\\overrightarrow{A_1B_1}\\)， \\(\\overrightarrow{DQ}=\\lambda\\overrightarrow{DC_1}(0\\leq\\lambda\\leq1)\\)，则  \\(|\\overrightarrow{PQ}|\\) 的最小值是___。",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_948_940_1094_1156.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_948_940_1094_1156.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_907_1307_1091_1551.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_907_1307_1091_1551.jpg",
+          "exists": true
+        }
+      ],
+      "visual_status": "NEEDS_VISION_SIDECAR",
+      "evidence": []
+    },
+    {
+      "item_id": "cf037999c56eca66",
+      "kind": "direct_variant",
+      "label": "变式",
+      "example_number": null,
+      "parent_example_number": 5,
+      "role": "direct_variant",
+      "role_ref": null,
+      "source_docs": [
+        22
+      ],
+      "vision_hint": "1.2+1.3-LIcf037999c56eca66",
+      "question_text": "【变式】如图，四棱锥  \\(P-ABCD\\) 中，底面  \\(ABCD\\) 是平行四边形， \\(E\\) 在棱  \\(PC\\) 上，且  \\(PE = 2EC\\)，若  \\(\\overrightarrow{AE} = x\\overrightarrow{AB} + y\\overrightarrow{AD} + z\\overrightarrow{AP}\\)，则  \\(x + y - z =\\)（ ）\n\nA.  \\(\\frac{3}{2}\\) B.  \\(1\\) C.  \\(\\frac{5}{2}\\) D.  \\(2\\)",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_892_723_1091_870.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_892_723_1091_870.jpg",
+          "exists": true
+        }
+      ],
+      "visual_status": "NEEDS_VISION_SIDECAR",
+      "evidence": []
+    },
+    {
+      "item_id": "bcfdff63c5c01bf4",
+      "kind": "direct_variant",
+      "label": "变式1",
+      "example_number": null,
+      "parent_example_number": 10,
+      "role": "direct_variant",
+      "role_ref": null,
+      "source_docs": [
+        24
+      ],
+      "vision_hint": "1.2+1.3-LIbcfdff63c5c01bf4",
+      "question_text": "【变式1】如图，三棱柱 \\(ABC-A_1B_1C_1\\) 中，\\(CC_1\\perp\\)平面 \\(ABC\\)，\\(AC\\perp BC\\)，\\(AC=BC=2\\)，\\(CC_1=3\\)。点 \\(D\\)，\\(E\\) 分别在棱 \\(AA_1\\) 和 \\(CC_1\\) 上，\\(AD=1\\)，\\(CE=2\\)，\\(M\\) 为棱 \\(A_1B_1\\) 的中点。\n\n（1）证明： \\(C_{1}M \\perp B_{1}D\\)；\n\n（2）证明： \\(C_{1}M \\parallel\\) 平面 \\(B_{1}DE\\)",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_898_728_1092_954.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_898_728_1092_954.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_854_1222_1090_1493.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_854_1222_1090_1493.jpg",
+          "exists": true
+        }
+      ],
+      "visual_status": "NEEDS_VISION_SIDECAR",
+      "evidence": []
+    },
+    {
+      "item_id": "d085ad01a858870d",
+      "kind": "direct_variant",
+      "label": "变式2",
+      "example_number": null,
+      "parent_example_number": 10,
+      "role": "direct_variant",
+      "role_ref": null,
+      "source_docs": [
+        25
+      ],
+      "vision_hint": "1.2+1.3-LId085ad01a858870d",
+      "question_text": "【变式2】如图，四棱锥S-ABCD的底面是正方形，每条侧棱的长都是底面边长的 \\(\\sqrt{2}\\)倍，P为侧棱SD上的点.\n\n（1）求证： \\(AC \\perp SD\\)；\n\n（2）若  \\(SD \\perp\\) 平面  \\(PAC\\)，则侧棱  \\(SC\\) 上是否存在点  \\(E\\)，使  \\(BE \\parallel\\) 平面  \\(PAC\\)?\n\n若存在，求  \\(SE:EC\\) 的值；若不存在，说明理由。",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_895_119_1091_318.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_895_119_1091_318.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_869_987_1091_1214.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_869_987_1091_1214.jpg",
+          "exists": true
+        }
+      ],
+      "visual_status": "NEEDS_VISION_SIDECAR",
+      "evidence": []
+    },
+    {
+      "item_id": "0b28bb0d2da57497",
+      "kind": "direct_variant",
+      "label": "变式",
+      "example_number": null,
+      "parent_example_number": 12,
+      "role": "direct_variant",
+      "role_ref": null,
+      "source_docs": [
+        26,
+        27
+      ],
+      "vision_hint": "1.2+1.3-LI0b28bb0d2da57497",
+      "question_text": "【变式】在中国古代数学瑰宝《九章算术》中，记载了一种称为“曲池”的几何体，该几何体为上下底面均为扇环形的柱体（扇环是指圆环被扇形截得的部分）。现有一个如图所示的曲池，其\n中  \\(AA_{1}\\) ⊥ 底面 ABCD，底面扇环所对的圆心角为  \\(\\frac{\\pi}{2}\\)，扇环对应的两个圆的半径之比为 1:2， \\(AB = AA_{1} = 1\\)，E 在  \\(\\widehat{A_{1}D_{1}}\\) 上且为靠近  \\(D_{1}\\) 的三等分点，则异面直线 BE 与  \\(C_{1}D\\) 所成角的余弦值为（ ）\n\nA.  \\(\\frac{\\sqrt{6} - \\sqrt{2}}{2}\\) B.  \\(\\frac{\\sqrt{2} - \\sqrt{6}}{4}\\) C.  \\(\\frac{\\sqrt{6} + \\sqrt{2}}{4}\\) D.  \\(\\frac{\\sqrt{6} - \\sqrt{2}}{4}\\)",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_879_267_1093_415.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_879_267_1093_415.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_854_667_1092_870.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_854_667_1092_870.jpg",
+          "exists": true
+        }
+      ],
+      "visual_status": "NEEDS_VISION_SIDECAR",
+      "evidence": []
+    }
+  ],
+  "learning_items_manifest": {
+    "status": "VERIFIED",
+    "counts": {
+      "worked_examples": 13,
+      "direct_variants": 4,
+      "total": 17
+    },
+    "source_packet_type": "DEEPSEEK_STUDENT_LEARNING_ITEMS"
+  },
+  "unresolved": [],
+  "route_support": {
+    "learning_plan": {
+      "section": "1.2+1.3",
+      "label": "第2节 空间向量基本定理、空间向量及其运算的坐标表示",
+      "step_order": [
+        "核验课程实际覆盖",
+        "按课程合集编号听当前方法",
+        "立即做对应知识点及右侧例题",
+        "立即做该方法直属变式和类型题",
+        "立即做对应A/B/C习题",
+        "记录首个断点并最小提示",
+        "未污染近迁移",
+        "隔天冷复测"
+      ],
+      "course_selection_rule": "只使用 Downloads\\课程合集\\3.1 空间向量与立体几何，严格按文件编号顺序；不使用其他下载副本。",
+      "completion_semantics": {
+        "video_only_sufficient": false,
+        "required_path": "视频课程 + 讲义顺序 + 无答案桥接微单元 + 独立作答",
+        "bridge_required_before_target_questions": [
+          "C14",
+          "C15",
+          "C16"
+        ],
+        "honesty_note": "课程库存和字幕存在不等于所有难题方法已覆盖；必须完成列出的桥接单元后才进入对应题目。"
+      },
+      "required_courses": [
+        {
+          "role": "required",
+          "course_key": "decomposition",
+          "original_course_ids": [
+            "3.1.2.1"
+          ],
+          "original_course_id": "3.1.2.1",
+          "course_id_variants": [
+            "3.1.2.1"
+          ],
+          "video_files": [
+            "C:\\Users\\poyi\\Downloads\\课程合集\\3.1 空间向量与立体几何\\3.1.2.1 空间向量拆分法.mp4"
+          ],
+          "recommended_video_files": [
+            "C:\\Users\\poyi\\Downloads\\课程合集\\3.1 空间向量与立体几何\\3.1.2.1 空间向量拆分法.mp4"
+          ],
+          "recommended_variant": "course_collection",
+          "transcript_files": [
+            "C:\\开发\\小工具\\一本通学习系统_v7\\data\\course_transcripts\\3.1.2.1 空间向量拆分法.json"
+          ],
+          "coverage_status": "COVERED",
+          "coverage_note": "课程库存存在不等于该小节所有难题方法已覆盖；必须结合转写、一本通例题/变式/习题逐项核验。"
+        },
+        {
+          "role": "required",
+          "course_key": "coordinate_system",
+          "original_course_ids": [
+            "3.1.3.1"
+          ],
+          "original_course_id": "3.1.3.1",
+          "course_id_variants": [
+            "3.1.3.1"
+          ],
+          "video_files": [
+            "C:\\Users\\poyi\\Downloads\\课程合集\\3.1 空间向量与立体几何\\3.1.3.1 空间直角坐标系.mp4"
+          ],
+          "recommended_video_files": [
+            "C:\\Users\\poyi\\Downloads\\课程合集\\3.1 空间向量与立体几何\\3.1.3.1 空间直角坐标系.mp4"
+          ],
+          "recommended_variant": "course_collection",
+          "transcript_files": [
+            "C:\\开发\\小工具\\一本通学习系统_v7\\data\\course_transcripts\\3.1.3.1 空间直角坐标系.json"
+          ],
+          "coverage_status": "COVERED",
+          "coverage_note": "课程库存存在不等于该小节所有难题方法已覆盖；必须结合转写、一本通例题/变式/习题逐项核验。"
+        },
+        {
+          "role": "required",
+          "course_key": "coordinate_ops",
+          "original_course_ids": [
+            "3.1.3.2"
+          ],
+          "original_course_id": "3.1.3.2",
+          "course_id_variants": [
+            "3.1.3.2"
+          ],
+          "video_files": [
+            "C:\\Users\\poyi\\Downloads\\课程合集\\3.1 空间向量与立体几何\\3.1.3.2 空间向量运算的坐标表示.mp4"
+          ],
+          "recommended_video_files": [
+            "C:\\Users\\poyi\\Downloads\\课程合集\\3.1 空间向量与立体几何\\3.1.3.2 空间向量运算的坐标表示.mp4"
+          ],
+          "recommended_variant": "course_collection",
+          "transcript_files": [
+            "C:\\开发\\小工具\\一本通学习系统_v7\\data\\course_transcripts\\3.1.3.2 空间向量运算的坐标表示.json"
+          ],
+          "coverage_status": "COVERED",
+          "coverage_note": "课程库存存在不等于该小节所有难题方法已覆盖；必须结合转写、一本通例题/变式/习题逐项核验。"
+        }
+      ],
+      "support_courses": [
+        {
+          "role": "support",
+          "course_key": "equal_surface",
+          "original_course_ids": [
+            "3.1.2.2"
+          ],
+          "original_course_id": "3.1.2.2",
+          "course_id_variants": [
+            "3.1.2.2"
+          ],
+          "video_files": [
+            "C:\\Users\\poyi\\Downloads\\课程合集\\3.1 空间向量与立体几何\\3.1.2.2 空间向量等值面法.mp4"
+          ],
+          "recommended_video_files": [
+            "C:\\Users\\poyi\\Downloads\\课程合集\\3.1 空间向量与立体几何\\3.1.2.2 空间向量等值面法.mp4"
+          ],
+          "recommended_variant": "course_collection",
+          "transcript_files": [
+            "C:\\开发\\小工具\\一本通学习系统_v7\\data\\course_transcripts\\3.1.2.2 空间向量等值面法.json"
+          ],
+          "coverage_status": "COVERED",
+          "coverage_note": "课程库存存在不等于该小节所有难题方法已覆盖；必须结合转写、一本通例题/变式/习题逐项核验。"
+        },
+        {
+          "role": "support",
+          "course_key": "space_vector_ops",
+          "original_course_ids": [
+            "3.1.1.1"
+          ],
+          "original_course_id": "3.1.1.1",
+          "course_id_variants": [
+            "3.1.1.1"
+          ],
+          "video_files": [
+            "C:\\Users\\poyi\\Downloads\\课程合集\\3.1 空间向量与立体几何\\3.1.1.1 空间向量的运算.mp4"
+          ],
+          "recommended_video_files": [
+            "C:\\Users\\poyi\\Downloads\\课程合集\\3.1 空间向量与立体几何\\3.1.1.1 空间向量的运算.mp4"
+          ],
+          "recommended_variant": "course_collection",
+          "transcript_files": [
+            "C:\\开发\\小工具\\一本通学习系统_v7\\data\\course_transcripts\\3.1.1.1 空间向量的运算.json"
+          ],
+          "coverage_status": "COVERED",
+          "coverage_note": "课程库存存在不等于该小节所有难题方法已覆盖；必须结合转写、一本通例题/变式/习题逐项核验。"
+        }
+      ],
+      "must_listen_courses": [
+        {
+          "role": "required",
+          "course_key": "decomposition",
+          "original_course_ids": [
+            "3.1.2.1"
+          ],
+          "original_course_id": "3.1.2.1",
+          "course_id_variants": [
+            "3.1.2.1"
+          ],
+          "video_files": [
+            "C:\\Users\\poyi\\Downloads\\课程合集\\3.1 空间向量与立体几何\\3.1.2.1 空间向量拆分法.mp4"
+          ],
+          "recommended_video_files": [
+            "C:\\Users\\poyi\\Downloads\\课程合集\\3.1 空间向量与立体几何\\3.1.2.1 空间向量拆分法.mp4"
+          ],
+          "recommended_variant": "course_collection",
+          "transcript_files": [
+            "C:\\开发\\小工具\\一本通学习系统_v7\\data\\course_transcripts\\3.1.2.1 空间向量拆分法.json"
+          ],
+          "coverage_status": "COVERED",
+          "coverage_note": "课程库存存在不等于该小节所有难题方法已覆盖；必须结合转写、一本通例题/变式/习题逐项核验。"
+        },
+        {
+          "role": "required",
+          "course_key": "coordinate_system",
+          "original_course_ids": [
+            "3.1.3.1"
+          ],
+          "original_course_id": "3.1.3.1",
+          "course_id_variants": [
+            "3.1.3.1"
+          ],
+          "video_files": [
+            "C:\\Users\\poyi\\Downloads\\课程合集\\3.1 空间向量与立体几何\\3.1.3.1 空间直角坐标系.mp4"
+          ],
+          "recommended_video_files": [
+            "C:\\Users\\poyi\\Downloads\\课程合集\\3.1 空间向量与立体几何\\3.1.3.1 空间直角坐标系.mp4"
+          ],
+          "recommended_variant": "course_collection",
+          "transcript_files": [
+            "C:\\开发\\小工具\\一本通学习系统_v7\\data\\course_transcripts\\3.1.3.1 空间直角坐标系.json"
+          ],
+          "coverage_status": "COVERED",
+          "coverage_note": "课程库存存在不等于该小节所有难题方法已覆盖；必须结合转写、一本通例题/变式/习题逐项核验。"
+        },
+        {
+          "role": "required",
+          "course_key": "coordinate_ops",
+          "original_course_ids": [
+            "3.1.3.2"
+          ],
+          "original_course_id": "3.1.3.2",
+          "course_id_variants": [
+            "3.1.3.2"
+          ],
+          "video_files": [
+            "C:\\Users\\poyi\\Downloads\\课程合集\\3.1 空间向量与立体几何\\3.1.3.2 空间向量运算的坐标表示.mp4"
+          ],
+          "recommended_video_files": [
+            "C:\\Users\\poyi\\Downloads\\课程合集\\3.1 空间向量与立体几何\\3.1.3.2 空间向量运算的坐标表示.mp4"
+          ],
+          "recommended_variant": "course_collection",
+          "transcript_files": [
+            "C:\\开发\\小工具\\一本通学习系统_v7\\data\\course_transcripts\\3.1.3.2 空间向量运算的坐标表示.json"
+          ],
+          "coverage_status": "COVERED",
+          "coverage_note": "课程库存存在不等于该小节所有难题方法已覆盖；必须结合转写、一本通例题/变式/习题逐项核验。"
+        },
+        {
+          "role": "support",
+          "course_key": "equal_surface",
+          "original_course_ids": [
+            "3.1.2.2"
+          ],
+          "original_course_id": "3.1.2.2",
+          "course_id_variants": [
+            "3.1.2.2"
+          ],
+          "video_files": [
+            "C:\\Users\\poyi\\Downloads\\课程合集\\3.1 空间向量与立体几何\\3.1.2.2 空间向量等值面法.mp4"
+          ],
+          "recommended_video_files": [
+            "C:\\Users\\poyi\\Downloads\\课程合集\\3.1 空间向量与立体几何\\3.1.2.2 空间向量等值面法.mp4"
+          ],
+          "recommended_variant": "course_collection",
+          "transcript_files": [
+            "C:\\开发\\小工具\\一本通学习系统_v7\\data\\course_transcripts\\3.1.2.2 空间向量等值面法.json"
+          ],
+          "coverage_status": "COVERED",
+          "coverage_note": "课程库存存在不等于该小节所有难题方法已覆盖；必须结合转写、一本通例题/变式/习题逐项核验。"
+        },
+        {
+          "role": "support",
+          "course_key": "space_vector_ops",
+          "original_course_ids": [
+            "3.1.1.1"
+          ],
+          "original_course_id": "3.1.1.1",
+          "course_id_variants": [
+            "3.1.1.1"
+          ],
+          "video_files": [
+            "C:\\Users\\poyi\\Downloads\\课程合集\\3.1 空间向量与立体几何\\3.1.1.1 空间向量的运算.mp4"
+          ],
+          "recommended_video_files": [
+            "C:\\Users\\poyi\\Downloads\\课程合集\\3.1 空间向量与立体几何\\3.1.1.1 空间向量的运算.mp4"
+          ],
+          "recommended_variant": "course_collection",
+          "transcript_files": [
+            "C:\\开发\\小工具\\一本通学习系统_v7\\data\\course_transcripts\\3.1.1.1 空间向量的运算.json"
+          ],
+          "coverage_status": "COVERED",
+          "coverage_note": "课程库存存在不等于该小节所有难题方法已覆盖；必须结合转写、一本通例题/变式/习题逐项核验。"
+        }
+      ],
+      "question_groups": {
+        "A": [
+          1,
+          4
+        ],
+        "B": [
+          5,
+          13
+        ],
+        "C": [
+          14,
+          16
+        ]
+      },
+      "exercise_order": [
+        {
+          "group": "A",
+          "numbers": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "group": "B",
+          "numbers": [
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ]
+        },
+        {
+          "group": "C",
+          "numbers": [
+            14,
+            15,
+            16
+          ]
+        }
+      ],
+      "layout_kind": "knowledge_points_then_type_training_then_exercises",
+      "knowledge_points": [
+        {
+          "id": "1.2-k1",
+          "label": "空间向量基本定理、基底与基向量",
+          "examples": [
+            "例1"
+          ]
+        },
+        {
+          "id": "1.3-k1",
+          "label": "空间直角坐标系与空间点坐标",
+          "examples": [
+            "例2",
+            "例3"
+          ]
+        },
+        {
+          "id": "1.3-k2",
+          "label": "空间向量坐标运算、平行垂直、模和夹角",
+          "examples": [
+            "例4"
+          ]
+        }
+      ],
+      "type_labels": [
+        "类型Ⅰ 基底与分解",
+        "类型Ⅱ 线性运算坐标表示",
+        "类型Ⅲ 数量积坐标表示",
+        "类型Ⅳ 平行垂直",
+        "类型Ⅴ 夹角与模"
+      ],
+      "type_training": [
+        {
+          "type": "类型Ⅰ 基底表示",
+          "example_numbers": [
+            5
+          ],
+          "focus": "判断能否作基底并按路径分解"
+        },
+        {
+          "type": "类型Ⅱ 线性运算坐标表示",
+          "example_numbers": [
+            6,
+            7
+          ],
+          "focus": "坐标加减、数乘和向量表示"
+        },
+        {
+          "type": "类型Ⅲ 数量积坐标表示",
+          "example_numbers": [
+            8,
+            9
+          ],
+          "focus": "点积、投影向量和坐标计算"
+        },
+        {
+          "type": "类型Ⅳ 平行垂直",
+          "example_numbers": [
+            10
+          ],
+          "focus": "比例方程与点积判定"
+        },
+        {
+          "type": "类型Ⅴ 夹角与模",
+          "example_numbers": [
+            11,
+            12,
+            13
+          ],
+          "focus": "夹角、模和动点单变量化"
+        }
+      ],
+      "direct_variants": [
+        {
+          "example": "例5",
+          "variants": [
+            "变式"
+          ],
+          "ocr_docs": [
+            22
+          ]
+        },
+        {
+          "example": "例10",
+          "variants": [
+            "变式1",
+            "变式2"
+          ],
+          "ocr_docs": [
+            24,
+            25
+          ]
+        },
+        {
+          "example": "例12",
+          "variants": [
+            "变式"
+          ],
+          "ocr_docs": [
+            26
+          ]
+        }
+      ],
+      "micro_units": [
+        "单变量化配方",
+        "阿波罗尼斯球",
+        "四点共面系数和=1"
+      ],
+      "bridge_units": [
+        {
+          "id": "micro-four-point-coplanar",
+          "title": "四点共面系数和=1",
+          "sections": [
+            "1.1",
+            "1.2+1.3"
+          ],
+          "target_questions": [
+            "C14"
+          ],
+          "status": "SUPPLEMENT_READY",
+          "supplement_path": "data/bridge_supplement_lessons.json",
+          "source_evidence": [
+            "data/bridge_supplement_lessons.json",
+            "C:\\开发\\小工具\\一本通DeepSeek迭代\\worker-02-solutions\\difficulty-matrix.md",
+            "C:\\开发\\小工具\\一本通DeepSeek迭代\\worker-05-synthesis\\chapter1-learning-path.md"
+          ],
+          "prerequisites": [
+            "空间向量线性表示",
+            "共面向量定义"
+          ],
+          "lesson_steps": [
+            "固定公共起点 O，把待判定点写成 OP=xOA+yOB+zOC。",
+            "正向证明：若 P 在平面 ABC 内，写 AP=uAB+vAC，换回公共起点得 OP=(1-u-v)OA+uOB+vOC，所以 x+y+z=1。",
+            "逆向证明：若 x+y+z=1，则 OP=OA+yAB+zAC，点 P 可由 A 沿平面内两条方向到达，因此 P 在平面 ABC 内。",
+            "最后区分点的位置向量系数与任意自由向量系数；换公共起点时必须重新推导。"
+          ],
+          "method_check": [
+            "能说明为什么三点共面时系数和为1，而不是把它当成记忆口号。",
+            "能区分三点共线的二维系数条件与四点共面的三维系数条件。",
+            "能在最后回代几何位置，排除把向量共面误写成点共面的情况。"
+          ],
+          "release_requirements": [
+            "方法题独立完成1题",
+            "同构变式独立完成1题",
+            "口述系数和成立理由"
+          ],
+          "answer_leak_guard": "不携带原题答案、选项或答案册文本",
+          "target_question_keys": [
+            "1.1-C13",
+            "1.1-C14",
+            "1.2+1.3-C14"
+          ]
+        },
+        {
+          "id": "bridge-1.1-polarization",
+          "title": "极化恒等式与数量积最值",
+          "sections": [
+            "1.1",
+            "1.2+1.3"
+          ],
+          "target_questions": [
+            "C16"
+          ],
+          "target_learning_items": [
+            "教材例14"
+          ],
+          "status": "SUPPLEMENT_READY",
+          "supplement_path": "data/bridge_supplement_lessons.json",
+          "source_evidence": [
+            "data/bridge_supplement_lessons.json",
+            "C:\\开发\\小工具\\一本通DeepSeek迭代\\worker-02-solutions\\difficulty-matrix.md",
+            "C:\\开发\\小工具\\一本通DeepSeek迭代\\worker-05-synthesis\\final-learning-flow.md"
+          ],
+          "prerequisites": [
+            "数量积",
+            "向量模长平方",
+            "中点向量表示"
+          ],
+          "lesson_steps": [
+            "展开 \\(|a+b|^2=(a+b)\\cdot(a+b)\\)，得到 \\(2a\\cdot b=|a+b|^2-|a|^2-|b|^2\\)；展开 \\(|a-b|^2\\)，得到 \\(2a\\cdot b=|a|^2+|b|^2-|a-b|^2\\)。",
+            "题目给和向量、差向量或中点距离时，先选能直接替换目标数量积的一种形式，不同时套两套恒等式。",
+            "先区分全空间型与区域型最值：任意点没有额外区域时，先完成平方或用中点恒等式判断等号点；动点被限制在长方体、平面或线段内时，还要在真实定义域内检查端点、顶点、边界和内部点。",
+            "最后回代原几何对象，确认中心点、中点、向量方向和定义域没有被替换错。"
+          ],
+          "method_check": [
+            "能在不看答案时写出恒等式的来源，而不是只套符号。",
+            "能说明为什么几何约束会限制模长平方的取值范围。",
+            "能把猜中的数值与有完整过程的独立通过分开记录。"
+          ],
+          "self_made_variant": "先处理一个任意点的数量积最值，再把同一动点限制在一个长方体内；只写‘恒等式选择—可行域—等号/边界检查’三栏，不填写原题答案。",
+          "release_requirements": [
+            "原型题独立过程完整",
+            "全空间型与区域型各做一题无答案近迁移",
+            "等号成立条件可解释"
+          ],
+          "answer_leak_guard": "不携带原题答案、选项或答案册文本",
+          "target_question_keys": [
+            "1.1-B8",
+            "1.2+1.3-C16"
+          ]
+        },
+        {
+          "id": "bridge-1.2-single-variable",
+          "title": "空间动点单变量化配方",
+          "sections": [
+            "1.2+1.3",
+            "micro专题1"
+          ],
+          "target_questions": [
+            "C15",
+            "C16"
+          ],
+          "status": "SUPPLEMENT_READY",
+          "supplement_path": "data/bridge_supplement_lessons.json",
+          "source_evidence": [
+            "C:\\开发\\小工具\\一本通DeepSeek迭代\\worker-02-solutions\\difficulty-matrix.md",
+            "C:\\Users\\poyi\\Downloads\\e\\_analysis\\transcripts\\3.1.4.8 动点问题.json"
+          ],
+          "prerequisites": [
+            "空间直角坐标系",
+            "直线参数表示",
+            "定义域"
+          ],
+          "lesson_steps": [
+            "先判断动点所在的线段或直线，再用 P=A+λv 表示并写出 λ 的几何定义域。",
+            "把距离、数量积或夹角条件逐一化成 λ 的表达式，保留原始几何约束。",
+            "对得到的函数先看定义域，再做配方、判别式或单调性判断。",
+            "若有两个动点，先只固定其中一个练习单变量流程，再升级到双参数化。"
+          ],
+          "method_check": [
+            "能说清参数零点、端点和方向向量分别代表什么。",
+            "能区分函数极值与题目要求的存在性。",
+            "能在参数求出后回到线段范围检查，不把直线上的解当成线段上的解。"
+          ],
+          "release_requirements": [
+            "单变量规划独立完成",
+            "含定义域的近变式独立完成",
+            "一次延迟冷复述"
+          ],
+          "answer_leak_guard": "不携带原题答案、选项或答案册文本",
+          "target_question_keys": [
+            "1.2+1.3-C15",
+            "1.2+1.3-C16",
+            "micro专题1-B1",
+            "micro专题1-C6"
+          ]
+        },
+        {
+          "id": "bridge-1.2-apollonius",
+          "title": "阿波罗尼斯球与等距轨迹",
+          "sections": [
+            "1.2+1.3",
+            "micro专题1"
+          ],
+          "target_questions": [
+            "C16"
+          ],
+          "status": "SUPPLEMENT_READY",
+          "supplement_path": "data/bridge_supplement_lessons.json",
+          "source_evidence": [
+            "C:\\开发\\小工具\\一本通DeepSeek迭代\\worker-02-solutions\\difficulty-matrix.md",
+            "C:\\开发\\小工具\\一本通DeepSeek迭代\\worker-05-synthesis\\chapter1-learning-path.md"
+          ],
+          "prerequisites": [
+            "坐标运算",
+            "平方距离",
+            "球面方程"
+          ],
+          "lesson_steps": [
+            "把两个距离的比例或等式平方，移项并完成平方，先判断轨迹类型。",
+            "从整理后的表达式读出球心、半径或空集条件，不代入原题答案。",
+            "把动点所在的线段、平面或球面限制与轨迹求交，单独记录可行性。",
+            "使用自造的两点和一个参数比例做练习，只核对轨迹类型和检查步骤。"
+          ],
+          "method_check": [
+            "能从距离关系推到轨迹，而不是看到‘球’字就直接套结论。",
+            "能检查比例退化、半径非正和与原几何范围不交的情形。",
+            "能把轨迹结论与后续数量积最值分成两个步骤。"
+          ],
+          "release_requirements": [
+            "补充无答案微课已具备",
+            "需要一个不含原题答案的自造变式",
+            "需要视觉/题面通过后再放行"
+          ],
+          "answer_leak_guard": "不携带原题答案、选项或答案册文本",
+          "target_question_keys": [
+            "1.2+1.3-C16",
+            "micro专题1-C5"
+          ]
+        }
+      ],
+      "coverage_gaps": [
+        "现有课程转写未检出阿波罗尼斯球/单变量化专门讲解；C15-C16 需专项桥接，不能把现有三门课标为完整覆盖。"
+      ],
+      "exit_gate": "基底分解、建系写点、坐标运算各一题独立完整；A组达到约定正确率；C15/C16远迁移单独补课。"
+    },
+    "sequential_learning_packet": {
+      "path": "data\\packets\\1.2_1.3\\learning_packet.json",
+      "status": "VERIFIED",
+      "counts": {
+        "worked_examples": 13,
+        "direct_variants": 4,
+        "abc_exercises": 16,
+        "total_numbered_learning_items": 33
+      },
+      "workflow_order": [
+        "repeat_each_learning_cycle_in_order",
+        "watch_current_courses",
+        "learn_each_current_example_then_attempt_its_direct_variants",
+        "attempt_current_abc_exercises_without_answers",
+        "assess_current_cycle_before_advancing",
+        "unseen_near_transfer",
+        "delayed_closed_book_review"
+      ],
+      "planning_scope": "complete_section_route",
+      "execution_scope": "current_cycle_only",
+      "cycle_count": 10,
+      "current_cycle": {
+        "cycle_id": "1.2_1.3-cycle-1",
+        "sequence": 1,
+        "title": "空间向量基本定理与基底判断",
+        "course_keys": [
+          "decomposition"
+        ],
+        "prerequisite_course_keys": [
+          "space_vector_ops"
+        ],
+        "knowledge_refs": [
+          "1.2-k1"
+        ],
+        "prerequisite_knowledge_refs": [],
+        "type_refs": [],
+        "example_numbers": [
+          1
+        ],
+        "variant_item_ids": [],
+        "exercise_keys": [
+          "B8"
+        ],
+        "bridge_unit_ids": [],
+        "method_checkpoint_ids": [],
+        "action_order": [
+          "watch_current_courses",
+          "learn_each_current_example_then_attempt_its_direct_variants",
+          "attempt_current_abc_exercises_without_answers",
+          "assess_current_cycle"
+        ],
+        "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+        "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。"
+      }
+    },
+    "question_coverage": [
+      {
+        "question_key": "A1",
+        "qid": "Q-6ed7e46c02ea0cbe",
+        "section": "1.2+1.3",
+        "group": "A",
+        "number": 1,
+        "unlock_class": "COURSE_DIRECT",
+        "course_keys": [
+          "coordinate_system",
+          "coordinate_ops"
+        ],
+        "course_transcript_status": "PRESENT",
+        "missing_course_keys": [],
+        "bridge_units": [],
+        "bridge_status": "NOT_REQUIRED",
+        "zero_base_status": "NOT_APPLICABLE",
+        "visual_status": "READY_TEXT_ONLY",
+        "visual_ready": true,
+        "packet_status": "VERIFIED",
+        "question_text_present": true,
+        "release_status": "COURSE_READY_NOT_MASTERY",
+        "mastery_status": "NOT_ASSESSED",
+        "blockers": []
+      },
+      {
+        "question_key": "A2",
+        "qid": "Q-9dc59a76b39b51c2",
+        "section": "1.2+1.3",
+        "group": "A",
+        "number": 2,
+        "unlock_class": "COURSE_DIRECT",
+        "course_keys": [
+          "coordinate_system",
+          "coordinate_ops"
+        ],
+        "course_transcript_status": "PRESENT",
+        "missing_course_keys": [],
+        "bridge_units": [],
+        "bridge_status": "NOT_REQUIRED",
+        "zero_base_status": "NOT_APPLICABLE",
+        "visual_status": "READY_TEXT_ONLY",
+        "visual_ready": true,
+        "packet_status": "VERIFIED",
+        "question_text_present": true,
+        "release_status": "COURSE_READY_NOT_MASTERY",
+        "mastery_status": "NOT_ASSESSED",
+        "blockers": []
+      },
+      {
+        "question_key": "A3",
+        "qid": "Q-8937bea007e341dc",
+        "section": "1.2+1.3",
+        "group": "A",
+        "number": 3,
+        "unlock_class": "COURSE_DIRECT",
+        "course_keys": [
+          "coordinate_system",
+          "coordinate_ops"
+        ],
+        "course_transcript_status": "PRESENT",
+        "missing_course_keys": [],
+        "bridge_units": [],
+        "bridge_status": "NOT_REQUIRED",
+        "zero_base_status": "NOT_APPLICABLE",
+        "visual_status": "READY_TEXT_ONLY",
+        "visual_ready": true,
+        "packet_status": "VERIFIED",
+        "question_text_present": true,
+        "release_status": "COURSE_READY_NOT_MASTERY",
+        "mastery_status": "NOT_ASSESSED",
+        "blockers": []
+      },
+      {
+        "question_key": "A4",
+        "qid": "Q-e3eea135920d1de5",
+        "section": "1.2+1.3",
+        "group": "A",
+        "number": 4,
+        "unlock_class": "COURSE_DIRECT",
+        "course_keys": [
+          "coordinate_system",
+          "coordinate_ops"
+        ],
+        "course_transcript_status": "PRESENT",
+        "missing_course_keys": [],
+        "bridge_units": [],
+        "bridge_status": "NOT_REQUIRED",
+        "zero_base_status": "NOT_APPLICABLE",
+        "visual_status": "READY_TEXT_ONLY",
+        "visual_ready": true,
+        "packet_status": "VERIFIED",
+        "question_text_present": true,
+        "release_status": "COURSE_READY_NOT_MASTERY",
+        "mastery_status": "NOT_ASSESSED",
+        "blockers": []
+      },
+      {
+        "question_key": "B5",
+        "qid": "Q-ca47ddb3109b2aa7",
+        "section": "1.2+1.3",
+        "group": "B",
+        "number": 5,
+        "unlock_class": "METHOD_BRIDGE",
+        "course_keys": [
+          "decomposition"
+        ],
+        "course_transcript_status": "PRESENT",
+        "missing_course_keys": [],
+        "bridge_units": [],
+        "bridge_status": "NOT_REQUIRED",
+        "zero_base_status": "NOT_APPLICABLE",
+        "visual_status": "VISION_VERIFIED",
+        "visual_ready": true,
+        "packet_status": "VERIFIED",
+        "question_text_present": true,
+        "release_status": "READY_FOR_INDEPENDENT_ATTEMPT",
+        "mastery_status": "NOT_ASSESSED",
+        "blockers": []
+      },
+      {
+        "question_key": "B6",
+        "qid": "Q-a0ac3d3dec067140",
+        "section": "1.2+1.3",
+        "group": "B",
+        "number": 6,
+        "unlock_class": "COURSE_DIRECT",
+        "course_keys": [
+          "coordinate_ops"
+        ],
+        "course_transcript_status": "PRESENT",
+        "missing_course_keys": [],
+        "bridge_units": [],
+        "bridge_status": "NOT_REQUIRED",
+        "zero_base_status": "NOT_APPLICABLE",
+        "visual_status": "READY_TEXT_ONLY",
+        "visual_ready": true,
+        "packet_status": "VERIFIED",
+        "question_text_present": true,
+        "release_status": "COURSE_READY_NOT_MASTERY",
+        "mastery_status": "NOT_ASSESSED",
+        "blockers": []
+      },
+      {
+        "question_key": "B7",
+        "qid": "Q-c0fa068ea13aa8b0",
+        "section": "1.2+1.3",
+        "group": "B",
+        "number": 7,
+        "unlock_class": "COURSE_DIRECT",
+        "course_keys": [
+          "coordinate_ops"
+        ],
+        "course_transcript_status": "PRESENT",
+        "missing_course_keys": [],
+        "bridge_units": [],
+        "bridge_status": "NOT_REQUIRED",
+        "zero_base_status": "NOT_APPLICABLE",
+        "visual_status": "READY_TEXT_ONLY",
+        "visual_ready": true,
+        "packet_status": "VERIFIED",
+        "question_text_present": true,
+        "release_status": "COURSE_READY_NOT_MASTERY",
+        "mastery_status": "NOT_ASSESSED",
+        "blockers": []
+      },
+      {
+        "question_key": "B8",
+        "qid": "Q-491d3349a231a63f",
+        "section": "1.2+1.3",
+        "group": "B",
+        "number": 8,
+        "unlock_class": "METHOD_BRIDGE",
+        "course_keys": [
+          "coordinate_ops"
+        ],
+        "course_transcript_status": "PRESENT",
+        "missing_course_keys": [],
+        "bridge_units": [],
+        "bridge_status": "NOT_REQUIRED",
+        "zero_base_status": "NOT_APPLICABLE",
+        "visual_status": "READY_TEXT_ONLY",
+        "visual_ready": true,
+        "packet_status": "VERIFIED",
+        "question_text_present": true,
+        "release_status": "READY_FOR_INDEPENDENT_ATTEMPT",
+        "mastery_status": "NOT_ASSESSED",
+        "blockers": []
+      },
+      {
+        "question_key": "B9",
+        "qid": "Q-0e25875e8ce0e2b0",
+        "section": "1.2+1.3",
+        "group": "B",
+        "number": 9,
+        "unlock_class": "METHOD_BRIDGE",
+        "course_keys": [
+          "decomposition"
+        ],
+        "course_transcript_status": "PRESENT",
+        "missing_course_keys": [],
+        "bridge_units": [],
+        "bridge_status": "NOT_REQUIRED",
+        "zero_base_status": "NOT_APPLICABLE",
+        "visual_status": "VISION_VERIFIED",
+        "visual_ready": true,
+        "packet_status": "VERIFIED",
+        "question_text_present": true,
+        "release_status": "READY_FOR_INDEPENDENT_ATTEMPT",
+        "mastery_status": "NOT_ASSESSED",
+        "blockers": []
+      },
+      {
+        "question_key": "B10",
+        "qid": "Q-4cc4fab641617085",
+        "section": "1.2+1.3",
+        "group": "B",
+        "number": 10,
+        "unlock_class": "METHOD_BRIDGE",
+        "course_keys": [
+          "coordinate_ops"
+        ],
+        "course_transcript_status": "PRESENT",
+        "missing_course_keys": [],
+        "bridge_units": [],
+        "bridge_status": "NOT_REQUIRED",
+        "zero_base_status": "NOT_APPLICABLE",
+        "visual_status": "READY_TEXT_ONLY",
+        "visual_ready": true,
+        "packet_status": "VERIFIED",
+        "question_text_present": true,
+        "release_status": "READY_FOR_INDEPENDENT_ATTEMPT",
+        "mastery_status": "NOT_ASSESSED",
+        "blockers": []
+      },
+      {
+        "question_key": "B11",
+        "qid": "Q-bba50604ebcccacf",
+        "section": "1.2+1.3",
+        "group": "B",
+        "number": 11,
+        "unlock_class": "COURSE_DIRECT",
+        "course_keys": [
+          "coordinate_system",
+          "coordinate_ops"
+        ],
+        "course_transcript_status": "PRESENT",
+        "missing_course_keys": [],
+        "bridge_units": [],
+        "bridge_status": "NOT_REQUIRED",
+        "zero_base_status": "NOT_APPLICABLE",
+        "visual_status": "READY_TEXT_ONLY",
+        "visual_ready": true,
+        "packet_status": "VERIFIED",
+        "question_text_present": true,
+        "release_status": "COURSE_READY_NOT_MASTERY",
+        "mastery_status": "NOT_ASSESSED",
+        "blockers": []
+      },
+      {
+        "question_key": "B12",
+        "qid": "Q-16e242b54c60a9aa",
+        "section": "1.2+1.3",
+        "group": "B",
+        "number": 12,
+        "unlock_class": "COURSE_DIRECT",
+        "course_keys": [
+          "coordinate_ops"
+        ],
+        "course_transcript_status": "PRESENT",
+        "missing_course_keys": [],
+        "bridge_units": [],
+        "bridge_status": "NOT_REQUIRED",
+        "zero_base_status": "NOT_APPLICABLE",
+        "visual_status": "READY_TEXT_ONLY",
+        "visual_ready": true,
+        "packet_status": "VERIFIED",
+        "question_text_present": true,
+        "release_status": "COURSE_READY_NOT_MASTERY",
+        "mastery_status": "NOT_ASSESSED",
+        "blockers": []
+      },
+      {
+        "question_key": "B13",
+        "qid": "Q-3b98ee5668cad691",
+        "section": "1.2+1.3",
+        "group": "B",
+        "number": 13,
+        "unlock_class": "COURSE_DIRECT",
+        "course_keys": [
+          "coordinate_system",
+          "coordinate_ops"
+        ],
+        "course_transcript_status": "PRESENT",
+        "missing_course_keys": [],
+        "bridge_units": [],
+        "bridge_status": "NOT_REQUIRED",
+        "zero_base_status": "NOT_APPLICABLE",
+        "visual_status": "VISION_VERIFIED",
+        "visual_ready": true,
+        "packet_status": "VERIFIED",
+        "question_text_present": true,
+        "release_status": "COURSE_READY_NOT_MASTERY",
+        "mastery_status": "NOT_ASSESSED",
+        "blockers": []
+      },
+      {
+        "question_key": "C14",
+        "qid": "Q-8bc83f44a0a18ca0",
+        "section": "1.2+1.3",
+        "group": "C",
+        "number": 14,
+        "unlock_class": "MICRO_UNIT",
+        "course_keys": [
+          "decomposition",
+          "coordinate_ops"
+        ],
+        "course_transcript_status": "PRESENT",
+        "missing_course_keys": [],
+        "bridge_units": [
+          {
+            "id": "micro-four-point-coplanar",
+            "title": "四点共面系数和=1",
+            "release_status": "SUPPLEMENT_READY",
+            "source_status": "UNKNOWN",
+            "curriculum_status": "SUPPLEMENT_READY",
+            "target_questions": [
+              "1.1-C13",
+              "1.1-C14",
+              "1.2+1.3-C14"
+            ],
+            "zero_base_status": "NOT_VERIFIED",
+            "zero_base_note": null
+          }
+        ],
+        "bridge_status": "SUPPLEMENT_READY",
+        "zero_base_status": "NOT_APPLICABLE",
+        "visual_status": "VISION_VERIFIED",
+        "visual_ready": true,
+        "packet_status": "VERIFIED",
+        "question_text_present": true,
+        "release_status": "READY_FOR_INDEPENDENT_ATTEMPT",
+        "mastery_status": "NOT_ASSESSED",
+        "blockers": []
+      },
+      {
+        "question_key": "C15",
+        "qid": "Q-3e85a8a45c48effa",
+        "section": "1.2+1.3",
+        "group": "C",
+        "number": 15,
+        "unlock_class": "MICRO_UNIT",
+        "course_keys": [
+          "coordinate_ops"
+        ],
+        "course_transcript_status": "PRESENT",
+        "missing_course_keys": [],
+        "bridge_units": [
+          {
+            "id": "bridge-1.2-single-variable",
+            "title": "空间动点单变量化配方",
+            "release_status": "SUPPLEMENT_READY",
+            "source_status": "UNKNOWN",
+            "curriculum_status": "SUPPLEMENT_READY",
+            "target_questions": [
+              "1.2+1.3-C15",
+              "1.2+1.3-C16",
+              "micro专题1-B1",
+              "micro专题1-C6"
+            ],
+            "zero_base_status": "NOT_VERIFIED",
+            "zero_base_note": null
+          }
+        ],
+        "bridge_status": "SUPPLEMENT_READY",
+        "zero_base_status": "NOT_APPLICABLE",
+        "visual_status": "READY_TEXT_ONLY",
+        "visual_ready": true,
+        "packet_status": "VERIFIED",
+        "question_text_present": true,
+        "release_status": "READY_FOR_INDEPENDENT_ATTEMPT",
+        "mastery_status": "NOT_ASSESSED",
+        "blockers": []
+      },
+      {
+        "question_key": "C16",
+        "qid": "Q-9e0354161f002565",
+        "section": "1.2+1.3",
+        "group": "C",
+        "number": 16,
+        "unlock_class": "MICRO_UNIT",
+        "course_keys": [
+          "coordinate_ops"
+        ],
+        "course_transcript_status": "PRESENT",
+        "missing_course_keys": [],
+        "bridge_units": [
+          {
+            "id": "bridge-1.1-polarization",
+            "title": "极化恒等式与数量积最值",
+            "release_status": "SUPPLEMENT_READY",
+            "source_status": "UNKNOWN",
+            "curriculum_status": "SUPPLEMENT_READY",
+            "target_questions": [
+              "1.1-B8",
+              "1.2+1.3-C16"
+            ],
+            "zero_base_status": "NOT_VERIFIED",
+            "zero_base_note": null
+          },
+          {
+            "id": "bridge-1.2-single-variable",
+            "title": "空间动点单变量化配方",
+            "release_status": "SUPPLEMENT_READY",
+            "source_status": "UNKNOWN",
+            "curriculum_status": "SUPPLEMENT_READY",
+            "target_questions": [
+              "1.2+1.3-C15",
+              "1.2+1.3-C16",
+              "micro专题1-B1",
+              "micro专题1-C6"
+            ],
+            "zero_base_status": "NOT_VERIFIED",
+            "zero_base_note": null
+          },
+          {
+            "id": "bridge-1.2-apollonius",
+            "title": "阿波罗尼斯球与等距轨迹",
+            "release_status": "SUPPLEMENT_READY",
+            "source_status": "UNKNOWN",
+            "curriculum_status": "SUPPLEMENT_READY",
+            "target_questions": [
+              "1.2+1.3-C16",
+              "micro专题1-C5"
+            ],
+            "zero_base_status": "NOT_VERIFIED",
+            "zero_base_note": null
+          }
+        ],
+        "bridge_status": "SUPPLEMENT_READY",
+        "zero_base_status": "NOT_APPLICABLE",
+        "visual_status": "READY_TEXT_ONLY",
+        "visual_ready": true,
+        "packet_status": "VERIFIED",
+        "question_text_present": true,
+        "release_status": "READY_FOR_INDEPENDENT_ATTEMPT",
+        "mastery_status": "NOT_ASSESSED",
+        "blockers": []
+      }
+    ],
+    "bridge_micro_lessons": [
+      {
+        "id": "micro-four-point-coplanar",
+        "title": "四点共面系数和=1",
+        "sections": [
+          "1.1",
+          "1.2+1.3"
+        ],
+        "target_questions": [
+          "1.1-C13",
+          "1.1-C14",
+          "1.2+1.3-C14"
+        ],
+        "status": "SUPPLEMENT_READY",
+        "supplement_path": "data/bridge_supplement_lessons.json",
+        "source_evidence": [
+          "data/bridge_supplement_lessons.json",
+          "C:\\开发\\小工具\\一本通DeepSeek迭代\\worker-02-solutions\\difficulty-matrix.md",
+          "C:\\开发\\小工具\\一本通DeepSeek迭代\\worker-05-synthesis\\chapter1-learning-path.md"
+        ],
+        "prerequisites": [
+          "空间向量线性表示",
+          "共面向量定义"
+        ],
+        "lesson_steps": [
+          "固定公共起点 O，把待判定点写成 OP=xOA+yOB+zOC。",
+          "正向证明：若 P 在平面 ABC 内，写 AP=uAB+vAC，换回公共起点得 OP=(1-u-v)OA+uOB+vOC，所以 x+y+z=1。",
+          "逆向证明：若 x+y+z=1，则 OP=OA+yAB+zAC，点 P 可由 A 沿平面内两条方向到达，因此 P 在平面 ABC 内。",
+          "最后区分点的位置向量系数与任意自由向量系数；换公共起点时必须重新推导。"
+        ],
+        "method_check": [
+          "能说明为什么三点共面时系数和为1，而不是把它当成记忆口号。",
+          "能区分三点共线的二维系数条件与四点共面的三维系数条件。",
+          "能在最后回代几何位置，排除把向量共面误写成点共面的情况。"
+        ],
+        "release_requirements": [
+          "方法题独立完成1题",
+          "同构变式独立完成1题",
+          "口述系数和成立理由"
+        ],
+        "answer_leak_guard": "不携带原题答案、选项或答案册文本"
+      },
+      {
+        "id": "bridge-1.1-polarization",
+        "title": "极化恒等式与数量积最值",
+        "sections": [
+          "1.1",
+          "1.2+1.3"
+        ],
+        "target_questions": [
+          "1.1-B8",
+          "1.2+1.3-C16"
+        ],
+        "target_learning_items": [
+          "教材例14"
+        ],
+        "status": "SUPPLEMENT_READY",
+        "supplement_path": "data/bridge_supplement_lessons.json",
+        "source_evidence": [
+          "data/bridge_supplement_lessons.json",
+          "C:\\开发\\小工具\\一本通DeepSeek迭代\\worker-02-solutions\\difficulty-matrix.md",
+          "C:\\开发\\小工具\\一本通DeepSeek迭代\\worker-05-synthesis\\final-learning-flow.md"
+        ],
+        "prerequisites": [
+          "数量积",
+          "向量模长平方",
+          "中点向量表示"
+        ],
+        "lesson_steps": [
+          "展开 \\(|a+b|^2=(a+b)\\cdot(a+b)\\)，得到 \\(2a\\cdot b=|a+b|^2-|a|^2-|b|^2\\)；展开 \\(|a-b|^2\\)，得到 \\(2a\\cdot b=|a|^2+|b|^2-|a-b|^2\\)。",
+          "题目给和向量、差向量或中点距离时，先选能直接替换目标数量积的一种形式，不同时套两套恒等式。",
+          "先区分全空间型与区域型最值：任意点没有额外区域时，先完成平方或用中点恒等式判断等号点；动点被限制在长方体、平面或线段内时，还要在真实定义域内检查端点、顶点、边界和内部点。",
+          "最后回代原几何对象，确认中心点、中点、向量方向和定义域没有被替换错。"
+        ],
+        "method_check": [
+          "能在不看答案时写出恒等式的来源，而不是只套符号。",
+          "能说明为什么几何约束会限制模长平方的取值范围。",
+          "能把猜中的数值与有完整过程的独立通过分开记录。"
+        ],
+        "self_made_variant": "先处理一个任意点的数量积最值，再把同一动点限制在一个长方体内；只写‘恒等式选择—可行域—等号/边界检查’三栏，不填写原题答案。",
+        "release_requirements": [
+          "原型题独立过程完整",
+          "全空间型与区域型各做一题无答案近迁移",
+          "等号成立条件可解释"
+        ],
+        "answer_leak_guard": "不携带原题答案、选项或答案册文本"
+      },
+      {
+        "id": "bridge-1.2-single-variable",
+        "title": "空间动点单变量化配方",
+        "sections": [
+          "1.2+1.3",
+          "micro专题1"
+        ],
+        "target_questions": [
+          "1.2+1.3-C15",
+          "1.2+1.3-C16",
+          "micro专题1-B1",
+          "micro专题1-C6"
+        ],
+        "status": "SUPPLEMENT_READY",
+        "supplement_path": "data/bridge_supplement_lessons.json",
+        "source_evidence": [
+          "C:\\开发\\小工具\\一本通DeepSeek迭代\\worker-02-solutions\\difficulty-matrix.md",
+          "C:\\Users\\poyi\\Downloads\\e\\_analysis\\transcripts\\3.1.4.8 动点问题.json"
+        ],
+        "prerequisites": [
+          "空间直角坐标系",
+          "直线参数表示",
+          "定义域"
+        ],
+        "lesson_steps": [
+          "先判断动点所在的线段或直线，再用 P=A+λv 表示并写出 λ 的几何定义域。",
+          "把距离、数量积或夹角条件逐一化成 λ 的表达式，保留原始几何约束。",
+          "对得到的函数先看定义域，再做配方、判别式或单调性判断。",
+          "若有两个动点，先只固定其中一个练习单变量流程，再升级到双参数化。"
+        ],
+        "method_check": [
+          "能说清参数零点、端点和方向向量分别代表什么。",
+          "能区分函数极值与题目要求的存在性。",
+          "能在参数求出后回到线段范围检查，不把直线上的解当成线段上的解。"
+        ],
+        "release_requirements": [
+          "单变量规划独立完成",
+          "含定义域的近变式独立完成",
+          "一次延迟冷复述"
+        ],
+        "answer_leak_guard": "不携带原题答案、选项或答案册文本"
+      },
+      {
+        "id": "bridge-1.2-apollonius",
+        "title": "阿波罗尼斯球与等距轨迹",
+        "sections": [
+          "1.2+1.3",
+          "micro专题1"
+        ],
+        "target_questions": [
+          "1.2+1.3-C16",
+          "micro专题1-C5"
+        ],
+        "status": "SUPPLEMENT_READY",
+        "supplement_path": "data/bridge_supplement_lessons.json",
+        "source_evidence": [
+          "C:\\开发\\小工具\\一本通DeepSeek迭代\\worker-02-solutions\\difficulty-matrix.md",
+          "C:\\开发\\小工具\\一本通DeepSeek迭代\\worker-05-synthesis\\chapter1-learning-path.md"
+        ],
+        "prerequisites": [
+          "坐标运算",
+          "平方距离",
+          "球面方程"
+        ],
+        "lesson_steps": [
+          "把两个距离的比例或等式平方，移项并完成平方，先判断轨迹类型。",
+          "从整理后的表达式读出球心、半径或空集条件，不代入原题答案。",
+          "把动点所在的线段、平面或球面限制与轨迹求交，单独记录可行性。",
+          "使用自造的两点和一个参数比例做练习，只核对轨迹类型和检查步骤。"
+        ],
+        "method_check": [
+          "能从距离关系推到轨迹，而不是看到‘球’字就直接套结论。",
+          "能检查比例退化、半径非正和与原几何范围不交的情形。",
+          "能把轨迹结论与后续数量积最值分成两个步骤。"
+        ],
+        "release_requirements": [
+          "补充无答案微课已具备",
+          "需要一个不含原题答案的自造变式",
+          "需要视觉/题面通过后再放行"
+        ],
+        "answer_leak_guard": "不携带原题答案、选项或答案册文本"
+      }
+    ]
+  },
+  "instructions": [
+    "先核对 status；UNVERIFIED 只可报告缺口，不可讲题或报答案。",
+    "question_text、page text 和 vision_sidecar/vision_sidecars 是唯一输入；不要假设看到了原图。",
+    "缺失图片、乱码公式、题号不确定必须标记 unknown/E0。",
+    "课程覆盖不能替代学生 mastery；猜中、提示后、看答案必须保持污染。",
+    "route_support.learning_plan 只用于核对整节路线；实际回复只执行 route_support.sequential_learning_packet.current_cycle，不展示或推进后续循环。",
+    "当前循环按 course_keys→knowledge_refs/type_refs→例题及其紧跟变式→exercise_keys→本批验收推进。",
+    "learning_items 是完整章节路线中的无答案例题/直属变式题面；教学阶段必须先学习例题方法，独立作答阶段不得读取 teaching_text 或任何答案字段。",
+    "每个 learning_items 记录都必须按 visual_status 执行；NEEDS_VISION_SIDECAR、MISSING_OCR_ANCHOR 或 UNVERIFIED 只能记录 BLOCKED，不能猜图。",
+    "独立作答前必须由编排器单独完成 route_support.sequential_learning_packet 指向的知识页、例题教学和无答案直接变式；不得在独立作答阶段重新读取例题解法。",
+    "route_support.question_coverage 只表示解锁/阻断，不表示学生已经掌握。",
+    "route_support.bridge_micro_lessons 只提供无答案方法骨架；SUPPLEMENT_READY 表示补充课文本已具备，不表示学生 mastery；SUPPLEMENT_REQUIRED 表示仍缺课。",
+    "独立消费探针：先回显 evidence.canary；对指定 qid 计算 sha256(canary+qid) 前8位，并只复述该题当前可见字段；不得输出答案册内容。"
+  ]
+}

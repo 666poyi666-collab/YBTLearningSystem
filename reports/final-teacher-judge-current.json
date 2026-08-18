@@ -1,0 +1,137 @@
+﻿{
+  "report": "final-teacher-judge-current",
+  "schema_version": "2.0",
+  "judge_role": "final_teacher_grader",
+  "checked_at": "2026-08-14T18:05:00+08:00",
+  "judge_status": "same_session_workflow_pass",
+  "judge_status_conditions": [
+    "66 项独立结果无未决（correct 66/66；disputed 0；unverifiable 0）",
+    "6 个此前 disputed 均已由学生文件更新为 prompted_correction_pass 且保留 original_result，不冒充 clean first-attempt",
+    "16 变式 16/16 独立数学 agreed（含 variant-independent-check-current.json 六题）",
+    "B12 pass_source_ambiguity；C7 prompted_correction 双支且 crosscheck 仅作歧义分析",
+    "unseen_transfer 4/4 与预期一致；24h_cold_retest 全部 not_run",
+    "build-result 17:00:31 四包 VERIFIED、contexts 4/4 passed、0 空页、50/50 可消费"
+  ],
+  "overall_mastery": "NOT_24H_MASTERED（same_session_workflow_pass 不代表隔日掌握；24h_cold_retest=not_run，不得写 24h mastered）",
+  "inputs": [
+    "reports/student-1.1-current.json (17:10:48, 含 A3 prompted_correction_pass)",
+    "reports/student-1.2_1.3-current.json (17:10:53, 含 B5 prompted_correction_pass)",
+    "reports/student-1.4-current.json (17:12:30, 含 C11/C12 prompted_correction_pass)",
+    "reports/student-micro-current.json (17:11:48, 含 B2/B4 prompted_correction_pass、C7 prompted_correction)",
+    "reports/variant-independent-check-current.json (17:12:08, 6/6 agreed)",
+    "reports/student-1.1-unseen-transfer-current.json / 1.2_1.3 / 1.4 / micro (17:04)",
+    "reports/build-result.json (17:00:31)",
+    "tests evidence: final-acceptance.json 16:13 记录 73 用例 passed；test_runtime.py 16:46、test_manifest_fidelity.py 15:42（最新门禁由父控独立执行）",
+    "data/packets/*/answer_sidecar.json、learning_packet.json、chapter1_manifest.json（前轮已核）"
+  ],
+  "ledger": {
+    "worked_examples": 58,
+    "direct_variants": 16,
+    "abc_exercises": 50,
+    "total_numbered_learning_items": 124,
+    "ledger_match": true,
+    "per_section": {
+      "1.1": { "worked_examples": 16, "direct_variants": 8, "abc_exercises": 14, "total": 38 },
+      "1.2+1.3": { "worked_examples": 13, "direct_variants": 4, "abc_exercises": 16, "total": 33 },
+      "1.4": { "worked_examples": 22, "direct_variants": 3, "abc_exercises": 12, "total": 37 },
+      "micro专题1": { "worked_examples": 7, "direct_variants": 1, "abc_exercises": 8, "total": 16 }
+    }
+  },
+  "worked_examples": {
+    "total": 58,
+    "understood": 58,
+    "per_section": { "1.1": "16/16", "1.2+1.3": "13/13", "1.4": "22/22", "micro专题1": "7/7" },
+    "counted_as_independent_mastery": false,
+    "note": "教学例题仅计学习理解，逐项 understood 记录已确认，不计独立掌握"
+  },
+  "variants": {
+    "total": 16,
+    "correct": 16,
+    "independent_math_agreed": 16,
+    "per_section": { "1.1": "8/8", "1.2+1.3": "4/4", "1.4": "3/3", "micro专题1": "1/1" },
+    "source": "10 项前轮独立数学复核 + 6 项 variant-independent-check-current.json 独立完整推导（例11变式1/2、例12变式、例15变式1、1.2 DV1、DV2）",
+    "answer_side_note": "变式无独立答案侧（design：仅题干、解答隔离）；16/16 全部为判卷员独立数学推导 agreed，未假称存在 sidecar"
+  },
+  "exercises": {
+    "total": 50,
+    "correct": 50,
+    "clean_first_attempt": 42,
+    "prompted_correction": 7,
+    "source_ambiguity": 1,
+    "unverifiable": 0,
+    "disputed": 0,
+    "prompted_items": [
+      { "item": "1.1-A3(2)", "original": "AC1", "corrected": "A1C（(1)(3) 原独立结果未变）" },
+      { "item": "1.2+1.3-B5", "original": "选 A（推导正确、字母映射误标）", "corrected": "选 C（MN=-(3/4)a+(2/3)b+(1/3)c）" },
+      { "item": "1.4-C11(3)", "original": "AG 不在平面 AEF 内（镜像坐标错）", "corrected": "AG 在平面 AEF 内（B(-1,2,0)，G 满足面方程）" },
+      { "item": "1.4-C12(2)", "original": "存在 G=(1/3,1/3,-1/3)（底面下方）", "corrected": "不存在（候选点在棱锥外，不属于截面 AEF）" },
+      { "item": "micro-B2", "original": "AB", "corrected": "ABD（D 项 EG² 符号修正，θ=π/3）" },
+      { "item": "micro-B4(2)", "original": "1/8", "corrected": "-1/8（钝角符号）" },
+      { "item": "micro-C7", "original": "仅 sin=√3/2（示意图排除另一支）", "corrected": "双支 {√3/2, √3/4}（题设重推导；crosscheck 仅作二面角符号口径歧义分析，不作无条件证明）" }
+    ],
+    "source_ambiguity_items": [
+      { "item": "1.2+1.3-B12", "verdict": "pass_source_ambiguity", "answer_book": "双值 {13,19}", "printed_question": "欠定（第32页视觉确认无额外约束）", "student": "{13,19} + source ambiguity" }
+    ]
+  },
+  "independent_items_66": {
+    "total": 66,
+    "correct": 66,
+    "clean_first_attempt": 57,
+    "prompted_correction": 7,
+    "source_ambiguity": 1,
+    "exposure_caveat_not_first_attempt": 1,
+    "unverifiable": 0,
+    "disputed": 0,
+    "breakdown": "correct 66 = clean_first_attempt 57（42 习题首过 + 15 变式）+ prompted_correction 7 + source_ambiguity 1 + exposure_caveat 1（micro 变式：审计轮视觉转写暴露后独立重做，文件自注非 unseen）",
+    "per_section_final": {
+      "1.1": { "variants": "8/8", "exercises": "14/14（13 首过 + A3 prompted）" },
+      "1.2+1.3": { "variants": "4/4", "exercises": "16/16（14 首过 + B5 prompted + B12 ambiguity）" },
+      "1.4": { "variants": "3/3", "exercises": "12/12（10 首过 + C11/C12 prompted）" },
+      "micro专题1": { "variants": "1/1（exposure caveat）", "exercises": "8/8（5 首过 + B2/B4/C7 prompted）" }
+    }
+  },
+  "b12": {
+    "verdict": "pass_source_ambiguity",
+    "answer_book_single_value": false,
+    "answer_book_values": ["13", "19"],
+    "printed_question_underdetermined": true,
+    "visual_evidence": "原书第32页渲染 + 240dpi 父控核对：无 n>0 等约束",
+    "independent_math": "m=8, n=±1, a·c ∈ {13,19}",
+    "student_answer": "{13,19} + source ambiguity 标记",
+    "student_not_partial": true,
+    "source_defect": "教材题目欠定（非 OCR 缺陷）；答案册未给单值"
+  },
+  "c7": {
+    "verdict": "prompted_correction pass",
+    "final_answer": "sin ∈ {√3/2, √3/4}（双支）",
+    "answer_book": "保留两值（√3/2 或 √3/4）",
+    "clean_first_attempt": false,
+    "crosscheck_report_role": "ambiguity_analysis_only",
+    "crosscheck_finding": "标准二面角半平面约定下仅 B1 支匹配 cos=+√5/5；按两平面锐角(|cos|)解释则 B2 支亦满足；sidecar 无度量数据（objects 缺 A1、无 coordinates/ranges/text）",
+    "cannot_claim": "交叉检查不得作为独立无条件证明双支的证据"
+  },
+  "unseen_transfer": {
+    "verdict": "pass",
+    "total": 4,
+    "answers_match_expected": 4,
+    "clean_unseen_declared": true,
+    "details": [
+      { "section": "1.1", "expected": "|MN|=7/2", "student": "7/2", "match": true },
+      { "section": "1.2+1.3", "expected": "x=0, c·b=5, 投影=0", "student": "x=0, c·b=5, 投影=(0,0,0)", "match": true },
+      { "section": "1.4", "expected": "sin=√3/3", "student": "√3/3", "match": true },
+      { "section": "micro专题1", "expected": "d=2√3/3", "student": "2√3/3（双法交叉验证）", "match": true }
+    ],
+    "independent_exposure_audit": "not_performed（干净性以学生声明为准）"
+  },
+  "24h_cold_retest": "not_run",
+  "leak_checks": {
+    "forbidden_source_declarations": "9/9 文件齐全（4 份 same_session 更新版 + 4 份 unseen + crosscheck 均声明答案侧未读）",
+    "student_packet_empty_pages": "0/69（16:49 构建复核；build-result 17:00 页数 18/15/22/14 一致）",
+    "packet_gate": "build-result 17:00:31：4/4 VERIFIED，unresolved 0",
+    "context_gate": "4/4 validate passed（含 answer_leak 模式）",
+    "coverage_gate": "50/50 可消费（31 VISION_VERIFIED + 19 READY_TEXT_ONLY），attempt_ready_gate=true",
+    "latest_test_gate": "记录在案 73/73（final-acceptance 16:13）；最新测试门禁由父控独立执行，判卷员未代为运行"
+  },
+  "same_session_verdict": "pass（66/66 正确；其中 7 prompted_correction + 1 source_ambiguity + 1 exposure_caveat 不按首次独立计）",
+  "overall_verdict_text": "same_session_workflow_pass：66 独立项全部正确、无未决，16 变式 16/16 独立数学 agreed，58 例题 understood 不计掌握，unseen 4/4，泄漏门禁通过。整体掌握仍止步 same_session：24h_cold_retest=not_run，不得宣称 24h mastered。"
+}

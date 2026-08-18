@@ -1,0 +1,28 @@
+{
+  "schema_version": "7.1",
+  "type": "5_zero_base_plus_5_self_simulation",
+  "source": "本线程当前运行中已完成的10个DeepSeek worker回传；不是静态关键词自模拟",
+  "model_contract": {"agent_type": "deepseek_worker", "model": "opencode-go/deepseek-v4-flash", "reasoning_effort": "max", "context_window": 1000000},
+  "zero_base": [
+    {"id": "Z1", "scope": "第1节", "result": "conditional", "gaps": ["B8极化恒等式微单元", "C14后续章节依赖", "实时奖励未测"]},
+    {"id": "Z2", "scope": "第2节", "result": "conditional", "gaps": ["C15/C16远迁移", "OCR题号和课程映射校验"]},
+    {"id": "Z3", "scope": "第3节", "result": "unknown_visual", "gaps": ["图形/翻折/二面角视觉侧车", "公式乱码校验"]},
+    {"id": "Z4", "scope": "第4节", "result": "conditional", "gaps": ["动态二面角双参数", "补形/外接球微单元"]},
+    {"id": "Z5", "scope": "全章用户体验裁判", "result": "conditional", "gaps": ["奖励接口原先不存在", "真实学生未测", "视觉题不能由纯文本独立完成"]}
+  ],
+  "self_simulation": [
+    {"id": "S1", "scope": "本人A", "result": "rules_pass", "gaps": ["F3桥接题号标签需严格区分"]},
+    {"id": "S2", "scope": "本人B", "result": "rules_pass", "gaps": ["第2节题号与课程重复映射"]},
+    {"id": "S3", "scope": "本人C", "result": "conditional_visual", "gaps": ["A1图形和折叠题需要视觉侧车"]},
+    {"id": "S4", "scope": "本人D", "result": "conditional", "gaps": ["C7双参数、基础补课"]},
+    {"id": "S5", "scope": "本人E", "result": "conditional", "gaps": ["奖励原先缺失", "视觉闭环和实时行为未完成"]}
+  ],
+  "round2_workers": [
+    {"worker_id": "019ffb5d-1509-7cf1-8c93-630479bf7766", "scope": "Z1/S1 第1节", "zero_base": "FAIL", "self_agent": "PARTIAL", "evidence": ["第二轮独立 worker 回传", "题面/视觉/答案/近迁移缺口"]},
+    {"worker_id": "019ffb5d-179b-7b53-80ab-4781f295498d", "scope": "Z2/S2 第2节", "zero_base": "FAIL", "self_agent": "PARTIAL", "evidence": ["第二轮独立 worker 回传", "题面/课程映射/答案/复测缺口"]},
+    {"worker_id": "019ffb5d-1825-70f0-a43d-851e333eda00", "scope": "Z3/S3 第3节", "zero_base": "FAIL", "self_agent": "PARTIAL", "evidence": ["第二轮独立 worker 回传", "公式/视觉/类型映射缺口"]},
+    {"worker_id": "019ffb5d-18ad-7960-816a-73152c01abda", "scope": "Z4/S4 微专题", "zero_base": "FAIL", "self_agent": "PARTIAL", "evidence": ["第二轮独立 worker 回传", "B组题面/公式/视觉/复测缺口"]},
+    {"worker_id": "019ffb5d-1938-7113-86f6-01da1d7deaea", "scope": "Z5/S5 全章裁判", "zero_base": "FAIL", "self_agent": "PARTIAL", "evidence": ["第二轮独立 worker 回传", "50题发布门槛未达成"]}
+  ],
+  "verdict": "当前运行层已补齐奖励/状态/答案隔离/课程计划；视觉解析已严格 fail-closed，但四节完整发布仍受视觉侧车未全覆盖、课程桥接缺口、8.5g未知和百度/千帆OCR链未核验约束。已有5个零基础+5个本人模拟均未通过全章完整掌握门槛，不能把模拟结果升级为通过。"
+}

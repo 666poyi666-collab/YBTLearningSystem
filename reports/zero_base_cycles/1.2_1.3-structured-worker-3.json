@@ -1,0 +1,400 @@
+{
+ "schema_version": "1.2+1.3-10cycles",
+ "section": "1.2+1.3",
+ "worker": 3,
+ "generation": "G-CH1-S12-01",
+ "worker_status": "COMPLETED",
+ "scope": {
+  "tasks": [
+   "15",
+   "16",
+   "17",
+   "18",
+   "19",
+   "20",
+   "21"
+  ],
+  "item_count": 7,
+  "note": "任务15-21：循环5 末（例7）+ 循环6（例8、例9、B7、B10）+ 循环7 首（例10、变式1(10)）"
+ },
+ "context_binding": {
+  "canary": "01cb4018b3977ceb",
+  "context_sha256": "271c68719a46b628e716267fb786ee13c4e40bec9523ffe4f005fada1c05fd86",
+  "context_file": "data/contexts/1.2_1.3.json",
+  "binding": "worker must echo canary and answer derived probes from this exact context",
+  "probe_qids": [
+   "Q-6ed7e46c02ea0cbe",
+   "Q-9dc59a76b39b51c2",
+   "Q-8937bea007e341dc"
+  ],
+  "probe_tokens": {
+   "Q-6ed7e46c02ea0cbe": "d9f08af0",
+   "Q-9dc59a76b39b51c2": "9819bc0a",
+   "Q-8937bea007e341dc": "638a9259"
+  },
+  "probe_answered_in_items": [
+   "A1",
+   "A2",
+   "A3"
+  ],
+  "gate": {
+   "file": "reports/builds/1.2_1.3-build.json",
+   "read_at": "2026-08-16T22:02:19",
+   "built_at_declared": "2026-08-16T22:10:00",
+   "worker": "build-1.2-1.3",
+   "hard_constraint": "33 项不变（13 例题+4 变式+16 习题，item_id/qid 复用），10 循环重构",
+   "test_results": "104 passed / 2 failed（均与本节无关：1.4-k3 重复渲染、1.1 台账哈希失配）"
+  },
+  "context_finalized_at": "2026-08-16T22:03:40",
+  "context_stability": "mtime 22:03:40 后 3 分钟无变化（确认至 22:06:56）",
+  "note": "上下文在轮询期间被构建流水线多次重写（688be4…→b08a72…→7628a1…→终版 271c68…），终版 evidence 已核对；五门课程文稿（3.1.1.1/3.1.2.1/3.1.2.2/3.1.3.1/3.1.3.2）已全部通读"
+ },
+ "answer_sidecar_read": false,
+ "human_acceptance_not_proven": true,
+ "verdicts_summary": {
+  "PASS": 6,
+  "BLOCKED": 1
+ },
+ "method_check_results": [
+  {
+   "method_key": "1.2_1.3-coplanar-check-1",
+   "label": "方法检查：重心向量表示独立推导",
+   "cycle": 9,
+   "status": "CLOSED",
+   "verdict": "PASS",
+   "note": "学生独立推导：三角形重心=三点平均（G 为 △ABC 重心 ⇒ SG=⅓(SA+SB+SC)，源自 3.1.2.2 等值面法重心特性），并在 B9（任务13）、C14（任务31）中实际调用；等值面复核系数和。"
+  },
+  {
+   "method_key": "1.2_1.3-coplanar-check-2",
+   "label": "方法检查：截线共面条件自造验证",
+   "cycle": 9,
+   "status": "CLOSED",
+   "verdict": "PASS",
+   "note": "自造无答案验证：三棱锥 S-ABC，取 SA/SB/SC 中点 D,E,F，平面 DEF 为 ½ 倍面（位置向量系数和 ½=½(u+v+w)）；SG 中点 M 的 SM=¼(SA+SB+SC) 系数和 ¾≠½ ⇒ M 不在平面 DEF；与 C14 中『系数和=1 判定点面位置』正反互证。"
+  },
+  {
+   "method_key": "1.2_1.3-single-variable-check-1",
+   "label": "方法检查：空间动点单变量化检查",
+   "cycle": 10,
+   "status": "NOT_CLOSED",
+   "verdict": "BLOCKED",
+   "note": "桥接『空间动点单变量化配方』=SOURCE_METHOD_READY（只有方法骨架、缺完整无答案微课），标准规定零基础不能据此放行；检查标准（单变量规划、含定义域近变式、延迟冷复述）无法在模拟中满足。"
+  },
+  {
+   "method_key": "1.2_1.3-apollonius-check-1",
+   "label": "方法检查：阿波罗尼斯球轨迹检查",
+   "cycle": 10,
+   "status": "NOT_CLOSED",
+   "verdict": "BLOCKED",
+   "note": "桥接『阿波罗尼斯球与等距轨迹』=SUPPLEMENT_READY 但检查标准未具备（需自造变式、视觉/题面放行），且循环10 整体因动点单变量化未闭合而阻断。"
+  },
+  {
+   "bridge_key": "micro-four-point-coplanar",
+   "label": "桥接：四点共面系数和=1",
+   "target_items": [
+    "C14"
+   ],
+   "status": "CLOSED",
+   "verdict": "PASS",
+   "note": "SUPPLEMENT_READY 无答案文本在路线内；模拟中完成正向/逆向推导与自造验证；C14 独立作答通过；question_coverage=READY_FOR_INDEPENDENT_ATTEMPT。"
+  },
+  {
+   "bridge_key": "bridge-1.2-single-variable",
+   "label": "桥接：空间动点单变量化配方",
+   "target_items": [
+    "C15",
+    "C16"
+   ],
+   "status": "NOT_CLOSED",
+   "verdict": "BLOCKED",
+   "note": "SOURCE_METHOD_READY：只有方法骨架，缺完整无答案微课；零基础放行不成立；question_coverage=BLOCKED_BRIDGE（构建报告 gap_list 确认既有状态未变）。"
+  },
+  {
+   "bridge_key": "bridge-1.2-apollonius",
+   "label": "桥接：阿波罗尼斯球与等距轨迹",
+   "target_items": [
+    "C16"
+   ],
+   "status": "NOT_CLOSED",
+   "verdict": "BLOCKED",
+   "note": "SUPPLEMENT_READY 但检查标准未具备（自造变式、视觉/题面放行）；C16 整体因动点单变量化未闭合而阻断。"
+  },
+  {
+   "bridge_key": "bridge-1.1-polarization",
+   "label": "桥接：极化恒等式与数量积最值",
+   "target_items": [
+    "C16"
+   ],
+   "status": "NOT_CLOSED",
+   "verdict": "BLOCKED",
+   "note": "SUPPLEMENT_READY 但检查标准未具备（原型题独立过程、全空间型与区域型各一题无答案近迁移、等号条件可解释）；C16 整体阻断。"
+  }
+ ],
+ "first_breakpoints": [
+  {
+   "breakpoint": "图形未核验（NEEDS_VISION_SIDECAR）：路线标注『未完成视觉核验，禁止猜图』，缺已核验视觉侧车",
+   "class": "VISUAL_GATE",
+   "items": [
+    "例1",
+    "例2",
+    "例3",
+    "例4",
+    "例5",
+    "例12",
+    "例13",
+    "变式(5)",
+    "变式1(10)",
+    "变式2(10)",
+    "变式(12)"
+   ]
+  },
+  {
+   "breakpoint": "桥接未闭合：空间动点单变量化配方 SOURCE_METHOD_READY（只有方法骨架，缺完整无答案微课）",
+   "class": "BRIDGE_GATE",
+   "items": [
+    "C15",
+    "C16"
+   ]
+  },
+  {
+   "breakpoint": "桥接检查标准未具备：阿波罗尼斯球与等距轨迹、极化恒等式与数量积最值（SUPPLEMENT_READY 但未通过自造变式/放行门禁）",
+   "class": "BRIDGE_GATE",
+   "items": [
+    "C16"
+   ]
+  }
+ ],
+ "item_results": [
+  {
+   "section": "1.2+1.3",
+   "cycle": 5,
+   "item_id": "1a9c42257c66649e",
+   "task": "15",
+   "label": "教材例7",
+   "kind": "教学例题（类型例题）",
+   "visual_status": "READY_TEXT_ONLY",
+   "source_revision": {
+    "generation": "G-CH1-S12-01",
+    "source_packet_type": "DEEPSEEK_STUDENT_CONTEXT",
+    "packet_status": "VERIFIED",
+    "route_revision": "10 循环重构（build-1.2-1.3, 2026-08-16T22:10:00, item_id/qid 复用）"
+   },
+   "context_sha256": "271c68719a46b628e716267fb786ee13c4e40bec9523ffe4f005fada1c05fd86",
+   "observation_signal": "题面：(1) 空间四点 A(1,2,3)、B(1,1,2)、C(2,1,1)、D(1,1,1)，求 AB-2CD；(2) 空间四边形 ABCD 中 AB=(1,3,2)，BC=(-2,-3,1)，AD=(3,1,2)，求 CD。信号词：向量坐标=末减初；多边形封闭关系。",
+   "course_call": {
+    "course_id": "3.1.3.2",
+    "method_model_id": "3.1.3.2:linear_ops",
+    "appears_before_first_use": true,
+    "linkage": "课程 3.1.3.2（+3.1.1.1 字母运算）：向量坐标=末点坐标减起点坐标；首尾相接封闭四边形 AB+BC+CD=AD。",
+    "first_use_location": "任务15 教材例7（3.1.3.2 类型Ⅱ 第二次使用）"
+   },
+   "first_line": "目标量：(1) AB-2CD；(2) CD。",
+   "second_line": "依据：(1) AB=(0,-1,-1)，CD=D-C=(-1,0,0)，AB-2CD=(0,-1,-1)-(-2,0,0)=(2,-1,-1)；(2) CD=AD-AB-BC=(3,1,2)-(1,3,2)-(-2,-3,1)=(4,1,-1)。",
+   "continuation": "(1) (2,-1,-1)；(2) (4,1,-1)；回代 AB+BC+CD=(3,1,2)=AD 成立。",
+   "independent_self_check": "核对：末减初方向未反；CD 不是 DC；数乘 2 先乘后减；第(2)问用封闭四边形关系而非猜测。",
+   "first_breakpoint": "none",
+   "hint_level": "none",
+   "verdict": "PASS",
+   "answer_sidecar_read": false,
+   "human_acceptance_not_proven": true
+  },
+  {
+   "section": "1.2+1.3",
+   "cycle": 6,
+   "item_id": "c77cbbb7b8837fc7",
+   "task": "16",
+   "label": "教材例8",
+   "kind": "教学例题（类型例题）",
+   "visual_status": "READY_TEXT_ONLY",
+   "source_revision": {
+    "generation": "G-CH1-S12-01",
+    "source_packet_type": "DEEPSEEK_STUDENT_CONTEXT",
+    "packet_status": "VERIFIED",
+    "route_revision": "10 循环重构（build-1.2-1.3, 2026-08-16T22:10:00, item_id/qid 复用）"
+   },
+   "context_sha256": "271c68719a46b628e716267fb786ee13c4e40bec9523ffe4f005fada1c05fd86",
+   "observation_signal": "题面：a=(2,-3,1)，b=(2,0,3)，c=(1,2,2)，求 a·(b+c)（四选一）。信号词：数量积坐标公式。",
+   "course_call": {
+    "course_id": "3.1.3.2",
+    "method_model_id": "3.1.3.2:coordinate_dot_product",
+    "appears_before_first_use": true,
+    "linkage": "课程 3.1.3.2（类型Ⅲ 数量积）：点乘=对应坐标相乘再相加；先加后点乘（分配律）。",
+    "first_use_location": "任务16 教材例8（3.1.3.2 类型Ⅲ 首次执行）"
+   },
+   "first_line": "目标量：a·(b+c)；先算 b+c=(3,2,5)。",
+   "second_line": "依据：a·(b+c)=2·3+(-3)·2+1·5=6-6+5=5。",
+   "continuation": "结果 5，对应选项 B。",
+   "independent_self_check": "核对：对应项相乘顺序一致；负号处理正确；结果 5 在选项中。",
+   "first_breakpoint": "none",
+   "hint_level": "none",
+   "verdict": "PASS",
+   "answer_sidecar_read": false,
+   "human_acceptance_not_proven": true
+  },
+  {
+   "section": "1.2+1.3",
+   "cycle": 6,
+   "item_id": "a463b65df011512d",
+   "task": "17",
+   "label": "教材例9",
+   "kind": "教学例题（类型例题）",
+   "visual_status": "READY_TEXT_ONLY",
+   "source_revision": {
+    "generation": "G-CH1-S12-01",
+    "source_packet_type": "DEEPSEEK_STUDENT_CONTEXT",
+    "packet_status": "VERIFIED",
+    "route_revision": "10 循环重构（build-1.2-1.3, 2026-08-16T22:10:00, item_id/qid 复用）"
+   },
+   "context_sha256": "271c68719a46b628e716267fb786ee13c4e40bec9523ffe4f005fada1c05fd86",
+   "observation_signal": "题面：A(2,-1,1)、B(3,-2,1)、C(0,1,-1)，求 AB 在 AC 上的投影向量的坐标。信号词：投影向量公式。",
+   "course_call": {
+    "course_id": "3.1.3.2",
+    "method_model_id": "3.1.3.2:projection_vector",
+    "appears_before_first_use": true,
+    "linkage": "课程 3.1.3.2（类型Ⅲ）：投影向量 proj_b(a)=(a·b/|b|²)·b（平面向量类比到空间，课程点乘与投影法内容）。",
+    "first_use_location": "任务17 教材例9（3.1.3.2 类型Ⅲ 第二次使用）"
+   },
+   "first_line": "目标量：AB 在 AC 上的投影向量；写 a=AB=(1,-1,0)，b=AC=(-2,2,-2)。",
+   "second_line": "依据：proj=(a·b/|b|²)·b；a·b=1·(-2)+(-1)·2+0·(-2)=-4；|b|²=4+4+4=12。",
+   "continuation": "proj=(-4/12)·(-2,2,-2)=(2/3,-2/3,2/3)。",
+   "independent_self_check": "核对：投影方向沿 AC 所在直线（(2/3,-2/3,2/3)=-⅓·AC ✓）；分母用 |AC|² 而非 |AB|²；坐标无漏项。",
+   "first_breakpoint": "none",
+   "hint_level": "none",
+   "verdict": "PASS",
+   "answer_sidecar_read": false,
+   "human_acceptance_not_proven": true
+  },
+  {
+   "section": "1.2+1.3",
+   "cycle": 6,
+   "item_id": "Q-c0fa068ea13aa8b0",
+   "task": "18",
+   "label": "B7",
+   "kind": "A/B/C习题",
+   "visual_status": "READY_TEXT_ONLY",
+   "source_revision": {
+    "generation": "G-CH1-S12-01",
+    "source_packet_type": "DEEPSEEK_STUDENT_CONTEXT",
+    "packet_status": "VERIFIED",
+    "route_revision": "10 循环重构（build-1.2-1.3, 2026-08-16T22:10:00, item_id/qid 复用）"
+   },
+   "context_sha256": "271c68719a46b628e716267fb786ee13c4e40bec9523ffe4f005fada1c05fd86",
+   "observation_signal": "题面：a=(0,1,0)，b=(0,-1,1)，则 b 在 a 上的投影向量为（四选一）。信号词：投影向量公式。",
+   "course_call": {
+    "course_id": "3.1.3.2",
+    "method_model_id": "3.1.3.2:projection_vector",
+    "appears_before_first_use": true,
+    "linkage": "课程 3.1.3.2（类型Ⅲ）：proj_a(b)=(b·a/|a|²)·a。",
+    "first_use_location": "任务18 B7（3.1.3.2 类型Ⅲ 独立习题）"
+   },
+   "first_line": "目标量：proj；b·a=0·0+(-1)·1+1·0=-1，|a|²=1。",
+   "second_line": "依据：proj=(-1/1)·a=-a=(0,-1,0)。",
+   "continuation": "结果 -a，对应选项 B。",
+   "independent_self_check": "核对：投影向量与 a 共线（-a ∥ a ✓）；选项 B 为 -a。",
+   "first_breakpoint": "none",
+   "hint_level": "none",
+   "verdict": "PASS",
+   "answer_sidecar_read": false,
+   "human_acceptance_not_proven": true
+  },
+  {
+   "section": "1.2+1.3",
+   "cycle": 6,
+   "item_id": "Q-4cc4fab641617085",
+   "task": "19",
+   "label": "B10",
+   "kind": "A/B/C习题",
+   "visual_status": "READY_TEXT_ONLY",
+   "source_revision": {
+    "generation": "G-CH1-S12-01",
+    "source_packet_type": "DEEPSEEK_STUDENT_CONTEXT",
+    "packet_status": "VERIFIED",
+    "route_revision": "10 循环重构（build-1.2-1.3, 2026-08-16T22:10:00, item_id/qid 复用）"
+   },
+   "context_sha256": "271c68719a46b628e716267fb786ee13c4e40bec9523ffe4f005fada1c05fd86",
+   "observation_signal": "题面：a=(-2,1,-5)，3a-2b=(-10,5,-13)，则 a·b=（四选一）。信号词：由线性组合反解 b，再数量积。",
+   "course_call": {
+    "course_id": "3.1.3.2",
+    "method_model_id": "3.1.3.2:linear_ops",
+    "appears_before_first_use": true,
+    "linkage": "课程 3.1.3.2（类型Ⅱ/Ⅲ）：数乘+加减反解未知向量：2b=3a-(3a-2b)，再按坐标点乘。",
+    "first_use_location": "任务19 B10（3.1.3.2 独立习题）"
+   },
+   "first_line": "目标量：a·b；先解 b：2b=3a-(-10,5,-13)=(-6,3,-15)-(-10,5,-13)=(4,-2,-2) ⇒ b=(2,-1,-1)。",
+   "second_line": "依据：a·b=(-2)·2+1·(-1)+(-5)·(-1)=-4-1+5=0。",
+   "continuation": "a·b=0，对应选项 C。",
+   "independent_self_check": "核对：3a-2b 回代 3(-2,1,-5)-2(2,-1,-1)=(-10,5,-13) ✓；点乘逐项相乘未错位。",
+   "first_breakpoint": "none",
+   "hint_level": "none",
+   "verdict": "PASS",
+   "answer_sidecar_read": false,
+   "human_acceptance_not_proven": true
+  },
+  {
+   "section": "1.2+1.3",
+   "cycle": 7,
+   "item_id": "0cc4d4ebec2bcaeb",
+   "task": "20",
+   "label": "教材例10",
+   "kind": "教学例题（类型例题）",
+   "visual_status": "READY_TEXT_ONLY",
+   "source_revision": {
+    "generation": "G-CH1-S12-01",
+    "source_packet_type": "DEEPSEEK_STUDENT_CONTEXT",
+    "packet_status": "VERIFIED",
+    "route_revision": "10 循环重构（build-1.2-1.3, 2026-08-16T22:10:00, item_id/qid 复用）"
+   },
+   "context_sha256": "271c68719a46b628e716267fb786ee13c4e40bec9523ffe4f005fada1c05fd86",
+   "observation_signal": "题面：(1) a=(-1,0,-1)，b=(1,x,y)，a∥b，求 x+y；(2) a=(2,-1,3)，b=(-4,2,x)，a⊥b，求 x。信号词：平行=对应成比例；垂直=点乘为 0。",
+   "course_call": {
+    "course_id": "3.1.3.2",
+    "method_model_id": "3.1.3.2:parallel_perpendicular",
+    "appears_before_first_use": true,
+    "linkage": "课程 3.1.3.2（类型Ⅳ）：a∥b ⇔ b=λa（对应成比例，分母为零时同样成立）；a⊥b ⇔ a·b=0。",
+    "first_use_location": "任务20 教材例10（3.1.3.2 类型Ⅳ 首次执行）"
+   },
+   "first_line": "目标量：x+y 与 x；(1) b=λa ⇒ (1,x,y)=λ(-1,0,-1) ⇒ λ=-1，x=0，y=1。",
+   "second_line": "依据：(1) x+y=1；(2) a·b=2·(-4)+(-1)·2+3·x=3x-10=0 ⇒ x=10/3。",
+   "continuation": "(1) x+y=1；(2) x=10/3。",
+   "independent_self_check": "核对：平行用比例关系而非点乘；λ 由第一分量定出后再求其余分量；垂直点乘逐项相乘未错位。",
+   "first_breakpoint": "none",
+   "hint_level": "none",
+   "verdict": "PASS",
+   "answer_sidecar_read": false,
+   "human_acceptance_not_proven": true
+  },
+  {
+   "section": "1.2+1.3",
+   "cycle": 7,
+   "item_id": "bcfdff63c5c01bf4",
+   "task": "21",
+   "label": "变式1(10)",
+   "kind": "直属变式",
+   "visual_status": "NEEDS_VISION_SIDECAR",
+   "source_revision": {
+    "generation": "G-CH1-S12-01",
+    "source_packet_type": "DEEPSEEK_STUDENT_CONTEXT",
+    "packet_status": "VERIFIED",
+    "route_revision": "10 循环重构（build-1.2-1.3, 2026-08-16T22:10:00, item_id/qid 复用）"
+   },
+   "context_sha256": "271c68719a46b628e716267fb786ee13c4e40bec9523ffe4f005fada1c05fd86",
+   "observation_signal": "直属变式：三棱柱 ABC-A1B1C1，CC1⊥平面ABC，AC⊥BC，AC=BC=2，CC1=3，D、E 分别在棱 AA1、CC1 上（AD=1，CE=2），M 为棱 A1B1 中点；(1) 证 C1M⊥B1D；(2) 证 C1M∥平面B1DE。文字较完整，但变式要求先复述例10 模型并指出改变项，且三棱柱顶点方位、D/E/M 位置依赖配图；图未核验。",
+   "course_call": {
+    "course_id": "3.1.3.2",
+    "method_model_id": "3.1.3.2:parallel_perpendicular",
+    "appears_before_first_use": true,
+    "linkage": "课程 3.1.3.2（类型Ⅳ）：垂直=点乘 0；线面平行=方向向量与平面法向量垂直（或共面向量表示）；变式需先复述例10 平行/垂直模型。",
+    "first_use_location": "任务21 变式1(10)（例10 直属变式）"
+   },
+   "first_line": "目标量：证明 C1M⊥B1D 与 C1M∥平面B1DE；先建系（C 为原点，CA/CB/CC1 为轴——依赖图确认轴对应）。",
+   "second_line": "依据：课程坐标法：C1M·B1D=0 证垂直；平面 B1DE 法向量 n 满足 n·B1D=0 且 n·B1E=0，再证 C1M·n=0。",
+   "continuation": "按协议停止：图形状态 NEEDS_VISION_SIDECAR 未核验（顶点方位、D/E/M 位置依赖图），禁止猜图。",
+   "independent_self_check": "检查：建系选择需图确认；变式相对例10 的改变项需图+题面对照；按协议阻断。",
+   "first_breakpoint": "图形未核验（NEEDS_VISION_SIDECAR）：变式1(10) 依赖图中建系与点位置，禁止猜图",
+   "hint_level": "none",
+   "verdict": "BLOCKED",
+   "answer_sidecar_read": false,
+   "human_acceptance_not_proven": true
+  }
+ ]
+}

@@ -1,0 +1,114 @@
+{
+  "schema_version": "1.0",
+  "iteration": 4,
+  "worker_id": "Z3",
+  "cycle_scope": "1.1-cycle-7（数量积求长度与求角）：例15/16 教学 + 4 道直属变式 + 独立完成 B12；判断拆分后任务量与前置是否合理。",
+  "generated_at": "2026-08-14T19:28:48+08:00",
+  "simulation_order": "看视频/转写（本循环无新增视频，复用前置 line_line_angle，转写全文已于 iteration 3 阅读 13148 字符）→ 左栏知识（1.1-k4 扩充前置块，含求长度/求角/最值性质与投影向量）→ 教学例题 15/16 → 直属变式 → B12。",
+  "assumption": "按路径顺序假设学生已通过 cycle-5（line_line_angle 课程、k4、例6-8）与 cycle-6（例13/14、重心检查点、bridge-1.1-centroid 与 bridge-1.1-polarization 已释放）；本循环无新增视频（md 原文『本循环没有新增视频，复用已通过的前置方法』），prerequisite_course_keys=[line_line_angle]，prerequisite_knowledge_refs=[1.1-k4]，bridge_unit_ids=[]，method_checkpoints=0。",
+  "assigned_items": [
+    "变式1（例15）∠BAD",
+    "变式2（例15）动点 M,N 的 x,y,z 与 |MN| 最小值",
+    "变式1（例16）OE 与 BF 夹角余弦",
+    "变式2（例16）AB1 与 BC1 所成角余弦",
+    "B12 三棱锥分点+中点：PM 长与异面直线角余弦"
+  ],
+  "attempts": [
+    {
+      "item_id": "variant-15-1",
+      "item": "变式1（例15）：平行六面体 ∠BAA1=∠DAA1=30°，AB=AD=1，AA1=√3，AC1=2√3，求 ∠BAD",
+      "independent_process": "设 a=AB,b=AD,c=AA1；|a|=|b|=1，|c|=√3；a·c=|a||c|cos30°=√3·(√3/2)=3/2，b·c=3/2，a·b=cosθ。AC1=a+b+c（平行六面体体对角线）。由 k4 性质 |AC1|²=AC1·AC1：12=|a|²+|b|²+|c|²+2(a·b+a·c+b·c)=1+1+3+2(cosθ+3/2+3/2)=11+2cosθ → cosθ=1/2 → θ=60°。",
+      "conclusion": "∠BAD=60°",
+      "first_breakpoint": "无实质断点；与例15 的『拆向量+平方展开』同构反向，k4 扩充块显式给出 |a|=√(a·a) 求长度性质",
+      "hint_used": false,
+      "confidence": 0.95
+    },
+    {
+      "item_id": "variant-15-2",
+      "item": "变式2（例15）：正方形 ABCD⊥ABEF（边长1），CM=λCA，BN=λBF，0<λ<1；(1) MN=xAB+yAD+zAF；(2) |MN| 最小值",
+      "independent_process": "设 a=AB,b=AD,c=AF，两两垂直（面面垂直且交线为 AB，AD⊥AB、AF⊥AB、AD⊥AF）。M=C+λ(A−C)=(1−λ)C+λA=(1−λ)(a+b)；N=B+λ(F−B)=b+λ(c−b)=(1−λ)b+λc。MN=N−M=−(1−λ)a+λc → x=λ−1，y=0，z=λ。(2) |MN|²=(1−λ)²|a|²+λ²|c|²=(1−λ)²+λ²=2λ²−2λ+1=2(λ−1/2)²+1/2（配方，λ∈(0,1) 含 λ=1/2）→ |MN|min=√2/2。",
+      "conclusion": "(1) x=λ−1，y=0，z=λ；(2) |MN|min=√2/2",
+      "first_breakpoint": "动点参数化（CM=λCA 翻译为 M=(1−λ)C+λA，需先把 C 用基底表示 C=a+b）是首个卡点候选，用 k2 数乘与例15 方法可解决；(2) 配方求最值仍依赖高一代数（k4 新增『|a·b|≤|a||b| 用于求数量积的最值』性质不直接覆盖配方式最值），属已知外部依赖",
+      "hint_used": false,
+      "confidence": 0.9
+    },
+    {
+      "item_id": "variant-16-1",
+      "item": "变式1（例16）：正四面体 OABC，E、F 为 AB、OC 中点，求向量 OE 与 BF 的夹角余弦值",
+      "independent_process": "设棱长1：a=OA,b=OB,c=OC，两两夹角60°，a·b=a·c=b·c=1/2。OE=(a+b)/2；BF=OF−OB=c/2−b。OE·BF=(a+b)/2·(c/2−b)=(a·c/2−a·b+b·c/2−b·b)/2=(1/4−1/2+1/4−1)/2=−1/2。|OE|²=(1+1+2·1/2)/4=3/4；|BF|²=|c/2−b|²=1/4+1−1/2=3/4。cos<OE,BF>=(−1/2)/(3/4)=−2/3。",
+      "conclusion": "向量 OE 与 BF 夹角余弦 = −2/3（向量角不加绝对值；若问异面直线角才取 2/3）",
+      "first_breakpoint": "无实质断点；向量角/直线角区分来自 k4 夹角范围 [0,π] 与 line_line_angle 课程首段，均显式前置",
+      "hint_used": false,
+      "confidence": 0.9
+    },
+    {
+      "item_id": "variant-16-2",
+      "item": "变式2（例16）：三棱柱底面边长=侧棱长，∠BAA1=∠CAA1=60°，直线 AB1 与 BC1 所成角余弦",
+      "independent_process": "设棱长1：a=AB,b=AC,c=AA1，a·b=a·c=b·c=1/2。AB1=a+c；BC1=C1−B=b+c−a。AB1·BC1=(a+c)·(b+c−a)=a·b+a·c−|a|²+c·b+|c|²−c·a=1/2+1/2−1+1/2+1−1/2=1。|AB1|²=1+1+2·1/2=3；|BC1|²=|b+c−a|²=3+2(1/2−1/2−1/2)=2。线线角取锐角：cos=|AB1·BC1|/(|AB1||BC1|)=1/√6=√6/6。",
+      "conclusion": "直线 AB1 与 BC1 所成角余弦 = √6/6，选 C",
+      "first_breakpoint": "无新知识断点；计算量大（三向量交叉项），线线角绝对值由 line_line_angle 课程显式前置",
+      "hint_used": false,
+      "confidence": 0.95
+    },
+    {
+      "item_id": "B12",
+      "item": "B12（2025·浙江台州模拟）：三棱锥 P-ABC，AB=AC=3，AP=4，∠BAC=∠PAC=∠BAP=60°，D 在 BC 上 CD=2BD，M 为 AD 中点；(1) 求 PM 长；(2) 异面直线 PM 与 AC 所成角余弦",
+      "independent_process": "设 a=AB,b=AC,c=AP；|a|=|b|=3，|c|=4；a·b=9/2，a·c=b·c=3·4·cos60°=6。D 在 BC 上且 CD=2BD → BD=BC/3 → D=B+(1/3)(C−B)=(2/3)a+(1/3)b。M 为 AD 中点 → M=D/2=a/3+b/6。PM=M−P=a/3+b/6−c。(1) |PM|²=|a/3|²+|b/6|²+|c|²+2[(a·b)/18−(a·c)/3−(b·c)/6]=1+1/4+16+2(1/4−2−1)=47/4 → PM=√47/2。(2) PM·b=(a/3+b/6−c)·b=(a·b)/3+(b·b)/6−c·b=3/2+3/2−6=−3；异面直线所成角为锐角：cos=|PM·b|/(|PM||b|)=3/((√47/2)·3)=2/√47=2√47/47。",
+      "conclusion": "(1) PM=√47/2；(2) 异面直线 PM 与 AC 所成角余弦 = 2/√47（2√47/47）",
+      "first_breakpoint": "定比分点翻译（CD=2BD → D=(2a+b)/3）是首个卡点候选：方向/系数易错（BD=BC/3 而非 BC 的 2/3），用 k2 数乘与 cycle-2 拆分法解决；(2) 异面直线角取绝对值由 line_line_angle 课程显式前置",
+      "hint_used": false,
+      "confidence": 0.9
+    }
+  ],
+  "comparison_to_iteration_3": {
+    "gap_status": [
+      {"iteration3_gap": "重心几何事实无左栏文本（仅检查点题干自包含）", "status": "FIXED", "evidence": "新增 bridge-1.1-centroid『三角形重心的向量表示』（SUPPLEMENT_READY，含推导步骤与自造变式，release_note：须在 B11 前独立推导一次），并挂入 cycle-6 bridge_unit_ids"},
+      {"iteration3_gap": "极化恒等式桥接晚于例14 首次使用（bridge 在 cycle-8 释放）", "status": "FIXED", "evidence": "bridge-1.1-polarization 现挂入 cycle-6 bridge_unit_ids（与例13/14 同循环），且 cycle-9 新增 1.1-polarization-check-1 检查点；target 更新为 1.1-B8、1.2+1.3-C16"},
+      {"iteration3_gap": "配方/换元求最值无路径内前置", "status": "PARTIALLY_FIXED", "evidence": "k4 前置块扩充至 4709 字符，显式新增数量积性质表：a·a=|a|² 求长度、cos 公式求空间角、|a·b|≤|a||b| 求数量积最值、投影向量定义；但变式2(例15) 的配方式最值仍依赖高一代数（路径未标注）"},
+      {"iteration3_gap": "课程坐标法与例题向量法不一致无标注", "status": "STILL_PRESENT", "evidence": "cycle-7 头部仍无方法差异标注（观察项，非阻塞）"},
+      {"iteration3_gap": "任务量偏重（cycle-6 曾 12 项）", "status": "FIXED_BY_SPLIT", "evidence": "路径重建为 10 循环：cycle-6=例13/14+重心检查点+B11（桥接 centroid+polarization）；cycle-7=例15/16+4 变式+B12；cycle-9=极化与四点共面综合（2 检查点）"}
+    ],
+    "retest_note": "变式1/2(例15)、变式1/2(例16)、B12 在 iteration 3 时属旧 cycle-6 直属项，本轮在拆分后的 cycle-7 中重新独立推导复测；结论一致，推导过程独立重写，未参考任何答案源",
+    "path_metadata_note": "contexts/1.1.json（canary=1221e8b5057d51fb）中 B12 coverage 保持 METHOD_BRIDGE、course_keys=[decomposition, line_line_angle]、release=READY_FOR_INDEPENDENT_ATTEMPT，与 manifest cycle-7 归属一致，无 iteration-2 式的元数据不同步；route_support.bridge_supplement_lessons 中有一个空占位条目（id/title/status 为空），属轻微元数据观察项"
+  },
+  "knowledge_order_assessment": {
+    "verdict": "本循环首次用到的知识全部在路径中显式出现于使用之前；无需用模型先验补洞",
+    "checks": [
+      "1.1-k4 扩充前置块（4709 字符）内嵌于 cycle-7 头部：数量积定义/运算律/夹角范围 + 性质表（a·a=|a|² 求长度、cos 公式求空间角、|a·b|≤|a||b| 求最值）+ 投影向量 → 先于例15/16 与全部变式/B12 使用 ✓",
+      "线线角公式与向量角/直线角区分：前置课程 line_line_angle（3.1.4.3，转写全文 iteration 3 已读，含『线线角永远加绝对值』与书写五步）✓",
+      "中点向量与定比分点（B12 的 D=(2a+b)/3）：k2 线性运算与 cycle-2 拆分法显式前置，coverage 元数据 course_keys=[decomposition, line_line_angle] 佐证 ✓",
+      "动点参数化（变式2(例15)）：k2 数乘 + 例15 教学，无未出现知识 ✓",
+      "未发现『首次使用先于显式出现』的知识：5 个直属项的全部推导仅使用上述显式前置",
+      "外部依赖（已标注非向量知识）：配方式最值属高一代数，路径未标注（最小结构缺口）"
+    ]
+  },
+  "task_load_assessment": {
+    "verdict": "拆分后任务量合理，前置充分",
+    "detail": "cycle-7 现为 2 教学例题（15/16，带完整解析）+ 4 直属变式 + 1 习题（B12 两小问）= 7 个学习项，无检查点、无新增视频；对比 iteration-3 的旧 cycle-6（4 例题+5 变式+1 检查点+2 习题=12 项）显著均衡，与 cycle-5（3 例题+1 检查点+2 习题）相当。变式2(例15)（动点+配方最值）与变式2(例16)（三棱柱大计算）仍是本循环重项，但均与例题同构。前置：k4 扩充块 + line_line_angle 课程 + k2 拆分，全部显式，B12 的解锁元数据（decomposition, line_line_angle）与路径一致。结论：拆分合理，任务量适中，前置无缺口。",
+    "minor_notes": [
+      "cycle-7 无方法检查点，验收依赖变式+B12 独立过程（可接受，B12 两小问覆盖求长与求角两类型）",
+      "变式2(例15) 的配方依赖高一代数，建议在 cycle-7 头部标注外部依赖",
+      "若进一步减负，可将变式2(例15) 移至 cycle-9（极化/最值综合），但非必需"
+    ]
+  },
+  "status": "proxy_pass",
+  "status_rationale": "路径材料足够（k4 扩充前置块、例15/16 教学解析、line_line_angle 前置课程全部显式），5 个直属项全部独立完成、hint_used=false、confidence 0.9-0.95；无检查点未过、无未解决断点。按任务约定，真人冷复测 not_run 不降级模拟路径状态，故标 proxy_pass（代理层面）。代理解出不等于真人掌握。",
+  "structural_gaps": [
+    "配方式最值的外部代数依赖（高一函数配方/换元）在路径中仍未标注（最小；k4 的 |a·b|≤|a||b| 性质仅覆盖数量积型最值）",
+    "课程方法（3.1.4.3 坐标法）与例题方法（向量拆解）差异未在 cycle-7 标注（观察项，教学解析已补足方法）",
+    "contexts/1.1.json 的 route_support.bridge_supplement_lessons 含一个空占位条目（元数据小瑕疵，不影响路径）"
+  ],
+  "human_evidence_not_run": "真人冷复测未执行：无隔天闭卷复述、无未见题迁移、无真人独立作答证据。此 not_run 仅记录于本字段与 honesty_boundary，不将模拟路径状态降为 partial。",
+  "answer_sources_read": [
+    "chapter1_manifest.json（2026-08-14 19:25:17 版）：10 循环结构与 cycle-7/6/9 元数据、bridge_unit_ids",
+    "data/packets/1.1/learning_packet.json（19:26:22 版）：cycle-7 全段（prerequisite_knowledge_blocks=1.1-k4 扩充全文 4709 字符、例15/16 教学、4 变式、B12 题干）",
+    "data/packets/1.1/learning_packet.md（19:26:27 版）：循环 7/10 全段（含例15/16 教学解析——教学阶段允许看完整解法）",
+    "data/contexts/1.1.json（19:26:22 版，canary=1221e8b5057d51fb）：current_cycle 指针、B11/B12 coverage 元数据、bridge_micro/supplement_lessons 列表",
+    "data/bridge_micro_lessons.json（19:26:08 版）：13 个微单元（含 bridge-1.1-centroid、bridge-1.1-polarization 全文方法文本）",
+    "data/bridge_supplement_lessons.json（19:26:08 版）：7 个无答案补充微课全文（含重心、二面角定义、投影等 lesson 文本）",
+    "data/course_transcripts/3.1.4.3 向量夹角与直线夹角.json：full_text 13148 字符已于 iteration 3 全文阅读，本 iteration 未重复读取（按路径顺序前置已通过）"
+  ],
+  "forbidden_answer_sources_read": [],
+  "honesty_boundary": "严格未读取 data/packets/1.1/answer_sidecar.json、任何答案册、其他代理报告或任何习题答案；直属变式与 B12 在包内均为无解答项，作答未参考任何解析。例15/16 教学解析属允许的教学阶段内容。如实披露：本轮 5 个直属项与 iteration 3（旧 cycle-6 范围）为同题复测，推导过程本轮独立重写，未读取本人或其他代理的旧报告来作答。真人冷复测 not_run（无隔天闭卷/未见题/真人证据），已在 human_evidence_not_run 单列；代理 proxy_pass 不构成真人掌握证据。仅写入 reports/zero_base_cycles/1.1-iteration-4-worker-3.json，未修改 manifest/packet/代码/测试/桥接文件或其他报告。"
+}
+

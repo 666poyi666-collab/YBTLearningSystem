@@ -1,0 +1,272 @@
+{
+ "schema": "student-micro-current-v1",
+ "date": "2026-08-14",
+ "inputs": [
+  "C:/开发/小工具/一本通学习系统_v7/data/packets/micro专题1/learning_packet.json (schema 7.3, VERIFIED)",
+  "C:/开发/小工具/一本通学习系统_v7/data/contexts/micro专题1.json (VERIFIED)"
+ ],
+ "forbidden_respected": [
+  "answer_sidecar 未读",
+  "答案册 PDF 未读",
+  "reports/ 旧模拟未读"
+ ],
+ "deepseek_mode": {
+  "status": "active schema_version=1 default_count=5",
+  "delegation": "本实例为父控制器派发的 child worker（opencode-go/deepseek-v4-flash / max / 1000000），child 运行时限制不得再 spawn 子代理，本轮由本 worker 直接执行学习/推导/验收",
+  "dispatch_evidence": "不适用（child worker 无 spawn 能力）"
+ },
+ "workflow": [
+  "knowledge/type pages(4) -> 完成",
+  "worked_examples 7个 teaching_text -> 完成",
+  "direct_variant 独立完成 -> 完成",
+  "exercise 8个独立完成 -> 完成",
+  "24h_cold_retest -> not_run"
+ ],
+ "knowledge_and_type_pages": [
+  {
+   "ocr_doc": 55,
+   "content": "内容提要+类型Ⅰ 线上动点",
+   "understood": true
+  },
+  {
+   "ocr_doc": 57,
+   "content": "类型Ⅱ 坐标难写处理",
+   "understood": true
+  },
+  {
+   "ocr_doc": 59,
+   "content": "类型Ⅲ 立体几何综合题",
+   "understood": true
+  },
+  {
+   "ocr_doc": 62,
+   "content": "类型Ⅳ 动态二面角三角方法",
+   "understood": true
+  }
+ ],
+ "worked_examples": [
+  {
+   "label": "例1",
+   "status": "understood",
+   "key_technique": "线上动点单参化(0,0,a)；AE⊥PC+PA=PC三线合一→E为PC中点；法向量求线面角/距离",
+   "ocr_defects": []
+  },
+  {
+   "label": "例2",
+   "status": "understood",
+   "key_technique": "斜棱柱回避坐标 EF=EA1+1/2·AB；面面垂直性质；矩形A1EGF几何法求线面角",
+   "ocr_defects": [
+    "重建前'A1EG'漏F，已修复（A_1EGF 3处均含F）"
+   ]
+  },
+  {
+   "label": "例3",
+   "status": "understood",
+   "key_technique": "难写坐标设未知数+长度条件方程组求E(2,2,0)；重心坐标公式",
+   "ocr_defects": []
+  },
+  {
+   "label": "例4",
+   "status": "understood",
+   "key_technique": "动点单分量直接设M(0,a,2)；单调性→cosθmax=2/5",
+   "ocr_defects": []
+  },
+  {
+   "label": "例5",
+   "status": "understood",
+   "key_technique": "轨迹相似比/法向量平行垂直/体积最值(距离最大)/平方和常数三角换元；答案ACD",
+   "ocr_defects": [
+    "重建前 P(1,1,1/2) 笔误与重复段，已修复（P=1/3，无重复段）"
+   ]
+  },
+  {
+   "label": "例6",
+   "status": "understood",
+   "key_technique": "作二面角平面角A-BD-C，O为BD三等分点建系设θ，数量积逐项判定；答案B",
+   "ocr_defects": []
+  },
+  {
+   "label": "例7",
+   "status": "understood",
+   "key_technique": "∠AED为平面角设θ建系，双法向量 |cos|=sinθ/√(sin²θ+8)=1/3→θ=π/2",
+   "ocr_defects": [
+    "重建前答案误写π/7，已修复为π/2（公式同步修复）"
+   ]
+  }
+ ],
+ "mastery_note": "worked_examples 只记 understood，不计入独立掌握",
+ "direct_variant": {
+  "item_id": "7acb63953b401367",
+  "parent": "例1",
+  "status": "pass",
+  "result": "EP = √17/10",
+  "key_reasoning": "D1原点建系：B(1,1,√3),E(1,1/2,0),C(0,1,√3)；P=E+λ(C-E)=(1-λ,(1+λ)/2,√3λ)；d²=|PB1|²-(PB1·u)²=(5λ²-2λ+1)/4，λ=1/5最小；EP=|λ|·|EC|=√17/10",
+  "contamination": "解答曾在本会话审计轮视觉转写暴露，独立重做但非 unseen"
+ },
+ "exercises": [
+  {
+   "number": 1,
+   "group": "B",
+   "qid": "Q-639bfa897cbfec5b",
+   "status": "pass",
+   "result": "B（AFmax=1）",
+   "key_reasoning": "E(0,0,e),F(f,0,0)；C1E·EF=-4f-e(e-4)=0→f=e(4-e)/4，e=2时fmax=1",
+   "ocr_defects": [
+    "无图，题面自足"
+   ]
+  },
+  {
+   "number": 2,
+   "group": "B",
+   "qid": "Q-504a0984daa421c7",
+   "status": "prompted_correction_pass",
+   "result": "AB",
+   "key_reasoning": "A:EF∥AC⊂面ABC；B:BE⊂面ABD、DG⊂面BCD共面将迫使两面重合故异面；C:BE·DG=-(3a²/16)(3+cosα)<0恒不垂直；D:|EG|²=a²/4+3a²/8(1+cosα)=7a²/16→cosα=-1/2→α=2π/3非π/3",
+   "ocr_defects": [
+    "无图，依赖文字建系"
+   ],
+   "original_result": "AB",
+   "original_reasoning": "A:EF∥AC⊂面ABC；B:BE⊂面ABD、DG⊂面BCD共面将迫使两面重合故异面；C:BE·DG=-(3a²/16)(3+cosα)<0恒不垂直；D:|EG|²=a²/4+3a²/8(1+cosα)=7a²/16→cosα=-1/2→α=2π/3非π/3",
+   "prompted_correction": true,
+   "corrected_result": "ABD",
+   "corrected_reasoning": "D项重新推导：设折起角 alpha（A 绕 BD 从共面位抬起），建系 B(-a/2,0,0), D(a/2,0,0), C(0,-sqrt3 a/2,0), A(0,sqrt3 a/2 cos alpha, sqrt3 a/2 sin alpha)。E=(A+D)/2, G=(B+C)/2，|EG|^2 = a^2/4 + 3a^2/8(1+cos alpha)。EG=sqrt7/4 AB -> 7a^2/16 -> 1+cos alpha = 1/2 -> cos alpha = -1/2 -> alpha = 2pi/3。二面角 A-BD-C 的平面角 theta：面ABD 内垂BD 方向 (0,cos alpha,sin alpha)，面BCD 内垂BD 方向 (0,-1,0)，cos theta = -cos alpha -> theta = pi - alpha = pi/3。故 D 正确。A（EF∥AC⊂面ABC 且 E∉面ABC）、B（BE⊂面ABD、DG⊂面BCD，共面将迫使两面重合）、C（BE·DG=-(3a^2/16)(3+cos alpha)<0 恒不垂直）不变。教师提示错误点：原推导把折起角 alpha 直接当作二面角（最终平面角映射错误），EG^2 代数本身无误，错在角度解读。"
+  },
+  {
+   "number": 3,
+   "group": "B",
+   "qid": "Q-fd0b8a66eaccebff",
+   "status": "pass",
+   "result": "(1)AM⊥平面PBD；(2)AO=2OM",
+   "key_reasoning": "M(a/2,a/2,a/2)∥面PBD法向量(1,1,1)；平面PBD:x+y+z=a，O=t(1,1,1)→t=a/3→AO:OM=2:1；使用视觉核实的AM（非EM）",
+   "ocr_defects": [
+    "doc_65.md 曾误读EM，JSON已修正并留档derived_corrections"
+   ]
+  },
+  {
+   "number": 4,
+   "group": "B",
+   "qid": "Q-263868214b39f6b0",
+   "status": "prompted_correction_pass",
+   "result": "(1)证毕；(2)二面角A1-BD-B1余弦=1/8",
+   "key_reasoning": "A1(1,1,√14),D(2,2,√14)；A1D=(1,1,0)∥面A1BC法向量(2√14,2√14,0)；面A1BD法向量(-√14,√14,-2)与面BDB1法向量(√14,√14,-2)：|cos|=4/32=1/8",
+   "ocr_defects": [],
+   "original_result": "(1)证毕；(2)二面角A1-BD-B1余弦=1/8",
+   "original_reasoning": "A1(1,1,√14),D(2,2,√14)；A1D=(1,1,0)∥面A1BC法向量(2√14,2√14,0)；面A1BD法向量(-√14,√14,-2)与面BDB1法向量(√14,√14,-2)：|cos|=4/32=1/8",
+   "prompted_correction": true,
+   "corrected_result": "(1)证毕；(2)二面角 A1-BD-B1 的平面角余弦 = -1/8（钝角）",
+   "corrected_reasoning": "(1) 不变：A1D=(1,1,0) ∥ 面A1BC 法向量 (2sqrt14,2sqrt14,0)。(2) 符号修正：按题目指定半平面射线判定。棱 BD 方向 u=(0,2,sqrt14)/sqrt18。在 D 点作垂直 BD 的平面：面A1BD 内射线方向 DA1 的垂BD 分量 = (-1,-7/9,sqrt14/9)，面BDB1 内射线方向 DB1 的垂BD 分量 = (1,-7/9,sqrt14/9)，cos = [(-1)(1)+(-7/9)^2+14/81]/[(4/3)(4/3)] = (-2/9)/(16/9) = -1/8（B 点复核同值 -1/8）。法向量 n1=(-sqrt14,sqrt14,-2) 与 n2=(sqrt14,sqrt14,-2) 夹角为锐角（cos=+1/8），二面角为其补角，故平面角余弦 = -1/8。教师提示错误点：原推导取了法向量夹角绝对值（+1/8），未按半平面射线判定锐钝，符号错误。"
+  },
+  {
+   "number": 5,
+   "group": "C",
+   "qid": "Q-a2eecc6d8aa470ea",
+   "status": "pass",
+   "result": "ACD",
+   "key_reasoning": "A:EF·(1,1,1)=0∥面A1BD；B:EF⊥面A1C1E需F(3/2,1/2,0)≠BD中点(1,1,0)错；C:F(0,y,0)距直线A1E最小=4√5/5(y=0)；D:外接球心(1/2,3/2,1/2),R²=19/4,S=19π",
+   "ocr_defects": [
+    "JSON侧仍READY_TEXT_ONLY/E1-only（非本次修复范围），PDF侧此前已核实题干完整"
+   ]
+  },
+  {
+   "number": 6,
+   "group": "C",
+   "qid": "Q-b15f23afc701e63f",
+   "status": "pass",
+   "result": "(1)证毕(n1·n2=0)；(2)d=3√13/13；(3)存在：T=D时M(0,2/5,4/5)",
+   "key_reasoning": "P(0,0,1),B(1,0,0),C(1,1,0),D(0,2,0)；面PAC法向量(1,-1,0)⊥面PCD法向量(1,1,2)；面ABM法向量(0,-1/2,3/4)→d=|AP·n|/|n|=3/√13；PT⊥面ABM需(1-t,1+t,-1)∥(0,-(1-s),s(1+t))→t=1,s=1/5",
+   "ocr_defects": []
+  },
+  {
+   "number": 7,
+   "group": "C",
+   "qid": "Q-575acda8e8d5dfd3",
+   "status": "pass",
+   "prompted_correction": true,
+   "answer": "sin ∈ {√3/2, √3/4}（两支）",
+   "correction_note": "首轮裁决仅取 sin=√3/2（以印刷示意图方位排除另一支），被用户纠正：印刷示意图不构成几何方位约束，且教师答案侧确认保留两支；本裁决未读答案侧，仅由题设重新推导并接受所有满足条件的分支；不冒充首次独立",
+   "key_reasoning": "建系B(-1,0,0),C(1,0,0),A(0,√3,0)，A1(x0,y0,h)。AA1=A1C→x0-√3y0=-1；体积3→h=√3；|cos 二面角A1-BC-A|=|y0|/√(3+y0²)=√5/5→y0²=3/4。分支1: y0=+√3/2, H(1/2,√3/2)=AC中点, |AA1|=2→sin=√3/2；分支2: y0=-√3/2, H(-5/2,-√3/2), |AA1|=4→sin=√3/4。两支均满足AA1=A1C、体积3、|cos|=√5/5（数值验证通过）",
+   "ocr_defects": [
+    "原题号行水印已修复；本题为 prompted_correction 双分支作答"
+   ]
+  },
+  {
+   "number": 8,
+   "group": "C",
+   "qid": "Q-420d45cfbbe47282",
+   "status": "pass",
+   "result": "(1)证毕；(2)线面角45°(π/4)",
+   "key_reasoning": "A1(-1,y,z),y²+z²=3；AD·(面OCC1法向量)=0；两面垂直→y=√3/3,z=2√6/3；面BCC1B1法向量(2√2,2√6/3,-4√3/3),|n1|=4,|AA1|=2,|AA1·n1|=4√2→sin=√2/2",
+   "ocr_defects": []
+  }
+ ],
+ "mastery_summary": {
+  "independent_items": 9,
+  "pass": 9,
+  "partial": 0,
+  "blocked": 0,
+  "unclear": 0,
+  "note": "B2/B4 经教师提示后 prompted_correction 修正（B2: AB->ABD，B4: 1/8->-1/8），修正后均仍为 pass；C7 为上一轮 prompted_correction（双分支 sin∈{sqrt3/2,sqrt3/4}）；所有纠正均保留 original_result 并标注 prompted_correction，不冒充首次独立",
+  "worked_examples": "7/7 understood（不计入独立掌握）"
+ },
+ "status_classification": {
+  "same_session": {
+   "definition": "本会话内学习后立即完成（含审计轮暴露的污染与 C7 纠正）",
+   "items": [
+    {
+     "item": "变式",
+     "status": "pass"
+    },
+    {
+     "item": "B1",
+     "status": "pass"
+    },
+    {
+     "item": "B2",
+     "status": "prompted_correction_pass",
+     "prompted_correction": true
+    },
+    {
+     "item": "B3",
+     "status": "pass"
+    },
+    {
+     "item": "B4",
+     "status": "prompted_correction_pass",
+     "prompted_correction": true
+    },
+    {
+     "item": "C5",
+     "status": "pass"
+    },
+    {
+     "item": "C6",
+     "status": "pass"
+    },
+    {
+     "item": "C7",
+     "status": "pass",
+     "prompted_correction": true
+    },
+    {
+     "item": "C8",
+     "status": "pass"
+    }
+   ],
+   "pass_count": 9,
+   "total": 9
+  },
+  "unseen": {
+   "status": "not_clean",
+   "reason": "例题/变式解答在本会话审计轮视觉转写中暴露，unseen 前提受污染；需新会话+新题面重测"
+  },
+  "24h_cold_retest": {
+   "status": "not_run",
+   "note": "待 24 小时后单独执行"
+  }
+ },
+ "remaining_minor_items": [
+  "C7 question_text 仍有 '### ' markdown 前缀（格式残留）",
+  "C5 仍 READY_TEXT_ONLY/E1-only，建议后续补视觉侧证",
+  "learning_packet source.source_file 为 None"
+ ]
+}

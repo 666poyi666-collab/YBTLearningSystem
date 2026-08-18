@@ -1,0 +1,542 @@
+{
+  "schema_version": "1.0",
+  "iteration": 2,
+  "cycle_id": "1.1-cycle-5",
+  "agent_id": "Z5",
+  "role": "zero_base_high_school_student_simulation",
+  "title": "数量积、夹角、长度与综合桥接（iteration 2）",
+  "generated_at": "2026-08-14",
+  "project_root": "C:\\开发\\小工具\\一本通学习系统_v7",
+  "scope": "只负责 1.1-cycle-5；直属任务 B4/B5/B6/B7/B8/B11/B12/C13/C14；未读取任何答案册、answer_sidecar.json、其他代理报告或其他循环作答；只原位改写本报告文件",
+  "assigned_items": [
+    {
+      "key": "B4",
+      "qid": "Q-f15b941e305191d5",
+      "group": "B",
+      "number": 4,
+      "unlock_class": "METHOD_BRIDGE",
+      "course_keys": [
+        "space_vector_ops"
+      ],
+      "release_status": "READY_FOR_INDEPENDENT_ATTEMPT"
+    },
+    {
+      "key": "B5",
+      "qid": "Q-8dd0fc02442f324f",
+      "group": "B",
+      "number": 5,
+      "unlock_class": "COURSE_DIRECT",
+      "course_keys": [
+        "space_vector_ops"
+      ],
+      "release_status": "READY_FOR_INDEPENDENT_ATTEMPT"
+    },
+    {
+      "key": "B6",
+      "qid": "Q-a5a0d0efe5d430ca",
+      "group": "B",
+      "number": 6,
+      "unlock_class": "METHOD_BRIDGE",
+      "course_keys": [
+        "decomposition"
+      ],
+      "release_status": "READY_FOR_INDEPENDENT_ATTEMPT"
+    },
+    {
+      "key": "B7",
+      "qid": "Q-c541e3eee1efc530",
+      "group": "B",
+      "number": 7,
+      "unlock_class": "METHOD_BRIDGE",
+      "course_keys": [
+        "decomposition"
+      ],
+      "release_status": "READY_FOR_INDEPENDENT_ATTEMPT"
+    },
+    {
+      "key": "B8",
+      "qid": "Q-9d766f3ecd1ae46e",
+      "group": "B",
+      "number": 8,
+      "unlock_class": "MICRO_UNIT",
+      "course_keys": [
+        "space_vector_ops"
+      ],
+      "bridge_units": [
+        "bridge-1.1-polarization"
+      ],
+      "release_status": "READY_FOR_INDEPENDENT_ATTEMPT"
+    },
+    {
+      "key": "B11",
+      "qid": "Q-443c567c45c66273",
+      "group": "B",
+      "number": 11,
+      "unlock_class": "METHOD_BRIDGE",
+      "course_keys": [
+        "space_vector_ops",
+        "decomposition"
+      ],
+      "release_status": "READY_FOR_INDEPENDENT_ATTEMPT"
+    },
+    {
+      "key": "B12",
+      "qid": "Q-65729f8347757586",
+      "group": "B",
+      "number": 12,
+      "unlock_class": "METHOD_BRIDGE",
+      "course_keys": [
+        "decomposition",
+        "line_line_angle"
+      ],
+      "release_status": "READY_FOR_INDEPENDENT_ATTEMPT"
+    },
+    {
+      "key": "C13",
+      "qid": "Q-32207093b5cdcaee",
+      "group": "C",
+      "number": 13,
+      "unlock_class": "MICRO_UNIT",
+      "course_keys": [
+        "decomposition",
+        "coplanar"
+      ],
+      "bridge_units": [
+        "bridge-1.1-polarization",
+        "micro-four-point-coplanar"
+      ],
+      "release_status": "READY_FOR_INDEPENDENT_ATTEMPT"
+    },
+    {
+      "key": "C14",
+      "qid": "Q-5bf035885c806a48",
+      "group": "C",
+      "number": 14,
+      "unlock_class": "MICRO_UNIT",
+      "course_keys": [
+        "space_vector_ops",
+        "coplanar"
+      ],
+      "bridge_units": [
+        "bridge-1.1-polarization",
+        "micro-four-point-coplanar"
+      ],
+      "release_status": "READY_FOR_INDEPENDENT_ATTEMPT"
+    }
+  ],
+  "course_evidence": {
+    "watched_transcript": {
+      "course_key": "line_line_angle",
+      "course_id": "3.1.4.3",
+      "transcript_file": "data\\course_transcripts\\3.1.4.3 向量夹角与直线夹角.json",
+      "text_chars": 13148,
+      "text_sha256": "4f63e95883d112ec5e8b365e2e8cd41b32c54358fa5baba8ade896a1cd4b17f5",
+      "note": "19:02 重新校验哈希与 iteration 1 完全一致（字节级未变），内容沿用 iteration 1 通读结论；课程只教建系坐标点乘加线线角绝对值，不含拆解/极化/投影/共面系数和/点面距离"
+    },
+    "deepseek_context_read": "data\\contexts\\1.1.json（DEEPSEEK_STUDENT_CONTEXT, status=VERIFIED, canary=8291db915b349d86, model_contract=opencode-go/deepseek-v4-flash/max/1000000）",
+    "note": "context 的 current_cycle 指向 1.1-cycle-1（整节通用路由）；本代理按任务书与最新 manifest 的 cycle-5 exercise_keys 执行，context 的 question_coverage/bridge_micro_lessons 用于核对释放状态"
+  },
+  "attempts": [
+    {
+      "item": "B4",
+      "question": "三棱锥 A-BCD 每条棱长都为 2，求 AB·CD（A.2√3 B.√3 C.2 D.0）",
+      "process": "设 AB=a, AC=c, AD=d，模均 2，两两夹角 60 度（正四面体）。CD = d-c。AB·CD = a·(d-c) = a·d - a·c = 2·2·cos60 - 2·2·cos60 = 2-2 = 0",
+      "result": "0（选 D）",
+      "first_breakpoint": null,
+      "hint_required": false,
+      "confidence": 0.9,
+      "knowledge_used": [
+        "1.1-k2 线性运算/拆解",
+        "1.1-k4 数量积定义"
+      ],
+      "left_column_before_first_use": true,
+      "explicit_connection": "配套题承接 1.1-k4；k4 在习题前展示"
+    },
+    {
+      "item": "B5",
+      "question": "棱长2正方体，E 是棱 A1D1 中点，求 EB1·EB（A.4 B.5 C.6 D.4√2）",
+      "process": "建系 A(0,0,0)，B(2,0,0)，D(0,2,0)，A1(0,0,2)，D1(0,2,2)，B1(2,0,2)，E(0,1,2)。EB1 = (2,-1,0)，EB = (2,-1,-2)。EB1·EB = 4+1+0 = 5",
+      "result": "5（选 B）",
+      "first_breakpoint": null,
+      "hint_required": false,
+      "confidence": 0.85,
+      "knowledge_used": [
+        "课程建系标点写向量",
+        "1.1-k4 数量积"
+      ],
+      "left_column_before_first_use": true,
+      "explicit_connection": "配套题承接 1.1-k4；建系来自课程"
+    },
+    {
+      "item": "B6",
+      "question": "正三角形 ABC 与正方形 BCDE 边长均 2，二面角 A-BC-D = π/3，求 AC·BD（A.2-√3 B.2+√3 C.-2-√3 D.-2+√3）",
+      "process": "取 B(0,0,0)，C(2,0,0)，D(2,2,0)（正方形在 z=0 平面）。设 A=(1,h,k)，|AB|=2 得 h²+k²=3；二面角平面角即平面 ABC 与 BCD 的夹角：平面 BCD 法向量 (0,0,1)，平面 ABC 法向量 (0,-2k,2h)，cos60 = |2h|/(2√3) 得 |h| = √3/2，取 h=√3/2，k=3/2。AC = (1,-√3/2,-3/2)，BD = (2,2,0)。AC·BD = 2-√3",
+      "result": "2-√3（选 A）",
+      "first_breakpoint": "二面角平面角概念与坐标化取点（必修前置，循环左栏与课程均未讲二面角）；把 A 的 (h,k) 分量确定是首次卡点",
+      "hint_required": false,
+      "confidence": 0.6,
+      "knowledge_used": [
+        "二面角平面角（必修前置，不在循环内）",
+        "建系/数量积（课程+k4）"
+      ],
+      "left_column_before_first_use": false,
+      "explicit_connection": "配套题承接 1.1-k4；二面角概念无连接"
+    },
+    {
+      "item": "B7",
+      "question": "二面角 α-l-β 棱上有 A,B，AC 垂直 l（在 α 内），BD 垂直 l（在 β 内），AB=1，AC=2，BD=3，二面角平面角 π/3，求 CD（A.2 B.2√2 C.2√3 D.2√5）",
+      "process": "设 l 为 x 轴，A(0,0,0)，B(1,0,0)；α 为 x-y 平面，C(0,2,0)；β 过 x 轴且与 α 成 60 度，取 D = B + 3(0,cos60,sin60) = (1,3/2,3√3/2)。CD = (1,-1/2,3√3/2)，|CD|² = 1+1/4+27/4 = 8，CD = 2√2",
+      "result": "2√2（选 B）",
+      "first_breakpoint": "把 CD 拆成 CA+AB+BD 的三段并确定 AC 与 BD 夹角即二面角（方向/符号易错）；二面角概念为必修前置",
+      "hint_required": false,
+      "confidence": 0.6,
+      "knowledge_used": [
+        "二面角平面角（必修前置）",
+        "模长平方/数量积（例15 模式）"
+      ],
+      "left_column_before_first_use": false,
+      "explicit_connection": "配套题承接 1.1-k4；二面角概念无连接"
+    },
+    {
+      "item": "B8",
+      "question": "P 是棱长2正方体内（含表面）任意一点，求 PA·PC 最大值",
+      "process": "建系 A(0,0,0)，C(2,2,0)，P(x,y,z)，x,y,z 属于 [0,2]。PA·PC = (-x,-y,-z)·(2-x,2-y,-z) = x²-2x+y²-2y+z² = (x-1)²+(y-1)²+z²-2。最大 = 1+1+4-2 = 4（x=0 或 2，y=0 或 2，z=2）。交叉验证（极化恒等式桥接骨架）：PA·PC = |PG|²-|GA|²，G=(1,1,0)，|GA|²=2，最远点 (0,0,2)：|PG|²=6，得 4",
+      "result": "4",
+      "first_breakpoint": null,
+      "hint_required": false,
+      "confidence": 0.8,
+      "knowledge_used": [
+        "课程建系思想",
+        "1.1-k4 数量积",
+        "bridge-1.1-polarization 文本骨架"
+      ],
+      "left_column_before_first_use": true,
+      "explicit_connection": "桥接单元在习题前展示；配套题承接 1.1-k4"
+    },
+    {
+      "item": "B11",
+      "question": "正四面体 OABC 棱长2，G 为 △OBC 重心，M 为 AG 中点。(1) 用 OA,OB,OC 表示 OM 并求 |OM|；(2) 证明 OM 垂直 BC",
+      "process": "(1) OG = (OB+OC)/3（重心）；OM = (OA+OG)/2 = (1/2)OA+(1/6)OB+(1/6)OC。|OM|² = (1/4)·4+(1/36)·4+(1/36)·4+(1/6)·2+(1/6)·2+(1/18)·2 = 1+2/9+1/3+1/3+1/9 = 2，|OM| = √2。(2) OM·BC = OM·(OC-OB) = 1-1+(1/6)(2-4+4-2) = 0，OM 垂直 BC 成立",
+      "result": "(1) OM = (1/2)OA+(1/6)OB+(1/6)OC，|OM| = √2；(2) OM·BC = 0，垂直成立",
+      "first_breakpoint": "重心向量式 OG=(OB+OC)/3（必修平面向量前置，循环左栏无）；中点两步链易把系数写成 (1/2,1/4,1/4)",
+      "hint_required": false,
+      "confidence": 0.7,
+      "knowledge_used": [
+        "重心向量表示（必修前置）",
+        "拆解/模长平方/垂直判定（k4）"
+      ],
+      "left_column_before_first_use": false,
+      "explicit_connection": "配套题承接 1.1-k4；重心无连接"
+    },
+    {
+      "item": "B12",
+      "question": "三棱锥 P-ABC：AB=AC=3，AP=4，∠BAC=∠PAC=∠BAP=60 度，D 在 BC 上且 CD=2BD，M 为 AD 中点。(1) 求 PM；(2) 求异面直线 PM 与 AC 所成角余弦",
+      "process": "设 AB=a, AC=c, AP=p；a·c=9/2，a·p=c·p=6。AD = (2/3)a+(1/3)c，AM = (1/3)a+(1/6)c。PM = (1/3)a+(1/6)c-p。|PM|² = 1+1/4+16+1/2-4-2 = 47/4，PM = √47/2。PM·AC = (1/3)(9/2)+(1/6)(9)-6 = -3，线线角余弦 = |PM·AC|/(|PM|·3) = 2/√47 = 2√47/47",
+      "result": "(1) PM = √47/2；(2) 余弦 = 2√47/47",
+      "first_breakpoint": "分点比例 CD=2BD 到 AD=(2/3)a+(1/3)c 的系数易写反（与 iteration 1 相同断点）",
+      "hint_required": false,
+      "confidence": 0.65,
+      "knowledge_used": [
+        "拆解（k2/前置）",
+        "模长平方（例15）",
+        "线线角绝对值（课程）"
+      ],
+      "left_column_before_first_use": true,
+      "explicit_connection": "配套题承接 1.1-k4/类型Ⅴ/Ⅵ"
+    },
+    {
+      "item": "C13",
+      "question": "a,b,c 不共面，OA=a-2b+c，OB=pa+b+qc，OC=2a+b-2c，O,A,B,C 共面，求 3p+5q",
+      "process": "O,A,B,C 共面等价于 C 在平面 OAB 内，等价于 OC = xOA+yOB（k3 共面向量定理形式）。分量比较：x+py=2；-2x+y=1；x+qy=-2。前两式得 y=5/(2p+1)，x=2-5p/(2p+1)；代入第三式：5(q-p)/(2p+1) = -4，5q = -3p-4，3p+5q = -4。交叉验证（行列式）：|1 -2 1; p 1 q; 2 1 -2| = -3p-5q-4 = 0，3p+5q = -4",
+      "result": "3p+5q = -4",
+      "first_breakpoint": "把四点共面翻译成 OC = xOA+yOB（k3 共面向量定理）而非直接套系数和=1（O 在平面内，不适用 x+y+z=1 形式）；iteration 1 同样卡点，本次左栏 k3 补全文本加 micro 桥接已前置，减轻",
+      "hint_required": false,
+      "confidence": 0.7,
+      "knowledge_used": [
+        "1.1-k3 共面向量定理（前置知识块，含系数和推论补全）",
+        "micro-four-point-coplanar 文本桥接"
+      ],
+      "left_column_before_first_use": true,
+      "explicit_connection": "prerequisite_knowledge_blocks=1.1-k3 显式列出；桥接单元习题前展示"
+    },
+    {
+      "item": "C14",
+      "question": "棱长1正四面体 P-ABC，O 底面重心，G,F 分别在 PO、PC 上（不含端点），D,E 在 PA、PB 延长线上，PD=xPA，PE=yPB，PF=zPC，DF 交 AC 于 M，EF 交 BC 于 N。A：x=y 则 MN 平行平面 PAB；B：PO=(1/2)PA+(1/3)PB+(1/6)PC；C：z=1/2 且平面 DEF 过 O 时 x+y 最小值为4；D：G 为外接球心且 x=y=2、平面 DEF 过 G 时 F 到平面 PDE 的距离为 √6/9",
+      "process": "设 e1=PA, e2=PB, e3=PC（两两 60 度，模1）。A：M 在 AC 与 DF 上，t = z(1-x)/(z-x)；N 同理同参数，MN = (1-t)(e2-e1) 平行 AB，AB 在平面 PAB 内，MN 平行平面 PAB，成立。B：O=(e1+e2+e3)/3，PO=(1/3)(PA+PB+PC)，与 (1/2,1/3,1/6) 不符，不成立。C：O=αD+βE+γF，α+β+γ=1：α=1/(3x)，β=1/(3y)，γ=2/3，1/x+1/y=1，(x-1)(y-1)=1，x+y 大于等于 4，取等 x=y=2，成立。D：外接球心 G=(1/4)(e1+e2+e3)；平面 DEF 过 G：1/8+1/8+1/(4z)=1，z=1/3；平面 PDE=平面 PAB；F 到平面 PAB 距离 = z·(√6/3) = √6/9，成立",
+      "result": "ACD（B 错误）",
+      "first_breakpoint": "D 项外接球心加点面距离：循环左栏/课程/桥接均无（iteration 1 同断点，仍存在）；C 项高一基本不等式；整体代数量大",
+      "hint_required": false,
+      "confidence": {
+        "A": 0.55,
+        "B": 0.85,
+        "C": 0.55,
+        "D": 0.35,
+        "overall": 0.4
+      },
+      "knowledge_used": [
+        "k3 系数和推论（前置块）",
+        "micro-four-point-coplanar 桥接",
+        "高一基本不等式（前置）",
+        "外接球心/点面距离（前置缺失）"
+      ],
+      "left_column_before_first_use": "A/B/C 项 true（k3+桥接前置）；D 项 false",
+      "explicit_connection": "A/B/C 显式承接；D 项无连接"
+    }
+  ],
+  "first_breakpoints": [
+    {
+      "item": "B4",
+      "breakpoint": null,
+      "resolved_without_hint": true,
+      "comparison_to_iteration_1": "新题（原 cycle-1），无断点"
+    },
+    {
+      "item": "B5",
+      "breakpoint": null,
+      "resolved_without_hint": true,
+      "comparison_to_iteration_1": "新题（原 cycle-1），无断点"
+    },
+    {
+      "item": "B6",
+      "breakpoint": "二面角平面角概念不在循环左栏/课程（必修前置）；A 点 (h,k) 坐标化确定",
+      "resolved_without_hint": true,
+      "comparison_to_iteration_1": "新增断点（iteration 1 未做过该题）"
+    },
+    {
+      "item": "B7",
+      "breakpoint": "CD=CA+AB+BD 拆分与 AC、BD 夹角等于二面角的符号处理；二面角概念前置缺失",
+      "resolved_without_hint": true,
+      "comparison_to_iteration_1": "新增断点"
+    },
+    {
+      "item": "B8",
+      "breakpoint": null,
+      "resolved_without_hint": true,
+      "comparison_to_iteration_1": "保持无断点（坐标配方路径）；桥接状态从 REQUIRED_SUPPLEMENT_NOT_VERIFIED 变为 READY_FOR_INDEPENDENT_ATTEMPT"
+    },
+    {
+      "item": "B11",
+      "breakpoint": "重心向量式（必修前置）与中点两步链系数",
+      "resolved_without_hint": true,
+      "comparison_to_iteration_1": "新增断点（iteration 1 未做过该题）"
+    },
+    {
+      "item": "B12",
+      "breakpoint": "分点比例 CD=2BD 系数易写反",
+      "resolved_without_hint": true,
+      "comparison_to_iteration_1": "iteration 1 同断点，仍存在"
+    },
+    {
+      "item": "C13",
+      "breakpoint": "四点共面到 OC=xOA+yOB 的翻译",
+      "resolved_without_hint": true,
+      "comparison_to_iteration_1": "减轻：k3 系数和推论加 micro 桥接已显式前置；但翻译动作仍需学生主动完成"
+    },
+    {
+      "item": "C14",
+      "breakpoint": "D 项外接球心加点面距离前置缺失；C 项基本不等式",
+      "resolved_without_hint": true,
+      "residual_risk": true,
+      "comparison_to_iteration_1": "D 项断点仍存在（无课程/桥接覆盖）"
+    }
+  ],
+  "comparison_to_iteration_1": {
+    "task_set_changed": "iteration 1 循环5习题=B8/B12/C13/C14（另有5道变式）；iteration 2 直属任务=B4/B5/B6/B7/B8/B11/B12/C13/C14。manifest 19:00 重排：cycle1=[A1,A2,A3]、cycle2=[B10]、cycle3=[]、cycle4=[B9]、cycle5=[B4-B8,B11,B12,C13,C14]；B4-B7/B11 系路径重构后移入 cycle 5 的承接题，非旧题残留",
+    "fixes_observed": [
+      "四点共面系数和=1：iteration 1 判 TEXT_BRIDGE_ONLY/未连接；iteration 2 的 prerequisite_knowledge_blocks 显式包含 1.1-k3（含系数和推论补全文本），且 micro-four-point-coplanar 骨架在习题前展示，修复为左栏显式连接",
+      "B8/C13/C14 释放状态：iteration 1 plan 门禁标注 REQUIRED_SUPPLEMENT_NOT_VERIFIED；iteration 2 question_coverage 全部 READY_FOR_INDEPENDENT_ATTEMPT（桥接 SOURCE_METHOD_READY，提供方法骨架）",
+      "md 新增显式连接行：本批配套题承接 1.1-k3, 1.1-k4, 类型Ⅳ/Ⅴ/Ⅵ，习题与左栏知识的承接关系文字化",
+      "循环5开头显式展示前置知识块 k3 与本批知识块 k4 全文，先于例题与习题"
+    ],
+    "breakpoint_comparison": [
+      {
+        "item": "B8",
+        "iteration_1": "无断点",
+        "iteration_2": "无断点",
+        "status": "unchanged"
+      },
+      {
+        "item": "B12",
+        "iteration_1": "分点比例系数",
+        "iteration_2": "分点比例系数（仍存在）",
+        "status": "persists"
+      },
+      {
+        "item": "C13",
+        "iteration_1": "四点共面到线性相关翻译",
+        "iteration_2": "同翻译动作，但左栏 k3 与桥接已前置（减轻）",
+        "status": "mitigated"
+      },
+      {
+        "item": "C14",
+        "iteration_1": "D 项外接球+点面距离缺失；C 项基本不等式",
+        "iteration_2": "D 项仍存在；C 项仍依赖高一",
+        "status": "persists"
+      },
+      {
+        "item": "B4/B5/B6/B7/B11",
+        "iteration_1": "未分配",
+        "iteration_2": "B6/B7 新增二面角前置断点；B11 新增重心前置断点；B4/B5 无断点",
+        "status": "new_items"
+      }
+    ],
+    "iteration_1_variant_notes": "iteration 1 的变式断点（dv-13/15-1/15-2/16-1/16-2）不在本轮直属清单，不重复判定；其方法缺口（拆解/平方/极化无课程视频）在 iteration 2 中由桥接文本骨架与例题解析部分覆盖，但课程本身仍未讲授"
+  },
+  "knowledge_integration_assessment": {
+    "method": "对每题检查：首次用到该知识点时，左栏 knowledge_blocks / prerequisite_knowledge_blocks / 桥接骨架是否已按路径顺序出现在习题之前，且与题目显式承接（配套题承接声明或桥接 target_questions）",
+    "findings": [
+      {
+        "item": "B4",
+        "knowledge": "k4 数量积定义",
+        "present_before_first_use": true,
+        "explicit": "承接声明 1.1-k4",
+        "note": "k4 全文在循环5开头、例6-8 之前展示"
+      },
+      {
+        "item": "B5",
+        "knowledge": "k4 数量积 + 建系",
+        "present_before_first_use": true,
+        "explicit": "承接声明 + 课程",
+        "note": ""
+      },
+      {
+        "item": "B6",
+        "knowledge": "k4 数量积",
+        "present_before_first_use": true,
+        "explicit": "承接声明",
+        "note": "但二面角平面角概念（必修）不在循环左栏/课程，为隐性前置"
+      },
+      {
+        "item": "B7",
+        "knowledge": "k4 数量积 + 例15 模长平方",
+        "present_before_first_use": true,
+        "explicit": "承接声明",
+        "note": "二面角概念同样隐性前置"
+      },
+      {
+        "item": "B8",
+        "knowledge": "k4 数量积 + 极化恒等式桥接",
+        "present_before_first_use": true,
+        "explicit": "桥接 target_questions 含 1.1-B8",
+        "note": "桥接为文本骨架（SOURCE_METHOD_READY），无专门视频"
+      },
+      {
+        "item": "B11",
+        "knowledge": "k4 拆解/垂直 + 重心",
+        "present_before_first_use": "k4 true；重心 false",
+        "explicit": "承接声明仅覆盖 k4",
+        "note": "重心向量式为必修前置，左栏无"
+      },
+      {
+        "item": "B12",
+        "knowledge": "k4 + 线线角公式",
+        "present_before_first_use": true,
+        "explicit": "承接声明 + 课程",
+        "note": ""
+      },
+      {
+        "item": "C13",
+        "knowledge": "k3 共面向量定理/系数和 + micro 桥接",
+        "present_before_first_use": true,
+        "explicit": "prerequisite_knowledge_blocks=1.1-k3 + 桥接 target_questions",
+        "note": "iteration 2 修复项"
+      },
+      {
+        "item": "C14",
+        "knowledge": "k3 系数和 + 桥接（A/B/C 项）",
+        "present_before_first_use": true,
+        "explicit": "同 C13",
+        "note": "D 项需要的外接球心/点面距离首次使用前未出现（无课程/桥接/左栏），为唯一显式断裂"
+      }
+    ],
+    "conclusion": "左栏知识在首次用到前出现且显式相连的情况：7/9 题完整成立（B4/B5/B8/B12/C13/C14 的 A/B/C 项以及 B6/B7 的数量积部分）；B6/B7 的二面角、B11 的重心、C14-D 的外接球心与点面距离为首次使用前未出现的知识（前两者属必修隐性前置，后者属循环外课程）。不能只看视频：课程仅覆盖建系点乘线线角，拆解/平方/极化/共面系数和均靠左栏知识块、例题解析文本与桥接骨架承担，这一判断与 iteration 1 一致且证据更完整。"
+  },
+  "status": "partial",
+  "status_reasons": [
+    "9/9 直属题完成独立作答并写出推导，hint_required 全部 false，未读取任何答案来源",
+    "高置信项（B4/B5/B8 大于等于 0.8）与中置信项（B6/B7/B11/B12/C13 0.6-0.7）可构成代理通过的主体，但不足以声明 proxy_pass",
+    "C14 整体 0.4、D 项 0.35，且外接球心/点面距离前置缺失，存在明确未覆盖成分",
+    "B6/B7/B11 依赖必修隐性前置（二面角、重心），循环内左栏与课程未显式连接",
+    "极化恒等式仍无专门视频（文本骨架 SOURCE_METHOD_READY）；k4 左栏 OCR 仍缺投影向量定义段（例8 依赖解析文本）",
+    "无延迟闭卷复测、无未见近迁移证据；代理过程由模型生成，不等于真人掌握",
+    "结论：不阻塞本轮推进至桥接验证阶段，但 C14-D 在补课前不得计入掌握"
+  ],
+  "remaining_gaps": {
+    "uncovered_bridge_knowledge": [
+      {
+        "gap": "极化恒等式",
+        "status": "SOURCE_METHOD_READY（文本骨架）/ NO_DEDICATED_VIDEO",
+        "affects": [
+          "B8",
+          "C14"
+        ],
+        "note": "骨架已前置，无视频讲授；等号条件需自证"
+      },
+      {
+        "gap": "投影向量（k4 左栏缺段）",
+        "status": "GAP",
+        "affects": [
+          "例8"
+        ],
+        "note": "OCR 知识页止于锐/直/钝角判断；例8 仅解析文本"
+      },
+      {
+        "gap": "外接球心与点面距离",
+        "status": "PREREQUISITE_GAP",
+        "affects": [
+          "C14-D"
+        ],
+        "note": "属 3.1.4.6/3.1.4.7 后续课程，循环 course_keys 不含"
+      },
+      {
+        "gap": "二面角平面角（B6/B7）",
+        "status": "PREREQUISITE_GAP（必修隐性）",
+        "affects": [
+          "B6",
+          "B7"
+        ],
+        "note": "循环左栏/课程均未出现"
+      },
+      {
+        "gap": "重心向量式（B11）",
+        "status": "PREREQUISITE_GAP（必修隐性）",
+        "affects": [
+          "B11"
+        ],
+        "note": "循环左栏无"
+      },
+      {
+        "gap": "高一函数最值/基本不等式（C14-C、例15变式2）",
+        "status": "PREREQUISITE_GAP",
+        "affects": [
+          "C14-C"
+        ],
+        "note": "课程仅口头提及高一底子"
+      }
+    ],
+    "recommended_actions": [
+      "C14-D 前置：先学 3.1.4.6/3.1.4.7（法向量/点面距离）后再回做",
+      "B6/B7/B11：补二面角与重心（必修）回顾块，或显式标注隐性前置",
+      "极化桥接完成 release_requirements（原型题+近迁移+等号条件解释）后，B8/C14 才能计掌握",
+      "隔天闭卷冷复测 B12/C13/C14-A 至少 2 题",
+      "k4 投影向量段补 OCR/人工补录"
+    ]
+  },
+  "answer_sources_read": [
+    "chapter1_manifest.json（1.1 节 learning_cycles，cycle-5 exercise_keys=B4,B5,B6,B7,B8,B11,B12,C13,C14）",
+    "data/packets/1.1/learning_packet.md（循环5/5 全文：k3/k4 知识块、桥接骨架、例6-8/13-16、变式、B4-B8/B11/B12/C13/C14 题干）",
+    "data/packets/1.1/learning_packet.json（cycle-5 条目、knowledge_blocks=1.1-k4、prerequisite_knowledge_blocks=1.1-k3 全文、answer_policy）",
+    "data/contexts/1.1.json（DEEPSEEK_STUDENT_CONTEXT：status/canary/model_contract、instructions、route_support.question_coverage、route_support.bridge_micro_lessons、sequential_learning_packet 结构）",
+    "data/course_transcripts/3.1.4.3 向量夹角与直线夹角.json（本迭代仅校验 text_sha256=4f63e958... 与 iteration 1 一致；全文于 iteration 1 通读）",
+    "reports/zero_base_cycles/1.1-cycle-5.json（本人 iteration 1 报告，仅用于对比）",
+    "未读取：data/packets/1.1/answer_sidecar.json、packet.json、packet.md、lesson_packet.json、student_packet.json、其他代理报告、其他循环作答"
+  ],
+  "honesty_boundary": [
+    "全程未读取任何答案册、answer_sidecar.json、其他代理报告或其他循环的作答",
+    "attempts 中的结果全部为独立推导；交叉验证仅用代数/几何自洽（如 C13 行列式与线性表示双路径、B8 坐标与极化双路径），未与答案册比对（被禁止）",
+    "转写内容按字节哈希确认与 iteration 1 一致，课程理解结论沿用；未假装重新看视频",
+    "context 文件 current_cycle 指向 cycle-1 与本人任务（cycle-5）不一致，已按任务书与最新 manifest 执行并在 course_evidence 中如实记录",
+    "status=partial：代理解出不等于真人掌握；无冷复测/近迁移证据；C14-D 与隐性前置项不计入掌握",
+    "仅原位改写 reports/zero_base_cycles/1.1-cycle-5.json，未修改 manifest、packet、代码、测试或其他代理文件"
+  ]
+}

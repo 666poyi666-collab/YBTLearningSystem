@@ -1,0 +1,170 @@
+{
+  "schema_version": "1.1",
+  "artifact": "ZERO_BASE_WORKER_ITEM_SIMULATION",
+  "generation": "G-20260816-07",
+  "generated_at": "2026-08-16T20:13:22+08:00",
+  "worker": 2,
+  "worker_role": "deepseek_worker",
+  "model_contract": {
+    "model": "opencode-go/deepseek-v4-flash",
+    "reasoning_effort": "max",
+    "context_window": 1000000
+  },
+  "section": "1.1",
+  "cycles": "3-4",
+  "tasks": "15-17",
+  "worker_status": "PASS",
+  "answer_sidecar_read": false,
+  "human_acceptance_not_proven": true,
+  "context_sha256": "2ba656cf38a3581aab11d3f5e04967018ef5be9be0af7de6cd59309abbd67119",
+  "item_results": [
+    {
+      "section": "1.1",
+      "source_revision": {
+        "generation": "G-20260816-07",
+        "context_sha256": "2ba656cf38a3581aab11d3f5e04967018ef5be9be0af7de6cd59309abbd67119"
+      },
+      "context_sha256": "2ba656cf38a3581aab11d3f5e04967018ef5be9be0af7de6cd59309abbd67119",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true,
+      "cycle": "4",
+      "item_id": "85adf2efd96849c8",
+      "observation_signal": "设问是判断 MA、MB、MC 三个向量是否共面，属于自由向量共面判断，不是点共面判断；题给条件 OM = (1/3)OA + (1/3)OB + (1/3)OC，A、B、C 不共线，O 在平面 ABC 外；关键词是自由向量线性相关与位置向量系数和。",
+      "course_call": {
+        "course_key": "coplanar",
+        "course_id": "3.1.4.2",
+        "course_title": "证明共面（必听主课）",
+        "method_model_id": "coplanar:vector-vs-point-coplanarity-skeleton",
+        "method": "类型Ⅲ 证明共面 G-07 方法族：先区分自由向量共面与点落在同一平面；第一行写目标向量或点的位置向量；第二行设为基向量线性组合并逐项比较系数；若判断点面位置，单独检查位置向量系数和条件；同一直线分点比例先设整段为 t 倍、剩余段为 (1-t) 倍并解 t；检查点核对系数唯一性、分点方向与参数范围、系数和与题目平面，不把向量共面直接写成点共面。 方法调用：3.1.4.2 证明共面（向量能被两个不共线向量拆分即共面）；3.1.2.1 空间向量基本定理；3.1.2.2 等值面法位置向量系数和交叉验证。"
+      },
+      "anti_stall_action": "防卡动作 1（共面区分）：先判定对象是自由向量共面，采用线性相关判据 MA+MB+MC=0，不把点共面条件当作唯一依据；防卡动作 2：3OM=OA+OB+OC 改写为三个差向量和为零；防卡动作 3：位置向量系数 1/3+1/3+1/3=1 单独检查，交叉确认 M 在平面 ABC 内。",
+      "coplanarity_distinction_check": "共面区分防卡规则验证：判定对象=自由向量共面（MA、MB、MC 三向量）；用线性相关判据 MC=-MA-MB 判定共面；位置向量系数和=1 只作交叉验证（M 为重心在面内），未把向量共面误写为点共面。",
+      "first_line": "第一行写目标向量：判断自由向量 MA、MB、MC 是否共面；把题给条件改写为 3OM = OA + OB + OC。",
+      "second_line": "第二行写线性组合并逐项比较：3OM - OA - OB - OC = 0，即 (OM-OA) + (OM-OB) + (OM-OC) = 0，逐项核对 OM-OA = AM = -MA、OM-OB = -MB、OM-OC = -MC，所以 MA + MB + MC = 0。",
+      "continuation": "继续推进：由 MA + MB + MC = 0 得 MC = -MA - MB；MA 与 MB 不共线（三角形 ABC 两边方向），故 MC 可由 MA、MB 唯一线性表示，MA、MB、MC 三个自由向量共面。",
+      "independent_self_check": "自检：区分向量共面与点共面——本题只写三向量线性相关即共面；位置向量系数和 1/3+1/3+1/3=1 单独检查，确认 M 是三角形 ABC 重心、落在平面 ABC 内，端点共面与向量共面结论一致；符号方向逐项核对。",
+      "first_breakpoint": "",
+      "hint_level": "none",
+      "verdict": "PASS"
+    },
+    {
+      "section": "1.1",
+      "source_revision": {
+        "generation": "G-20260816-07",
+        "context_sha256": "2ba656cf38a3581aab11d3f5e04967018ef5be9be0af7de6cd59309abbd67119"
+      },
+      "context_sha256": "2ba656cf38a3581aab11d3f5e04967018ef5be9be0af7de6cd59309abbd67119",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true,
+      "cycle": "4",
+      "item_id": "0d9860d67f5ba867",
+      "observation_signal": "平行六面体 ABCD-A1B1C1D1，E、F、G、H 分别是棱 A1D1、C1D1、CC1、AB 的中点；第(1)问是自由向量拆分（EG 在基底 AB、AD、AA1 下的系数），第(2)问是四点共面（点落在同一平面）；先区分对象类型再选方法。",
+      "course_call": {
+        "course_key": "decomposition",
+        "course_id": "3.1.2.1",
+        "course_title": "空间向量拆分法（必听主课）",
+        "method_model_id": "decomposition:space-vector-basis-unique-split",
+        "method": "类型Ⅲ 证明共面 G-07 方法族：先区分自由向量共面与点落在同一平面；第一行写目标向量或点的位置向量；第二行设为基向量线性组合并逐项比较系数；若判断点面位置，单独检查位置向量系数和条件；同一直线分点比例先设整段为 t 倍、剩余段为 (1-t) 倍并解 t；检查点核对系数唯一性、分点方向与参数范围、系数和与题目平面，不把向量共面直接写成点共面。 方法调用：3.1.2.1 空间向量基本定理唯一拆分求系数；3.1.4.2 从公共起点 F 出发的三向量拆分判共面；3.1.2.2 位置向量系数和=1 交叉验证；中点即 1:1 分点，用 t/(1-t) 规则核对。"
+      },
+      "anti_stall_action": "防卡动作 1（共面区分）：第(1)问自由向量系数无需系数和条件，第(2)问点共面需位置向量系数和或公共起点拆分；防卡动作 2（分点比例）：每个中点先设整段为 t 倍、剩余为 (1-t) 倍并解 t=1/2，如 E = A1 + (1/2)(D1-A1)；防卡动作 3：位置向量系数和 H = 2E - 3F + 2G（和=1）交叉验证四点共面。",
+      "coplanarity_distinction_check": "共面区分防卡规则验证：判定对象=第(1)问自由向量共面/拆分；第(2)问四点共面（点落在同一平面）；第(1)问只逐项比较基系数 x=1、y=1/2、z=-1/2；第(2)问走公共起点 F 拆分 FH=2FG+2FE，并以位置向量系数和 H=2E-3F+2G（2-3+2=1）交叉验证，未把两类对象混用。",
+      "first_line": "第一行写目标向量与位置向量：取基底 e1=AB、e2=AD、e3=AA1，以 A 为原点写出各点位置：B=e1、D=e2、A1=e3、C=e1+e2、C1=e1+e2+e3、D1=e2+e3。",
+      "second_line": "第二行设为基向量线性组合并逐项比较系数：每个中点按 t/(1-t) 规则写（整段 t=1/2）：E=(A1+D1)/2=(1/2)e2+e3；F=(C1+D1)/2=(1/2)e1+e2+e3；G=(C+C1)/2=e1+e2+(1/2)e3；H=(A+B)/2=(1/2)e1；EG=G-E=e1+(1/2)e2-(1/2)e3，逐项比较得 x=1、y=1/2、z=-1/2。",
+      "continuation": "继续推进：第(2)问以 F 为公共起点：FG=G-F=(1/2)e1-(1/2)e3、FE=E-F=-(1/2)e1-(1/2)e2、FH=H-F=-e2-e3；验证 FH = 2FG + 2FE（逐项回代成立），故 H 在 FG、FE 张成的平面内，E、F、G、H 四点共面。",
+      "independent_self_check": "自检：基向量不共面保证系数唯一；中点分点参数 t=1/2 方向正确（从起点到终点）；自由向量组合 2FG+2FE 与位置向量系数和分别检查——H = 2E - 3F + 2G 且 2-3+2=1 满足点共面条件，两法一致；结论明确写四点共面而非仅向量共面。",
+      "first_breakpoint": "",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "variant_delta": "相对母题例12：母题为自由向量共面判断（纯向量条件）；变式新增第(1)问自由向量基系数计算，第(2)问转为四点共面（点落在同一平面）构造性证明；对象类型从向量共面扩展为点共面，且引入中点分点（t=1/2）的系数书写，必须走位置向量系数和或公共起点拆分。"
+    },
+    {
+      "section": "1.1",
+      "source_revision": {
+        "generation": "G-20260816-07",
+        "context_sha256": "2ba656cf38a3581aab11d3f5e04967018ef5be9be0af7de6cd59309abbd67119"
+      },
+      "context_sha256": "2ba656cf38a3581aab11d3f5e04967018ef5be9be0af7de6cd59309abbd67119",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true,
+      "cycle": "4",
+      "item_id": "B9",
+      "observation_signal": "正四棱锥 P-ABCD，E、F 分别为 PA、PC 的中点，G 满足 DG=2GP（PD 上分点 2:1）；第(1)问自由向量拆分求 BG 在基底 BA、BC、BP 下的系数，第(2)问证 B、E、G、F 四点共面（点共面）；先区分对象类型。",
+      "course_call": {
+        "course_key": "decomposition",
+        "course_id": "3.1.2.1",
+        "course_title": "空间向量拆分法（必听主课）",
+        "method_model_id": "decomposition:space-vector-basis-unique-split",
+        "method": "类型Ⅲ 证明共面 G-07 方法族：先区分自由向量共面与点落在同一平面；第一行写目标向量或点的位置向量；第二行设为基向量线性组合并逐项比较系数；若判断点面位置，单独检查位置向量系数和条件；同一直线分点比例先设整段为 t 倍、剩余段为 (1-t) 倍并解 t；检查点核对系数唯一性、分点方向与参数范围、系数和与题目平面，不把向量共面直接写成点共面。 方法调用：3.1.2.1 以 B 为公共起点、基底 BA/BC/BP 唯一拆分；3.1.4.2 从 B 出发的三向量拆分判共面；3.1.2.2 位置向量系数和=1 交叉验证；DG=2GP 走 t/(1-t) 分点防卡动作。"
+      },
+      "anti_stall_action": "防卡动作 1（分点比例）：设整段 DP 为 1，GP=t·DP、DG=(1-t)·DP，由 DG=2GP 得 1-t=2t，解 t=1/3，故 G=(1/3)D+(2/3)P，核对方向（G 在 PD 上靠近 P）；防卡动作 2（共面区分）：第(1)问自由向量系数无需系数和条件，第(2)问点共面走公共起点 B 拆分并单独检查位置向量系数和；防卡动作 3：区分自由向量组合系数和 4/3 与点共面位置向量系数和 1，不混用。",
+      "coplanarity_distinction_check": "共面区分防卡规则验证：判定对象=第(1)问自由向量拆分；第(2)问四点共面（B、E、G、F 点落在同一平面）；第(1)问逐项比较基系数 x=y=1/3、z=2/3；第(2)问用 BG=(2/3)BE+(2/3)BF 判定 G 在平面 BEF 内，并以位置向量系数和 G=(-1/3)B+(2/3)E+(2/3)F（和=1）交叉验证；自由向量组合系数和 4/3 与点共面系数和 1 明确区分。",
+      "first_line": "第一行写目标向量与位置向量：选 B 为公共起点，基底 BA、BC、BP；正方形底面给 D = BA + BC；分点防卡动作：设 GP=t·DP、DG=(1-t)·DP，DG=2GP 得 t=1/3，G=(1/3)D+(2/3)P=(BA+BC+2BP)/3，所以 BG=(1/3)BA+(1/3)BC+(2/3)BP。",
+      "second_line": "第二行设为基向量线性组合并逐项比较系数：x=1/3、y=1/3、z=2/3（基不共面，系数唯一）；再写 E、F 位置：BE=(BA+BP)/2、BF=(BC+BP)/2。",
+      "continuation": "继续推进：验证 (2/3)BE + (2/3)BF = (BA+BC+2BP)/3 = BG，因此 G 在 BE、BF 张成的平面 BEF 内，B、E、G、F 四点共面；位置向量系数和交叉验证 G = (-1/3)B + (2/3)E + (2/3)F，系数和 -1/3+2/3+2/3=1 成立。",
+      "independent_self_check": "自检：分点参数 t=1/3 方向与范围正确（0<t<1，G 在 D 与 P 之间且靠近 P）；正方形底面保证 D=BA+BC；逐项比较系数确认唯一；自由向量组合系数和 4/3 与点共面位置向量系数和 1 分开检查，不混用；结论与题目对象 B、E、G、F 对应，不写成向量共面。",
+      "first_breakpoint": "",
+      "hint_level": "none",
+      "verdict": "PASS"
+    }
+  ],
+  "method_check_results": [
+    {
+      "section": "1.1",
+      "source_revision": {
+        "generation": "G-20260816-07",
+        "context_sha256": "2ba656cf38a3581aab11d3f5e04967018ef5be9be0af7de6cd59309abbd67119"
+      },
+      "context_sha256": "2ba656cf38a3581aab11d3f5e04967018ef5be9be0af7de6cd59309abbd67119",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true,
+      "cycle": "3",
+      "item_id": "等值面法方法检查",
+      "observation_signal": "方法检查要求闭卷复述 3.1.2.2 等值面法的方法链：四点共面位置向量系数和=1 的正逆向理由，并区分三点共线（二维系数和=1）与四点共面（三维系数和=1）。",
+      "course_call": {
+        "course_key": "equisurface",
+        "course_id": "3.1.2.2",
+        "course_title": "空间向量等值面法（补充课程）",
+        "method_model_id": "equisurface:coefficient-sum-one",
+        "method": "等值面法模型：OP = xOA + yOB + zOC 且 x+y+z=1 等价于 P 在平面 ABC 内；正向 AP=uAB+vAC 换公共起点得系数和=1；逆向 x+y+z=1 得 OP=OA+yAB+zAC，点由平面内两条方向到达；换公共起点必须重新推导。"
+      },
+      "anti_stall_action": "防卡动作（共面区分）：先固定公共起点再写位置向量；正向与逆向分开推导；区分自由向量系数与位置向量系数，回代几何位置。",
+      "first_line": "第一行写判定条件：固定公共起点 O，把待判定点写为 OP = xOA + yOB + zOC，检查 x+y+z 是否等于 1。",
+      "second_line": "第二行写正向理由：若 P 在平面 ABC 内，则 AP = uAB + vAC，换回公共起点得 OP = (1-u-v)OA + uOB + vOC，所以 x+y+z=1。",
+      "continuation": "继续推进：逆向理由：若 x+y+z=1，则 OP = OA + yAB + zAC，P 可由 A 沿平面内两条方向到达，因此 P 在平面 ABC 内；区分点的位置向量系数与任意自由向量系数。",
+      "independent_self_check": "自检：三维四点共面系数和与二维三点共线系数和区分；公共起点一致；最后回代几何位置，避免把向量共面误写成点共面。",
+      "first_breakpoint": "",
+      "hint_level": "none",
+      "verdict": "PASS"
+    },
+    {
+      "section": "1.1",
+      "source_revision": {
+        "generation": "G-20260816-07",
+        "context_sha256": "2ba656cf38a3581aab11d3f5e04967018ef5be9be0af7de6cd59309abbd67119"
+      },
+      "context_sha256": "2ba656cf38a3581aab11d3f5e04967018ef5be9be0af7de6cd59309abbd67119",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true,
+      "cycle": "3",
+      "item_id": "等值面法末减出近迁移",
+      "observation_signal": "近迁移检查：用刚复述的等值面法处理未见小变式——已知 OP = 6OA + 2OB - 7OC，判断点 P 是否在平面 ABC 内。",
+      "course_call": {
+        "course_key": "equisurface",
+        "course_id": "3.1.2.2",
+        "course_title": "空间向量等值面法（补充课程）",
+        "method_model_id": "equisurface:coefficient-sum-one",
+        "method": "沿用等值面法模型：OP = xOA + yOB + zOC 时 x+y+z=1 即 P 在平面 ABC 内；本小题直接检验系数和。"
+      },
+      "anti_stall_action": "防卡动作：负系数代入系数和时单独核对符号；检查方向向量 OB、OC 不共线；结论回代为点 P 在面内，不写成向量共面。",
+      "first_line": "第一行写目标：判断点 P 是否在平面 ABC 内，写出 OP = 6OA + 2OB + (-7)OC。",
+      "second_line": "第二行算位置向量系数和：6 + 2 + (-7) = 1，满足等值面条件 x+y+z=1。",
+      "continuation": "继续推进：由等值面法逆向结论，OP = OA + 2OB - 7OC 中的方向向量 OB、OC 与公共起点 OA 组合后仍落在平面 ABC 内，因此点 P 在平面 ABC 内，检查完成。",
+      "independent_self_check": "自检：负系数符号正确；OB、OC 不共线；结论写点 P 在面内，不写错成向量共面。",
+      "first_breakpoint": "",
+      "hint_level": "none",
+      "verdict": "PASS"
+    }
+  ],
+  "first_breakpoints": [],
+  "material_blockers": []
+}

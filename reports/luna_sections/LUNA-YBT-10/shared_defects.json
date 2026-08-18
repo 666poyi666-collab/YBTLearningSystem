@@ -1,0 +1,79 @@
+{
+  "schema_version": "ybt-luna-shared-defects-v1",
+  "task_id": "LUNA-YBT-10",
+  "status": "reported",
+  "defects": [
+    {
+      "defect_id": "VISUAL-INVENTORY-STATUS-MISMATCH-20260817",
+      "status": "unknown",
+      "description": "视觉源库存仍为 blocked/NEEDS_VISION_SIDECAR，但 READY 视觉门禁为 127/127，通过的全量 sidecar 对相关图像有匹配 hash；当前 learning packet 对两项 ch3.s5 图像显式为 READY_TEXT_ONLY。",
+      "evidence": {
+        "ready_status": "ready",
+        "ready_visual_gate": {
+          "target_count": 127,
+          "passed_count": 127,
+          "post_build_unbound_items": 0
+        },
+        "inventory_status": "blocked",
+        "inventory_sha256": "6a74378730c450904fa22221df46560c99022b94eee7161b16f2cda67ae21ebf",
+        "assigned_inventory_items": [
+          {
+            "section": "2.5",
+            "kind": "direct_variant",
+            "item_id": "bbd7ba4532eb28a2",
+            "label": "变式2",
+            "visual_status": "NEEDS_VISION_SIDECAR",
+            "image_exists": true,
+            "source_docs": [
+              63
+            ]
+          },
+          {
+            "section": "ch3.s5",
+            "kind": "worked_example",
+            "item_id": "94b9bd96c483cea2",
+            "label": "例8",
+            "visual_status": "NEEDS_VISION_SIDECAR",
+            "image_exists": true,
+            "source_docs": [
+              76,
+              77
+            ]
+          },
+          {
+            "section": "ch3.s5",
+            "kind": "worked_example",
+            "item_id": "66abf1bf280a7c24",
+            "label": "例10",
+            "visual_status": "NEEDS_VISION_SIDECAR",
+            "image_exists": true,
+            "source_docs": [
+              77,
+              78
+            ]
+          }
+        ],
+        "matching_sidecars": [
+          {
+            "item_id": "bbd7ba4532eb28a2",
+            "status": "passed",
+            "image_sha256": "66d4828aba05c0fd47ef219de64f8a3b33c9ef814aca35d3caa40aaa5e2a865b",
+            "confidence": "E2"
+          },
+          {
+            "item_id": "94b9bd96c483cea2",
+            "status": "passed",
+            "image_sha256": "aede929bb11bd3bacdf30b53e364214d950de33c33da45c1d7ffbf0fd7ebba2a",
+            "confidence": "E2"
+          },
+          {
+            "item_id": "66abf1bf280a7c24",
+            "status": "passed",
+            "image_sha256": "d56fac477a8ea714eb5a19361af64af618df1adae7bcb854e937791c6c7a5934",
+            "confidence": "E2"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "schema_version": "7.2",
+  "status": "passed",
+  "provider": "GLM-4.6V-Flash via deepseek-eyes",
+  "model": "glm-4.6v-flash",
+  "inventory_path": "C:\\开发\\小工具\\一本通学习系统_v7\\reports\\all_chapters\\visual-inventory-current.json",
+  "inventory_sha256": "8688ebda8b16ba7091efaac32b755e164f6bc72cf8466ad78f307044ec1c4fdb",
+  "target_count": 1,
+  "passed_count": 1,
+  "failed_count": 0,
+  "generated_at": "2026-08-16T20:31:06+00:00",
+  "results": [
+    {
+      "status": "passed",
+      "section": "1.2+1.3",
+      "kind": "worked_example",
+      "item_id": "fcfa77372aee59c2",
+      "label": "例1",
+      "question_hint": "1.2+1.3-LIfcfa77372aee59c2",
+      "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_804_1346_1008_1516.jpg",
+      "image_sha256": "0b0cae00f24fce2edf8837ca428fe1fe0577ed65e97da3d60a960c0a0e4834f9",
+      "source_docs": [
+        18,
+        19
+      ],
+      "confidence": "E2",
+      "model": "glm-4.6v-flash",
+      "elapsed_ms": 3206,
+      "attempt": 1,
+      "structured": {
+        "objects": [
+          "长方体",
+          "顶点A, B, C, D, A1, B1, C1, D1",
+          "棱AA1, AB, AD, A1D1, B1C1, BC, CD, C1D1, B1A1, DC",
+          "面ABCD, A1B1C1D1, ADD1A1, BCC1B1",
+          "虚线A1D1, D1C1, DC, AD"
+        ],
+        "relations": [
+          "顶点连接成棱",
+          "棱围成面",
+          "面构成长方体",
+          "虚线表示被遮挡的棱"
+        ],
+        "coordinates": [],
+        "ranges": [],
+        "text": [],
+        "uncertainties": [],
+        "confidence": "E2"
+      }
+    }
+  ],
+  "attempt_log": [
+    {
+      "question_hint": "1.2+1.3-LIfcfa77372aee59c2",
+      "image_sha256": "0b0cae00f24fce2edf8837ca428fe1fe0577ed65e97da3d60a960c0a0e4834f9",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": "passed",
+          "confidence": "E2",
+          "error": null,
+          "validation_errors": [],
+          "elapsed_ms": 3206
+        }
+      ]
+    }
+  ],
+  "consumer_guard": "Only immutable-image, exact-model, answer-free E1/E2 structured rows may enter packets."
+}

@@ -1,0 +1,825 @@
+{
+  "schema_version": "7.1",
+  "packet_type": "DEEPSEEK_LESSON_PACKET",
+  "section": "2.6",
+  "label": "第6节 直线与圆的位置关系",
+  "source": {
+    "ocr_root": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109",
+    "ocr_docs": [
+      71,
+      92
+    ],
+    "source_file": null
+  },
+  "manifest": {
+    "page_count": 22,
+    "question_count": 19,
+    "expected_question_count": 19,
+    "expected_groups": {
+      "A": [
+        1,
+        4
+      ],
+      "B": [
+        5,
+        15
+      ],
+      "C": [
+        16,
+        19
+      ]
+    },
+    "derived_question_correction_count": 0
+  },
+  "status": "VERIFIED",
+  "consumer_guard": "Lesson-only context: may include worked examples; never use for independent attempt or reward judgement.",
+  "pages": [
+    {
+      "ocr_doc": 71,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_71.md",
+      "text": "# 2.5.1 直线与圆的位置关系\n\n习题：P1\n\n## 知识梳理\n\n## 知识点 1：直线与圆的位置关系\n\n直线与圆有三种位置关系：相交、相切、相离。判断方法用表格表示如下：\n\n\n<table border=1 style='margin: auto; word-wrap: break-word;'><tr><td colspan=\"2\">位置关系</td><td style='text-align: center; word-wrap: break-word;'>相交</td><td style='text-align: center; word-wrap: break-word;'>相切</td><td style='text-align: center; word-wrap: break-word;'>相离</td></tr><tr><td colspan=\"2\">图示</td><td style='text-align: center; word-wrap: break-word;'><img src=\"imgs/img_in_image_box_281_418_377_502.jpg\" alt=\"Image\"\" /></td><td style='text-align: center; word-wrap: break-word;'><img src=\"imgs/img_in_image_box_430_419_518_504.jpg\" alt=\"Image\"\" /></td><td style='text-align: center; word-wrap: break-word;'><img src=\"imgs/img_in_image_box_572_404_659_510.jpg\" alt=\"Image\"\" /></td></tr><tr><td colspan=\"2\">公共点个数</td><td style='text-align: center; word-wrap: break-word;'>2</td><td style='text-align: center; word-wrap: break-word;'>1</td><td style='text-align: center; word-wrap: break-word;'>0</td></tr><tr><td rowspan=\"2\">判定方法</td><td style='text-align: center; word-wrap: break-word;'>几何法</td><td style='text-align: center; word-wrap: break-word;'>d &lt; r</td><td style='text-align: center; word-wrap: break-word;'>d = r</td><td style='text-align: center; word-wrap: break-word;'>d &gt; r</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>代数法</td><td style='text-align: center; word-wrap: break-word;'>\\(\\Delta &gt; 0\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(\\Delta = 0\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(\\Delta &lt; 0\\)</td></tr></table>\n\n注：①几何法中的 d 指的是圆心到直线的距离，r 指的是圆的半径.\n\n②代数法指的是联立直线和圆的方程，消去y（或x）后，得到关于x（或y）的一元二次方程，根据该方程的判别式 \\(\\Delta\\)的正负情况判断直线与圆的交点个数.\n\n## 知识点2：直线与圆相切\n\n1. 过圆上一点的切线\n\n过圆上一点 \\(P(x_{0},y_{0})\\)的切线只有一条，切线有斜率存在和不存在两种情况.\n\n若切线 \\(l\\) 的斜率存在，设为 \\(k\\)。当 \\(PA\\) 斜率存在时，如图 1，先由 \\(P\\)，\\(A\\) 的坐标求 \\(k_{PA}\\)，再由 \\(l \\perp PA\\) 求 \\(k\\)，再用点斜式写出切线 \\(l\\) 的方程；当 \\(PA\\) 的斜率不存在时，如图 2，\\(k=0\\)，可直接得到切线 \\(l\\) 的方程为 \\(y=y_0\\)。\n\n如图3，若切线\\(l\\)的斜率不存在，则可直接得到切线\\(l\\)的方程为\\(x=x_0\\)。\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_136_1357_289_1499.jpg\" alt=\"Image\" width=\"12%\" /></div>\n\n\n<div style=\"text-align: center;\">图1</div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_314_1357_467_1498.jpg\" alt=\"Image\" width=\"12%\" /></div>\n\n\n<div style=\"text-align: center;\">图2</div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_492_1357_647_1501.jpg\" alt=\"Image\" width=\"13%\" /></div>\n\n\n<div style=\"text-align: center;\">图3</div>\n\n\n## 知识点1\n\n【例 1】直线  \\(l: 2x - y + 1 = 0\\) 与圆 C:  \\((x+1)^{2} + y^{2} = 4\\) 的位置关系是（）\n\nA. 相离 B. 相切\n\nC. 相交 D. 无法确定\n\n解法1：判断直线与圆的位置关系，先计算圆心到直线的距离，再与半径比较，由题意，圆心  \\(C(-1,0)\\)，半径  \\(r=2\\)，所以 C 到 l 的距离  \\(d=\\frac{|2\\times(-1)-0+1|}{\\sqrt{2^2+(-1)^2}}\\)  \\(=\\frac{\\sqrt{5}}{5}<r\\)，故直线 l 与圆 C 相交。\n\n解法2：判断直线与圆的位置关系，也可用代数法处理，\n\n直线 l 的方程可化为  \\(y=2x+1\\)，代入圆 C 的方程整理得： \\(5x^2+6x-2=0\\)，\n\n判别式  \\(\\Delta=6^2-4\\times5\\times(-2)=76>0\\)，\n\n所以直线 l 与圆 C 相交。\n\n答案：C\n\n【反思】判断直线与圆的位置关系，常有几何、代数两种方法，但几何法往往计算量更小，所以后续问题我们以几何法为主。\n\n## 知识点2\n\n【例2】“k=0”是“直线l:y=kx+2\n\n与圆 \\(C:x^{2}+y^{2}-2y=0\\)相切”的（）\n\nA. 必要不充分条件\n\nB．充分不必要条件\n\nC．充要条件\n\nD．既不充分也不必要条件\n\n解析： \\(x^2 + y^2 - 2y = 0 \\Leftrightarrow x^2 + (y - 1)^2 = 1\\)，\n\n所以圆  \\(C\\) 的圆心为  \\(C(0,1)\\)，半径  \\(r = 1\\)，\n\n \\(y = kx + 2 \\Leftrightarrow kx - y + 2 = 0\\)，\n\n \\(l\\) 与圆  \\(C\\) 相切  \\(\\Leftrightarrow\\) 圆心  \\(C\\) 到  \\(l\\) 的距离与  \\(r\\) 相等",
+      "text_sha256": "fb0a581aa89220aecea6cc595cc24204c5fdce5cf96dec8ca42a312988f18e95",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_281_418_377_502.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\imgs\\img_in_image_box_281_418_377_502.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_430_419_518_504.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\imgs\\img_in_image_box_430_419_518_504.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_572_404_659_510.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\imgs\\img_in_image_box_572_404_659_510.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_136_1357_289_1499.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\imgs\\img_in_image_box_136_1357_289_1499.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_314_1357_467_1498.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\imgs\\img_in_image_box_314_1357_467_1498.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_492_1357_647_1501.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\imgs\\img_in_image_box_492_1357_647_1501.jpg",
+          "exists": true
+        }
+      ],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 72,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_72.md",
+      "text": "\n<table border=1 style='margin: auto; word-wrap: break-word;'><tr><td colspan=\"2\">圆上一点 \\(P(x_0,y_0)\\)的切线 \\(l\\)的方程结论如下表：</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>圆的方程</td><td style='text-align: center; word-wrap: break-word;'>切线方程</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>\\((x-a)^2+(y-b)^2=r^2\\)</td><td style='text-align: center; word-wrap: break-word;'>\\((x_0-a)(x-a)+(y_0-b)(y-b)=r^2\\)</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>\\(x^2+y^2+Dx+Ey+F=0\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(x_0x+y_0y+D\\cdot\\frac{x_0+x}{2}+E\\cdot\\frac{y_0+y}{2}+F=0\\)</td></tr></table>\n\n注：上述公式可用于选择、填空题的快速求解，在解答题中，则建议用前面叙述的常规方法。\n\n### 2. 切线长\n\n如图，过圆 C 外一点  \\(P(x_0, y_0)\\) 的圆的切线有两条， \\(A\\)， \\(B\\) 为切点，我们把  \\(|PA|\\) 和  \\(|PB|\\) 称为切线长。两切线的切线长相等，且常利用勾股定理来计算， \\(|PA| = |PB| = \\sqrt{|PC|^2 - r^2}\\)。\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_284_734_494_893.jpg\" alt=\"Image\" width=\"17%\" /></div>\n\n\n### 3. 切点弦\n\n如图，过圆外一点  \\(P(x_0, y_0)\\) 引圆的两条切线，切点分别为  \\(A\\),  \\(B\\)，弦  \\(AB\\) 称为该圆的切点弦。下面给出过圆外一点  \\(P(x_0, y_0)\\) 引圆的切线所得切点弦所在直线  \\(l\\) 的方程：\n\n \\(\\Leftrightarrow \\frac{|k \\cdot 0 - 1 + 2|}{\\sqrt{k^2 + (-1)^2}} = 1 \\Leftrightarrow k^2 + 1 = 1 \\Leftrightarrow k = 0\\)，\n\n所以“ \\(k = 0\\)”是“直线  \\(l: y = kx + 2\\) 与圆  \\(C: x^2 + y^2 - 2y = 0\\) 相切”的充要条件。\n\n答案：C\n\n\n\n\n<table border=1 style='margin: auto; word-wrap: break-word;'><tr><td style='text-align: center; word-wrap: break-word;'>圆的方程</td><td style='text-align: center; word-wrap: break-word;'>切点弦方程</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>\\((x-a)^{2}+(y-b)^{2}=r^{2}\\)</td><td style='text-align: center; word-wrap: break-word;'>\\((x_{0}-a)(x-a)+(y_{0}-b)(y-b)=r^{2}\\)</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>\\(x^{2}+y^{2}+Dx+Ey+F=0\\)</td><td style='text-align: center; word-wrap: break-word;'>\\(x_{0}x+y_{0}y+D\\cdot\\frac{x_{0}+x}{2}+E\\cdot\\frac{y_{0}+y}{2}+F=0\\)</td></tr></table>\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_282_1372_502_1535.jpg\" alt=\"Image\" width=\"18%\" /></div>\n\n\n【例 3】已知点  \\(M(1,2)\\) 在圆  \\(O: x^2 + y^2 = r^2\\) 上，则过点  \\(M\\) 的圆  \\(O\\) 的切线  \\(l\\) 的方程为 ___.\n\n解法1：\\(r\\) 未知，先将点代入圆的方程求 \\(r\\)，\n\n把点 \\(M\\) 代入圆 \\(O\\) 的方程中，有 \\(1^2 + 2^2 = r^2\\)，\n\n结合 \\(r > 0\\) 可解得：\\(r = \\sqrt{5}\\)，\n\n所以圆 \\(O\\) 的方程为 \\(x^2 + y^2 = 5\\)，\n\n如图，\\(l \\perp OM\\)，且 \\(k_{OM} = \\frac{2 - 0}{1 - 0} = 2\\)，\n\n所以切线 \\(l\\) 的斜率 \\(k = -\\frac{1}{k_{OM}} = -\\frac{1}{2}\\)，\n\n故切线 \\(l\\) 的方程为 \\(y - 2 = -\\frac{1}{2}(x - 1)\\)，\n\n整理得：\\(x + 2y - 5 = 0\\)。\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_794_809_1016_1005.jpg\" alt=\"Image\" width=\"18%\" /></div>\n\n\n解法2：同解法1 求出圆 O 的方程后，也可利用知识点2第1点中的结论快速写出切线 l 的方程，\n\n圆  \\(O: x^{2} + y^{2} = 5\\) 在点  \\(M(1,2)\\) 处的切线 l 的方程为  \\(1 \\cdot x + 2 \\cdot y = 5\\)，即  \\(x + 2y - 5 = 0\\)。\n\n答案： \\(x + 2y - 5 = 0\\)\n\n【例4】过圆 \\(O:x^2+y^2=1\\)外的一点 \\(P(3,2)\\)作圆 \\(O\\)的两条切线，切点分别为 \\(M\\)， \\(N\\)，则 \\(|MP|=\\)___，直线 \\(MN\\)的方程为___。\n\n解析：由题意，圆 \\(O\\) 的圆心为 \\(O(0,0)\\)，\n\n半径 \\(r=1\\)，所以 \\(|OM|=1\\)，\n\n如图，\\(|OP|=\\sqrt{(3-0)^2+(2-0)^2}=\\sqrt{13}\\)，",
+      "text_sha256": "7ce17dc829f23799198dc71dba9f2bb3bee7e65fe64c210c08ad05ab257ac4ea",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_284_734_494_893.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\imgs\\img_in_image_box_284_734_494_893.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_282_1372_502_1535.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\imgs\\img_in_image_box_282_1372_502_1535.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_794_809_1016_1005.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\imgs\\img_in_image_box_794_809_1016_1005.jpg",
+          "exists": true
+        }
+      ],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 73,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_73.md",
+      "text": "注：①切点弦方程与前述过圆上一点 \\(P(x_{0},y_{0})\\)的切线方程的形式相同，但含义不同.\n\n当 P 在圆上时，方程  \\((x_0 - a)(x - a) + (y_0 - b)(y - b) = r^2\\) 或  \\(x_0x + y_0y + D \\cdot \\frac{x_0 + x}{2} + E \\cdot \\frac{y_0 + y}{2} + F = 0\\) 表示圆在点 P 处的切线方程；\n\n当 P 在圆外时，方程  \\((x_{0}-a)(x-a)+(y_{0}-b)(y-b)=r^{2}\\) 或  \\(x_{0}x+y_{0}y+D\\cdot\\frac{x_{0}+x}{2}+E\\cdot\\frac{y_{0}+y}{2}+F=0\\) 表示过点 P 作圆的两条切线，切点弦所在直线的方程.\n\n②上述公式建议用于选择、填空题的快速求解.\n\n由 MP 是圆 O 的一条切线得  \\(MP \\perp OM\\)，\n\n所以  \\(\\left|MP\\right| = \\sqrt{\\left|OP\\right|^{2} - \\left|OM\\right|^{2}}\\)\n\n \\(=\\sqrt{(\\sqrt{13})^{2}-1^{2}}=2\\sqrt{3}\\)\n\n由知识点2第3点的结论，切点弦MN所在\n\n直线的方程为 \\(3\\cdot x+2\\cdot y=1\\)，\n\n即 \\(3x+2y-1=0\\)。\n\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_802_339_1012_493.jpg\" alt=\"Image\" width=\"17%\" /></div>\n\n\n答案： \\(2\\sqrt{3}\\)， \\(3x+2y-1=0\\)\n\n## 本节核心题型\n\n本节核心内容基于直线与圆的相离、相交、相切三种位置关系而设计，首先类型Ⅰ针对的是判断直线与圆的位置关系和根据直线与圆的位置关系求参这两类问题，其目的是让同学们熟悉直线与圆位置关系的判断方法；类型Ⅱ、Ⅲ这两组题是在直线与圆相交的基础上设计的题型，包括弦长计算和中点弦问题；类型Ⅳ则涉及圆的切线有关的计算；最后的类型V，我们归纳基于直线与圆的位置关系演变出的一系列最值问题。请大家跟着例题、解析和反思去学习、归纳这些题型的处理方法吧。\n\n## 类型 I：直线与圆的位置关系的判断与应用\n\n【例 5】已知圆  \\(C:(x-1)^{2}+(y-1)^{2}=4\\)，直线  \\(l:mx-y-2m=0\\)，则直线  \\(l\\) 与圆  \\(C\\) 的公共点个数为（ ）\n\nA. 0 个          B. 1 个          C. 2 个          D. 与  \\(m\\) 有关，不能确定\n\n解法1：判断直线与圆的位置关系，可计算圆心到直线的距离，与半径比较，\n\n由题意，圆 \\(C\\) 的圆心为 \\(C(1,1)\\)，半径 \\(r=2\\)，所以圆心到直线 \\(l\\) 的距离 \\(d=\\frac{|m-1-2m|}{\\sqrt{m^2+(-1)^2}}=\\frac{|m+1|}{\\sqrt{m^2+1}}=\\sqrt{\\frac{(m+1)^2}{m^2+1}}\\)\n\n\\(=\\sqrt{\\frac{m^2+2m+1}{m^2+1}}=\\sqrt{1+\\frac{2m}{m^2+1}}\\)，对于 \\(\\frac{2m}{m^2+1}\\) 这部分，常上下同除以 \\(m\\)，再用基本不等式分析，但需讨论 \\(m\\) 的正负，\n\n当 \\(m\\leq0\\) 时，因为 \\(m^2+1\\geq1>0\\)，所以 \\(\\frac{2m}{m^2+1}\\leq0\\)，故 \\(d=\\sqrt{1+\\frac{2m}{m^2+1}}\\leq1\\)；\n\n当 \\(m>0\\) 时，\\(\\frac{2m}{m^2+1}=\\frac{2}{m+\\frac{1}{m}}\\leq\\frac{2}{2\\sqrt{m\\cdot\\frac{1}{m}}}=1\\)，所以 \\(d=\\sqrt{1+\\frac{2m}{m^2+1}}\\leq\\sqrt{1+1}=\\sqrt{2}\\)，取等条件是 \\(m=\\frac{1}{m}\\)，即 \\(m=1\\)；\n\n综上所述，\\(d\\leq\\sqrt{2}<r\\) 对任意的实数 \\(m\\) 恒成立，所以直线 \\(l\\) 与圆 \\(C\\) 相交，它们有 2 个交点。",
+      "text_sha256": "561e2783acf455e38657752c3032345a520c69d92dcdd34be847cbe4a376bd4d",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_802_339_1012_493.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\imgs\\img_in_image_box_802_339_1012_493.jpg",
+          "exists": true
+        }
+      ],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 74,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_74.md",
+      "text": "解法2：观察发现直线 \\(l\\) 过定点，故先找到该定点，再通过判断该定点与圆的位置关系来判断直线 \\(l\\) 与圆 \\(C\\) 的公共点个数，\\(mx - y - 2m = 0 \\Rightarrow m(x - 2) - y = 0\\)，令 \\(\\begin{cases} x - 2 = 0 \\\\ y = 0 \\end{cases}\\) 得 \\(\\begin{cases} x = 2 \\\\ y = 0 \\end{cases}\\)，所以直线 \\(l\\) 过定点 \\(P(2,0)\\)，因为 \\((2 - 1)^2 + (0 - 1)^2 = 2 < 4\\)，所以点 \\(P\\) 在圆 \\(C\\) 内部，故直线 \\(l\\) 与圆 \\(C\\) 相交，它们有 2 个公共点。\n\n答案：C\n\n【反思】①判断直线与圆的位置关系，常规方法是计算圆心到直线的距离 d，再与半径 r 比较。\n\n(i)若  \\(d > r\\)，则直线与圆相离；(ii)若  \\(d = r\\)，则直线与圆相切；(iii)若  \\(d < r\\)，则直线与圆相交。不仅判断直线与圆的位置关系可以这么处理，已知直线与圆的位置关系求参时，也能这样翻译，比如下面的变式1，2，3。\n\n②若直线是过定点P的动直线，则也可通过判断点P与圆的位置关系来判断直线与圆的位置关系。\n\n(i) 若 P 在圆外，则如图 1，直线与圆可能相离、相交或相切；(ii) 若 P 在圆上，则如图 2，直线与圆可能相切或相交；(iii) 若 P 在圆内，则如图 3，直线与圆只能相交.\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_339_482_495_627.jpg\" alt=\"Image\" width=\"13%\" /></div>\n\n\n<div style=\"text-align: center;\">图1</div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_542_510_675_627.jpg\" alt=\"Image\" width=\"11%\" /></div>\n\n\n<div style=\"text-align: center;\">图2</div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_726_522_850_628.jpg\" alt=\"Image\" width=\"10%\" /></div>\n\n\n<div style=\"text-align: center;\">图3</div>\n\n\n【变式1】（多选）已知圆  \\(M: x^2 + y^2 = 1\\)，直线  \\(l: y = k(x + \\sqrt{3}) - 1\\)，则（ ）\n\nA.  \\(l\\) 恒过定点  \\((\\sqrt{3}, -1)\\)  \n\nB. 若  \\(l\\) 平分圆周  \\(M\\)，则  \\(k = \\frac{\\sqrt{3}}{3}\\)  \n\nC. 当  \\(k = \\sqrt{3}\\) 时， \\(l\\) 与圆  \\(M\\) 相切  \n\nD. 当  \\(-\\sqrt{3} < k < \\sqrt{3}\\) 时， \\(l\\) 与圆  \\(M\\) 相交\n\n解析：A 项，令  \\(x + \\sqrt{3} = 0\\) 可得  \\(x = -\\sqrt{3}\\)，此时  \\(y = -1\\)，所以直线  \\(l\\) 恒过定点  \\((-\\sqrt{3}, -1)\\)，故 A 项错误；B 项，平分圆周意味着过圆心，故可直接将圆心的坐标代入直线  \\(l\\) 的方程求  \\(k\\)，\n\n由题意， \\(l\\) 过圆心  \\(M(0, 0)\\)，代入  \\(l\\) 的方程得  \\(0 = k \\cdot (0 + \\sqrt{3}) - 1\\)，解得： \\(k = \\frac{\\sqrt{3}}{3}\\)，故 B 项正确；\n\n当  \\(k = \\sqrt{3}\\) 时， \\(l\\) 的方程为  \\(y = \\sqrt{3}(x + \\sqrt{3}) - 1\\)，即  \\(\\sqrt{3}x - y + 2 = 0 \\Rightarrow\\) 圆心  \\(M\\) 到  \\(l\\) 的距离  \\(d = \\frac{|2|}{\\sqrt{(\\sqrt{3})^2 + (-1)^2}} = 1\\)；又圆  \\(M\\) 的半径  \\(r = 1\\)，所以  \\(d = r\\)，从而直线  \\(l\\) 与圆  \\(M\\) 相切，故 C 项正确；\n\nD 项，直线与圆相交 ⇔ 圆心到直线的距离  \\(d < r\\)，由此求出  \\(k\\) 的范围，与此项的结论比较，\n\n直线  \\(l\\) 的方程可化为  \\(kx - y + \\sqrt{3}k - 1 = 0\\)，所以直线  \\(l\\) 与圆  \\(M\\) 相交 ⇔  \\(d = \\frac{\\left|\\sqrt{3}k - 1\\right|}{\\sqrt{k^2 + (-1)^2}} < 1\\)，解得： \\(0 < k < \\sqrt{3}\\)，\n\n从而当  \\(-\\sqrt{3} < k < \\sqrt{3}\\) 时， \\(l\\) 与圆  \\(M\\) 不一定相交，故 D 项错误。\n\n答案：BC\n\n【变式 2】已知圆  \\(O: x^2 + y^2 = r^2 (r > 0)\\)，设直线  \\(x + \\sqrt{3}y - \\sqrt{3} = 0\\) 与两坐标轴的交点分别为  \\(A\\)， \\(B\\)，若圆  \\(O\\) 上有且只有一个点  \\(P\\) 满足  \\(|AP| = |BP|\\)，则  \\(r\\) 的值为___。\n\n解析：所给直线与坐标轴的交点 A，B 的坐标可求，先把它们求出来，",
+      "text_sha256": "db399a9c9ddad03b15025656e68876e410b0a5f86d70b0c138ce8d4a7422f6e8",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_339_482_495_627.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\imgs\\img_in_image_box_339_482_495_627.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_542_510_675_627.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\imgs\\img_in_image_box_542_510_675_627.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_726_522_850_628.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\imgs\\img_in_image_box_726_522_850_628.jpg",
+          "exists": true
+        }
+      ],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 75,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_75.md",
+      "text": "联立 \\(\\begin{cases}y=0\\\\x+\\sqrt{3}y-\\sqrt{3}=0\\end{cases}\\)解得： \\(x=\\sqrt{3}\\)，所以 \\(A(\\sqrt{3},0)\\)，联立 \\(\\begin{cases}x=0\\\\x+\\sqrt{3}y-\\sqrt{3}=0\\end{cases}\\)解得： \\(y=1\\)，所以 \\(B(0,1)\\)，\n\n怎样翻译圆 \\(O\\)上只有1个点 \\(P\\)满足 \\(|AP|=|BP|\\)？由于满足 \\(|AP|=|BP|\\)的点 \\(P\\)在线段 \\(AB\\)的中垂线上，所以问题等\n\n价于 \\(AB\\)的中垂线与圆 \\(O\\)只有1个交点，\n\n如图， \\(AB\\)中点为 \\(D\\left(\\frac{\\sqrt{3}}{2},\\frac{1}{2}\\right)\\)，直线 \\(AB\\)的斜率为 \\(-\\frac{\\sqrt{3}}{3}\\Rightarrow AB\\)中垂线 \\(l\\)的斜率为 \\(\\sqrt{3}\\)，\n\n所以 \\(AB\\)中垂线 \\(l\\)的方程为 \\(y-\\frac{1}{2}=\\sqrt{3}\\left(x-\\frac{\\sqrt{3}}{2}\\right)\\)，整理得： \\(\\sqrt{3}x-y-1=0\\)，\n\n由题意，圆 \\(O\\)与直线 \\(l\\)相切，所以 \\(d=\\frac{|-1|}{\\sqrt{(\\sqrt{3})^2+(-1)^2}}=r\\)，故 \\(r=\\frac{1}{2}\\)。\n\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_894_277_1093_432.jpg\" alt=\"Image\" width=\"16%\" /></div>\n\n\n答案： \\(\\frac{1}{2}\\)\n\n【变式 3】已知圆  \\(C\\) 的圆心在  \\(x\\) 轴正半轴上，且与直线  \\(x - \\sqrt{3}y + 1 = 0\\) 和  \\(y\\) 轴都相切，则圆  \\(C\\) 的方程为___。\n\n解析：条件给出圆心在 x 轴正半轴上，则写出圆的方程只差圆心的横坐标和半径，故可考虑设出它们，并翻译圆 C 与所给两直线相切，建立方程组求解所设未知量，\n\n由题意，可设圆 C 的圆心为  \\(C(a,0)\\)， \\(a>0\\)，半径为 r，因为圆 C 与直线  \\(x-\\sqrt{3}y+1=0\\) 和 y 轴都相切，\n\n所以  \\(\\frac{|a+1|}{\\sqrt{1^2+(\\sqrt{3})^2}}=r\\) 且  \\(|a|=r\\)，从而  \\(\\frac{|a+1|}{\\sqrt{1^2+(\\sqrt{3})^2}}=|a|\\)，解得： \\(a=1\\) 或  \\(-\\frac{1}{3}\\)（舍去），故  \\(r=|a|=1\\)，\n\n \\[(x-1)^{2}+y^{2}=1\\] \n\n答案： \\((x-1)^{2}+y^{2}=1\\)\n\n【变式 4】若关于  \\(x\\) 的方程  \\(kx - 2k + 3 - \\sqrt{4 - x^2} = 0\\) 有且仅有 2 个不同的实数根，则实数  \\(k\\) 的取值范围是___.\n\n解析：直接研究所给方程的解不易，而方程解的个数问题可转化为图象的交点个数问题来分析，故考虑按此处理。观察发现将  \\(kx - 2k + 3\\) 和  \\(\\sqrt{4 - x^2}\\) 分开，就能画图了， \\(kx - 2k + 3 - \\sqrt{4 - x^2} = 0 \\Leftrightarrow kx - 2k + 3 = \\sqrt{4 - x^2}\\)，所以题设条件等价于直线  \\(l: y = kx - 2k + 3\\) 与曲线  \\(C: y = \\sqrt{4 - x^2}\\) 有且仅有 2 个交点，容易看出直线  \\(l\\) 是过定点的直线，那曲线  \\(C\\) 呢？曲线  \\(C\\) 的方程带根号，可通过平方去根号，再作观察，直线  \\(l\\) 的方程可化为  \\(y = k(x - 2) + 3\\)，令  \\(x - 2 = 0\\) 得  \\(x = 2\\)，此时  \\(y = 3\\)，所以直线  \\(l\\) 过定点  \\(P(2, 3)\\)，由  \\(y = \\sqrt{4 - x^2}\\) 可得  \\(y^2 = 4 - x^2 (y \\geq 0)\\)，即  \\(x^2 + y^2 = 4 (y \\geq 0)\\)，所以曲线  \\(C\\) 是圆心为原点，半径为 2 的上半圆，如图，要使直线  \\(l\\) 与曲线  \\(C\\) 恰有 2 个交点，则  \\(l\\) 可从  \\(l_1\\)（不可取）绕点  \\(P\\) 逆时针旋转至  \\(l_2\\)（可取），其中直线  \\(l\\) 与圆  \\(\\varOmega\\) 相切，所以圆心  \\(\\varOmega\\) 到  \\(l: kx - v - 2k + 3 = 0\\) 的距离  \\(d = \\frac{|-2k + 3|}{\\sqrt{k^2 + (-1)^2}} = 2\\)，解得： \\(k = \\frac{5}{12}\\)，直线  \\(l_2\\) 过  \\(P(2, 3)\\) 和  \\(A(-2, 0)\\)，其斜率  \\(k = \\frac{0 - 3}{-2 - 2} = \\frac{3}{4}\\)，所以实数  \\(k\\) 的取值范围是  \\(\\left( \\frac{5}{12}, \\frac{3}{4} \\right]\\)。\n\n答案： \\(\\left( \\frac{5}{12}, \\frac{3}{4} \\right]\\)\n\n【反思】可以看到，本题虽仍是根据直线与圆的位置关系求参，但设问的方式与前几题不同，且由于本题只取了上半圆，所以不能将直线与圆有 2 个交点简单地翻译成  \\(d < r\\)，需要具体问题具体分析。\n\n\n\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_837_1298_1092_1467.jpg\" alt=\"Image\" width=\"21%\" /></div>\n",
+      "text_sha256": "a20ca7b59f40e1914d4c72d7d4a913c91992be8cee65a08b347819807c978742",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_894_277_1093_432.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\imgs\\img_in_image_box_894_277_1093_432.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_837_1298_1092_1467.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\imgs\\img_in_image_box_837_1298_1092_1467.jpg",
+          "exists": true
+        }
+      ],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 76,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_76.md",
+      "text": "类型Ⅱ：弦长计算\n\n【例 6】已知圆  \\(C: x^{2} + y^{2} - 2x - 2y - 2 = 0\\)，直线  \\(l: x - y + 2 = 0\\).\n\n（1）求圆 C 的圆心及半径；\n\n（2）求直线 l 被圆 C 截得的弦 AB 的长.\n\n解：（1）由 \\(x^{2}+y^{2}-2x-2y-2=0\\)可得 \\((x-1)^{2}+(y-1)^{2}=4\\)，所以圆C的圆心为 \\(C(1,1)\\)，半径 \\(r=2\\)。\n\n（2）（涉及直线被圆截得的弦长，考虑用公式  \\(L=2\\sqrt{r^2-d^2}\\) 计算，已有  \\(r\\)，下面先算圆心到直线的距离  \\(d\\)）\n\n圆心  \\(C\\) 到直线  \\(l\\) 的距离  \\(d=\\frac{|1-1+2|}{\\sqrt{1^2+(-1)^2}}=\\sqrt{2}\\)，所以直线  \\(l\\) 被圆  \\(C\\) 截得的弦长  \\(L=2\\sqrt{r^2-d^2}=2\\sqrt{2}\\)。\n\n【反思】直线被圆截得的弦长常用公式  \\(L=2\\sqrt{r^{2}-d^{2}}\\) 计算。本题是让求弦长，若是已知弦长求参，我们也常用此公式建立方程，比如下面的变式1。另外，弦长还可能结合平面几何知识考查，在变式2，3中会涉及。甚至有的题条件并不涉及弦长，但其本质仍是弦长问题，比如后面的变式4。\n\n【变式1】（2025·天津卷）直线 \\(l:x-y+6=0\\)与x轴交于点 \\(A\\)，与y轴交于点 \\(B\\)，与圆 \\((x+1)^2+(y-3)^2=r^2(r>0)\\)交于 \\(C\\)， \\(D\\)两点，若 \\(|AB|=3|CD|\\)，则 \\(r=\\)___。\n\n解析：条件给出  \\(|AB|=3|CD|\\)，且分析发现  \\(|AB|\\) 和  \\(|CD|\\) 都好求，故先求出它们，再由此建立方程求  \\(r\\)，联立  \\(\\begin{cases} y=0 \\\\ x-y+6=0 \\end{cases}\\) 解得： \\(\\begin{cases} x=-6 \\\\ y=0 \\end{cases}\\)，所以  \\(A(-6,0)\\)，联立  \\(\\begin{cases} x=0 \\\\ x-y+6=0 \\end{cases}\\) 解得： \\(\\begin{cases} x=0 \\\\ y=6 \\end{cases}\\)，所以  \\(B(0,6)\\)，故  \\(|AB|=\\sqrt{(-6-0)^2+(0-6)^2}=6\\sqrt{2}\\)，\n\n再求 |CD|，这是直线被圆截得的弦长，可用弦长公式  \\(L = 2\\sqrt{r^2 - d^2}\\) 计算，下面先求  \\(d\\)，圆心  \\((-1,3)\\) 到直线  \\(l\\) 的距离  \\(d = \\frac{|-1 - 3 + 6|}{\\sqrt{1^2 + (-1)^2}} = \\sqrt{2}\\)，所以  \\(|CD| = 2\\sqrt{r^2 - d^2} = 2\\sqrt{r^2 - 2}\\)，由题意， \\(|AB| = 3|CD|\\)，所以  \\(6\\sqrt{2} = 3 \\times 2\\sqrt{r^2 - 2}\\)，结合  \\(r > 0\\) 可得  \\(r = 2\\)。\n\n答案：2\n\n【变式 2】已知直线  \\(l: x - y + 4 = 0\\) 与圆  \\(O: x^2 + y^2 = 9\\) 交于  \\(A\\),  \\(B\\) 两点，过  \\(A\\),  \\(B\\) 分别作  \\(l\\) 的垂线交  \\(x\\) 轴于  \\(C\\),  \\(D\\) 两点，则  \\(|CD| =\\)（ ）\n\nA.  \\(\\sqrt{2}\\) B. 2 C.  \\(2\\sqrt{2}\\) D. 4\n\n解析：如图1，这里所求不是弦长 \\(|AB|\\)，而是让求 \\(|CD|\\)，怎么办呢？CD是直角梯形ABDC的斜腰，计算斜腰，常考虑过C向BD作垂线，构造直角三角形来分析，\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_347_1271_573_1480.jpg\" alt=\"Image\" width=\"18%\" /></div>\n\n\n<div style=\"text-align: center;\">图1</div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_617_1271_848_1478.jpg\" alt=\"Image\" width=\"19%\" /></div>\n\n\n<div style=\"text-align: center;\">图2</div>\n\n\n如图2，作 \\(CE\\perp BD\\)于点E，由题意， \\(l\\perp BD\\)， \\(l\\perp AC\\)，所以 \\(AC\\parallel BE\\)， \\(AB\\parallel CE\\)，故四边形ABEC是矩形，",
+      "text_sha256": "62d414b73f05da3c0215ed8b9bd3f29b07b5a0ec9c2681330da343b0f1e80d92",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_347_1271_573_1480.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\imgs\\img_in_image_box_347_1271_573_1480.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_617_1271_848_1478.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\imgs\\img_in_image_box_617_1271_848_1478.jpg",
+          "exists": true
+        }
+      ],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 77,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_77.md",
+      "text": "由 \\(AB \\parallel CE\\) 可得 \\(\\angle ECD = \\angle AFC\\)，而 \\(\\angle AFC\\) 即为直线 \\(l\\) 的倾斜角，\n\n由 \\(AB \\parallel CE\\) 可得 \\(\\angle ECD = \\angle AFC\\)，而 \\(\\angle AFC\\) 即为直线 \\(l\\) 的倾斜角，\n\n\\(x - y + 4 = 0 \\Rightarrow y = x + 4 \\Rightarrow l\\) 的斜率为 \\(1 \\Rightarrow l\\) 的倾斜角为 \\(45^\\circ\\)，所以 \\(\\angle ECD = 45^\\circ\\)，\n\n观察图 2 可发现，有了 \\(\\angle ECD\\)，只要再求出 \\(\\triangle CDE\\) 的一边，就能得到 \\(|CD|\\)，观察发现 \\(|CE| = |AB|\\)，而 \\(|AB|\\) 是直线 \\(l\\) 被圆 \\(O\\) 截得的弦长，可按公式 \\(L = 2\\sqrt{r^2 - d^2}\\) 计算，\n\n圆心 \\(O\\) 到直线 \\(l\\) 的距离 \\(d = \\frac{|4|}{\\sqrt{1^2 + (-1)^2}} = 2\\sqrt{2}\\)，所以 \\(|AB| = 2\\sqrt{r^2 - d^2} = 2\\sqrt{9 - (2\\sqrt{2})^2} = 2\\)，\n\n从而 \\(|CE| = |AB| = 2\\)，故在 \\(\\triangle CDE\\) 中，\\(|CD| = \\frac{|CE|}{\\cos \\angle ECD} = \\frac{2}{\\cos 45^\\circ} = 2\\sqrt{2}\\)。\n\n答案：C\n\n【变式 3】若两条直线  \\(l_1: y = 3x + m\\)， \\(l_2: y = 3x + n\\) 与圆  \\(x^2 + y^2 + 3x + y + k = 0\\) 的四个交点能构成矩形，则  \\(m + n =\\)___。\n\n解析：如图，四个交点  \\(A\\)， \\(B\\)， \\(C\\)， \\(D\\) 能构成矩形等价于  \\(l_1 \\parallel l_2\\) 且  \\(|AB| = |CD|\\)，\n\n由题意， \\(l_{1}\\) 和  \\(l_{2}\\) 的斜率都为 3，所以要使  \\(l_{1} \\parallel l_{2}\\)，只需  \\(m \\neq n\\)，\n\n再翻译  \\(|AB|=|CD|\\)，涉及圆的弦长，可用  \\(L=2\\sqrt{r^{2}-d^{2}}\\) 处理，不难发现只需圆心到两直线的距离相等，\n\n由  \\(x^{2}+y^{2}+3x+y+k=0\\) 可得  \\(\\left(x+\\frac{3}{2}\\right)^{2}+\\left(y+\\frac{1}{2}\\right)^{2}=\\frac{5}{2}-k\\)，所以圆心为  \\(P\\left(-\\frac{3}{2},-\\frac{1}{2}\\right)\\)\n\n \\(l_{2}\\) 的方程可分别化为  \\(3x - y + m = 0\\)，  \\(3x - y + n = 0\\)，\n\n所以 \\(\\frac{\\left|3\\times\\left(-\\frac{3}{2}\\right)-\\left(-\\frac{1}{2}\\right)+m\\right|}{\\sqrt{3^{2}+(-1)^{2}}}=\\frac{\\left|3\\times\\left(-\\frac{3}{2}\\right)-\\left(-\\frac{1}{2}\\right)+n\\right|}{\\sqrt{3^{2}+(-1)^{2}}}\\Rightarrow|m-4|=|n-4|\\)，故 \\(m-4=\\pm(n-4)\\)，又 \\(m\\neq n\\)，所以 \\(m-4\\neq n-4\\)，从而 \\(m-4=-(n-4)\\)，故 \\(m+n=8\\)。\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_940_675_1093_864.jpg\" alt=\"Image\" width=\"12%\" /></div>\n\n\n答案：8\n\n【变式 4】已知直线  \\(l: x + y = 1\\) 与圆  \\(C: (x - a)^2 + (y - 1)^2 = 4\\) 交于  \\(A, B\\) 两点，若  \\(\\triangle ABC\\) 的面积为 2，则  \\(a\\) 的值是（ ）\n\nA.  \\(\\pm1\\) B.  \\(\\pm\\sqrt{2}\\) C.  \\(\\pm2\\) D.  \\(\\pm\\sqrt{5}\\)\n\n解析：条件给出\\(\\triangle ABC\\)的面积为2，如何翻译？需先表示该面积。如图，可以\\(AB\\)为底边，则底边可用弦长公式\\(L=2\\sqrt{r^2-d^2}\\)计算，高即为点\\(C\\)到直线\\(l\\)的距离\\(d\\)，两者都与\\(d\\)有关，故先用\\(d\\)表示\\(S_{\\triangle ABC}\\)，由弦长公式，\\(|AB|=2\\sqrt{r^2-d^2}=2\\sqrt{4-d^2}\\)，所以\\(S_{\\triangle ABC}=\\frac{1}{2}|AB|\\cdot d=\\frac{1}{2}\\times2\\sqrt{4-d^2}\\cdot d=\\sqrt{4-d^2}\\cdot d\\)，又由题意，\\(S_{\\triangle ABC}=2\\)，所以\\(\\sqrt{4-d^2}\\cdot d=2\\)，解得：\\(d=\\sqrt{2}\\)，\n\n\n\n根据点到直线的距离公式， \\(d\\) 又可用  \\(a\\) 表示，于是可建立方程求  \\(a\\)，圆  \\(C\\) 的圆心为  \\(C(a,1)\\)，直线  \\(l\\) 的方程可化为  \\(x + y - 1 = 0\\)，所以  \\(d = \\frac{|a + 1 - 1|}{\\sqrt{1^2 + 1^2}} = \\frac{|a|}{\\sqrt{2}}\\)，从而  \\(\\frac{|a|}{\\sqrt{2}} = \\sqrt{2}\\)，故  \\(a = \\pm 2\\)。\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_887_1237_1092_1417.jpg\" alt=\"Image\" width=\"17%\" /></div>\n\n\n答案：C\n\n类型Ⅲ：中点弦问题\n\n【例 7】已知圆  \\(C:(x-1)^{2}+y^{2}=10\\)，直线 l 过点  \\(P(3,1)\\) 且与圆 C 交于 A, B 两点，若 P 为线段 AB",
+      "text_sha256": "777ebad55f6fa5b329006de8d841f5d32c2074f01e149ff1c524f1286be64f30",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_940_675_1093_864.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\imgs\\img_in_image_box_940_675_1093_864.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_887_1237_1092_1417.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\imgs\\img_in_image_box_887_1237_1092_1417.jpg",
+          "exists": true
+        }
+      ],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 78,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_78.md",
+      "text": "的中点，O为坐标原点，则 \\(\\triangle AOB\\)的面积为___.\n\n解析：条件涉及 \\(P\\) 为弦 \\(AB\\) 的中点，想到垂径定理，如图，因为 \\(P\\) 为 \\(AB\\) 的中点，所以 \\(PC \\perp AB\\)，\n\n怎样计算 \\(S_{\\triangle AOB}\\)？可以 \\(AB\\) 为底边，\\(|AB|\\) 可按弦长公式 \\(L=2\\sqrt{r^2-d^2}\\) 计算，要圆心 \\(C\\) 到直线 \\(AB\\) 的距离 \\(d\\)，下面\n\n先由 \\(PC \\perp AB\\) 求直线 \\(AB\\) 的方程，圆心 \\(C\\) 的坐标为 \\((1,0)\\)，又 \\(P(3,1)\\)，所以 \\(k_{PC}=\\frac{0-1}{1-3}=\\frac{1}{2}\\)，\n\n从而 \\(k_{AB}=-\\frac{1}{k_{PC}}=-2\\)，故直线 \\(AB\\) 的方程为 \\(y-1=-2(x-3)\\)，即 \\(2x+y-7=0\\)，\n\n\n\n所以圆心 \\(C\\) 到直线 \\(AB\\) 的距离 \\(d = \\frac{|2 \\times 1 + 0 - 7|}{\\sqrt{2^2 + 1^2}} = \\sqrt{5}\\)，故 \\(|AB| = 2\\sqrt{r^2 - d^2}\\)\n\n\\(=2\\sqrt{10 - (\\sqrt{5})^2} = 2\\sqrt{5}\\)，又原点到直线 \\(AB\\) 的距离 \\(h = \\frac{|-7|}{\\sqrt{2^2 + 1^2}} = \\frac{7}{\\sqrt{5}}\\)，\n\n所以 \\(S_{\\triangle AOB} = \\frac{1}{2}|AB| \\cdot h = \\frac{1}{2} \\times 2\\sqrt{5} \\times \\frac{7}{\\sqrt{5}} = 7\\)。\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_874_333_1093_529.jpg\" alt=\"Image\" width=\"18%\" /></div>\n\n\n答案：7\n\n【反思】涉及圆的弦中点，常抓住弦中点与圆心的连线垂直于弦来分析。本题是直接给出了弦中点，其实在诸多问题中，即使题干没有提及弦中点，我们也可以取出弦中点来分析，比如下面的变式。\n\n【变式】设 \\(O\\) 为坐标原点，圆 \\(O\\) 与直线 \\(l: x + y = 2\\) 相切，与直线 \\(l\\) 垂直的直线 \\(m\\) 与圆 \\(O\\) 交于不同的两点 \\(P\\)，\\(\\overrightarrow{Q}\\)，若 \\(\\overrightarrow{OP} \\cdot \\overrightarrow{OQ} < 0\\)，则直线 \\(m\\) 的纵截距的取值范围是___。\n\n解析：题干没给圆 \\(O\\) 的半径，先用直线 \\(l\\) 与圆 \\(O\\) 相切求半径，\n\n设圆 \\(O\\) 的半径为 \\(r\\)，则由题意，圆心 \\(O\\) 到直线 \\(l\\) 的距离 \\(d = \\frac{|-2|}{\\sqrt{1^2 + 1^2}} = \\sqrt{2} = r\\)，\n\n怎样翻译 \\(\\overrightarrow{OP} \\cdot \\overrightarrow{OQ} < 0\\)？要设 \\(P\\)，\\(Q\\) 的坐标，用坐标算 \\(\\overrightarrow{OP} \\cdot \\overrightarrow{OQ}\\) 吗？这样做需联立直线 \\(m\\) 和圆 \\(O\\) 的方程，比较麻烦，不妨先画图看看。如图，设 \\(PQ\\) 的中点为 \\(I\\)，则 \\(\\overrightarrow{OP} \\cdot \\overrightarrow{OQ} < 0 \\Leftrightarrow \\angle POQ\\) 为钝角或平角 \\(\\Leftrightarrow 45^\\circ < \\angle POI < 90^\\circ\\) 或 \\(O\\) 与 \\(I\\) 重合 \\(\\Leftrightarrow |OI| < |PI|\\)，\\(|OI|\\) 和 \\(|PI|\\) 好算，故按此翻译较简单，\n\n因为 \\(m \\perp l\\)，所以可设直线 \\(m\\) 的方程为 \\(y = x + b\\)，即 \\(x - y + b = 0\\)，\n\n\n\n圆心到直线 \\(m\\) 的距离 \\(|OI| = \\frac{|b|}{\\sqrt{1^2 + (-1)^2}} = \\frac{|b|}{\\sqrt{2}}\\)，所以 \\(|PI| = \\sqrt{|OP|^2 - |OI|^2} = \\sqrt{2 - \\frac{b^2}{2}}\\)，因为 \\(\\overrightarrow{OP} \\cdot \\overrightarrow{OQ} < 0\\)，所以 \\(|OI| < |PI|\\)，即 \\(\\frac{|b|}{\\sqrt{2}} < \\sqrt{2 - \\frac{b^2}{2}}\\)，解得：\\(-\\sqrt{2} < b < \\sqrt{2}\\)，故直线 \\(m\\) 的纵截距的取值范围是 \\((-\\sqrt{2}, \\sqrt{2})\\)。\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_871_993_1092_1181.jpg\" alt=\"Image\" width=\"18%\" /></div>\n\n\n答案： \\((-\\sqrt{2}, \\sqrt{2})\\)\n\n## 类型IV：切线有关的计算\n\n【例 8】已知点  \\(P(2,3)\\) 和圆  \\(C:(x-1)^2+(y-1)^2=5\\)，则圆  \\(C\\) 的过点  \\(P\\) 的切线  \\(l\\) 的方程为___.\n\n解法1：求圆的过某点的切线，先判断该点与圆的位置关系，以便于知道有几条切线，\n\n将点 \\(P\\) 的坐标代入圆 \\(C\\) 的方程得 \\((2-1)^2 + (3-1)^2 = 5\\)，所以点 \\(P\\) 在圆 \\(C\\) 上，\n\n如图，圆 \\(C\\) 的过 \\(P\\) 的切线 \\(l\\) 只有一条，且与 \\(CP\\) 垂直，故可由 \\(CP\\) 的斜率求 \\(l\\) 的斜率，结合点 \\(P\\) 写出 \\(l\\) 的方程，由题意，\\(C(1,1)\\)，\\(k_{CP} = \\frac{3-1}{2-1} = 2\\)，所以切线 \\(l\\) 的斜率为 \\(-\\frac{1}{2}\\)，\n\n故切线 \\(l\\) 的方程为 \\(y-3 = -\\frac{1}{2}(x-2)\\)，即 \\(x + 2y - 8 = 0\\)。\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_928_1375_1094_1526.jpg\" alt=\"Image\" width=\"13%\" /></div>\n",
+      "text_sha256": "f7fbebfb94102da393adce8833f810c89a0079343a4c83dec415cf9f98852361",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_874_333_1093_529.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\imgs\\img_in_image_box_874_333_1093_529.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_871_993_1092_1181.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\imgs\\img_in_image_box_871_993_1092_1181.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_928_1375_1094_1526.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\imgs\\img_in_image_box_928_1375_1094_1526.jpg",
+          "exists": true
+        }
+      ],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 79,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_79.md",
+      "text": "解法2：作为小题，也可直接代圆上一点处的切线方程结论来求切线l的方程，\n\n由圆上一点处切线方程结论，切线 l 的方程为  \\((2-1)(x-1)+(3-1)(y-1)=5\\)，化简得： \\(x+2y-8=0\\)。\n\n答案： \\(x+2y-8=0\\)\n\n【反思】求圆 C 的过点 P 的切线 l，当点 P 在圆 C 上时，可由  \\(CP \\perp\\) 切线 l 求出 l 的斜率，结合点 P 写出 l 的方程。那如果点 P 在圆 C 外部，又怎样求过 P 的切线方程呢？我们将通过后面的变式来详细分析。\n\n【变式】已知圆  \\(C:(x+1)^{2}+y^{2}=4\\)，若过点  \\(P(1,3)\\) 的直线 l 与圆 C 相切，则 l 的方程为 ___.\n\n解析：求圆的过某点的切线，先判断该点与圆的位置关系， \\((1+1)^{2}+3^{2}=13>4\\Rightarrow\\)点P在圆C外，\n\n解析：求圆的过某点的切线，先判断该点与圆的位置关系， \\((1+1)+3=15>4\\Rightarrow\\)点P在圆C外，如图，过P的切线有2条，怎样求其方程？已有点P，求l的方程还差斜率，故考虑设斜率，但需单独讨论斜率不存在的情况，\n\n当 \\(l\\in\\mathbb{R}\\)\n\n当 \\(l\\) 过点 \\(P\\) 且斜率不存在时，其方程为 \\(x=1\\)，圆心 \\(C(-1,0)\\) 到 \\(l\\) 的距离 \\(d=2=r \\Rightarrow l\\) 与圆 \\(C\\) 相切，满足题意；当 \\(l\\) 过点 \\(P\\) 且斜率存在时，可设其斜率为 \\(k\\)，则 \\(l\\) 的方程为 \\(y-3=k(x-1)\\)，即 \\(kx-y+3-k=0\\)，圆心 \\(C\\) 到 \\(l\\) 的距离 \\(d=\\frac{|-k+3-k|}{\\sqrt{k^2+(-1)^2}}=\\frac{|3-2k|}{\\sqrt{k^2+1}}\\)，\n\n\n\n因为 \\(l\\) 与圆 \\(C\\) 相切，所以 \\(d = r\\)，故 \\(\\frac{|3 - 2k|}{\\sqrt{k^2 + 1}} = 2\\)，解得：\\(k = \\frac{5}{12}\\)。\n\n所以直线 l 的方程为  \\(\\frac{5}{12}x - y + 3 - \\frac{5}{12} = 0\\)，化简得：  \\(5x - 12y + 31 = 0\\)；\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_911_540_1092_720.jpg\" alt=\"Image\" width=\"15%\" /></div>\n\n\n综上所述，直线 l 的方程为 x=1 或  \\(5x-12y+31=0\\)。\n\n答案：x=1 或  \\(5x-12y+31=0\\)\n\n【反思】求圆 C 的过点 P 的切线 l，当点 P 在圆 C 外时，常设切线的斜率为 k，结合点 P 写出切线 l 的方程，由圆心到直线 l 的距离 d = r 建立方程求 k，但别忘了单独考虑 l 的斜率不存在的情况.\n\n【例 9】过圆  \\(O: x^2 + y^2 = 1\\) 外的点  \\(P(3,2)\\) 作圆  \\(O\\) 的一条切线，切点为  \\(M\\)，则  \\(|PM| =\\) （ ）\n\nA. 2\n\nB.  \\(2\\sqrt{3}\\)\n\nC.  \\(\\sqrt{13}\\)\n\nD. 4\n\n解析：如图，直接求  \\(|PM|\\) 不易，但  \\(|OM|\\) 已知， \\(|OP|\\) 也好求，故考虑到  \\(\\triangle POM\\) 中用勾股定理求  \\(|PM|\\)，由题意， \\(PM\\) 是圆  \\(O\\) 的切线，所以  \\(OM \\perp PM\\)，\n\n又  \\(|OM| = 1\\)， \\(|PO| = \\sqrt{3^2 + 2^2} = \\sqrt{13}\\)，所以  \\(|PM| = \\sqrt{|PO|^2 - |OM|^2} = \\sqrt{(\\sqrt{13})^2 - 1^2} = 2\\sqrt{3}\\)。\n\n答案：B\n\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_880_992_1094_1152.jpg\" alt=\"Image\" width=\"17%\" /></div>\n\n\n【反思】求切线长，常到如图所示的 \\(\\triangle POM\\)中用勾股定理计算，其核心是求 \\(\\left|PO\\right|\\)，\n\n故在与切线长有关的最值问题中，常将切线长的最值转化为\\(|PO|\\)的最值来分析，比如下面的变式1. 另外，与切线有关的其它量（例如切线夹角、切点弦长等）的计算，也常转化为\\(|PO|\\)来分析，后面的变式2，3会涉及.\n\n【变式1】由直线\\(l: y = x + 1\\)上的一点向圆\\(x^2 + y^2 - 6x + 8 = 0\\)引切线，则切线长的最小值为（ ）\n\nA. 3          B. \\(2\\sqrt{2}\\)      C. \\(\\sqrt{7}\\)        D. \\(\\sqrt{6}\\)\n\n解析：\\(x^2 + y^2 - 6x + 8 = 0 \\Rightarrow (x - 3)^2 + y^2 = 1\\)，所以圆心为\\(A(3,0)\\)，半径\\(r = 1\\)，\n\n如图，设\\(P\\)为直线\\(l: y = x + 1\\)上一点，\\(PQ\\)与\\(\\odot A\\)相切于点\\(Q\\)，\n\n\n\n所求即为  \\(|PQ|\\) 的最小值， \\(P\\) 是动点， \\(Q\\) 也随  \\(P\\) 而运动，不方便直接研究  \\(|PQ|\\) 的最小值，怎么办呢？可考虑到  \\(\\triangle PAQ\\) 中用勾股定理，转化为  \\(|PA|\\) 来分析，\n\n由图可知， \\(PQ \\perp AQ\\)，且  \\(|AQ| = 1\\)，所以  \\(|PQ| = \\sqrt{|PA|^2 - |AQ|^2} = \\sqrt{|PA|^2 - 1}\\) ①，\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_859_1399_1091_1557.jpg\" alt=\"Image\" width=\"19%\" /></div>\n",
+      "text_sha256": "26de62458690600fac6f8be0a434fd2256854473eda09f40c8204d8e7941ec24",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_911_540_1092_720.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\imgs\\img_in_image_box_911_540_1092_720.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_880_992_1094_1152.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\imgs\\img_in_image_box_880_992_1094_1152.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_859_1399_1091_1557.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\imgs\\img_in_image_box_859_1399_1091_1557.jpg",
+          "exists": true
+        }
+      ],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 80,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_80.md",
+      "text": "故只需求  \\(|PA|_{\\min}\\)，显然当  \\(PA \\perp I\\) 时， \\(|PA|\\) 最小，此时  \\(|PA|\\) 即为点  \\(A\\) 到  \\(I\\) 的距离，\n\n \\(y = x + 1\\) 可化为  \\(x - y + 1 = 0\\)，所以  \\(|PA|_{\\min} = \\frac{|3 - 0 + 1|}{\\sqrt{1^2 + (-1)^2}} = 2\\sqrt{2}\\)，代入①得  \\(|PQ|_{\\min} = \\sqrt{(2\\sqrt{2})^2 - 1} = \\sqrt{7}\\)。\n\n答案：C\n\n【变式2】（2023·新课标Ⅰ卷）过点(0,-2)与圆 \\(x^{2}+y^{2}-4x-1=0\\)相切的两直线的夹角为 \\(\\alpha\\)，则 \\(\\sin\\alpha=\\)（）\n\nA. 1 B.  \\(\\frac{\\sqrt{15}}{4}\\) C.  \\(\\frac{\\sqrt{10}}{4}\\) D.  \\(\\frac{\\sqrt{6}}{4}\\)\n\n解析： \\(x^2 + y^2 - 4x - 1 = 0 \\Rightarrow (x - 2)^2 + y^2 = 5\\)，圆心为  \\(C(2,0)\\)，半径  \\(r = \\sqrt{5}\\)，记  \\(P(0, -2)\\)，两切点分别为  \\(A\\),  \\(B\\)，如图， \\(PA\\),  \\(PB\\) 的夹角  \\(\\alpha = \\pi - \\angle APB\\)，所以  \\(\\sin \\alpha = \\sin(\\pi - \\angle APB) = \\sin \\angle APB\\)，\n\n注意到 \\(\\angle APB = 2\\angle APC\\)，故要求 \\(\\sin\\angle APB\\)，可先在 \\(\\mathrm{Rt}\\triangle PAC\\) 中求 \\(\\sin\\angle APC\\) 和 \\(\\cos\\angle APC\\)，再用倍因为 \\(|PC| = \\sqrt{(0-2)^2 + (-2-0)^2} = 2\\sqrt{2}\\)，\\(|AC| = r = \\sqrt{5}\\)，\n\n\n\n所以 \\(|PA|=\\sqrt{|PC|^2-|AC|^2}=\\sqrt{3}\\)，从而 \\(\\cos\\angle APC=\\frac{|PA|}{|PC|}=\\frac{\\sqrt{3}}{2\\sqrt{2}}\\)，\n\n \\(\\sin\\angle APC=\\frac{|AC|}{|PC|}=\\frac{\\sqrt{5}}{2\\sqrt{2}}\\)，故 \\(\\sin\\angle APB=\\sin2\\angle APC=2\\sin\\angle APC\\cos\\angle APC\\)\n\n \\(=2\\times\\frac{\\sqrt{5}}{2\\sqrt{2}}\\times\\frac{\\sqrt{3}}{2\\sqrt{2}}=\\frac{\\sqrt{15}}{4}\\)，所以 \\(\\sin\\alpha=\\frac{\\sqrt{15}}{4}\\)。\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_901_600_1092_767.jpg\" alt=\"Image\" width=\"16%\" /></div>\n\n\n答案：B\n\n【变式 3】过直线  \\(x + y + 1 = 0\\) 上任意一点 P 作直线 PA，PB 与圆  \\(x^2 + y^2 - 2x = 0\\) 相切，A，B 为切点，则  \\(|AB|\\) 的最小值为___.\n\n解法 1： \\(x^{2}+y^{2}-2x=0\\Rightarrow(x-1)^{2}+y^{2}=1\\)，所以该圆的圆心为  \\(C(1,0)\\)，半径 r=1，\n\n怎样算|AB|？观察发现|AB|等于△PAC的斜边PC上的高的2倍，故先算该高，可用等面积法，设点A到直线PC的距离为h，则 \\(S_{\\triangle PAC} = \\frac{1}{2}|PA| \\cdot |AC| = \\frac{1}{2}|PC| \\cdot h\\)，所以 \\(h = \\frac{|PA| \\cdot |AC|}{|PC|} = \\frac{|PA|}{|PC|} = \\frac{\\sqrt{|PC|^2 - 1}}{|PC|} = \\sqrt{1 - \\frac{1}{|PC|^2}}\\)，故 \\(|AB| = 2h = 2\\sqrt{1 - \\frac{1}{|PC|^2}}\\)，可发现，当|PC|最小时，|AB|也最小，而 \\(|PC|_{\\min}\\)即为点C到直线 \\(x + y + 1 = 0\\)的距离，由图可知， \\(|PC|_{\\min} = \\frac{|1 + 0 + 1|}{\\sqrt{1^2 + 1^2}} = \\sqrt{2}\\)，所以 \\(|AB|_{\\min} = 2\\sqrt{1 - \\frac{1}{(\\sqrt{2})^2}} = \\sqrt{2}\\)。\n\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_878_1094_1092_1258.jpg\" alt=\"Image\" width=\"17%\" /></div>\n\n\n解法2： \\(x^{2}+y^{2}-2x=0\\Rightarrow(x-1)^{2}+y^{2}=1\\)，所以该圆的圆心为 \\(C(1,0)\\)，半径 \\(r=1\\)，\n\n注意到 \\(AB\\) 是切点弦，故也可先用结论求出切点弦方程，再按直线被圆截得的弦长来分析 \\(|AB|\\) 的最小值，\n\n设 \\(P(a,-a-1)\\)，由切点弦方程结论，直线 \\(AB\\) 的方程为 \\(ax+(-a-1)y-2\\cdot\\frac{a+x}{2}=0\\)，即 \\((a-1)x-(a+1)y-a=0\\)，\n\n设圆心 \\(C\\) 到直线 \\(AB\\) 的距离为 \\(d\\)，则 \\(|AB|=2\\sqrt{r^{2}-d^{2}}=2\\sqrt{1-d^{2}}\\)，且 \\(d=\\frac{|a-1-a|}{\\sqrt{(a-1)^{2}+(a+1)^{2}}}=\\frac{1}{\\sqrt{2a^{2}+2}}\\) ①，\n\n要求 \\(|AB|_{\\min}\\) 的最小值，只需求 \\(d_{\\max}\\)，由①可知当 \\(a=0\\) 时，\\(d\\) 取得最大值 \\(\\frac{\\sqrt{2}}{2}\\)，所以 \\(|AB|_{\\min}=2\\sqrt{1-\\left(\\frac{\\sqrt{2}}{2}\\right)^{2}}=\\sqrt{2}\\)。",
+      "text_sha256": "52c188de70064fa3a954dac3d5e7c057bf2b0933454928ec9a3d9fd18172c51b",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_901_600_1092_767.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\imgs\\img_in_image_box_901_600_1092_767.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_878_1094_1092_1258.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\imgs\\img_in_image_box_878_1094_1092_1258.jpg",
+          "exists": true
+        }
+      ],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 81,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_81.md",
+      "text": "答案： \\(\\sqrt{2}\\)\n\n【反思】从例9及其变式1，2，3可以看出，无论是切线长，切线夹角，还是切点弦长，最终都回归到圆外的点P到圆心的距离上来，这是这类切线有关问题的共性，下面我们再来看一个综合性的变式4.\n\n【变式4】（多选）若 \\(A\\)，\\(B\\) 为圆 \\(O: x^2 + y^2 = 1\\) 上两点，\\(P\\) 为直线 \\(l: x + y - 2 = 0\\) 上一动点，则（ ）\n\nA. 直线 \\(l\\) 与圆 \\(O\\) 相离\n\nB. 当 \\(A\\)，\\(B\\) 为两定点时，满足 \\(\\angle APB = \\frac{\\pi}{2}\\) 的点 \\(P\\) 最多有 2 个\n\nC. 当 \\(|AB| = \\sqrt{3}\\) 时，\\(|\\overrightarrow{PA} + \\overrightarrow{PB}|\\) 的最大值是 \\(2\\sqrt{2} + 1\\)\n\nD. 当 \\(PA\\)，\\(PB\\) 为圆 \\(O\\) 的两条切线时，直线 \\(AB\\) 过定点 \\(\\left(\\frac{1}{2}, \\frac{1}{2}\\right)\\)\n\n解析：A 项，圆心 O 到直线 l 的距离  \\(d = \\frac{|-2|}{\\sqrt{1^2 + 1^2}} = \\sqrt{2} > r = 1\\)，所以直线 l 与圆 O 相离，故 A 项正确；\n\nB 项， \\(\\angle APB = \\frac{\\pi}{2}\\) 怎样翻译？我们不妨先画图，并尝试找出一种使  \\(\\angle APB = \\frac{\\pi}{2}\\) 的情况再来分析，\n\nB 项， \\(\\angle APB = \\frac{\\pi}{2}\\)怎样翻译？我们不妨先画图，并尝试找出一种使  \\(\\angle APB = \\frac{\\pi}{2}\\) 的情况再来分析，\n\n如图1，因为O到 \\(l\\)的距离为 \\(\\sqrt{2}\\)，所以当 \\(OP \\perp l\\)时， \\(|OP| = \\sqrt{2}\\)，过 \\(P\\)作圆 \\(O\\)的两条切线，切点分别为 \\(A\\)， \\(B\\)，\n\n则 \\(\\triangle AOP\\)和 \\(\\triangle BOP\\)都是等腰直角三角形，故此时就满足 \\(\\angle APB = \\frac{\\pi}{2}\\)，可以想象，对于直线 \\(l\\)上其它位置的点 \\(P\\)，\n\n如图2， \\(\\angle APB\\)的最大值（ \\(PA\\)， \\(PB\\)与圆 \\(O\\)相切时取得）都小于 \\(\\frac{\\pi}{2}\\)，所以满足 \\(\\angle APB = \\frac{\\pi}{2}\\)的点 \\(P\\)最多只有1个，\n\n且只有当 \\(A\\)， \\(B\\)在如图1所示的两个位置时才有，否则没有，故B项错误；\n\nC项，点P可沿直线l运动到无穷远处，可以想象 \\(\\left|\\overrightarrow{PA}+\\overrightarrow{PB}\\right|\\)能无限大，若要严格分析，可用AB中点表示 \\(\\overrightarrow{PA}+\\overrightarrow{PB}\\)再看，如图3，取AB中点I，连接OI，PI，OA，则 \\(OI\\perp AB\\)，且 \\(\\left|\\overrightarrow{PA}+\\overrightarrow{PB}\\right|=\\left|2\\overrightarrow{PI}\\right|=2\\left|\\overrightarrow{PI}\\right|\\)，条件给出 \\(|AB|=\\sqrt{3}\\)，可用它找到点I的轨迹，\n\n因为 \\(|AB|=\\sqrt{3}\\)，所以 \\(|AI|=\\frac{\\sqrt{3}}{2}\\)，从而 \\(|OI|=\\sqrt{|OA|^2-|AI|^2}=\\frac{1}{2}\\)，故点 \\(I\\)的轨迹是以 \\(O\\)为圆心， \\(\\frac{1}{2}\\)为半径的圆，当 \\(P\\)在 \\(l\\)上运动时， \\(|PI|\\)可以无限大，所以 \\(|PI|\\)没有最大值，从而 \\(|\\overrightarrow{PA}+\\overrightarrow{PB}|\\)没有最大值，故 \\(C\\)项错误； \\(D\\)顶 \\(AR\\)是切点弦所在直线，可因切点弦方程结论写出其方程，再看否定占\n\n \\(x + y - 2 = 0 \\Rightarrow y = 2 - x\\)，所以可设  \\(P(a, 2 - a)\\)，由切点弦方程结论，直线 AB 的方程为  \\(ax + (2 - a)y = 1\\)，整理得： \\(a(x - y) + 2y - 1 = 0\\)，令  \\(\\begin{cases} x - y = 0 \\\\ 2y - 1 = 0 \\end{cases}\\) 可得  \\(x = y = \\frac{1}{2}\\)，所以直线 AB 过定点  \\(\\left( \\frac{1}{2}, \\frac{1}{2} \\right)\\)，故 D 项正确.\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_249_1236_459_1432.jpg\" alt=\"Image\" width=\"17%\" /></div>\n\n\n<div style=\"text-align: center;\">图1</div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_491_1236_701_1432.jpg\" alt=\"Image\" width=\"17%\" /></div>\n\n\n<div style=\"text-align: center;\">图2</div>\n\n\n答案：AD\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_731_1235_943_1432.jpg\" alt=\"Image\" width=\"17%\" /></div>\n\n\n<div style=\"text-align: center;\">图3</div>\n",
+      "text_sha256": "10b39e003fcc13d96598d4dde896553a259a531237a7bccb1caf9e68feb9ccbc",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_249_1236_459_1432.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\imgs\\img_in_image_box_249_1236_459_1432.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_491_1236_701_1432.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\imgs\\img_in_image_box_491_1236_701_1432.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_731_1235_943_1432.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\imgs\\img_in_image_box_731_1235_943_1432.jpg",
+          "exists": true
+        }
+      ],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 82,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_82.md",
+      "text": "类型V：直线与圆有关的最值问题\n\n【例 10】已知 P 是圆  \\(C:(x-1)^2+y^2=1\\) 上的动点，则点 P 到直线  \\(l:x+y+2=0\\) 的距离  \\(d\\) 的取值范围是___.\n\n解析：所求为圆上动点到定直线距离的取值范围，可尝试画出图形，看能否直接找到该距离的最大、最小值，由题意，圆  \\(C\\) 的圆心为  \\(C(1,0)\\)，半径  \\(r=1\\)，如图，过  \\(C\\) 作直线  \\(l\\) 的垂线交圆  \\(C\\) 于  \\(P_1\\)， \\(P_2\\) 两点，对圆  \\(C\\) 上任意的点  \\(P\\)，当  \\(P\\) 与  \\(P_1\\) 重合时，点  \\(P\\) 到直线  \\(l\\) 的距离  \\(d\\) 最小，且最小值为  \\(d_{c-l} - r\\)，其中  \\(d_{c-l}\\) 是圆心  \\(C\\) 到直线  \\(l\\) 的距离，因为  \\(d_{c-l} = \\frac{|1+2|}{\\sqrt{1^2+1^2}} = \\frac{3\\sqrt{2}}{2}\\)，所以  \\(d_{\\min} = d_{c-l} - r = \\frac{3\\sqrt{2}}{2} - 1\\)；当  \\(P\\) 与  \\(P_2\\) 重合时，点  \\(P\\) 到直线  \\(l\\) 的距离  \\(d\\) 最大，且最大值为  \\(d_{c-l} + r = \\frac{3\\sqrt{2}}{2} + 1\\)；所以  \\(d\\) 的取值范围是  \\(\\left[\\frac{3\\sqrt{2}}{2} - 1, \\frac{3\\sqrt{2}}{2} + 1\\right]\\)。答案： \\(\\left[\\frac{3\\sqrt{2}}{2} - 1, \\frac{3\\sqrt{2}}{2} + 1\\right]\\)\n\n【反思】当直线  \\(l\\) 与圆  \\(C\\) 相离时，圆  \\(C\\) 上的点到直线  \\(l\\) 距离的取值范围是  \\([d_{c-l} - r, d_{c-l} + r]\\)，其中  \\(d_{c-l}\\) 是圆心  \\(C\\) 到直线  \\(l\\) 的距离， \\(r\\) 为圆  \\(C\\) 的半径。这是一个基础最值模型，由此可演变出一系列最值问题，我们来看两个变式。\n\n【变式 1】（2018·新课标Ⅲ卷）直线  \\(x + y + 2 = 0\\) 分别与  \\(x\\) 轴， \\(y\\) 轴交于  \\(A\\)， \\(B\\) 两点，点  \\(P\\) 在圆  \\((x-2)^2 + y^2 = 2\\) 上，则  \\(\\triangle ABP\\) 面积的取值范围是（ ）\n\nA.  \\([2,6]\\)\n\nB.  \\([4,8]\\)\n\nC.  \\([\\sqrt{2}, 3\\sqrt{2}]\\)\n\nD.  \\([2\\sqrt{2}, 3\\sqrt{2}]\\)\n\n\n\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_895_369_1094_526.jpg\" alt=\"Image\" width=\"16%\" /></div>\n\n\n解析：在  \\(x + y + 2 = 0\\) 中令  \\(x = 0\\) 得  \\(y = -2\\)，令  \\(y = 0\\) 得  \\(x = -2\\)，所以  \\(A(-2,0)\\)， \\(B(0, -2)\\)，故  \\(|AB| = 2\\sqrt{2}\\)， \\(|AB|\\) 不变，故可考虑以  \\(AB\\) 为底边计算  \\(\\triangle ABP\\) 的面积，这样就只需分析其高的取值范围，记  \\(\\triangle ABP\\) 的  \\(AB\\) 边上的高为  \\(h\\)，则  \\(S_{\\triangle ABP} = \\frac{1}{2}|AB| \\cdot h = \\sqrt{2}h\\) ①，如图，直线  \\(AB\\) 与圆  \\(C\\) 相离，于是问题又回到了例 10 的模型上，圆  \\(C\\) 的圆心为  \\(C(2,0)\\)，半径  \\(r = \\sqrt{2}\\)，圆心  \\(C\\) 到直线  \\(AB\\) 的距离  \\(d = \\frac{|2 + 2|}{\\sqrt{1^2 + 1^2}} = 2\\sqrt{2}\\)，所以当  \\(P\\) 在圆  \\(C\\) 上运动时，有  \\(d - r \\leq h \\leq d + r\\)，故  \\(\\sqrt{2} \\leq h \\leq 3\\sqrt{2}\\)，结合①得  \\(2 \\leq S_{\\triangle ABP} = \\sqrt{2}h \\leq 6\\)，所以  \\(\\triangle ABP\\) 面积的取值范围是  \\([2,6]\\)。\n\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_876_1030_1092_1186.jpg\" alt=\"Image\" width=\"18%\" /></div>\n\n\n答案：A\n\n【变式 2】设 \\(P\\), \\(Q\\) 分别是直线 \\(l: 4x - 3y - 11 = 0\\) 和圆 \\(C: (x + 2)^2 + (y - 2)^2 = 4\\) 上的动点，则 \\(|PQ|\\) 的最小值是（ ）\n\nA. 1          B. 3          C. 5          D. 7\n\n解析：P，Q都在动，不易直接看出何时|PQ|最小，可考虑先取定一个，取定谁？直线上的动点到定点距离的最小值容易分析，故先取定Q，考虑P在直线l上运动的情形，\n\n由题意，圆C的圆心为C(-2,2)，半径r=2，如图1，对圆C上任意的点Q，当P在l上运动时，\n\n总有|PQ|≥d_{Q-l}，其中d_{Q-l}表示点Q到直线l的距离，故只需求d_{Q-l}的最小值，问题又回到了例10的模型，",
+      "text_sha256": "78ba5248f9d281b3684449f0a94d4a4ab02537c2ed93e6a93410ae969579577f",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_895_369_1094_526.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\imgs\\img_in_image_box_895_369_1094_526.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_876_1030_1092_1186.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\imgs\\img_in_image_box_876_1030_1092_1186.jpg",
+          "exists": true
+        }
+      ],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 83,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_83.md",
+      "text": "因为圆心 \\(C\\) 到 \\(l\\) 的距离 \\(d = \\frac{|4 \\times (-2) - 3 \\times 2 - 11|}{\\sqrt{4^2 + (-3)^2}} = 5\\)，所以 \\(d_{Q-l} \\geq d - r = 5 - 2 = 3\\)，结合 \\(|PQ| \\geq d_{Q-l}\\) 可得 \\(|PQ| \\geq 3\\)，取等的情形如图 2，所以 \\(|PQ|\\) 的最小值为 3。\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_377_226_571_412.jpg\" alt=\"Image\" width=\"16%\" /></div>\n\n\n<div style=\"text-align: center;\">图1</div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_623_227_817_412.jpg\" alt=\"Image\" width=\"16%\" /></div>\n\n\n<div style=\"text-align: center;\">图2</div>\n\n\n答案：B\n\n【例 11】（2023·全国乙卷）已知实数 x, y 满足  \\(x^{2} + y^{2} - 4x - 2y - 4 = 0\\)，则 x - y 的最大值是（ ）\n\nA.  \\(1 + \\frac{3\\sqrt{2}}{2}\\) B. 4 C.  \\(1 + 3\\sqrt{2}\\) D. 7\n\n解法 1：目标式 \\(x - y\\) 中 \\(x, y\\) 都是一次项，这与直线方程中 \\(x, y\\) 的情况类似，但这里不是方程，而只是一个代数式，怎么办呢？可考虑设其为 \\(t\\)，构造一个方程出来，再作观察，\n\n由 \\(x^2 + y^2 - 4x - 2y - 4 = 0\\) 可得 \\((x - 2)^2 + (y - 1)^2 = 9\\)，所以该方程表示圆心为 \\(C(2,1)\\)，半径 \\(r = 3\\) 的圆，\n\n设 \\(t = x - y\\)，则 \\(x - y - t = 0\\)，因为 \\(x, y\\) 还满足圆 \\(C\\) 的方程，所以直线 \\(x - y - t = 0\\) 与该圆有交点，\n\n从而圆心 \\(C\\) 到直线的距离 \\(d = \\frac{|2 - 1 - t|}{\\sqrt{1^2 + (-1)^2}} \\leq 3\\)，解得：\\(1 - 3\\sqrt{2} \\leq t \\leq 1 + 3\\sqrt{2}\\)，故 \\((x - y)_{\\max} = 1 + 3\\sqrt{2}\\)。\n\n解法2：按解法1将圆的方程化为 \\((x-2)^2+(y-1)^2=9\\)后，注意到这是平方和为常数结构，也可考虑三角换元，\n\n由 \\((x-2)^2+(y-1)^2=9\\)可得 \\(\\left(\\frac{x-2}{3}\\right)^2+\\left(\\frac{y-1}{3}\\right)^2=1\\)，令 \\(\\begin{cases} \\frac{x-2}{3}=\\cos\\theta \\\\ \\frac{y-1}{3}=\\sin\\theta \\end{cases}\\)，则 \\(\\begin{cases} x=2+3\\cos\\theta \\\\ y=1+3\\sin\\theta \\end{cases}\\)， \\(\\theta\\in\\mathbf{R}\\)，\n\n所以 \\(x-y=2+3\\cos\\theta-1-3\\sin\\theta=1-3\\sqrt{2}\\sin\\left(\\theta-\\frac{\\pi}{4}\\right)\\)，故当 \\(\\sin\\left(\\theta-\\frac{\\pi}{4}\\right)=-1\\)时， \\(x-y\\)取得最大值 \\(1+3\\sqrt{2}\\)。\n\n答案：C\n\n【反思】①当题干给出x，y满足某圆的方程，让求另一个关于x，y的代数式的最值时，可考虑设该代数式等于t，构造一个方程，根据该方程代表的曲线（包括直线）与圆有交点来求t的范围.\n\n②在 \\((x-a)^{2}+(y-b)^{2}=r^{2}\\)的条件下求关于x，y的某代数式的最值（或范围），可借助三角换元 \\(\\left\\{\\begin{aligned}x&=a+r\\cos\\theta\\\\ y&=b+r\\sin\\theta\\end{aligned}\\right.\\)将x，y用 \\(\\theta\\)表示，从而将关于x，y的二元代数式化为单变量函数来分析.\n\n【变式】已知实数 \\(x\\)，\\(y\\) 满足 \\((x-2)^2+(y-3)^2=1\\)，则 \\(\\frac{y}{x+1}\\) 的取值范围是 ___。\n\n解法1：观察发现已知和所求与上面的例11类似，能像上面那样设 \\(\\frac{y}{x+1}\\)为t处理吗？我们来试试，\n\n设 \\(t=\\frac{y}{x+1}\\)，则 \\(tx-y+t=0\\)，因为x，y还满足 \\((x-2)^2+(y-3)^2=1\\)，此方程表示圆心为 \\(C(2,3)\\)，半径 \\(r=1\\)的圆，\n\n所以直线 \\(tx-y+t=0\\)与该圆有交点，故圆心到直线的距离 \\(d=\\frac{|t\\cdot2-3+t|}{\\sqrt{t^2+(-1)^2}}\\leq r=1\\Rightarrow\\frac{9-\\sqrt{17}}{8}\\leq t\\leq\\frac{9+\\sqrt{17}}{8}\\)，",
+      "text_sha256": "f2005064417592f6d01d30bd1c401f15d2ebff0369db5db56a5d999ce78a529e",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_377_226_571_412.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\imgs\\img_in_image_box_377_226_571_412.jpg",
+          "exists": true
+        },
+        {
+          "ref": "imgs/img_in_image_box_623_227_817_412.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\imgs\\img_in_image_box_623_227_817_412.jpg",
+          "exists": true
+        }
+      ],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 84,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_84.md",
+      "text": "所以 \\(\\frac{y}{x+1}\\)的取值范围是 \\(\\left[\\frac{9-\\sqrt{17}}{8},\\frac{9+\\sqrt{17}}{8}\\right]\\).\n\n解法2：看到所给等式是平方和为常数结构，想到通过三角换元将目标二元代数式化为一元函数分析，令\\(\\begin{cases}x=2+\\cos\\theta\\\\y=3+\\sin\\theta\\end{cases}\\)，\\(\\theta\\in\\mathbf{R}\\)，则\\(\\frac{y}{x+1}=\\frac{3+\\sin\\theta}{2+\\cos\\theta+1}=\\frac{3+\\sin\\theta}{3+\\cos\\theta}\\)①，\n\n如何求式①的取值范围？直接分析该式不易，观察发现 \\(\\sin\\theta\\)和 \\(\\cos\\theta\\)都是一次的，由此联想到辅助角公式，我们先将其设为 \\(m\\)，再通过变形把 \\(\\sin\\theta\\)和 \\(\\cos\\theta\\)拿到一起，\n\n令 \\(\\frac{3+\\sin\\theta}{3+\\cos\\theta}=m\\)，则 \\(3+\\sin\\theta=3m+m\\cos\\theta\\)，所以 \\(\\sin\\theta-m\\cos\\theta=3m-3\\)，从而 \\(\\sqrt{1+m^2}\\sin(\\theta+\\varphi)=3m-3\\)，\n\n故 \\(\\sin(\\theta+\\varphi)=\\frac{3m-3}{\\sqrt{1+m^2}}\\)，因为 \\(-1\\leq\\sin(\\theta+\\varphi)\\leq1\\)，所以 \\(-1\\leq\\frac{3m-3}{\\sqrt{1+m^2}}\\leq1\\)，即 \\(\\frac{|3m-3|}{\\sqrt{1+m^2}}\\leq1\\)，\n\n解得： \\(\\frac{9-\\sqrt{17}}{8}\\leq m\\leq\\frac{9+\\sqrt{17}}{8}\\)，所以 \\(\\frac{y}{x+1}\\)的取值范围是 \\(\\left[\\frac{9-\\sqrt{17}}{8},\\frac{9+\\sqrt{17}}{8}\\right]\\)。\n\n解法3：注意到 \\(\\frac{y}{x+1}\\)可看成 \\(\\frac{y-0}{x-(-1)}\\)，于是它表示点 \\(P(x,y)\\)与点 \\(Q(-1,0)\\)的连线斜率，故也可考虑画图分析。\n\n设 \\(P(x,y)\\)， \\(Q(-1,0)\\)，则 \\(P\\)为圆 \\(C:(x-2)^2+(y-3)^2=1\\)上的动点，且 \\(\\frac{y}{x+1}=k_{PQ}\\)，\n\n如图，当 \\(P\\)在圆 \\(C\\)上运动时， \\(k_{PQ}\\)应介于两条切线 \\(l_1\\)和 \\(l_2\\)的斜率之间，\n\n故只需求出这两条切线的斜率， \\(\\frac{y}{x+1}\\)的范围就有了，如何求切线斜率，已有点Q，可直接设斜率，写出切线的\n\n方程，按  \\(d = r\\) 翻译直线与圆相切，建立方程求所设斜率，\n\n设圆  \\(C\\) 的过点  \\(Q\\) 的切线的斜率为  \\(k\\)（由图可知两切线斜率都存在），则切线的方程为  \\(y - 0 = k[x - (-1)]\\)，\n\nkx-y+k=0，圆心 C 到该切线的距离  \\(d=\\frac{|k\\cdot2-3+k|}{\\sqrt{k^{2}+(-1)^{2}}}=r=1\\)，解得： \\(k=\\frac{9\\pm\\sqrt{17}}{8}\\)，\n\n所以当 \\(P\\) 在圆 \\(C\\) 上运动时，\\(\\frac{9-\\sqrt{17}}{8}\\leq k_{PQ}\\leq\\frac{9+\\sqrt{17}}{8}\\)，\n\n又 \\(\\frac{y}{x+1}=k_{PQ}\\)，所以 \\(\\frac{y}{x+1}\\)的取值范围是 \\(\\left[\\frac{9-\\sqrt{17}}{8},\\frac{9+\\sqrt{17}}{8}\\right]\\).\n\n答案： \\(\\left[\\frac{9-\\sqrt{17}}{8},\\frac{9+\\sqrt{17}}{8}\\right]\\)\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_890_866_1092_1031.jpg\" alt=\"Image\" width=\"16%\" /></div>\n\n\n## 补充、拓展\n\n在上一节，我们初步提到了设而不求的思想，为了进一步强化大家对这种思想的理解，这里我们设计了一个类型VI来作为本节的拓展题型.\n\n类型VI：设而不求的处理思想\n\n【例 12】已知圆  \\(C: x^{2} + y^{2} - 2x + t = 0\\)，直线  \\(l: 2x + y = 0\\).\n\n（1）若直线 l 与圆 C 相切，求实数 t 的值；\n\n（2）若直线  \\(l\\) 与圆  \\(C\\) 交于  \\(A\\)， \\(B\\) 两点，且  \\(\\overrightarrow{OA} \\cdot \\overrightarrow{OB} = -1\\)，其中  \\(O\\) 为原点，求圆  \\(C\\) 的半径。\n\n解：（1） \\(x^2 + y^2 - 2x + t = 0 \\Leftrightarrow (x-1)^2 + y^2 = 1 - t\\)，所以  \\(t < 1\\)，且圆  \\(C\\) 的圆心为  \\(C(1,0)\\)，半径  \\(r = \\sqrt{1-t}\\)，若直线  \\(l\\) 与圆  \\(C\\) 相切，则圆心  \\(C\\) 到直线  \\(l\\) 的距离  \\(d = r\\)，即  \\(\\frac{|2 \\times 1 + 0|}{\\sqrt{2^2 + 1^2}} = \\sqrt{1-t}\\)，解得： \\(t = \\frac{1}{5}\\)。",
+      "text_sha256": "665f292f25ebd919b642378314429ac73e7bcacf6cb72c88731315b9a9ed7d4b",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_890_866_1092_1031.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\imgs\\img_in_image_box_890_866_1092_1031.jpg",
+          "exists": true
+        }
+      ],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 85,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_85.md",
+      "text": "（2）（条件给出 \\(OA \\cdot OB = -1\\)，翻译它需要计算 \\(OA \\cdot OB\\)，怎么算？可考虑设 \\(A, B\\) 的坐标，用坐标来算）\n\n设 \\(A(x_1, y_1)\\)，\\(B(x_2, y_2)\\)，则 \\(\\overrightarrow{OA} = (x_1, y_1)\\)，\\(\\overrightarrow{OB} = (x_2, y_2)\\)，所以 \\(\\overrightarrow{OA} \\cdot \\overrightarrow{OB} = x_1 x_2 + y_1 y_2\\) ①，\n\n（可以想象，若联立直线 \\(l\\) 和圆 \\(C\\) 的方程，求出 \\(A, B\\) 的坐标，再代入①，则较麻烦，怎么办呢？观察发现有 \\(x_1 x\\) 和 \\(y_1 y_2\\)，故联立直线 \\(l\\) 和圆 \\(C\\) 的方程，消去 \\(y\\) 或 \\(x\\) 后，可不解该方程，直接用韦达定理整体计算 \\(x_1 x_2\\) 和 \\(y_1 y_2\\)）\n\n联立 \\(\\begin{cases} 2x + y = 0 \\tag{②} \\\\ x^2 + y^2 - 2x + t = 0 \\tag{③} \\end{cases}\\)，由②得 \\(y = -2x\\)，代入③消去 \\(y\\) 整理得：\\(5x^2 - 2x + t = 0\\) ④，\n\n因为直线 \\(l\\) 与圆 \\(C\\) 有 2 个交点，所以方程④的判别式 \\(\\Delta = (-2)^2 - 4 \\times 5 \\times t = 4(1 - 5t) > 0\\)，解得：\\(t < \\frac{1}{5}\\)，\n\n因为 \\(A, B\\) 是直线 \\(l\\) 与圆 \\(C\\) 的两个交点，所以 \\(x_1, x_2\\) 是方程④的两个实根，由韦达定理，\\(x_1 x_2 = \\frac{t}{5}\\) ⑤，（怎样求 \\(y_1 y_2\\)？注意到 \\(A, B\\) 在直线 \\(y = -2x\\) 上，故可由此将 \\(y_1, y_2\\) 转换成 \\(x_1, x_2\\)，再加以计算）\n\n因为 \\(A, B\\) 在直线 \\(l\\) 上，所以 \\(y_1 = -2x_1\\)，\\(y_2 = -2x_2\\)，故 \\(y_1 y_2 = -2x_1 (-2 x_2) = 4 x_1 x_2 = \\frac{4t}{5}\\) ⑥，\n\n将⑤⑥代入①得 \\(\\overrightarrow{OA} \\cdot \\overrightarrow{OB} = x_1 x_2 + y_1 y_2 = t\\)，由题意，\\(\\overrightarrow{OA} \\cdot \\overrightarrow{OB} = -1\\)，所以 \\(t = -1\\)，满足 \\(t < \\frac{1}{5}\\)，\n\n此时圆 \\(C\\) 的半径 \\(r = \\sqrt{1 - t} = \\sqrt{1 - (-1)} = \\sqrt{2}\\)。\n\n \\[\\overrightarrow{OA}\\cdot\\overrightarrow{OB}\\] \n\n【反思】当直线与圆相交时，若计算某些量需要用到交点坐标，则可先设出交点的坐标，用该坐标表示要求的量，再联立直线和圆的方程，消去y（或x），得到关于x（或y）的一元二次方程，结合韦达定理来计算要求的量，这种设而不求的思想在解析几何中应用非常广泛，我们再来看一个难度更高的变式1.\n\n【变式1】在平面直角坐标系中， \\(Q(2,0)\\)，过点 \\(P(2,4)\\)作直线 \\(l\\)与圆 \\(O:x^2+y^2=4\\)交于不同的两点 \\(M,N\\)。\n\n（1）若直线 l 的斜率为 1，求 |MN|；\n\n（2）设直线 QM，QN 的斜率分别是  \\(k_{1}\\)， \\(k_{2}\\)，试探索  \\(k_{1} + k_{2}\\) 是否为定值。若是，求出该定值；若不是，说明理由。\n\n解：（1）若直线  \\(l\\) 的斜率为 1，则  \\(l\\) 的方程为  \\(y - 4 = 1 \\cdot (x - 2)\\)，即  \\(x - y + 2 = 0\\)，\n\n所以圆心  \\(O\\) 到直线  \\(l\\) 的距离  \\(d = \\frac{|2|}{\\sqrt{1^2 + (-1)^2}} = \\sqrt{2}\\)，故  \\(|MN| = 2\\sqrt{r^2 - d^2} = 2\\sqrt{4 - (\\sqrt{2})^2} = 2\\sqrt{2}\\)。\n\n（2）（目标式涉及 QM，QN 的斜率，考虑设 M，N 的坐标，先表示出  \\(k_1 + k_2\\)，再作观察）设  \\(M(x_1, y_1)\\)， \\(N(x_2, y_2)\\)，则  \\(k_1 + k_2 = \\frac{y_1}{x_1 - 2} + \\frac{y_2}{x_2 - 2}\\)，\n\n（接下来怎么处理？观察发现两个分式中  \\(x_1\\) 与  \\(x_2\\)， \\(y_1\\) 与  \\(y_2\\) 的结构是对称的，故可想象，若将两式通分，化简所得结果中  \\(x_1\\) 与  \\(x_2\\)， \\(y_1\\) 与  \\(y_2\\) 也应对称，于是可联立直线和圆的方程，结合韦达定理计算，故按此处理）\n\n所以  \\(k_1 + k_2 = \\frac{(x_2 - 2)y_1 + (x_1 - 2)y_2}{(x_1 - 2)(x_2 - 2)} = \\frac{x_1 y_2 + x_2 y_1 - 2(y_1 + y_2)}{x_1 x_2 - 2(x_1 + x_2) + 4}\\) ①，\n\n（式①中  \\(x_1x_2\\)， \\(x_1+x_2\\)， \\(y_1+y_2\\) 可结合韦达定理计算，那  \\(x_1y_2+x_2y_1\\) 呢？此式涉及的变量较多，可利用直线的方程消元，再结合韦达定理计算，下面先设直线的方程，直线 l 过点 P，只需再设斜率，即可写出其方程）\n\n过点  \\(P(2,4)\\) 且斜率不存在的直线为 x=2，它与圆 O 只有 1 个交点，不合题意，所以 l 的斜率存在，设为 k，则 l 的方程为  \\(y-4=k(x-2)\\)，即  \\(y=kx+4-2k\\)，因为 M，N 两点在 l 上，所以  \\(\\begin{cases}y_1=kx_1+4-2k\\\\y_2=kx_2+4-2k\\end{cases}\\)，故  \\(x_1y_2+x_2y_1=x_1(kx_2+4-2k)+x_2(kx_1+4-2k)=2kx_1x_2+(4-2k)(x_1+x_2)\\)， \\(y_1+y_2=kx_1+4-2k+kx_2+4-2k=k(x_1+x_2)+8-4k\\)，",
+      "text_sha256": "a15eff4462e528242459e149d47d7caa1709d7f61eff800906ef98f45ecbe975",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 86,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_86.md",
+      "text": "代入①得  \\(k_{1}+k_{2}=\\frac{2kx_{1}x_{2}+(4-2k)(x_{1}+x_{2})-2[k(x_{1}+x_{2})+8-4k]}{x_{1}x_{2}-2(x_{1}+x_{2})+4}=\\frac{2kx_{1}x_{2}+(4-4k)(x_{1}+x_{2})+8k-16}{x_{1}x_{2}-2(x_{1}+x_{2})+4}\\) ②，\n\n（只含  \\(x_{1}+x_{2}\\) 和  \\(x_{1}x_{2}\\) 了，于是可将直线 l 的方程代入圆 O 的方程，结合韦达定理计算它们）\n\n将  \\(y = kx + 4 - 2k\\) 代入  \\(x^{2} + y^{2} = 4\\) 整理得： \\((1 + k^{2})x^{2} - 4k(k - 2)x + 4k^{2} - 16k + 12 = 0\\) ③，\n\n（直线 l 与圆 O 有 2 个交点，则上述方程应满足  \\(\\Delta > 0\\)，由此可对 k 的范围进行限制，但经尝试，这里  \\(\\Delta\\) 比较难算，于是我们换个思路，按圆心到直线的距离 d < r 来翻译直线 l 与圆 O 有 2 个交点）\n\n因为直线 l 与圆 O 有 2 个交点，所以圆心 O 到直线 l 的距离  \\(d=\\frac{|4-2k|}{\\sqrt{k^{2}+1}}<2\\)，解得： \\(k>\\frac{3}{4}\\)，\n\n对方程③，由韦达定理， \\(x_{1}+x_{2}=\\frac{4k(k-2)}{1+k^{2}}\\)， \\(x_{1}x_{2}=\\frac{4k^{2}-16k+12}{1+k^{2}}\\)，\n\n代入②得  \\(k_{1}+k_{2}=\\frac{2kx_{1}x_{2}+(4-4k)(x_{1}+x_{2})+8k-16}{x_{1}x_{2}-2(x_{1}+x_{2})+4}=\\frac{2k\\cdot\\frac{4k^{2}-16k+12}{1+k^{2}}+(4-4k)\\cdot\\frac{4k(k-2)}{1+k^{2}}+8k-16}{\\frac{4k^{2}-16k+12}{1+k^{2}}-2\\cdot\\frac{4k(k-2)}{1+k^{2}}+4}\\)\n\n= \\(\\frac{2k(4k^{2}-16k+12)+4k(4-4k)(k-2)+(8k-16)(1+k^{2})}{4k^{2}-16k+12-8k(k-2)+4(1+k^{2})}=\\frac{8k^{3}-32k^{2}+24k+(8k-16)[2k(1-k)+1+k^{2}]}{16}\\)\n\n= \\(\\frac{8k^{3}-32k^{2}+24k+(8k-16)(2k+1-k^{2})}{16}=\\frac{8k^{3}-32k^{2}+24k+16k^{2}+8k-8k^{3}-32k-16+16k^{2}}{16}=\\frac{-16}{16}=-1\\)，\n\n所以  \\(k_{1}+k_{2}\\) 是定值 -1.\n\n【反思】不仅  \\(x_1 + x_2\\)， \\(x_1x_2\\)， \\(y_1 + y_2\\)， \\(y_1y_2\\) 可以通过联立直线和圆的方程，结合韦达定理来计算，只要是关于  \\(x_1\\) 和  \\(x_2\\)， \\(y_1\\) 和  \\(y_2\\) 结构对称的式子，往往都可以结合韦达定理进行计算。例如本题的  \\(x_1, y_2 + x_2, y_1\\)，又比如  \\(\\frac{1}{x_1} + \\frac{1}{x_2}\\)， \\(\\frac{1}{x_1^2} + \\frac{1}{x_2^2}\\) 等。\n\n【变式2】已知圆 O 的圆心为坐标原点，且经过点  \\(A(\\sqrt{5},2)\\).\n\n（1）求圆O的方程：\n\n（2）已知不过原点且不与坐标轴垂直的直线 \\(l\\) 与圆 \\(O\\) 交于 \\(B, C\\) 两点，点 \\(B\\) 关于原点的对称点为 \\(B_1\\)，点 \\(B\\) 关于 \\(x\\) 轴的对称点为 \\(B_2\\)，直线 \\(B_1C\\)，\\(B_2C\\) 在 \\(y\\) 轴上的截距分别是 \\(m\\)，\\(n\\)，证明：\\(mn\\) 为定值，并求该定值.\n\n解：（1）由题意，圆  \\(O\\) 的半径  \\(r = |OA| = \\sqrt{(\\sqrt{5})^2 + 2^2} = 3\\)，所以圆  \\(O\\) 的方程为  \\(x^2 + y^2 = 9\\)。\n\n（2）（条件涉及直线  \\(B_1C\\) 和  \\(B_2C\\) 在 y 轴上的截距，考虑先写出这两条直线的方程，求出对应的截距。要写  \\(B_1C\\) 和  \\(B_2C\\) 的方程，可考虑用  \\(B_1\\)， \\(B_2\\)， \\(C\\) 的坐标，而  \\(B_1\\)， \\(B_2\\) 的坐标都与  \\(B\\) 有关，故直接设  \\(B\\)， \\(C\\) 的坐标）\n\n设  \\(B(x_1, y_1)\\)， \\(C(x_2, y_2)\\)，如图，因为直线  \\(l\\) 不过原点且不与坐标轴垂直，所以  \\(x_1 \\ne \\pm x_2\\)，因为  \\(B_1\\)， \\(B_2\\) 分别与  \\(B\\) 关于原点、 \\(x\\) 轴对称，所以  \\(B_1(-x_1, -y_1)\\)， \\(B_2(x_1, -y_1)\\)，因为  \\(x_1 \\ne \\pm x_2\\)，所以  \\(x_1 \\pm x_2 \\ne 0\\)，故直线  \\(B_1C\\) 和  \\(B_2C\\) 的斜率都存在，\n\n直线  \\(B_1C\\) 的斜率  \\(k_{B_1C} = \\frac{y_2 - (-y_1)}{x_2 - (-x_1)} = \\frac{y_2 + y_1}{x_2 + x_1}\\)，所以其方程为  \\(y - y_2 = \\frac{y_2 + y_1}{x_2 + x_1}(x - x_2)\\)，令  \\(x = 0\\) 得  \\(y - y_2 = \\frac{y_2 + y_1}{x_2 + x_1} \\cdot (-x_2)\\)，所以  \\(y = y_2 - \\frac{(y_2 + y_1)x_2}{x_2 + x_1} = \\frac{y_2(x_2 + x_1) - (y_2 + y_1)x_2}{x_2 + x_1} = \\frac{x_1y_2 - x_2y_1}{x_1 + x_2}\\)，故直线  \\(B_1C\\) 在  \\(y\\) 轴上的截距  \\(m = \\frac{x_1y_2 - x_2y_1}{x_1 + x_2}\\) ①，\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_907_1204_1092_1436.jpg\" alt=\"Image\" width=\"15%\" /></div>\n",
+      "text_sha256": "97274613b39279cf39f99b5e9c326380b0be14b7e6f60c39e0f2faf505df13fe",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_907_1204_1092_1436.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\imgs\\img_in_image_box_907_1204_1092_1436.jpg",
+          "exists": true
+        }
+      ],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 87,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_87.md",
+      "text": "（再求 \\(B_2C\\) 在 \\(y\\) 轴上的截距 \\(n\\)，要像上面那样再算一遍吗？不用，注意到 \\(B_2C\\) 与 \\(B_1C\\) 相比，只是把 \\(B_1\\) 换成了 \\(B_2\\)，即将 \\(-x_1\\) 换成 \\(x_1\\)，其它都一样，故直接在①中将 \\(-x_1\\) 换成 \\(x_1\\)，也即将 \\(x_1\\) 换成 \\(-x_1\\)，就能得到 \\(n\\)，无需重复计算）\n\n在①中将 \\(x_1\\) 换成 \\(-x_1\\) 得 \\(n = -\\frac{x_1y_2 + x_2y_1}{x_2 - x_1} = \\frac{x_1y_2 + x_2y_1}{x_1 - x_2}\\)，所以 \\(mn = \\frac{x_1y_2 - x_2y_1}{x_1 + x_2} \\cdot \\frac{x_1y_2 + x_2y_1}{x_1 - x_2} = \\frac{x_1^2y_2^2 - x_2^2y_1^2}{x_1^2 - x_2^2}\\) ②，\n\n（观察发现不方便结合韦达定理计算式②，怎么办呢？上式涉及 4 个变量，要进一步计算它，应考虑消元，如何消元？注意到式②中 4 个变量都为平方结构，这与圆的方程中 \\(x\\)，\\(y\\) 的次数是一致的，故可考虑根据 \\(B\\)，\\(C\\) 都在圆 \\(O\\) 上，利用圆 \\(O\\) 的方程来消元）因为 \\(B\\)，\\(C\\) 都在圆 \\(O\\) 上，所以 \\(\\begin{cases} x_1^2 + y_1^2 = 9 \\\\ x_2^2 + y_2^2 = 9 \\end{cases}\\)，故 \\(\\begin{cases} y_1^2 = 9 - x_1^2 \\\\ y_2^2 = 9 - x_2^2 \\end{cases}\\)，\n\n代入②得 \\(mn = \\frac{x_1^2(9 - x_2^2) - x_2^2(9 - x_1^2)}{x_1^2 - x_2^2} = \\frac{9(x_1^2 - x_2^2)}{x_1^2 - x_2^2} = 9\\)，所以 \\(mn\\) 为定值 9.\n\n【反思】①在计算某些类似的对象（例如本题的 m 与 n）时，可考虑严格计算其中一个，再观察另一个与它的差异，直接用代换的方法得到另一个，这种做法可以很好地简化计算，后面会经常用到。\n\n②设而不求是解析几何中常用的思想，但设出点的坐标，并用该坐标表示出目标量后，不一定需要结合韦达定理来进一步化简计算，有时也可结合点所在的曲线方程来消元，进而化简出结果.\n\n## 强化训练\n\n## A 组 夯实基础\n\n1. (2025·北京大兴三模)\n\n已知直线  \\(l: x + y - 1 = 0\\) 与圆  \\(C: (x+1)^2 + (y-2)^2 = 4\\)，则（ ）\n\nA.  \\(l\\) 与  \\(C\\) 相离 \\quad B.  \\(l\\) 与  \\(C\\) 相切\n\nC.  \\(l\\) 平分  \\(C\\) \\quad D.  \\(l\\) 与  \\(C\\) 相交但不平分  \\(C\\)\n\n2.（2025·甘肃平凉模拟）\n\n过点  \\(A(-1, \\sqrt{3})\\) 与圆  \\(O: x^2 + y^2 = 4\\) 相切的直线方程为___。\n\n3.（2025·云南昆明模拟）\n\n已知圆  \\(C:(x-2)^{2}+(y-3)^{2}=16\\)，直线  \\(l:(2m+1)x+(m+1)y-13m-9=0\\)，则直线 l 与圆 C 的公共点的个数为（）\n\nA. 0 个 B. 1 个\n\nC. 2 个 D. 不确定，与 m 有关",
+      "text_sha256": "08b4f34066fad8cbde621dc7597d16b3cf17d627b4ce544b625ae41b444907d1",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 88,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_88.md",
+      "text": "4.（2025·云南模拟）\n\n若  \\(P(1,2)\\) 为圆  \\(O: x^{2} + y^{2} = 9\\) 的弦 AB 的中点，则直线 AB 的方程是（）\n\nA.  \\(x-2y+5=0\\) B.  \\(2x-y+4=0\\)\n\nC.  \\(x+2y-5=0\\) D.  \\(2x+y-4=0\\)\n\n## B组 强化能力\n\n### 5. （2025·浙江杭州模拟）\n\n若直线 \\(l:y=kx+1\\)与圆 \\(C:(x-2)^{2}+y^{2}=9\\)相交于 \\(A,B\\)两点，则 \\(|AB|\\)的取值范围是___.\n\n### 6. （2025·重庆模拟）\n\n6. (2025·重庆模拟)\n\n圆心在射线  \\(y = \\frac{x}{2} (x \\geq 0)\\) 上，与 y 轴相切，且被 x 轴所截得的弦长为  \\(2\\sqrt{3}\\) 的圆的方程为___。\n\n## 数·高中数学一本通\n\n### 7. （2025·广东惠州二调）\n\n已知“水滴”的表面是一个由圆锥的侧面和部分球面（常称为“球冠”）所围成的几何体。如图所示，将“水滴”的轴截面看成由线段 AB，AC 和优弧 BC 所围成的平面图形，其中点 B，C 所在直线与水平面平行，AB 和 AC 与圆弧相切。已知“水滴”的“竖直高度”与“水平宽度”（“水平宽度”指的是平行于水平面的直线。截轴截面所得线段的长度的最大值）的比值为  \\(\\frac{4}{3}\\)，则  \\(\\sin \\angle BAC =\\)（ ）\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_545_1095_671_1267.jpg\" alt=\"Image\" width=\"10%\" /></div>\n\n\nA.  \\(\\frac{3}{5}\\) B.  \\(\\frac{4}{5}\\) C.  \\(\\frac{16}{25}\\) D.  \\(\\frac{24}{25}\\)",
+      "text_sha256": "3e9c40ab43b30bf0e91825c2eba24dcec514be63a7b8fef4a8eed2a4a7fd417b",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_545_1095_671_1267.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\imgs\\img_in_image_box_545_1095_671_1267.jpg",
+          "exists": true
+        }
+      ],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 89,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_89.md",
+      "text": "若方程  \\(\\sqrt{1-x^{2}}=x+m\\) 无实数解，则实数 m 的取值范围是（）\n\nA.  \\((-\\infty,-1)\\) B.  \\([0,1)\\)\n\nC.  \\((-\\infty,-1)\\cup(\\sqrt{2},+\\infty)\\) D.  \\([\\sqrt{2},+\\infty)\\)\n\n### 9. （2025·全国模拟）\n\n若实数 x，y 满足方程  \\(x^{2}+y^{2}-2x-4y+1=0\\)，则代数式  \\(\\frac{y}{x+2}\\) 的取值范围为 ___.\n\n### 10. （2023·新课标Ⅱ卷）\n\n已知直线  \\(x - my + 1 = 0\\) 与  \\(\\odot C: (x-1)^2 + y^2 = 4\\) 交于  \\(A, B\\) 两点，写出满足 “ \\(\\triangle ABC\\) 的面积为  \\(\\frac{8}{5}\\)” 的  \\(m\\) 的一个值___。\n\n11.（2024·陕西模拟）（多选）\n\n若圆  \\(C:(x-1)^{2}+(y-2)^{2}=9\\)，直线  \\(l:m(x+y+1)+y-x=0\\)， \\(m\\in\\mathbf{R}\\)，则下列说法正确的是（ ）\n\nA. 直线  \\(l\\) 过定点  \\(\\left(-\\frac{1}{2}, -\\frac{1}{2}\\right)\\)\n\nB. 直线  \\(l\\) 与圆  \\(C\\) 一定相交\n\nC. 若直线  \\(l\\) 平分圆  \\(C\\) 的周长，则  \\(m=-4\\)\n\nD. 直线  \\(l\\) 被圆  \\(C\\) 截得的最短弦的长度为  \\(\\sqrt{2}\\)",
+      "text_sha256": "f80ab418add601d4c081cb8371a9bbd224b15e5d662e1613a1b1e4c360758cda",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 90,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_90.md",
+      "text": "### 12 \\. （2025 · 河南信阳模拟）\n\nP 在圆  \\(C:(x-a^{2})^{2}+(y-a)^{2}=1\\) 上运动，Q 在直线 l: y=x+2 上运动，则  \\(\\left|PQ\\right|\\) 的最小值为（）\n\nA.  \\(\\sqrt{2}-1\\) B.  \\(\\sqrt{2}\\) C.  \\(\\frac{7\\sqrt{2}}{8}-1\\) D.  \\(\\frac{7\\sqrt{2}}{8}\\)\n\n### 13 \\. （2025 · 全国 I 卷）\n\n若圆  \\(x^{2}+(y+2)^{2}=r^{2}(r>0)\\) 上到直线  \\(y=\\sqrt{3}x+2\\) 的距离为 1 的点有且仅有 2 个，则 r 的取值范围是（）\n\nA.  \\((0,1)\\) B.  \\((1,3)\\) C.  \\((3,+\\infty)\\) D.  \\((0,+\\infty)\\)\n\n### 14. （2025·广东广州模拟）\n\n已知圆心为 C 的圆经过点 A(1,-1) 和 B(4,2)，且圆心 C 在直线 l: x - y + 1 = 0 上，求圆 C 的标准方程及过点 M(-2,-2) 的切线 l' 方程.\n\n### 15. （2025·云南大理期末）\n\n一个圆 M 切直线  \\(l_{1}: x - 6y - 10 = 0\\) 于点  \\(P(4, -1)\\)，且圆心在直线  \\(l_{2}: 5x - 3y = 0\\) 上.\n\n（1）求圆 M 的方程：\n\n（2）过直线 \\(l:5x+7y+24=0\\)上一点N引圆M的两条切线，切点分别为A，B，求四边形 \\(MANB\\)面积的最小值.",
+      "text_sha256": "4701796ba6656f33dce4dc03126c73ea15619febf114320e53dd681a8e37b704",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 91,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_91.md",
+      "text": "## C组 拓展提升\n\n### 16. （2025 · 江苏模拟）\n\n已知圆  \\(C: x^2 - 2x + y^2 - 3 = 0\\)，过点  \\(T(2,0)\\) 的直线  \\(l\\) 交圆  \\(C\\) 于  \\(A, B\\) 两点，点  \\(P\\) 在圆  \\(C\\) 上， \\(CP \\parallel AB\\)， \\(\\overrightarrow{PA} \\cdot \\overrightarrow{PB} = \\frac{1}{2}\\)，则  \\(|AB| =\\) ___.\n\n### 17 \\. (2024 · 浙江模拟)\n\n在平面直角坐标系 xOy 中，圆 C 的方程为  \\((x-3)^{2}\\)\n\n+y^{2}=1，且圆 C 与 x 轴交于 M, N 两点，设直线 l 的方程为  \\(y=kx(k>0)\\)，直线 l 与圆 C 交于 A, B 两点，直线 AM 与直线 BN 相交于点 P，直线 AM, BN, OP 的斜率分别为  \\(k_{1}\\),  \\(k_{2}\\),  \\(k_{3}\\)，则（）\n\nA.  \\(k_{1}+k_{2}=2k_{3}\\) B.  \\(2k_{1}+k_{2}=k_{3}\\)\n\nC.  \\(k_{1}+2k_{2}=k_{3}\\) D.  \\(k_{1}+k_{2}=k_{3}\\)\n\n## 一 数·高中数学一本通\n\n### 18. （2025·上海期末）\n\n已知过点  \\(A(-1,0)\\) 的直线 l 与圆  \\(C: x^{2} + (y - 3)^{2} = 4\\) 相交于 P, Q 两点，直线  \\(m: x + 3y + 6 = 0\\).\n\n（1）当 \\(|PQ|=2\\sqrt{3}\\)时，求直线 \\(l\\)的方程；\n\n（2）设 T 为直线 m 上的动点，过 T 作圆 C 的两条切线 TG，TH，切点分别为 G，H，求四边形 TGCH 面积的最小值；\n\n（3）是否存在直线  \\(l\\)，使得  \\(\\overrightarrow{OP} + \\overrightarrow{OQ}\\) 与  \\(\\overrightarrow{AC}\\) 共线？如果存在，求出直线  \\(l\\) 的方程；如果不存在，请说明理由。",
+      "text_sha256": "8893adc031e61225d721ca03e24f1efe0bb5036231e64f8bb7af33816d4a33de",
+      "image_refs": [],
+      "math_errors": []
+    },
+    {
+      "ocr_doc": 92,
+      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_92.md",
+      "text": "19.（2025 · 云南临沧模拟）\n\n已知圆  \\(O: x^{2} + y^{2} = 16\\) 分别与 x 轴正半轴、y 轴正半轴交于 A, B 两点，P 为圆 O 上的动点.\n\n（1）若  \\(\\overrightarrow{AQ} = 2\\overrightarrow{QP}\\)，求点  \\(Q\\) 的轨迹方程；\n\n(2) 若 P 为圆 O 上异于 A, B 的动点, 直线 AP 与 y 轴交于点 M, 直线 BP 与 x 轴交于点 N, 求证:  \\(|AN| \\cdot |BM|\\) 为定值.",
+      "text_sha256": "78060629b6ee5572916e9dd70b3ae47ab748a3d681d3264c3235c591ff1404c5",
+      "image_refs": [],
+      "math_errors": []
+    }
+  ],
+  "questions": [
+    {
+      "qid": "Q-1acc18076a7cceea",
+      "section": "2.6",
+      "group": "A",
+      "number": 1,
+      "kind": "A组",
+      "source_anchor": {
+        "ocr_doc": 87,
+        "pdf_page": 88,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_87.md"
+      },
+      "question_text": "1. (2025·北京大兴三模)\n\n已知直线  \\(l: x + y - 1 = 0\\) 与圆  \\(C: (x+1)^2 + (y-2)^2 = 4\\)，则（ ）\n\nA.  \\(l\\) 与  \\(C\\) 相离 \\quad B.  \\(l\\) 与  \\(C\\) 相切\n\nC.  \\(l\\) 平分  \\(C\\) \\quad D.  \\(l\\) 与  \\(C\\) 相交但不平分  \\(C\\)",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-0059986c883370ec",
+      "section": "2.6",
+      "group": "A",
+      "number": 2,
+      "kind": "A组",
+      "source_anchor": {
+        "ocr_doc": 87,
+        "pdf_page": 88,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_87.md"
+      },
+      "question_text": "2.（2025·甘肃平凉模拟）\n\n过点  \\(A(-1, \\sqrt{3})\\) 与圆  \\(O: x^2 + y^2 = 4\\) 相切的直线方程为___。",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-a6f1a65e82b3bbe5",
+      "section": "2.6",
+      "group": "A",
+      "number": 3,
+      "kind": "A组",
+      "source_anchor": {
+        "ocr_doc": 87,
+        "pdf_page": 88,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_87.md"
+      },
+      "question_text": "3.（2025·云南昆明模拟）\n\n已知圆  \\(C:(x-2)^{2}+(y-3)^{2}=16\\)，直线  \\(l:(2m+1)x+(m+1)y-13m-9=0\\)，则直线 l 与圆 C 的公共点的个数为（）\n\nA. 0 个 B. 1 个\n\nC. 2 个 D. 不确定，与 m 有关",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-03e480d7a1cf23d7",
+      "section": "2.6",
+      "group": "A",
+      "number": 4,
+      "kind": "A组",
+      "source_anchor": {
+        "ocr_doc": 88,
+        "pdf_page": 89,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_88.md"
+      },
+      "question_text": "4.（2025·云南模拟）\n\n若  \\(P(1,2)\\) 为圆  \\(O: x^{2} + y^{2} = 9\\) 的弦 AB 的中点，则直线 AB 的方程是（）\n\nA.  \\(x-2y+5=0\\) B.  \\(2x-y+4=0\\)\n\nC.  \\(x+2y-5=0\\) D.  \\(2x+y-4=0\\)",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-72a3611b11a566f7",
+      "section": "2.6",
+      "group": "B",
+      "number": 5,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 88,
+        "pdf_page": 89,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_88.md"
+      },
+      "question_text": "### 5. （2025·浙江杭州模拟）\n\n若直线 \\(l:y=kx+1\\)与圆 \\(C:(x-2)^{2}+y^{2}=9\\)相交于 \\(A,B\\)两点，则 \\(|AB|\\)的取值范围是___.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-967da85d33815645",
+      "section": "2.6",
+      "group": "B",
+      "number": 6,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 88,
+        "pdf_page": 89,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_88.md"
+      },
+      "question_text": "6. (2025·重庆模拟)\n\n圆心在射线  \\(y = \\frac{x}{2} (x \\geq 0)\\) 上，与 y 轴相切，且被 x 轴所截得的弦长为  \\(2\\sqrt{3}\\) 的圆的方程为___。\n\n## 数·高中数学一本通",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-dfa5d1d45a2d1637",
+      "section": "2.6",
+      "group": "B",
+      "number": 7,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 88,
+        "pdf_page": 89,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_88.md"
+      },
+      "question_text": "### 7. （2025·广东惠州二调）\n\n已知“水滴”的表面是一个由圆锥的侧面和部分球面（常称为“球冠”）所围成的几何体。如图所示，将“水滴”的轴截面看成由线段 AB，AC 和优弧 BC 所围成的平面图形，其中点 B，C 所在直线与水平面平行，AB 和 AC 与圆弧相切。已知“水滴”的“竖直高度”与“水平宽度”（“水平宽度”指的是平行于水平面的直线。截轴截面所得线段的长度的最大值）的比值为  \\(\\frac{4}{3}\\)，则  \\(\\sin \\angle BAC =\\)（ ）\n\n\n\n\nA.  \\(\\frac{3}{5}\\) B.  \\(\\frac{4}{5}\\) C.  \\(\\frac{16}{25}\\) D.  \\(\\frac{24}{25}\\)",
+      "image_refs": [
+        {
+          "ref": "imgs/img_in_image_box_545_1095_671_1267.jpg",
+          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\imgs\\img_in_image_box_545_1095_671_1267.jpg",
+          "exists": true
+        }
+      ],
+      "visual_status": "VISION_VERIFIED",
+      "math_errors": [],
+      "evidence": [
+        "E1",
+        "E2"
+      ],
+      "vision_sidecars": [
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\imgs\\img_in_image_box_545_1095_671_1267.jpg",
+          "image_sha256": "83bfaa8774a949a6022ea2b57b988ff15ccd051f48a6d785228065714450c99b",
+          "confidence": "E2",
+          "structured": {
+            "objects": [],
+            "relations": [],
+            "coordinates": [],
+            "ranges": [],
+            "text": [
+              "A",
+              "B",
+              "C"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        }
+      ],
+      "vision_sidecar": {
+        "objects": [],
+        "relations": [],
+        "coordinates": [],
+        "ranges": [],
+        "text": [
+          "A",
+          "B",
+          "C"
+        ],
+        "uncertainties": [],
+        "confidence": "E2"
+      },
+      "vision_source_provenance": []
+    },
+    {
+      "qid": "Q-88c2824a46ecfddb",
+      "section": "2.6",
+      "group": "B",
+      "number": 8,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 89,
+        "pdf_page": 90,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_89.md",
+        "recovery": "PADDLE_OCR_TEXT_NEIGHBOR_SEQUENCE_B7_B8_B9",
+        "recovery_source_kind": "primary_ocr"
+      },
+      "question_text": "若方程  \\(\\sqrt{1-x^{2}}=x+m\\) 无实数解，则实数 m 的取值范围是（）\n\nA.  \\((-\\infty,-1)\\) B.  \\([0,1)\\)\n\nC.  \\((-\\infty,-1)\\cup(\\sqrt{2},+\\infty)\\) D.  \\([\\sqrt{2},+\\infty)\\)",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1",
+        "PADDLE_OCR_TEXT_NEIGHBOR_SEQUENCE_B7_B8_B9"
+      ],
+      "recovery_reason": "printed_number_missing_from_paddle_ocr"
+    },
+    {
+      "qid": "Q-3130256be5662949",
+      "section": "2.6",
+      "group": "B",
+      "number": 9,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 89,
+        "pdf_page": 90,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_89.md"
+      },
+      "question_text": "### 9. （2025·全国模拟）\n\n若实数 x，y 满足方程  \\(x^{2}+y^{2}-2x-4y+1=0\\)，则代数式  \\(\\frac{y}{x+2}\\) 的取值范围为 ___.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-ecb7075022b78bcb",
+      "section": "2.6",
+      "group": "B",
+      "number": 10,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 89,
+        "pdf_page": 90,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_89.md"
+      },
+      "question_text": "### 10. （2023·新课标Ⅱ卷）\n\n已知直线  \\(x - my + 1 = 0\\) 与  \\(\\odot C: (x-1)^2 + y^2 = 4\\) 交于  \\(A, B\\) 两点，写出满足 “ \\(\\triangle ABC\\) 的面积为  \\(\\frac{8}{5}\\)” 的  \\(m\\) 的一个值___。",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-caf301a324d044b5",
+      "section": "2.6",
+      "group": "B",
+      "number": 11,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 89,
+        "pdf_page": 90,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_89.md"
+      },
+      "question_text": "11.（2024·陕西模拟）（多选）\n\n若圆  \\(C:(x-1)^{2}+(y-2)^{2}=9\\)，直线  \\(l:m(x+y+1)+y-x=0\\)， \\(m\\in\\mathbf{R}\\)，则下列说法正确的是（ ）\n\nA. 直线  \\(l\\) 过定点  \\(\\left(-\\frac{1}{2}, -\\frac{1}{2}\\right)\\)\n\nB. 直线  \\(l\\) 与圆  \\(C\\) 一定相交\n\nC. 若直线  \\(l\\) 平分圆  \\(C\\) 的周长，则  \\(m=-4\\)\n\nD. 直线  \\(l\\) 被圆  \\(C\\) 截得的最短弦的长度为  \\(\\sqrt{2}\\)",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-478dac60411116ab",
+      "section": "2.6",
+      "group": "B",
+      "number": 12,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 90,
+        "pdf_page": 91,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_90.md"
+      },
+      "question_text": "### 12 \\. （2025 · 河南信阳模拟）\n\nP 在圆  \\(C:(x-a^{2})^{2}+(y-a)^{2}=1\\) 上运动，Q 在直线 l: y=x+2 上运动，则  \\(\\left|PQ\\right|\\) 的最小值为（）\n\nA.  \\(\\sqrt{2}-1\\) B.  \\(\\sqrt{2}\\) C.  \\(\\frac{7\\sqrt{2}}{8}-1\\) D.  \\(\\frac{7\\sqrt{2}}{8}\\)",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-c19a19943a8e5fd5",
+      "section": "2.6",
+      "group": "B",
+      "number": 13,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 90,
+        "pdf_page": 91,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_90.md"
+      },
+      "question_text": "### 13 \\. （2025 · 全国 I 卷）\n\n若圆  \\(x^{2}+(y+2)^{2}=r^{2}(r>0)\\) 上到直线  \\(y=\\sqrt{3}x+2\\) 的距离为 1 的点有且仅有 2 个，则 r 的取值范围是（）\n\nA.  \\((0,1)\\) B.  \\((1,3)\\) C.  \\((3,+\\infty)\\) D.  \\((0,+\\infty)\\)",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-8211b5826dbf6274",
+      "section": "2.6",
+      "group": "B",
+      "number": 14,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 90,
+        "pdf_page": 91,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_90.md"
+      },
+      "question_text": "### 14. （2025·广东广州模拟）\n\n已知圆心为 C 的圆经过点 A(1,-1) 和 B(4,2)，且圆心 C 在直线 l: x - y + 1 = 0 上，求圆 C 的标准方程及过点 M(-2,-2) 的切线 l' 方程.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-a30fd7a509725134",
+      "section": "2.6",
+      "group": "B",
+      "number": 15,
+      "kind": "B组",
+      "source_anchor": {
+        "ocr_doc": 90,
+        "pdf_page": 91,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_90.md"
+      },
+      "question_text": "### 15. （2025·云南大理期末）\n\n一个圆 M 切直线  \\(l_{1}: x - 6y - 10 = 0\\) 于点  \\(P(4, -1)\\)，且圆心在直线  \\(l_{2}: 5x - 3y = 0\\) 上.\n\n（1）求圆 M 的方程：\n\n（2）过直线 \\(l:5x+7y+24=0\\)上一点N引圆M的两条切线，切点分别为A，B，求四边形 \\(MANB\\)面积的最小值.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-6e64acea9d129724",
+      "section": "2.6",
+      "group": "C",
+      "number": 16,
+      "kind": "C组",
+      "source_anchor": {
+        "ocr_doc": 91,
+        "pdf_page": 92,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_91.md"
+      },
+      "question_text": "### 16. （2025 · 江苏模拟）\n\n已知圆  \\(C: x^2 - 2x + y^2 - 3 = 0\\)，过点  \\(T(2,0)\\) 的直线  \\(l\\) 交圆  \\(C\\) 于  \\(A, B\\) 两点，点  \\(P\\) 在圆  \\(C\\) 上， \\(CP \\parallel AB\\)， \\(\\overrightarrow{PA} \\cdot \\overrightarrow{PB} = \\frac{1}{2}\\)，则  \\(|AB| =\\) ___.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-84ba62543dc3f2cf",
+      "section": "2.6",
+      "group": "C",
+      "number": 17,
+      "kind": "C组",
+      "source_anchor": {
+        "ocr_doc": 91,
+        "pdf_page": 92,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_91.md"
+      },
+      "question_text": "### 17 \\. (2024 · 浙江模拟)\n\n在平面直角坐标系 xOy 中，圆 C 的方程为  \\((x-3)^{2}\\)\n\n+y^{2}=1，且圆 C 与 x 轴交于 M, N 两点，设直线 l 的方程为  \\(y=kx(k>0)\\)，直线 l 与圆 C 交于 A, B 两点，直线 AM 与直线 BN 相交于点 P，直线 AM, BN, OP 的斜率分别为  \\(k_{1}\\),  \\(k_{2}\\),  \\(k_{3}\\)，则（）\n\nA.  \\(k_{1}+k_{2}=2k_{3}\\) B.  \\(2k_{1}+k_{2}=k_{3}\\)\n\nC.  \\(k_{1}+2k_{2}=k_{3}\\) D.  \\(k_{1}+k_{2}=k_{3}\\)",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-d23db2d52a36e999",
+      "section": "2.6",
+      "group": "C",
+      "number": 18,
+      "kind": "C组",
+      "source_anchor": {
+        "ocr_doc": 91,
+        "pdf_page": 92,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_91.md"
+      },
+      "question_text": "### 18. （2025·上海期末）\n\n已知过点  \\(A(-1,0)\\) 的直线 l 与圆  \\(C: x^{2} + (y - 3)^{2} = 4\\) 相交于 P, Q 两点，直线  \\(m: x + 3y + 6 = 0\\).\n\n（1）当 \\(|PQ|=2\\sqrt{3}\\)时，求直线 \\(l\\)的方程；\n\n（2）设 T 为直线 m 上的动点，过 T 作圆 C 的两条切线 TG，TH，切点分别为 G，H，求四边形 TGCH 面积的最小值；\n\n（3）是否存在直线  \\(l\\)，使得  \\(\\overrightarrow{OP} + \\overrightarrow{OQ}\\) 与  \\(\\overrightarrow{AC}\\) 共线？如果存在，求出直线  \\(l\\) 的方程；如果不存在，请说明理由。",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    },
+    {
+      "qid": "Q-02a404b0e8e1dfff",
+      "section": "2.6",
+      "group": "C",
+      "number": 19,
+      "kind": "C组",
+      "source_anchor": {
+        "ocr_doc": 92,
+        "pdf_page": 93,
+        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_92.md"
+      },
+      "question_text": "19.（2025 · 云南临沧模拟）\n\n已知圆  \\(O: x^{2} + y^{2} = 16\\) 分别与 x 轴正半轴、y 轴正半轴交于 A, B 两点，P 为圆 O 上的动点.\n\n（1）若  \\(\\overrightarrow{AQ} = 2\\overrightarrow{QP}\\)，求点  \\(Q\\) 的轨迹方程；\n\n(2) 若 P 为圆 O 上异于 A, B 的动点, 直线 AP 与 y 轴交于点 M, 直线 BP 与 x 轴交于点 N, 求证:  \\(|AN| \\cdot |BM|\\) 为定值.",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
+      "math_errors": [],
+      "evidence": [
+        "E1"
+      ]
+    }
+  ],
+  "unresolved": []
+}

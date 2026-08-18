@@ -1,0 +1,22 @@
+{
+  "schema_version": "ybt-shared-defects-v1",
+  "task_id": "LUNA-CH12-07",
+  "section": "2.4",
+  "status": "reported",
+  "defects": [
+    {
+      "defect_id": "YBT-CH12-07-FALLBACK-001",
+      "scope": "shared packet to fallback-script binding",
+      "status": "not_resolved_in_shared_source",
+      "observed": "The direct build_paddle_glm_crosscheck.py invocation stops with missing PaddleOCR doc: 2.4 34b11ecd93de016ebba5dadb6c1877a44acb16ea04975031688878ad251b21b2.",
+      "cause_evidence": "The three image-bearing exercise records in data/packets/2.4/learning_packet.json store the page number in source_anchor.ocr_doc while source_docs is empty; the shared script currently reads only source_docs.",
+      "affected_item_keys": [
+        "Q:Q-c042e341306a52c6",
+        "Q:Q-baeb75215619f586",
+        "Q:Q-5eb69e4cc4e8a123"
+      ],
+      "action_taken": "No shared source, packet, manifest, skill, or script was modified. A temporary isolated input copy supplied the existing OCR page anchors to the unchanged Skill script; it produced the task-local cross-check, and the temporary generator was deleted after delivery.",
+      "delivery_impact": "The task-local fallback evidence is valid under the current contract: mode=paddle_glm_crosscheck, luna_status=blocked, visual_status=passed, visual_model=glm-4.6v-flash."
+    }
+  ]
+}

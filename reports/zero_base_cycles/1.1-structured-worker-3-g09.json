@@ -1,0 +1,449 @@
+{
+  "schema_version": "1.1",
+  "artifact": "ZERO_BASE_AGENT_SIMULATION_WORKER",
+  "section": "1.1",
+  "generation": "G-20260816-09",
+  "worker": 3,
+  "worker_status": "PARTIAL",
+  "worker_scope": {
+    "cycles": "5-6",
+    "tasks": "18-26",
+    "item_ids": [
+      "b867c227820b9b42",
+      "40489a2282275850",
+      "df02a4165b305660",
+      "B4",
+      "B5",
+      "a150e68825eff982",
+      "b2a2e4099db3ab67",
+      "d93a88e15e97f1dd",
+      "B11"
+    ]
+  },
+  "worker_contract": {
+    "role": "deepseek_worker",
+    "model": "opencode-go/deepseek-v4-flash",
+    "reasoning_effort": "max",
+    "context_window": 1000000,
+    "answer_sidecar_read": false,
+    "answer_ocr_read": false
+  },
+  "context_consumption": {
+    "context_file": "data/contexts/1.1.json",
+    "packet_type": "DEEPSEEK_STUDENT_CONTEXT",
+    "status": "VERIFIED",
+    "student_packet": {
+      "packet_type": "DEEPSEEK_STUDENT_PACKET",
+      "status": "VERIFIED"
+    },
+    "student_learning_items": {
+      "packet_type": "DEEPSEEK_STUDENT_LEARNING_ITEMS",
+      "status": "VERIFIED",
+      "counts": {
+        "worked_examples": 16,
+        "direct_variants": 8,
+        "total": 24
+      }
+    },
+    "context_sha256": "f7134202319beade76dd7f8dbbbd07b36613661ffa57b56c17267b7976e50dd2",
+    "canary": "9aa133e8105f3e95",
+    "probe_tokens": {
+      "Q-84442c12da683ad3": "bb957c78",
+      "Q-1727695600a57e80": "8af98ec5",
+      "Q-7370f2df587a419e": "474ad3ed"
+    },
+    "inputs_consumed": [
+      "data/zero_base_simulation_standard.md",
+      "data/packets/1.1/learning_path_without_questions.md (cycles 5-6, tasks 18-26)",
+      "data/packets/1.1/learning_packet.json (cycles 5-6 question faces + worked-example teaching_text)",
+      "data/packets/1.1/student_learning_items.json (item closure, VERIFIED, 16+8=24)",
+      "data/contexts/1.1.json (evidence/canary/probes)",
+      "data/bridge_supplement_lessons.json (bridge-1.1-projection / bridge-1.1-centroid / bridge-1.1-polarization)",
+      "data/course_transcripts/3.1.1.1, 3.1.2.1, 3.1.4.1, 3.1.4.3 (method coverage scan)"
+    ],
+    "answer_sidecar_read": false,
+    "answer_ocr_read": false,
+    "answer_text_in_context": false
+  },
+  "answer_sidecar_read": false,
+  "human_acceptance_not_proven": true,
+  "item_results": [
+    {
+      "section": "1.1",
+      "cycle": 5,
+      "item_id": "b867c227820b9b42",
+      "source_revision": {
+        "generation": "G-20260816-09",
+        "note": "教材例6 教学例题，教学阶段跟随完整过程；题干与 teaching_text 取自当前代 learning_packet.json；教学跟随不等于独立掌握"
+      },
+      "context_sha256": "f7134202319beade76dd7f8dbbbd07b36613661ffa57b56c17267b7976e50dd2",
+      "observation_signal": "设问词'夹角'；正方体 ABCD-A1B1C1D1 中对角线向量 AC 与五条棱/对角线方向向量（A1B1、B1A1、AD1、CD1、B1D1）的夹角，目标量是角度而非长度或投影；图形状态 VISION_VERIFIED。",
+      "course_call": {
+        "method_model_id": "m:3.1.4.3:cos-angle-formula",
+        "course": "3.1.4.3 向量夹角与直线夹角（必听主课）；前置 3.1.1.1 空间向量的运算、3.1.2.1 空间向量拆分法",
+        "bridge": "知识点4 夹角定义：平移共起点、范围 [0,π]、a 与 -b 夹角为 π-θ（注②）",
+        "note": "主课给出 cosθ=a·b/(|a||b|) 与向量角/线线角区分；教学例题允许跟随完整过程。"
+      },
+      "first_line": "按知识点4 夹角定义处理：把两向量平移至同一平面/共起点。正方体棱 A1B1=AB（平行且同向），先求 ⟨AC,AB⟩。",
+      "second_line": "正方形对角线夹角：⟨AC,AB⟩=45°；对 B1A1=-AB 用注②'反向向量夹角为 π-θ'得 ⟨AC,B1A1⟩=180°-45°=135°。",
+      "continuation": "AD1、CD1、AC 均为面对角线且等长，△ACD1 为等边三角形：⟨AC,AD1⟩=60°；⟨AC,CD1⟩=180°-∠ACD1=120°；B1D1=BD，正方形对角线 AC⊥BD，得 90°。",
+      "independent_self_check": "五个结果逐一落在 [0°,180°]；成对校验 135°+45°=180°、120°+60°=180°；等边三角形判定依赖正方体三面对角线相等；末项用垂直定义。",
+      "first_breakpoint": "无。唯一易混点'反向向量夹角 180°-θ'由知识点4 注②覆盖，教学阶段内解决，未构成断点。",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 5,
+      "item_id": "40489a2282275850",
+      "source_revision": {
+        "generation": "G-20260816-09",
+        "note": "教材例7 教学例题，教学阶段跟随完整过程；题干与 teaching_text 取自当前代 learning_packet.json；教学跟随不等于独立掌握"
+      },
+      "context_sha256": "f7134202319beade76dd7f8dbbbd07b36613661ffa57b56c17267b7976e50dd2",
+      "observation_signal": "设问是数量积填空（EF·AB）；正四面体棱长 1 + E、F 分别是 AD、CD 的中点，信号词'中点'指向中位线替换后直接用定义。",
+      "course_call": {
+        "method_model_id": "m:3.1.2.1:midpoint-substitution",
+        "course": "3.1.4.3 向量夹角与直线夹角（主课）；3.1.2.1 空间向量拆分法（前置）；3.1.1.1 空间向量的运算（前置）",
+        "bridge": "知识点4 数量积定义 |a||b|cosθ；三角形中位线（初中已知）",
+        "note": "中位线 EF=(1/2)AC 替换后用定义求值；教学例题允许跟随完整过程。"
+      },
+      "first_line": "目标 EF·AB；先用中位线把 EF 换成已知向量：E、F 是 AD、CD 中点，EF=(1/2)AC。",
+      "second_line": "代入定义：EF·AB=(1/2)AC·AB=(1/2)|AC||AB|cos⟨AC,AB⟩；正四面体各面为等边三角形，面角 60°。",
+      "continuation": "=(1/2)×1×1×cos60°=1/4。",
+      "independent_self_check": "cos60°=1/2 为正且 EF 与 AC 同向；|AC|=|AB|=1；结果 1/4 ≤ |EF||AB|=1/2，符合 |a·b|≤|a||b|。",
+      "first_breakpoint": "无。中位线性质与定义法调用均为已具备知识，教学阶段无断点。",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 5,
+      "item_id": "df02a4165b305660",
+      "source_revision": {
+        "generation": "G-20260816-09",
+        "note": "教材例8 教学例题，教学阶段跟随完整过程；题干与 teaching_text 取自当前代 learning_packet.json；教学跟随不等于独立掌握"
+      },
+      "context_sha256": "f7134202319beade76dd7f8dbbbd07b36613661ffa57b56c17267b7976e50dd2",
+      "observation_signal": "设问词'投影向量'两处（直线投影与平面投影），目标量是向量而非长度；题干依赖正方体图形的垂足结构，图形状态 VISION_VERIFIED。",
+      "course_call": {
+        "method_model_id": "m:bridge-1.1-projection:projection-vector",
+        "course": "3.1.4.3 向量夹角与直线夹角（必听主课）",
+        "bridge": "补充方法：投影向量定义、方向与标量长度（SUPPLEMENT_READY）+ 知识点4 投影向量表",
+        "note": "主课 3.1.4.3 全文无'投影'关键词（0 命中），3.1.1.1 仅把投影法列为三大基本方法之一并说明空间向量里用得不多；投影方法由知识点4 文字块与桥接承担；教学例题允许跟随完整过程。"
+      },
+      "first_line": "先区分投影向量（向量，有方向）与投影长度（标量）：本题两空都问向量。对直线 AB，把 C 向 AB 所在直线作垂线，垂足为 B。",
+      "second_line": "正方体底面正方形中 AB⊥BC，故 AC 在直线 AB 上的投影向量是 AB。",
+      "continuation": "对平面 ABCD：C1 向底面作垂线，垂足为 C（C1C⊥平面 ABCD），故 AC1 在平面 ABCD 上的投影向量是 AC。",
+      "independent_self_check": "两个结果仍是向量；用公式 (a·b/|b|²)b 复核方向与长度，图形法与公式法一致；未与投影长度混写。",
+      "first_breakpoint": "无。桥接检查点（投影方向/长度区分）先于例8 独立完成，教学阶段无断点。",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 5,
+      "item_id": "B4",
+      "source_revision": {
+        "generation": "G-20260816-09",
+        "note": "A/B/C 习题，独立作答；题干取自当前代 learning_packet.json question_text（qid=Q-f15b941e305191d5），未读取 teaching_text 与任何答案字段"
+      },
+      "context_sha256": "f7134202319beade76dd7f8dbbbd07b36613661ffa57b56c17267b7976e50dd2",
+      "observation_signal": "设问'AB·CD'数量积数值；三棱锥 A-BCD 每条棱长都为 2（正四面体结构），目标是异面棱向量 AB 与 CD 的数量积；图形状态 VISION_VERIFIED 且文字数据完整。",
+      "course_call": {
+        "method_model_id": "m:1.1-k4:dot-product-definition",
+        "course": "3.1.4.3 向量夹角与直线夹角（主课）；3.1.2.1 空间向量拆分法（前置，含正四面体异面棱投影示范）；3.1.1.1 空间向量的运算（前置）",
+        "bridge": "知识点4 数量积定义与分配律",
+        "note": "先尝试定义法：需要 cos⟨AB,CD⟩，而异面棱夹角未直接给出；3.1.2.1 有'夹角未知→投影/对称性→异面垂直'示范可调用。"
+      },
+      "first_line": "先写定义式 AB·CD=|AB||CD|cos⟨AB,CD⟩，写到此处停下：AB 与 CD 是异面棱，夹角没有直接给出，定义式无法代入。",
+      "second_line": "最小提示后调用 3.1.2.1 已示范的方法：正四面体对棱垂直（对称性），AB⊥CD，cos⟨AB,CD⟩=0；另用拆分 CD=AD-AC 交叉复核。",
+      "continuation": "拆分展开：AB·(AD-AC)=AB·AD-AB·AC=2×2×cos60°-2×2×cos60°=2-2=0，两种方法结果一致，对应选项 D。",
+      "independent_self_check": "拆分方向符号复核（C→D=C→A+A→D）；面角 60° 依据等边三角形；|0|≤|AB||CD|=4；结果 0 对应选项 D。",
+      "first_breakpoint": "直接用定义时异面棱 AB 与 CD 的夹角未知，无法代入；未自主把'夹角未知'与 3.1.2.1 的投影/对称性示范连接，需最小提示。",
+      "hint_level": "minimal",
+      "verdict": "PARTIAL",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 5,
+      "item_id": "B5",
+      "source_revision": {
+        "generation": "G-20260816-09",
+        "note": "A/B/C 习题，独立作答；题干取自当前代 learning_packet.json question_text（qid=Q-8dd0fc02442f324f），未读取 teaching_text 与任何答案字段"
+      },
+      "context_sha256": "f7134202319beade76dd7f8dbbbd07b36613661ffa57b56c17267b7976e50dd2",
+      "observation_signal": "设问'EB1·EB'数量积数值；棱长 2 的正方体 + E 是棱 A1D1 的中点，信号词'中点'指向沿三条正交棱拆分后展开；图形状态 VISION_VERIFIED 且文字数据完整。",
+      "course_call": {
+        "method_model_id": "m:3.1.2.1:decomposition-dot-product",
+        "course": "3.1.4.3 向量夹角与直线夹角（主课）；3.1.1.1 空间向量的运算（前置，点乘运算率）；3.1.2.1 空间向量拆分法（前置）",
+        "bridge": "知识点4 数量积定义与分配律；正方体棱两两垂直",
+        "note": "需把 EB1、EB 分别沿三条正交棱拆分再展开；该'双向量拆分+六项展开'模式在例13（任务23）前无完整示范，路线书写骨架提供了展开框架。"
+      },
+      "first_line": "记 u=A1B1、v=A1D1、w=A1A（模长 2，两两垂直）：EB1=EA1+A1B1=-(1/2)v+u；EB 的路径 E→A1→A→B 写 EB=-(1/2)v+w+u，写 A1A 的方向时首次迟疑（误写成 AA1）。",
+      "second_line": "展开 EB1·EB=(-v/2+u)·(u+w-v/2)，逐项：u·u+u·w-(1/2)u·v-(1/2)v·u-(1/2)v·w+(1/4)v·v。",
+      "continuation": "两两垂直使交叉项全为 0：=4+1=5，对应选项 B。",
+      "independent_self_check": "方向自检：A1A=-AA1；展开共 6 项无漏项；|u|=|v|=|w|=2 代入模长平方；结果 5 对应选项 B。",
+      "first_breakpoint": "第一行写 EB 的加法链时 A1A 的方向负号不确定（写成 AA1 会得到错误展开），需最小提示核对向量方向；该卡点未自主解决。",
+      "hint_level": "minimal",
+      "verdict": "PARTIAL",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 6,
+      "item_id": "a150e68825eff982",
+      "source_revision": {
+        "generation": "G-20260816-09",
+        "note": "教材例13 教学例题，教学阶段跟随完整过程；题干与 teaching_text 取自当前代 learning_packet.json，图形状态 READY_TEXT_ONLY；教学跟随不等于独立掌握"
+      },
+      "context_sha256": "f7134202319beade76dd7f8dbbbd07b36613661ffa57b56c17267b7976e50dd2",
+      "observation_signal": "设问'AE·AD'数量积填空；正四面体棱长 1 + E 是 BC 中点，信号词'中点'指向把 AE 拆成已知向量组合（拆解法）；纯文字可作答。",
+      "course_call": {
+        "method_model_id": "m:3.1.2.1:decomposition-dot-product",
+        "course": "3.1.4.3 向量夹角与直线夹角（前置主课）；3.1.4.1 平行垂直证明（补充课程）",
+        "bridge": "知识点4 分配律；例13 teaching_text 的拆解法示范与反思",
+        "note": "循环6 无主课视频（course_keys 为空），方法来自前置课程与知识点；拆解法首次完整示范；教学例题允许跟随完整过程。"
+      },
+      "first_line": "定义法需先算 cos∠DAE 较繁，改用拆解法：E 为 BC 中点，AE=(1/2)AB+(1/2)AC，把目标数量积转为已知长度夹角向量的数量积。",
+      "second_line": "展开（分配律）：AE·AD=(1/2)(AB+AC)·AD=(1/2)AB·AD+(1/2)AC·AD。",
+      "continuation": "正四面体面角 60°、棱长 1：=(1/2)×1×1×cos60°+(1/2)×1×1×cos60°=1/2。",
+      "independent_self_check": "中点系数 1/2+1/2 和为 1；两处 cos60° 均为正；结果 1/2 落在 [0,|AE||AD|] 内；无漏项。",
+      "first_breakpoint": "无。教学例题跟随拆解+展开模式，教学阶段无断点；反思还预告了极化恒等式（例14）。",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 6,
+      "item_id": "b2a2e4099db3ab67",
+      "source_revision": {
+        "generation": "G-20260816-09",
+        "note": "直属变式（对应例13），独立作答；题干取自当前代 learning_packet.json question_text，未读取 teaching_text 与任何答案字段"
+      },
+      "context_sha256": "f7134202319beade76dd7f8dbbbd07b36613661ffa57b56c17267b7976e50dd2",
+      "observation_signal": "设问'BD1·AC'数量积数值；平行六面体三邻边 AB=AD=AA1=1 且两两夹角 60°；相对母题改动：正四面体→平行六面体，两个目标向量都要拆分，展开项增加；图形状态 VISION_VERIFIED。",
+      "course_call": {
+        "method_model_id": "m:3.1.2.1:decomposition-dot-product",
+        "course": "3.1.4.3 向量夹角与直线夹角（主课）；3.1.2.1 空间向量拆分法（前置）；3.1.1.1 空间向量的运算（前置）",
+        "bridge": "知识点4 分配律；例13 拆解法模型",
+        "note": "先独立复述例13 模型（把目标向量拆成已知长度夹角向量再展开），再替换本变式改动的对象。"
+      },
+      "first_line": "相对例13 的改动：BD1 和 AC 都需拆分。先写 BD1 的加法链 B→A→D→D1：BD1=BA+AD+DD1=-AB+AD+AA1（BA=-AB 负号处首次迟疑）；AC=AB+AD。",
+      "second_line": "记 a=AD、b=AB、c=AA1（模长 1，两两夹角 60°）：BD1·AC=(-b+a+c)·(b+a)，逐项展开。",
+      "continuation": "=-b·b-b·a+a·b+a·a+c·b+c·a=-1-1/2+1/2+1+1/2+1/2=1，对应选项 A。",
+      "independent_self_check": "六项核对（3 自项+3 交叉项）无漏项；负号来自 BA=-AB；cos60°=1/2 逐项代入；结果 1 对应选项 A。",
+      "first_breakpoint": "拆 BD1 时路径与负号（BA=-AB）处不确定，且展开六项易漏项；需最小提示'沿 B→A→D→D1 依次写加法链核对方向'后完成。",
+      "hint_level": "minimal",
+      "verdict": "PARTIAL",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 6,
+      "item_id": "d93a88e15e97f1dd",
+      "source_revision": {
+        "generation": "G-20260816-09",
+        "note": "教材例14 教学例题，教学阶段跟随完整过程；题干与 teaching_text 取自当前代 learning_packet.json；教学跟随不等于独立掌握"
+      },
+      "context_sha256": "f7134202319beade76dd7f8dbbbd07b36613661ffa57b56c17267b7976e50dd2",
+      "observation_signal": "设问含'最小值'；正三棱锥 S-ABC 底面边长为 2 + 'P 是空间中任意一点'，目标是 PA·(PB+PC) 的最小值，信号词'任意点+和向量'指向中点与极化恒等式；图形状态 VISION_VERIFIED。",
+      "course_call": {
+        "method_model_id": "m:bridge-1.1-polarization:polarization-identity",
+        "course": "3.1.4.3 向量夹角与直线夹角（主课）；3.1.4.1 平行垂直证明（补充课程）",
+        "bridge": "补充方法：极化恒等式与数量积最值（SUPPLEMENT_READY）+ 例14 teaching_text 反思推导",
+        "note": "主课视频全文无'极化'关键词（0 命中）；极化方法由桥接与例题反思推导承担；教学例题允许跟随完整过程。"
+      },
+      "first_line": "识别类型：任意点+数量积最值（全空间型）。设 BC 中点 D：PB+PC=2PD，目标=2PA·PD。",
+      "second_line": "PA、PD 共起点且 AD 长度可算：底面正三角形边长 2，AD=2sin60°=√3；设 AD 中点 G，极化恒等式 PA·PD=|PG|²-|GA|²。",
+      "continuation": "=|PG|²-(1/4)|AD|²=|PG|²-3/4≥-3/4，代回得 2PA·PD≥-3/2，等号当且仅当 P 与 G 重合。",
+      "independent_self_check": "全空间型：P 任意点故 |PG|²≥0 且可取 0；等号点 G 在定义域内；2×(-3/4)=-3/2 未漏系数；对应选项 A。",
+      "first_breakpoint": "无。教学例题跟随完整过程；极化恒等式'为什么成立'由桥接展开与反思推导覆盖，未构成断点。",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 6,
+      "item_id": "B11",
+      "source_revision": {
+        "generation": "G-20260816-09",
+        "note": "A/B/C 习题，独立作答；题干取自当前代 learning_packet.json question_text（qid=Q-443c567c45c66273），未读取任何答案字段；路线要求先完成桥接：三角形重心的向量表示（须在 B11 前独立推导一次）"
+      },
+      "context_sha256": "f7134202319beade76dd7f8dbbbd07b36613661ffa57b56c17267b7976e50dd2",
+      "observation_signal": "设问（1）'用 OA、OB、OC 表示 OM 并求 |OM|'、（2）'证明 OM⊥BC'；正四面体 OABC 棱长 2 + 'G 是 △OBC 的重心' + 'M 是线段 AG 的中点'，信号词'重心+中点'；图形状态 VISION_VERIFIED 且文字数据完整。",
+      "course_call": {
+        "method_model_id": "m:bridge-1.1-centroid:centroid-vector",
+        "course": "3.1.2.1 空间向量拆分法（必听主课）；3.1.4.3 向量夹角与直线夹角（必听主课）；3.1.4.1 平行垂直证明（补充课程）",
+        "bridge": "补充方法：三角形重心的向量表示（SUPPLEMENT_READY）；检查点 1.1-centroid-check-1 已先通过",
+        "note": "桥接示范以 △ABC+公共起点 O 推出 OG=(OA+OB+OC)/3；本题重心在 △OBC 且公共起点取顶点 O，需换起点迁移（OO=0）。"
+      },
+      "first_line": "先复述重心方法：重心是三角形三顶点位置向量的等权平均。G 是 △OBC 重心、公共起点取 O：OO=0，OG=(OO+OB+OC)/3=(OB+OC)/3——系数归属（是否含 OA）处首次迟疑。",
+      "second_line": "M 是 AG 中点：OM=(OA+OG)/2=OA/2+OB/6+OC/6；|OM|²=(1/4)|OA|²+(1/36)|OB+OC|²+(1/6)OA·(OB+OC)。",
+      "continuation": "棱长 2、两两夹角 60°：|OA|²=4；|OB+OC|²=4+4+2×2×2×cos60°=12；OA·(OB+OC)=2+2=4；|OM|²=1+1/3+2/3=2，|OM|=√2。（2）OM·BC=(OA/2+(OB+OC)/6)·(OC-OB)=(OA·OC-OA·OB)/2+(|OC|²-|OB|²)/6=0，故 OM⊥BC。",
+      "independent_self_check": "重心系数归属：△OBC 三顶点 O、B、C，不含 A，等权系数和为 1；|OM|=√2 与棱长 2 同量级；（2）用 a⊥b⟺a·b=0（知识点4 性质）。",
+      "first_breakpoint": "把重心公式迁移到'公共起点 O 同时是 △OBC 顶点'时，第一行 OG 的系数归属迟疑（先想写 (OA+OB+OC)/3）；需最小提示'以 O 为原点，OO=0，重心为三顶点位置向量等权平均'后完成。",
+      "hint_level": "minimal",
+      "verdict": "PARTIAL",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    }
+  ],
+  "method_check_results": [
+    {
+      "cycle": 5,
+      "check_id": "1.1-projection-check-1",
+      "label": "投影向量方向与长度检查",
+      "method_model_id": "m:bridge-1.1-projection:projection-vector",
+      "verdict": "PASS",
+      "observation_signal": "无答案自造变式：在正方体中自选一条面对角线和一条棱，画投影方向、用数量积写投影长度，并说明投影向量与投影长度为何不是同一个量。",
+      "first_line": "先区分三量：投影向量（向量，有方向）、有向投影长度（标量 a·b/|b|）、无向投影线段长度（标量 |a·b|/|b|）。",
+      "second_line": "自选面对角线 a 与棱 b：投影向量=(a·b/|b|²)b；画垂足图形核对方向（与 b 同向或反向）。",
+      "continuation": "再写有向投影长度 a·b/|b| 与无向投影线段长度 |a·b|/|b|，解释符号只存在于有向量，并说明投影向量是有方向的三维对象而投影长度只是实数。",
+      "independent_self_check": "分母 |b|² 与 |b| 不混；反向投影符号正确；图形法（垂足）与公式法（数量积）结果一致。",
+      "first_breakpoint": "无。有向/无向长度之差的辨析由桥接检查标准覆盖，检查点独立完成。",
+      "hint_level": "none",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true,
+      "evidence": "桥接 bridge-1.1-projection SUPPLEMENT_READY；检查标准'能区分向量/有向/无向投影长度、能解释 |b|² 与 |b|、能处理反向投影'全部满足。",
+      "note": "主课 3.1.4.3 视频全文无'投影'关键词（0 命中），3.1.1.1 仅提及投影法为三大基本方法之一且说明空间向量里用得不多；方法由知识点4 投影向量表+桥接文字承担；检查点通过只代表方法链可独立完成，不签发掌握。",
+      "id": "1.1-projection-check-1",
+      "section": "1.1",
+      "context_sha256": "f7134202319beade76dd7f8dbbbd07b36613661ffa57b56c17267b7976e50dd2",
+      "source_revision": {
+        "generation": "G-20260816-09"
+      },
+      "generation": "G-20260816-09"
+    },
+    {
+      "cycle": 6,
+      "check_id": "1.1-centroid-check-1",
+      "label": "三角形重心向量回顾",
+      "method_model_id": "m:bridge-1.1-centroid:centroid-vector",
+      "verdict": "PASS",
+      "observation_signal": "无答案检查：设 G 是 △ABC 重心、O 为任意公共起点，不引用结论，取 BC 中点 M 推出 OG 关于 OA、OB、OC 的表示并说明系数对称性。",
+      "first_line": "取 BC 中点 M：OM=(OB+OC)/2；重心 G 在中线 AM 上且 AG:GM=2:1，写 OG=OA+(2/3)AM。",
+      "second_line": "代入 AM=OM-OA：OG=OA+(2/3)(OM-OA)=OA/3+(2/3)OM=OA/3+(OB+OC)/3。",
+      "continuation": "整理得 OG=(OA+OB+OC)/3；交换 A、B、C 重推一次，三系数均由顶点等权地位决定。",
+      "independent_self_check": "2:1 系数方向正确（AG=(2/3)AM 而非 GM）；三系数相等且和为 1；换公共起点重推仍成立。",
+      "first_breakpoint": "无。桥接独立推导完成，2:1 方向核对后无断点。",
+      "hint_level": "none",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true,
+      "evidence": "桥接 bridge-1.1-centroid SUPPLEMENT_READY；检查标准'能从中点与 2:1 推出公式、能解释三系数相同、任意公共起点可用'全部满足。",
+      "note": "重心方法不在任何课程视频中（3.1.1.1/3.1.2.1/3.1.4.1/3.1.4.3 均 0 命中'重心'），由桥接文字承担；检查点通过不签发掌握。",
+      "id": "1.1-centroid-check-1",
+      "section": "1.1",
+      "context_sha256": "f7134202319beade76dd7f8dbbbd07b36613661ffa57b56c17267b7976e50dd2",
+      "source_revision": {
+        "generation": "G-20260816-09"
+      },
+      "generation": "G-20260816-09"
+    },
+    {
+      "cycle": 6,
+      "check_id": "1.1-polarization-check-1",
+      "label": "极化恒等式与数量积最值（例14 前置方法链）",
+      "method_model_id": "m:bridge-1.1-polarization:polarization-identity",
+      "verdict": "PASS",
+      "observation_signal": "无答案自造变式：由 |a+b|² 与 |a-b|² 推出数量积表达式，再列出固定 |a|、|b| 时求数量积最值必须检查的定义域与等号条件。",
+      "first_line": "展开 |a+b|²=(a+b)·(a+b)=|a|²+|b|²+2a·b，得 2a·b=|a+b|²-|a|²-|b|²；展开 |a-b|² 得 2a·b=|a|²+|b|²-|a-b|²。",
+      "second_line": "题目给和向量、差向量或中点距离时只选一种形式；先区分全空间型与区域型最值。",
+      "continuation": "全空间型：由 |a+b|²≥0 得最值与等号点；区域型：动点在长方体/平面/线段内时，检查端点、顶点、边界与内部点，再回代原几何对象。",
+      "independent_self_check": "两种恒等式可独立写出来源而非套符号；等号条件可解释；定义域检查与等号点位置核对。",
+      "first_breakpoint": "无。桥接内容完整且可独立完成原型与近迁移。",
+      "hint_level": "none",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true,
+      "evidence": "桥接 bridge-1.1-polarization SUPPLEMENT_READY；服务声明含教材例14 与 B8；循环6 bridge_unit_ids 已包含该桥接，例14 前可完成。",
+      "note": "当前代路线把正式检查点 1.1-polarization-check-1 放在循环9（任务36），但桥接在循环6 已入列并服务例14/B8；例14 teaching_text 反思自带极化推导；建议主控在路线中显式标注'例14 前须完成极化原型检查或至少桥接推导'，避免循环6 依赖悬空。",
+      "id": "1.1-polarization-check-1",
+      "section": "1.1",
+      "context_sha256": "f7134202319beade76dd7f8dbbbd07b36613661ffa57b56c17267b7976e50dd2",
+      "source_revision": {
+        "generation": "G-20260816-09"
+      },
+      "generation": "G-20260816-09"
+    },
+    {
+      "cycle": "5-6",
+      "check_id": "1.1-course-coverage-3.1.4.3",
+      "label": "主课覆盖检查：夹角公式/投影/极化/重心",
+      "method_model_id": "m:3.1.4.3:coverage-audit",
+      "verdict": "PARTIAL",
+      "observation_signal": "检查循环5-6 所用方法在课程视频中的实际教授情况：夹角公式、投影向量、极化恒等式、重心向量。",
+      "first_line": "对 3.1.4.3 向量夹角与直线夹角 full_text 关键词统计：夹角 61、点乘 10、投影 0、数量积 0、极化 0、重心 0；实际教授 cosθ=a·b/(|a||b|) 与向量角/线线角区分（线线角取绝对值）。",
+      "second_line": "3.1.1.1 空间向量的运算：点乘运算率 8 命中；投影 15 命中均为把'几何投影法'列为向量三大基本方法之一，并明说'空间向量里投影法用的没有那么多'；3.1.2.1 空间向量拆分法：投影 9 命中，其中一次为正四面体异面棱'夹角未知→投影/对称性→异面垂直'示范。",
+      "continuation": "3.1.4.1 平行垂直证明（循环6 前置补充课）：点乘 20 命中，覆盖数量积用于垂直/平行证明。数量积定义/运算律/投影向量表由知识点4 文字块承担；极化/重心由桥接+例题反思承担。",
+      "independent_self_check": "统计以关键词命中数为据，不把'课程覆盖标注'当作已教；桥接状态为 SUPPLEMENT_READY（文字已具备），不是课程已教。",
+      "first_breakpoint": "主课视频未教授投影向量定义、极化恒等式与重心向量；零基础教学链依赖知识点文字块与桥接，依赖链脆弱，需主控确认桥接检查点在对应题目前完成。",
+      "hint_level": "none",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true,
+      "evidence": "course_transcripts/3.1.4.3 full_text 关键词统计（夹角 61、点乘 10、投影 0、数量积 0、极化 0、重心 0）；3.1.1.1（投影 15 仅为方法名提及、点乘 8）；3.1.2.1（投影 9、点乘 1，含一次异面棱投影示范）；3.1.4.1（点乘 20）。",
+      "note": "循环6 无主课视频（learning_packet.json cycle 6 course_keys 为空），例13/变式13/例14/B11 完全依赖前置课程+桥接。",
+      "id": "1.1-course-coverage-3.1.4.3",
+      "section": "1.1",
+      "context_sha256": "f7134202319beade76dd7f8dbbbd07b36613661ffa57b56c17267b7976e50dd2",
+      "source_revision": {
+        "generation": "G-20260816-09"
+      },
+      "generation": "G-20260816-09"
+    },
+    {
+      "cycle": "5-6",
+      "check_id": "1.1-order-b4b5-vs-example13",
+      "label": "B4/B5 与'数量积拆分展开'示范位置检查",
+      "method_model_id": "m:1.1-k4:dot-product-expansion-order",
+      "verdict": "PARTIAL",
+      "observation_signal": "检查 B4、B5（循环5 习题，任务21-22）所需的'拆分目标向量+分配律展开'模式在路线中的首次完整示范位置。",
+      "first_line": "B4 需 CD=AD-AC 拆分后展开（或用 3.1.2.1 投影示范的异面垂直）；B5 需 EB1/EB 沿三正交棱拆分后展开；两题都依赖'拆分+分配律展开数量积'模式。",
+      "second_line": "该模式的完整示范（拆解法：选已知长度夹角向量表示目标向量再展开）首次出现在循环6 教材例13 及其 teaching_text 反思（任务23）。",
+      "continuation": "循环5 之前只有 3.1.2.1 的一次投影/点乘示范（正四面体异面棱，可部分覆盖 B4）与 3.1.1.1 的点乘运算率文字；B5 的'双向量拆分+六项展开'无前置完整示范；路线书写骨架已给出展开框架（先列三自项三交叉项再合并）。",
+      "independent_self_check": "以 teaching_text 反思与关键词命中为据；B4/B5 位于例13 之前，B5 属方法示范滞后，B4 有部分前置覆盖。",
+      "first_breakpoint": "B5 首断点（A1A 方向负号）与'拆分展开'示范滞后相关；建议主控评估把'双向量拆分展开'微示范或微课前移到 B5 前。",
+      "hint_level": "none",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true,
+      "evidence": "例13 teaching_text 反思'本题使用的是拆解法…先用它们表示求数量积的向量，再将所求数量积转化为已知长度、夹角的向量之间的数量积'；B4/B5 位于循环5 任务 21-22，例13 位于循环6 任务 23。",
+      "note": "这是顺序观察，不是对题面的修改；B4/B5 仍按当前路线判为 PARTIAL 并需复测。",
+      "id": "1.1-order-b4b5-vs-example13",
+      "section": "1.1",
+      "context_sha256": "f7134202319beade76dd7f8dbbbd07b36613661ffa57b56c17267b7976e50dd2",
+      "source_revision": {
+        "generation": "G-20260816-09"
+      },
+      "generation": "G-20260816-09"
+    }
+  ],
+  "first_breakpoints": [
+    "B4: 直接用数量积定义时异面棱 AB 与 CD 的夹角未知，无法代入；未自主把'夹角未知'与 3.1.2.1 的投影/对称性示范连接，需最小提示。",
+    "B5: 第一行写 EB 的加法链时 A1A 的方向负号不确定（写成 AA1 会得错误展开），需最小提示核对向量方向。",
+    "变式(13): 拆 BD1 时路径与负号（BA=-AB）处不确定，且展开六项易漏项，需最小提示。",
+    "B11: 把重心公式迁移到'公共起点 O 同时是 △OBC 顶点'时系数归属迟疑（先想含 OA），需最小提示。"
+  ],
+  "findings": [
+    "循环5 主课 3.1.4.3 覆盖夹角公式与线线角（点乘 10、夹角 61），但全文无'数量积/投影/极化/重心'关键词；投影方法链由知识点4 文字块 + bridge-1.1-projection 承担，3.1.1.1 仅把投影法列为三大基本方法之一。",
+    "循环6 无主课视频（course_keys 为空）：例13、变式13、例14、B11 的方法全部来自前置课程（3.1.4.3、3.1.4.1 平行垂直证明-补充课）+ 桥接文字 + teaching_text 反思，零基础学生没有新的视频示范。",
+    "3.1.2.1 有一次正四面体异面棱'夹角未知→投影→异面垂直'示范，可部分覆盖 B4 的方法需求；B5 的'双向量拆分+六项展开'在例13（任务23）前无完整示范，方法示范顺序滞后于 B5。",
+    "桥接状态全部为 SUPPLEMENT_READY（文字已具备），但按零基础标准，文字可读不等于掌握；三个方法检查点（投影/重心/极化）通过只代表方法链可独立完成，全部 human_acceptance_not_proven=true。",
+    "极化正式检查点在循环9（任务36），但桥接在循环6 已入列服务例14/B8；例14 teaching_text 反思自带极化推导；建议主控显式标注例14 前的桥接完成条件。",
+    "视觉状态：本范围 9 项中 8 项 VISION_VERIFIED、例13 READY_TEXT_ONLY（纯文字可作答）；B4/B5/B11/变式13 题干文字数据完整（image_refs 与文字数据均完整），无 NEEDS_VISION_SIDECAR/MISSING_OCR_ANCHOR/UNVERIFIED，未因图形阻断。",
+    "提示污染处置：B4/B5/变式13/B11 使用最小提示后完成，按标准不得判 PASS，必须完成未见迁移或 24 小时冷复测补证后才能进入下一循环。"
+  ],
+  "worker_notes": "本 worker 为循环5-6（任务18-26）零基础模拟。5 个教学例题（例6/7/8/13/14）在教学阶段跟随完整过程判 PASS，教学跟随不等于独立掌握、不签发 mastery；4 个独立作答题（B4/B5/变式13/B11）在真实零基础过程中各出现首断点并经最小提示完成，判 PARTIAL 并标注复测要求。context_sha256=f7134202319beade76dd7f8dbbbd07b36613661ffa57b56c17267b7976e50dd2；canary=9aa133e8105f3e95 已回显；探针 token（bb957c78/8af98ec5/474ad3ed）与 sha256(canary+qid) 前 8 位逐一吻合。worker contract 与 deepseek-mode.json 及 agents/deepseek-worker.toml 锁定一致（opencode-go/deepseek-v4-flash、max、1000000），未使用其他模型或角色。所有记录 answer_sidecar_read=false、human_acceptance_not_proven=true；未读取 answer_sidecar.json、答案 OCR 与历史模拟，未调用子代理。"
+}

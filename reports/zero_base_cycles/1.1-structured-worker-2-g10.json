@@ -1,0 +1,234 @@
+{
+  "schema_version": "1.1",
+  "section": "1.1",
+  "worker": "2",
+  "generation": "G-20260816-10",
+  "worker_status": "PASS",
+  "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+  "answer_sidecar_read": false,
+  "human_acceptance_not_proven": true,
+  "context_binding": {
+    "canary": null,
+    "canary_note": "canary 已改为内容确定性派生；写入时 data/contexts/1.1.json 磁盘文件仍为上一代（evidence.context_sha256=e26cb009…, canary=f53604ed66007c04），重建落盘后需以文件内 canary 重新核对探针。",
+    "probe_sha256_prefix_ok": null,
+    "consumed_transcripts": [
+      "3.1.2.1 空间向量拆分法.json",
+      "3.1.2.2 空间向量等值面法.json",
+      "3.1.4.2 证明共面.json"
+    ]
+  },
+  "item_results": [
+    {
+      "section": "1.1",
+      "cycle": 4,
+      "item_id": "85adf2efd96849c8",
+      "source_revision": {
+        "generation": "G-20260816-10",
+        "item_id": "85adf2efd96849c8",
+        "kind": "type_example",
+        "role_ref": "类型Ⅲ 证明共面",
+        "source_docs": [
+          7
+        ],
+        "route_source": "learning_path_without_questions.md 任务15"
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true,
+      "observation_signal": "题面是判断型：A、B、C 三点不共线，平面 ABC 外一点 O 满足 OM = (1/3)OA + (1/3)OB + (1/3)OC，问 MA、MB、MC 三个向量是否共面。设问关键词是『三个向量是否共面』，给的是位置向量系数和形式（三个系数各 1/3，和恰为 1），提示两种入口：系数和/等值面（M 的位置）与向量线性关系（MA、MB、MC 是否相关）。",
+      "course_call": {
+        "method_model_id": "coplanar_proof_common_origin_linear_dependence",
+        "course_keys": [
+          "coplanar",
+          "decomposition"
+        ],
+        "transcripts": [
+          "3.1.4.2 证明共面.json",
+          "3.1.2.1 空间向量拆分法.json"
+        ],
+        "note": "调用 3.1.4.2 的核心方法：证明/判断共面=把目标向量统一到公共起点后看能否被另两个向量拆分（拆分有解⇔共面）；调用 3.1.2.1 的减法拆分（共起点末减初）把 MA、MB、MC 换到公共起点 O；并用知识页『四点共面系数和』/等值面法（系数和=1⇔点在面上）做位置交叉验证。"
+      },
+      "first_line": "目标量是三个向量 MA、MB、MC；先把它们统一到公共起点 O（母题方法：所有未知向量换到同一公共起点再比较），用减法拆分 MA = OA − OM，MB = OB − OM，MC = OC − OM。",
+      "second_line": "代入题设 OM = (1/3)OA + (1/3)OB + (1/3)OC（依据：位置向量的线性组合逐项展开），得 MA = (2/3)OA − (1/3)OB − (1/3)OC，MB = −(1/3)OA + (2/3)OB − (1/3)OC，MC = −(1/3)OA − (1/3)OB + (2/3)OC。",
+      "continuation": "把三式相加：MA + MB + MC 中 OA 的系数为 2/3 − 1/3 − 1/3 = 0，OB、OC 的系数同样为 0，所以 MA + MB + MC = 0（零向量），即 MC = −MA − MB。由共面向量定理（知识页：向量 p 与不共线向量 a、b 共面的充要条件是 p = xa + yb），MC 能被 MA、MB 线性表示，故 MA、MB、MC 三个向量共面。交叉验证（等值面法）：OM 系数和 = 1/3+1/3+1/3 = 1 ⇒ M 在平面 ABC 内（一倍面），三个向量 MA、MB、MC 都在平面 ABC 内，必然共面，两条路线结论一致。",
+      "independent_self_check": "①方向自检：MA 是 M→A，用公共起点 O 表示必须是 OA − OM（末减初），写反会得到 AM；②系数自检：三向量相加逐项系数归零，与『和为零向量』的几何含义（M 是三角形 ABC 在向量意义下的重心位置）吻合；③位置自检：OM 系数和=1 且 A、B、C 不共线 ⇒ M 恰在平面 ABC 内，不是平面外任意点，三个向量在同一个平面内，与代数结论一致；④非零条件：OA、OB、OC 是空间向量，A、B、C 不共线保证平面存在，无需处理零向量退化。",
+      "first_breakpoint": null,
+      "hint_level": "none",
+      "verdict": "PASS"
+    },
+    {
+      "section": "1.1",
+      "cycle": 4,
+      "item_id": "0d9860d67f5ba867",
+      "source_revision": {
+        "generation": "G-20260816-10",
+        "item_id": "0d9860d67f5ba867",
+        "kind": "direct_variant",
+        "parent_example_number": 12,
+        "source_docs": [
+          7
+        ],
+        "route_source": "learning_path_without_questions.md 任务16"
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true,
+      "observation_signal": "变式相对母题改变了什么：母题是抽象『O 在平面外 + 位置向量系数和 + 判断三个向量是否共面』（判断型、纯系数推理）；变式换成具体几何体平行六面体 ABCD-A1B1C1D1，E、F、G、H 分别是棱 A1D1、C1D1、CC1、AB 的中点，改为（1）求 EG 在基底 AB、AD、AA1 下的拆分系数（计算型）和（2）证 E、F、G、H 四点共面（证明型）。关键词：中点、基底拆分、四点共面。图形状态视觉已核验（侧车给出各点相对位置）。",
+      "course_call": {
+        "method_model_id": "decomposition_common_origin_midpoint_then_coplanar_linear_combination",
+        "course_keys": [
+          "decomposition",
+          "coplanar"
+        ],
+        "transcripts": [
+          "3.1.2.1 空间向量拆分法.json",
+          "3.1.4.2 证明共面.json"
+        ],
+        "note": "调用 3.1.2.1 的两把拆分刀：①中间点桥接+三角形法则（把不知道的向量往棱上凑），②共起点减法『末减初』（统一用 A 作公共起点，EG = AG − AE）；中点性质：棱中点的位置向量 = 两端位置向量平均（平行六面体坐标/向量表示）。调用 3.1.4.2：证四点共面=固定公共起点后证明三个从同点出发的向量线性相关（其中一个能被另外两个拆分），并用四点共面系数和=1（公共起点 A）做第二路线核对。"
+      },
+      "first_line": "（1）目标量 EG；统一公共起点 A（依据：基底 AB、AD、AA1 都以 A 为起点），用减法拆分 EG = AG − AE（末减初）。先写两个中间量：E 是 A1D1 中点 ⇒ AE = (AD + AA1)/2（A1D1 两端 D1 = AD+AA1、A1 = AA1，取平均得 (1/2)AD + AA1，这里初算时误写成 (1/2)AD + (1/2)AA1，见自检）；G 是 CC1 中点 ⇒ AG = AC + (1/2)AA1 = AB + AD + (1/2)AA1。",
+      "second_line": "EG = AG − AE = [AB + AD + (1/2)AA1] − [(1/2)AD + AA1] = AB + (1/2)AD − (1/2)AA1（依据：向量减法逐项相减），所以 x = 1，y = 1/2，z = −1/2。",
+      "continuation": "（2）证 E、F、G、H 四点共面。取 H（AB 中点，棱上点）为公共起点：HE = AE − AH = −(1/2)AB + (1/2)AD + AA1；F 是 C1D1 中点 ⇒ AF = (AC1 + AD1)/2 = (1/2)AB + AD + AA1 ⇒ HF = AF − AH = AD + AA1；HG = AG − AH = (1/2)AB + AD + (1/2)AA1。观察 HE + HG = 0·AB + (3/2)AD + (3/2)AA1 = (3/2)(AD + AA1) = (3/2)HF，即 HF = (2/3)HE + (2/3)HG，HE、HF、HG 线性相关 ⇒ 以 H 为起点三向量共面 ⇒ E、F、G、H 四点共面。第二路线（四点共面系数和=1，公共起点 A）：AE=(0,1/2,1)、AF=(1/2,1,1)、AG=(1,1,1/2)、AH=(1/2,0,0)，解 AH = αAE + βAF + γAG 得 α=2、β=−3、γ=2，α+β+γ = 2−3+2 = 1，且逐坐标回代成立 ⇒ H ∈ 面 EFG，两路线一致。",
+      "independent_self_check": "①初次错误与修正：算 AE 时把 A1D1 中点写成 (1/2)AD + (1/2)AA1，自检时用图核对——E 在 A1D1 中点，D1 本身在 AD 与 AA1 两个方向各占一整份，A1 在 AA1 方向一整份，平均后 AE 的 AA1 系数应为 1 而非 1/2，修正为 (1/2)AD + AA1；②符号自检：z = −1/2 为负，几何上 EG 的 AA1 方向分量从 E（上底面）指向 G（棱 CC1 中部），确实与 AA1 反向，负号合理；③共面自检用两条独立路线（H 起点线性关系 + A 起点系数和=1）结果一致，排除把向量共面误写成点共面；④系数唯一性：基底 AB、AD、AA1 不共面（平行六面体三条不共面棱），拆分系数唯一。",
+      "first_breakpoint": null,
+      "hint_level": "none",
+      "verdict": "PASS"
+    },
+    {
+      "section": "1.1",
+      "cycle": 4,
+      "item_id": "B9",
+      "source_revision": {
+        "generation": "G-20260816-10",
+        "question_key": "B9",
+        "qid": "Q-2191f72b893e2bf4",
+        "group": "B",
+        "number": 9,
+        "source_anchor": {
+          "ocr_doc": 14,
+          "pdf_page": 15
+        },
+        "route_source": "learning_path_without_questions.md 任务17"
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true,
+      "observation_signal": "正四棱锥 P-ABCD 中 E、F 分别是 PA、PC 的中点，DG = 2GP（G 在 DP 上，DG:GP = 2:1）。问（1）BG = xBA + yBC + zBP 求 x、y、z；（2）证 B、E、G、F 四点共面。关键词：正四棱锥（底面 ABCD 为正方形，P 在底面中心正上方）、中点、三等分点（DG = 2GP）、基底拆分、四点共面。图形视觉已核验（侧车：E 在直线 PA 上、F 在直线 PC 上、G 在直线 PD 上，A、B、C、D 底面连线齐全）。题面完整，无桥接要求（COURSE_DIRECT，课程拆分法+证明共面均已听）。",
+      "course_call": {
+        "method_model_id": "decomposition_ratio_point_common_origin_coplanar_linear_combination",
+        "course_keys": [
+          "decomposition",
+          "coplanar"
+        ],
+        "transcripts": [
+          "3.1.2.1 空间向量拆分法.json",
+          "3.1.4.2 证明共面.json",
+          "3.1.2.2 空间向量等值面法.json"
+        ],
+        "note": "调用 3.1.2.1：基底 BA、BC、BP 以 B 为公共起点；D 用基底表示需利用正方形底面 BD = BA + BC（平行四边形法则）；三等分点用『共线系数和=1 + 系数比反比 + 近大远小』定位 G 在 DP 上的位置。调用 3.1.4.2：四点共面=以 B 为公共起点证 BE、BF、BG 线性相关。调用 3.1.2.2 等值面法做系数和速算核对（D 在 2 倍面、P 在 1 倍面、G 的系数和）。"
+      },
+      "first_line": "（1）目标量 BG，公共起点 B。G 在 DP 上且 DG:GP = 2:1，先写 G 的仿射位置：G = D + (2/3)(P − D)（从 D 向 P 走全长的 2/3），换到 B 起点（依据：位置向量线性组合）：BG = BD + (2/3)(BP − BD) = (1/3)BD + (2/3)BP。",
+      "second_line": "把 BD 用基底拆开：底面 ABCD 是正方形，BD = BA + BC（B→A→D 折线 = BA + AD，且 AD = BC，依据平行四边形法则/对边平行且相等），代入得 BG = (1/3)(BA + BC) + (2/3)BP = (1/3)BA + (1/3)BC + (2/3)BP，所以 x = 1/3，y = 1/3，z = 2/3。",
+      "continuation": "（2）证 B、E、G、F 四点共面：以 B 为公共起点写三个向量。E 是 PA 中点 ⇒ BE = (BA + BP)/2 = (1/2)BA + (1/2)BP；F 是 PC 中点 ⇒ BF = (BC + BP)/2 = (1/2)BC + (1/2)BP。检查线性关系：(2/3)BE + (2/3)BF = (1/3)BA + (1/3)BP + (1/3)BC + (1/3)BP = (1/3)BA + (1/3)BC + (2/3)BP = BG，即 BG = (2/3)BE + (2/3)BF，BG 能被 BE、BF 拆分 ⇒ 三向量共面 ⇒ B、E、G、F 四点共面。",
+      "independent_self_check": "①方向自检（真实误读修正）：初读 DG = 2GP 直觉以为 G 靠近 D，一度写出 BG = (2/3)BD + (1/3)BP；用『近大远小』核对——DG:GP = 2:1 意味着 G 距 P 只占 1/3、距 D 占 2/3，G 离 P 近，故 BP 系数应更大，与 (1/3)BD + (2/3)BP 一致，方向误读被修正；②数值回代（自设坐标）：A(−1,−1,0)、B(1,−1,0)、C(1,1,0)、D(−1,1,0)、P(0,0,h)，G = (−1/3, 1/3, 2h/3)，解 xBA+yBC+zBP = BG 得 z=2/3、x=1/3、y=1/3，逐坐标一致；③等值面系数和核对：B 为起点，A、C、P 在一倍面，D 在 2 倍面（BD = BA+BC 系数和 2），G 的系数和 = (1/3)·2 + (2/3)·1 = 4/3，落在 1 与 2 之间且靠近 P 侧，几何位置吻合；④共面结论回代：BG 由 BE、BF 线性表示，系数 2/3、2/3 可解释（G 是 D(2 倍面) 与 P(1 倍面) 连线上 4/3 倍面的点，BE、BF 各在一倍面上，组合后系数和 4/3 自洽），未把向量共面误写成点共面。",
+      "first_breakpoint": null,
+      "hint_level": "none",
+      "verdict": "PASS"
+    }
+  ],
+  "method_check_results": [
+    {
+      "section": "1.1",
+      "cycle": 3,
+      "cycle_title": "空间向量等值面法",
+      "check_id": "method-check-equisurface-core",
+      "check_name": "等值面法方法检查",
+      "source_revision": {
+        "generation": "G-20260816-10",
+        "route_source": "learning_path_without_questions.md 循环3 方法检查",
+        "course_keys": [
+          "equisurface",
+          "decomposition"
+        ]
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true,
+      "observation_signal": "放行检查：回忆课程 3.1.2.2 空间向量等值面法与前置 3.1.2.1 拆分法的对应方法链，用自己的话说出每一步为什么成立；只写方法，不跳到结论。",
+      "course_call": {
+        "method_model_id": "equisurface_coefficient_sum_one_and_parallel_family",
+        "course_keys": [
+          "equisurface",
+          "decomposition"
+        ],
+        "transcripts": [
+          "3.1.2.2 空间向量等值面法.json",
+          "3.1.2.1 空间向量拆分法.json"
+        ],
+        "note": "调用方法链：①空间向量基本定理（三个不共面基底唯一拆分，3.1.2.1）；②等值面定义与系数和=1 的证明（用共面拆分换公共起点推导，桥接 micro-four-point-coplanar 的正反向推导）；③等值面族平行且按倍数等间距（平行面分线段成比例）；④0 倍面过公共起点、对角三顶点截面把体对角线三等分。"
+      },
+      "reconstruction": "第一步（为什么能拆）：空间中三个不共面的基底 e1、e2、e3 能唯一表示任意空间向量（空间向量基本定理），所以固定公共起点 O、取基底 OA、OB、OC 后，任意点的位置向量 OP = xOA + yOB + zOC 的系数 (x,y,z) 唯一。第二步（为什么系数和=1 ⇔ 点在面 ABC 内）：P ∈ 面 ABC ⇔ AP = uAB + vAC（共面向量定理，A、B、C 不共线时 u、v 唯一）⇔ OP − OA = u(OB − OA) + v(OC − OA) ⇔ OP = (1−u−v)OA + uOB + vOC，三个系数相加 = (1−u−v)+u+v = 1；反向：若 x+y+z = 1，则 OP = OA + y(OB−OA) + z(OC−OA) = OA + yAB + zAC，P 可从 A 沿面内两个方向到达，故 P 在面 ABC 内。第三步（等值面为什么平行且等间距）：x+y+z = k 的全体点构成与一倍面平行的平面族（法方向由三条棱的等权重组合决定，面与面两两平行）；过公共起点 O 的面是 0 倍面；平行面分线段成比例，所以中点三角形面是 1/2 倍面、过对角三顶点（B、D、A1 的对角）的截面是 2 倍面、对角顶点 C1 是 3 倍面，三个截面把体对角线 A→C1 三等分（正方体、长方体、平行六面体都成立）。第四步（为什么能用于速算）：只考系数和 1:1:1 型（课程明示 ax+by+cz 变形不考），把『求系数和』变成『看点在哪一个等值面上』的几何判断。",
+      "self_check": "①证明不是背口号：系数和=1 是从 AP = uAB + vAC 换公共起点推出来的，且正反方向都成立；②区分二维与三维：三点共线的二维条件是 OP = xOA + yOB 且 x+y = 1（O、A、B 不共线），四点共面的三维条件是 x+y+z = 1，维数不同、系数个数不同，不能混用；③区分自由向量与位置向量：系数和定理只对『从公共起点出发的位置向量』有效，自由向量的系数和要按『末减初』另算（见下一个检查）；④回代几何位置：算出系数和后必须回到几何体确认点所在的面确实平行于一倍面。",
+      "first_breakpoint": null,
+      "hint_level": "none",
+      "verdict": "PASS"
+    },
+    {
+      "section": "1.1",
+      "cycle": 3,
+      "cycle_title": "空间向量等值面法",
+      "check_id": "method-check-equisurface-final-minus-initial",
+      "check_name": "等值面法末减出近迁移",
+      "source_revision": {
+        "generation": "G-20260816-10",
+        "route_source": "learning_path_without_questions.md 循环3 方法检查",
+        "course_keys": [
+          "equisurface",
+          "decomposition"
+        ]
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true,
+      "observation_signal": "放行检查（近迁移）：等值面法的『末减出』——两个等值面之间的向量 PQ 的系数和 = 末点所在倍面 − 初点所在倍面；用自造近变式独立走一遍方法链并核对每一步为什么成立。",
+      "course_call": {
+        "method_model_id": "equisurface_vector_final_minus_initial",
+        "course_keys": [
+          "equisurface",
+          "decomposition"
+        ],
+        "transcripts": [
+          "3.1.2.2 空间向量等值面法.json",
+          "3.1.2.1 空间向量拆分法.json"
+        ],
+        "note": "调用方法链：共起点减法 PQ = OQ − OP（3.1.2.1 末减初）；系数逐项相减 ⇒ PQ 的系数和 = Q 的系数和 − P 的系数和；把『系数和』读成『所在等值面的倍数』。"
+      },
+      "reconstruction": "为什么 PQ 的系数和 = 末倍面 − 初倍面：PQ = OQ − OP（减法定义，三角形法则的逆向），两边在同一基底展开后系数逐项相减，故 (PQ 系数和) = (OQ 系数和) − (OP 系数和)。若 P 在 a 倍面、Q 在 b 倍面，则 a = OP 系数和、b = OQ 系数和（系数和定理），所以 PQ 系数和 = b − a，即『末减初』。",
+      "self_made_near_transfer": "自造变式（平行六面体 ABCD-A1B1C1D1，公共起点 A，基底 AB、AD、AA1，不引用任何教材数据）：①标等值面：B、D、A1 所在面是一倍面（三基底末端）；过 A 的平行面是 0 倍面；C 在 2 倍面（AC = AB+AD，系数和 2）；C1 在 3 倍面（AC1 = AB+AD+AA1，系数和 3）。②取 E = A1B1 中点、F = B1C1 中点：E 的系数和 = (A1 的 1 + B1 的 2)/2 = 1.5，F 的系数和 = (B1 的 2 + C1 的 3)/2 = 2.5；EF 系数和 = 末 2.5 − 初 1.5 = 1.0。直接展开核对：E = (1/2)AB + AA1，F = AB + (1/2)AD + AA1，EF = (1/2)AB + (1/2)AD，系数和 = 1.0 ✓ 一致。③再取 G = CC1 中点、H = C1：G 系数和 = 2.5，H = 3，GH 系数和 = 0.5；直接展开 GH = (1/2)AA1，系数和 0.5 ✓ 一致。两个自造例都验证『末减初』，且与逐项展开完全吻合。",
+      "self_check": "①方向核对：箭头从 E 指向 F 时末是 F、初是 E，系数和 = 2.5 − 1.5 = 1.0，若写成 F − E 的相反方向会得 −1.0，方向必须与题面向量一致；②边界核对：当 P、Q 在同一倍面时系数和为 0，即平行于一倍面的平移向量系数和为 0，几何上自洽（本例 E、F 若取同一面上两点验证）；③与位置向量区分：位置向量 OP 的系数和是『面倍数』，自由向量 PQ 的系数和是『两面倍数之差』，不能把自由向量的系数和误当位置向量条件（x+y+z=1 不适用于自由向量）；④唯一性：基底不共面保证系数唯一，展开核对无歧义。",
+      "first_breakpoint": null,
+      "hint_level": "none",
+      "verdict": "PASS"
+    }
+  ],
+  "first_breakpoints": [],
+  "verdict_summary": {
+    "item_results": {
+      "total": 3,
+      "PASS": 3,
+      "PARTIAL": 0,
+      "BLOCKED": 0,
+      "FAIL": 0
+    },
+    "method_check_results": {
+      "total": 2,
+      "PASS": 2,
+      "PARTIAL": 0,
+      "BLOCKED": 0,
+      "FAIL": 0
+    },
+    "overall": "PASS 5 / 5",
+    "unresolved_first_breakpoints": 0,
+    "evidence_level": "SAME_SESSION_WORKFLOW_PASS（教学例题随堂理解 + 直属变式与 B 组题独立作答；未做 24 小时冷复测，故不构成掌握门证据）"
+  }
+}

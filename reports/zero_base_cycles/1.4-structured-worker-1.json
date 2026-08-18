@@ -1,0 +1,353 @@
+{
+  "schema_version": "1.0",
+  "section": "1.4",
+  "worker": "worker-1",
+  "generation": "G-CH1-S14-01",
+  "worker_status": "PARTIAL",
+  "item_results": [
+    {
+      "section": "1.4",
+      "cycle": "1.4-cycle-1",
+      "item_id": "1.4-cycle-1-例1",
+      "source_revision": {
+        "generation": "G-CH1-S14-01"
+      },
+      "context_sha256": "d638b3d2dd2364a3e89da9fb90cab36005e9cc2a132cbbdc9bac599e579a69a6",
+      "observation_signal": "知识点1 直线向量表示：目标=求指定直线的方向向量，或把点线关系翻译成向量式（观察信号来自路线模板，无题干）",
+      "course_call": {
+        "course_id": "3.1.3.3",
+        "method_model_id": "dir_vector_two_point_diff",
+        "appears_before_first_use": true,
+        "linkage": "方向向量=直线上两点坐标差，直接服务求直线方向向量",
+        "first_use_location": "3.1.3.3 视频开头'直线的方向向量'定义段（直线上两点 AB 即方向）"
+      },
+      "first_line": "第一行：设直线上两点 A、B，写目标向量 d=AB=B−A 与两点坐标关系",
+      "second_line": "第二行：d=(xB−xA, yB−yA, zB−zA)；依据：方向向量定义（与直线平行；方向可反向，角度处理用绝对值）",
+      "continuation": "继续：若目标为点 P 在直线 l 上，写 OP=OA+t·a（直线向量表达式(i)/(ii)）并逐步代入坐标（图形未核验：本记录为教学阶段方法层跟随，未对题图做任何猜测）",
+      "independent_self_check": "核对：方向向量非零；d 与 −d 等价（夹角取锐）；参数 t 范围；结论与题目问句对应",
+      "first_breakpoint": "",
+      "hint_level": "full",
+      "verdict": "PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.4",
+      "cycle": "1.4-cycle-1",
+      "item_id": "1.4-cycle-1-例2",
+      "source_revision": {
+        "generation": "G-CH1-S14-01"
+      },
+      "context_sha256": "d638b3d2dd2364a3e89da9fb90cab36005e9cc2a132cbbdc9bac599e579a69a6",
+      "observation_signal": "知识点1 平面向量表示：目标=判断点是否在平面内（共面充要条件系数和=1）",
+      "course_call": {
+        "course_id": "3.1.4.2",
+        "method_model_id": "coplanar_coefficient_sum_1",
+        "appears_before_first_use": true,
+        "linkage": "平面向量表示：判断点 P 是否在平面 ABC 内（位置向量拆分，系数和=1）",
+        "first_use_location": "3.1.4.2 视频'例一'段（系数和 3分之1+2分之1+6分之1=1 代表 P 与 ABC 共面）"
+      },
+      "first_line": "第一行：目标=判 P∈面ABC；写位置向量 OP，选基底 OA、OB、OC",
+      "second_line": "第二行：设 OP=x·OA+y·OB+z·OC，依据平面向量基本定理；P 与 A、B、C 共面 ⇔ x+y+z=1",
+      "continuation": "继续：解出 x,y,z（三方程三系数）→ 检验系数和=1 → 落回'点在面内'结论（图形未核验：本记录为教学阶段方法层跟随，未对题图做任何猜测）",
+      "independent_self_check": "核对：基底不共面；'点在面内'与'向量共面'区分；系数计算无跳步",
+      "first_breakpoint": "",
+      "hint_level": "full",
+      "verdict": "PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.4",
+      "cycle": "1.4-cycle-1",
+      "item_id": "1.4-cycle-1-例3",
+      "source_revision": {
+        "generation": "G-CH1-S14-01"
+      },
+      "context_sha256": "d638b3d2dd2364a3e89da9fb90cab36005e9cc2a132cbbdc9bac599e579a69a6",
+      "observation_signal": "知识点2 平面的法向量：目标=求指定平面的法向量",
+      "course_call": {
+        "course_id": "3.1.3.3",
+        "method_model_id": "normal_vector_undetermined",
+        "appears_before_first_use": true,
+        "linkage": "待定系数法求平面的法向量（设 n=(x,y,1) 与面内两向量点乘为 0）",
+        "first_use_location": "3.1.3.3 视频'法向量的求法'段（设 M=XY1，两个方程两个未知数）"
+      },
+      "first_line": "第一行：目标=n⊥α；在面 α 内取两不共线向量 a、b",
+      "second_line": "第二行：设 n=(x,y,1)，列 n·a=0 与 n·b=0；依据：法向量垂直于面内所有向量",
+      "continuation": "继续：解方程组得 x,y；若'无解'说明 Z 坐标=0，改设 n=(x,1,z) 或 (1,y,z) 重解；可用差乘验算（图形未核验：本记录为教学阶段方法层跟随，未对题图做任何猜测）",
+      "independent_self_check": "核对：a、b 不共线；Z=0 情形换设；结果回代两式点乘=0",
+      "first_breakpoint": "",
+      "hint_level": "full",
+      "verdict": "PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.4",
+      "cycle": "1.4-cycle-1",
+      "item_id": "1.4-cycle-1-A2",
+      "source_revision": {
+        "generation": "G-CH1-S14-01"
+      },
+      "context_sha256": "d638b3d2dd2364a3e89da9fb90cab36005e9cc2a132cbbdc9bac599e579a69a6",
+      "observation_signal": "目标=方向向量或法向量相关结论（模板级观察信号，无题干）",
+      "course_call": {
+        "course_id": "3.1.3.3",
+        "method_model_id": "normal_vector_undetermined",
+        "appears_before_first_use": true,
+        "linkage": "A 组基础题：方向向量与法向量选用（路线模板：先归类型'方向向量与平面的法向量'，再写目标与已知）",
+        "first_use_location": "3.1.3.3 视频'法向量的求法'段（待定系数与差乘两法）"
+      },
+      "first_line": "第一行：写目标量（方向向量/法向量）与已知点坐标关系",
+      "second_line": "第二行：选方法公式：方向向量=两点坐标差；法向量 n·a=n·b=0（设 n=(x,y,1)）",
+      "continuation": "继续：代入坐标逐步求解 —— 卡点：题面不可见，无法写具体坐标与向量",
+      "independent_self_check": "模板检查：使用条件、符号、方向、定义域、结论闭合 —— 具体数据无法核验",
+      "first_breakpoint": "题面不可见：题干仅在《一本通》原书，无题目路线不含题干/选项/配图，无法落具体向量、坐标与目标量；方法入口已建立，停在数据化之前",
+      "hint_level": "none",
+      "verdict": "PARTIAL",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.4",
+      "cycle": "1.4-cycle-1",
+      "item_id": "1.4-cycle-1-B5",
+      "source_revision": {
+        "generation": "G-CH1-S14-01"
+      },
+      "context_sha256": "d638b3d2dd2364a3e89da9fb90cab36005e9cc2a132cbbdc9bac599e579a69a6",
+      "observation_signal": "目标=坐标运算相关结论（模板级观察信号，无题干）",
+      "course_call": {
+        "course_id": "3.1.3.2",
+        "method_model_id": "coordinate_ops_parallel_dot",
+        "appears_before_first_use": true,
+        "linkage": "B 组强化题：坐标运算类（加减/数乘/点乘/平行对应成比例/垂直点乘为 0/模长）",
+        "first_use_location": "3.1.3.2 视频基本运算段（加减、数乘、点乘、平行对应成比例、垂直点乘=0、模长公式）"
+      },
+      "first_line": "第一行：写出目标量（如待定系数或模长）与两向量坐标关系",
+      "second_line": "第二行：按运算规则列式：平行→对应坐标成比例（分母非零）；垂直→点乘=0；模=√(x²+y²+z²)",
+      "continuation": "继续：解方程 —— 卡点：题面不可见，具体坐标不可得",
+      "independent_self_check": "模板检查：对应成比例前提分母非零、符号、回代 —— 无法闭合",
+      "first_breakpoint": "题面不可见：题干仅在《一本通》原书，无题目路线不含题干/选项/配图，无法落具体向量、坐标与目标量；方法入口已建立，停在数据化之前",
+      "hint_level": "none",
+      "verdict": "PARTIAL",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.4",
+      "cycle": "1.4-cycle-2",
+      "item_id": "1.4-cycle-2-例4",
+      "source_revision": {
+        "generation": "G-CH1-S14-01"
+      },
+      "context_sha256": "d638b3d2dd2364a3e89da9fb90cab36005e9cc2a132cbbdc9bac599e579a69a6",
+      "observation_signal": "知识点3 面面平行：目标=证明 α∥β",
+      "course_call": {
+        "course_id": "3.1.4.1",
+        "method_model_id": "plane_plane_parallel_normals",
+        "appears_before_first_use": true,
+        "linkage": "面面平行 ⇔ 两平面法向量平行（存在 λ：n1=λn2）",
+        "first_use_location": "3.1.4.1 视频平行证明段（面面平行：法向量平行，存在系数 K）"
+      },
+      "first_line": "第一行：目标=证 α∥β；写两平面法向量 n1、n2",
+      "second_line": "第二行：求法向量（待定系数或差乘）；依据：面面平行 ⇔ n1∥n2 ⇔ ∃λ，n1=λn2",
+      "continuation": "继续：证对应坐标成比例（解 λ）→ 答题（图形未核验：本记录为教学阶段方法层跟随，未对题图做任何猜测）",
+      "independent_self_check": "核对：两平面不重合；法向量非零；比例逐坐标一致",
+      "first_breakpoint": "",
+      "hint_level": "full",
+      "verdict": "PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.4",
+      "cycle": "1.4-cycle-2",
+      "item_id": "1.4-cycle-2-例5",
+      "source_revision": {
+        "generation": "G-CH1-S14-01"
+      },
+      "context_sha256": "d638b3d2dd2364a3e89da9fb90cab36005e9cc2a132cbbdc9bac599e579a69a6",
+      "observation_signal": "知识点3 线面位置判断：目标=判断直线与平面平行/相交/在面内",
+      "course_call": {
+        "course_id": "3.1.4.1",
+        "method_model_id": "line_plane_parallel_dot0",
+        "appears_before_first_use": true,
+        "linkage": "线面平行 ⇔ 方向向量⊥法向量 且 线不在面内（l⊄α）",
+        "first_use_location": "3.1.4.1 视频线面平行段（L 垂直法向量 + 线在面外）"
+      },
+      "first_line": "第一行：目标=判 l 与 α 的位置关系；写方向向量 d 与法向量 n",
+      "second_line": "第二行：算 d·n；依据：d·n=0 ⇒ l∥α 或 l⊂α，需再核 l 是否在面内",
+      "continuation": "继续：d·n≠0→相交；d·n=0→取 l 上一点代入 α 判断在面内/面外→答题",
+      "independent_self_check": "核对：'在面内'与'平行'严格区分；法向量方向不影响结果；不跳步",
+      "first_breakpoint": "",
+      "hint_level": "full",
+      "verdict": "PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.4",
+      "cycle": "1.4-cycle-2",
+      "item_id": "1.4-cycle-2-例6",
+      "source_revision": {
+        "generation": "G-CH1-S14-01"
+      },
+      "context_sha256": "d638b3d2dd2364a3e89da9fb90cab36005e9cc2a132cbbdc9bac599e579a69a6",
+      "observation_signal": "知识点3 线线角：目标=求两直线夹角（余弦）",
+      "course_call": {
+        "course_id": "3.1.4.3",
+        "method_model_id": "line_line_angle_abs_dot",
+        "appears_before_first_use": true,
+        "linkage": "线线角 cosθ=|a·b|/(|a||b|)，直线夹角永远取锐角（0~90°）",
+        "first_use_location": "3.1.4.3 视频'向量夹角与直线夹角'区别段（线线角必须加绝对值）"
+      },
+      "first_line": "第一行：目标=线线角 θ∈[0,90°]；写两直线方向向量 a、b",
+      "second_line": "第二行：cosθ=|a·b|/(|a|·|b|)；依据：方向向量反向只补角，直线夹角取锐角",
+      "continuation": "继续：算点乘与模→代入→答题（若问正切，画直角三角形转换）（图形未核验：本记录为教学阶段方法层跟随，未对题图做任何猜测）",
+      "independent_self_check": "核对：绝对值不丢；模长非零；问的是向量角还是直线角",
+      "first_breakpoint": "",
+      "hint_level": "full",
+      "verdict": "PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.4",
+      "cycle": "1.4-cycle-2",
+      "item_id": "1.4-cycle-2-例7",
+      "source_revision": {
+        "generation": "G-CH1-S14-01"
+      },
+      "context_sha256": "d638b3d2dd2364a3e89da9fb90cab36005e9cc2a132cbbdc9bac599e579a69a6",
+      "observation_signal": "知识点3 点面距离：目标=求点 P 到平面 α 的距离",
+      "course_call": {
+        "course_id": "3.1.4.7",
+        "method_model_id": "point_plane_dist_projection",
+        "appears_before_first_use": true,
+        "linkage": "点面距 d=|AP·n|/|n|（A 为面内任一点，AP 在法向量上的投影长）",
+        "first_use_location": "3.1.4.7 视频点面距段（CC1/CD/CE 三向量殊途同归验证同一答案）"
+      },
+      "first_line": "第一行：目标=d(P,α)；写面 α 的法向量 n、面内点 A、面外点 P",
+      "second_line": "第二行：d=|AP·n|/|n|；依据：AP 在法向量方向的投影长即距离",
+      "continuation": "继续：求 n（待定系数/差乘/平面方程）→ 点乘 → 除以 |n| → 非负",
+      "independent_self_check": "核对：A∈α 且 P∉α；投影取绝对值；距离非负",
+      "first_breakpoint": "",
+      "hint_level": "full",
+      "verdict": "PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.4",
+      "cycle": "1.4-cycle-2",
+      "item_id": "1.4-cycle-2-例8",
+      "source_revision": {
+        "generation": "G-CH1-S14-01"
+      },
+      "context_sha256": "d638b3d2dd2364a3e89da9fb90cab36005e9cc2a132cbbdc9bac599e579a69a6",
+      "observation_signal": "知识点3 线面角：目标=求直线与平面所成角（正弦）",
+      "course_call": {
+        "course_id": "3.1.4.4",
+        "method_model_id": "line_plane_angle_sin",
+        "appears_before_first_use": true,
+        "linkage": "线面角 sinθ=|d·n|/(|d||n|)，永远正弦且取绝对值",
+        "first_use_location": "3.1.4.4 视频线面角公式推导段（法向量朝上/朝下两类，诱导公式→绝对值→正弦）"
+      },
+      "first_line": "第一行：目标=线面角 θ∈[0,90°]；写直线方向向量 d、平面法向量 n",
+      "second_line": "第二行：sinθ=|d·n|/(|d|·|n|)；依据：向量夹角与线面角互余，法向量方向不定故取绝对值",
+      "continuation": "继续：求 n→点乘→除模→答题（正弦值）",
+      "independent_self_check": "核对：绝对值；正弦非负；θ 范围 0~90°",
+      "first_breakpoint": "",
+      "hint_level": "full",
+      "verdict": "PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.4",
+      "cycle": "1.4-cycle-2",
+      "item_id": "1.4-cycle-2-例9",
+      "source_revision": {
+        "generation": "G-CH1-S14-01"
+      },
+      "context_sha256": "d638b3d2dd2364a3e89da9fb90cab36005e9cc2a132cbbdc9bac599e579a69a6",
+      "observation_signal": "知识点3 面面角：目标=求两平面夹角（或二面角）余弦",
+      "course_call": {
+        "course_id": "3.1.4.5",
+        "method_model_id": "dihedral_cos_abs",
+        "appears_before_first_use": true,
+        "linkage": "面面角/二面角 |cosφ|=|m·n|/(|m||n|)，二面角可钝可锐需几何判断",
+        "first_use_location": "3.1.4.5 视频二面角求法段（法向量夹角与二面角等角或互补，绝对值相等）"
+      },
+      "first_line": "第一行：目标=面面角/二面角 φ；写两平面法向量 m、n",
+      "second_line": "第二行：|cosφ|=|m·n|/(|m|·|n|)；依据：法向量夹角与二面角等角或补角",
+      "continuation": "继续：算点乘除模→若问二面角，由几何关系判锐钝定符号→答题（图形未核验：本记录为教学阶段方法层跟随，未对题图做任何猜测）",
+      "independent_self_check": "核对：平面夹角取锐（≤90°）；二面角 0~180° 正负由几何判定，不直接套公式",
+      "first_breakpoint": "",
+      "hint_level": "full",
+      "verdict": "PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.4",
+      "cycle": "1.4-cycle-2",
+      "item_id": "1.4-cycle-2-例10",
+      "source_revision": {
+        "generation": "G-CH1-S14-01"
+      },
+      "context_sha256": "d638b3d2dd2364a3e89da9fb90cab36005e9cc2a132cbbdc9bac599e579a69a6",
+      "observation_signal": "知识点3 二面角综合：目标=综合求二面角（含反求动点位置）",
+      "course_call": {
+        "course_id": "3.1.4.5",
+        "method_model_id": "dihedral_reverse_param_solve",
+        "appears_before_first_use": true,
+        "linkage": "二面角综合：正求/反求（设参数 T，二面角余弦=定值列方程解 T，定义域舍根）",
+        "first_use_location": "3.1.4.5 视频反求动点段（设 A1M/A1B1=T，列方程解 T，舍去 2分之3）"
+      },
+      "first_line": "第一行：目标=二面角 φ（或反求动点位置）；写两平面法向量（含参数）",
+      "second_line": "第二行：|cosφ|=|m·n|/(|m||n|) 含参数；依据：二面角公式 + 动点单变量设参",
+      "continuation": "继续：列参数方程→解→按定义域/图形位置舍根→答题（图形未核验：本记录为教学阶段方法层跟随，未对题图做任何猜测）",
+      "independent_self_check": "核对：参数定义域（线段含端点）；多解筛选；锐钝判断；分母非零",
+      "first_breakpoint": "",
+      "hint_level": "full",
+      "verdict": "PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    }
+  ],
+  "method_check_results": [
+    {
+      "section": "1.4",
+      "cycle": "1.4-cycle-1",
+      "method_check_id": "1.4-direction-normal-check-1",
+      "method_model_id": "dir_and_normal_vector_choice",
+      "result": "PASS",
+      "evidence": "方法链由 3.1.3.2/3.1.3.3 完整覆盖（两点差方向向量、待定系数/差乘/平面方程法向量），可闭卷复述选用条件；检查点：定义、参数范围、等式来源、几何解释齐全"
+    },
+    {
+      "section": "1.4",
+      "cycle": "1.4-cycle-2",
+      "method_check_id": "1.4-application-check-1",
+      "method_model_id": "vector_application_classification",
+      "result": "PASS",
+      "evidence": "方法链由 3.1.4.1/3.1.4.2/3.1.4.3/3.1.4.4/3.1.4.5/3.1.4.7 完整覆盖（平行垂直/共面/三类角/距离），可闭卷复述归类条件"
+    }
+  ],
+  "first_breakpoints": [
+    {
+      "item_id": "1.4-cycle-1-A2",
+      "cycle": "1.4-cycle-1",
+      "first_breakpoint": "题面不可见：题干仅在《一本通》原书，无题目路线不含题干/选项/配图，无法落具体向量、坐标与目标量；方法入口已建立，停在数据化之前"
+    },
+    {
+      "item_id": "1.4-cycle-1-B5",
+      "cycle": "1.4-cycle-1",
+      "first_breakpoint": "题面不可见：题干仅在《一本通》原书，无题目路线不含题干/选项/配图，无法落具体向量、坐标与目标量；方法入口已建立，停在数据化之前"
+    }
+  ],
+  "answer_sidecar_read": false,
+  "human_acceptance_not_proven": true
+}

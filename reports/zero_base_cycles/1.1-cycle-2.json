@@ -1,0 +1,153 @@
+{
+  "report_type": "zero_base_cycle_proxy_report",
+  "schema_version": "2.0",
+  "iteration": 2,
+  "cycle_id": "1.1-cycle-2",
+  "cycle_title": "共线概念与向量拆分",
+  "agent_id": "Z2",
+  "agent_role": "零基础高中生代理（只负责 1.1-cycle-2，不处理其他循环）",
+  "generated_at": "2026-08-14T19:08:10+08:00",
+  "runtime_contract": "opencode-go/deepseek-v4-flash / context_window=1000000 / reasoning_effort=max（与 deepseek-mode.json worker 契约一致；Z2 为已派发子代理，不派生下级代理）",
+  "assigned_items": {
+    "current_direct_task": ["B10"],
+    "cycle_items_in_latest_packet": {
+      "course_keys": ["decomposition"],
+      "prerequisite_course_keys": [],
+      "knowledge_blocks": ["1.1-k3"],
+      "prerequisite_knowledge_blocks": [],
+      "worked_examples": ["例4", "例5", "例11"],
+      "direct_variants": ["变式1", "变式2"],
+      "method_checkpoints": [],
+      "exercise_questions": ["B10"]
+    },
+    "moved_out_of_cycle2": ["B6", "B11"],
+    "assignment_source": "data/packets/1.1/learning_packet.json (schema 7.4, 2026-08-14 19:02, VERIFIED) 循环级定义 + data/packets/1.1/learning_packet.md cycle-2 节（B10 为 B 组唯一配套题，含承接行）+ data/contexts/1.1.json route_support.question_coverage（B10: qid=Q-c71c166fd308bd39, unlock_class=METHOD_BRIDGE, course_keys=[decomposition], bridge NOT_REQUIRED, release_status=READY_FOR_INDEPENDENT_ATTEMPT）",
+    "discrepancy_notes": [
+      "data/contexts/1.1.json 的 sequential_learning_packet.current_cycle 指向 1.1-cycle-1（生成于 19:02，未推进到 cycle-2）；本代理按父任务分配 + packet/coverage 交叉核验后执行 cycle-2，并已如实记录该指针不一致",
+      "chapter1_manifest.json（18:35 旧版）cycle-2 exercise_keys 仍为 [B6,B10,B11]，与新包（19:02，cycle-2 仅 B10）不一致，manifest 未随包更新"
+    ]
+  },
+  "course_evidence": {
+    "transcript": {
+      "file": "data/course_transcripts/3.1.2.1 空间向量拆分法.json",
+      "last_write": "2026-08-14 19:02:10",
+      "source_video": "C:/Users/poyi/Downloads/课程合集/3.1 空间向量与立体几何/3.1.2.1 空间向量拆分法.mp4",
+      "source_video_sha256": "08db2676d2f5ff7bb78aa2ac57126bc840de2b0524d7e24c9de09b8b20904dc7",
+      "duration_s": 1972.58,
+      "provenance": "transcript source video is byte-identical to the Downloads/课程合集 video by SHA-256",
+      "recheck_note": "本迭代重新核验：源视频哈希不变、关键内容标记（空间向量基本定理/共线系数和/中点拆分）不变；零向量共线约定等 k3 定理讲解仍缺失（HAS_ZERO_VECTOR_RULE=False），iteration-1 转写阅读结论继续有效"
+    },
+    "packet": {
+      "learning_packet_json": "data/packets/1.1/learning_packet.json, schema_version=7.4, status=VERIFIED",
+      "learning_packet_md": "data/packets/1.1/learning_packet.md (19:02:25)",
+      "manifest": "data/packets/1.1/manifest.json status=VERIFIED, unresolved_count=0",
+      "answer_policy": "worked_examples=teaching solutions allowed; direct_variants=question only; abc_exercises=question only; answer sidecar forbidden"
+    },
+    "context_probe": {
+      "context_file": "data/contexts/1.1.json (schema 7.1, 19:02:13)",
+      "canary": "8291db915b349d86",
+      "canary_echoed": true,
+      "binding_function": "sha256(canary+qid) 取前 8 位十六进制",
+      "b10_qid": "Q-c71c166fd308bd39",
+      "b10_probe_prefix": "eb421c62",
+      "probe_tokens_verified": {
+        "Q-84442c12da683ad3": "c270b104",
+        "Q-1727695600a57e80": "507451c6",
+        "Q-7370f2df587a419e": "1297ad47"
+      },
+      "all_verified": true,
+      "restatement_rule_ok": "只复述 B10 当前可见字段（question_text），未输出任何答案册内容"
+    }
+  },
+  "attempts": [
+    {
+      "item": "B10",
+      "item_type": "abc_exercise",
+      "group": "B",
+      "qid": "Q-c71c166fd308bd39",
+      "question": "（2025·上海模拟）如图，在四面体 ABCD 中，点 E, F, I, H 分别是 AB, AC, CD, BD 的中点，G 为 EI 的中点，判断 G, F, H 三点是否共线，并说明理由。",
+      "process": [
+        "选定公共起点 A，记 b=AB, c=AC, d=AD（利用视频所教的中点/起点统一技巧）",
+        "中点向量表示：E=1/2·b，F=1/2·c，I=1/2·(c+d)，H=1/2·(b+d)",
+        "G 为 EI 中点：G=1/2·(E+I)=1/4·(b+c+d)",
+        "FG=G-F=1/4·(b+c+d)-1/2·c=1/4·(b-c+d)",
+        "FH=H-F=1/2·(b+d)-1/2·c=1/2·(b-c+d)=2·FG",
+        "由 k3 知识块共线向量定理（a∥b 当且仅当存在 λ 使 a=λb）：FH=2·FG 且同起点 F，故 G, F, H 共线；且 G=1/2·(F+H)，即 G 为 FH 的中点",
+        "备选几何验证：EFIH 为平行四边形（EF=1/2·(c-b)，IH=1/2·(b-c)=-EF），对角线 EI 与 FH 互相平分，G 在 FH 上"
+      ],
+      "result": "G, F, H 三点共线，且 G 是 FH 的中点",
+      "first_breakpoint": "把中点条件翻译成公共起点 A 下的向量平均（E=1/2·b 等）之前，需要主动选定公共起点并统一所有点向量；若只盯着图形硬找比例关系会先卡住。severity=minor，独立解决",
+      "hint_used": false,
+      "hint_needed": false,
+      "confidence": 0.85,
+      "verification": "本轮数值复核：取 A=(0,0,0), B=(4,0,0), C=(0,4,0), D=(0,0,4)，得 E=(2,0,0), F=(0,2,0), I=(0,2,2), H=(2,0,2), G=(1,1,1)；FG=(1,-1,1)，FH=(2,-2,2)=2·FG，G=((F+H)/2)——两项检查均 True（PowerShell 当轮执行）",
+      "notes": "本循环 method_checkpoints=0，无检查点需作答；例题/变式非本次直属任务，不重复作答"
+    }
+  ],
+  "first_breakpoints": [
+    {
+      "item": "B10",
+      "breakpoint": "选公共起点并把中点写成向量平均（E=1/2·b 等）",
+      "resolved": "独立解决",
+      "severity": "minor",
+      "vs_iteration_1": "同类断点仍存在，但本次路径更可及：k3 知识块完整文本（共线向量定理）+ 视频中点拆分示例（AM=1/2·AB+1/2·AD）+ 例11 变式的比例比较思想均在本循环显式可见"
+    },
+    {
+      "item": "cycle-level",
+      "breakpoint": "无新增断点；B6/B11 相关断点已随题目移出本循环（按硬约束 7 不再核算）",
+      "resolved": "不适用",
+      "severity": "none"
+    }
+  ],
+  "comparison_to_iteration_1": {
+    "fixed": [
+      "左栏知识可见性：iteration-2 的 cycle-2 在循环级嵌入 1.1-k3 完整知识块文本（方向向量、共线/共面向量定义、共线向量定理 a=λb、零向量与任意向量共线约定、三点共线系数和 x+y=1 推论），位于例题与习题之前（md 内位置：知识块文本 1605 < 例4 4334 < B10 6712）；iteration-1 只有知识点名称引用，无完整文本",
+      "显式连接：新增承接行「本批配套题承接：1.1-k3, 类型Ⅱ 证明平行、共线」，直接置于 B 组 B10 正上方（iteration-1 无此行），习题与左栏知识在学生路径层显式相连",
+      "错位习题移除：新包 cycle-2 习题仅 B10；B6（数量积/二面角，k4 考点）与 B11 不再属于 cycle-2（md 中 HAS_B6=False、HAS_B11=False），iteration-1 记录的『B6 挂错循环』缺口在 cycle-2 范围内消失"
+    ],
+    "still_present": [
+      "decomposition 视频本身仍不系统讲解 k3 定理（零向量共线约定、共线/共面向量定理陈述），转写复核 HAS_ZERO_VECTOR_RULE=False；定理讲解由知识块文本+例题解析承担，对零基础学生『听讲先行』环节仍是缺口",
+      "例11『作差-比较倍数』共线证明方法论仍无视频直接支撑（例题解析为主要来源）；对 B10 影响小（B10 用中点表示+比例比较，视频有中点/拆分支撑）",
+      "B10 首断点类别与 iteration-1 相同（公共起点选择+中点向量化），severity 维持 minor"
+    ],
+    "new": [
+      "data/contexts/1.1.json 的 current_cycle 指针仍指向 1.1-cycle-1，未推进到 cycle-2，与本次分配不一致（上下文文件生成滞后）",
+      "chapter1_manifest.json（18:35 旧版）与新 learning_packet.json（19:02）的 cycle-2 习题归属不一致：旧 manifest 仍列 [B6,B10,B11]，新包仅 B10——manifest 未随包更新",
+      "本循环 method_checkpoints=0（检查点阶段为空，记录而非缺口）"
+    ],
+    "removed_from_scope": [
+      "B6、B11：按硬约束 7（题目已从本循环移走不得继续核算）不再算作 cycle-2 任务；B6 的 k4 前置缺口移交对应循环（如 cycle-5）处理",
+      "变式1/变式2/例题复核：本次直属任务仅为 B10，未重复作答；iteration-1 已留证据，保留于历史对比"
+    ]
+  },
+  "knowledge_integration_assessment": {
+    "item": "B10",
+    "knowledge_before_first_use": {
+      "check": "PASS",
+      "evidence": "1.1-k3 知识块完整文本在 cycle-2 节开头出现（md 位置 1605），B10 在其后（6712）；知识块先于首次使用呈现"
+    },
+    "explicit_link_to_question": {
+      "check": "PASS（学生路径层）",
+      "evidence": "md 承接行「本批配套题承接：1.1-k3, 类型Ⅱ 证明平行、共线」直接位于 B10 之前；question_coverage 以 course_keys=[decomposition] 解锁 B10（隐式课程连接）",
+      "limitation": "数据层 exercise 记录本身无逐题 knowledge_refs 字段（记录 keys 无该字段），显式连接仅存在于 md 承接行与 coverage，未落到结构化字段"
+    },
+    "required_facts_and_sources": [
+      "中点向量表示（E=1/2·b 等）：decomposition 视频（AM=1/2·AB+1/2·AD 示例）+ 例2/例3",
+      "共线判定（a∥b ⇔ a=λb）：1.1-k3 知识块『共线向量定理』",
+      "证明三点共线转化为向量比例的思想：例11 解析 + 变式1/变式2 迁移",
+      "结论：B10 所需左栏知识在首次使用前出现且与学生路径显式相连；『不能只看视频』要求已满足（知识块文本与例题承担定理讲解）"
+    ]
+  },
+  "status": "partial",
+  "status_detail": "B10（本次唯一直属任务）单项 proxy_pass：独立作答、无提示、数值复核通过、confidence=0.85。循环级 partial：遗留数据一致性问题（contexts current_cycle 指针停在 cycle-1、旧 manifest 习题归属未更新）与视频定理讲解缺口（k3 定理仍无视频讲解，由知识块文本承担）；method_checkpoints=0。代理解出不等于真人掌握，本循环未做任何 FULL_PASS/掌握声明",
+  "remaining_gaps": [
+    "decomposition 视频未讲解 1.1-k3 定理内容（零向量共线约定、共线/共面向量定理陈述）：对零基础『先听讲』环节有影响，需知识块文本/例题承担或补无答案桥接",
+    "chapter1_manifest.json 与新 learning_packet.json 的 cycle-2 习题归属不一致（旧 manifest 仍列 B6/B11），需更新 manifest 或标注过期",
+    "data/contexts/1.1.json current_cycle 未推进到 cycle-2（指向 cycle-1），生成机制需推进或按分配覆盖",
+    "例11『作差-比较倍数』共线证明方法论无视频直接支撑（例题解析为主要来源）",
+    "exercise 记录层缺逐题 knowledge_refs 字段，显式连接仅存在于 md 承接行与 coverage",
+    "B6/B11 移出后的验收归属需在对应循环（如 cycle-5）确认；B6 的 k4 前置缺口（数量积/二面角）仍存在，只是不再属于本循环"
+  ],
+  "answer_sources_read": [],
+  "honesty_boundary": "本报告是模型代理按零基础身份模拟的 iteration-2 学习记录，不宣称任何真人已掌握本循环内容。未读取 data/packets/1.1/answer_sidecar.json、任何答案册、其他代理报告或其他循环作答（answer_sources_read=[]）；上下文探针已回显 canary 并核验绑定散列，仅复述 B10 可见字段。B10 为独立作答并当轮数值复核；断点、信心、缺口均为代理估计，需真人按 exit_gate（知识点闭卷复述、独立复测、隔天冷重做）另行验证。"
+}

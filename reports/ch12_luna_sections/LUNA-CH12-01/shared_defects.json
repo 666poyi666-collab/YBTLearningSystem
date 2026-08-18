@@ -1,0 +1,25 @@
+{
+  "schema_version": "ybt-shared-defects-v1",
+  "task_id": "LUNA-CH12-01",
+  "section": "1.1",
+  "status": "reported",
+  "defects": [
+    {
+      "id": "fallback-builder-exercise-anchor",
+      "scope": "build_paddle_glm_crosscheck.py",
+      "status": "workaround_applied",
+      "source": "The shared builder reads source_docs while 1.1 exercise items expose source_anchor.ocr_doc.",
+      "evidence": "The official command stopped at B4 image SHA 1193b7af78de73b5943ddc8a5b4bb6a196c1079eb0338864c2233474a5f7ed6b although data/ocr_live_current/first_chapter_69/doc_13.md exists.",
+      "impact": "The shared builder cannot finish section 1.1 without resolving the exercise OCR anchor.",
+      "workaround": "A task-local temporary copy used source_anchor.ocr_doc when source_docs was empty; no shared Skill, packet, or OCR artifact was modified."
+    },
+    {
+      "id": "luna-host-image-input-1.1",
+      "scope": "current luna_worker host",
+      "status": "blocked_by_runtime",
+      "evidence": "image content omitted because current luna_worker host does not support image input",
+      "impact": "No current Luna image observation is accepted for the 23 bound images.",
+      "workaround": "Preserved luna_status=blocked and used assignment-bound exact-SHA glm-4.6v-flash plus PaddleOCR fallback; no GLM row was relabeled as Luna."
+    }
+  ]
+}

@@ -1,0 +1,400 @@
+{
+ "schema_version": "1.2+1.3-10cycles",
+ "section": "1.2+1.3",
+ "worker": 4,
+ "generation": "G-CH1-S12-01",
+ "worker_status": "COMPLETED",
+ "scope": {
+  "tasks": [
+   "22",
+   "23",
+   "24",
+   "25",
+   "26",
+   "27",
+   "28"
+  ],
+  "item_count": 7,
+  "note": "任务22-28：循环7 末（变式2(10)、B12、B13）+ 循环8（例11、例12、变式(12)、例13）"
+ },
+ "context_binding": {
+  "canary": "01cb4018b3977ceb",
+  "context_sha256": "271c68719a46b628e716267fb786ee13c4e40bec9523ffe4f005fada1c05fd86",
+  "context_file": "data/contexts/1.2_1.3.json",
+  "binding": "worker must echo canary and answer derived probes from this exact context",
+  "probe_qids": [
+   "Q-6ed7e46c02ea0cbe",
+   "Q-9dc59a76b39b51c2",
+   "Q-8937bea007e341dc"
+  ],
+  "probe_tokens": {
+   "Q-6ed7e46c02ea0cbe": "d9f08af0",
+   "Q-9dc59a76b39b51c2": "9819bc0a",
+   "Q-8937bea007e341dc": "638a9259"
+  },
+  "probe_answered_in_items": [
+   "A1",
+   "A2",
+   "A3"
+  ],
+  "gate": {
+   "file": "reports/builds/1.2_1.3-build.json",
+   "read_at": "2026-08-16T22:02:19",
+   "built_at_declared": "2026-08-16T22:10:00",
+   "worker": "build-1.2-1.3",
+   "hard_constraint": "33 项不变（13 例题+4 变式+16 习题，item_id/qid 复用），10 循环重构",
+   "test_results": "104 passed / 2 failed（均与本节无关：1.4-k3 重复渲染、1.1 台账哈希失配）"
+  },
+  "context_finalized_at": "2026-08-16T22:03:40",
+  "context_stability": "mtime 22:03:40 后 3 分钟无变化（确认至 22:06:56）",
+  "note": "上下文在轮询期间被构建流水线多次重写（688be4…→b08a72…→7628a1…→终版 271c68…），终版 evidence 已核对；五门课程文稿（3.1.1.1/3.1.2.1/3.1.2.2/3.1.3.1/3.1.3.2）已全部通读"
+ },
+ "answer_sidecar_read": false,
+ "human_acceptance_not_proven": true,
+ "verdicts_summary": {
+  "BLOCKED": 4,
+  "PASS": 3
+ },
+ "method_check_results": [
+  {
+   "method_key": "1.2_1.3-coplanar-check-1",
+   "label": "方法检查：重心向量表示独立推导",
+   "cycle": 9,
+   "status": "CLOSED",
+   "verdict": "PASS",
+   "note": "学生独立推导：三角形重心=三点平均（G 为 △ABC 重心 ⇒ SG=⅓(SA+SB+SC)，源自 3.1.2.2 等值面法重心特性），并在 B9（任务13）、C14（任务31）中实际调用；等值面复核系数和。"
+  },
+  {
+   "method_key": "1.2_1.3-coplanar-check-2",
+   "label": "方法检查：截线共面条件自造验证",
+   "cycle": 9,
+   "status": "CLOSED",
+   "verdict": "PASS",
+   "note": "自造无答案验证：三棱锥 S-ABC，取 SA/SB/SC 中点 D,E,F，平面 DEF 为 ½ 倍面（位置向量系数和 ½=½(u+v+w)）；SG 中点 M 的 SM=¼(SA+SB+SC) 系数和 ¾≠½ ⇒ M 不在平面 DEF；与 C14 中『系数和=1 判定点面位置』正反互证。"
+  },
+  {
+   "method_key": "1.2_1.3-single-variable-check-1",
+   "label": "方法检查：空间动点单变量化检查",
+   "cycle": 10,
+   "status": "NOT_CLOSED",
+   "verdict": "BLOCKED",
+   "note": "桥接『空间动点单变量化配方』=SOURCE_METHOD_READY（只有方法骨架、缺完整无答案微课），标准规定零基础不能据此放行；检查标准（单变量规划、含定义域近变式、延迟冷复述）无法在模拟中满足。"
+  },
+  {
+   "method_key": "1.2_1.3-apollonius-check-1",
+   "label": "方法检查：阿波罗尼斯球轨迹检查",
+   "cycle": 10,
+   "status": "NOT_CLOSED",
+   "verdict": "BLOCKED",
+   "note": "桥接『阿波罗尼斯球与等距轨迹』=SUPPLEMENT_READY 但检查标准未具备（需自造变式、视觉/题面放行），且循环10 整体因动点单变量化未闭合而阻断。"
+  },
+  {
+   "bridge_key": "micro-four-point-coplanar",
+   "label": "桥接：四点共面系数和=1",
+   "target_items": [
+    "C14"
+   ],
+   "status": "CLOSED",
+   "verdict": "PASS",
+   "note": "SUPPLEMENT_READY 无答案文本在路线内；模拟中完成正向/逆向推导与自造验证；C14 独立作答通过；question_coverage=READY_FOR_INDEPENDENT_ATTEMPT。"
+  },
+  {
+   "bridge_key": "bridge-1.2-single-variable",
+   "label": "桥接：空间动点单变量化配方",
+   "target_items": [
+    "C15",
+    "C16"
+   ],
+   "status": "NOT_CLOSED",
+   "verdict": "BLOCKED",
+   "note": "SOURCE_METHOD_READY：只有方法骨架，缺完整无答案微课；零基础放行不成立；question_coverage=BLOCKED_BRIDGE（构建报告 gap_list 确认既有状态未变）。"
+  },
+  {
+   "bridge_key": "bridge-1.2-apollonius",
+   "label": "桥接：阿波罗尼斯球与等距轨迹",
+   "target_items": [
+    "C16"
+   ],
+   "status": "NOT_CLOSED",
+   "verdict": "BLOCKED",
+   "note": "SUPPLEMENT_READY 但检查标准未具备（自造变式、视觉/题面放行）；C16 整体因动点单变量化未闭合而阻断。"
+  },
+  {
+   "bridge_key": "bridge-1.1-polarization",
+   "label": "桥接：极化恒等式与数量积最值",
+   "target_items": [
+    "C16"
+   ],
+   "status": "NOT_CLOSED",
+   "verdict": "BLOCKED",
+   "note": "SUPPLEMENT_READY 但检查标准未具备（原型题独立过程、全空间型与区域型各一题无答案近迁移、等号条件可解释）；C16 整体阻断。"
+  }
+ ],
+ "first_breakpoints": [
+  {
+   "breakpoint": "图形未核验（NEEDS_VISION_SIDECAR）：路线标注『未完成视觉核验，禁止猜图』，缺已核验视觉侧车",
+   "class": "VISUAL_GATE",
+   "items": [
+    "例1",
+    "例2",
+    "例3",
+    "例4",
+    "例5",
+    "例12",
+    "例13",
+    "变式(5)",
+    "变式1(10)",
+    "变式2(10)",
+    "变式(12)"
+   ]
+  },
+  {
+   "breakpoint": "桥接未闭合：空间动点单变量化配方 SOURCE_METHOD_READY（只有方法骨架，缺完整无答案微课）",
+   "class": "BRIDGE_GATE",
+   "items": [
+    "C15",
+    "C16"
+   ]
+  },
+  {
+   "breakpoint": "桥接检查标准未具备：阿波罗尼斯球与等距轨迹、极化恒等式与数量积最值（SUPPLEMENT_READY 但未通过自造变式/放行门禁）",
+   "class": "BRIDGE_GATE",
+   "items": [
+    "C16"
+   ]
+  }
+ ],
+ "item_results": [
+  {
+   "section": "1.2+1.3",
+   "cycle": 7,
+   "item_id": "d085ad01a858870d",
+   "task": "22",
+   "label": "变式2(10)",
+   "kind": "直属变式",
+   "visual_status": "NEEDS_VISION_SIDECAR",
+   "source_revision": {
+    "generation": "G-CH1-S12-01",
+    "source_packet_type": "DEEPSEEK_STUDENT_CONTEXT",
+    "packet_status": "VERIFIED",
+    "route_revision": "10 循环重构（build-1.2-1.3, 2026-08-16T22:10:00, item_id/qid 复用）"
+   },
+   "context_sha256": "271c68719a46b628e716267fb786ee13c4e40bec9523ffe4f005fada1c05fd86",
+   "observation_signal": "直属变式：四棱锥 S-ABCD，底面正方形，每条侧棱长为底面边长的 √2 倍，P 为侧棱 SD 上点；(1) 证 AC⊥SD；(2) 若 SD⊥平面PAC，侧棱 SC 上是否存在点 E 使 BE∥平面PAC，求 SE:EC。依赖图中底面方位与 S 的投影位置；图未核验。",
+   "course_call": {
+    "course_id": "3.1.3.2",
+    "method_model_id": "3.1.3.2:parallel_perpendicular",
+    "appears_before_first_use": true,
+    "linkage": "课程 3.1.3.2（类型Ⅳ）：垂直=点乘 0；线面平行用法向量/共面；变式相对例10 从『判断平行垂直』扩展为『存在性+比例』。",
+    "first_use_location": "任务22 变式2(10)（例10 直属变式）"
+   },
+   "first_line": "目标量：(1) 证 AC·SD=0；(2) 设 SE=λSC（0<λ<1）解 λ 并判断存在性。先建系：底面正方形中心为原点（依赖图确认方位）。",
+   "second_line": "依据：课程坐标法：AC⊥SD ⇔ AC·SD=0；BE∥平面PAC ⇔ BE·n=0（n 为平面 PAC 的法向量，用叉乘或方程组求）。",
+   "continuation": "按协议停止：图形未核验（NEEDS_VISION_SIDECAR），S 与底面相对方位、P 位置依赖图，禁止猜图。",
+   "independent_self_check": "检查：存在性题解得 λ 后须回检 0<λ<1；图未核验前不进入计算。",
+   "first_breakpoint": "图形未核验（NEEDS_VISION_SIDECAR）：变式2(10) 依赖图中空间方位，禁止猜图",
+   "hint_level": "none",
+   "verdict": "BLOCKED",
+   "answer_sidecar_read": false,
+   "human_acceptance_not_proven": true
+  },
+  {
+   "section": "1.2+1.3",
+   "cycle": 7,
+   "item_id": "Q-16e242b54c60a9aa",
+   "task": "23",
+   "label": "B12",
+   "kind": "A/B/C习题",
+   "visual_status": "READY_TEXT_ONLY",
+   "source_revision": {
+    "generation": "G-CH1-S12-01",
+    "source_packet_type": "DEEPSEEK_STUDENT_CONTEXT",
+    "packet_status": "VERIFIED",
+    "route_revision": "10 循环重构（build-1.2-1.3, 2026-08-16T22:10:00, item_id/qid 复用）"
+   },
+   "context_sha256": "271c68719a46b628e716267fb786ee13c4e40bec9523ffe4f005fada1c05fd86",
+   "observation_signal": "题面：a=(1,3,-2)，b=(1,0,2)，c=(m,n,-4)。(1) 若 a∥c，求 |b+c| 的值；(2) 若 b⊥c，|c|=9，求 a·c 的值。信号词：平行/垂直/模长条件→待定系数→求值。",
+   "course_call": {
+    "course_id": "3.1.3.2",
+    "method_model_id": "3.1.3.2:parallel_perpendicular",
+    "appears_before_first_use": true,
+    "linkage": "课程 3.1.3.2（类型Ⅳ）：平行对应成比例、垂直点乘 0、模长=√平方和；路线将 B12 安排在类型Ⅳ（承接数量积求长度求角）。",
+    "first_use_location": "任务23 B12（3.1.3.2 类型Ⅳ 独立习题）"
+   },
+   "first_line": "目标量：(1) |b+c|；(2) a·c；(1) c=λa ⇒ -4=-2λ ⇒ λ=2 ⇒ m=2，n=6；b+c=(3,6,-2)。",
+   "second_line": "依据：(1) |b+c|=√(9+36+4)=7；(2) b⊥c ⇒ m+0+2·(-4)=m-8=0 ⇒ m=8；|c|=√(64+n²+16)=9 ⇒ n²=1 ⇒ n=±1。",
+   "continuation": "(1) 7；(2) a·c=8+3n+8=16+3n ⇒ n=1 时 19，n=-1 时 13；题干未再给约束，两个分支都保留（13 或 19）。",
+   "independent_self_check": "核对：n=±1 两分支均满足 b⊥c 与 |c|=9，未擅自舍根；题干若预期唯一值需额外条件，按题面如实列两值；(1) 中 λ 由 z 分量定出再求 m、n。",
+   "first_breakpoint": "none",
+   "hint_level": "none",
+   "verdict": "PASS",
+   "answer_sidecar_read": false,
+   "human_acceptance_not_proven": true
+  },
+  {
+   "section": "1.2+1.3",
+   "cycle": 7,
+   "item_id": "Q-3b98ee5668cad691",
+   "task": "24",
+   "label": "B13",
+   "kind": "A/B/C习题",
+   "visual_status": "VISION_VERIFIED",
+   "source_revision": {
+    "generation": "G-CH1-S12-01",
+    "source_packet_type": "DEEPSEEK_STUDENT_CONTEXT",
+    "packet_status": "VERIFIED",
+    "route_revision": "10 循环重构（build-1.2-1.3, 2026-08-16T22:10:00, item_id/qid 复用）"
+   },
+   "context_sha256": "271c68719a46b628e716267fb786ee13c4e40bec9523ffe4f005fada1c05fd86",
+   "observation_signal": "题面：在棱长为 4 的正方体中，E、F 分别为 DD1、BD 的中点。(1) 求证 EF⊥B1C；(2) 求 EF 与 DC 所成角的余弦值。信号词：正方体+中点→建系坐标法；垂直=点乘 0；线线角=|点乘|公式。视觉侧车（E2）确认正方体与 E、F 连线（侧车对 E 位置的坐标描述与题干文字『E 为 DD1 中点』存在噪声，以题干为准）。",
+   "course_call": {
+    "course_id": "3.1.3.1",
+    "method_model_id": "3.1.3.2:parallel_perpendicular",
+    "appears_before_first_use": true,
+    "linkage": "课程 3.1.3.1（建系）+3.1.3.2（类型Ⅳ/Ⅴ）：建系→坐标→点乘 0 证垂直；线线角余弦=|a·b|/(|a||b|)。",
+    "first_use_location": "任务24 B13（3.1.3.1+3.1.3.2 独立习题）"
+   },
+   "first_line": "目标量：EF·B1C 与 cos(EF, DC)；建系 A(4,0,0)，B(4,4,0)，C(0,4,0)，D(0,0,0)，A1(4,0,4)，B1(4,4,4)，C1(0,4,4)，D1(0,0,4)。",
+   "second_line": "依据：E=DD1 中点=(0,0,2)；F=BD 中点=(2,2,0)；EF=(2,2,-2)；B1C=C-B1=(-4,0,-4)；DC=(0,4,0)。",
+   "continuation": "(1) EF·B1C=2·(-4)+2·0+(-2)·(-4)=-8+8=0 ⇒ EF⊥B1C；(2) cos=|EF·DC|/(|EF||DC|)=8/(2√3·4)=1/√3=√3/3。",
+   "independent_self_check": "核对：线线角加绝对值（课程强调线线角 0~90°）；E 中点回代（D(0,0,0)→D1(0,0,4) 中点 (0,0,2) ✓）；B1C 用 C-B1 未写反。",
+   "first_breakpoint": "none",
+   "hint_level": "none",
+   "verdict": "PASS",
+   "answer_sidecar_read": false,
+   "human_acceptance_not_proven": true
+  },
+  {
+   "section": "1.2+1.3",
+   "cycle": 8,
+   "item_id": "94d4c82f6d2171e2",
+   "task": "25",
+   "label": "教材例11",
+   "kind": "教学例题（类型例题）",
+   "visual_status": "READY_TEXT_ONLY",
+   "source_revision": {
+    "generation": "G-CH1-S12-01",
+    "source_packet_type": "DEEPSEEK_STUDENT_CONTEXT",
+    "packet_status": "VERIFIED",
+    "route_revision": "10 循环重构（build-1.2-1.3, 2026-08-16T22:10:00, item_id/qid 复用）"
+   },
+   "context_sha256": "271c68719a46b628e716267fb786ee13c4e40bec9523ffe4f005fada1c05fd86",
+   "observation_signal": "题面：y,z∈R，a=(1,1,1)，b=(1,y,1)，c=(z,-4,2)，且 a⊥b，b∥c；(1) 求 |a+b|；(2) 求 a+b 与 b-c 的夹角的余弦值。信号词：垂直/平行条件→待定系数→模与夹角。",
+   "course_call": {
+    "course_id": "3.1.3.2",
+    "method_model_id": "3.1.3.2:parallel_perpendicular",
+    "appears_before_first_use": true,
+    "linkage": "课程 3.1.3.2（类型Ⅳ/Ⅴ）：垂直点乘 0 定 y；平行对应成比例定 z；夹角余弦=(a+b)·(b-c)/(|a+b||b-c|)。",
+    "first_use_location": "任务25 教材例11（3.1.3.2 类型Ⅴ 首次执行）"
+   },
+   "first_line": "目标量：|a+b| 与余弦值；先定参数：a⊥b ⇒ 1+y+1=0 ⇒ y=-2；b∥c ⇒ (1,-2,1)=λ(z,-4,2) ⇒ λ=½，z=2。",
+   "second_line": "依据：a+b=(2,-1,2)，|a+b|=√(4+1+4)=3；b-c=(-1,2,-1)，|b-c|=√6；(a+b)·(b-c)=-2-2-2=-6。",
+   "continuation": "(1) |a+b|=3；(2) cos=-6/(3√6)=-√6/3。",
+   "independent_self_check": "核对：本题问『向量夹角』余弦，可为负（-√6/3），不加绝对值（课程强调只有线线角才加绝对值）；y、z 回代验算 a·b=0、b∥c 成立。",
+   "first_breakpoint": "none",
+   "hint_level": "none",
+   "verdict": "PASS",
+   "answer_sidecar_read": false,
+   "human_acceptance_not_proven": true
+  },
+  {
+   "section": "1.2+1.3",
+   "cycle": 8,
+   "item_id": "590da6bc5e5f4e4b",
+   "task": "26",
+   "label": "教材例12",
+   "kind": "教学例题（类型例题）",
+   "visual_status": "NEEDS_VISION_SIDECAR",
+   "source_revision": {
+    "generation": "G-CH1-S12-01",
+    "source_packet_type": "DEEPSEEK_STUDENT_CONTEXT",
+    "packet_status": "VERIFIED",
+    "route_revision": "10 循环重构（build-1.2-1.3, 2026-08-16T22:10:00, item_id/qid 复用）"
+   },
+   "context_sha256": "271c68719a46b628e716267fb786ee13c4e40bec9523ffe4f005fada1c05fd86",
+   "observation_signal": "题干：长方体 ABCD-A1B1C1D1 中，AB=2，BC=AA1=1，E 为 A1C 的中点，求异面直线 AD1 与 BE 所成角的余弦值。文字给出棱长与 E 的位置；但配图（顶点方位）未核验，路线标注『未完成视觉核验，禁止猜图』。",
+   "course_call": {
+    "course_id": "3.1.3.1",
+    "method_model_id": "3.1.3.2:vector_angle_abs",
+    "appears_before_first_use": true,
+    "linkage": "课程 3.1.3.1+3.1.3.2（类型Ⅴ）：异面直线夹角用向量点乘加绝对值：cosθ=|a·b|/(|a||b|)；建系后 AD1、BE 取坐标。",
+    "first_use_location": "任务26 教材例12（类型Ⅴ 线线角例题）"
+   },
+   "first_line": "目标量：cos(AD1, BE)；先建系（如以 A 为原点，AB/AD/AA1 为轴——需图确认轴对应）。",
+   "second_line": "依据：课程公式 cos=|AD1·BE|/(|AD1||BE|)；E 为 A1C 中点，坐标由中点公式得。",
+   "continuation": "按协议停止：图形状态 NEEDS_VISION_SIDECAR 未核验，顶点方位与轴对应依赖图，不凭常规记法替代核验。",
+   "independent_self_check": "检查：长方体记法虽常规，协议要求视觉核验后才可作答；禁止猜图、禁止把推导当掌握。",
+   "first_breakpoint": "图形未核验（NEEDS_VISION_SIDECAR）：教材例12 依赖图中顶点方位，禁止猜图",
+   "hint_level": "none",
+   "verdict": "BLOCKED",
+   "answer_sidecar_read": false,
+   "human_acceptance_not_proven": true
+  },
+  {
+   "section": "1.2+1.3",
+   "cycle": 8,
+   "item_id": "0b28bb0d2da57497",
+   "task": "27",
+   "label": "变式(12)",
+   "kind": "直属变式",
+   "visual_status": "NEEDS_VISION_SIDECAR",
+   "source_revision": {
+    "generation": "G-CH1-S12-01",
+    "source_packet_type": "DEEPSEEK_STUDENT_CONTEXT",
+    "packet_status": "VERIFIED",
+    "route_revision": "10 循环重构（build-1.2-1.3, 2026-08-16T22:10:00, item_id/qid 复用）"
+   },
+   "context_sha256": "271c68719a46b628e716267fb786ee13c4e40bec9523ffe4f005fada1c05fd86",
+   "observation_signal": "直属变式（九章算术『曲池』）：上下底面为扇环的柱体，AA1⊥底面，底面扇环圆心角 π/2，两圆半径比 1:2，AB=AA1=1，E 在 A1D1 弧上且为靠近 D1 的三等分点，求异面直线 BE 与 C1D 所成角的余弦值。图形（扇环、弧、点方位）未核验。",
+   "course_call": {
+    "course_id": "3.1.3.2",
+    "method_model_id": "3.1.3.2:vector_angle_abs",
+    "appears_before_first_use": true,
+    "linkage": "课程 3.1.3.2（类型Ⅴ）：线线角余弦=|a·b|/(|a||b|)；变式相对例12 从长方体换为扇环柱体，建系与 E 坐标由图中扇环确定。",
+    "first_use_location": "任务27 变式(12)（例12 直属变式）"
+   },
+   "first_line": "目标量：cos(BE, C1D)；先建系：以 A 为原点、AA1 为 z 轴、扇环直边为 x/y（依赖图）。",
+   "second_line": "依据：E 在弧 A1D1 三等分点 ⇒ 用圆心角参数定 E 坐标；BE、C1D 向量与夹角公式。",
+   "continuation": "按协议停止：图形未核验（NEEDS_VISION_SIDECAR），扇环的圆、弧与 E 位置依赖图，禁止猜图。",
+   "independent_self_check": "检查：变式需复述例12 模型并指出改变项（几何体形状与建系）；图未核验前不进入。",
+   "first_breakpoint": "图形未核验（NEEDS_VISION_SIDECAR）：变式(12) 曲池几何依赖图中扇环，禁止猜图",
+   "hint_level": "none",
+   "verdict": "BLOCKED",
+   "answer_sidecar_read": false,
+   "human_acceptance_not_proven": true
+  },
+  {
+   "section": "1.2+1.3",
+   "cycle": 8,
+   "item_id": "57b57c8f53fc2c69",
+   "task": "28",
+   "label": "教材例13",
+   "kind": "教学例题（类型例题）",
+   "visual_status": "NEEDS_VISION_SIDECAR",
+   "source_revision": {
+    "generation": "G-CH1-S12-01",
+    "source_packet_type": "DEEPSEEK_STUDENT_CONTEXT",
+    "packet_status": "VERIFIED",
+    "route_revision": "10 循环重构（build-1.2-1.3, 2026-08-16T22:10:00, item_id/qid 复用）"
+   },
+   "context_sha256": "271c68719a46b628e716267fb786ee13c4e40bec9523ffe4f005fada1c05fd86",
+   "observation_signal": "题干：正三棱柱 ABC-A1B1C1 底面边长为 2、侧棱长为 3，D 为 BC 中点，A1P=λA1B1，DQ=λDC1（0≤λ≤1），求 |PQ| 的最小值。文字给出全部参数与定义域；配图未核验。",
+   "course_call": {
+    "course_id": "3.1.3.2",
+    "method_model_id": "3.1.3.2:modulus_single_variable",
+    "appears_before_first_use": true,
+    "linkage": "课程 3.1.3.2（类型Ⅴ）：模长 |PQ|²=坐标平方和；动点参数化 P=A1+λ·(A1B1 方向)、Q=D+λ·(DC1 方向) 后化为 λ 的二次函数（对应桥接『空间动点单变量化配方』的方法入口）。",
+    "first_use_location": "任务28 教材例13（类型Ⅴ 模长最值例题）"
+   },
+   "first_line": "目标量：|PQ| 关于 λ 的最小值；先建系（正三棱柱底面中心/顶点建系，依赖图确认方位），写出 P、Q 坐标。",
+   "second_line": "依据：课程模长公式；|PQ|² 展开为 λ 的二次函数，定义域 [0,1]，配方或端点检查求最小。",
+   "continuation": "按协议停止：图形状态 NEEDS_VISION_SIDECAR 未核验（正三棱柱顶点方位、D 位置需图确认），禁止猜图。",
+   "independent_self_check": "检查：即使文字自足，协议要求图核验；动点 λ 端点检查留待放行后。",
+   "first_breakpoint": "图形未核验（NEEDS_VISION_SIDECAR）：教材例13 依赖图中顶点方位，禁止猜图",
+   "hint_level": "none",
+   "verdict": "BLOCKED",
+   "answer_sidecar_read": false,
+   "human_acceptance_not_proven": true
+  }
+ ]
+}

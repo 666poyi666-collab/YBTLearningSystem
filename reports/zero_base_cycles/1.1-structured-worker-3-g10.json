@@ -1,0 +1,313 @@
+{
+  "schema_version": "1.1",
+  "section": "1.1",
+  "worker": "3",
+  "generation": "G-20260816-10",
+  "worker_status": "PASS",
+  "answer_sidecar_read": false,
+  "human_acceptance_not_proven": true,
+  "item_results": [
+    {
+      "section": "1.1",
+      "cycle": 5,
+      "item_id": "b867c227820b9b42",
+      "source_revision": {
+        "generation": "G-20260816-10"
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "例6（教学例题）：正方体 ABCD-A1B1C1D1，求向量 AC 与 A1B1、B1A1、AD1、CD1、B1D1 的夹角。设问关键词是『向量……的夹角』，不是直线夹角，所以按向量夹角公式 cos<a,b>=a·b/(|a||b|)，范围 [0,π]，不加绝对值。",
+      "course_call": {
+        "course_keys": [
+          "3.1.4.3 向量夹角与直线夹角"
+        ],
+        "method_model_id": "3.1.4.3:vector_angle_cos_dot_product_no_abs",
+        "note": "主课讲：向量夹角直接点乘除模长、不加绝对值；只有求直线夹角才加绝对值。"
+      },
+      "first_line": "第一行：设棱长 a=1（不影响夹角），以 A 为原点建系，A(0,0,0)、B(1,0,0)、C(1,1,0)、D(0,1,0)、A1(0,0,1)、B1(1,0,1)、C1(1,1,1)、D1(0,1,1)；目标向量 AC=(1,1,0)，|AC|=√2。",
+      "second_line": "第二行：夹角公式 cos<a,b>=a·b/(|a||b|)（doc3 知识点4 定义）；其余五个向量：A1B1=(1,0,0)、B1A1=(-1,0,0)、AD1=(0,1,1)、CD1=(-1,0,1)、B1D1=(-1,1,0)，模长均为 √2。",
+      "continuation": "继续动作：逐个点乘——AC·A1B1=1 → cos=√2/2 → 45°；AC·B1A1=-1 → cos=-√2/2 → 135°；AC·AD1=1 → cos=1/2 → 60°；AC·CD1=-1 → cos=-1/2 → 120°；AC·B1D1=0 → 90°。",
+      "independent_self_check": "独立自检：题问向量夹角，故 135°、120° 合法（[0,π] 内），不加绝对值；棱长取 1 不影响夹角；坐标标注与正方体『下底 ABCD、上底 A1B1C1D1』的约定一致（图示侧车坐标标注较噪，但正方体标注由记号本身确定，不依赖猜图）；无非零向量问题。",
+      "first_breakpoint": "",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 5,
+      "item_id": "40489a2282275850",
+      "source_revision": {
+        "generation": "G-20260816-10"
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "例7（教学例题）：正四面体 ABCD 棱长 1，E、F 分别是 AD、CD 的中点，求数量积 EF·AB。设问关键词：中点 + 数量积 → 先把 EF 用顶点向量表示（中位线），再点乘。",
+      "course_call": {
+        "course_keys": [
+          "3.1.4.3 向量夹角与直线夹角",
+          "3.1.2.1 空间向量拆分法"
+        ],
+        "method_model_id": "3.1.2.1:midpoint_decomposition_then_dot_definition",
+        "note": "3.1.2.1 的中点向量：E=(A+D)/2、F=(C+D)/2；doc3 的数量积定义 a·b=|a||b|cos<a,b>。"
+      },
+      "first_line": "第一行：目标量 EF·AB；EF = F - E = (C-A)/2 = ½AC（中位线，方向与 AC 同向）。",
+      "second_line": "第二行：EF·AB = ½AC·AB = ½|AC||AB|cos<AC,AB>（数量积定义，依据 doc3：a·b=|a||b|cos<a,b>）。",
+      "continuation": "继续动作：正四面体每个面是正三角形 → <AC,AB>=60°，|AC|=|AB|=1 → EF·AB = ½·1·1·cos60° = ¼。",
+      "independent_self_check": "独立自检：方向检查——EF 由 E 指向 F，与 A→C 同向，夹角取 60° 而非 120°；正四面体棱长 1 代入无误；结果 ¼ 为正且小于 ½，量级合理。",
+      "first_breakpoint": "",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 5,
+      "item_id": "df02a4165b305660",
+      "source_revision": {
+        "generation": "G-20260816-10"
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "例8（教学例题）：正方体，求 AC 在直线 AB 上的投影向量、AC1 在平面 ABCD 上的投影向量。设问关键词：『投影向量』→ 用 doc4 投影定义（向直线投影：起点落在直线上、终点作垂线；向平面投影：起点终点分别作垂线），并区分投影向量与投影长度。",
+      "course_call": {
+        "course_keys": [
+          "3.1.4.3 向量夹角与直线夹角",
+          "bridge-1.1-projection"
+        ],
+        "method_model_id": "bridge-1.1-projection:projection_vector_line_and_plane",
+        "note": "桥接：投影向量=(a·b/|b|²)b 有方向；有向投影长度=a·b/|b|；无向=|a·b|/|b|；doc4 表格三种投影定义。"
+      },
+      "first_line": "第一行：设棱长 1，A(0,0,0)、B(1,0,0)、C(1,1,0)、C1(1,1,1)；AC=(1,1,0)，AC1=(1,1,1)。",
+      "second_line": "第二行：AC 在直线 AB 上投影：起点 A 已在 AB 上，终点 C 向 AB 作垂线，垂足为 B → 投影向量 = AB。公式复核：投影向量=(AC·AB/|AB|²)AB = ((1,1,0)·(1,0,0)/1)·(1,0,0) = (1,0,0) = AB，两法一致。",
+      "continuation": "继续动作：AC1 在平面 ABCD 上投影：起点 A、终点 C1 分别向底面作垂线，垂足为 A、C → 投影向量 = AC；同时 AC1 与底面所成角即 AC1 与投影向量 AC 的夹角（doc4 注）。",
+      "independent_self_check": "独立自检：题目要『投影向量』（有方向），不是投影长度，故写 AB、AC 而非数字长度；公式法与垂足图形法结果一致；|AB|²=1 分母合法；反向情况在方法检查中单独复核过。",
+      "first_breakpoint": "",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 5,
+      "item_id": "B4",
+      "source_revision": {
+        "generation": "G-20260816-10"
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "B4（B组 独立作答）：三棱锥 A-BCD 每条棱长都为 2（正四面体），求 AB·CD。设问关键词：异面棱 AB 与 CD 的数量积 → 先把 CD 用公共起点 A 拆分（CD=AD-AC），再分配律展开。",
+      "course_call": {
+        "course_keys": [
+          "3.1.4.3 向量夹角与直线夹角",
+          "3.1.1.1 空间向量的运算",
+          "3.1.2.1 空间向量拆分法"
+        ],
+        "method_model_id": "3.1.2.1:base_decomposition_plus_distribution_law_dot",
+        "note": "3.1.1.1 分配律 (a+b)·c=a·c+b·c；3.1.2.1 末减出拆分；隐藏答案独立作答。"
+      },
+      "first_line": "第一行：目标量 AB·CD；以 A 为公共起点：CD = AD - AC（末减出）。",
+      "second_line": "第二行：AB·CD = AB·(AD-AC) = AB·AD - AB·AC（分配律，依据 3.1.1.1）。",
+      "continuation": "继续动作：每条棱长 2 且每个面是正三角形 → <AB,AD>=<AB,AC>=60°：AB·AD = 2·2·cos60° = 2，AB·AC = 2 → AB·CD = 2-2 = 0。",
+      "independent_self_check": "独立自检：拆分方向 CD=AD-AC 正确（末 D 减初 C）；符号无错；结果 0 与『正四面体对棱互相垂直』的几何事实互相印证；无零向量、夹角定义合法；选项 D=0 与计算一致。",
+      "first_breakpoint": "",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 5,
+      "item_id": "B5",
+      "source_revision": {
+        "generation": "G-20260816-10"
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "B5（B组 独立作答）：正方体棱长 2，E 是棱 A1D1 的中点，求 EB1·EB。设问关键词：正方体 + 中点 + 数量积 → 主课 3.1.4.3 的建系坐标法（设棱长防分数、写向量顺手写模长）。",
+      "course_call": {
+        "course_keys": [
+          "3.1.4.3 向量夹角与直线夹角"
+        ],
+        "method_model_id": "3.1.4.3:coordinate_dot_product_cube_midpoint",
+        "note": "主课示范：建系→标点→写向量→计算；出现中点可设棱长 2 避免分数；隐藏答案独立作答。"
+      },
+      "first_line": "第一行：建系（A 为原点，AB、AD、AA1 为 x、y、z 轴，棱长 2）：A(0,0,0)、B(2,0,0)、D1(0,2,2)、A1(0,0,2)、B1(2,0,2)；E 为 A1D1 中点 → E(0,1,2)。",
+      "second_line": "第二行：EB1 = B1-E = (2,-1,0)，顺手写 |EB1|²=5；EB = B-E = (2,-1,-2)，|EB|²=9。",
+      "continuation": "继续动作：EB1·EB = 2·2 + (-1)·(-1) + 0·(-2) = 4+1+0 = 5。",
+      "independent_self_check": "独立自检：E 点坐标 (0,1,2) 是 A1D1 中点（y 居中）无误；两向量方向 E→B1、E→B 与图示一致；结果 5 满足 |a·b|≤|a||b|=√45≈6.7；选项 B=5 与计算一致。",
+      "first_breakpoint": "",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 6,
+      "item_id": "a150e68825eff982",
+      "source_revision": {
+        "generation": "G-20260816-10"
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "例13（教学例题）：棱长 1 的正四面体 ABCD，E 是 BC 的中点，求 AE·AD。设问关键词：中点 + 数量积 → 用 3.1.2.1 中点拆分把 AE 拆到基底，再逐项点乘。",
+      "course_call": {
+        "course_keys": [
+          "3.1.2.1 空间向量拆分法",
+          "3.1.4.3 向量夹角与直线夹角"
+        ],
+        "method_model_id": "3.1.2.1:midpoint_decomposition_then_dot",
+        "note": "AE = AB + BE = AB + ½BC；对棱 BC⊥AD（正四面体对棱垂直）。"
+      },
+      "first_line": "第一行：AE = AB + BE = AB + ½BC（E 是 BC 中点）。",
+      "second_line": "第二行：AE·AD = (AB+½BC)·AD = AB·AD + ½BC·AD（分配律，依据 3.1.1.1）。",
+      "continuation": "继续动作：AB·AD = 1·1·cos60° = ½；BC·AD = 0（正四面体对棱垂直，BC·AD=(AC-AB)·AD = cos60°-cos60°=0 可验证）；故 AE·AD = ½。",
+      "independent_self_check": "独立自检：对棱垂直用数量积验证过（AC·AD=AB·AD=½ 相减得 0），不是凭图形；展开无漏项；结果 ½ 为正、在合理范围。",
+      "first_breakpoint": "",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 6,
+      "item_id": "b2a2e4099db3ab67",
+      "source_revision": {
+        "generation": "G-20260816-10"
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "变式(13)（例13 直属变式，独立作答）：平行六面体 ABCD-A1B1C1D1，AB=AD=AA1=1，∠A1AB=∠A1AD=∠BAD=60°，求 BD1·AC。相对母题例13 的改变：正四面体（公共顶点、棱两两 60°）→ 平行六面体（三组基底棱 60°），目标从『共顶点两条棱的乘积』变成『体对角线向量 BD1 × 面对角线向量 AC』；同一模型=基底点乘 + 分配律展开，但展开项数和符号必须重推。",
+      "course_call": {
+        "course_keys": [
+          "3.1.1.1 空间向量的运算",
+          "3.1.2.1 空间向量拆分法"
+        ],
+        "method_model_id": "3.1.1.1:six_term_dot_expansion_base_vectors",
+        "note": "隐藏答案独立作答；先复述例13 的数量积模型，再只替换变式改变的对象与符号。"
+      },
+      "first_line": "第一行：选基底 AB、AD、AA1（不共面、模长 1、两两夹角 60°）；BD1 = AA1 + AD - AB（路线 B→A→A1→D1，或 BD1=AD1-AB 同结果），AC = AB + AD。",
+      "second_line": "第二行：BD1·AC = (AA1+AD-AB)·(AB+AD)，展开六项：AA1·AB + AA1·AD + AD·AB + AD·AD - AB·AB - AB·AD（分配律逐项，3.1.1.1）。",
+      "continuation": "继续动作：任意两个不同基底点乘 = 1·1·cos60° = ½，同基底自乘 = 1：½ + ½ + ½ + 1 - 1 - ½ = 1。",
+      "independent_self_check": "独立自检：符号检查——BD1 中 -AB 项来自 B→A 反向，符号正确；展开六项无漏项（先列三个自项、三个交叉项再合并）；用另一路线 BD1=AD1-AB 重推结果一致；1 与选项 A 吻合。",
+      "first_breakpoint": "",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 6,
+      "item_id": "d93a88e15e97f1dd",
+      "source_revision": {
+        "generation": "G-20260816-10"
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "例14（教学例题）：正三棱锥 S-ABC 底面 ABC 边长为 2，P 是空间任意一点，求 PA·(PB+PC) 的最小值。设问关键词：任意点 + 数量积最值 → 先改写成中点向量，再用极化恒等式（桥接 SUPPLEMENT_READY，教学阶段跟随方法链）。",
+      "course_call": {
+        "course_keys": [
+          "3.1.4.3 向量夹角与直线夹角",
+          "bridge-1.1-polarization"
+        ],
+        "method_model_id": "bridge-1.1-polarization:midpoint_polarization_min_value",
+        "note": "桥接：2a·b=|a+b|²-|a|²-|b|² 或中点形式 PA·PM=|PN|²-|NA|²（N 为 AM 中点）；全空间型最值检查等号点可达。"
+      },
+      "first_line": "第一行：设 M 为 BC 中点：PB+PC = 2PM → 目标 = 2·PA·PM。",
+      "second_line": "第二行：设 N 为 AM 中点：PA·PM = (PN+NA)·(PN-NA) = |PN|² - |NA|²（极化恒等式中点形式）。",
+      "continuation": "继续动作：等边△ABC 边长 2 → 中线 AM = √3，|NA| = √3/2；P 为空间任意点 → min|PN|² = 0（取 P=N，可达）→ 目标最小值 = 2·(-(√3/2)²) = 2·(-3/4) = -3/2。",
+      "independent_self_check": "独立自检：只套一套恒等式（中点形式），没有同时混用另一形式；等号条件 P=N 属于全空间、可达；回代原对象时×2 未丢；选项 A=-3/2 与计算一致。",
+      "first_breakpoint": "",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 6,
+      "item_id": "B11",
+      "source_revision": {
+        "generation": "G-20260816-10"
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "B11（B组 独立作答）：正四面体 OABC 棱长 2，G 是 △OBC 的重心，M 是线段 AG 的中点。（1）用 OA、OB、OC 表示 OM 并求 |OM|；（2）证明 OM⊥BC。设问关键词：重心 + 中点 + 模长 + 垂直 → 先由桥接『三角形重心的向量表示』（方法检查已独立闭合）写 OG，再用公共起点中点公式写 OM，最后数量积判垂直。",
+      "course_call": {
+        "course_keys": [
+          "3.1.2.1 空间向量拆分法",
+          "3.1.4.3 向量夹角与直线夹角",
+          "3.1.4.1平行垂直证明",
+          "bridge-1.1-centroid"
+        ],
+        "method_model_id": "bridge-1.1-centroid:centroid_vector_then_dot_orthogonality",
+        "note": "桥接重心 OG=(OB+OC)/3（方法检查独立推导闭合）；3.1.4.1：线线垂直 ⇔ 方向向量点乘=0；隐藏答案独立作答。"
+      },
+      "first_line": "第一行：（1）重心 G（公共起点 O）：OG = (OB+OC)/3（由 BC 中点 M0 处 OM0=(OB+OC)/2 与 OG=(2/3)OM0 推出）；M 为 AG 中点 → OM = (OA+OG)/2 = ½OA + (1/6)OB + (1/6)OC。",
+      "second_line": "第二行：（2）|OM|² = OM·OM 展开：¼|OA|² + (1/36)|OB|² + (1/36)|OC|² + 2·(½·1/6)OA·OB + 2·(½·1/6)OA·OC + 2·(1/36)OB·OC（三个自项 + 三个交叉项）。",
+      "continuation": "继续动作：正四面体棱长 2：|OA|=|OB|=|OC|=2，两两夹角 60° → 两两点乘 = 4·cos60° = 2；|OM|² = 1 + 1/9 + 1/9 + 2·(1/12)·2 + 2·(1/12)·2 + 2·(1/36)·2 = 1+2/9+2/3+1/9 = 2 → |OM| = √2。（2）OM·BC = (½OA+(1/6)OB+(1/6)OC)·(OC-OB) = ½(OA·OC-OA·OB) + (1/6)(OB·OC-|OB|²) + (1/6)(|OC|²-OB·OC) = ½(2-2)+0 = 0 → OM⊥BC（3.1.4.1 点乘=0 判垂直）。",
+      "independent_self_check": "独立自检：OG=(OB+OC)/3 由中点+2:1 独立推出（见方法检查），不是背公式；OM 展开六个交叉项无漏项、系数正确；|OM|=√2 在 (0,2] 合理；OM·BC=0 且 BC 非零向量，垂直结论合法；两问互相独立验证。",
+      "first_breakpoint": "",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    }
+  ],
+  "method_check_results": [
+    {
+      "section": "1.1",
+      "cycle": 5,
+      "method_id": "projection_vector_direction_and_length_check",
+      "method_title": "投影向量方向与长度检查",
+      "observation_signal": "放行检查：区分投影向量（有方向）、有向投影长度（标量）、无向投影线段长度；解释公式里的 |b|² 与 |b|；处理反向投影。",
+      "course_call": {
+        "course_keys": [
+          "3.1.4.3 向量夹角与直线夹角",
+          "bridge-1.1-projection"
+        ],
+        "method_model_id": "bridge-1.1-projection:projection_vector_directed_length_undirected_length"
+      },
+      "first_line": "已知/目标：向量 a 在非零向量 b 方向的投影向量 = (a·b/|b|²)b；有向投影长度 = a·b/|b|；无向 = |a·b|/|b|。",
+      "second_line": "推导：设正方体棱长 1，a=AC=(1,1,0)（面对角线），b=AB=(1,0,0)（棱）：投影向量 = (1/1)·(1,0,0) = (1,0,0) = AB；有向投影长度 = a·b/|b| = 1；无向 = 1。",
+      "continuation": "方向检查：取反向 a'=(-1,-1,0)=CA：投影向量 = (-1,0,0)，与 b 反向，有向投影长度 = -1，无向长度 = 1 → 符号决定同向/反向；|b|² 出现在投影向量分母（保证结果是 b 的倍数、保持方向），|b| 出现在投影长度分母（结果是无方向的标量）。",
+      "independent_self_check": "图形法复核：C 向直线 AB 作垂线，垂足 B → 投影向量 OB=AB，与公式法一致；向平面投影：起点终点分别作垂足（doc4）；三种量单位/方向/绝对值差别清楚，反向投影能处理。",
+      "first_breakpoint": "",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "source_revision": {
+        "generation": "G-20260816-10"
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 6,
+      "method_id": "triangle_centroid_vector_review",
+      "method_title": "三角形重心向量回顾",
+      "observation_signal": "放行检查（B11 前置）：用中点与 2:1 推出重心向量公式 OG=(OA+OB+OC)/3；解释三系数相同；换公共起点复述；自造变式。",
+      "course_call": {
+        "course_keys": [
+          "3.1.2.1 空间向量拆分法",
+          "3.1.4.3 向量夹角与直线夹角",
+          "bridge-1.1-centroid"
+        ],
+        "method_model_id": "bridge-1.1-centroid:centroid_vector_from_midpoint_and_2to1"
+      },
+      "first_line": "已知/目标：△OBC 重心 G。取 BC 中点 M0：OM0 = (OB+OC)/2（中点向量，公共起点 O）。",
+      "second_line": "重心 G 在中线 OM0 上且 OG:GM0=2:1 → OG = (2/3)OM0 = (2/3)·(OB+OC)/2 = (OB+OC)/3。",
+      "continuation": "三系数同为 1/3：每一步都除以 3，三顶点地位完全对称，交换 B、C 结果不变 → 等权。换公共起点复述：对 △ABC 重心 G 与任意起点 P：PG=(PA+PB+PC)/3。自造变式（换公共起点+换中线）：公共起点 A，G 为 △ABC 重心，取 BC 中点 M0，AG=(2/3)AM0=(AB+AC)/3 → OG = OA+(AB+AC)/3 = (OA+OB+OC)/3，两条中线推出同一公式。",
+      "independent_self_check": "公式由中点与 2:1 独立推出，未直接引用结论；三系数相同的原因（等权对称）可解释；任意公共起点下使用正确（B11 中公共起点即 O，直接适用）。",
+      "first_breakpoint": "",
+      "hint_level": "none",
+      "verdict": "PASS",
+      "source_revision": {
+        "generation": "G-20260816-10"
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "answer_sidecar_read": false,
+      "human_acceptance_not_proven": true
+    }
+  ],
+  "first_breakpoints": []
+}

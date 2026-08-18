@@ -1,0 +1,58 @@
+{
+  "schema_version": "7.1",
+  "checked_at": "2026-08-13T19:48:15.454014+00:00",
+  "status": "failed",
+  "standalone_route": {
+    "requested_model": "opencode-go/deepseek-v4-flash",
+    "requested_variant": "max",
+    "requested_context_window": 1000000,
+    "agent_role": "direct_model_route",
+    "command_excludes_answer_sidecar": true
+  },
+  "process": {
+    "returncode": 0,
+    "event_count": 0,
+    "session_id": null,
+    "stderr_tail": "\u001b[0m\n> build · deepseek-v4-flash\n\u001b[0m\n\u001b[0m✱ \u001b[0mGlob \"**/context.json\"\u001b[90m 1 match\u001b[0m\n\u001b[0m→ \u001b[0mRead data/deepseek_probe_workspace/context.json\n\u001b[0m→ \u001b[0mRead data/deepseek_probe_workspace/context.json\u001b[90m [offset=1522]\u001b[0m\n\u001b[0m\n\u001b[0m$ \u001b[0m$canary = \"8c3405580346eac4\"; foreach ($q in @(\"Q-898523c513a8b29a\",\"Q-6ce8264d983a858c\",\"Q-fe6dd2e1ff436d64\")) { $sha = [System.Security.Cryptography.SHA256]::Create(); $bytes = $sha.ComputeHash([System.Text.Encoding]::UTF8.GetBytes($canary + $q)); $hex = [BitConverter]::ToString($bytes) -replace '-',''; Write-Output (\"{0} -> {1}\" -f $q, $hex.Substring(0,8)) }\nQ-898523c513a8b29a -> 6908678F\nQ-6ce8264d983a858c -> 4B708294\nQ-fe6dd2e1ff436d64 -> D325D59D\n\u001b[0m\n",
+    "raw_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\deepseek_probe_1.1.raw.jsonl"
+  },
+  "response": {
+    "runtime": {
+      "model": "opencode-go/deepseek-v4-flash",
+      "reasoning_effort": "max",
+      "context_window": 1000000
+    },
+    "context_sha256": "",
+    "canary": "8c3405580346eac4",
+    "qid_probes": {
+      "Q-898523c513a8b29a": "6908678F",
+      "Q-6ce8264d983a858c": "4B708294",
+      "Q-fe6dd2e1ff436d64": "D325D59D"
+    },
+    "question_echo": {},
+    "understanding_summary": {
+      "status": null,
+      "section": null,
+      "question_count": null
+    }
+  },
+  "parse_error": "plain_text_probe_recovered_but_not_release_grade_json",
+  "verification": {
+    "status": "failed",
+    "errors": [
+      "response_context_hash_mismatch",
+      "probe_mismatch:Q-898523c513a8b29a",
+      "probe_mismatch:Q-6ce8264d983a858c",
+      "probe_mismatch:Q-fe6dd2e1ff436d64",
+      "question_echo_incomplete"
+    ],
+    "context": {
+      "status": "passed",
+      "errors": [],
+      "route_status": "passed",
+      "route_errors": [],
+      "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\contexts\\1.1.json"
+    },
+    "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\.deepseek_probe_response.tmp.json"
+  }
+}
