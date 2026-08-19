@@ -36,3 +36,4 @@
 - 新增 `build_chatgpt_context_audit.py` 和 `data/chatgpt_context/chapter12_complete_audit.{json,md}`：按正确 schema 与课程视频文件名绑定 11 节 manifest、无答案题面、课程转写、进度和哈希；审计结果 11/11 节、401/401 项题面完整，全部绑定课程转写就绪，课程目录 170/170 有转写。
 - 明确浏览器 `localStorage` 进度不会自动同步到 GitHub，页面新增“复制进度”；生成的快照要求 ChatGPT 先核对完整审计文件，再按当前题目和网课转写讲解。
 - UI 历史备份保留本机并加入 `.gitignore`，GitHub 只提交当前交付、审计包和实现，避免重复 HTML 备份膨胀仓库。
+- ChatGPT 在 Edge 项目中重新读取提交 `ec04712` 后复核通过：11/11 节、401/401 项、170/170 课程转写和两章 learner progress 均可读取；最终报告写入 `reports/chatgpt_assistance_simulation/chapter12_full_audit.md`。
