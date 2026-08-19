@@ -11,6 +11,7 @@
 7. Answer isolation
 8. Versioning and evidence states
 9. Parallel-task discipline
+10. Chapter learner handoff
 
 ## 1. Authority and Scope
 
@@ -23,24 +24,21 @@ Authority order:
 5. Verified in-scope memory.
 6. Old chats, draft reports, generated pages, and model claims.
 
-The active project is normally `C:\开发\小工具\一本通学习系统_v7`.
+Resolve the active project from the current repository or the task's explicit path.
 
-The current whole-book target is the existing first five chapters:
+The current delivery target is chapters 1 and 2:
 
-- 5 chapters.
-- 38 sections.
-- 379 worked examples.
-- 284 direct variants.
-- 546 A/B/C exercises.
-- 1,209 numbered learning items total.
+- 2 chapters.
+- 11 packet sections.
+- 401 numbered learning items.
 
-These counts are a baseline, not an excuse to skip live verification. Compare them with `reports/all_chapters/packet-build-current.json` and every chapter manifest. A previous value of 1,210 is stale; the verified duplicate direct variant in section 2.3 reduced the canonical total to 1,209.
+Chapters 3-5 remain preserved source and historical delivery assets. Do not generate or claim new completion for them unless the user explicitly expands the active scope.
+
+The full repository baseline remains 5 chapters, 38 sections, and 1,209 items. These counts are not an excuse to skip live verification. Compare active chapter counts with `reports/all_chapters/packet-build-current.json` and the chapter manifests.
 
 ## 2. Source Boundary
 
-Allowed course root:
-
-`C:\Users\poyi\Downloads\课程合集`
+Allowed course identity comes from `data/all_chapters_course_catalog.json`; committed transcripts are resolved by filename under `data/course_transcripts`. If raw videos are restored, supply their course root explicitly and verify each hash against the catalog instead of relying on a historical user path.
 
 Allowed course directories:
 
@@ -76,7 +74,7 @@ Forbidden contamination:
 
 Read the artifacts in this order:
 
-1. `reports/luna_dispatch/READY.json` and `assignments.json`.
+1. The active scope's `READY.json` and `assignments.json` (currently `reports/ch12_luna_dispatch/`).
 2. `reports/all_chapters/packet-build-current.json`.
 3. `data/all_chapters_course_catalog.json`.
 4. Assigned chapter manifests.
@@ -111,7 +109,7 @@ Packet status rules:
 
 - Read every OCR page in the section range.
 - Reconstruct left/right and top/bottom layout from headings, examples, images, and page continuation.
-- Establish the complete order: knowledge point, adjacent example, direct variant, type example, then A/B/C.
+- Establish the source order and real parentage among knowledge blocks, adjacent examples, type examples, variants, and reinforcement exercises. Do not force a universal block order.
 - Never sort solely by abstract dependency if it contradicts the textbook layout.
 - Cross-check Luna Max page/diagram observations against PaddleOCR and the original image; use the documented exact-SHA GLM fallback only after a Luna host capability failure.
 
@@ -128,6 +126,7 @@ Packet status rules:
 - For each cycle, identify the transcript method actually used.
 - Record required new courses, already-learned prerequisites, and optional methods separately.
 - Do not claim a course covers an item merely because the section references the course.
+- Emit required course keys for the chapter ledger. Coverage is not course completion.
 
 ### S5 Section Overview
 
@@ -152,7 +151,7 @@ For every item, produce:
 
 ### S7 Learner Simulation
 
-- Use the five-round/five-persona protocol in `simulation-gates.md`.
+- Use the five-round/five-persona protocol in `simulation-gates.md` as an internal route stress test.
 - Every persona attempts every item.
 - Freeze learner attempts before any evaluator view.
 - Record the learner's actual course call, recognition statement, first line, continuation attempt, self-check attempt, and first break. Boolean-only rows are not evidence.
@@ -171,6 +170,7 @@ For every item, produce:
 - Use descriptive labels and stable task numbering.
 - Use UTF-8 and MathJax-compatible LaTeX.
 - Show current state honestly; do not style blocked items as complete.
+- Keep per-item and per-persona details in machine JSON. In learner-facing files, group shared guidance by the smallest truthful textbook unit and show item-specific text only when it differs.
 
 ### S10 Validation and Handoff
 
@@ -181,7 +181,7 @@ For every item, produce:
 
 ## 5. Course and Textbook Ordering
 
-The final global route owns course deduplication. A section task must supply precise course use; it must not decide that a course was globally new unless the assignment explicitly provides prior global course state.
+The active chapter route owns course deduplication. A section task must supply precise course use; it must not decide that a course was chapter-new unless the assignment explicitly provides prior chapter course state.
 
 Within each section:
 
@@ -190,14 +190,7 @@ Within each section:
 3. Keep optional courses out of mandatory release gates unless the item actually needs them.
 4. If the course assumes an unstated prerequisite, add a bridge before the item and test that bridge.
 
-The item order inside each cycle is fixed:
-
-1. Knowledge block.
-2. Adjacent worked examples.
-3. Direct variants of those examples.
-4. Type examples.
-5. Assigned A/B/C exercises.
-6. Cycle acceptance check.
+The item order inside each cycle follows the source page. Common roles are knowledge blocks with adjacent examples, type examples with their variants, and reinforcement exercises, followed by a cycle acceptance check. Preserve observed parent-child relationships and do not relocate an item merely to fill a common role.
 
 ## 6. Visual and OCR Gates
 
@@ -253,13 +246,25 @@ Status definitions:
 - `unknown`: evidence is missing or cannot be interpreted.
 - `stale`: evidence belongs to a different source or route hash.
 
-Proxy simulation never proves human mastery. Real human observation and 24-hour cold retest remain separate.
+Route stress testing and the growing proxy never prove human mastery. Real human observation and 24-hour cold retest remain separate.
 
 ## 9. Parallel-Task Discipline
 
-- Do not call subagents from a section task.
+- Section route construction may be parallel, but the growing learner is one chapter-level sequential actor and must not run independently in multiple section tasks.
+- When the runtime supports delegation and the user has authorized learner simulation, the controller may delegate exactly one answer-isolated learner role for the active chapter. That learner must not delegate further or edit shared sources.
 - Do not edit shared source or another task's directory.
 - Write only to `reports/luna_sections/<task_id>/`.
 - Report shared defects in `shared_defects.json`; the controller is the only shared-source writer.
 - A task may inspect all course/catalog files required by its assigned sections, but it may not broaden its section set.
 - Completion means the assigned delivery validates. It does not mean the whole book is complete.
+
+## 10. Chapter Learner Handoff
+
+After all active chapter section routes validate:
+
+1. The controller merges sections in manifest order and builds the exact union of item-level required courses.
+2. It initializes or loads `data/learner_progress/chapter<chapter>.json` using schema `ybt-growing-learner-chapter-v1`.
+3. `primary-user-proxy` consumes course transcripts and attempts items sequentially. Course consumption and attempts are separate evidence events.
+4. The profile starts with only the zero-base assumption. Every profile change cites frozen attempt evidence and increments `profile_version`.
+5. The chapter status lists unfinished required courses and unresolved canonical items. It is `completed` only when both are empty and the progress validator passes.
+6. Real-user and 24-hour states remain independent fields.

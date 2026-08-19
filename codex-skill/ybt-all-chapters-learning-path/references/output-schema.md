@@ -8,6 +8,7 @@
 4. Simulation record
 5. Markdown and HTML requirements
 6. Evidence file
+7. Growing learner chapter progress
 
 ## 1. Required Files
 
@@ -160,7 +161,7 @@ Required section shape:
 
 ```json
 {
-  "protocol": "five-round-five-persona-v1",
+  "protocol": "five-round-five-persona-v2",
   "rounds": [
     {
       "round": 1,
@@ -227,7 +228,17 @@ For each cycle show:
 7. A/B/C items.
 8. Cycle checks.
 
-For every item show the seven learner fields, but not question text, answers, internal IDs, hashes, implementation notes, or model instructions.
+Do not repeat the seven learner fields for every item in Markdown/HTML. `delivery.json` retains those fields for machine reconciliation. Learner-facing files use this compact hierarchy:
+
+1. Chapter or section status strip: course coverage, simulated course completion, unresolved items, and real-user state.
+2. Deduplicated course checklist in learning order.
+3. Source-derived textbook map for the section.
+4. One shared method block per truthful knowledge/type/cycle unit: recognition, method, first line, continuation, blocker, correction, and self-check.
+5. Complete item-label checklist under that method block.
+6. Item-specific note only when an item differs from the shared method or remains blocked.
+7. Cycle acceptance check and next action.
+
+Never expose fixed-persona attempts, growing-learner attempt transcripts, hashes, or validator details in learner-facing files.
 
 HTML requirements:
 
@@ -238,6 +249,7 @@ HTML requirements:
 - Distinguish new course, learned course, worked example, variant, type item, exercise, blocked state, and verification state by accessible color plus text.
 - MathJax-compatible LaTeX with balanced delimiters.
 - Stable task numbering; dynamic content must not shift controls or labels.
+- Prefer a compact chapter ledger, sticky or nearby section navigation, short method blocks, and scannable item checklists over repeated prose panels.
 
 ## 6. Evidence File
 
@@ -252,3 +264,83 @@ HTML requirements:
 - Final states for proxy simulation, independent acceptance, human acceptance, and 24-hour retest.
 
 Do not paste credentials, full chat transcripts, or answer sidecars.
+
+## 7. Growing Learner Chapter Progress
+
+Persist the chapter-level learner at `data/learner_progress/chapter<chapter>.json`:
+
+```json
+{
+  "schema_version": "ybt-growing-learner-chapter-v1",
+  "chapter": 1,
+  "source_binding": {
+    "manifest_sha256": "...",
+    "course_catalog_sha256": "...",
+    "assignment_sha256": "...",
+    "requirements_sha256": "...",
+    "delivery_sha256": {}
+  },
+  "learner": {
+    "learner_id": "primary-user-proxy",
+    "mode": "persistent_zero_base_proxy",
+    "profile_version": 1,
+    "initial_assumptions": ["zero_base"],
+    "confirmed_strengths": [],
+    "confirmed_gaps": [],
+    "uncertainties": [],
+    "hint_dependencies": [],
+    "self_check_gaps": [],
+    "profile_history": [
+      {
+        "version": 1,
+        "reason": "initialized_with_zero_base_assumption_only",
+        "evidence": []
+      }
+    ]
+  },
+  "course_ledger": {
+    "required_course_keys": [],
+    "records": [
+      {
+        "course_key": "exact catalog course_key",
+        "first_section": "1.1",
+        "status": "planned",
+        "completion_evidence": []
+      }
+    ],
+    "unfinished_course_keys": [],
+    "status": "not_started"
+  },
+  "sections": [
+    {
+      "section": "1.1",
+      "status": "not_started",
+      "profile_version_before": 1,
+      "profile_version_after": 1,
+      "attempted_item_keys": [],
+      "passed_item_keys": [],
+      "unresolved_item_keys": []
+    }
+  ],
+  "coverage": {
+    "canonical_items": 0,
+    "attempted_items": 0,
+    "passed_items": 0,
+    "unresolved_items": 0,
+    "remaining_items": 0
+  },
+  "simulated_learning_status": "not_started",
+  "human_learning_status": "not_started",
+  "cold_24h_retest": "not_run",
+  "status": "not_started"
+}
+```
+
+Rules:
+
+- The required course set is the exact union of `course_refs` for every canonical item in the chapter's validated section deliveries.
+- `planned` and `in_progress` courses appear in `unfinished_course_keys`. `simulated_completed` requires non-empty answer-free course-consumption evidence. `blocked` also remains unfinished.
+- Section item sets are checked against canonical packets. A completed section has attempted and passed every item and has no unresolved item.
+- Profile versions never decrease. A version increment requires a profile-history record tied to frozen attempt evidence.
+- `status=completed` requires all required courses to be `simulated_completed`, every section to pass, and every canonical item to pass.
+- `human_learning_status` and `cold_24h_retest` are never promoted by proxy evidence.

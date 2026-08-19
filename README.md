@@ -1,6 +1,8 @@
 # 一本通学习系统 v7
 
-这是第一章「空间向量与立体几何」的可运行资料、状态和验收层。v6.1 与 DeepSeek 迭代目录保留为历史规则来源，v7 不覆盖它们。
+这是《一本通》教材、课程覆盖、学习路径和验收证据仓库。当前产品范围是第一章与第二章：分节 v2 工件继续承担内部路线压力测试，章节级 `primary-user-proxy` 按教材顺序维护持续成长的零基础用户画像。第三至第五章保留为历史资产，除非用户明确扩大范围，不继续生成新交付。
+
+当前产品合同见 `docs/PRODUCT-REQUIREMENTS.md`，工程规则见 `docs/PROJECT-STANDARDS.md`。
 
 ## 运行
 
@@ -15,7 +17,12 @@ python scripts/verify_saved_deepseek_http_probe.py
 python -m ybt_learning.cli simulate-five
 python -m ybt_learning.cli verify-packet --packet data/packets/1.1/student_packet.json
 python -m unittest discover -s tests -v
+python codex-skill/ybt-all-chapters-learning-path/scripts/validate_chapter_learning_progress.py --project-root . --progress data/learner_progress/chapter1.json
+python codex-skill/ybt-all-chapters-learning-path/scripts/validate_chapter_learning_progress.py --project-root . --progress data/learner_progress/chapter2.json
+python codex-skill/ybt-all-chapters-learning-path/scripts/render_compact_chapter_learning.py --project-root .
 ```
+
+当前两章持续学习者账本是证据为空的初始状态：第一章 15 门必修课程、124 个项目；第二章 22 门必修课程、277 个项目。只有课程消费和逐题作答证据闭合后才能标记代理章完成。
 
 生产状态入口：先用 `init-state --state <路径> --section 1.1` 建立目标状态；原题作答用 `record-attempt`，独立近变式用 `record-near-variant --item-id <原题ID> --variant-item-id <新题ID>`，到期复测用 `review-item`，小节完成用 `complete-section`。`VISION_VERIFIED` 必须同时提供 `--source-anchor-json '{"visual_evidence":"E1或E2"}'`，否则拒绝入账。
 

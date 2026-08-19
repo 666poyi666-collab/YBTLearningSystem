@@ -1,0 +1,1677 @@
+{
+  "schema_version": "ybt-chatgpt-context-audit-v1",
+  "scope": "chapters_1_and_2",
+  "teacher_behavior_contract": {
+    "item_source": "Read the current item from student_learning_items.json.",
+    "route_source": "Read the current cycle and course references from the chapter manifest and learning delivery.",
+    "teaching_source": "Read every referenced course transcript full_text before explaining the item.",
+    "teaching_style": "Use the teacher's definitions, method order, recognition cues, and terminology from the transcript.",
+    "answer_policy": "Do not read or expose answer sidecars before the learner freezes an attempt.",
+    "progress_policy": "Repository progress and browser local progress are separate. Use an explicit browser progress snapshot for current user state."
+  },
+  "library": {
+    "catalog_courses": 170,
+    "transcript_files": 170,
+    "catalog_transcripts_present": 170,
+    "missing_catalog_transcripts": []
+  },
+  "chapters": [
+    {
+      "chapter": 1,
+      "sections": 4,
+      "canonical_items": 124,
+      "required_courses": 15,
+      "progress_path": "data/learner_progress/chapter1.json",
+      "progress_status": "not_started"
+    },
+    {
+      "chapter": 2,
+      "sections": 7,
+      "canonical_items": 277,
+      "required_courses": 22,
+      "progress_path": "data/learner_progress/chapter2.json",
+      "progress_status": "not_started"
+    }
+  ],
+  "sections": [
+    {
+      "chapter": 1,
+      "section": "1.1",
+      "title": "第1节 空间向量及其运算",
+      "manifest_path": "chapter1_manifest.json",
+      "packet_manifest_path": "data/packets/1.1/manifest.json",
+      "learning_packet_path": "data/packets/1.1/learning_packet.json",
+      "student_learning_items_path": "data/packets/1.1/student_learning_items.json",
+      "student_packet_path": "data/packets/1.1/student_packet.json",
+      "knowledge_points": [
+        "空间向量的相关概念",
+        "空间向量的线性运算",
+        "共线向量与共面向量",
+        "数量积、夹角与投影向量"
+      ],
+      "type_labels": [
+        "类型Ⅰ 线性运算",
+        "类型Ⅱ 证明平行、共线",
+        "类型Ⅲ 证明共面",
+        "类型Ⅳ 数量积",
+        "类型Ⅴ 求长度、距离",
+        "类型Ⅵ 求角"
+      ],
+      "learning_cycles": [
+        {
+          "id": "1.1-cycle-1",
+          "title": "空间向量概念与线性运算"
+        },
+        {
+          "id": "1.1-cycle-2",
+          "title": "共线概念与向量拆分"
+        },
+        {
+          "id": "1.1-cycle-3",
+          "title": "空间向量等值面法"
+        },
+        {
+          "id": "1.1-cycle-4",
+          "title": "共面证明"
+        },
+        {
+          "id": "1.1-cycle-5",
+          "title": "数量积基础与投影"
+        },
+        {
+          "id": "1.1-cycle-6",
+          "title": "数量积展开、极化与重心"
+        },
+        {
+          "id": "1.1-cycle-7",
+          "title": "数量积求长度与求角"
+        },
+        {
+          "id": "1.1-cycle-8",
+          "title": "二面角平面角前置与应用"
+        },
+        {
+          "id": "1.1-cycle-9",
+          "title": "极化与四点共面综合"
+        },
+        {
+          "id": "1.1-cycle-10",
+          "title": "外接球、点面距离与压轴综合"
+        }
+      ],
+      "item_counts": {
+        "worked_examples": 16,
+        "direct_variants": 8,
+        "abc_exercises": 14,
+        "total": 38
+      },
+      "student_item_counts": {
+        "worked_examples": 16,
+        "direct_variants": 8,
+        "abc_exercises": 14,
+        "total": 38
+      },
+      "first_item_label": "例1",
+      "last_item_label": "C14",
+      "question_content_complete": true,
+      "courses": [
+        {
+          "course_key": "space_vector_ops",
+          "course_number": "3.1.1.1",
+          "title": "空间向量的运算",
+          "transcript_path": "data/course_transcripts/3.1.1.1 空间向量的运算.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 10374,
+          "transcript_sha256": "c8dfcf931ec6071453e1afa28945010d26313e416ea035ad7c575703fa544071"
+        },
+        {
+          "course_key": "decomposition",
+          "course_number": "3.1.2.1",
+          "title": "空间向量拆分法",
+          "transcript_path": "data/course_transcripts/3.1.2.1 空间向量拆分法.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 10185,
+          "transcript_sha256": "d9f8ca061da9af709e21d69b5638da42aab0149041bc03a5237518f3799d785c"
+        },
+        {
+          "course_key": "coplanar",
+          "course_number": "3.1.4.2",
+          "title": "证明共面",
+          "transcript_path": "data/course_transcripts/3.1.4.2 证明共面.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 7371,
+          "transcript_sha256": "968ae0a27d2627b307951e3d537fde7d5bc00cd45066ae86151d31bf7282a325"
+        },
+        {
+          "course_key": "line_line_angle",
+          "course_number": "3.1.4.3",
+          "title": "向量夹角与直线夹角",
+          "transcript_path": "data/course_transcripts/3.1.4.3 向量夹角与直线夹角.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 13148,
+          "transcript_sha256": "0be63e83adac131e7f4e0cf99d0424f23b1981ee3a446d5b2fa6029733311147"
+        },
+        {
+          "course_key": "parallel_perpendicular",
+          "course_number": "3.1.4.1平行垂直证明",
+          "title": "3.1.4.1平行垂直证明",
+          "transcript_path": "data/course_transcripts/3.1.4.1平行垂直证明.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 13506,
+          "transcript_sha256": "94c0581735e82edeb9613c4adfa25230e22ca40b1d563b007099c54c0ee2a0bc"
+        },
+        {
+          "course_key": "plane_plane_angle",
+          "course_number": "3.1.4.5",
+          "title": "平面与平面的夹角",
+          "transcript_path": "data/course_transcripts/3.1.4.5 平面与平面的夹角.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 11722,
+          "transcript_sha256": "5a01b37ad36ed0c8aed759b8b3f58ca2dbf7beb9c0aa1f9de4ee8b42f9afe23b"
+        },
+        {
+          "course_key": "plane_equation_upper",
+          "course_number": "3.1.4.6.a",
+          "title": "平面方程与法向量（上）",
+          "transcript_path": "data/course_transcripts/3.1.4.6.a 平面方程与法向量（上）.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 14031,
+          "transcript_sha256": "54de6ddd1117713ce8a28e33374ad3cb7c868b4c74f36dc99fd65b67727c2f0a"
+        },
+        {
+          "course_key": "plane_equation_lower",
+          "course_number": "3.1.4.6.b",
+          "title": "平面方程与法向量（下）",
+          "transcript_path": "data/course_transcripts/3.1.4.6.b 平面方程与法向量（下）.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 12086,
+          "transcript_sha256": "361496fd36e353ab29fed41acc0a6642c023bee9e8cfbd25aab463a0296d7412"
+        },
+        {
+          "course_key": "distance",
+          "course_number": "3.1.4.7",
+          "title": "距离问题",
+          "transcript_path": "data/course_transcripts/3.1.4.7 距离问题.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 8605,
+          "transcript_sha256": "a476ddac1a574d6a287f789a2fd29600be72a04c67330998e26888dedc96d410"
+        }
+      ],
+      "teacher_transcripts_ready": true,
+      "progress": {
+        "path": "data/learner_progress/chapter1.json",
+        "chapter_status": "not_started",
+        "human_learning_status": "not_started",
+        "section_status": "not_started",
+        "attempted_items": 0,
+        "passed_items": 0
+      },
+      "hashes": {
+        "chapter_manifest_sha256": "d4f276a026ddfd35d69795ed5c589cdbf8f3f8e98ad3fe73ef814d672a1541c5",
+        "learning_packet_sha256": "416990cafa7fabe30dc1c4e04712da47d8ab80ae19e5d6f26b72a46c0814e053",
+        "student_learning_items_sha256": "22c1650492b87ffb05f6bfabc81875f2f9cdcccb757a30e0cf0bacd87aed38bb",
+        "student_packet_sha256": "e4d8a88105b9bc15fbcffa727fe86f217e687f10eb2102e0943f48d9d93bc478",
+        "progress_sha256": "7f828cb6a067ad124eb17845b57ad2f29aa9e07006938f4140339579dbd79509"
+      },
+      "missing": [],
+      "status": "complete"
+    },
+    {
+      "chapter": 1,
+      "section": "1.2+1.3",
+      "title": "第2节 空间向量基本定理、空间向量及其运算的坐标表示",
+      "manifest_path": "chapter1_manifest.json",
+      "packet_manifest_path": "data/packets/1.2_1.3/manifest.json",
+      "learning_packet_path": "data/packets/1.2_1.3/learning_packet.json",
+      "student_learning_items_path": "data/packets/1.2_1.3/student_learning_items.json",
+      "student_packet_path": "data/packets/1.2_1.3/student_packet.json",
+      "knowledge_points": [
+        "空间向量基本定理、基底与基向量",
+        "空间直角坐标系与空间点坐标",
+        "空间向量坐标运算、平行垂直、模和夹角"
+      ],
+      "type_labels": [
+        "类型Ⅰ 基底与分解",
+        "类型Ⅱ 线性运算坐标表示",
+        "类型Ⅲ 数量积坐标表示",
+        "类型Ⅳ 平行垂直",
+        "类型Ⅴ 夹角与模"
+      ],
+      "learning_cycles": [
+        {
+          "id": "1.2_1.3-cycle-1",
+          "title": "空间向量基本定理与基底判断"
+        },
+        {
+          "id": "1.2_1.3-cycle-2",
+          "title": "空间直角坐标系与点的坐标"
+        },
+        {
+          "id": "1.2_1.3-cycle-3",
+          "title": "空间向量的坐标运算"
+        },
+        {
+          "id": "1.2_1.3-cycle-4",
+          "title": "类型Ⅰ 基底表示与分解"
+        },
+        {
+          "id": "1.2_1.3-cycle-5",
+          "title": "类型Ⅱ 线性运算的坐标表示"
+        },
+        {
+          "id": "1.2_1.3-cycle-6",
+          "title": "类型Ⅲ 数量积的坐标表示"
+        },
+        {
+          "id": "1.2_1.3-cycle-7",
+          "title": "类型Ⅳ 平行与垂直的坐标判定"
+        },
+        {
+          "id": "1.2_1.3-cycle-8",
+          "title": "类型Ⅴ 夹角与模"
+        },
+        {
+          "id": "1.2_1.3-cycle-9",
+          "title": "四点共面与截线系数综合（C14）"
+        },
+        {
+          "id": "1.2_1.3-cycle-10",
+          "title": "动点单变量化与阿波罗尼斯球综合（C15、C16）"
+        }
+      ],
+      "item_counts": {
+        "worked_examples": 13,
+        "direct_variants": 4,
+        "abc_exercises": 16,
+        "total": 33
+      },
+      "student_item_counts": {
+        "worked_examples": 13,
+        "direct_variants": 4,
+        "abc_exercises": 16,
+        "total": 33
+      },
+      "first_item_label": "例1",
+      "last_item_label": "C16",
+      "question_content_complete": true,
+      "courses": [
+        {
+          "course_key": "decomposition",
+          "course_number": "3.1.2.1",
+          "title": "空间向量拆分法",
+          "transcript_path": "data/course_transcripts/3.1.2.1 空间向量拆分法.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 10185,
+          "transcript_sha256": "d9f8ca061da9af709e21d69b5638da42aab0149041bc03a5237518f3799d785c"
+        },
+        {
+          "course_key": "space_vector_ops",
+          "course_number": "3.1.1.1",
+          "title": "空间向量的运算",
+          "transcript_path": "data/course_transcripts/3.1.1.1 空间向量的运算.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 10374,
+          "transcript_sha256": "c8dfcf931ec6071453e1afa28945010d26313e416ea035ad7c575703fa544071"
+        },
+        {
+          "course_key": "coordinate_system",
+          "course_number": "3.1.3.1",
+          "title": "空间直角坐标系",
+          "transcript_path": "data/course_transcripts/3.1.3.1 空间直角坐标系.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 11236,
+          "transcript_sha256": "1190e4e94b5a80144596d7218ef479d8e5e3a10860e74f681ee42e4105e668f8"
+        },
+        {
+          "course_key": "coordinate_ops",
+          "course_number": "3.1.3.2",
+          "title": "空间向量运算的坐标表示",
+          "transcript_path": "data/course_transcripts/3.1.3.2 空间向量运算的坐标表示.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 10340,
+          "transcript_sha256": "88343b0159aeb40c6fc0b28c66fe626358e91963fe13ab2bb04c72482475636e"
+        },
+        {
+          "course_key": "equal_surface",
+          "course_number": "3.1.2.2",
+          "title": "空间向量等值面法",
+          "transcript_path": "data/course_transcripts/3.1.2.2 空间向量等值面法.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 9618,
+          "transcript_sha256": "77a6408700cd958c33c768d5c55916f164022298f6d09c802ffc073db5422e62"
+        }
+      ],
+      "teacher_transcripts_ready": true,
+      "progress": {
+        "path": "data/learner_progress/chapter1.json",
+        "chapter_status": "not_started",
+        "human_learning_status": "not_started",
+        "section_status": "not_started",
+        "attempted_items": 0,
+        "passed_items": 0
+      },
+      "hashes": {
+        "chapter_manifest_sha256": "d4f276a026ddfd35d69795ed5c589cdbf8f3f8e98ad3fe73ef814d672a1541c5",
+        "learning_packet_sha256": "784cdb8e77a3b23a22c26a0cb37d85a8f9ec576f82e5f2aeb8b8062029b00f9f",
+        "student_learning_items_sha256": "b53b34bbbcb0203188af46c4b4258477a808ed07ad754149e6c4f024f8044bd5",
+        "student_packet_sha256": "60310a0b0ff1ac02afb9c26958000a86660c3faca697ef1e9849f281cdeb46f0",
+        "progress_sha256": "7f828cb6a067ad124eb17845b57ad2f29aa9e07006938f4140339579dbd79509"
+      },
+      "missing": [],
+      "status": "complete"
+    },
+    {
+      "chapter": 1,
+      "section": "1.4",
+      "title": "第3节 空间向量的应用",
+      "manifest_path": "chapter1_manifest.json",
+      "packet_manifest_path": "data/packets/1.4/manifest.json",
+      "learning_packet_path": "data/packets/1.4/learning_packet.json",
+      "student_learning_items_path": "data/packets/1.4/student_learning_items.json",
+      "student_packet_path": "data/packets/1.4/student_packet.json",
+      "knowledge_points": [
+        "点、直线、平面的向量表示",
+        "平面的法向量",
+        "向量法应用、平行垂直、空间角、距离与位置关系"
+      ],
+      "type_labels": [
+        "类型Ⅰ 研究平行关系",
+        "类型Ⅱ 研究垂直关系",
+        "类型Ⅲ 求空间角",
+        "类型Ⅳ 求距离",
+        "类型Ⅴ 点线在面内判断"
+      ],
+      "learning_cycles": [
+        {
+          "id": "1.4-cycle-1",
+          "title": "方向向量与平面的法向量"
+        },
+        {
+          "id": "1.4-cycle-2",
+          "title": "向量方法在立体几何中的应用"
+        },
+        {
+          "id": "1.4-cycle-3",
+          "title": "类型ⅠⅡ 平行与垂直证明"
+        },
+        {
+          "id": "1.4-cycle-4",
+          "title": "类型Ⅲ 求空间角"
+        },
+        {
+          "id": "1.4-cycle-5",
+          "title": "类型Ⅳ 距离问题"
+        },
+        {
+          "id": "1.4-cycle-6",
+          "title": "类型Ⅴ 动点与点线在面内判断"
+        },
+        {
+          "id": "1.4-cycle-7",
+          "title": "翻折守恒与存在性综合"
+        }
+      ],
+      "item_counts": {
+        "worked_examples": 22,
+        "direct_variants": 3,
+        "abc_exercises": 12,
+        "total": 37
+      },
+      "student_item_counts": {
+        "worked_examples": 22,
+        "direct_variants": 3,
+        "abc_exercises": 12,
+        "total": 37
+      },
+      "first_item_label": "例1",
+      "last_item_label": "C12",
+      "question_content_complete": true,
+      "courses": [
+        {
+          "course_key": "coordinate_ops",
+          "course_number": "3.1.3.2",
+          "title": "空间向量运算的坐标表示",
+          "transcript_path": "data/course_transcripts/3.1.3.2 空间向量运算的坐标表示.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 10340,
+          "transcript_sha256": "88343b0159aeb40c6fc0b28c66fe626358e91963fe13ab2bb04c72482475636e"
+        },
+        {
+          "course_key": "coplanar",
+          "course_number": "3.1.4.2",
+          "title": "证明共面",
+          "transcript_path": "data/course_transcripts/3.1.4.2 证明共面.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 7371,
+          "transcript_sha256": "968ae0a27d2627b307951e3d537fde7d5bc00cd45066ae86151d31bf7282a325"
+        },
+        {
+          "course_key": "direction_normal",
+          "course_number": "3.1.3.3",
+          "title": "直线的方向向量与平面的法向量",
+          "transcript_path": "data/course_transcripts/3.1.3.3 直线的方向向量与平面的法向量.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 11760,
+          "transcript_sha256": "d0ec9c67e89b5b7506aebe5aaa477553790cbc98b64eed43cb0fb63c8cde276c"
+        },
+        {
+          "course_key": "parallel_perpendicular",
+          "course_number": "3.1.4.1平行垂直证明",
+          "title": "3.1.4.1平行垂直证明",
+          "transcript_path": "data/course_transcripts/3.1.4.1平行垂直证明.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 13506,
+          "transcript_sha256": "94c0581735e82edeb9613c4adfa25230e22ca40b1d563b007099c54c0ee2a0bc"
+        },
+        {
+          "course_key": "line_line_angle",
+          "course_number": "3.1.4.3",
+          "title": "向量夹角与直线夹角",
+          "transcript_path": "data/course_transcripts/3.1.4.3 向量夹角与直线夹角.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 13148,
+          "transcript_sha256": "0be63e83adac131e7f4e0cf99d0424f23b1981ee3a446d5b2fa6029733311147"
+        },
+        {
+          "course_key": "distance",
+          "course_number": "3.1.4.7",
+          "title": "距离问题",
+          "transcript_path": "data/course_transcripts/3.1.4.7 距离问题.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 8605,
+          "transcript_sha256": "a476ddac1a574d6a287f789a2fd29600be72a04c67330998e26888dedc96d410"
+        },
+        {
+          "course_key": "line_plane_angle",
+          "course_number": "3.1.4.4",
+          "title": "直线与平面的夹角",
+          "transcript_path": "data/course_transcripts/3.1.4.4 直线与平面的夹角.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 7706,
+          "transcript_sha256": "635245d9a4e1d53dd30ed409b7c8937636bfeae6901f599d72c2b38068138cf8"
+        },
+        {
+          "course_key": "plane_plane_angle",
+          "course_number": "3.1.4.5",
+          "title": "平面与平面的夹角",
+          "transcript_path": "data/course_transcripts/3.1.4.5 平面与平面的夹角.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 11722,
+          "transcript_sha256": "5a01b37ad36ed0c8aed759b8b3f58ca2dbf7beb9c0aa1f9de4ee8b42f9afe23b"
+        },
+        {
+          "course_key": "moving_point",
+          "course_number": "3.1.4.8",
+          "title": "动点问题",
+          "transcript_path": "data/course_transcripts/3.1.4.8 动点问题.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 12078,
+          "transcript_sha256": "da8ca5e664bf4438ef4a559263240bdf12e0494e1f67ab699ea7902293df3976"
+        }
+      ],
+      "teacher_transcripts_ready": true,
+      "progress": {
+        "path": "data/learner_progress/chapter1.json",
+        "chapter_status": "not_started",
+        "human_learning_status": "not_started",
+        "section_status": "not_started",
+        "attempted_items": 0,
+        "passed_items": 0
+      },
+      "hashes": {
+        "chapter_manifest_sha256": "d4f276a026ddfd35d69795ed5c589cdbf8f3f8e98ad3fe73ef814d672a1541c5",
+        "learning_packet_sha256": "a7eca3ef6d38e20c7241243aa768665d403d63d4bc96b28d03cff4ab9b58fb81",
+        "student_learning_items_sha256": "c52de4938607e34db72d03e00062646b2b48bb6d6041ce53a582b132b417d56d",
+        "student_packet_sha256": "e730b075a89a1b59feda6c6d7968533b92935e9b11c2779a2be531c8853daa5f",
+        "progress_sha256": "7f828cb6a067ad124eb17845b57ad2f29aa9e07006938f4140339579dbd79509"
+      },
+      "missing": [],
+      "status": "complete"
+    },
+    {
+      "chapter": 1,
+      "section": "micro专题1",
+      "title": "第4节 微专题1：立体几何综合题",
+      "manifest_path": "chapter1_manifest.json",
+      "packet_manifest_path": "data/packets/micro专题1/manifest.json",
+      "learning_packet_path": "data/packets/micro专题1/learning_packet.json",
+      "student_learning_items_path": "data/packets/micro专题1/student_learning_items.json",
+      "student_packet_path": "data/packets/micro专题1/student_packet.json",
+      "knowledge_points": [],
+      "type_labels": [
+        "类型Ⅰ 线上动点",
+        "类型Ⅱ 向量线性回避坐标",
+        "类型Ⅲ 立体几何综合题",
+        "类型Ⅳ 动态二面角三角方法"
+      ],
+      "learning_cycles": [
+        {
+          "id": "micro-cycle-1",
+          "title": "线上动点"
+        },
+        {
+          "id": "micro-cycle-2",
+          "title": "向量线性回避坐标"
+        },
+        {
+          "id": "micro-cycle-3",
+          "title": "立体几何综合题"
+        },
+        {
+          "id": "micro-cycle-4",
+          "title": "动态二面角三角方法"
+        },
+        {
+          "id": "micro-cycle-5",
+          "title": "动点轨迹与存在性综合"
+        },
+        {
+          "id": "micro-cycle-6",
+          "title": "翻折、补形与综合压轴"
+        }
+      ],
+      "item_counts": {
+        "worked_examples": 7,
+        "direct_variants": 1,
+        "abc_exercises": 8,
+        "total": 16
+      },
+      "student_item_counts": {
+        "worked_examples": 7,
+        "direct_variants": 1,
+        "abc_exercises": 8,
+        "total": 16
+      },
+      "first_item_label": "例1",
+      "last_item_label": "C8",
+      "question_content_complete": true,
+      "courses": [
+        {
+          "course_key": "moving_point",
+          "course_number": "3.1.4.8",
+          "title": "动点问题",
+          "transcript_path": "data/course_transcripts/3.1.4.8 动点问题.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 12078,
+          "transcript_sha256": "da8ca5e664bf4438ef4a559263240bdf12e0494e1f67ab699ea7902293df3976"
+        },
+        {
+          "course_key": "direction_normal",
+          "course_number": "3.1.3.3",
+          "title": "直线的方向向量与平面的法向量",
+          "transcript_path": "data/course_transcripts/3.1.3.3 直线的方向向量与平面的法向量.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 11760,
+          "transcript_sha256": "d0ec9c67e89b5b7506aebe5aaa477553790cbc98b64eed43cb0fb63c8cde276c"
+        },
+        {
+          "course_key": "line_plane_angle",
+          "course_number": "3.1.4.4",
+          "title": "直线与平面的夹角",
+          "transcript_path": "data/course_transcripts/3.1.4.4 直线与平面的夹角.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 7706,
+          "transcript_sha256": "635245d9a4e1d53dd30ed409b7c8937636bfeae6901f599d72c2b38068138cf8"
+        },
+        {
+          "course_key": "distance",
+          "course_number": "3.1.4.7",
+          "title": "距离问题",
+          "transcript_path": "data/course_transcripts/3.1.4.7 距离问题.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 8605,
+          "transcript_sha256": "a476ddac1a574d6a287f789a2fd29600be72a04c67330998e26888dedc96d410"
+        },
+        {
+          "course_key": "parallel_perpendicular",
+          "course_number": "3.1.4.1平行垂直证明",
+          "title": "3.1.4.1平行垂直证明",
+          "transcript_path": "data/course_transcripts/3.1.4.1平行垂直证明.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 13506,
+          "transcript_sha256": "94c0581735e82edeb9613c4adfa25230e22ca40b1d563b007099c54c0ee2a0bc"
+        },
+        {
+          "course_key": "plane_equation_upper",
+          "course_number": "3.1.4.6.a",
+          "title": "平面方程与法向量（上）",
+          "transcript_path": "data/course_transcripts/3.1.4.6.a 平面方程与法向量（上）.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 14031,
+          "transcript_sha256": "54de6ddd1117713ce8a28e33374ad3cb7c868b4c74f36dc99fd65b67727c2f0a"
+        },
+        {
+          "course_key": "line_line_angle",
+          "course_number": "3.1.4.3",
+          "title": "向量夹角与直线夹角",
+          "transcript_path": "data/course_transcripts/3.1.4.3 向量夹角与直线夹角.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 13148,
+          "transcript_sha256": "0be63e83adac131e7f4e0cf99d0424f23b1981ee3a446d5b2fa6029733311147"
+        },
+        {
+          "course_key": "plane_plane_angle",
+          "course_number": "3.1.4.5",
+          "title": "平面与平面的夹角",
+          "transcript_path": "data/course_transcripts/3.1.4.5 平面与平面的夹角.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 11722,
+          "transcript_sha256": "5a01b37ad36ed0c8aed759b8b3f58ca2dbf7beb9c0aa1f9de4ee8b42f9afe23b"
+        }
+      ],
+      "teacher_transcripts_ready": true,
+      "progress": {
+        "path": "data/learner_progress/chapter1.json",
+        "chapter_status": "not_started",
+        "human_learning_status": "not_started",
+        "section_status": "not_started",
+        "attempted_items": 0,
+        "passed_items": 0
+      },
+      "hashes": {
+        "chapter_manifest_sha256": "d4f276a026ddfd35d69795ed5c589cdbf8f3f8e98ad3fe73ef814d672a1541c5",
+        "learning_packet_sha256": "5d403ed590effb0cd3664426621fe81791fdf8262ccf89759e02a8a54d3b05d1",
+        "student_learning_items_sha256": "01055b95ae82483863924320db222bb9cfb11e36ab425fc32941e861e2b9f90a",
+        "student_packet_sha256": "d2933ac7b150f2110103fa633c9ba4881fd30b9c16b1ff81843e014b52e03358",
+        "progress_sha256": "7f828cb6a067ad124eb17845b57ad2f29aa9e07006938f4140339579dbd79509"
+      },
+      "missing": [],
+      "status": "complete"
+    },
+    {
+      "chapter": 2,
+      "section": "2.1",
+      "title": "第1节 直线的倾斜角与斜率",
+      "manifest_path": "chapter2_manifest.json",
+      "packet_manifest_path": "data/packets/2.1/manifest.json",
+      "learning_packet_path": "data/packets/2.1/learning_packet.json",
+      "student_learning_items_path": "data/packets/2.1/student_learning_items.json",
+      "student_packet_path": "data/packets/2.1/student_packet.json",
+      "knowledge_points": [
+        "直线的倾斜角",
+        "直线的斜率",
+        "过两点的直线的斜率公式",
+        "两条直线平行和垂直的判定"
+      ],
+      "type_labels": [
+        "类型I 直线的倾斜角、斜率的相互转化",
+        "类型Ⅱ 由直线与线段相交求斜率的范围",
+        "类型III 判定两条直线平行",
+        "类型IV 判定两条直线垂直",
+        "类型V 用斜率判断几何图形的形状"
+      ],
+      "learning_cycles": [
+        {
+          "id": "2.1-cycle-1",
+          "title": "直线的倾斜角"
+        },
+        {
+          "id": "2.1-cycle-2",
+          "title": "直线的斜率"
+        },
+        {
+          "id": "2.1-cycle-3",
+          "title": "过两点的直线的斜率公式"
+        },
+        {
+          "id": "2.1-cycle-4",
+          "title": "两条直线平行和垂直的判定"
+        },
+        {
+          "id": "2.1-cycle-5",
+          "title": "A组 夯实基础"
+        },
+        {
+          "id": "2.1-cycle-6",
+          "title": "B组 强化能力"
+        },
+        {
+          "id": "2.1-cycle-7",
+          "title": "C组 拓展提升"
+        }
+      ],
+      "item_counts": {
+        "worked_examples": 16,
+        "direct_variants": 7,
+        "abc_exercises": 14,
+        "total": 37
+      },
+      "student_item_counts": {
+        "worked_examples": 16,
+        "direct_variants": 7,
+        "abc_exercises": 14,
+        "total": 37
+      },
+      "first_item_label": "例1",
+      "last_item_label": "C14",
+      "question_content_complete": true,
+      "courses": [
+        {
+          "course_key": "slope_angle_relation",
+          "course_number": "3.2.1.1",
+          "title": "直线倾斜角与斜率的关系",
+          "transcript_path": "data/course_transcripts/3.2.1.1 直线倾斜角与斜率的关系.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 8984,
+          "transcript_sha256": "ccfa982a3349407ffc888e423cd0a45d5615310ebd25c383bb29aa03a5e1a155"
+        },
+        {
+          "course_key": "moving_line_region",
+          "course_number": "3.2.1.2",
+          "title": "动直线与线段区域相交",
+          "transcript_path": "data/course_transcripts/3.2.1.2 动直线与线段区域相交.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 6280,
+          "transcript_sha256": "fcb615a1c069e7b3b3144ba35d674672bd77a878103938196721f2039ea8f521"
+        }
+      ],
+      "teacher_transcripts_ready": true,
+      "progress": {
+        "path": "data/learner_progress/chapter2.json",
+        "chapter_status": "not_started",
+        "human_learning_status": "not_started",
+        "section_status": "not_started",
+        "attempted_items": 0,
+        "passed_items": 0
+      },
+      "hashes": {
+        "chapter_manifest_sha256": "5584c68a130fc8cf40c5bdfa666552378c05cb9fde6d7ea09727badb76c58f08",
+        "learning_packet_sha256": "d205b8d7d05df506a7a6c9b9af83ed9e6010e41b4e7ff7fb8f82ba6f58e6cc60",
+        "student_learning_items_sha256": "47533947498b21a7e38d4560c14f06215f30dcff0f026d4fbd86f0f3dbfd87dc",
+        "student_packet_sha256": "c987dc80d3a514545e77a74e1d8d64cf46d8fea94c2ab9d598d00e12688350cc",
+        "progress_sha256": "4fdaa54d72b7409b8fdd3806310721b84e1496a21418bf1fb0d0438dce82c9a5"
+      },
+      "missing": [],
+      "status": "complete"
+    },
+    {
+      "chapter": 2,
+      "section": "2.2",
+      "title": "第2节 直线的方程",
+      "manifest_path": "chapter2_manifest.json",
+      "packet_manifest_path": "data/packets/2.2/manifest.json",
+      "learning_packet_path": "data/packets/2.2/learning_packet.json",
+      "student_learning_items_path": "data/packets/2.2/student_learning_items.json",
+      "student_packet_path": "data/packets/2.2/student_packet.json",
+      "knowledge_points": [
+        "直线的点斜式方程",
+        "直线的两点式方程",
+        "直线的一般式方程",
+        "利用直线方程判断两直线的位置关系"
+      ],
+      "type_labels": [
+        "类型I 直线的点斜式和斜截式方程",
+        "类型Ⅱ 直线的两点式和截距式方程",
+        "类型III 直线的一般式方程",
+        "类型IV 由直线的平行、垂直求参",
+        "类型V 寻找直线所过的定点"
+      ],
+      "learning_cycles": [
+        {
+          "id": "2.2-cycle-1",
+          "title": "直线的点斜式方程"
+        },
+        {
+          "id": "2.2-cycle-2",
+          "title": "直线的两点式方程"
+        },
+        {
+          "id": "2.2-cycle-3",
+          "title": "直线的一般式方程"
+        },
+        {
+          "id": "2.2-cycle-4",
+          "title": "A组 夯实基础"
+        },
+        {
+          "id": "2.2-cycle-5",
+          "title": "B组 强化能力"
+        },
+        {
+          "id": "2.2-cycle-6",
+          "title": "C组 拓展提升"
+        }
+      ],
+      "item_counts": {
+        "worked_examples": 15,
+        "direct_variants": 8,
+        "abc_exercises": 16,
+        "total": 39
+      },
+      "student_item_counts": {
+        "worked_examples": 15,
+        "direct_variants": 8,
+        "abc_exercises": 16,
+        "total": 39
+      },
+      "first_item_label": "例1",
+      "last_item_label": "C16",
+      "question_content_complete": true,
+      "courses": [
+        {
+          "course_key": "line_five_forms",
+          "course_number": "3.2.2.1",
+          "title": "直线的五种表示形式及其应用",
+          "transcript_path": "data/course_transcripts/3.2.2.1 直线的五种表示形式及其应用.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 9233,
+          "transcript_sha256": "2ef5c5aec4a90cc70571223bf71a57dda04b5b8887ff736173c4a9a7e0501922"
+        },
+        {
+          "course_key": "line_equation_application",
+          "course_number": "3.2.2.2",
+          "title": "直线方程的应用",
+          "transcript_path": "data/course_transcripts/3.2.2.2 直线方程的应用.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 8588,
+          "transcript_sha256": "f83ea2f5ece2e4feaeab2638df73aedb07ec98a5406c3f4d0193a36f607dd068"
+        },
+        {
+          "course_key": "line_parallel_perpendicular",
+          "course_number": "3.2.2.3",
+          "title": "直线间的位置关系：平行与垂直",
+          "transcript_path": "data/course_transcripts/3.2.2.3 直线间的位置关系：平行与垂直.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 5994,
+          "transcript_sha256": "3b46fa4a9dc9ee83b68c439688f5f5025b94815946b4902a0aeff244e1e6848e"
+        }
+      ],
+      "teacher_transcripts_ready": true,
+      "progress": {
+        "path": "data/learner_progress/chapter2.json",
+        "chapter_status": "not_started",
+        "human_learning_status": "not_started",
+        "section_status": "not_started",
+        "attempted_items": 0,
+        "passed_items": 0
+      },
+      "hashes": {
+        "chapter_manifest_sha256": "5584c68a130fc8cf40c5bdfa666552378c05cb9fde6d7ea09727badb76c58f08",
+        "learning_packet_sha256": "8158f3bc590090c50a095b59cc46d96c14ddf8bef9eeeb53b96b5f296ea08cf6",
+        "student_learning_items_sha256": "6c0061275791fcdb09186d0fa547d5924a0ba160ab73951077c507512d181bcd",
+        "student_packet_sha256": "dd897dae1b643c935b4e86ed5244d1faba1ab07f9291661f152c0c551adfc7a4",
+        "progress_sha256": "4fdaa54d72b7409b8fdd3806310721b84e1496a21418bf1fb0d0438dce82c9a5"
+      },
+      "missing": [],
+      "status": "complete"
+    },
+    {
+      "chapter": 2,
+      "section": "2.3",
+      "title": "第3节 直线的交点坐标与距离公式",
+      "manifest_path": "chapter2_manifest.json",
+      "packet_manifest_path": "data/packets/2.3/manifest.json",
+      "learning_packet_path": "data/packets/2.3/learning_packet.json",
+      "student_learning_items_path": "data/packets/2.3/student_learning_items.json",
+      "student_packet_path": "data/packets/2.3/student_packet.json",
+      "knowledge_points": [
+        "两条直线的交点坐标",
+        "平面两点间的距离",
+        "点到直线的距离",
+        "两条平行直线间的距离",
+        "解析法（坐标法）处理平面几何问题的思想"
+      ],
+      "type_labels": [
+        "类型I 直线的交点问题、过两直线交点的直线系方程的应用",
+        "类型Ⅱ 两点间距离公式的应用",
+        "类型III 点到直线距离公式的应用",
+        "类型IV 两条平行线间距离公式的应用",
+        "类型V 综合大题"
+      ],
+      "learning_cycles": [
+        {
+          "id": "2.3-cycle-1",
+          "title": "两条直线的交点坐标"
+        },
+        {
+          "id": "2.3-cycle-2",
+          "title": "平面两点间的距离"
+        },
+        {
+          "id": "2.3-cycle-3",
+          "title": "点到直线的距离"
+        },
+        {
+          "id": "2.3-cycle-4",
+          "title": "两条平行直线间的距离"
+        },
+        {
+          "id": "2.3-cycle-5",
+          "title": "A组 夯实基础"
+        },
+        {
+          "id": "2.3-cycle-6",
+          "title": "B组 强化能力"
+        },
+        {
+          "id": "2.3-cycle-7",
+          "title": "C组 拓展提升"
+        }
+      ],
+      "item_counts": {
+        "worked_examples": 14,
+        "direct_variants": 9,
+        "abc_exercises": 22,
+        "total": 45
+      },
+      "student_item_counts": {
+        "worked_examples": 14,
+        "direct_variants": 9,
+        "abc_exercises": 22,
+        "total": 45
+      },
+      "first_item_label": "例1",
+      "last_item_label": "C组22",
+      "question_content_complete": true,
+      "courses": [
+        {
+          "course_key": "line_five_forms",
+          "course_number": "3.2.2.1",
+          "title": "直线的五种表示形式及其应用",
+          "transcript_path": "data/course_transcripts/3.2.2.1 直线的五种表示形式及其应用.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 9233,
+          "transcript_sha256": "2ef5c5aec4a90cc70571223bf71a57dda04b5b8887ff736173c4a9a7e0501922"
+        },
+        {
+          "course_key": "line_equation_application",
+          "course_number": "3.2.2.2",
+          "title": "直线方程的应用",
+          "transcript_path": "data/course_transcripts/3.2.2.2 直线方程的应用.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 8588,
+          "transcript_sha256": "f83ea2f5ece2e4feaeab2638df73aedb07ec98a5406c3f4d0193a36f607dd068"
+        },
+        {
+          "course_key": "point_line_distance",
+          "course_number": "3.2.3.1",
+          "title": "点到直线以及平行直线距离公式",
+          "transcript_path": "data/course_transcripts/3.2.3.1 点到直线以及平行直线距离公式.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 8662,
+          "transcript_sha256": "f7c3476688d9b1cefeaf7bb1b26a9795cae56340dd11fa481c0ce1d3a04b2b57"
+        },
+        {
+          "course_key": "line_parallel_perpendicular",
+          "course_number": "3.2.2.3",
+          "title": "直线间的位置关系：平行与垂直",
+          "transcript_path": "data/course_transcripts/3.2.2.3 直线间的位置关系：平行与垂直.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 5994,
+          "transcript_sha256": "3b46fa4a9dc9ee83b68c439688f5f5025b94815946b4902a0aeff244e1e6848e"
+        },
+        {
+          "course_key": "line_family_fixed_point",
+          "course_number": "3.2.3.4",
+          "title": "过定点的直线系与曲线系",
+          "transcript_path": "data/course_transcripts/3.2.3.4 过定点的直线系与曲线系.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 11402,
+          "transcript_sha256": "bed2ae00832196b4573532519c10d2989c40101b40f52e778fab98a0d43d5648"
+        },
+        {
+          "course_key": "slope_angle_relation",
+          "course_number": "3.2.1.1",
+          "title": "直线倾斜角与斜率的关系",
+          "transcript_path": "data/course_transcripts/3.2.1.1 直线倾斜角与斜率的关系.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 8984,
+          "transcript_sha256": "ccfa982a3349407ffc888e423cd0a45d5615310ebd25c383bb29aa03a5e1a155"
+        },
+        {
+          "course_key": "circle_determination",
+          "course_number": "3.2.4.2",
+          "title": "圆的确定",
+          "transcript_path": "data/course_transcripts/3.2.4.2 圆的确定.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 6436,
+          "transcript_sha256": "c892b166703fb0c953f01c848c6d8b6adccc4fff836cf44131095e195ed7f9f4"
+        }
+      ],
+      "teacher_transcripts_ready": true,
+      "progress": {
+        "path": "data/learner_progress/chapter2.json",
+        "chapter_status": "not_started",
+        "human_learning_status": "not_started",
+        "section_status": "not_started",
+        "attempted_items": 0,
+        "passed_items": 0
+      },
+      "hashes": {
+        "chapter_manifest_sha256": "5584c68a130fc8cf40c5bdfa666552378c05cb9fde6d7ea09727badb76c58f08",
+        "learning_packet_sha256": "6adc3f0358eed0e55dca74cc25ca4c856537f48e74962a46c7c29f5671e839b9",
+        "student_learning_items_sha256": "4ea0ffc1a8547fbae9db192701b96ac8f3604e5bb83e25d45ce002ef0aac5b05",
+        "student_packet_sha256": "acfb6fc4fe0a81815536e68b24ec6f7dc2cb30b6acdd8ebb058ab4bbeefa653f",
+        "progress_sha256": "4fdaa54d72b7409b8fdd3806310721b84e1496a21418bf1fb0d0438dce82c9a5"
+      },
+      "missing": [],
+      "status": "complete"
+    },
+    {
+      "chapter": 2,
+      "section": "2.4",
+      "title": "第4节 微专题2：直线有关的对称问题",
+      "manifest_path": "chapter2_manifest.json",
+      "packet_manifest_path": "data/packets/2.4/manifest.json",
+      "learning_packet_path": "data/packets/2.4/learning_packet.json",
+      "student_learning_items_path": "data/packets/2.4/student_learning_items.json",
+      "student_packet_path": "data/packets/2.4/student_packet.json",
+      "knowledge_points": [],
+      "type_labels": [
+        "类型I 点关于直线对称",
+        "类型Ⅱ 直线关于点对称",
+        "类型Ⅲ 直线关于直线对称",
+        "类型IV 入射光线与反射光线的对称问题",
+        "类型V 利用对称解决线段的和、差最值问题"
+      ],
+      "learning_cycles": [
+        {
+          "id": "2.4-cycle-1",
+          "title": "类型I 点关于直线对称"
+        },
+        {
+          "id": "2.4-cycle-2",
+          "title": "类型Ⅱ 直线关于点对称"
+        },
+        {
+          "id": "2.4-cycle-3",
+          "title": "类型Ⅲ 直线关于直线对称"
+        },
+        {
+          "id": "2.4-cycle-4",
+          "title": "类型IV 入射光线与反射光线的对称问题"
+        },
+        {
+          "id": "2.4-cycle-5",
+          "title": "类型V 利用对称解决线段的和、差最值问题"
+        },
+        {
+          "id": "2.4-cycle-6",
+          "title": "A组 夯实基础"
+        },
+        {
+          "id": "2.4-cycle-7",
+          "title": "B组 强化能力"
+        },
+        {
+          "id": "2.4-cycle-8",
+          "title": "C组 拓展提升"
+        }
+      ],
+      "item_counts": {
+        "worked_examples": 5,
+        "direct_variants": 8,
+        "abc_exercises": 15,
+        "total": 28
+      },
+      "student_item_counts": {
+        "worked_examples": 5,
+        "direct_variants": 8,
+        "abc_exercises": 15,
+        "total": 28
+      },
+      "first_item_label": "例1",
+      "last_item_label": "C15",
+      "question_content_complete": true,
+      "courses": [
+        {
+          "course_key": "point_line_symmetry_upper",
+          "course_number": "3.2.3.2.a",
+          "title": "点线对称（上）",
+          "transcript_path": "data/course_transcripts/3.2.3.2.a 点线对称（上）.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 9213,
+          "transcript_sha256": "3e69e7cdc025cd54579f86ca4fd75f3d4c0fbbc25e2d5ac5e73b58a9222d9c78"
+        },
+        {
+          "course_key": "point_line_symmetry_lower",
+          "course_number": "3.2.3.2.b",
+          "title": "点线对称（下）",
+          "transcript_path": "data/course_transcripts/3.2.3.2.b 点线对称（下）.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 8646,
+          "transcript_sha256": "089da60a397500e097a38c1379e0139c632adc4c7bb523afb35cb414752d4096"
+        },
+        {
+          "course_key": "line_line_symmetry_upper",
+          "course_number": "3.2.3.3.a",
+          "title": "线线对称（上）",
+          "transcript_path": "data/course_transcripts/3.2.3.3.a 线线对称（上）.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 5822,
+          "transcript_sha256": "49c14b5ce0f923e6f5f0511ac39f02debfeac7dcafcdabfef945e012a694c222"
+        },
+        {
+          "course_key": "line_line_symmetry_lower",
+          "course_number": "3.2.3.3.b",
+          "title": "线线对称（下）",
+          "transcript_path": "data/course_transcripts/3.2.3.3.b 线线对称（下）.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 11927,
+          "transcript_sha256": "78bd06387662dc6b02df1e644515efef5164408e3b788572173f9013d44fbeba"
+        },
+        {
+          "course_key": "line_family_fixed_point",
+          "course_number": "3.2.3.4",
+          "title": "过定点的直线系与曲线系",
+          "transcript_path": "data/course_transcripts/3.2.3.4 过定点的直线系与曲线系.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 11402,
+          "transcript_sha256": "bed2ae00832196b4573532519c10d2989c40101b40f52e778fab98a0d43d5648"
+        }
+      ],
+      "teacher_transcripts_ready": true,
+      "progress": {
+        "path": "data/learner_progress/chapter2.json",
+        "chapter_status": "not_started",
+        "human_learning_status": "not_started",
+        "section_status": "not_started",
+        "attempted_items": 0,
+        "passed_items": 0
+      },
+      "hashes": {
+        "chapter_manifest_sha256": "5584c68a130fc8cf40c5bdfa666552378c05cb9fde6d7ea09727badb76c58f08",
+        "learning_packet_sha256": "125536fb080f102be6929f66510152bf9a5baa1585a528c47be79b1e05812209",
+        "student_learning_items_sha256": "522e6afdda18b23ef952002c4e949e97aab503c5ed43f31e153f1acd0deb3643",
+        "student_packet_sha256": "52e1821997faf893dac66d11b8294513501387f2ddf198f7f46b776083d8e60a",
+        "progress_sha256": "4fdaa54d72b7409b8fdd3806310721b84e1496a21418bf1fb0d0438dce82c9a5"
+      },
+      "missing": [],
+      "status": "complete"
+    },
+    {
+      "chapter": 2,
+      "section": "2.5",
+      "title": "第5节 圆的方程",
+      "manifest_path": "chapter2_manifest.json",
+      "packet_manifest_path": "data/packets/2.5/manifest.json",
+      "learning_packet_path": "data/packets/2.5/learning_packet.json",
+      "student_learning_items_path": "data/packets/2.5/student_learning_items.json",
+      "student_packet_path": "data/packets/2.5/student_packet.json",
+      "knowledge_points": [
+        "圆的标准方程",
+        "圆的一般方程",
+        "点与圆的位置关系"
+      ],
+      "type_labels": [
+        "类型I 二元二次方程表示圆的系数条件",
+        "类型Ⅱ 点与圆的位置关系的判断与求参",
+        "类型Ⅲ 求圆的方程",
+        "类型IV 圆相关的对称问题",
+        "类型V 与圆有关的求轨迹方程问题",
+        "类型VI 定点与圆上动点之间距离的最值问题",
+        "类型Ⅶ 圆过定点问题"
+      ],
+      "learning_cycles": [
+        {
+          "id": "2.5-cycle-1",
+          "title": "圆的标准方程"
+        },
+        {
+          "id": "2.5-cycle-2",
+          "title": "圆的一般方程"
+        },
+        {
+          "id": "2.5-cycle-3",
+          "title": "点与圆的位置关系"
+        },
+        {
+          "id": "2.5-cycle-4",
+          "title": "A组 夯实基础"
+        },
+        {
+          "id": "2.5-cycle-5",
+          "title": "B组 强化能力"
+        },
+        {
+          "id": "2.5-cycle-6",
+          "title": "C组 拓展提升"
+        }
+      ],
+      "item_counts": {
+        "worked_examples": 11,
+        "direct_variants": 12,
+        "abc_exercises": 16,
+        "total": 39
+      },
+      "student_item_counts": {
+        "worked_examples": 11,
+        "direct_variants": 12,
+        "abc_exercises": 16,
+        "total": 39
+      },
+      "first_item_label": "例1",
+      "last_item_label": "C16",
+      "question_content_complete": true,
+      "courses": [
+        {
+          "course_key": "circle_standard_general",
+          "course_number": "3.2.4.1",
+          "title": "圆的标准方程和一般方程",
+          "transcript_path": "data/course_transcripts/3.2.4.1 圆的标准方程和一般方程.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 5505,
+          "transcript_sha256": "7e780a6671a38b037d3a4bbe32088da3c9cae4f83d61ac4405645be56201bb12"
+        },
+        {
+          "course_key": "circle_determination",
+          "course_number": "3.2.4.2",
+          "title": "圆的确定",
+          "transcript_path": "data/course_transcripts/3.2.4.2 圆的确定.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 6436,
+          "transcript_sha256": "c892b166703fb0c953f01c848c6d8b6adccc4fff836cf44131095e195ed7f9f4"
+        },
+        {
+          "course_key": "circle_equiv_algebra",
+          "course_number": "3.2.5.8",
+          "title": "圆的等价模型（代数）",
+          "transcript_path": "data/course_transcripts/3.2.5.8 圆的等价模型（代数）.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 8931,
+          "transcript_sha256": "cd083e520457da1f1e78eb37024886cf33235a6963d198fc1e20a05a44747a27"
+        },
+        {
+          "course_key": "circle_equiv_geometry",
+          "course_number": "3.2.5.9",
+          "title": "圆的等价模型（几何）",
+          "transcript_path": "data/course_transcripts/3.2.5.9 圆的等价模型（几何）.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 10631,
+          "transcript_sha256": "e5f7cdff3878fc9661d05ccef55e7aade019cb5d90bc673a281ec0004acc58a6"
+        }
+      ],
+      "teacher_transcripts_ready": true,
+      "progress": {
+        "path": "data/learner_progress/chapter2.json",
+        "chapter_status": "not_started",
+        "human_learning_status": "not_started",
+        "section_status": "not_started",
+        "attempted_items": 0,
+        "passed_items": 0
+      },
+      "hashes": {
+        "chapter_manifest_sha256": "5584c68a130fc8cf40c5bdfa666552378c05cb9fde6d7ea09727badb76c58f08",
+        "learning_packet_sha256": "3d201c8c837bae004343df19169b67ff19a9b1635bf222664dde455f6cf4b0e0",
+        "student_learning_items_sha256": "b8343aae8444903c6f35f57ab4e688047e692f96153a71bc80606e7b106f5be4",
+        "student_packet_sha256": "b8f133f9037272926e5a2d26a28e44a540e554760a76e052072171797d6e09e9",
+        "progress_sha256": "4fdaa54d72b7409b8fdd3806310721b84e1496a21418bf1fb0d0438dce82c9a5"
+      },
+      "missing": [],
+      "status": "complete"
+    },
+    {
+      "chapter": 2,
+      "section": "2.6",
+      "title": "第6节 直线与圆的位置关系",
+      "manifest_path": "chapter2_manifest.json",
+      "packet_manifest_path": "data/packets/2.6/manifest.json",
+      "learning_packet_path": "data/packets/2.6/learning_packet.json",
+      "student_learning_items_path": "data/packets/2.6/student_learning_items.json",
+      "student_packet_path": "data/packets/2.6/student_packet.json",
+      "knowledge_points": [
+        "直线与圆的位置关系",
+        "直线与圆相切"
+      ],
+      "type_labels": [
+        "类型I 直线与圆的位置关系的判断与应用",
+        "类型Ⅱ 弦长计算",
+        "类型Ⅲ 中点弦问题",
+        "类型IV 切线有关的计算",
+        "类型V 直线与圆有关的最值问题",
+        "类型VI 设而不求的处理思想"
+      ],
+      "learning_cycles": [
+        {
+          "id": "2.6-cycle-1",
+          "title": "直线与圆的位置关系"
+        },
+        {
+          "id": "2.6-cycle-2",
+          "title": "直线与圆相切"
+        },
+        {
+          "id": "2.6-cycle-3",
+          "title": "A组 夯实基础"
+        },
+        {
+          "id": "2.6-cycle-4",
+          "title": "B组 强化能力"
+        },
+        {
+          "id": "2.6-cycle-5",
+          "title": "C组 拓展提升"
+        }
+      ],
+      "item_counts": {
+        "worked_examples": 12,
+        "direct_variants": 19,
+        "abc_exercises": 19,
+        "total": 50
+      },
+      "student_item_counts": {
+        "worked_examples": 12,
+        "direct_variants": 19,
+        "abc_exercises": 19,
+        "total": 50
+      },
+      "first_item_label": "例1",
+      "last_item_label": "C-19",
+      "question_content_complete": true,
+      "courses": [
+        {
+          "course_key": "line_circle_position",
+          "course_number": "3.2.5.1",
+          "title": "直线与圆位置关系的判定与应用",
+          "transcript_path": "data/course_transcripts/3.2.5.1 直线与圆位置关系的判定与应用.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 7971,
+          "transcript_sha256": "dc1f46e76995a43d12eb72823a0bbd9d298adcc37204c2ba9452402bf27ece60"
+        },
+        {
+          "course_key": "tangent",
+          "course_number": "3.2.5.2",
+          "title": "相切与求切线",
+          "transcript_path": "data/course_transcripts/3.2.5.2 相切与求切线.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 9268,
+          "transcript_sha256": "abe9ff932d7cf2b10f4e683a95a0ee96c95e4e2aad8f95751f250ced6bc5b3eb"
+        },
+        {
+          "course_key": "pole_polar_chord",
+          "course_number": "3.2.5.7",
+          "title": "配极与切点弦模型",
+          "transcript_path": "data/course_transcripts/3.2.5.7 配极与切点弦模型.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 10350,
+          "transcript_sha256": "e1f2e50e0dd7d2b5d8c53e2ca4b943c7e84a713008ae760368bd9319f0151fae"
+        },
+        {
+          "course_key": "chord_length",
+          "course_number": "3.2.5.3",
+          "title": "弦长与垂径定理",
+          "transcript_path": "data/course_transcripts/3.2.5.3 弦长与垂径定理.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 6343,
+          "transcript_sha256": "e5e0c0ed5eef1d8f4b8d34fecd6f9f1da16ff5724c754d90ad01d770a4f028f3"
+        },
+        {
+          "course_key": "longest_shortest_chord",
+          "course_number": "3.2.5.4",
+          "title": "最长弦与最短弦",
+          "transcript_path": "data/course_transcripts/3.2.5.4 最长弦与最短弦.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 10207,
+          "transcript_sha256": "52541d6bc0d28c2fd465766cec7afee020f1be907a222adf9750f2593989f936"
+        },
+        {
+          "course_key": "line_circle_extreme",
+          "course_number": "3.2.5.5",
+          "title": "线圆相离的最值模型",
+          "transcript_path": "data/course_transcripts/3.2.5.5 线圆相离的最值模型.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 9548,
+          "transcript_sha256": "a14b5c2d75e47953888e6561d6d368dd222f95c06e30c46ee9afbfa0cd2c473b"
+        }
+      ],
+      "teacher_transcripts_ready": true,
+      "progress": {
+        "path": "data/learner_progress/chapter2.json",
+        "chapter_status": "not_started",
+        "human_learning_status": "not_started",
+        "section_status": "not_started",
+        "attempted_items": 0,
+        "passed_items": 0
+      },
+      "hashes": {
+        "chapter_manifest_sha256": "5584c68a130fc8cf40c5bdfa666552378c05cb9fde6d7ea09727badb76c58f08",
+        "learning_packet_sha256": "47d26e5b95122ffc843b77a1341410ca074e7a0d7ac5f0a04c59f01dea878e00",
+        "student_learning_items_sha256": "cb4602bc779b5d132cd162385b9cb0d6f58459c28eba3c15cdce5a937d8f3c07",
+        "student_packet_sha256": "8bbcec8bfe16d3e52f733321a7bc65d3d126210c9b55b0af23987be0f736649c",
+        "progress_sha256": "4fdaa54d72b7409b8fdd3806310721b84e1496a21418bf1fb0d0438dce82c9a5"
+      },
+      "missing": [],
+      "status": "complete"
+    },
+    {
+      "chapter": 2,
+      "section": "2.7",
+      "title": "第7节 圆与圆的位置关系",
+      "manifest_path": "chapter2_manifest.json",
+      "packet_manifest_path": "data/packets/2.7/manifest.json",
+      "learning_packet_path": "data/packets/2.7/learning_packet.json",
+      "student_learning_items_path": "data/packets/2.7/student_learning_items.json",
+      "student_packet_path": "data/packets/2.7/student_packet.json",
+      "knowledge_points": [
+        "圆与圆的位置关系",
+        "两圆的公共弦",
+        "两圆的公切线"
+      ],
+      "type_labels": [
+        "类型I 圆与圆的位置关系的判断与应用",
+        "类型Ⅱ 两圆的公共弦问题",
+        "类型III 求两圆的公切线方程",
+        "类型IV 基于两圆位置关系的一类最值问题",
+        "类型V 隐圆问题",
+        "类型VI 两类圆系方程的应用"
+      ],
+      "learning_cycles": [
+        {
+          "id": "2.7-cycle-1",
+          "title": "圆与圆的位置关系"
+        },
+        {
+          "id": "2.7-cycle-2",
+          "title": "两圆的公共弦"
+        },
+        {
+          "id": "2.7-cycle-3",
+          "title": "两圆的公切线"
+        },
+        {
+          "id": "2.7-cycle-4",
+          "title": "A组 夯实基础"
+        },
+        {
+          "id": "2.7-cycle-5",
+          "title": "B组 强化能力"
+        },
+        {
+          "id": "2.7-cycle-6",
+          "title": "C组 拓展提升"
+        }
+      ],
+      "item_counts": {
+        "worked_examples": 10,
+        "direct_variants": 10,
+        "abc_exercises": 19,
+        "total": 39
+      },
+      "student_item_counts": {
+        "worked_examples": 10,
+        "direct_variants": 10,
+        "abc_exercises": 19,
+        "total": 39
+      },
+      "first_item_label": "例1",
+      "last_item_label": "C19",
+      "question_content_complete": true,
+      "courses": [
+        {
+          "course_key": "circle_circle_position",
+          "course_number": "3.2.5.6",
+          "title": "圆与圆的五种位置关系判定",
+          "transcript_path": "data/course_transcripts/3.2.5.6 圆与圆的五种位置关系判定.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 6986,
+          "transcript_sha256": "38914e67202e946d5ec5671fc3d7d0e558d7eb9c5ef480689e0c7f204125f785"
+        },
+        {
+          "course_key": "pole_polar_chord",
+          "course_number": "3.2.5.7",
+          "title": "配极与切点弦模型",
+          "transcript_path": "data/course_transcripts/3.2.5.7 配极与切点弦模型.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 10350,
+          "transcript_sha256": "e1f2e50e0dd7d2b5d8c53e2ca4b943c7e84a713008ae760368bd9319f0151fae"
+        },
+        {
+          "course_key": "circle_equiv_algebra",
+          "course_number": "3.2.5.8",
+          "title": "圆的等价模型（代数）",
+          "transcript_path": "data/course_transcripts/3.2.5.8 圆的等价模型（代数）.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 8931,
+          "transcript_sha256": "cd083e520457da1f1e78eb37024886cf33235a6963d198fc1e20a05a44747a27"
+        },
+        {
+          "course_key": "circle_equiv_geometry",
+          "course_number": "3.2.5.9",
+          "title": "圆的等价模型（几何）",
+          "transcript_path": "data/course_transcripts/3.2.5.9 圆的等价模型（几何）.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 10631,
+          "transcript_sha256": "e5f7cdff3878fc9661d05ccef55e7aade019cb5d90bc673a281ec0004acc58a6"
+        },
+        {
+          "course_key": "tangent",
+          "course_number": "3.2.5.2",
+          "title": "相切与求切线",
+          "transcript_path": "data/course_transcripts/3.2.5.2 相切与求切线.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 9268,
+          "transcript_sha256": "abe9ff932d7cf2b10f4e683a95a0ee96c95e4e2aad8f95751f250ced6bc5b3eb"
+        },
+        {
+          "course_key": "line_circle_extreme",
+          "course_number": "3.2.5.5",
+          "title": "线圆相离的最值模型",
+          "transcript_path": "data/course_transcripts/3.2.5.5 线圆相离的最值模型.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 9548,
+          "transcript_sha256": "a14b5c2d75e47953888e6561d6d368dd222f95c06e30c46ee9afbfa0cd2c473b"
+        },
+        {
+          "course_key": "circle_determination",
+          "course_number": "3.2.4.2",
+          "title": "圆的确定",
+          "transcript_path": "data/course_transcripts/3.2.4.2 圆的确定.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 6436,
+          "transcript_sha256": "c892b166703fb0c953f01c848c6d8b6adccc4fff836cf44131095e195ed7f9f4"
+        },
+        {
+          "course_key": "chord_length",
+          "course_number": "3.2.5.3",
+          "title": "弦长与垂径定理",
+          "transcript_path": "data/course_transcripts/3.2.5.3 弦长与垂径定理.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 6343,
+          "transcript_sha256": "e5e0c0ed5eef1d8f4b8d34fecd6f9f1da16ff5724c754d90ad01d770a4f028f3"
+        },
+        {
+          "course_key": "circle_standard_general",
+          "course_number": "3.2.4.1",
+          "title": "圆的标准方程和一般方程",
+          "transcript_path": "data/course_transcripts/3.2.4.1 圆的标准方程和一般方程.json",
+          "transcript_exists": true,
+          "transcript_nonempty": true,
+          "transcript_chars": 5505,
+          "transcript_sha256": "7e780a6671a38b037d3a4bbe32088da3c9cae4f83d61ac4405645be56201bb12"
+        }
+      ],
+      "teacher_transcripts_ready": true,
+      "progress": {
+        "path": "data/learner_progress/chapter2.json",
+        "chapter_status": "not_started",
+        "human_learning_status": "not_started",
+        "section_status": "not_started",
+        "attempted_items": 0,
+        "passed_items": 0
+      },
+      "hashes": {
+        "chapter_manifest_sha256": "5584c68a130fc8cf40c5bdfa666552378c05cb9fde6d7ea09727badb76c58f08",
+        "learning_packet_sha256": "d3f48dfb3805f4b6b785c6a68fa5be2d9e5e7eecd56dda53b9bd6b32f45bbb28",
+        "student_learning_items_sha256": "d2085bb8ff3c107f131f1e9315d14d7c4f46fd28afdd13ead28008e19a899463",
+        "student_packet_sha256": "79231366bf053456b46f6610dfdf6956067188a82135a7ba2ca9b7371e78b146",
+        "progress_sha256": "4fdaa54d72b7409b8fdd3806310721b84e1496a21418bf1fb0d0438dce82c9a5"
+      },
+      "missing": [],
+      "status": "complete"
+    }
+  ],
+  "summary": {
+    "sections": 11,
+    "canonical_items": 401,
+    "complete_sections": 11,
+    "partial_sections": 0,
+    "all_question_content_complete": true,
+    "all_teacher_transcripts_ready": true
+  }
+}
