@@ -38,3 +38,4 @@
 - UI 历史备份保留本机并加入 `.gitignore`，GitHub 只提交当前交付、审计包和实现，避免重复 HTML 备份膨胀仓库。
 - ChatGPT 在 Edge 项目中重新读取提交 `ec04712` 后复核通过：11/11 节、401/401 项、170/170 课程转写和两章 learner progress 均可读取；最终报告写入 `reports/chatgpt_assistance_simulation/chapter12_full_audit.md`。
 - 修正审计器对题图的路径判断：题包里的旧绝对路径映射到仓库 `data/ocr_live_current/first_chapter_69/imgs` 和 `second_chapter_109/imgs` 后，11 节题图引用全部存在；更新审计结果 `all_visual_assets_present=true`，确认题目文字、题图和课程全文均闭合。
+- 全面更新 `ybt-all-chapters-learning-path` Skill：加入上下文审计合同、正确题面/题图/课程转写 source map、ChatGPT/GitHub handoff、浏览器进度快照、静态完整与真实学习分层、课程覆盖缺口和最终验收 flags；Skill quick validation、渲染测试和两章进度校验通过。

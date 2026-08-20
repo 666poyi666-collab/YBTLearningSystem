@@ -1,0 +1,70 @@
+# Context Audit Contract
+
+This reference governs whether the first two chapters can be described as fully readable by a learner assistant or ChatGPT.
+
+## Source map
+
+For each active section:
+
+- Section structure and knowledge labels: `chapter<chapter>_manifest.json`.
+- Teaching examples and direct variants: `data/packets/<section>/student_learning_items.json`.
+- A/B/C exercise question text: `data/packets/<section>/student_packet.json`.
+- Cycle/course assignment: validated section delivery plus manifest learning cycles.
+- Teacher method: every `course_refs` entry mapped through `data/all_chapters_course_catalog.json` to `data/course_transcripts/<video stem>.json`, then read `full_text`.
+- Diagrams: `image_refs[*].ref` basename resolved under `data/ocr_live_current/first_chapter_69/imgs` for chapter 1 and `data/ocr_live_current/second_chapter_109/imgs` for chapter 2.
+- Repository learner ledger: `data/learner_progress/chapter<chapter>.json`.
+- Browser live learner state: HTML `localStorage`, exported only by the page's `复制进度` action.
+
+## Required audit command
+
+```powershell
+python codex-skill\ybt-all-chapters-learning-path\scripts\build_chatgpt_context_audit.py --project-root .
+```
+
+The command writes:
+
+- `data/chatgpt_context/chapter12_complete_audit.json`
+- `data/chatgpt_context/chapter12_complete_audit.md`
+
+For the current active scope, static completeness requires:
+
+```text
+sections = 11
+canonical_items = 401
+complete_sections = 11
+partial_sections = 0
+all_question_content_complete = true
+all_visual_assets_present = true
+all_teacher_transcripts_ready = true
+catalog_courses = 170
+transcript_files = 170
+catalog_transcripts_present = 170
+```
+
+The audit also records SHA-256 values for the manifest, learning packet, student items, student packet, progress file, and every bound transcript. A hash mismatch is `stale`, not `complete`.
+
+## ChatGPT retrieval contract
+
+ChatGPT is allowed to retrieve the repository on demand through the GitHub connection. It does not need the whole repository pasted into one prompt, and a one-shot answer cannot prove that all files were loaded into context.
+
+Before teaching a current item, ChatGPT must:
+
+1. Read the audit JSON and confirm the complete flags.
+2. Read the current no-answer item from the correct student source.
+3. Read the referenced diagram when the item has an image dependency.
+4. Read every bound course transcript `full_text`.
+5. Explain using the teacher transcript's definitions, recognition cues, method order, and terminology.
+6. Use a browser progress snapshot for live user progress; never infer live progress from initialized repository JSON.
+
+If any required path is unreadable, ChatGPT must name the exact path and mark the current explanation `资料不足` or `课程覆盖缺口`. It must not silently use a title, stale summary, answer sidecar, or another persona's attempt.
+
+## Completion vocabulary
+
+- `static_complete`: source files, question text, diagrams, course transcripts, and hashes close.
+- `route_complete`: every item has a source-derived cycle and course route.
+- `human_not_started`: real learner has no attempt evidence yet.
+- `proxy_complete`: primary-user-proxy completed its separate evidence contract.
+- `cold_retest_not_run`: no 24-hour evidence exists.
+
+`human_not_started` is not a source defect. `proxy_complete` is not human completion.
+

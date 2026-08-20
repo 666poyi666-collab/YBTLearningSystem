@@ -82,6 +82,7 @@ Read the artifacts in this order:
 6. Assigned `data/packets/<section>/student_packet.json` and `student_learning_items.json` when present.
 7. Bound course transcripts.
 8. Current Luna/Paddle cross-check records, or capability-blocked Luna plus READY-bound GLM/Paddle fallback records, bound to original image SHAs.
+9. `data/chatgpt_context/chapter12_complete_audit.json` before any ChatGPT handoff or claim that the active chapters are statically complete.
 
 Do not begin a delivery while `READY.json` is absent or its status is not `ready`. Hash every consumed file and write the hashes into `delivery.json`.
 
@@ -90,6 +91,7 @@ Packet status rules:
 - `VERIFIED`: structural packet gate passed for the current hash.
 - `UNVERIFIED`: diagnostic only; do not release the section.
 - Visual sidecars and simulations can still block a structurally verified packet.
+- The context audit is a separate static-completeness gate. It must bind question text, visual assets, transcripts, progress files, and hashes; it does not claim human learning completion.
 
 ## 4. S0-S10 Workflow
 
@@ -104,6 +106,7 @@ Packet status rules:
 - Verify READY, packet-build, course-catalog, packet, transcript, and visual hashes.
 - Reject stale or missing files.
 - Record exact source paths without copying secrets or credentials.
+- Run `build_chatgpt_context_audit.py`. For chapters 1 and 2, require `sections=11`, `canonical_items=401`, complete sections 11, all question content, all visual assets, and all teacher transcripts true.
 
 ### S2 Textbook Reconstruction
 
@@ -123,6 +126,7 @@ Packet status rules:
 ### S4 Course Mapping
 
 - Read transcript text, not only course titles.
+- Read the bound transcript JSON `full_text`; a non-empty transcript is the teacher-method source used in explanations.
 - For each cycle, identify the transcript method actually used.
 - Record required new courses, already-learned prerequisites, and optional methods separately.
 - Do not claim a course covers an item merely because the section references the course.
@@ -179,6 +183,15 @@ For every item, produce:
 - Write `evidence.md` with commands and meaningful results.
 - Return status with `passed`, `failed`, `blocked`, `not_run`, `unknown`, and `stale` kept separate.
 
+### S11 ChatGPT Assistance Handoff
+
+- Connect the approved GitHub repository through `@GitHub`; do not paste or upload the whole repository.
+- Send the project bootstrap prompt from `prompts/math_project_bootstrap.md` once.
+- Before teaching, ChatGPT reads the context audit, the current no-answer item, its image, and every bound course transcript `full_text`.
+- Use the HTML page's current-cycle prompt or `复制进度` snapshot for browser-local progress. Repository progress JSON is the initialized/evidence ledger, not automatic live browser state.
+- Ask for one diagnosis, one minimal hint, and one next action; wait for the learner attempt before adding help.
+- If an exact path cannot be read, report the path and mark the explanation `资料不足` or `课程覆盖缺口`.
+
 ## 5. Course and Textbook Ordering
 
 The active chapter route owns course deduplication. A section task must supply precise course use; it must not decide that a course was chapter-new unless the assignment explicitly provides prior chapter course state.
@@ -203,6 +216,7 @@ For an item with images:
 - Every cross-check record must be current, model-bound, structured, meaningful, conflict-adjudicated, and answer-free.
 - Luna arrays are `objects`, `relations`, `coordinates`, `ranges`, `text`, and `uncertainties`; Paddle evidence preserves text and coordinates.
 - Missing visual-provider proof, missing Paddle source evidence, unresolved material conflict, hash mismatch, answer language, or an unseen image blocks the item. A recorded Luna host rejection does not block the fallback path when exact-SHA GLM/Paddle evidence passes.
+- Legacy absolute image paths in packets must be resolved to the active chapter OCR image root and recorded in the context audit. Do not treat the legacy path string itself as the current file location.
 
 Never use a diagram description to solve the item or identify a correct option. Use it only to restore visible objects, labels, positions, and direct relations.
 
@@ -268,3 +282,4 @@ After all active chapter section routes validate:
 4. The profile starts with only the zero-base assumption. Every profile change cites frozen attempt evidence and increments `profile_version`.
 5. The chapter status lists unfinished required courses and unresolved canonical items. It is `completed` only when both are empty and the progress validator passes.
 6. Real-user and 24-hour states remain independent fields.
+7. Browser-local stars, listened cycles, passed items, and questions are exported through the page progress snapshot; they are not silently written into the chapter proxy ledger.

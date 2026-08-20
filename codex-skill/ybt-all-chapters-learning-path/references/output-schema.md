@@ -230,7 +230,7 @@ For each cycle show:
 
 Do not repeat the seven learner fields for every item in Markdown/HTML. `delivery.json` retains those fields for machine reconciliation. Learner-facing files use this compact hierarchy:
 
-1. Chapter or section status strip: course coverage, simulated course completion, unresolved items, and real-user state.
+1. Chapter or section status strip: required courses, user-facing course/loop/item progress, unresolved items, and current real-user state. Do not expose internal `simulated_completed` or proxy labels as if they were human progress.
 2. Deduplicated course checklist in learning order.
 3. Source-derived textbook map for the section.
 4. One shared method block per truthful knowledge/type/cycle unit: recognition, method, first line, continuation, blocker, correction, and self-check.
@@ -250,6 +250,8 @@ HTML requirements:
 - MathJax-compatible LaTeX with balanced delimiters.
 - Stable task numbering; dynamic content must not shift controls or labels.
 - Prefer a compact chapter ledger, sticky or nearby section navigation, short method blocks, and scannable item checklists over repeated prose panels.
+- The current approved workspace composition is: chapter progress strip, section navigation, dynamic next step, vertical cycle route, vertical course queue, and full-width cycle detail. Do not restore a horizontal cycle-tab wall or report-style metric grid.
+- A learner-facing page may keep browser-local stars, listened cycles, passed items, questions, and a `复制进度` action. It must state that live browser progress is a snapshot, not an automatic repository write.
 
 ## 6. Evidence File
 
