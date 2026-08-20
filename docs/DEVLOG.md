@@ -1,5 +1,19 @@
 # Development Log
 
+## 2026-08-20
+
+- 接入 PoyiProjectPlatform 统一项目声明。
+- 确认数学远程 MCP 必须直接位于主仓库 `cloud/mcp`，不再创建独立 `math-cloud-mcp` 项目。
+- 记录第二章时间轴缺口与 Cloudflare 数据导入的验证要求。
+- 在主仓库新增 `cloud/mcp`：MCP 2026-07-28 无状态 Worker、D1/R2 边界、读写 scopes、13 个学习工具、幂等事件表和静态合同测试。
+- 通过 Cloudflare Dashboard 创建 D1 `math-learning` 和私有 R2 `math-learning-content`，并将 D1 UUID 写回 Worker 配置。
+- 运行原有 Python 全量回归：140 项中 6 项既有证据链失败、1 项因缺少本机 DeepSeek 配置跳过；已登记到 KNOWN-ISSUES，未把 MCP 测试通过冒充主项目全部通过。
+- 新增 `docs/MCP-PLAN-REVIEW.md`，核对绘画 ID 对话方案并给出可直接回传的修正建议。
+- 完成共享 OAuth 的数学 audience、`math:read`/`math:write` scope 与独立资源服务器凭据注册；秘密仅保存于 Cloudflare。
+- 将 D1 `0001_initial.sql` 应用到远端并部署 `math-learning-mcp` 生产版本 `536bc85b-160e-455c-a709-4f56df54b1da`。
+- 远端 `/healthz`、`/readyz` 和 protected-resource 元数据均为 200；无令牌 `/mcp` 返回含 resource metadata 的 401，确认 OAuth 保护生效。
+- 教材、题包、题图和课程转写尚未导入 D1/R2；当前只证明服务、表结构和认证链路就绪，不把空内容库冒充完整学习数据上线。
+
 ## 2026-08-18
 
 - 接管 GitHub 备份并核对 5 章、38 节、1,209 个学习项、170 份课程转写和仓库内 Skill。

@@ -1,0 +1,37 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "math-learning-mcp",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-07-28",
+  "compatibility_flags": ["nodejs_compat"],
+  "account_id": "6465e9d49bcdb88adde245a7f7a74acc",
+  "workers_dev": true,
+  "preview_urls": false,
+  "observability": { "enabled": true },
+  "vars": {
+    "OAUTH_ISSUER": "https://poyi-oauth-as.focuslink-poyi-6465e9.workers.dev",
+    "OAUTH_AUDIENCE": "https://math-learning-mcp.focuslink-poyi-6465e9.workers.dev/mcp",
+    "OAUTH_INTROSPECTION_URL": "https://poyi-oauth-as.focuslink-poyi-6465e9.workers.dev/introspect",
+    "OAUTH_RS_CLIENT_ID": "math-learning-mcp"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "math-learning",
+      "database_id": "914ea846-73c2-4a36-a16d-de91bcc71799",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "CONTENT",
+      "bucket_name": "math-learning-content"
+    }
+  ],
+  "services": [
+    {
+      "binding": "OAUTH_HTTP",
+      "service": "poyi-oauth-as"
+    }
+  ]
+}
