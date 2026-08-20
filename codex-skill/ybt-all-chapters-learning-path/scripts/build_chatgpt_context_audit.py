@@ -47,6 +47,11 @@ def _course_rows(project_root: Path, catalog: dict[str, dict[str, Any]], keys: l
     return rows
 
 
+def _visual_root(project_root: Path, chapter: int) -> Path:
+    folder = "first_chapter_69" if chapter == 1 else "second_chapter_109"
+    return project_root / "data" / "ocr_live_current" / folder / "imgs"
+
+
 def build_audit(project_root: Path) -> dict[str, Any]:
     catalog_document = load_json(project_root / "data" / "all_chapters_course_catalog.json")
     catalog = {str(row["course_key"]): row for row in catalog_document.get("courses", [])}
@@ -101,6 +106,19 @@ def build_audit(project_root: Path) -> dict[str, Any]:
                 *student.get("direct_variants", []),
                 *student_packet.get("questions", []),
             ]
+            visual_root = _visual_root(project_root, chapter)
+            image_refs = [
+                str(ref.get("ref") or "")
+                for row in question_rows
+                for ref in row.get("image_refs", [])
+                if str(ref.get("ref") or "")
+            ]
+            visual_paths = [visual_root / Path(ref).name for ref in image_refs]
+            missing_visuals = [
+                str(path.relative_to(project_root)).replace("\\", "/")
+                for path in visual_paths
+                if not path.is_file()
+            ]
             progress_section = progress_by_section[section_id]
             missing: list[str] = []
             for path in (packet_manifest_path, packet_path, student_path, student_packet_path):
@@ -111,6 +129,7 @@ def build_audit(project_root: Path) -> dict[str, Any]:
             if any(not str(row.get("question_text") or "").strip() for row in question_rows):
                 missing.append("empty_student_question_text")
             missing.extend(row["transcript_path"] for row in courses if not row["transcript_nonempty"])
+            missing.extend(missing_visuals)
 
             sections.append({
                 "chapter": chapter,
@@ -134,6 +153,11 @@ def build_audit(project_root: Path) -> dict[str, Any]:
                 "question_content_complete": len(question_rows) == len(delivery_items) and all(
                     str(row.get("question_text") or "").strip() for row in question_rows
                 ),
+                "visual_assets": {
+                    "referenced": len(image_refs),
+                    "present": len(image_refs) - len(missing_visuals),
+                    "missing": missing_visuals,
+                },
                 "courses": courses,
                 "teacher_transcripts_ready": all(row["transcript_nonempty"] for row in courses),
                 "progress": {
@@ -195,6 +219,7 @@ def build_audit(project_root: Path) -> dict[str, Any]:
             "complete_sections": sum(row["status"] == "complete" for row in sections),
             "partial_sections": sum(row["status"] == "partial" for row in sections),
             "all_question_content_complete": all(row["question_content_complete"] for row in sections),
+            "all_visual_assets_present": all(not row["visual_assets"]["missing"] for row in sections),
             "all_teacher_transcripts_ready": all(row["teacher_transcripts_ready"] for row in sections),
         },
     }
@@ -208,6 +233,7 @@ def render_markdown(audit: dict[str, Any]) -> str:
         f"- 教材项目：{audit['summary']['canonical_items']}",
         f"- 完整节次：{audit['summary']['complete_sections']}",
         f"- 课程目录/转写：{audit['library']['catalog_transcripts_present']}/{audit['library']['catalog_courses']}",
+        f"- 题图文件：{sum(row['visual_assets']['present'] for row in audit['sections'])}/{sum(row['visual_assets']['referenced'] for row in audit['sections'])}",
         "",
         "| 节次 | 知识点 | 循环 | 例题 | 变式 | A/B/C | 总数 | 转写 | 进度 | 状态 |",
         "|---|---:|---:|---:|---:|---:|---:|---|---|---|",
@@ -225,7 +251,7 @@ def render_markdown(audit: dict[str, Any]) -> str:
         "",
         "## 讲题协议",
         "",
-        "ChatGPT 必须先读取当前题目的无答案题面，再读取该题绑定的课程转写正文，并采用网课老师的定义、识别方式、方法顺序和术语辅助用户。浏览器实时进度不在 GitHub 中，必须由网页复制进度快照传入。",
+        "ChatGPT 必须先读取当前题目的无答案题面和对应题图，再读取该题绑定的课程转写正文，并采用网课老师的定义、识别方式、方法顺序和术语辅助用户。浏览器实时进度不在 GitHub 中，必须由网页复制进度快照传入。",
         "",
     ])
     return "\n".join(lines)

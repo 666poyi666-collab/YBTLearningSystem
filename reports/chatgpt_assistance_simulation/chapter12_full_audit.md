@@ -7,6 +7,7 @@
 - 题面内容：`all_question_content_complete=true`
 - 课程转写：`all_teacher_transcripts_ready=true`
 - 课程目录与转写：170/170
+- 题图文件：题包引用的题图全部能映射到仓库 OCR 图片目录
 - 第一章：15 门课程、124 项、`not_started`
 - 第二章：22 门课程、277 项、`not_started`
 
@@ -26,4 +27,3 @@ ChatGPT 通过 `@GitHub` 重新读取提交 `ec04712` 后确认：
 ## 结论
 
 第一、二章的静态教材、题面、循环、课程映射和课程转写已经完整可读取。真实用户和持续学习者的学习状态仍是未开始，这是进度状态，不是资料缺失。
-

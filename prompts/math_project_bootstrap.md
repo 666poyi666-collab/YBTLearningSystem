@@ -32,6 +32,6 @@
 
 ## 完整资料审计
 
-开始整章工作前，先读取 `data/chatgpt_context/chapter12_complete_audit.json`。只有当 `summary.complete_sections=11`、`summary.all_question_content_complete=true` 且 `summary.all_teacher_transcripts_ready=true` 时，才可以说第一、二章资料闭合。该审计文件是本地构建的哈希绑定索引，不替代当前题面的逐题读取。
+开始整章工作前，先读取 `data/chatgpt_context/chapter12_complete_audit.json`。只有当 `summary.complete_sections=11`、`summary.all_question_content_complete=true`、`summary.all_visual_assets_present=true` 且 `summary.all_teacher_transcripts_ready=true` 时，才可以说第一、二章资料闭合。该审计文件是本地构建的哈希绑定索引，不替代当前题面的逐题读取。
 
-讲题时必须读取当前题目的无答案题面和绑定课程转写 `full_text`。解释应采用转写中网课老师的定义、术语、识别动作和方法顺序，而不是泛泛使用另一套教法。
+讲题时必须读取当前题目的无答案题面、对应题图和绑定课程转写 `full_text`。解释应采用转写中网课老师的定义、术语、识别动作和方法顺序，而不是泛泛使用另一套教法。
