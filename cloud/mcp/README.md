@@ -23,6 +23,6 @@
 
 当前内容快照为 `v1-946594dec80d0b04`：第一、二章共 11 节、401 个教材项目、37 门必修课程、1,365 条项目-课程映射和 2,038 个转写查询片段；R2 另保存 11 个节次题包、1 个课程转写包和 1 个题图包（72 张引用题图）。导入计划由 `scripts/import_content.mjs` 生成，默认 dry-run，可用 `npm run import:dry` 重建；远程导入使用 `npm run import:remote`。
 
-学习者安全的读取工具包括：`math_get_section_overview`（完整节次大纲与项目索引）、`math_get_item_content`（完整题面与题图，不返回答案侧车）和 `math_get_course_transcript`（完整老师文稿及可靠时间轴）。第二章课程没有可验证的逐句时间轴时，返回 `timelineAvailable=false` 和空时间轴，不作估算。当前生产 Worker 为 `https://math-learning-mcp.focuslink-poyi-6465e9.workers.dev`，部署版本 `ea0e7282-57a4-4013-a5a5-b39e99a6b9a4`。
+学习者安全的读取工具包括：`math_get_section_overview`（完整节次大纲与项目索引）、`math_get_item_content`（完整题面与题图，不返回答案侧车）和 `math_get_course_transcript`（完整老师文稿及可靠时间轴）。第二章课程没有可验证的逐句时间轴时，返回 `timelineAvailable=false` 和空时间轴，不作估算。当前生产 Worker 为 `https://math-learning-mcp.focuslink-poyi-6465e9.workers.dev`，部署版本 `98671c0a-75c3-4ff9-95e9-280730567d3b`。
 
 ChatGPT 网页端已创建“数学一本通学习”开发模式 App，并成功发现 OAuth 端点；当前停在 OAuth 服务的一次性验证码登录页，尚未完成授权，因此还不能把 App 登记冒充为已实际调用 MCP 工具。
