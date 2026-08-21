@@ -4,6 +4,7 @@
 
 - 补齐云端内容读取闭环：新增 `math_get_section_overview`、`math_get_item_content` 和 `math_get_course_transcript`，分别读取完整节次大纲、无答案侧车的题面/题图和老师全文；MCP image blocks 返回题图，第二章无可靠时间轴时显式返回 `timelineAvailable=false`。
 - 新增 `cloud/mcp/scripts/import_content.mjs` 与 `npm run import:dry/import:remote`，将第一、二章构建为版本化 R2 题包、转写包和题图包，并生成可重复 D1 索引导入 SQL；导入版本 `v1-946594dec80d0b04`。
+- 同步项目初始化提示词和循环求助提示词：MCP 可用时先读完整节次、题面/题图、老师全文和真实进度；GitHub 保留为静态回退；写回工具必须等待用户明确确认。
 - 远端内容验收：D1 为 2 章、11 节、401 个项目、37 门课程、1,365 条项目-课程映射、2,038 个转写片段和 14 个初始学习状态；R2 为 11 个节次包、1 个转写包和 1 个题图包（72 张题图）。
 - 重新部署 `math-learning-mcp` Worker 版本 `98671c0a-75c3-4ff9-95e9-280730567d3b`；`/healthz`、`/readyz` 返回 200，无令牌 `/mcp` 返回 401，并将 D1 内容版本源码指针更新到提交 `6f991fa2c08cbce70fb0b5b5ff14f7a7ffe3353d`。未把这些边界检查冒充 ChatGPT 已经使用真实令牌调用工具。
 - 云端 MCP TypeScript/合同测试为 5/5；原有 Python 回归仍为 140 项中的 6 项失败、2 项错误和 1 项跳过，均落在既有 OCR、历史视觉证据、模拟 source hash 与奖励链路径，本轮未扩大其范围。

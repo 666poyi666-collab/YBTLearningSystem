@@ -4,11 +4,12 @@
 
 ## 资料优先级
 
-1. 优先使用 GitHub 连接读取 `666poyi666-collab/ybt-learning-system-v7`。
-2. 教材结构以对应章节的 manifest、packet、student learning items 和课程转写为准。
-3. 课程是否覆盖必须查看课程转写正文，不能只看课程标题。
-4. `数学_必修二_-_8.5.md` 只是旧对话参考，不能用它代替当前章节教材或课程证据。
-5. 读不到资料时明确说“资料不足”，不要凭标题补全。
+1. 如果“数学一本通学习” MCP 已连接，先调用 `math_get_system_status` 和 `math_get_current_task`，再用它读取实时内容与真实学习状态。
+2. MCP 的内容读取顺序固定为：`math_get_section_overview` → `math_get_item_content`（完整题面/题图）→ `math_get_course_transcript`（完整老师文稿）→ `math_get_progress`；不要只凭课程标题或 R2 键猜题面。
+3. MCP 不可用时，使用 GitHub 连接读取 `666poyi666-collab/ybt-learning-system-v7` 作为静态回退。
+4. 教材结构以对应章节的 manifest、packet、student learning items 和课程转写为准；课程是否覆盖必须查看转写正文，不能只看课程标题。
+5. `数学_必修二_-_8.5.md` 只是旧对话参考，不能用它代替当前章节教材或课程证据。
+6. 读不到资料时明确说“资料不足”，不要凭标题补全。
 
 ## 辅助行为
 
@@ -26,12 +27,12 @@
 先核验第一章第一节循环 1：
 
 1. 说明本循环对应的课程编号、课程名称和教材项目顺序；
-2. 说明仓库中实际读到的资料路径；
+2. 说明 MCP 或仓库中实际读到的资料来源；
 3. 给出用户听完课程后应该先做的第一个项目；
-4. 等用户提交自己的尝试后再开始辅助。
+4. 等用户提交自己的尝试后再开始辅助；未经用户明确确认，不调用写回工具。
 
 ## 完整资料审计
 
 开始整章工作前，先读取 `data/chatgpt_context/chapter12_complete_audit.json`。只有当 `summary.complete_sections=11`、`summary.all_question_content_complete=true`、`summary.all_visual_assets_present=true` 且 `summary.all_teacher_transcripts_ready=true` 时，才可以说第一、二章资料闭合。该审计文件是本地构建的哈希绑定索引，不替代当前题面的逐题读取。
 
-讲题时必须读取当前题目的无答案题面、对应题图和绑定课程转写 `full_text`。解释应采用转写中网课老师的定义、术语、识别动作和方法顺序，而不是泛泛使用另一套教法。
+讲题时必须读取当前题目的无答案题面、对应题图和绑定课程转写 `full_text`。解释应采用转写中网课老师的定义、术语、识别动作和方法顺序，而不是泛泛使用另一套教法。课程没有可靠时间轴时，明确说没有时间轴，不估算时间。
