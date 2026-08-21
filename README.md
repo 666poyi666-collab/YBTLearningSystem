@@ -4,7 +4,7 @@
 
 当前产品合同见 `docs/PRODUCT-REQUIREMENTS.md`，工程规则见 `docs/PROJECT-STANDARDS.md`。
 
-云端 MCP 已部署在 `https://math-learning-mcp.focuslink-poyi-6465e9.workers.dev`，并导入第一、二章的版本化内容快照 `v1-946594dec80d0b04`。它可以在 OAuth 连接完成后按权限读取完整节次、题面/题图、老师文稿和真实学习进度；第二章没有可靠时间轴的课程会明确返回无时间轴状态。
+云端 MCP 已部署在 `https://math-learning-mcp.focuslink-poyi-6465e9.workers.dev`，并导入第一、二章的版本化内容快照 `v1-946594dec80d0b04`。ChatGPT OAuth 已完成真实只读调用验收，能够按权限读取完整节次、题面/题图、老师文稿和真实学习进度；第二章没有可靠时间轴的课程会明确返回无时间轴状态。
 
 ## 运行
 

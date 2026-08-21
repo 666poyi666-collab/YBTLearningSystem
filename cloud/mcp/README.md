@@ -25,4 +25,4 @@
 
 学习者安全的读取工具包括：`math_get_section_overview`（完整节次大纲与项目索引）、`math_get_item_content`（完整题面与题图，不返回答案侧车）和 `math_get_course_transcript`（完整老师文稿及可靠时间轴）。第二章课程没有可验证的逐句时间轴时，返回 `timelineAvailable=false` 和空时间轴，不作估算。当前生产 Worker 为 `https://math-learning-mcp.focuslink-poyi-6465e9.workers.dev`，部署版本 `98671c0a-75c3-4ff9-95e9-280730567d3b`。
 
-ChatGPT 网页端已创建“数学一本通学习”开发模式 App，并成功发现 OAuth 端点；当前停在 OAuth 服务的一次性验证码登录页，尚未完成授权，因此还不能把 App 登记冒充为已实际调用 MCP 工具。
+ChatGPT 网页端“数学一本通学习”开发模式 App 已完成 OAuth 授权，并在项目“数学选择性必修一”中完成真实只读调用验收：ChatGPT 读取了系统状态、第一章第一节概览、第一道题题面和第一门课程全文；系统返回 2 章、11 节、401 个项目、37 门课程、2,038 个转写片段，学习事件仍为 0。本次验收未写入学习进度。
