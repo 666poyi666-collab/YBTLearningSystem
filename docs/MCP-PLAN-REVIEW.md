@@ -22,4 +22,4 @@
 
 ## 可直接发给原任务的建议
 
-> 方案方向保留，但请停止创建独立 MCP 仓库。数学 MCP 已改为主仓库 `cloud/mcp`，使用 MCP 2026-07-28 无状态架构；Cloudflare Worker、D1、R2 已创建。下一步先恢复并版本化共享 OAuth AS，增加 `math:read/write`，再执行 D1 迁移、资料导入、正式部署和 ChatGPT 连接。第二章没有原音视频时继续返回“无可靠时间轴”，不能估算伪造。ChatGPT Plus 当前账户已经能连接自定义 OAuth MCP，因此不再把 Business/Enterprise 当成上线前提。
+> 方案方向保留，但请停止创建独立 MCP 仓库。数学 MCP 已改为主仓库 `cloud/mcp`，使用 MCP 2026-07-28 无状态架构；Cloudflare Worker、D1、R2 和 OAuth 已完成独立验收。第一、二章内容已按 `v1-946594dec80d0b04` 导入 D1/R2，生产 Worker 版本为 `ea0e7282-57a4-4013-a5a5-b39e99a6b9a4`。下一步只剩 ChatGPT 自定义 OAuth App 的网页端连接和带真实令牌的工具调用验收；第二章没有原音视频时继续返回“无可靠时间轴”，不能估算伪造。ChatGPT Plus 当前账户已经能连接自定义 OAuth MCP，因此不再把 Business/Enterprise 当成上线前提。

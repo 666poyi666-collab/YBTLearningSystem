@@ -44,6 +44,6 @@ GitHub 负责读取仓库事实：教材题包、题图、课程转写、课程�
 
 ## GitHub 与 MCP 的边界
 
-当前不需要 MCP。GitHub App + 项目提示词 + 网页复制上下文已经足够完成第一、二章的辅助闭环。
+GitHub App + 项目提示词仍是静态仓库事实的回退路径；数学远程 MCP 已部署并保存第一、二章的版本化题包、题图、课程全文和学习状态索引。连接完成后，ChatGPT 应优先使用 MCP 获取实时内容和进度，GitHub 用于核对源文件、审计包和提示词。
 
-只有在需要 ChatGPT 自动读取和写回学习进度、记录错因、更新画像时，才引入后端 API 或远程 MCP。MCP 不是资料上传工具，也不能替代项目提示词和学习状态模型。
+MCP 不是资料上传工具，也不能替代项目提示词和学习状态模型。ChatGPT 网页端已经创建了 `https://math-learning-mcp.focuslink-poyi-6465e9.workers.dev/mcp` 的 OAuth 自定义 App；完成一次性验证码授权后，先调用 `math_get_system_status`，再按“节次概览 → 完整题面/题图 → 完整老师文稿 → 当前进度”的顺序读取，写回工具只在用户明确确认后使用。尚未完成 OAuth 授权和真实工具调用时，不得把 Worker 在线描述为 ChatGPT 已经接入。

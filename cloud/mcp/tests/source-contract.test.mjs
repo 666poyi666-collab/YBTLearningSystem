@@ -5,11 +5,12 @@ import test from 'node:test'
 import { fileURLToPath } from 'node:url'
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
-const [source, packageText, schema, config] = await Promise.all([
+const [source, packageText, schema, config, importer] = await Promise.all([
   readFile(resolve(root, 'src/index.ts'), 'utf8'),
   readFile(resolve(root, 'package.json'), 'utf8'),
   readFile(resolve(root, 'migrations/0001_initial.sql'), 'utf8'),
   readFile(resolve(root, 'wrangler.jsonc'), 'utf8'),
+  readFile(resolve(root, 'scripts/import_content.mjs'), 'utf8'),
 ])
 const packageJson = JSON.parse(packageText)
 
@@ -33,4 +34,21 @@ test('keeps content, state and authentication boundaries explicit', () => {
   assert.match(config, /"binding": "DB"/)
   assert.match(config, /"OAUTH_RS_CLIENT_ID": "math-learning-mcp"/)
   assert.doesNotMatch(config, /OAUTH_RS_CLIENT_SECRET|Bearer\s+[A-Za-z0-9]/)
+})
+
+test('exposes complete learner-safe content reads', () => {
+  assert.match(source, /math_get_section_overview/)
+  assert.match(source, /math_get_item_content/)
+  assert.match(source, /math_get_course_transcript/)
+  assert.match(source, /image_pack_key/)
+  assert.match(source, /timelineAvailable/)
+})
+
+test('content importer is versioned, idempotent and limited to chapters 1/2', () => {
+  assert.match(importer, /chapter12_complete_audit\.json/)
+  assert.match(importer, /source_versions/)
+  assert.match(importer, /INSERT OR IGNORE INTO learner_state/)
+  assert.match(importer, /v1-\$\{manifestSha\.slice\(0, 16\)\}/)
+  assert.match(importer, /for \(const chapter of \[1, 2\]\)/)
+  assert.doesNotMatch(importer, /answer_sidecar/)
 })

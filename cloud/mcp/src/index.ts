@@ -26,15 +26,16 @@ interface Env {
 
 type Scope = 'math:read' | 'math:write'
 type JsonRecord = Record<string, unknown>
+type ImageContent = { type: 'image'; data: string; mimeType: string }
 
 const READ_SCOPE: Scope = 'math:read'
 const WRITE_SCOPE: Scope = 'math:write'
 const PROJECT = { name: 'poyi-math-learning', version: '0.1.0' }
 const USER_ID = 'poyi-owner'
 
-function result(payload: unknown) {
+function result(payload: unknown, extraContent: ImageContent[] = []) {
   return {
-    content: [{ type: 'text' as const, text: JSON.stringify(payload, null, 2) }],
+    content: [{ type: 'text' as const, text: JSON.stringify(payload, null, 2) }, ...extraContent],
     structuredContent: payload as JsonRecord,
   }
 }
@@ -142,6 +143,47 @@ function parseJson(value: string | null): unknown {
   try { return JSON.parse(value) } catch { return null }
 }
 
+async function readContentJson(env: Env, key: string): Promise<JsonRecord | null> {
+  const object = await env.CONTENT.get(key)
+  if (!object) return null
+  try {
+    const value: unknown = JSON.parse(await object.text())
+    return value && typeof value === 'object' && !Array.isArray(value) ? value as JsonRecord : null
+  } catch {
+    return null
+  }
+}
+
+function recordArray(value: unknown): JsonRecord[] {
+  return Array.isArray(value) ? value.filter((item): item is JsonRecord => Boolean(item && typeof item === 'object' && !Array.isArray(item))) : []
+}
+
+async function itemFromContent(env: Env, row: JsonRecord): Promise<{ item: JsonRecord; pack: JsonRecord } | null> {
+  const key = typeof row.content_r2_key === 'string' ? row.content_r2_key : ''
+  if (!key) return null
+  const pack = await readContentJson(env, key)
+  if (!pack) return null
+  const itemId = String(row.item_id ?? '')
+  const item = recordArray(pack.items).find((candidate) => String(candidate.item_id ?? '') === itemId)
+  return item ? { item, pack } : null
+}
+
+async function itemImageContent(env: Env, pack: JsonRecord, item: JsonRecord): Promise<ImageContent[]> {
+  const imagePackKey = typeof pack.image_pack_key === 'string' ? pack.image_pack_key : ''
+  if (!imagePackKey) return []
+  const imagePack = await readContentJson(env, imagePackKey)
+  if (!imagePack || !imagePack.images || typeof imagePack.images !== 'object') return []
+  const images = imagePack.images as JsonRecord
+  const resultBlocks: ImageContent[] = []
+  for (const ref of recordArray(item.image_refs)) {
+    const key = typeof ref.key === 'string' ? ref.key : ''
+    const asset = key && images[key] && typeof images[key] === 'object' ? images[key] as JsonRecord : null
+    if (!asset || typeof asset.data !== 'string' || typeof asset.mimeType !== 'string') continue
+    resultBlocks.push({ type: 'image', data: asset.data, mimeType: asset.mimeType })
+  }
+  return resultBlocks
+}
+
 async function systemStatus(env: Env) {
   const row = await env.DB.prepare(`
     SELECT
@@ -225,19 +267,54 @@ async function recordLearningEvent(
     stored.event_type !== eventType || stored.subject_type !== subjectType
     || stored.subject_id !== subjectId || stored.payload_json !== payloadJson
   ) throw new Error('idempotency_conflict')
+  const replayed = stored.event_id !== eventId
+  if (!replayed && eventType !== 'progress_snapshot_synced') {
+    await projectEventState(env, eventType, subjectType, subjectId, payload, baseVersion, createdAt)
+  }
   return {
     ok: true,
     eventId: stored.event_id,
     requestId,
-    replayed: stored.event_id !== eventId,
+    replayed,
     createdAt: stored.created_at,
   }
+}
+
+async function projectEventState(
+  env: Env,
+  eventType: string,
+  subjectType: string,
+  subjectId: string,
+  payload: JsonRecord,
+  baseVersion: number | undefined,
+  updatedAt: string,
+) {
+  const stateKey = `${subjectType}:${subjectId}`
+  const existing = await env.DB.prepare(`SELECT version FROM learner_state WHERE user_id = ? AND state_key = ?`)
+    .bind(USER_ID, stateKey).first<{ version: number | string }>()
+  const currentVersion = Number(existing?.version ?? 0)
+  if (baseVersion !== undefined && currentVersion !== baseVersion) throw new Error('version_conflict')
+  const value = {
+    ...payload,
+    status: eventType,
+    subjectType,
+    subjectId,
+    source: 'cloud_mcp_event_projection',
+  }
+  await env.DB.prepare(`
+    INSERT INTO learner_state (user_id, state_key, version, value_json, updated_at)
+    VALUES (?, ?, ?, ?, ?)
+    ON CONFLICT(user_id, state_key) DO UPDATE SET
+      version = excluded.version,
+      value_json = excluded.value_json,
+      updated_at = excluded.updated_at
+  `).bind(USER_ID, stateKey, currentVersion + 1, JSON.stringify(value), updatedAt).run()
 }
 
 function createServer(env: Env, scopes: readonly string[]): McpServer {
   const server = new McpServer(PROJECT, {
     instructions:
-      '这是一本通数学学习系统。讲题前先读取当前题目、对应网课方法和真实学习进度；课程覆盖、用户已学、题目已通过和冷复测是不同状态。不要输出未请求的答案，不要把内部模拟进度当成真实用户进度。',
+      '这是一本通数学学习系统。讲题前先调用 math_get_section_overview 定位节次，再调用 math_get_item_content 获取完整题面和题图、math_get_course_transcript 获取完整老师文稿，最后读取真实学习进度；课程覆盖、用户已学、题目已通过和冷复测是不同状态。不要只凭标题或 R2 键猜题目，不要输出未请求的答案，不要把内部模拟进度当成真实用户进度。',
   })
   const readAllowed = () => scopes.includes(READ_SCOPE)
   const writeAllowed = () => scopes.includes(WRITE_SCOPE)
@@ -255,6 +332,88 @@ function createServer(env: Env, scopes: readonly string[]): McpServer {
     const row = await env.DB.prepare(`SELECT version, value_json, updated_at FROM learner_state WHERE user_id = ? AND state_key = 'current_task'`)
       .bind(USER_ID).first<Record<string, string | number>>()
     return result({ currentTask: row ? { version: Number(row.version), value: parseJson(String(row.value_json)), updatedAt: row.updated_at } : null })
+  })
+
+  server.registerTool('math_get_section_overview', {
+    description: '读取某一节的完整学习大纲：知识点、类型题、循环顺序、课程编号、桥接项和教材项目索引；不返回答案侧车。',
+    inputSchema: { sectionKey: z.string().min(1).max(80) },
+  }, async ({ sectionKey }) => {
+    if (!readAllowed()) return failure('insufficient_scope', READ_SCOPE)
+    const section = await env.DB.prepare(`
+      SELECT s.section_key, s.chapter_key, s.title, s.manifest_r2_key,
+             c.title AS chapter_title
+      FROM sections s JOIN chapters c ON c.chapter_key = s.chapter_key
+      WHERE s.section_key = ?
+    `).bind(sectionKey).first<JsonRecord>()
+    if (!section) return failure('not_found', '未找到节次', { sectionKey })
+    const pack = await readContentJson(env, String(section.manifest_r2_key))
+    if (!pack) return failure('content_unavailable', '节次内容包不可读', { sectionKey })
+    const itemRows = await env.DB.prepare(`
+      SELECT item_id, label, item_type, concept_key, sort_order
+      FROM items WHERE section_key = ? ORDER BY sort_order
+    `).bind(sectionKey).all<JsonRecord>()
+    const manifest = pack.manifest && typeof pack.manifest === 'object' ? pack.manifest as JsonRecord : {}
+    return result({
+      ok: true,
+      section,
+      manifest,
+      items: itemRows.results,
+      packetManifest: pack.packet_manifest ?? null,
+    })
+  })
+
+  server.registerTool('math_get_item_content', {
+    description: '读取某一道教材项目的完整学生题面和题图。答案侧车永远不在返回内容中；题图以 MCP image blocks 返回。',
+    inputSchema: { itemId: z.string().min(1).max(200) },
+  }, async ({ itemId }) => {
+    if (!readAllowed()) return failure('insufficient_scope', READ_SCOPE)
+    const row = await env.DB.prepare(`
+      SELECT i.item_id, i.section_key, i.label, i.item_type, i.concept_key,
+             i.content_r2_key, i.source_sha256, s.title AS section_title,
+             c.chapter_key, c.title AS chapter_title
+      FROM items i
+      JOIN sections s ON s.section_key = i.section_key
+      JOIN chapters c ON c.chapter_key = s.chapter_key
+      WHERE i.item_id = ?
+    `).bind(itemId).first<JsonRecord>()
+    if (!row) return failure('not_found', '未找到教材项目', { itemId })
+    const content = await itemFromContent(env, row)
+    if (!content) return failure('content_unavailable', '教材项目内容包不可读', { itemId })
+    const images = await itemImageContent(env, content.pack, content.item)
+    return result({ ok: true, index: row, item: content.item, imageCount: images.length }, images)
+  })
+
+  server.registerTool('math_get_course_transcript', {
+    description: '读取某门网课的完整老师文稿；若有可靠句段时间轴则可一并返回，否则明确标记 timelineAvailable=false。',
+    inputSchema: {
+      courseKey: z.string().min(1).max(200),
+      includeTimeline: z.boolean().default(true),
+    },
+  }, async ({ courseKey, includeTimeline }) => {
+    if (!readAllowed()) return failure('insufficient_scope', READ_SCOPE)
+    const row = await env.DB.prepare(`
+      SELECT course_key, title, transcript_r2_key, transcript_sha256, duration_ms, has_timeline
+      FROM courses WHERE course_key = ?
+    `).bind(courseKey).first<JsonRecord>()
+    if (!row) return failure('not_found', '未找到课程', { courseKey })
+    const pack = await readContentJson(env, String(row.transcript_r2_key))
+    const courses = pack?.courses && typeof pack.courses === 'object' ? pack.courses as JsonRecord : null
+    const transcript = courses?.[courseKey] && typeof courses[courseKey] === 'object' ? courses[courseKey] as JsonRecord : null
+    if (!transcript) return failure('content_unavailable', '课程文稿内容包不可读', { courseKey })
+    const payload: JsonRecord = {
+      ok: true,
+      course: row,
+      transcript: {
+        courseKey,
+        fullText: transcript.fullText ?? '',
+        timelineAvailable: Number(row.has_timeline) === 1,
+        sentences: includeTimeline && Number(row.has_timeline) === 1 ? transcript.sentences ?? [] : [],
+        durationMs: transcript.durationMs ?? row.duration_ms ?? null,
+        sourceSha256: transcript.sourceSha256 ?? row.transcript_sha256 ?? null,
+        provenance: transcript.provenance ?? null,
+      },
+    }
+    return result(payload)
   })
 
   server.registerTool('math_get_learning_context', {
