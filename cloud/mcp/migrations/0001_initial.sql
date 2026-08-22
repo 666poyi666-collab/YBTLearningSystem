@@ -93,3 +93,12 @@ CREATE TABLE IF NOT EXISTS questions (
   created_at TEXT NOT NULL,
   resolved_at TEXT
 );
+
+CREATE TABLE IF NOT EXISTS answer_sources (
+  item_id TEXT NOT NULL REFERENCES items(item_id),
+  source_kind TEXT NOT NULL,
+  source_version_id TEXT NOT NULL REFERENCES source_versions(id),
+  answer_text TEXT NOT NULL,
+  source_sha256 TEXT NOT NULL,
+  PRIMARY KEY(item_id, source_kind, source_version_id)
+);

@@ -2,6 +2,8 @@
 
 ## 2026-08-22
 
+- 将 Cloudflare MCP 内容导入范围从第一、二章扩展到选择性必修 1 第一至第三章：dry-run 结果为 3 章、24 节、747 个项目、81 门课程、7,840 个转写分片、82 张题图；学习路径仍只推进第一、二章。
+- 新增 `math_get_answer_sources` 和 `answer_sources` 表，导入已有原书答案侧车并要求 ChatGPT 将 `original_answer_book` 与独立 `model_solution` 分栏，明确推荐方案和理由；没有模型解法优势时不伪造第二种答案。
 - 登记用户新提供的 `高二数学精讲精练（上）.pdf`（278 页）和 `高二数学精讲精练（下）.pdf`（284 页）及 SHA-256。两份文件均为扫描型 PDF、当前没有文字层；先登记为本地受控资料源，尚未上传 GitHub/R2，也未假称 ChatGPT MCP 已能直接检索讲义页。
 - 修复第一、二章学习进度账本的 `requirements_sha256` 过期绑定；两章进度校验器恢复通过，状态仍诚实保持 `not_started`。
 - 修复 learner-facing HTML 的“复制给 ChatGPT”提示词：现在按 MCP 优先顺序读取系统状态、节次概览、无答案题面/题图、教师全文和当前进度；MCP 不可用时才回退到 `@GitHub`，并保留不自动写回进度的边界。

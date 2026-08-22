@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * Build and import the chapter 1/2 learner-safe content snapshot.
+ * Build and import the complete 选择性必修1 library snapshot.
  *
  * The source of truth remains the repository. R2 receives a small number of
  * immutable versioned packs (section packets, transcript pack and image pack),
@@ -132,12 +132,13 @@ function chunkStatements(statements, maxBytes = 70000) {
 }
 
 function imageDirForChapter(chapter) {
-  return join(dataRoot, 'ocr_live_current', chapter === 1 ? 'first_chapter_69' : 'second_chapter_109', 'imgs')
+  const directory = chapter === 1 ? 'first_chapter_69' : chapter === 2 ? 'second_chapter_109' : 'third_chapter_180'
+  return join(dataRoot, 'ocr_live_current', directory, 'imgs')
 }
 
 async function buildImageIndex() {
   const index = new Map()
-  for (const chapter of [1, 2]) {
+  for (const chapter of [1, 2, 3]) {
     const dir = imageDirForChapter(chapter)
     if (!existsSync(dir)) throw new Error(`missing image directory: ${dir}`)
     for (const file of await readdir(dir)) {
@@ -153,10 +154,11 @@ async function main() {
   const audit = await json(auditPath)
   const catalog = await json(join(dataRoot, 'all_chapters_course_catalog.json'))
   const catalogByKey = new Map((catalog.courses ?? []).map((course) => [course.course_key, course]))
+  const libraryChapters = [1, 2, 3]
   const imageIndex = await buildImageIndex()
   const chapterManifests = new Map()
   const rawManifestBytes = []
-  for (const chapter of [1, 2]) {
+  for (const chapter of libraryChapters) {
     const path = join(repoRoot, `chapter${chapter}_manifest.json`)
     const bytes = await readFile(path)
     rawManifestBytes.push(bytes)
@@ -176,6 +178,7 @@ async function main() {
   const chapters = []
   const items = []
   const links = []
+  const answerSources = []
 
   function imageRefsFor(chapter, refs) {
     return (refs ?? []).map((ref) => {
@@ -201,12 +204,40 @@ async function main() {
     return readFileSync(path)
   }
 
-  for (const chapter of [1, 2]) {
+  for (const chapter of libraryChapters) {
     const manifest = chapterManifests.get(chapter)
     chapters.push({ chapterKey: String(chapter), title: manifest.target_identity?.chapter ?? `第${chapter}章`, sortOrder: chapter })
   }
 
-  for (const auditSection of audit.sections.filter((section) => [1, 2].includes(Number(section.chapter)))) {
+  const librarySections = libraryChapters.flatMap((chapter) => {
+    const manifest = chapterManifests.get(chapter)
+    return (manifest.sections ?? []).map((section) => {
+      const courseIds = [...new Set([...(section.required_course_ids ?? []), ...(section.support_course_ids ?? [])])]
+      const courseKeyById = new Map([
+        ...(section.required_course_ids ?? []).map((id, index) => [id, section.required_course_keys?.[index] ?? id]),
+        ...(section.support_course_ids ?? []).map((id, index) => [id, section.support_course_keys?.[index] ?? id]),
+      ])
+      const courses = courseIds.map((courseId) => {
+        const catalogEntry = [...catalog.courses].find((course) => course.course_id === courseId)
+        return {
+          course_key: courseKeyById.get(courseId) ?? catalogEntry?.course_key ?? courseId,
+          course_number: courseId,
+          title: catalogEntry?.title ?? courseId,
+          transcript_path: catalogEntry?.transcript_file ?? null,
+        }
+      })
+      return {
+        chapter,
+        section: section.id,
+        title: section.label,
+        manifest_path: `chapter${chapter}_manifest.json`,
+        packet_manifest_path: `data/packets/${String(section.id).replaceAll('+', '_')}/manifest.json`,
+        courses,
+      }
+    })
+  })
+
+  for (const auditSection of librarySections) {
     const chapter = Number(auditSection.chapter)
     const manifest = chapterManifests.get(chapter)
     const manifestSection = manifest.sections.find((section) => section.id === auditSection.section)
@@ -215,6 +246,8 @@ async function main() {
     const learning = await json(join(dataRoot, 'packets', packetFolder, 'student_learning_items.json'))
     const packet = await json(join(dataRoot, 'packets', packetFolder, 'student_packet.json'))
     const packetManifest = await json(join(dataRoot, 'packets', packetFolder, 'manifest.json'))
+    const answerPath = join(dataRoot, 'packets', packetFolder, 'answer_sidecar.json')
+    const answerPack = existsSync(answerPath) ? await json(answerPath) : { answers: [] }
     const cycleByLabel = new Map()
     const cycleByExample = new Map()
     for (const cycle of manifestSection.learning_cycles ?? []) {
@@ -269,6 +302,21 @@ async function main() {
     for (const raw of packet.questions ?? []) {
       const label = `${raw.group}${raw.number}`
       addItem(raw, 'exercise', label, cycleByLabel.get(label)?.knowledge_refs?.[0] ?? null)
+    }
+
+    for (const answer of answerPack.answers ?? []) {
+      const label = `${answer.group ?? ''}${answer.number ?? ''}`
+      const item = sectionItems.find((candidate) => candidate.label === label)
+      const answerText = typeof answer.answer_text === 'string' ? answer.answer_text.trim() : ''
+      if (item && answerText) {
+        answerSources.push({
+          itemId: item.item_id,
+          sourceKind: 'original_answer_book',
+          sourceVersionId,
+          answerText,
+          sourceSha256: sha256(Buffer.from(answerText, 'utf8')),
+        })
+      }
     }
 
     sectionItems.sort((a, b) => {
@@ -338,6 +386,7 @@ async function main() {
   for (const section of sections) statements.push(`INSERT OR REPLACE INTO sections (section_key, chapter_key, title, manifest_r2_key, sort_order) VALUES (${sqlString(section.sectionKey)}, ${sqlString(section.chapterKey)}, ${sqlString(section.title)}, ${sqlString(section.manifestR2Key)}, ${sqlNumber(section.sortOrder)});`)
   for (const course of courseRows) statements.push(`INSERT OR REPLACE INTO courses (course_key, title, transcript_r2_key, transcript_sha256, duration_ms, has_timeline) VALUES (${sqlString(course.courseKey)}, ${sqlString(`${course.courseNumber} ${course.title}`.trim())}, ${sqlString(course.transcriptR2Key)}, ${sqlString(course.sourceSha256)}, ${sqlNumber(course.durationMs)}, ${course.hasTimeline ? 1 : 0});`)
   for (const item of items) statements.push(`INSERT OR REPLACE INTO items (item_id, section_key, label, item_type, concept_key, content_r2_key, source_sha256, sort_order) VALUES (${sqlString(item.itemId)}, ${sqlString(item.sectionKey)}, ${sqlString(item.label)}, ${sqlString(item.itemType)}, ${sqlString(item.conceptKey)}, ${sqlString(item.contentR2Key)}, ${sqlString(item.sourceSha256)}, ${sqlNumber(item.sortOrder)});`)
+  for (const answer of answerSources) statements.push(`INSERT OR REPLACE INTO answer_sources (item_id, source_kind, source_version_id, answer_text, source_sha256) VALUES (${sqlString(answer.itemId)}, ${sqlString(answer.sourceKind)}, ${sqlString(answer.sourceVersionId)}, ${sqlString(answer.answerText)}, ${sqlString(answer.sourceSha256)});`)
   const uniqueLinks = new Map(links.map((link) => [`${link.itemId}:${link.courseKey}:${link.relationship}`, link]))
   for (const item of items) statements.push(`DELETE FROM item_course_links WHERE item_id = ${sqlString(item.itemId)};`)
   for (const link of uniqueLinks.values()) statements.push(`INSERT OR IGNORE INTO item_course_links (item_id, course_key, relationship) VALUES (${sqlString(link.itemId)}, ${sqlString(link.courseKey)}, ${sqlString(link.relationship)});`)
@@ -378,7 +427,7 @@ async function main() {
   for (const chunk of chunks) statements.push(`INSERT OR REPLACE INTO transcript_chunks (course_key, chunk_index, start_ms, end_ms, text, topic, method_tags) VALUES (${sqlString(chunk.courseKey)}, ${sqlNumber(chunk.chunkIndex)}, ${sqlNumber(chunk.startMs)}, ${sqlNumber(chunk.endMs)}, ${sqlString(chunk.text)}, NULL, '[]');`)
 
   const initialStates = []
-  for (const chapter of [1, 2]) {
+  for (const chapter of libraryChapters) {
     const chapterSections = sections.filter((section) => section.chapterKey === String(chapter))
     initialStates.push({ key: `chapter:${chapter}`, value: { chapter, status: 'not_started', source: 'repository_snapshot', sectionCount: chapterSections.length } })
     for (const section of chapterSections) initialStates.push({ key: `section:${section.sectionKey}`, value: { chapter, section: section.sectionKey, status: 'not_started', source: 'repository_snapshot' } })
@@ -396,7 +445,7 @@ async function main() {
   }
   const plan = {
     schema_version: 'ybt-cloud-import-plan-v1', sourceVersionId, manifestSha, currentCommit,
-    chapters: chapters.length, sections: sections.length, items: items.length, courses: courses.size,
+    library: '选择性必修1', chapters: chapters.length, sections: sections.length, items: items.length, courses: courses.size,
     links: uniqueLinks.size, transcriptChunks: chunks.length, imageObjects: Object.keys(imagePack).length,
     r2: [{ key: imageKey, path: imagePackPath }, { key: transcriptKey, path: transcriptPackPath }, ...sectionPacks],
     sql: sqlPaths,

@@ -40,15 +40,16 @@ test('exposes complete learner-safe content reads', () => {
   assert.match(source, /math_get_section_overview/)
   assert.match(source, /math_get_item_content/)
   assert.match(source, /math_get_course_transcript/)
+  assert.match(source, /math_get_answer_sources/)
   assert.match(source, /image_pack_key/)
   assert.match(source, /timelineAvailable/)
 })
 
-test('content importer is versioned, idempotent and limited to chapters 1/2', () => {
+test('content importer is versioned, idempotent and covers selective compulsory 1', () => {
   assert.match(importer, /chapter12_complete_audit\.json/)
   assert.match(importer, /source_versions/)
   assert.match(importer, /INSERT OR IGNORE INTO learner_state/)
   assert.match(importer, /v1-\$\{manifestSha\.slice\(0, 16\)\}/)
-  assert.match(importer, /for \(const chapter of \[1, 2\]\)/)
-  assert.doesNotMatch(importer, /answer_sidecar/)
+  assert.match(importer, /const libraryChapters = \[1, 2, 3\]/)
+  assert.match(importer, /original_answer_book/)
 })

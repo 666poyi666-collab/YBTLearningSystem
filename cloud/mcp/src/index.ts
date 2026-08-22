@@ -383,6 +383,23 @@ function createServer(env: Env, scopes: readonly string[]): McpServer {
     return result({ ok: true, index: row, item: content.item, imageCount: images.length }, images)
   })
 
+  server.registerTool('math_get_answer_sources', {
+    description: '读取已导入的原书答案来源。返回原书答案与来源版本，不把模型推导冒充原书答案；模型解法由当前对话另行生成并标注。',
+    inputSchema: { itemId: z.string().min(1).max(200) },
+  }, async ({ itemId }) => {
+    if (!readAllowed()) return failure('insufficient_scope', READ_SCOPE)
+    const rows = await env.DB.prepare(`
+      SELECT item_id, source_kind, source_version_id, answer_text, source_sha256
+      FROM answer_sources WHERE item_id = ? ORDER BY source_kind
+    `).bind(itemId).all<JsonRecord>()
+    return result({
+      ok: true,
+      itemId,
+      sources: rows.results,
+      modelSolutionPolicy: '模型解法必须单独标为 model_solution，并与原书答案分栏；推荐方案需说明选择理由。',
+    })
+  })
+
   server.registerTool('math_get_course_transcript', {
     description: '读取某门网课的完整老师文稿；若有可靠句段时间轴则可一并返回，否则明确标记 timelineAvailable=false。',
     inputSchema: {
@@ -547,10 +564,10 @@ function protectedResourceMetadata(env: Env): Response {
 
 async function readiness(env: Env): Promise<Response> {
   try {
-    const row = await env.DB.prepare(`SELECT COUNT(*) AS count FROM sqlite_master WHERE type = 'table' AND name IN ('source_versions','items','courses','transcript_chunks','learning_events','learner_state','questions')`).first<{ count: number | string }>()
+    const row = await env.DB.prepare(`SELECT COUNT(*) AS count FROM sqlite_master WHERE type = 'table' AND name IN ('source_versions','items','courses','transcript_chunks','learning_events','learner_state','questions','answer_sources')`).first<{ count: number | string }>()
     const configured = oauthConfig(env) !== null
-    const ready = Number(row?.count ?? 0) === 7 && configured
-    return Response.json({ ok: ready, service: 'math-learning-mcp', storage: Number(row?.count ?? 0) === 7 ? 'ready' : 'migration_required', oauth: configured ? 'configured' : 'not_configured' }, { status: ready ? 200 : 503 })
+    const ready = Number(row?.count ?? 0) === 8 && configured
+    return Response.json({ ok: ready, service: 'math-learning-mcp', storage: Number(row?.count ?? 0) === 8 ? 'ready' : 'migration_required', oauth: configured ? 'configured' : 'not_configured' }, { status: ready ? 200 : 503 })
   } catch {
     return Response.json({ ok: false, service: 'math-learning-mcp', storage: 'unavailable' }, { status: 503 })
   }
