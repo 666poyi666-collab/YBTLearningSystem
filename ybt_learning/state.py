@@ -445,19 +445,37 @@ def run_reward_test(path: str | Path) -> dict[str, Any]:
         "idempotent_grants": len({g["idempotency_key"] for g in grants}) == len(grants),
     }
     first_image_path = Path(path).with_name("first-image-reward-test-state.json")
-    first_source_image = Path(r"C:\开发\小工具\一本通DeepSeek迭代\worker-01-content\ocr\imgs\img_in_image_box_523_429_694_610.jpg")
-    project_data = Path(__file__).resolve().parents[1] / "data"
+    project_root = Path(__file__).resolve().parents[1]
+    first_source_image = project_root / "data" / "ocr_live_current" / "first_chapter_69" / "imgs" / "img_in_image_box_523_429_694_610.jpg"
+    # Bind the reward smoke test to the current answer-free packet rather than
+    # to the old device-specific OCR path that produced the historical sidecar.
+    # The packet keeps the original provenance for audit, while the executable
+    # gate resolves the image through the repository's active OCR snapshot.
     first_image_sidecar_verified = False
-    for sidecar_path in (project_data / "vision_sidecar_full.json", project_data / "vision_sidecar_sample.json"):
-        if not sidecar_path.exists():
-            continue
+    student_packet_path = project_root / "data" / "packets" / "1.1" / "student_packet.json"
+    if student_packet_path.exists():
         try:
-            sidecar = json.loads(sidecar_path.read_text(encoding="utf-8"))
+            student_packet = json.loads(student_packet_path.read_text(encoding="utf-8"))
         except json.JSONDecodeError:
-            continue
-        for result in sidecar.get("results", []):
-            if result.get("question_hint") == "1.1-A1" and result.get("status") == "passed" and result.get("confidence") in {"E1", "E2"} and Path(result.get("image", "")) == first_source_image:
-                first_image_sidecar_verified = True
+            student_packet = {}
+        first_question = next(
+            (
+                question
+                for question in student_packet.get("questions", [])
+                if question.get("group") == "A" and int(question.get("number", 0)) == 1
+            ),
+            None,
+        )
+        if first_question and first_question.get("visual_status") == "VISION_VERIFIED":
+            image_refs = first_question.get("image_refs", [])
+            image_bound = any(Path(str(ref.get("ref") or ref.get("path") or "")).name == first_source_image.name for ref in image_refs)
+            sidecars = first_question.get("vision_sidecars", [])
+            sidecar_bound = any(
+                row.get("confidence") in {"E1", "E2"}
+                for row in sidecars
+                if isinstance(row, dict)
+            )
+            first_image_sidecar_verified = image_bound and sidecar_bound and bool(first_question.get("evidence"))
     first_image_store = StateStore.create(first_image_path, target)
     blocked_visual = first_image_store.record_attempt(
         "1.1-A1-blocked-visual",

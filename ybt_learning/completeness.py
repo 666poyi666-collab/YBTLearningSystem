@@ -150,6 +150,26 @@ def _packet_item_keys(packet: dict[str, Any]) -> dict[str, list[str]]:
     }
 
 
+def _resolve_ocr_root(root: Path, manifest: dict[str, Any]) -> Path:
+    """Resolve legacy OCR provenance to the repository's active OCR snapshot.
+
+    Manifests intentionally preserve the original machine path as provenance,
+    but executable audits must use the checked-in current live run when that
+    path is unavailable after a device migration.
+    """
+    declared = Path(str(manifest.get("source_evidence", {}).get("ocr_root", "")))
+    if declared.is_dir():
+        return declared
+    candidates = (
+        root / "data" / "ocr_live_current" / "first_chapter_69",
+        root / "data" / "ocr_live_full",
+    )
+    for candidate in candidates:
+        if candidate.is_dir() and any(candidate.glob("doc_*.md")):
+            return candidate
+    return declared
+
+
 def audit_chapter1(root: str | Path) -> dict[str, Any]:
     """Audit the answer-free chapter inventory without opening answer sidecars.
 
@@ -230,7 +250,7 @@ def audit_chapter1(root: str | Path) -> dict[str, Any]:
             finding("coverage_range_mismatch", "blocked", "question coverage keys do not equal manifest ranges", section_id)
 
         ocr_start, ocr_end = section.get("ocr_docs", [None, None])
-        ocr_root = Path(manifest.get("source_evidence", {}).get("ocr_root", ""))
+        ocr_root = _resolve_ocr_root(root, manifest)
         ocr_questions, ocr_out_of_range = (
             ocr_question_scan(ocr_root, [ocr_start, ocr_end], section.get("question_groups", {}))
             if ocr_start is not None and ocr_end is not None

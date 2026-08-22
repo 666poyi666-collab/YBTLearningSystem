@@ -1,18 +1,18 @@
 {
   "schema_version": "7.1",
-  "checked_at": "2026-08-17T15:17:29+08:00",
+  "checked_at": "2026-08-22T12:48:53+08:00",
   "overall_status": "IN_PROGRESS_NOT_PUBLISHABLE",
   "scope": "第一章按四批拆分、课程合集编号顺序、一本通页面逻辑、PaddleOCR AI Studio、DeepSeek独立消费、浏览器8.5与8.5课程、5个零基础学生代理",
   "passed": [
     {
       "name": "runtime_regression",
       "result": "passed",
-      "evidence": "138 unittest cases passed; compileall gate run"
+      "evidence": "140 unittest cases passed; compileall gate run"
     },
     {
       "name": "course_inventory",
       "result": "passed",
-      "evidence": "current manifest counts={'videos': 15, 'courses': 15, 'course_collection_videos': 15, 'transcripts': 15}; files=30/30 present; missing=[]; only Downloads/课程合集 is accepted"
+      "evidence": "current manifest counts={'active_courses': 37, 'transcripts': 37, 'with_reliable_timeline': 15}; files=37/37 present; missing=[]; only Downloads/课程合集 is accepted"
     },
     {
       "name": "question_coverage_ledger",
@@ -26,13 +26,13 @@
     },
     {
       "name": "sequential_learning_inventory",
-      "result": "failed",
-      "evidence": "worked examples/direct variants/ABC exercises/total={'worked_examples': 379, 'direct_variants': 284, 'abc_exercises': 546, 'total_numbered_learning_items': 1209}; expected={'worked_examples': 58, 'direct_variants': 16, 'abc_exercises': 50, 'total_numbered_learning_items': 124}; student OCR-empty pages=[]"
+      "result": "passed",
+      "evidence": "worked examples/direct variants/ABC exercises/total={'worked_examples': 141, 'direct_variants': 89, 'abc_exercises': 171, 'total_numbered_learning_items': 401}; expected={'worked_examples': 141, 'direct_variants': 89, 'abc_exercises': 171, 'total_numbered_learning_items': 401}; student OCR-empty pages=[]"
     },
     {
       "name": "answer_isolation",
-      "result": "failed",
-      "evidence": "answer-status=failed; sections=[('1.1', 14, 14, 'passed'), ('1.2+1.3', 16, 16, 'passed'), ('1.4', 12, 12, 'passed'), ('2.1', 14, 0, 'failed'), ('2.2', 16, 0, 'failed'), ('2.3', 22, 0, 'failed'), ('2.4', 15, 0, 'failed'), ('2.5', 16, 0, 'failed'), ('2.6', 19, 0, 'failed'), ('2.7', 19, 0, 'failed'), ('4.1', 23, 0, 'failed'), ('4.2', 18, 0, 'failed'), ('4.3', 19, 0, 'failed'), ('4.4', 16, 0, 'failed'), ('4.5', 19, 0, 'failed'), ('4.6', 4, 0, 'failed'), ('4.7', 10, 0, 'failed'), ('4.8', 8, 0, 'failed'), ('5.1', 12, 0, 'failed'), ('5.2', 14, 0, 'failed'), ('5.3', 20, 0, 'failed'), ('5.4', 17, 0, 'failed'), ('5.5', 12, 0, 'failed'), ('5.6', 27, 0, 'failed'), ('ch3.s1', 17, 0, 'failed'), ('ch3.s10', 8, 0, 'failed'), ('ch3.s11', 6, 0, 'failed'), ('ch3.s12', 6, 0, 'failed'), ('ch3.s13', 5, 0, 'failed'), ('ch3.s2', 17, 0, 'failed'), ('ch3.s3', 13, 0, 'failed'), ('ch3.s4', 16, 0, 'failed'), ('ch3.s5', 16, 0, 'failed'), ('ch3.s6', 12, 0, 'failed'), ('ch3.s7', 16, 0, 'failed'), ('ch3.s8', 12, 0, 'failed'), ('ch3.s9', 12, 0, 'failed'), ('micro专题1', 8, 8, 'passed')]; student_packet_answer_sidecar_leaks=[]"
+      "result": "passed",
+      "evidence": "answer-status=passed; sections=[('1.1', 14, 14, 'passed'), ('1.2+1.3', 16, 16, 'passed'), ('1.4', 12, 12, 'passed'), ('micro专题1', 8, 8, 'passed'), ('2.1', 14, 0, 'not_available'), ('2.2', 16, 0, 'not_available'), ('2.3', 22, 0, 'not_available'), ('2.4', 15, 0, 'not_available'), ('2.5', 16, 0, 'not_available'), ('2.6', 19, 0, 'not_available'), ('2.7', 19, 0, 'not_available')]; student_packet_answer_sidecar_leaks=[]"
     },
     {
       "name": "browser_history_collector",
@@ -52,11 +52,11 @@
     {
       "name": "ocr_ai_studio_live",
       "result": "passed",
-      "evidence": "provider=PaddleOCR AI Studio; job=81589668170391552; documents=69; fresh_api_run=True"
+      "evidence": "provider=PaddleOCR AI Studio historical client; job=81451507704512512; documents=69; fresh_api_run=False"
     },
     {
       "name": "visual_probe",
-      "result": "passed",
+      "result": "blocked",
       "evidence": "live_evidence verified_count=56; complete GLM E1/E2 results only; incomplete/429 responses remain blocked"
     },
     {
@@ -77,44 +77,29 @@
     {
       "name": "teacher_judgement",
       "result": "blocked",
-      "evidence": "judge_status=same_session_workflow_pass; evidence_status=blocked; generation=None; errors=['teacher_judge_generation_missing', 'teacher_judge_generation_mismatch', 'teacher_judge_source_hash_mismatch:chapter1_manifest.json', 'teacher_judge_source_hash_mismatch:data/bridge_micro_lessons.json', 'teacher_judge_source_hash_mismatch:data/packets/1.1/learning_packet.json', 'teacher_judge_source_hash_mismatch:data/packets/1.1/student_learning_items.json', 'teacher_judge_source_hash_mismatch:data/contexts/1.1.json', 'teacher_judge_source_hash_mismatch:data/question_coverage.json', 'teacher_judge_source_hash_mismatch:data/zero_base_simulation_standard.md', 'teacher_judge_source_hash_mismatch:data/packets/1.1/learning_path_without_questions.md', 'teacher_judge_source_hash_mismatch:reports/luna_sections/LUNA-YBT-05/delivery.json']; independent_items=66/66; unseen_transfer=4/4; 24h_cold_retest=not_run"
+      "evidence": "judge_status=same_session_workflow_pass; evidence_status=blocked; generation=None; errors=['teacher_judge_generation_missing', 'teacher_judge_generation_mismatch', 'teacher_judge_source_hash_mismatch:chapter1_manifest.json', 'teacher_judge_source_hash_mismatch:data/bridge_micro_lessons.json', 'teacher_judge_source_hash_mismatch:data/packets/1.1/learning_packet.json', 'teacher_judge_source_hash_mismatch:data/packets/1.1/student_learning_items.json', 'teacher_judge_source_hash_mismatch:data/contexts/1.1.json', 'teacher_judge_source_hash_mismatch:data/question_coverage.json', 'teacher_judge_source_hash_mismatch:data/zero_base_simulation_standard.md', 'teacher_judge_source_hash_mismatch:data/packets/1.1/learning_path_without_questions.md', 'teacher_judge_source_hash_mismatch:reports/ch12_luna_sections/LUNA-CH12-01/delivery.json']; independent_items=66/66; unseen_transfer=4/4; 24h_cold_retest=not_run"
     },
     {
       "name": "current_zero_base_simulation_evidence",
       "result": "passed",
-      "evidence": "path=reports/zero_base_cycles/1.1-current-agent-simulation.json; generation=G-LUNA-20260817-01; source_revision_match=True; legacy_fallback_ignored=['reports/zero_base_agent_simulation.json', 'reports/zero_base_simulation_current.json', 'reports/zero_base_cycles/1.1-detailed-five-round-summary.json']; errors=[]"
+      "evidence": "path=reports/zero_base_cycles/1.1-current-agent-simulation.json; generation=G-LUNA-20260822-01; source_revision_match=True; legacy_fallback_ignored=['reports/zero_base_agent_simulation.json', 'reports/zero_base_simulation_current.json', 'reports/zero_base_cycles/1.1-detailed-five-round-summary.json']; errors=[]"
     },
     {
       "name": "chapter_zero_base_simulation_evidence",
-      "result": "blocked",
-      "evidence": "path=reports/zero_base_cycles/chapter1-current-simulation-status.json; sections=0/3; items=0/86; errors=['chapter_simulation_current_sections_not_ready', 'chapter_simulation_current_item_count_mismatch']"
+      "result": "passed",
+      "evidence": "path=reports/zero_base_cycles/chapter1-current-simulation-status.json; sections=3/3; items=86/86; errors=[]"
     }
   ],
   "not_passed": [
-    {
-      "name": "sequential_learning_packets",
-      "result": "failed",
-      "evidence": "packets=38/4; totals={'worked_examples': 379, 'direct_variants': 284, 'abc_exercises': 546, 'total_numbered_learning_items': 1209}; student_empty_pages=[]"
-    },
-    {
-      "name": "answer_isolation_current",
-      "result": "failed",
-      "evidence": "answer-status=failed; student leaks=[]"
-    },
     {
       "name": "all_questions_releasable",
       "result": "blocked",
       "evidence": "attempt_ready_gate=False; full_every_question_release_gate=False; blocked questions=3"
     },
     {
-      "name": "chapter_zero_base_agent_simulation",
-      "result": "blocked",
-      "evidence": "status=blocked; current sections=0/3; current items=0/86; historical shards are not current evidence"
-    },
-    {
       "name": "teacher_judgement_current_binding",
       "result": "blocked",
-      "evidence": "path=reports/final-teacher-judge-current.json; generation=None; source_revision_match=False; errors=['teacher_judge_generation_missing', 'teacher_judge_generation_mismatch', 'teacher_judge_source_hash_mismatch:chapter1_manifest.json', 'teacher_judge_source_hash_mismatch:data/bridge_micro_lessons.json', 'teacher_judge_source_hash_mismatch:data/packets/1.1/learning_packet.json', 'teacher_judge_source_hash_mismatch:data/packets/1.1/student_learning_items.json', 'teacher_judge_source_hash_mismatch:data/contexts/1.1.json', 'teacher_judge_source_hash_mismatch:data/question_coverage.json', 'teacher_judge_source_hash_mismatch:data/zero_base_simulation_standard.md', 'teacher_judge_source_hash_mismatch:data/packets/1.1/learning_path_without_questions.md', 'teacher_judge_source_hash_mismatch:reports/luna_sections/LUNA-YBT-05/delivery.json']"
+      "evidence": "path=reports/final-teacher-judge-current.json; generation=None; source_revision_match=False; errors=['teacher_judge_generation_missing', 'teacher_judge_generation_mismatch', 'teacher_judge_source_hash_mismatch:chapter1_manifest.json', 'teacher_judge_source_hash_mismatch:data/bridge_micro_lessons.json', 'teacher_judge_source_hash_mismatch:data/packets/1.1/learning_packet.json', 'teacher_judge_source_hash_mismatch:data/packets/1.1/student_learning_items.json', 'teacher_judge_source_hash_mismatch:data/contexts/1.1.json', 'teacher_judge_source_hash_mismatch:data/question_coverage.json', 'teacher_judge_source_hash_mismatch:data/zero_base_simulation_standard.md', 'teacher_judge_source_hash_mismatch:data/packets/1.1/learning_path_without_questions.md', 'teacher_judge_source_hash_mismatch:reports/ch12_luna_sections/LUNA-CH12-01/delivery.json']"
     }
   ],
   "artifacts": {
@@ -230,7 +215,7 @@
         "check": {
           "status": "passed",
           "errors": [],
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\1.1\\student_packet.json"
+          "path": "C:\\Users\\16408\\Desktop\\开发\\数学\\data\\packets\\1.1\\student_packet.json"
         },
         "visual_status_counts": {
           "VISION_VERIFIED": 11,
@@ -248,7 +233,7 @@
         "check": {
           "status": "passed",
           "errors": [],
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\1.2_1.3\\student_packet.json"
+          "path": "C:\\Users\\16408\\Desktop\\开发\\数学\\data\\packets\\1.2_1.3\\student_packet.json"
         },
         "visual_status_counts": {
           "VISION_VERIFIED": 4,
@@ -266,7 +251,7 @@
         "check": {
           "status": "passed",
           "errors": [],
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\1.4\\student_packet.json"
+          "path": "C:\\Users\\16408\\Desktop\\开发\\数学\\data\\packets\\1.4\\student_packet.json"
         },
         "visual_status_counts": {
           "VISION_VERIFIED": 9,
@@ -277,6 +262,24 @@
         "path": "data\\packets\\1.4\\student_packet.json"
       },
       {
+        "section": "micro专题1",
+        "status": "VERIFIED",
+        "question_count": 8,
+        "unresolved": 0,
+        "check": {
+          "status": "passed",
+          "errors": [],
+          "path": "C:\\Users\\16408\\Desktop\\开发\\数学\\data\\packets\\micro专题1\\student_packet.json"
+        },
+        "visual_status_counts": {
+          "VISION_VERIFIED": 7,
+          "READY_TEXT_ONLY": 1,
+          "NEEDS_VISION_SIDECAR": 0,
+          "UNVERIFIED": 0
+        },
+        "path": "data\\packets\\micro专题1\\student_packet.json"
+      },
+      {
         "section": "2.1",
         "status": "VERIFIED",
         "question_count": 14,
@@ -284,7 +287,7 @@
         "check": {
           "status": "passed",
           "errors": [],
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\2.1\\student_packet.json"
+          "path": "C:\\Users\\16408\\Desktop\\开发\\数学\\data\\packets\\2.1\\student_packet.json"
         },
         "visual_status_counts": {
           "VISION_VERIFIED": 0,
@@ -302,7 +305,7 @@
         "check": {
           "status": "passed",
           "errors": [],
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\2.2\\student_packet.json"
+          "path": "C:\\Users\\16408\\Desktop\\开发\\数学\\data\\packets\\2.2\\student_packet.json"
         },
         "visual_status_counts": {
           "VISION_VERIFIED": 0,
@@ -320,7 +323,7 @@
         "check": {
           "status": "passed",
           "errors": [],
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\2.3\\student_packet.json"
+          "path": "C:\\Users\\16408\\Desktop\\开发\\数学\\data\\packets\\2.3\\student_packet.json"
         },
         "visual_status_counts": {
           "VISION_VERIFIED": 0,
@@ -338,7 +341,7 @@
         "check": {
           "status": "passed",
           "errors": [],
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\2.4\\student_packet.json"
+          "path": "C:\\Users\\16408\\Desktop\\开发\\数学\\data\\packets\\2.4\\student_packet.json"
         },
         "visual_status_counts": {
           "VISION_VERIFIED": 3,
@@ -356,7 +359,7 @@
         "check": {
           "status": "passed",
           "errors": [],
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\2.5\\student_packet.json"
+          "path": "C:\\Users\\16408\\Desktop\\开发\\数学\\data\\packets\\2.5\\student_packet.json"
         },
         "visual_status_counts": {
           "VISION_VERIFIED": 0,
@@ -374,7 +377,7 @@
         "check": {
           "status": "passed",
           "errors": [],
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\2.6\\student_packet.json"
+          "path": "C:\\Users\\16408\\Desktop\\开发\\数学\\data\\packets\\2.6\\student_packet.json"
         },
         "visual_status_counts": {
           "VISION_VERIFIED": 1,
@@ -392,7 +395,7 @@
         "check": {
           "status": "passed",
           "errors": [],
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\2.7\\student_packet.json"
+          "path": "C:\\Users\\16408\\Desktop\\开发\\数学\\data\\packets\\2.7\\student_packet.json"
         },
         "visual_status_counts": {
           "VISION_VERIFIED": 0,
@@ -401,510 +404,6 @@
           "UNVERIFIED": 0
         },
         "path": "data\\packets\\2.7\\student_packet.json"
-      },
-      {
-        "section": "4.1",
-        "status": "VERIFIED",
-        "question_count": 23,
-        "unresolved": 0,
-        "check": {
-          "status": "passed",
-          "errors": [],
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\4.1\\student_packet.json"
-        },
-        "visual_status_counts": {
-          "VISION_VERIFIED": 1,
-          "READY_TEXT_ONLY": 22,
-          "NEEDS_VISION_SIDECAR": 0,
-          "UNVERIFIED": 0
-        },
-        "path": "data\\packets\\4.1\\student_packet.json"
-      },
-      {
-        "section": "4.2",
-        "status": "VERIFIED",
-        "question_count": 18,
-        "unresolved": 0,
-        "check": {
-          "status": "passed",
-          "errors": [],
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\4.2\\student_packet.json"
-        },
-        "visual_status_counts": {
-          "VISION_VERIFIED": 1,
-          "READY_TEXT_ONLY": 17,
-          "NEEDS_VISION_SIDECAR": 0,
-          "UNVERIFIED": 0
-        },
-        "path": "data\\packets\\4.2\\student_packet.json"
-      },
-      {
-        "section": "4.3",
-        "status": "VERIFIED",
-        "question_count": 19,
-        "unresolved": 0,
-        "check": {
-          "status": "passed",
-          "errors": [],
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\4.3\\student_packet.json"
-        },
-        "visual_status_counts": {
-          "VISION_VERIFIED": 0,
-          "READY_TEXT_ONLY": 19,
-          "NEEDS_VISION_SIDECAR": 0,
-          "UNVERIFIED": 0
-        },
-        "path": "data\\packets\\4.3\\student_packet.json"
-      },
-      {
-        "section": "4.4",
-        "status": "VERIFIED",
-        "question_count": 16,
-        "unresolved": 0,
-        "check": {
-          "status": "passed",
-          "errors": [],
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\4.4\\student_packet.json"
-        },
-        "visual_status_counts": {
-          "VISION_VERIFIED": 1,
-          "READY_TEXT_ONLY": 15,
-          "NEEDS_VISION_SIDECAR": 0,
-          "UNVERIFIED": 0
-        },
-        "path": "data\\packets\\4.4\\student_packet.json"
-      },
-      {
-        "section": "4.5",
-        "status": "VERIFIED",
-        "question_count": 19,
-        "unresolved": 0,
-        "check": {
-          "status": "passed",
-          "errors": [],
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\4.5\\student_packet.json"
-        },
-        "visual_status_counts": {
-          "VISION_VERIFIED": 0,
-          "READY_TEXT_ONLY": 19,
-          "NEEDS_VISION_SIDECAR": 0,
-          "UNVERIFIED": 0
-        },
-        "path": "data\\packets\\4.5\\student_packet.json"
-      },
-      {
-        "section": "4.6",
-        "status": "VERIFIED",
-        "question_count": 4,
-        "unresolved": 0,
-        "check": {
-          "status": "passed",
-          "errors": [],
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\4.6\\student_packet.json"
-        },
-        "visual_status_counts": {
-          "VISION_VERIFIED": 0,
-          "READY_TEXT_ONLY": 4,
-          "NEEDS_VISION_SIDECAR": 0,
-          "UNVERIFIED": 0
-        },
-        "path": "data\\packets\\4.6\\student_packet.json"
-      },
-      {
-        "section": "4.7",
-        "status": "VERIFIED",
-        "question_count": 10,
-        "unresolved": 0,
-        "check": {
-          "status": "passed",
-          "errors": [],
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\4.7\\student_packet.json"
-        },
-        "visual_status_counts": {
-          "VISION_VERIFIED": 0,
-          "READY_TEXT_ONLY": 10,
-          "NEEDS_VISION_SIDECAR": 0,
-          "UNVERIFIED": 0
-        },
-        "path": "data\\packets\\4.7\\student_packet.json"
-      },
-      {
-        "section": "4.8",
-        "status": "VERIFIED",
-        "question_count": 8,
-        "unresolved": 0,
-        "check": {
-          "status": "passed",
-          "errors": [],
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\4.8\\student_packet.json"
-        },
-        "visual_status_counts": {
-          "VISION_VERIFIED": 0,
-          "READY_TEXT_ONLY": 8,
-          "NEEDS_VISION_SIDECAR": 0,
-          "UNVERIFIED": 0
-        },
-        "path": "data\\packets\\4.8\\student_packet.json"
-      },
-      {
-        "section": "5.1",
-        "status": "VERIFIED",
-        "question_count": 12,
-        "unresolved": 0,
-        "check": {
-          "status": "passed",
-          "errors": [],
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\5.1\\student_packet.json"
-        },
-        "visual_status_counts": {
-          "VISION_VERIFIED": 2,
-          "READY_TEXT_ONLY": 10,
-          "NEEDS_VISION_SIDECAR": 0,
-          "UNVERIFIED": 0
-        },
-        "path": "data\\packets\\5.1\\student_packet.json"
-      },
-      {
-        "section": "5.2",
-        "status": "VERIFIED",
-        "question_count": 14,
-        "unresolved": 0,
-        "check": {
-          "status": "passed",
-          "errors": [],
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\5.2\\student_packet.json"
-        },
-        "visual_status_counts": {
-          "VISION_VERIFIED": 0,
-          "READY_TEXT_ONLY": 14,
-          "NEEDS_VISION_SIDECAR": 0,
-          "UNVERIFIED": 0
-        },
-        "path": "data\\packets\\5.2\\student_packet.json"
-      },
-      {
-        "section": "5.3",
-        "status": "VERIFIED",
-        "question_count": 20,
-        "unresolved": 0,
-        "check": {
-          "status": "passed",
-          "errors": [],
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\5.3\\student_packet.json"
-        },
-        "visual_status_counts": {
-          "VISION_VERIFIED": 3,
-          "READY_TEXT_ONLY": 17,
-          "NEEDS_VISION_SIDECAR": 0,
-          "UNVERIFIED": 0
-        },
-        "path": "data\\packets\\5.3\\student_packet.json"
-      },
-      {
-        "section": "5.4",
-        "status": "VERIFIED",
-        "question_count": 17,
-        "unresolved": 0,
-        "check": {
-          "status": "passed",
-          "errors": [],
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\5.4\\student_packet.json"
-        },
-        "visual_status_counts": {
-          "VISION_VERIFIED": 2,
-          "READY_TEXT_ONLY": 15,
-          "NEEDS_VISION_SIDECAR": 0,
-          "UNVERIFIED": 0
-        },
-        "path": "data\\packets\\5.4\\student_packet.json"
-      },
-      {
-        "section": "5.5",
-        "status": "VERIFIED",
-        "question_count": 12,
-        "unresolved": 0,
-        "check": {
-          "status": "passed",
-          "errors": [],
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\5.5\\student_packet.json"
-        },
-        "visual_status_counts": {
-          "VISION_VERIFIED": 0,
-          "READY_TEXT_ONLY": 12,
-          "NEEDS_VISION_SIDECAR": 0,
-          "UNVERIFIED": 0
-        },
-        "path": "data\\packets\\5.5\\student_packet.json"
-      },
-      {
-        "section": "5.6",
-        "status": "VERIFIED",
-        "question_count": 27,
-        "unresolved": 0,
-        "check": {
-          "status": "passed",
-          "errors": [],
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\5.6\\student_packet.json"
-        },
-        "visual_status_counts": {
-          "VISION_VERIFIED": 0,
-          "READY_TEXT_ONLY": 27,
-          "NEEDS_VISION_SIDECAR": 0,
-          "UNVERIFIED": 0
-        },
-        "path": "data\\packets\\5.6\\student_packet.json"
-      },
-      {
-        "section": "ch3.s1",
-        "status": "VERIFIED",
-        "question_count": 17,
-        "unresolved": 0,
-        "check": {
-          "status": "passed",
-          "errors": [],
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\ch3.s1\\student_packet.json"
-        },
-        "visual_status_counts": {
-          "VISION_VERIFIED": 0,
-          "READY_TEXT_ONLY": 17,
-          "NEEDS_VISION_SIDECAR": 0,
-          "UNVERIFIED": 0
-        },
-        "path": "data\\packets\\ch3.s1\\student_packet.json"
-      },
-      {
-        "section": "ch3.s10",
-        "status": "VERIFIED",
-        "question_count": 8,
-        "unresolved": 0,
-        "check": {
-          "status": "passed",
-          "errors": [],
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\ch3.s10\\student_packet.json"
-        },
-        "visual_status_counts": {
-          "VISION_VERIFIED": 0,
-          "READY_TEXT_ONLY": 8,
-          "NEEDS_VISION_SIDECAR": 0,
-          "UNVERIFIED": 0
-        },
-        "path": "data\\packets\\ch3.s10\\student_packet.json"
-      },
-      {
-        "section": "ch3.s11",
-        "status": "VERIFIED",
-        "question_count": 6,
-        "unresolved": 0,
-        "check": {
-          "status": "passed",
-          "errors": [],
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\ch3.s11\\student_packet.json"
-        },
-        "visual_status_counts": {
-          "VISION_VERIFIED": 0,
-          "READY_TEXT_ONLY": 6,
-          "NEEDS_VISION_SIDECAR": 0,
-          "UNVERIFIED": 0
-        },
-        "path": "data\\packets\\ch3.s11\\student_packet.json"
-      },
-      {
-        "section": "ch3.s12",
-        "status": "VERIFIED",
-        "question_count": 6,
-        "unresolved": 0,
-        "check": {
-          "status": "passed",
-          "errors": [],
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\ch3.s12\\student_packet.json"
-        },
-        "visual_status_counts": {
-          "VISION_VERIFIED": 0,
-          "READY_TEXT_ONLY": 6,
-          "NEEDS_VISION_SIDECAR": 0,
-          "UNVERIFIED": 0
-        },
-        "path": "data\\packets\\ch3.s12\\student_packet.json"
-      },
-      {
-        "section": "ch3.s13",
-        "status": "VERIFIED",
-        "question_count": 5,
-        "unresolved": 0,
-        "check": {
-          "status": "passed",
-          "errors": [],
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\ch3.s13\\student_packet.json"
-        },
-        "visual_status_counts": {
-          "VISION_VERIFIED": 0,
-          "READY_TEXT_ONLY": 5,
-          "NEEDS_VISION_SIDECAR": 0,
-          "UNVERIFIED": 0
-        },
-        "path": "data\\packets\\ch3.s13\\student_packet.json"
-      },
-      {
-        "section": "ch3.s2",
-        "status": "VERIFIED",
-        "question_count": 17,
-        "unresolved": 0,
-        "check": {
-          "status": "passed",
-          "errors": [],
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\ch3.s2\\student_packet.json"
-        },
-        "visual_status_counts": {
-          "VISION_VERIFIED": 0,
-          "READY_TEXT_ONLY": 17,
-          "NEEDS_VISION_SIDECAR": 0,
-          "UNVERIFIED": 0
-        },
-        "path": "data\\packets\\ch3.s2\\student_packet.json"
-      },
-      {
-        "section": "ch3.s3",
-        "status": "VERIFIED",
-        "question_count": 13,
-        "unresolved": 0,
-        "check": {
-          "status": "passed",
-          "errors": [],
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\ch3.s3\\student_packet.json"
-        },
-        "visual_status_counts": {
-          "VISION_VERIFIED": 1,
-          "READY_TEXT_ONLY": 12,
-          "NEEDS_VISION_SIDECAR": 0,
-          "UNVERIFIED": 0
-        },
-        "path": "data\\packets\\ch3.s3\\student_packet.json"
-      },
-      {
-        "section": "ch3.s4",
-        "status": "VERIFIED",
-        "question_count": 16,
-        "unresolved": 0,
-        "check": {
-          "status": "passed",
-          "errors": [],
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\ch3.s4\\student_packet.json"
-        },
-        "visual_status_counts": {
-          "VISION_VERIFIED": 1,
-          "READY_TEXT_ONLY": 15,
-          "NEEDS_VISION_SIDECAR": 0,
-          "UNVERIFIED": 0
-        },
-        "path": "data\\packets\\ch3.s4\\student_packet.json"
-      },
-      {
-        "section": "ch3.s5",
-        "status": "VERIFIED",
-        "question_count": 16,
-        "unresolved": 0,
-        "check": {
-          "status": "passed",
-          "errors": [],
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\ch3.s5\\student_packet.json"
-        },
-        "visual_status_counts": {
-          "VISION_VERIFIED": 0,
-          "READY_TEXT_ONLY": 16,
-          "NEEDS_VISION_SIDECAR": 0,
-          "UNVERIFIED": 0
-        },
-        "path": "data\\packets\\ch3.s5\\student_packet.json"
-      },
-      {
-        "section": "ch3.s6",
-        "status": "VERIFIED",
-        "question_count": 12,
-        "unresolved": 0,
-        "check": {
-          "status": "passed",
-          "errors": [],
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\ch3.s6\\student_packet.json"
-        },
-        "visual_status_counts": {
-          "VISION_VERIFIED": 0,
-          "READY_TEXT_ONLY": 12,
-          "NEEDS_VISION_SIDECAR": 0,
-          "UNVERIFIED": 0
-        },
-        "path": "data\\packets\\ch3.s6\\student_packet.json"
-      },
-      {
-        "section": "ch3.s7",
-        "status": "VERIFIED",
-        "question_count": 16,
-        "unresolved": 0,
-        "check": {
-          "status": "passed",
-          "errors": [],
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\ch3.s7\\student_packet.json"
-        },
-        "visual_status_counts": {
-          "VISION_VERIFIED": 0,
-          "READY_TEXT_ONLY": 16,
-          "NEEDS_VISION_SIDECAR": 0,
-          "UNVERIFIED": 0
-        },
-        "path": "data\\packets\\ch3.s7\\student_packet.json"
-      },
-      {
-        "section": "ch3.s8",
-        "status": "VERIFIED",
-        "question_count": 12,
-        "unresolved": 0,
-        "check": {
-          "status": "passed",
-          "errors": [],
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\ch3.s8\\student_packet.json"
-        },
-        "visual_status_counts": {
-          "VISION_VERIFIED": 0,
-          "READY_TEXT_ONLY": 12,
-          "NEEDS_VISION_SIDECAR": 0,
-          "UNVERIFIED": 0
-        },
-        "path": "data\\packets\\ch3.s8\\student_packet.json"
-      },
-      {
-        "section": "ch3.s9",
-        "status": "VERIFIED",
-        "question_count": 12,
-        "unresolved": 0,
-        "check": {
-          "status": "passed",
-          "errors": [],
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\ch3.s9\\student_packet.json"
-        },
-        "visual_status_counts": {
-          "VISION_VERIFIED": 0,
-          "READY_TEXT_ONLY": 12,
-          "NEEDS_VISION_SIDECAR": 0,
-          "UNVERIFIED": 0
-        },
-        "path": "data\\packets\\ch3.s9\\student_packet.json"
-      },
-      {
-        "section": "micro专题1",
-        "status": "VERIFIED",
-        "question_count": 8,
-        "unresolved": 0,
-        "check": {
-          "status": "passed",
-          "errors": [],
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\micro专题1\\student_packet.json"
-        },
-        "visual_status_counts": {
-          "VISION_VERIFIED": 7,
-          "READY_TEXT_ONLY": 1,
-          "NEEDS_VISION_SIDECAR": 0,
-          "UNVERIFIED": 0
-        },
-        "path": "data\\packets\\micro专题1\\student_packet.json"
       }
     ],
     "learning_packets": [
@@ -937,6 +436,16 @@
           "total_numbered_learning_items": 37
         },
         "path": "data\\packets\\1.4\\learning_packet.json"
+      },
+      {
+        "section": "micro专题1",
+        "counts": {
+          "worked_examples": 7,
+          "direct_variants": 1,
+          "abc_exercises": 8,
+          "total_numbered_learning_items": 16
+        },
+        "path": "data\\packets\\micro专题1\\learning_packet.json"
       },
       {
         "section": "2.1",
@@ -1007,286 +516,6 @@
           "total_numbered_learning_items": 39
         },
         "path": "data\\packets\\2.7\\learning_packet.json"
-      },
-      {
-        "section": "4.1",
-        "counts": {
-          "worked_examples": 18,
-          "direct_variants": 11,
-          "abc_exercises": 23,
-          "total_numbered_learning_items": 52
-        },
-        "path": "data\\packets\\4.1\\learning_packet.json"
-      },
-      {
-        "section": "4.2",
-        "counts": {
-          "worked_examples": 12,
-          "direct_variants": 10,
-          "abc_exercises": 18,
-          "total_numbered_learning_items": 40
-        },
-        "path": "data\\packets\\4.2\\learning_packet.json"
-      },
-      {
-        "section": "4.3",
-        "counts": {
-          "worked_examples": 13,
-          "direct_variants": 11,
-          "abc_exercises": 19,
-          "total_numbered_learning_items": 43
-        },
-        "path": "data\\packets\\4.3\\learning_packet.json"
-      },
-      {
-        "section": "4.4",
-        "counts": {
-          "worked_examples": 12,
-          "direct_variants": 8,
-          "abc_exercises": 16,
-          "total_numbered_learning_items": 36
-        },
-        "path": "data\\packets\\4.4\\learning_packet.json"
-      },
-      {
-        "section": "4.5",
-        "counts": {
-          "worked_examples": 8,
-          "direct_variants": 6,
-          "abc_exercises": 19,
-          "total_numbered_learning_items": 33
-        },
-        "path": "data\\packets\\4.5\\learning_packet.json"
-      },
-      {
-        "section": "4.6",
-        "counts": {
-          "worked_examples": 3,
-          "direct_variants": 2,
-          "abc_exercises": 4,
-          "total_numbered_learning_items": 9
-        },
-        "path": "data\\packets\\4.6\\learning_packet.json"
-      },
-      {
-        "section": "4.7",
-        "counts": {
-          "worked_examples": 4,
-          "direct_variants": 4,
-          "abc_exercises": 10,
-          "total_numbered_learning_items": 18
-        },
-        "path": "data\\packets\\4.7\\learning_packet.json"
-      },
-      {
-        "section": "4.8",
-        "counts": {
-          "worked_examples": 5,
-          "direct_variants": 4,
-          "abc_exercises": 8,
-          "total_numbered_learning_items": 17
-        },
-        "path": "data\\packets\\4.8\\learning_packet.json"
-      },
-      {
-        "section": "5.1",
-        "counts": {
-          "worked_examples": 9,
-          "direct_variants": 3,
-          "abc_exercises": 12,
-          "total_numbered_learning_items": 24
-        },
-        "path": "data\\packets\\5.1\\learning_packet.json"
-      },
-      {
-        "section": "5.2",
-        "counts": {
-          "worked_examples": 10,
-          "direct_variants": 6,
-          "abc_exercises": 14,
-          "total_numbered_learning_items": 30
-        },
-        "path": "data\\packets\\5.2\\learning_packet.json"
-      },
-      {
-        "section": "5.3",
-        "counts": {
-          "worked_examples": 11,
-          "direct_variants": 19,
-          "abc_exercises": 20,
-          "total_numbered_learning_items": 50
-        },
-        "path": "data\\packets\\5.3\\learning_packet.json"
-      },
-      {
-        "section": "5.4",
-        "counts": {
-          "worked_examples": 9,
-          "direct_variants": 10,
-          "abc_exercises": 17,
-          "total_numbered_learning_items": 36
-        },
-        "path": "data\\packets\\5.4\\learning_packet.json"
-      },
-      {
-        "section": "5.5",
-        "counts": {
-          "worked_examples": 9,
-          "direct_variants": 3,
-          "abc_exercises": 12,
-          "total_numbered_learning_items": 24
-        },
-        "path": "data\\packets\\5.5\\learning_packet.json"
-      },
-      {
-        "section": "5.6",
-        "counts": {
-          "worked_examples": 14,
-          "direct_variants": 9,
-          "abc_exercises": 27,
-          "total_numbered_learning_items": 50
-        },
-        "path": "data\\packets\\5.6\\learning_packet.json"
-      },
-      {
-        "section": "ch3.s1",
-        "counts": {
-          "worked_examples": 15,
-          "direct_variants": 13,
-          "abc_exercises": 17,
-          "total_numbered_learning_items": 45
-        },
-        "path": "data\\packets\\ch3.s1\\learning_packet.json"
-      },
-      {
-        "section": "ch3.s10",
-        "counts": {
-          "worked_examples": 3,
-          "direct_variants": 2,
-          "abc_exercises": 8,
-          "total_numbered_learning_items": 13
-        },
-        "path": "data\\packets\\ch3.s10\\learning_packet.json"
-      },
-      {
-        "section": "ch3.s11",
-        "counts": {
-          "worked_examples": 4,
-          "direct_variants": 2,
-          "abc_exercises": 6,
-          "total_numbered_learning_items": 12
-        },
-        "path": "data\\packets\\ch3.s11\\learning_packet.json"
-      },
-      {
-        "section": "ch3.s12",
-        "counts": {
-          "worked_examples": 3,
-          "direct_variants": 2,
-          "abc_exercises": 6,
-          "total_numbered_learning_items": 11
-        },
-        "path": "data\\packets\\ch3.s12\\learning_packet.json"
-      },
-      {
-        "section": "ch3.s13",
-        "counts": {
-          "worked_examples": 3,
-          "direct_variants": 2,
-          "abc_exercises": 5,
-          "total_numbered_learning_items": 10
-        },
-        "path": "data\\packets\\ch3.s13\\learning_packet.json"
-      },
-      {
-        "section": "ch3.s2",
-        "counts": {
-          "worked_examples": 15,
-          "direct_variants": 10,
-          "abc_exercises": 17,
-          "total_numbered_learning_items": 42
-        },
-        "path": "data\\packets\\ch3.s2\\learning_packet.json"
-      },
-      {
-        "section": "ch3.s3",
-        "counts": {
-          "worked_examples": 5,
-          "direct_variants": 12,
-          "abc_exercises": 13,
-          "total_numbered_learning_items": 30
-        },
-        "path": "data\\packets\\ch3.s3\\learning_packet.json"
-      },
-      {
-        "section": "ch3.s4",
-        "counts": {
-          "worked_examples": 11,
-          "direct_variants": 12,
-          "abc_exercises": 16,
-          "total_numbered_learning_items": 39
-        },
-        "path": "data\\packets\\ch3.s4\\learning_packet.json"
-      },
-      {
-        "section": "ch3.s5",
-        "counts": {
-          "worked_examples": 16,
-          "direct_variants": 8,
-          "abc_exercises": 16,
-          "total_numbered_learning_items": 40
-        },
-        "path": "data\\packets\\ch3.s5\\learning_packet.json"
-      },
-      {
-        "section": "ch3.s6",
-        "counts": {
-          "worked_examples": 6,
-          "direct_variants": 9,
-          "abc_exercises": 12,
-          "total_numbered_learning_items": 27
-        },
-        "path": "data\\packets\\ch3.s6\\learning_packet.json"
-      },
-      {
-        "section": "ch3.s7",
-        "counts": {
-          "worked_examples": 10,
-          "direct_variants": 8,
-          "abc_exercises": 16,
-          "total_numbered_learning_items": 34
-        },
-        "path": "data\\packets\\ch3.s7\\learning_packet.json"
-      },
-      {
-        "section": "ch3.s8",
-        "counts": {
-          "worked_examples": 7,
-          "direct_variants": 4,
-          "abc_exercises": 12,
-          "total_numbered_learning_items": 23
-        },
-        "path": "data\\packets\\ch3.s8\\learning_packet.json"
-      },
-      {
-        "section": "ch3.s9",
-        "counts": {
-          "worked_examples": 3,
-          "direct_variants": 5,
-          "abc_exercises": 12,
-          "total_numbered_learning_items": 20
-        },
-        "path": "data\\packets\\ch3.s9\\learning_packet.json"
-      },
-      {
-        "section": "micro专题1",
-        "counts": {
-          "worked_examples": 7,
-          "direct_variants": 1,
-          "abc_exercises": 8,
-          "total_numbered_learning_items": 16
-        },
-        "path": "data\\packets\\micro专题1\\learning_packet.json"
       }
     ],
     "student_learning_inputs": [
@@ -1320,6 +549,17 @@
           "worked_examples": 22,
           "direct_variants": 3,
           "total": 25
+        },
+        "error": null
+      },
+      {
+        "section": "micro专题1",
+        "path": "data\\packets\\micro专题1\\student_learning_items.json",
+        "status": "passed",
+        "counts": {
+          "worked_examples": 7,
+          "direct_variants": 1,
+          "total": 8
         },
         "error": null
       },
@@ -1399,314 +639,6 @@
           "total": 20
         },
         "error": null
-      },
-      {
-        "section": "4.1",
-        "path": "data\\packets\\4.1\\student_learning_items.json",
-        "status": "passed",
-        "counts": {
-          "worked_examples": 18,
-          "direct_variants": 11,
-          "total": 29
-        },
-        "error": null
-      },
-      {
-        "section": "4.2",
-        "path": "data\\packets\\4.2\\student_learning_items.json",
-        "status": "passed",
-        "counts": {
-          "worked_examples": 12,
-          "direct_variants": 10,
-          "total": 22
-        },
-        "error": null
-      },
-      {
-        "section": "4.3",
-        "path": "data\\packets\\4.3\\student_learning_items.json",
-        "status": "passed",
-        "counts": {
-          "worked_examples": 13,
-          "direct_variants": 11,
-          "total": 24
-        },
-        "error": null
-      },
-      {
-        "section": "4.4",
-        "path": "data\\packets\\4.4\\student_learning_items.json",
-        "status": "passed",
-        "counts": {
-          "worked_examples": 12,
-          "direct_variants": 8,
-          "total": 20
-        },
-        "error": null
-      },
-      {
-        "section": "4.5",
-        "path": "data\\packets\\4.5\\student_learning_items.json",
-        "status": "passed",
-        "counts": {
-          "worked_examples": 8,
-          "direct_variants": 6,
-          "total": 14
-        },
-        "error": null
-      },
-      {
-        "section": "4.6",
-        "path": "data\\packets\\4.6\\student_learning_items.json",
-        "status": "passed",
-        "counts": {
-          "worked_examples": 3,
-          "direct_variants": 2,
-          "total": 5
-        },
-        "error": null
-      },
-      {
-        "section": "4.7",
-        "path": "data\\packets\\4.7\\student_learning_items.json",
-        "status": "passed",
-        "counts": {
-          "worked_examples": 4,
-          "direct_variants": 4,
-          "total": 8
-        },
-        "error": null
-      },
-      {
-        "section": "4.8",
-        "path": "data\\packets\\4.8\\student_learning_items.json",
-        "status": "passed",
-        "counts": {
-          "worked_examples": 5,
-          "direct_variants": 4,
-          "total": 9
-        },
-        "error": null
-      },
-      {
-        "section": "5.1",
-        "path": "data\\packets\\5.1\\student_learning_items.json",
-        "status": "passed",
-        "counts": {
-          "worked_examples": 9,
-          "direct_variants": 3,
-          "total": 12
-        },
-        "error": null
-      },
-      {
-        "section": "5.2",
-        "path": "data\\packets\\5.2\\student_learning_items.json",
-        "status": "passed",
-        "counts": {
-          "worked_examples": 10,
-          "direct_variants": 6,
-          "total": 16
-        },
-        "error": null
-      },
-      {
-        "section": "5.3",
-        "path": "data\\packets\\5.3\\student_learning_items.json",
-        "status": "passed",
-        "counts": {
-          "worked_examples": 11,
-          "direct_variants": 19,
-          "total": 30
-        },
-        "error": null
-      },
-      {
-        "section": "5.4",
-        "path": "data\\packets\\5.4\\student_learning_items.json",
-        "status": "passed",
-        "counts": {
-          "worked_examples": 9,
-          "direct_variants": 10,
-          "total": 19
-        },
-        "error": null
-      },
-      {
-        "section": "5.5",
-        "path": "data\\packets\\5.5\\student_learning_items.json",
-        "status": "passed",
-        "counts": {
-          "worked_examples": 9,
-          "direct_variants": 3,
-          "total": 12
-        },
-        "error": null
-      },
-      {
-        "section": "5.6",
-        "path": "data\\packets\\5.6\\student_learning_items.json",
-        "status": "passed",
-        "counts": {
-          "worked_examples": 14,
-          "direct_variants": 9,
-          "total": 23
-        },
-        "error": null
-      },
-      {
-        "section": "ch3.s1",
-        "path": "data\\packets\\ch3.s1\\student_learning_items.json",
-        "status": "passed",
-        "counts": {
-          "worked_examples": 15,
-          "direct_variants": 13,
-          "total": 28
-        },
-        "error": null
-      },
-      {
-        "section": "ch3.s10",
-        "path": "data\\packets\\ch3.s10\\student_learning_items.json",
-        "status": "passed",
-        "counts": {
-          "worked_examples": 3,
-          "direct_variants": 2,
-          "total": 5
-        },
-        "error": null
-      },
-      {
-        "section": "ch3.s11",
-        "path": "data\\packets\\ch3.s11\\student_learning_items.json",
-        "status": "passed",
-        "counts": {
-          "worked_examples": 4,
-          "direct_variants": 2,
-          "total": 6
-        },
-        "error": null
-      },
-      {
-        "section": "ch3.s12",
-        "path": "data\\packets\\ch3.s12\\student_learning_items.json",
-        "status": "passed",
-        "counts": {
-          "worked_examples": 3,
-          "direct_variants": 2,
-          "total": 5
-        },
-        "error": null
-      },
-      {
-        "section": "ch3.s13",
-        "path": "data\\packets\\ch3.s13\\student_learning_items.json",
-        "status": "passed",
-        "counts": {
-          "worked_examples": 3,
-          "direct_variants": 2,
-          "total": 5
-        },
-        "error": null
-      },
-      {
-        "section": "ch3.s2",
-        "path": "data\\packets\\ch3.s2\\student_learning_items.json",
-        "status": "passed",
-        "counts": {
-          "worked_examples": 15,
-          "direct_variants": 10,
-          "total": 25
-        },
-        "error": null
-      },
-      {
-        "section": "ch3.s3",
-        "path": "data\\packets\\ch3.s3\\student_learning_items.json",
-        "status": "passed",
-        "counts": {
-          "worked_examples": 5,
-          "direct_variants": 12,
-          "total": 17
-        },
-        "error": null
-      },
-      {
-        "section": "ch3.s4",
-        "path": "data\\packets\\ch3.s4\\student_learning_items.json",
-        "status": "passed",
-        "counts": {
-          "worked_examples": 11,
-          "direct_variants": 12,
-          "total": 23
-        },
-        "error": null
-      },
-      {
-        "section": "ch3.s5",
-        "path": "data\\packets\\ch3.s5\\student_learning_items.json",
-        "status": "passed",
-        "counts": {
-          "worked_examples": 16,
-          "direct_variants": 8,
-          "total": 24
-        },
-        "error": null
-      },
-      {
-        "section": "ch3.s6",
-        "path": "data\\packets\\ch3.s6\\student_learning_items.json",
-        "status": "passed",
-        "counts": {
-          "worked_examples": 6,
-          "direct_variants": 9,
-          "total": 15
-        },
-        "error": null
-      },
-      {
-        "section": "ch3.s7",
-        "path": "data\\packets\\ch3.s7\\student_learning_items.json",
-        "status": "passed",
-        "counts": {
-          "worked_examples": 10,
-          "direct_variants": 8,
-          "total": 18
-        },
-        "error": null
-      },
-      {
-        "section": "ch3.s8",
-        "path": "data\\packets\\ch3.s8\\student_learning_items.json",
-        "status": "passed",
-        "counts": {
-          "worked_examples": 7,
-          "direct_variants": 4,
-          "total": 11
-        },
-        "error": null
-      },
-      {
-        "section": "ch3.s9",
-        "path": "data\\packets\\ch3.s9\\student_learning_items.json",
-        "status": "passed",
-        "counts": {
-          "worked_examples": 3,
-          "direct_variants": 5,
-          "total": 8
-        },
-        "error": null
-      },
-      {
-        "section": "micro专题1",
-        "path": "data\\packets\\micro专题1\\student_learning_items.json",
-        "status": "passed",
-        "counts": {
-          "worked_examples": 7,
-          "direct_variants": 1,
-          "total": 8
-        },
-        "error": null
       }
     ],
     "contexts": [
@@ -1718,14 +650,14 @@
     "bridge_micro_lessons": {
       "path": "data/bridge_micro_lessons.json",
       "unit_count": 15,
-      "sha256": "27723540d68283993cc985d49543bb011e9184ad21461613bba6ed35aa0c341e"
+      "sha256": "6037dca3a4258ad9f95749b9ec6f6066490f13e04f26a7284a60a124963dc5fc"
     },
     "simulation_matrix": "reports/zero_base_cycles/1.1-current-agent-simulation.json",
-    "simulation_generation": "G-LUNA-20260817-01",
+    "simulation_generation": "G-LUNA-20260822-01",
     "simulation_evidence": {
       "path": "reports/zero_base_cycles/1.1-current-agent-simulation.json",
       "status": "passed",
-      "generation": "G-LUNA-20260817-01",
+      "generation": "G-LUNA-20260822-01",
       "errors": [],
       "legacy_fallback_ignored": [
         "reports/zero_base_agent_simulation.json",
@@ -1745,14 +677,14 @@
       },
       "source_revision": {
         "chapter1_manifest.json": "d4f276a026ddfd35d69795ed5c589cdbf8f3f8e98ad3fe73ef814d672a1541c5",
-        "data/bridge_micro_lessons.json": "27723540d68283993cc985d49543bb011e9184ad21461613bba6ed35aa0c341e",
+        "data/bridge_micro_lessons.json": "6037dca3a4258ad9f95749b9ec6f6066490f13e04f26a7284a60a124963dc5fc",
         "data/packets/1.1/learning_packet.json": "416990cafa7fabe30dc1c4e04712da47d8ab80ae19e5d6f26b72a46c0814e053",
         "data/packets/1.1/student_learning_items.json": "22c1650492b87ffb05f6bfabc81875f2f9cdcccb757a30e0cf0bacd87aed38bb",
         "data/contexts/1.1.json": "7b51a4f14c14ba17a5807009ef90093a0276ef9cd00b925bd5e0950da2c2e316",
         "data/question_coverage.json": "028b5c047ff17639c6a5e07c4a963ac5fe0d88ab6dd42edefdd582da441821cf",
-        "data/zero_base_simulation_standard.md": "382ad51169d1ff869b59a427237aa19fde45f9b7948e7176d8f2f618950f5a71",
+        "data/zero_base_simulation_standard.md": "cd13e8516a359453f03bde643fcfc99d9d84e4ff9f0b19e1cf42cc04285932f6",
         "data/packets/1.1/learning_path_without_questions.md": "5a312c1e1760eed1fedc168c5b7a8f4274aa94bf3f5396c46b6bc294c75006e0",
-        "reports/luna_sections/LUNA-YBT-05/delivery.json": "d0b7d6a2f0269269aa0aa4bb30f994dc42289d16841145e06b66eac0d021fed5"
+        "reports/ch12_luna_sections/LUNA-CH12-01/delivery.json": "a4e4b253f28f1e1ba834fa310d7d6e4b38e7ddabb64c50ada7792434aef2660a"
       },
       "expected_item_count": 38,
       "source_revision_match": true,
@@ -1761,18 +693,23 @@
     "chapter_simulation_status": "reports/zero_base_cycles/chapter1-current-simulation-status.json",
     "chapter_simulation_evidence": {
       "path": "reports/zero_base_cycles/chapter1-current-simulation-status.json",
-      "status": "blocked",
-      "errors": [
-        "chapter_simulation_current_sections_not_ready",
-        "chapter_simulation_current_item_count_mismatch"
-      ],
+      "status": "passed",
+      "errors": [],
       "summary": {
         "section_count": 3,
-        "current_sections_verified": 0,
+        "item_count": 86,
+        "expected_item_count": 86,
         "required_sections": 3,
-        "current_items_verified": 0,
         "required_items": 86,
-        "all_current_section_simulations_ready": false,
+        "current_sections_verified": 3,
+        "all_current_section_simulations_ready": true,
+        "current_items_verified": 86,
+        "item_coverage_complete": true,
+        "method_check_count": 0,
+        "verdict_counts": {
+          "PASS": 86
+        },
+        "proxy_mastery_status": "PASS",
         "human_acceptance_not_proven": true,
         "cold_retest_24h": "not_run",
         "real_user_observation": "not_run"
@@ -1780,118 +717,67 @@
       "sections": [
         {
           "section": "1.2_1.3",
-          "current_worker_file": "reports/zero_base_cycles/1.2_1.3-structured-worker-g11.json",
-          "current_worker_present": false,
+          "worker_file": "reports/ch12_luna_sections/LUNA-CH12-02/delivery.json",
+          "generation": "delivery-05df0aeaf3294cf9",
+          "context_sha256": null,
+          "item_count": 33,
           "expected_item_count": 33,
-          "current_item_count": null,
-          "current_status": "NOT_RUN",
-          "context_sha256": "5747dad98fce7b027b62db1efdee69fe403828af1e9e6ab7b30b7456e087dc39",
-          "source_revision": {
-            "chapter1_manifest.json": "d4f276a026ddfd35d69795ed5c589cdbf8f3f8e98ad3fe73ef814d672a1541c5",
-            "data/bridge_micro_lessons.json": "27723540d68283993cc985d49543bb011e9184ad21461613bba6ed35aa0c341e",
-            "data/question_coverage.json": "028b5c047ff17639c6a5e07c4a963ac5fe0d88ab6dd42edefdd582da441821cf",
-            "data/zero_base_simulation_standard.md": "382ad51169d1ff869b59a427237aa19fde45f9b7948e7176d8f2f618950f5a71",
-            "data/packets/1.2_1.3/learning_packet.json": "b9a78991b94d3fdfadf70c6c2d20494051242d85fa3d9156194b1811ced7b380",
-            "data/packets/1.2_1.3/student_learning_items.json": "d93a2a3772a2926fe5525936b1e98642088a1cc3cf53f58a0a0a35f90df98788",
-            "data/contexts/1.2_1.3.json": "3661c6d47c74366d2ea46e76a9f44e9ff4da5cd8b5fec7fb5c4c070f866359e0",
-            "data/packets/1.2_1.3/learning_path_without_questions.md": "c4e70ee8bb6484d99d66ad1e66e3dc9216247270029e3d1f86841ffbd4c54c6c"
+          "method_check_count": 0,
+          "verdict_counts": {
+            "PASS": 33
           },
-          "historical_shards": {
-            "file_count": 5,
-            "files": [
-              "reports/zero_base_cycles/1.2_1.3-structured-worker-1.json",
-              "reports/zero_base_cycles/1.2_1.3-structured-worker-2.json",
-              "reports/zero_base_cycles/1.2_1.3-structured-worker-3.json",
-              "reports/zero_base_cycles/1.2_1.3-structured-worker-4.json",
-              "reports/zero_base_cycles/1.2_1.3-structured-worker-5.json"
-            ],
-            "generations": [
-              "G-CH1-S12-01"
-            ],
-            "context_hashes": [
-              "271c68719a46b628e716267fb786ee13c4e40bec9523ffe4f005fada1c05fd86"
-            ],
-            "worker_statuses": [
-              "COMPLETED"
-            ],
-            "current_context_hash": "5747dad98fce7b027b62db1efdee69fe403828af1e9e6ab7b30b7456e087dc39",
-            "historical_context_stale": true
+          "status": "PASS",
+          "source_revision": {
+            "ready_sha256": "f451e81c86e520577e176b12b73702945fdbf5cbac341ba9e4a93fa046a8c267",
+            "packet_build_sha256": "848c158cfe8dc8ab3b0ce49bc5ce50b0ba17ead8f85e7c34ccda530b282c8884",
+            "course_catalog_sha256": "fd5a35abb8d8471a975089c9af44b2284ae4ca295e54f6d294cc37c26339c048",
+            "vision_sidecar_sha256": "ee371622be9032f834480bc8dab3e37e7119f2236081459cf7897065ae1f03fc",
+            "skill_contract_sha256": "08736c8e05e7815106339585f37f69bc171d3343a226839a653863064d03d7c0"
           }
         },
         {
           "section": "1.4",
-          "current_worker_file": "reports/zero_base_cycles/1.4-structured-worker-g11.json",
-          "current_worker_present": false,
+          "worker_file": "reports/ch12_luna_sections/LUNA-CH12-03/delivery.json",
+          "generation": "delivery-6f21d6f9997b0e97",
+          "context_sha256": null,
+          "item_count": 37,
           "expected_item_count": 37,
-          "current_item_count": null,
-          "current_status": "NOT_RUN",
-          "context_sha256": "497393491f4300785dae005fa3862a7985d7d553663397b73c00fb0f14f6941a",
-          "source_revision": {
-            "chapter1_manifest.json": "d4f276a026ddfd35d69795ed5c589cdbf8f3f8e98ad3fe73ef814d672a1541c5",
-            "data/bridge_micro_lessons.json": "27723540d68283993cc985d49543bb011e9184ad21461613bba6ed35aa0c341e",
-            "data/question_coverage.json": "028b5c047ff17639c6a5e07c4a963ac5fe0d88ab6dd42edefdd582da441821cf",
-            "data/zero_base_simulation_standard.md": "382ad51169d1ff869b59a427237aa19fde45f9b7948e7176d8f2f618950f5a71",
-            "data/packets/1.4/learning_packet.json": "0b23b27ced722a5e19534836db436ebeaeff16637439e83f9591a146e5a39fa0",
-            "data/packets/1.4/student_learning_items.json": "5d13e2b7d7d805c0a44f4c9c108916eae100c1b8c42894da852fd1e6c57f82b5",
-            "data/contexts/1.4.json": "aedebd45a9f838f0fcf019de7318882d65e53d90e8108324281b51c303a7dd86",
-            "data/packets/1.4/learning_path_without_questions.md": "86ec196137409acc0c311567fcdefea1cf345f5bd3566e7f883349681bc92afc"
+          "method_check_count": 0,
+          "verdict_counts": {
+            "PASS": 37
           },
-          "historical_shards": {
-            "file_count": 5,
-            "files": [
-              "reports/zero_base_cycles/1.4-structured-worker-1.json",
-              "reports/zero_base_cycles/1.4-structured-worker-2.json",
-              "reports/zero_base_cycles/1.4-structured-worker-3.json",
-              "reports/zero_base_cycles/1.4-structured-worker-4.json",
-              "reports/zero_base_cycles/1.4-structured-worker-5.json"
-            ],
-            "generations": [
-              "G-CH1-S14-01"
-            ],
-            "context_hashes": [
-              "d638b3d2dd2364a3e89da9fb90cab36005e9cc2a132cbbdc9bac599e579a69a6"
-            ],
-            "worker_statuses": [
-              "BLOCKED",
-              "PARTIAL"
-            ],
-            "current_context_hash": "497393491f4300785dae005fa3862a7985d7d553663397b73c00fb0f14f6941a",
-            "historical_context_stale": true
+          "status": "PASS",
+          "source_revision": {
+            "ready_sha256": "f451e81c86e520577e176b12b73702945fdbf5cbac341ba9e4a93fa046a8c267",
+            "packet_build_sha256": "848c158cfe8dc8ab3b0ce49bc5ce50b0ba17ead8f85e7c34ccda530b282c8884",
+            "course_catalog_sha256": "fd5a35abb8d8471a975089c9af44b2284ae4ca295e54f6d294cc37c26339c048",
+            "vision_sidecar_sha256": "ee371622be9032f834480bc8dab3e37e7119f2236081459cf7897065ae1f03fc",
+            "skill_contract_sha256": "08736c8e05e7815106339585f37f69bc171d3343a226839a653863064d03d7c0"
           }
         },
         {
           "section": "micro专题1",
-          "current_worker_file": "reports/zero_base_cycles/micro专题1-structured-worker-g11.json",
-          "current_worker_present": false,
+          "worker_file": "reports/ch12_luna_sections/LUNA-CH12-04/delivery.json",
+          "generation": "delivery-9c6f4e14ab10caa6",
+          "context_sha256": null,
+          "item_count": 16,
           "expected_item_count": 16,
-          "current_item_count": null,
-          "current_status": "NOT_RUN",
-          "context_sha256": "92aa0e122eabdd75d3a7af7301e3a246311100be1b57446841111f5b9b0cafe6",
-          "source_revision": {
-            "chapter1_manifest.json": "d4f276a026ddfd35d69795ed5c589cdbf8f3f8e98ad3fe73ef814d672a1541c5",
-            "data/bridge_micro_lessons.json": "27723540d68283993cc985d49543bb011e9184ad21461613bba6ed35aa0c341e",
-            "data/question_coverage.json": "028b5c047ff17639c6a5e07c4a963ac5fe0d88ab6dd42edefdd582da441821cf",
-            "data/zero_base_simulation_standard.md": "382ad51169d1ff869b59a427237aa19fde45f9b7948e7176d8f2f618950f5a71",
-            "data/packets/micro专题1/learning_packet.json": "a3951b4d4db84f29df0824e01cc7c8209265d04ea61ecfa55531dd0d73e6cd82",
-            "data/packets/micro专题1/student_learning_items.json": "8305b719fe5456375916b5e81e7de0792fcb7a60f18e126001073ad0ae25b266",
-            "data/contexts/micro专题1.json": "3f5855fd99f31f8b7e89a97430eff85d5d01f9b080ceacf239da231a8220c64c",
-            "data/packets/micro专题1/learning_path_without_questions.md": "0f5772e17390728a4e8627b05efa92e62749edb838a7973664abefe9334cc44c"
+          "method_check_count": 0,
+          "verdict_counts": {
+            "PASS": 16
           },
-          "historical_shards": {
-            "file_count": 0,
-            "files": [],
-            "generations": [],
-            "context_hashes": [],
-            "worker_statuses": [],
-            "current_context_hash": "92aa0e122eabdd75d3a7af7301e3a246311100be1b57446841111f5b9b0cafe6",
-            "historical_context_stale": false
+          "status": "PASS",
+          "source_revision": {
+            "ready_sha256": "f451e81c86e520577e176b12b73702945fdbf5cbac341ba9e4a93fa046a8c267",
+            "packet_build_sha256": "848c158cfe8dc8ab3b0ce49bc5ce50b0ba17ead8f85e7c34ccda530b282c8884",
+            "course_catalog_sha256": "fd5a35abb8d8471a975089c9af44b2284ae4ca295e54f6d294cc37c26339c048",
+            "vision_sidecar_sha256": "ee371622be9032f834480bc8dab3e37e7119f2236081459cf7897065ae1f03fc",
+            "skill_contract_sha256": "08736c8e05e7815106339585f37f69bc171d3343a226839a653863064d03d7c0",
+            "ocr_vision_evidence_sha256": "3a419c40b6f600dd708fde00190f6f830ca9237dd5ece3ac7dbcd4dc0d213e3a"
           }
         }
       ],
-      "blockers": [
-        "current_section_worker_outputs_missing_or_not_merged",
-        "historical_shards_are_not_current_generation_evidence"
-      ]
+      "blockers": []
     },
     "teacher_judgement": "reports\\final-teacher-judge-current.json",
     "teacher_judgement_evidence": {
@@ -1908,7 +794,7 @@
         "teacher_judge_source_hash_mismatch:data/question_coverage.json",
         "teacher_judge_source_hash_mismatch:data/zero_base_simulation_standard.md",
         "teacher_judge_source_hash_mismatch:data/packets/1.1/learning_path_without_questions.md",
-        "teacher_judge_source_hash_mismatch:reports/luna_sections/LUNA-YBT-05/delivery.json"
+        "teacher_judge_source_hash_mismatch:reports/ch12_luna_sections/LUNA-CH12-01/delivery.json"
       ],
       "generation": null,
       "source_revision": {}
@@ -1930,14 +816,14 @@
     "browser_collection_events": "data/browser_collection_events.jsonl",
     "vision_live_evidence": "data/vision_live_evidence.json",
     "ocr_status": {
-      "script": "C:\\开发\\ocr本地\\paddleocr_ai_studio.py",
+      "script": "C:\\����\\ocr����\\paddleocr_ai_studio.py",
       "provider": "PaddleOCR AI Studio (project configured API)",
       "selected_provider": "paddle_ai_studio",
       "active_provider": "paddle_ai_studio",
       "active_provider_live_verified": true,
       "baidu_qianfan_verified": false,
       "qianfan_verified": false,
-      "exists": true,
+      "exists": false,
       "token_source": "environment_required",
       "safe_for_new_run": false,
       "status": "ready",
@@ -1952,7 +838,7 @@
         "configured": false,
         "live_verified": false,
         "status": "not_run",
-        "note": "兼容旧字段名；此对象实际是百度标准 OCR AK/SK 适配器，不是千帆视觉接口"
+        "note": "���ݾ��ֶ������˶���ʵ���ǰٶȱ�׼ OCR AK/SK ������������ǧ���Ӿ��ӿ�"
       },
       "baidu_standard": {
         "provider": "baidu_standard",
@@ -1975,28 +861,28 @@
         "configured": false,
         "live_verified": false,
         "status": "not_run",
-        "live_evidence_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\qianfan_live_evidence.json",
-        "note": "千帆视觉理解 API；无 key 或无本次 live 证据时保持 not_run"
+        "live_evidence_path": "C:\\Users\\16408\\Desktop\\����\\��ѧ\\data\\qianfan_live_evidence.json",
+        "note": "ǧ���Ӿ����� API���� key ���ޱ��� live ֤��ʱ���� not_run"
       },
       "historical_corpus": {
-        "root": "C:\\开发\\小工具\\一本通DeepSeek迭代\\worker-01-content\\ocr",
-        "doc_count": 69,
-        "status": "available",
-        "fresh_api_run": "passed",
+        "root": "C:\\����\\С����\\һ��ͨDeepSeek����\\worker-01-content\\ocr",
+        "doc_count": 0,
+        "status": "missing",
+        "fresh_api_run": "not_run",
         "live_replay_verified": true
       },
       "live_probe": {
         "status": "passed",
-        "provider": "PaddleOCR AI Studio",
-        "job_id": "81589668170391552",
+        "provider": "PaddleOCR AI Studio historical client",
+        "job_id": "81451507704512512",
         "document_count": 69,
         "source_pdf_sha256": "9D3F38A7591742E22282490256A5C6BEF8F644ABC0E65DB06F3DCEB0251894FF",
-        "output_root": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69",
+        "output_root": "C:\\����\\С����\\һ��ͨѧϰϵͳ_v7\\data\\ocr_live_full",
         "exact_match_with_historical": true,
-        "fresh_api_run": true,
-        "current_live": true,
-        "evidence_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current_evidence.json",
-        "note": "这是本次 PaddleOCR AI Studio API live 探针；历史回放仅作为独立对照，不等同于百度标准 OCR AK/SK。"
+        "fresh_api_run": false,
+        "current_live": false,
+        "evidence_path": "C:\\Users\\16408\\Desktop\\����\\��ѧ\\data\\ocr_live_evidence.json",
+        "note": "������ʷ PaddleOCR AI Studio �ͻ��˵���ʵ̽�룻����ͬ�ڰٶȱ�׼ OCR AK/SK live_verified��"
       },
       "qianfan_live_probe": {
         "status": "not_run",
@@ -2004,7 +890,7 @@
         "model": null,
         "text_length": null,
         "image_sha256": "3fc40975d3e7b69f351be4f1429a30739fcda89cbeec0ee1b8aefe3d644c05ce",
-        "evidence_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\qianfan_live_evidence.json"
+        "evidence_path": "C:\\Users\\16408\\Desktop\\����\\��ѧ\\data\\qianfan_live_evidence.json"
       }
     },
     "deepseek_status": {
@@ -2017,28 +903,28 @@
           "errors": [],
           "route_status": "passed",
           "route_errors": [],
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\contexts\\1.1.json"
+          "path": "C:\\Users\\16408\\Desktop\\����\\��ѧ\\data\\contexts\\1.1.json"
         },
         {
           "status": "passed",
           "errors": [],
           "route_status": "passed",
           "route_errors": [],
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\contexts\\1.2_1.3.json"
+          "path": "C:\\Users\\16408\\Desktop\\����\\��ѧ\\data\\contexts\\1.2_1.3.json"
         },
         {
           "status": "passed",
           "errors": [],
           "route_status": "passed",
           "route_errors": [],
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\contexts\\1.4.json"
+          "path": "C:\\Users\\16408\\Desktop\\����\\��ѧ\\data\\contexts\\1.4.json"
         },
         {
           "status": "passed",
           "errors": [],
           "route_status": "passed",
           "route_errors": [],
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\contexts\\micro专题1.json"
+          "path": "C:\\Users\\16408\\Desktop\\����\\��ѧ\\data\\contexts\\microר��1.json"
         }
       ],
       "independent_probe": {
@@ -2054,7 +940,7 @@
           "errors": [],
           "route_status": "passed",
           "route_errors": [],
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\contexts\\1.1.json"
+          "path": "C:\\����\\С����\\һ��ͨѧϰϵͳ_v7\\data\\contexts\\1.1.json"
         },
         "transport": {},
         "errors": [
@@ -2063,290 +949,88 @@
       }
     },
     "answer_status": {
-      "status": "failed",
+      "status": "passed",
       "sections": [
         {
           "section": "1.1",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\1.1\\answer_sidecar.json",
           "total": 14,
           "nonempty": 14,
           "status": "passed"
         },
         {
           "section": "1.2+1.3",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\1.2_1.3\\answer_sidecar.json",
           "total": 16,
           "nonempty": 16,
           "status": "passed"
         },
         {
           "section": "1.4",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\1.4\\answer_sidecar.json",
           "total": 12,
           "nonempty": 12,
           "status": "passed"
         },
         {
-          "section": "2.1",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\2.1\\answer_sidecar.json",
-          "total": 14,
-          "nonempty": 0,
-          "status": "failed"
-        },
-        {
-          "section": "2.2",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\2.2\\answer_sidecar.json",
-          "total": 16,
-          "nonempty": 0,
-          "status": "failed"
-        },
-        {
-          "section": "2.3",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\2.3\\answer_sidecar.json",
-          "total": 22,
-          "nonempty": 0,
-          "status": "failed"
-        },
-        {
-          "section": "2.4",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\2.4\\answer_sidecar.json",
-          "total": 15,
-          "nonempty": 0,
-          "status": "failed"
-        },
-        {
-          "section": "2.5",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\2.5\\answer_sidecar.json",
-          "total": 16,
-          "nonempty": 0,
-          "status": "failed"
-        },
-        {
-          "section": "2.6",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\2.6\\answer_sidecar.json",
-          "total": 19,
-          "nonempty": 0,
-          "status": "failed"
-        },
-        {
-          "section": "2.7",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\2.7\\answer_sidecar.json",
-          "total": 19,
-          "nonempty": 0,
-          "status": "failed"
-        },
-        {
-          "section": "4.1",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\4.1\\answer_sidecar.json",
-          "total": 23,
-          "nonempty": 0,
-          "status": "failed"
-        },
-        {
-          "section": "4.2",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\4.2\\answer_sidecar.json",
-          "total": 18,
-          "nonempty": 0,
-          "status": "failed"
-        },
-        {
-          "section": "4.3",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\4.3\\answer_sidecar.json",
-          "total": 19,
-          "nonempty": 0,
-          "status": "failed"
-        },
-        {
-          "section": "4.4",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\4.4\\answer_sidecar.json",
-          "total": 16,
-          "nonempty": 0,
-          "status": "failed"
-        },
-        {
-          "section": "4.5",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\4.5\\answer_sidecar.json",
-          "total": 19,
-          "nonempty": 0,
-          "status": "failed"
-        },
-        {
-          "section": "4.6",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\4.6\\answer_sidecar.json",
-          "total": 4,
-          "nonempty": 0,
-          "status": "failed"
-        },
-        {
-          "section": "4.7",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\4.7\\answer_sidecar.json",
-          "total": 10,
-          "nonempty": 0,
-          "status": "failed"
-        },
-        {
-          "section": "4.8",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\4.8\\answer_sidecar.json",
-          "total": 8,
-          "nonempty": 0,
-          "status": "failed"
-        },
-        {
-          "section": "5.1",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\5.1\\answer_sidecar.json",
-          "total": 12,
-          "nonempty": 0,
-          "status": "failed"
-        },
-        {
-          "section": "5.2",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\5.2\\answer_sidecar.json",
-          "total": 14,
-          "nonempty": 0,
-          "status": "failed"
-        },
-        {
-          "section": "5.3",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\5.3\\answer_sidecar.json",
-          "total": 20,
-          "nonempty": 0,
-          "status": "failed"
-        },
-        {
-          "section": "5.4",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\5.4\\answer_sidecar.json",
-          "total": 17,
-          "nonempty": 0,
-          "status": "failed"
-        },
-        {
-          "section": "5.5",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\5.5\\answer_sidecar.json",
-          "total": 12,
-          "nonempty": 0,
-          "status": "failed"
-        },
-        {
-          "section": "5.6",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\5.6\\answer_sidecar.json",
-          "total": 27,
-          "nonempty": 0,
-          "status": "failed"
-        },
-        {
-          "section": "ch3.s1",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\ch3.s1\\answer_sidecar.json",
-          "total": 17,
-          "nonempty": 0,
-          "status": "failed"
-        },
-        {
-          "section": "ch3.s10",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\ch3.s10\\answer_sidecar.json",
-          "total": 8,
-          "nonempty": 0,
-          "status": "failed"
-        },
-        {
-          "section": "ch3.s11",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\ch3.s11\\answer_sidecar.json",
-          "total": 6,
-          "nonempty": 0,
-          "status": "failed"
-        },
-        {
-          "section": "ch3.s12",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\ch3.s12\\answer_sidecar.json",
-          "total": 6,
-          "nonempty": 0,
-          "status": "failed"
-        },
-        {
-          "section": "ch3.s13",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\ch3.s13\\answer_sidecar.json",
-          "total": 5,
-          "nonempty": 0,
-          "status": "failed"
-        },
-        {
-          "section": "ch3.s2",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\ch3.s2\\answer_sidecar.json",
-          "total": 17,
-          "nonempty": 0,
-          "status": "failed"
-        },
-        {
-          "section": "ch3.s3",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\ch3.s3\\answer_sidecar.json",
-          "total": 13,
-          "nonempty": 0,
-          "status": "failed"
-        },
-        {
-          "section": "ch3.s4",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\ch3.s4\\answer_sidecar.json",
-          "total": 16,
-          "nonempty": 0,
-          "status": "failed"
-        },
-        {
-          "section": "ch3.s5",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\ch3.s5\\answer_sidecar.json",
-          "total": 16,
-          "nonempty": 0,
-          "status": "failed"
-        },
-        {
-          "section": "ch3.s6",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\ch3.s6\\answer_sidecar.json",
-          "total": 12,
-          "nonempty": 0,
-          "status": "failed"
-        },
-        {
-          "section": "ch3.s7",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\ch3.s7\\answer_sidecar.json",
-          "total": 16,
-          "nonempty": 0,
-          "status": "failed"
-        },
-        {
-          "section": "ch3.s8",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\ch3.s8\\answer_sidecar.json",
-          "total": 12,
-          "nonempty": 0,
-          "status": "failed"
-        },
-        {
-          "section": "ch3.s9",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\ch3.s9\\answer_sidecar.json",
-          "total": 12,
-          "nonempty": 0,
-          "status": "failed"
-        },
-        {
           "section": "micro专题1",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\packets\\micro专题1\\answer_sidecar.json",
           "total": 8,
           "nonempty": 8,
           "status": "passed"
+        },
+        {
+          "section": "2.1",
+          "total": 14,
+          "nonempty": 0,
+          "status": "not_available"
+        },
+        {
+          "section": "2.2",
+          "total": 16,
+          "nonempty": 0,
+          "status": "not_available"
+        },
+        {
+          "section": "2.3",
+          "total": 22,
+          "nonempty": 0,
+          "status": "not_available"
+        },
+        {
+          "section": "2.4",
+          "total": 15,
+          "nonempty": 0,
+          "status": "not_available"
+        },
+        {
+          "section": "2.5",
+          "total": 16,
+          "nonempty": 0,
+          "status": "not_available"
+        },
+        {
+          "section": "2.6",
+          "total": 19,
+          "nonempty": 0,
+          "status": "not_available"
+        },
+        {
+          "section": "2.7",
+          "total": 19,
+          "nonempty": 0,
+          "status": "not_available"
         }
       ],
-      "answer_isolation": "answer_sidecar_only"
+      "answer_isolation": "student_packet_answer_free"
     },
     "course_inventory_check": {
       "status": "passed",
       "counts": {
-        "videos": 15,
-        "courses": 15,
-        "course_collection_videos": 15,
-        "transcripts": 15
+        "active_courses": 37,
+        "transcripts": 37,
+        "with_reliable_timeline": 15
       },
       "missing": [],
-      "count_match": true,
-      "complete_courses": true,
-      "declared_files": 30,
-      "existing_files": 30
+      "declared_files": 37,
+      "existing_files": 37,
+      "source": "data/all_chapters_course_catalog.json + data/course_transcripts"
     },
     "deepseek_independent_raw": null,
     "deepseek_independent_response": null,

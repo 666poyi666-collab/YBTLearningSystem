@@ -4,11 +4,10 @@
 
 ## 推荐连接方式
 
-1. 在 ChatGPT 的 `设置 → Apps → GitHub` 连接 GitHub。
-2. 只授权仓库 `666poyi666-collab/ybt-learning-system-v7`。
-3. 打开项目“数学选择性必修一”，新建聊天。
-4. 第一条消息中明确写 `@GitHub`、仓库名和当前章节。
-5. 将 `C:\Users\16408\Downloads\数学_必修二_-_8.5.md` 作为项目参考文件上传一次。它是旧对话参考，不是本节教材事实，也不应提交到公开 GitHub。
+1. 在 ChatGPT 项目“数学选择性必修一”中使用已经授权的“数学一本通学习”远程 MCP。
+2. 新建聊天后发送 `prompts/math_project_bootstrap.md`，让 ChatGPT 先读取 MCP 系统状态、当前任务和第一章第一节概览。
+3. MCP 不可用时，才在 ChatGPT 的 `设置 → Apps → GitHub` 连接 GitHub，并只授权仓库 `666poyi666-collab/ybt-learning-system-v7`，作为静态回退。
+4. 将 `C:\Users\16408\Downloads\数学_必修二_-_8.5.md` 作为可选项目参考文件上传一次。它是旧对话参考，不是本节教材事实，也不应提交到公开 GitHub。
 
 GitHub 负责读取仓库事实：教材题包、题图、课程转写、课程覆盖、学习路径和项目规则。8.5 文件只负责提供过去对话的辅助形式和用户卡点案例。当前节次的真实内容必须以仓库题包、题图和课程转写为准。
 

@@ -1599,7 +1599,31 @@ class PacketBuilder:
             return False
         if not images:
             return False
+        project_root = Path(__file__).resolve().parents[1]
+
+        def resolve_image_reference(value: Any) -> Path:
+            reference = Path(str(value or ""))
+            if reference.is_file() or _is_answer_book_path(str(reference)):
+                return reference
+            candidates = (
+                project_root / "data" / "ocr_live_current" / "first_chapter_69" / "imgs" / reference.name,
+                project_root / "data" / "ocr_live_current" / "second_chapter_109" / "imgs" / reference.name,
+                project_root / "data" / "ocr_live_current" / "first_chapter_69" / reference.name,
+                project_root / "data" / "ocr_live_current" / "second_chapter_109" / reference.name,
+                project_root / "data" / "ocr_live_full" / "imgs" / reference.name,
+                project_root / "reports" / "source_visuals2" / reference.name,
+                project_root / "reports" / "source_visuals" / reference.name,
+            )
+            return next((candidate for candidate in candidates if candidate.is_file()), reference)
+
         sidecar_image = Path(str(sidecar.get("image", "")))
+        if not sidecar_image.is_file():
+            # Evidence produced on the old device may retain an absolute OCR
+            # path.  Resolve only the basename into the current repository
+            # snapshot; the content hash check below remains authoritative.
+            if _is_answer_book_path(str(sidecar_image)):
+                return False
+            sidecar_image = resolve_image_reference(sidecar_image)
         if not sidecar_image.is_file():
             return False
         provenance = sidecar.get("source_provenance")
@@ -1612,11 +1636,12 @@ class PacketBuilder:
         declared_hash = sidecar.get("image_sha256")
         if declared_hash and declared_hash != actual_sidecar_hash:
             return False
-        if any(Path(str(ref.get("path", ""))).resolve() == sidecar_resolved for ref in images):
+        resolved_images = [(ref, resolve_image_reference(ref.get("path"))) for ref in images]
+        if any(reference.resolve() == sidecar_resolved for _, reference in resolved_images if reference.is_file()):
             return True
         if any(
-            actual_sidecar_hash == (ref.get("sha256") or _sha256_file(Path(str(ref.get("path", ""))).resolve()))
-            for ref in images
+            actual_sidecar_hash == (ref.get("sha256") or _sha256_file(reference))
+            for ref, reference in resolved_images
         ):
             return True
 
@@ -1628,6 +1653,20 @@ class PacketBuilder:
             return False
         source_pdf = Path(str(provenance.get("source_pdf", "")))
         if not source_pdf.is_file():
+            # The original source PDF may live on the old device.  The
+            # derived crop and its current OCR image hash still provide a
+            # verifiable content binding, so accept that portable fallback
+            # without pretending the old PDF path is available.
+            derived_hash = provenance.get("derived_from_image_sha256")
+            derived_path = resolve_image_reference(provenance.get("derived_from_image_path"))
+            if (
+                isinstance(derived_hash, str)
+                and re.fullmatch(r"[0-9a-f]{64}", derived_hash)
+                and derived_path.is_file()
+                and _sha256_file(derived_path) == derived_hash
+                and any(derived_hash == (ref.get("sha256") or _sha256_file(reference)) for ref, reference in resolved_images)
+            ):
+                return True
             return False
         source_pdf_sha256 = provenance.get("source_pdf_sha256")
         if not isinstance(source_pdf_sha256, str) or source_pdf_sha256 != _sha256_file(source_pdf):
@@ -1648,8 +1687,8 @@ class PacketBuilder:
             return False
         derived_path = provenance.get("derived_from_image_path")
         if derived_path:
-            derived_resolved = Path(str(derived_path)).resolve()
-            if not any(Path(str(ref.get("path", ""))).resolve() == derived_resolved for ref in images):
+            derived_resolved = resolve_image_reference(derived_path).resolve()
+            if not any(reference.resolve() == derived_resolved for _, reference in resolved_images if reference.is_file()):
                 # The same immutable OCR crop can live under the historical
                 # worker root or the current live root.  Exact path equality
                 # is unnecessary when the declared derived path exists and

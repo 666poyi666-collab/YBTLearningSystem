@@ -18,7 +18,7 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT_DEFAULT = ROOT / "reports" / "zero_base_cycles" / "chapter1-current-agent-simulation.json"
+OUTPUT_DEFAULT = ROOT / "reports" / "zero_base_cycles" / "chapter1-current-simulation-status.json"
 
 SECTION_CONFIG: dict[str, dict[str, str]] = {
     "1.2_1.3": {
@@ -27,6 +27,7 @@ SECTION_CONFIG: dict[str, dict[str, str]] = {
         "context": "data/contexts/1.2_1.3.json",
         "route": "data/packets/1.2_1.3/learning_path_without_questions.md",
         "worker": "reports/zero_base_cycles/1.2_1.3-structured-worker-g11.json",
+        "delivery": "reports/ch12_luna_sections/LUNA-CH12-02/delivery.json",
     },
     "1.4": {
         "packet": "data/packets/1.4/learning_packet.json",
@@ -34,6 +35,7 @@ SECTION_CONFIG: dict[str, dict[str, str]] = {
         "context": "data/contexts/1.4.json",
         "route": "data/packets/1.4/learning_path_without_questions.md",
         "worker": "reports/zero_base_cycles/1.4-structured-worker-g11.json",
+        "delivery": "reports/ch12_luna_sections/LUNA-CH12-03/delivery.json",
     },
     "micro专题1": {
         "packet": "data/packets/micro专题1/learning_packet.json",
@@ -41,6 +43,7 @@ SECTION_CONFIG: dict[str, dict[str, str]] = {
         "context": "data/contexts/micro专题1.json",
         "route": "data/packets/micro专题1/learning_path_without_questions.md",
         "worker": "reports/zero_base_cycles/micro专题1-structured-worker-g11.json",
+        "delivery": "reports/ch12_luna_sections/LUNA-CH12-04/delivery.json",
     },
 }
 
@@ -138,8 +141,59 @@ def validate_item(item: dict[str, Any], section: str, generation: str, context_s
         raise ValueError(f"{section}:{item.get('item_id')} verdict invalid")
 
 
+def validate_current_delivery(section: str) -> dict[str, Any] | None:
+    """Validate the current chapter delivery when the old worker shard is absent.
+
+    The active 1/2-chapter merge now stores the five-round/five-persona
+    evidence in ``reports/ch12_luna_sections``.  Keep the older worker-file
+    path as a fallback for historical runs, but never prefer it over a current
+    delivery that is already hash-bound and structurally verified.
+    """
+    config = SECTION_CONFIG[section]
+    delivery_path = ROOT / config["delivery"]
+    if not delivery_path.is_file():
+        return None
+    delivery = load(delivery_path)
+    row = next((item for item in delivery.get("sections", []) if item.get("section") == section.replace("_", "+")), None)
+    if row is None:
+        raise ValueError(f"{section}: current delivery section missing")
+    simulation = row.get("simulation", {})
+    rounds = simulation.get("rounds", [])
+    if simulation.get("status") != "passed" or len(rounds) != 5:
+        raise ValueError(f"{section}: current delivery simulation is not a passed five-round record")
+    if any(len(round.get("personas", [])) != 5 for round in rounds):
+        raise ValueError(f"{section}: current delivery persona count mismatch")
+    actual = simulation.get("actual_attempts_per_item", {})
+    expected = int(row.get("coverage", {}).get("expected_items", 0))
+    if len(actual) != expected or any(int(value) != 25 for value in actual.values()):
+        raise ValueError(f"{section}: current delivery attempt closure mismatch")
+    final_results = [
+        result
+        for persona in rounds[-1].get("personas", [])
+        for result in persona.get("item_results", [])
+    ]
+    if any(result.get("verdict") not in {"passed", "passed_after_self_correction"} for result in final_results):
+        raise ValueError(f"{section}: current delivery final round has unresolved items")
+    generation = f"delivery-{sha256(delivery_path)[:16]}"
+    return {
+        "section": section,
+        "worker_file": config["delivery"],
+        "generation": generation,
+        "context_sha256": None,
+        "item_count": expected,
+        "expected_item_count": expected,
+        "method_check_count": 0,
+        "verdict_counts": {"PASS": expected},
+        "status": "PASS",
+        "source_revision": delivery.get("source_binding", {}),
+    }
+
+
 def validate_section(section: str) -> dict[str, Any]:
     config = SECTION_CONFIG[section]
+    current_delivery = validate_current_delivery(section)
+    if current_delivery is not None:
+        return current_delivery
     worker_path = ROOT / config["worker"]
     if not worker_path.is_file():
         raise FileNotFoundError(f"missing current worker output: {config['worker']}")
@@ -210,7 +264,7 @@ def build_snapshot() -> dict[str, Any]:
         total_counts.update(section["verdict_counts"])
     return {
         "schema_version": "1.0",
-        "artifact": "CURRENT_CHAPTER_ZERO_BASE_AGENT_SIMULATION",
+        "artifact": "CHAPTER_ZERO_BASE_SIMULATION_STATUS",
         "generated_at": datetime.now().astimezone().isoformat(timespec="seconds"),
         "scope": "第一章 1.2+1.3、1.4、micro专题1 当前代逐题零基础代理模拟",
         "worker_contract": dict(EXPECTED_CONTRACT),
@@ -219,6 +273,11 @@ def build_snapshot() -> dict[str, Any]:
             "section_count": len(sections),
             "item_count": sum(item["item_count"] for item in sections),
             "expected_item_count": sum(item["expected_item_count"] for item in sections),
+            "required_sections": len(sections),
+            "required_items": sum(item["expected_item_count"] for item in sections),
+            "current_sections_verified": sum(item["status"] == "PASS" for item in sections),
+            "all_current_section_simulations_ready": all(item["status"] == "PASS" for item in sections),
+            "current_items_verified": sum(item["item_count"] for item in sections),
             "item_coverage_complete": all(item["item_count"] == item["expected_item_count"] for item in sections),
             "method_check_count": sum(item["method_check_count"] for item in sections),
             "verdict_counts": dict(sorted(total_counts.items())),

@@ -1095,20 +1095,14 @@ class LiveEvidenceChainTests(unittest.TestCase):
     """提交库内真实证据链回归（只读，不生成新证据）：第一张图奖励、样本侧车与 1.1 包绑定。"""
 
     ROOT = Path(__file__).resolve().parents[1]
-    FIRST_IMAGE_HISTORICAL = Path(r"C:\开发\小工具\一本通DeepSeek迭代\worker-01-content\ocr\imgs\img_in_image_box_523_429_694_610.jpg")
+    FIRST_IMAGE_CURRENT = ROOT / "data" / "ocr_live_current" / "first_chapter_69" / "imgs" / "img_in_image_box_523_429_694_610.jpg"
     FIRST_IMAGE_LIVE = ROOT / "data" / "ocr_live_full" / "imgs" / "img_in_image_box_523_429_694_610.jpg"
 
     def test_first_image_reward_chain_committed_artifacts(self) -> None:
-        sample = json.loads((self.ROOT / "data" / "vision_sidecar_sample.json").read_text(encoding="utf-8"))
-        entry = next((x for x in sample.get("results", []) if x.get("question_hint") == "1.1-A1"), None)
-        self.assertIsNotNone(entry, "vision_sidecar_sample.json 必须保留 1.1-A1 条目")
-        self.assertEqual(entry.get("status"), "passed")
-        self.assertEqual(entry.get("confidence"), "E2")
-        self.assertEqual(Path(entry["image"]), self.FIRST_IMAGE_HISTORICAL)
-        self.assertTrue(self.FIRST_IMAGE_HISTORICAL.is_file(), "第一张图历史根文件必须存在")
+        self.assertTrue(self.FIRST_IMAGE_CURRENT.is_file(), "第一张图当前 OCR 根文件必须存在")
         self.assertTrue(self.FIRST_IMAGE_LIVE.is_file(), "第一张图 live OCR 根文件必须存在")
         self.assertEqual(
-            _sha256_file(self.FIRST_IMAGE_HISTORICAL),
+            _sha256_file(self.FIRST_IMAGE_CURRENT),
             _sha256_file(self.FIRST_IMAGE_LIVE),
             "两棵根的图片必须逐字节一致（PacketBuilder 内容哈希绑定）",
         )
@@ -1120,6 +1114,9 @@ class LiveEvidenceChainTests(unittest.TestCase):
         packet = json.loads((self.ROOT / "data" / "packets" / "1.1" / "student_packet.json").read_text(encoding="utf-8"))
         a1 = next(q for q in packet["questions"] if q.get("group") == "A" and q.get("number") == 1)
         self.assertEqual(a1["visual_status"], "VISION_VERIFIED")
+        self.assertTrue(a1.get("evidence"))
+        self.assertTrue(any(Path(str(ref.get("ref") or ref.get("path") or "")).name == self.FIRST_IMAGE_CURRENT.name for ref in a1.get("image_refs", [])))
+        self.assertTrue(any(row.get("confidence") in {"E1", "E2"} for row in a1.get("vision_sidecars", []) if isinstance(row, dict)))
 
     def test_committed_reward_test_state_invariants(self) -> None:
         state = json.loads((self.ROOT / "data" / "reward-test-state.json").read_text(encoding="utf-8"))

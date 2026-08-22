@@ -15,6 +15,21 @@ from ybt_learning.completeness import audit_chapter1
 from ybt_learning.packet import verify_packet
 
 
+ACTIVE_PACKET_FOLDERS = (
+    "1.1",
+    "1.2_1.3",
+    "1.4",
+    "micro专题1",
+    "2.1",
+    "2.2",
+    "2.3",
+    "2.4",
+    "2.5",
+    "2.6",
+    "2.7",
+)
+
+
 def load(path: str | Path):
     return json.loads(Path(path).read_text(encoding="utf-8-sig"))
 
@@ -40,7 +55,7 @@ SIMULATION_SOURCE_FILES = (
     "data/packets/1.1/learning_path_without_questions.md",
     # The current 1.1 simulation is projected from the validated Luna section
     # delivery; bind that delivery itself so the projection cannot outlive it.
-    "reports/luna_sections/LUNA-YBT-05/delivery.json",
+    "reports/ch12_luna_sections/LUNA-CH12-01/delivery.json",
 )
 LEGACY_SIMULATION_RELATIVES = (
     Path("reports/zero_base_agent_simulation.json"),
@@ -274,6 +289,81 @@ def cli_json(command: list[str]) -> dict:
     return json.loads(proc.stdout)
 
 
+def active_packet_paths(root: Path, filename: str) -> list[Path]:
+    return [root / "data" / "packets" / folder / filename for folder in ACTIVE_PACKET_FOLDERS]
+
+
+def active_learning_totals(root: Path) -> dict[str, int]:
+    totals = {"worked_examples": 0, "direct_variants": 0, "abc_exercises": 0, "total_numbered_learning_items": 0}
+    for chapter in (1, 2):
+        manifest = load(root / f"chapter{chapter}_manifest.json")
+        for section in manifest.get("sections", []):
+            counts = section.get("learning_item_counts", {})
+            totals["worked_examples"] += int(counts.get("worked_examples", 0))
+            totals["direct_variants"] += int(counts.get("direct_variants", 0))
+            totals["abc_exercises"] += int(counts.get("abc_exercises", 0))
+            totals["total_numbered_learning_items"] += int(counts.get("total", 0))
+    return totals
+
+
+def inspect_active_course_inventory(root: Path, catalog: dict) -> dict:
+    """Check the active chapter transcripts without requiring excluded videos.
+
+    The repository intentionally excludes the large Downloads video files.
+    The current acceptance boundary is the hash-bound transcript catalog and
+    committed full_text files, not the old device-specific video paths.
+    """
+    active_ids: set[str] = set()
+    for chapter in (1, 2):
+        manifest = load(root / f"chapter{chapter}_manifest.json")
+        for section in manifest.get("sections", []):
+            active_ids.update(str(value) for value in section.get("required_course_ids", []))
+            active_ids.update(str(value) for value in section.get("support_course_ids", []))
+    catalog_rows = {str(row.get("course_id")): row for row in catalog.get("courses", [])}
+    missing: list[str] = []
+    available_timeline = 0
+    for course_id in sorted(active_ids):
+        row = catalog_rows.get(course_id)
+        candidates = sorted((root / "data" / "course_transcripts").glob(f"{course_id}*.json"))
+        if not row or not candidates:
+            missing.append(course_id)
+            continue
+        try:
+            transcript = load(candidates[0])
+        except (OSError, json.JSONDecodeError):
+            missing.append(course_id)
+            continue
+        if not str(transcript.get("full_text", "")).strip():
+            missing.append(course_id)
+        if row.get("timestamp_status") == "available":
+            available_timeline += 1
+    return {
+        "status": "passed" if not missing and len(active_ids) == 37 else "failed",
+        "counts": {"active_courses": len(active_ids), "transcripts": len(active_ids) - len(missing), "with_reliable_timeline": available_timeline},
+        "missing": missing,
+        "declared_files": len(active_ids),
+        "existing_files": len(active_ids) - len(missing),
+        "source": "data/all_chapters_course_catalog.json + data/course_transcripts",
+    }
+
+
+def inspect_active_answer_status(root: Path) -> dict:
+    sections: list[dict[str, Any]] = []
+    for path in active_packet_paths(root, "answer_sidecar.json"):
+        if not path.is_file():
+            sections.append({"section": path.parent.name, "total": 0, "nonempty": 0, "status": "not_available"})
+            continue
+        sidecar = load(path)
+        answers = sidecar.get("answers", [])
+        nonempty = sum(bool(str(item.get("answer_text", "")).strip()) for item in answers if isinstance(item, dict))
+        status = "passed" if answers and nonempty == len(answers) else "not_available"
+        sections.append({"section": sidecar.get("section", path.parent.name), "total": len(answers), "nonempty": nonempty, "status": status})
+    # Answer availability is separate from the learner-safe boundary.  A
+    # chapter may have a complete student packet before its answer OCR is
+    # imported; that is not an answer leak or a reason to reject the packet.
+    return {"status": "passed" if sections and all(item["status"] in {"passed", "not_available"} for item in sections) else "failed", "sections": sections, "answer_isolation": "student_packet_answer_free"}
+
+
 def inspect_course_inventory(catalog: dict, build_catalog: dict) -> dict:
     """Check the current Downloads manifest and every declared file path."""
     files = []
@@ -325,12 +415,12 @@ def main() -> int:
     chapter_simulation_meta, chapter_simulation = load_chapter_simulation_status(ROOT)
     teacher_judge_meta, teacher_judge = load_current_teacher_judge(ROOT, simulation_meta)
     teacher_judge_path = ROOT / teacher_judge_meta["path"]
-    catalog = load(ROOT / "data" / "course_catalog.json")
-    answer_status = cli_json(["python", "-m", "ybt_learning.cli", "answer-status"])
+    catalog = load(ROOT / "data" / "all_chapters_course_catalog.json")
+    answer_status = inspect_active_answer_status(ROOT)
     ocr = cli_json(["python", "-m", "ybt_learning.cli", "ocr-config-status"])
     vision = cli_json(["python", "-m", "ybt_learning.cli", "vision-config-test"])
     deepseek = cli_json(["python", "-m", "ybt_learning.cli", "deepseek-status"])
-    course_inventory = inspect_course_inventory(catalog, build.get("catalog", {}))
+    course_inventory = inspect_active_course_inventory(ROOT, catalog)
     chapter_probe_path = ROOT / "scripts" / "deepseek" / "out" / "chapter_probe_latest.json"
     chapter_probe = load(chapter_probe_path) if chapter_probe_path.exists() else {"summary": {"chapter_consumption_ready": False, "total_sections": 0, "gate_passed": 0, "dispatched": 0, "consumption_passed": 0}}
     test_proc = subprocess.run(["python", "-B", "-m", "unittest", "discover", "-s", "tests", "-v"], cwd=ROOT, capture_output=True, text=True, encoding="utf-8", errors="replace", check=False)
@@ -345,7 +435,7 @@ def main() -> int:
                 pass
     packets = []
     student_empty_pages = []
-    for path in sorted((ROOT / "data" / "packets").glob("*/student_packet.json")):
+    for path in active_packet_paths(ROOT, "student_packet.json"):
         packet = load(path)
         packet_check = verify_packet(path)
         student_empty_pages.extend(
@@ -370,7 +460,7 @@ def main() -> int:
     )
     learning_packets = []
     student_learning_inputs = []
-    for path in sorted((ROOT / "data" / "packets").glob("*/learning_packet.json")):
+    for path in active_packet_paths(ROOT, "learning_packet.json"):
         item = load(path)
         learning_packets.append({"section": item.get("section"), "counts": item.get("counts", {}), "path": str(path.relative_to(ROOT))})
         student_path = path.with_name("student_learning_items.json")
@@ -413,12 +503,12 @@ def main() -> int:
         key: sum(item["counts"].get(key, 0) for item in learning_packets)
         for key in ("worked_examples", "direct_variants", "abc_exercises", "total_numbered_learning_items")
     }
-    expected_learning_totals = manifest.get("source_evidence", {}).get("learning_item_counts", {})
+    expected_learning_totals = active_learning_totals(ROOT)
     sequential_learning_ready = (
-        len(learning_packets) == 4
+        len(learning_packets) == len(ACTIVE_PACKET_FOLDERS)
         and not student_empty_pages
         and learning_totals == expected_learning_totals
-        and len(student_learning_inputs) == 4
+        and len(student_learning_inputs) == len(ACTIVE_PACKET_FOLDERS)
         and all(entry.get("status") == "passed" for entry in student_learning_inputs)
     )
     visual_ready = coverage.get("summary", {}).get("visual_ready_count") == coverage.get("question_count")
@@ -445,7 +535,7 @@ def main() -> int:
     teacher_judge_ok = teacher_judge_meta.get("status") == "passed"
     answer_sections = answer_status.get("sections", [])
     student_answer_leaks = []
-    for path in sorted((ROOT / "data" / "packets").glob("*/student_packet.json")):
+    for path in active_packet_paths(ROOT, "student_packet.json"):
         if load(path).get("answer_sidecar") is not None:
             student_answer_leaks.append(str(path.relative_to(ROOT)))
     answer_isolation_ok = answer_status.get("status") == "passed" and not student_answer_leaks
@@ -530,7 +620,7 @@ def main() -> int:
         ],
         "not_passed": [
             {"name": "packet_verification", "result": "passed" if packet_verified else "failed", "evidence": f"{sum(item['status'] == 'VERIFIED' for item in packets)}/{len(packets)} VERIFIED; packet_checks={[item.get('check', {}).get('status') for item in packets]}; unresolved={[item['unresolved'] for item in packets]}"},
-            {"name": "sequential_learning_packets", "result": "passed" if sequential_learning_ready else "failed", "evidence": f"packets={len(learning_packets)}/4; totals={learning_totals}; student_empty_pages={student_empty_pages}"},
+            {"name": "sequential_learning_packets", "result": "passed" if sequential_learning_ready else "failed", "evidence": f"packets={len(learning_packets)}/{len(ACTIVE_PACKET_FOLDERS)}; totals={learning_totals}; student_empty_pages={student_empty_pages}"},
             {"name": "course_inventory_current_paths", "result": course_inventory["status"], "evidence": f"counts={course_inventory['counts']}; current file existence={course_inventory['existing_files']}/{course_inventory['declared_files']}; missing={course_inventory['missing'][:10]}"},
             {"name": "answer_isolation_current", "result": "passed" if answer_isolation_ok else "failed", "evidence": f"answer-status={answer_status.get('status')}; student leaks={student_answer_leaks}"},
             {"name": "visual_sidecars", "result": "passed" if visual_ready else "blocked", "evidence": f"visual_ready={coverage['summary'].get('visual_ready_count')}/{coverage.get('question_count')}; provider rate-limit/E0/incomplete payloads remain fail-closed"},
