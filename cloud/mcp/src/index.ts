@@ -311,6 +311,24 @@ async function projectEventState(
   `).bind(USER_ID, stateKey, currentVersion + 1, JSON.stringify(value), updatedAt).run()
 }
 
+async function learnerProfile(env: Env) {
+  const diagnostics = await env.DB.prepare(`SELECT diagnostic_id, item_id, section_key, error_type, error_direction, evidence_text, user_correction, final_status, created_at FROM learner_diagnostics WHERE user_id = ? ORDER BY created_at DESC LIMIT 200`).bind(USER_ID).all<JsonRecord>()
+  const memories = await env.DB.prepare(`SELECT memory_id, item_id, section_key, title, content, reason, priority, user_requested, status, created_at FROM memory_items WHERE user_id = ? AND status = 'active' ORDER BY created_at DESC LIMIT 200`).bind(USER_ID).all<JsonRecord>()
+  const classifications = await env.DB.prepare(`SELECT classification_id, item_id, section_key, cluster_title, basis, confidence, created_at FROM type_classifications WHERE user_id = ? ORDER BY created_at DESC LIMIT 200`).bind(USER_ID).all<JsonRecord>()
+  return { ok: true, diagnostics: diagnostics.results, memories: memories.results, typeClassifications: classifications.results }
+}
+
+async function wrongQuestionExport(env: Env, sectionKey: string, format: string) {
+  const rows = await env.DB.prepare(`SELECT d.item_id, d.section_key, d.error_type, d.error_direction, d.evidence_text, d.user_correction, d.final_status, d.created_at, i.label FROM learner_diagnostics d LEFT JOIN items i ON i.item_id = d.item_id WHERE d.user_id = ? AND (? = '' OR d.section_key = ?) ORDER BY d.created_at`).bind(USER_ID, sectionKey, sectionKey).all<JsonRecord>()
+  const memories = await env.DB.prepare(`SELECT title, content, reason, priority FROM memory_items WHERE user_id = ? AND (? = '' OR section_key = ?) AND status = 'active' ORDER BY created_at`).bind(USER_ID, sectionKey, sectionKey).all<JsonRecord>()
+  if (format === 'json') return { ok: true, format, wrongQuestions: rows.results, memories: memories.results }
+  const lines = ['# 数学错题与薄弱点记录', '', '## 错题记录', '']
+  for (const row of rows.results) lines.push(`### ${row.label ?? row.item_id ?? '未绑定题目'}\n\n- 错误类型：${row.error_type}\n- 错误方向：${row.error_direction ?? '未分类'}\n- 证据：${row.evidence_text}\n- 用户更正：${row.user_correction ?? '未记录'}\n- 状态：${row.final_status}\n`)
+  lines.push('## 记忆重点', '')
+  for (const memory of memories.results) lines.push(`### ${memory.title}\n\n${memory.content}\n\n- 记忆理由：${memory.reason}\n- 优先级：${memory.priority}\n`)
+  return { ok: true, format: 'markdown', content: lines.join('\n'), wrongQuestionCount: rows.results.length, memoryCount: memories.results.length }
+}
+
 function createServer(env: Env, scopes: readonly string[]): McpServer {
   const server = new McpServer(PROJECT, {
     instructions:
@@ -454,6 +472,29 @@ function createServer(env: Env, scopes: readonly string[]): McpServer {
     return result({ states: rows.results.map((row) => ({ key: row.state_key, version: Number(row.version), value: parseJson(String(row.value_json)), updatedAt: row.updated_at })) })
   })
 
+  server.registerTool('math_get_learner_profile', {
+    description: '读取持续学习者的错题画像、记忆重点和题型归类，不读取内部模拟人格。',
+    inputSchema: {},
+  }, async () => readAllowed() ? result(await learnerProfile(env)) : failure('insufficient_scope', READ_SCOPE))
+
+  server.registerTool('math_get_type_clusters', {
+    description: '读取某节教材已有题型清单及用户新增题型归类记录。',
+    inputSchema: { sectionKey: z.string().min(1).max(80) },
+  }, async ({ sectionKey }) => {
+    if (!readAllowed()) return failure('insufficient_scope', READ_SCOPE)
+    const row = await env.DB.prepare(`SELECT manifest_r2_key FROM sections WHERE section_key = ?`).bind(sectionKey).first<JsonRecord>()
+    if (!row) return failure('not_found', '未找到节次', { sectionKey })
+    const pack = await readContentJson(env, String(row.manifest_r2_key))
+    const manifest = pack?.manifest && typeof pack.manifest === 'object' ? pack.manifest as JsonRecord : {}
+    const userRows = await env.DB.prepare(`SELECT cluster_title, basis, confidence, item_id, created_at FROM type_classifications WHERE user_id = ? AND section_key = ? ORDER BY created_at DESC`).bind(USER_ID, sectionKey).all<JsonRecord>()
+    return result({ ok: true, sectionKey, textbookTypes: manifest.type_labels ?? manifest.type_training ?? [], userClassifications: userRows.results })
+  })
+
+  server.registerTool('math_export_wrong_questions', {
+    description: '生成高考规范风格的错题与记忆重点文档。输出可选 markdown 或 json；不把模型解法伪装成原书答案。',
+    inputSchema: { sectionKey: z.string().max(80).default(''), format: z.enum(['markdown', 'json']).default('markdown') },
+  }, async ({ sectionKey, format }) => readAllowed() ? result(await wrongQuestionExport(env, sectionKey, format)) : failure('insufficient_scope', READ_SCOPE))
+
   server.registerTool('math_get_teacher_method', {
     description: '读取某门课程与知识点相关的网课老师讲法和大概时间段。',
     inputSchema: {
@@ -528,6 +569,47 @@ function createServer(env: Env, scopes: readonly string[]): McpServer {
     return result({ ok: true, question: stored, replayed: stored.question_id !== questionId })
   })
 
+  server.registerTool('math_record_diagnostic', {
+    description: '记录一道题的错误类型、错误方向、证据和用户更正；允许将语音误识别撤销为 confirmed_correct。',
+    inputSchema: {
+      requestId: z.uuid(), itemId: z.string().max(200).optional(), sectionKey: z.string().max(80).optional(),
+      errorType: z.string().min(1).max(120), errorDirection: z.string().max(500).optional(), evidenceText: z.string().min(1).max(4000),
+      userCorrection: z.string().max(2000).optional(), finalStatus: z.enum(['open', 'confirmed_wrong', 'confirmed_correct', 'needs_review']).default('open'),
+    },
+  }, async ({ requestId, itemId, sectionKey, errorType, errorDirection, evidenceText, userCorrection, finalStatus }) => {
+    if (!writeAllowed()) return failure('insufficient_scope', WRITE_SCOPE)
+    const id = crypto.randomUUID(); const createdAt = new Date().toISOString()
+    await env.DB.prepare(`INSERT INTO learner_diagnostics (diagnostic_id, request_id, user_id, item_id, section_key, error_type, error_direction, evidence_text, user_correction, final_status, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT(request_id) DO NOTHING`).bind(id, requestId, USER_ID, itemId ?? null, sectionKey ?? null, errorType, errorDirection ?? null, evidenceText, userCorrection ?? null, finalStatus, createdAt).run()
+    const stored = await env.DB.prepare(`SELECT diagnostic_id, item_id, section_key, error_type, error_direction, evidence_text, user_correction, final_status, created_at FROM learner_diagnostics WHERE request_id = ? AND user_id = ?`).bind(requestId, USER_ID).first<JsonRecord>()
+    return stored ? result({ ok: true, diagnostic: stored, replayed: stored.diagnostic_id !== id }) : failure('write_failed', '错题画像写入失败')
+  })
+
+  server.registerTool('math_record_memory', {
+    description: '记录用户明确要求记忆或模型判断具有长期复用价值的数学记忆点。',
+    inputSchema: {
+      requestId: z.uuid(), itemId: z.string().max(200).optional(), sectionKey: z.string().max(80).optional(),
+      title: z.string().min(1).max(200), content: z.string().min(1).max(4000), reason: z.string().min(1).max(1000),
+      priority: z.enum(['high', 'normal', 'low']).default('normal'), userRequested: z.boolean().default(false),
+    },
+  }, async ({ requestId, itemId, sectionKey, title, content, reason, priority, userRequested }) => {
+    if (!writeAllowed()) return failure('insufficient_scope', WRITE_SCOPE)
+    const id = crypto.randomUUID(); const createdAt = new Date().toISOString()
+    await env.DB.prepare(`INSERT INTO memory_items (memory_id, request_id, user_id, item_id, section_key, title, content, reason, priority, user_requested, status, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'active', ?) ON CONFLICT(request_id) DO NOTHING`).bind(id, requestId, USER_ID, itemId ?? null, sectionKey ?? null, title, content, reason, priority, userRequested ? 1 : 0, createdAt).run()
+    const stored = await env.DB.prepare(`SELECT memory_id, item_id, section_key, title, content, reason, priority, user_requested, status, created_at FROM memory_items WHERE request_id = ? AND user_id = ?`).bind(requestId, USER_ID).first<JsonRecord>()
+    return stored ? result({ ok: true, memory: stored, replayed: stored.memory_id !== id }) : failure('write_failed', '记忆点写入失败')
+  })
+
+  server.registerTool('math_record_type_classification', {
+    description: '把一本通之外的新题归入已有题型，或记录一个经过解释的新题型。',
+    inputSchema: { requestId: z.uuid(), itemId: z.string().max(200).optional(), sectionKey: z.string().max(80).optional(), clusterTitle: z.string().min(1).max(200), basis: z.string().min(1).max(2000), confidence: z.enum(['high', 'medium', 'low']).default('medium') },
+  }, async ({ requestId, itemId, sectionKey, clusterTitle, basis, confidence }) => {
+    if (!writeAllowed()) return failure('insufficient_scope', WRITE_SCOPE)
+    const id = crypto.randomUUID(); const createdAt = new Date().toISOString()
+    await env.DB.prepare(`INSERT INTO type_classifications (classification_id, request_id, user_id, item_id, section_key, cluster_title, basis, confidence, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT(request_id) DO NOTHING`).bind(id, requestId, USER_ID, itemId ?? null, sectionKey ?? null, clusterTitle, basis, confidence, createdAt).run()
+    const stored = await env.DB.prepare(`SELECT classification_id, item_id, section_key, cluster_title, basis, confidence, created_at FROM type_classifications WHERE request_id = ? AND user_id = ?`).bind(requestId, USER_ID).first<JsonRecord>()
+    return stored ? result({ ok: true, classification: stored, replayed: stored.classification_id !== id }) : failure('write_failed', '题型归类写入失败')
+  })
+
   server.registerTool('math_mark_item_passed', {
     description: '在具备冻结尝试证据且用户确认后记录题目通过；模型不能自行判定。',
     inputSchema: {
@@ -566,8 +648,8 @@ async function readiness(env: Env): Promise<Response> {
   try {
     const row = await env.DB.prepare(`SELECT COUNT(*) AS count FROM sqlite_master WHERE type = 'table' AND name IN ('source_versions','items','courses','transcript_chunks','learning_events','learner_state','questions','answer_sources')`).first<{ count: number | string }>()
     const configured = oauthConfig(env) !== null
-    const ready = Number(row?.count ?? 0) === 8 && configured
-    return Response.json({ ok: ready, service: 'math-learning-mcp', storage: Number(row?.count ?? 0) === 8 ? 'ready' : 'migration_required', oauth: configured ? 'configured' : 'not_configured' }, { status: ready ? 200 : 503 })
+    const ready = Number(row?.count ?? 0) === 12 && configured
+    return Response.json({ ok: ready, service: 'math-learning-mcp', storage: Number(row?.count ?? 0) === 12 ? 'ready' : 'migration_required', oauth: configured ? 'configured' : 'not_configured' }, { status: ready ? 200 : 503 })
   } catch {
     return Response.json({ ok: false, service: 'math-learning-mcp', storage: 'unavailable' }, { status: 503 })
   }

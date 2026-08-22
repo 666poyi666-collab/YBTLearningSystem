@@ -1,5 +1,9 @@
 # Development Log
 
+## 2026-08-23
+
+- 新增持续学习者闭环 MCP 工具：`math_record_diagnostic`（错题画像/错误方向/语音误识别撤销）、`math_record_memory`（用户指定或模型识别的高价值记忆点）、`math_record_type_classification`（题型归类）和 `math_export_wrong_questions`（Markdown/JSON 错题文档）。新增 `math_get_learner_profile` 和 `math_get_type_clusters` 查询工具；原书答案与模型解法继续保持分栏。
+
 ## 2026-08-22
 
 - 将 Cloudflare MCP 内容导入范围从第一、二章扩展到选择性必修 1 第一至第三章：dry-run 结果为 3 章、24 节、747 个项目、81 门课程、7,840 个转写分片、82 张题图；学习路径仍只推进第一、二章。
