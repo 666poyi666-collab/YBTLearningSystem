@@ -4,7 +4,7 @@
 
 当前产品合同见 `docs/PRODUCT-REQUIREMENTS.md`，工程规则见 `docs/PROJECT-STANDARDS.md`。
 
-云端 MCP 已部署在 `https://math-learning-mcp.focuslink-poyi-6465e9.workers.dev`，并导入第一、二章的版本化内容快照 `v1-946594dec80d0b04`。ChatGPT OAuth 已完成真实只读调用验收，能够按权限读取完整节次、题面/题图、老师文稿和真实学习进度；第二章没有可靠时间轴的课程会明确返回无时间轴状态。
+云端 MCP 已部署在 `https://math-learning-mcp.focuslink-poyi-6465e9.workers.dev`，并导入选择性必修 1 第一至第三章的版本化内容快照 `v1-ad47692e319f82a7`：3 章、24 节、747 个教材项目、81 门课程、7,840 个转写分片和 82 张题图。当前学习路径仍只推进第一、二章。ChatGPT OAuth 已完成真实只读调用验收；第二章、第三章没有可靠时间轴的课程会明确返回无时间轴状态。已导入的原书答案来源通过 `math_get_answer_sources` 查询；当前结构化答案为 50 道第一章 A/B/C 题，其他章节答案尚未完成结构化导入。
 
 ## 运行
 
