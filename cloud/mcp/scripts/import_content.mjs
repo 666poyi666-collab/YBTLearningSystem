@@ -104,6 +104,22 @@ function run(command, args, options = {}) {
   })
 }
 
+async function runWithRetry(command, args, options = {}, attempts = 4) {
+  let lastError
+  for (let attempt = 1; attempt <= attempts; attempt += 1) {
+    try {
+      return await run(command, args, options)
+    } catch (error) {
+      lastError = error
+      if (attempt === attempts) break
+      const delayMs = 1000 * 2 ** (attempt - 1)
+      console.warn(`retrying ${command} (${attempt}/${attempts - 1}) after ${delayMs}ms`)
+      await new Promise((resolvePromise) => setTimeout(resolvePromise, delayMs))
+    }
+  }
+  throw lastError
+}
+
 function wranglerCommand() {
   return process.platform === 'win32' ? 'npx.cmd' : 'npx'
 }
@@ -470,10 +486,10 @@ async function main() {
   if (!remote) throw new Error('remote import requires --remote')
   const wrangler = wranglerCommand()
   for (const object of plan.r2) {
-    await run(wrangler, ['wrangler', 'r2', 'object', 'put', `${bucket}/${object.key}`, '--file', object.path, '--content-type', 'application/json', '--remote', '-y'], { cwd: cloudRoot })
+    await runWithRetry(wrangler, ['wrangler', 'r2', 'object', 'put', `${bucket}/${object.key}`, '--file', object.path, '--content-type', 'application/json', '--remote', '-y'], { cwd: cloudRoot })
   }
   for (const path of sqlPaths) {
-    await run(wrangler, ['wrangler', 'd1', 'execute', database, '--remote', '--file', path, '--yes'], { cwd: cloudRoot })
+    await runWithRetry(wrangler, ['wrangler', 'd1', 'execute', database, '--remote', '--file', path, '--yes'], { cwd: cloudRoot })
   }
   console.log(`import complete: ${sourceVersionId}`)
 }
