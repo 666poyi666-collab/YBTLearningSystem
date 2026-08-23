@@ -2,6 +2,9 @@
 
 ## 2026-08-23
 
+- 完成选择性必修 1 全量资料的 Cloudflare 导入准备：五章、38 节、1,209 个教材项目、170 门课程目录、19,234 个转写分片和 125 张题图；学习路径仍严格限定第一、二章。课程映射按 `course_key` 去重，避免同编号不同难度课程触发外键冲突。
+- 核验远端学习状态：`poyi-owner` 的 `learning_events` 当前为 0，`learner_state` 仍是初始化版本；网页 `localStorage` 和 ChatGPT 只读调用不会自动写回进度，必须在用户明确确认后调用幂等写工具。
+- 统一答案来源契约：`math_get_answer_sources` 只返回已导入的一本通原书来源；ChatGPT 的独立推导必须在对话中单列为 `model_solution`，标注推荐方案和理由，缺少原书答案时明确显示不可用。
 - 新增持续学习者闭环 MCP 工具：`math_record_diagnostic`（错题画像/错误方向/语音误识别撤销）、`math_record_memory`（用户指定或模型识别的高价值记忆点）、`math_record_type_classification`（题型归类）和 `math_export_wrong_questions`（Markdown/JSON 错题文档）。新增 `math_get_learner_profile` 和 `math_get_type_clusters` 查询工具；原书答案与模型解法继续保持分栏。
 
 ## 2026-08-22

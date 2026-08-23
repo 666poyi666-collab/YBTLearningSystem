@@ -132,13 +132,21 @@ function chunkStatements(statements, maxBytes = 70000) {
 }
 
 function imageDirForChapter(chapter) {
-  const directory = chapter === 1 ? 'first_chapter_69' : chapter === 2 ? 'second_chapter_109' : 'third_chapter_180'
+  const directory = chapter === 1
+    ? 'first_chapter_69'
+    : chapter === 2
+      ? 'second_chapter_109'
+      : chapter === 3
+        ? 'third_chapter_180'
+        : chapter === 4
+          ? 'chapter4_100'
+          : 'chapter5_95'
   return join(dataRoot, 'ocr_live_current', directory, 'imgs')
 }
 
 async function buildImageIndex() {
   const index = new Map()
-  for (const chapter of [1, 2, 3]) {
+  for (const chapter of [1, 2, 3, 4, 5]) {
     const dir = imageDirForChapter(chapter)
     if (!existsSync(dir)) throw new Error(`missing image directory: ${dir}`)
     for (const file of await readdir(dir)) {
@@ -154,7 +162,7 @@ async function main() {
   const audit = await json(auditPath)
   const catalog = await json(join(dataRoot, 'all_chapters_course_catalog.json'))
   const catalogByKey = new Map((catalog.courses ?? []).map((course) => [course.course_key, course]))
-  const libraryChapters = [1, 2, 3]
+  const libraryChapters = [1, 2, 3, 4, 5]
   const imageIndex = await buildImageIndex()
   const chapterManifests = new Map()
   const rawManifestBytes = []
@@ -212,17 +220,20 @@ async function main() {
   const librarySections = libraryChapters.flatMap((chapter) => {
     const manifest = chapterManifests.get(chapter)
     return (manifest.sections ?? []).map((section) => {
-      const courseIds = [...new Set([...(section.required_course_ids ?? []), ...(section.support_course_ids ?? [])])]
-      const courseKeyById = new Map([
-        ...(section.required_course_ids ?? []).map((id, index) => [id, section.required_course_keys?.[index] ?? id]),
-        ...(section.support_course_ids ?? []).map((id, index) => [id, section.support_course_keys?.[index] ?? id]),
-      ])
-      const courses = courseIds.map((courseId) => {
-        const catalogEntry = [...catalog.courses].find((course) => course.course_id === courseId)
+      // Course keys are authoritative here.  A single numbered lesson may
+      // have multiple variants (for example a base and an advanced lesson),
+      // so deduplicating by course_id can silently drop one referenced course.
+      const courseKeys = [...new Set([
+        ...(section.required_course_keys ?? []),
+        ...(section.support_course_keys ?? []),
+      ])]
+      const courses = courseKeys.map((courseKey) => {
+        const catalogEntry = catalog.courses.find((course) => course.course_key === courseKey)
+        const courseId = catalogEntry?.course_id ?? courseIdFromKey(courseKey, courseKey)
         return {
-          course_key: courseKeyById.get(courseId) ?? catalogEntry?.course_key ?? courseId,
+          course_key: courseKey,
           course_number: courseId,
-          title: catalogEntry?.title ?? courseId,
+          title: catalogEntry?.title ?? courseKey,
           transcript_path: catalogEntry?.transcript_file ?? null,
         }
       })

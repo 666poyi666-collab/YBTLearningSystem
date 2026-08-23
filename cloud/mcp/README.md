@@ -21,7 +21,7 @@
 
 代码、D1 schema、私有 R2、共享 OAuth audience/scopes 和独立资源服务器凭据均已建立。远端迁移、内容导入、生产部署和未授权访问验收已通过；`/healthz`、`/readyz` 与 protected-resource 元数据均为 200，无令牌 `/mcp` 为 401。
 
-当前内容快照为 `v1-ad47692e319f82a7`：选择性必修 1 第一至第三章共 24 节、747 个教材项目、81 门课程、2,852 条项目-课程映射和 7,840 个转写查询片段；R2 保存 24 个节次题包、1 个课程转写包和 1 个题图包（82 张引用题图）。导入计划由 `scripts/import_content.mjs` 生成，默认 dry-run，可用 `npm run import:dry` 重建；远程导入使用 `npm run import:remote`。学习路径仍只针对第一、二章。
+当前内容快照为版本化导入计划：选择性必修 1 第一至第五章共 38 节、1,209 个教材项目、全部 170 门课程目录中的实际映射课程、课程转写和可用答案来源；R2 保存节次题包、课程转写包和题图包。导入计划由 `scripts/import_content.mjs` 生成，默认 dry-run，可用 `npm run import:dry` 重建；远程导入使用 `npm run import:remote`。学习路径仍只针对第一、二章。
 
 学习者安全的读取工具包括：`math_get_section_overview`（完整节次大纲与项目索引）、`math_get_item_content`（完整题面与题图，不返回答案侧车）、`math_get_course_transcript`（完整老师文稿及可靠时间轴）和 `math_get_answer_sources`（已导入的一本通原书答案来源）。模型自己的解法不写入原书答案表，必须由 ChatGPT 单独标记为 `model_solution` 并给出推荐理由。没有可验证逐句时间轴时，返回 `timelineAvailable=false` 和空时间轴，不作估算。当前生产 Worker 为 `https://math-learning-mcp.focuslink-poyi-6465e9.workers.dev`，最新部署版本为 `7f01d8e0-ece1-4716-ba35-19bcf6e41d86`。
 

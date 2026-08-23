@@ -50,11 +50,11 @@ test('exposes complete learner-safe content reads', () => {
   assert.match(source, /timelineAvailable/)
 })
 
-test('content importer is versioned, idempotent and covers selective compulsory 1', () => {
+test('content importer is versioned, idempotent and covers the complete selective compulsory 1 library', () => {
   assert.match(importer, /chapter12_complete_audit\.json/)
   assert.match(importer, /source_versions/)
   assert.match(importer, /INSERT OR IGNORE INTO learner_state/)
   assert.match(importer, /v1-\$\{manifestSha\.slice\(0, 16\)\}/)
-  assert.match(importer, /const libraryChapters = \[1, 2, 3\]/)
+  assert.match(importer, /const libraryChapters = \[1, 2, 3, 4, 5\]/)
   assert.match(importer, /original_answer_book/)
 })
