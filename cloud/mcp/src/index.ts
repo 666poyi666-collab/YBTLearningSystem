@@ -184,6 +184,18 @@ async function itemImageContent(env: Env, pack: JsonRecord, item: JsonRecord): P
   return resultBlocks
 }
 
+async function handoutPageImageContent(env: Env, row: JsonRecord): Promise<ImageContent[]> {
+  const key = typeof row.page_pack_r2_key === 'string' ? row.page_pack_r2_key : ''
+  if (!key) return []
+  const pack = await readContentJson(env, key)
+  if (!pack || !pack.pages || typeof pack.pages !== 'object') return []
+  const pages = pack.pages as JsonRecord
+  const assetKey = `${row.source_id}:${row.pdf_page}`
+  const asset = pages[assetKey] && typeof pages[assetKey] === 'object' ? pages[assetKey] as JsonRecord : null
+  if (!asset || typeof asset.data !== 'string' || typeof asset.mimeType !== 'string') return []
+  return [{ type: 'image', data: asset.data, mimeType: asset.mimeType }]
+}
+
 async function systemStatus(env: Env) {
   const row = await env.DB.prepare(`
     SELECT
@@ -192,8 +204,12 @@ async function systemStatus(env: Env) {
       (SELECT COUNT(*) FROM items) AS items,
       (SELECT COUNT(*) FROM courses) AS courses,
       (SELECT COUNT(*) FROM transcript_chunks) AS transcript_chunks,
-      (SELECT COUNT(*) FROM learning_events WHERE user_id = ?) AS learning_events
-  `).bind(USER_ID).first<Record<string, number | string>>()
+      (SELECT COUNT(*) FROM learning_events WHERE user_id = ?) AS learning_events,
+      (SELECT COUNT(*) FROM learner_diagnostics WHERE user_id = ?) AS learner_diagnostics,
+      (SELECT COUNT(*) FROM type_classifications WHERE user_id = ?) AS type_classifications,
+      (SELECT COUNT(*) FROM handout_sources) AS handout_sources,
+      (SELECT COUNT(*) FROM handout_pages) AS handout_pages
+  `).bind(USER_ID, USER_ID, USER_ID).first<Record<string, number | string>>()
   const source = await env.DB.prepare(`
     SELECT id, git_commit, manifest_sha256, imported_at
     FROM source_versions ORDER BY imported_at DESC LIMIT 1
@@ -268,20 +284,57 @@ async function recordLearningEvent(
     || stored.subject_id !== subjectId || stored.payload_json !== payloadJson
   ) throw new Error('idempotency_conflict')
   const replayed = stored.event_id !== eventId
-  if (!replayed && eventType !== 'progress_snapshot_synced') {
-    await projectEventState(env, eventType, subjectType, subjectId, payload, baseVersion, createdAt)
-  }
+  const projection = eventType === 'progress_snapshot_synced'
+    ? await projectProgressSnapshot(env, requestId, payload, baseVersion, createdAt)
+    : await projectEventState(env, requestId, eventType, subjectType, subjectId, payload, baseVersion, createdAt)
   return {
     ok: true,
     eventId: stored.event_id,
     requestId,
     replayed,
     createdAt: stored.created_at,
+    projection,
   }
+}
+
+async function upsertLearnerState(
+  env: Env,
+  stateKey: string,
+  value: JsonRecord,
+  sourceRequestId: string,
+  updatedAt: string,
+  expectedVersion?: number,
+) {
+  const existing = await env.DB.prepare(`SELECT version, value_json FROM learner_state WHERE user_id = ? AND state_key = ?`)
+    .bind(USER_ID, stateKey).first<Record<string, string | number>>()
+  const currentVersion = Number(existing?.version ?? 0)
+  const currentValue = parseJson(existing ? String(existing.value_json) : null)
+  if (currentValue && typeof currentValue === 'object' && !Array.isArray(currentValue)
+      && (currentValue as JsonRecord).sourceRequestId === sourceRequestId) {
+    return { stateKey, version: currentVersion, replayed: true }
+  }
+  if (expectedVersion !== undefined && currentVersion !== expectedVersion) throw new Error('version_conflict')
+  const nextVersion = currentVersion + 1
+  const nextValue = JSON.stringify({ ...value, sourceRequestId })
+  if (existing) {
+    const update = await env.DB.prepare(`
+      UPDATE learner_state SET version = ?, value_json = ?, updated_at = ?
+      WHERE user_id = ? AND state_key = ? AND version = ?
+    `).bind(nextVersion, nextValue, updatedAt, USER_ID, stateKey, currentVersion).run()
+    if (Number(update.meta.changes ?? 0) !== 1) throw new Error('version_conflict')
+  } else {
+    const insert = await env.DB.prepare(`
+      INSERT INTO learner_state (user_id, state_key, version, value_json, updated_at)
+      VALUES (?, ?, ?, ?, ?) ON CONFLICT(user_id, state_key) DO NOTHING
+    `).bind(USER_ID, stateKey, nextVersion, nextValue, updatedAt).run()
+    if (Number(insert.meta.changes ?? 0) !== 1) throw new Error('version_conflict')
+  }
+  return { stateKey, version: nextVersion, replayed: false }
 }
 
 async function projectEventState(
   env: Env,
+  requestId: string,
   eventType: string,
   subjectType: string,
   subjectId: string,
@@ -290,10 +343,6 @@ async function projectEventState(
   updatedAt: string,
 ) {
   const stateKey = `${subjectType}:${subjectId}`
-  const existing = await env.DB.prepare(`SELECT version FROM learner_state WHERE user_id = ? AND state_key = ?`)
-    .bind(USER_ID, stateKey).first<{ version: number | string }>()
-  const currentVersion = Number(existing?.version ?? 0)
-  if (baseVersion !== undefined && currentVersion !== baseVersion) throw new Error('version_conflict')
   const value = {
     ...payload,
     status: eventType,
@@ -301,14 +350,61 @@ async function projectEventState(
     subjectId,
     source: 'cloud_mcp_event_projection',
   }
-  await env.DB.prepare(`
-    INSERT INTO learner_state (user_id, state_key, version, value_json, updated_at)
-    VALUES (?, ?, ?, ?, ?)
-    ON CONFLICT(user_id, state_key) DO UPDATE SET
-      version = excluded.version,
-      value_json = excluded.value_json,
-      updated_at = excluded.updated_at
-  `).bind(USER_ID, stateKey, currentVersion + 1, JSON.stringify(value), updatedAt).run()
+  return upsertLearnerState(env, stateKey, value, requestId, updatedAt, baseVersion)
+}
+
+async function projectProgressSnapshot(
+  env: Env,
+  requestId: string,
+  payload: JsonRecord,
+  baseVersion: number | undefined,
+  updatedAt: string,
+) {
+  const projections: JsonRecord[] = []
+  const currentTask = payload.currentTask && typeof payload.currentTask === 'object' && !Array.isArray(payload.currentTask)
+    ? payload.currentTask as JsonRecord
+    : {}
+  const chapterKey = String(payload.chapterKey ?? currentTask.chapterKey ?? '')
+  const sectionKey = String(payload.sectionKey ?? currentTask.sectionKey ?? '')
+  const currentTaskValue = {
+    chapter: chapterKey || null,
+    section: sectionKey || null,
+    ...currentTask,
+    source: 'cloud_mcp_progress_snapshot',
+  }
+  projections.push(await upsertLearnerState(env, 'current_task', currentTaskValue, requestId, updatedAt, baseVersion))
+
+  for (const cycle of recordArray(payload.completedCycles)) {
+    const cycleId = String(cycle.cycleId ?? cycle.cycle ?? '')
+    if (!cycleId) continue
+    projections.push(await upsertLearnerState(env, `cycle:${cycleId}`, {
+      ...cycle,
+      chapter: chapterKey || null,
+      section: sectionKey || null,
+      status: 'completed',
+      source: 'cloud_mcp_progress_snapshot',
+    }, requestId, updatedAt))
+  }
+  for (const course of recordArray(payload.completedCourses)) {
+    const courseKey = String(course.courseKey ?? '')
+    if (!courseKey) continue
+    projections.push(await upsertLearnerState(env, `course:${courseKey}`, {
+      ...course,
+      status: 'course_listened',
+      source: 'cloud_mcp_progress_snapshot',
+    }, requestId, updatedAt))
+  }
+  if (sectionKey) {
+    projections.push(await upsertLearnerState(env, `section:${sectionKey}`, {
+      chapter: chapterKey || null,
+      section: sectionKey,
+      status: 'in_progress',
+      completedCycleCount: recordArray(payload.completedCycles).length,
+      currentCycle: currentTask.cycle ?? null,
+      source: 'cloud_mcp_progress_snapshot',
+    }, requestId, updatedAt))
+  }
+  return projections
 }
 
 async function learnerProfile(env: Env) {
@@ -319,20 +415,134 @@ async function learnerProfile(env: Env) {
 }
 
 async function wrongQuestionExport(env: Env, sectionKey: string, format: string) {
-  const rows = await env.DB.prepare(`SELECT d.item_id, d.section_key, d.error_type, d.error_direction, d.evidence_text, d.user_correction, d.final_status, d.created_at, i.label FROM learner_diagnostics d LEFT JOIN items i ON i.item_id = d.item_id WHERE d.user_id = ? AND (? = '' OR d.section_key = ?) ORDER BY d.created_at`).bind(USER_ID, sectionKey, sectionKey).all<JsonRecord>()
-  const memories = await env.DB.prepare(`SELECT title, content, reason, priority FROM memory_items WHERE user_id = ? AND (? = '' OR section_key = ?) AND status = 'active' ORDER BY created_at`).bind(USER_ID, sectionKey, sectionKey).all<JsonRecord>()
-  if (format === 'json') return { ok: true, format, wrongQuestions: rows.results, memories: memories.results }
-  const lines = ['# 数学错题与薄弱点记录', '', '## 错题记录', '']
-  for (const row of rows.results) lines.push(`### ${row.label ?? row.item_id ?? '未绑定题目'}\n\n- 错误类型：${row.error_type}\n- 错误方向：${row.error_direction ?? '未分类'}\n- 证据：${row.evidence_text}\n- 用户更正：${row.user_correction ?? '未记录'}\n- 状态：${row.final_status}\n`)
+  const generatedAt = new Date().toISOString()
+  const rows = await env.DB.prepare(`
+    SELECT d.item_id, d.section_key, d.error_type, d.error_direction,
+           d.evidence_text, d.user_correction, d.final_status, d.created_at,
+           i.label, i.item_type
+    FROM learner_diagnostics d LEFT JOIN items i ON i.item_id = d.item_id
+    WHERE d.user_id = ? AND (? = '' OR d.section_key = ?)
+    ORDER BY d.created_at
+  `).bind(USER_ID, sectionKey, sectionKey).all<JsonRecord>()
+  const memories = await env.DB.prepare(`
+    SELECT item_id, section_key, title, content, reason, priority, created_at
+    FROM memory_items WHERE user_id = ? AND (? = '' OR section_key = ?)
+      AND status = 'active' ORDER BY created_at
+  `).bind(USER_ID, sectionKey, sectionKey).all<JsonRecord>()
+  const classifications = await env.DB.prepare(`
+    SELECT t.item_id, t.section_key, t.cluster_title, t.basis, t.confidence,
+           t.created_at, i.label
+    FROM type_classifications t LEFT JOIN items i ON i.item_id = t.item_id
+    WHERE t.user_id = ? AND (? = '' OR t.section_key = ?)
+    ORDER BY t.created_at
+  `).bind(USER_ID, sectionKey, sectionKey).all<JsonRecord>()
+  const snapshot = await env.DB.prepare(`
+    SELECT payload_json, created_at FROM learning_events
+    WHERE user_id = ? AND event_type = 'progress_snapshot_synced'
+      AND (? = '' OR subject_id = ?)
+    ORDER BY created_at DESC LIMIT 1
+  `).bind(USER_ID, sectionKey, `section:${sectionKey}`).first<Record<string, string>>()
+  const snapshotValue = snapshot ? parseJson(snapshot.payload_json) : null
+  const progress = snapshotValue && typeof snapshotValue === 'object' && !Array.isArray(snapshotValue)
+    ? snapshotValue as JsonRecord
+    : {}
+  const completedCycles = recordArray(progress.completedCycles)
+  const classificationByItem = new Map(classifications.results
+    .filter((row) => row.item_id)
+    .map((row) => [String(row.item_id), row]))
+  const summary = {
+    total: rows.results.length,
+    open: rows.results.filter((row) => row.final_status === 'open' || row.final_status === 'needs_review').length,
+    corrected: rows.results.filter((row) => row.final_status === 'confirmed_correct').length,
+    confirmedWrong: rows.results.filter((row) => row.final_status === 'confirmed_wrong').length,
+    typeClassifications: classifications.results.length,
+    memories: memories.results.length,
+    completedCycles: completedCycles.length,
+  }
+  const payload = {
+    ok: true,
+    format,
+    generatedAt,
+    freshness: 'live_cloud_d1',
+    latestProgressAt: snapshot?.created_at ?? null,
+    scope: sectionKey || 'all',
+    currentTask: progress.currentTask ?? null,
+    completedCycles,
+    summary,
+    wrongQuestions: rows.results,
+    typeClassifications: classifications.results,
+    memories: memories.results,
+  }
+  if (format === 'json') return payload
+
+  const lines = [
+    '# 当前错题与题型整理', '',
+    `> 实时生成：${generatedAt} · 云端进度：${snapshot?.created_at ?? '暂无同步快照'} · 范围：${sectionKey || '全部'}`, '',
+    '## 当前学习位置', '',
+    `- 当前任务：${JSON.stringify(progress.currentTask ?? '未记录')}`,
+    `- 已完成循环：${completedCycles.map((cycle) => cycle.title ?? cycle.cycleId).join('、') || '暂无'}`, '',
+    '## 汇总', '',
+    `- 错题/卡点记录：${summary.total} 项`,
+    `- 待复核：${summary.open} 项`,
+    `- 已纠正：${summary.corrected} 项`,
+    `- 题型归类：${summary.typeClassifications} 项`,
+    `- 记忆重点：${summary.memories} 项`, '',
+    '## 错题与卡点', '',
+  ]
+  if (!rows.results.length) lines.push('暂无结构化错题记录。同步快照里的文字备注会列在“循环复盘”中，但不会冒充已核验错题。', '')
+  for (const row of rows.results) {
+    const classification = classificationByItem.get(String(row.item_id ?? ''))
+    lines.push(
+      `### ${row.label ?? '未绑定教材题号'}`,
+      '',
+      `- 题型：${classification?.cluster_title ?? '待归类'}`,
+      `- 错误类型：${row.error_type}`,
+      `- 错误方向：${row.error_direction ?? '待补充'}`,
+      `- 错误表现：${row.evidence_text}`,
+      `- 改正状态：${row.final_status}`,
+      `- 下一步：${row.final_status === 'confirmed_correct' ? '进入独立近变式或冷复测' : '先提交独立过程，再判断是否通过'}`,
+      '',
+    )
+  }
+  lines.push('## 题型分类', '')
+  if (!classifications.results.length) lines.push('暂无结构化题型归类。', '')
+  for (const row of classifications.results) lines.push(
+    `### ${row.cluster_title}`,
+    '',
+    `- 对应题目：${row.label ?? '未绑定教材题号'}`,
+    `- 归类依据：${row.basis}`,
+    `- 置信度：${row.confidence}`,
+    '',
+  )
+  lines.push('## 循环复盘', '')
+  if (!completedCycles.length) lines.push('暂无已同步循环。', '')
+  for (const cycle of completedCycles) lines.push(
+    `### ${cycle.title ?? cycle.cycleId ?? '未命名循环'}`,
+    '',
+    `- 状态：${cycle.status ?? '未记录'}`,
+    `- 已确认题目：${Array.isArray(cycle.confirmedItems) ? cycle.confirmedItems.join('、') : '未记录'}`,
+    `- 学习备注：${cycle.notes ?? '无'}`,
+    '',
+  )
   lines.push('## 记忆重点', '')
-  for (const memory of memories.results) lines.push(`### ${memory.title}\n\n${memory.content}\n\n- 记忆理由：${memory.reason}\n- 优先级：${memory.priority}\n`)
-  return { ok: true, format: 'markdown', content: lines.join('\n'), wrongQuestionCount: rows.results.length, memoryCount: memories.results.length }
+  if (!memories.results.length) lines.push('暂无主动保存的记忆重点。', '')
+  for (const memory of memories.results) lines.push(
+    `### ${memory.title}`,
+    '',
+    `${memory.content}`,
+    '',
+    `- 记忆理由：${memory.reason}`,
+    `- 优先级：${memory.priority}`,
+    '',
+  )
+  lines.push('---', '', '本报告只整理错因、题型、方法与复测动作；不写教材答案、正确选项或内部题目 ID。')
+  return { ...payload, format: 'markdown', content: lines.join('\n') }
 }
 
 function createServer(env: Env, scopes: readonly string[]): McpServer {
   const server = new McpServer(PROJECT, {
     instructions:
-      '这是一本通数学学习系统。讲题前先调用 math_get_section_overview 定位节次，再调用 math_get_item_content 获取完整题面和题图、math_get_course_transcript 获取完整老师文稿，最后读取真实学习进度；课程覆盖、用户已学、题目已通过和冷复测是不同状态。不要只凭标题或 R2 键猜题目，不要输出未请求的答案，不要把内部模拟进度当成真实用户进度。',
+      '这是一本通数学学习系统。讲题前先调用 math_get_section_overview 定位节次，再调用 math_get_item_content 获取完整题面和题图、math_get_course_transcript 获取完整老师文稿；需要讲义时先搜索再读取原页图。每次用户确认错误或提示后卡点，立即调用 math_record_wrong_question 同时记录错因和题型；用户要求整理时调用 math_export_wrong_questions 生成最新云端报告。课程覆盖、用户已学、题目已通过和冷复测是不同状态。不要只凭 OCR、标题或 R2 键猜题目，不要输出未请求的答案，不要把内部模拟进度当成真实用户进度。',
   })
   const readAllowed = () => scopes.includes(READ_SCOPE)
   const writeAllowed = () => scopes.includes(WRITE_SCOPE)
@@ -451,6 +661,93 @@ function createServer(env: Env, scopes: readonly string[]): McpServer {
     return result(payload)
   })
 
+  server.registerTool('math_search_handout', {
+    description: '搜索《高二数学精讲精练》讲义 OCR 索引。OCR 只用于定位；公式、图形和题面必须再读取原页图核对。',
+    inputSchema: {
+      query: z.string().min(1).max(200),
+      courseKey: z.string().max(200).default(''),
+      limit: z.number().int().min(1).max(30).default(10),
+    },
+  }, async ({ query, courseKey, limit }) => {
+    if (!readAllowed()) return failure('insufficient_scope', READ_SCOPE)
+    const rows = await env.DB.prepare(`
+      SELECT DISTINCT p.source_id, s.title AS source_title, p.pdf_page,
+             p.printed_page, p.page_role, p.headings_json,
+             substr(p.ocr_text, 1, 1600) AS ocr_excerpt,
+             p.ocr_confidence, p.visual_status,
+             l.course_key, l.relationship, l.confidence AS mapping_confidence
+      FROM handout_pages p
+      JOIN handout_sources s ON s.source_id = p.source_id
+      LEFT JOIN handout_course_links l
+        ON l.source_id = p.source_id AND l.pdf_page = p.pdf_page
+      WHERE p.ocr_text LIKE ? AND (? = '' OR l.course_key = ?)
+      ORDER BY p.source_id, p.pdf_page LIMIT ?
+    `).bind(`%${query}%`, courseKey, courseKey, limit).all<JsonRecord>()
+    return result({
+      ok: true,
+      query,
+      courseKey: courseKey || null,
+      matches: rows.results.map((row) => ({ ...row, headings: parseJson(String(row.headings_json)) })),
+      evidencePolicy: 'OCR 只负责检索定位；讲解前调用 math_get_handout_page 查看原页图，未视觉复核的公式不得当成确定事实。',
+    })
+  })
+
+  server.registerTool('math_get_course_handout', {
+    description: '读取某门网课在《高二数学精讲精练》中的候选讲义页；候选映射与已视觉核验映射会明确区分。',
+    inputSchema: {
+      courseKey: z.string().min(1).max(200),
+      limit: z.number().int().min(1).max(50).default(20),
+    },
+  }, async ({ courseKey, limit }) => {
+    if (!readAllowed()) return failure('insufficient_scope', READ_SCOPE)
+    const rows = await env.DB.prepare(`
+      SELECT p.source_id, s.title AS source_title, p.pdf_page, p.printed_page,
+             p.page_role, p.headings_json, p.ocr_confidence, p.visual_status,
+             l.relationship, l.confidence AS mapping_confidence
+      FROM handout_course_links l
+      JOIN handout_pages p ON p.source_id = l.source_id AND p.pdf_page = l.pdf_page
+      JOIN handout_sources s ON s.source_id = p.source_id
+      WHERE l.course_key = ? ORDER BY p.source_id, p.pdf_page LIMIT ?
+    `).bind(courseKey, limit).all<JsonRecord>()
+    return result({
+      ok: true,
+      courseKey,
+      pages: rows.results.map((row) => ({ ...row, headings: parseJson(String(row.headings_json)) })),
+      mappingPolicy: 'candidate 表示 OCR/标题候选；verified 才表示原页视觉已确认。',
+    })
+  })
+
+  server.registerTool('math_get_handout_page', {
+    description: '返回讲义指定 PDF 页的 OCR 定位文本和原页图。原页图是公式、图形和题面的最终核对依据。',
+    inputSchema: {
+      sourceId: z.string().min(1).max(80),
+      pdfPage: z.number().int().min(1).max(1000),
+      includeImage: z.boolean().default(true),
+    },
+  }, async ({ sourceId, pdfPage, includeImage }) => {
+    if (!readAllowed()) return failure('insufficient_scope', READ_SCOPE)
+    const row = await env.DB.prepare(`
+      SELECT p.*, s.title AS source_title, s.source_sha256
+      FROM handout_pages p JOIN handout_sources s ON s.source_id = p.source_id
+      WHERE p.source_id = ? AND p.pdf_page = ?
+    `).bind(sourceId, pdfPage).first<JsonRecord>()
+    if (!row) return failure('not_found', '未找到讲义页', { sourceId, pdfPage })
+    const links = await env.DB.prepare(`
+      SELECT course_key, relationship, confidence FROM handout_course_links
+      WHERE source_id = ? AND pdf_page = ? ORDER BY course_key
+    `).bind(sourceId, pdfPage).all<JsonRecord>()
+    const images = includeImage ? await handoutPageImageContent(env, row) : []
+    return result({
+      ok: true,
+      page: { ...row, headings: parseJson(String(row.headings_json)), headings_json: undefined },
+      courseLinks: links.results,
+      imageCount: images.length,
+      evidencePolicy: Number(images.length) === 1
+        ? '请以返回原页图核对公式、图形和题面；OCR 文本仅作搜索辅助。'
+        : '原页图当前不可读，不得仅凭 OCR 断言公式或图形。',
+    }, images)
+  })
+
   server.registerTool('math_get_learning_context', {
     description: '一次读取题目索引、教材位置、对应课程与真实用户状态。完整题面按返回的 R2 内容键受控获取。',
     inputSchema: { itemId: z.string().min(1).max(200) },
@@ -491,7 +788,7 @@ function createServer(env: Env, scopes: readonly string[]): McpServer {
   })
 
   server.registerTool('math_export_wrong_questions', {
-    description: '生成高考规范风格的错题与记忆重点文档。输出可选 markdown 或 json；不把模型解法伪装成原书答案。',
+    description: '根据当前云端错题、题型、记忆点和最新循环快照，实时生成错题与题型整理文档。输出 markdown 或机器 JSON，不包含教材答案或内部题目 ID。',
     inputSchema: { sectionKey: z.string().max(80).default(''), format: z.enum(['markdown', 'json']).default('markdown') },
   }, async ({ sectionKey, format }) => readAllowed() ? result(await wrongQuestionExport(env, sectionKey, format)) : failure('insufficient_scope', READ_SCOPE))
 
@@ -584,6 +881,73 @@ function createServer(env: Env, scopes: readonly string[]): McpServer {
     return stored ? result({ ok: true, diagnostic: stored, replayed: stored.diagnostic_id !== id }) : failure('write_failed', '错题画像写入失败')
   })
 
+  server.registerTool('math_record_wrong_question', {
+    description: '实时记录一道已确认错题或提示后卡点，并同时完成题型归类；相同 requestId 幂等。不要把语音误识别或未确认猜测写成错题。',
+    inputSchema: {
+      requestId: z.uuid(),
+      itemId: z.string().max(200).optional(),
+      sectionKey: z.string().min(1).max(80),
+      errorType: z.string().min(1).max(120),
+      errorDirection: z.string().min(1).max(500),
+      evidenceText: z.string().min(1).max(4000),
+      userCorrection: z.string().max(2000).optional(),
+      finalStatus: z.enum(['open', 'confirmed_wrong', 'confirmed_correct', 'needs_review']).default('open'),
+      clusterTitle: z.string().min(1).max(200),
+      classificationBasis: z.string().min(1).max(2000),
+      classificationConfidence: z.enum(['high', 'medium', 'low']).default('medium'),
+    },
+  }, async ({
+    requestId, itemId, sectionKey, errorType, errorDirection, evidenceText,
+    userCorrection, finalStatus, clusterTitle, classificationBasis, classificationConfidence,
+  }) => {
+    if (!writeAllowed()) return failure('insufficient_scope', WRITE_SCOPE)
+    const createdAt = new Date().toISOString()
+    const diagnosticId = crypto.randomUUID()
+    const classificationId = crypto.randomUUID()
+    await env.DB.prepare(`
+      INSERT INTO learner_diagnostics (
+        diagnostic_id, request_id, user_id, item_id, section_key, error_type,
+        error_direction, evidence_text, user_correction, final_status, created_at
+      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT(request_id) DO NOTHING
+    `).bind(
+      diagnosticId, requestId, USER_ID, itemId ?? null, sectionKey, errorType,
+      errorDirection, evidenceText, userCorrection ?? null, finalStatus, createdAt,
+    ).run()
+    await env.DB.prepare(`
+      INSERT INTO type_classifications (
+        classification_id, request_id, user_id, item_id, section_key,
+        cluster_title, basis, confidence, created_at
+      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT(request_id) DO NOTHING
+    `).bind(
+      classificationId, requestId, USER_ID, itemId ?? null, sectionKey,
+      clusterTitle, classificationBasis, classificationConfidence, createdAt,
+    ).run()
+    const diagnostic = await env.DB.prepare(`
+      SELECT diagnostic_id, item_id, section_key, error_type, error_direction,
+             evidence_text, user_correction, final_status, created_at
+      FROM learner_diagnostics WHERE request_id = ? AND user_id = ?
+    `).bind(requestId, USER_ID).first<JsonRecord>()
+    const classification = await env.DB.prepare(`
+      SELECT classification_id, item_id, section_key, cluster_title, basis,
+             confidence, created_at FROM type_classifications
+      WHERE request_id = ? AND user_id = ?
+    `).bind(requestId, USER_ID).first<JsonRecord>()
+    const same = diagnostic?.item_id === (itemId ?? null)
+      && diagnostic?.section_key === sectionKey
+      && diagnostic?.error_type === errorType
+      && diagnostic?.evidence_text === evidenceText
+      && classification?.cluster_title === clusterTitle
+      && classification?.basis === classificationBasis
+    if (!diagnostic || !classification) return failure('write_failed', '错题或题型归类写入不完整')
+    if (!same) return failure('idempotency_conflict', 'requestId 已用于不同错题记录')
+    return result({
+      ok: true,
+      diagnostic,
+      classification,
+      replayed: diagnostic.diagnostic_id !== diagnosticId || classification.classification_id !== classificationId,
+    })
+  })
+
   server.registerTool('math_record_memory', {
     description: '记录用户明确要求记忆或模型判断具有长期复用价值的数学记忆点。',
     inputSchema: {
@@ -646,10 +1010,11 @@ function protectedResourceMetadata(env: Env): Response {
 
 async function readiness(env: Env): Promise<Response> {
   try {
-    const row = await env.DB.prepare(`SELECT COUNT(*) AS count FROM sqlite_master WHERE type = 'table' AND name IN ('source_versions','items','courses','transcript_chunks','learning_events','learner_state','questions','answer_sources')`).first<{ count: number | string }>()
+    const row = await env.DB.prepare(`SELECT COUNT(*) AS count FROM sqlite_master WHERE type = 'table' AND name IN ('source_versions','chapters','sections','items','courses','item_course_links','transcript_chunks','learning_events','learner_state','questions','answer_sources','learner_diagnostics','memory_items','type_classifications','wrong_question_exports','handout_sources','handout_pages','handout_course_links')`).first<{ count: number | string }>()
     const configured = oauthConfig(env) !== null
-    const ready = Number(row?.count ?? 0) === 12 && configured
-    return Response.json({ ok: ready, service: 'math-learning-mcp', storage: Number(row?.count ?? 0) === 12 ? 'ready' : 'migration_required', oauth: configured ? 'configured' : 'not_configured' }, { status: ready ? 200 : 503 })
+    const storageReady = Number(row?.count ?? 0) === 18
+    const ready = storageReady && configured
+    return Response.json({ ok: ready, service: 'math-learning-mcp', storage: storageReady ? 'ready' : 'migration_required', oauth: configured ? 'configured' : 'not_configured' }, { status: ready ? 200 : 503 })
   } catch {
     return Response.json({ ok: false, service: 'math-learning-mcp', storage: 'unavailable' }, { status: 503 })
   }

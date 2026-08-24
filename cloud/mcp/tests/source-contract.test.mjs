@@ -5,12 +5,15 @@ import test from 'node:test'
 import { fileURLToPath } from 'node:url'
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
-const [source, packageText, schema, config, importer] = await Promise.all([
+const [source, packageText, schema, config, importer, learnerMigration, handoutMigration, handoutImporter] = await Promise.all([
   readFile(resolve(root, 'src/index.ts'), 'utf8'),
   readFile(resolve(root, 'package.json'), 'utf8'),
   readFile(resolve(root, 'migrations/0001_initial.sql'), 'utf8'),
   readFile(resolve(root, 'wrangler.jsonc'), 'utf8'),
   readFile(resolve(root, 'scripts/import_content.mjs'), 'utf8'),
+  readFile(resolve(root, 'migrations/0002_learner_intelligence.sql'), 'utf8'),
+  readFile(resolve(root, 'migrations/0003_course_handouts.sql'), 'utf8'),
+  readFile(resolve(root, 'scripts/import_handouts.mjs'), 'utf8'),
 ])
 const packageJson = JSON.parse(packageText)
 
@@ -46,6 +49,10 @@ test('exposes complete learner-safe content reads', () => {
   assert.match(source, /math_record_diagnostic/)
   assert.match(source, /math_record_memory/)
   assert.match(source, /math_record_type_classification/)
+  assert.match(source, /math_record_wrong_question/)
+  assert.match(source, /math_search_handout/)
+  assert.match(source, /math_get_course_handout/)
+  assert.match(source, /math_get_handout_page/)
   assert.match(source, /image_pack_key/)
   assert.match(source, /timelineAvailable/)
 })
@@ -57,4 +64,14 @@ test('content importer is versioned, idempotent and covers the complete selectiv
   assert.match(importer, /v1-\$\{manifestSha\.slice\(0, 16\)\}/)
   assert.match(importer, /const libraryChapters = \[1, 2, 3, 4, 5\]/)
   assert.match(importer, /original_answer_book/)
+})
+
+test('ships additive production migrations and a fail-closed handout importer', () => {
+  assert.match(learnerMigration, /CREATE TABLE IF NOT EXISTS learner_diagnostics/)
+  assert.match(learnerMigration, /CREATE TABLE IF NOT EXISTS type_classifications/)
+  assert.match(handoutMigration, /CREATE TABLE IF NOT EXISTS handout_pages/)
+  assert.match(handoutMigration, /CREATE TABLE IF NOT EXISTS handout_course_links/)
+  assert.match(handoutImporter, /text_is_search_aid_only/)
+  assert.match(handoutImporter, /visual_review_required/)
+  assert.match(handoutImporter, /NEEDS_VISION_REVIEW|visual_status/)
 })
