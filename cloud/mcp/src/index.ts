@@ -449,7 +449,30 @@ async function wrongQuestionExport(env: Env, sectionKey: string, format: string)
   const progress = snapshotValue && typeof snapshotValue === 'object' && !Array.isArray(snapshotValue)
     ? snapshotValue as JsonRecord
     : {}
-  const completedCycles = recordArray(progress.completedCycles)
+  const currentTaskRow = await env.DB.prepare(`
+    SELECT value_json, updated_at FROM learner_state
+    WHERE user_id = ? AND state_key = 'current_task'
+  `).bind(USER_ID).first<Record<string, string>>()
+  const currentTaskValue = currentTaskRow ? parseJson(currentTaskRow.value_json) : null
+  const currentTask = currentTaskValue && typeof currentTaskValue === 'object' && !Array.isArray(currentTaskValue)
+    ? currentTaskValue as JsonRecord
+    : progress.currentTask ?? null
+  const cyclePrefix = sectionKey ? `cycle:${sectionKey}-cycle-%` : 'cycle:%'
+  const cycleRows = await env.DB.prepare(`
+    SELECT state_key, value_json, updated_at FROM learner_state
+    WHERE user_id = ? AND state_key LIKE ? ORDER BY state_key
+  `).bind(USER_ID, cyclePrefix).all<Record<string, string>>()
+  const liveCycles: JsonRecord[] = []
+  for (const row of cycleRows.results) {
+    const value = parseJson(row.value_json)
+    if (value && typeof value === 'object' && !Array.isArray(value)) {
+      liveCycles.push({ ...(value as JsonRecord), stateKey: row.state_key, updatedAt: row.updated_at })
+    }
+  }
+  const completedCycles = liveCycles.filter((cycle) => cycle.status === 'completed' || cycle.status === 'cycle_completed')
+  const deferredCycles = liveCycles.filter((cycle) => cycle.status === 'deferred' || cycle.status === 'cycle_deferred')
+  const fallbackCycles = recordArray(progress.completedCycles)
+  const reportCompletedCycles = completedCycles.length ? completedCycles : fallbackCycles
   const classificationByItem = new Map(classifications.results
     .filter((row) => row.item_id)
     .map((row) => [String(row.item_id), row]))
@@ -460,17 +483,19 @@ async function wrongQuestionExport(env: Env, sectionKey: string, format: string)
     confirmedWrong: rows.results.filter((row) => row.final_status === 'confirmed_wrong').length,
     typeClassifications: classifications.results.length,
     memories: memories.results.length,
-    completedCycles: completedCycles.length,
+    completedCycles: reportCompletedCycles.length,
+    deferredCycles: deferredCycles.length,
   }
   const payload = {
     ok: true,
     format,
     generatedAt,
     freshness: 'live_cloud_d1',
-    latestProgressAt: snapshot?.created_at ?? null,
+    latestProgressAt: currentTaskRow?.updated_at ?? snapshot?.created_at ?? null,
     scope: sectionKey || 'all',
-    currentTask: progress.currentTask ?? null,
-    completedCycles,
+    currentTask,
+    completedCycles: reportCompletedCycles,
+    deferredCycles,
     summary,
     wrongQuestions: rows.results,
     typeClassifications: classifications.results,
@@ -482,8 +507,9 @@ async function wrongQuestionExport(env: Env, sectionKey: string, format: string)
     '# 当前错题与题型整理', '',
     `> 实时生成：${generatedAt} · 云端进度：${snapshot?.created_at ?? '暂无同步快照'} · 范围：${sectionKey || '全部'}`, '',
     '## 当前学习位置', '',
-    `- 当前任务：${JSON.stringify(progress.currentTask ?? '未记录')}`,
-    `- 已完成循环：${completedCycles.map((cycle) => cycle.title ?? cycle.cycleId).join('、') || '暂无'}`, '',
+    `- 当前任务：${JSON.stringify(currentTask ?? '未记录')}`,
+    `- 已完成循环：${reportCompletedCycles.map((cycle) => cycle.title ?? cycle.cycleId ?? cycle.stateKey).join('、') || '暂无'}`,
+    `- 暂缓循环：${deferredCycles.map((cycle) => cycle.title ?? cycle.subjectId ?? cycle.stateKey).join('、') || '暂无'}`, '',
     '## 汇总', '',
     `- 错题/卡点记录：${summary.total} 项`,
     `- 待复核：${summary.open} 项`,
@@ -518,13 +544,20 @@ async function wrongQuestionExport(env: Env, sectionKey: string, format: string)
     '',
   )
   lines.push('## 循环复盘', '')
-  if (!completedCycles.length) lines.push('暂无已同步循环。', '')
-  for (const cycle of completedCycles) lines.push(
+  if (!reportCompletedCycles.length) lines.push('暂无已同步循环。', '')
+  for (const cycle of reportCompletedCycles) lines.push(
     `### ${cycle.title ?? cycle.cycleId ?? '未命名循环'}`,
     '',
     `- 状态：${cycle.status ?? '未记录'}`,
     `- 已确认题目：${Array.isArray(cycle.confirmedItems) ? cycle.confirmedItems.join('、') : '未记录'}`,
     `- 学习备注：${cycle.notes ?? '无'}`,
+    '',
+  )
+  for (const cycle of deferredCycles) lines.push(
+    `### ${cycle.title ?? cycle.subjectId ?? cycle.stateKey ?? '未命名循环'}`,
+    '',
+    '- 状态：暂缓（不计为完成）',
+    `- 原因：${cycle.reason ?? '用户要求稍后再学'}`,
     '',
   )
   lines.push('## 记忆重点', '')
