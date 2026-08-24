@@ -457,6 +457,19 @@ async function wrongQuestionExport(env: Env, sectionKey: string, format: string)
   const currentTask = currentTaskValue && typeof currentTaskValue === 'object' && !Array.isArray(currentTaskValue)
     ? currentTaskValue as JsonRecord
     : progress.currentTask ?? null
+  const currentTaskRecord: JsonRecord | null = currentTask && typeof currentTask === 'object' && !Array.isArray(currentTask)
+    ? currentTask as JsonRecord
+    : null
+  const reportCurrentTask = currentTaskRecord
+    ? {
+        chapter: currentTaskRecord.chapter ?? null,
+        section: currentTaskRecord.section ?? null,
+        title: currentTaskRecord.title ?? null,
+        courseKey: currentTaskRecord.courseKey ?? null,
+        status: currentTaskRecord.status ?? null,
+        deferredCycle: currentTaskRecord.deferredCycle ?? null,
+      }
+    : null
   const cyclePrefix = sectionKey ? `cycle:${sectionKey}-cycle-%` : 'cycle:%'
   const cycleRows = await env.DB.prepare(`
     SELECT state_key, value_json, updated_at FROM learner_state
@@ -493,7 +506,7 @@ async function wrongQuestionExport(env: Env, sectionKey: string, format: string)
     freshness: 'live_cloud_d1',
     latestProgressAt: currentTaskRow?.updated_at ?? snapshot?.created_at ?? null,
     scope: sectionKey || 'all',
-    currentTask,
+    currentTask: reportCurrentTask,
     completedCycles: reportCompletedCycles,
     deferredCycles,
     summary,
@@ -507,7 +520,7 @@ async function wrongQuestionExport(env: Env, sectionKey: string, format: string)
     '# 当前错题与题型整理', '',
     `> 实时生成：${generatedAt} · 云端进度：${snapshot?.created_at ?? '暂无同步快照'} · 范围：${sectionKey || '全部'}`, '',
     '## 当前学习位置', '',
-    `- 当前任务：${JSON.stringify(currentTask ?? '未记录')}`,
+    `- 当前任务：${reportCurrentTask?.title ?? '未记录'}${reportCurrentTask?.courseKey ? `（课程 ${reportCurrentTask.courseKey}）` : ''}`,
     `- 已完成循环：${reportCompletedCycles.map((cycle) => cycle.title ?? cycle.cycleId ?? cycle.stateKey).join('、') || '暂无'}`,
     `- 暂缓循环：${deferredCycles.map((cycle) => cycle.title ?? cycle.subjectId ?? cycle.stateKey).join('、') || '暂无'}`, '',
     '## 汇总', '',
@@ -572,7 +585,17 @@ async function wrongQuestionExport(env: Env, sectionKey: string, format: string)
     '',
   )
   lines.push('---', '', '本报告只整理错因、题型、方法与复测动作；不写教材答案、正确选项或内部题目 ID。')
-  return { ...payload, format: 'markdown', content: lines.join('\n') }
+  return {
+    ok: true,
+    format: 'markdown',
+    generatedAt,
+    freshness: 'live_cloud_d1',
+    latestProgressAt: currentTaskRow?.updated_at ?? snapshot?.created_at ?? null,
+    scope: sectionKey || 'all',
+    currentTask: reportCurrentTask,
+    summary,
+    content: lines.join('\n'),
+  }
 }
 
 function createServer(env: Env, scopes: readonly string[]): McpServer {
@@ -892,6 +915,7 @@ function createServer(env: Env, scopes: readonly string[]): McpServer {
     inputSchema: {
       requestId: z.uuid(),
       cycleId: z.string().min(1).max(200),
+      cycleTitle: z.string().min(1).max(200),
       reason: z.string().min(1).max(1000),
       nextCycleId: z.string().min(1).max(200),
       nextCycleTitle: z.string().min(1).max(200),
@@ -899,15 +923,24 @@ function createServer(env: Env, scopes: readonly string[]): McpServer {
       currentTaskBaseVersion: z.number().int().nonnegative(),
       userConfirmed: z.boolean(),
     },
-  }, async ({ requestId, cycleId, reason, nextCycleId, nextCycleTitle, nextCourseKey, currentTaskBaseVersion, userConfirmed }) => {
+  }, async ({ requestId, cycleId, cycleTitle, reason, nextCycleId, nextCycleTitle, nextCourseKey, currentTaskBaseVersion, userConfirmed }) => {
     if (!writeAllowed()) return failure('insufficient_scope', WRITE_SCOPE)
     if (!userConfirmed) return failure('confirmation_required', '暂缓循环需要用户明确确认')
     try {
+      const existingTaskRow = await env.DB.prepare(`
+        SELECT value_json FROM learner_state WHERE user_id = ? AND state_key = 'current_task'
+      `).bind(USER_ID).first<Record<string, string>>()
+      const existingTaskValue = existingTaskRow ? parseJson(existingTaskRow.value_json) : null
+      const existingTask = existingTaskValue && typeof existingTaskValue === 'object' && !Array.isArray(existingTaskValue)
+        ? existingTaskValue as JsonRecord
+        : {}
       const event = await recordLearningEvent(env, requestId, 'cycle_deferred', 'cycle', cycleId, {
-        status: 'deferred', reason, userConfirmed: true,
+        title: cycleTitle, status: 'deferred', reason, userConfirmed: true,
         nextTask: { cycle: nextCycleId, title: nextCycleTitle, courseKey: nextCourseKey ?? null },
       })
       const currentTask = await upsertLearnerState(env, 'current_task', {
+        chapter: existingTask.chapter ?? null,
+        section: existingTask.section ?? null,
         cycle: nextCycleId,
         title: nextCycleTitle,
         courseKey: nextCourseKey ?? null,
@@ -1005,9 +1038,15 @@ function createServer(env: Env, scopes: readonly string[]): McpServer {
     const same = diagnostic?.item_id === (itemId ?? null)
       && diagnostic?.section_key === sectionKey
       && diagnostic?.error_type === errorType
+      && diagnostic?.error_direction === errorDirection
       && diagnostic?.evidence_text === evidenceText
+      && diagnostic?.user_correction === (userCorrection ?? null)
+      && diagnostic?.final_status === finalStatus
+      && classification?.item_id === (itemId ?? null)
+      && classification?.section_key === sectionKey
       && classification?.cluster_title === clusterTitle
       && classification?.basis === classificationBasis
+      && classification?.confidence === classificationConfidence
     if (!diagnostic || !classification) return failure('write_failed', '错题或题型归类写入不完整')
     if (!same) return failure('idempotency_conflict', 'requestId 已用于不同错题记录')
     return result({

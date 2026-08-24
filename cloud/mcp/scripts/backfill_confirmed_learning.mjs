@@ -77,7 +77,7 @@ for (const [memoryId, requestId, itemId, title, content, reason] of memories) {
 const deferRequestId = '3ecb111a-15a5-4502-bc32-5ed5cd04322f'
 const deferEventId = 'ab2cdf36-8b07-41bd-b2f8-a8489d1d3e49'
 const deferPayload = {
-  status: 'deferred', reason: '用户明确说“先跳过这个循环”', userConfirmed: true,
+  title: '空间向量等值面法', status: 'deferred', reason: '用户明确说“先跳过这个循环”', userConfirmed: true,
   nextTask: { cycle: '1.1-cycle-4', title: '共面证明', courseKey: 'coplanar' },
 }
 const evidenceHash = createHash('sha256').update('先跳过这个循环').digest('hex')
