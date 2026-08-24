@@ -185,10 +185,12 @@ For every item, produce:
 
 ### S11 ChatGPT Assistance Handoff
 
-- Connect the approved GitHub repository through `@GitHub`; do not paste or upload the whole repository.
+- Use the approved remote math MCP first; keep the approved GitHub repository as the static fallback and audit source. Do not paste or upload the whole repository.
 - Send the project bootstrap prompt from `prompts/math_project_bootstrap.md` once.
-- Before teaching, ChatGPT reads the context audit, the current no-answer item, its image, and every bound course transcript `full_text`.
-- Use the HTML page's current-cycle prompt or `复制进度` snapshot for browser-local progress. Repository progress JSON is the initialized/evidence ledger, not automatic live browser state.
+- Before teaching, ChatGPT reads system status/current task/live progress, the current no-answer item, its image, and every bound course transcript `full_text`; use GitHub context audit only when MCP is unavailable or a static hash audit is requested.
+- Search paired handouts through OCR, then read the exact source-page image before using formulas, diagrams, or question wording. Candidate page/course links are not verified links.
+- Use the HTML page's current-cycle prompt or `复制进度` snapshot for browser-local progress. Only a successful MCP write updates real cloud progress; repository progress JSON remains the proxy/evidence ledger.
+- Confirmed errors, blockers, and hint dependencies are immediately written with `math_record_wrong_question`. “整理当前错题” calls `math_export_wrong_questions`; a skipped cycle calls `math_defer_cycle` and remains distinct from completion.
 - Ask for one diagnosis, one minimal hint, and one next action; wait for the learner attempt before adding help.
 - If an exact path cannot be read, report the path and mark the explanation `资料不足` or `课程覆盖缺口`.
 

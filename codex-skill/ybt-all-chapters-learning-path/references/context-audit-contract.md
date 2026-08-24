@@ -14,6 +14,8 @@ For each active section:
 - Diagrams: `image_refs[*].ref` basename resolved under `data/ocr_live_current/first_chapter_69/imgs` for chapter 1 and `data/ocr_live_current/second_chapter_109/imgs` for chapter 2.
 - Repository learner ledger: `data/learner_progress/chapter<chapter>.json`.
 - Browser live learner state: HTML `localStorage`, exported only by the page's `复制进度` action.
+- Cloud real-learner state: remote math MCP `learner_state` and idempotent `learning_events`; this is authoritative after a successful write.
+- Paired course handouts: `math_search_handout` for OCR location, `math_get_course_handout` for candidate page mapping, and `math_get_handout_page` for source-page visual verification. OCR alone is not formula or diagram authority.
 
 ## Required audit command
 
@@ -45,16 +47,17 @@ The audit also records SHA-256 values for the manifest, learning packet, student
 
 ## ChatGPT retrieval contract
 
-ChatGPT is allowed to retrieve the repository on demand through the GitHub connection. It does not need the whole repository pasted into one prompt, and a one-shot answer cannot prove that all files were loaded into context.
+ChatGPT should use the remote math MCP first and the GitHub connection as a static fallback/audit source. It does not need the whole repository pasted into one prompt, and a one-shot answer cannot prove that all files were loaded into context.
 
 Before teaching a current item, ChatGPT must:
 
-1. Read the audit JSON and confirm the complete flags.
-2. Read the current no-answer item from the correct student source.
-3. Read the referenced diagram when the item has an image dependency.
-4. Read every bound course transcript `full_text`.
+1. Read MCP system status, current task, section overview, and live progress.
+2. Read the current no-answer item and every referenced diagram.
+3. Read every bound course transcript `full_text`.
+4. When the paired handout is useful, search it and then read the exact source-page image; OCR text is location evidence only.
 5. Explain using the teacher transcript's definitions, recognition cues, method order, and terminology.
-6. Use a browser progress snapshot for live user progress; never infer live progress from initialized repository JSON.
+6. After a confirmed error/blocker, write its diagnostic and type through `math_record_wrong_question`; on request, export the live report through `math_export_wrong_questions`.
+7. If MCP is unavailable, read the audit JSON and use GitHub sources. Never infer live progress from initialized repository JSON or an unsynchronized browser snapshot.
 
 If any required path is unreadable, ChatGPT must name the exact path and mark the current explanation `资料不足` or `课程覆盖缺口`. It must not silently use a title, stale summary, answer sidecar, or another persona's attempt.
 
@@ -67,4 +70,3 @@ If any required path is unreadable, ChatGPT must name the exact path and mark th
 - `cold_retest_not_run`: no 24-hour evidence exists.
 
 `human_not_started` is not a source defect. `proxy_complete` is not human completion.
-

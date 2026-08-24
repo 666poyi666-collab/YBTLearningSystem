@@ -45,6 +45,10 @@ description: Build, audit, simulate, and refine Chinese high-school mathematics 
 - After section routes are merged, run one sequential `primary-user-proxy` across the chapter. Start with only a zero-base assumption and update its persistent profile only from frozen attempt evidence.
 - Every simulated attempt must preserve the learner's actual course call, recognition statement, first line, continuation attempt, and self-check. Boolean-only simulation is invalid.
 - Keep route stress testing, the growing learner, independent verification, human learning, and 24-hour cold retest separate. Human and 24-hour gates remain `not_run` unless real evidence exists.
+- For the real learner, use the remote math MCP as the live state authority. A browser `localStorage` flag or a conversation statement is not cloud progress until an idempotent MCP write succeeds.
+- After the learner confirms an error, blocker, or hint dependency, call `math_record_wrong_question` so the diagnostic and type classification advance together. Do not turn speech-recognition mistakes or model guesses into wrong-question records.
+- When the learner asks for current wrong questions, call `math_export_wrong_questions`; report its live generation time, covered/deferred cycles, error status, type clusters, memory points, and retest actions. Do not reconstruct the report from chat memory.
+- A skipped cycle is `deferred`, never `completed`. Use `math_defer_cycle` after explicit user confirmation and advance `current_task` to the named next cycle.
 - Preserve `passed`, `failed`, `blocked`, `not_run`, `unknown`, and `stale` as distinct states.
 - Never call a section “资料不足” because `human_learning_status=not_started`. `not_started` means learning has not happened; it is not a source defect.
 - Never call a chapter statically complete unless `sections=11`, `canonical_items=401`, `complete_sections=11`, `all_question_content_complete=true`, `all_visual_assets_present=true`, and `all_teacher_transcripts_ready=true` for the active first-two-chapter audit.
@@ -72,7 +76,7 @@ description: Build, audit, simulate, and refine Chinese high-school mathematics 
 4. Freeze each attempt before evaluation. Update the profile version only when the evidence adds a confirmed strength, gap, uncertainty, hint dependency, or self-check gap.
 5. At chapter close, list unfinished required courses and unresolved items. Mark simulated chapter completion only when both lists are empty and the chapter progress validator passes.
 6. Report real-user course completion and 24-hour retest independently; do not infer them from the proxy.
-7. Keep browser-local progress separate from repository progress. The HTML page may store stars, listened cycles, passed items, and questions in `localStorage`; use its “复制进度” snapshot when asking ChatGPT for live assistance.
+7. Keep browser-local, cloud real-user, and repository proxy progress separate. The HTML page may store stars, listened cycles, passed items, and questions in `localStorage`; after explicit confirmation, use MCP write tools to synchronize real events. A copied snapshot alone is not a successful cloud write.
 
 ## Delivery Rules
 
@@ -83,7 +87,7 @@ description: Build, audit, simulate, and refine Chinese high-school mathematics 
 - Use UTF-8 without BOM for JSON/HTML and UTF-8 for Markdown. Use MathJax-compatible `\(...\)` and `\[...\]`; do not emit unmatched `$`.
 - Do not edit shared manifests, OCR, packets, catalogs, visual sidecars, or another task's output. Report a shared-source defect instead.
 - Do not upload the whole repository or commit private 8.5 conversation history to the public repository. ChatGPT uses GitHub for repository facts; the 8.5 file is an optional private project reference.
-- ChatGPT assistance must use `@GitHub`, read `data/chatgpt_context/chapter12_complete_audit.json`, then read the current no-answer item, its image, and every bound transcript before explaining. A ChatGPT response saying “已读取” is not audit evidence.
+- ChatGPT assistance is MCP-first: read system status, current task, section, no-answer item/image, teacher transcript, and live progress. Use the three handout tools when the paired course handout is relevant, and inspect the returned source page image before relying on formulas or diagrams. `@GitHub` and `chapter12_complete_audit.json` are the static fallback/audit path. A response saying “已读取” is not audit evidence.
 
 ## Validate
 

@@ -251,7 +251,7 @@ HTML requirements:
 - Stable task numbering; dynamic content must not shift controls or labels.
 - Prefer a compact chapter ledger, sticky or nearby section navigation, short method blocks, and scannable item checklists over repeated prose panels.
 - The current approved workspace composition is: chapter progress strip, section navigation, dynamic next step, vertical cycle route, vertical course queue, and full-width cycle detail. Do not restore a horizontal cycle-tab wall or report-style metric grid.
-- A learner-facing page may keep browser-local stars, listened cycles, passed items, questions, and a `复制进度` action. It must state that live browser progress is a snapshot, not an automatic repository write.
+- A learner-facing page may keep browser-local stars, listened cycles, passed items, questions, and a `复制进度` action. It must state that the copied browser state is not cloud progress until a confirmed `math_sync_progress_snapshot` succeeds. Confirmed errors/classifications are written by `math_record_wrong_question`; live wrong-question documents come from `math_export_wrong_questions`; deferred cycles remain distinct from completion.
 
 ## 6. Evidence File
 
