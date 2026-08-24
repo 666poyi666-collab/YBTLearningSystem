@@ -50,6 +50,8 @@ test('exposes complete learner-safe content reads', () => {
   assert.match(source, /math_record_memory/)
   assert.match(source, /math_record_type_classification/)
   assert.match(source, /math_record_wrong_question/)
+  assert.match(source, /math_defer_cycle/)
+  assert.match(source, /isWriteToolName/)
   assert.match(source, /math_search_handout/)
   assert.match(source, /math_get_course_handout/)
   assert.match(source, /math_get_handout_page/)

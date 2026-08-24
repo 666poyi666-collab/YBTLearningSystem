@@ -122,15 +122,18 @@ async function authorize(request: Request, env: Env, requiredScope: Scope) {
   return { ok: true as const, scopes }
 }
 
+function isWriteToolName(name: string): boolean {
+  return name.startsWith('math_record_') || name.startsWith('math_mark_')
+    || name.startsWith('math_sync_') || name.startsWith('math_defer_')
+}
+
 async function requiredScope(request: Request): Promise<Scope> {
   const headerName = request.headers.get('mcp-name')
-  if (headerName) return headerName.startsWith('math_record_') || headerName.startsWith('math_mark_') || headerName === 'math_sync_progress_snapshot'
-    ? WRITE_SCOPE
-    : READ_SCOPE
+  if (headerName) return isWriteToolName(headerName) ? WRITE_SCOPE : READ_SCOPE
   try {
     const rpc = await request.clone().json<{ method?: string; params?: { name?: string } }>()
     const name = rpc.params?.name ?? ''
-    return rpc.method === 'tools/call' && (name.startsWith('math_record_') || name.startsWith('math_mark_') || name === 'math_sync_progress_snapshot')
+    return rpc.method === 'tools/call' && isWriteToolName(name)
       ? WRITE_SCOPE
       : READ_SCOPE
   } catch {
@@ -850,6 +853,40 @@ function createServer(env: Env, scopes: readonly string[]): McpServer {
       }
     })
   }
+
+  server.registerTool('math_defer_cycle', {
+    description: '在用户明确要求跳过或暂缓当前循环后记录状态，并推进到用户指定的下一循环；不会把暂缓冒充完成。',
+    inputSchema: {
+      requestId: z.uuid(),
+      cycleId: z.string().min(1).max(200),
+      reason: z.string().min(1).max(1000),
+      nextCycleId: z.string().min(1).max(200),
+      nextCycleTitle: z.string().min(1).max(200),
+      nextCourseKey: z.string().max(200).optional(),
+      currentTaskBaseVersion: z.number().int().nonnegative(),
+      userConfirmed: z.boolean(),
+    },
+  }, async ({ requestId, cycleId, reason, nextCycleId, nextCycleTitle, nextCourseKey, currentTaskBaseVersion, userConfirmed }) => {
+    if (!writeAllowed()) return failure('insufficient_scope', WRITE_SCOPE)
+    if (!userConfirmed) return failure('confirmation_required', '暂缓循环需要用户明确确认')
+    try {
+      const event = await recordLearningEvent(env, requestId, 'cycle_deferred', 'cycle', cycleId, {
+        status: 'deferred', reason, userConfirmed: true,
+        nextTask: { cycle: nextCycleId, title: nextCycleTitle, courseKey: nextCourseKey ?? null },
+      })
+      const currentTask = await upsertLearnerState(env, 'current_task', {
+        cycle: nextCycleId,
+        title: nextCycleTitle,
+        courseKey: nextCourseKey ?? null,
+        status: 'not_started',
+        deferredCycle: cycleId,
+        source: 'cloud_mcp_cycle_deferred',
+      }, requestId, String(event.createdAt), currentTaskBaseVersion)
+      return result({ ok: true, event, currentTask })
+    } catch (error) {
+      return failure(error instanceof Error ? error.message : 'write_failed', '暂缓循环写入失败')
+    }
+  })
 
   server.registerTool('math_record_question', {
     description: '记录用户针对题目的疑问，不自动判定题目通过。',

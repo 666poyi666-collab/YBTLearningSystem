@@ -4,7 +4,7 @@
 
 当前产品合同见 `docs/PRODUCT-REQUIREMENTS.md`，工程规则见 `docs/PROJECT-STANDARDS.md`。
 
-云端 MCP 已部署在 `https://math-learning-mcp.focuslink-poyi-6465e9.workers.dev`，资料库导入范围为选择性必修 1 第一至第五章；当前学习路径仍只推进第一、二章。ChatGPT OAuth 已完成真实只读调用验收；没有可靠时间轴的课程会明确返回无时间轴状态。已导入的一本通答案来源通过 `math_get_answer_sources` 查询；原书答案和 ChatGPT 自己的模型解法必须分开显示。
+云端 MCP 已部署在 `https://math-learning-mcp.focuslink-poyi-6465e9.workers.dev`，资料库导入范围为选择性必修 1 第一至第五章；当前学习路径仍只推进第一、二章。两本《高二数学精讲精练》共 562 页已建立 OCR 检索与原页图核对链路。ChatGPT OAuth 已完成真实调用验收；没有可靠时间轴的课程会明确返回无时间轴状态。错题、题型和进度实时写入 D1；原书答案和 ChatGPT 自己的模型解法必须分开显示。
 
 ## 运行
 

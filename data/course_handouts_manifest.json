@@ -1,6 +1,6 @@
 {
   "schema_version": "math-course-handouts-v1",
-  "status": "registered_local_sources",
+  "status": "cloud_indexed_with_source_page_images",
   "purpose": "登记用户提供的网课配套讲义，供后续按课程或题目建立讲义页锚和视觉检索索引。",
   "source_boundary": "用户提供的下载目录；文件不自动进入公开 GitHub 或学生答案上下文。",
   "handouts": [
@@ -10,7 +10,9 @@
       "page_count": 278,
       "sha256": "12f344e70a9e18ed7536671176f6387df43a628c4dd9567f8e09953458f53c20",
       "text_layer": "absent",
-      "integration_status": "local_registered_not_imported_to_mcp"
+      "integration_status": "cloud_indexed_278_of_278_pages",
+      "ocr_provider": "rapidocr_onnxruntime",
+      "visual_policy": "OCR is a search aid; formulas, diagrams and question text require the source page image"
     },
     {
       "file_name": "高二数学精讲精练（下）.pdf",
@@ -18,12 +20,16 @@
       "page_count": 284,
       "sha256": "4e6992305c4227576849e6faa4372613743c960083c72148b0b0c608de181de8",
       "text_layer": "absent",
-      "integration_status": "local_registered_not_imported_to_mcp"
+      "integration_status": "cloud_indexed_284_of_284_pages",
+      "ocr_provider": "rapidocr_onnxruntime",
+      "visual_policy": "OCR is a search aid; formulas, diagrams and question text require the source page image"
     }
   ],
   "retrieval_policy": {
-    "current_mcp": "课程转写、题包、题图和进度由数学远程 MCP 提供；讲义 PDF 尚未由 MCP 工具直接返回。",
-    "next_step": "按课程编号建立讲义页范围和 OCR/视觉索引后，再决定是否上传版本化 R2 并新增只读讲义查询工具。",
+    "current_mcp": "课程转写、题包、题图、进度、562 页讲义 OCR 索引和原页图均由数学远程 MCP 提供。",
+    "cloud_version": "handouts-v1-63e203abb4ffc0ba",
+    "cloud_counts": {"sources": 2, "pages": 562, "candidate_course_links": 142},
+    "next_step": "使用中按课程或关键词搜索候选页，再读取原页图核对；候选课程映射只有完成视觉核验后才能升级为 verified。",
     "answer_isolation": "讲义可以作为老师授课参考，但不能把答案册或讲义解析自动放入独立作答上下文。"
   }
 }
