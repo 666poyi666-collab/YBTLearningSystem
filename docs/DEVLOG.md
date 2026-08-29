@@ -6,7 +6,7 @@
 - 核对用户新提供的《ChatGPT-第一章第一节-20260829-2237.md》：仅作为交互反馈证据，不把其中的模型答案或旧进度直接当教材事实。确认用户反馈的核心缺口为课程跳跃、手写第一处分歧定位和可检索的必刷题页码。
 - 建立必刷题独立索引：源 PDF 106 页、SHA-256 `d08ef016908977cd52872ce604daa4fd83991c51268b42638155c194a078d928`；RapidOCR 逐页生成 727 个唯一题目候选（第一章 194、第二章 230、第三章 269、模块综合 34）。题面 OCR 只作检索，题干/公式/图形必须以原页图核对，源 PDF 不含答案。
 - 新增必刷题 D1/R2 表、课程优先学习包和路线工具：`math_get_course_first_route`、`math_get_course_learning_bundle`、`math_get_practice_route`、`math_get_practice_page`、`math_search_practice`、`math_record_practice_attempt`；新增手写逐行分析工具 `math_record_handwriting_analysis`，明确第一处分歧与 `downstream_contaminated` 状态。
-- 生产导入完成：必刷题 D1 为 1 个来源、106 页、727 题、1,972 条课程/循环/章节路由；R2 保存索引和 22 页包。Worker 已部署版本 `ec424356-1dba-424e-914c-b6c2441681e6`，`/readyz` 为 200。
+- 生产导入完成：必刷题 D1 为 1 个来源、106 页、727 题、1,972 条课程/循环/章节路由；R2 保存索引和 22 页包。Worker 已部署版本 `43836dbb-4f8a-40c1-99be-c4ca039d3f43`，`/readyz` 为 200。
 - 收紧学习包和报告边界：`math_get_course_learning_bundle` 明确必刷题是 `unlocked` 还是 `locked_until_course_listened`；`math_export_wrong_questions` 新增手写批改区，显示第一处错误行、下游污染、修正动作和分析状态。
 
 ## 2026-08-24
