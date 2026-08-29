@@ -27,10 +27,10 @@
 
 代码、D1 schema、私有 R2、共享 OAuth audience/scopes 和独立资源服务器凭据均已建立。远端迁移、内容导入、生产部署和未授权访问验收已通过；`/healthz`、`/readyz` 与 protected-resource 元数据均为 200，无令牌 `/mcp` 为 401。
 
-当前内容快照为版本化导入计划：选择性必修 1 第一至第五章共 38 节、1,209 个教材项目、全部 170 门课程目录中的实际映射课程、课程转写和可用答案来源；R2 保存节次题包、课程转写包和题图包。导入计划由 `scripts/import_content.mjs` 生成，默认 dry-run，可用 `npm run import:dry` 重建；远程导入使用 `npm run import:remote`。学习路径仍只针对第一、二章。
+当前生产内容版本为 `v1-2db8d9d7ffb183c9`：选择性必修 1 第一至第五章共 38 节、1,209 个教材项目、4,956 条唯一项目-课程链接和 50 条当前原书答案。课程目录保留 170 门与 19,234 个转写片段；其中 141 门已有当前项目直连，其余课程用于已披露的待核验映射或讲义检索，不冒充精确覆盖。R2 保存节次题包、课程转写包和题图包。
 
 补充练习库版本化导入计划由 `scripts/import_practice_book.mjs` 生成，索引器为仓库根目录 `scripts/build_practice_book_index.py`。当前书源为 106 页、727 个唯一题目；第一章 194 题、第二章 230 题、第三章 269 题，另有 34 道模块综合题。最新候选路由版本为 `practice-v1-f55a4c6c3bbfd761`，包含 3,020 条候选链接；题面 OCR 是搜索辅助，原页图是题面权威，跨节综合页不生成伪精确 cycle 绑定。源 PDF 本身没有答案，必刷题始终选做且不阻塞主线。
 
-学习者安全的读取工具包括：`math_get_section_overview`（完整节次大纲与项目索引）、`math_get_item_content`（完整题面与题图，不返回答案侧车）、`math_get_course_transcript`（完整老师文稿及可靠时间轴）、三项讲义检索/原页工具、课程优先学习包、必刷题路由/原页工具、手写逐行分析和 `math_get_answer_sources`（已导入的一本通原书答案来源）。模型自己的解法不写入原书答案表，必须由 ChatGPT 单独标记为 `model_solution` 并给出推荐理由。没有可验证逐句时间轴时，返回 `timelineAvailable=false` 和空时间轴，不作估算。当前生产 Worker 为 `https://math-learning-mcp.focuslink-poyi-6465e9.workers.dev`，最新部署版本为 `efa887d6-017f-4f9d-8a14-c35e14350ea0`。
+学习者安全的读取工具包括：`math_get_section_overview`（完整节次大纲与项目索引）、`math_get_item_content`（完整题面与题图，不返回答案侧车）、`math_get_course_transcript`（完整老师文稿及可靠时间轴）、三项讲义检索/原页工具、课程优先学习包、必刷题路由/原页工具、手写逐行分析和 `math_get_answer_sources`（已导入的一本通原书答案来源）。模型自己的解法不写入原书答案表，必须由 ChatGPT 单独标记为 `model_solution` 并给出推荐理由。没有可验证逐句时间轴时，返回 `timelineAvailable=false` 和空时间轴，不作估算。当前生产 Worker 为 `https://math-learning-mcp.focuslink-poyi-6465e9.workers.dev`，最新部署版本为 `25231906-c1f3-467b-9a3d-ae30908bf2c7`。
 
-ChatGPT 网页端“数学一本通学习”开发模式 App 已完成 OAuth 授权，并在项目“数学选择性必修一”中完成真实只读调用验收：ChatGPT 读取了系统状态、第一章第一节概览、第一道题题面和第一门课程全文；系统返回 2 章、11 节、401 个项目、37 门课程、2,038 个转写片段，学习事件仍为 0。本次验收未写入学习进度。
+ChatGPT 网页端“数学一本通学习”开发模式 App 已完成 OAuth 授权。当前 D1 保留 7 条用户确认学习事件、3 条诊断、3 条题型分类和 3 条记忆点；内容/练习重导入没有覆盖这些记录。`/healthz`、`/readyz` 均为 200，无令牌 `/mcp` 为 401。
