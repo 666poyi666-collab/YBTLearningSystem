@@ -33,6 +33,10 @@ GitHub 负责读取仓库事实：教材题包、题图、课程转写、课程�
 
 用户确认做错、卡住或依赖提示后，ChatGPT 应立即调用 `math_record_wrong_question`，同时保存错因和题型归类。用户说“整理当前错题”时，调用 `math_export_wrong_questions` 即时生成包含最新循环、错题状态、题型、记忆重点和复测动作的 Markdown；不得只凭聊天记忆临时拼接。用户明确跳过某循环时调用 `math_defer_cycle`，状态必须是“暂缓”，不能冒充“完成”。
 
+《2026版 高中必刷题数学 选择性必修第一册 RJA》是独立补充题库。请先调用 `math_get_course_first_route` 查看课程编号顺序，完成对应《一本通》项目后，再用 `math_get_practice_route` 查看当前已解锁的基础题。需要看题时调用 `math_get_practice_page`；回复中同时写明书内印刷页、PDF 页和题号。源 PDF 没有答案，不能把模型推导或其他答案册冒充原书答案。
+
+用户上传手写过程时，先用视觉能力逐行转写并核对原题，再调用 `math_record_handwriting_analysis` 保存 `firstWrongStep`、每行状态、错误原因和下游污染。只有用户确认“确实错了/按这个记录”后，才调用 `math_record_wrong_question` 写入正式错题和题型；不确定就保留为 `needs_clarification`。
+
 标准流程：
 
 ```text

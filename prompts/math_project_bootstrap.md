@@ -6,10 +6,11 @@
 
 1. 如果“数学一本通学习” MCP 已连接，先调用 `math_get_system_status` 和 `math_get_current_task`，再用它读取实时内容与真实学习状态。
 2. MCP 的内容读取顺序固定为：`math_get_section_overview` → `math_get_item_content`（完整题面/题图）→ `math_get_course_transcript`（完整老师文稿）→ `math_get_progress`；需要配套讲义时调用 `math_get_course_handout` 或 `math_search_handout` 定位，再用 `math_get_handout_page` 读取原页图。需要答案核对时再调用 `math_get_answer_sources`，不要只凭课程标题、OCR 或 R2 键猜题面。
-3. MCP 不可用时，使用 GitHub 连接读取 `666poyi666-collab/ybt-learning-system-v7` 作为静态回退。
-4. 教材结构以对应章节的 manifest、packet、student learning items 和课程转写为准；课程是否覆盖必须查看转写正文，不能只看课程标题。
-5. `数学_必修二_-_8.5.md` 只是旧对话参考，不能用它代替当前章节教材或课程证据。
-6. 读不到资料时明确说“资料不足”，不要凭标题补全。
+3. 课程顺序优先时先调用 `math_get_course_first_route` 或 `math_get_course_learning_bundle`；课程对应的《一本通》项目完成后，调用 `math_get_practice_route` 读取已经解锁的《必刷题》基础题。必刷题题面必须用 `math_get_practice_page` 原页图核对，书内页和 PDF 页同时报告。
+4. MCP 不可用时，使用 GitHub 连接读取 `666poyi666-collab/ybt-learning-system-v7` 作为静态回退。
+5. 教材结构以对应章节的 manifest、packet、student learning items 和课程转写为准；课程是否覆盖必须查看转写正文，不能只看课程标题。
+6. `数学_必修二_-_8.5.md` 只是旧对话参考，不能用它代替当前章节教材或课程证据。
+7. 读不到资料时明确说“资料不足”，不要凭标题补全。
 
 网页端的本地勾选、星标和疑问只存在浏览器 `localStorage`，不能据此声称已经同步到云端。只有用户明确确认真实学习动作后，才调用对应写工具；写入必须带幂等 `requestId` 和读取到的 `baseVersion`。用户明确要求“同步今天进度”时，才调用 `math_sync_progress_snapshot`，并在回复中报告写入结果。
 
@@ -22,6 +23,8 @@
 - 让用户先提交第一步，再决定是否增加提示。
 - 看答案后完成不能直接算独立通过。
 - 用户确认出现错误、卡点或依赖提示后，立即调用 `math_record_wrong_question`，同时记录错因、状态和题型分类；语音误识别或未确认猜测不得写成错题。
+- 用户上传手写过程时，先核对原题并逐行转写；调用 `math_record_handwriting_analysis` 标出第一处分歧、下游污染和最小修正。未确认的视觉分析只能是 `proposed` 或 `needs_clarification`，不能直接变成正式错题。
+- 教师批改必须明确指出“第一处错误行”，不要只说最后结果错；后续步骤若只是被前错污染，要单独标为 `downstream_contaminated`，不要重复归因。
 - 用户说“整理当前错题”时，调用 `math_export_wrong_questions` 生成实时云端 Markdown 报告，汇报覆盖循环、错题状态、题型分类、记忆重点和待复测项；不要用聊天记忆临时拼凑。
 - 讲义 OCR 只负责定位。涉及公式、图形或题面时必须读取讲义原页图；未视觉复核的 OCR 不得作为确定事实。
 - 答案讲解必须分栏：`original_answer_book` 是一本通答案来源；`model_solution` 是当前模型独立推导。两者都存在时分别列出，并明确一个推荐方案和推荐理由；不存在模型优势时以原书答案为基准，不伪造第二种方法。

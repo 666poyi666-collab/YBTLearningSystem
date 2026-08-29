@@ -113,6 +113,15 @@ def _course_title(catalog: dict[str, dict[str, Any]], key: str) -> str:
     return title
 
 
+def _course_sort_key(catalog: dict[str, dict[str, Any]], key: str) -> tuple[Any, ...]:
+    """Sort catalog lessons by their numeric course id rather than alias/title."""
+    number = _course_number(catalog, key)
+    if number == "课程":
+        return (9999, key)
+    parts = tuple(int(part) for part in re.findall(r"\d+", number))
+    return (*parts, -1, key)
+
+
 def _section_rows(facts: dict[str, Any]) -> dict[str, dict[str, Any]]:
     rows = facts.get("section_deliveries")
     if not isinstance(rows, dict):
@@ -207,7 +216,7 @@ def render_markdown(
 ) -> str:
     chapter = int(progress["chapter"])
     title = _chapter_title(manifest, chapter)
-    required = list(progress["course_ledger"]["required_course_keys"])
+    required = sorted(progress["course_ledger"]["required_course_keys"], key=lambda key: _course_sort_key(catalog, str(key)))
     statuses = _course_status(progress)
     lines = [
         f"# {title}学习路径",
@@ -722,7 +731,7 @@ def render_html(
 ) -> str:
     chapter = int(progress["chapter"])
     title = _chapter_title(manifest, chapter)
-    required = list(progress["course_ledger"]["required_course_keys"])
+    required = sorted(progress["course_ledger"]["required_course_keys"], key=lambda key: _course_sort_key(catalog, str(key)))
     statuses = _course_status(progress)
     completed = sum(statuses.get(key) == "simulated_completed" for key in required)
     section_by_id = _section_rows(facts)

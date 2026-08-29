@@ -49,6 +49,9 @@ description: Build, audit, simulate, and refine Chinese high-school mathematics 
 - After the learner confirms an error, blocker, or hint dependency, call `math_record_wrong_question` so the diagnostic and type classification advance together. Do not turn speech-recognition mistakes or model guesses into wrong-question records.
 - When the learner asks for current wrong questions, call `math_export_wrong_questions`; report its live generation time, covered/deferred cycles, error status, type clusters, memory points, and retest actions. Do not reconstruct the report from chat memory.
 - A skipped cycle is `deferred`, never `completed`. Use `math_defer_cycle` after explicit user confirmation and advance `current_task` to the named next cycle.
+- When the user asks for supplementary practice, keep it as a separate practice-book source. Prefer course-number order for the route, while preserving source-page/question order inside each course unit. Use `math_get_course_first_route` / `math_get_course_learning_bundle`, then unlock practice with `math_get_practice_route` only after the linked YBT/course state permits it.
+- The 2026 practice book is answer-free in this source. Its OCR is search evidence only; `math_get_practice_page` must return the original page image before any formula, diagram, or exact stem is treated as verified.
+- Handwritten work is a separate evidence layer. First verify the question source, transcribe each line, identify exactly one first divergence when possible, mark later lines as downstream contamination when appropriate, and save a `proposed` analysis through `math_record_handwriting_analysis`. Only explicit learner confirmation can promote it to `math_record_wrong_question`.
 - Preserve `passed`, `failed`, `blocked`, `not_run`, `unknown`, and `stale` as distinct states.
 - Never call a section “资料不足” because `human_learning_status=not_started`. `not_started` means learning has not happened; it is not a source defect.
 - Never call a chapter statically complete unless `sections=11`, `canonical_items=401`, `complete_sections=11`, `all_question_content_complete=true`, `all_visual_assets_present=true`, and `all_teacher_transcripts_ready=true` for the active first-two-chapter audit.
@@ -60,7 +63,8 @@ description: Build, audit, simulate, and refine Chinese high-school mathematics 
 2. Reconcile the section manifest, OCR pages, packet, learning packet, `student_learning_items`, `student_packet`, and visual assets bidirectionally.
 3. Read the complete section layout before choosing courses. Reconstruct the actual block boundaries and example/variant parentage from the page instead of forcing a universal order.
 4. Read every assigned course transcript's `full_text`. Extract the teacher's definition, recognition cue, method order, terminology, and common warning for each mapped cycle.
-5. Build the section overview: first course, later new courses, already-learned dependencies, and exact item labels in order.
+   - If supplementary practice is in scope, read its course bundle and route unlock state after the transcript; never substitute a practice title for teacher coverage.
+5. Build the section overview: first course, later new courses, already-learned dependencies, exact item labels in order, and unlocked supplementary practice pages/题号.
 6. Build each cycle in source order. Write the item method fields required by the output schema without copying question text or answers.
 7. Record course coverage gaps separately from missing source files. If an advanced item has no dedicated transcript, mark the gap and add a bridge requirement; do not claim full teacher coverage.
 8. Run five rounds with five zero-base personas per round. Every persona must attempt every section item; freeze each attempt before judging it.

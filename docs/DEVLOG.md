@@ -1,5 +1,12 @@
 # Development Log
 
+## 2026-08-29
+
+- 根据用户最新对话调整学习路线目标：课程编号连续顺序优先；每门课程完成后先完成对应《一本通》，再解锁《2026版高中必刷题数学·选择性必修第一册》的基础题；提升题后置到节次，检测/高考强化后置到章节。
+- 核对用户新提供的《ChatGPT-第一章第一节-20260829-2237.md》：仅作为交互反馈证据，不把其中的模型答案或旧进度直接当教材事实。确认用户反馈的核心缺口为课程跳跃、手写第一处分歧定位和可检索的必刷题页码。
+- 建立必刷题独立索引：源 PDF 106 页、SHA-256 `d08ef016908977cd52872ce604daa4fd83991c51268b42638155c194a078d928`；RapidOCR 逐页生成 727 个唯一题目候选（第一章 194、第二章 230、第三章 269、模块综合 34）。题面 OCR 只作检索，题干/公式/图形必须以原页图核对，源 PDF 不含答案。
+- 新增必刷题 D1/R2 表、课程优先学习包和路线工具：`math_get_course_first_route`、`math_get_course_learning_bundle`、`math_get_practice_route`、`math_get_practice_page`、`math_search_practice`、`math_record_practice_attempt`；新增手写逐行分析工具 `math_record_handwriting_analysis`，明确第一处分歧与 `downstream_contaminated` 状态。
+
 ## 2026-08-24
 
 - 修复进度快照只写 `learning_events`、不更新 `learner_state` 的缺陷：同一次幂等快照现在投影 `current_task`、已完成循环、已听课程和节次进行中状态，并以 `sourceRequestId` 防止重放重复递增。

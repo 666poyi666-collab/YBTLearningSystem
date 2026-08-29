@@ -146,6 +146,12 @@ function parseJson(value: string | null): unknown {
   try { return JSON.parse(value) } catch { return null }
 }
 
+function courseSortKey(value: string): string {
+  const match = value.match(/(?:^|\s)(\d+(?:\.\d+){1,4})(?:\s|$)/)
+  if (!match) return `9999.${value}`
+  return `${match[1].split('.').map((part) => part.padStart(4, '0')).join('.')}.${value}`
+}
+
 async function readContentJson(env: Env, key: string): Promise<JsonRecord | null> {
   const object = await env.CONTENT.get(key)
   if (!object) return null
@@ -199,6 +205,18 @@ async function handoutPageImageContent(env: Env, row: JsonRecord): Promise<Image
   return [{ type: 'image', data: asset.data, mimeType: asset.mimeType }]
 }
 
+async function practicePageImageContent(env: Env, row: JsonRecord): Promise<ImageContent[]> {
+  const key = typeof row.page_pack_r2_key === 'string' ? row.page_pack_r2_key : ''
+  if (!key) return []
+  const pack = await readContentJson(env, key)
+  if (!pack || !pack.pages || typeof pack.pages !== 'object') return []
+  const pages = pack.pages as JsonRecord
+  const assetKey = `${row.source_id}:${row.pdf_page}`
+  const asset = pages[assetKey] && typeof pages[assetKey] === 'object' ? pages[assetKey] as JsonRecord : null
+  if (!asset || typeof asset.data !== 'string' || typeof asset.mimeType !== 'string') return []
+  return [{ type: 'image', data: asset.data, mimeType: asset.mimeType }]
+}
+
 async function systemStatus(env: Env) {
   const row = await env.DB.prepare(`
     SELECT
@@ -211,8 +229,12 @@ async function systemStatus(env: Env) {
       (SELECT COUNT(*) FROM learner_diagnostics WHERE user_id = ?) AS learner_diagnostics,
       (SELECT COUNT(*) FROM type_classifications WHERE user_id = ?) AS type_classifications,
       (SELECT COUNT(*) FROM handout_sources) AS handout_sources,
-      (SELECT COUNT(*) FROM handout_pages) AS handout_pages
-  `).bind(USER_ID, USER_ID, USER_ID).first<Record<string, number | string>>()
+      (SELECT COUNT(*) FROM handout_pages) AS handout_pages,
+      (SELECT COUNT(*) FROM practice_sources) AS practice_sources,
+      (SELECT COUNT(*) FROM practice_items) AS practice_items,
+      (SELECT COUNT(*) FROM practice_attempts WHERE user_id = ?) AS practice_attempts,
+      (SELECT COUNT(*) FROM handwriting_analyses WHERE user_id = ?) AS handwriting_analyses
+  `).bind(USER_ID, USER_ID, USER_ID, USER_ID, USER_ID).first<Record<string, number | string>>()
   const source = await env.DB.prepare(`
     SELECT id, git_commit, manifest_sha256, imported_at
     FROM source_versions ORDER BY imported_at DESC LIMIT 1
@@ -601,7 +623,7 @@ async function wrongQuestionExport(env: Env, sectionKey: string, format: string)
 function createServer(env: Env, scopes: readonly string[]): McpServer {
   const server = new McpServer(PROJECT, {
     instructions:
-      '这是一本通数学学习系统。讲题前先调用 math_get_section_overview 定位节次，再调用 math_get_item_content 获取完整题面和题图、math_get_course_transcript 获取完整老师文稿；需要讲义时先搜索再读取原页图。每次用户确认错误或提示后卡点，立即调用 math_record_wrong_question 同时记录错因和题型；用户要求整理时调用 math_export_wrong_questions 生成最新云端报告。课程覆盖、用户已学、题目已通过和冷复测是不同状态。不要只凭 OCR、标题或 R2 键猜题目，不要输出未请求的答案，不要把内部模拟进度当成真实用户进度。',
+      '这是课程顺序优先的数学学习系统。每门课先调用 math_get_course_learning_bundle，一次核对老师全文、讲义原页、对应一本通和已解锁必刷题；执行顺序是听课、一本通、必刷题基础、拔高、验收。讲义和必刷题 OCR 只用于定位，公式题面必须读取原页图；必刷题源 PDF 没有答案。用户上传手写过程时，先核对原题，再逐行转写并定位第一处分歧，用 math_record_handwriting_analysis 保存 proposed 分析；用户确认后才调用 math_record_wrong_question 写正式错题和题型。用户要求整理时调用 math_export_wrong_questions。课程覆盖、用户已学、题目已通过和冷复测是不同状态。不要输出未请求的答案，不要把内部模拟进度当成真实用户进度。',
   })
   const readAllowed = () => scopes.includes(READ_SCOPE)
   const writeAllowed = () => scopes.includes(WRITE_SCOPE)
@@ -805,6 +827,242 @@ function createServer(env: Env, scopes: readonly string[]): McpServer {
         ? '请以返回原页图核对公式、图形和题面；OCR 文本仅作搜索辅助。'
         : '原页图当前不可读，不得仅凭 OCR 断言公式或图形。',
     }, images)
+  })
+
+  server.registerTool('math_search_practice', {
+    description: '搜索《高中必刷题·选择性必修第一册》OCR 索引。OCR 只用于定位，题干、公式和图形必须再读取原页图。',
+    inputSchema: {
+      query: z.string().min(1).max(200),
+      chapterKey: z.string().max(20).default(''),
+      sectionKey: z.string().max(80).default(''),
+      limit: z.number().int().min(1).max(40).default(12),
+    },
+  }, async ({ query, chapterKey, sectionKey, limit }) => {
+    if (!readAllowed()) return failure('insufficient_scope', READ_SCOPE)
+    const rows = await env.DB.prepare(`
+      SELECT i.item_id, i.label, i.chapter_key, i.section_key, i.unit_key,
+             i.unit_title, i.source_type_title, i.practice_level, i.cadence, i.printed_page, i.pdf_page,
+             substr(i.ocr_excerpt, 1, 1400) AS ocr_excerpt,
+             i.visual_status, i.answer_status, s.title AS source_title
+      FROM practice_items i JOIN practice_sources s ON s.source_id = i.source_id
+      WHERE i.ocr_excerpt LIKE ? AND (? = '' OR i.chapter_key = ?)
+        AND (? = '' OR i.section_key = ?)
+      ORDER BY CAST(i.chapter_key AS INTEGER), i.printed_page, i.question_number, i.occurrence LIMIT ?
+    `).bind(`%${query}%`, chapterKey, chapterKey, sectionKey, sectionKey, limit).all<JsonRecord>()
+    return result({
+      ok: true, query, matches: rows.results,
+      evidencePolicy: '搜索结果不是可直接作答的完整题面；先调用 math_get_practice_page 查看原页图。该 PDF 不含答案，模型解法必须标为 model_solution。',
+    })
+  })
+
+  server.registerTool('math_get_practice_page', {
+    description: '读取必刷题指定 PDF 页的题号索引、OCR 定位文本和原页图；原页图是题干、公式和图形的最终依据。',
+    inputSchema: {
+      sourceId: z.string().min(1).max(100),
+      pdfPage: z.number().int().min(1).max(1000),
+      includeImage: z.boolean().default(true),
+    },
+  }, async ({ sourceId, pdfPage, includeImage }) => {
+    if (!readAllowed()) return failure('insufficient_scope', READ_SCOPE)
+    const row = await env.DB.prepare(`
+      SELECT p.*, s.title AS source_title, s.source_sha256, s.answer_status
+      FROM practice_pages p JOIN practice_sources s ON s.source_id = p.source_id
+      WHERE p.source_id = ? AND p.pdf_page = ?
+    `).bind(sourceId, pdfPage).first<JsonRecord>()
+    if (!row) return failure('not_found', '未找到必刷题页面', { sourceId, pdfPage })
+    const items = await env.DB.prepare(`
+      SELECT item_id, label, question_number, occurrence, chapter_key, section_key,
+             unit_key, unit_title, source_type_title, practice_level, cadence, visual_status, answer_status
+      FROM practice_items WHERE source_id = ? AND pdf_page = ?
+      ORDER BY question_number, occurrence
+    `).bind(sourceId, pdfPage).all<JsonRecord>()
+    const images = includeImage ? await practicePageImageContent(env, row) : []
+    return result({
+      ok: true,
+      page: { ...row, headings: parseJson(String(row.headings_json)), headings_json: undefined },
+      items: items.results,
+      imageCount: images.length,
+      evidencePolicy: images.length === 1
+        ? '必须以返回原页图核对题号、公式和图形；OCR 文本仅作定位。源 PDF 不含答案。'
+        : '原页图不可读，不得只凭 OCR 讲题或判题。',
+    }, images)
+  })
+
+  server.registerTool('math_get_practice_route', {
+    description: '按课程、循环、节次和练习节奏读取必刷题题号与印刷/PDF页码，并根据真实云端进度标出是否解锁。',
+    inputSchema: {
+      courseKey: z.string().max(200).default(''),
+      cycleId: z.string().max(200).default(''),
+      sectionKey: z.string().max(80).default(''),
+      cadence: z.enum(['', 'after_course', 'after_section', 'after_chapter']).default(''),
+      limit: z.number().int().min(1).max(200).default(80),
+    },
+  }, async ({ courseKey, cycleId, sectionKey, cadence, limit }) => {
+    if (!readAllowed()) return failure('insufficient_scope', READ_SCOPE)
+    if (!courseKey && !cycleId && !sectionKey) return failure('route_filter_required', '至少提供 courseKey、cycleId 或 sectionKey')
+    const rows = await env.DB.prepare(`
+      SELECT i.item_id, i.label, i.chapter_key, i.section_key, i.unit_key,
+             i.unit_title, i.source_type_title, i.practice_level, i.cadence, i.printed_page, i.pdf_page,
+             i.visual_status, i.answer_status,
+             group_concat(l.route_type || ':' || l.route_key, '|') AS route_keys,
+             (SELECT a.result FROM practice_attempts a
+               WHERE a.user_id = ? AND a.practice_item_id = i.item_id
+               ORDER BY a.created_at DESC LIMIT 1) AS latest_result
+      FROM practice_items i
+      LEFT JOIN practice_route_links l ON l.item_id = i.item_id
+      WHERE (? = '' OR EXISTS (SELECT 1 FROM practice_route_links x WHERE x.item_id=i.item_id AND x.route_type='course' AND x.route_key=?))
+        AND (? = '' OR EXISTS (SELECT 1 FROM practice_route_links x WHERE x.item_id=i.item_id AND x.route_type='cycle' AND x.route_key=?))
+        AND (? = '' OR i.section_key = ?)
+        AND (? = '' OR i.cadence = ?)
+      GROUP BY i.item_id
+      ORDER BY i.printed_page, i.question_number, i.occurrence LIMIT ?
+    `).bind(USER_ID, courseKey, courseKey, cycleId, cycleId, sectionKey, sectionKey, cadence, cadence, limit).all<JsonRecord>()
+    const states = await env.DB.prepare(`
+      SELECT state_key, value_json FROM learner_state WHERE user_id = ?
+        AND (state_key LIKE 'course:%' OR state_key LIKE 'cycle:%'
+          OR state_key LIKE 'section:%' OR state_key LIKE 'chapter:%')
+    `).bind(USER_ID).all<Record<string, string>>()
+    const completed = new Set(states.results.filter((row) => {
+      const value = parseJson(row.value_json)
+      if (!value || typeof value !== 'object' || Array.isArray(value)) return false
+      const status = String((value as JsonRecord).status ?? '')
+      return ['completed', 'course_listened', 'cycle_completed', 'item_passed'].includes(status)
+    }).map((row) => row.state_key))
+    const items = rows.results.map((row) => {
+      const routeKeys = String(row.route_keys ?? '').split('|').filter(Boolean)
+      const courseRequirements = routeKeys.filter((key) => key.startsWith('course:'))
+      const cycleRequirements = routeKeys.filter((key) => key.startsWith('cycle:'))
+      const sectionRequirements = routeKeys.filter((key) => key.startsWith('section:'))
+      const chapterRequirements = routeKeys.filter((key) => key.startsWith('chapter:'))
+      let requirements: string[] = []
+      if (row.cadence === 'after_course') requirements = courseRequirements.length ? courseRequirements : cycleRequirements
+      else if (row.cadence === 'after_section') requirements = sectionRequirements
+      else if (row.cadence === 'after_chapter') requirements = chapterRequirements
+      const completedCount = requirements.filter((key) => completed.has(key)).length
+      const unlockStatus = requirements.length === 0 ? 'manual_review'
+        : completedCount === requirements.length ? 'unlocked'
+          : completedCount > 0 ? 'partially_unlocked' : 'locked'
+      return { ...row, routeKeys, requirements, unlockStatus }
+    })
+    return result({
+      ok: true,
+      routePolicy: '课程顺序优先：听课 -> 对应一本通 -> 已解锁必刷题基础题；节次综合和章节检测后置。页内按题号顺序。',
+      items,
+    })
+  })
+
+  server.registerTool('math_get_course_learning_bundle', {
+    description: '一次读取一门课的老师文稿、讲义候选原页、对应一本通项目、必刷题题号页码和真实课程状态，作为课程优先学习入口。',
+    inputSchema: { courseKey: z.string().min(1).max(200), practiceLimit: z.number().int().min(1).max(100).default(40) },
+  }, async ({ courseKey, practiceLimit }) => {
+    if (!readAllowed()) return failure('insufficient_scope', READ_SCOPE)
+    const course = await env.DB.prepare(`SELECT course_key,title,transcript_r2_key,transcript_sha256,duration_ms,has_timeline FROM courses WHERE course_key=?`).bind(courseKey).first<JsonRecord>()
+    if (!course) return failure('not_found', '未找到课程', { courseKey })
+    const transcriptPack = await readContentJson(env, String(course.transcript_r2_key))
+    const packedCourses = transcriptPack?.courses && typeof transcriptPack.courses === 'object' ? transcriptPack.courses as JsonRecord : {}
+    const transcript = packedCourses[courseKey] && typeof packedCourses[courseKey] === 'object' ? packedCourses[courseKey] as JsonRecord : {}
+    const ybtItems = await env.DB.prepare(`
+      SELECT i.item_id,i.label,i.item_type,i.section_key,i.concept_key,l.relationship
+      FROM item_course_links l JOIN items i ON i.item_id=l.item_id
+      WHERE l.course_key=? ORDER BY i.section_key,i.sort_order
+    `).bind(courseKey).all<JsonRecord>()
+    const handoutPages = await env.DB.prepare(`
+      SELECT p.source_id,p.pdf_page,p.printed_page,p.visual_status,l.confidence
+      FROM handout_course_links l JOIN handout_pages p ON p.source_id=l.source_id AND p.pdf_page=l.pdf_page
+      WHERE l.course_key=? ORDER BY p.source_id,p.pdf_page LIMIT 30
+    `).bind(courseKey).all<JsonRecord>()
+    const practiceItems = await env.DB.prepare(`
+      SELECT i.item_id,i.label,i.printed_page,i.pdf_page,i.unit_title,i.source_type_title,i.practice_level,i.cadence,i.visual_status,i.answer_status
+      FROM practice_route_links l JOIN practice_items i ON i.item_id=l.item_id
+      WHERE l.route_type='course' AND l.route_key=? ORDER BY i.printed_page,i.question_number,i.occurrence LIMIT ?
+    `).bind(courseKey, practiceLimit).all<JsonRecord>()
+    const state = await env.DB.prepare(`SELECT version,value_json,updated_at FROM learner_state WHERE user_id=? AND state_key=?`).bind(USER_ID, `course:${courseKey}`).first<Record<string, string | number>>()
+    return result({
+      ok: true,
+      executionOrder: ['course_transcript', 'teacher_handout_source_page', 'ybt_items', 'practice_basic', 'practice_advanced', 'acceptance'],
+      course,
+      transcript: {
+        fullText: transcript.fullText ?? '',
+        timelineAvailable: Number(course.has_timeline) === 1,
+        durationMs: transcript.durationMs ?? course.duration_ms ?? null,
+        sourceSha256: transcript.sourceSha256 ?? course.transcript_sha256 ?? null,
+      },
+      handoutPages: handoutPages.results,
+      ybtItems: ybtItems.results,
+      practiceItems: practiceItems.results,
+      learnerState: state ? { version: Number(state.version), value: parseJson(String(state.value_json)), updatedAt: state.updated_at } : null,
+      evidencePolicy: '老师文稿决定讲法顺序；讲义与必刷题 OCR 仅定位，公式题面必须读原页图；必刷题源 PDF 不含答案。',
+    })
+  })
+
+  server.registerTool('math_get_course_first_route', {
+    description: '按课程编号生成整章执行顺序；每门课后列出对应一本通和必刷题数量，课程内部保持教材/题号原顺序。',
+    inputSchema: { chapterKey: z.string().min(1).max(20) },
+  }, async ({ chapterKey }) => {
+    if (!readAllowed()) return failure('insufficient_scope', READ_SCOPE)
+    const rows = await env.DB.prepare(`
+      SELECT c.course_key, c.title, c.duration_ms, c.has_timeline,
+        (SELECT COUNT(DISTINCT i.item_id)
+          FROM item_course_links il JOIN items i ON i.item_id=il.item_id
+          JOIN sections s ON s.section_key=i.section_key
+          WHERE il.course_key=c.course_key AND s.chapter_key=?) AS ybt_item_count,
+        (SELECT COUNT(DISTINCT pi.item_id)
+          FROM practice_route_links pl JOIN practice_items pi ON pi.item_id=pl.item_id
+          WHERE pl.route_type='course' AND pl.route_key=c.course_key
+            AND pi.chapter_key=?) AS practice_item_count,
+        (SELECT value_json FROM learner_state
+          WHERE user_id=? AND state_key='course:' || c.course_key) AS state_json,
+        (SELECT updated_at FROM learner_state
+          WHERE user_id=? AND state_key='course:' || c.course_key) AS state_updated_at
+      FROM courses c
+      WHERE EXISTS (
+        SELECT 1 FROM item_course_links il JOIN items i ON i.item_id=il.item_id
+        JOIN sections s ON s.section_key=i.section_key
+        WHERE il.course_key=c.course_key AND s.chapter_key=?
+      ) OR EXISTS (
+        SELECT 1 FROM practice_route_links pl JOIN practice_items pi ON pi.item_id=pl.item_id
+        WHERE pl.route_type='course' AND pl.route_key=c.course_key AND pi.chapter_key=?
+      )
+      ORDER BY c.title
+    `).bind(chapterKey, chapterKey, USER_ID, USER_ID, chapterKey, chapterKey).all<Record<string, string | number | null>>()
+    const orderedCourses = [...rows.results].sort((left, right) => courseSortKey(String(left.title ?? '')).localeCompare(courseSortKey(String(right.title ?? '')), 'en'))
+    return result({
+      ok: true,
+      chapterKey,
+      policy: {
+        primaryOrder: 'course_number',
+        perCourse: ['listen_course', 'read_teacher_handout_source_page', 'complete_ybt_items', 'complete_unlocked_practice_basic', 'complete_practice_advanced_if_needed'],
+        checkpoints: ['after_section', 'after_chapter'],
+        invariant: '每个一本通项目只出现一次；同一课程内保持教材原顺序，不能为了课程顺序重排题目内部结构。',
+      },
+      courses: orderedCourses.map((row, index) => ({
+        order: index + 1,
+        courseKey: row.course_key,
+        title: row.title,
+        durationMs: row.duration_ms,
+        timelineAvailable: Number(row.has_timeline) === 1,
+        ybtItemCount: Number(row.ybt_item_count),
+        practiceItemCount: Number(row.practice_item_count),
+        learnerState: parseJson(row.state_json ? String(row.state_json) : null),
+        stateUpdatedAt: row.state_updated_at,
+      })),
+    })
+  })
+
+  server.registerTool('math_get_handwriting_history', {
+    description: '读取已保存的手写过程分析。proposed 表示模型初判，只有后续用户确认才可转为正式错题画像。',
+    inputSchema: { itemRef: z.string().max(200).default(''), limit: z.number().int().min(1).max(100).default(20) },
+  }, async ({ itemRef, limit }) => {
+    if (!readAllowed()) return failure('insufficient_scope', READ_SCOPE)
+    const rows = await env.DB.prepare(`
+      SELECT analysis_id,item_kind,item_ref,section_key,image_evidence_id,
+             question_source_verified,transcription_json,steps_json,
+             first_wrong_step,error_type,reason,minimal_correction,
+             downstream_status,confidence,analysis_status,created_at
+      FROM handwriting_analyses WHERE user_id=? AND (?='' OR item_ref=?)
+      ORDER BY created_at DESC LIMIT ?
+    `).bind(USER_ID, itemRef, itemRef, limit).all<Record<string, string | number | null>>()
+    return result({ analyses: rows.results.map((row) => ({ ...row, transcription: parseJson(String(row.transcription_json)), steps: parseJson(String(row.steps_json)) })) })
   })
 
   server.registerTool('math_get_learning_context', {
@@ -1057,6 +1315,78 @@ function createServer(env: Env, scopes: readonly string[]): McpServer {
     })
   })
 
+  server.registerTool('math_record_practice_attempt', {
+    description: '记录必刷题真实作答。baseVersion 等于该题已有尝试数；相同 requestId 幂等，不把看答案后完成标为独立通过。',
+    inputSchema: {
+      requestId: z.uuid(),
+      practiceItemId: z.string().min(1).max(240),
+      result: z.enum(['correct', 'incorrect', 'partial', 'skipped', 'needs_review']),
+      independent: z.boolean(),
+      hintLevel: z.enum(['none', 'minimal', 'method', 'solution_seen']).default('none'),
+      processEvidence: z.string().min(1).max(4000),
+      evidenceHash: z.string().regex(/^[0-9a-f]{64}$/).optional(),
+      baseVersion: z.number().int().nonnegative(),
+    },
+  }, async ({ requestId, practiceItemId, result: attemptResult, independent, hintLevel, processEvidence, evidenceHash, baseVersion }) => {
+    if (!writeAllowed()) return failure('insufficient_scope', WRITE_SCOPE)
+    const existing = await env.DB.prepare(`SELECT attempt_id,practice_item_id,result,independent,hint_level,process_evidence,evidence_hash,created_at FROM practice_attempts WHERE request_id=? AND user_id=?`).bind(requestId, USER_ID).first<JsonRecord>()
+    if (existing) {
+      const same = existing.practice_item_id === practiceItemId && existing.result === attemptResult
+        && Number(existing.independent) === (independent ? 1 : 0) && existing.hint_level === hintLevel
+        && existing.process_evidence === processEvidence && existing.evidence_hash === (evidenceHash ?? null)
+      return same ? result({ ok: true, attempt: existing, replayed: true }) : failure('idempotency_conflict', 'requestId 已用于不同练习尝试')
+    }
+    const item = await env.DB.prepare(`SELECT item_id,label,answer_status FROM practice_items WHERE item_id=?`).bind(practiceItemId).first<JsonRecord>()
+    if (!item) return failure('not_found', '未找到必刷题项目', { practiceItemId })
+    const count = await env.DB.prepare(`SELECT COUNT(*) AS count FROM practice_attempts WHERE user_id=? AND practice_item_id=?`).bind(USER_ID, practiceItemId).first<{ count: number | string }>()
+    if (Number(count?.count ?? 0) !== baseVersion) return failure('version_conflict', '练习题尝试版本已变化', { expected: baseVersion, actual: Number(count?.count ?? 0) })
+    if (hintLevel === 'solution_seen' && independent) return failure('invalid_independence', '看过完整解法后不能标为独立作答')
+    const attemptId = crypto.randomUUID(); const createdAt = new Date().toISOString()
+    await env.DB.prepare(`INSERT INTO practice_attempts (attempt_id,request_id,user_id,practice_item_id,result,independent,hint_level,process_evidence,evidence_hash,created_at) VALUES (?,?,?,?,?,?,?,?,?,?)`).bind(attemptId, requestId, USER_ID, practiceItemId, attemptResult, independent ? 1 : 0, hintLevel, processEvidence, evidenceHash ?? null, createdAt).run()
+    return result({ ok: true, attempt: { attemptId, practiceItemId, result: attemptResult, independent, hintLevel, createdAt }, version: baseVersion + 1, replayed: false })
+  })
+
+  server.registerTool('math_record_handwriting_analysis', {
+    description: '保存手写过程逐行核对结果：先转写，再定位第一处分歧。初判保持 proposed；用户确认后再用 math_record_wrong_question 写入正式错题画像。',
+    inputSchema: {
+      requestId: z.uuid(),
+      itemKind: z.enum(['ybt', 'practice', 'teacher_handout', 'other']),
+      itemRef: z.string().min(1).max(240),
+      sectionKey: z.string().max(80).optional(),
+      imageEvidenceId: z.string().min(1).max(300),
+      questionSourceVerified: z.boolean(),
+      transcription: z.array(z.object({ line: z.number().int().min(1).max(100), text: z.string().min(1).max(1000), legibility: z.enum(['clear', 'partial', 'uncertain']) })).min(1).max(100),
+      steps: z.array(z.object({ line: z.number().int().min(1).max(100), status: z.enum(['correct', 'first_wrong', 'uncertain', 'downstream_contaminated']), explanation: z.string().min(1).max(1500) })).min(1).max(100),
+      firstWrongStep: z.number().int().min(1).max(100).optional(),
+      errorType: z.string().max(160).optional(),
+      reason: z.string().max(3000).optional(),
+      minimalCorrection: z.string().max(3000).optional(),
+      downstreamStatus: z.enum(['clean', 'contaminated_after_first_error', 'uncertain']),
+      confidence: z.enum(['high', 'medium', 'low']),
+      analysisStatus: z.enum(['proposed', 'no_error', 'needs_clarification']).default('proposed'),
+      baseVersion: z.number().int().nonnegative(),
+    },
+  }, async ({ requestId, itemKind, itemRef, sectionKey, imageEvidenceId, questionSourceVerified, transcription, steps, firstWrongStep, errorType, reason, minimalCorrection, downstreamStatus, confidence, analysisStatus, baseVersion }) => {
+    if (!writeAllowed()) return failure('insufficient_scope', WRITE_SCOPE)
+    if (!questionSourceVerified && analysisStatus !== 'needs_clarification') return failure('question_source_required', '未核对原题时只能标记 needs_clarification')
+    if (analysisStatus === 'proposed' && firstWrongStep === undefined) return failure('first_wrong_step_required', '发现错误时必须定位第一处错误行')
+    if (firstWrongStep !== undefined && !steps.some((step) => step.line === firstWrongStep && step.status === 'first_wrong')) return failure('step_mismatch', 'firstWrongStep 必须对应 first_wrong 行')
+    const transcriptionJson = JSON.stringify(transcription); const stepsJson = JSON.stringify(steps)
+    const existing = await env.DB.prepare(`SELECT * FROM handwriting_analyses WHERE request_id=? AND user_id=?`).bind(requestId, USER_ID).first<JsonRecord>()
+    if (existing) {
+      const same = existing.item_kind === itemKind && existing.item_ref === itemRef
+        && existing.image_evidence_id === imageEvidenceId && existing.transcription_json === transcriptionJson
+        && existing.steps_json === stepsJson && Number(existing.first_wrong_step ?? -1) === Number(firstWrongStep ?? -1)
+        && existing.analysis_status === analysisStatus
+      return same ? result({ ok: true, analysis: existing, replayed: true }) : failure('idempotency_conflict', 'requestId 已用于不同手写分析')
+    }
+    const count = await env.DB.prepare(`SELECT COUNT(*) AS count FROM handwriting_analyses WHERE user_id=? AND item_ref=?`).bind(USER_ID, itemRef).first<{ count: number | string }>()
+    if (Number(count?.count ?? 0) !== baseVersion) return failure('version_conflict', '手写分析版本已变化', { expected: baseVersion, actual: Number(count?.count ?? 0) })
+    const analysisId = crypto.randomUUID(); const createdAt = new Date().toISOString()
+    await env.DB.prepare(`INSERT INTO handwriting_analyses (analysis_id,request_id,user_id,item_kind,item_ref,section_key,image_evidence_id,question_source_verified,transcription_json,steps_json,first_wrong_step,error_type,reason,minimal_correction,downstream_status,confidence,analysis_status,created_at) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`).bind(analysisId, requestId, USER_ID, itemKind, itemRef, sectionKey ?? null, imageEvidenceId, questionSourceVerified ? 1 : 0, transcriptionJson, stepsJson, firstWrongStep ?? null, errorType ?? null, reason ?? null, minimalCorrection ?? null, downstreamStatus, confidence, analysisStatus, createdAt).run()
+    return result({ ok: true, analysis: { analysisId, itemKind, itemRef, firstWrongStep: firstWrongStep ?? null, errorType: errorType ?? null, minimalCorrection: minimalCorrection ?? null, confidence, analysisStatus, createdAt }, version: baseVersion + 1, replayed: false })
+  })
+
   server.registerTool('math_record_memory', {
     description: '记录用户明确要求记忆或模型判断具有长期复用价值的数学记忆点。',
     inputSchema: {
@@ -1119,9 +1449,9 @@ function protectedResourceMetadata(env: Env): Response {
 
 async function readiness(env: Env): Promise<Response> {
   try {
-    const row = await env.DB.prepare(`SELECT COUNT(*) AS count FROM sqlite_master WHERE type = 'table' AND name IN ('source_versions','chapters','sections','items','courses','item_course_links','transcript_chunks','learning_events','learner_state','questions','answer_sources','learner_diagnostics','memory_items','type_classifications','wrong_question_exports','handout_sources','handout_pages','handout_course_links')`).first<{ count: number | string }>()
+    const row = await env.DB.prepare(`SELECT COUNT(*) AS count FROM sqlite_master WHERE type = 'table' AND name IN ('source_versions','chapters','sections','items','courses','item_course_links','transcript_chunks','learning_events','learner_state','questions','answer_sources','learner_diagnostics','memory_items','type_classifications','wrong_question_exports','handout_sources','handout_pages','handout_course_links','practice_sources','practice_pages','practice_items','practice_route_links','practice_attempts','handwriting_analyses')`).first<{ count: number | string }>()
     const configured = oauthConfig(env) !== null
-    const storageReady = Number(row?.count ?? 0) === 18
+    const storageReady = Number(row?.count ?? 0) === 24
     const ready = storageReady && configured
     return Response.json({ ok: ready, service: 'math-learning-mcp', storage: storageReady ? 'ready' : 'migration_required', oauth: configured ? 'configured' : 'not_configured' }, { status: ready ? 200 : 503 })
   } catch {

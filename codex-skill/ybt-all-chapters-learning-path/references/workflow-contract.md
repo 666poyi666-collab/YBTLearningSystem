@@ -70,6 +70,8 @@ Forbidden contamination:
 - Courses outside the eight directories above.
 - Course or transcript files whose SHA does not match the current catalog.
 
+The supplementary `2026版 高中必刷题数学 选择性必修第一册 RJA` is a separate practice source. It may be used only after the linked course/YBT unit is unlocked. Its PDF has no answer content; OCR locates a source page, while the original page image verifies the exact problem.
+
 ## 3. Artifact Chain
 
 Read the artifacts in this order:
@@ -191,6 +193,7 @@ For every item, produce:
 - Search paired handouts through OCR, then read the exact source-page image before using formulas, diagrams, or question wording. Candidate page/course links are not verified links.
 - Use the HTML page's current-cycle prompt or `复制进度` snapshot for browser-local progress. Only a successful MCP write updates real cloud progress; repository progress JSON remains the proxy/evidence ledger.
 - Confirmed errors, blockers, and hint dependencies are immediately written with `math_record_wrong_question`. “整理当前错题” calls `math_export_wrong_questions`; a skipped cycle calls `math_defer_cycle` and remains distinct from completion.
+- For handwritten submissions, save a line-by-line `math_record_handwriting_analysis` proposal first. A proposed first error is not a confirmed wrong-question record until the learner confirms it.
 - Ask for one diagnosis, one minimal hint, and one next action; wait for the learner attempt before adding help.
 - If an exact path cannot be read, report the path and mark the explanation `资料不足` or `课程覆盖缺口`.
 

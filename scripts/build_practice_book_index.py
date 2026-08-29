@@ -1,0 +1,304 @@
+#!/usr/bin/env python3
+"""Build a source-page-backed index for the supplementary practice book.
+
+OCR is deliberately treated as search evidence. Question wording, formulas and
+diagrams remain unverified until the original page image is inspected.
+"""
+
+from __future__ import annotations
+
+import argparse
+import hashlib
+import json
+import re
+import statistics
+from datetime import datetime, timezone
+from pathlib import Path
+from typing import Any
+
+import pymupdf
+
+
+QUESTION_RE = re.compile(r"^\s*(\d{1,2})\s*[.．、]\s*(.*)$")
+HEADING_TOKENS = ("章", "节", "课时", "专题", "训练", "检测", "强化", "题型")
+LEVEL_MARKERS = ("刷基础", "刷提升", "刷能力", "刷难关", "刷速度", "刷真题", "刷原创", "刷综合")
+
+
+PRACTICE_UNITS: list[dict[str, Any]] = [
+    {"start": 1, "end": 2, "chapter": "1", "section": "1.1", "unit": "1.1.1", "title": "空间向量及其线性运算", "courses": ["space_vector_ops"], "cycles": ["1.1-cycle-1"], "cadence": "after_course"},
+    {"start": 3, "end": 5, "chapter": "1", "section": "1.1", "unit": "1.1.2", "title": "空间向量的数量积运算", "courses": ["line_line_angle"], "cycles": ["1.1-cycle-5", "1.1-cycle-6", "1.1-cycle-7"], "cadence": "after_course"},
+    {"start": 6, "end": 6, "chapter": "1", "section": "1.2+1.3", "unit": "1.2", "title": "空间向量基本定理", "courses": ["decomposition", "equal_surface"], "cycles": ["1.1-cycle-2", "1.1-cycle-3"], "cadence": "after_course"},
+    {"start": 7, "end": 8, "chapter": "1", "section": "1.2+1.3", "unit": "1.3", "title": "空间向量及其运算的坐标表示", "courses": ["coordinate_system", "coordinate_ops"], "cycles": [], "cadence": "after_course"},
+    {"start": 9, "end": 10, "chapter": "1", "section": "1.2+1.3", "unit": "1.1-1.3-review", "title": "第1.1-1.3节综合训练", "courses": ["coordinate_ops"], "cycles": [], "cadence": "after_section"},
+    {"start": 11, "end": 11, "chapter": "1", "section": "1.4", "unit": "1.4.1-lesson-1", "title": "空间中点、直线和平面的向量表示", "courses": ["direction_normal"], "cycles": [], "cadence": "after_course"},
+    {"start": 12, "end": 13, "chapter": "1", "section": "1.4", "unit": "1.4.1-lesson-2", "title": "空间线面位置关系的判定", "courses": ["parallel_perpendicular", "coplanar"], "cycles": ["1.1-cycle-4", "1.1-cycle-8"], "cadence": "after_course"},
+    {"start": 14, "end": 15, "chapter": "1", "section": "1.4", "unit": "1.4.2-lesson-1", "title": "用空间向量研究距离问题", "courses": ["plane_equation_upper", "plane_equation_lower", "distance"], "cycles": ["1.1-cycle-10"], "cadence": "after_course"},
+    {"start": 16, "end": 19, "chapter": "1", "section": "1.4", "unit": "1.4.2-lesson-2", "title": "用空间向量研究夹角问题", "courses": ["line_line_angle", "line_plane_angle", "plane_plane_angle"], "cycles": ["1.1-cycle-7", "1.1-cycle-8"], "cadence": "after_course"},
+    {"start": 20, "end": 21, "chapter": "1", "section": "1.4", "unit": "1.4-review", "title": "第1.4节综合训练", "courses": ["distance"], "cycles": ["1.1-cycle-10"], "cadence": "after_section"},
+    {"start": 22, "end": 22, "chapter": "1", "section": "micro专题1", "unit": "topic-1", "title": "空间中的动点问题", "courses": ["moving_point"], "cycles": [], "cadence": "after_course"},
+    {"start": 23, "end": 26, "chapter": "1", "section": "chapter-1", "unit": "chapter-1-test", "title": "第一章素养检测", "courses": [], "cycles": [], "cadence": "after_chapter"},
+    {"start": 27, "end": 28, "chapter": "1", "section": "chapter-1", "unit": "chapter-1-gaokao", "title": "第一章高考强化", "courses": [], "cycles": [], "cadence": "after_chapter"},
+    {"start": 29, "end": 30, "chapter": "2", "section": "2.1", "unit": "2.1", "title": "直线的倾斜角与斜率", "courses": [], "cycles": [], "cadence": "after_section"},
+    {"start": 31, "end": 34, "chapter": "2", "section": "2.2", "unit": "2.2", "title": "直线的方程", "courses": [], "cycles": [], "cadence": "after_section"},
+    {"start": 35, "end": 38, "chapter": "2", "section": "2.3", "unit": "2.3", "title": "直线的交点坐标与距离公式", "courses": [], "cycles": [], "cadence": "after_section"},
+    {"start": 39, "end": 39, "chapter": "2", "section": "2.3", "unit": "topic-2", "title": "与直线有关的对称问题", "courses": [], "cycles": [], "cadence": "after_section"},
+    {"start": 40, "end": 40, "chapter": "2", "section": "2.3", "unit": "topic-3", "title": "与直线有关的最值问题", "courses": [], "cycles": [], "cadence": "after_section"},
+    {"start": 41, "end": 43, "chapter": "2", "section": "2.4", "unit": "2.4", "title": "圆的方程", "courses": [], "cycles": [], "cadence": "after_section"},
+    {"start": 44, "end": 48, "chapter": "2", "section": "2.5", "unit": "2.5", "title": "直线与圆、圆与圆的位置关系", "courses": [], "cycles": [], "cadence": "after_section"},
+    {"start": 49, "end": 49, "chapter": "2", "section": "2.5", "unit": "topic-4", "title": "与圆有关的轨迹问题", "courses": [], "cycles": [], "cadence": "after_section"},
+    {"start": 50, "end": 52, "chapter": "2", "section": "chapter-2", "unit": "chapter-2-test", "title": "第二章素养检测", "courses": [], "cycles": [], "cadence": "after_chapter"},
+    {"start": 53, "end": 53, "chapter": "2", "section": "chapter-2", "unit": "chapter-2-gaokao", "title": "第二章高考强化", "courses": [], "cycles": [], "cadence": "after_chapter"},
+    {"start": 54, "end": 62, "chapter": "3", "section": "3.1", "unit": "3.1", "title": "椭圆", "courses": [], "cycles": [], "cadence": "after_section"},
+    {"start": 63, "end": 71, "chapter": "3", "section": "3.2", "unit": "3.2", "title": "双曲线", "courses": [], "cycles": [], "cadence": "after_section"},
+    {"start": 72, "end": 77, "chapter": "3", "section": "3.3", "unit": "3.3", "title": "抛物线", "courses": [], "cycles": [], "cadence": "after_section"},
+    {"start": 78, "end": 82, "chapter": "3", "section": "chapter-3", "unit": "chapter-3-topics", "title": "圆锥曲线专题", "courses": [], "cycles": [], "cadence": "after_section"},
+    {"start": 83, "end": 90, "chapter": "3", "section": "chapter-3", "unit": "chapter-3-assessment", "title": "第三章检测与高考强化", "courses": [], "cycles": [], "cadence": "after_chapter"},
+    {"start": 91, "end": 94, "chapter": "all", "section": "module", "unit": "new-exam-specials", "title": "新定义与开放题专练", "courses": [], "cycles": [], "cadence": "after_chapter"},
+    {"start": 95, "end": 98, "chapter": "all", "section": "module", "unit": "module-test", "title": "模块综合测试", "courses": [], "cycles": [], "cadence": "after_chapter"},
+]
+
+
+def sha256_bytes(value: bytes) -> str:
+    return hashlib.sha256(value).hexdigest()
+
+
+def sha256_file(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as stream:
+        for block in iter(lambda: stream.read(1024 * 1024), b""):
+            digest.update(block)
+    return digest.hexdigest()
+
+
+def page_unit(printed_page: int | None) -> dict[str, Any] | None:
+    if printed_page is None:
+        return None
+    return next((unit for unit in PRACTICE_UNITS if unit["start"] <= printed_page <= unit["end"]), None)
+
+
+def ordered_rows(result: Any, width: int) -> list[dict[str, Any]]:
+    rows: list[dict[str, Any]] = []
+    for item in result or []:
+        if not isinstance(item, (list, tuple)) or len(item) < 3:
+            continue
+        box, text, score = item[0], str(item[1]).strip(), item[2]
+        if not text:
+            continue
+        try:
+            xs = [float(point[0]) for point in box]
+            ys = [float(point[1]) for point in box]
+            center_x = statistics.mean(xs)
+            center_y = statistics.mean(ys)
+            rows.append({
+                "text": text,
+                "confidence": round(float(score), 4),
+                "bbox": [round(min(xs), 1), round(min(ys), 1), round(max(xs), 1), round(max(ys), 1)],
+                "column": "left" if center_x < width * 0.5 else "right",
+                "center_x": center_x,
+                "center_y": center_y,
+            })
+        except (TypeError, ValueError, IndexError):
+            continue
+    return rows
+
+
+def reading_order(rows: list[dict[str, Any]], width: int) -> list[dict[str, Any]]:
+    full_width = [row for row in rows if row["bbox"][0] < width * 0.25 and row["bbox"][2] > width * 0.75]
+    body = [row for row in rows if row not in full_width]
+    result = sorted(full_width, key=lambda row: (row["center_y"], row["center_x"]))
+    for column in ("left", "right"):
+        result.extend(sorted((row for row in body if row["column"] == column), key=lambda row: (row["center_y"], row["center_x"])))
+    return result
+
+
+def extract_questions(rows: list[dict[str, Any]], source_id: str, printed_page: int, pdf_page: int, unit: dict[str, Any], image_height: int) -> list[dict[str, Any]]:
+    items: list[dict[str, Any]] = []
+    occurrences: dict[tuple[int, str], int] = {}
+    for column in ("left", "right"):
+        column_rows = sorted((row for row in rows if row["column"] == column), key=lambda row: (row["center_y"], row["center_x"]))
+        starts: list[tuple[int, re.Match[str]]] = []
+        for index, row in enumerate(column_rows):
+            match = QUESTION_RE.match(row["text"])
+            remainder = match.group(2).strip() if match else ''
+            section_heading = bool(remainder[:1].isdigit() and row["center_y"] < image_height * 0.22)
+            footer_noise = row["center_y"] > image_height * 0.93
+            if match and remainder and not section_heading and not footer_noise and not re.fullmatch(r"[\d.．\s]+", remainder):
+                starts.append((index, match))
+        for position, (start_index, match) in enumerate(starts):
+            end_index = starts[position + 1][0] if position + 1 < len(starts) else min(len(column_rows), start_index + 14)
+            excerpt_rows = column_rows[start_index:end_index]
+            excerpt = "\n".join(row["text"] for row in excerpt_rows).strip()
+            number = int(match.group(1))
+            occurrence_key = (number, column)
+            occurrences[occurrence_key] = occurrences.get(occurrence_key, 0) + 1
+            occurrence = occurrences[occurrence_key]
+            prior_text = [row["text"] for row in column_rows[:start_index]]
+            practice_level = next((marker for text in reversed(prior_text) for marker in LEVEL_MARKERS if marker in text), "未标级")
+            source_type_title = next((text for text in reversed(prior_text) if "题型" in text), "未标题型")
+            cadence = unit["cadence"]
+            if cadence == "after_course" and practice_level in {"刷能力", "刷难关", "刷速度"}:
+                cadence = "after_section"
+            item_id = f"{source_id}:p{printed_page}:q{number}:{column}:r{occurrence}"
+            items.append({
+                "item_id": item_id,
+                "label": f"第{printed_page}页第{number}题" + (f"（第{occurrence}组）" if occurrence > 1 else ""),
+                "question_number": number,
+                "occurrence": occurrence,
+                "printed_page": printed_page,
+                "pdf_page": pdf_page,
+                "column": column,
+                "unit": unit["unit"],
+                "chapter": unit["chapter"],
+                "section": unit["section"],
+                "title": unit["title"],
+                "source_type_title": source_type_title,
+                "practice_level": practice_level,
+                "course_keys": unit["courses"],
+                "cycle_ids": unit["cycles"],
+                "cadence": cadence,
+                "ocr_excerpt": excerpt[:2200],
+                "ocr_excerpt_sha256": sha256_bytes(excerpt.encode("utf-8")),
+                "visual_status": "NEEDS_SOURCE_PAGE_REVIEW",
+                "answer_status": "not_in_source_pdf",
+            })
+    return sorted(items, key=lambda item: (item["question_number"], item["column"]))
+
+
+def heading_candidates(text: str) -> list[str]:
+    candidates = []
+    for line in text.splitlines():
+        clean = line.strip()
+        if clean and any(token in clean for token in HEADING_TOKENS):
+            candidates.append(clean)
+    return candidates[:16]
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--pdf", type=Path, required=True)
+    parser.add_argument("--out", type=Path, required=True)
+    parser.add_argument("--dpi", type=int, default=150)
+    parser.add_argument("--remap-only", action="store_true")
+    args = parser.parse_args()
+    if not args.pdf.is_file():
+        raise SystemExit(f"missing PDF: {args.pdf}")
+    if args.remap_only:
+        index_path = args.out / "index.json"
+        payload = json.loads(index_path.read_text(encoding="utf-8"))
+        items: list[dict[str, Any]] = []
+        for page in payload.get("pages", []):
+            rows = []
+            for raw in page.get("ocr_lines", []):
+                bbox = raw.get("bbox", [0, 0, 0, 0])
+                rows.append({
+                    **raw,
+                    "center_x": (float(bbox[0]) + float(bbox[2])) / 2,
+                    "center_y": (float(bbox[1]) + float(bbox[3])) / 2,
+                })
+            unit = page_unit(page.get("printed_page"))
+            page_items = extract_questions(rows, payload["source_id"], int(page["printed_page"]), int(page["pdf_page"]), unit, int(page["image_height"])) if unit and page.get("printed_page") else []
+            page["question_item_ids"] = [item["item_id"] for item in page_items]
+            items.extend(page_items)
+        payload["items"] = items
+        payload["generated_at"] = datetime.now(timezone.utc).isoformat()
+        index_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        print(json.dumps({"status": "remapped", "pages": len(payload["pages"]), "items": len(items)}, ensure_ascii=False))
+        return 0
+    try:
+        from rapidocr_onnxruntime import RapidOCR
+    except ImportError as error:
+        raise SystemExit("rapidocr_onnxruntime is required") from error
+
+    source_sha = sha256_file(args.pdf)
+    source_id = f"bishua-rja-2026-{source_sha[:12]}"
+    pages_root = args.out / "pages"
+    pages_root.mkdir(parents=True, exist_ok=True)
+    ocr = RapidOCR()
+    document = pymupdf.open(str(args.pdf))
+    pages: list[dict[str, Any]] = []
+    items: list[dict[str, Any]] = []
+    try:
+        for index in range(len(document)):
+            pdf_page = index + 1
+            printed_page = pdf_page - 8 if pdf_page >= 9 else None
+            image_path = pages_root / f"page-{pdf_page:03d}.jpg"
+            if image_path.is_file():
+                image_bytes = image_path.read_bytes()
+                pixmap = pymupdf.Pixmap(image_bytes)
+            else:
+                pixmap = document[index].get_pixmap(dpi=args.dpi, alpha=False)
+                image_bytes = pixmap.tobytes("jpg", jpg_quality=86)
+                image_path.write_bytes(image_bytes)
+            result, _ = ocr(str(image_path))
+            rows = ordered_rows(result, pixmap.width)
+            ordered = reading_order(rows, pixmap.width)
+            text = "\n".join(row["text"] for row in ordered)
+            unit = page_unit(printed_page)
+            page_items = extract_questions(rows, source_id, int(printed_page), pdf_page, unit, pixmap.height) if unit and printed_page else []
+            items.extend(page_items)
+            pages.append({
+                "source_id": source_id,
+                "pdf_page": pdf_page,
+                "printed_page": printed_page,
+                "page_role": "content" if unit else "front_matter",
+                "unit": unit["unit"] if unit else None,
+                "chapter": unit["chapter"] if unit else None,
+                "section": unit["section"] if unit else None,
+                "unit_title": unit["title"] if unit else None,
+                "course_keys": unit["courses"] if unit else [],
+                "cycle_ids": unit["cycles"] if unit else [],
+                "cadence": unit["cadence"] if unit else None,
+                "heading_candidates": heading_candidates(text),
+                "ocr_lines": [{key: row[key] for key in ("text", "confidence", "bbox", "column")} for row in rows],
+                "question_item_ids": [item["item_id"] for item in page_items],
+                "ocr_text": text,
+                "ocr_text_sha256": sha256_bytes(text.encode("utf-8")),
+                "ocr_confidence": round(statistics.mean(row["confidence"] for row in rows), 4) if rows else 0,
+                "ocr_status": "passed" if text else "empty",
+                "visual_status": "NEEDS_SOURCE_PAGE_REVIEW" if unit else "FRONT_MATTER",
+                "page_image_path": f"pages/page-{pdf_page:03d}.jpg",
+                "page_image_sha256": sha256_bytes(image_bytes),
+                "image_width": pixmap.width,
+                "image_height": pixmap.height,
+            })
+            if pdf_page == 1 or pdf_page % 10 == 0 or pdf_page == len(document):
+                print(f"practice book: {pdf_page}/{len(document)}, items={len(items)}", flush=True)
+    finally:
+        document.close()
+
+    payload = {
+        "schema_version": "math-practice-book-index-v1",
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "source_id": source_id,
+        "title": "2026版 高中必刷题数学 选择性必修第一册 RJA",
+        "file_name": args.pdf.name,
+        "source_pdf_sha256": source_sha,
+        "page_count": len(pages),
+        "content_page_count": sum(page["page_role"] == "content" for page in pages),
+        "printed_page_offset": 8,
+        "printed_page_anchor_evidence": [
+            {"pdf_page": 9, "printed_page": 1},
+            {"pdf_page": 103, "printed_page": 95},
+            {"pdf_page": 106, "printed_page": 98},
+        ],
+        "ocr_provider": "rapidocr_onnxruntime",
+        "text_is_search_aid_only": True,
+        "source_page_is_question_authority": True,
+        "answer_status": "not_in_source_pdf",
+        "route_policy": {
+            "default": "course_first",
+            "order": ["course", "ybt", "practice_basic", "practice_advanced", "acceptance"],
+            "within_unit": "preserve source page and question order",
+        },
+        "units": PRACTICE_UNITS,
+        "pages": pages,
+        "items": items,
+    }
+    args.out.mkdir(parents=True, exist_ok=True)
+    (args.out / "index.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(json.dumps({"source_id": source_id, "pages": len(pages), "items": len(items), "out": str(args.out)}, ensure_ascii=False))
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
