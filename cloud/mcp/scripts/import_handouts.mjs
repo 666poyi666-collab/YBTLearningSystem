@@ -3,7 +3,7 @@
 /** Import the private course-handout page index and rendered source pages. */
 
 import { createHash } from 'node:crypto'
-import { mkdir, readFile, writeFile } from 'node:fs/promises'
+import { mkdir, readFile, rm, writeFile } from 'node:fs/promises'
 import { dirname, join, resolve } from 'node:path'
 import { spawn } from 'node:child_process'
 import { fileURLToPath } from 'node:url'
@@ -18,6 +18,8 @@ const indexPath = resolve(indexArg >= 0 ? args[indexArg + 1] : join(repoRoot, 't
 const indexRoot = dirname(indexPath)
 const bucket = 'math-learning-content'
 const database = 'math-learning'
+const wranglerCli = join(cloudRoot, 'node_modules', 'wrangler', 'bin', 'wrangler.js')
+const MAX_SQL_CHUNK_BYTES = 1_000_000
 
 function sha256(value) {
   return createHash('sha256').update(value).digest('hex')
@@ -33,7 +35,7 @@ function sqlNumber(value) {
   return String(Number(value))
 }
 
-function chunkStatements(statements, maxBytes = 70000) {
+function chunkStatements(statements, maxBytes = MAX_SQL_CHUNK_BYTES) {
   const chunks = []
   let current = []
   let bytes = 0
@@ -56,7 +58,7 @@ function run(command, commandArgs, options = {}) {
     const child = spawn(command, commandArgs, {
       cwd: options.cwd ?? repoRoot,
       stdio: options.capture ? ['ignore', 'pipe', 'pipe'] : 'inherit',
-      shell: process.platform === 'win32',
+      shell: false,
       windowsHide: true,
     })
     let stdout = ''
@@ -100,6 +102,7 @@ async function main() {
   })))
   const version = `handouts-v1-${sha256(fingerprint).slice(0, 16)}`
   const outputRoot = join(repoRoot, 'tmp', 'math-handout-import', version)
+  await rm(outputRoot, { recursive: true, force: true })
   await mkdir(outputRoot, { recursive: true })
 
   const objects = []
@@ -184,12 +187,11 @@ async function main() {
   console.log(JSON.stringify({ ...plan, objects: undefined, sqlPaths: undefined }, null, 2))
   if (!remote) return
 
-  const wrangler = process.platform === 'win32' ? 'npx.cmd' : 'npx'
   for (const object of objects) {
-    await runWithRetry(wrangler, ['wrangler', 'r2', 'object', 'put', `${bucket}/${object.key}`, '--file', object.path, '--content-type', 'application/json', '--remote', '-y'], { cwd: cloudRoot })
+    await runWithRetry(process.execPath, [wranglerCli, 'r2', 'object', 'put', `${bucket}/${object.key}`, '--file', object.path, '--content-type', 'application/json', '--remote', '-y'], { cwd: cloudRoot })
   }
   for (const path of sqlPaths) {
-    await runWithRetry(wrangler, ['wrangler', 'd1', 'execute', database, '--remote', '--file', path, '--yes'], { cwd: cloudRoot })
+    await runWithRetry(process.execPath, [wranglerCli, 'd1', 'execute', database, '--remote', '--file', path, '--yes'], { cwd: cloudRoot })
   }
   console.log(`handout import complete: ${version}`)
 }

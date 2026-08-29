@@ -3,7 +3,7 @@
 /** Import the source-page-backed supplementary practice book into R2 and D1. */
 
 import { createHash } from 'node:crypto'
-import { mkdir, readFile, writeFile } from 'node:fs/promises'
+import { mkdir, readFile, rm, writeFile } from 'node:fs/promises'
 import { dirname, resolve, join } from 'node:path'
 import { spawn } from 'node:child_process'
 import { fileURLToPath } from 'node:url'
@@ -18,6 +18,8 @@ const indexPath = resolve(indexFlag >= 0 ? args[indexFlag + 1] : join(repoRoot, 
 const indexRoot = dirname(indexPath)
 const bucket = 'math-learning-content'
 const database = 'math-learning'
+const wranglerCli = join(cloudRoot, 'node_modules', 'wrangler', 'bin', 'wrangler.js')
+const MAX_SQL_CHUNK_BYTES = 1_000_000
 
 function sha256(value) { return createHash('sha256').update(value).digest('hex') }
 function sqlString(value) {
@@ -28,7 +30,7 @@ function sqlNumber(value) {
   if (value === null || value === undefined || Number.isNaN(Number(value))) return 'NULL'
   return String(Number(value))
 }
-function chunkStatements(statements, maxBytes = 70000) {
+function chunkStatements(statements, maxBytes = MAX_SQL_CHUNK_BYTES) {
   const chunks = []; let current = []; let bytes = 0
   for (const statement of statements) {
     const size = Buffer.byteLength(statement, 'utf8') + 2
@@ -43,7 +45,7 @@ function run(command, commandArgs, options = {}) {
     const child = spawn(command, commandArgs, {
       cwd: options.cwd ?? repoRoot,
       stdio: options.capture ? ['ignore', 'pipe', 'pipe'] : 'inherit',
-      shell: process.platform === 'win32', windowsHide: true,
+      shell: false, windowsHide: true,
     })
     let stdout = ''; let stderr = ''
     child.stdout?.on('data', (chunk) => { stdout += chunk.toString() })
@@ -79,6 +81,7 @@ async function main() {
   })
   const version = `practice-v1-${sha256(fingerprint).slice(0, 16)}`
   const outputRoot = join(repoRoot, 'tmp', 'math-practice-import', version)
+  await rm(outputRoot, { recursive: true, force: true })
   await mkdir(outputRoot, { recursive: true })
   const indexKey = `practice/${version}/index.json`
   const statements = []
@@ -138,6 +141,15 @@ async function main() {
     statements.push(`INSERT OR IGNORE INTO practice_route_links (item_id,route_type,route_key,cadence,confidence) VALUES (${sqlString(item.item_id)},'chapter',${sqlString(item.chapter)},${sqlString(item.cadence)},'verified_toc_range');`)
   }
 
+  const desiredItemIds = index.items.map((item) => sqlString(item.item_id)).join(',')
+  if (desiredItemIds) {
+    const staleItemFilter = `source_id=${sqlString(index.source_id)} AND item_id NOT IN (${desiredItemIds}) AND NOT EXISTS (SELECT 1 FROM practice_attempts a WHERE a.practice_item_id = practice_items.item_id)`
+    statements.push(`DELETE FROM practice_route_links WHERE item_id IN (SELECT item_id FROM practice_items WHERE ${staleItemFilter});`)
+    statements.push(`DELETE FROM practice_items WHERE ${staleItemFilter};`)
+  }
+  const desiredPages = index.pages.map((page) => sqlNumber(page.pdf_page)).join(',')
+  if (desiredPages) statements.push(`DELETE FROM practice_pages WHERE source_id=${sqlString(index.source_id)} AND pdf_page NOT IN (${desiredPages}) AND NOT EXISTS (SELECT 1 FROM practice_items i WHERE i.source_id=practice_pages.source_id AND i.pdf_page=practice_pages.pdf_page);`)
+
   const compactPath = join(outputRoot, 'index.json')
   await writeFile(compactPath, JSON.stringify(compactIndex), 'utf8')
   objects.unshift({ key: indexKey, path: compactPath })
@@ -157,9 +169,8 @@ async function main() {
   await writeFile(join(outputRoot, 'plan.json'), JSON.stringify({ ...plan, objects, sqlPaths }, null, 2), 'utf8')
   console.log(JSON.stringify(plan, null, 2))
   if (!remote) return
-  const wrangler = process.platform === 'win32' ? 'npx.cmd' : 'npx'
-  for (const object of objects) await runWithRetry(wrangler, ['wrangler','r2','object','put',`${bucket}/${object.key}`,'--file',object.path,'--content-type','application/json','--remote','-y'], { cwd: cloudRoot })
-  for (const path of sqlPaths) await runWithRetry(wrangler, ['wrangler','d1','execute',database,'--remote','--file',path,'--yes'], { cwd: cloudRoot })
+  for (const object of objects) await runWithRetry(process.execPath, [wranglerCli,'r2','object','put',`${bucket}/${object.key}`,'--file',object.path,'--content-type','application/json','--remote','-y'], { cwd: cloudRoot })
+  for (const path of sqlPaths) await runWithRetry(process.execPath, [wranglerCli,'d1','execute',database,'--remote','--file',path,'--yes'], { cwd: cloudRoot })
   console.log(`practice import complete: ${version}`)
 }
 

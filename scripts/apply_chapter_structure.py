@@ -64,7 +64,7 @@ COURSE_TARGET_OVERRIDES: dict[str, dict[str, int]] = {
         "focus_triangle_perimeter_area": 4,
         "chord_midpoint_slope_constant": 5, "chord_midpoint_extended": 6,
     },
-    "ch3.s7": {"parabola_definition_equation": 1, "focal_radius_formula": 4},
+    "ch3.s7": {"parabola_definition_equation": 1, "focal_radius_formula": 4, "focal_chord_area": 4},
     "ch3.s8": {"parabola_properties": 1},
     "ch3.s9": {
         "chord_midpoint_extended": 1,
@@ -161,6 +161,10 @@ SECTION_INHERITED_COURSES: dict[str, list[str]] = {
         "4.1.4.9 最值讨论与值域之具体函数", "4.2.2.2 常用函数放缩",
         "4.2.6.1 求和型放缩（上）", "4.2.6.1 求和型放缩（下）",
     ],
+}
+
+SECTION_COURSE_ADDITIONS: dict[str, list[str]] = {
+    "ch3.s7": ["focal_radius_formula", "focal_chord_area"],
 }
 
 SECTION_COURSE_EXCLUSIONS: dict[str, set[str]] = {
@@ -424,6 +428,9 @@ def apply_section(
         "total": len(examples) + len(variants) + len(expected_keys),
     }
     required_keys, support_keys = clean_course_lists(chapter, manifest, section)
+    for key in SECTION_COURSE_ADDITIONS.get(section_id, []):
+        if key not in required_keys and key not in support_keys:
+            support_keys.append(key)
     exclusions = SECTION_COURSE_EXCLUSIONS.get(section_id, set())
     required_keys = [key for key in required_keys if key not in exclusions]
     support_keys = [key for key in support_keys if key not in exclusions]

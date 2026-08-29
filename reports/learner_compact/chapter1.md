@@ -6,33 +6,33 @@
 
 | 顺序 | 课程 | 视频 | 状态 |
 |---:|---|---|---|
-| 1 | 3.1.1.1 空间向量的运算 | `3.1.1.1 空间向量的运算.mp4` | 待学 |
-| 2 | 3.1.2.1 空间向量拆分法 | `3.1.2.1 空间向量拆分法.mp4` | 待学 |
-| 3 | 3.1.2.2 空间向量等值面法 | `3.1.2.2 空间向量等值面法.mp4` | 待学 |
-| 4 | 3.1.3.1 空间直角坐标系 | `3.1.3.1 空间直角坐标系.mp4` | 待学 |
-| 5 | 3.1.3.2 空间向量运算的坐标表示 | `3.1.3.2 空间向量运算的坐标表示.mp4` | 待学 |
-| 6 | 3.1.3.3 直线的方向向量与平面的法向量 | `3.1.3.3 直线的方向向量与平面的法向量.mp4` | 待学 |
-| 7 | 3.1.4.1 平行垂直证明 | `3.1.4.1平行垂直证明.mp4` | 待学 |
-| 8 | 3.1.4.2 证明共面 | `3.1.4.2 证明共面.mp4` | 待学 |
-| 9 | 3.1.4.3 向量夹角与直线夹角 | `3.1.4.3 向量夹角与直线夹角.mp4` | 待学 |
-| 10 | 3.1.4.4 直线与平面的夹角 | `3.1.4.4 直线与平面的夹角.mp4` | 待学 |
-| 11 | 3.1.4.5 平面与平面的夹角 | `3.1.4.5 平面与平面的夹角.mp4` | 待学 |
-| 12 | 3.1.4.6.a 平面方程与法向量（上） | `3.1.4.6.a 平面方程与法向量（上）.mp4` | 待学 |
-| 13 | 3.1.4.6.b 平面方程与法向量（下） | `3.1.4.6.b 平面方程与法向量（下）.mp4` | 待学 |
-| 14 | 3.1.4.7 距离问题 | `3.1.4.7 距离问题.mp4` | 待学 |
-| 15 | 3.1.4.8 动点问题 | `3.1.4.8 动点问题.mp4` | 待学 |
+| 1 | 3.1.1.1 space_vector_ops | `3.1.1.1 空间向量的运算.mp4` | 待学 |
+| 2 | 3.1.2.1 decomposition | `3.1.2.1 空间向量拆分法.mp4` | 待学 |
+| 3 | 3.1.2.2 equal_surface | `3.1.2.2 空间向量等值面法.mp4` | 待学 |
+| 4 | 3.1.3.1 coordinate_system | `3.1.3.1 空间直角坐标系.mp4` | 待学 |
+| 5 | 3.1.3.2 coordinate_ops | `3.1.3.2 空间向量运算的坐标表示.mp4` | 待学 |
+| 6 | 3.1.3.3 direction_normal | `3.1.3.3 直线的方向向量与平面的法向量.mp4` | 待学 |
+| 7 | 3.1.4.1 parallel_perpendicular | `3.1.4.1平行垂直证明.mp4` | 待学 |
+| 8 | 3.1.4.2 coplanar | `3.1.4.2 证明共面.mp4` | 待学 |
+| 9 | 3.1.4.3 line_line_angle | `3.1.4.3 向量夹角与直线夹角.mp4` | 待学 |
+| 10 | 3.1.4.4 line_plane_angle | `3.1.4.4 直线与平面的夹角.mp4` | 待学 |
+| 11 | 3.1.4.5 plane_plane_angle | `3.1.4.5 平面与平面的夹角.mp4` | 待学 |
+| 12 | 3.1.4.6.a plane_equation_upper | `3.1.4.6.a 平面方程与法向量（上）.mp4` | 待学 |
+| 13 | 3.1.4.6.b plane_equation_lower | `3.1.4.6.b 平面方程与法向量（下）.mp4` | 待学 |
+| 14 | 3.1.4.7 distance | `3.1.4.7 距离问题.mp4` | 待学 |
+| 15 | 3.1.4.8 moving_point | `3.1.4.8 动点问题.mp4` | 待学 |
 
-未完成课程：3.1.1.1 空间向量的运算、3.1.2.1 空间向量拆分法、3.1.4.3 向量夹角与直线夹角、3.1.4.2 证明共面、3.1.4.1 平行垂直证明、3.1.4.5 平面与平面的夹角、3.1.4.6.a 平面方程与法向量（上）、3.1.4.6.b 平面方程与法向量（下）、3.1.4.7 距离问题、3.1.2.2 空间向量等值面法、3.1.3.1 空间直角坐标系、3.1.3.2 空间向量运算的坐标表示、3.1.3.3 直线的方向向量与平面的法向量、3.1.4.4 直线与平面的夹角、3.1.4.8 动点问题
+未完成课程：3.1.1.1 space_vector_ops、3.1.2.1 decomposition、3.1.4.3 line_line_angle、3.1.4.2 coplanar、3.1.4.1 parallel_perpendicular、3.1.4.5 plane_plane_angle、3.1.4.6.a plane_equation_upper、3.1.4.6.b plane_equation_lower、3.1.4.7 distance、3.1.2.2 equal_surface、3.1.3.1 coordinate_system、3.1.3.2 coordinate_ops、3.1.3.3 direction_normal、3.1.4.4 line_plane_angle、3.1.4.8 moving_point
 
 ## 第1节 空间向量及其运算
 
 - **状态**：未开始
-- **课程**：3.1.1.1 空间向量的运算 → 3.1.2.1 空间向量拆分法 → 3.1.4.1 平行垂直证明 → 3.1.4.2 证明共面 → 3.1.4.3 向量夹角与直线夹角 → 3.1.4.5 平面与平面的夹角 → 3.1.4.6.a 平面方程与法向量（上） → 3.1.4.6.b 平面方程与法向量（下） → 3.1.4.7 距离问题
+- **课程**：3.1.1.1 space_vector_ops → 3.1.2.1 decomposition → 3.1.4.1 parallel_perpendicular → 3.1.4.2 coplanar → 3.1.4.3 line_line_angle → 3.1.4.5 plane_plane_angle → 3.1.4.6.a plane_equation_upper → 3.1.4.6.b plane_equation_lower → 3.1.4.7 distance
 - **项目**：38 项
 
 ### 循环 1｜空间向量概念与线性运算
 
-- **课程调用**：3.1.1.1 空间向量的运算
+- **课程调用**：3.1.1.1 space_vector_ops
 - **知识/类型**：空间向量的相关概念、空间向量的线性运算
 - **知识点右侧例题**：例1、例2、例3
 - **类型题**：例9、例10
@@ -56,7 +56,7 @@
 
 <details class="item-detail"><summary><strong>例1</strong> · 空间向量的相关概念 · 知识点右侧例题</summary>
 
-- **课程**：3.1.1.1 空间向量的运算
+- **课程**：3.1.1.1 space_vector_ops
 - **识别**：题面要求从长方体顶点向量中找相等或相反关系
 - **方法**：方向与模的双条件筛选模型；向量可平移，起点不决定向量本身
 - **第一行**：先写：候选向量\(\overrightarrow{UV}\)需满足方向与目标同/反向且\(|UV|=|XY|\)
@@ -69,7 +69,7 @@
 
 <details class="item-detail"><summary><strong>例2</strong> · 空间向量的线性运算 · 知识点右侧例题</summary>
 
-- **课程**：3.1.1.1 空间向量的运算
+- **课程**：3.1.1.1 space_vector_ops
 - **识别**：题面出现平行六面体和多项向量相加，需把项接成首尾或平行四边形
 - **方法**：空间向量加减的首尾相接/平行四边形模型，先平移再合并
 - **第一行**：先写：\(\overrightarrow{目标}=\overrightarrow{第一项}+\overrightarrow{第二项}+\cdots\)
@@ -82,7 +82,7 @@
 
 <details class="item-detail"><summary><strong>例3</strong> · 空间向量的线性运算 · 知识点右侧例题</summary>
 
-- **课程**：3.1.1.1 空间向量的运算
+- **课程**：3.1.1.1 space_vector_ops
 - **识别**：题面给出四面体、边上中点和向量比例，目标是用基准向量表示另一条向量
 - **方法**：位置向量/分点向量模型：先把中点写成两端平均，再沿同一直线用比例传递
 - **第一行**：先写：\(\overrightarrow{AE}=\tfrac12\overrightarrow{AB}+\tfrac12\overrightarrow{AC}\)，再按题设比例设目标向量
@@ -95,7 +95,7 @@
 
 <details class="item-detail"><summary><strong>例9</strong> · 类型Ⅰ 线性运算 · 类型题</summary>
 
-- **课程**：3.1.1.1 空间向量的运算
+- **课程**：3.1.1.1 space_vector_ops
 - **识别**：题面是符号向量或括号表达式，目标是线性展开与合并
 - **方法**：代数线性运算模型：先展开外层系数和减号，再合并同类向量
 - **第一行**：先写：\(E=\sum_i c_i\mathbf{u}_i\)，保留每个括号的外层符号
@@ -108,7 +108,7 @@
 
 <details class="item-detail"><summary><strong>例10</strong> · 类型Ⅰ 线性运算 · 类型题</summary>
 
-- **课程**：3.1.1.1 空间向量的运算
+- **课程**：3.1.1.1 space_vector_ops
 - **识别**：题面是平行六面体中的多项几何向量，要求化简并定位结果向量
 - **方法**：平移向量到公共起点/首尾相接，再用平行六面体平行关系闭合
 - **第一行**：先写：\(\overrightarrow{结果}=\overrightarrow{项1}+\overrightarrow{项2}+\overrightarrow{项3}\)
@@ -121,7 +121,7 @@
 
 <details class="item-detail"><summary><strong>A1</strong> · 类型Ⅰ 线性运算 · 强化训练</summary>
 
-- **课程**：3.1.1.1 空间向量的运算
+- **课程**：3.1.1.1 space_vector_ops
 - **识别**：题面在四面体中给出底边中点和OA/OB/OC，要求表示AN
 - **方法**：分点位置向量模型：先写中点位置向量，再减去起点位置向量
 - **第一行**：先写：\(\overrightarrow{AN}=\overrightarrow{ON}-\overrightarrow{OA}\)
@@ -134,7 +134,7 @@
 
 <details class="item-detail"><summary><strong>A2</strong> · 类型Ⅰ 线性运算 · 强化训练</summary>
 
-- **课程**：3.1.1.1 空间向量的运算
+- **课程**：3.1.1.1 space_vector_ops
 - **识别**：题面由符号向量和有向线段减法组成，需区分代数向量与几何向量
 - **方法**：括号展开与路径闭合模型，几何向量先改写成统一起点的形式
 - **第一行**：先写：\(E=2(a-2b-3c)-3(a+2b-c)\) 或按题目第一小问逐项列出
@@ -147,7 +147,7 @@
 
 <details class="item-detail"><summary><strong>A3</strong> · 类型Ⅰ 线性运算 · 强化训练</summary>
 
-- **课程**：3.1.1.1 空间向量的运算
+- **课程**：3.1.1.1 space_vector_ops
 - **识别**：题面是正方体中点G与对角线交点O的多项向量式
 - **方法**：正方体平行关系+中点/对角线位置模型，先把每项改写为A或同一顶点的基向量
 - **第一行**：先写：\(\overrightarrow{GD}=\overrightarrow{GA}+\overrightarrow{AD}\)，并为O写出对角线位置表示
@@ -162,7 +162,7 @@
 
 ### 循环 2｜共线概念与向量拆分
 
-- **课程调用**：3.1.2.1 空间向量拆分法
+- **课程调用**：3.1.2.1 decomposition
 - **知识/类型**：共线向量与共面向量
 - **知识点右侧例题**：例4、例5
 - **直属变式**：变式1、变式2
@@ -185,7 +185,7 @@
 
 <details class="item-detail"><summary><strong>例4</strong> · 共线向量与共面向量 · 知识点右侧例题</summary>
 
-- **课程**：3.1.2.1 空间向量拆分法
+- **课程**：3.1.2.1 decomposition
 - **识别**：题面要求判断向量共线/平行，且给出可拆分的空间向量关系
 - **方法**：空间向量基本定理的共线判据：选非零方向向量，目标向量写成同一方向的实数倍
 - **第一行**：先写：\(\overrightarrow{u}=\lambda\overrightarrow{v},\quad\overrightarrow{v}\ne\mathbf0\)
@@ -198,7 +198,7 @@
 
 <details class="item-detail"><summary><strong>例5</strong> · 共线向量与共面向量 · 知识点右侧例题</summary>
 
-- **课程**：3.1.2.1 空间向量拆分法
+- **课程**：3.1.2.1 decomposition
 - **识别**：题面通过三条基向量和系数关系判断共线或共面
 - **方法**：不共面基底的唯一拆分模型：逐项比较系数，再辨别一维倍数或二维组合
 - **第一行**：先写：\(\overrightarrow{u}=x\mathbf e_1+y\mathbf e_2+z\mathbf e_3\)，并标注基底条件
@@ -211,7 +211,7 @@
 
 <details class="item-detail"><summary><strong>例11</strong> · 类型Ⅱ 证明平行、共线 · 类型题</summary>
 
-- **课程**：3.1.2.1 空间向量拆分法
+- **课程**：3.1.2.1 decomposition
 - **识别**：题面要证明三点共线/两线平行，并给出相对同一起点的向量展开
 - **方法**：先求相邻段向量差，再证明两段是非零实数倍
 - **第一行**：先写：\(\overrightarrow{BC}=\overrightarrow{AC}-\overrightarrow{AB},\quad\overrightarrow{CD}=\overrightarrow{AD}-\overrightarrow{AC}\)
@@ -224,7 +224,7 @@
 
 <details class="item-detail"><summary><strong>变式1</strong> · 类型Ⅱ 证明平行、共线 · 直属变式</summary>
 
-- **课程**：3.1.2.1 空间向量拆分法
+- **课程**：3.1.2.1 decomposition
 - **识别**：题面保留例11的平行/共线结构，但加入立方体点E、F和分点位置
 - **方法**：先重建例11的同向倍数模型，再把分点表示替换为本题的棱向量
 - **第一行**：先写：\(\overrightarrow{EF}=x\overrightarrow{A_1A}+y\overrightarrow{A_1B_1}+z\overrightarrow{A_1D_1}\)
@@ -237,7 +237,7 @@
 
 <details class="item-detail"><summary><strong>变式2</strong> · 类型Ⅱ 证明平行、共线 · 直属变式</summary>
 
-- **课程**：3.1.2.1 空间向量拆分法
+- **课程**：3.1.2.1 decomposition
 - **识别**：题面把点M、N放入新的空间骨架，要求用三条基向量表达MN
 - **方法**：参数分解模型：统一到A/B等基点，再比较三个基向量系数
 - **第一行**：先写：\(\overrightarrow{MN}=x\overrightarrow{AB}+y\overrightarrow{AD}+z\overrightarrow{AF}\)
@@ -250,7 +250,7 @@
 
 <details class="item-detail"><summary><strong>B10</strong> · 类型Ⅱ 证明平行、共线 · 强化训练</summary>
 
-- **课程**：3.1.2.1 空间向量拆分法
+- **课程**：3.1.2.1 decomposition
 - **识别**：题面在四面体中给出多条棱的中点，目标是判断三点共线
 - **方法**：中点位置向量+共线方向模型：先写各点位置，再比较两段向量是否为实数倍
 - **第一行**：先写：\(\overrightarrow{GF}=\overrightarrow{OF}-\overrightarrow{OG},\quad\overrightarrow{GH}=\overrightarrow{OH}-\overrightarrow{OG}\)
@@ -265,7 +265,7 @@
 
 ### 循环 4｜共面证明
 
-- **课程调用**：3.1.2.1 空间向量拆分法、3.1.4.2 证明共面
+- **课程调用**：3.1.2.1 decomposition、3.1.4.2 coplanar
 - **知识/类型**：共线向量与共面向量
 - **直属变式**：变式
 - **类型题**：例12
@@ -284,7 +284,7 @@
 
 <details class="item-detail"><summary><strong>例12</strong> · 类型Ⅲ 证明共面 · 类型题</summary>
 
-- **课程**：3.1.2.1 空间向量拆分法、3.1.4.2 证明共面
+- **课程**：3.1.2.1 decomposition、3.1.4.2 coplanar
 - **识别**：题面要求证明点/线落在同一平面，适合用两个不共线向量展开
 - **方法**：点共面系数和模型：统一起点后用两个基方向或系数和为1判别
 - **第一行**：先写：\(\overrightarrow{OP}=x\overrightarrow{OA}+y\overrightarrow{OB}+z\overrightarrow{OC}\)，并标注\(x+y+z\)待检
@@ -297,7 +297,7 @@
 
 <details class="item-detail"><summary><strong>变式</strong> · 类型Ⅲ 证明共面 · 直属变式</summary>
 
-- **课程**：3.1.2.1 空间向量拆分法、3.1.4.2 证明共面
+- **课程**：3.1.2.1 decomposition、3.1.4.2 coplanar
 - **识别**：题面把四个棱上点连接成新四边形，目标是证明四点共面
 - **方法**：先写各点的基向量系数，再用系数和/二维参数关系闭合共面证明
 - **第一行**：先写：\(\overrightarrow{OE}=x_E\mathbf e_1+y_E\mathbf e_2+z_E\mathbf e_3\)，对F、G、H同样列式
@@ -310,7 +310,7 @@
 
 <details class="item-detail"><summary><strong>B9</strong> · 类型Ⅲ 证明共面 · 强化训练</summary>
 
-- **课程**：3.1.2.1 空间向量拆分法、3.1.4.2 证明共面
+- **课程**：3.1.2.1 decomposition、3.1.4.2 coplanar
 - **识别**：题面在正四棱锥中给出中点和内点，目标是证明四点共面
 - **方法**：位置向量系数和=1或同一二维参数平面模型，先把每个点写到同一基底
 - **第一行**：先写：\(\overrightarrow{OX}=x_X\overrightarrow{OA}+y_X\overrightarrow{OB}+z_X\overrightarrow{OC}+w_X\overrightarrow{OD}\)
@@ -325,7 +325,7 @@
 
 ### 循环 5｜数量积基础与投影
 
-- **课程调用**：3.1.1.1 空间向量的运算、3.1.2.1 空间向量拆分法、3.1.4.3 向量夹角与直线夹角
+- **课程调用**：3.1.1.1 space_vector_ops、3.1.2.1 decomposition、3.1.4.3 line_line_angle
 - **知识/类型**：数量积、夹角与投影向量
 - **知识点右侧例题**：例6、例7、例8
 - **强化训练**：B4、B5
@@ -345,7 +345,7 @@
 
 <details class="item-detail"><summary><strong>例6</strong> · 数量积、夹角与投影向量 · 知识点右侧例题</summary>
 
-- **课程**：3.1.1.1 空间向量的运算、3.1.2.1 空间向量拆分法、3.1.4.3 向量夹角与直线夹角
+- **课程**：3.1.1.1 space_vector_ops、3.1.2.1 decomposition、3.1.4.3 line_line_angle
 - **识别**：题面要求求AC与多条棱/对角线的夹角，给出正方体结构
 - **方法**：数量积夹角模型：选目标向量，写\(\cos\theta=\frac{u\cdot v}{|u||v|}\)，先统一方向
 - **第一行**：先写：\(\cos\theta=\frac{\overrightarrow{AC}\cdot\overrightarrow{UV}}{|AC|\,|UV|}\)
@@ -358,7 +358,7 @@
 
 <details class="item-detail"><summary><strong>例7</strong> · 数量积、夹角与投影向量 · 知识点右侧例题</summary>
 
-- **课程**：3.1.1.1 空间向量的运算、3.1.2.1 空间向量拆分法、3.1.4.3 向量夹角与直线夹角
+- **课程**：3.1.1.1 space_vector_ops、3.1.2.1 decomposition、3.1.4.3 line_line_angle
 - **识别**：题面给出空间向量的长度、夹角或正交关系，目标是展开数量积
 - **方法**：数量积定义/分配律模型，先把未知数量积化为已知模与夹角项
 - **第一行**：先写：\(u\cdot v=|u||v|\cos\langle u,v\rangle\)，或按题设展开目标点积
@@ -371,7 +371,7 @@
 
 <details class="item-detail"><summary><strong>例8</strong> · 数量积、夹角与投影向量 · 知识点右侧例题</summary>
 
-- **课程**：3.1.1.1 空间向量的运算、3.1.2.1 空间向量拆分法、3.1.4.3 向量夹角与直线夹角
+- **课程**：3.1.1.1 space_vector_ops、3.1.2.1 decomposition、3.1.4.3 line_line_angle
 - **识别**：题面明确要求向量在直线/平面上的投影向量
 - **方法**：投影模型：先辨认投影目标，再区分投影向量与投影长度，最后用数量积或垂足关系
 - **第一行**：先写：\(\operatorname{proj}_{l}a=\overrightarrow{OB}\)，并标注\(OB\)沿目标直线
@@ -384,7 +384,7 @@
 
 <details class="item-detail"><summary><strong>B4</strong> · 数量积、夹角与投影向量 · 强化训练</summary>
 
-- **课程**：3.1.1.1 空间向量的运算、3.1.2.1 空间向量拆分法、3.1.4.3 向量夹角与直线夹角
+- **课程**：3.1.1.1 space_vector_ops、3.1.2.1 decomposition、3.1.4.3 line_line_angle
 - **识别**：题面给出三棱锥等棱条件，要求计算两条异向棱向量的数量积
 - **方法**：先求两向量的模与夹角，或拆到同一参考点的基向量再用分配律
 - **第一行**：先写：\(\overrightarrow{AB}\cdot\overrightarrow{CD}=|AB||CD|\cos\langle AB,CD\rangle\)
@@ -397,7 +397,7 @@
 
 <details class="item-detail"><summary><strong>B5</strong> · 数量积、夹角与投影向量 · 强化训练</summary>
 
-- **课程**：3.1.1.1 空间向量的运算、3.1.2.1 空间向量拆分法、3.1.4.3 向量夹角与直线夹角
+- **课程**：3.1.1.1 space_vector_ops、3.1.2.1 decomposition、3.1.4.3 line_line_angle
 - **识别**：题面在正方体中给出棱上中点E，目标是EB1与EB的数量积
 - **方法**：以E为共同起点，分别表达EB1、EB，利用正方体正交棱分解
 - **第一行**：先写：\(\overrightarrow{EB_1}=\overrightarrow{EA_1}+\overrightarrow{A_1B_1},\quad\overrightarrow{EB}=\overrightarrow{EA}+\overrightarrow{AB}\)
@@ -412,7 +412,7 @@
 
 ### 循环 6｜数量积展开、极化与重心
 
-- **课程调用**：3.1.4.3 向量夹角与直线夹角
+- **课程调用**：3.1.4.3 line_line_angle
 - **知识/类型**：数量积、夹角与投影向量
 - **直属变式**：变式
 - **类型题**：例13、例14
@@ -432,7 +432,7 @@
 
 <details class="item-detail"><summary><strong>例13</strong> · 类型Ⅳ 数量积 · 类型题</summary>
 
-- **课程**：3.1.4.3 向量夹角与直线夹角
+- **课程**：3.1.4.3 line_line_angle
 - **识别**：题面用正四面体中点把AE拆成AB、AC，再与AD做数量积
 - **方法**：中点分解+数量积分配律模型，避免直接求复杂空间夹角
 - **第一行**：先写：\(\overrightarrow{AE}=\tfrac12\overrightarrow{AB}+\tfrac12\overrightarrow{AC}\)，再与目标向量点乘
@@ -445,7 +445,7 @@
 
 <details class="item-detail"><summary><strong>例14</strong> · 类型Ⅳ 数量积 · 类型题</summary>
 
-- **课程**：3.1.4.3 向量夹角与直线夹角
+- **课程**：3.1.4.3 line_line_angle
 - **识别**：题面要求带空间任意点的数量积最值，出现两向量和与中点结构
 - **方法**：极化恒等式模型：先用中点把两向量改成同起点，再将点积转成模长平方
 - **第一行**：先写：\(u\cdot v=|\tfrac{u+v}{2}|^2-|\tfrac{u-v}{2}|^2\)，不填最终值
@@ -458,7 +458,7 @@
 
 <details class="item-detail"><summary><strong>变式</strong> · 类型Ⅳ 数量积 · 直属变式</summary>
 
-- **课程**：3.1.4.3 向量夹角与直线夹角
+- **课程**：3.1.4.3 line_line_angle
 - **识别**：题面仍是数量积但换成平行六面体和三条基向量的长度/夹角
 - **方法**：拆分法+分配律：先把目标向量分别展开到AB、AD、AA1，再逐项点乘
 - **第一行**：先写：\(\overrightarrow{BD_1}= -\overrightarrow{AB}+\overrightarrow{AD}+\overrightarrow{AA_1}\)，并写AC的同基表示
@@ -471,7 +471,7 @@
 
 <details class="item-detail"><summary><strong>B11</strong> · 类型Ⅳ 数量积 · 强化训练</summary>
 
-- **课程**：3.1.4.3 向量夹角与直线夹角
+- **课程**：3.1.4.3 line_line_angle
 - **识别**：题面把正四面体重心和中点叠加，目标包含向量表示、长度和垂直证明
 - **方法**：重心位置向量+数量积/正交证明的组合模型
 - **第一行**：先写：\(\overrightarrow{OM}=\overrightarrow{OG}+\overrightarrow{GM}\)，并把G写成底面三点的平均
@@ -486,7 +486,7 @@
 
 ### 循环 7｜数量积求长度与求角
 
-- **课程调用**：3.1.4.3 向量夹角与直线夹角
+- **课程调用**：3.1.4.3 line_line_angle
 - **知识/类型**：数量积、夹角与投影向量
 - **直属变式**：变式1、变式2、变式1、变式2
 - **类型题**：例15、例16
@@ -509,7 +509,7 @@
 
 <details class="item-detail"><summary><strong>例15</strong> · 类型Ⅴ 求长度、距离 · 类型题</summary>
 
-- **课程**：3.1.4.3 向量夹角与直线夹角
+- **课程**：3.1.4.3 line_line_angle
 - **识别**：题面要求空间三棱锥中点到点的长度，且随后比较异面直线夹角
 - **方法**：向量长度/距离模型：先用分点关系写目标向量，再平方取模，角度另用点积
 - **第一行**：先写：\(\overrightarrow{PM}=\overrightarrow{PA}+\overrightarrow{AD}/2\)，并保留分点参数
@@ -522,7 +522,7 @@
 
 <details class="item-detail"><summary><strong>例16</strong> · 类型Ⅵ 求角 · 类型题</summary>
 
-- **课程**：3.1.4.3 向量夹角与直线夹角
+- **课程**：3.1.4.3 line_line_angle
 - **识别**：题面只给三个向量和为零及模长，目标是求两向量夹角
 - **方法**：移项后平方模型：把第三向量移到另一侧，避免产生两个未知交叉项
 - **第一行**：先写：\(a+b=-c\)，再写\((a+b)^2=(-c)^2\)
@@ -535,7 +535,7 @@
 
 <details class="item-detail"><summary><strong>变式1</strong> · 类型Ⅴ 求长度、距离、类型Ⅵ 求角 · 直属变式</summary>
 
-- **课程**：3.1.4.3 向量夹角与直线夹角
+- **课程**：3.1.4.3 line_line_angle
 - **识别**：题面延续例15的长度/距离结构但更换分点或目标向量
 - **方法**：先参数化分点，再把目标向量写成已知基向量组合并平方
 - **第一行**：先写：\(\overrightarrow{PX}=\overrightarrow{PA}+t\overrightarrow{AD}\)，其中t只取题干给定范围
@@ -548,7 +548,7 @@
 
 <details class="item-detail"><summary><strong>变式2</strong> · 类型Ⅴ 求长度、距离、类型Ⅵ 求角 · 直属变式</summary>
 
-- **课程**：3.1.4.3 向量夹角与直线夹角
+- **课程**：3.1.4.3 line_line_angle
 - **识别**：题面把M、N放在两个垂直正方形平面内，要求参数表达和MN最小长度
 - **方法**：先向量化MN，再利用两平面垂直得到基向量正交，最后把长度平方配方
 - **第一行**：先写：\(\overrightarrow{MN}=x\overrightarrow{AB}+y\overrightarrow{AD}+z\overrightarrow{AF}\)
@@ -561,7 +561,7 @@
 
 <details class="item-detail"><summary><strong>变式1</strong> · 类型Ⅴ 求长度、距离、类型Ⅵ 求角 · 直属变式</summary>
 
-- **课程**：3.1.4.3 向量夹角与直线夹角
+- **课程**：3.1.4.3 line_line_angle
 - **识别**：题面把向量和为零的代数模型换成正四面体中点向量夹角
 - **方法**：先拆两条目标向量到共同顶点基向量，再按数量积夹角公式推进
 - **第一行**：先写：\(\cos\theta=\frac{\overrightarrow{OE}\cdot\overrightarrow{BF}}{|OE||BF|}\)
@@ -574,7 +574,7 @@
 
 <details class="item-detail"><summary><strong>变式2</strong> · 类型Ⅴ 求长度、距离、类型Ⅵ 求角 · 直属变式</summary>
 
-- **课程**：3.1.4.3 向量夹角与直线夹角
+- **课程**：3.1.4.3 line_line_angle
 - **识别**：题面延续求角模型但更换空间点/方向，需把几何对象转成向量夹角
 - **方法**：基向量分解+点积余弦模型，先确定有向线段再处理直线锐角
 - **第一行**：先写：\(\cos\theta=\frac{u\cdot v}{|u||v|}\)，并标明u、v的几何来源
@@ -587,7 +587,7 @@
 
 <details class="item-detail"><summary><strong>B12</strong> · 类型Ⅴ 求长度、距离、类型Ⅵ 求角 · 强化训练</summary>
 
-- **课程**：3.1.4.3 向量夹角与直线夹角
+- **课程**：3.1.4.3 line_line_angle
 - **识别**：题面在三棱锥中给分点D和中点M，连续要求PM长度与PM/AC异面直线夹角
 - **方法**：两段方法链：先模长平方，再用PM和AC的方向向量计算夹角余弦
 - **第一行**：先写：\(\overrightarrow{PM}=\overrightarrow{PA}+\overrightarrow{AD}/2\)，并另列\(\cos\angle(PM,AC)\)
@@ -602,7 +602,7 @@
 
 ### 循环 8｜二面角平面角前置与应用
 
-- **课程调用**：3.1.4.1 平行垂直证明、3.1.4.3 向量夹角与直线夹角、3.1.4.5 平面与平面的夹角
+- **课程调用**：3.1.4.1 parallel_perpendicular、3.1.4.3 line_line_angle、3.1.4.5 plane_plane_angle
 - **知识/类型**：数量积、夹角与投影向量
 - **强化训练**：B6、B7
 
@@ -618,7 +618,7 @@
 
 <details class="item-detail"><summary><strong>B6</strong> · 本循环综合应用 · 强化训练</summary>
 
-- **课程**：3.1.4.1 平行垂直证明、3.1.4.3 向量夹角与直线夹角、3.1.4.5 平面与平面的夹角
+- **课程**：3.1.4.1 parallel_perpendicular、3.1.4.3 line_line_angle、3.1.4.5 plane_plane_angle
 - **识别**：先锁定二面角公共棱，再检查同起点与两条垂棱；不同垂足必须先平移，不能把任意两线当平面角。
 - **方法**：bridge-1.1-dihedral-definition：同起点 + 双垂棱 + 不同垂足平移/三段长度拆分；合法截面闭合后才调用数量积或余弦。
 - **第一行**：先写：公共棱 l；在同一点 O 取 OA⊂α、OB⊂β，且 OA⊥l、OB⊥l。
@@ -631,7 +631,7 @@
 
 <details class="item-detail"><summary><strong>B7</strong> · 本循环综合应用 · 强化训练</summary>
 
-- **课程**：3.1.4.1 平行垂直证明、3.1.4.3 向量夹角与直线夹角、3.1.4.5 平面与平面的夹角
+- **课程**：3.1.4.1 parallel_perpendicular、3.1.4.3 line_line_angle、3.1.4.5 plane_plane_angle
 - **识别**：先读出 α-l-β 的公共棱 l，再验证两面内截线的同起点、双垂棱和不同垂足平移，之后才做二维关系。
 - **方法**：bridge-1.1-dihedral-definition：二面角定义→同起点双垂棱→不同垂足平移→三段长度拆分→数量积/余弦核验。
 - **第一行**：先写：二面角 α-l-β；选 O∈l，OA⊂α、OB⊂β，且 OA⊥l、OB⊥l。
@@ -646,7 +646,7 @@
 
 ### 循环 9｜极化与四点共面综合
 
-- **课程调用**：3.1.2.1 空间向量拆分法、3.1.4.2 证明共面、3.1.4.3 向量夹角与直线夹角
+- **课程调用**：3.1.2.1 decomposition、3.1.4.2 coplanar、3.1.4.3 line_line_angle
 - **知识/类型**：共线向量与共面向量、数量积、夹角与投影向量
 - **强化训练**：B8、C13
 
@@ -662,7 +662,7 @@
 
 <details class="item-detail"><summary><strong>B8</strong> · 本循环综合应用 · 强化训练</summary>
 
-- **课程**：3.1.2.1 空间向量拆分法、3.1.4.2 证明共面、3.1.4.3 向量夹角与直线夹角
+- **课程**：3.1.2.1 decomposition、3.1.4.2 coplanar、3.1.4.3 line_line_angle
 - **识别**：题面把正方体内任意点的点积最值与极化/几何约束结合
 - **方法**：极化恒等式+向量分解模型；先把点积写成模长平方，再检查点在长方体内的定义域
 - **第一行**：先写：\(u\cdot v=|\tfrac{u+v}{2}|^2-|\tfrac{u-v}{2}|^2\)，并列点P的参数范围
@@ -675,7 +675,7 @@
 
 <details class="item-detail"><summary><strong>C13</strong> · 本循环综合应用 · 强化训练</summary>
 
-- **课程**：3.1.2.1 空间向量拆分法、3.1.4.2 证明共面、3.1.4.3 向量夹角与直线夹角
+- **课程**：3.1.2.1 decomposition、3.1.4.2 coplanar、3.1.4.3 line_line_angle
 - **识别**：题面要求在四点共面系数和与数量积/最值之间切换
 - **方法**：先用四点共面系数和=1判定参数，再用数量积分配或极化处理目标量
 - **第一行**：先写：\(\overrightarrow{OP}=x\overrightarrow{OA}+y\overrightarrow{OB}+z\overrightarrow{OC},\quad x+y+z=1\)
@@ -690,7 +690,7 @@
 
 ### 循环 10｜外接球、点面距离与压轴综合
 
-- **课程调用**：3.1.2.1 空间向量拆分法、3.1.4.1 平行垂直证明、3.1.4.2 证明共面、3.1.4.3 向量夹角与直线夹角、3.1.4.6.a 平面方程与法向量（上）、3.1.4.6.b 平面方程与法向量（下）、3.1.4.7 距离问题
+- **课程调用**：3.1.2.1 decomposition、3.1.4.1 parallel_perpendicular、3.1.4.2 coplanar、3.1.4.3 line_line_angle、3.1.4.6.a plane_equation_upper、3.1.4.6.b plane_equation_lower、3.1.4.7 distance
 - **知识/类型**：共线向量与共面向量、数量积、夹角与投影向量
 - **强化训练**：C14
 
@@ -705,7 +705,7 @@
 
 <details class="item-detail"><summary><strong>C14</strong> · 本循环综合应用 · 强化训练</summary>
 
-- **课程**：3.1.2.1 空间向量拆分法、3.1.4.1 平行垂直证明、3.1.4.2 证明共面、3.1.4.3 向量夹角与直线夹角、3.1.4.6.a 平面方程与法向量（上）、3.1.4.6.b 平面方程与法向量（下）、3.1.4.7 距离问题
+- **课程**：3.1.2.1 decomposition、3.1.4.1 parallel_perpendicular、3.1.4.2 coplanar、3.1.4.3 line_line_angle、3.1.4.6.a plane_equation_upper、3.1.4.6.b plane_equation_lower、3.1.4.7 distance
 - **识别**：把综合题拆成四个门：四点共面/仿射求交、正数乘积最值、平面与距离、外接球等距回代；每门先验条件再推进。
 - **方法**：bridge-1.1-positive-product-sum：正数条件→平方非负→等号条件→几何定义域回代；并行完成仿射求交、平面距离和外接球三点等距回代。
 - **第一行**：先写：x>0，y>0，xy=k（k>0）；另列四点共面系数和、仿射求交参数与球心等距检查表。
@@ -721,12 +721,12 @@
 ## 第2节 空间向量基本定理、空间向量及其运算的坐标表示
 
 - **状态**：未开始
-- **课程**：3.1.1.1 空间向量的运算 → 3.1.2.1 空间向量拆分法 → 3.1.2.2 空间向量等值面法 → 3.1.3.1 空间直角坐标系 → 3.1.3.2 空间向量运算的坐标表示
+- **课程**：3.1.1.1 space_vector_ops → 3.1.2.1 decomposition → 3.1.2.2 equal_surface → 3.1.3.1 coordinate_system → 3.1.3.2 coordinate_ops
 - **项目**：33 项
 
 ### 循环 1｜空间向量基本定理与基底判断
 
-- **课程调用**：3.1.1.1 空间向量的运算、3.1.2.1 空间向量拆分法、3.1.2.2 空间向量等值面法
+- **课程调用**：3.1.1.1 space_vector_ops、3.1.2.1 decomposition、3.1.2.2 equal_surface
 - **知识/类型**：空间向量基本定理、基底与基向量
 - **知识点右侧例题**：例1
 - **强化训练**：B8
@@ -743,7 +743,7 @@
 
 <details class="item-detail"><summary><strong>例1</strong> · 空间向量基本定理、基底与基向量 · 知识点右侧例题</summary>
 
-- **课程**：3.1.1.1 空间向量的运算、3.1.2.1 空间向量拆分法、3.1.2.2 空间向量等值面法
+- **课程**：3.1.1.1 space_vector_ops、3.1.2.1 decomposition、3.1.2.2 equal_surface
 - **识别**：三个候选向量能否构成空间基底（例1）
 - **方法**：以公共起点和基底系数表示向量，先检验不共面或系数独立，再完成分解；本题锚点：三个候选向量能否构成空间基底（例1）
 - **第一行**：设候选向量为 \(u,v,w\)，先写可能的 \(w=\alpha u+\beta v\) 关系
@@ -756,7 +756,7 @@
 
 <details class="item-detail"><summary><strong>B8</strong> · 空间向量基本定理、基底与基向量 · 强化训练</summary>
 
-- **课程**：3.1.1.1 空间向量的运算、3.1.2.1 空间向量拆分法、3.1.2.2 空间向量等值面法
+- **课程**：3.1.1.1 space_vector_ops、3.1.2.1 decomposition、3.1.2.2 equal_surface
 - **识别**：已知基底的线性组合能否构成新基底（B8）
 - **方法**：以公共起点和基底系数表示向量，先检验不共面或系数独立，再完成分解；本题锚点：已知基底的线性组合能否构成新基底（B8）
 - **第一行**：设新向量为 \(u_i=\alpha_i a+\beta_i b+\gamma_i c\)，排列成系数表
@@ -771,7 +771,7 @@
 
 ### 循环 2｜空间直角坐标系与点的坐标
 
-- **课程调用**：3.1.1.1 空间向量的运算、3.1.2.1 空间向量拆分法、3.1.3.1 空间直角坐标系
+- **课程调用**：3.1.1.1 space_vector_ops、3.1.2.1 decomposition、3.1.3.1 coordinate_system
 - **知识/类型**：空间直角坐标系与空间点坐标
 - **知识点右侧例题**：例2、例3
 
@@ -787,7 +787,7 @@
 
 <details class="item-detail"><summary><strong>例2</strong> · 空间直角坐标系与空间点坐标 · 知识点右侧例题</summary>
 
-- **课程**：3.1.1.1 空间向量的运算、3.1.2.1 空间向量拆分法、3.1.3.1 空间直角坐标系
+- **课程**：3.1.1.1 space_vector_ops、3.1.2.1 decomposition、3.1.3.1 coordinate_system
 - **识别**：原点、三条轴和长方体棱长给定（例2）
 - **方法**：先建立或读取空间直角坐标系，再用终点减起点和分量运算推进；本题锚点：原点、三条轴和长方体棱长给定（例2）
 - **第一行**：先写 \(A=O\)，再设 \(B=(0,b,0),D=(d,0,0),A_1=(0,0,h)\)
@@ -800,7 +800,7 @@
 
 <details class="item-detail"><summary><strong>例3</strong> · 空间直角坐标系与空间点坐标 · 知识点右侧例题</summary>
 
-- **课程**：3.1.1.1 空间向量的运算、3.1.2.1 空间向量拆分法、3.1.3.1 空间直角坐标系
+- **课程**：3.1.1.1 space_vector_ops、3.1.2.1 decomposition、3.1.3.1 coordinate_system
 - **识别**：向量在指定坐标平面上的投影（例3）
 - **方法**：用目标方向的点积系数构造投影向量，始终保留投影方向；本题锚点：向量在指定坐标平面上的投影（例3）
 - **第一行**：若目标为 \(Oyz\)，先设终点为 \(P(x,y,z)\)，其投影写成 \(P'(0,y,z)\)
@@ -815,7 +815,7 @@
 
 ### 循环 3｜空间向量的坐标运算
 
-- **课程调用**：3.1.1.1 空间向量的运算、3.1.3.1 空间直角坐标系、3.1.3.2 空间向量运算的坐标表示
+- **课程调用**：3.1.1.1 space_vector_ops、3.1.3.1 coordinate_system、3.1.3.2 coordinate_ops
 - **知识/类型**：空间向量坐标运算、平行垂直、模和夹角
 - **知识点右侧例题**：例4
 - **强化训练**：A1、A2、A3、A4
@@ -835,7 +835,7 @@
 
 <details class="item-detail"><summary><strong>例4</strong> · 空间向量坐标运算、平行垂直、模和夹角 · 知识点右侧例题</summary>
 
-- **课程**：3.1.1.1 空间向量的运算、3.1.3.1 空间直角坐标系、3.1.3.2 空间向量运算的坐标表示
+- **课程**：3.1.1.1 space_vector_ops、3.1.3.1 coordinate_system、3.1.3.2 coordinate_ops
 - **识别**：同一空间模型连续出现加减、点积、模、平行和夹角（例4）
 - **方法**：先建立或读取空间直角坐标系，再用终点减起点和分量运算推进；本题锚点：同一空间模型连续出现加减、点积、模、平行和夹角（例4）
 - **第一行**：统一写 \(\overrightarrow{XY}=Y-X\)，并先列参与运算的点坐标
@@ -848,7 +848,7 @@
 
 <details class="item-detail"><summary><strong>A1</strong> · 空间向量坐标运算、平行垂直、模和夹角 · 强化训练</summary>
 
-- **课程**：3.1.1.1 空间向量的运算、3.1.3.1 空间直角坐标系、3.1.3.2 空间向量运算的坐标表示
+- **课程**：3.1.1.1 space_vector_ops、3.1.3.1 coordinate_system、3.1.3.2 coordinate_ops
 - **识别**：三维向量直接相减（A1）
 - **方法**：把线性组合拆成对应分量，保留向量结构并在模问题中先写平方和；本题锚点：三维向量直接相减（A1）
 - **第一行**：写 \(\vec a-\vec b=(a_1-b_1,a_2-b_2,a_3-b_3)\)
@@ -861,7 +861,7 @@
 
 <details class="item-detail"><summary><strong>A2</strong> · 空间向量坐标运算、平行垂直、模和夹角 · 强化训练</summary>
 
-- **课程**：3.1.1.1 空间向量的运算、3.1.3.1 空间直角坐标系、3.1.3.2 空间向量运算的坐标表示
+- **课程**：3.1.1.1 space_vector_ops、3.1.3.1 coordinate_system、3.1.3.2 coordinate_ops
 - **识别**：含未知分量的垂直条件（A2）
 - **方法**：平行用同一比例因子，垂直用数量积为零；分小问隔离参数条件；本题锚点：含未知分量的垂直条件（A2）
 - **第一行**：先写 \((x,1,1)\cdot(1,-2,1)=0\)
@@ -874,7 +874,7 @@
 
 <details class="item-detail"><summary><strong>A3</strong> · 空间向量坐标运算、平行垂直、模和夹角 · 强化训练</summary>
 
-- **课程**：3.1.1.1 空间向量的运算、3.1.3.1 空间直角坐标系、3.1.3.2 空间向量运算的坐标表示
+- **课程**：3.1.1.1 space_vector_ops、3.1.3.1 coordinate_system、3.1.3.2 coordinate_ops
 - **识别**：含未知分量的平行条件（A3）
 - **方法**：平行用同一比例因子，垂直用数量积为零；分小问隔离参数条件；本题锚点：含未知分量的平行条件（A3）
 - **第一行**：先设 \((1,x,y)=t(-1,0,-1)\)
@@ -887,7 +887,7 @@
 
 <details class="item-detail"><summary><strong>A4</strong> · 空间向量坐标运算、平行垂直、模和夹角 · 强化训练</summary>
 
-- **课程**：3.1.1.1 空间向量的运算、3.1.3.1 空间直角坐标系、3.1.3.2 空间向量运算的坐标表示
+- **课程**：3.1.1.1 space_vector_ops、3.1.3.1 coordinate_system、3.1.3.2 coordinate_ops
 - **识别**：两个三维向量夹角余弦（A4）
 - **方法**：统一用点积、模和方向向量处理长度与夹角，异面直线角单独检查方向；本题锚点：两个三维向量夹角余弦（A4）
 - **第一行**：先写 \(\cos\theta=\frac{\vec m\cdot\vec n}{|\vec m||\vec n|}\)
@@ -902,7 +902,7 @@
 
 ### 循环 4｜类型Ⅰ 基底表示与分解
 
-- **课程调用**：3.1.1.1 空间向量的运算、3.1.2.1 空间向量拆分法、3.1.2.2 空间向量等值面法、3.1.3.2 空间向量运算的坐标表示
+- **课程调用**：3.1.1.1 space_vector_ops、3.1.2.1 decomposition、3.1.2.2 equal_surface、3.1.3.2 coordinate_ops
 - **知识/类型**：按教材项目推进
 - **直属变式**：变式
 - **类型题**：例5
@@ -922,7 +922,7 @@
 
 <details class="item-detail"><summary><strong>例5</strong> · 类型Ⅰ 基底表示 · 类型题</summary>
 
-- **课程**：3.1.1.1 空间向量的运算、3.1.2.1 空间向量拆分法、3.1.2.2 空间向量等值面法、3.1.3.2 空间向量运算的坐标表示
+- **课程**：3.1.1.1 space_vector_ops、3.1.2.1 decomposition、3.1.2.2 equal_surface、3.1.3.2 coordinate_ops
 - **识别**：空间四边形中的基向量表示和分点（例5）
 - **方法**：以公共起点和基底系数表示向量，先检验不共面或系数独立，再完成分解；本题锚点：空间四边形中的基向量表示和分点（例5）
 - **第一行**：设 \(\overrightarrow{OM}=p\vec a+q\vec b+r\vec c\)，\(\overrightarrow{ON}=s\vec a+t\vec b+u\vec c\)
@@ -935,7 +935,7 @@
 
 <details class="item-detail"><summary><strong>变式</strong> · 类型Ⅰ 基底表示 · 直属变式</summary>
 
-- **课程**：3.1.1.1 空间向量的运算、3.1.2.1 空间向量拆分法、3.1.2.2 空间向量等值面法、3.1.3.2 空间向量运算的坐标表示
+- **课程**：3.1.1.1 space_vector_ops、3.1.2.1 decomposition、3.1.2.2 equal_surface、3.1.3.2 coordinate_ops
 - **识别**：四棱锥棱上分点的基底系数（变式）
 - **方法**：以公共起点和基底系数表示向量，先检验不共面或系数独立，再完成分解；本题锚点：四棱锥棱上分点的基底系数（变式）
 - **第一行**：设 \(E=P+t(C-P)\)，先写 \(\overrightarrow{AE}=\overrightarrow{AP}+t\overrightarrow{PC}\)
@@ -948,7 +948,7 @@
 
 <details class="item-detail"><summary><strong>B5</strong> · 类型Ⅰ 基底表示 · 强化训练</summary>
 
-- **课程**：3.1.1.1 空间向量的运算、3.1.2.1 空间向量拆分法、3.1.2.2 空间向量等值面法、3.1.3.2 空间向量运算的坐标表示
+- **课程**：3.1.1.1 space_vector_ops、3.1.2.1 decomposition、3.1.2.2 equal_surface、3.1.3.2 coordinate_ops
 - **识别**：M、N 在两条棱上且给出两组向量等式（B5）
 - **方法**：以公共起点和基底系数表示向量，先检验不共面或系数独立，再完成分解；本题锚点：M、N 在两条棱上且给出两组向量等式（B5）
 - **第一行**：分别设 \(\overrightarrow{OM}=t\vec a\)、\(\overrightarrow{ON}=(1-s)\vec b+s\vec c\)
@@ -961,7 +961,7 @@
 
 <details class="item-detail"><summary><strong>B9</strong> · 类型Ⅰ 基底表示 · 强化训练</summary>
 
-- **课程**：3.1.1.1 空间向量的运算、3.1.2.1 空间向量拆分法、3.1.2.2 空间向量等值面法、3.1.3.2 空间向量运算的坐标表示
+- **课程**：3.1.1.1 space_vector_ops、3.1.2.1 decomposition、3.1.2.2 equal_surface、3.1.3.2 coordinate_ops
 - **识别**：三棱锥底面重心的基底分解（B9）
 - **方法**：以公共起点和基底系数表示向量，先检验不共面或系数独立，再完成分解；本题锚点：三棱锥底面重心的基底分解（B9）
 - **第一行**：先写 \(\overrightarrow{PM}=x\overrightarrow{PA}+y\overrightarrow{PB}+z\overrightarrow{PC}\)，并另写重心的对称表示
@@ -976,7 +976,7 @@
 
 ### 循环 5｜类型Ⅱ 线性运算的坐标表示
 
-- **课程调用**：3.1.1.1 空间向量的运算、3.1.3.1 空间直角坐标系、3.1.3.2 空间向量运算的坐标表示
+- **课程调用**：3.1.1.1 space_vector_ops、3.1.3.1 coordinate_system、3.1.3.2 coordinate_ops
 - **知识/类型**：按教材项目推进
 - **类型题**：例6、例7
 
@@ -992,7 +992,7 @@
 
 <details class="item-detail"><summary><strong>例6</strong> · 类型Ⅱ 线性运算坐标表示 · 类型题</summary>
 
-- **课程**：3.1.1.1 空间向量的运算、3.1.3.1 空间直角坐标系、3.1.3.2 空间向量运算的坐标表示
+- **课程**：3.1.1.1 space_vector_ops、3.1.3.1 coordinate_system、3.1.3.2 coordinate_ops
 - **识别**：坐标向量加减、数乘、模和单位方向（例6）
 - **方法**：把线性组合拆成对应分量，保留向量结构并在模问题中先写平方和；本题锚点：坐标向量加减、数乘、模和单位方向（例6）
 - **第一行**：写 \(\lambda\vec a+\mu\vec b=(\lambda a_1+\mu b_1,\lambda a_2+\mu b_2,\lambda a_3+\mu b_3)\)
@@ -1005,7 +1005,7 @@
 
 <details class="item-detail"><summary><strong>例7</strong> · 类型Ⅱ 线性运算坐标表示 · 类型题</summary>
 
-- **课程**：3.1.1.1 空间向量的运算、3.1.3.1 空间直角坐标系、3.1.3.2 空间向量运算的坐标表示
+- **课程**：3.1.1.1 space_vector_ops、3.1.3.1 coordinate_system、3.1.3.2 coordinate_ops
 - **识别**：点坐标转方向向量或用闭合向量链求未知边（例7）
 - **方法**：把线性组合拆成对应分量，保留向量结构并在模问题中先写平方和；本题锚点：点坐标转方向向量或用闭合向量链求未知边（例7）
 - **第一行**：先列 \(\overrightarrow{AB}=B-A\)、\(\overrightarrow{CD}=D-C\) 的模板
@@ -1020,7 +1020,7 @@
 
 ### 循环 6｜类型Ⅲ 数量积的坐标表示
 
-- **课程调用**：3.1.3.1 空间直角坐标系、3.1.3.2 空间向量运算的坐标表示
+- **课程调用**：3.1.3.1 coordinate_system、3.1.3.2 coordinate_ops
 - **知识/类型**：按教材项目推进
 - **类型题**：例8、例9
 - **强化训练**：B7、B10
@@ -1039,7 +1039,7 @@
 
 <details class="item-detail"><summary><strong>例8</strong> · 类型Ⅲ 数量积坐标表示 · 类型题</summary>
 
-- **课程**：3.1.3.1 空间直角坐标系、3.1.3.2 空间向量运算的坐标表示
+- **课程**：3.1.3.1 coordinate_system、3.1.3.2 coordinate_ops
 - **识别**：向量和进入数量积表达式（例8）
 - **方法**：先用分配律或点积坐标公式展开，再逐分量相乘相加；本题锚点：向量和进入数量积表达式（例8）
 - **第一行**：先写 \(\vec a\cdot(\vec b+\vec c)=\vec a\cdot\vec b+\vec a\cdot\vec c\)
@@ -1052,7 +1052,7 @@
 
 <details class="item-detail"><summary><strong>例9</strong> · 类型Ⅲ 数量积坐标表示 · 类型题</summary>
 
-- **课程**：3.1.3.1 空间直角坐标系、3.1.3.2 空间向量运算的坐标表示
+- **课程**：3.1.3.1 coordinate_system、3.1.3.2 coordinate_ops
 - **识别**：向量在另一向量上的投影向量（例9）
 - **方法**：用目标方向的点积系数构造投影向量，始终保留投影方向；本题锚点：向量在另一向量上的投影向量（例9）
 - **第一行**：设投影为 \(\operatorname{proj}_{\vec b}\vec a=\frac{\vec a\cdot\vec b}{\vec b\cdot\vec b}\vec b\)
@@ -1065,7 +1065,7 @@
 
 <details class="item-detail"><summary><strong>B7</strong> · 类型Ⅲ 数量积坐标表示 · 强化训练</summary>
 
-- **课程**：3.1.3.1 空间直角坐标系、3.1.3.2 空间向量运算的坐标表示
+- **课程**：3.1.3.1 coordinate_system、3.1.3.2 coordinate_ops
 - **识别**：一个向量在另一个向量上的投影（B7）
 - **方法**：用目标方向的点积系数构造投影向量，始终保留投影方向；本题锚点：一个向量在另一个向量上的投影（B7）
 - **第一行**：写 \(\operatorname{proj}_{\vec a}\vec b=\frac{\vec a\cdot\vec b}{\vec a\cdot\vec a}\vec a\)
@@ -1078,7 +1078,7 @@
 
 <details class="item-detail"><summary><strong>B10</strong> · 类型Ⅲ 数量积坐标表示 · 强化训练</summary>
 
-- **课程**：3.1.3.1 空间直角坐标系、3.1.3.2 空间向量运算的坐标表示
+- **课程**：3.1.3.1 coordinate_system、3.1.3.2 coordinate_ops
 - **识别**：先由线性关系解未知向量再求点积（B10）
 - **方法**：先用分配律或点积坐标公式展开，再逐分量相乘相加；本题锚点：先由线性关系解未知向量再求点积（B10）
 - **第一行**：从 \(3\vec a-2\vec b=\vec d\) 开始，先写 \(\vec b=\frac{3\vec a-\vec d}{2}\)
@@ -1093,7 +1093,7 @@
 
 ### 循环 7｜类型Ⅳ 平行与垂直的坐标判定
 
-- **课程调用**：3.1.3.1 空间直角坐标系、3.1.3.2 空间向量运算的坐标表示
+- **课程调用**：3.1.3.1 coordinate_system、3.1.3.2 coordinate_ops
 - **知识/类型**：按教材项目推进
 - **直属变式**：变式1、变式2
 - **类型题**：例10
@@ -1114,7 +1114,7 @@
 
 <details class="item-detail"><summary><strong>例10</strong> · 类型Ⅳ 平行垂直 · 类型题</summary>
 
-- **课程**：3.1.3.1 空间直角坐标系、3.1.3.2 空间向量运算的坐标表示
+- **课程**：3.1.3.1 coordinate_system、3.1.3.2 coordinate_ops
 - **识别**：未知坐标和分小问的平行、垂直条件（例10）
 - **方法**：平行用同一比例因子，垂直用数量积为零；分小问隔离参数条件；本题锚点：未知坐标和分小问的平行、垂直条件（例10）
 - **第一行**：平行小问先设 \(\vec b=t\vec a\)，垂直小问先写 \(\vec a\cdot\vec b=0\)
@@ -1127,7 +1127,7 @@
 
 <details class="item-detail"><summary><strong>变式1</strong> · 类型Ⅳ 平行垂直 · 直属变式</summary>
 
-- **课程**：3.1.3.1 空间直角坐标系、3.1.3.2 空间向量运算的坐标表示
+- **课程**：3.1.3.1 coordinate_system、3.1.3.2 coordinate_ops
 - **识别**：三棱柱内垂直证明和平面平行证明（变式1）
 - **方法**：平行用同一比例因子，垂直用数量积为零；分小问隔离参数条件；本题锚点：三棱柱内垂直证明和平面平行证明（变式1）
 - **第一行**：先写 \(\vec u=\overrightarrow{C_1M}\)、\(\vec v=\overrightarrow{B_1D}\)，再列 \(\vec u\cdot\vec v\)
@@ -1140,7 +1140,7 @@
 
 <details class="item-detail"><summary><strong>变式2</strong> · 类型Ⅳ 平行垂直 · 直属变式</summary>
 
-- **课程**：3.1.3.1 空间直角坐标系、3.1.3.2 空间向量运算的坐标表示
+- **课程**：3.1.3.1 coordinate_system、3.1.3.2 coordinate_ops
 - **识别**：正方形底面四棱锥中的垂直与存在性（变式2）
 - **方法**：平行用同一比例因子，垂直用数量积为零；分小问隔离参数条件；本题锚点：正方形底面四棱锥中的垂直与存在性（变式2）
 - **第一行**：先写 \(\overrightarrow{AC}\)、\(\overrightarrow{SD}\)，再设 \(E=S+t(C-S)\)
@@ -1153,7 +1153,7 @@
 
 <details class="item-detail"><summary><strong>B12</strong> · 类型Ⅳ 平行垂直 · 强化训练</summary>
 
-- **课程**：3.1.3.1 空间直角坐标系、3.1.3.2 空间向量运算的坐标表示
+- **课程**：3.1.3.1 coordinate_system、3.1.3.2 coordinate_ops
 - **识别**：分小问处理平行约束模和垂直约束点积（B12）
 - **方法**：平行用同一比例因子，垂直用数量积为零；分小问隔离参数条件；本题锚点：分小问处理平行约束模和垂直约束点积（B12）
 - **第一行**：平行小问写 \(\vec a=t\vec c\)，垂直小问写 \(\vec b\cdot\vec c=0\)
@@ -1166,7 +1166,7 @@
 
 <details class="item-detail"><summary><strong>B13</strong> · 类型Ⅳ 平行垂直 · 强化训练</summary>
 
-- **课程**：3.1.3.1 空间直角坐标系、3.1.3.2 空间向量运算的坐标表示
+- **课程**：3.1.3.1 coordinate_system、3.1.3.2 coordinate_ops
 - **识别**：立方体中两个中点的垂直与夹角（B13）
 - **方法**：统一用点积、模和方向向量处理长度与夹角，异面直线角单独检查方向；本题锚点：立方体中两个中点的垂直与夹角（B13）
 - **第一行**：先设 \(E=\frac{D+D_1}{2}\)、\(F=\frac{B+D}{2}\)，再写三条方向向量
@@ -1181,7 +1181,7 @@
 
 ### 循环 8｜类型Ⅴ 夹角与模
 
-- **课程调用**：3.1.3.1 空间直角坐标系、3.1.3.2 空间向量运算的坐标表示
+- **课程调用**：3.1.3.1 coordinate_system、3.1.3.2 coordinate_ops
 - **知识/类型**：按教材项目推进
 - **直属变式**：变式
 - **类型题**：例11、例12、例13
@@ -1203,7 +1203,7 @@
 
 <details class="item-detail"><summary><strong>例11</strong> · 类型Ⅴ 夹角与模 · 类型题</summary>
 
-- **课程**：3.1.3.1 空间直角坐标系、3.1.3.2 空间向量运算的坐标表示
+- **课程**：3.1.3.1 coordinate_system、3.1.3.2 coordinate_ops
 - **识别**：平行垂直约束下求和向量的模与夹角（例11）
 - **方法**：统一用点积、模和方向向量处理长度与夹角，异面直线角单独检查方向；本题锚点：平行垂直约束下求和向量的模与夹角（例11）
 - **第一行**：先写 \(\vec b=t\vec c\) 与 \(\vec a\cdot\vec b=0\)，再设目标向量
@@ -1216,7 +1216,7 @@
 
 <details class="item-detail"><summary><strong>例12</strong> · 类型Ⅴ 夹角与模 · 类型题</summary>
 
-- **课程**：3.1.3.1 空间直角坐标系、3.1.3.2 空间向量运算的坐标表示
+- **课程**：3.1.3.1 coordinate_system、3.1.3.2 coordinate_ops
 - **识别**：长方体分点与异面直线夹角（例12）
 - **方法**：统一用点积、模和方向向量处理长度与夹角，异面直线角单独检查方向；本题锚点：长方体分点与异面直线夹角（例12）
 - **第一行**：先设三条棱方向为 \(\vec i,\vec j,\vec k\)，并写 \(E=\frac{A_1+C}{2}\)
@@ -1229,7 +1229,7 @@
 
 <details class="item-detail"><summary><strong>例13</strong> · 类型Ⅴ 夹角与模 · 类型题</summary>
 
-- **课程**：3.1.3.1 空间直角坐标系、3.1.3.2 空间向量运算的坐标表示
+- **课程**：3.1.3.1 coordinate_system、3.1.3.2 coordinate_ops
 - **识别**：两个点随同一参数运动且目标为长度最小（例13）
 - **方法**：把综合条件先转成坐标或向量参数，再用桥接的单变量、轨迹和边界检查完成范围分析；本题锚点：两个点随同一参数运动且目标为长度最小（例13）
 - **第一行**：先写 \(P=P_0+\lambda\vec u\)、\(Q=Q_0+\lambda\vec v\)，再列 \(|PQ|^2\)
@@ -1242,7 +1242,7 @@
 
 <details class="item-detail"><summary><strong>变式</strong> · 类型Ⅴ 夹角与模 · 直属变式</summary>
 
-- **课程**：3.1.3.1 空间直角坐标系、3.1.3.2 空间向量运算的坐标表示
+- **课程**：3.1.3.1 coordinate_system、3.1.3.2 coordinate_ops
 - **识别**：曲池图形的圆弧分点和异面直线夹角（变式）
 - **方法**：统一用点积、模和方向向量处理长度与夹角，异面直线角单独检查方向；本题锚点：曲池图形的圆弧分点和异面直线夹角（变式）
 - **第一行**：先按图设 \(E=E_0+t\overrightarrow{A_1D_1}\)，再写两条目标直线方向向量
@@ -1255,7 +1255,7 @@
 
 <details class="item-detail"><summary><strong>B6</strong> · 类型Ⅴ 夹角与模 · 强化训练</summary>
 
-- **课程**：3.1.3.1 空间直角坐标系、3.1.3.2 空间向量运算的坐标表示
+- **课程**：3.1.3.1 coordinate_system、3.1.3.2 coordinate_ops
 - **识别**：先平行确定参数再用垂直求模（B6）
 - **方法**：平行用同一比例因子，垂直用数量积为零；分小问隔离参数条件；本题锚点：先平行确定参数再用垂直求模（B6）
 - **第一行**：先写 \((1,y,1)=t(2,-4,2)\)，再写 \((x,1,1)\cdot(1,y,1)=0\)
@@ -1268,7 +1268,7 @@
 
 <details class="item-detail"><summary><strong>B11</strong> · 类型Ⅴ 夹角与模 · 强化训练</summary>
 
-- **课程**：3.1.3.1 空间直角坐标系、3.1.3.2 空间向量运算的坐标表示
+- **课程**：3.1.3.1 coordinate_system、3.1.3.2 coordinate_ops
 - **识别**：正交三棱锥中两条异面直线夹角（B11）
 - **方法**：统一用点积、模和方向向量处理长度与夹角，异面直线角单独检查方向；本题锚点：正交三棱锥中两条异面直线夹角（B11）
 - **第一行**：设 \(A=O\)，先写 \(M=\frac{B+C}{2}\)、\(N=\frac{D}{2}\)，再列方向向量
@@ -1283,7 +1283,7 @@
 
 ### 循环 9｜四点共面与截线系数综合（C14）
 
-- **课程调用**：3.1.2.1 空间向量拆分法、3.1.2.2 空间向量等值面法、3.1.3.2 空间向量运算的坐标表示
+- **课程调用**：3.1.2.1 decomposition、3.1.2.2 equal_surface、3.1.3.2 coordinate_ops
 - **知识/类型**：按教材项目推进
 - **强化训练**：C14
 
@@ -1298,7 +1298,7 @@
 
 <details class="item-detail"><summary><strong>C14</strong> · 本循环综合应用 · 强化训练</summary>
 
-- **课程**：3.1.2.1 空间向量拆分法、3.1.2.2 空间向量等值面法、3.1.3.2 空间向量运算的坐标表示
+- **课程**：3.1.2.1 decomposition、3.1.2.2 equal_surface、3.1.3.2 coordinate_ops
 - **识别**：底面重心、中点和三条侧棱截面共面（C14）
 - **方法**：以公共起点和基底系数表示向量，先检验不共面或系数独立，再完成分解；本题锚点：底面重心、中点和三条侧棱截面共面（C14）
 - **第一行**：先写 \(\overrightarrow{SG}=\frac{\overrightarrow{SA}+\overrightarrow{SB}+\overrightarrow{SC}}{3}\)，再表达 M
@@ -1313,7 +1313,7 @@
 
 ### 循环 10｜动点单变量化与阿波罗尼斯球综合（C15、C16）
 
-- **课程调用**：3.1.1.1 空间向量的运算、3.1.3.1 空间直角坐标系、3.1.3.2 空间向量运算的坐标表示
+- **课程调用**：3.1.1.1 space_vector_ops、3.1.3.1 coordinate_system、3.1.3.2 coordinate_ops
 - **知识/类型**：按教材项目推进
 - **强化训练**：C15、C16
 
@@ -1329,7 +1329,7 @@
 
 <details class="item-detail"><summary><strong>C15</strong> · 本循环综合应用 · 强化训练</summary>
 
-- **课程**：3.1.1.1 空间向量的运算、3.1.3.1 空间直角坐标系、3.1.3.2 空间向量运算的坐标表示
+- **课程**：3.1.1.1 space_vector_ops、3.1.3.1 coordinate_system、3.1.3.2 coordinate_ops
 - **识别**：两条正交单位方向与固定向量内积，目标为可调平面分量后的模（C15）
 - **方法**：把综合条件先转成坐标或向量参数，再用桥接的单变量、轨迹和边界检查完成范围分析；本题锚点：两条正交单位方向与固定向量内积，目标为可调平面分量后的模（C15）
 - **第一行**：设 \(\vec r=\vec c-m\vec a-n\vec b\)，先写 \(|\vec r|^2\) 并按正交条件展开
@@ -1342,7 +1342,7 @@
 
 <details class="item-detail"><summary><strong>C16</strong> · 本循环综合应用 · 强化训练</summary>
 
-- **课程**：3.1.1.1 空间向量的运算、3.1.3.1 空间直角坐标系、3.1.3.2 空间向量运算的坐标表示
+- **课程**：3.1.1.1 space_vector_ops、3.1.3.1 coordinate_system、3.1.3.2 coordinate_ops
 - **识别**：动点距离比约束与正方体内数量积范围（C16）
 - **方法**：把综合条件先转成坐标或向量参数，再用桥接的单变量、轨迹和边界检查完成范围分析；本题锚点：动点距离比约束与正方体内数量积范围（C16）
 - **第一行**：先设 \(P=(x,y,z)\)，写 \(|P-F|^2=4|P-E|^2\)，再展开目标点积
@@ -1358,12 +1358,12 @@
 ## 第3节 空间向量的应用
 
 - **状态**：未开始
-- **课程**：3.1.3.2 空间向量运算的坐标表示 → 3.1.3.3 直线的方向向量与平面的法向量 → 3.1.4.1 平行垂直证明 → 3.1.4.2 证明共面 → 3.1.4.3 向量夹角与直线夹角 → 3.1.4.4 直线与平面的夹角 → 3.1.4.5 平面与平面的夹角 → 3.1.4.6.a 平面方程与法向量（上） → 3.1.4.6.b 平面方程与法向量（下） → 3.1.4.7 距离问题 → 3.1.4.8 动点问题
+- **课程**：3.1.3.2 coordinate_ops → 3.1.3.3 direction_normal → 3.1.4.1 parallel_perpendicular → 3.1.4.2 coplanar → 3.1.4.3 line_line_angle → 3.1.4.4 line_plane_angle → 3.1.4.5 plane_plane_angle → 3.1.4.6.a plane_equation_upper → 3.1.4.6.b plane_equation_lower → 3.1.4.7 distance → 3.1.4.8 moving_point
 - **项目**：37 项
 
 ### 循环 1｜方向向量与平面的法向量
 
-- **课程调用**：3.1.3.2 空间向量运算的坐标表示、3.1.3.3 直线的方向向量与平面的法向量、3.1.4.1 平行垂直证明、3.1.4.2 证明共面
+- **课程调用**：3.1.3.2 coordinate_ops、3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.2 coplanar
 - **知识/类型**：点、直线、平面的向量表示、平面的法向量
 - **知识点右侧例题**：例1、例2、例3
 - **强化训练**：A2、B5
@@ -1383,7 +1383,7 @@
 
 <details class="item-detail"><summary><strong>例1</strong> · 点、直线、平面的向量表示 · 知识点右侧例题</summary>
 
-- **课程**：3.1.3.2 空间向量运算的坐标表示、3.1.3.3 直线的方向向量与平面的法向量、3.1.4.1 平行垂直证明、3.1.4.2 证明共面
+- **课程**：3.1.3.2 coordinate_ops、3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.2 coplanar
 - **识别**：题面给出两点坐标并要求判断直线方向向量；候选向量只需与两点作差所得向量共线且非零
 - **方法**：坐标作差得到基准方向向量，再用非零实数倍检验候选向量。
 - **第一行**：\overrightarrow{AB}=(x_B-x_A, y_B-y_A, z_B-z_A)
@@ -1396,7 +1396,7 @@
 
 <details class="item-detail"><summary><strong>例2</strong> · 点、直线、平面的向量表示 · 知识点右侧例题</summary>
 
-- **课程**：3.1.3.2 空间向量运算的坐标表示、3.1.3.3 直线的方向向量与平面的法向量、3.1.4.1 平行垂直证明、3.1.4.2 证明共面
+- **课程**：3.1.3.2 coordinate_ops、3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.2 coplanar
 - **识别**：点在平面内且要求位置向量的线性表示；系数和为1提示使用仿射分解而非随意三向量展开
 - **方法**：先用平面内两条不共线方向向量表示点，再把方向向量展开到三个位置向量并整理系数和。
 - **第一行**：\overrightarrow{OP}=\overrightarrow{OA}+s\overrightarrow{AB}+t\overrightarrow{AC}
@@ -1409,7 +1409,7 @@
 
 <details class="item-detail"><summary><strong>例3</strong> · 平面的法向量 · 知识点右侧例题</summary>
 
-- **课程**：3.1.3.2 空间向量运算的坐标表示、3.1.3.3 直线的方向向量与平面的法向量、3.1.4.1 平行垂直证明、3.1.4.2 证明共面
+- **课程**：3.1.3.2 coordinate_ops、3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.2 coplanar
 - **识别**：题面给平面内两个不共线向量并要求法向量；若出现坐标轴垂直于底面可直接选方向向量
 - **方法**：优先寻找已知垂线；找不到时设法向量并令其分别垂直于平面内两个不共线向量。
 - **第一行**：\mathbf m=(u,v,w),\quad \mathbf m\cdot\overrightarrow{BD}=0,\quad \mathbf m\cdot\overrightarrow{A_1D}=0
@@ -1422,7 +1422,7 @@
 
 <details class="item-detail"><summary><strong>A2</strong> · 点、直线、平面的向量表示、平面的法向量 · 强化训练</summary>
 
-- **课程**：3.1.3.2 空间向量运算的坐标表示、3.1.3.3 直线的方向向量与平面的法向量、3.1.4.1 平行垂直证明、3.1.4.2 证明共面
+- **课程**：3.1.3.2 coordinate_ops、3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.2 coplanar
 - **识别**：正方体中点和线面平行/垂直证明；先做中点坐标，再分别翻译线线垂直和线面平行
 - **方法**：统一建系写中点，先以数量积验证垂直，再把目标方向表示成目标平面内基向量组合并补位置条件。
 - **第一行**：\overrightarrow{EF}\cdot\overrightarrow{A_1D}=0;\quad \overrightarrow{EF}=\lambda\mathbf e_1+\mu\mathbf e_2
@@ -1435,7 +1435,7 @@
 
 <details class="item-detail"><summary><strong>B5</strong> · 点、直线、平面的向量表示、平面的法向量 · 强化训练</summary>
 
-- **课程**：3.1.3.2 空间向量运算的坐标表示、3.1.3.3 直线的方向向量与平面的法向量、3.1.4.1 平行垂直证明、3.1.4.2 证明共面
+- **课程**：3.1.3.2 coordinate_ops、3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.2 coplanar
 - **识别**：平行六面体三条棱等长且夹角已知，要求长度和线面垂直；用三条基向量数量积展开长度平方和垂直条件
 - **方法**：以 A 为原点用三条棱向量作基底，先展开目标向量模平方，再写目标线与平面内两向量的数量积。
 - **第一行**：\overrightarrow{AC_1}=\mathbf a+\mathbf b+\mathbf c,\quad |\overrightarrow{AC_1}|^2=(\mathbf a+\mathbf b+\mathbf c)^2
@@ -1450,7 +1450,7 @@
 
 ### 循环 2｜向量方法在立体几何中的应用
 
-- **课程调用**：3.1.3.2 空间向量运算的坐标表示、3.1.3.3 直线的方向向量与平面的法向量、3.1.4.1 平行垂直证明、3.1.4.2 证明共面、3.1.4.3 向量夹角与直线夹角、3.1.4.4 直线与平面的夹角、3.1.4.5 平面与平面的夹角、3.1.4.6.a 平面方程与法向量（上）、3.1.4.6.b 平面方程与法向量（下）、3.1.4.7 距离问题
+- **课程调用**：3.1.3.2 coordinate_ops、3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.2 coplanar、3.1.4.3 line_line_angle、3.1.4.4 line_plane_angle、3.1.4.5 plane_plane_angle、3.1.4.6.a plane_equation_upper、3.1.4.6.b plane_equation_lower、3.1.4.7 distance
 - **知识/类型**：向量法应用、平行垂直、空间角、距离与位置关系
 - **知识点右侧例题**：例4、例5、例6、例7、例8、例9、例10
 
@@ -1471,7 +1471,7 @@
 
 <details class="item-detail"><summary><strong>例4</strong> · 向量法应用、平行垂直、空间角、距离与位置关系 · 知识点右侧例题</summary>
 
-- **课程**：3.1.3.2 空间向量运算的坐标表示、3.1.3.3 直线的方向向量与平面的法向量、3.1.4.1 平行垂直证明、3.1.4.2 证明共面、3.1.4.3 向量夹角与直线夹角、3.1.4.4 直线与平面的夹角、3.1.4.5 平面与平面的夹角、3.1.4.6.a 平面方程与法向量（上）、3.1.4.6.b 平面方程与法向量（下）、3.1.4.7 距离问题
+- **课程**：3.1.3.2 coordinate_ops、3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.2 coplanar、3.1.4.3 line_line_angle、3.1.4.4 line_plane_angle、3.1.4.5 plane_plane_angle、3.1.4.6.a plane_equation_upper、3.1.4.6.b plane_equation_lower、3.1.4.7 distance
 - **识别**：题面给两平面的法向量并询问平行；平面平行转译为法向量平行
 - **方法**：把平面位置关系翻译成法向量的共线关系，再用对应分量或比例参数消去未知量。
 - **第一行**：\mathbf n=\lambda\mathbf m,\quad \lambda\ne0
@@ -1484,7 +1484,7 @@
 
 <details class="item-detail"><summary><strong>例5</strong> · 向量法应用、平行垂直、空间角、距离与位置关系 · 知识点右侧例题</summary>
 
-- **课程**：3.1.3.2 空间向量运算的坐标表示、3.1.3.3 直线的方向向量与平面的法向量、3.1.4.1 平行垂直证明、3.1.4.2 证明共面、3.1.4.3 向量夹角与直线夹角、3.1.4.4 直线与平面的夹角、3.1.4.5 平面与平面的夹角、3.1.4.6.a 平面方程与法向量（上）、3.1.4.6.b 平面方程与法向量（下）、3.1.4.7 距离问题
+- **课程**：3.1.3.2 coordinate_ops、3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.2 coplanar、3.1.4.3 line_line_angle、3.1.4.4 line_plane_angle、3.1.4.5 plane_plane_angle、3.1.4.6.a plane_equation_upper、3.1.4.6.b plane_equation_lower、3.1.4.7 distance
 - **识别**：同一题分别讨论线面平行和线面垂直；线面平行对应方向向量垂直法向量，线面垂直对应方向向量平行法向量
 - **方法**：分情况处理线面平行与线面垂直，分别使用数量积为零和向量共线，不能混用。
 - **第一行**：\mathbf a\cdot\mathbf b=0\quad\text{或}\quad\mathbf a=\lambda\mathbf b
@@ -1497,7 +1497,7 @@
 
 <details class="item-detail"><summary><strong>例6</strong> · 向量法应用、平行垂直、空间角、距离与位置关系 · 知识点右侧例题</summary>
 
-- **课程**：3.1.3.2 空间向量运算的坐标表示、3.1.3.3 直线的方向向量与平面的法向量、3.1.4.1 平行垂直证明、3.1.4.2 证明共面、3.1.4.3 向量夹角与直线夹角、3.1.4.4 直线与平面的夹角、3.1.4.5 平面与平面的夹角、3.1.4.6.a 平面方程与法向量（上）、3.1.4.6.b 平面方程与法向量（下）、3.1.4.7 距离问题
+- **课程**：3.1.3.2 coordinate_ops、3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.2 coplanar、3.1.4.3 line_line_angle、3.1.4.4 line_plane_angle、3.1.4.5 plane_plane_angle、3.1.4.6.a plane_equation_upper、3.1.4.6.b plane_equation_lower、3.1.4.7 distance
 - **识别**：两条直线给出方向向量并求夹角；直线夹角取不大于直角的角，数量积需要绝对值
 - **方法**：用两方向向量的数量积求夹角余弦，取绝对值并用模长归一化。
 - **第一行**：\cos\theta=\frac{|\mathbf s_1\cdot\mathbf s_2|}{|\mathbf s_1||\mathbf s_2|}
@@ -1510,7 +1510,7 @@
 
 <details class="item-detail"><summary><strong>例7</strong> · 向量法应用、平行垂直、空间角、距离与位置关系 · 知识点右侧例题</summary>
 
-- **课程**：3.1.3.2 空间向量运算的坐标表示、3.1.3.3 直线的方向向量与平面的法向量、3.1.4.1 平行垂直证明、3.1.4.2 证明共面、3.1.4.3 向量夹角与直线夹角、3.1.4.4 直线与平面的夹角、3.1.4.5 平面与平面的夹角、3.1.4.6.a 平面方程与法向量（上）、3.1.4.6.b 平面方程与法向量（下）、3.1.4.7 距离问题
+- **课程**：3.1.3.2 coordinate_ops、3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.2 coplanar、3.1.4.3 line_line_angle、3.1.4.4 line_plane_angle、3.1.4.5 plane_plane_angle、3.1.4.6.a plane_equation_upper、3.1.4.6.b plane_equation_lower、3.1.4.7 distance
 - **识别**：一个点在平面外、另一个点在平面内且给出平面法向量；点到面距离是连接向量在法向方向上的投影
 - **方法**：选取平面内点构造连接向量，再投影到法向量并除以法向量模长。
 - **第一行**：d=\frac{|\overrightarrow{BA}\cdot\mathbf n|}{|\mathbf n|}
@@ -1523,7 +1523,7 @@
 
 <details class="item-detail"><summary><strong>例8</strong> · 向量法应用、平行垂直、空间角、距离与位置关系 · 知识点右侧例题</summary>
 
-- **课程**：3.1.3.2 空间向量运算的坐标表示、3.1.3.3 直线的方向向量与平面的法向量、3.1.4.1 平行垂直证明、3.1.4.2 证明共面、3.1.4.3 向量夹角与直线夹角、3.1.4.4 直线与平面的夹角、3.1.4.5 平面与平面的夹角、3.1.4.6.a 平面方程与法向量（上）、3.1.4.6.b 平面方程与法向量（下）、3.1.4.7 距离问题
+- **课程**：3.1.3.2 coordinate_ops、3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.2 coplanar、3.1.4.3 line_line_angle、3.1.4.4 line_plane_angle、3.1.4.5 plane_plane_angle、3.1.4.6.a plane_equation_upper、3.1.4.6.b plane_equation_lower、3.1.4.7 distance
 - **识别**：直线给方向向量、平面给法向量并求线面角；线面角是方向向量与法向量夹角的余角
 - **方法**：先求方向向量与法向量夹角的余弦，再用线面角正弦等于该绝对余弦。
 - **第一行**：\sin\theta=\frac{|\mathbf s\cdot\mathbf n|}{|\mathbf s||\mathbf n|}
@@ -1536,7 +1536,7 @@
 
 <details class="item-detail"><summary><strong>例9</strong> · 向量法应用、平行垂直、空间角、距离与位置关系 · 知识点右侧例题</summary>
 
-- **课程**：3.1.3.2 空间向量运算的坐标表示、3.1.3.3 直线的方向向量与平面的法向量、3.1.4.1 平行垂直证明、3.1.4.2 证明共面、3.1.4.3 向量夹角与直线夹角、3.1.4.4 直线与平面的夹角、3.1.4.5 平面与平面的夹角、3.1.4.6.a 平面方程与法向量（上）、3.1.4.6.b 平面方程与法向量（下）、3.1.4.7 距离问题
+- **课程**：3.1.3.2 coordinate_ops、3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.2 coplanar、3.1.4.3 line_line_angle、3.1.4.4 line_plane_angle、3.1.4.5 plane_plane_angle、3.1.4.6.a plane_equation_upper、3.1.4.6.b plane_equation_lower、3.1.4.7 distance
 - **识别**：同一知识块同时出现线线角、线面角和面面角的公式整理；先按题问对象选择方向向量或法向量
 - **方法**：先分类角的对象，再分别调用方向向量数量积、方向向量与法向量投影、两个法向量夹角三条公式。
 - **第一行**：\text{先分类对象，再写 }\mathbf u,\mathbf v\text{ 或 }\mathbf s,\mathbf n\text{ 的数量积式}
@@ -1549,7 +1549,7 @@
 
 <details class="item-detail"><summary><strong>例10</strong> · 向量法应用、平行垂直、空间角、距离与位置关系 · 知识点右侧例题</summary>
 
-- **课程**：3.1.3.2 空间向量运算的坐标表示、3.1.3.3 直线的方向向量与平面的法向量、3.1.4.1 平行垂直证明、3.1.4.2 证明共面、3.1.4.3 向量夹角与直线夹角、3.1.4.4 直线与平面的夹角、3.1.4.5 平面与平面的夹角、3.1.4.6.a 平面方程与法向量（上）、3.1.4.6.b 平面方程与法向量（下）、3.1.4.7 距离问题
+- **课程**：3.1.3.2 coordinate_ops、3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.2 coplanar、3.1.4.3 line_line_angle、3.1.4.4 line_plane_angle、3.1.4.5 plane_plane_angle、3.1.4.6.a plane_equation_upper、3.1.4.6.b plane_equation_lower、3.1.4.7 distance
 - **识别**：四棱锥中给垂直底面条件、底面矩形和中点，要求二面角；二面角需要两个面的法向量并判断锐钝
 - **方法**：建系后写出两个目标平面的两条面内向量，求各自法向量，再用法向量夹角并做几何锐钝裁决。
 - **第一行**：\mathbf m_1\perp\Pi_1,\quad \mathbf m_2\perp\Pi_2,\quad \cos\varphi=\frac{|\mathbf m_1\cdot\mathbf m_2|}{|\mathbf m_1||\mathbf m_2|}
@@ -1564,7 +1564,7 @@
 
 ### 循环 3｜类型ⅠⅡ 平行与垂直证明
 
-- **课程调用**：3.1.3.2 空间向量运算的坐标表示、3.1.3.3 直线的方向向量与平面的法向量、3.1.4.1 平行垂直证明、3.1.4.2 证明共面、3.1.4.5 平面与平面的夹角
+- **课程调用**：3.1.3.2 coordinate_ops、3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.2 coplanar、3.1.4.5 plane_plane_angle
 - **知识/类型**：按教材项目推进
 - **类型题**：例11、例12、例13、例14
 - **强化训练**：B4
@@ -1584,7 +1584,7 @@
 
 <details class="item-detail"><summary><strong>例11</strong> · 类型Ⅰ 研究平行关系 · 类型题</summary>
 
-- **课程**：3.1.3.2 空间向量运算的坐标表示、3.1.3.3 直线的方向向量与平面的法向量、3.1.4.1 平行垂直证明、3.1.4.2 证明共面、3.1.4.5 平面与平面的夹角
+- **课程**：3.1.3.2 coordinate_ops、3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.2 coplanar、3.1.4.5 plane_plane_angle
 - **识别**：目标是直线平行平面且题目给长方体和中点；可把目标方向写成平面内两方向向量的线性组合
 - **方法**：先建系或用基底写目标直线方向，再证明其属于目标平面的方向子空间，并确认直线不在该平面内。
 - **第一行**：\overrightarrow{A_1P}=\lambda\overrightarrow{AC}+\mu\overrightarrow{AD_1}
@@ -1597,7 +1597,7 @@
 
 <details class="item-detail"><summary><strong>例12</strong> · 类型Ⅰ 研究平行关系 · 类型题</summary>
 
-- **课程**：3.1.3.2 空间向量运算的坐标表示、3.1.3.3 直线的方向向量与平面的法向量、3.1.4.1 平行垂直证明、3.1.4.2 证明共面、3.1.4.5 平面与平面的夹角
+- **课程**：3.1.3.2 coordinate_ops、3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.2 coplanar、3.1.4.5 plane_plane_angle
 - **识别**：等腰梯形直棱柱中用向量证明平行关系；底面平行边和中点信息用于构造同方向向量
 - **方法**：用底面平行关系建立基底，再将目标向量拆成平面内两个不共线向量的组合。
 - **第一行**：\overrightarrow{\text{目标线}}=\lambda\mathbf e_1+\mu\mathbf e_2,\quad \mathbf e_1,\mathbf e_2\in\Pi
@@ -1610,7 +1610,7 @@
 
 <details class="item-detail"><summary><strong>例13</strong> · 类型Ⅱ 研究垂直关系 · 类型题</summary>
 
-- **课程**：3.1.3.2 空间向量运算的坐标表示、3.1.3.3 直线的方向向量与平面的法向量、3.1.4.1 平行垂直证明、3.1.4.2 证明共面、3.1.4.5 平面与平面的夹角
+- **课程**：3.1.3.2 coordinate_ops、3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.2 coplanar、3.1.4.5 plane_plane_angle
 - **识别**：要求证明两个平面垂直；平面垂直可转成两个法向量垂直或找一面内线垂直另一面
 - **方法**：分别为两个平面构造法向量，再用数量积为零完成面面垂直证明。
 - **第一行**：\mathbf m_1\perp\Pi_1,\quad \mathbf m_2\perp\Pi_2,\quad \mathbf m_1\cdot\mathbf m_2=0
@@ -1623,7 +1623,7 @@
 
 <details class="item-detail"><summary><strong>例14</strong> · 类型Ⅱ 研究垂直关系 · 类型题</summary>
 
-- **课程**：3.1.3.2 空间向量运算的坐标表示、3.1.3.3 直线的方向向量与平面的法向量、3.1.4.1 平行垂直证明、3.1.4.2 证明共面、3.1.4.5 平面与平面的夹角
+- **课程**：3.1.3.2 coordinate_ops、3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.2 coplanar、3.1.4.5 plane_plane_angle
 - **识别**：目标是一条线垂直一个平面且题面给平行六面体/菱形；线面垂直等价于目标方向垂直平面内两条不共线方向
 - **方法**：写目标直线方向并选目标平面内两条不共线向量，逐一验证数量积为零。
 - **第一行**：\overrightarrow{CA_1}\cdot\mathbf e_1=0,\quad \overrightarrow{CA_1}\cdot\mathbf e_2=0
@@ -1636,7 +1636,7 @@
 
 <details class="item-detail"><summary><strong>B4</strong> · 类型Ⅰ 研究平行关系、类型Ⅱ 研究垂直关系 · 强化训练</summary>
 
-- **课程**：3.1.3.2 空间向量运算的坐标表示、3.1.3.3 直线的方向向量与平面的法向量、3.1.4.1 平行垂直证明、3.1.4.2 证明共面、3.1.4.5 平面与平面的夹角
+- **课程**：3.1.3.2 coordinate_ops、3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.2 coplanar、3.1.4.5 plane_plane_angle
 - **识别**：四棱锥中先证线线垂直再由面面垂直反求长度；底面菱形和顶点垂直条件适合坐标法
 - **方法**：让垂直底面的棱落在坐标轴，写目标线向量；再为两个目标平面求法向量并列面面垂直条件。
 - **第一行**：\overrightarrow{AC}\cdot\overrightarrow{PB}=0;\quad \mathbf n_{PAB}\cdot\mathbf n_{PBC}=0
@@ -1651,7 +1651,7 @@
 
 ### 循环 4｜类型Ⅲ 求空间角
 
-- **课程调用**：3.1.3.2 空间向量运算的坐标表示、3.1.3.3 直线的方向向量与平面的法向量、3.1.4.1 平行垂直证明、3.1.4.3 向量夹角与直线夹角、3.1.4.4 直线与平面的夹角、3.1.4.5 平面与平面的夹角、3.1.4.7 距离问题
+- **课程调用**：3.1.3.2 coordinate_ops、3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.3 line_line_angle、3.1.4.4 line_plane_angle、3.1.4.5 plane_plane_angle、3.1.4.7 distance
 - **知识/类型**：按教材项目推进
 - **直属变式**：变式1、变式2
 - **类型题**：例15、例16、例17
@@ -1676,7 +1676,7 @@
 
 <details class="item-detail"><summary><strong>例15</strong> · 类型Ⅲ 求空间角 · 类型题</summary>
 
-- **课程**：3.1.3.2 空间向量运算的坐标表示、3.1.3.3 直线的方向向量与平面的法向量、3.1.4.1 平行垂直证明、3.1.4.3 向量夹角与直线夹角、3.1.4.4 直线与平面的夹角、3.1.4.5 平面与平面的夹角、3.1.4.7 距离问题
+- **课程**：3.1.3.2 coordinate_ops、3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.3 line_line_angle、3.1.4.4 line_plane_angle、3.1.4.5 plane_plane_angle、3.1.4.7 distance
 - **识别**：两条空间直线给出棱柱和坐标条件并求所成角的正弦；先求方向向量夹角余弦，再由平方关系换成正弦
 - **方法**：用坐标写两条直线方向向量，数量积求余弦，最后用正弦平方恒等式并保留锐角范围。
 - **第一行**：\mathbf s_1=\overrightarrow{BC_1},\quad \mathbf s_2=\overrightarrow{AB_1},\quad \sin^2\theta=1-\cos^2\theta
@@ -1689,7 +1689,7 @@
 
 <details class="item-detail"><summary><strong>例16</strong> · 类型Ⅲ 求空间角 · 类型题</summary>
 
-- **课程**：3.1.3.2 空间向量运算的坐标表示、3.1.3.3 直线的方向向量与平面的法向量、3.1.4.1 平行垂直证明、3.1.4.3 向量夹角与直线夹角、3.1.4.4 直线与平面的夹角、3.1.4.5 平面与平面的夹角、3.1.4.7 距离问题
+- **课程**：3.1.3.2 coordinate_ops、3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.3 line_line_angle、3.1.4.4 line_plane_angle、3.1.4.5 plane_plane_angle、3.1.4.7 distance
 - **识别**：直线与平面夹角且图形含中点；使用直线方向向量与平面法向量的投影公式
 - **方法**：建立正方体坐标系，写目标直线方向和目标平面两个方向，求法向量后使用线面角公式。
 - **第一行**：\mathbf s=\overrightarrow{AC_1},\quad \mathbf n\perp\Pi,\quad \sin\theta=\frac{|\mathbf s\cdot\mathbf n|}{|\mathbf s||\mathbf n|}
@@ -1702,7 +1702,7 @@
 
 <details class="item-detail"><summary><strong>例17</strong> · 类型Ⅲ 求空间角 · 类型题</summary>
 
-- **课程**：3.1.3.2 空间向量运算的坐标表示、3.1.3.3 直线的方向向量与平面的法向量、3.1.4.1 平行垂直证明、3.1.4.3 向量夹角与直线夹角、3.1.4.4 直线与平面的夹角、3.1.4.5 平面与平面的夹角、3.1.4.7 距离问题
+- **课程**：3.1.3.2 coordinate_ops、3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.3 line_line_angle、3.1.4.4 line_plane_angle、3.1.4.5 plane_plane_angle、3.1.4.7 distance
 - **识别**：同题先证线线垂直再求两个平面夹角；两个小问共享坐标系和中点向量
 - **方法**：一次建系复用坐标；第一问做数量积垂直，第二问分别求两个平面法向量并判断指定二面角。
 - **第一行**：\overrightarrow{AC}\cdot\overrightarrow{PE}=0;\quad \mathbf n_1\perp\Pi_1,\ \mathbf n_2\perp\Pi_2
@@ -1715,7 +1715,7 @@
 
 <details class="item-detail"><summary><strong>变式1</strong> · 类型Ⅲ 求空间角 · 直属变式</summary>
 
-- **课程**：3.1.3.2 空间向量运算的坐标表示、3.1.3.3 直线的方向向量与平面的法向量、3.1.4.1 平行垂直证明、3.1.4.3 向量夹角与直线夹角、3.1.4.4 直线与平面的夹角、3.1.4.5 平面与平面的夹角、3.1.4.7 距离问题
+- **课程**：3.1.3.2 coordinate_ops、3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.3 line_line_angle、3.1.4.4 line_plane_angle、3.1.4.5 plane_plane_angle、3.1.4.7 distance
 - **识别**：平面图形沿折痕折成立体图形并求长度与二面角；折前长度和角度守恒，折后用向量或截面处理
 - **方法**：先建立翻折守恒桥接，确认折痕和不变量，再在折后空间中用垂直关系和两个面法向量求二面角。
 - **第一行**：\text{先列折前守恒量，再写折后 }\mathbf n_1,\mathbf n_2\text{ 与二面角公式}
@@ -1728,7 +1728,7 @@
 
 <details class="item-detail"><summary><strong>变式2</strong> · 类型Ⅲ 求空间角 · 直属变式</summary>
 
-- **课程**：3.1.3.2 空间向量运算的坐标表示、3.1.3.3 直线的方向向量与平面的法向量、3.1.4.1 平行垂直证明、3.1.4.3 向量夹角与直线夹角、3.1.4.4 直线与平面的夹角、3.1.4.5 平面与平面的夹角、3.1.4.7 距离问题
+- **课程**：3.1.3.2 coordinate_ops、3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.3 line_line_angle、3.1.4.4 line_plane_angle、3.1.4.5 plane_plane_angle、3.1.4.7 distance
 - **识别**：四面体顶点在以直径为条件的球面上并求二面角；直径条件可转为圆周/球面中的垂直结构，随后使用坐标和法向量
 - **方法**：先用球面与直径条件建立几何约束，再选坐标表示底面和球心，最后用两个目标面的法向量求二面角。
 - **第一行**：\text{先写球面约束与底面基底，再写 }\mathbf n_1,\mathbf n_2\text{ 的数量积式}
@@ -1741,7 +1741,7 @@
 
 <details class="item-detail"><summary><strong>A1</strong> · 类型Ⅲ 求空间角 · 强化训练</summary>
 
-- **课程**：3.1.3.2 空间向量运算的坐标表示、3.1.3.3 直线的方向向量与平面的法向量、3.1.4.1 平行垂直证明、3.1.4.3 向量夹角与直线夹角、3.1.4.4 直线与平面的夹角、3.1.4.5 平面与平面的夹角、3.1.4.7 距离问题
+- **课程**：3.1.3.2 coordinate_ops、3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.3 line_line_angle、3.1.4.4 line_plane_angle、3.1.4.5 plane_plane_angle、3.1.4.7 distance
 - **识别**：A组复现两方向向量的直线夹角基础模型；与例6同方法但必须独立从题面识别
 - **方法**：调用直线夹角数量积公式，先取方向向量再取绝对值。
 - **第一行**：\cos\theta=\frac{|\mathbf s_1\cdot\mathbf s_2|}{|\mathbf s_1||\mathbf s_2|}
@@ -1754,7 +1754,7 @@
 
 <details class="item-detail"><summary><strong>B3</strong> · 类型Ⅲ 求空间角 · 强化训练</summary>
 
-- **课程**：3.1.3.2 空间向量运算的坐标表示、3.1.3.3 直线的方向向量与平面的法向量、3.1.4.1 平行垂直证明、3.1.4.3 向量夹角与直线夹角、3.1.4.4 直线与平面的夹角、3.1.4.5 平面与平面的夹角、3.1.4.7 距离问题
+- **课程**：3.1.3.2 coordinate_ops、3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.3 line_line_angle、3.1.4.4 line_plane_angle、3.1.4.5 plane_plane_angle、3.1.4.7 distance
 - **识别**：长方体中给直线夹角余弦反求高度参数；坐标化后未知量只进入方向向量和模长
 - **方法**：以底面为 xy 平面、竖棱为 z 轴写两方向向量，列直线夹角公式并联立长度定义域。
 - **第一行**：\cos\theta=\frac{|\overrightarrow{AB_1}\cdot\overrightarrow{BD_1}|}{|\overrightarrow{AB_1}||\overrightarrow{BD_1}|}
@@ -1767,7 +1767,7 @@
 
 <details class="item-detail"><summary><strong>B6</strong> · 类型Ⅲ 求空间角 · 强化训练</summary>
 
-- **课程**：3.1.3.2 空间向量运算的坐标表示、3.1.3.3 直线的方向向量与平面的法向量、3.1.4.1 平行垂直证明、3.1.4.3 向量夹角与直线夹角、3.1.4.4 直线与平面的夹角、3.1.4.5 平面与平面的夹角、3.1.4.7 距离问题
+- **课程**：3.1.3.2 coordinate_ops、3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.3 line_line_angle、3.1.4.4 line_plane_angle、3.1.4.5 plane_plane_angle、3.1.4.7 distance
 - **识别**：四棱锥含面面垂直、等腰直角三角形和线面角；先处理公共棱截面，再用法向量或方向向量
 - **方法**：把面面垂直条件用于选坐标平面，写直线方向和目标平面法向量，依次处理垂直关系与线面角。
 - **第一行**：\Pi_1\perp\Pi_2;\quad \sin\theta=\frac{|\mathbf s\cdot\mathbf n_{PBC}|}{|\mathbf s||\mathbf n_{PBC}|}
@@ -1780,7 +1780,7 @@
 
 <details class="item-detail"><summary><strong>B7</strong> · 类型Ⅲ 求空间角 · 强化训练</summary>
 
-- **课程**：3.1.3.2 空间向量运算的坐标表示、3.1.3.3 直线的方向向量与平面的法向量、3.1.4.1 平行垂直证明、3.1.4.3 向量夹角与直线夹角、3.1.4.4 直线与平面的夹角、3.1.4.5 平面与平面的夹角、3.1.4.7 距离问题
+- **课程**：3.1.3.2 coordinate_ops、3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.3 line_line_angle、3.1.4.4 line_plane_angle、3.1.4.5 plane_plane_angle、3.1.4.7 distance
 - **识别**：菱形底面、正三角侧面和动点中点，求体积与线面角；中点参数只影响目标方向或高度
 - **方法**：先用底面和正三角形条件建立基底，体积用底面积乘高，角度用目标方向与平面法向量。
 - **第一行**：\mathbf s=\overrightarrow{AM},\quad \sin\theta=\frac{|\mathbf s\cdot\mathbf n_{PBC}|}{|\mathbf s||\mathbf n_{PBC}|}
@@ -1795,7 +1795,7 @@
 
 ### 循环 5｜类型Ⅳ 距离问题
 
-- **课程调用**：3.1.3.2 空间向量运算的坐标表示、3.1.3.3 直线的方向向量与平面的法向量、3.1.4.1 平行垂直证明、3.1.4.4 直线与平面的夹角、3.1.4.5 平面与平面的夹角、3.1.4.6.a 平面方程与法向量（上）、3.1.4.6.b 平面方程与法向量（下）、3.1.4.7 距离问题
+- **课程调用**：3.1.3.2 coordinate_ops、3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.4 line_plane_angle、3.1.4.5 plane_plane_angle、3.1.4.6.a plane_equation_upper、3.1.4.6.b plane_equation_lower、3.1.4.7 distance
 - **知识/类型**：按教材项目推进
 - **直属变式**：变式
 - **类型题**：例18、例19、例20
@@ -1817,7 +1817,7 @@
 
 <details class="item-detail"><summary><strong>例18</strong> · 类型Ⅳ 求距离 · 类型题</summary>
 
-- **课程**：3.1.3.2 空间向量运算的坐标表示、3.1.3.3 直线的方向向量与平面的法向量、3.1.4.1 平行垂直证明、3.1.4.4 直线与平面的夹角、3.1.4.5 平面与平面的夹角、3.1.4.6.a 平面方程与法向量（上）、3.1.4.6.b 平面方程与法向量（下）、3.1.4.7 距离问题
+- **课程**：3.1.3.2 coordinate_ops、3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.4 line_plane_angle、3.1.4.5 plane_plane_angle、3.1.4.6.a plane_equation_upper、3.1.4.6.b plane_equation_lower、3.1.4.7 distance
 - **识别**：点和直线上两点坐标给出，要求点到直线距离；用叉积面积或投影正交分解均可
 - **方法**：先取直线方向向量，再用点到直线的向量投影或叉积模长除以方向向量模长。
 - **第一行**：\mathbf s=\overrightarrow{BC},\quad d=\frac{|\overrightarrow{BA}\times\mathbf s|}{|\mathbf s|}
@@ -1830,7 +1830,7 @@
 
 <details class="item-detail"><summary><strong>例19</strong> · 类型Ⅳ 求距离 · 类型题</summary>
 
-- **课程**：3.1.3.2 空间向量运算的坐标表示、3.1.3.3 直线的方向向量与平面的法向量、3.1.4.1 平行垂直证明、3.1.4.4 直线与平面的夹角、3.1.4.5 平面与平面的夹角、3.1.4.6.a 平面方程与法向量（上）、3.1.4.6.b 平面方程与法向量（下）、3.1.4.7 距离问题
+- **课程**：3.1.3.2 coordinate_ops、3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.4 line_plane_angle、3.1.4.5 plane_plane_angle、3.1.4.6.a plane_equation_upper、3.1.4.6.b plane_equation_lower、3.1.4.7 distance
 - **识别**：三棱锥中先证线面平行再求点到直线距离；中点关系同时服务两个小问
 - **方法**：用坐标或向量处理中点；第一问把目标方向表示成平面内组合，第二问转为点线距离。
 - **第一行**：\overrightarrow{MN}=\lambda\overrightarrow{BD}+\mu\overrightarrow{BE};\quad d(N,ME)=\frac{|\overrightarrow{MN}\times\overrightarrow{ME}|}{|\overrightarrow{ME}|}
@@ -1843,7 +1843,7 @@
 
 <details class="item-detail"><summary><strong>例20</strong> · 类型Ⅳ 求距离 · 类型题</summary>
 
-- **课程**：3.1.3.2 空间向量运算的坐标表示、3.1.3.3 直线的方向向量与平面的法向量、3.1.4.1 平行垂直证明、3.1.4.4 直线与平面的夹角、3.1.4.5 平面与平面的夹角、3.1.4.6.a 平面方程与法向量（上）、3.1.4.6.b 平面方程与法向量（下）、3.1.4.7 距离问题
+- **课程**：3.1.3.2 coordinate_ops、3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.4 line_plane_angle、3.1.4.5 plane_plane_angle、3.1.4.6.a plane_equation_upper、3.1.4.6.b plane_equation_lower、3.1.4.7 distance
 - **识别**：梯形四棱柱中同时求线面平行和点面距离；先构造目标平面法向量可同时服务两个小问
 - **方法**：统一建系，先将目标线方向写成平面内组合，再由平面法向量对点面距离做投影。
 - **第一行**：\overrightarrow{D_1N}=\lambda\mathbf e_1+\mu\mathbf e_2;\quad d(B,\Pi)=\frac{|\overrightarrow{XB}\cdot\mathbf n_\Pi|}{|\mathbf n_\Pi|}
@@ -1856,7 +1856,7 @@
 
 <details class="item-detail"><summary><strong>变式</strong> · 类型Ⅳ 求距离 · 直属变式</summary>
 
-- **课程**：3.1.3.2 空间向量运算的坐标表示、3.1.3.3 直线的方向向量与平面的法向量、3.1.4.1 平行垂直证明、3.1.4.4 直线与平面的夹角、3.1.4.5 平面与平面的夹角、3.1.4.6.a 平面方程与法向量（上）、3.1.4.6.b 平面方程与法向量（下）、3.1.4.7 距离问题
+- **课程**：3.1.3.2 coordinate_ops、3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.4 line_plane_angle、3.1.4.5 plane_plane_angle、3.1.4.6.a plane_equation_upper、3.1.4.6.b plane_equation_lower、3.1.4.7 distance
 - **识别**：长方体中两条异面直线求距离；不能直接用点线距离，要先构造两方向的公垂向量
 - **方法**：求两条直线方向向量，设公垂向量同时垂直二者，再用两线上各取一点的连接向量投影。
 - **第一行**：\mathbf n\cdot\mathbf s_1=0,\quad \mathbf n\cdot\mathbf s_2=0,\quad d=\frac{|\overrightarrow{XY}\cdot\mathbf n|}{|\mathbf n|}
@@ -1869,7 +1869,7 @@
 
 <details class="item-detail"><summary><strong>B8</strong> · 类型Ⅳ 求距离 · 强化训练</summary>
 
-- **课程**：3.1.3.2 空间向量运算的坐标表示、3.1.3.3 直线的方向向量与平面的法向量、3.1.4.1 平行垂直证明、3.1.4.4 直线与平面的夹角、3.1.4.5 平面与平面的夹角、3.1.4.6.a 平面方程与法向量（上）、3.1.4.6.b 平面方程与法向量（下）、3.1.4.7 距离问题
+- **课程**：3.1.3.2 coordinate_ops、3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.4 line_plane_angle、3.1.4.5 plane_plane_angle、3.1.4.6.a plane_equation_upper、3.1.4.6.b plane_equation_lower、3.1.4.7 distance
 - **识别**：三棱柱中侧面菱形、面面垂直和线面垂直/角度综合；先用已知垂直关系固定坐标，再处理两种角对象
 - **方法**：利用两个垂直平面选坐标基底，写目标线方向和目标平面法向量，依次完成垂直证明与角度计算。
 - **第一行**：\mathbf s_{A_1B}\cdot\mathbf e_1=\mathbf s_{A_1B}\cdot\mathbf e_2=0
@@ -1882,7 +1882,7 @@
 
 <details class="item-detail"><summary><strong>C9</strong> · 类型Ⅳ 求距离 · 强化训练</summary>
 
-- **课程**：3.1.3.2 空间向量运算的坐标表示、3.1.3.3 直线的方向向量与平面的法向量、3.1.4.1 平行垂直证明、3.1.4.4 直线与平面的夹角、3.1.4.5 平面与平面的夹角、3.1.4.6.a 平面方程与法向量（上）、3.1.4.6.b 平面方程与法向量（下）、3.1.4.7 距离问题
+- **课程**：3.1.3.2 coordinate_ops、3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.4 line_plane_angle、3.1.4.5 plane_plane_angle、3.1.4.6.a plane_equation_upper、3.1.4.6.b plane_equation_lower、3.1.4.7 distance
 - **识别**：正四棱锥中两条异面直线求距离；异面距离必须用公垂向量或等价平面转化
 - **方法**：建立正四棱锥坐标，求两条直线方向和公垂向量，再做两线上锚点连接向量的投影；先补异面距离桥接。
 - **第一行**：\mathbf n\cdot\mathbf s_{PC}=0,\quad \mathbf n\cdot\mathbf s_{BD}=0,\quad d=\frac{|\overrightarrow{XY}\cdot\mathbf n|}{|\mathbf n|}
@@ -1897,7 +1897,7 @@
 
 ### 循环 6｜类型Ⅴ 动点与点线在面内判断
 
-- **课程调用**：3.1.3.2 空间向量运算的坐标表示、3.1.3.3 直线的方向向量与平面的法向量、3.1.4.1 平行垂直证明、3.1.4.2 证明共面、3.1.4.4 直线与平面的夹角、3.1.4.5 平面与平面的夹角、3.1.4.7 距离问题、3.1.4.8 动点问题
+- **课程调用**：3.1.3.2 coordinate_ops、3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.2 coplanar、3.1.4.4 line_plane_angle、3.1.4.5 plane_plane_angle、3.1.4.7 distance、3.1.4.8 moving_point
 - **知识/类型**：按教材项目推进
 - **类型题**：例21、例22
 - **强化训练**：C11
@@ -1915,7 +1915,7 @@
 
 <details class="item-detail"><summary><strong>例21</strong> · 类型Ⅴ 点线在面内判断 · 类型题</summary>
 
-- **课程**：3.1.3.2 空间向量运算的坐标表示、3.1.3.3 直线的方向向量与平面的法向量、3.1.4.1 平行垂直证明、3.1.4.2 证明共面、3.1.4.4 直线与平面的夹角、3.1.4.5 平面与平面的夹角、3.1.4.7 距离问题、3.1.4.8 动点问题
+- **课程**：3.1.3.2 coordinate_ops、3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.2 coplanar、3.1.4.4 line_plane_angle、3.1.4.5 plane_plane_angle、3.1.4.7 distance、3.1.4.8 moving_point
 - **识别**：要求证明一个点在指定平面内且题面给两个分点比例；可用补形构造平行四边形或直接做平面向量分解
 - **方法**：选择几何补点法或坐标法，把目标点相对平面基点的向量写成两条面内不共线向量的组合。
 - **第一行**：\overrightarrow{AC_1}=\lambda\overrightarrow{AE}+\mu\overrightarrow{AF}
@@ -1928,7 +1928,7 @@
 
 <details class="item-detail"><summary><strong>例22</strong> · 类型Ⅴ 点线在面内判断 · 类型题</summary>
 
-- **课程**：3.1.3.2 空间向量运算的坐标表示、3.1.3.3 直线的方向向量与平面的法向量、3.1.4.1 平行垂直证明、3.1.4.2 证明共面、3.1.4.4 直线与平面的夹角、3.1.4.5 平面与平面的夹角、3.1.4.7 距离问题、3.1.4.8 动点问题
+- **课程**：3.1.3.2 coordinate_ops、3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.2 coplanar、3.1.4.4 line_plane_angle、3.1.4.5 plane_plane_angle、3.1.4.7 distance、3.1.4.8 moving_point
 - **识别**：三棱柱综合题包含线面垂直、二面角和直线与平面相交；三小问共享同一坐标系但判定对象不同
 - **方法**：先统一坐标系；分别用方向向量/法向量解决垂直和二面角，再用直线参数式与平面方程或向量分解判断相交。
 - **第一行**：\mathbf s_{AC}\cdot\mathbf e_1=\mathbf s_{AC}\cdot\mathbf e_2=0;\quad \mathbf r(t)=\mathbf r_0+t\mathbf s
@@ -1941,7 +1941,7 @@
 
 <details class="item-detail"><summary><strong>C11</strong> · 类型Ⅴ 点线在面内判断 · 强化训练</summary>
 
-- **课程**：3.1.3.2 空间向量运算的坐标表示、3.1.3.3 直线的方向向量与平面的法向量、3.1.4.1 平行垂直证明、3.1.4.2 证明共面、3.1.4.4 直线与平面的夹角、3.1.4.5 平面与平面的夹角、3.1.4.7 距离问题、3.1.4.8 动点问题
+- **课程**：3.1.3.2 coordinate_ops、3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.2 coplanar、3.1.4.4 line_plane_angle、3.1.4.5 plane_plane_angle、3.1.4.7 distance、3.1.4.8 moving_point
 - **识别**：四棱锥含分点和二面角，目标涉及参数化；动点或分点先写参数，再把角度条件转换成方程
 - **方法**：先完成动态二面角三角参数化桥接，写分点参数坐标，再用目标平面的法向量和角度范围求参数。
 - **第一行**：F=P+\lambda(C-P),\quad \mathbf n_1\perp\Pi_1,\quad \mathbf n_2\perp\Pi_2
@@ -1956,7 +1956,7 @@
 
 ### 循环 7｜翻折守恒与存在性综合
 
-- **课程调用**：3.1.3.2 空间向量运算的坐标表示、3.1.3.3 直线的方向向量与平面的法向量、3.1.4.1 平行垂直证明、3.1.4.2 证明共面、3.1.4.4 直线与平面的夹角、3.1.4.5 平面与平面的夹角、3.1.4.7 距离问题、3.1.4.8 动点问题
+- **课程调用**：3.1.3.2 coordinate_ops、3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.2 coplanar、3.1.4.4 line_plane_angle、3.1.4.5 plane_plane_angle、3.1.4.7 distance、3.1.4.8 moving_point
 - **知识/类型**：按教材项目推进
 - **强化训练**：C10、C12
 
@@ -1972,7 +1972,7 @@
 
 <details class="item-detail"><summary><strong>C10</strong> · 本循环综合应用 · 强化训练</summary>
 
-- **课程**：3.1.3.2 空间向量运算的坐标表示、3.1.3.3 直线的方向向量与平面的法向量、3.1.4.1 平行垂直证明、3.1.4.2 证明共面、3.1.4.4 直线与平面的夹角、3.1.4.5 平面与平面的夹角、3.1.4.7 距离问题、3.1.4.8 动点问题
+- **课程**：3.1.3.2 coordinate_ops、3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.2 coplanar、3.1.4.4 line_plane_angle、3.1.4.5 plane_plane_angle、3.1.4.7 distance、3.1.4.8 moving_point
 - **识别**：菱形沿对角线折叠成三棱锥并包含体积/垂直/二面角；折痕守恒桥接是进入空间向量的第一步
 - **方法**：先做翻折守恒桥接和截面识别，再用折后坐标/向量完成垂直证明与二面角，所有范围条件回代。
 - **第一行**：\text{折前守恒量}\Rightarrow\overrightarrow{BD}\perp\overrightarrow{CE};\quad \cos\varphi=\frac{|\mathbf n_1\cdot\mathbf n_2|}{|\mathbf n_1||\mathbf n_2|}
@@ -1985,7 +1985,7 @@
 
 <details class="item-detail"><summary><strong>C12</strong> · 本循环综合应用 · 强化训练</summary>
 
-- **课程**：3.1.3.2 空间向量运算的坐标表示、3.1.3.3 直线的方向向量与平面的法向量、3.1.4.1 平行垂直证明、3.1.4.2 证明共面、3.1.4.4 直线与平面的夹角、3.1.4.5 平面与平面的夹角、3.1.4.7 距离问题、3.1.4.8 动点问题
+- **课程**：3.1.3.2 coordinate_ops、3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.2 coplanar、3.1.4.4 line_plane_angle、3.1.4.5 plane_plane_angle、3.1.4.7 distance、3.1.4.8 moving_point
 - **识别**：正方形底面、两个中点和截面内是否存在点；存在性题要先双参数表示，再解垂直条件并检查截面范围
 - **方法**：先补动态截面参数化桥接，以 AEF 面内两不共线向量表示 G，令 DG 垂直该面并判定参数是否存在且唯一。
 - **第一行**：G=A+\lambda\overrightarrow{AE}+\mu\overrightarrow{AF},\quad \overrightarrow{DG}\cdot\mathbf n_{AEF}=0
@@ -2001,12 +2001,12 @@
 ## 第4节 微专题1：立体几何综合题
 
 - **状态**：未开始
-- **课程**：3.1.3.3 直线的方向向量与平面的法向量 → 3.1.4.1 平行垂直证明 → 3.1.4.3 向量夹角与直线夹角 → 3.1.4.4 直线与平面的夹角 → 3.1.4.5 平面与平面的夹角 → 3.1.4.6.a 平面方程与法向量（上） → 3.1.4.7 距离问题 → 3.1.4.8 动点问题
+- **课程**：3.1.3.3 direction_normal → 3.1.4.1 parallel_perpendicular → 3.1.4.3 line_line_angle → 3.1.4.4 line_plane_angle → 3.1.4.5 plane_plane_angle → 3.1.4.6.a plane_equation_upper → 3.1.4.7 distance → 3.1.4.8 moving_point
 - **项目**：16 项
 
 ### 循环 1｜线上动点
 
-- **课程调用**：3.1.3.3 直线的方向向量与平面的法向量、3.1.4.4 直线与平面的夹角、3.1.4.7 距离问题、3.1.4.8 动点问题
+- **课程调用**：3.1.3.3 direction_normal、3.1.4.4 line_plane_angle、3.1.4.7 distance、3.1.4.8 moving_point
 - **知识/类型**：空间动点的单变量参数化、参数定义域与距离最值
 - **直属变式**：变式
 - **类型题**：例1
@@ -2025,7 +2025,7 @@
 
 <details class="item-detail"><summary><strong>例1</strong> · 类型Ⅰ 线上动点 · 类型题</summary>
 
-- **课程**：3.1.3.3 直线的方向向量与平面的法向量、3.1.4.4 直线与平面的夹角、3.1.4.7 距离问题、3.1.4.8 动点问题
+- **课程**：3.1.3.3 direction_normal、3.1.4.4 line_plane_angle、3.1.4.7 distance、3.1.4.8 moving_point
 - **识别**：看到点在固定线段或轴上运动，条件涉及线面角、距离或瞬时状态；先区分证明关系与动态量求值，动态量统一保留为一个参数的函数
 - **方法**：以圆锥高方向建立坐标系；固定点先坐标化，动点沿 PO 只保留一个参数；用平面法向量翻译线面角，再用点面距离公式完成末步。
 - **第一行**：设动点为 M=(0,0,t)，并写出 0≤t≤|PO|；再以两条平面内方向向量构造平面 ABE 的法向量 n。
@@ -2038,7 +2038,7 @@
 
 <details class="item-detail"><summary><strong>变式</strong> · 类型Ⅰ 线上动点 · 直属变式</summary>
 
-- **课程**：3.1.3.3 直线的方向向量与平面的法向量、3.1.4.4 直线与平面的夹角、3.1.4.7 距离问题、3.1.4.8 动点问题
+- **课程**：3.1.3.3 direction_normal、3.1.4.4 line_plane_angle、3.1.4.7 distance、3.1.4.8 moving_point
 - **识别**：动点 P 在线 EC 上，目标是到固定竖直棱的最短距离；先判断这是距离函数最小化而非直接求某个位置的证明
 - **方法**：用 P=E+t(C-E) 做共线参数化；把到固定直线的距离转成方向向量与垂直条件，得到单变量二次表达式后只在定义域内比较。
 - **第一行**：设 P=E+t(C-E)，并先写出 t 的几何范围；取固定直线 BB1 的方向向量 v。
@@ -2051,7 +2051,7 @@
 
 <details class="item-detail"><summary><strong>B1</strong> · 类型Ⅰ 线上动点 · 强化训练</summary>
 
-- **课程**：3.1.3.3 直线的方向向量与平面的法向量、3.1.4.4 直线与平面的夹角、3.1.4.7 距离问题、3.1.4.8 动点问题
+- **课程**：3.1.3.3 direction_normal、3.1.4.4 line_plane_angle、3.1.4.7 distance、3.1.4.8 moving_point
 - **识别**：正方体中 E、F 分别在两条棱上，题设给出 C1E 与 EF 的垂直关系；AF 是棱上变量，目标是最大值，因此先选棱参数再翻译垂直条件
 - **方法**：给 E、F 分别用棱上参数表示；把 C1E⊥EF 写成数量积方程，消去一个参数后在棱长定义域内做单变量最值。
 - **第一行**：设 AE=u、AF=v，写出 E=(0,0,u)、F=(v,0,0) 的同一坐标系表示，并标注 0≤u,v≤4。
@@ -2066,7 +2066,7 @@
 
 ### 循环 2｜向量线性回避坐标
 
-- **课程调用**：3.1.3.3 直线的方向向量与平面的法向量、3.1.4.1 平行垂直证明、3.1.4.4 直线与平面的夹角、3.1.4.6.a 平面方程与法向量（上）
+- **课程调用**：3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.4 line_plane_angle、3.1.4.6.a plane_equation_upper
 - **知识/类型**：基向量线性表示、中点、重心与数量积翻译
 - **类型题**：例2、例3
 - **强化训练**：B3
@@ -2084,7 +2084,7 @@
 
 <details class="item-detail"><summary><strong>例2</strong> · 类型Ⅱ 向量线性回避坐标 · 类型题</summary>
 
-- **课程**：3.1.3.3 直线的方向向量与平面的法向量、3.1.4.1 平行垂直证明、3.1.4.4 直线与平面的夹角、3.1.4.6.a 平面方程与法向量（上）
+- **课程**：3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.4 line_plane_angle、3.1.4.6.a plane_equation_upper
 - **识别**：底面非正交且点坐标难写，题设给出中点和垂直平面关系；优先选基向量线性表示，避免强行写斜棱柱全部坐标
 - **方法**：选取底面两条基向量和侧棱向量；先用中点关系写 EF，再用数量积证明垂直，最后用平面内两条方向与法向量翻译线面角。
 - **第一行**：取底面基向量 a=AC、b=AB 与侧向量 c=AA1，先写 E、F 的中点向量，再写 EF=αa+βb+γc。
@@ -2097,7 +2097,7 @@
 
 <details class="item-detail"><summary><strong>例3</strong> · 类型Ⅱ 向量线性回避坐标 · 类型题</summary>
 
-- **课程**：3.1.3.3 直线的方向向量与平面的法向量、3.1.4.1 平行垂直证明、3.1.4.4 直线与平面的夹角、3.1.4.6.a 平面方程与法向量（上）
+- **课程**：3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.4 line_plane_angle、3.1.4.6.a plane_equation_upper
 - **识别**：四棱锥中给出两个互相垂直的平面，目标含重心和线面角；先用面面垂直构造底面内的垂直关系，再用重心的平均向量表示
 - **方法**：以底面两条独立方向和 PA 为基底，先证明底面两边垂直，再把重心向量写成顶点向量平均，最后用平面法向量求线面角。
 - **第一行**：设底面基向量 e1=AB、e2=BC、竖直向量 e3=PA，并写 G=(P+C+E)/3 的向量模板。
@@ -2110,7 +2110,7 @@
 
 <details class="item-detail"><summary><strong>B3</strong> · 类型Ⅱ 向量线性回避坐标 · 强化训练</summary>
 
-- **课程**：3.1.3.3 直线的方向向量与平面的法向量、3.1.4.1 平行垂直证明、3.1.4.4 直线与平面的夹角、3.1.4.6.a 平面方程与法向量（上）
+- **课程**：3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.4 line_plane_angle、3.1.4.6.a plane_equation_upper
 - **识别**：正方形底面、PA⊥底面且 M 是 PC 中点；第一问是线面垂直，第二问是直线与平面交点的比例关系
 - **方法**：以正方形底面两条边和 PA 建系或基底；用方向向量与平面法向量证明 AM⊥PBD，再把 AM 与 PBD 的交点用参数线性表示并比较系数。
 - **第一行**：设 AB=a、AD=b、AP=c，写 M=(P+C)/2，并写 AM 的参数式 A+s(M-A)。
@@ -2125,7 +2125,7 @@
 
 ### 循环 3｜立体几何综合题
 
-- **课程调用**：3.1.3.3 直线的方向向量与平面的法向量、3.1.4.1 平行垂直证明、3.1.4.3 向量夹角与直线夹角、3.1.4.4 直线与平面的夹角、3.1.4.5 平面与平面的夹角、3.1.4.7 距离问题、3.1.4.8 动点问题
+- **课程调用**：3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.3 line_line_angle、3.1.4.4 line_plane_angle、3.1.4.5 plane_plane_angle、3.1.4.7 distance、3.1.4.8 moving_point
 - **知识/类型**：异面直线夹角最值、正方体动点的统一参数化
 - **类型题**：例4、例5
 - **强化训练**：B4
@@ -2143,7 +2143,7 @@
 
 <details class="item-detail"><summary><strong>例4</strong> · 类型Ⅲ 立体几何综合题 · 类型题</summary>
 
-- **课程**：3.1.3.3 直线的方向向量与平面的法向量、3.1.4.1 平行垂直证明、3.1.4.3 向量夹角与直线夹角、3.1.4.4 直线与平面的夹角、3.1.4.5 平面与平面的夹角、3.1.4.7 距离问题、3.1.4.8 动点问题
+- **课程**：3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.3 line_line_angle、3.1.4.4 line_plane_angle、3.1.4.5 plane_plane_angle、3.1.4.7 distance、3.1.4.8 moving_point
 - **识别**：动点在线段上，目标是异面直线夹角的最值；把两条异面直线分别取方向向量，再把夹角余弦化为动参数函数
 - **方法**：以两个互相垂直的正方形面为坐标平面，设动点坐标为单参数；构造 EM、AF 的方向向量，用夹角余弦函数和定义域做最值。
 - **第一行**：设 M=P+t(Q-P)，写出 0≤t≤1，并取 u=EM、v=AF 作为两条异面直线方向向量。
@@ -2156,7 +2156,7 @@
 
 <details class="item-detail"><summary><strong>例5</strong> · 类型Ⅲ 立体几何综合题 · 类型题</summary>
 
-- **课程**：3.1.3.3 直线的方向向量与平面的法向量、3.1.4.1 平行垂直证明、3.1.4.3 向量夹角与直线夹角、3.1.4.4 直线与平面的夹角、3.1.4.5 平面与平面的夹角、3.1.4.7 距离问题、3.1.4.8 动点问题
+- **课程**：3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.3 line_line_angle、3.1.4.4 line_plane_angle、3.1.4.5 plane_plane_angle、3.1.4.7 distance、3.1.4.8 moving_point
 - **识别**：动点在正方形面内，选项分别涉及平行、垂直、体积和线面角；先统一用面内两个参数表示 Q，再分别翻译各选项条件
 - **方法**：把正方形内动点写成两个有界参数；平行/垂直用方向向量和法向量，距离用点线/点面模板，外接球用垂直平分面等距方程，所有结论都回到正方形边界。
 - **第一行**：设 Q=B+s(B1-B)+t(C-B)，并写 0≤s,t≤1；固定 P 的棱上参数关系后列出目标方向向量。
@@ -2169,7 +2169,7 @@
 
 <details class="item-detail"><summary><strong>B4</strong> · 类型Ⅲ 立体几何综合题 · 强化训练</summary>
 
-- **课程**：3.1.3.3 直线的方向向量与平面的法向量、3.1.4.1 平行垂直证明、3.1.4.3 向量夹角与直线夹角、3.1.4.4 直线与平面的夹角、3.1.4.5 平面与平面的夹角、3.1.4.7 距离问题、3.1.4.8 动点问题
+- **课程**：3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.3 line_line_angle、3.1.4.4 line_plane_angle、3.1.4.5 plane_plane_angle、3.1.4.7 distance、3.1.4.8 moving_point
 - **识别**：直角三角形底面和垂直投影给出天然坐标/基底；第一问是线面垂直，第二问是二面角平面角余弦
 - **方法**：以底面直角三角形的两边和高向量建系；用中点坐标写 A1D，验证其垂直于平面 A1BC，再为两个二面角面求法向量并取夹角。
 - **第一行**：取 A 为原点，令 AB、AC、AA1 为三个基方向，写 D=(B1+C1)/2 的中点模板和 A1D 方向向量。
@@ -2184,7 +2184,7 @@
 
 ### 循环 4｜动态二面角三角方法
 
-- **课程调用**：3.1.3.3 直线的方向向量与平面的法向量、3.1.4.1 平行垂直证明、3.1.4.3 向量夹角与直线夹角、3.1.4.5 平面与平面的夹角、3.1.4.8 动点问题
+- **课程调用**：3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.3 line_line_angle、3.1.4.5 plane_plane_angle、3.1.4.8 moving_point
 - **知识/类型**：翻折守恒、公共棱截面角参数化、锐二面角约定
 - **类型题**：例6、例7
 - **强化训练**：B2
@@ -2202,7 +2202,7 @@
 
 <details class="item-detail"><summary><strong>例6</strong> · 类型Ⅳ 动态二面角三角方法 · 类型题</summary>
 
-- **课程**：3.1.3.3 直线的方向向量与平面的法向量、3.1.4.1 平行垂直证明、3.1.4.3 向量夹角与直线夹角、3.1.4.5 平面与平面的夹角、3.1.4.8 动点问题
+- **课程**：3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.3 line_line_angle、3.1.4.5 plane_plane_angle、3.1.4.8 moving_point
 - **识别**：三角形沿固定对角线翻折，问题询问某些位置是否出现垂直；公共棱固定，折后位置只需用一个二面角参数表示
 - **方法**：先取翻折公共棱的截面平面角作为参数，以公共棱为坐标轴建立点坐标；把各选项线段方向写成参数向量并逐一检查点积是否可能为零。
 - **第一行**：设折痕 BD 为固定轴，令折后截面角为 θ，写动点 A(θ) 的参数坐标模板并保留 θ 的几何范围。
@@ -2215,7 +2215,7 @@
 
 <details class="item-detail"><summary><strong>例7</strong> · 类型Ⅳ 动态二面角三角方法 · 类型题</summary>
 
-- **课程**：3.1.3.3 直线的方向向量与平面的法向量、3.1.4.1 平行垂直证明、3.1.4.3 向量夹角与直线夹角、3.1.4.5 平面与平面的夹角、3.1.4.8 动点问题
+- **课程**：3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.3 line_line_angle、3.1.4.5 plane_plane_angle、3.1.4.8 moving_point
 - **识别**：折叠后仍保留中点、平行和长度关系，且第二问给出两个平面的锐二面角余弦；先做几何位置/平行证明，再把折痕截面角设为 θ 做法向量运算
 - **方法**：利用折叠守恒恢复平行四边形和中点结构；第二问以折痕垂直截面的平面角 θ 建系，分别求两个平面法向量并建立余弦方程。
 - **第一行**：先设折痕 EF 的截面角为 θ，再以 E 为原点写 D、M、B、C 的参数坐标模板。
@@ -2228,7 +2228,7 @@
 
 <details class="item-detail"><summary><strong>B2</strong> · 类型Ⅳ 动态二面角三角方法 · 强化训练</summary>
 
-- **课程**：3.1.3.3 直线的方向向量与平面的法向量、3.1.4.1 平行垂直证明、3.1.4.3 向量夹角与直线夹角、3.1.4.5 平面与平面的夹角、3.1.4.8 动点问题
+- **课程**：3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.3 line_line_angle、3.1.4.5 plane_plane_angle、3.1.4.8 moving_point
 - **识别**：菱形沿对角线折起，E、F、G 为中点，选项混合线面平行、异面和二面角；先把折痕 BD 固定，再分别处理纯几何关系和参数角度关系
 - **方法**：在折前/折后分别保留中点与平行四边形关系；用基向量或法向量判定线面平行和线线垂直；涉及二面角时引入截面角参数并筛选存在性。
 - **第一行**：固定折痕 BD，设折后截面角为 θ；先列 E、F、G 的中点向量，再写 BE、DG、EF 的方向向量。
@@ -2243,7 +2243,7 @@
 
 ### 循环 5｜动点轨迹与存在性综合
 
-- **课程调用**：3.1.3.3 直线的方向向量与平面的法向量、3.1.4.6.a 平面方程与法向量（上）、3.1.4.7 距离问题、3.1.4.8 动点问题
+- **课程调用**：3.1.3.3 direction_normal、3.1.4.6.a plane_equation_upper、3.1.4.7 distance、3.1.4.8 moving_point
 - **知识/类型**：底面内双参数、点面距离、外接球等距约束
 - **强化训练**：C5、C6
 
@@ -2259,7 +2259,7 @@
 
 <details class="item-detail"><summary><strong>C5</strong> · 本循环综合应用 · 强化训练</summary>
 
-- **课程**：3.1.3.3 直线的方向向量与平面的法向量、3.1.4.6.a 平面方程与法向量（上）、3.1.4.7 距离问题、3.1.4.8 动点问题
+- **课程**：3.1.3.3 direction_normal、3.1.4.6.a plane_equation_upper、3.1.4.7 distance、3.1.4.8 moving_point
 - **识别**：F 在底面区域内运动，选项分别切换中点、平行、垂直、距离和外接球；先统一建立正方体坐标，再按选项选择轨迹、距离或球心模型
 - **方法**：用两个面内参数表示 F；平行/垂直用方向向量和法向量，距离用点线/点面模板，外接球用垂直平分面等距方程，所有结论都回到正方形边界。
 - **第一行**：设 F=(s,t,0)，写 0≤s,t≤2，并固定 E 的中点坐标；先列每个选项所需的方向向量或等距关系。
@@ -2272,7 +2272,7 @@
 
 <details class="item-detail"><summary><strong>C6</strong> · 本循环综合应用 · 强化训练</summary>
 
-- **课程**：3.1.3.3 直线的方向向量与平面的法向量、3.1.4.6.a 平面方程与法向量（上）、3.1.4.7 距离问题、3.1.4.8 动点问题
+- **课程**：3.1.3.3 direction_normal、3.1.4.6.a plane_equation_upper、3.1.4.7 distance、3.1.4.8 moving_point
 - **识别**：四棱锥含底面梯形、竖直高和 PT 上动点，三问分别涉及面面垂直、距离和存在性；先把底面梯形放入二维坐标，再用高向量完成空间坐标化
 - **方法**：建立底面梯形坐标系并抬升 P；用法向量证明面面垂直，用点面距离公式处理中点 M，再给 T、M 分别设参检验 PT⊥平面 ABM 的存在性。
 - **第一行**：先设底面四点坐标并令 P=A+h，T=C+λ(D-C)，M=P+μ(T-P)，同时写 λ、μ 的线段范围。
@@ -2287,7 +2287,7 @@
 
 ### 循环 6｜翻折、补形与综合压轴
 
-- **课程调用**：3.1.3.3 直线的方向向量与平面的法向量、3.1.4.1 平行垂直证明、3.1.4.4 直线与平面的夹角、3.1.4.5 平面与平面的夹角、3.1.4.8 动点问题
+- **课程调用**：3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.4 line_plane_angle、3.1.4.5 plane_plane_angle、3.1.4.8 moving_point
 - **知识/类型**：棱柱/棱台平移与补形、面面垂直、线面角投影
 - **强化训练**：C7、C8
 
@@ -2303,7 +2303,7 @@
 
 <details class="item-detail"><summary><strong>C7</strong> · 本循环综合应用 · 强化训练</summary>
 
-- **课程**：3.1.3.3 直线的方向向量与平面的法向量、3.1.4.1 平行垂直证明、3.1.4.4 直线与平面的夹角、3.1.4.5 平面与平面的夹角、3.1.4.8 动点问题
+- **课程**：3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.4 line_plane_angle、3.1.4.5 plane_plane_angle、3.1.4.8 moving_point
 - **识别**：正三角形底面和棱柱平移结构给出稳定基向量；先处理固定垂直关系，再用体积与二面角条件求线面角
 - **方法**：以正三角形底面两边和侧棱为基底，利用棱柱平移写顶点；第一问用点积，第二问用体积求高并用公共棱截面/法向量翻译二面角，再得到线面角。
 - **第一行**：取 A 为原点，写 B、C、A1 及其平移点的向量模板，并以 AA1=h·k 表示未知高度方向。
@@ -2316,7 +2316,7 @@
 
 <details class="item-detail"><summary><strong>C8</strong> · 本循环综合应用 · 强化训练</summary>
 
-- **课程**：3.1.3.3 直线的方向向量与平面的法向量、3.1.4.1 平行垂直证明、3.1.4.4 直线与平面的夹角、3.1.4.5 平面与平面的夹角、3.1.4.8 动点问题
+- **课程**：3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.4 line_plane_angle、3.1.4.5 plane_plane_angle、3.1.4.8 moving_point
 - **识别**：三棱台含上下底面、两个中点和垂直平面条件；先用补形/平移整理点线关系，再用法向量处理面面垂直与线面角
 - **方法**：以两个平行三角形底面和侧向量建模；用中点向量与平行截面关系证明线面平行，随后用两个平面法向量表达垂直条件并计算线面角。
 - **第一行**：先写 O=(A1+B1)/2、D=(O+A1)/2，并以 A、B、C 与对应上底点的平移向量表示全部所需方向。

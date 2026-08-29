@@ -229,14 +229,42 @@ def build_course_catalog(
         frozen_path = ROOT / "data" / "all_chapters_course_catalog.json"
         frozen = load_json(frozen_path)
         frozen_by_key = {str(row["course_key"]): row for row in frozen.get("courses", [])}
-        missing = sorted(used_keys - set(frozen_by_key))
-        if missing:
-            raise ValueError(f"course keys missing from frozen catalog: {missing}")
-        rows = [frozen_by_key[key] for key in sorted(used_keys)]
+        declared_keys = set(metadata)
+        if not used_keys.issubset(declared_keys):
+            raise ValueError(f"course keys missing from manifest metadata: {sorted(used_keys - declared_keys)}")
+        rows = []
+        for key in sorted(declared_keys):
+            item = metadata[key]
+            existing = frozen_by_key.get(key)
+            course_id = str(item.get("course_id") or item.get("original_course_id") or key)
+            title = str(item.get("title") or key)
+            transcript = TRANSCRIPT_ROOT / f"{course_id} {title}.json"
+            if existing:
+                transcript = TRANSCRIPT_ROOT / Path(str(existing.get("transcript_file") or transcript.name)).name
+            if not transcript.is_file():
+                raise FileNotFoundError(f"frozen course transcript missing: {key}: {transcript}")
+            transcript_data = load_json(transcript)
+            sentences = transcript_data.get("sentences")
+            rows.append({
+                **(existing or {}),
+                "course_key": key,
+                "course_id": course_id,
+                "title": title,
+                "video_file": Path(str((existing or {}).get("video_file") or f"{course_id} {title}.mp4")).name,
+                "video_sha256": str(transcript_data.get("source_video_sha256") or (existing or {}).get("video_sha256") or item.get("sha256") or ""),
+                "transcript_file": f"data/course_transcripts/{transcript.name}",
+                "transcript_sha256": sha256_file(transcript),
+                "transcript_text_sha256": hashlib.sha256(str(transcript_data.get("full_text") or "").encode("utf-8")).hexdigest(),
+                "duration_s": transcript_data.get("duration_s"),
+                "sentence_count": len(sentences) if isinstance(sentences, list) else 0,
+                "timestamp_status": "available" if isinstance(sentences, list) and sentences else "not_available_legacy_full_text",
+                "source_rule": "frozen transcript catalog; source video hash retained",
+            })
         return {
             **frozen,
             "status": "passed_frozen_video_hashes",
             "course_count": len(rows),
+            "used_course_count": len(used_keys),
             "courses": rows,
             "frozen_catalog_source": str(frozen_path.relative_to(ROOT)).replace("\\", "/"),
         }

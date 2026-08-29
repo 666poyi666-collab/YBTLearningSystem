@@ -11,7 +11,7 @@
  */
 
 import { createHash } from 'node:crypto'
-import { mkdir, readFile, readdir, writeFile } from 'node:fs/promises'
+import { mkdir, readFile, readdir, rm, writeFile } from 'node:fs/promises'
 import { existsSync, readFileSync } from 'node:fs'
 import { basename, dirname, join, resolve, win32 } from 'node:path'
 import { spawn } from 'node:child_process'
@@ -22,6 +22,8 @@ const cloudRoot = resolve(scriptDir, '..')
 const repoRoot = resolve(cloudRoot, '..', '..')
 const dataRoot = join(repoRoot, 'data')
 const importRoot = join(repoRoot, 'tmp', 'math-cloud-import')
+const wranglerCli = join(cloudRoot, 'node_modules', 'wrangler', 'bin', 'wrangler.js')
+const MAX_SQL_CHUNK_BYTES = 1_000_000
 
 const argv = new Set(process.argv.slice(2))
 const dryRun = argv.has('--dry-run') || !argv.has('--remote')
@@ -87,9 +89,7 @@ function run(command, args, options = {}) {
     const child = spawn(command, args, {
       cwd: options.cwd ?? repoRoot,
       stdio: options.capture ? ['ignore', 'pipe', 'pipe'] : 'inherit',
-      // Windows exposes npx as a .cmd shim; it requires the shell path for
-      // child_process.spawn to accept the executable and Unicode arguments.
-      shell: process.platform === 'win32',
+      shell: false,
       windowsHide: true,
     })
     let stdout = ''
@@ -120,8 +120,8 @@ async function runWithRetry(command, args, options = {}, attempts = 4) {
   throw lastError
 }
 
-function wranglerCommand() {
-  return process.platform === 'win32' ? 'npx.cmd' : 'npx'
+function wranglerArgs(args) {
+  return [wranglerCli, ...args]
 }
 
 async function writeObject(path, value) {
@@ -129,7 +129,7 @@ async function writeObject(path, value) {
   await writeFile(path, `${JSON.stringify(value)}\n`, 'utf8')
 }
 
-function chunkStatements(statements, maxBytes = 70000) {
+function chunkStatements(statements, maxBytes = MAX_SQL_CHUNK_BYTES) {
   const chunks = []
   let current = []
   let currentBytes = 0
@@ -175,8 +175,11 @@ async function buildImageIndex() {
 
 async function main() {
   const auditPath = join(dataRoot, 'chatgpt_context', 'chapter12_complete_audit.json')
-  const audit = await json(auditPath)
-  const catalog = await json(join(dataRoot, 'all_chapters_course_catalog.json'))
+  const auditBytes = await readFile(auditPath)
+  const audit = JSON.parse(auditBytes.toString('utf8'))
+  const catalogPath = join(dataRoot, 'all_chapters_course_catalog.json')
+  const catalogBytes = await readFile(catalogPath)
+  const catalog = JSON.parse(catalogBytes.toString('utf8'))
   const catalogByKey = new Map((catalog.courses ?? []).map((course) => [course.course_key, course]))
   const libraryChapters = [1, 2, 3, 4, 5]
   const imageIndex = await buildImageIndex()
@@ -188,11 +191,21 @@ async function main() {
     rawManifestBytes.push(bytes)
     chapterManifests.set(chapter, JSON.parse(bytes.toString('utf8')))
   }
-  const manifestSha = sha256(Buffer.concat([...rawManifestBytes, Buffer.from(await readFile(auditPath))]))
+  const packetBindingBytes = []
+  for (const chapter of libraryChapters) {
+    for (const section of chapterManifests.get(chapter).sections ?? []) {
+      const packetFolder = String(section.id).replaceAll('+', '_')
+      for (const file of ['student_learning_items.json', 'student_packet.json', 'answer_sidecar.json']) {
+        packetBindingBytes.push(await readFile(join(dataRoot, 'packets', packetFolder, file)))
+      }
+    }
+  }
+  const manifestSha = sha256(Buffer.concat([...rawManifestBytes, auditBytes, catalogBytes, ...packetBindingBytes]))
   const version = `v1-${manifestSha.slice(0, 16)}`
   const sourceVersionId = version
   const currentCommit = await readCurrentCommit()
   const outputRoot = join(importRoot, version)
+  await rm(outputRoot, { recursive: true, force: true })
   await mkdir(outputRoot, { recursive: true })
 
   const imagePack = {}
@@ -203,6 +216,29 @@ async function main() {
   const items = []
   const links = []
   const answerSources = []
+
+  async function registerCourse(courseKey, metadata = {}) {
+    if (courses.has(courseKey)) return
+    const catalogEntry = catalogByKey.get(courseKey)
+    if (!catalogEntry) throw new Error(`course missing from catalog: ${courseKey}`)
+    const transcriptFile = pathBase(catalogEntry.transcript_file ?? metadata.transcript_path)
+    const transcriptPath = join(dataRoot, 'course_transcripts', transcriptFile)
+    const transcriptBytes = await readFile(transcriptPath)
+    const transcript = JSON.parse(transcriptBytes.toString('utf8'))
+    const sentences = Array.isArray(transcript.sentences) ? transcript.sentences.filter((s) => Number.isFinite(Number(s.start)) && Number.isFinite(Number(s.end)) && typeof s.text === 'string') : []
+    courses.set(courseKey, {
+      courseKey,
+      courseNumber: metadata.course_number ?? catalogEntry.course_id ?? courseIdFromKey(courseKey),
+      title: metadata.title ?? catalogEntry.title ?? courseKey,
+      durationMs: Math.round(Number(transcript.duration_s ?? catalogEntry.duration_s ?? 0) * 1000),
+      hasTimeline: sentences.length > 0,
+      sourceSha256: sha256(transcriptBytes),
+      textSha256: catalogEntry.transcript_text_sha256 ?? null,
+      fullText: transcript.full_text ?? '',
+      sentences,
+      provenance: 'repository transcript JSON; source video path omitted from cloud payload',
+    })
+  }
 
   function imageRefsFor(chapter, refs) {
     return (refs ?? []).map((ref) => {
@@ -371,28 +407,11 @@ async function main() {
       items.push({ itemId: item.item_id, sectionKey: auditSection.section, label: item.label, itemType: item.kind, conceptKey: item.role_ref, contentR2Key: contentKey, sourceSha256: sha256(stableJson(item)), sortOrder: sectionItems.indexOf(item) + 1 })
     }
     for (const course of auditSection.courses ?? []) {
-      if (courses.has(course.course_key)) continue
-      const catalogEntry = catalogByKey.get(course.course_key)
-      if (!catalogEntry) throw new Error(`course missing from catalog: ${course.course_key}`)
-      const transcriptFile = pathBase(catalogEntry.transcript_file ?? course.transcript_path)
-      const transcriptPath = join(dataRoot, 'course_transcripts', transcriptFile)
-      const transcriptBytes = await readFile(transcriptPath)
-      const transcript = JSON.parse(transcriptBytes.toString('utf8'))
-      const sentences = Array.isArray(transcript.sentences) ? transcript.sentences.filter((s) => Number.isFinite(Number(s.start)) && Number.isFinite(Number(s.end)) && typeof s.text === 'string') : []
-      courses.set(course.course_key, {
-        courseKey: course.course_key,
-        courseNumber: course.course_number ?? courseIdFromKey(course.course_key),
-        title: course.title,
-        durationMs: Math.round(Number(transcript.duration_s ?? catalogEntry.duration_s ?? 0) * 1000),
-        hasTimeline: sentences.length > 0,
-        sourceSha256: sha256(transcriptBytes),
-        textSha256: catalogEntry.transcript_text_sha256 ?? null,
-        fullText: transcript.full_text ?? '',
-        sentences,
-        provenance: 'repository transcript JSON; source video path omitted from cloud payload',
-      })
+      await registerCourse(course.course_key, course)
     }
   }
+
+  for (const catalogEntry of catalog.courses ?? []) await registerCourse(catalogEntry.course_key, catalogEntry)
 
   const transcriptPack = {
     schema_version: 'ybt-cloud-transcript-pack-v1',
@@ -414,7 +433,13 @@ async function main() {
   for (const course of courseRows) statements.push(`INSERT OR REPLACE INTO courses (course_key, title, transcript_r2_key, transcript_sha256, duration_ms, has_timeline) VALUES (${sqlString(course.courseKey)}, ${sqlString(`${course.courseNumber} ${course.title}`.trim())}, ${sqlString(course.transcriptR2Key)}, ${sqlString(course.sourceSha256)}, ${sqlNumber(course.durationMs)}, ${course.hasTimeline ? 1 : 0});`)
   for (const item of items) statements.push(`INSERT OR REPLACE INTO items (item_id, section_key, label, item_type, concept_key, content_r2_key, source_sha256, sort_order) VALUES (${sqlString(item.itemId)}, ${sqlString(item.sectionKey)}, ${sqlString(item.label)}, ${sqlString(item.itemType)}, ${sqlString(item.conceptKey)}, ${sqlString(item.contentR2Key)}, ${sqlString(item.sourceSha256)}, ${sqlNumber(item.sortOrder)});`)
   for (const answer of answerSources) statements.push(`INSERT OR REPLACE INTO answer_sources (item_id, source_kind, source_version_id, answer_text, source_sha256) VALUES (${sqlString(answer.itemId)}, ${sqlString(answer.sourceKind)}, ${sqlString(answer.sourceVersionId)}, ${sqlString(answer.answerText)}, ${sqlString(answer.sourceSha256)});`)
-  const uniqueLinks = new Map(links.map((link) => [`${link.itemId}:${link.courseKey}:${link.relationship}`, link]))
+  const relationshipPriority = { optional_course: 1, prerequisite_course: 2, cycle_course: 3 }
+  const uniqueLinks = new Map()
+  for (const link of links) {
+    const key = `${link.itemId}:${link.courseKey}`
+    const previous = uniqueLinks.get(key)
+    if (!previous || relationshipPriority[link.relationship] > relationshipPriority[previous.relationship]) uniqueLinks.set(key, link)
+  }
   for (const item of items) statements.push(`DELETE FROM item_course_links WHERE item_id = ${sqlString(item.itemId)};`)
   for (const link of uniqueLinks.values()) statements.push(`INSERT OR IGNORE INTO item_course_links (item_id, course_key, relationship) VALUES (${sqlString(link.itemId)}, ${sqlString(link.courseKey)}, ${sqlString(link.relationship)});`)
   const chunks = []
@@ -451,7 +476,16 @@ async function main() {
     }
     flush()
   }
+  for (const course of courseRows) statements.push(`DELETE FROM transcript_chunks WHERE course_key = ${sqlString(course.courseKey)};`)
   for (const chunk of chunks) statements.push(`INSERT OR REPLACE INTO transcript_chunks (course_key, chunk_index, start_ms, end_ms, text, topic, method_tags) VALUES (${sqlString(chunk.courseKey)}, ${sqlNumber(chunk.chunkIndex)}, ${sqlNumber(chunk.startMs)}, ${sqlNumber(chunk.endMs)}, ${sqlString(chunk.text)}, NULL, '[]');`)
+
+  const desiredItemIds = items.map((item) => sqlString(item.itemId)).join(',')
+  const managedSections = sections.map((section) => sqlString(section.sectionKey)).join(',')
+  if (desiredItemIds && managedSections) {
+    const staleItemFilter = `section_key IN (${managedSections}) AND item_id NOT IN (${desiredItemIds}) AND NOT EXISTS (SELECT 1 FROM answer_sources a WHERE a.item_id = items.item_id)`
+    statements.push(`DELETE FROM item_course_links WHERE item_id IN (SELECT item_id FROM items WHERE ${staleItemFilter});`)
+    statements.push(`DELETE FROM items WHERE ${staleItemFilter};`)
+  }
 
   const initialStates = []
   for (const chapter of libraryChapters) {
@@ -484,12 +518,11 @@ async function main() {
     return
   }
   if (!remote) throw new Error('remote import requires --remote')
-  const wrangler = wranglerCommand()
   for (const object of plan.r2) {
-    await runWithRetry(wrangler, ['wrangler', 'r2', 'object', 'put', `${bucket}/${object.key}`, '--file', object.path, '--content-type', 'application/json', '--remote', '-y'], { cwd: cloudRoot })
+    await runWithRetry(process.execPath, wranglerArgs(['r2', 'object', 'put', `${bucket}/${object.key}`, '--file', object.path, '--content-type', 'application/json', '--remote', '-y']), { cwd: cloudRoot })
   }
   for (const path of sqlPaths) {
-    await runWithRetry(wrangler, ['wrangler', 'd1', 'execute', database, '--remote', '--file', path, '--yes'], { cwd: cloudRoot })
+    await runWithRetry(process.execPath, wranglerArgs(['d1', 'execute', database, '--remote', '--file', path, '--yes']), { cwd: cloudRoot })
   }
   console.log(`import complete: ${sourceVersionId}`)
 }
