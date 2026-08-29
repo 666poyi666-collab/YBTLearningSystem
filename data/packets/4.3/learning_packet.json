@@ -2,9 +2,9 @@
   "schema_version": "7.4",
   "packet_type": "DEEPSEEK_SEQUENTIAL_LEARNING_PACKET",
   "section": "4.3",
-  "status": "VERIFIED",
+  "status": "UNVERIFIED",
   "source": {
-    "ocr_root": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100",
+    "ocr_root": "data/ocr_live_current/chapter4_100",
     "ocr_docs": [
       34,
       50
@@ -25,10 +25,10 @@
       "cycle_id": "4.3-cycle-1",
       "sequence": 1,
       "title": "等差数列的前 n 项和公式及其推导",
-      "course_keys": [
-        "4.3.2.4 等差数列Sn的性质"
+      "course_keys": [],
+      "prerequisite_course_keys": [
+        "4.3.2.1 等差数列的基本公式"
       ],
-      "prerequisite_course_keys": [],
       "optional_course_keys": [],
       "knowledge_refs": [
         "4.3-k1"
@@ -79,7 +79,6 @@
       "direct_variants": [],
       "exercise_questions": [],
       "action_order": [
-        "watch_current_courses",
         "learn_each_current_example_then_attempt_its_direct_variants",
         "assess_current_cycle"
       ],
@@ -104,10 +103,10 @@
       "sequence": 2,
       "title": "等差数列的前 n 项和公式与二次函数",
       "course_keys": [
-        "4.3.2.1 等差数列的基本公式"
+        "4.3.2.4 等差数列Sn的性质"
       ],
       "prerequisite_course_keys": [
-        "4.3.2.4 等差数列Sn的性质"
+        "4.3.2.1 等差数列的基本公式"
       ],
       "optional_course_keys": [],
       "knowledge_refs": [
@@ -165,8 +164,8 @@
       "title": "等差数列的前 n 项和的性质",
       "course_keys": [],
       "prerequisite_course_keys": [
-        "4.3.2.4 等差数列Sn的性质",
-        "4.3.2.1 等差数列的基本公式"
+        "4.3.2.1 等差数列的基本公式",
+        "4.3.2.4 等差数列Sn的性质"
       ],
       "optional_course_keys": [],
       "knowledge_refs": [
@@ -194,444 +193,9 @@
           "teaching_text": "【例 4】等差数列 \\(\\{a_n\\}\\) 的前 \\(n\\) 项和为 \\(S_n\\)，若 \\(S_2 = 4\\)，\\(S_4 = 16\\)，则 \\(S_6 =\\)___。\n解析：观察发现已知和所求涉及的下标都是 \\(2\\) 的倍数，联想到利用片段和性质求 \\(S_6\\)，因为 \\(\\{a_n\\}\\) 是等差数列，所以由片段和性质，\\(S_2\\)，\\(S_4 - S_2\\)，\\(S_6 - S_4\\) 成等差数列，所以 \\(2(S_4 - S_2) = S_2 + (S_6 - S_4)\\)，即 \\(2 \\times (16 - 4) = 4 + S_6 - 16\\)，解得：\\(S_6 = 36\\)。\n答案：36\n## 本节核心题型\n关于等差数列的前 \\(n\\) 项和，首先要学会最基本的代公式计算，所以我们设计了类型Ⅰ这组题来给大家强化基础；其次，前 \\(n\\) 项和的有关性质也是高频考点，于是我们又设计了类型Ⅱ这组题来讲解与等差数列前 \\(n\\) 项和有关的几个性质的应用；而在类型Ⅲ中，我们将重点分析与等差数列前 \\(n\\) 项和最值有关的问题的处理方法；最后，我们通过类型Ⅳ来给大家举一个等差数列前 \\(n\\) 项和公式在实际问题中的应用的例子。",
           "solution_present": true,
           "vision_hint": "4.3-LIb081de4bdfbb74c6"
-        },
-        {
-          "item_id": "81d543331004d4c3",
-          "kind": "example",
-          "label": "例5",
-          "example_number": 5,
-          "parent_example_number": null,
-          "role": "knowledge_example",
-          "role_ref": "4.3-k3",
-          "source_docs": [
-            36
-          ],
-          "question_text": "【例5】已知等差数列\\(\\{a_n\\}\\)的前\\(n\\)项和为\\(S_n\\)，若\\(S_4=2S_2\\)，\\(a_2=2a_1+1\\)，则\\(S_{15}=\\)（）\nA. \\(-20\\) B. \\(-15\\) C. \\(-10\\) D. \\(-5\\)",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "teaching_text": "【例5】已知等差数列\\(\\{a_n\\}\\)的前\\(n\\)项和为\\(S_n\\)，若\\(S_4=2S_2\\)，\\(a_2=2a_1+1\\)，则\\(S_{15}=\\)（）\nA. \\(-20\\) B. \\(-15\\) C. \\(-10\\) D. \\(-5\\)\n解析：已知和所求都容易代公式，故先代公式翻译已知条件，建立方程组求出  \\(a_1\\) 和  \\(d\\)，再用它们求  \\(S_{15}\\)\n设  \\(\\{a_n\\}\\) 的公差为  \\(d\\)，由题意， \\(\\begin{cases} S_4 = 2S_2 \\\\ a_2 = 2a_1 + 1 \\end{cases}\\)，所以  \\(\\begin{cases} 4a_1 + \\frac{4 \\times 3}{2}d = 2\\left(2a_1 + \\frac{2 \\times 1}{2}d\\right) \\\\ a_1 + d = 2a_1 + 1 \\end{cases}\\)，解得： \\(\\begin{cases} a_1 = -1 \\\\ d = 0 \\end{cases}\\)，\n所以  \\(S_{15} = 15a_1 + \\frac{15 \\times 14}{2}d = 15 \\times (-1) + \\frac{15 \\times 14}{2} \\times 0 = -15\\)。\n答案：B\n【反思】当涉及等差数列 \\(\\{a_n\\}\\) 的前 \\(n\\) 项和 \\(S_n\\) 时，常考虑代公式 \\(S_n = \\frac{n(a_1 + a_n)}{2} = na_1 + \\frac{n(n-1)}{2}d\\) 处理，至于具体代哪个公式，要看怎样更方便计算，我们再通过下面的变式 1 和变式 2 来巩固一下。",
-          "solution_present": true,
-          "vision_hint": "4.3-LI81d543331004d4c3"
-        },
-        {
-          "item_id": "e716715c1a89b29e",
-          "kind": "example",
-          "label": "例6",
-          "example_number": 6,
-          "parent_example_number": null,
-          "role": "knowledge_example",
-          "role_ref": "4.3-k3",
-          "source_docs": [
-            38
-          ],
-          "question_text": "【例6】设等差数列 \\(\\{a_{n}\\}\\)的前n项和为 \\(S_{n}\\)，若 \\(S_{100}=1000\\)， \\(S_{1000}=100\\)，那么 \\(S_{1100}\\)等于（）\nA. 10 B. 80 C. -100 D. -1100",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "teaching_text": "【例6】设等差数列 \\(\\{a_{n}\\}\\)的前n项和为 \\(S_{n}\\)，若 \\(S_{100}=1000\\)， \\(S_{1000}=100\\)，那么 \\(S_{1100}\\)等于（）\nA. 10 B. 80 C. -100 D. -1100\n解析：可以想象，涉及的下标较大，若用公式翻译已知条件求  \\(a_1\\) 和  \\(d\\)，则计算量较大，能否简化？注意到已知和所求都只与  \\(S_n\\) 有关，故可考虑将  \\(S_n\\) 设为  \\(An^2 + Bn\\) 的形式，用待定系数法求  \\(A\\) 和  \\(B\\)，\n因为  \\(\\{a_n\\}\\) 是等差数列，所以可设  \\(S_n = An^2 + Bn\\)，由题意， \\(\\begin{cases} S_{100} = 100^2A + 100B = 1000 \\\\ S_{1000} = 1000^2A + 1000B = 100 \\end{cases} \\Rightarrow \\begin{cases} 100A + B = 10 \\\\ 10000A + 10B = 1 \\end{cases}\\)，\n解得： \\(A = -\\frac{11}{1000}\\)， \\(B = \\frac{111}{10}\\)，所以  \\(S_{1100} = 1100^2A + 1100B = 1100^2 \\times \\left(-\\frac{11}{1000}\\right) + 1100 \\times \\frac{111}{10} = -1100\\)。\n答案：D\n【反思】对于等差数列的前  \\(n\\) 项和，若代公式  \\(S_n = \\frac{n(a_1 + a_n)}{2} = na_1 + \\frac{n(n-1)}{2}d\\) 计算较麻烦，则还可以考虑将  \\(S_n\\) 写成  \\(S_n = An^2 + Bn\\) ( \\(A, B \\in \\mathbb{R}\\)) 的形式，用待定系数法处理。",
-          "solution_present": true,
-          "vision_hint": "4.3-LIe716715c1a89b29e"
-        },
-        {
-          "item_id": "acc90aa938f0e481",
-          "kind": "example",
-          "label": "例7",
-          "example_number": 7,
-          "parent_example_number": null,
-          "role": "knowledge_example",
-          "role_ref": "4.3-k3",
-          "source_docs": [
-            39
-          ],
-          "question_text": "【例7】设等差数列 \\(\\{a_{n}\\}\\)的前n项和为 \\(S_{n}\\)，若 \\(S_{7}=28\\)， \\(S_{11}=88\\)，则 \\(\\{a_{n}\\}\\)的公差d=（）\nA. 1 B. 2 C. 3 D. 4",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "teaching_text": "【例7】设等差数列 \\(\\{a_{n}\\}\\)的前n项和为 \\(S_{n}\\)，若 \\(S_{7}=28\\)， \\(S_{11}=88\\)，则 \\(\\{a_{n}\\}\\)的公差d=（）\nA. 1 B. 2 C. 3 D. 4\n解法1：已知条件容易代公式，故可考虑直接代公式翻译，建立关于 \\(a_1\\)和 \\(d\\)的方程组并求解。\n由题意， \\(\\begin{cases} S_7 = 7a_1 + \\dfrac{7 \\times 6}{2}d = 7a_1 + 21d = 28 \\\\ S_{11} = 11a_1 + \\dfrac{11 \\times 10}{2}d = 11a_1 + 55d = 88 \\end{cases}\\)，解得： \\(\\begin{cases} a_1 = -2 \\\\ d = 2 \\end{cases}\\)，所以 \\(\\{a_n\\}\\)的公差 \\(d = 2\\)。\n解法2：只需要知道等差数列其中的任意两项，就可以方便地求出公差，怎样把前n项和的条件与项联系起来？注意到 \\(S_{7}\\)和 \\(S_{11}\\)下标都为奇数，于是联想到可用性质 \\(S_{2n-1}=(2n-1)a_{n}\\)快速求出 \\(a_{4}\\)和 \\(a_{6}\\)，\n由等差数列的前 n 项和的性质， \\(\\left\\{\\begin{aligned}S_{7}&=7a_{4}=28\\\\ S_{11}&=11a_{6}=88\\end{aligned}\\right.\\)，所以 \\(\\left\\{\\begin{aligned}a_{4}&=4\\\\ a_{6}&=8\\end{aligned}\\right.\\)，故公差 \\(d=\\frac{a_{6}-a_{4}}{6-4}=\\frac{8-4}{6-4}=2\\)。\n答案：B\n【反思】涉及等差数列的前 \\(n\\) 项和，除了直接代公式翻译外，也可考虑利用性质 \\(S_{2n-1}=(2n-1)a_n\\) 将前 \\(n\\) 项和转化为项。尽管该性质中 \\(S\\) 的下标是奇数，但实际上，下标为偶数的情况也可以用，例如本题若将条件 \\(S_{11}=88\\) 改为 \\(S_{12}=108\\)，怎么做？前 12 项的中间两项为 \\(a_6\\) 和 \\(a_7\\)，我们用 \\(a_{6.5}\\) 来代表 \\(a_6\\) 和 \\(a_7\\) 的中间项，即 \\(a_{6.5}=\\frac{a_6+a_7}{2}\\)，所以 \\(S_{12}=12a_{6.5}=108\\Rightarrow a_{6.5}=9\\)，所以公差 \\(d=\\frac{a_{6.5}-a_4}{6.5-4}=\\frac{9-4}{2.5}=2\\)，也顺利地解决了问题。所以在小题中，虽不存在 \\(a_{6.5}\\) 这一项，但可以借助这一假设值处理问题，不过请注意，解答题中不建议这样使用。",
-          "solution_present": true,
-          "vision_hint": "4.3-LIacc90aa938f0e481"
-        },
-        {
-          "item_id": "ebee62e5f9ca5902",
-          "kind": "example",
-          "label": "例8",
-          "example_number": 8,
-          "parent_example_number": null,
-          "role": "knowledge_example",
-          "role_ref": "4.3-k3",
-          "source_docs": [
-            39,
-            40
-          ],
-          "question_text": "【例 8】已知数列  \\(S_{n}\\) 是等差数列  \\(\\{a_{n}\\}\\) 的前 n 项和，且  \\(S_{2}=4\\)， \\(S_{4}=16\\)，则  \\(S_{8}=\\) （ ）\nA. 36 B. 46 C. 64 D. 160",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "teaching_text": "【例 8】已知数列  \\(S_{n}\\) 是等差数列  \\(\\{a_{n}\\}\\) 的前 n 项和，且  \\(S_{2}=4\\)， \\(S_{4}=16\\)，则  \\(S_{8}=\\) （ ）\nA. 36 B. 46 C. 64 D. 160\n解析：已知和所求均只涉及  \\(S_{n}\\)，且观察发现下标都是2的倍数，故联想到片段和性质，由等差数列的片段和性质， \\(S_{2}\\)， \\(S_{4}-S_{2}\\)， \\(S_{6}-S_{4}\\)， \\(S_{8}-S_{6}\\) 成等差数列，\n又  \\(S_{2}=4\\)， \\(S_{4}=16\\)，所以  \\(S_{4}-S_{2}=16-4=12\\)，故上述等差数列是4，12，20，28，怎样求  \\(S_{8}\\)？观察发现把  \\(S_{2}\\)， \\(S_{4}-S_{2}\\)， \\(S_{6}-S_{4}\\)， \\(S_{8}-S_{6}\\) 相加，即可得到  \\(S_{8}\\)，所以  \\(S_{8}=S_{2}+S_{4}-S_{2}+S_{6}-S_{4}+S_{8}-S_{6}=4+12+20+28=64\\)。\n答案：C\n【反思】若条件和所求涉及的前n项和的下标都是常数k的倍数，则常考虑利用片段和性质处理。本题下标的倍数关系比较明显，有时这一特征是隐藏在题干中的，这就需要我们自己去发现，比如下面的变式。",
-          "solution_present": true,
-          "vision_hint": "4.3-LIebee62e5f9ca5902"
-        },
-        {
-          "item_id": "c7604aa978c29e8f",
-          "kind": "example",
-          "label": "例9",
-          "example_number": 9,
-          "parent_example_number": null,
-          "role": "knowledge_example",
-          "role_ref": "4.3-k3",
-          "source_docs": [
-            40
-          ],
-          "question_text": "【例9】已知等差数列 \\(\\{a_{n}\\}\\)的前n项和为 \\(S_{n}\\)，且 \\(\\frac{S_{5}}{5}-\\frac{S_{2}}{2}=6\\)，则 \\(a_{7}-a_{4}=\\)（）\nA. 9 B. 10 C. 11 D. 12",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "teaching_text": "【例9】已知等差数列 \\(\\{a_{n}\\}\\)的前n项和为 \\(S_{n}\\)，且 \\(\\frac{S_{5}}{5}-\\frac{S_{2}}{2}=6\\)，则 \\(a_{7}-a_{4}=\\)（）\nA. 9 B. 10 C. 11 D. 12\n解法1：已知和所求的直接联系不明显，但它们都容易用公式翻译，故可考虑直接代公式处理，由题意， \\(\\frac{S_5}{5} - \\frac{S_2}{2} = \\frac{1}{5}\\left(5a_1 + \\frac{5 \\times 4}{2}d\\right) - \\frac{1}{2}(2a_1 + d) = \\frac{3}{2}d = 6\\)，所以 \\(d = 4\\)，故 \\(a_7 - a_4 = 3d = 12\\)。\n解法2：出现了 \\(\\frac{S_n}{n}\\)这一结构，联想到数列 \\(\\left\\{\\frac{S_n}{n}\\right\\}\\)是公差为 \\(\\frac{d}{2}\\)的等差数列，由此可快速求解，\n设 \\(\\{a_n\\}\\)的公差为 \\(d\\)，因为 \\(\\{a_n\\}\\)为等差数列，且 \\(S_n\\)为其前 \\(n\\)项和，所以 \\(\\left\\{\\frac{S_n}{n}\\right\\}\\)是公差为 \\(\\frac{d}{2}\\)的等差数列，\n所以 \\(\\frac{S_5}{5}-\\frac{S_2}{2}=(5-2)\\times\\frac{d}{2}=6\\)，解得： \\(d=4\\)，所以 \\(a_7-a_4=3d=3\\times4=12\\)。\n答案：D\n【反思】若等差数列的前 \\(n\\) 项和为 \\(S_n\\)，则数列 \\(\\left\\{\\frac{S_n}{n}\\right\\}\\) 是首项为 \\(a_1\\)，公差为 \\(\\frac{d}{2}\\) 的等差数列，这个结论在小题中可直接使用，若大题涉及该结论，可用 \\(S_n = na_1 + \\frac{n(n-1)}{2}d\\) 进行推导。",
-          "solution_present": true,
-          "vision_hint": "4.3-LIc7604aa978c29e8f"
-        },
-        {
-          "item_id": "aaacbc18f9d5ca8b",
-          "kind": "example",
-          "label": "例10",
-          "example_number": 10,
-          "parent_example_number": null,
-          "role": "knowledge_example",
-          "role_ref": "4.3-k3",
-          "source_docs": [
-            41
-          ],
-          "question_text": "【例 10】等差数列  \\(\\{a_{n}\\}\\) 满足  \\(a_{3} + a_{7} = 20\\)， \\(a_{8} = 4\\)，若  \\(S_{n}\\) 为前 n 项和，则  \\(S_{n}\\) 最大时，n 的值为（）\nA. 9 或 10 B. 8 C. 9 D. 10 或 11",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "teaching_text": "【例 10】等差数列  \\(\\{a_{n}\\}\\) 满足  \\(a_{3} + a_{7} = 20\\)， \\(a_{8} = 4\\)，若  \\(S_{n}\\) 为前 n 项和，则  \\(S_{n}\\) 最大时，n 的值为（）\nA. 9 或 10 B. 8 C. 9 D. 10 或 11\n解析：先求出  \\(S_n\\)，再分析何时  \\(S_n\\) 最大可行，但偏麻烦。注意到  \\(d \\neq 0\\) 的等差数列是单调的，故要分析何时  \\(S_n\\) 最大，只需找到  \\(\\{a_n\\}\\) 前多少项为正数，从哪一项开始为负数，于是我们先求通项公式，\n设等差数列  \\(\\{a_n\\}\\) 的公差为  \\(d\\)，则  \\(a_3 + a_7 = 2a_5 = 20\\)，解得： \\(a_5 = 10\\)，所以  \\(d = \\frac{a_8 - a_5}{8 - 5} = \\frac{4 - 10}{3} = -2\\)，\n \\(a_1 = a_5 - 4d = 10 - 4 \\times (-2) = 18\\)，所以  \\(a_n = a_1 + (n-1)d = 18 + (n-1) \\cdot (-2) = 20 - 2n\\)，\n从而当  \\(n \\leq 9\\) 时， \\(a_n > 0\\)； \\(a_{10} = 0\\)；当  \\(n \\geq 11\\) 时， \\(a_n < 0\\)；故当  \\(n = 9\\) 或 10 时， \\(S_n\\) 有最大值。\n答案：A\n【反思】研究等差数列\\(\\{a_{n}\\}\\)的前\\(n\\)项和的最值（以最大值为例，最小值可类似处理），可先求出其通项公式，再用通项公式分析\\(\\{a_{n}\\}\\)的哪些项为正数，哪些项为负数，求和时，求到为正数的最后一项，就能使\\(S_{n}\\)最大。若数列中存在为0的项，则求和时加到这一项，\\(S_{n}\\)也是最大的。",
-          "solution_present": true,
-          "vision_hint": "4.3-LIaaacbc18f9d5ca8b"
-        },
-        {
-          "item_id": "58e0a5896aa65d6a",
-          "kind": "example",
-          "label": "例11",
-          "example_number": 11,
-          "parent_example_number": null,
-          "role": "knowledge_example",
-          "role_ref": "4.3-k3",
-          "source_docs": [
-            42,
-            43
-          ],
-          "question_text": "【例 11】2024 年两会报告中提出 “大力推进现代化产业体系建设，加快发展新质生产力”，所谓新质生产力，是创新主导、以科技创新作为核心要素的先进生产力质态。今年全国两会，“新质生产力”已成为 C 位热词。某创新公司落实两会精神，准备年初用 980 万元购买新设备用来创新，第一年使用的各种创新费用 120 万元，以后每年还要持续增加创新费用 40 万元，公司每年经过创新后的收益为 500 万元。\n（1）创新公司第几年开始获利？\n（2）经过多少年创新公司获得的年平均利润最大？最大年平均利润是多少？",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "teaching_text": "【例 11】2024 年两会报告中提出 “大力推进现代化产业体系建设，加快发展新质生产力”，所谓新质生产力，是创新主导、以科技创新作为核心要素的先进生产力质态。今年全国两会，“新质生产力”已成为 C 位热词。某创新公司落实两会精神，准备年初用 980 万元购买新设备用来创新，第一年使用的各种创新费用 120 万元，以后每年还要持续增加创新费用 40 万元，公司每年经过创新后的收益为 500 万元。\n（1）创新公司第几年开始获利？\n（2）经过多少年创新公司获得的年平均利润最大？最大年平均利润是多少？\n解：（1）（利润=总收益-总成本，这里需要注意成本分成两个部分，一个是买设备的固定成本，另一个则是创新费用，不难发现每年的创新费用成等差数列，所以到第 \\(n\\) 年的总费用可代等差数列的前 \\(n\\) 项和公式计算）\n由题意，设公司到第 \\(n\\) 年的累计利润为 \\(f(n)\\)，由题意，\\(f(n)=500n-\\left[120n+\\frac{n(n-1)}{2}\\times40\\right]-980\\)，\n整理得： \\(f(n)=-20n^{2}+400n-980\\)，要使公司获利，则 \\(f(n)=-20n^{2}+400n-980>0\\)，\n解得： \\(10 - \\sqrt{51} < n < 10 + \\sqrt{51}\\)，又因为 \\(n \\in \\mathbb{N}^*\\)， \\(7 < \\sqrt{51} < 8\\)，所以 \\(3 \\leq n \\leq 17\\)，故公司第3年开始获利。\n（2）由题意，该公司的年平均利润为 \\(\\frac{f(n)}{n}=\\frac{-20n^{2}+400n-980}{n}=-20\\left(n+\\frac{49}{n}\\right)+400\\) ①，\n因为 \\(n \\in \\mathbb{N}^*\\)，所以 \\(n + \\frac{49}{n} \\geq 2\\sqrt{n \\cdot \\frac{49}{n}} = 14\\)，当且仅当 \\(n = 7\\)时等号成立，\n代入①得 \\(\\frac{f(n)}{n}=-20\\left(n+\\frac{49}{n}\\right)+400\\leq-20\\times14+400=120\\)\n所以公司经过7年可获得的年平均利润最大，最大年平均利润为120万元.\n【反思】等差数列的前 n 项和公式在实际问题中有广泛的应用，解决这类问题的基本步骤是：①阅读材料，将其转化为等差数列模型，并设出有关变量，从而将实际问题转化为等差数列问题；②分析已知条件，求解数列问题；③回归实际，将求得的结果翻译成实际问题中的结果.\n## 补充、拓展\n等差数列可能与其它知识、方法综合出题，此时难度往往稍高，下面的类型V中，我们会举例子；另外，偶尔也会遇到与等差数列有关的新定义问题，我们通过后面的类型VI来拓展。",
-          "solution_present": true,
-          "vision_hint": "4.3-LI58e0a5896aa65d6a"
-        },
-        {
-          "item_id": "01c9f3f4269e1d39",
-          "kind": "example",
-          "label": "例12",
-          "example_number": 12,
-          "parent_example_number": null,
-          "role": "knowledge_example",
-          "role_ref": "4.3-k3",
-          "source_docs": [
-            43
-          ],
-          "question_text": "【例 12】各项均不为 0 的数列  \\(\\{a_{n}\\}\\) 对任意正整数 n 满足： \\(\\frac{1}{a_{1}a_{2}}+\\frac{1}{a_{2}a_{3}}+\\cdots+\\frac{1}{a_{n}a_{n+1}}=1-\\frac{1}{2a_{n+1}}\\).\n（1）若 \\(\\{a_{n}\\}\\)为等差数列，求 \\(a_{1}\\);\n（2）若 \\(a_{1}=-\\frac{2}{7}\\)，求 \\(\\{a_{n}\\}\\)的前n项和 \\(S_{n}\\)",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "teaching_text": "【例 12】各项均不为 0 的数列  \\(\\{a_{n}\\}\\) 对任意正整数 n 满足： \\(\\frac{1}{a_{1}a_{2}}+\\frac{1}{a_{2}a_{3}}+\\cdots+\\frac{1}{a_{n}a_{n+1}}=1-\\frac{1}{2a_{n+1}}\\).\n（1）若 \\(\\{a_{n}\\}\\)为等差数列，求 \\(a_{1}\\);\n（2）若 \\(a_{1}=-\\frac{2}{7}\\)，求 \\(\\{a_{n}\\}\\)的前n项和 \\(S_{n}\\)\n解：（1）（所给等式左侧为 \\(\\left\\{\\frac{1}{a_{n}a_{n+1}}\\right\\}\\)的前n项和，可通过退n相减，化掉和式再看）\n由题意，对任意的  \\(n \\in \\mathbb{N}^*\\)，都有  \\(\\frac{1}{a_1a_2} + \\frac{1}{a_2a_3} + \\cdots + \\frac{1}{a_{n-1}a_n} + \\frac{1}{a_na_{n+1}} = 1 - \\frac{1}{2a_{n+1}}\\)，\n所以当 \\(n\\geq2\\)时， \\(\\frac{1}{a_1a_2}+\\frac{1}{a_2a_3}+\\cdots+\\frac{1}{a_{n-1}a_n}=1-\\frac{1}{2a_n}\\)，\n两式作差得： \\(\\frac{1}{a_{n}a_{n+1}}=\\frac{1}{2a_{n}}-\\frac{1}{2a_{n+1}}\\)，所以 \\(a_{n+1}-a_{n}=2(n\\geq2)\\)，结合 \\(\\{a_{n}\\}\\)为等差数列可得其公差d=2\n（要求的是 \\(a_{1}\\)，需要再找一个方程，可在题干所给等式中取n=1来构造方程）\n在 \\(\\frac{1}{a_1a_2}+\\frac{1}{a_2a_3}+\\cdots+\\frac{1}{a_na_{n+1}}=1-\\frac{1}{2a_{n+1}}\\)中令n=1可得 \\(\\frac{1}{a_1a_2}=1-\\frac{1}{2a_2}\\)，所以 \\(\\frac{1}{a_1(a_1+2)}=1-\\frac{1}{2(a_1+2)}\\)，\n两端同乘以  \\(2a_{1}(a_{1}+2)\\) 化简得：  \\(2a_{1}^{2}+3a_{1}-2=0\\) ，解得：  \\(a_{1}=\\frac{1}{2}\\) 或 -2 ，\n当 \\(a_1 = -2\\)时， \\(a_2 = a_1 + d = -2 + 2 = 0\\)，与题意不符，舍去，所以 \\(a_1 = \\frac{1}{2}\\)。\n（2）（由第（1）问的 \\(a_{n+1}-a_n=2(n\\geq2)\\)可知 \\(\\{a_n\\}\\)从第二项起构成等差数列，那第一项呢？我们来看看 \\(a_2-a_1\\)的情况）由（1）可得 \\(\\frac{1}{a_1a_2}=1-\\frac{1}{2a_2}\\)，将 \\(a_1=-\\frac{2}{7}\\)代入可解得： \\(a_2=-3\\)，\n（我们发现  \\(a_2 - a_1 \\neq 2\\)，所以  \\(\\{a_n\\}\\) 只是从第 2 项起才构成等差数列，故求和时分  \\(n \\geq 2\\) 和  \\(n=1\\) 分别考虑当  \\(n \\geq 2\\) 时，由（1）可知  \\(a_{n+1} - a_n = 2\\)，所以  \\(a_2\\)， \\(a_3\\)， \\(a_4\\)， \\(\\cdots\\)， \\(a_n\\)， \\(\\cdots\\) 构成公差为 2 的等差数列，故  \\(S_n = a_1 + a_2 + \\cdots + a_n = -\\frac{2}{7} + \\frac{(n-1)(a_2 + a_n)}{2} = -\\frac{2}{7} + \\frac{(n-1)[-3 + (-3) + (n-2) \\times 2]}{2} = n^2 - 6n + \\frac{33}{7}\\)；又因为  \\(S_1 = a_1 = -\\frac{2}{7}\\) 也满足上式，所以对任意的  \\(n \\in \\mathbb{N}^*\\)，都有  \\(S_n = n^2 - 6n + \\frac{33}{7}\\)。\n【反思】若数列从第二项起成等差数列，则求其前 \\(n\\) 项和时也应分 \\(n=1\\) 和 \\(n \\geq 2\\) 讨论，代公式时，要注意灵活运用 “\\(S_n = \\frac{\\text{项数} \\times (\\text{首项} + \\text{末项})}{2} = \\text{项数} \\times \\text{首项} + \\frac{\\text{项数} \\times (\\text{项数} - 1)}{2} \\times \\text{公差}\\)”。",
-          "solution_present": true,
-          "vision_hint": "4.3-LI01c9f3f4269e1d39"
-        },
-        {
-          "item_id": "2f47d259e7e032f5",
-          "kind": "example",
-          "label": "例13",
-          "example_number": 13,
-          "parent_example_number": null,
-          "role": "knowledge_example",
-          "role_ref": "4.3-k3",
-          "source_docs": [
-            44,
-            45
-          ],
-          "question_text": "【例 13】任取数列 \\(\\{a_n\\}\\) 中相邻的两项，若这两项之差的绝对值为 3，则称数列 \\(\\{a_n\\}\\) 具有“P 性质”。已知具有“P 性质”的数列 \\(\\{a_n\\}\\) 共有 \\(n\\) 项，且所有项之和为 \\(S_n\\)。\n（1）若 n=4，且  \\(a_{1}=1\\)， \\(a_{4}=4\\)，求  \\(S_{4}\\) 的所有可能值；\n（2）若 \\(a_{1}=2025\\)，n=675，且 \\(a_{k}>a_{k+1}(k=1,2,\\cdots,674)\\)恒成立，求 \\(a_{675}\\)；\n（3）若 \\(a_{1}=1,\\quad n\\geq2,\\quad S_{n}=0\\)，证明： \\(n^{2}+n\\)能被4整除.",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "teaching_text": "【例 13】任取数列 \\(\\{a_n\\}\\) 中相邻的两项，若这两项之差的绝对值为 3，则称数列 \\(\\{a_n\\}\\) 具有“P 性质”。已知具有“P 性质”的数列 \\(\\{a_n\\}\\) 共有 \\(n\\) 项，且所有项之和为 \\(S_n\\)。\n（1）若 n=4，且  \\(a_{1}=1\\)， \\(a_{4}=4\\)，求  \\(S_{4}\\) 的所有可能值；\n（2）若 \\(a_{1}=2025\\)，n=675，且 \\(a_{k}>a_{k+1}(k=1,2,\\cdots,674)\\)恒成立，求 \\(a_{675}\\)；\n（3）若 \\(a_{1}=1,\\quad n\\geq2,\\quad S_{n}=0\\)，证明： \\(n^{2}+n\\)能被4整除.\n解：（1）（由题设条件，具有“P性质”的数列 \\(a_n\\)应满足 \\(\\left|a_n - a_{n-1}\\right| = 3(n \\geq 2)\\)，由此结合 \\(a_1 = 1\\)可画出接下来3项的树状图，再看哪些满足 \\(a_1 = 4\\)即可）\n如图，满足 \\(n = 4\\)， \\(a_1 = 1\\)， \\(a_4 = 4\\)，且具有“P性质”的数列有1，4，1，4，或1，4，7，4，或1，-2，1，4，所以 \\(S_4\\)所有可能的值为10，16，或4.\n（2）由题意， \\(\\left|a_{k}-a_{k+1}\\right|=3\\)，又因为 \\(a_{k}>a_{k+1}\\)，所以 \\(\\left|a_{k}-a_{k+1}\\right|=a_{k}-a_{k+1}=3\\)，\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_896_1461_1095_1631.jpg\" alt=\"Image\" width=\"16%\" /></div>\n从而  \\(a_{k+1}-a_k=-3\\)，故  \\(\\{a_n\\}\\) 是首项为  \\(a_1=2025\\)，公差 d=-3 的等差数列，所以  \\(a_{675}=a_1+674d=2025+674\\times(-3)=3\\)。\n（3）（要证 \\(n^2 + n\\) 能被 \\(4\\) 整除，考虑先表示出 \\(S_n\\)，再作分析。这里 \\(\\{a_n\\}\\) 类似于等差数列，但不是严格的等差数列，无法直接代公式求 \\(S_n\\)，怎么办呢？我们将 \\(|a_k - a_{k+1}| = 3\\) 去绝对值，再作分析）\n由题意，\\(|a_k - a_{k+1}| = 3\\)，所以 \\(a_{k+1} - a_k = \\pm 3\\)，记 \\(a_{k+1} - a_k = c_k\\)，则 \\(c_k = \\pm 3\\)，且 \\(a_{k+1} = a_k + c_k\\)，\\(k=1,2,\\cdots,n-1\\)，\n所以 \\(a_{k+1} = a_k + c_k = a_{k-1} + c_{k-1} + c_k = a_{k-2} + c_{k-2} + c_{k-1} + c_k = \\cdots = a_1 + c_1 + c_2 + \\cdots + c_k\\)，\n故 \\(S_n = a_1 + a_2 + a_3 + \\cdots + a_n = a_1 + (a_1 + c_1) + (a_1 + c_1 + c_2) + \\cdots + (a_1 + c_1 + c_2 + \\cdots + c_{n-1})\\)\n\\(=na_1 + (n-1)c_1 + (n-2)c_2 + \\cdots + 2c_{n-2} + c_{n-1} = n + (n-1)c_1 + (n-2)c_2 + \\cdots + 2c_{n-2} + c_{n-1}\\) ①，\n（要证的结论涉及 \\(n(n+1)\\)，如何产生这一结构？注意到 \\(n + (n-1) + (n-2) + \\cdots + 1 = \\frac{n(n+1)}{2}\\)，故考虑将式①第一项的 \\(n\\) 凑成 \\(n + (n-1) + (n-2) + \\cdots + 1\\)，构造出目标结构 \\(n(n+1)\\)，再作分析）\n由①可得 \\(S_n = n + (n-1) + (n-2) + \\cdots + 1 - (n-1) - (n-2) - \\cdots - 1 + (n-1)c_1 + (n-2)c_2 + \\cdots + 2c_{n-2} + c_{n-1} = \\frac{n(n+1)}{2} + (n-1)(c_1 - 1) + (n-2)(c_2 - 1) + \\cdots + 2(c_{n-2} - 1) + (c_{n-1} - 1)\\)，\n又由题意，\\(S_n = 0\\)，所以 \\(\\frac{n(n+1)}{2} + (n-1)(c_1 - 1) + (n-2)(c_2 - 1) + \\cdots + 2(c_{n-2} - 1) + (c_{n-1} - 1) = 0\\)，\n故 \\(n(n+1) = -2[(n-1)(c_1 - 1) + (n-2)(c_2 - 1) + \\cdots + 2(c_{n-2} - 1) + (c_{n-1} - 1)]\\)，\n因为 \\(c_1\\)，\\(c_2\\)，\\(\\cdots\\)，\\(c_{n-1}\\) 只能取 3 或 -3，所以 \\(c_1 - 1\\)，\\(c_2 - 1\\)，\\(\\cdots\\)，\\(c_{n-1} - 1\\) 都为偶数，\n从而 \\((n-1)(c_1 - 1) + (n-2)(c_2 - 1) + \\cdots + 2(c_{n-2} - 1) + (c_{n-1} - 1)\\) 也为偶数，\n故 \\(-2[(n-1)(c_1 - 1) + (n-2)(c_2 - 1) + \\cdots + 2(c_{n-2} - 1) + (c_{n-1} - 1)]\\) 必为 4 的整数倍，即 \\(n^2 + n = n(n+1)\\) 能被 4 整除。\n【反思】①涉及整除问题，常考虑从公因式的角度来进行分析；②新定义问题往往难度较大，对思维能力要求较高，没有固定的套路，要顺利解决这类问题，除了需要有扎实的基础外，还应具备较强的逻辑推理能力。",
-          "solution_present": true,
-          "vision_hint": "4.3-LI2f47d259e7e032f5"
         }
       ],
-      "direct_variants": [
-        {
-          "item_id": "c8a6520edc374861",
-          "kind": "direct_variant",
-          "label": "变式1",
-          "example_number": null,
-          "parent_example_number": 5,
-          "role": "direct_variant",
-          "role_ref": null,
-          "source_docs": [
-            36
-          ],
-          "question_text": "【变式1】（多选）已知等差数列\\(\\{a_n\\}\\)的前\\(n\\)项和为\\(S_n\\)，\\(a_1<0\\)，\\(S_7=S_{12}\\)，则（ ）\nA. 数列\\(\\{a_n\\}\\)是递减数列\nB. \\(a_{10}=0\\)\nC. \\(S_n<0\\)时，\\(n\\)的最大值是18\nD. \\(S_2>S_{16}\\)",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "solution_isolated": true,
-          "vision_hint": "4.3-LIc8a6520edc374861"
-        },
-        {
-          "item_id": "81cc4a9eac39ac17",
-          "kind": "direct_variant",
-          "label": "变式2",
-          "example_number": null,
-          "parent_example_number": 5,
-          "role": "direct_variant",
-          "role_ref": null,
-          "source_docs": [
-            36,
-            37
-          ],
-          "question_text": "【变式2】已知正项数列 \\(\\{a_{n}\\}\\)的前n项和为 \\(S_{n}\\)，且满足 \\(a_{n}^{2}+a_{n}=2S_{n}+6\\)。\n（1）证明： \\(\\{a_{n}\\}\\) 为等差数列；\n（2）求数列 \\(\\left\\{\\frac{S_{n}}{n}\\right\\}\\)的前n项和 \\(T_{n}\\).",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "solution_isolated": true,
-          "vision_hint": "4.3-LI81cc4a9eac39ac17"
-        },
-        {
-          "item_id": "25b22fcad44c4d9e",
-          "kind": "direct_variant",
-          "label": "变式3",
-          "example_number": null,
-          "parent_example_number": 5,
-          "role": "direct_variant",
-          "role_ref": null,
-          "source_docs": [
-            37
-          ],
-          "question_text": "【变式3】已知等差数列 \\(\\{a_{n}\\}\\)的前n项和为 \\(S_{n}\\)，若 \\(a_{1}=15\\)， \\(S_{7}=14a_{10}\\)，则\n(1)  \\(a_{11} + a_{12} + \\cdots + a_{20} =\\)___；(2)  \\(a_2 + a_5 + a_8 + \\cdots + a_{35} =\\)___。",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "solution_isolated": true,
-          "vision_hint": "4.3-LI25b22fcad44c4d9e"
-        },
-        {
-          "item_id": "4500e6386f3b312f",
-          "kind": "direct_variant",
-          "label": "变式4",
-          "example_number": null,
-          "parent_example_number": 5,
-          "role": "direct_variant",
-          "role_ref": null,
-          "source_docs": [
-            37,
-            38
-          ],
-          "question_text": "【变式 4】已知数列 \\(\\{a_n\\}\\) 中，\\(a_1 = -\\frac{1}{5}\\)，\\(a_{n+1} = \\frac{a_n}{2a_n + 1}\\)，记 \\(b_n = \\frac{1}{a_n}\\)。\n（1）求证：数列 \\(\\{b_{n}\\}\\)是等差数列，并求出 \\(b_{n}\\)\n（2）设 \\(T_{n}=\\left|b_{1}\\right|+\\left|b_{2}\\right|+\\cdots+\\left|b_{n}\\right|\\)，求 \\(T_{n}\\)",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "solution_isolated": true,
-          "vision_hint": "4.3-LI4500e6386f3b312f"
-        },
-        {
-          "item_id": "9e52af966fabca5f",
-          "kind": "direct_variant",
-          "label": "变式",
-          "example_number": null,
-          "parent_example_number": 6,
-          "role": "direct_variant",
-          "role_ref": null,
-          "source_docs": [
-            38,
-            39
-          ],
-          "question_text": "【变式】（多选）记等差数列\\(\\{a_n\\}\\)的前\\(n\\)项和为\\(S_n\\)，已知\\(S_n = Pn^2 + Qn + M (P, Q, M \\in \\mathbb{R})\\)，则下列说法一定正确的是（ ）\nA. \\(M \\ne 0\\)  \nB. 若\\(\\{a_n\\}\\)单调递增，则\\(P > 0\\)  \nC. 若\\(Q = 0\\)，则\\(a_3 = 4a_1\\)  \nD. 若\\(P + Q + M = 0\\)，则\\(a_1 = 0\\)",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "solution_isolated": true,
-          "vision_hint": "4.3-LI9e52af966fabca5f"
-        },
-        {
-          "item_id": "cd5e04efc7e9623f",
-          "kind": "direct_variant",
-          "label": "变式",
-          "example_number": null,
-          "parent_example_number": 7,
-          "role": "direct_variant",
-          "role_ref": null,
-          "source_docs": [
-            39
-          ],
-          "question_text": "【变式】已知等差数列\\(\\{a_n\\}\\)，\\(\\{b_n\\}\\)的前\\(n\\)项和分别为\\(S_n\\)，\\(T_n\\)，若\\(\\frac{S_n}{T_n}=\\frac{2n+5}{3n-7}\\)，则\\(\\frac{b_5}{a_3}=\\)（）\nA. \\(\\frac{8}{23}\\)\nB. \\(\\frac{20}{23}\\)\nC. \\(1\\)\nD. \\(\\frac{4}{3}\\)",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "solution_isolated": true,
-          "vision_hint": "4.3-LIcd5e04efc7e9623f"
-        },
-        {
-          "item_id": "ed8e1fc2f5a21082",
-          "kind": "direct_variant",
-          "label": "变式",
-          "example_number": null,
-          "parent_example_number": 8,
-          "role": "direct_variant",
-          "role_ref": null,
-          "source_docs": [
-            40
-          ],
-          "question_text": "【变式】（2020·新课标Ⅱ卷）北京天坛的圜丘坛为古代祭天的场所，分上、中、下三层。上层中心有一块圆形石板（称为天心石）。环绕天心石砌9块扇面形石板构成第一环，向外每环依次增加9块，下一层的第一环比上一层的最后一环多9块，向外每环依次也增加9块，已知每层环数相同，且下层比中层多729块，则三层共有扇面形石板（不含天心石）（）\nA. 3699 块 B. 3474 块 C. 3402 块 D. 3339 块",
-          "image_refs": [
-            {
-              "ref": "imgs/img_in_image_box_872_345_1099_646.jpg",
-              "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_872_345_1099_646.jpg",
-              "exists": true
-            }
-          ],
-          "visual_status": "VISION_VERIFIED",
-          "solution_isolated": true,
-          "vision_hint": "4.3-LIed8e1fc2f5a21082",
-          "vision_sidecars": [
-            {
-              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_872_345_1099_646.jpg",
-              "image_sha256": "e905b52407eb2724883195e97db659d35b3f79beb5f362862faf699f441723d7",
-              "confidence": "E2",
-              "structured": {
-                "objects": [
-                  "环形台阶",
-                  "建筑顶部塔楼"
-                ],
-                "relations": [
-                  "建筑顶部塔楼位于环形台阶后方中央",
-                  "环形台阶环绕建筑入口"
-                ],
-                "coordinates": [
-                  [
-                    "建筑入口位置：环形台阶中心上方建筑入口位置"
-                  ],
-                  [
-                    "环形台阶：从下至上分为多个同心圆层"
-                  ]
-                ],
-                "ranges": [
-                  [
-                    "环形台阶的同心圆层数：约3-4层"
-                  ],
-                  [
-                    "建筑顶部塔楼高度：高于周围建筑"
-                  ]
-                ],
-                "text": [],
-                "uncertainties": [],
-                "confidence": "E2"
-              },
-              "source_provenance": null
-            }
-          ],
-          "vision_sidecar": {
-            "objects": [
-              "环形台阶",
-              "建筑顶部塔楼"
-            ],
-            "relations": [
-              "建筑顶部塔楼位于环形台阶后方中央",
-              "环形台阶环绕建筑入口"
-            ],
-            "coordinates": [
-              [
-                "建筑入口位置：环形台阶中心上方建筑入口位置"
-              ],
-              [
-                "环形台阶：从下至上分为多个同心圆层"
-              ]
-            ],
-            "ranges": [
-              [
-                "环形台阶的同心圆层数：约3-4层"
-              ],
-              [
-                "建筑顶部塔楼高度：高于周围建筑"
-              ]
-            ],
-            "text": [],
-            "uncertainties": [],
-            "confidence": "E2"
-          },
-          "vision_source_provenance": [],
-          "evidence": [
-            "E1",
-            "E2"
-          ]
-        },
-        {
-          "item_id": "44c778cb60a541b3",
-          "kind": "direct_variant",
-          "label": "变式",
-          "example_number": null,
-          "parent_example_number": 9,
-          "role": "direct_variant",
-          "role_ref": null,
-          "source_docs": [
-            41
-          ],
-          "question_text": "【变式】已知  \\(S_n\\) 是等差数列  \\(\\{a_n\\}\\) 的前  \\(n\\) 项和，若  \\(\\frac{S_m}{m} - S_1 = 1\\)（常数  \\(m \\in \\mathbb{N}^*\\) 且  \\(m \\geq 2\\)），则  \\(\\frac{S_{2m-1}}{2m-1} - S_1 =\\)（ ）\nA. 1       B. 2       C. -1       D. -2",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "solution_isolated": true,
-          "vision_hint": "4.3-LI44c778cb60a541b3"
-        },
-        {
-          "item_id": "d65a47a002a299c0",
-          "kind": "direct_variant",
-          "label": "变式1",
-          "example_number": null,
-          "parent_example_number": 10,
-          "role": "direct_variant",
-          "role_ref": null,
-          "source_docs": [
-            41,
-            42
-          ],
-          "question_text": "【变式1】（多选）记等差数列\\(\\{a_n\\}\\)的前\\(n\\)项和为\\(S_n\\)，公差为\\(d\\)，若\\(a_8+a_9>0\\)，\\(a_9<0\\)，则下列结论正确的是（ ）\nA. \\(d<0\\)  \nB. 当\\(n=8\\)时，\\(S_n\\)取得最大值  \nC. \\(a_2+a_5+a_{12}>0\\)  \nD. 使得\\(S_n>0\\)成立的最大自然数\\(n\\)是15",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "solution_isolated": true,
-          "vision_hint": "4.3-LId65a47a002a299c0"
-        },
-        {
-          "item_id": "313857fb05643926",
-          "kind": "direct_variant",
-          "label": "变式2",
-          "example_number": null,
-          "parent_example_number": 10,
-          "role": "direct_variant",
-          "role_ref": null,
-          "source_docs": [
-            42
-          ],
-          "question_text": "【变式2】已知在等差数列 \\(\\{a_n\\}\\)中， \\(a_1<0\\)， \\(S_9=S_{12}\\)，则当 \\(S_n\\)最小时， \\(n=\\)___。",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "solution_isolated": true,
-          "vision_hint": "4.3-LI313857fb05643926"
-        },
-        {
-          "item_id": "9962a58c95a69aa5",
-          "kind": "direct_variant",
-          "label": "变式",
-          "example_number": null,
-          "parent_example_number": 12,
-          "role": "direct_variant",
-          "role_ref": null,
-          "source_docs": [
-            43,
-            44
-          ],
-          "question_text": "【变式】设各项均为正数的数列 \\(\\{a_{n}\\}\\)满足 \\(\\frac{S_{n}}{a_{n}}=pn+q\\)，p，q为实数，其中 \\(S_{n}\\)为 \\(\\{a_{n}\\}\\)的前n项和.\n（1）若 p=1， \\(a_{1}=2025\\)，求数列 \\(\\{a_{n}\\}\\)的通项公式；\n（2）若数列 \\(\\{a_{n}\\}\\)为等差数列，求p，q的值.",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "solution_isolated": true,
-          "vision_hint": "4.3-LI9962a58c95a69aa5"
-        }
-      ],
+      "direct_variants": [],
       "exercise_questions": [],
       "action_order": [
         "learn_each_current_example_then_attempt_its_direct_variants",
@@ -664,30 +228,570 @@
     {
       "cycle_id": "4.3-cycle-4",
       "sequence": 4,
-      "title": "A组 夯实基础",
+      "title": "类型I 求等差数列的前 n 项和",
       "course_keys": [],
       "prerequisite_course_keys": [
-        "4.3.2.4 等差数列Sn的性质",
-        "4.3.2.1 等差数列的基本公式"
+        "4.3.2.1 等差数列的基本公式",
+        "4.3.2.4 等差数列Sn的性质"
       ],
       "optional_course_keys": [],
       "knowledge_refs": [],
       "prerequisite_knowledge_refs": [],
       "type_refs": [
-        "类型I 求等差数列的前 n 项和",
-        "类型Ⅱ 等差数列前 n 项和有关性质的应用",
-        "类型Ⅲ 等差数列前 n 项和的最值问题",
-        "类型IV 等差数列前 n 项和的实际应用",
-        "类型V 等差数列综合题",
+        "类型I 求等差数列的前 n 项和"
+      ],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [
+        {
+          "item_id": "81d543331004d4c3",
+          "kind": "example",
+          "label": "例5",
+          "example_number": 5,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型I 求等差数列的前 n 项和",
+          "source_docs": [
+            36
+          ],
+          "question_text": "【例5】已知等差数列\\(\\{a_n\\}\\)的前\\(n\\)项和为\\(S_n\\)，若\\(S_4=2S_2\\)，\\(a_2=2a_1+1\\)，则\\(S_{15}=\\)（）\nA. \\(-20\\) B. \\(-15\\) C. \\(-10\\) D. \\(-5\\)",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例5】已知等差数列\\(\\{a_n\\}\\)的前\\(n\\)项和为\\(S_n\\)，若\\(S_4=2S_2\\)，\\(a_2=2a_1+1\\)，则\\(S_{15}=\\)（）\nA. \\(-20\\) B. \\(-15\\) C. \\(-10\\) D. \\(-5\\)\n解析：已知和所求都容易代公式，故先代公式翻译已知条件，建立方程组求出  \\(a_1\\) 和  \\(d\\)，再用它们求  \\(S_{15}\\)\n设  \\(\\{a_n\\}\\) 的公差为  \\(d\\)，由题意， \\(\\begin{cases} S_4 = 2S_2 \\\\ a_2 = 2a_1 + 1 \\end{cases}\\)，所以  \\(\\begin{cases} 4a_1 + \\frac{4 \\times 3}{2}d = 2\\left(2a_1 + \\frac{2 \\times 1}{2}d\\right) \\\\ a_1 + d = 2a_1 + 1 \\end{cases}\\)，解得： \\(\\begin{cases} a_1 = -1 \\\\ d = 0 \\end{cases}\\)，\n所以  \\(S_{15} = 15a_1 + \\frac{15 \\times 14}{2}d = 15 \\times (-1) + \\frac{15 \\times 14}{2} \\times 0 = -15\\)。\n答案：B\n【反思】当涉及等差数列 \\(\\{a_n\\}\\) 的前 \\(n\\) 项和 \\(S_n\\) 时，常考虑代公式 \\(S_n = \\frac{n(a_1 + a_n)}{2} = na_1 + \\frac{n(n-1)}{2}d\\) 处理，至于具体代哪个公式，要看怎样更方便计算，我们再通过下面的变式 1 和变式 2 来巩固一下。",
+          "solution_present": true,
+          "vision_hint": "4.3-LI81d543331004d4c3"
+        }
+      ],
+      "direct_variants": [
+        {
+          "item_id": "c8a6520edc374861",
+          "kind": "direct_variant",
+          "label": "变式1",
+          "example_number": null,
+          "parent_example_number": 5,
+          "role": "direct_variant",
+          "role_ref": "类型I 求等差数列的前 n 项和",
+          "source_docs": [
+            36
+          ],
+          "question_text": "【变式1】（多选）已知等差数列\\(\\{a_n\\}\\)的前\\(n\\)项和为\\(S_n\\)，\\(a_1<0\\)，\\(S_7=S_{12}\\)，则（ ）\nA. 数列\\(\\{a_n\\}\\)是递减数列\nB. \\(a_{10}=0\\)\nC. \\(S_n<0\\)时，\\(n\\)的最大值是18\nD. \\(S_2>S_{16}\\)",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "4.3-LIc8a6520edc374861"
+        },
+        {
+          "item_id": "81cc4a9eac39ac17",
+          "kind": "direct_variant",
+          "label": "变式2",
+          "example_number": null,
+          "parent_example_number": 5,
+          "role": "direct_variant",
+          "role_ref": "类型I 求等差数列的前 n 项和",
+          "source_docs": [
+            36,
+            37
+          ],
+          "question_text": "【变式2】已知正项数列 \\(\\{a_{n}\\}\\)的前n项和为 \\(S_{n}\\)，且满足 \\(a_{n}^{2}+a_{n}=2S_{n}+6\\)。\n（1）证明： \\(\\{a_{n}\\}\\) 为等差数列；\n（2）求数列 \\(\\left\\{\\frac{S_{n}}{n}\\right\\}\\)的前n项和 \\(T_{n}\\).",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "4.3-LI81cc4a9eac39ac17"
+        },
+        {
+          "item_id": "25b22fcad44c4d9e",
+          "kind": "direct_variant",
+          "label": "变式3",
+          "example_number": null,
+          "parent_example_number": 5,
+          "role": "direct_variant",
+          "role_ref": "类型I 求等差数列的前 n 项和",
+          "source_docs": [
+            37
+          ],
+          "question_text": "【变式3】已知等差数列 \\(\\{a_{n}\\}\\)的前n项和为 \\(S_{n}\\)，若 \\(a_{1}=15\\)， \\(S_{7}=14a_{10}\\)，则\n(1)  \\(a_{11} + a_{12} + \\cdots + a_{20} =\\)___；(2)  \\(a_2 + a_5 + a_8 + \\cdots + a_{35} =\\)___。",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "4.3-LI25b22fcad44c4d9e"
+        },
+        {
+          "item_id": "4500e6386f3b312f",
+          "kind": "direct_variant",
+          "label": "变式4",
+          "example_number": null,
+          "parent_example_number": 5,
+          "role": "direct_variant",
+          "role_ref": "类型I 求等差数列的前 n 项和",
+          "source_docs": [
+            37,
+            38
+          ],
+          "question_text": "【变式 4】已知数列 \\(\\{a_n\\}\\) 中，\\(a_1 = -\\frac{1}{5}\\)，\\(a_{n+1} = \\frac{a_n}{2a_n + 1}\\)，记 \\(b_n = \\frac{1}{a_n}\\)。\n（1）求证：数列 \\(\\{b_{n}\\}\\)是等差数列，并求出 \\(b_{n}\\)\n（2）设 \\(T_{n}=\\left|b_{1}\\right|+\\left|b_{2}\\right|+\\cdots+\\left|b_{n}\\right|\\)，求 \\(T_{n}\\)",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "4.3-LI4500e6386f3b312f"
+        }
+      ],
+      "exercise_questions": [],
+      "action_order": [
+        "learn_each_current_example_then_attempt_its_direct_variants",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [],
+      "prerequisite_knowledge_blocks": []
+    },
+    {
+      "cycle_id": "4.3-cycle-5",
+      "sequence": 5,
+      "title": "类型Ⅱ 等差数列前 n 项和有关性质的应用",
+      "course_keys": [],
+      "prerequisite_course_keys": [
+        "4.3.2.1 等差数列的基本公式",
+        "4.3.2.4 等差数列Sn的性质"
+      ],
+      "optional_course_keys": [],
+      "knowledge_refs": [],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 等差数列前 n 项和有关性质的应用"
+      ],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [
+        {
+          "item_id": "e716715c1a89b29e",
+          "kind": "example",
+          "label": "例6",
+          "example_number": 6,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型Ⅱ 等差数列前 n 项和有关性质的应用",
+          "source_docs": [
+            38
+          ],
+          "question_text": "【例6】设等差数列 \\(\\{a_{n}\\}\\)的前n项和为 \\(S_{n}\\)，若 \\(S_{100}=1000\\)， \\(S_{1000}=100\\)，那么 \\(S_{1100}\\)等于（）\nA. 10 B. 80 C. -100 D. -1100",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例6】设等差数列 \\(\\{a_{n}\\}\\)的前n项和为 \\(S_{n}\\)，若 \\(S_{100}=1000\\)， \\(S_{1000}=100\\)，那么 \\(S_{1100}\\)等于（）\nA. 10 B. 80 C. -100 D. -1100\n解析：可以想象，涉及的下标较大，若用公式翻译已知条件求  \\(a_1\\) 和  \\(d\\)，则计算量较大，能否简化？注意到已知和所求都只与  \\(S_n\\) 有关，故可考虑将  \\(S_n\\) 设为  \\(An^2 + Bn\\) 的形式，用待定系数法求  \\(A\\) 和  \\(B\\)，\n因为  \\(\\{a_n\\}\\) 是等差数列，所以可设  \\(S_n = An^2 + Bn\\)，由题意， \\(\\begin{cases} S_{100} = 100^2A + 100B = 1000 \\\\ S_{1000} = 1000^2A + 1000B = 100 \\end{cases} \\Rightarrow \\begin{cases} 100A + B = 10 \\\\ 10000A + 10B = 1 \\end{cases}\\)，\n解得： \\(A = -\\frac{11}{1000}\\)， \\(B = \\frac{111}{10}\\)，所以  \\(S_{1100} = 1100^2A + 1100B = 1100^2 \\times \\left(-\\frac{11}{1000}\\right) + 1100 \\times \\frac{111}{10} = -1100\\)。\n答案：D\n【反思】对于等差数列的前  \\(n\\) 项和，若代公式  \\(S_n = \\frac{n(a_1 + a_n)}{2} = na_1 + \\frac{n(n-1)}{2}d\\) 计算较麻烦，则还可以考虑将  \\(S_n\\) 写成  \\(S_n = An^2 + Bn\\) ( \\(A, B \\in \\mathbb{R}\\)) 的形式，用待定系数法处理。",
+          "solution_present": true,
+          "vision_hint": "4.3-LIe716715c1a89b29e"
+        },
+        {
+          "item_id": "acc90aa938f0e481",
+          "kind": "example",
+          "label": "例7",
+          "example_number": 7,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型Ⅱ 等差数列前 n 项和有关性质的应用",
+          "source_docs": [
+            39
+          ],
+          "question_text": "【例7】设等差数列 \\(\\{a_{n}\\}\\)的前n项和为 \\(S_{n}\\)，若 \\(S_{7}=28\\)， \\(S_{11}=88\\)，则 \\(\\{a_{n}\\}\\)的公差d=（）\nA. 1 B. 2 C. 3 D. 4",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例7】设等差数列 \\(\\{a_{n}\\}\\)的前n项和为 \\(S_{n}\\)，若 \\(S_{7}=28\\)， \\(S_{11}=88\\)，则 \\(\\{a_{n}\\}\\)的公差d=（）\nA. 1 B. 2 C. 3 D. 4\n解法1：已知条件容易代公式，故可考虑直接代公式翻译，建立关于 \\(a_1\\)和 \\(d\\)的方程组并求解。\n由题意， \\(\\begin{cases} S_7 = 7a_1 + \\dfrac{7 \\times 6}{2}d = 7a_1 + 21d = 28 \\\\ S_{11} = 11a_1 + \\dfrac{11 \\times 10}{2}d = 11a_1 + 55d = 88 \\end{cases}\\)，解得： \\(\\begin{cases} a_1 = -2 \\\\ d = 2 \\end{cases}\\)，所以 \\(\\{a_n\\}\\)的公差 \\(d = 2\\)。\n解法2：只需要知道等差数列其中的任意两项，就可以方便地求出公差，怎样把前n项和的条件与项联系起来？注意到 \\(S_{7}\\)和 \\(S_{11}\\)下标都为奇数，于是联想到可用性质 \\(S_{2n-1}=(2n-1)a_{n}\\)快速求出 \\(a_{4}\\)和 \\(a_{6}\\)，\n由等差数列的前 n 项和的性质， \\(\\left\\{\\begin{aligned}S_{7}&=7a_{4}=28\\\\ S_{11}&=11a_{6}=88\\end{aligned}\\right.\\)，所以 \\(\\left\\{\\begin{aligned}a_{4}&=4\\\\ a_{6}&=8\\end{aligned}\\right.\\)，故公差 \\(d=\\frac{a_{6}-a_{4}}{6-4}=\\frac{8-4}{6-4}=2\\)。\n答案：B\n【反思】涉及等差数列的前 \\(n\\) 项和，除了直接代公式翻译外，也可考虑利用性质 \\(S_{2n-1}=(2n-1)a_n\\) 将前 \\(n\\) 项和转化为项。尽管该性质中 \\(S\\) 的下标是奇数，但实际上，下标为偶数的情况也可以用，例如本题若将条件 \\(S_{11}=88\\) 改为 \\(S_{12}=108\\)，怎么做？前 12 项的中间两项为 \\(a_6\\) 和 \\(a_7\\)，我们用 \\(a_{6.5}\\) 来代表 \\(a_6\\) 和 \\(a_7\\) 的中间项，即 \\(a_{6.5}=\\frac{a_6+a_7}{2}\\)，所以 \\(S_{12}=12a_{6.5}=108\\Rightarrow a_{6.5}=9\\)，所以公差 \\(d=\\frac{a_{6.5}-a_4}{6.5-4}=\\frac{9-4}{2.5}=2\\)，也顺利地解决了问题。所以在小题中，虽不存在 \\(a_{6.5}\\) 这一项，但可以借助这一假设值处理问题，不过请注意，解答题中不建议这样使用。",
+          "solution_present": true,
+          "vision_hint": "4.3-LIacc90aa938f0e481"
+        },
+        {
+          "item_id": "ebee62e5f9ca5902",
+          "kind": "example",
+          "label": "例8",
+          "example_number": 8,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型Ⅱ 等差数列前 n 项和有关性质的应用",
+          "source_docs": [
+            39,
+            40
+          ],
+          "question_text": "【例 8】已知数列  \\(S_{n}\\) 是等差数列  \\(\\{a_{n}\\}\\) 的前 n 项和，且  \\(S_{2}=4\\)， \\(S_{4}=16\\)，则  \\(S_{8}=\\) （ ）\nA. 36 B. 46 C. 64 D. 160",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例 8】已知数列  \\(S_{n}\\) 是等差数列  \\(\\{a_{n}\\}\\) 的前 n 项和，且  \\(S_{2}=4\\)， \\(S_{4}=16\\)，则  \\(S_{8}=\\) （ ）\nA. 36 B. 46 C. 64 D. 160\n解析：已知和所求均只涉及  \\(S_{n}\\)，且观察发现下标都是2的倍数，故联想到片段和性质，由等差数列的片段和性质， \\(S_{2}\\)， \\(S_{4}-S_{2}\\)， \\(S_{6}-S_{4}\\)， \\(S_{8}-S_{6}\\) 成等差数列，\n又  \\(S_{2}=4\\)， \\(S_{4}=16\\)，所以  \\(S_{4}-S_{2}=16-4=12\\)，故上述等差数列是4，12，20，28，怎样求  \\(S_{8}\\)？观察发现把  \\(S_{2}\\)， \\(S_{4}-S_{2}\\)， \\(S_{6}-S_{4}\\)， \\(S_{8}-S_{6}\\) 相加，即可得到  \\(S_{8}\\)，所以  \\(S_{8}=S_{2}+S_{4}-S_{2}+S_{6}-S_{4}+S_{8}-S_{6}=4+12+20+28=64\\)。\n答案：C\n【反思】若条件和所求涉及的前n项和的下标都是常数k的倍数，则常考虑利用片段和性质处理。本题下标的倍数关系比较明显，有时这一特征是隐藏在题干中的，这就需要我们自己去发现，比如下面的变式。",
+          "solution_present": true,
+          "vision_hint": "4.3-LIebee62e5f9ca5902"
+        },
+        {
+          "item_id": "c7604aa978c29e8f",
+          "kind": "example",
+          "label": "例9",
+          "example_number": 9,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型Ⅱ 等差数列前 n 项和有关性质的应用",
+          "source_docs": [
+            40
+          ],
+          "question_text": "【例9】已知等差数列 \\(\\{a_{n}\\}\\)的前n项和为 \\(S_{n}\\)，且 \\(\\frac{S_{5}}{5}-\\frac{S_{2}}{2}=6\\)，则 \\(a_{7}-a_{4}=\\)（）\nA. 9 B. 10 C. 11 D. 12",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例9】已知等差数列 \\(\\{a_{n}\\}\\)的前n项和为 \\(S_{n}\\)，且 \\(\\frac{S_{5}}{5}-\\frac{S_{2}}{2}=6\\)，则 \\(a_{7}-a_{4}=\\)（）\nA. 9 B. 10 C. 11 D. 12\n解法1：已知和所求的直接联系不明显，但它们都容易用公式翻译，故可考虑直接代公式处理，由题意， \\(\\frac{S_5}{5} - \\frac{S_2}{2} = \\frac{1}{5}\\left(5a_1 + \\frac{5 \\times 4}{2}d\\right) - \\frac{1}{2}(2a_1 + d) = \\frac{3}{2}d = 6\\)，所以 \\(d = 4\\)，故 \\(a_7 - a_4 = 3d = 12\\)。\n解法2：出现了 \\(\\frac{S_n}{n}\\)这一结构，联想到数列 \\(\\left\\{\\frac{S_n}{n}\\right\\}\\)是公差为 \\(\\frac{d}{2}\\)的等差数列，由此可快速求解，\n设 \\(\\{a_n\\}\\)的公差为 \\(d\\)，因为 \\(\\{a_n\\}\\)为等差数列，且 \\(S_n\\)为其前 \\(n\\)项和，所以 \\(\\left\\{\\frac{S_n}{n}\\right\\}\\)是公差为 \\(\\frac{d}{2}\\)的等差数列，\n所以 \\(\\frac{S_5}{5}-\\frac{S_2}{2}=(5-2)\\times\\frac{d}{2}=6\\)，解得： \\(d=4\\)，所以 \\(a_7-a_4=3d=3\\times4=12\\)。\n答案：D\n【反思】若等差数列的前 \\(n\\) 项和为 \\(S_n\\)，则数列 \\(\\left\\{\\frac{S_n}{n}\\right\\}\\) 是首项为 \\(a_1\\)，公差为 \\(\\frac{d}{2}\\) 的等差数列，这个结论在小题中可直接使用，若大题涉及该结论，可用 \\(S_n = na_1 + \\frac{n(n-1)}{2}d\\) 进行推导。",
+          "solution_present": true,
+          "vision_hint": "4.3-LIc7604aa978c29e8f"
+        }
+      ],
+      "direct_variants": [
+        {
+          "item_id": "9e52af966fabca5f",
+          "kind": "direct_variant",
+          "label": "变式",
+          "example_number": null,
+          "parent_example_number": 6,
+          "role": "direct_variant",
+          "role_ref": "类型Ⅱ 等差数列前 n 项和有关性质的应用",
+          "source_docs": [
+            38,
+            39
+          ],
+          "question_text": "【变式】（多选）记等差数列\\(\\{a_n\\}\\)的前\\(n\\)项和为\\(S_n\\)，已知\\(S_n = Pn^2 + Qn + M (P, Q, M \\in \\mathbb{R})\\)，则下列说法一定正确的是（ ）\nA. \\(M \\ne 0\\)  \nB. 若\\(\\{a_n\\}\\)单调递增，则\\(P > 0\\)  \nC. 若\\(Q = 0\\)，则\\(a_3 = 4a_1\\)  \nD. 若\\(P + Q + M = 0\\)，则\\(a_1 = 0\\)",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "4.3-LI9e52af966fabca5f"
+        },
+        {
+          "item_id": "cd5e04efc7e9623f",
+          "kind": "direct_variant",
+          "label": "变式",
+          "example_number": null,
+          "parent_example_number": 7,
+          "role": "direct_variant",
+          "role_ref": "类型Ⅱ 等差数列前 n 项和有关性质的应用",
+          "source_docs": [
+            39
+          ],
+          "question_text": "【变式】已知等差数列\\(\\{a_n\\}\\)，\\(\\{b_n\\}\\)的前\\(n\\)项和分别为\\(S_n\\)，\\(T_n\\)，若\\(\\frac{S_n}{T_n}=\\frac{2n+5}{3n-7}\\)，则\\(\\frac{b_5}{a_3}=\\)（）\nA. \\(\\frac{8}{23}\\)\nB. \\(\\frac{20}{23}\\)\nC. \\(1\\)\nD. \\(\\frac{4}{3}\\)",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "4.3-LIcd5e04efc7e9623f"
+        },
+        {
+          "item_id": "ed8e1fc2f5a21082",
+          "kind": "direct_variant",
+          "label": "变式",
+          "example_number": null,
+          "parent_example_number": 8,
+          "role": "direct_variant",
+          "role_ref": "类型Ⅱ 等差数列前 n 项和有关性质的应用",
+          "source_docs": [
+            40
+          ],
+          "question_text": "【变式】（2020·新课标Ⅱ卷）北京天坛的圜丘坛为古代祭天的场所，分上、中、下三层。上层中心有一块圆形石板（称为天心石）。环绕天心石砌9块扇面形石板构成第一环，向外每环依次增加9块，下一层的第一环比上一层的最后一环多9块，向外每环依次也增加9块，已知每层环数相同，且下层比中层多729块，则三层共有扇面形石板（不含天心石）（）\nA. 3699 块 B. 3474 块 C. 3402 块 D. 3339 块",
+          "image_refs": [
+            {
+              "ref": "imgs/img_in_image_box_872_345_1099_646.jpg",
+              "path": "data/ocr_live_current/chapter4_100/imgs/img_in_image_box_872_345_1099_646.jpg",
+              "exists": true
+            }
+          ],
+          "visual_status": "NEEDS_VISION_SIDECAR",
+          "solution_isolated": true,
+          "vision_hint": "4.3-LIed8e1fc2f5a21082"
+        },
+        {
+          "item_id": "44c778cb60a541b3",
+          "kind": "direct_variant",
+          "label": "变式",
+          "example_number": null,
+          "parent_example_number": 9,
+          "role": "direct_variant",
+          "role_ref": "类型Ⅱ 等差数列前 n 项和有关性质的应用",
+          "source_docs": [
+            41
+          ],
+          "question_text": "【变式】已知  \\(S_n\\) 是等差数列  \\(\\{a_n\\}\\) 的前  \\(n\\) 项和，若  \\(\\frac{S_m}{m} - S_1 = 1\\)（常数  \\(m \\in \\mathbb{N}^*\\) 且  \\(m \\geq 2\\)），则  \\(\\frac{S_{2m-1}}{2m-1} - S_1 =\\)（ ）\nA. 1       B. 2       C. -1       D. -2",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "4.3-LI44c778cb60a541b3"
+        }
+      ],
+      "exercise_questions": [],
+      "action_order": [
+        "learn_each_current_example_then_attempt_its_direct_variants",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [],
+      "prerequisite_knowledge_blocks": []
+    },
+    {
+      "cycle_id": "4.3-cycle-6",
+      "sequence": 6,
+      "title": "类型Ⅲ 等差数列前 n 项和的最值问题",
+      "course_keys": [],
+      "prerequisite_course_keys": [
+        "4.3.2.1 等差数列的基本公式",
+        "4.3.2.4 等差数列Sn的性质"
+      ],
+      "optional_course_keys": [],
+      "knowledge_refs": [],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 等差数列前 n 项和的最值问题"
+      ],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [
+        {
+          "item_id": "aaacbc18f9d5ca8b",
+          "kind": "example",
+          "label": "例10",
+          "example_number": 10,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型Ⅲ 等差数列前 n 项和的最值问题",
+          "source_docs": [
+            41
+          ],
+          "question_text": "【例 10】等差数列  \\(\\{a_{n}\\}\\) 满足  \\(a_{3} + a_{7} = 20\\)， \\(a_{8} = 4\\)，若  \\(S_{n}\\) 为前 n 项和，则  \\(S_{n}\\) 最大时，n 的值为（）\nA. 9 或 10 B. 8 C. 9 D. 10 或 11",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例 10】等差数列  \\(\\{a_{n}\\}\\) 满足  \\(a_{3} + a_{7} = 20\\)， \\(a_{8} = 4\\)，若  \\(S_{n}\\) 为前 n 项和，则  \\(S_{n}\\) 最大时，n 的值为（）\nA. 9 或 10 B. 8 C. 9 D. 10 或 11\n解析：先求出  \\(S_n\\)，再分析何时  \\(S_n\\) 最大可行，但偏麻烦。注意到  \\(d \\neq 0\\) 的等差数列是单调的，故要分析何时  \\(S_n\\) 最大，只需找到  \\(\\{a_n\\}\\) 前多少项为正数，从哪一项开始为负数，于是我们先求通项公式，\n设等差数列  \\(\\{a_n\\}\\) 的公差为  \\(d\\)，则  \\(a_3 + a_7 = 2a_5 = 20\\)，解得： \\(a_5 = 10\\)，所以  \\(d = \\frac{a_8 - a_5}{8 - 5} = \\frac{4 - 10}{3} = -2\\)，\n \\(a_1 = a_5 - 4d = 10 - 4 \\times (-2) = 18\\)，所以  \\(a_n = a_1 + (n-1)d = 18 + (n-1) \\cdot (-2) = 20 - 2n\\)，\n从而当  \\(n \\leq 9\\) 时， \\(a_n > 0\\)； \\(a_{10} = 0\\)；当  \\(n \\geq 11\\) 时， \\(a_n < 0\\)；故当  \\(n = 9\\) 或 10 时， \\(S_n\\) 有最大值。\n答案：A\n【反思】研究等差数列\\(\\{a_{n}\\}\\)的前\\(n\\)项和的最值（以最大值为例，最小值可类似处理），可先求出其通项公式，再用通项公式分析\\(\\{a_{n}\\}\\)的哪些项为正数，哪些项为负数，求和时，求到为正数的最后一项，就能使\\(S_{n}\\)最大。若数列中存在为0的项，则求和时加到这一项，\\(S_{n}\\)也是最大的。",
+          "solution_present": true,
+          "vision_hint": "4.3-LIaaacbc18f9d5ca8b"
+        }
+      ],
+      "direct_variants": [
+        {
+          "item_id": "d65a47a002a299c0",
+          "kind": "direct_variant",
+          "label": "变式1",
+          "example_number": null,
+          "parent_example_number": 10,
+          "role": "direct_variant",
+          "role_ref": "类型Ⅲ 等差数列前 n 项和的最值问题",
+          "source_docs": [
+            41,
+            42
+          ],
+          "question_text": "【变式1】（多选）记等差数列\\(\\{a_n\\}\\)的前\\(n\\)项和为\\(S_n\\)，公差为\\(d\\)，若\\(a_8+a_9>0\\)，\\(a_9<0\\)，则下列结论正确的是（ ）\nA. \\(d<0\\)  \nB. 当\\(n=8\\)时，\\(S_n\\)取得最大值  \nC. \\(a_2+a_5+a_{12}>0\\)  \nD. 使得\\(S_n>0\\)成立的最大自然数\\(n\\)是15",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "4.3-LId65a47a002a299c0"
+        },
+        {
+          "item_id": "313857fb05643926",
+          "kind": "direct_variant",
+          "label": "变式2",
+          "example_number": null,
+          "parent_example_number": 10,
+          "role": "direct_variant",
+          "role_ref": "类型Ⅲ 等差数列前 n 项和的最值问题",
+          "source_docs": [
+            42
+          ],
+          "question_text": "【变式2】已知在等差数列 \\(\\{a_n\\}\\)中， \\(a_1<0\\)， \\(S_9=S_{12}\\)，则当 \\(S_n\\)最小时， \\(n=\\)___。",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "4.3-LI313857fb05643926"
+        }
+      ],
+      "exercise_questions": [],
+      "action_order": [
+        "learn_each_current_example_then_attempt_its_direct_variants",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [],
+      "prerequisite_knowledge_blocks": []
+    },
+    {
+      "cycle_id": "4.3-cycle-7",
+      "sequence": 7,
+      "title": "类型IV 等差数列前 n 项和的实际应用",
+      "course_keys": [],
+      "prerequisite_course_keys": [
+        "4.3.2.1 等差数列的基本公式",
+        "4.3.2.4 等差数列Sn的性质"
+      ],
+      "optional_course_keys": [],
+      "knowledge_refs": [],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [
+        "类型IV 等差数列前 n 项和的实际应用"
+      ],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [
+        {
+          "item_id": "58e0a5896aa65d6a",
+          "kind": "example",
+          "label": "例11",
+          "example_number": 11,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型IV 等差数列前 n 项和的实际应用",
+          "source_docs": [
+            42,
+            43
+          ],
+          "question_text": "【例 11】2024 年两会报告中提出 “大力推进现代化产业体系建设，加快发展新质生产力”，所谓新质生产力，是创新主导、以科技创新作为核心要素的先进生产力质态。今年全国两会，“新质生产力”已成为 C 位热词。某创新公司落实两会精神，准备年初用 980 万元购买新设备用来创新，第一年使用的各种创新费用 120 万元，以后每年还要持续增加创新费用 40 万元，公司每年经过创新后的收益为 500 万元。\n（1）创新公司第几年开始获利？\n（2）经过多少年创新公司获得的年平均利润最大？最大年平均利润是多少？",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例 11】2024 年两会报告中提出 “大力推进现代化产业体系建设，加快发展新质生产力”，所谓新质生产力，是创新主导、以科技创新作为核心要素的先进生产力质态。今年全国两会，“新质生产力”已成为 C 位热词。某创新公司落实两会精神，准备年初用 980 万元购买新设备用来创新，第一年使用的各种创新费用 120 万元，以后每年还要持续增加创新费用 40 万元，公司每年经过创新后的收益为 500 万元。\n（1）创新公司第几年开始获利？\n（2）经过多少年创新公司获得的年平均利润最大？最大年平均利润是多少？\n解：（1）（利润=总收益-总成本，这里需要注意成本分成两个部分，一个是买设备的固定成本，另一个则是创新费用，不难发现每年的创新费用成等差数列，所以到第 \\(n\\) 年的总费用可代等差数列的前 \\(n\\) 项和公式计算）\n由题意，设公司到第 \\(n\\) 年的累计利润为 \\(f(n)\\)，由题意，\\(f(n)=500n-\\left[120n+\\frac{n(n-1)}{2}\\times40\\right]-980\\)，\n整理得： \\(f(n)=-20n^{2}+400n-980\\)，要使公司获利，则 \\(f(n)=-20n^{2}+400n-980>0\\)，\n解得： \\(10 - \\sqrt{51} < n < 10 + \\sqrt{51}\\)，又因为 \\(n \\in \\mathbb{N}^*\\)， \\(7 < \\sqrt{51} < 8\\)，所以 \\(3 \\leq n \\leq 17\\)，故公司第3年开始获利。\n（2）由题意，该公司的年平均利润为 \\(\\frac{f(n)}{n}=\\frac{-20n^{2}+400n-980}{n}=-20\\left(n+\\frac{49}{n}\\right)+400\\) ①，\n因为 \\(n \\in \\mathbb{N}^*\\)，所以 \\(n + \\frac{49}{n} \\geq 2\\sqrt{n \\cdot \\frac{49}{n}} = 14\\)，当且仅当 \\(n = 7\\)时等号成立，\n代入①得 \\(\\frac{f(n)}{n}=-20\\left(n+\\frac{49}{n}\\right)+400\\leq-20\\times14+400=120\\)\n所以公司经过7年可获得的年平均利润最大，最大年平均利润为120万元.\n【反思】等差数列的前 n 项和公式在实际问题中有广泛的应用，解决这类问题的基本步骤是：①阅读材料，将其转化为等差数列模型，并设出有关变量，从而将实际问题转化为等差数列问题；②分析已知条件，求解数列问题；③回归实际，将求得的结果翻译成实际问题中的结果.\n## 补充、拓展\n等差数列可能与其它知识、方法综合出题，此时难度往往稍高，下面的类型V中，我们会举例子；另外，偶尔也会遇到与等差数列有关的新定义问题，我们通过后面的类型VI来拓展。",
+          "solution_present": true,
+          "vision_hint": "4.3-LI58e0a5896aa65d6a"
+        }
+      ],
+      "direct_variants": [],
+      "exercise_questions": [],
+      "action_order": [
+        "learn_each_current_example_then_attempt_its_direct_variants",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [],
+      "prerequisite_knowledge_blocks": []
+    },
+    {
+      "cycle_id": "4.3-cycle-8",
+      "sequence": 8,
+      "title": "类型V 等差数列综合题",
+      "course_keys": [],
+      "prerequisite_course_keys": [
+        "4.3.2.1 等差数列的基本公式",
+        "4.3.2.4 等差数列Sn的性质"
+      ],
+      "optional_course_keys": [],
+      "knowledge_refs": [],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [
+        "类型V 等差数列综合题"
+      ],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [
+        {
+          "item_id": "01c9f3f4269e1d39",
+          "kind": "example",
+          "label": "例12",
+          "example_number": 12,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型V 等差数列综合题",
+          "source_docs": [
+            43
+          ],
+          "question_text": "【例 12】各项均不为 0 的数列  \\(\\{a_{n}\\}\\) 对任意正整数 n 满足： \\(\\frac{1}{a_{1}a_{2}}+\\frac{1}{a_{2}a_{3}}+\\cdots+\\frac{1}{a_{n}a_{n+1}}=1-\\frac{1}{2a_{n+1}}\\).\n（1）若 \\(\\{a_{n}\\}\\)为等差数列，求 \\(a_{1}\\);\n（2）若 \\(a_{1}=-\\frac{2}{7}\\)，求 \\(\\{a_{n}\\}\\)的前n项和 \\(S_{n}\\)",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例 12】各项均不为 0 的数列  \\(\\{a_{n}\\}\\) 对任意正整数 n 满足： \\(\\frac{1}{a_{1}a_{2}}+\\frac{1}{a_{2}a_{3}}+\\cdots+\\frac{1}{a_{n}a_{n+1}}=1-\\frac{1}{2a_{n+1}}\\).\n（1）若 \\(\\{a_{n}\\}\\)为等差数列，求 \\(a_{1}\\);\n（2）若 \\(a_{1}=-\\frac{2}{7}\\)，求 \\(\\{a_{n}\\}\\)的前n项和 \\(S_{n}\\)\n解：（1）（所给等式左侧为 \\(\\left\\{\\frac{1}{a_{n}a_{n+1}}\\right\\}\\)的前n项和，可通过退n相减，化掉和式再看）\n由题意，对任意的  \\(n \\in \\mathbb{N}^*\\)，都有  \\(\\frac{1}{a_1a_2} + \\frac{1}{a_2a_3} + \\cdots + \\frac{1}{a_{n-1}a_n} + \\frac{1}{a_na_{n+1}} = 1 - \\frac{1}{2a_{n+1}}\\)，\n所以当 \\(n\\geq2\\)时， \\(\\frac{1}{a_1a_2}+\\frac{1}{a_2a_3}+\\cdots+\\frac{1}{a_{n-1}a_n}=1-\\frac{1}{2a_n}\\)，\n两式作差得： \\(\\frac{1}{a_{n}a_{n+1}}=\\frac{1}{2a_{n}}-\\frac{1}{2a_{n+1}}\\)，所以 \\(a_{n+1}-a_{n}=2(n\\geq2)\\)，结合 \\(\\{a_{n}\\}\\)为等差数列可得其公差d=2\n（要求的是 \\(a_{1}\\)，需要再找一个方程，可在题干所给等式中取n=1来构造方程）\n在 \\(\\frac{1}{a_1a_2}+\\frac{1}{a_2a_3}+\\cdots+\\frac{1}{a_na_{n+1}}=1-\\frac{1}{2a_{n+1}}\\)中令n=1可得 \\(\\frac{1}{a_1a_2}=1-\\frac{1}{2a_2}\\)，所以 \\(\\frac{1}{a_1(a_1+2)}=1-\\frac{1}{2(a_1+2)}\\)，\n两端同乘以  \\(2a_{1}(a_{1}+2)\\) 化简得：  \\(2a_{1}^{2}+3a_{1}-2=0\\) ，解得：  \\(a_{1}=\\frac{1}{2}\\) 或 -2 ，\n当 \\(a_1 = -2\\)时， \\(a_2 = a_1 + d = -2 + 2 = 0\\)，与题意不符，舍去，所以 \\(a_1 = \\frac{1}{2}\\)。\n（2）（由第（1）问的 \\(a_{n+1}-a_n=2(n\\geq2)\\)可知 \\(\\{a_n\\}\\)从第二项起构成等差数列，那第一项呢？我们来看看 \\(a_2-a_1\\)的情况）由（1）可得 \\(\\frac{1}{a_1a_2}=1-\\frac{1}{2a_2}\\)，将 \\(a_1=-\\frac{2}{7}\\)代入可解得： \\(a_2=-3\\)，\n（我们发现  \\(a_2 - a_1 \\neq 2\\)，所以  \\(\\{a_n\\}\\) 只是从第 2 项起才构成等差数列，故求和时分  \\(n \\geq 2\\) 和  \\(n=1\\) 分别考虑当  \\(n \\geq 2\\) 时，由（1）可知  \\(a_{n+1} - a_n = 2\\)，所以  \\(a_2\\)， \\(a_3\\)， \\(a_4\\)， \\(\\cdots\\)， \\(a_n\\)， \\(\\cdots\\) 构成公差为 2 的等差数列，故  \\(S_n = a_1 + a_2 + \\cdots + a_n = -\\frac{2}{7} + \\frac{(n-1)(a_2 + a_n)}{2} = -\\frac{2}{7} + \\frac{(n-1)[-3 + (-3) + (n-2) \\times 2]}{2} = n^2 - 6n + \\frac{33}{7}\\)；又因为  \\(S_1 = a_1 = -\\frac{2}{7}\\) 也满足上式，所以对任意的  \\(n \\in \\mathbb{N}^*\\)，都有  \\(S_n = n^2 - 6n + \\frac{33}{7}\\)。\n【反思】若数列从第二项起成等差数列，则求其前 \\(n\\) 项和时也应分 \\(n=1\\) 和 \\(n \\geq 2\\) 讨论，代公式时，要注意灵活运用 “\\(S_n = \\frac{\\text{项数} \\times (\\text{首项} + \\text{末项})}{2} = \\text{项数} \\times \\text{首项} + \\frac{\\text{项数} \\times (\\text{项数} - 1)}{2} \\times \\text{公差}\\)”。",
+          "solution_present": true,
+          "vision_hint": "4.3-LI01c9f3f4269e1d39"
+        }
+      ],
+      "direct_variants": [
+        {
+          "item_id": "9962a58c95a69aa5",
+          "kind": "direct_variant",
+          "label": "变式",
+          "example_number": null,
+          "parent_example_number": 12,
+          "role": "direct_variant",
+          "role_ref": "类型V 等差数列综合题",
+          "source_docs": [
+            43,
+            44
+          ],
+          "question_text": "【变式】设各项均为正数的数列 \\(\\{a_{n}\\}\\)满足 \\(\\frac{S_{n}}{a_{n}}=pn+q\\)，p，q为实数，其中 \\(S_{n}\\)为 \\(\\{a_{n}\\}\\)的前n项和.\n（1）若 p=1， \\(a_{1}=2025\\)，求数列 \\(\\{a_{n}\\}\\)的通项公式；\n（2）若数列 \\(\\{a_{n}\\}\\)为等差数列，求p，q的值.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "4.3-LI9962a58c95a69aa5"
+        }
+      ],
+      "exercise_questions": [],
+      "action_order": [
+        "learn_each_current_example_then_attempt_its_direct_variants",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [],
+      "prerequisite_knowledge_blocks": []
+    },
+    {
+      "cycle_id": "4.3-cycle-9",
+      "sequence": 9,
+      "title": "类型VI 等差数列有关的新定义问题",
+      "course_keys": [],
+      "prerequisite_course_keys": [
+        "4.3.2.1 等差数列的基本公式",
+        "4.3.2.4 等差数列Sn的性质"
+      ],
+      "optional_course_keys": [],
+      "knowledge_refs": [],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [
         "类型VI 等差数列有关的新定义问题"
       ],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [
+        {
+          "item_id": "2f47d259e7e032f5",
+          "kind": "example",
+          "label": "例13",
+          "example_number": 13,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型VI 等差数列有关的新定义问题",
+          "source_docs": [
+            44,
+            45
+          ],
+          "question_text": "【例 13】任取数列 \\(\\{a_n\\}\\) 中相邻的两项，若这两项之差的绝对值为 3，则称数列 \\(\\{a_n\\}\\) 具有“P 性质”。已知具有“P 性质”的数列 \\(\\{a_n\\}\\) 共有 \\(n\\) 项，且所有项之和为 \\(S_n\\)。\n（1）若 n=4，且  \\(a_{1}=1\\)， \\(a_{4}=4\\)，求  \\(S_{4}\\) 的所有可能值；\n（2）若 \\(a_{1}=2025\\)，n=675，且 \\(a_{k}>a_{k+1}(k=1,2,\\cdots,674)\\)恒成立，求 \\(a_{675}\\)；\n（3）若 \\(a_{1}=1,\\quad n\\geq2,\\quad S_{n}=0\\)，证明： \\(n^{2}+n\\)能被4整除.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例 13】任取数列 \\(\\{a_n\\}\\) 中相邻的两项，若这两项之差的绝对值为 3，则称数列 \\(\\{a_n\\}\\) 具有“P 性质”。已知具有“P 性质”的数列 \\(\\{a_n\\}\\) 共有 \\(n\\) 项，且所有项之和为 \\(S_n\\)。\n（1）若 n=4，且  \\(a_{1}=1\\)， \\(a_{4}=4\\)，求  \\(S_{4}\\) 的所有可能值；\n（2）若 \\(a_{1}=2025\\)，n=675，且 \\(a_{k}>a_{k+1}(k=1,2,\\cdots,674)\\)恒成立，求 \\(a_{675}\\)；\n（3）若 \\(a_{1}=1,\\quad n\\geq2,\\quad S_{n}=0\\)，证明： \\(n^{2}+n\\)能被4整除.\n解：（1）（由题设条件，具有“P性质”的数列 \\(a_n\\)应满足 \\(\\left|a_n - a_{n-1}\\right| = 3(n \\geq 2)\\)，由此结合 \\(a_1 = 1\\)可画出接下来3项的树状图，再看哪些满足 \\(a_1 = 4\\)即可）\n如图，满足 \\(n = 4\\)， \\(a_1 = 1\\)， \\(a_4 = 4\\)，且具有“P性质”的数列有1，4，1，4，或1，4，7，4，或1，-2，1，4，所以 \\(S_4\\)所有可能的值为10，16，或4.\n（2）由题意， \\(\\left|a_{k}-a_{k+1}\\right|=3\\)，又因为 \\(a_{k}>a_{k+1}\\)，所以 \\(\\left|a_{k}-a_{k+1}\\right|=a_{k}-a_{k+1}=3\\)，\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_896_1461_1095_1631.jpg\" alt=\"Image\" width=\"16%\" /></div>\n从而  \\(a_{k+1}-a_k=-3\\)，故  \\(\\{a_n\\}\\) 是首项为  \\(a_1=2025\\)，公差 d=-3 的等差数列，所以  \\(a_{675}=a_1+674d=2025+674\\times(-3)=3\\)。\n（3）（要证 \\(n^2 + n\\) 能被 \\(4\\) 整除，考虑先表示出 \\(S_n\\)，再作分析。这里 \\(\\{a_n\\}\\) 类似于等差数列，但不是严格的等差数列，无法直接代公式求 \\(S_n\\)，怎么办呢？我们将 \\(|a_k - a_{k+1}| = 3\\) 去绝对值，再作分析）\n由题意，\\(|a_k - a_{k+1}| = 3\\)，所以 \\(a_{k+1} - a_k = \\pm 3\\)，记 \\(a_{k+1} - a_k = c_k\\)，则 \\(c_k = \\pm 3\\)，且 \\(a_{k+1} = a_k + c_k\\)，\\(k=1,2,\\cdots,n-1\\)，\n所以 \\(a_{k+1} = a_k + c_k = a_{k-1} + c_{k-1} + c_k = a_{k-2} + c_{k-2} + c_{k-1} + c_k = \\cdots = a_1 + c_1 + c_2 + \\cdots + c_k\\)，\n故 \\(S_n = a_1 + a_2 + a_3 + \\cdots + a_n = a_1 + (a_1 + c_1) + (a_1 + c_1 + c_2) + \\cdots + (a_1 + c_1 + c_2 + \\cdots + c_{n-1})\\)\n\\(=na_1 + (n-1)c_1 + (n-2)c_2 + \\cdots + 2c_{n-2} + c_{n-1} = n + (n-1)c_1 + (n-2)c_2 + \\cdots + 2c_{n-2} + c_{n-1}\\) ①，\n（要证的结论涉及 \\(n(n+1)\\)，如何产生这一结构？注意到 \\(n + (n-1) + (n-2) + \\cdots + 1 = \\frac{n(n+1)}{2}\\)，故考虑将式①第一项的 \\(n\\) 凑成 \\(n + (n-1) + (n-2) + \\cdots + 1\\)，构造出目标结构 \\(n(n+1)\\)，再作分析）\n由①可得 \\(S_n = n + (n-1) + (n-2) + \\cdots + 1 - (n-1) - (n-2) - \\cdots - 1 + (n-1)c_1 + (n-2)c_2 + \\cdots + 2c_{n-2} + c_{n-1} = \\frac{n(n+1)}{2} + (n-1)(c_1 - 1) + (n-2)(c_2 - 1) + \\cdots + 2(c_{n-2} - 1) + (c_{n-1} - 1)\\)，\n又由题意，\\(S_n = 0\\)，所以 \\(\\frac{n(n+1)}{2} + (n-1)(c_1 - 1) + (n-2)(c_2 - 1) + \\cdots + 2(c_{n-2} - 1) + (c_{n-1} - 1) = 0\\)，\n故 \\(n(n+1) = -2[(n-1)(c_1 - 1) + (n-2)(c_2 - 1) + \\cdots + 2(c_{n-2} - 1) + (c_{n-1} - 1)]\\)，\n因为 \\(c_1\\)，\\(c_2\\)，\\(\\cdots\\)，\\(c_{n-1}\\) 只能取 3 或 -3，所以 \\(c_1 - 1\\)，\\(c_2 - 1\\)，\\(\\cdots\\)，\\(c_{n-1} - 1\\) 都为偶数，\n从而 \\((n-1)(c_1 - 1) + (n-2)(c_2 - 1) + \\cdots + 2(c_{n-2} - 1) + (c_{n-1} - 1)\\) 也为偶数，\n故 \\(-2[(n-1)(c_1 - 1) + (n-2)(c_2 - 1) + \\cdots + 2(c_{n-2} - 1) + (c_{n-1} - 1)]\\) 必为 4 的整数倍，即 \\(n^2 + n = n(n+1)\\) 能被 4 整除。\n【反思】①涉及整除问题，常考虑从公因式的角度来进行分析；②新定义问题往往难度较大，对思维能力要求较高，没有固定的套路，要顺利解决这类问题，除了需要有扎实的基础外，还应具备较强的逻辑推理能力。",
+          "solution_present": true,
+          "vision_hint": "4.3-LI2f47d259e7e032f5"
+        }
+      ],
+      "direct_variants": [],
+      "exercise_questions": [],
+      "action_order": [
+        "learn_each_current_example_then_attempt_its_direct_variants",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [],
+      "prerequisite_knowledge_blocks": []
+    },
+    {
+      "cycle_id": "4.3-cycle-10",
+      "sequence": 10,
+      "title": "A组 夯实基础",
+      "course_keys": [],
+      "prerequisite_course_keys": [
+        "4.3.2.1 等差数列的基本公式",
+        "4.3.2.4 等差数列Sn的性质"
+      ],
+      "optional_course_keys": [],
+      "knowledge_refs": [],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [],
       "bridge_unit_ids": [],
       "method_checkpoints": [],
       "worked_examples": [],
       "direct_variants": [],
       "exercise_questions": [
         {
-          "qid": "Q-4c084fcd3a99cffd",
+          "qid": "Q-842f9233c9dd2368",
           "section": "4.3",
           "group": "A",
           "number": 1,
@@ -695,7 +799,7 @@
           "source_anchor": {
             "ocr_doc": 45,
             "pdf_page": 46,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_45.md"
+            "file": "data/ocr_live_current/chapter4_100/doc_45.md"
           },
           "question_text": "### 1. (2025 · 湖南模拟)\n\n已知等差数列 \\(\\{a_n\\}\\) 的首项为 1，公差为 2，前 \\(n\\) 项和为 \\(S_n\\)，则 \\(a_3 + S_6 =\\)___。",
           "image_refs": [],
@@ -706,7 +810,7 @@
           ]
         },
         {
-          "qid": "Q-eee9811d3dea294c",
+          "qid": "Q-c58ca1dee28a86c4",
           "section": "4.3",
           "group": "A",
           "number": 2,
@@ -714,7 +818,7 @@
           "source_anchor": {
             "ocr_doc": 45,
             "pdf_page": 46,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_45.md"
+            "file": "data/ocr_live_current/chapter4_100/doc_45.md"
           },
           "question_text": "### 2. （2025·贵州六盘水期末）\n\n记等差数列  \\(\\{a_{n}\\}\\) 的前 n 项和为  \\(S_{n}\\)，已知  \\(a_{2}=4\\)， \\(S_{7}=0\\)，则  \\(\\{a_{n}\\}\\) 的公差为 ___.",
           "image_refs": [],
@@ -725,7 +829,7 @@
           ]
         },
         {
-          "qid": "Q-e5aed3805a738cab",
+          "qid": "Q-c3722bfb3542919d",
           "section": "4.3",
           "group": "A",
           "number": 3,
@@ -733,7 +837,7 @@
           "source_anchor": {
             "ocr_doc": 45,
             "pdf_page": 46,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_45.md"
+            "file": "data/ocr_live_current/chapter4_100/doc_45.md"
           },
           "question_text": "3.（2024·广东惠州模拟）\n\n已知等差数列  \\(\\{a_{n}\\}\\) 前 9 项和为 27， \\(a_{10}=8\\)，则  \\(a_{100}=\\) （）\n\nA. 100 B. 99 C. 98 D. 97",
           "image_refs": [],
@@ -744,7 +848,7 @@
           ]
         },
         {
-          "qid": "Q-7be460450d85e930",
+          "qid": "Q-10767ac9c509ae0f",
           "section": "4.3",
           "group": "A",
           "number": 4,
@@ -752,7 +856,7 @@
           "source_anchor": {
             "ocr_doc": 46,
             "pdf_page": 47,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_46.md"
+            "file": "data/ocr_live_current/chapter4_100/doc_46.md"
           },
           "question_text": "4.（2025·湖南长沙一模）\n\n已知等差数列 \\(\\{a_n\\}\\) 的前 \\(n\\) 项和为 \\(S_n\\)，若 \\(a_4 + a_{12} = a_8 + 2\\)，则 \\(S_{15} =\\) ___。",
           "image_refs": [],
@@ -773,32 +877,25 @@
       "prerequisite_knowledge_blocks": []
     },
     {
-      "cycle_id": "4.3-cycle-5",
-      "sequence": 5,
+      "cycle_id": "4.3-cycle-11",
+      "sequence": 11,
       "title": "B组 强化能力",
       "course_keys": [],
       "prerequisite_course_keys": [
-        "4.3.2.4 等差数列Sn的性质",
-        "4.3.2.1 等差数列的基本公式"
+        "4.3.2.1 等差数列的基本公式",
+        "4.3.2.4 等差数列Sn的性质"
       ],
       "optional_course_keys": [],
       "knowledge_refs": [],
       "prerequisite_knowledge_refs": [],
-      "type_refs": [
-        "类型I 求等差数列的前 n 项和",
-        "类型Ⅱ 等差数列前 n 项和有关性质的应用",
-        "类型Ⅲ 等差数列前 n 项和的最值问题",
-        "类型IV 等差数列前 n 项和的实际应用",
-        "类型V 等差数列综合题",
-        "类型VI 等差数列有关的新定义问题"
-      ],
+      "type_refs": [],
       "bridge_unit_ids": [],
       "method_checkpoints": [],
       "worked_examples": [],
       "direct_variants": [],
       "exercise_questions": [
         {
-          "qid": "Q-523489579c350424",
+          "qid": "Q-a4edad9463298c16",
           "section": "4.3",
           "group": "B",
           "number": 5,
@@ -806,7 +903,7 @@
           "source_anchor": {
             "ocr_doc": 46,
             "pdf_page": 47,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_46.md"
+            "file": "data/ocr_live_current/chapter4_100/doc_46.md"
           },
           "question_text": "5.（2025·广东韶光期末）\n\n若等差数列 \\(\\{a_{n}\\}\\)的前n项和为 \\(S_{n}\\)， \\(S_{3}=2S_{6}=6\\)，则 \\(S_{9}=\\)（）\n\nA. -9 B. -6\n\nC. -3 D. 9\n\n \\[(2025\\cdot 山西二模 )\\]",
           "image_refs": [],
@@ -817,7 +914,7 @@
           ]
         },
         {
-          "qid": "Q-fee791ac4fe5ea34",
+          "qid": "Q-47164cd430cbedf1",
           "section": "4.3",
           "group": "B",
           "number": 6,
@@ -825,7 +922,7 @@
           "source_anchor": {
             "ocr_doc": 46,
             "pdf_page": 47,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_46.md",
+            "file": "data/ocr_live_current/chapter4_100/doc_46.md",
             "recovery": "PADDLE_OCR_TEXT_NEIGHBOR_SEQUENCE_B5_B6_B7",
             "recovery_source_kind": "primary_ocr"
           },
@@ -840,7 +937,7 @@
           "recovery_reason": "printed_number_missing_from_paddle_ocr"
         },
         {
-          "qid": "Q-7f3d8d366b0e9233",
+          "qid": "Q-f1271d0f56898526",
           "section": "4.3",
           "group": "B",
           "number": 7,
@@ -848,7 +945,7 @@
           "source_anchor": {
             "ocr_doc": 46,
             "pdf_page": 47,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_46.md"
+            "file": "data/ocr_live_current/chapter4_100/doc_46.md"
           },
           "question_text": "7.（2025·河北沧州模拟）\n\n记  \\(S_n\\) 为等差数列  \\(\\{a_n\\}\\) 的前  \\(n\\) 项和，若公差  \\(d = \\frac{1}{2}\\)，且  \\(S_{100} = 145\\)，则  \\(a_1 + a_3 + a_5 + \\cdots + a_{97} + a_{99}\\) 的值为（ ）\n\nA. 60          B. 70          C. 75          D. 85",
           "image_refs": [],
@@ -859,7 +956,7 @@
           ]
         },
         {
-          "qid": "Q-60d288ccf1e5f69b",
+          "qid": "Q-3f7d738404e9d8e3",
           "section": "4.3",
           "group": "B",
           "number": 8,
@@ -867,7 +964,7 @@
           "source_anchor": {
             "ocr_doc": 46,
             "pdf_page": 47,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_46.md"
+            "file": "data/ocr_live_current/chapter4_100/doc_46.md"
           },
           "question_text": "8.（2025·河南模拟）\n\n已知等差数列 \\(\\{a_{n}\\}\\)的前n项和为 \\(S_{n}\\)，且 \\(\\frac{S_{7}}{7}-\\frac{S_{3}}{3}=4\\)，则 \\(a_{9}-a_{6}=\\)（）\n\nA. 2 B. 3 C. 4 D. 6",
           "image_refs": [],
@@ -878,7 +975,7 @@
           ]
         },
         {
-          "qid": "Q-1d5a1d0310c6fcc6",
+          "qid": "Q-db613009cb28f6a2",
           "section": "4.3",
           "group": "B",
           "number": 9,
@@ -886,7 +983,7 @@
           "source_anchor": {
             "ocr_doc": 47,
             "pdf_page": 48,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_47.md"
+            "file": "data/ocr_live_current/chapter4_100/doc_47.md"
           },
           "question_text": "9.（2024·陕西开学考试）（多选）\n\n已知数列\\(\\{a_n\\}\\)满足\\(2a_{n+1}=a_n+a_{n+2}\\)，其中\\(a_1=21\\)，\\(a_2=19\\)，设\\(S_n\\)为数列\\(\\{a_n\\}\\)的前\\(n\\)项和，则下列选项正确的是（ ）\n\nA. \\(\\{a_n\\}\\)为等差数列\n\nB. \\(a_n=2n+19\\)\n\nC. \\(\\frac{S_n}{n}=20+n\\)\n\nD. 当\\(n=11\\)时，\\(S_n\\)有最大值",
           "image_refs": [],
@@ -897,7 +994,7 @@
           ]
         },
         {
-          "qid": "Q-1dfaefcc3fa512c2",
+          "qid": "Q-730801c0d30330e4",
           "section": "4.3",
           "group": "B",
           "number": 10,
@@ -905,7 +1002,7 @@
           "source_anchor": {
             "ocr_doc": 47,
             "pdf_page": 48,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_47.md"
+            "file": "data/ocr_live_current/chapter4_100/doc_47.md"
           },
           "question_text": "10.（2025·广西开学考试）（多选）\n\n已知等差数列 \\(\\{a_{n}\\}\\)的前 \\(n\\)项和为 \\(S_{n}\\)，若 \\(S_{3}=18\\)， \\(a_{3}+a_{5}=28\\)，则（ ）\n\nA.  \\(S_{11}=11a_{6}\\) B.  \\(a_{6}=20\\)\n\nC.  \\(S_{5}=50\\) D.  \\(a_{n}+S_{n}\\) 的最小值是 4",
           "image_refs": [],
@@ -916,7 +1013,7 @@
           ]
         },
         {
-          "qid": "Q-3b138b9d89ec009f",
+          "qid": "Q-9105e70d7cad2f13",
           "section": "4.3",
           "group": "B",
           "number": 11,
@@ -924,7 +1021,7 @@
           "source_anchor": {
             "ocr_doc": 47,
             "pdf_page": 48,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_47.md"
+            "file": "data/ocr_live_current/chapter4_100/doc_47.md"
           },
           "question_text": "11.（2025·湖北武汉开学考试）\n\n记 \\(S_{n}\\)为等差数列 \\(\\{a_{n}\\}\\)的前n项和，若 \\(S_{3}=6\\)， \\(S_{5}=-10\\)，则 \\(S_{8}=\\)（）\n\nA. -4 B. -16 C. -32 D. -64",
           "image_refs": [],
@@ -935,7 +1032,7 @@
           ]
         },
         {
-          "qid": "Q-51bc8f26adbaf1a6",
+          "qid": "Q-7a966f5bc32ab9d4",
           "section": "4.3",
           "group": "B",
           "number": 12,
@@ -943,7 +1040,7 @@
           "source_anchor": {
             "ocr_doc": 48,
             "pdf_page": 49,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_48.md"
+            "file": "data/ocr_live_current/chapter4_100/doc_48.md"
           },
           "question_text": "12\\. (2024·东北三校联考) (多选)\n\n等差数列  \\(\\{a_{n}\\}\\) 的前 n 项和为  \\(S_{n}\\)，下列命题正确的是（）\n\nA. 若  \\(a_{3}+a_{7}=4\\)，则  \\(S_{9}=18\\)\n\nB. 若  \\(S_{15}>0\\)， \\(S_{16}<0\\)，则  \\(a_{8}^{2}>a_{9}^{2}\\)\n\nC. 若  \\(a_{1}+a_{2}=1\\)， \\(a_{3}+a_{4}=9\\)，则  \\(a_{7}+a_{8}=25\\)\n\nD. 若  \\(a_{1}>0\\)， \\(a_{8}=S_{10}\\)，则  \\(S_{9}>0\\)， \\(S_{10}<0\\)",
           "image_refs": [],
@@ -954,7 +1051,7 @@
           ]
         },
         {
-          "qid": "Q-40a0f6f417708284",
+          "qid": "Q-0b8de32d6612b736",
           "section": "4.3",
           "group": "B",
           "number": 13,
@@ -962,7 +1059,7 @@
           "source_anchor": {
             "ocr_doc": 48,
             "pdf_page": 49,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_48.md"
+            "file": "data/ocr_live_current/chapter4_100/doc_48.md"
           },
           "question_text": "13.（2025·黑龙江哈尔滨模拟）\n\n若  \\(S_n\\)， \\(T_n\\) 分别是等差数列  \\(\\{a_n\\}\\)， \\(\\{b_n\\}\\) 的前  \\(n\\) 项和，且  \\(\\frac{S_n}{T_n} = \\frac{2n+1}{4n-2} (n \\in \\mathbf{N}^*)\\)，则  \\(\\frac{a_3}{b_4 + b_7} + \\frac{a_8}{b_5 + b_6} =\\)（ ）\n\nA.  \\(\\frac{7}{10}\\)          B.  \\(\\frac{11}{18}\\)\n\nC.  \\(\\frac{21}{38}\\)          D.  \\(\\frac{17}{30}\\)",
           "image_refs": [],
@@ -973,7 +1070,7 @@
           ]
         },
         {
-          "qid": "Q-f0fc6a07d7e7bfd3",
+          "qid": "Q-6da89ddc5b36e3a2",
           "section": "4.3",
           "group": "B",
           "number": 14,
@@ -981,7 +1078,7 @@
           "source_anchor": {
             "ocr_doc": 48,
             "pdf_page": 49,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_48.md"
+            "file": "data/ocr_live_current/chapter4_100/doc_48.md"
           },
           "question_text": "14.（2025·海南模拟）（多选）\n\n设等差数列\\(\\{a_n\\}\\)的前\\(n\\)项和为\\(S_n\\)，已知\\(a_3 = -10\\)，\\(a_6 < 0\\)，\\(S_{12} > 0\\)，则（ ）\n\nA. \\(S_5 = -50\\)\n\nB. \\(a_7 > 0\\)\n\nC. \\(S_n \\geq S_{11}\\)\n\nD. \\(|a_3| < |a_{10}|\\)",
           "image_refs": [],
@@ -992,7 +1089,7 @@
           ]
         },
         {
-          "qid": "Q-0efbfa0520ad897b",
+          "qid": "Q-ee7af1b8e7e7bc6d",
           "section": "4.3",
           "group": "B",
           "number": 15,
@@ -1000,7 +1097,7 @@
           "source_anchor": {
             "ocr_doc": 48,
             "pdf_page": 49,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_48.md"
+            "file": "data/ocr_live_current/chapter4_100/doc_48.md"
           },
           "question_text": "15.（2025·四川凉州期中）\n\n记 \\(S_{n}\\)是公差不为0的等差数列 \\(\\{a_{n}\\}\\)的前n项和，若 \\(S_{5}=a_{7}\\)， \\(S_{8}=a_{4}a_{7}\\)\n\n（1）求数列 \\(\\{a_{n}\\}\\)的通项公式；\n\n（2）求使  \\(S_{n} > a_{n}\\) 成立的 n 的最小值.",
           "image_refs": [],
@@ -1011,7 +1108,7 @@
           ]
         },
         {
-          "qid": "Q-85deed10c42cc126",
+          "qid": "Q-6e24591a226ccf4e",
           "section": "4.3",
           "group": "B",
           "number": 16,
@@ -1019,7 +1116,7 @@
           "source_anchor": {
             "ocr_doc": 49,
             "pdf_page": 50,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_49.md"
+            "file": "data/ocr_live_current/chapter4_100/doc_49.md"
           },
           "question_text": "### 16. （2025·上海开学考试）\n\n某公司今年初用 25 万元引进一种新的设备，投入设备后每年收益为 21 万元。同时，公司每年需要付出设备的维修和工人工资等费用，第一年各种费用 2 万元，第二年各种费用 4 万元，以后每年各种费用都增加 2 万元。\n\n（1）引进这种设备后，求该公司使用这种设备后第 \\(n(n \\leq 18)\\)年所获利润 \\(f(n)\\);\n\n（2）这种设备使用多少年，该公司的年平均获利最大？",
           "image_refs": [],
@@ -1030,7 +1127,7 @@
           ]
         },
         {
-          "qid": "Q-daee9aa0fdfe8f59",
+          "qid": "Q-ae5cedfa5594418a",
           "section": "4.3",
           "group": "B",
           "number": 17,
@@ -1038,7 +1135,7 @@
           "source_anchor": {
             "ocr_doc": 49,
             "pdf_page": 50,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_49.md",
+            "file": "data/ocr_live_current/chapter4_100/doc_49.md",
             "recovery": "SOURCE_PAGE_VISUAL_CONFIRMS_PRINTED_B17",
             "recovery_source_kind": "primary_ocr"
           },
@@ -1063,32 +1160,25 @@
       "prerequisite_knowledge_blocks": []
     },
     {
-      "cycle_id": "4.3-cycle-6",
-      "sequence": 6,
+      "cycle_id": "4.3-cycle-12",
+      "sequence": 12,
       "title": "C组 拓展提升",
       "course_keys": [],
       "prerequisite_course_keys": [
-        "4.3.2.4 等差数列Sn的性质",
-        "4.3.2.1 等差数列的基本公式"
+        "4.3.2.1 等差数列的基本公式",
+        "4.3.2.4 等差数列Sn的性质"
       ],
       "optional_course_keys": [],
       "knowledge_refs": [],
       "prerequisite_knowledge_refs": [],
-      "type_refs": [
-        "类型I 求等差数列的前 n 项和",
-        "类型Ⅱ 等差数列前 n 项和有关性质的应用",
-        "类型Ⅲ 等差数列前 n 项和的最值问题",
-        "类型IV 等差数列前 n 项和的实际应用",
-        "类型V 等差数列综合题",
-        "类型VI 等差数列有关的新定义问题"
-      ],
+      "type_refs": [],
       "bridge_unit_ids": [],
       "method_checkpoints": [],
       "worked_examples": [],
       "direct_variants": [],
       "exercise_questions": [
         {
-          "qid": "Q-0c07582401e9fa14",
+          "qid": "Q-d01d8ca8af1b009b",
           "section": "4.3",
           "group": "C",
           "number": 18,
@@ -1096,7 +1186,7 @@
           "source_anchor": {
             "ocr_doc": 49,
             "pdf_page": 50,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_49.md"
+            "file": "data/ocr_live_current/chapter4_100/doc_49.md"
           },
           "question_text": "18.（2025·安徽六安模拟）（多选）\n\n已知等差数列 \\(\\{a_{n}\\}\\)的首项为 \\(a_{1}\\)，公差为d，前n项和为 \\(S_{n}\\)，若 \\(S_{10}<S_{8}<S_{9}\\)，则下列说法正确的是（）\n\nA. 当n=9时， \\(S_{n}\\)最大\n\nB. 使得 \\(S_{n}<0\\)成立的最小自然数n=18\n\nC.  \\(\\left|a_{8}+a_{9}\\right|>\\left|a_{10}+a_{11}\\right|\\)\n\nD. 数列 \\(\\left\\{\\frac{S_{n}}{a_{n}}\\right\\}\\)中的最小项为 \\(\\frac{S_{10}}{a_{10}}\\)",
           "image_refs": [],
@@ -1107,7 +1197,7 @@
           ]
         },
         {
-          "qid": "Q-9ec1c8b5e296aa35",
+          "qid": "Q-a1d10886fb9c79b1",
           "section": "4.3",
           "group": "C",
           "number": 19,
@@ -1115,7 +1205,7 @@
           "source_anchor": {
             "ocr_doc": 50,
             "pdf_page": 51,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_50.md"
+            "file": "data/ocr_live_current/chapter4_100/doc_50.md"
           },
           "question_text": "### 19. （2025 · 江苏苏州模拟）\n\n若数列 \\(\\{a_n\\}\\) 满足 \\(a_{n+2} - a_{n+1} \\geq a_{n+1} - a_n (n \\in \\mathbb{N}^*)\\)，则称 \\(\\{a_n\\}\\) 为“阶跃数列”。\n\n（1）若 \\(a_{n}=n^{2}+2n\\)，判断 \\(\\{a_{n}\\}\\)是否为“阶跃数列”；\n\n（2）在“阶跃数列” \\(\\{a_{n}\\}\\)中，若 \\(a_{n}=\\lambda\\cdot2^{n}-\\frac{n(n-1)(n+1)}{6}\\)，求实数 \\(\\lambda\\)的取值范围.",
           "image_refs": [],
@@ -1299,8 +1389,8 @@
       "label": "例5",
       "example_number": 5,
       "parent_example_number": null,
-      "role": "knowledge_example",
-      "role_ref": "4.3-k3",
+      "role": "type_example",
+      "role_ref": "类型I 求等差数列的前 n 项和",
       "source_docs": [
         36
       ],
@@ -1317,8 +1407,8 @@
       "label": "例6",
       "example_number": 6,
       "parent_example_number": null,
-      "role": "knowledge_example",
-      "role_ref": "4.3-k3",
+      "role": "type_example",
+      "role_ref": "类型Ⅱ 等差数列前 n 项和有关性质的应用",
       "source_docs": [
         38
       ],
@@ -1335,8 +1425,8 @@
       "label": "例7",
       "example_number": 7,
       "parent_example_number": null,
-      "role": "knowledge_example",
-      "role_ref": "4.3-k3",
+      "role": "type_example",
+      "role_ref": "类型Ⅱ 等差数列前 n 项和有关性质的应用",
       "source_docs": [
         39
       ],
@@ -1353,8 +1443,8 @@
       "label": "例8",
       "example_number": 8,
       "parent_example_number": null,
-      "role": "knowledge_example",
-      "role_ref": "4.3-k3",
+      "role": "type_example",
+      "role_ref": "类型Ⅱ 等差数列前 n 项和有关性质的应用",
       "source_docs": [
         39,
         40
@@ -1372,8 +1462,8 @@
       "label": "例9",
       "example_number": 9,
       "parent_example_number": null,
-      "role": "knowledge_example",
-      "role_ref": "4.3-k3",
+      "role": "type_example",
+      "role_ref": "类型Ⅱ 等差数列前 n 项和有关性质的应用",
       "source_docs": [
         40
       ],
@@ -1390,8 +1480,8 @@
       "label": "例10",
       "example_number": 10,
       "parent_example_number": null,
-      "role": "knowledge_example",
-      "role_ref": "4.3-k3",
+      "role": "type_example",
+      "role_ref": "类型Ⅲ 等差数列前 n 项和的最值问题",
       "source_docs": [
         41
       ],
@@ -1408,8 +1498,8 @@
       "label": "例11",
       "example_number": 11,
       "parent_example_number": null,
-      "role": "knowledge_example",
-      "role_ref": "4.3-k3",
+      "role": "type_example",
+      "role_ref": "类型IV 等差数列前 n 项和的实际应用",
       "source_docs": [
         42,
         43
@@ -1427,8 +1517,8 @@
       "label": "例12",
       "example_number": 12,
       "parent_example_number": null,
-      "role": "knowledge_example",
-      "role_ref": "4.3-k3",
+      "role": "type_example",
+      "role_ref": "类型V 等差数列综合题",
       "source_docs": [
         43
       ],
@@ -1445,8 +1535,8 @@
       "label": "例13",
       "example_number": 13,
       "parent_example_number": null,
-      "role": "knowledge_example",
-      "role_ref": "4.3-k3",
+      "role": "type_example",
+      "role_ref": "类型VI 等差数列有关的新定义问题",
       "source_docs": [
         44,
         45
@@ -1467,7 +1557,7 @@
       "example_number": null,
       "parent_example_number": 5,
       "role": "direct_variant",
-      "role_ref": null,
+      "role_ref": "类型I 求等差数列的前 n 项和",
       "source_docs": [
         36
       ],
@@ -1484,7 +1574,7 @@
       "example_number": null,
       "parent_example_number": 5,
       "role": "direct_variant",
-      "role_ref": null,
+      "role_ref": "类型I 求等差数列的前 n 项和",
       "source_docs": [
         36,
         37
@@ -1502,7 +1592,7 @@
       "example_number": null,
       "parent_example_number": 5,
       "role": "direct_variant",
-      "role_ref": null,
+      "role_ref": "类型I 求等差数列的前 n 项和",
       "source_docs": [
         37
       ],
@@ -1519,7 +1609,7 @@
       "example_number": null,
       "parent_example_number": 5,
       "role": "direct_variant",
-      "role_ref": null,
+      "role_ref": "类型I 求等差数列的前 n 项和",
       "source_docs": [
         37,
         38
@@ -1537,7 +1627,7 @@
       "example_number": null,
       "parent_example_number": 6,
       "role": "direct_variant",
-      "role_ref": null,
+      "role_ref": "类型Ⅱ 等差数列前 n 项和有关性质的应用",
       "source_docs": [
         38,
         39
@@ -1555,7 +1645,7 @@
       "example_number": null,
       "parent_example_number": 7,
       "role": "direct_variant",
-      "role_ref": null,
+      "role_ref": "类型Ⅱ 等差数列前 n 项和有关性质的应用",
       "source_docs": [
         39
       ],
@@ -1572,7 +1662,7 @@
       "example_number": null,
       "parent_example_number": 8,
       "role": "direct_variant",
-      "role_ref": null,
+      "role_ref": "类型Ⅱ 等差数列前 n 项和有关性质的应用",
       "source_docs": [
         40
       ],
@@ -1580,84 +1670,13 @@
       "image_refs": [
         {
           "ref": "imgs/img_in_image_box_872_345_1099_646.jpg",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_872_345_1099_646.jpg",
+          "path": "data/ocr_live_current/chapter4_100/imgs/img_in_image_box_872_345_1099_646.jpg",
           "exists": true
         }
       ],
-      "visual_status": "VISION_VERIFIED",
+      "visual_status": "NEEDS_VISION_SIDECAR",
       "solution_isolated": true,
-      "vision_hint": "4.3-LIed8e1fc2f5a21082",
-      "vision_sidecars": [
-        {
-          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_872_345_1099_646.jpg",
-          "image_sha256": "e905b52407eb2724883195e97db659d35b3f79beb5f362862faf699f441723d7",
-          "confidence": "E2",
-          "structured": {
-            "objects": [
-              "环形台阶",
-              "建筑顶部塔楼"
-            ],
-            "relations": [
-              "建筑顶部塔楼位于环形台阶后方中央",
-              "环形台阶环绕建筑入口"
-            ],
-            "coordinates": [
-              [
-                "建筑入口位置：环形台阶中心上方建筑入口位置"
-              ],
-              [
-                "环形台阶：从下至上分为多个同心圆层"
-              ]
-            ],
-            "ranges": [
-              [
-                "环形台阶的同心圆层数：约3-4层"
-              ],
-              [
-                "建筑顶部塔楼高度：高于周围建筑"
-              ]
-            ],
-            "text": [],
-            "uncertainties": [],
-            "confidence": "E2"
-          },
-          "source_provenance": null
-        }
-      ],
-      "vision_sidecar": {
-        "objects": [
-          "环形台阶",
-          "建筑顶部塔楼"
-        ],
-        "relations": [
-          "建筑顶部塔楼位于环形台阶后方中央",
-          "环形台阶环绕建筑入口"
-        ],
-        "coordinates": [
-          [
-            "建筑入口位置：环形台阶中心上方建筑入口位置"
-          ],
-          [
-            "环形台阶：从下至上分为多个同心圆层"
-          ]
-        ],
-        "ranges": [
-          [
-            "环形台阶的同心圆层数：约3-4层"
-          ],
-          [
-            "建筑顶部塔楼高度：高于周围建筑"
-          ]
-        ],
-        "text": [],
-        "uncertainties": [],
-        "confidence": "E2"
-      },
-      "vision_source_provenance": [],
-      "evidence": [
-        "E1",
-        "E2"
-      ]
+      "vision_hint": "4.3-LIed8e1fc2f5a21082"
     },
     {
       "item_id": "44c778cb60a541b3",
@@ -1666,7 +1685,7 @@
       "example_number": null,
       "parent_example_number": 9,
       "role": "direct_variant",
-      "role_ref": null,
+      "role_ref": "类型Ⅱ 等差数列前 n 项和有关性质的应用",
       "source_docs": [
         41
       ],
@@ -1683,7 +1702,7 @@
       "example_number": null,
       "parent_example_number": 10,
       "role": "direct_variant",
-      "role_ref": null,
+      "role_ref": "类型Ⅲ 等差数列前 n 项和的最值问题",
       "source_docs": [
         41,
         42
@@ -1701,7 +1720,7 @@
       "example_number": null,
       "parent_example_number": 10,
       "role": "direct_variant",
-      "role_ref": null,
+      "role_ref": "类型Ⅲ 等差数列前 n 项和的最值问题",
       "source_docs": [
         42
       ],
@@ -1718,7 +1737,7 @@
       "example_number": null,
       "parent_example_number": 12,
       "role": "direct_variant",
-      "role_ref": null,
+      "role_ref": "类型V 等差数列综合题",
       "source_docs": [
         43,
         44
@@ -1733,7 +1752,7 @@
   "deduplicated_learning_items": [],
   "exercise_questions": [
     {
-      "qid": "Q-4c084fcd3a99cffd",
+      "qid": "Q-842f9233c9dd2368",
       "section": "4.3",
       "group": "A",
       "number": 1,
@@ -1741,7 +1760,7 @@
       "source_anchor": {
         "ocr_doc": 45,
         "pdf_page": 46,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_45.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_45.md"
       },
       "question_text": "### 1. (2025 · 湖南模拟)\n\n已知等差数列 \\(\\{a_n\\}\\) 的首项为 1，公差为 2，前 \\(n\\) 项和为 \\(S_n\\)，则 \\(a_3 + S_6 =\\)___。",
       "image_refs": [],
@@ -1752,7 +1771,7 @@
       ]
     },
     {
-      "qid": "Q-eee9811d3dea294c",
+      "qid": "Q-c58ca1dee28a86c4",
       "section": "4.3",
       "group": "A",
       "number": 2,
@@ -1760,7 +1779,7 @@
       "source_anchor": {
         "ocr_doc": 45,
         "pdf_page": 46,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_45.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_45.md"
       },
       "question_text": "### 2. （2025·贵州六盘水期末）\n\n记等差数列  \\(\\{a_{n}\\}\\) 的前 n 项和为  \\(S_{n}\\)，已知  \\(a_{2}=4\\)， \\(S_{7}=0\\)，则  \\(\\{a_{n}\\}\\) 的公差为 ___.",
       "image_refs": [],
@@ -1771,7 +1790,7 @@
       ]
     },
     {
-      "qid": "Q-e5aed3805a738cab",
+      "qid": "Q-c3722bfb3542919d",
       "section": "4.3",
       "group": "A",
       "number": 3,
@@ -1779,7 +1798,7 @@
       "source_anchor": {
         "ocr_doc": 45,
         "pdf_page": 46,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_45.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_45.md"
       },
       "question_text": "3.（2024·广东惠州模拟）\n\n已知等差数列  \\(\\{a_{n}\\}\\) 前 9 项和为 27， \\(a_{10}=8\\)，则  \\(a_{100}=\\) （）\n\nA. 100 B. 99 C. 98 D. 97",
       "image_refs": [],
@@ -1790,7 +1809,7 @@
       ]
     },
     {
-      "qid": "Q-7be460450d85e930",
+      "qid": "Q-10767ac9c509ae0f",
       "section": "4.3",
       "group": "A",
       "number": 4,
@@ -1798,7 +1817,7 @@
       "source_anchor": {
         "ocr_doc": 46,
         "pdf_page": 47,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_46.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_46.md"
       },
       "question_text": "4.（2025·湖南长沙一模）\n\n已知等差数列 \\(\\{a_n\\}\\) 的前 \\(n\\) 项和为 \\(S_n\\)，若 \\(a_4 + a_{12} = a_8 + 2\\)，则 \\(S_{15} =\\) ___。",
       "image_refs": [],
@@ -1809,7 +1828,7 @@
       ]
     },
     {
-      "qid": "Q-523489579c350424",
+      "qid": "Q-a4edad9463298c16",
       "section": "4.3",
       "group": "B",
       "number": 5,
@@ -1817,7 +1836,7 @@
       "source_anchor": {
         "ocr_doc": 46,
         "pdf_page": 47,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_46.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_46.md"
       },
       "question_text": "5.（2025·广东韶光期末）\n\n若等差数列 \\(\\{a_{n}\\}\\)的前n项和为 \\(S_{n}\\)， \\(S_{3}=2S_{6}=6\\)，则 \\(S_{9}=\\)（）\n\nA. -9 B. -6\n\nC. -3 D. 9\n\n \\[(2025\\cdot 山西二模 )\\]",
       "image_refs": [],
@@ -1828,7 +1847,7 @@
       ]
     },
     {
-      "qid": "Q-fee791ac4fe5ea34",
+      "qid": "Q-47164cd430cbedf1",
       "section": "4.3",
       "group": "B",
       "number": 6,
@@ -1836,7 +1855,7 @@
       "source_anchor": {
         "ocr_doc": 46,
         "pdf_page": 47,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_46.md",
+        "file": "data/ocr_live_current/chapter4_100/doc_46.md",
         "recovery": "PADDLE_OCR_TEXT_NEIGHBOR_SEQUENCE_B5_B6_B7",
         "recovery_source_kind": "primary_ocr"
       },
@@ -1851,7 +1870,7 @@
       "recovery_reason": "printed_number_missing_from_paddle_ocr"
     },
     {
-      "qid": "Q-7f3d8d366b0e9233",
+      "qid": "Q-f1271d0f56898526",
       "section": "4.3",
       "group": "B",
       "number": 7,
@@ -1859,7 +1878,7 @@
       "source_anchor": {
         "ocr_doc": 46,
         "pdf_page": 47,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_46.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_46.md"
       },
       "question_text": "7.（2025·河北沧州模拟）\n\n记  \\(S_n\\) 为等差数列  \\(\\{a_n\\}\\) 的前  \\(n\\) 项和，若公差  \\(d = \\frac{1}{2}\\)，且  \\(S_{100} = 145\\)，则  \\(a_1 + a_3 + a_5 + \\cdots + a_{97} + a_{99}\\) 的值为（ ）\n\nA. 60          B. 70          C. 75          D. 85",
       "image_refs": [],
@@ -1870,7 +1889,7 @@
       ]
     },
     {
-      "qid": "Q-60d288ccf1e5f69b",
+      "qid": "Q-3f7d738404e9d8e3",
       "section": "4.3",
       "group": "B",
       "number": 8,
@@ -1878,7 +1897,7 @@
       "source_anchor": {
         "ocr_doc": 46,
         "pdf_page": 47,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_46.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_46.md"
       },
       "question_text": "8.（2025·河南模拟）\n\n已知等差数列 \\(\\{a_{n}\\}\\)的前n项和为 \\(S_{n}\\)，且 \\(\\frac{S_{7}}{7}-\\frac{S_{3}}{3}=4\\)，则 \\(a_{9}-a_{6}=\\)（）\n\nA. 2 B. 3 C. 4 D. 6",
       "image_refs": [],
@@ -1889,7 +1908,7 @@
       ]
     },
     {
-      "qid": "Q-1d5a1d0310c6fcc6",
+      "qid": "Q-db613009cb28f6a2",
       "section": "4.3",
       "group": "B",
       "number": 9,
@@ -1897,7 +1916,7 @@
       "source_anchor": {
         "ocr_doc": 47,
         "pdf_page": 48,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_47.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_47.md"
       },
       "question_text": "9.（2024·陕西开学考试）（多选）\n\n已知数列\\(\\{a_n\\}\\)满足\\(2a_{n+1}=a_n+a_{n+2}\\)，其中\\(a_1=21\\)，\\(a_2=19\\)，设\\(S_n\\)为数列\\(\\{a_n\\}\\)的前\\(n\\)项和，则下列选项正确的是（ ）\n\nA. \\(\\{a_n\\}\\)为等差数列\n\nB. \\(a_n=2n+19\\)\n\nC. \\(\\frac{S_n}{n}=20+n\\)\n\nD. 当\\(n=11\\)时，\\(S_n\\)有最大值",
       "image_refs": [],
@@ -1908,7 +1927,7 @@
       ]
     },
     {
-      "qid": "Q-1dfaefcc3fa512c2",
+      "qid": "Q-730801c0d30330e4",
       "section": "4.3",
       "group": "B",
       "number": 10,
@@ -1916,7 +1935,7 @@
       "source_anchor": {
         "ocr_doc": 47,
         "pdf_page": 48,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_47.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_47.md"
       },
       "question_text": "10.（2025·广西开学考试）（多选）\n\n已知等差数列 \\(\\{a_{n}\\}\\)的前 \\(n\\)项和为 \\(S_{n}\\)，若 \\(S_{3}=18\\)， \\(a_{3}+a_{5}=28\\)，则（ ）\n\nA.  \\(S_{11}=11a_{6}\\) B.  \\(a_{6}=20\\)\n\nC.  \\(S_{5}=50\\) D.  \\(a_{n}+S_{n}\\) 的最小值是 4",
       "image_refs": [],
@@ -1927,7 +1946,7 @@
       ]
     },
     {
-      "qid": "Q-3b138b9d89ec009f",
+      "qid": "Q-9105e70d7cad2f13",
       "section": "4.3",
       "group": "B",
       "number": 11,
@@ -1935,7 +1954,7 @@
       "source_anchor": {
         "ocr_doc": 47,
         "pdf_page": 48,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_47.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_47.md"
       },
       "question_text": "11.（2025·湖北武汉开学考试）\n\n记 \\(S_{n}\\)为等差数列 \\(\\{a_{n}\\}\\)的前n项和，若 \\(S_{3}=6\\)， \\(S_{5}=-10\\)，则 \\(S_{8}=\\)（）\n\nA. -4 B. -16 C. -32 D. -64",
       "image_refs": [],
@@ -1946,7 +1965,7 @@
       ]
     },
     {
-      "qid": "Q-51bc8f26adbaf1a6",
+      "qid": "Q-7a966f5bc32ab9d4",
       "section": "4.3",
       "group": "B",
       "number": 12,
@@ -1954,7 +1973,7 @@
       "source_anchor": {
         "ocr_doc": 48,
         "pdf_page": 49,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_48.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_48.md"
       },
       "question_text": "12\\. (2024·东北三校联考) (多选)\n\n等差数列  \\(\\{a_{n}\\}\\) 的前 n 项和为  \\(S_{n}\\)，下列命题正确的是（）\n\nA. 若  \\(a_{3}+a_{7}=4\\)，则  \\(S_{9}=18\\)\n\nB. 若  \\(S_{15}>0\\)， \\(S_{16}<0\\)，则  \\(a_{8}^{2}>a_{9}^{2}\\)\n\nC. 若  \\(a_{1}+a_{2}=1\\)， \\(a_{3}+a_{4}=9\\)，则  \\(a_{7}+a_{8}=25\\)\n\nD. 若  \\(a_{1}>0\\)， \\(a_{8}=S_{10}\\)，则  \\(S_{9}>0\\)， \\(S_{10}<0\\)",
       "image_refs": [],
@@ -1965,7 +1984,7 @@
       ]
     },
     {
-      "qid": "Q-40a0f6f417708284",
+      "qid": "Q-0b8de32d6612b736",
       "section": "4.3",
       "group": "B",
       "number": 13,
@@ -1973,7 +1992,7 @@
       "source_anchor": {
         "ocr_doc": 48,
         "pdf_page": 49,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_48.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_48.md"
       },
       "question_text": "13.（2025·黑龙江哈尔滨模拟）\n\n若  \\(S_n\\)， \\(T_n\\) 分别是等差数列  \\(\\{a_n\\}\\)， \\(\\{b_n\\}\\) 的前  \\(n\\) 项和，且  \\(\\frac{S_n}{T_n} = \\frac{2n+1}{4n-2} (n \\in \\mathbf{N}^*)\\)，则  \\(\\frac{a_3}{b_4 + b_7} + \\frac{a_8}{b_5 + b_6} =\\)（ ）\n\nA.  \\(\\frac{7}{10}\\)          B.  \\(\\frac{11}{18}\\)\n\nC.  \\(\\frac{21}{38}\\)          D.  \\(\\frac{17}{30}\\)",
       "image_refs": [],
@@ -1984,7 +2003,7 @@
       ]
     },
     {
-      "qid": "Q-f0fc6a07d7e7bfd3",
+      "qid": "Q-6da89ddc5b36e3a2",
       "section": "4.3",
       "group": "B",
       "number": 14,
@@ -1992,7 +2011,7 @@
       "source_anchor": {
         "ocr_doc": 48,
         "pdf_page": 49,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_48.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_48.md"
       },
       "question_text": "14.（2025·海南模拟）（多选）\n\n设等差数列\\(\\{a_n\\}\\)的前\\(n\\)项和为\\(S_n\\)，已知\\(a_3 = -10\\)，\\(a_6 < 0\\)，\\(S_{12} > 0\\)，则（ ）\n\nA. \\(S_5 = -50\\)\n\nB. \\(a_7 > 0\\)\n\nC. \\(S_n \\geq S_{11}\\)\n\nD. \\(|a_3| < |a_{10}|\\)",
       "image_refs": [],
@@ -2003,7 +2022,7 @@
       ]
     },
     {
-      "qid": "Q-0efbfa0520ad897b",
+      "qid": "Q-ee7af1b8e7e7bc6d",
       "section": "4.3",
       "group": "B",
       "number": 15,
@@ -2011,7 +2030,7 @@
       "source_anchor": {
         "ocr_doc": 48,
         "pdf_page": 49,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_48.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_48.md"
       },
       "question_text": "15.（2025·四川凉州期中）\n\n记 \\(S_{n}\\)是公差不为0的等差数列 \\(\\{a_{n}\\}\\)的前n项和，若 \\(S_{5}=a_{7}\\)， \\(S_{8}=a_{4}a_{7}\\)\n\n（1）求数列 \\(\\{a_{n}\\}\\)的通项公式；\n\n（2）求使  \\(S_{n} > a_{n}\\) 成立的 n 的最小值.",
       "image_refs": [],
@@ -2022,7 +2041,7 @@
       ]
     },
     {
-      "qid": "Q-85deed10c42cc126",
+      "qid": "Q-6e24591a226ccf4e",
       "section": "4.3",
       "group": "B",
       "number": 16,
@@ -2030,7 +2049,7 @@
       "source_anchor": {
         "ocr_doc": 49,
         "pdf_page": 50,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_49.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_49.md"
       },
       "question_text": "### 16. （2025·上海开学考试）\n\n某公司今年初用 25 万元引进一种新的设备，投入设备后每年收益为 21 万元。同时，公司每年需要付出设备的维修和工人工资等费用，第一年各种费用 2 万元，第二年各种费用 4 万元，以后每年各种费用都增加 2 万元。\n\n（1）引进这种设备后，求该公司使用这种设备后第 \\(n(n \\leq 18)\\)年所获利润 \\(f(n)\\);\n\n（2）这种设备使用多少年，该公司的年平均获利最大？",
       "image_refs": [],
@@ -2041,7 +2060,7 @@
       ]
     },
     {
-      "qid": "Q-daee9aa0fdfe8f59",
+      "qid": "Q-ae5cedfa5594418a",
       "section": "4.3",
       "group": "B",
       "number": 17,
@@ -2049,7 +2068,7 @@
       "source_anchor": {
         "ocr_doc": 49,
         "pdf_page": 50,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_49.md",
+        "file": "data/ocr_live_current/chapter4_100/doc_49.md",
         "recovery": "SOURCE_PAGE_VISUAL_CONFIRMS_PRINTED_B17",
         "recovery_source_kind": "primary_ocr"
       },
@@ -2064,7 +2083,7 @@
       "recovery_reason": "printed_number_missing_from_paddle_ocr"
     },
     {
-      "qid": "Q-0c07582401e9fa14",
+      "qid": "Q-d01d8ca8af1b009b",
       "section": "4.3",
       "group": "C",
       "number": 18,
@@ -2072,7 +2091,7 @@
       "source_anchor": {
         "ocr_doc": 49,
         "pdf_page": 50,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_49.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_49.md"
       },
       "question_text": "18.（2025·安徽六安模拟）（多选）\n\n已知等差数列 \\(\\{a_{n}\\}\\)的首项为 \\(a_{1}\\)，公差为d，前n项和为 \\(S_{n}\\)，若 \\(S_{10}<S_{8}<S_{9}\\)，则下列说法正确的是（）\n\nA. 当n=9时， \\(S_{n}\\)最大\n\nB. 使得 \\(S_{n}<0\\)成立的最小自然数n=18\n\nC.  \\(\\left|a_{8}+a_{9}\\right|>\\left|a_{10}+a_{11}\\right|\\)\n\nD. 数列 \\(\\left\\{\\frac{S_{n}}{a_{n}}\\right\\}\\)中的最小项为 \\(\\frac{S_{10}}{a_{10}}\\)",
       "image_refs": [],
@@ -2083,7 +2102,7 @@
       ]
     },
     {
-      "qid": "Q-9ec1c8b5e296aa35",
+      "qid": "Q-a1d10886fb9c79b1",
       "section": "4.3",
       "group": "C",
       "number": 19,
@@ -2091,7 +2110,7 @@
       "source_anchor": {
         "ocr_doc": 50,
         "pdf_page": 51,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_50.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_50.md"
       },
       "question_text": "### 19. （2025 · 江苏苏州模拟）\n\n若数列 \\(\\{a_n\\}\\) 满足 \\(a_{n+2} - a_{n+1} \\geq a_{n+1} - a_n (n \\in \\mathbb{N}^*)\\)，则称 \\(\\{a_n\\}\\) 为“阶跃数列”。\n\n（1）若 \\(a_{n}=n^{2}+2n\\)，判断 \\(\\{a_{n}\\}\\)是否为“阶跃数列”；\n\n（2）在“阶跃数列” \\(\\{a_{n}\\}\\)中，若 \\(a_{n}=\\lambda\\cdot2^{n}-\\frac{n(n-1)(n+1)}{6}\\)，求实数 \\(\\lambda\\)的取值范围.",
       "image_refs": [],
@@ -2113,5 +2132,7 @@
     "direct_variants": "question only; solution isolated",
     "abc_exercises": "question only; answer sidecar forbidden"
   },
-  "unresolved": []
+  "unresolved": [
+    "4.3-LIed8e1fc2f5a21082:NEEDS_VISION_SIDECAR"
+  ]
 }

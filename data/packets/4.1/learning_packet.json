@@ -2,9 +2,9 @@
   "schema_version": "7.4",
   "packet_type": "DEEPSEEK_SEQUENTIAL_LEARNING_PACKET",
   "section": "4.1",
-  "status": "VERIFIED",
+  "status": "UNVERIFIED",
   "source": {
-    "ocr_root": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100",
+    "ocr_root": "data/ocr_live_current/chapter4_100",
     "ocr_docs": [
       0,
       20
@@ -199,9 +199,7 @@
       "cycle_id": "4.1-cycle-3",
       "sequence": 3,
       "title": "数列的递推公式",
-      "course_keys": [
-        "4.3.1.1.b 通项型数列速解技巧"
-      ],
+      "course_keys": [],
       "prerequisite_course_keys": [
         "4.3.1.1.a 数列的概念和通项公式"
       ],
@@ -236,7 +234,6 @@
       "direct_variants": [],
       "exercise_questions": [],
       "action_order": [
-        "watch_current_courses",
         "learn_each_current_example_then_attempt_its_direct_variants",
         "assess_current_cycle"
       ],
@@ -261,8 +258,7 @@
       "title": "数列 $ \\{a_n\\} $的前 $ n $项和",
       "course_keys": [],
       "prerequisite_course_keys": [
-        "4.3.1.1.a 数列的概念和通项公式",
-        "4.3.1.1.b 通项型数列速解技巧"
+        "4.3.1.1.a 数列的概念和通项公式"
       ],
       "optional_course_keys": [],
       "knowledge_refs": [
@@ -309,427 +305,9 @@
           "teaching_text": "【例 8】若数列 \\(\\{a_n\\}\\) 满足 \\(a_n = \\frac{n-1}{n(n+1)}\\)，\n则 \\(\\{a_n\\}\\) 的前 3 项和 \\(S_3 =\\)___。\n解析：由题意，\\(a_1 = \\frac{1-1}{1 \\times (1+1)} = 0\\)，\n\\(a_2 = \\frac{2-1}{2 \\times (2+1)} = \\frac{1}{6}\\)，\\(a_3 = \\frac{3-1}{3 \\times (3+1)} = \\frac{1}{6}\\)，\n所以 \\(S_3 = a_1 + a_2 + a_3 = 0 + \\frac{1}{6} + \\frac{1}{6} = \\frac{1}{3}\\)。\n答案：\\(\\frac{1}{3}\\)\n## 本节核心题型\n不少同学初学数列，会有一种与生俱来的陌生感，这是因为尽管数列有函数的特征，但研究数列问题所用到的诸多方法，与高中数学的其它模块不同。本节我们先通过类型Ⅰ的观察、归纳和类型Ⅱ的通项与项的分析，带大家熟悉数列的通项公式、递推公式等基本概念；再由类型Ⅲ的学习，让大家掌握“累加法”和“累乘法”这两个求通项公式的重要方法；最后我们还设计了类型Ⅳ这一组题，专门讲解 \\(a_{n}\\)与 \\(S_{n}\\)的关系在具体问题中的用法。",
           "solution_present": true,
           "vision_hint": "4.1-LI8b9783836031cb86"
-        },
-        {
-          "item_id": "6fbabed649e75718",
-          "kind": "example",
-          "label": "例9",
-          "example_number": 9,
-          "parent_example_number": null,
-          "role": "knowledge_example",
-          "role_ref": "4.1-k4",
-          "source_docs": [
-            3,
-            4
-          ],
-          "question_text": "【例9】写出下列数列的一个通项公式，使它的前4项分别是下列各数：\n（1） \\(\\frac{2^{2}-1}{3}\\)， \\(\\frac{4^{2}-2}{9}\\)， \\(\\frac{6^{2}-3}{27}\\)， \\(\\frac{8^{2}-4}{81}\\);\n（2）1，-3，5，-7；\n（3）0.7，0.77，0.777，0.7777；\n（4）1， \\(\\frac{8}{5}\\)， \\(\\frac{15}{7}\\)， \\(\\frac{24}{9}\\).",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "teaching_text": "【例9】写出下列数列的一个通项公式，使它的前4项分别是下列各数：\n（1） \\(\\frac{2^{2}-1}{3}\\)， \\(\\frac{4^{2}-2}{9}\\)， \\(\\frac{6^{2}-3}{27}\\)， \\(\\frac{8^{2}-4}{81}\\);\n（2）1，-3，5，-7；\n（3）0.7，0.77，0.777，0.7777；\n（4）1， \\(\\frac{8}{5}\\)， \\(\\frac{15}{7}\\)， \\(\\frac{24}{9}\\).\n解：（1）（先看分子，应把被减数与减数分开看，其中  \\(2^2\\)， \\(4^2\\)， \\(6^2\\)， \\(8^2\\)，这部分归纳出来的第  \\(n\\) 项是  \\((2n)^2\\)，对应的减数即为  \\(n\\)；再看分母，分母的 3，9，27，81 的通项是  \\(3^n\\)，整体的通项也就找到了）\n由题意，该数列的一个通项公式可以是  \\(a_n = \\frac{(2n)^2 - n}{3^n}\\)，化简得： \\(\\overline{a}_n = \\frac{4n^2 - n}{3^n}\\)。\n（2）（这4个数的绝对值为 1, 3, 5, 7，其通项为  \\(2n-1\\)，符号的正负交替怎么表示？涉及正负交替，可用  \\((-1)^n\\) 这类结构来表示，但已知的前4项是奇数项为正，偶数项为负，故需调整为  \\((-1)^{n+1}\\)）\n由题意，该数列的一个通项公式可以是  \\(a_n = (-1)^{n+1}(2n-1)\\).\n（3）（小数不好表示规律，考虑化为分数来看，分别为 \\(\\frac{7}{10}\\)， \\(\\frac{77}{100}\\)， \\(\\frac{777}{1000}\\)， \\(\\frac{7777}{10000}\\)，分母规律就是 \\(10^n\\)，分子呢？用式子直接表示分子的规律不易，但由其结构可联想到9，99，999，9999的通项为 \\(10^n-1\\)，故把分子的7，77，777，7777向9，99，999，9999转化，如何转化？乘以 \\(\\frac{7}{9}\\)即可）\n所给数列的前4项可化为 \\(\\frac{7}{10}\\)， \\(\\frac{77}{100}\\)， \\(\\frac{777}{1000}\\)， \\(\\frac{7777}{10000}\\)，\n分子的7，77，777，7777可分别化为 \\(\\frac{7}{9} \\times (10^1-1)\\)， \\(\\frac{7}{9} \\times (10^2-1)\\)， \\(\\frac{7}{9} \\times (10^3-1)\\)， \\(\\frac{7}{9} \\times (10^4-1)\\)，\n其通项公式为 \\(\\frac{7}{9} \\times (10^n-1)\\)，所以原数列的一个通项公式可以是 \\(a_n = \\frac{\\frac{7}{9} \\times (10^n-1)}{10^n}\\)，化简得： \\(a_n = \\frac{7 \\times (10^n-1)}{9 \\times 10^n}\\)。\n（4）（观察发现后3项的分母依次为5，7，9，它们依次相差2，故想到先把首项1改写为 \\(\\frac{3}{3}\\)，再作观察）\n该数列的前4项分别为 \\(\\frac{3}{3}\\)， \\(\\frac{8}{5}\\)， \\(\\frac{15}{7}\\)， \\(\\frac{24}{9}\\)，即 \\(\\frac{2^2 - 1}{2 \\times 1 + 1}\\)， \\(\\frac{3^2 - 1}{2 \\times 2 + 1}\\)， \\(\\frac{4^2 - 1}{2 \\times 3 + 1}\\)， \\(\\frac{5^2 - 1}{2 \\times 4 + 1}\\)，\n所以该数列的一个通项公式可以是 \\(a_n = \\frac{(n+1)^2 - 1}{2n+1}\\)，化简得： \\(a_n = \\frac{n^2 + 2n}{2n+1}\\)。\n【反思】①像这种总结规律的题，若从整体看不易发现规律，可考虑拆分成局部分别考虑，例如第（1）小问拆成3个部分考虑，第（2）小问拆分成绝对值和符号分别考虑，等等；②同一数列的通项可能不是唯一的，例如\n第（2）小问中正负号交替出现的情况除了用 \\((-1)^n\\)或 \\((-1)^{n+1}\\)表示外，也可用 \\(\\cos n\\pi\\)或 \\(\\cos(n+1)\\pi\\)表示，那么第（2）小问中数列 \\(\\{a_n\\}\\)的通项公式也可写成 \\(a_n=(2n-1)\\cos(n+1)\\pi\\)。",
-          "solution_present": true,
-          "vision_hint": "4.1-LI6fbabed649e75718"
-        },
-        {
-          "item_id": "a82f7ccc0c17e597",
-          "kind": "example",
-          "label": "例10",
-          "example_number": 10,
-          "parent_example_number": null,
-          "role": "knowledge_example",
-          "role_ref": "4.1-k4",
-          "source_docs": [
-            5
-          ],
-          "question_text": "【例 10】已知数列  \\(\\{a_{n}\\}\\) 的通项公式为  \\(a_{n}=\\frac{9n^{2}-9n+2}{9n^{2}-1}\\).\n（1）判断 \\(\\frac{98}{101}\\)是不是数列 \\(\\{a_{n}\\}\\)中的项；\n（2）试判断数列 \\(\\{a_{n}\\}\\)中的项是否都在区间(0,1)内.",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "teaching_text": "【例 10】已知数列  \\(\\{a_{n}\\}\\) 的通项公式为  \\(a_{n}=\\frac{9n^{2}-9n+2}{9n^{2}-1}\\).\n（1）判断 \\(\\frac{98}{101}\\)是不是数列 \\(\\{a_{n}\\}\\)中的项；\n（2）试判断数列 \\(\\{a_{n}\\}\\)中的项是否都在区间(0,1)内.\n解：（1）（可以想象，直接令 \\(a_n=\\frac{70}{101}\\)，数字较大，解方程偏麻烦，观察发现分子分母都可分解因式，故尝试通过分解因式来化简 \\(a_n\\)，再令 \\(a_n=\\frac{98}{101}\\)）由题意， \\(a_n=\\frac{9n^2-9n+2}{9n^2-1}=\\frac{(3n-1)(3n-2)}{(3n+1)(3n-1)}=\\frac{3n-2}{3n+1}\\)①，令 \\(a_n=\\frac{98}{101}\\)得 \\(\\frac{3n-2}{3n+1}=\\frac{98}{101}\\)，解得： \\(n=\\frac{100}{3}\\)，因为 \\(\\frac{100}{3}\\)不是正整数，所以 \\(\\frac{98}{101}\\)不是数列 \\(\\{a_n\\}\\)中的项.\n（2）（观察发现式①的分子分母均为正数，且分母大于分子，所以必有 \\(a_n \\in (0,1)\\)，下面给出严格证明）因为 \\(n \\in \\mathbb{N}^*\\)，所以 \\(3n+1 > 3n - 2 \\geq 1 > 0\\)，从而 \\(0 < \\frac{3n-2}{3n+1} < 1\\)，故数列 \\(\\{a_n\\}\\)中的项都在区间 \\((0,1)\\)内。\n【反思】数列的通项公式类似于函数的解析式，所以利用通项公式研究数列中的项，本质就是方程问题或函数问题，如果没给通项公式，给的递推公式，那么 \\(a_{n}\\)与n的关系就无法直接看出，我们来看下面的变式.",
-          "solution_present": true,
-          "vision_hint": "4.1-LIa82f7ccc0c17e597"
-        },
-        {
-          "item_id": "6a1329aec6ce5fa9",
-          "kind": "example",
-          "label": "例11",
-          "example_number": 11,
-          "parent_example_number": null,
-          "role": "knowledge_example",
-          "role_ref": "4.1-k4",
-          "source_docs": [
-            5,
-            6
-          ],
-          "question_text": "【例 11】已知数列 \\(\\{a_n\\}\\) 满足 \\(a_1 = 1\\)，\\(a_{n+1} - a_n = \\ln \\frac{n+1}{n}\\)，则 \\(a_{15} =\\)___。",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "teaching_text": "【例 11】已知数列 \\(\\{a_n\\}\\) 满足 \\(a_1 = 1\\)，\\(a_{n+1} - a_n = \\ln \\frac{n+1}{n}\\)，则 \\(a_{15} =\\)___。\n解析：题干给出了关于  \\(a_{n+1}\\) 和  \\(a_n\\) 的递推公式，如何用它求  \\(a_{15}\\)？若无思路，不妨试试将  \\(n=1, 2, 3, \\cdots, 14\\) 代入所给递推公式，直到产生目标量  \\(a_{15}\\)，再作观察，因为  \\(a_{n+1} - a_n = \\ln \\frac{n+1}{n}\\)，所以当  \\(n=1,2,3,\\cdots,14\\) 时，分别有\n \\(a_2 - a_1 = \\ln \\frac{2}{1}\\),  \\(a_3 - a_2 = \\ln \\frac{3}{2}\\),  \\(a_4 - a_3 = \\ln \\frac{4}{3}\\),  \\(\\cdots\\),  \\(a_{15} - a_{14} = \\ln \\frac{15}{14}\\)，观察发现以上各式中，除已知的  \\(a_1\\) 和所求的  \\(a_{15}\\) 外，其余项都有一个正的和一个负的，相加后恰好可以抵消，故直接将各式相加，就能求出  \\(a_{15}\\)，\n将以上式子相加得： \\((a_2 - a_1) + (a_3 - a_2) + (a_4 - a_3) + \\cdots + (a_{15} - a_{14}) = \\ln \\frac{2}{1} + \\ln \\frac{3}{2} + \\ln \\frac{4}{3} + \\cdots + \\ln \\frac{15}{14}\\) ①，\n又  \\((a_2 - a_1) + (a_3 - a_2) + (a_4 - a_3) + \\cdots + (a_{15} - a_{14}) = (-a_1 + a_2) + (-a_2 + a_3) + (-a_3 + a_4) + \\cdots + (-a_{14} + a_{15}) = a_{15} - a_1\\)，\n \\(\\ln \\frac{2}{1} + \\ln \\frac{3}{2} + \\ln \\frac{4}{3} + \\cdots + \\ln \\frac{15}{14} = \\ln \\left( \\frac{2}{1} \\times \\frac{3}{2} \\times \\frac{4}{3} \\times \\cdots \\times \\frac{15}{14} \\right) = \\ln 15\\)，\n所以代入②得： \\(a_{15} - a_1 = \\ln 15\\)，\n所以代入①得  \\(a_{15} - a_{1} = \\ln 15\\)，故  \\(a_{15} = a_{1} + \\ln 15 = 1 + \\ln 15\\)。\n答案： \\(1 + \\ln15\\)\n【反思】给出形如  \\(a_{n+1}-a_n=f(n)\\) 或  \\(a_n-a_{n-1}=f(n-1)(n\\geq2)\\) 的递推公式，要求  \\(a_n\\)，可对  \\(n\\) 连续赋值，得到  \\(n-1\\) 个式子  \\(a_2-a_1=f(1)\\)， \\(a_3-a_2=f(2)\\)， \\(\\cdots\\)， \\(a_n-a_{n-1}=f(n-1)\\)，再将这些式子相加即可求出  \\(a_n\\)，这种求通项的方法称为“累加法”，我们通过下面的变式 1 来巩固这种重要的求通项方法。",
-          "solution_present": true,
-          "vision_hint": "4.1-LI6a1329aec6ce5fa9"
-        },
-        {
-          "item_id": "147ec4f8e41b288e",
-          "kind": "example",
-          "label": "例12",
-          "example_number": 12,
-          "parent_example_number": null,
-          "role": "knowledge_example",
-          "role_ref": "4.1-k4",
-          "source_docs": [
-            7
-          ],
-          "question_text": "【例 12】若数列  \\(\\{a_{n}\\}\\) 的前 n 项和  \\(S_{n}=n^{2}-1\\)，求  \\(a_{n}\\)",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "teaching_text": "【例 12】若数列  \\(\\{a_{n}\\}\\) 的前 n 项和  \\(S_{n}=n^{2}-1\\)，求  \\(a_{n}\\)\n解：（已知  \\(S_n\\)，怎么求  \\(a_n\\)？代  \\(a_n\\) 与  \\(S_n\\) 的关系式  \\(a_n = \\begin{cases} S_1, & n=1 \\\\ S_n - S_{n-1}, & n \\geq 2 \\end{cases}\\) 计算即可）\n因为  \\(S_n = n^2 - 1\\)，所以  \\(a_1 = S_1 = 1^2 - 1 = 0\\)，且当  \\(n \\geq 2\\) 时， \\(S_{n-1} = (n-1)^2 - 1\\)，\n所以当  \\(n \\geq 2\\) 时， \\(a_n = S_n - S_{n-1} = n^2 - 1 - [(n-1)^2 - 1] = 2n - 1\\)，因为  \\(a_1 = 0\\) 不满足上式，所以  \\(a_n = \\begin{cases} 0, & n=1 \\\\ 2n - 1, & n \\geq 2 \\end{cases}\\)\n【反思】若给出数列 \\(\\{a_n\\}\\) 的前 \\(n\\) 项和 \\(S_n\\)，则可直接按 \\(a_n = \\begin{cases} S_1, & n=1 \\\\ S_n - S_{n-1}, & n \\geq 2 \\end{cases}\\) 求 \\(a_n\\)，别忘了 \\(a_1\\) 要单独算。有时 \\(S_n\\) 会以具体的求和形式给出，比较隐晦，比如下面的变式。",
-          "solution_present": true,
-          "vision_hint": "4.1-LI147ec4f8e41b288e"
-        },
-        {
-          "item_id": "c046925ce598e7e7",
-          "kind": "example",
-          "label": "例13",
-          "example_number": 13,
-          "parent_example_number": null,
-          "role": "knowledge_example",
-          "role_ref": "4.1-k4",
-          "source_docs": [
-            8
-          ],
-          "question_text": "【例 13】记数列 \\(\\{a_n\\}\\) 的前 \\(n\\) 项和为 \\(S_n\\)，对任意正整数 \\(n\\)，有 \\(2S_n = na_n\\)，且 \\(a_2 = 3\\)。\n（1）求 \\(a_{1}\\)和 \\(a_{3}\\)的值；（2）求 \\(a_{n}\\)",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "teaching_text": "【例 13】记数列 \\(\\{a_n\\}\\) 的前 \\(n\\) 项和为 \\(S_n\\)，对任意正整数 \\(n\\)，有 \\(2S_n = na_n\\)，且 \\(a_2 = 3\\)。\n（1）求 \\(a_{1}\\)和 \\(a_{3}\\)的值；（2）求 \\(a_{n}\\)\n解：（1）（条件给出 \\(2S_n = na_n\\) 和 \\(a_2 = 3\\)，要求 \\(a_1\\) 和 \\(a_3\\)，可直接对 \\(n\\) 赋值，构造出 \\(a_1\\)，\\(a_3\\)）\n在 \\(2S_n = na_n\\) 中令 \\(n=1\\) 得 \\(2S_1=1\\cdot a_1\\)，结合 \\(S_1 = a_1\\) 可得 \\(2a_1 = a_1\\)，所以 \\(a_1 = 0\\)，\n在 \\(2S_n = na_n\\) 中令 \\(n=3\\) 得 \\(2S_3 = 3a_3\\)，所以 \\(2(a_1 + a_2 + a_3) = 3a_3\\)，结合 \\(a_1 = 0\\)，\\(a_2 = 3\\) 可得 \\(a_3 = 6\\)。\n（2）（条件给出的是 \\(2S_n = na_n\\)，所求为 \\(a_n\\)，考虑退 \\(n\\) 相减，消去 \\(S_n\\)，得到数列 \\(\\{a_n\\}\\) 的递推公式）\n因为 \\(2S_n = na_n\\)，所以当 \\(n \\geq 2\\) 时，\\(2S_{n-1} = (n-1)a_{n-1}\\)，两式作差得 \\(2S_n - 2S_{n-1} = na_n - (n-1)a_{n-1}\\)，\n所以 \\(2a_n = na_n - (n-1)a_{n-1}\\)，整理得：\\((n-2)a_n = (n-1)a_{n-1}\\) ①，（此式可进一步变形成 \\(\\frac{a_n}{a_{n-1}} = \\frac{n-1}{n-2}\\)，于是可用乘法求 \\(a_n\\)，但由于 \\(n-2\\) 在分母上，所以应在 \\(n \\geq 3\\) 的条件下进行累乘）\n由①可得当 \\(n \\geq 3\\) 时，\\(\\frac{a_n}{a_{n-1}} = \\frac{n-1}{n-2}\\)，所以当 \\(n \\geq 3\\) 时，\\(\\frac{a_n}{a_{n-1}} = \\frac{n-1}{n-2}\\)，\\(\\frac{a_{n-1}}{a_{n-2}} = \\frac{n-2}{n-3}\\)，…，\\(\\frac{a_3}{a_2} = \\frac{2}{1}\\)，\n将以上各式累乘得 \\(\\frac{a_n}{a_{n-1}} \\cdot \\frac{a_{n-1}}{a_{n-2}} \\cdots \\frac{a_3}{a_2} = \\frac{n-1}{n-2} \\cdot \\frac{n-2}{n-3} \\cdots \\frac{2}{1}\\)，整理得：\\(\\frac{a_n}{a_2} = n-1\\)，所以 \\(a_n = a_2(n-1) = 3(n-1)\\) ②，（上述结果是在 \\(n \\geq 3\\) 的条件下得到的，所以还需单独检验 \\(n=1\\)，\\(2\\) 时 \\(a_n = 3(n-1)\\) 是否成立）\n又 \\(a_1 = 0\\) 和 \\(a_2 = 3\\) 也满足②，所以对任意的 \\(n \\in \\mathbf{N}^*\\)，都有 \\(a_n = 3(n-1)\\)。\n【反思】遇到  \\(S_n\\) 与  \\(a_n\\) 混搭的关系式，要求  \\(a_n\\)，常考虑退 n 相减，消去  \\(S_n\\)，得到  \\(a_n\\) 的递推公式，但这不是绝对的，有时也会考虑消去  \\(a_n\\)，后续小节会遇到有关的例子。同理，若将条件中的前 n 项和换成前 n 项积，处理的方法也是类似的，只需要把退 n 相减变成退 n 相除即可，我们来看下面的变式。",
-          "solution_present": true,
-          "vision_hint": "4.1-LIc046925ce598e7e7"
-        },
-        {
-          "item_id": "647ecf1617a01714",
-          "kind": "example",
-          "label": "例14",
-          "example_number": 14,
-          "parent_example_number": null,
-          "role": "knowledge_example",
-          "role_ref": "4.1-k4",
-          "source_docs": [
-            9
-          ],
-          "question_text": "【例 14】已知数列 \\(\\{a_n\\}\\) 满足：\\(a_{n+1} = \\begin{cases} 2a_n, & 0 \\leq a_n < \\frac{1}{2} \\\\ 2a_n - 1, & \\frac{1}{2} \\leq a_n < 1 \\end{cases}\\)，若 \\(a_1 = \\frac{2}{5}\\)，则 \\(a_{2026} = \\left( \\right)\\)\nA. \\(\\frac{4}{5}\\)  B. \\(\\frac{3}{5}\\)  C. \\(\\frac{2}{5}\\)  D. \\(\\frac{1}{5}\\)",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "teaching_text": "【例 14】已知数列 \\(\\{a_n\\}\\) 满足：\\(a_{n+1} = \\begin{cases} 2a_n, & 0 \\leq a_n < \\frac{1}{2} \\\\ 2a_n - 1, & \\frac{1}{2} \\leq a_n < 1 \\end{cases}\\)，若 \\(a_1 = \\frac{2}{5}\\)，则 \\(a_{2026} = \\left( \\right)\\)\nA. \\(\\frac{4}{5}\\)  B. \\(\\frac{3}{5}\\)  C. \\(\\frac{2}{5}\\)  D. \\(\\frac{1}{5}\\)\n解析：要先由所给递推公式求出  \\(a_n\\)，再求  \\(a_{2026}\\) 吗？可以想象， \\(a_n\\) 不好求，怎么办呢？若无思路，不妨先按所给递推公式求出前几项，再观察规律，因为  \\(a_1 = \\frac{2}{5} \\in \\left[0, \\frac{1}{2}\\right)\\)，所以当  \\(n=1\\) 时， \\(a_2 = 2a_1 = \\frac{4}{5}\\)；\n因为  \\(a_2 = \\frac{4}{5} \\in \\left[\\frac{1}{2}, 1\\right)\\)，所以当  \\(n=2\\) 时， \\(a_3 = 2a_2 - 1 = 2 \\times \\frac{4}{5} - 1 = \\frac{3}{5}\\)；\n因为  \\(a_3 = \\frac{3}{5} \\in \\left[\\frac{1}{2}, 1\\right)\\)，所以当  \\(n=3\\) 时， \\(a_4 = 2a_3 - 1 = 2 \\times \\frac{3}{5} - 1 = \\frac{1}{5}\\)；\n因为  \\(a_4 = \\frac{1}{5} \\in \\left[0, \\frac{1}{2}\\right)\\)，所以当  \\(n=4\\) 时， \\(a_5 = 2a_4 = \\frac{2}{5}\\)；\n注意到  \\(a_5 = a_1\\)，故可想象，继续递推下去，必有  \\(a_6 = a_2\\)， \\(a_7 = a_3\\)， \\(\\cdots\\)，于是  \\(\\{a_n\\}\\) 是周期数列，问题就明朗了，\n由前面的分析可知  \\(\\{a_n\\}\\) 是以 4 为周期的周期数列，又因为  \\(2026 = 506 \\times 4 + 2\\)，所以  \\(a_{2026} = a_2 = \\frac{4}{5}\\)。\n答案：A\n【反思】①类似于周期函数的定义，若存在正整数  \\(M\\)，使  \\(a_{n+M} = a_n\\) 对任意的  \\(n \\in \\mathbb{N}^*\\) 都成立，则  \\(\\{a_n\\}\\) 是以  \\(M\\) 为周期的周期数列；②当题干所给的递推公式不好变形处理时，可尝试用它求出数列的前几项，观察并总结规律。这是在具体的问题中发现数列具有周期性最常用的方法。",
-          "solution_present": true,
-          "vision_hint": "4.1-LI647ecf1617a01714"
-        },
-        {
-          "item_id": "946310de2ba8124c",
-          "kind": "example",
-          "label": "例15",
-          "example_number": 15,
-          "parent_example_number": null,
-          "role": "knowledge_example",
-          "role_ref": "4.1-k4",
-          "source_docs": [
-            9,
-            10
-          ],
-          "question_text": "【例 15】数列  \\(\\{a_{n}\\}\\) 的通项公式如下，其中是递增数列的是（）\nA.  \\(a_{n}=\\sin\\frac{\\pi n}{2}\\) B.  \\(a_{n}=\\left(\\frac{1}{2}\\right)^{n}\\) C.  \\(a_{n}=2n-3\\) D.  \\(a_{n}=n^{2}-3n\\)",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "teaching_text": "【例 15】数列  \\(\\{a_{n}\\}\\) 的通项公式如下，其中是递增数列的是（）\nA.  \\(a_{n}=\\sin\\frac{\\pi n}{2}\\) B.  \\(a_{n}=\\left(\\frac{1}{2}\\right)^{n}\\) C.  \\(a_{n}=2n-3\\) D.  \\(a_{n}=n^{2}-3n\\)\n解析：观察选项发现四个数列的图象均容易画出，故可考虑画图分析数列的单调性，\nA 项，对于  \\(y = \\sin \\frac{\\pi x}{2}\\)， \\(\\omega = \\frac{\\pi}{2}\\)，所以其周期  \\(T = \\frac{2\\pi}{\\omega} = 4\\)，所以  \\(f(n) = \\sin \\frac{\\pi n}{2}\\) 的部分图象如图 1，\n由图 1 可知数列  \\(\\{a_n\\}\\) 不是递增数列，故 A 项错误；\nB 项， \\(y=\\left(\\frac{1}{2}\\right)^x\\) 在  \\(\\mathbb{R}\\) 上  \\(\\searrow\\)，所以  \\(g(n)=\\left(\\frac{1}{2}\\right)^n\\) 的图象如图 2，数列  \\(\\{a_n\\}\\) 是递减数列，故 B 项错误；\nC 项， \\(y=2x-3\\) 在  \\(\\mathbb{R}\\) 上  \\(\\nearrow\\)，所以  \\(h(n)=2n-3\\) 的图象如图 3，从而数列  \\(\\{a_n\\}\\) 是递增数列，故 C 项正确；\nD 项， \\(y=x^2-3x\\) 是开口向上，对称轴为  \\(x=\\frac{3}{2}\\) 的二次函数，所以  \\(t(n)=n^2-3n\\) 的图象如图 4，\n从而  \\(t(1)=t(2)\\)。即  \\(a=a\\)，故数列  \\(\\{a_n\\}\\) 不是递增数列，故 D 项错误\n从而  \\(t(1)=t(2)\\)，即  \\(a_{1}=a_{2}\\)，故数列  \\(\\{a_{n}\\}\\) 不是递增数列，故 D 项错误.\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_154_518_383_670.jpg\" alt=\"Image\" width=\"19%\" /></div>\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_438_521_584_669.jpg\" alt=\"Image\" width=\"12%\" /></div>\n<div style=\"text-align: center;\">图2</div>\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_624_520_770_669.jpg\" alt=\"Image\" width=\"12%\" /></div>\n<div style=\"text-align: center;\">图3</div>\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_831_520_1036_668.jpg\" alt=\"Image\" width=\"17%\" /></div>\n<div style=\"text-align: center;\">图4</div>\n答案：C\n【反思】若已知数列\\(\\{a_n\\}\\)的通项公式且容易画出数列的图象，则可考虑通过画图判断数列的单调性；若不方便画出数列的图象，则常用作差法或作商法证明数列的单调性，我们来看下面的变式1.",
-          "solution_present": true,
-          "vision_hint": "4.1-LI946310de2ba8124c"
-        },
-        {
-          "item_id": "c024c480e7ce7f4e",
-          "kind": "example",
-          "label": "例16",
-          "example_number": 16,
-          "parent_example_number": null,
-          "role": "knowledge_example",
-          "role_ref": "4.1-k4",
-          "source_docs": [
-            11
-          ],
-          "question_text": "【例 16】已知数列 \\(\\{a_n\\}\\) 的通项公式 \\(a_n = -n^2 + 3n + \\frac{3}{4}\\)，则数列 \\(\\{a_n\\}\\) 的最大值是（ ）\nA. 3\nB. 2\nC. \\(\\frac{11}{4}\\)\nD. \\(\\frac{3}{4}\\)",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "teaching_text": "【例 16】已知数列 \\(\\{a_n\\}\\) 的通项公式 \\(a_n = -n^2 + 3n + \\frac{3}{4}\\)，则数列 \\(\\{a_n\\}\\) 的最大值是（ ）\nA. 3\nB. 2\nC. \\(\\frac{11}{4}\\)\nD. \\(\\frac{3}{4}\\)\n解析：\\(\\{a_n\\}\\) 的通项公式对应的是二次函数，故可直接画图分析单调性，从而求出最值，令 \\(f(n) = -n^2 + 3n + \\frac{3}{4}\\)，其开口向下，且对称轴为 \\(n = \\frac{3}{2}\\)，如图，有 \\(f(1) = f(2) > f(3) > f(4) > \\cdots\\)，所以当 \\(n=1\\) 或 \\(n=2\\) 时，\\(f(n)\\) 取最大值，且最大值为 \\(f(1) = -1^2 + 3 \\times 1 + \\frac{3}{4} = \\frac{11}{4}\\)，即数列 \\(\\{a_n\\}\\) 的最大值是 \\(\\frac{11}{4}\\)。\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_918_870_1092_1013.jpg\" alt=\"Image\" width=\"14%\" /></div>\n答案：C\n【反思】求数列的最大（小）项，常先分析数列的单调性，本题是通过画图分析单调性，有时也会遇到不好画图的情况，我们再来看一个变式.",
-          "solution_present": true,
-          "vision_hint": "4.1-LIc024c480e7ce7f4e"
-        },
-        {
-          "item_id": "d51f0daccdfb35e9",
-          "kind": "example",
-          "label": "例17",
-          "example_number": 17,
-          "parent_example_number": null,
-          "role": "knowledge_example",
-          "role_ref": "4.1-k4",
-          "source_docs": [
-            12
-          ],
-          "question_text": "【例 17】记数列 \\(\\{a_n\\}\\) 的前 \\(n\\) 项和为 \\(S_n\\)，且 \\(a_n = \\cos \\frac{n\\pi}{4}\\)，则 \\(S_{2025} =\\) ___。",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "teaching_text": "【例 17】记数列 \\(\\{a_n\\}\\) 的前 \\(n\\) 项和为 \\(S_n\\)，且 \\(a_n = \\cos \\frac{n\\pi}{4}\\)，则 \\(S_{2025} =\\) ___。\n解析：可以想象， \\(y = \\cos \\frac{\\pi}{4} x\\) 的周期  \\(T = \\frac{2\\pi}{\\frac{\\pi}{4}} = 8\\)，故猜想  \\(\\{a_n\\}\\) 是周期为 8 的周期数列，下面先给出证明对任意的  \\(n \\in \\mathbf{N}^*\\)， \\(a_{n+8} = \\cos \\frac{(n+8)\\pi}{4} = \\cos \\left( \\frac{n\\pi}{4} + 2\\pi \\right) = \\cos \\frac{n\\pi}{4} = a_n\\)，所以  \\(\\{a_n\\}\\) 是周期为 8 的周期数列，要求  \\(S_{2025}\\)，考虑按周期分组，可先求  \\(a_1 + a_2 + \\cdots + a_8\\)，再看  \\(\\{a_n\\}\\) 的前 2025 项有几个周期，余下几项， \\(a_1 = \\cos \\frac{\\pi}{4} = \\frac{\\sqrt{2}}{2}\\)， \\(a_2 = \\cos \\frac{2\\pi}{4} = 0\\)， \\(a_3 = \\cos \\frac{3\\pi}{4} = -\\frac{\\sqrt{2}}{2}\\)， \\(a_4 = \\cos \\frac{4\\pi}{4} = -1\\)， \\(a_5 = \\cos \\frac{5\\pi}{4} = -\\frac{\\sqrt{2}}{2}\\)， \\(a_6 = \\cos \\frac{6\\pi}{4} = 0\\)， \\(a_7 = \\cos \\frac{7\\pi}{4} = \\frac{\\sqrt{2}}{2}\\)， \\(a_8 = \\cos \\frac{8\\pi}{4} = 1\\)，所以  \\(a_1 + a_2 + \\cdots + a_8 = \\frac{\\sqrt{2}}{2} + 0 - \\frac{\\sqrt{2}}{2} - 1 - \\frac{\\sqrt{2}}{2} + 0 + \\frac{\\sqrt{2}}{2} + 1 = 0\\)，\n又因为  \\(2025 = 253 \\times 8 + 1\\)，所以  \\(S_{2025} = 253 (a_1 + a_2 + \\cdots + a_8) + a_{2025} = a_{2025} = a_1 = \\frac{\\sqrt{2}}{2}\\)\n答案： \\(\\frac{\\sqrt{2}}{2}\\)\n【反思】当数列\\(\\{a_n\\}\\)具有周期性时，要求\\(\\{a_n\\}\\)的前\\(M\\)项和\\(S_M\\)，常抓住每个周期内求和的结果相同来计算。一般将前\\(M\\)项按周期分组，先求一个周期内的和，再看前\\(M\\)项有几个周期，余下几项。",
-          "solution_present": true,
-          "vision_hint": "4.1-LId51f0daccdfb35e9"
-        },
-        {
-          "item_id": "b0f159ff979f5147",
-          "kind": "example",
-          "label": "例18",
-          "example_number": 18,
-          "parent_example_number": null,
-          "role": "knowledge_example",
-          "role_ref": "4.1-k4",
-          "source_docs": [
-            12,
-            13
-          ],
-          "question_text": "【例 18】在数列 \\(\\{a_n\\}\\) 中，\\(a_1 = 2\\)，\\(n(a_{n+1} - a_n) = a_n + 1\\)，\\(n \\in \\mathbb{N}^*\\)，若对任意的 \\(a \\in [-2,2]\\)，\\(n \\in \\mathbb{N}^*\\)，不等式 \\(\\frac{a_{n+1}}{n+1} < 2t^2 + at -1\\) 恒成立，则实数 \\(t\\) 的取值范围为（ ）\nA. \\((-\\infty,-2) \\cup (1,+\\infty)\\)  \nB. \\((-\\infty,-2] \\cup [2,+\\infty)\\)  \nC. \\((-\\infty,-1] \\cup [2,+\\infty)\\)  \nD. \\([-2,2]\\)",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "teaching_text": "【例 18】在数列 \\(\\{a_n\\}\\) 中，\\(a_1 = 2\\)，\\(n(a_{n+1} - a_n) = a_n + 1\\)，\\(n \\in \\mathbb{N}^*\\)，若对任意的 \\(a \\in [-2,2]\\)，\\(n \\in \\mathbb{N}^*\\)，不等式 \\(\\frac{a_{n+1}}{n+1} < 2t^2 + at -1\\) 恒成立，则实数 \\(t\\) 的取值范围为（ ）\nA. \\((-\\infty,-2) \\cup (1,+\\infty)\\)  \nB. \\((-\\infty,-2] \\cup [2,+\\infty)\\)  \nC. \\((-\\infty,-1] \\cup [2,+\\infty)\\)  \nD. \\([-2,2]\\)\n解析：注意到所给不等式 \\(\\frac{a_{n+1}}{n+1}<2t^{2}+at-1\\)的右边不含n，故可先分析当n变化时，左边的 \\(\\frac{a_{n+1}}{n+1}\\)的取值情况，\n由  \\(n(a_{n+1}-a_n)=a_n+1\\) 可得  \\(na_{n+1}=(n+1)a_n+1\\) ①，为得到  \\(\\frac{a_{n+1}}{n+1}\\) 这一结构，可以对①式等号两端同除以  \\(n(n+1)\\)，由①可得  \\(\\frac{a_{n+1}}{n+1}=\\frac{a_n}{n}+\\frac{1}{n(n+1)}\\)，所以  \\(\\frac{a_{n+1}}{n+1}-\\frac{a_n}{n}=\\frac{1}{n(n+1)}\\) ②，\n若将  \\(\\frac{a_n}{n}\\) 看作  \\(b_n\\)，则上式为  \\(b_{n+1}-b_n=\\frac{1}{n(n+1)}\\)，于是想到用累加法求出  \\(\\frac{a_{n+1}}{n+1}\\)，\n由②可得 \\(\\left\\{\\begin{aligned}&\\frac{a_{2}}{2}-\\frac{a_{1}}{1}=\\frac{1}{1\\times2}\\\\ &\\frac{a_{3}}{3}-\\frac{a_{2}}{2}=\\frac{1}{2\\times3}\\\\ &\\cdots\\cdots\\\\ &\\frac{a_{n+1}}{n+1}-\\frac{a_{n}}{n}=\\frac{1}{n(n+1)}\\end{aligned}\\right.\\)，将各式累加得 \\(\\frac{a_{n+1}}{n+1}-\\frac{a_{1}}{1}=\\frac{1}{1\\times2}+\\frac{1}{2\\times3}+\\cdots+\\frac{1}{n(n+1)}\\) ③，怎样计算式③等号右侧\n的部分？注意到 \\(\\frac{1}{1\\times2}=1-\\frac{1}{2}\\)， \\(\\frac{1}{2\\times3}=\\frac{1}{2}-\\frac{1}{3}\\)，…，以此类推，于是按此将各分式拆开，可以实现求和， \\(\\frac{1}{1\\times2}+\\frac{1}{2\\times3}+\\cdots+\\frac{1}{n(n+1)}=1-\\frac{1}{2}+\\frac{1}{2}-\\frac{1}{3}+\\cdots+\\frac{1}{n}-\\frac{1}{n+1}=1-\\frac{1}{n+1}\\)，代入③可得 \\(\\frac{a_{n+1}}{n+1}-\\frac{a_1}{1}=1-\\frac{1}{n+1}\\)④，又 \\(a_1=2\\)，代入④整理得： \\(\\frac{a_{n+1}}{n+1}=3-\\frac{1}{n+1}\\)，因为 \\(\\frac{1}{n+1}>0\\)，所以 \\(3-\\frac{1}{n+1}<3\\)，且当 \\(n\\to+\\infty\\)时， \\(3-\\frac{1}{n+1}\\to3\\)，故要使 \\(\\frac{a_{n+1}}{n+1}<2t^2+at-1\\)对任意的 \\(n\\in\\mathbb{N}^*\\)恒成立，只需 \\(3\\leq2t^2+at-1\\)，即 \\(2t^2+at-4\\geq0\\)⑤，再考虑 \\(a\\)，由题意，不等式⑤需对任意的 \\(a\\in[-2,2]\\)成立，既然变量是 \\(a\\)，那我们把 \\(2t^2+at-4\\)看成关于 \\(a\\)的一次函数，该函数在 \\([-2,2]\\)上的图象是一条线段，其最小值必在端点处取得，故只需两个端点满足不等式⑤，令 \\(f(a)=2t^2+at-4\\)， \\(a\\in[-2,2]\\)，则不等式⑤在 \\(a\\in[-2,2]\\)时恒成立 \\(\\Leftrightarrow\\begin{cases}f(-2)=2t^2-2t-4\\geq0\\\\f(2)=2t^2+2t-4\\geq0\\end{cases}\\)，解得： \\(t\\geq2\\)或 \\(t\\leq-2\\)，所以实数 \\(t\\)的取值范围是 \\((-\\infty,-2-1]\\cup[2,+\\infty)\\)。\n答案：B\n【反思】像 \\(\\frac{1}{n(n+1)}\\)这种分母为同一数列相邻项的结构，常考虑将其拆分成两项之差，求前n项和时，就能相互抵消，这种求前n项和的方法叫做裂项相消法，后面我们还会通过微专题的形式来详细归纳这类求和方法。",
-          "solution_present": true,
-          "vision_hint": "4.1-LIb0f159ff979f5147"
         }
       ],
-      "direct_variants": [
-        {
-          "item_id": "c1bd3c0e4c5083fc",
-          "kind": "direct_variant",
-          "label": "变式1",
-          "example_number": null,
-          "parent_example_number": 9,
-          "role": "direct_variant",
-          "role_ref": null,
-          "source_docs": [
-            4
-          ],
-          "question_text": "【变式1】已知数列 \\(\\frac{1}{1}\\)， \\(\\frac{2}{1}\\)， \\(\\frac{1}{2}\\)， \\(\\frac{3}{1}\\)， \\(\\frac{2}{2}\\)， \\(\\frac{1}{3}\\)， \\(\\frac{4}{1}\\)， \\(\\frac{3}{2}\\)， \\(\\frac{2}{3}\\)， \\(\\frac{1}{4}\\)，…，则该数列的第17项 \\(a_{17}=\\)___。",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "solution_isolated": true,
-          "vision_hint": "4.1-LIc1bd3c0e4c5083fc"
-        },
-        {
-          "item_id": "0afede61206c7a93",
-          "kind": "direct_variant",
-          "label": "变式2",
-          "example_number": null,
-          "parent_example_number": 9,
-          "role": "direct_variant",
-          "role_ref": null,
-          "source_docs": [
-            4
-          ],
-          "question_text": "【变式2】如果数列1，5，12，22，…中的每一项都可用如图所示的图形表示出来，那么这个数列的第8项为（）\n\nA. 70 B. 92 C. 105 D. 118",
-          "image_refs": [
-            {
-              "ref": "imgs/img_in_image_box_425_722_755_914.jpg",
-              "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_425_722_755_914.jpg",
-              "exists": true
-            }
-          ],
-          "visual_status": "VISION_VERIFIED",
-          "solution_isolated": true,
-          "vision_hint": "4.1-LI0afede61206c7a93",
-          "vision_sidecars": [
-            {
-              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_425_722_755_914.jpg",
-              "image_sha256": "456167ffc10e9fb4548a9fff294e98491120692a153923047a747f2ccd63afc6",
-              "confidence": "E2",
-              "structured": {
-                "objects": [],
-                "relations": [],
-                "coordinates": [],
-                "ranges": [],
-                "text": [
-                  "高中数学"
-                ],
-                "uncertainties": [],
-                "confidence": "E2"
-              },
-              "source_provenance": null
-            }
-          ],
-          "vision_sidecar": {
-            "objects": [],
-            "relations": [],
-            "coordinates": [],
-            "ranges": [],
-            "text": [
-              "高中数学"
-            ],
-            "uncertainties": [],
-            "confidence": "E2"
-          },
-          "vision_source_provenance": [],
-          "evidence": [
-            "E1",
-            "E2"
-          ]
-        },
-        {
-          "item_id": "afc13d089ac69dcf",
-          "kind": "direct_variant",
-          "label": "变式",
-          "example_number": null,
-          "parent_example_number": 10,
-          "role": "direct_variant",
-          "role_ref": null,
-          "source_docs": [
-            5
-          ],
-          "question_text": "【变式】数列 \\(\\{a_n\\}\\) 定义如下：\\(a_1=1\\)，且当 \\(n \\geq 2\\) 时，\\(a_{n+1} = \\begin{cases} a_n + 1, & n \\text{为偶数} \\\\ a_n + 2, & n \\text{为奇数} \\end{cases}\\)，已知 \\(a_n = 10\\)，则正整数 \\(n\\) 的值为___。",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "solution_isolated": true,
-          "vision_hint": "4.1-LIafc13d089ac69dcf"
-        },
-        {
-          "item_id": "d74c54026f54ca90",
-          "kind": "direct_variant",
-          "label": "变式1",
-          "example_number": null,
-          "parent_example_number": 11,
-          "role": "direct_variant",
-          "role_ref": null,
-          "source_docs": [
-            6
-          ],
-          "question_text": "【变式1】已知首项为1的正项数列满足 \\(\\sqrt{a_{n+1}}-\\sqrt{a_n}=\\frac{1}{4}a_2\\)。\n（1）求 \\(a_{2}\\);\n（2）求 \\(\\{a_{n}\\}\\)的通项公式.",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "solution_isolated": true,
-          "vision_hint": "4.1-LId74c54026f54ca90"
-        },
-        {
-          "item_id": "21961c6fe2bcee0e",
-          "kind": "direct_variant",
-          "label": "变式2",
-          "example_number": null,
-          "parent_example_number": 11,
-          "role": "direct_variant",
-          "role_ref": null,
-          "source_docs": [
-            6,
-            7
-          ],
-          "question_text": "【变式 2】已知数列 \\(\\{a_n\\}\\) 满足 \\(a_1 = 2\\)，\\((n+1)a_n = (n-1)a_{n-1} (n \\geq 2, n \\in \\mathbb{N}^*)\\)，则 \\(a_n =\\)___。",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "solution_isolated": true,
-          "vision_hint": "4.1-LI21961c6fe2bcee0e"
-        },
-        {
-          "item_id": "da6c673b7db6e30d",
-          "kind": "direct_variant",
-          "label": "变式",
-          "example_number": null,
-          "parent_example_number": 12,
-          "role": "direct_variant",
-          "role_ref": null,
-          "source_docs": [
-            7,
-            8
-          ],
-          "question_text": "【变式】已知数列 \\(\\{a_n\\}\\) 满足 \\(a_1 + 2a_2 + 2^2a_3 + \\cdots + 2^{n-1}a_n = 2n - 2\\)，则 \\(a_n =\\)___.",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "solution_isolated": true,
-          "vision_hint": "4.1-LIda6c673b7db6e30d"
-        },
-        {
-          "item_id": "7313e87ef03ec590",
-          "kind": "direct_variant",
-          "label": "变式",
-          "example_number": null,
-          "parent_example_number": 13,
-          "role": "direct_variant",
-          "role_ref": null,
-          "source_docs": [
-            8,
-            9
-          ],
-          "question_text": "【变式】设 \\(T_{n}\\)为数列 \\(\\{a_{n}\\}\\)的前n项积，且 \\(T_{n}\\neq0\\)， \\(a_{n}=(2n-1)T_{n}\\)，则 \\(a_{n}=\\)（）\nA.  \\(\\frac{2n+1}{2n-1}\\) B.  \\(\\frac{2n-1}{2n+1}\\) C.  \\(\\frac{2n}{2n-1}\\) D.  \\(\\frac{2n}{2n+1}\\)",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "solution_isolated": true,
-          "vision_hint": "4.1-LI7313e87ef03ec590"
-        },
-        {
-          "item_id": "6d365309108efbca",
-          "kind": "direct_variant",
-          "label": "变式",
-          "example_number": null,
-          "parent_example_number": 14,
-          "role": "direct_variant",
-          "role_ref": null,
-          "source_docs": [
-            9
-          ],
-          "question_text": "【变式】若数列 \\(\\{a_n\\}\\) 的前 \\(n\\) 项和为 \\(S_n\\)，\\(2S_n = a_n + n\\)，则 \\(a_{101} =\\)___；\\(S_{101} =\\)___。",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "solution_isolated": true,
-          "vision_hint": "4.1-LI6d365309108efbca"
-        },
-        {
-          "item_id": "a9b6679b8704ce30",
-          "kind": "direct_variant",
-          "label": "变式1",
-          "example_number": null,
-          "parent_example_number": 15,
-          "role": "direct_variant",
-          "role_ref": null,
-          "source_docs": [
-            10
-          ],
-          "question_text": "【变式1】已知在数列\\(\\{a_n\\}\\)中，\\(0 < a_n < 1 (n \\in \\mathbb{N}^*)\\)，\\(a_{n+1} = \\frac{na_n + a_n^2}{n+1}\\)，求证：\\(\\{a_n\\}\\)是单调递减数列。\n证法1：（要证\\(\\{a_n\\}\\)是单调递减数列，只需证\\(a_{n+1}<a_n\\)，即证\\(a_{n+1}-a_n<0\\)，题干给出了\\(a_{n+1}\\)与\\(a_n\\)的递推关系，可将该关系代入，消去\\(a_{n+1}\\)，化简证明）\n由题意，\\(a_{n+1}-a_n=\\frac{na_n+a_n^2}{n+1}-a_n=\\frac{na_n+a_n^2-(n+1)a_n}{n+1}=\\frac{a_n^2-a_n}{n+1}=\\frac{a_n(a_n-1)}{n+1}\\)，\n因为  \\(0 < a_{n} < 1\\)，所以  \\(\\frac{a_{n}(a_{n}-1)}{n+1} < 0\\)，从而  \\(a_{n+1} - a_{n} < 0\\)，故  \\(a_{n+1} < a_{n}\\)，所以  \\(\\{a_{n}\\}\\) 是单调递减数列.\n证法2：（由题设条件不难发现 \\(\\{a_{n}\\}\\)是正项数列，于是也可考虑作商比较，即通过证明 \\(\\frac{a_{n+1}}{a_{n}}<1\\)来证 \\(a_{n+1}<a_{n}\\)，观察发现由所给递推关系式刚好也容易构造出 \\(\\frac{a_{n+1}}{a_{n}}\\)这一结构，故按此处理）\n由题意， \\(a_{n+1}=\\frac{na_n+a_n^2}{n+1}\\)，所以 \\(\\frac{a_{n+1}}{a_n}=\\frac{n+a_n}{n+1}\\)，因为 \\(0<a_n<1\\)，所以 \\(n+a_n<n+1\\)，且 \\(n+a_n\\)和 \\(n+1\\)都是正数，所以 \\(0<\\frac{n+a_n}{n+1}<1\\)，从而 \\(0<\\frac{a_{n+1}}{a_n}<1\\)，故 \\(a_{n+1}<a_n\\)，所以 \\(\\{a_n\\}\\)是单调递减数列.",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "solution_isolated": true,
-          "vision_hint": "4.1-LIa9b6679b8704ce30"
-        },
-        {
-          "item_id": "72afb14153379c4f",
-          "kind": "direct_variant",
-          "label": "变式2",
-          "example_number": null,
-          "parent_example_number": 15,
-          "role": "direct_variant",
-          "role_ref": null,
-          "source_docs": [
-            10,
-            11
-          ],
-          "question_text": "【变式 2】数列 \\(\\{a_n\\}\\) 中，\\(a_n = n^2 - kn (n \\in \\mathbf{N}^*)\\)，且 \\(\\{a_n\\}\\) 为单调递增数列，则 \\(k\\) 的取值范围是（ ）\nA. \\((-\\infty, 2]\\) B. \\((-\\infty, 3)\\) C. \\((-\\infty, 2)\\) D. \\((-\\infty, 3]\\)",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "solution_isolated": true,
-          "vision_hint": "4.1-LI72afb14153379c4f"
-        },
-        {
-          "item_id": "245e23a5b0af160d",
-          "kind": "direct_variant",
-          "label": "变式",
-          "example_number": null,
-          "parent_example_number": 16,
-          "role": "direct_variant",
-          "role_ref": null,
-          "source_docs": [
-            11,
-            12
-          ],
-          "question_text": "【变式】已知数列\\(\\{a_n\\}\\)的通项公式为\\(a_n=\\frac{2n-5}{2^n}\\)，求数列\\(\\{a_n\\}\\)的最大项。",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "solution_isolated": true,
-          "vision_hint": "4.1-LI245e23a5b0af160d"
-        }
-      ],
+      "direct_variants": [],
       "exercise_questions": [],
       "action_order": [
         "learn_each_current_example_then_attempt_its_direct_variants",
@@ -764,7 +342,164 @@
     {
       "cycle_id": "4.1-cycle-5",
       "sequence": 5,
-      "title": "A组 夯实基础",
+      "title": "类型Ⅰ 观察、归纳法求数列的通项公式或数列中的某一项",
+      "course_keys": [],
+      "prerequisite_course_keys": [
+        "4.3.1.1.a 数列的概念和通项公式"
+      ],
+      "optional_course_keys": [],
+      "knowledge_refs": [],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅰ 观察、归纳法求数列的通项公式或数列中的某一项"
+      ],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [
+        {
+          "item_id": "6fbabed649e75718",
+          "kind": "example",
+          "label": "例9",
+          "example_number": 9,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型Ⅰ 观察、归纳法求数列的通项公式或数列中的某一项",
+          "source_docs": [
+            3,
+            4
+          ],
+          "question_text": "【例9】写出下列数列的一个通项公式，使它的前4项分别是下列各数：\n（1） \\(\\frac{2^{2}-1}{3}\\)， \\(\\frac{4^{2}-2}{9}\\)， \\(\\frac{6^{2}-3}{27}\\)， \\(\\frac{8^{2}-4}{81}\\);\n（2）1，-3，5，-7；\n（3）0.7，0.77，0.777，0.7777；\n（4）1， \\(\\frac{8}{5}\\)， \\(\\frac{15}{7}\\)， \\(\\frac{24}{9}\\).",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例9】写出下列数列的一个通项公式，使它的前4项分别是下列各数：\n（1） \\(\\frac{2^{2}-1}{3}\\)， \\(\\frac{4^{2}-2}{9}\\)， \\(\\frac{6^{2}-3}{27}\\)， \\(\\frac{8^{2}-4}{81}\\);\n（2）1，-3，5，-7；\n（3）0.7，0.77，0.777，0.7777；\n（4）1， \\(\\frac{8}{5}\\)， \\(\\frac{15}{7}\\)， \\(\\frac{24}{9}\\).\n解：（1）（先看分子，应把被减数与减数分开看，其中  \\(2^2\\)， \\(4^2\\)， \\(6^2\\)， \\(8^2\\)，这部分归纳出来的第  \\(n\\) 项是  \\((2n)^2\\)，对应的减数即为  \\(n\\)；再看分母，分母的 3，9，27，81 的通项是  \\(3^n\\)，整体的通项也就找到了）\n由题意，该数列的一个通项公式可以是  \\(a_n = \\frac{(2n)^2 - n}{3^n}\\)，化简得： \\(\\overline{a}_n = \\frac{4n^2 - n}{3^n}\\)。\n（2）（这4个数的绝对值为 1, 3, 5, 7，其通项为  \\(2n-1\\)，符号的正负交替怎么表示？涉及正负交替，可用  \\((-1)^n\\) 这类结构来表示，但已知的前4项是奇数项为正，偶数项为负，故需调整为  \\((-1)^{n+1}\\)）\n由题意，该数列的一个通项公式可以是  \\(a_n = (-1)^{n+1}(2n-1)\\).\n（3）（小数不好表示规律，考虑化为分数来看，分别为 \\(\\frac{7}{10}\\)， \\(\\frac{77}{100}\\)， \\(\\frac{777}{1000}\\)， \\(\\frac{7777}{10000}\\)，分母规律就是 \\(10^n\\)，分子呢？用式子直接表示分子的规律不易，但由其结构可联想到9，99，999，9999的通项为 \\(10^n-1\\)，故把分子的7，77，777，7777向9，99，999，9999转化，如何转化？乘以 \\(\\frac{7}{9}\\)即可）\n所给数列的前4项可化为 \\(\\frac{7}{10}\\)， \\(\\frac{77}{100}\\)， \\(\\frac{777}{1000}\\)， \\(\\frac{7777}{10000}\\)，\n分子的7，77，777，7777可分别化为 \\(\\frac{7}{9} \\times (10^1-1)\\)， \\(\\frac{7}{9} \\times (10^2-1)\\)， \\(\\frac{7}{9} \\times (10^3-1)\\)， \\(\\frac{7}{9} \\times (10^4-1)\\)，\n其通项公式为 \\(\\frac{7}{9} \\times (10^n-1)\\)，所以原数列的一个通项公式可以是 \\(a_n = \\frac{\\frac{7}{9} \\times (10^n-1)}{10^n}\\)，化简得： \\(a_n = \\frac{7 \\times (10^n-1)}{9 \\times 10^n}\\)。\n（4）（观察发现后3项的分母依次为5，7，9，它们依次相差2，故想到先把首项1改写为 \\(\\frac{3}{3}\\)，再作观察）\n该数列的前4项分别为 \\(\\frac{3}{3}\\)， \\(\\frac{8}{5}\\)， \\(\\frac{15}{7}\\)， \\(\\frac{24}{9}\\)，即 \\(\\frac{2^2 - 1}{2 \\times 1 + 1}\\)， \\(\\frac{3^2 - 1}{2 \\times 2 + 1}\\)， \\(\\frac{4^2 - 1}{2 \\times 3 + 1}\\)， \\(\\frac{5^2 - 1}{2 \\times 4 + 1}\\)，\n所以该数列的一个通项公式可以是 \\(a_n = \\frac{(n+1)^2 - 1}{2n+1}\\)，化简得： \\(a_n = \\frac{n^2 + 2n}{2n+1}\\)。\n【反思】①像这种总结规律的题，若从整体看不易发现规律，可考虑拆分成局部分别考虑，例如第（1）小问拆成3个部分考虑，第（2）小问拆分成绝对值和符号分别考虑，等等；②同一数列的通项可能不是唯一的，例如\n第（2）小问中正负号交替出现的情况除了用 \\((-1)^n\\)或 \\((-1)^{n+1}\\)表示外，也可用 \\(\\cos n\\pi\\)或 \\(\\cos(n+1)\\pi\\)表示，那么第（2）小问中数列 \\(\\{a_n\\}\\)的通项公式也可写成 \\(a_n=(2n-1)\\cos(n+1)\\pi\\)。",
+          "solution_present": true,
+          "vision_hint": "4.1-LI6fbabed649e75718"
+        }
+      ],
+      "direct_variants": [
+        {
+          "item_id": "c1bd3c0e4c5083fc",
+          "kind": "direct_variant",
+          "label": "变式1",
+          "example_number": null,
+          "parent_example_number": 9,
+          "role": "direct_variant",
+          "role_ref": "类型Ⅰ 观察、归纳法求数列的通项公式或数列中的某一项",
+          "source_docs": [
+            4
+          ],
+          "question_text": "【变式1】已知数列 \\(\\frac{1}{1}\\)， \\(\\frac{2}{1}\\)， \\(\\frac{1}{2}\\)， \\(\\frac{3}{1}\\)， \\(\\frac{2}{2}\\)， \\(\\frac{1}{3}\\)， \\(\\frac{4}{1}\\)， \\(\\frac{3}{2}\\)， \\(\\frac{2}{3}\\)， \\(\\frac{1}{4}\\)，…，则该数列的第17项 \\(a_{17}=\\)___。",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "4.1-LIc1bd3c0e4c5083fc"
+        },
+        {
+          "item_id": "0afede61206c7a93",
+          "kind": "direct_variant",
+          "label": "变式2",
+          "example_number": null,
+          "parent_example_number": 9,
+          "role": "direct_variant",
+          "role_ref": "类型Ⅰ 观察、归纳法求数列的通项公式或数列中的某一项",
+          "source_docs": [
+            4
+          ],
+          "question_text": "【变式2】如果数列1，5，12，22，…中的每一项都可用如图所示的图形表示出来，那么这个数列的第8项为（）\n\nA. 70 B. 92 C. 105 D. 118",
+          "image_refs": [
+            {
+              "ref": "imgs/img_in_image_box_425_722_755_914.jpg",
+              "path": "data/ocr_live_current/chapter4_100/imgs/img_in_image_box_425_722_755_914.jpg",
+              "exists": true
+            }
+          ],
+          "visual_status": "NEEDS_VISION_SIDECAR",
+          "solution_isolated": true,
+          "vision_hint": "4.1-LI0afede61206c7a93"
+        }
+      ],
+      "exercise_questions": [],
+      "action_order": [
+        "learn_each_current_example_then_attempt_its_direct_variants",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [],
+      "prerequisite_knowledge_blocks": []
+    },
+    {
+      "cycle_id": "4.1-cycle-6",
+      "sequence": 6,
+      "title": "类型Ⅱ 数列中的项的简单分析",
+      "course_keys": [
+        "4.3.1.1.b 通项型数列速解技巧"
+      ],
+      "prerequisite_course_keys": [
+        "4.3.1.1.a 数列的概念和通项公式"
+      ],
+      "optional_course_keys": [],
+      "knowledge_refs": [],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 数列中的项的简单分析"
+      ],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [
+        {
+          "item_id": "a82f7ccc0c17e597",
+          "kind": "example",
+          "label": "例10",
+          "example_number": 10,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型Ⅱ 数列中的项的简单分析",
+          "source_docs": [
+            5
+          ],
+          "question_text": "【例 10】已知数列  \\(\\{a_{n}\\}\\) 的通项公式为  \\(a_{n}=\\frac{9n^{2}-9n+2}{9n^{2}-1}\\).\n（1）判断 \\(\\frac{98}{101}\\)是不是数列 \\(\\{a_{n}\\}\\)中的项；\n（2）试判断数列 \\(\\{a_{n}\\}\\)中的项是否都在区间(0,1)内.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例 10】已知数列  \\(\\{a_{n}\\}\\) 的通项公式为  \\(a_{n}=\\frac{9n^{2}-9n+2}{9n^{2}-1}\\).\n（1）判断 \\(\\frac{98}{101}\\)是不是数列 \\(\\{a_{n}\\}\\)中的项；\n（2）试判断数列 \\(\\{a_{n}\\}\\)中的项是否都在区间(0,1)内.\n解：（1）（可以想象，直接令 \\(a_n=\\frac{70}{101}\\)，数字较大，解方程偏麻烦，观察发现分子分母都可分解因式，故尝试通过分解因式来化简 \\(a_n\\)，再令 \\(a_n=\\frac{98}{101}\\)）由题意， \\(a_n=\\frac{9n^2-9n+2}{9n^2-1}=\\frac{(3n-1)(3n-2)}{(3n+1)(3n-1)}=\\frac{3n-2}{3n+1}\\)①，令 \\(a_n=\\frac{98}{101}\\)得 \\(\\frac{3n-2}{3n+1}=\\frac{98}{101}\\)，解得： \\(n=\\frac{100}{3}\\)，因为 \\(\\frac{100}{3}\\)不是正整数，所以 \\(\\frac{98}{101}\\)不是数列 \\(\\{a_n\\}\\)中的项.\n（2）（观察发现式①的分子分母均为正数，且分母大于分子，所以必有 \\(a_n \\in (0,1)\\)，下面给出严格证明）因为 \\(n \\in \\mathbb{N}^*\\)，所以 \\(3n+1 > 3n - 2 \\geq 1 > 0\\)，从而 \\(0 < \\frac{3n-2}{3n+1} < 1\\)，故数列 \\(\\{a_n\\}\\)中的项都在区间 \\((0,1)\\)内。\n【反思】数列的通项公式类似于函数的解析式，所以利用通项公式研究数列中的项，本质就是方程问题或函数问题，如果没给通项公式，给的递推公式，那么 \\(a_{n}\\)与n的关系就无法直接看出，我们来看下面的变式.",
+          "solution_present": true,
+          "vision_hint": "4.1-LIa82f7ccc0c17e597"
+        }
+      ],
+      "direct_variants": [
+        {
+          "item_id": "afc13d089ac69dcf",
+          "kind": "direct_variant",
+          "label": "变式",
+          "example_number": null,
+          "parent_example_number": 10,
+          "role": "direct_variant",
+          "role_ref": "类型Ⅱ 数列中的项的简单分析",
+          "source_docs": [
+            5
+          ],
+          "question_text": "【变式】数列 \\(\\{a_n\\}\\) 定义如下：\\(a_1=1\\)，且当 \\(n \\geq 2\\) 时，\\(a_{n+1} = \\begin{cases} a_n + 1, & n \\text{为偶数} \\\\ a_n + 2, & n \\text{为奇数} \\end{cases}\\)，已知 \\(a_n = 10\\)，则正整数 \\(n\\) 的值为___。",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "4.1-LIafc13d089ac69dcf"
+        }
+      ],
+      "exercise_questions": [],
+      "action_order": [
+        "watch_current_courses",
+        "learn_each_current_example_then_attempt_its_direct_variants",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [],
+      "prerequisite_knowledge_blocks": []
+    },
+    {
+      "cycle_id": "4.1-cycle-7",
+      "sequence": 7,
+      "title": "类型Ⅲ 由递推公式求通项公式——累加法与累乘法",
       "course_keys": [],
       "prerequisite_course_keys": [
         "4.3.1.1.a 数列的概念和通项公式",
@@ -774,21 +509,455 @@
       "knowledge_refs": [],
       "prerequisite_knowledge_refs": [],
       "type_refs": [
-        "类型Ⅰ 观察、归纳法求数列的通项公式或数列中的某一项",
-        "类型Ⅱ 数列中的项的简单分析",
-        "类型Ⅲ 由递推公式求通项公式——累加法与累乘法",
-        "类型IV $ a_{n} $ 与 $ S_{n} $ 的关系的应用",
-        "类型V 周期数列问题",
-        "类型VI 数列单调性的判断及应用",
+        "类型Ⅲ 由递推公式求通项公式——累加法与累乘法"
+      ],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [
+        {
+          "item_id": "6a1329aec6ce5fa9",
+          "kind": "example",
+          "label": "例11",
+          "example_number": 11,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型Ⅲ 由递推公式求通项公式——累加法与累乘法",
+          "source_docs": [
+            5,
+            6
+          ],
+          "question_text": "【例 11】已知数列 \\(\\{a_n\\}\\) 满足 \\(a_1 = 1\\)，\\(a_{n+1} - a_n = \\ln \\frac{n+1}{n}\\)，则 \\(a_{15} =\\)___。",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例 11】已知数列 \\(\\{a_n\\}\\) 满足 \\(a_1 = 1\\)，\\(a_{n+1} - a_n = \\ln \\frac{n+1}{n}\\)，则 \\(a_{15} =\\)___。\n解析：题干给出了关于  \\(a_{n+1}\\) 和  \\(a_n\\) 的递推公式，如何用它求  \\(a_{15}\\)？若无思路，不妨试试将  \\(n=1, 2, 3, \\cdots, 14\\) 代入所给递推公式，直到产生目标量  \\(a_{15}\\)，再作观察，因为  \\(a_{n+1} - a_n = \\ln \\frac{n+1}{n}\\)，所以当  \\(n=1,2,3,\\cdots,14\\) 时，分别有\n \\(a_2 - a_1 = \\ln \\frac{2}{1}\\),  \\(a_3 - a_2 = \\ln \\frac{3}{2}\\),  \\(a_4 - a_3 = \\ln \\frac{4}{3}\\),  \\(\\cdots\\),  \\(a_{15} - a_{14} = \\ln \\frac{15}{14}\\)，观察发现以上各式中，除已知的  \\(a_1\\) 和所求的  \\(a_{15}\\) 外，其余项都有一个正的和一个负的，相加后恰好可以抵消，故直接将各式相加，就能求出  \\(a_{15}\\)，\n将以上式子相加得： \\((a_2 - a_1) + (a_3 - a_2) + (a_4 - a_3) + \\cdots + (a_{15} - a_{14}) = \\ln \\frac{2}{1} + \\ln \\frac{3}{2} + \\ln \\frac{4}{3} + \\cdots + \\ln \\frac{15}{14}\\) ①，\n又  \\((a_2 - a_1) + (a_3 - a_2) + (a_4 - a_3) + \\cdots + (a_{15} - a_{14}) = (-a_1 + a_2) + (-a_2 + a_3) + (-a_3 + a_4) + \\cdots + (-a_{14} + a_{15}) = a_{15} - a_1\\)，\n \\(\\ln \\frac{2}{1} + \\ln \\frac{3}{2} + \\ln \\frac{4}{3} + \\cdots + \\ln \\frac{15}{14} = \\ln \\left( \\frac{2}{1} \\times \\frac{3}{2} \\times \\frac{4}{3} \\times \\cdots \\times \\frac{15}{14} \\right) = \\ln 15\\)，\n所以代入②得： \\(a_{15} - a_1 = \\ln 15\\)，\n所以代入①得  \\(a_{15} - a_{1} = \\ln 15\\)，故  \\(a_{15} = a_{1} + \\ln 15 = 1 + \\ln 15\\)。\n答案： \\(1 + \\ln15\\)\n【反思】给出形如  \\(a_{n+1}-a_n=f(n)\\) 或  \\(a_n-a_{n-1}=f(n-1)(n\\geq2)\\) 的递推公式，要求  \\(a_n\\)，可对  \\(n\\) 连续赋值，得到  \\(n-1\\) 个式子  \\(a_2-a_1=f(1)\\)， \\(a_3-a_2=f(2)\\)， \\(\\cdots\\)， \\(a_n-a_{n-1}=f(n-1)\\)，再将这些式子相加即可求出  \\(a_n\\)，这种求通项的方法称为“累加法”，我们通过下面的变式 1 来巩固这种重要的求通项方法。",
+          "solution_present": true,
+          "vision_hint": "4.1-LI6a1329aec6ce5fa9"
+        }
+      ],
+      "direct_variants": [
+        {
+          "item_id": "d74c54026f54ca90",
+          "kind": "direct_variant",
+          "label": "变式1",
+          "example_number": null,
+          "parent_example_number": 11,
+          "role": "direct_variant",
+          "role_ref": "类型Ⅲ 由递推公式求通项公式——累加法与累乘法",
+          "source_docs": [
+            6
+          ],
+          "question_text": "【变式1】已知首项为1的正项数列满足 \\(\\sqrt{a_{n+1}}-\\sqrt{a_n}=\\frac{1}{4}a_2\\)。\n（1）求 \\(a_{2}\\);\n（2）求 \\(\\{a_{n}\\}\\)的通项公式.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "4.1-LId74c54026f54ca90"
+        },
+        {
+          "item_id": "21961c6fe2bcee0e",
+          "kind": "direct_variant",
+          "label": "变式2",
+          "example_number": null,
+          "parent_example_number": 11,
+          "role": "direct_variant",
+          "role_ref": "类型Ⅲ 由递推公式求通项公式——累加法与累乘法",
+          "source_docs": [
+            6,
+            7
+          ],
+          "question_text": "【变式 2】已知数列 \\(\\{a_n\\}\\) 满足 \\(a_1 = 2\\)，\\((n+1)a_n = (n-1)a_{n-1} (n \\geq 2, n \\in \\mathbb{N}^*)\\)，则 \\(a_n =\\)___。",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "4.1-LI21961c6fe2bcee0e"
+        }
+      ],
+      "exercise_questions": [],
+      "action_order": [
+        "learn_each_current_example_then_attempt_its_direct_variants",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [],
+      "prerequisite_knowledge_blocks": []
+    },
+    {
+      "cycle_id": "4.1-cycle-8",
+      "sequence": 8,
+      "title": "类型IV $ a_{n} $ 与 $ S_{n} $ 的关系的应用",
+      "course_keys": [],
+      "prerequisite_course_keys": [
+        "4.3.1.1.a 数列的概念和通项公式",
+        "4.3.1.1.b 通项型数列速解技巧"
+      ],
+      "optional_course_keys": [],
+      "knowledge_refs": [],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [
+        "类型IV $ a_{n} $ 与 $ S_{n} $ 的关系的应用"
+      ],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [
+        {
+          "item_id": "147ec4f8e41b288e",
+          "kind": "example",
+          "label": "例12",
+          "example_number": 12,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型IV $ a_{n} $ 与 $ S_{n} $ 的关系的应用",
+          "source_docs": [
+            7
+          ],
+          "question_text": "【例 12】若数列  \\(\\{a_{n}\\}\\) 的前 n 项和  \\(S_{n}=n^{2}-1\\)，求  \\(a_{n}\\)",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例 12】若数列  \\(\\{a_{n}\\}\\) 的前 n 项和  \\(S_{n}=n^{2}-1\\)，求  \\(a_{n}\\)\n解：（已知  \\(S_n\\)，怎么求  \\(a_n\\)？代  \\(a_n\\) 与  \\(S_n\\) 的关系式  \\(a_n = \\begin{cases} S_1, & n=1 \\\\ S_n - S_{n-1}, & n \\geq 2 \\end{cases}\\) 计算即可）\n因为  \\(S_n = n^2 - 1\\)，所以  \\(a_1 = S_1 = 1^2 - 1 = 0\\)，且当  \\(n \\geq 2\\) 时， \\(S_{n-1} = (n-1)^2 - 1\\)，\n所以当  \\(n \\geq 2\\) 时， \\(a_n = S_n - S_{n-1} = n^2 - 1 - [(n-1)^2 - 1] = 2n - 1\\)，因为  \\(a_1 = 0\\) 不满足上式，所以  \\(a_n = \\begin{cases} 0, & n=1 \\\\ 2n - 1, & n \\geq 2 \\end{cases}\\)\n【反思】若给出数列 \\(\\{a_n\\}\\) 的前 \\(n\\) 项和 \\(S_n\\)，则可直接按 \\(a_n = \\begin{cases} S_1, & n=1 \\\\ S_n - S_{n-1}, & n \\geq 2 \\end{cases}\\) 求 \\(a_n\\)，别忘了 \\(a_1\\) 要单独算。有时 \\(S_n\\) 会以具体的求和形式给出，比较隐晦，比如下面的变式。",
+          "solution_present": true,
+          "vision_hint": "4.1-LI147ec4f8e41b288e"
+        },
+        {
+          "item_id": "c046925ce598e7e7",
+          "kind": "example",
+          "label": "例13",
+          "example_number": 13,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型IV $ a_{n} $ 与 $ S_{n} $ 的关系的应用",
+          "source_docs": [
+            8
+          ],
+          "question_text": "【例 13】记数列 \\(\\{a_n\\}\\) 的前 \\(n\\) 项和为 \\(S_n\\)，对任意正整数 \\(n\\)，有 \\(2S_n = na_n\\)，且 \\(a_2 = 3\\)。\n（1）求 \\(a_{1}\\)和 \\(a_{3}\\)的值；（2）求 \\(a_{n}\\)",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例 13】记数列 \\(\\{a_n\\}\\) 的前 \\(n\\) 项和为 \\(S_n\\)，对任意正整数 \\(n\\)，有 \\(2S_n = na_n\\)，且 \\(a_2 = 3\\)。\n（1）求 \\(a_{1}\\)和 \\(a_{3}\\)的值；（2）求 \\(a_{n}\\)\n解：（1）（条件给出 \\(2S_n = na_n\\) 和 \\(a_2 = 3\\)，要求 \\(a_1\\) 和 \\(a_3\\)，可直接对 \\(n\\) 赋值，构造出 \\(a_1\\)，\\(a_3\\)）\n在 \\(2S_n = na_n\\) 中令 \\(n=1\\) 得 \\(2S_1=1\\cdot a_1\\)，结合 \\(S_1 = a_1\\) 可得 \\(2a_1 = a_1\\)，所以 \\(a_1 = 0\\)，\n在 \\(2S_n = na_n\\) 中令 \\(n=3\\) 得 \\(2S_3 = 3a_3\\)，所以 \\(2(a_1 + a_2 + a_3) = 3a_3\\)，结合 \\(a_1 = 0\\)，\\(a_2 = 3\\) 可得 \\(a_3 = 6\\)。\n（2）（条件给出的是 \\(2S_n = na_n\\)，所求为 \\(a_n\\)，考虑退 \\(n\\) 相减，消去 \\(S_n\\)，得到数列 \\(\\{a_n\\}\\) 的递推公式）\n因为 \\(2S_n = na_n\\)，所以当 \\(n \\geq 2\\) 时，\\(2S_{n-1} = (n-1)a_{n-1}\\)，两式作差得 \\(2S_n - 2S_{n-1} = na_n - (n-1)a_{n-1}\\)，\n所以 \\(2a_n = na_n - (n-1)a_{n-1}\\)，整理得：\\((n-2)a_n = (n-1)a_{n-1}\\) ①，（此式可进一步变形成 \\(\\frac{a_n}{a_{n-1}} = \\frac{n-1}{n-2}\\)，于是可用乘法求 \\(a_n\\)，但由于 \\(n-2\\) 在分母上，所以应在 \\(n \\geq 3\\) 的条件下进行累乘）\n由①可得当 \\(n \\geq 3\\) 时，\\(\\frac{a_n}{a_{n-1}} = \\frac{n-1}{n-2}\\)，所以当 \\(n \\geq 3\\) 时，\\(\\frac{a_n}{a_{n-1}} = \\frac{n-1}{n-2}\\)，\\(\\frac{a_{n-1}}{a_{n-2}} = \\frac{n-2}{n-3}\\)，…，\\(\\frac{a_3}{a_2} = \\frac{2}{1}\\)，\n将以上各式累乘得 \\(\\frac{a_n}{a_{n-1}} \\cdot \\frac{a_{n-1}}{a_{n-2}} \\cdots \\frac{a_3}{a_2} = \\frac{n-1}{n-2} \\cdot \\frac{n-2}{n-3} \\cdots \\frac{2}{1}\\)，整理得：\\(\\frac{a_n}{a_2} = n-1\\)，所以 \\(a_n = a_2(n-1) = 3(n-1)\\) ②，（上述结果是在 \\(n \\geq 3\\) 的条件下得到的，所以还需单独检验 \\(n=1\\)，\\(2\\) 时 \\(a_n = 3(n-1)\\) 是否成立）\n又 \\(a_1 = 0\\) 和 \\(a_2 = 3\\) 也满足②，所以对任意的 \\(n \\in \\mathbf{N}^*\\)，都有 \\(a_n = 3(n-1)\\)。\n【反思】遇到  \\(S_n\\) 与  \\(a_n\\) 混搭的关系式，要求  \\(a_n\\)，常考虑退 n 相减，消去  \\(S_n\\)，得到  \\(a_n\\) 的递推公式，但这不是绝对的，有时也会考虑消去  \\(a_n\\)，后续小节会遇到有关的例子。同理，若将条件中的前 n 项和换成前 n 项积，处理的方法也是类似的，只需要把退 n 相减变成退 n 相除即可，我们来看下面的变式。",
+          "solution_present": true,
+          "vision_hint": "4.1-LIc046925ce598e7e7"
+        }
+      ],
+      "direct_variants": [
+        {
+          "item_id": "da6c673b7db6e30d",
+          "kind": "direct_variant",
+          "label": "变式",
+          "example_number": null,
+          "parent_example_number": 12,
+          "role": "direct_variant",
+          "role_ref": "类型IV $ a_{n} $ 与 $ S_{n} $ 的关系的应用",
+          "source_docs": [
+            7,
+            8
+          ],
+          "question_text": "【变式】已知数列 \\(\\{a_n\\}\\) 满足 \\(a_1 + 2a_2 + 2^2a_3 + \\cdots + 2^{n-1}a_n = 2n - 2\\)，则 \\(a_n =\\)___.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "4.1-LIda6c673b7db6e30d"
+        },
+        {
+          "item_id": "7313e87ef03ec590",
+          "kind": "direct_variant",
+          "label": "变式",
+          "example_number": null,
+          "parent_example_number": 13,
+          "role": "direct_variant",
+          "role_ref": "类型IV $ a_{n} $ 与 $ S_{n} $ 的关系的应用",
+          "source_docs": [
+            8,
+            9
+          ],
+          "question_text": "【变式】设 \\(T_{n}\\)为数列 \\(\\{a_{n}\\}\\)的前n项积，且 \\(T_{n}\\neq0\\)， \\(a_{n}=(2n-1)T_{n}\\)，则 \\(a_{n}=\\)（）\nA.  \\(\\frac{2n+1}{2n-1}\\) B.  \\(\\frac{2n-1}{2n+1}\\) C.  \\(\\frac{2n}{2n-1}\\) D.  \\(\\frac{2n}{2n+1}\\)",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "4.1-LI7313e87ef03ec590"
+        }
+      ],
+      "exercise_questions": [],
+      "action_order": [
+        "learn_each_current_example_then_attempt_its_direct_variants",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [],
+      "prerequisite_knowledge_blocks": []
+    },
+    {
+      "cycle_id": "4.1-cycle-9",
+      "sequence": 9,
+      "title": "类型V 周期数列问题",
+      "course_keys": [],
+      "prerequisite_course_keys": [
+        "4.3.1.1.a 数列的概念和通项公式",
+        "4.3.1.1.b 通项型数列速解技巧"
+      ],
+      "optional_course_keys": [],
+      "knowledge_refs": [],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [
+        "类型V 周期数列问题"
+      ],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [
+        {
+          "item_id": "647ecf1617a01714",
+          "kind": "example",
+          "label": "例14",
+          "example_number": 14,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型V 周期数列问题",
+          "source_docs": [
+            9
+          ],
+          "question_text": "【例 14】已知数列 \\(\\{a_n\\}\\) 满足：\\(a_{n+1} = \\begin{cases} 2a_n, & 0 \\leq a_n < \\frac{1}{2} \\\\ 2a_n - 1, & \\frac{1}{2} \\leq a_n < 1 \\end{cases}\\)，若 \\(a_1 = \\frac{2}{5}\\)，则 \\(a_{2026} = \\left( \\right)\\)\nA. \\(\\frac{4}{5}\\)  B. \\(\\frac{3}{5}\\)  C. \\(\\frac{2}{5}\\)  D. \\(\\frac{1}{5}\\)",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例 14】已知数列 \\(\\{a_n\\}\\) 满足：\\(a_{n+1} = \\begin{cases} 2a_n, & 0 \\leq a_n < \\frac{1}{2} \\\\ 2a_n - 1, & \\frac{1}{2} \\leq a_n < 1 \\end{cases}\\)，若 \\(a_1 = \\frac{2}{5}\\)，则 \\(a_{2026} = \\left( \\right)\\)\nA. \\(\\frac{4}{5}\\)  B. \\(\\frac{3}{5}\\)  C. \\(\\frac{2}{5}\\)  D. \\(\\frac{1}{5}\\)\n解析：要先由所给递推公式求出  \\(a_n\\)，再求  \\(a_{2026}\\) 吗？可以想象， \\(a_n\\) 不好求，怎么办呢？若无思路，不妨先按所给递推公式求出前几项，再观察规律，因为  \\(a_1 = \\frac{2}{5} \\in \\left[0, \\frac{1}{2}\\right)\\)，所以当  \\(n=1\\) 时， \\(a_2 = 2a_1 = \\frac{4}{5}\\)；\n因为  \\(a_2 = \\frac{4}{5} \\in \\left[\\frac{1}{2}, 1\\right)\\)，所以当  \\(n=2\\) 时， \\(a_3 = 2a_2 - 1 = 2 \\times \\frac{4}{5} - 1 = \\frac{3}{5}\\)；\n因为  \\(a_3 = \\frac{3}{5} \\in \\left[\\frac{1}{2}, 1\\right)\\)，所以当  \\(n=3\\) 时， \\(a_4 = 2a_3 - 1 = 2 \\times \\frac{3}{5} - 1 = \\frac{1}{5}\\)；\n因为  \\(a_4 = \\frac{1}{5} \\in \\left[0, \\frac{1}{2}\\right)\\)，所以当  \\(n=4\\) 时， \\(a_5 = 2a_4 = \\frac{2}{5}\\)；\n注意到  \\(a_5 = a_1\\)，故可想象，继续递推下去，必有  \\(a_6 = a_2\\)， \\(a_7 = a_3\\)， \\(\\cdots\\)，于是  \\(\\{a_n\\}\\) 是周期数列，问题就明朗了，\n由前面的分析可知  \\(\\{a_n\\}\\) 是以 4 为周期的周期数列，又因为  \\(2026 = 506 \\times 4 + 2\\)，所以  \\(a_{2026} = a_2 = \\frac{4}{5}\\)。\n答案：A\n【反思】①类似于周期函数的定义，若存在正整数  \\(M\\)，使  \\(a_{n+M} = a_n\\) 对任意的  \\(n \\in \\mathbb{N}^*\\) 都成立，则  \\(\\{a_n\\}\\) 是以  \\(M\\) 为周期的周期数列；②当题干所给的递推公式不好变形处理时，可尝试用它求出数列的前几项，观察并总结规律。这是在具体的问题中发现数列具有周期性最常用的方法。",
+          "solution_present": true,
+          "vision_hint": "4.1-LI647ecf1617a01714"
+        }
+      ],
+      "direct_variants": [
+        {
+          "item_id": "6d365309108efbca",
+          "kind": "direct_variant",
+          "label": "变式",
+          "example_number": null,
+          "parent_example_number": 14,
+          "role": "direct_variant",
+          "role_ref": "类型V 周期数列问题",
+          "source_docs": [
+            9
+          ],
+          "question_text": "【变式】若数列 \\(\\{a_n\\}\\) 的前 \\(n\\) 项和为 \\(S_n\\)，\\(2S_n = a_n + n\\)，则 \\(a_{101} =\\)___；\\(S_{101} =\\)___。",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "4.1-LI6d365309108efbca"
+        }
+      ],
+      "exercise_questions": [],
+      "action_order": [
+        "learn_each_current_example_then_attempt_its_direct_variants",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [],
+      "prerequisite_knowledge_blocks": []
+    },
+    {
+      "cycle_id": "4.1-cycle-10",
+      "sequence": 10,
+      "title": "类型VI 数列单调性的判断及应用",
+      "course_keys": [],
+      "prerequisite_course_keys": [
+        "4.3.1.1.a 数列的概念和通项公式",
+        "4.3.1.1.b 通项型数列速解技巧"
+      ],
+      "optional_course_keys": [],
+      "knowledge_refs": [],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [
+        "类型VI 数列单调性的判断及应用"
+      ],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [
+        {
+          "item_id": "946310de2ba8124c",
+          "kind": "example",
+          "label": "例15",
+          "example_number": 15,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型VI 数列单调性的判断及应用",
+          "source_docs": [
+            9,
+            10
+          ],
+          "question_text": "【例 15】数列  \\(\\{a_{n}\\}\\) 的通项公式如下，其中是递增数列的是（）\nA.  \\(a_{n}=\\sin\\frac{\\pi n}{2}\\) B.  \\(a_{n}=\\left(\\frac{1}{2}\\right)^{n}\\) C.  \\(a_{n}=2n-3\\) D.  \\(a_{n}=n^{2}-3n\\)",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例 15】数列  \\(\\{a_{n}\\}\\) 的通项公式如下，其中是递增数列的是（）\nA.  \\(a_{n}=\\sin\\frac{\\pi n}{2}\\) B.  \\(a_{n}=\\left(\\frac{1}{2}\\right)^{n}\\) C.  \\(a_{n}=2n-3\\) D.  \\(a_{n}=n^{2}-3n\\)\n解析：观察选项发现四个数列的图象均容易画出，故可考虑画图分析数列的单调性，\nA 项，对于  \\(y = \\sin \\frac{\\pi x}{2}\\)， \\(\\omega = \\frac{\\pi}{2}\\)，所以其周期  \\(T = \\frac{2\\pi}{\\omega} = 4\\)，所以  \\(f(n) = \\sin \\frac{\\pi n}{2}\\) 的部分图象如图 1，\n由图 1 可知数列  \\(\\{a_n\\}\\) 不是递增数列，故 A 项错误；\nB 项， \\(y=\\left(\\frac{1}{2}\\right)^x\\) 在  \\(\\mathbb{R}\\) 上  \\(\\searrow\\)，所以  \\(g(n)=\\left(\\frac{1}{2}\\right)^n\\) 的图象如图 2，数列  \\(\\{a_n\\}\\) 是递减数列，故 B 项错误；\nC 项， \\(y=2x-3\\) 在  \\(\\mathbb{R}\\) 上  \\(\\nearrow\\)，所以  \\(h(n)=2n-3\\) 的图象如图 3，从而数列  \\(\\{a_n\\}\\) 是递增数列，故 C 项正确；\nD 项， \\(y=x^2-3x\\) 是开口向上，对称轴为  \\(x=\\frac{3}{2}\\) 的二次函数，所以  \\(t(n)=n^2-3n\\) 的图象如图 4，\n从而  \\(t(1)=t(2)\\)。即  \\(a=a\\)，故数列  \\(\\{a_n\\}\\) 不是递增数列，故 D 项错误\n从而  \\(t(1)=t(2)\\)，即  \\(a_{1}=a_{2}\\)，故数列  \\(\\{a_{n}\\}\\) 不是递增数列，故 D 项错误.\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_154_518_383_670.jpg\" alt=\"Image\" width=\"19%\" /></div>\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_438_521_584_669.jpg\" alt=\"Image\" width=\"12%\" /></div>\n<div style=\"text-align: center;\">图2</div>\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_624_520_770_669.jpg\" alt=\"Image\" width=\"12%\" /></div>\n<div style=\"text-align: center;\">图3</div>\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_831_520_1036_668.jpg\" alt=\"Image\" width=\"17%\" /></div>\n<div style=\"text-align: center;\">图4</div>\n答案：C\n【反思】若已知数列\\(\\{a_n\\}\\)的通项公式且容易画出数列的图象，则可考虑通过画图判断数列的单调性；若不方便画出数列的图象，则常用作差法或作商法证明数列的单调性，我们来看下面的变式1.",
+          "solution_present": true,
+          "vision_hint": "4.1-LI946310de2ba8124c"
+        },
+        {
+          "item_id": "c024c480e7ce7f4e",
+          "kind": "example",
+          "label": "例16",
+          "example_number": 16,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型VI 数列单调性的判断及应用",
+          "source_docs": [
+            11
+          ],
+          "question_text": "【例 16】已知数列 \\(\\{a_n\\}\\) 的通项公式 \\(a_n = -n^2 + 3n + \\frac{3}{4}\\)，则数列 \\(\\{a_n\\}\\) 的最大值是（ ）\nA. 3\nB. 2\nC. \\(\\frac{11}{4}\\)\nD. \\(\\frac{3}{4}\\)",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例 16】已知数列 \\(\\{a_n\\}\\) 的通项公式 \\(a_n = -n^2 + 3n + \\frac{3}{4}\\)，则数列 \\(\\{a_n\\}\\) 的最大值是（ ）\nA. 3\nB. 2\nC. \\(\\frac{11}{4}\\)\nD. \\(\\frac{3}{4}\\)\n解析：\\(\\{a_n\\}\\) 的通项公式对应的是二次函数，故可直接画图分析单调性，从而求出最值，令 \\(f(n) = -n^2 + 3n + \\frac{3}{4}\\)，其开口向下，且对称轴为 \\(n = \\frac{3}{2}\\)，如图，有 \\(f(1) = f(2) > f(3) > f(4) > \\cdots\\)，所以当 \\(n=1\\) 或 \\(n=2\\) 时，\\(f(n)\\) 取最大值，且最大值为 \\(f(1) = -1^2 + 3 \\times 1 + \\frac{3}{4} = \\frac{11}{4}\\)，即数列 \\(\\{a_n\\}\\) 的最大值是 \\(\\frac{11}{4}\\)。\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_918_870_1092_1013.jpg\" alt=\"Image\" width=\"14%\" /></div>\n答案：C\n【反思】求数列的最大（小）项，常先分析数列的单调性，本题是通过画图分析单调性，有时也会遇到不好画图的情况，我们再来看一个变式.",
+          "solution_present": true,
+          "vision_hint": "4.1-LIc024c480e7ce7f4e"
+        }
+      ],
+      "direct_variants": [
+        {
+          "item_id": "a9b6679b8704ce30",
+          "kind": "direct_variant",
+          "label": "变式1",
+          "example_number": null,
+          "parent_example_number": 15,
+          "role": "direct_variant",
+          "role_ref": "类型VI 数列单调性的判断及应用",
+          "source_docs": [
+            10
+          ],
+          "question_text": "【变式1】已知在数列\\(\\{a_n\\}\\)中，\\(0 < a_n < 1 (n \\in \\mathbb{N}^*)\\)，\\(a_{n+1} = \\frac{na_n + a_n^2}{n+1}\\)，求证：\\(\\{a_n\\}\\)是单调递减数列。\n证法1：（要证\\(\\{a_n\\}\\)是单调递减数列，只需证\\(a_{n+1}<a_n\\)，即证\\(a_{n+1}-a_n<0\\)，题干给出了\\(a_{n+1}\\)与\\(a_n\\)的递推关系，可将该关系代入，消去\\(a_{n+1}\\)，化简证明）\n由题意，\\(a_{n+1}-a_n=\\frac{na_n+a_n^2}{n+1}-a_n=\\frac{na_n+a_n^2-(n+1)a_n}{n+1}=\\frac{a_n^2-a_n}{n+1}=\\frac{a_n(a_n-1)}{n+1}\\)，\n因为  \\(0 < a_{n} < 1\\)，所以  \\(\\frac{a_{n}(a_{n}-1)}{n+1} < 0\\)，从而  \\(a_{n+1} - a_{n} < 0\\)，故  \\(a_{n+1} < a_{n}\\)，所以  \\(\\{a_{n}\\}\\) 是单调递减数列.\n证法2：（由题设条件不难发现 \\(\\{a_{n}\\}\\)是正项数列，于是也可考虑作商比较，即通过证明 \\(\\frac{a_{n+1}}{a_{n}}<1\\)来证 \\(a_{n+1}<a_{n}\\)，观察发现由所给递推关系式刚好也容易构造出 \\(\\frac{a_{n+1}}{a_{n}}\\)这一结构，故按此处理）\n由题意， \\(a_{n+1}=\\frac{na_n+a_n^2}{n+1}\\)，所以 \\(\\frac{a_{n+1}}{a_n}=\\frac{n+a_n}{n+1}\\)，因为 \\(0<a_n<1\\)，所以 \\(n+a_n<n+1\\)，且 \\(n+a_n\\)和 \\(n+1\\)都是正数，所以 \\(0<\\frac{n+a_n}{n+1}<1\\)，从而 \\(0<\\frac{a_{n+1}}{a_n}<1\\)，故 \\(a_{n+1}<a_n\\)，所以 \\(\\{a_n\\}\\)是单调递减数列.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "4.1-LIa9b6679b8704ce30"
+        },
+        {
+          "item_id": "72afb14153379c4f",
+          "kind": "direct_variant",
+          "label": "变式2",
+          "example_number": null,
+          "parent_example_number": 15,
+          "role": "direct_variant",
+          "role_ref": "类型VI 数列单调性的判断及应用",
+          "source_docs": [
+            10,
+            11
+          ],
+          "question_text": "【变式 2】数列 \\(\\{a_n\\}\\) 中，\\(a_n = n^2 - kn (n \\in \\mathbf{N}^*)\\)，且 \\(\\{a_n\\}\\) 为单调递增数列，则 \\(k\\) 的取值范围是（ ）\nA. \\((-\\infty, 2]\\) B. \\((-\\infty, 3)\\) C. \\((-\\infty, 2)\\) D. \\((-\\infty, 3]\\)",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "4.1-LI72afb14153379c4f"
+        },
+        {
+          "item_id": "245e23a5b0af160d",
+          "kind": "direct_variant",
+          "label": "变式",
+          "example_number": null,
+          "parent_example_number": 16,
+          "role": "direct_variant",
+          "role_ref": "类型VI 数列单调性的判断及应用",
+          "source_docs": [
+            11,
+            12
+          ],
+          "question_text": "【变式】已知数列\\(\\{a_n\\}\\)的通项公式为\\(a_n=\\frac{2n-5}{2^n}\\)，求数列\\(\\{a_n\\}\\)的最大项。",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "4.1-LI245e23a5b0af160d"
+        }
+      ],
+      "exercise_questions": [],
+      "action_order": [
+        "learn_each_current_example_then_attempt_its_direct_variants",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [],
+      "prerequisite_knowledge_blocks": []
+    },
+    {
+      "cycle_id": "4.1-cycle-11",
+      "sequence": 11,
+      "title": "类型Ⅶ 两类数列求前 n 项和问题",
+      "course_keys": [],
+      "prerequisite_course_keys": [
+        "4.3.1.1.a 数列的概念和通项公式",
+        "4.3.1.1.b 通项型数列速解技巧"
+      ],
+      "optional_course_keys": [],
+      "knowledge_refs": [],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [
         "类型Ⅶ 两类数列求前 n 项和问题"
       ],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [
+        {
+          "item_id": "d51f0daccdfb35e9",
+          "kind": "example",
+          "label": "例17",
+          "example_number": 17,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型Ⅶ 两类数列求前 n 项和问题",
+          "source_docs": [
+            12
+          ],
+          "question_text": "【例 17】记数列 \\(\\{a_n\\}\\) 的前 \\(n\\) 项和为 \\(S_n\\)，且 \\(a_n = \\cos \\frac{n\\pi}{4}\\)，则 \\(S_{2025} =\\) ___。",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例 17】记数列 \\(\\{a_n\\}\\) 的前 \\(n\\) 项和为 \\(S_n\\)，且 \\(a_n = \\cos \\frac{n\\pi}{4}\\)，则 \\(S_{2025} =\\) ___。\n解析：可以想象， \\(y = \\cos \\frac{\\pi}{4} x\\) 的周期  \\(T = \\frac{2\\pi}{\\frac{\\pi}{4}} = 8\\)，故猜想  \\(\\{a_n\\}\\) 是周期为 8 的周期数列，下面先给出证明对任意的  \\(n \\in \\mathbf{N}^*\\)， \\(a_{n+8} = \\cos \\frac{(n+8)\\pi}{4} = \\cos \\left( \\frac{n\\pi}{4} + 2\\pi \\right) = \\cos \\frac{n\\pi}{4} = a_n\\)，所以  \\(\\{a_n\\}\\) 是周期为 8 的周期数列，要求  \\(S_{2025}\\)，考虑按周期分组，可先求  \\(a_1 + a_2 + \\cdots + a_8\\)，再看  \\(\\{a_n\\}\\) 的前 2025 项有几个周期，余下几项， \\(a_1 = \\cos \\frac{\\pi}{4} = \\frac{\\sqrt{2}}{2}\\)， \\(a_2 = \\cos \\frac{2\\pi}{4} = 0\\)， \\(a_3 = \\cos \\frac{3\\pi}{4} = -\\frac{\\sqrt{2}}{2}\\)， \\(a_4 = \\cos \\frac{4\\pi}{4} = -1\\)， \\(a_5 = \\cos \\frac{5\\pi}{4} = -\\frac{\\sqrt{2}}{2}\\)， \\(a_6 = \\cos \\frac{6\\pi}{4} = 0\\)， \\(a_7 = \\cos \\frac{7\\pi}{4} = \\frac{\\sqrt{2}}{2}\\)， \\(a_8 = \\cos \\frac{8\\pi}{4} = 1\\)，所以  \\(a_1 + a_2 + \\cdots + a_8 = \\frac{\\sqrt{2}}{2} + 0 - \\frac{\\sqrt{2}}{2} - 1 - \\frac{\\sqrt{2}}{2} + 0 + \\frac{\\sqrt{2}}{2} + 1 = 0\\)，\n又因为  \\(2025 = 253 \\times 8 + 1\\)，所以  \\(S_{2025} = 253 (a_1 + a_2 + \\cdots + a_8) + a_{2025} = a_{2025} = a_1 = \\frac{\\sqrt{2}}{2}\\)\n答案： \\(\\frac{\\sqrt{2}}{2}\\)\n【反思】当数列\\(\\{a_n\\}\\)具有周期性时，要求\\(\\{a_n\\}\\)的前\\(M\\)项和\\(S_M\\)，常抓住每个周期内求和的结果相同来计算。一般将前\\(M\\)项按周期分组，先求一个周期内的和，再看前\\(M\\)项有几个周期，余下几项。",
+          "solution_present": true,
+          "vision_hint": "4.1-LId51f0daccdfb35e9"
+        },
+        {
+          "item_id": "b0f159ff979f5147",
+          "kind": "example",
+          "label": "例18",
+          "example_number": 18,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型Ⅶ 两类数列求前 n 项和问题",
+          "source_docs": [
+            12,
+            13
+          ],
+          "question_text": "【例 18】在数列 \\(\\{a_n\\}\\) 中，\\(a_1 = 2\\)，\\(n(a_{n+1} - a_n) = a_n + 1\\)，\\(n \\in \\mathbb{N}^*\\)，若对任意的 \\(a \\in [-2,2]\\)，\\(n \\in \\mathbb{N}^*\\)，不等式 \\(\\frac{a_{n+1}}{n+1} < 2t^2 + at -1\\) 恒成立，则实数 \\(t\\) 的取值范围为（ ）\nA. \\((-\\infty,-2) \\cup (1,+\\infty)\\)  \nB. \\((-\\infty,-2] \\cup [2,+\\infty)\\)  \nC. \\((-\\infty,-1] \\cup [2,+\\infty)\\)  \nD. \\([-2,2]\\)",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例 18】在数列 \\(\\{a_n\\}\\) 中，\\(a_1 = 2\\)，\\(n(a_{n+1} - a_n) = a_n + 1\\)，\\(n \\in \\mathbb{N}^*\\)，若对任意的 \\(a \\in [-2,2]\\)，\\(n \\in \\mathbb{N}^*\\)，不等式 \\(\\frac{a_{n+1}}{n+1} < 2t^2 + at -1\\) 恒成立，则实数 \\(t\\) 的取值范围为（ ）\nA. \\((-\\infty,-2) \\cup (1,+\\infty)\\)  \nB. \\((-\\infty,-2] \\cup [2,+\\infty)\\)  \nC. \\((-\\infty,-1] \\cup [2,+\\infty)\\)  \nD. \\([-2,2]\\)\n解析：注意到所给不等式 \\(\\frac{a_{n+1}}{n+1}<2t^{2}+at-1\\)的右边不含n，故可先分析当n变化时，左边的 \\(\\frac{a_{n+1}}{n+1}\\)的取值情况，\n由  \\(n(a_{n+1}-a_n)=a_n+1\\) 可得  \\(na_{n+1}=(n+1)a_n+1\\) ①，为得到  \\(\\frac{a_{n+1}}{n+1}\\) 这一结构，可以对①式等号两端同除以  \\(n(n+1)\\)，由①可得  \\(\\frac{a_{n+1}}{n+1}=\\frac{a_n}{n}+\\frac{1}{n(n+1)}\\)，所以  \\(\\frac{a_{n+1}}{n+1}-\\frac{a_n}{n}=\\frac{1}{n(n+1)}\\) ②，\n若将  \\(\\frac{a_n}{n}\\) 看作  \\(b_n\\)，则上式为  \\(b_{n+1}-b_n=\\frac{1}{n(n+1)}\\)，于是想到用累加法求出  \\(\\frac{a_{n+1}}{n+1}\\)，\n由②可得 \\(\\left\\{\\begin{aligned}&\\frac{a_{2}}{2}-\\frac{a_{1}}{1}=\\frac{1}{1\\times2}\\\\ &\\frac{a_{3}}{3}-\\frac{a_{2}}{2}=\\frac{1}{2\\times3}\\\\ &\\cdots\\cdots\\\\ &\\frac{a_{n+1}}{n+1}-\\frac{a_{n}}{n}=\\frac{1}{n(n+1)}\\end{aligned}\\right.\\)，将各式累加得 \\(\\frac{a_{n+1}}{n+1}-\\frac{a_{1}}{1}=\\frac{1}{1\\times2}+\\frac{1}{2\\times3}+\\cdots+\\frac{1}{n(n+1)}\\) ③，怎样计算式③等号右侧\n的部分？注意到 \\(\\frac{1}{1\\times2}=1-\\frac{1}{2}\\)， \\(\\frac{1}{2\\times3}=\\frac{1}{2}-\\frac{1}{3}\\)，…，以此类推，于是按此将各分式拆开，可以实现求和， \\(\\frac{1}{1\\times2}+\\frac{1}{2\\times3}+\\cdots+\\frac{1}{n(n+1)}=1-\\frac{1}{2}+\\frac{1}{2}-\\frac{1}{3}+\\cdots+\\frac{1}{n}-\\frac{1}{n+1}=1-\\frac{1}{n+1}\\)，代入③可得 \\(\\frac{a_{n+1}}{n+1}-\\frac{a_1}{1}=1-\\frac{1}{n+1}\\)④，又 \\(a_1=2\\)，代入④整理得： \\(\\frac{a_{n+1}}{n+1}=3-\\frac{1}{n+1}\\)，因为 \\(\\frac{1}{n+1}>0\\)，所以 \\(3-\\frac{1}{n+1}<3\\)，且当 \\(n\\to+\\infty\\)时， \\(3-\\frac{1}{n+1}\\to3\\)，故要使 \\(\\frac{a_{n+1}}{n+1}<2t^2+at-1\\)对任意的 \\(n\\in\\mathbb{N}^*\\)恒成立，只需 \\(3\\leq2t^2+at-1\\)，即 \\(2t^2+at-4\\geq0\\)⑤，再考虑 \\(a\\)，由题意，不等式⑤需对任意的 \\(a\\in[-2,2]\\)成立，既然变量是 \\(a\\)，那我们把 \\(2t^2+at-4\\)看成关于 \\(a\\)的一次函数，该函数在 \\([-2,2]\\)上的图象是一条线段，其最小值必在端点处取得，故只需两个端点满足不等式⑤，令 \\(f(a)=2t^2+at-4\\)， \\(a\\in[-2,2]\\)，则不等式⑤在 \\(a\\in[-2,2]\\)时恒成立 \\(\\Leftrightarrow\\begin{cases}f(-2)=2t^2-2t-4\\geq0\\\\f(2)=2t^2+2t-4\\geq0\\end{cases}\\)，解得： \\(t\\geq2\\)或 \\(t\\leq-2\\)，所以实数 \\(t\\)的取值范围是 \\((-\\infty,-2-1]\\cup[2,+\\infty)\\)。\n答案：B\n【反思】像 \\(\\frac{1}{n(n+1)}\\)这种分母为同一数列相邻项的结构，常考虑将其拆分成两项之差，求前n项和时，就能相互抵消，这种求前n项和的方法叫做裂项相消法，后面我们还会通过微专题的形式来详细归纳这类求和方法。",
+          "solution_present": true,
+          "vision_hint": "4.1-LIb0f159ff979f5147"
+        }
+      ],
+      "direct_variants": [],
+      "exercise_questions": [],
+      "action_order": [
+        "learn_each_current_example_then_attempt_its_direct_variants",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [],
+      "prerequisite_knowledge_blocks": []
+    },
+    {
+      "cycle_id": "4.1-cycle-12",
+      "sequence": 12,
+      "title": "A组 夯实基础",
+      "course_keys": [],
+      "prerequisite_course_keys": [
+        "4.3.1.1.a 数列的概念和通项公式",
+        "4.3.1.1.b 通项型数列速解技巧"
+      ],
+      "optional_course_keys": [],
+      "knowledge_refs": [],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [],
       "bridge_unit_ids": [],
       "method_checkpoints": [],
       "worked_examples": [],
       "direct_variants": [],
       "exercise_questions": [
         {
-          "qid": "Q-6b3ac8a64a3d0af2",
+          "qid": "Q-6850a44a7baa5be1",
           "section": "4.1",
           "group": "A",
           "number": 1,
@@ -796,7 +965,7 @@
           "source_anchor": {
             "ocr_doc": 13,
             "pdf_page": 14,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_13.md"
+            "file": "data/ocr_live_current/chapter4_100/doc_13.md"
           },
           "question_text": "1.（2025·四川眉山期末）\n\n数列-1， \\(\\frac{1}{2}\\)，- \\(\\frac{1}{3}\\)， \\(\\frac{1}{4}\\)，- \\(\\frac{1}{5}\\)，…的一个通项公式为（）\n\nA.  \\(\\frac{1}{n}\\) B.  \\(-\\frac{1}{n}\\)\n\nC.  \\(\\frac{(-1)^{n-1}}{n}\\) D.  \\(\\frac{(-1)^{n}}{n}\\)",
           "image_refs": [],
@@ -807,7 +976,7 @@
           ]
         },
         {
-          "qid": "Q-664396a533a59f12",
+          "qid": "Q-6cc858ab3b4a822b",
           "section": "4.1",
           "group": "A",
           "number": 2,
@@ -815,7 +984,7 @@
           "source_anchor": {
             "ocr_doc": 14,
             "pdf_page": 15,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_14.md"
+            "file": "data/ocr_live_current/chapter4_100/doc_14.md"
           },
           "question_text": "2.（2025·辽宁期中）\n\n已知数列 \\(\\sqrt{2}\\)，3， \\(2\\sqrt{7}\\)， \\(\\sqrt{65}\\)，…，则 \\(\\sqrt{1001}\\)是该数列的（）\n\nA. 第8项 B. 第9项\n\nC. 第10项 D. 第11项",
           "image_refs": [],
@@ -826,7 +995,7 @@
           ]
         },
         {
-          "qid": "Q-f4134217c336b670",
+          "qid": "Q-44afe85dc4de4f56",
           "section": "4.1",
           "group": "A",
           "number": 3,
@@ -834,7 +1003,7 @@
           "source_anchor": {
             "ocr_doc": 14,
             "pdf_page": 15,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_14.md"
+            "file": "data/ocr_live_current/chapter4_100/doc_14.md"
           },
           "question_text": "### 3. （2025·全国模拟）\n\n已知数列\\(\\{a_n\\}\\)为2，0，2，0，⋯，写出一个该数列的通项公式\\(a_n=\\)___。（不可写为分段形式）",
           "image_refs": [],
@@ -845,7 +1014,7 @@
           ]
         },
         {
-          "qid": "Q-eb9ca09161925194",
+          "qid": "Q-e7ab814dfd0a0935",
           "section": "4.1",
           "group": "A",
           "number": 4,
@@ -853,7 +1022,7 @@
           "source_anchor": {
             "ocr_doc": 14,
             "pdf_page": 15,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_14.md"
+            "file": "data/ocr_live_current/chapter4_100/doc_14.md"
           },
           "question_text": "### 4. （2025·全国模拟）\n\n任取一个正整数，若是奇数，就将该数乘3再加上1；若是偶数，就将该数除以2，反复进行上述两种运算，经过有限次步骤后，必进入循环圈1→4→2→1。这就是数学史上著名的“冰雹猜想”（又称“角谷猜想”）。\n\n已知数列\\(\\{a_n\\}\\)满足\\(a_1=1\\)，\\(a_{n+1}=\\begin{cases} \\frac{a_n}{2}, & a_n \\text{为偶数} \\\\ 3a_n+1, & a_n \\text{为奇数} \\end{cases}\\)，则\\(a_{2025}=\\)（ ）\n\nA. 1\n\nB. 2\n\nC. 4\n\nD. 8",
           "image_refs": [],
@@ -864,7 +1033,7 @@
           ]
         },
         {
-          "qid": "Q-1add16b417c0b583",
+          "qid": "Q-023fc11d1a8c256e",
           "section": "4.1",
           "group": "A",
           "number": 5,
@@ -872,7 +1041,7 @@
           "source_anchor": {
             "ocr_doc": 14,
             "pdf_page": 15,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_14.md"
+            "file": "data/ocr_live_current/chapter4_100/doc_14.md"
           },
           "question_text": "### 5. （2025·全国模拟）\n\n已知数列 \\(\\{a_n\\}\\) 的通项公式为 \\(a_n = \\frac{1}{n(n+2)}(n \\in \\mathbb{N}^*)\\).\n\n（1）计算 \\(a_{3}+a_{4}\\)的值：\n\n（2） \\(\\frac{1}{120}\\) 是不是该数列中的项？若是，应为第几项？若不是，说明理由.",
           "image_refs": [],
@@ -893,8 +1062,8 @@
       "prerequisite_knowledge_blocks": []
     },
     {
-      "cycle_id": "4.1-cycle-6",
-      "sequence": 6,
+      "cycle_id": "4.1-cycle-13",
+      "sequence": 13,
       "title": "B组 强化能力",
       "course_keys": [],
       "prerequisite_course_keys": [
@@ -904,22 +1073,14 @@
       "optional_course_keys": [],
       "knowledge_refs": [],
       "prerequisite_knowledge_refs": [],
-      "type_refs": [
-        "类型Ⅰ 观察、归纳法求数列的通项公式或数列中的某一项",
-        "类型Ⅱ 数列中的项的简单分析",
-        "类型Ⅲ 由递推公式求通项公式——累加法与累乘法",
-        "类型IV $ a_{n} $ 与 $ S_{n} $ 的关系的应用",
-        "类型V 周期数列问题",
-        "类型VI 数列单调性的判断及应用",
-        "类型Ⅶ 两类数列求前 n 项和问题"
-      ],
+      "type_refs": [],
       "bridge_unit_ids": [],
       "method_checkpoints": [],
       "worked_examples": [],
       "direct_variants": [],
       "exercise_questions": [
         {
-          "qid": "Q-28444cfc257eda9f",
+          "qid": "Q-8f84de940c420bbb",
           "section": "4.1",
           "group": "B",
           "number": 6,
@@ -927,7 +1088,7 @@
           "source_anchor": {
             "ocr_doc": 14,
             "pdf_page": 15,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_14.md"
+            "file": "data/ocr_live_current/chapter4_100/doc_14.md"
           },
           "question_text": "### 6. （2025·上海青浦开学考试）\n\n某种规律排列的一列数：1， \\(\\frac{1}{2}\\)， \\(\\frac{1}{3}\\)， \\(\\frac{2}{3}\\)， \\(\\frac{1}{4}\\)， \\(\\frac{2}{4}\\)， \\(\\frac{3}{4}\\)， \\(\\frac{1}{5}\\)， \\(\\frac{2}{5}\\)， \\(\\frac{3}{5}\\)， \\(\\frac{4}{5}\\)，…，那么这列数的第50个数是 ___.",
           "image_refs": [],
@@ -938,7 +1099,7 @@
           ]
         },
         {
-          "qid": "Q-6830b557a42e6be6",
+          "qid": "Q-7a807fed0f895d14",
           "section": "4.1",
           "group": "B",
           "number": 7,
@@ -946,442 +1107,64 @@
           "source_anchor": {
             "ocr_doc": 15,
             "pdf_page": 16,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_15.md"
+            "file": "data/ocr_live_current/chapter4_100/doc_15.md"
           },
           "question_text": "### 7. （2025·湖北期中）\n\n传说古希腊毕达哥拉斯学派的数学家用沙粒和小石子来研究数，他们根据沙粒或小石子所排列的形状把数分成许多类，如图中第一行的1，3，6，10称为三角形数，第二行的1，4，9，16称为正方形数，第三行的1，5，12，22称为五边形数，则正方形数、五边形数所构成的数列的第5项分别为（）\n\n\n\n\n\n\n\n6\n\n\n\n\n\n10\n\n\n\n\n\n4\n\n\n\n\n\n9\n\n\n\n\n\n16\n\n\n\n\n\n5\n\n\n\n\n\nA. 24, 34 B. 25, 35 C. 25, 34 D. 24, 35\n\n12\n\n\n\n\n\n22",
           "image_refs": [
             {
               "ref": "imgs/img_in_image_box_458_417_504_481.jpg",
-              "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_458_417_504_481.jpg",
+              "path": "data/ocr_live_current/chapter4_100/imgs/img_in_image_box_458_417_504_481.jpg",
               "exists": true
             },
             {
               "ref": "imgs/img_in_image_box_558_388_635_459.jpg",
-              "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_558_388_635_459.jpg",
+              "path": "data/ocr_live_current/chapter4_100/imgs/img_in_image_box_558_388_635_459.jpg",
               "exists": true
             },
             {
               "ref": "imgs/img_in_image_box_688_361_799_461.jpg",
-              "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_688_361_799_461.jpg",
+              "path": "data/ocr_live_current/chapter4_100/imgs/img_in_image_box_688_361_799_461.jpg",
               "exists": true
             },
             {
               "ref": "imgs/img_in_image_box_458_559_504_606.jpg",
-              "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_458_559_504_606.jpg",
+              "path": "data/ocr_live_current/chapter4_100/imgs/img_in_image_box_458_559_504_606.jpg",
               "exists": true
             },
             {
               "ref": "imgs/img_in_image_box_557_526_635_604.jpg",
-              "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_557_526_635_604.jpg",
+              "path": "data/ocr_live_current/chapter4_100/imgs/img_in_image_box_557_526_635_604.jpg",
               "exists": true
             },
             {
               "ref": "imgs/img_in_image_box_689_494_799_604.jpg",
-              "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_689_494_799_604.jpg",
+              "path": "data/ocr_live_current/chapter4_100/imgs/img_in_image_box_689_494_799_604.jpg",
               "exists": true
             },
             {
               "ref": "imgs/img_in_image_box_447_734_517_805.jpg",
-              "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_447_734_517_805.jpg",
+              "path": "data/ocr_live_current/chapter4_100/imgs/img_in_image_box_447_734_517_805.jpg",
               "exists": true
             },
             {
               "ref": "imgs/img_in_image_box_535_687_655_803.jpg",
-              "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_535_687_655_803.jpg",
+              "path": "data/ocr_live_current/chapter4_100/imgs/img_in_image_box_535_687_655_803.jpg",
               "exists": true
             },
             {
               "ref": "imgs/img_in_image_box_658_639_828_802.jpg",
-              "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_658_639_828_802.jpg",
+              "path": "data/ocr_live_current/chapter4_100/imgs/img_in_image_box_658_639_828_802.jpg",
               "exists": true
             }
           ],
-          "visual_status": "VISION_VERIFIED",
+          "visual_status": "NEEDS_VISION_SIDECAR",
           "math_errors": [],
           "evidence": [
-            "E1",
-            "E2"
-          ],
-          "vision_sidecars": [
-            {
-              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_458_417_504_481.jpg",
-              "image_sha256": "bc53404d5e8f16b4886393ed3f06bb7f46314c8050b256f70734385725a3216f",
-              "confidence": "E2",
-              "structured": {
-                "objects": [],
-                "relations": [],
-                "coordinates": [],
-                "ranges": [],
-                "text": [
-                  "3"
-                ],
-                "uncertainties": [],
-                "confidence": "E2"
-              },
-              "source_provenance": null
-            },
-            {
-              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_558_388_635_459.jpg",
-              "image_sha256": "db51d1f7581660614c252a5c0e8d7b181ba64e8a83fdd9db6433d907b925b006",
-              "confidence": "E2",
-              "structured": {
-                "objects": [
-                  "顶点",
-                  "边",
-                  "三角形",
-                  "线段",
-                  "点",
-                  "线段"
-                ],
-                "relations": [
-                  "顶点连接",
-                  "边构成三角形",
-                  "线段连接点",
-                  "点构成线段",
-                  "线段构成三角形",
-                  "点连接边"
-                ],
-                "coordinates": [
-                  "[0.5, 0.8]",
-                  "[0.3, 0.5]",
-                  "[0.7, 0.5]",
-                  "[0.1, 0.2]",
-                  "[0.5, 0.2]",
-                  "[0.9, 0.2]"
-                ],
-                "ranges": [
-                  "[0.1, 0.2]:[0.5, 0.8]",
-                  "[0.3, 0.5]:[0.1, 0.2]",
-                  "[0.7, 0.5]:[0.5, 0.2]",
-                  "[0.1, 0.2]:[0.9, 0.2]",
-                  "[0.5, 0.2]:[0.9, 0.2]",
-                  "[0.5, 0.8]:[0.3, 0.5]"
-                ],
-                "text": [],
-                "uncertainties": [],
-                "confidence": "E2"
-              },
-              "source_provenance": null
-            },
-            {
-              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_688_361_799_461.jpg",
-              "image_sha256": "d92b0d7702938696e63910f09867f248e86b9be74d14a244aa3a075935f7d52e",
-              "confidence": "E2",
-              "structured": {
-                "objects": [
-                  {
-                    "name": "三角形顶点",
-                    "type": "点"
-                  },
-                  {
-                    "name": "三角形边",
-                    "type": "线段"
-                  },
-                  {
-                    "name": "内部线段",
-                    "type": "线段"
-                  },
-                  {
-                    "name": "内部点",
-                    "type": "点"
-                  }
-                ],
-                "relations": [
-                  {
-                    "from": "三角形顶点",
-                    "to": "三角形边",
-                    "type": "连接"
-                  },
-                  {
-                    "from": "内部点",
-                    "to": "内部线段",
-                    "type": "连接"
-                  },
-                  {
-                    "from": "三角形边",
-                    "to": "内部点",
-                    "type": "连接"
-                  },
-                  {
-                    "from": "内部线段",
-                    "to": "三角形边",
-                    "type": "连接"
-                  }
-                ],
-                "coordinates": [
-                  {
-                    "name": "三角形顶点",
-                    "values": [
-                      [
-                        5,
-                        0
-                      ],
-                      [
-                        2.5,
-                        3
-                      ],
-                      [
-                        7.5,
-                        3
-                      ]
-                    ]
-                  },
-                  {
-                    "name": "内部点",
-                    "values": [
-                      [
-                        3.5,
-                        1.5
-                      ],
-                      [
-                        4.5,
-                        2
-                      ],
-                      [
-                        5.5,
-                        1.5
-                      ],
-                      [
-                        6,
-                        1.5
-                      ],
-                      [
-                        5,
-                        2
-                      ]
-                    ]
-                  },
-                  {
-                    "name": "内部线段端点",
-                    "values": [
-                      [
-                        3.5,
-                        1.5
-                      ],
-                      [
-                        4.5,
-                        2
-                      ],
-                      [
-                        5.5,
-                        1.5
-                      ],
-                      [
-                        6,
-                        1.5
-                      ]
-                    ]
-                  }
-                ],
-                "ranges": [],
-                "text": [],
-                "uncertainties": [],
-                "confidence": "E2"
-              },
-              "source_provenance": null
-            },
-            {
-              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_458_559_504_606.jpg",
-              "image_sha256": "f2632efdc66a6c13bfa5acfc9c1201b1b58bf418dd7d75b8246395ce9ee4c82a",
-              "confidence": "E2",
-              "structured": {
-                "objects": [
-                  "正方形"
-                ],
-                "relations": [
-                  "正方形的四条边"
-                ],
-                "coordinates": [
-                  [
-                    0,
-                    0
-                  ],
-                  [
-                    0,
-                    1
-                  ],
-                  [
-                    1,
-                    1
-                  ],
-                  [
-                    1,
-                    0
-                  ]
-                ],
-                "ranges": [],
-                "text": [],
-                "uncertainties": [],
-                "confidence": "E2"
-              },
-              "source_provenance": null
-            },
-            {
-              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_557_526_635_604.jpg",
-              "image_sha256": "6eb34d835c64ab8188cfae4790f50406394721014d211229dfe841e2ffef81d9",
-              "confidence": "E2",
-              "structured": {
-                "objects": [
-                  "正方形",
-                  "内嵌小正方形"
-                ],
-                "relations": [],
-                "coordinates": [
-                  [
-                    11,
-                    11
-                  ],
-                  [
-                    11,
-                    33
-                  ],
-                  [
-                    33,
-                    11
-                  ],
-                  [
-                    33,
-                    33
-                  ],
-                  [
-                    19,
-                    19
-                  ],
-                  [
-                    23,
-                    23
-                  ]
-                ],
-                "ranges": [],
-                "text": [],
-                "uncertainties": [],
-                "confidence": "E2"
-              },
-              "source_provenance": null
-            },
-            {
-              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_689_494_799_604.jpg",
-              "image_sha256": "98205a1aa429f9d70cfd6c6b6372d3067fce4d47d31bed6817fc9b01f910c6f7",
-              "confidence": "E2",
-              "structured": {
-                "objects": [
-                  "矩形框",
-                  "内嵌矩形框"
-                ],
-                "relations": [],
-                "coordinates": [],
-                "ranges": [],
-                "text": [],
-                "uncertainties": [],
-                "confidence": "E2"
-              },
-              "source_provenance": null
-            },
-            {
-              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_447_734_517_805.jpg",
-              "image_sha256": "fc167d6b94ac64a9898f9b90a2e154be0ebf5fc081a91cdd0cc77ebe902bb2ce",
-              "confidence": "E2",
-              "structured": {
-                "objects": [],
-                "relations": [
-                  "五边形顶点连接",
-                  "边连接顶点"
-                ],
-                "coordinates": [
-                  "顶点坐标",
-                  "边端点坐标"
-                ],
-                "ranges": [],
-                "text": [],
-                "uncertainties": [],
-                "confidence": "E2"
-              },
-              "source_provenance": null
-            },
-            {
-              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_535_687_655_803.jpg",
-              "image_sha256": "7608763aa2f03dfa9d1c868d4d9455dc9b860a9d862c4254370874d2e68eed68",
-              "confidence": "E2",
-              "structured": {
-                "objects": [
-                  {
-                    "name": "五边形",
-                    "type": "多边形"
-                  },
-                  {
-                    "name": "内五边形",
-                    "type": "多边形"
-                  }
-                ],
-                "relations": [],
-                "coordinates": [
-                  [
-                    0,
-                    0
-                  ],
-                  [
-                    1,
-                    1
-                  ],
-                  [
-                    2,
-                    0.5
-                  ],
-                  [
-                    2,
-                    0
-                  ],
-                  [
-                    1.5,
-                    0.2
-                  ],
-                  [
-                    1,
-                    0.5
-                  ]
-                ],
-                "ranges": [],
-                "text": [],
-                "uncertainties": [],
-                "confidence": "E2"
-              },
-              "source_provenance": null
-            },
-            {
-              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_658_639_828_802.jpg",
-              "image_sha256": "35a0874815953b1f34c2b6764e965b1a1059a4e33ab3113d21a0e43b75295e3f",
-              "confidence": "E2",
-              "structured": {
-                "objects": [
-                  "五边形",
-                  "内嵌四边形",
-                  "内嵌小四边形"
-                ],
-                "relations": [],
-                "coordinates": [],
-                "ranges": [],
-                "text": [],
-                "uncertainties": [],
-                "confidence": "E2"
-              },
-              "source_provenance": null
-            }
-          ],
-          "vision_sidecar": {
-            "objects": [],
-            "relations": [],
-            "coordinates": [],
-            "ranges": [],
-            "text": [
-              "3"
-            ],
-            "uncertainties": [],
-            "confidence": "E2"
-          },
-          "vision_source_provenance": []
+            "E1"
+          ]
         },
         {
-          "qid": "Q-fef3fcd3b24e82d7",
+          "qid": "Q-52fe385ca95d135a",
           "section": "4.1",
           "group": "B",
           "number": 8,
@@ -1389,7 +1172,7 @@
           "source_anchor": {
             "ocr_doc": 15,
             "pdf_page": 16,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_15.md"
+            "file": "data/ocr_live_current/chapter4_100/doc_15.md"
           },
           "question_text": "8.（2025·河北期末）\n\n在数列 \\(\\{a_n\\}\\) 中，\\(a_1=0\\)，\\(a_{n+1}=a_n+\\ln\\left(1+\\frac{1}{n}\\right)\\)，则 \\(\\{a_n\\}\\) 的通项公式为（ ）\n\nA. \\(a_n=\\ln n\\)          B. \\(a_n=(n-1)\\ln(n+1)\\)\n\nC. \\(a_n=n\\ln n\\)        D. \\(a_n=\\ln n+n-1\\)",
           "image_refs": [],
@@ -1400,7 +1183,7 @@
           ]
         },
         {
-          "qid": "Q-15128671ee8b8ab8",
+          "qid": "Q-c56f07fe37827b22",
           "section": "4.1",
           "group": "B",
           "number": 9,
@@ -1408,7 +1191,7 @@
           "source_anchor": {
             "ocr_doc": 15,
             "pdf_page": 16,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_15.md"
+            "file": "data/ocr_live_current/chapter4_100/doc_15.md"
           },
           "question_text": "9. (2025·云南期末)\n\n在数列 \\(\\{a_{n}\\}\\)中，若 \\(a_{1}=3\\)， \\(a_{n}=n(a_{n+1}-a_{n})\\)，则666是 \\(\\{a_{n}\\}\\)的（）\n\nA. 第111项 B. 第222项\n\nC. 第333项 D. 第666项",
           "image_refs": [],
@@ -1419,7 +1202,7 @@
           ]
         },
         {
-          "qid": "Q-207f12003d877445",
+          "qid": "Q-7076b579d6640560",
           "section": "4.1",
           "group": "B",
           "number": 10,
@@ -1427,7 +1210,7 @@
           "source_anchor": {
             "ocr_doc": 16,
             "pdf_page": 17,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_16.md"
+            "file": "data/ocr_live_current/chapter4_100/doc_16.md"
           },
           "question_text": "10.（2023·安徽题·1）\n\n设数列\\(\\{a_n\\}\\)满足\\(a_1+2a_2+3a_3+\\cdots+na_n=2n-1(n\\in\\mathbb{N}^*)\\)，则数列\\(\\left\\{\\frac{a_n}{n+2}\\right\\}\\)的前10项和为（ ）\n\nA. \\(\\frac{131}{132}\\) B. \\(\\frac{135}{132}\\)\n\nC. \\(\\frac{175}{132}\\) D. \\(\\frac{109}{66}\\)",
           "image_refs": [],
@@ -1438,7 +1221,7 @@
           ]
         },
         {
-          "qid": "Q-5da9c0df4e2ad308",
+          "qid": "Q-d5337415229ed518",
           "section": "4.1",
           "group": "B",
           "number": 11,
@@ -1446,7 +1229,7 @@
           "source_anchor": {
             "ocr_doc": 16,
             "pdf_page": 17,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_16.md"
+            "file": "data/ocr_live_current/chapter4_100/doc_16.md"
           },
           "question_text": "11.（2025·四川绵阳模拟）（多选）\n\n下列通项公式中，数列\\(\\{a_n\\}\\)是递增数列的是（ ）\n\nA. \\(a_n = 2n - 11\\) B. \\(a_n = -3n + 32\\)\n\nC. \\(a_n = 2 \\times \\left(\\frac{1}{3}\\right)^n\\) D. \\(a_n = 2 \\times 3^n\\)",
           "image_refs": [],
@@ -1457,7 +1240,7 @@
           ]
         },
         {
-          "qid": "Q-c3fc8adec90bab5e",
+          "qid": "Q-197fff2ccdd8aabe",
           "section": "4.1",
           "group": "B",
           "number": 12,
@@ -1465,7 +1248,7 @@
           "source_anchor": {
             "ocr_doc": 16,
             "pdf_page": 17,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_16.md"
+            "file": "data/ocr_live_current/chapter4_100/doc_16.md"
           },
           "question_text": "12\\. （2025 · 全国模拟）\n\n已知数列 \\(\\{a_n\\}\\) 满足 \\(a_1 = a_2 = 2\\)，\\(a_{n+1} = |a_n - a_{n-1}|\\)，其中 \\(n \\in \\mathbb{N}^*\\) 且 \\(n \\geq 2\\)，求该数列的前 100 项和 \\(S_{100}\\)。",
           "image_refs": [],
@@ -1476,7 +1259,7 @@
           ]
         },
         {
-          "qid": "Q-b7bb016a47bf7045",
+          "qid": "Q-fd38217119fd3743",
           "section": "4.1",
           "group": "B",
           "number": 13,
@@ -1484,7 +1267,7 @@
           "source_anchor": {
             "ocr_doc": 17,
             "pdf_page": 18,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_17.md"
+            "file": "data/ocr_live_current/chapter4_100/doc_17.md"
           },
           "question_text": "13.（2025·全国模拟）\n\n已知数列\\(\\{a_n\\}\\)满足\\(a_2=2\\)，\\(S_{n+1}+S_{n-1}=2S_n+\\)\n\n\\(\\log_2\\left(1+\\frac{1}{n}\\right)(n\\geq2)\\)，则\\(a_8=\\)（ ）\n\nA. \\(2\\sqrt{2}\\) B. 3\n\nC. 4 D. \\(4\\sqrt{2}\\)",
           "image_refs": [],
@@ -1495,7 +1278,7 @@
           ]
         },
         {
-          "qid": "Q-e68067574f4dcbe5",
+          "qid": "Q-c6fe6ac27f396124",
           "section": "4.1",
           "group": "B",
           "number": 14,
@@ -1503,7 +1286,7 @@
           "source_anchor": {
             "ocr_doc": 17,
             "pdf_page": 18,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_17.md"
+            "file": "data/ocr_live_current/chapter4_100/doc_17.md"
           },
           "question_text": "14.（2025·全国模拟）\n\n已知数列 \\(\\{a_n\\}\\) 满足 \\(a_1=1\\)，\\(a_n=a_1+\\frac{1}{2}a_2+\\frac{1}{3}a_3+\\cdots\\)\n\n\\(+\\frac{1}{n-1}a_{n-1}(n\\geq2)\\)，若 \\(a_n=1005\\)，则 \\(n=\\)___.",
           "image_refs": [],
@@ -1514,7 +1297,7 @@
           ]
         },
         {
-          "qid": "Q-988f79f7f5fe3b79",
+          "qid": "Q-b66eb505c1cf2a31",
           "section": "4.1",
           "group": "B",
           "number": 15,
@@ -1522,7 +1305,7 @@
           "source_anchor": {
             "ocr_doc": 17,
             "pdf_page": 18,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_17.md"
+            "file": "data/ocr_live_current/chapter4_100/doc_17.md"
           },
           "question_text": "15.（2025·）东模拟）\n\n记 \\(S_n\\)为首项为1的数列 \\(\\{a_n\\}\\)的前 \\(n\\)项和，且 \\(\\frac{S_n}{a_n} = n^2\\)，则 \\(S_{30} =\\)（ ）\n\nA.  \\(\\frac{60}{29}\\) B.  \\(\\frac{50}{29}\\)\n\nC.  \\(\\frac{60}{31}\\) D.  \\(\\frac{50}{31}\\)",
           "image_refs": [],
@@ -1533,7 +1316,7 @@
           ]
         },
         {
-          "qid": "Q-d4a04c7c13b1c1a2",
+          "qid": "Q-a334228e1a77aa69",
           "section": "4.1",
           "group": "B",
           "number": 16,
@@ -1541,7 +1324,7 @@
           "source_anchor": {
             "ocr_doc": 17,
             "pdf_page": 18,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_17.md"
+            "file": "data/ocr_live_current/chapter4_100/doc_17.md"
           },
           "question_text": "16. (2025·天津北辰模拟)\n\n数列 \\(\\{a_n\\}\\) 的通项公式为 \\(a_n = n^2 - 2\\lambda n (n=1,2,\\cdots)\\)，若 \\(\\{a_n\\}\\) 为递增数列，则 \\(\\lambda\\) 的取值范围为 ___.",
           "image_refs": [],
@@ -1552,7 +1335,7 @@
           ]
         },
         {
-          "qid": "Q-04ca9261569ad999",
+          "qid": "Q-e1d03803b183463e",
           "section": "4.1",
           "group": "B",
           "number": 17,
@@ -1560,7 +1343,7 @@
           "source_anchor": {
             "ocr_doc": 18,
             "pdf_page": 19,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_18.md"
+            "file": "data/ocr_live_current/chapter4_100/doc_18.md"
           },
           "question_text": "### 17 \\. （2025·广西桂林模拟）\n\n已知函数  \\(f(x)=\\begin{cases}(3-a)x-4, & x \\leq 8 \\\\ a^{x-7}, & x > 8\\end{cases}\\)，若数列  \\(\\{a_n\\}\\) 满足  \\(a_n = f(n)(n \\in \\mathbf{N}^*)\\) 且  \\(\\{a_n\\}\\) 是递增数列，则  \\(a\\) 的取值范围是（ ）\n\nA.  \\(\\left(\\frac{20}{9}, 3\\right)\\) \\quad B.  \\(\\left[\\frac{20}{9}, 3\\right)\\) \\quad C.  \\((2, 3)\\) \\quad D.  \\([2, 3)\\)",
           "image_refs": [],
@@ -1571,7 +1354,7 @@
           ]
         },
         {
-          "qid": "Q-ecc3ed36b1c96609",
+          "qid": "Q-8d8e0f6486934aae",
           "section": "4.1",
           "group": "B",
           "number": 18,
@@ -1579,7 +1362,7 @@
           "source_anchor": {
             "ocr_doc": 18,
             "pdf_page": 19,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_18.md"
+            "file": "data/ocr_live_current/chapter4_100/doc_18.md"
           },
           "question_text": "### 18. （2025 · 全国模拟）\n\n在数列\\(\\{a_n\\}\\)中，\\(a_1=2\\)，\\(a_{n+1}=a_n+\\frac{1}{n(n+1)}\\)，求数列\\(\\{a_n\\}\\)的通项公式。",
           "image_refs": [],
@@ -1590,7 +1373,7 @@
           ]
         },
         {
-          "qid": "Q-9bc153493dbcb7f9",
+          "qid": "Q-c4a90438b5189bdb",
           "section": "4.1",
           "group": "B",
           "number": 19,
@@ -1598,7 +1381,7 @@
           "source_anchor": {
             "ocr_doc": 18,
             "pdf_page": 19,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_18.md"
+            "file": "data/ocr_live_current/chapter4_100/doc_18.md"
           },
           "question_text": "### 19. （2025 · 辽宁模拟）\n\n设数列 \\(\\{a_n\\}\\) 满足 \\(a_1 > 0\\)，\\(a_{n+1} = a_n + \\frac{2}{a_n} (n \\in \\mathbb{N}^*)\\)，求证：\\(\\{a_n\\}\\) 是递增数列。",
           "image_refs": [],
@@ -1609,7 +1392,7 @@
           ]
         },
         {
-          "qid": "Q-3b8e037aeb952c48",
+          "qid": "Q-4918b89ce72b101d",
           "section": "4.1",
           "group": "B",
           "number": 20,
@@ -1617,7 +1400,7 @@
           "source_anchor": {
             "ocr_doc": 19,
             "pdf_page": 20,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_19.md"
+            "file": "data/ocr_live_current/chapter4_100/doc_19.md"
           },
           "question_text": "20.（2025·广东肇庆模拟）\n\n已知数列  \\(\\{a_{n}\\}\\) 的前 n 项和  \\(S_{n}=\\frac{1}{2}(n^{2}+n)\\).\n\n（1）求数列 \\(\\{a_{n}\\}\\)的通项公式；\n\n（2）设数列 \\(\\left\\{\\frac{1}{a_{n}^{2}+a_{n}}\\right\\}\\)的前n项和为 \\(T_{n}\\)，求证： \\(T_{n}\\geq\\frac{1}{2}\\).",
           "image_refs": [],
@@ -1638,8 +1421,8 @@
       "prerequisite_knowledge_blocks": []
     },
     {
-      "cycle_id": "4.1-cycle-7",
-      "sequence": 7,
+      "cycle_id": "4.1-cycle-14",
+      "sequence": 14,
       "title": "C组 拓展提升",
       "course_keys": [],
       "prerequisite_course_keys": [
@@ -1649,22 +1432,14 @@
       "optional_course_keys": [],
       "knowledge_refs": [],
       "prerequisite_knowledge_refs": [],
-      "type_refs": [
-        "类型Ⅰ 观察、归纳法求数列的通项公式或数列中的某一项",
-        "类型Ⅱ 数列中的项的简单分析",
-        "类型Ⅲ 由递推公式求通项公式——累加法与累乘法",
-        "类型IV $ a_{n} $ 与 $ S_{n} $ 的关系的应用",
-        "类型V 周期数列问题",
-        "类型VI 数列单调性的判断及应用",
-        "类型Ⅶ 两类数列求前 n 项和问题"
-      ],
+      "type_refs": [],
       "bridge_unit_ids": [],
       "method_checkpoints": [],
       "worked_examples": [],
       "direct_variants": [],
       "exercise_questions": [
         {
-          "qid": "Q-6f36bd2e33aa9626",
+          "qid": "Q-a445105e146259ed",
           "section": "4.1",
           "group": "C",
           "number": 21,
@@ -1672,7 +1447,7 @@
           "source_anchor": {
             "ocr_doc": 19,
             "pdf_page": 20,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_19.md"
+            "file": "data/ocr_live_current/chapter4_100/doc_19.md"
           },
           "question_text": "### 21. （2025·全国模拟）\n\n如果  \\(x = [x] + \\{x\\}\\)， \\([x] \\in \\mathbb{Z}\\)， \\(0 \\leq \\{x\\} < 1\\)，就称  \\([x]\\) 表示  \\(x\\) 的整数部分， \\(\\{x\\}\\) 表示  \\(x\\) 的小数部分。已知数列  \\(\\{a_n\\}\\) 满足  \\(a_1 = \\sqrt{5}\\)， \\(a_{n+1} = [a_n] + \\frac{2}{\\{a_n\\}}\\)，则  \\(a_{100} - a_{99}\\) 等于___。",
           "image_refs": [],
@@ -1683,7 +1458,7 @@
           ]
         },
         {
-          "qid": "Q-2e602d464119de52",
+          "qid": "Q-2f8d029cca329df7",
           "section": "4.1",
           "group": "C",
           "number": 22,
@@ -1691,7 +1466,7 @@
           "source_anchor": {
             "ocr_doc": 19,
             "pdf_page": 20,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_19.md"
+            "file": "data/ocr_live_current/chapter4_100/doc_19.md"
           },
           "question_text": "### 22. （2025·重庆模拟）（多选）\n\n已知数列 \\(\\{a_n\\}\\) 的通项公式为 \\(a_n = \\frac{8^n(n+2)}{9^n}\\)，则（ ）\n\nA. \\(\\forall n \\in \\mathbb{N}^*\\), \\(a_{n+1} \\geq a_n\\)\n\nB. \\(\\exists m \\in \\mathbb{N}^*\\), \\(\\forall n \\in \\mathbb{N}^*\\), \\(a_n \\leq a_m\\)\n\nC. \\(\\exists m \\in \\mathbb{N}^*\\), \\(\\forall n \\in \\mathbb{N}^*\\), \\(a_n \\geq a_m\\)\n\nD. \\(\\exists m, n \\in \\mathbb{N}^*\\), \\(m \\neq n\\), \\(a_n = a_m\\)",
           "image_refs": [],
@@ -1702,7 +1477,7 @@
           ]
         },
         {
-          "qid": "Q-b6263050f900cb32",
+          "qid": "Q-1c0809a6335ed660",
           "section": "4.1",
           "group": "C",
           "number": 23,
@@ -1710,7 +1485,7 @@
           "source_anchor": {
             "ocr_doc": 20,
             "pdf_page": 21,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_20.md"
+            "file": "data/ocr_live_current/chapter4_100/doc_20.md"
           },
           "question_text": "### 23 \\. (2025 · 北京通州期中)\n\n已知数列 \\(\\{a_n\\}\\) 的通项公式为 \\(a_n = [n \\cdot \\sqrt{2}]\\)，其中 \\([x]\\) 表示不超过实数 \\(x\\) 的最大整数，数列 \\(\\{b_n\\}\\) 的通项公式为 \\(b_n = 2^{n-1} (n \\in \\mathbb{N}^*)\\)。\n\n（1）写出数列 \\(\\{a_{n}\\}\\)的前6项；\n\n（2）试判断 \\(b_{6}\\)与 \\(b_{7}\\)是否为数列 \\(\\{a_{n}\\}\\)中的项，并说明理由.",
           "image_refs": [],
@@ -1988,8 +1763,8 @@
       "label": "例9",
       "example_number": 9,
       "parent_example_number": null,
-      "role": "knowledge_example",
-      "role_ref": "4.1-k4",
+      "role": "type_example",
+      "role_ref": "类型Ⅰ 观察、归纳法求数列的通项公式或数列中的某一项",
       "source_docs": [
         3,
         4
@@ -2007,8 +1782,8 @@
       "label": "例10",
       "example_number": 10,
       "parent_example_number": null,
-      "role": "knowledge_example",
-      "role_ref": "4.1-k4",
+      "role": "type_example",
+      "role_ref": "类型Ⅱ 数列中的项的简单分析",
       "source_docs": [
         5
       ],
@@ -2025,8 +1800,8 @@
       "label": "例11",
       "example_number": 11,
       "parent_example_number": null,
-      "role": "knowledge_example",
-      "role_ref": "4.1-k4",
+      "role": "type_example",
+      "role_ref": "类型Ⅲ 由递推公式求通项公式——累加法与累乘法",
       "source_docs": [
         5,
         6
@@ -2044,8 +1819,8 @@
       "label": "例12",
       "example_number": 12,
       "parent_example_number": null,
-      "role": "knowledge_example",
-      "role_ref": "4.1-k4",
+      "role": "type_example",
+      "role_ref": "类型IV $ a_{n} $ 与 $ S_{n} $ 的关系的应用",
       "source_docs": [
         7
       ],
@@ -2062,8 +1837,8 @@
       "label": "例13",
       "example_number": 13,
       "parent_example_number": null,
-      "role": "knowledge_example",
-      "role_ref": "4.1-k4",
+      "role": "type_example",
+      "role_ref": "类型IV $ a_{n} $ 与 $ S_{n} $ 的关系的应用",
       "source_docs": [
         8
       ],
@@ -2080,8 +1855,8 @@
       "label": "例14",
       "example_number": 14,
       "parent_example_number": null,
-      "role": "knowledge_example",
-      "role_ref": "4.1-k4",
+      "role": "type_example",
+      "role_ref": "类型V 周期数列问题",
       "source_docs": [
         9
       ],
@@ -2098,8 +1873,8 @@
       "label": "例15",
       "example_number": 15,
       "parent_example_number": null,
-      "role": "knowledge_example",
-      "role_ref": "4.1-k4",
+      "role": "type_example",
+      "role_ref": "类型VI 数列单调性的判断及应用",
       "source_docs": [
         9,
         10
@@ -2117,8 +1892,8 @@
       "label": "例16",
       "example_number": 16,
       "parent_example_number": null,
-      "role": "knowledge_example",
-      "role_ref": "4.1-k4",
+      "role": "type_example",
+      "role_ref": "类型VI 数列单调性的判断及应用",
       "source_docs": [
         11
       ],
@@ -2135,8 +1910,8 @@
       "label": "例17",
       "example_number": 17,
       "parent_example_number": null,
-      "role": "knowledge_example",
-      "role_ref": "4.1-k4",
+      "role": "type_example",
+      "role_ref": "类型Ⅶ 两类数列求前 n 项和问题",
       "source_docs": [
         12
       ],
@@ -2153,8 +1928,8 @@
       "label": "例18",
       "example_number": 18,
       "parent_example_number": null,
-      "role": "knowledge_example",
-      "role_ref": "4.1-k4",
+      "role": "type_example",
+      "role_ref": "类型Ⅶ 两类数列求前 n 项和问题",
       "source_docs": [
         12,
         13
@@ -2175,7 +1950,7 @@
       "example_number": null,
       "parent_example_number": 9,
       "role": "direct_variant",
-      "role_ref": null,
+      "role_ref": "类型Ⅰ 观察、归纳法求数列的通项公式或数列中的某一项",
       "source_docs": [
         4
       ],
@@ -2192,7 +1967,7 @@
       "example_number": null,
       "parent_example_number": 9,
       "role": "direct_variant",
-      "role_ref": null,
+      "role_ref": "类型Ⅰ 观察、归纳法求数列的通项公式或数列中的某一项",
       "source_docs": [
         4
       ],
@@ -2200,48 +1975,13 @@
       "image_refs": [
         {
           "ref": "imgs/img_in_image_box_425_722_755_914.jpg",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_425_722_755_914.jpg",
+          "path": "data/ocr_live_current/chapter4_100/imgs/img_in_image_box_425_722_755_914.jpg",
           "exists": true
         }
       ],
-      "visual_status": "VISION_VERIFIED",
+      "visual_status": "NEEDS_VISION_SIDECAR",
       "solution_isolated": true,
-      "vision_hint": "4.1-LI0afede61206c7a93",
-      "vision_sidecars": [
-        {
-          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_425_722_755_914.jpg",
-          "image_sha256": "456167ffc10e9fb4548a9fff294e98491120692a153923047a747f2ccd63afc6",
-          "confidence": "E2",
-          "structured": {
-            "objects": [],
-            "relations": [],
-            "coordinates": [],
-            "ranges": [],
-            "text": [
-              "高中数学"
-            ],
-            "uncertainties": [],
-            "confidence": "E2"
-          },
-          "source_provenance": null
-        }
-      ],
-      "vision_sidecar": {
-        "objects": [],
-        "relations": [],
-        "coordinates": [],
-        "ranges": [],
-        "text": [
-          "高中数学"
-        ],
-        "uncertainties": [],
-        "confidence": "E2"
-      },
-      "vision_source_provenance": [],
-      "evidence": [
-        "E1",
-        "E2"
-      ]
+      "vision_hint": "4.1-LI0afede61206c7a93"
     },
     {
       "item_id": "afc13d089ac69dcf",
@@ -2250,7 +1990,7 @@
       "example_number": null,
       "parent_example_number": 10,
       "role": "direct_variant",
-      "role_ref": null,
+      "role_ref": "类型Ⅱ 数列中的项的简单分析",
       "source_docs": [
         5
       ],
@@ -2267,7 +2007,7 @@
       "example_number": null,
       "parent_example_number": 11,
       "role": "direct_variant",
-      "role_ref": null,
+      "role_ref": "类型Ⅲ 由递推公式求通项公式——累加法与累乘法",
       "source_docs": [
         6
       ],
@@ -2284,7 +2024,7 @@
       "example_number": null,
       "parent_example_number": 11,
       "role": "direct_variant",
-      "role_ref": null,
+      "role_ref": "类型Ⅲ 由递推公式求通项公式——累加法与累乘法",
       "source_docs": [
         6,
         7
@@ -2302,7 +2042,7 @@
       "example_number": null,
       "parent_example_number": 12,
       "role": "direct_variant",
-      "role_ref": null,
+      "role_ref": "类型IV $ a_{n} $ 与 $ S_{n} $ 的关系的应用",
       "source_docs": [
         7,
         8
@@ -2320,7 +2060,7 @@
       "example_number": null,
       "parent_example_number": 13,
       "role": "direct_variant",
-      "role_ref": null,
+      "role_ref": "类型IV $ a_{n} $ 与 $ S_{n} $ 的关系的应用",
       "source_docs": [
         8,
         9
@@ -2338,7 +2078,7 @@
       "example_number": null,
       "parent_example_number": 14,
       "role": "direct_variant",
-      "role_ref": null,
+      "role_ref": "类型V 周期数列问题",
       "source_docs": [
         9
       ],
@@ -2355,7 +2095,7 @@
       "example_number": null,
       "parent_example_number": 15,
       "role": "direct_variant",
-      "role_ref": null,
+      "role_ref": "类型VI 数列单调性的判断及应用",
       "source_docs": [
         10
       ],
@@ -2372,7 +2112,7 @@
       "example_number": null,
       "parent_example_number": 15,
       "role": "direct_variant",
-      "role_ref": null,
+      "role_ref": "类型VI 数列单调性的判断及应用",
       "source_docs": [
         10,
         11
@@ -2390,7 +2130,7 @@
       "example_number": null,
       "parent_example_number": 16,
       "role": "direct_variant",
-      "role_ref": null,
+      "role_ref": "类型VI 数列单调性的判断及应用",
       "source_docs": [
         11,
         12
@@ -2405,7 +2145,7 @@
   "deduplicated_learning_items": [],
   "exercise_questions": [
     {
-      "qid": "Q-6b3ac8a64a3d0af2",
+      "qid": "Q-6850a44a7baa5be1",
       "section": "4.1",
       "group": "A",
       "number": 1,
@@ -2413,7 +2153,7 @@
       "source_anchor": {
         "ocr_doc": 13,
         "pdf_page": 14,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_13.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_13.md"
       },
       "question_text": "1.（2025·四川眉山期末）\n\n数列-1， \\(\\frac{1}{2}\\)，- \\(\\frac{1}{3}\\)， \\(\\frac{1}{4}\\)，- \\(\\frac{1}{5}\\)，…的一个通项公式为（）\n\nA.  \\(\\frac{1}{n}\\) B.  \\(-\\frac{1}{n}\\)\n\nC.  \\(\\frac{(-1)^{n-1}}{n}\\) D.  \\(\\frac{(-1)^{n}}{n}\\)",
       "image_refs": [],
@@ -2424,7 +2164,7 @@
       ]
     },
     {
-      "qid": "Q-664396a533a59f12",
+      "qid": "Q-6cc858ab3b4a822b",
       "section": "4.1",
       "group": "A",
       "number": 2,
@@ -2432,7 +2172,7 @@
       "source_anchor": {
         "ocr_doc": 14,
         "pdf_page": 15,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_14.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_14.md"
       },
       "question_text": "2.（2025·辽宁期中）\n\n已知数列 \\(\\sqrt{2}\\)，3， \\(2\\sqrt{7}\\)， \\(\\sqrt{65}\\)，…，则 \\(\\sqrt{1001}\\)是该数列的（）\n\nA. 第8项 B. 第9项\n\nC. 第10项 D. 第11项",
       "image_refs": [],
@@ -2443,7 +2183,7 @@
       ]
     },
     {
-      "qid": "Q-f4134217c336b670",
+      "qid": "Q-44afe85dc4de4f56",
       "section": "4.1",
       "group": "A",
       "number": 3,
@@ -2451,7 +2191,7 @@
       "source_anchor": {
         "ocr_doc": 14,
         "pdf_page": 15,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_14.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_14.md"
       },
       "question_text": "### 3. （2025·全国模拟）\n\n已知数列\\(\\{a_n\\}\\)为2，0，2，0，⋯，写出一个该数列的通项公式\\(a_n=\\)___。（不可写为分段形式）",
       "image_refs": [],
@@ -2462,7 +2202,7 @@
       ]
     },
     {
-      "qid": "Q-eb9ca09161925194",
+      "qid": "Q-e7ab814dfd0a0935",
       "section": "4.1",
       "group": "A",
       "number": 4,
@@ -2470,7 +2210,7 @@
       "source_anchor": {
         "ocr_doc": 14,
         "pdf_page": 15,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_14.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_14.md"
       },
       "question_text": "### 4. （2025·全国模拟）\n\n任取一个正整数，若是奇数，就将该数乘3再加上1；若是偶数，就将该数除以2，反复进行上述两种运算，经过有限次步骤后，必进入循环圈1→4→2→1。这就是数学史上著名的“冰雹猜想”（又称“角谷猜想”）。\n\n已知数列\\(\\{a_n\\}\\)满足\\(a_1=1\\)，\\(a_{n+1}=\\begin{cases} \\frac{a_n}{2}, & a_n \\text{为偶数} \\\\ 3a_n+1, & a_n \\text{为奇数} \\end{cases}\\)，则\\(a_{2025}=\\)（ ）\n\nA. 1\n\nB. 2\n\nC. 4\n\nD. 8",
       "image_refs": [],
@@ -2481,7 +2221,7 @@
       ]
     },
     {
-      "qid": "Q-1add16b417c0b583",
+      "qid": "Q-023fc11d1a8c256e",
       "section": "4.1",
       "group": "A",
       "number": 5,
@@ -2489,7 +2229,7 @@
       "source_anchor": {
         "ocr_doc": 14,
         "pdf_page": 15,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_14.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_14.md"
       },
       "question_text": "### 5. （2025·全国模拟）\n\n已知数列 \\(\\{a_n\\}\\) 的通项公式为 \\(a_n = \\frac{1}{n(n+2)}(n \\in \\mathbb{N}^*)\\).\n\n（1）计算 \\(a_{3}+a_{4}\\)的值：\n\n（2） \\(\\frac{1}{120}\\) 是不是该数列中的项？若是，应为第几项？若不是，说明理由.",
       "image_refs": [],
@@ -2500,7 +2240,7 @@
       ]
     },
     {
-      "qid": "Q-28444cfc257eda9f",
+      "qid": "Q-8f84de940c420bbb",
       "section": "4.1",
       "group": "B",
       "number": 6,
@@ -2508,7 +2248,7 @@
       "source_anchor": {
         "ocr_doc": 14,
         "pdf_page": 15,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_14.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_14.md"
       },
       "question_text": "### 6. （2025·上海青浦开学考试）\n\n某种规律排列的一列数：1， \\(\\frac{1}{2}\\)， \\(\\frac{1}{3}\\)， \\(\\frac{2}{3}\\)， \\(\\frac{1}{4}\\)， \\(\\frac{2}{4}\\)， \\(\\frac{3}{4}\\)， \\(\\frac{1}{5}\\)， \\(\\frac{2}{5}\\)， \\(\\frac{3}{5}\\)， \\(\\frac{4}{5}\\)，…，那么这列数的第50个数是 ___.",
       "image_refs": [],
@@ -2519,7 +2259,7 @@
       ]
     },
     {
-      "qid": "Q-6830b557a42e6be6",
+      "qid": "Q-7a807fed0f895d14",
       "section": "4.1",
       "group": "B",
       "number": 7,
@@ -2527,442 +2267,64 @@
       "source_anchor": {
         "ocr_doc": 15,
         "pdf_page": 16,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_15.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_15.md"
       },
       "question_text": "### 7. （2025·湖北期中）\n\n传说古希腊毕达哥拉斯学派的数学家用沙粒和小石子来研究数，他们根据沙粒或小石子所排列的形状把数分成许多类，如图中第一行的1，3，6，10称为三角形数，第二行的1，4，9，16称为正方形数，第三行的1，5，12，22称为五边形数，则正方形数、五边形数所构成的数列的第5项分别为（）\n\n\n\n\n\n\n\n6\n\n\n\n\n\n10\n\n\n\n\n\n4\n\n\n\n\n\n9\n\n\n\n\n\n16\n\n\n\n\n\n5\n\n\n\n\n\nA. 24, 34 B. 25, 35 C. 25, 34 D. 24, 35\n\n12\n\n\n\n\n\n22",
       "image_refs": [
         {
           "ref": "imgs/img_in_image_box_458_417_504_481.jpg",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_458_417_504_481.jpg",
+          "path": "data/ocr_live_current/chapter4_100/imgs/img_in_image_box_458_417_504_481.jpg",
           "exists": true
         },
         {
           "ref": "imgs/img_in_image_box_558_388_635_459.jpg",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_558_388_635_459.jpg",
+          "path": "data/ocr_live_current/chapter4_100/imgs/img_in_image_box_558_388_635_459.jpg",
           "exists": true
         },
         {
           "ref": "imgs/img_in_image_box_688_361_799_461.jpg",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_688_361_799_461.jpg",
+          "path": "data/ocr_live_current/chapter4_100/imgs/img_in_image_box_688_361_799_461.jpg",
           "exists": true
         },
         {
           "ref": "imgs/img_in_image_box_458_559_504_606.jpg",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_458_559_504_606.jpg",
+          "path": "data/ocr_live_current/chapter4_100/imgs/img_in_image_box_458_559_504_606.jpg",
           "exists": true
         },
         {
           "ref": "imgs/img_in_image_box_557_526_635_604.jpg",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_557_526_635_604.jpg",
+          "path": "data/ocr_live_current/chapter4_100/imgs/img_in_image_box_557_526_635_604.jpg",
           "exists": true
         },
         {
           "ref": "imgs/img_in_image_box_689_494_799_604.jpg",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_689_494_799_604.jpg",
+          "path": "data/ocr_live_current/chapter4_100/imgs/img_in_image_box_689_494_799_604.jpg",
           "exists": true
         },
         {
           "ref": "imgs/img_in_image_box_447_734_517_805.jpg",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_447_734_517_805.jpg",
+          "path": "data/ocr_live_current/chapter4_100/imgs/img_in_image_box_447_734_517_805.jpg",
           "exists": true
         },
         {
           "ref": "imgs/img_in_image_box_535_687_655_803.jpg",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_535_687_655_803.jpg",
+          "path": "data/ocr_live_current/chapter4_100/imgs/img_in_image_box_535_687_655_803.jpg",
           "exists": true
         },
         {
           "ref": "imgs/img_in_image_box_658_639_828_802.jpg",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_658_639_828_802.jpg",
+          "path": "data/ocr_live_current/chapter4_100/imgs/img_in_image_box_658_639_828_802.jpg",
           "exists": true
         }
       ],
-      "visual_status": "VISION_VERIFIED",
+      "visual_status": "NEEDS_VISION_SIDECAR",
       "math_errors": [],
       "evidence": [
-        "E1",
-        "E2"
-      ],
-      "vision_sidecars": [
-        {
-          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_458_417_504_481.jpg",
-          "image_sha256": "bc53404d5e8f16b4886393ed3f06bb7f46314c8050b256f70734385725a3216f",
-          "confidence": "E2",
-          "structured": {
-            "objects": [],
-            "relations": [],
-            "coordinates": [],
-            "ranges": [],
-            "text": [
-              "3"
-            ],
-            "uncertainties": [],
-            "confidence": "E2"
-          },
-          "source_provenance": null
-        },
-        {
-          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_558_388_635_459.jpg",
-          "image_sha256": "db51d1f7581660614c252a5c0e8d7b181ba64e8a83fdd9db6433d907b925b006",
-          "confidence": "E2",
-          "structured": {
-            "objects": [
-              "顶点",
-              "边",
-              "三角形",
-              "线段",
-              "点",
-              "线段"
-            ],
-            "relations": [
-              "顶点连接",
-              "边构成三角形",
-              "线段连接点",
-              "点构成线段",
-              "线段构成三角形",
-              "点连接边"
-            ],
-            "coordinates": [
-              "[0.5, 0.8]",
-              "[0.3, 0.5]",
-              "[0.7, 0.5]",
-              "[0.1, 0.2]",
-              "[0.5, 0.2]",
-              "[0.9, 0.2]"
-            ],
-            "ranges": [
-              "[0.1, 0.2]:[0.5, 0.8]",
-              "[0.3, 0.5]:[0.1, 0.2]",
-              "[0.7, 0.5]:[0.5, 0.2]",
-              "[0.1, 0.2]:[0.9, 0.2]",
-              "[0.5, 0.2]:[0.9, 0.2]",
-              "[0.5, 0.8]:[0.3, 0.5]"
-            ],
-            "text": [],
-            "uncertainties": [],
-            "confidence": "E2"
-          },
-          "source_provenance": null
-        },
-        {
-          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_688_361_799_461.jpg",
-          "image_sha256": "d92b0d7702938696e63910f09867f248e86b9be74d14a244aa3a075935f7d52e",
-          "confidence": "E2",
-          "structured": {
-            "objects": [
-              {
-                "name": "三角形顶点",
-                "type": "点"
-              },
-              {
-                "name": "三角形边",
-                "type": "线段"
-              },
-              {
-                "name": "内部线段",
-                "type": "线段"
-              },
-              {
-                "name": "内部点",
-                "type": "点"
-              }
-            ],
-            "relations": [
-              {
-                "from": "三角形顶点",
-                "to": "三角形边",
-                "type": "连接"
-              },
-              {
-                "from": "内部点",
-                "to": "内部线段",
-                "type": "连接"
-              },
-              {
-                "from": "三角形边",
-                "to": "内部点",
-                "type": "连接"
-              },
-              {
-                "from": "内部线段",
-                "to": "三角形边",
-                "type": "连接"
-              }
-            ],
-            "coordinates": [
-              {
-                "name": "三角形顶点",
-                "values": [
-                  [
-                    5,
-                    0
-                  ],
-                  [
-                    2.5,
-                    3
-                  ],
-                  [
-                    7.5,
-                    3
-                  ]
-                ]
-              },
-              {
-                "name": "内部点",
-                "values": [
-                  [
-                    3.5,
-                    1.5
-                  ],
-                  [
-                    4.5,
-                    2
-                  ],
-                  [
-                    5.5,
-                    1.5
-                  ],
-                  [
-                    6,
-                    1.5
-                  ],
-                  [
-                    5,
-                    2
-                  ]
-                ]
-              },
-              {
-                "name": "内部线段端点",
-                "values": [
-                  [
-                    3.5,
-                    1.5
-                  ],
-                  [
-                    4.5,
-                    2
-                  ],
-                  [
-                    5.5,
-                    1.5
-                  ],
-                  [
-                    6,
-                    1.5
-                  ]
-                ]
-              }
-            ],
-            "ranges": [],
-            "text": [],
-            "uncertainties": [],
-            "confidence": "E2"
-          },
-          "source_provenance": null
-        },
-        {
-          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_458_559_504_606.jpg",
-          "image_sha256": "f2632efdc66a6c13bfa5acfc9c1201b1b58bf418dd7d75b8246395ce9ee4c82a",
-          "confidence": "E2",
-          "structured": {
-            "objects": [
-              "正方形"
-            ],
-            "relations": [
-              "正方形的四条边"
-            ],
-            "coordinates": [
-              [
-                0,
-                0
-              ],
-              [
-                0,
-                1
-              ],
-              [
-                1,
-                1
-              ],
-              [
-                1,
-                0
-              ]
-            ],
-            "ranges": [],
-            "text": [],
-            "uncertainties": [],
-            "confidence": "E2"
-          },
-          "source_provenance": null
-        },
-        {
-          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_557_526_635_604.jpg",
-          "image_sha256": "6eb34d835c64ab8188cfae4790f50406394721014d211229dfe841e2ffef81d9",
-          "confidence": "E2",
-          "structured": {
-            "objects": [
-              "正方形",
-              "内嵌小正方形"
-            ],
-            "relations": [],
-            "coordinates": [
-              [
-                11,
-                11
-              ],
-              [
-                11,
-                33
-              ],
-              [
-                33,
-                11
-              ],
-              [
-                33,
-                33
-              ],
-              [
-                19,
-                19
-              ],
-              [
-                23,
-                23
-              ]
-            ],
-            "ranges": [],
-            "text": [],
-            "uncertainties": [],
-            "confidence": "E2"
-          },
-          "source_provenance": null
-        },
-        {
-          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_689_494_799_604.jpg",
-          "image_sha256": "98205a1aa429f9d70cfd6c6b6372d3067fce4d47d31bed6817fc9b01f910c6f7",
-          "confidence": "E2",
-          "structured": {
-            "objects": [
-              "矩形框",
-              "内嵌矩形框"
-            ],
-            "relations": [],
-            "coordinates": [],
-            "ranges": [],
-            "text": [],
-            "uncertainties": [],
-            "confidence": "E2"
-          },
-          "source_provenance": null
-        },
-        {
-          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_447_734_517_805.jpg",
-          "image_sha256": "fc167d6b94ac64a9898f9b90a2e154be0ebf5fc081a91cdd0cc77ebe902bb2ce",
-          "confidence": "E2",
-          "structured": {
-            "objects": [],
-            "relations": [
-              "五边形顶点连接",
-              "边连接顶点"
-            ],
-            "coordinates": [
-              "顶点坐标",
-              "边端点坐标"
-            ],
-            "ranges": [],
-            "text": [],
-            "uncertainties": [],
-            "confidence": "E2"
-          },
-          "source_provenance": null
-        },
-        {
-          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_535_687_655_803.jpg",
-          "image_sha256": "7608763aa2f03dfa9d1c868d4d9455dc9b860a9d862c4254370874d2e68eed68",
-          "confidence": "E2",
-          "structured": {
-            "objects": [
-              {
-                "name": "五边形",
-                "type": "多边形"
-              },
-              {
-                "name": "内五边形",
-                "type": "多边形"
-              }
-            ],
-            "relations": [],
-            "coordinates": [
-              [
-                0,
-                0
-              ],
-              [
-                1,
-                1
-              ],
-              [
-                2,
-                0.5
-              ],
-              [
-                2,
-                0
-              ],
-              [
-                1.5,
-                0.2
-              ],
-              [
-                1,
-                0.5
-              ]
-            ],
-            "ranges": [],
-            "text": [],
-            "uncertainties": [],
-            "confidence": "E2"
-          },
-          "source_provenance": null
-        },
-        {
-          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_658_639_828_802.jpg",
-          "image_sha256": "35a0874815953b1f34c2b6764e965b1a1059a4e33ab3113d21a0e43b75295e3f",
-          "confidence": "E2",
-          "structured": {
-            "objects": [
-              "五边形",
-              "内嵌四边形",
-              "内嵌小四边形"
-            ],
-            "relations": [],
-            "coordinates": [],
-            "ranges": [],
-            "text": [],
-            "uncertainties": [],
-            "confidence": "E2"
-          },
-          "source_provenance": null
-        }
-      ],
-      "vision_sidecar": {
-        "objects": [],
-        "relations": [],
-        "coordinates": [],
-        "ranges": [],
-        "text": [
-          "3"
-        ],
-        "uncertainties": [],
-        "confidence": "E2"
-      },
-      "vision_source_provenance": []
+        "E1"
+      ]
     },
     {
-      "qid": "Q-fef3fcd3b24e82d7",
+      "qid": "Q-52fe385ca95d135a",
       "section": "4.1",
       "group": "B",
       "number": 8,
@@ -2970,7 +2332,7 @@
       "source_anchor": {
         "ocr_doc": 15,
         "pdf_page": 16,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_15.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_15.md"
       },
       "question_text": "8.（2025·河北期末）\n\n在数列 \\(\\{a_n\\}\\) 中，\\(a_1=0\\)，\\(a_{n+1}=a_n+\\ln\\left(1+\\frac{1}{n}\\right)\\)，则 \\(\\{a_n\\}\\) 的通项公式为（ ）\n\nA. \\(a_n=\\ln n\\)          B. \\(a_n=(n-1)\\ln(n+1)\\)\n\nC. \\(a_n=n\\ln n\\)        D. \\(a_n=\\ln n+n-1\\)",
       "image_refs": [],
@@ -2981,7 +2343,7 @@
       ]
     },
     {
-      "qid": "Q-15128671ee8b8ab8",
+      "qid": "Q-c56f07fe37827b22",
       "section": "4.1",
       "group": "B",
       "number": 9,
@@ -2989,7 +2351,7 @@
       "source_anchor": {
         "ocr_doc": 15,
         "pdf_page": 16,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_15.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_15.md"
       },
       "question_text": "9. (2025·云南期末)\n\n在数列 \\(\\{a_{n}\\}\\)中，若 \\(a_{1}=3\\)， \\(a_{n}=n(a_{n+1}-a_{n})\\)，则666是 \\(\\{a_{n}\\}\\)的（）\n\nA. 第111项 B. 第222项\n\nC. 第333项 D. 第666项",
       "image_refs": [],
@@ -3000,7 +2362,7 @@
       ]
     },
     {
-      "qid": "Q-207f12003d877445",
+      "qid": "Q-7076b579d6640560",
       "section": "4.1",
       "group": "B",
       "number": 10,
@@ -3008,7 +2370,7 @@
       "source_anchor": {
         "ocr_doc": 16,
         "pdf_page": 17,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_16.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_16.md"
       },
       "question_text": "10.（2023·安徽题·1）\n\n设数列\\(\\{a_n\\}\\)满足\\(a_1+2a_2+3a_3+\\cdots+na_n=2n-1(n\\in\\mathbb{N}^*)\\)，则数列\\(\\left\\{\\frac{a_n}{n+2}\\right\\}\\)的前10项和为（ ）\n\nA. \\(\\frac{131}{132}\\) B. \\(\\frac{135}{132}\\)\n\nC. \\(\\frac{175}{132}\\) D. \\(\\frac{109}{66}\\)",
       "image_refs": [],
@@ -3019,7 +2381,7 @@
       ]
     },
     {
-      "qid": "Q-5da9c0df4e2ad308",
+      "qid": "Q-d5337415229ed518",
       "section": "4.1",
       "group": "B",
       "number": 11,
@@ -3027,7 +2389,7 @@
       "source_anchor": {
         "ocr_doc": 16,
         "pdf_page": 17,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_16.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_16.md"
       },
       "question_text": "11.（2025·四川绵阳模拟）（多选）\n\n下列通项公式中，数列\\(\\{a_n\\}\\)是递增数列的是（ ）\n\nA. \\(a_n = 2n - 11\\) B. \\(a_n = -3n + 32\\)\n\nC. \\(a_n = 2 \\times \\left(\\frac{1}{3}\\right)^n\\) D. \\(a_n = 2 \\times 3^n\\)",
       "image_refs": [],
@@ -3038,7 +2400,7 @@
       ]
     },
     {
-      "qid": "Q-c3fc8adec90bab5e",
+      "qid": "Q-197fff2ccdd8aabe",
       "section": "4.1",
       "group": "B",
       "number": 12,
@@ -3046,7 +2408,7 @@
       "source_anchor": {
         "ocr_doc": 16,
         "pdf_page": 17,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_16.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_16.md"
       },
       "question_text": "12\\. （2025 · 全国模拟）\n\n已知数列 \\(\\{a_n\\}\\) 满足 \\(a_1 = a_2 = 2\\)，\\(a_{n+1} = |a_n - a_{n-1}|\\)，其中 \\(n \\in \\mathbb{N}^*\\) 且 \\(n \\geq 2\\)，求该数列的前 100 项和 \\(S_{100}\\)。",
       "image_refs": [],
@@ -3057,7 +2419,7 @@
       ]
     },
     {
-      "qid": "Q-b7bb016a47bf7045",
+      "qid": "Q-fd38217119fd3743",
       "section": "4.1",
       "group": "B",
       "number": 13,
@@ -3065,7 +2427,7 @@
       "source_anchor": {
         "ocr_doc": 17,
         "pdf_page": 18,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_17.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_17.md"
       },
       "question_text": "13.（2025·全国模拟）\n\n已知数列\\(\\{a_n\\}\\)满足\\(a_2=2\\)，\\(S_{n+1}+S_{n-1}=2S_n+\\)\n\n\\(\\log_2\\left(1+\\frac{1}{n}\\right)(n\\geq2)\\)，则\\(a_8=\\)（ ）\n\nA. \\(2\\sqrt{2}\\) B. 3\n\nC. 4 D. \\(4\\sqrt{2}\\)",
       "image_refs": [],
@@ -3076,7 +2438,7 @@
       ]
     },
     {
-      "qid": "Q-e68067574f4dcbe5",
+      "qid": "Q-c6fe6ac27f396124",
       "section": "4.1",
       "group": "B",
       "number": 14,
@@ -3084,7 +2446,7 @@
       "source_anchor": {
         "ocr_doc": 17,
         "pdf_page": 18,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_17.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_17.md"
       },
       "question_text": "14.（2025·全国模拟）\n\n已知数列 \\(\\{a_n\\}\\) 满足 \\(a_1=1\\)，\\(a_n=a_1+\\frac{1}{2}a_2+\\frac{1}{3}a_3+\\cdots\\)\n\n\\(+\\frac{1}{n-1}a_{n-1}(n\\geq2)\\)，若 \\(a_n=1005\\)，则 \\(n=\\)___.",
       "image_refs": [],
@@ -3095,7 +2457,7 @@
       ]
     },
     {
-      "qid": "Q-988f79f7f5fe3b79",
+      "qid": "Q-b66eb505c1cf2a31",
       "section": "4.1",
       "group": "B",
       "number": 15,
@@ -3103,7 +2465,7 @@
       "source_anchor": {
         "ocr_doc": 17,
         "pdf_page": 18,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_17.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_17.md"
       },
       "question_text": "15.（2025·）东模拟）\n\n记 \\(S_n\\)为首项为1的数列 \\(\\{a_n\\}\\)的前 \\(n\\)项和，且 \\(\\frac{S_n}{a_n} = n^2\\)，则 \\(S_{30} =\\)（ ）\n\nA.  \\(\\frac{60}{29}\\) B.  \\(\\frac{50}{29}\\)\n\nC.  \\(\\frac{60}{31}\\) D.  \\(\\frac{50}{31}\\)",
       "image_refs": [],
@@ -3114,7 +2476,7 @@
       ]
     },
     {
-      "qid": "Q-d4a04c7c13b1c1a2",
+      "qid": "Q-a334228e1a77aa69",
       "section": "4.1",
       "group": "B",
       "number": 16,
@@ -3122,7 +2484,7 @@
       "source_anchor": {
         "ocr_doc": 17,
         "pdf_page": 18,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_17.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_17.md"
       },
       "question_text": "16. (2025·天津北辰模拟)\n\n数列 \\(\\{a_n\\}\\) 的通项公式为 \\(a_n = n^2 - 2\\lambda n (n=1,2,\\cdots)\\)，若 \\(\\{a_n\\}\\) 为递增数列，则 \\(\\lambda\\) 的取值范围为 ___.",
       "image_refs": [],
@@ -3133,7 +2495,7 @@
       ]
     },
     {
-      "qid": "Q-04ca9261569ad999",
+      "qid": "Q-e1d03803b183463e",
       "section": "4.1",
       "group": "B",
       "number": 17,
@@ -3141,7 +2503,7 @@
       "source_anchor": {
         "ocr_doc": 18,
         "pdf_page": 19,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_18.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_18.md"
       },
       "question_text": "### 17 \\. （2025·广西桂林模拟）\n\n已知函数  \\(f(x)=\\begin{cases}(3-a)x-4, & x \\leq 8 \\\\ a^{x-7}, & x > 8\\end{cases}\\)，若数列  \\(\\{a_n\\}\\) 满足  \\(a_n = f(n)(n \\in \\mathbf{N}^*)\\) 且  \\(\\{a_n\\}\\) 是递增数列，则  \\(a\\) 的取值范围是（ ）\n\nA.  \\(\\left(\\frac{20}{9}, 3\\right)\\) \\quad B.  \\(\\left[\\frac{20}{9}, 3\\right)\\) \\quad C.  \\((2, 3)\\) \\quad D.  \\([2, 3)\\)",
       "image_refs": [],
@@ -3152,7 +2514,7 @@
       ]
     },
     {
-      "qid": "Q-ecc3ed36b1c96609",
+      "qid": "Q-8d8e0f6486934aae",
       "section": "4.1",
       "group": "B",
       "number": 18,
@@ -3160,7 +2522,7 @@
       "source_anchor": {
         "ocr_doc": 18,
         "pdf_page": 19,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_18.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_18.md"
       },
       "question_text": "### 18. （2025 · 全国模拟）\n\n在数列\\(\\{a_n\\}\\)中，\\(a_1=2\\)，\\(a_{n+1}=a_n+\\frac{1}{n(n+1)}\\)，求数列\\(\\{a_n\\}\\)的通项公式。",
       "image_refs": [],
@@ -3171,7 +2533,7 @@
       ]
     },
     {
-      "qid": "Q-9bc153493dbcb7f9",
+      "qid": "Q-c4a90438b5189bdb",
       "section": "4.1",
       "group": "B",
       "number": 19,
@@ -3179,7 +2541,7 @@
       "source_anchor": {
         "ocr_doc": 18,
         "pdf_page": 19,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_18.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_18.md"
       },
       "question_text": "### 19. （2025 · 辽宁模拟）\n\n设数列 \\(\\{a_n\\}\\) 满足 \\(a_1 > 0\\)，\\(a_{n+1} = a_n + \\frac{2}{a_n} (n \\in \\mathbb{N}^*)\\)，求证：\\(\\{a_n\\}\\) 是递增数列。",
       "image_refs": [],
@@ -3190,7 +2552,7 @@
       ]
     },
     {
-      "qid": "Q-3b8e037aeb952c48",
+      "qid": "Q-4918b89ce72b101d",
       "section": "4.1",
       "group": "B",
       "number": 20,
@@ -3198,7 +2560,7 @@
       "source_anchor": {
         "ocr_doc": 19,
         "pdf_page": 20,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_19.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_19.md"
       },
       "question_text": "20.（2025·广东肇庆模拟）\n\n已知数列  \\(\\{a_{n}\\}\\) 的前 n 项和  \\(S_{n}=\\frac{1}{2}(n^{2}+n)\\).\n\n（1）求数列 \\(\\{a_{n}\\}\\)的通项公式；\n\n（2）设数列 \\(\\left\\{\\frac{1}{a_{n}^{2}+a_{n}}\\right\\}\\)的前n项和为 \\(T_{n}\\)，求证： \\(T_{n}\\geq\\frac{1}{2}\\).",
       "image_refs": [],
@@ -3209,7 +2571,7 @@
       ]
     },
     {
-      "qid": "Q-6f36bd2e33aa9626",
+      "qid": "Q-a445105e146259ed",
       "section": "4.1",
       "group": "C",
       "number": 21,
@@ -3217,7 +2579,7 @@
       "source_anchor": {
         "ocr_doc": 19,
         "pdf_page": 20,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_19.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_19.md"
       },
       "question_text": "### 21. （2025·全国模拟）\n\n如果  \\(x = [x] + \\{x\\}\\)， \\([x] \\in \\mathbb{Z}\\)， \\(0 \\leq \\{x\\} < 1\\)，就称  \\([x]\\) 表示  \\(x\\) 的整数部分， \\(\\{x\\}\\) 表示  \\(x\\) 的小数部分。已知数列  \\(\\{a_n\\}\\) 满足  \\(a_1 = \\sqrt{5}\\)， \\(a_{n+1} = [a_n] + \\frac{2}{\\{a_n\\}}\\)，则  \\(a_{100} - a_{99}\\) 等于___。",
       "image_refs": [],
@@ -3228,7 +2590,7 @@
       ]
     },
     {
-      "qid": "Q-2e602d464119de52",
+      "qid": "Q-2f8d029cca329df7",
       "section": "4.1",
       "group": "C",
       "number": 22,
@@ -3236,7 +2598,7 @@
       "source_anchor": {
         "ocr_doc": 19,
         "pdf_page": 20,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_19.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_19.md"
       },
       "question_text": "### 22. （2025·重庆模拟）（多选）\n\n已知数列 \\(\\{a_n\\}\\) 的通项公式为 \\(a_n = \\frac{8^n(n+2)}{9^n}\\)，则（ ）\n\nA. \\(\\forall n \\in \\mathbb{N}^*\\), \\(a_{n+1} \\geq a_n\\)\n\nB. \\(\\exists m \\in \\mathbb{N}^*\\), \\(\\forall n \\in \\mathbb{N}^*\\), \\(a_n \\leq a_m\\)\n\nC. \\(\\exists m \\in \\mathbb{N}^*\\), \\(\\forall n \\in \\mathbb{N}^*\\), \\(a_n \\geq a_m\\)\n\nD. \\(\\exists m, n \\in \\mathbb{N}^*\\), \\(m \\neq n\\), \\(a_n = a_m\\)",
       "image_refs": [],
@@ -3247,7 +2609,7 @@
       ]
     },
     {
-      "qid": "Q-b6263050f900cb32",
+      "qid": "Q-1c0809a6335ed660",
       "section": "4.1",
       "group": "C",
       "number": 23,
@@ -3255,7 +2617,7 @@
       "source_anchor": {
         "ocr_doc": 20,
         "pdf_page": 21,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_20.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_20.md"
       },
       "question_text": "### 23 \\. (2025 · 北京通州期中)\n\n已知数列 \\(\\{a_n\\}\\) 的通项公式为 \\(a_n = [n \\cdot \\sqrt{2}]\\)，其中 \\([x]\\) 表示不超过实数 \\(x\\) 的最大整数，数列 \\(\\{b_n\\}\\) 的通项公式为 \\(b_n = 2^{n-1} (n \\in \\mathbb{N}^*)\\)。\n\n（1）写出数列 \\(\\{a_{n}\\}\\)的前6项；\n\n（2）试判断 \\(b_{6}\\)与 \\(b_{7}\\)是否为数列 \\(\\{a_{n}\\}\\)中的项，并说明理由.",
       "image_refs": [],
@@ -3277,5 +2639,8 @@
     "direct_variants": "question only; solution isolated",
     "abc_exercises": "question only; answer sidecar forbidden"
   },
-  "unresolved": []
+  "unresolved": [
+    "4.1-LI0afede61206c7a93:NEEDS_VISION_SIDECAR",
+    "Q-7a807fed0f895d14:NEEDS_VISION_SIDECAR"
+  ]
 }

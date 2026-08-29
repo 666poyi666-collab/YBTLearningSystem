@@ -4,7 +4,7 @@
   "section": "2.4",
   "status": "VERIFIED",
   "source": {
-    "ocr_root": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109",
+    "ocr_root": "data/ocr_live_current/second_chapter_109",
     "ocr_docs": [
       44,
       55
@@ -26,9 +26,12 @@
       "sequence": 1,
       "title": "类型I 点关于直线对称",
       "course_keys": [
-        "point_line_symmetry_upper"
+        "point_line_symmetry_upper",
+        "point_line_symmetry_lower"
       ],
-      "prerequisite_course_keys": [],
+      "prerequisite_course_keys": [
+        "point_line_distance"
+      ],
       "optional_course_keys": [],
       "knowledge_refs": [],
       "prerequisite_knowledge_refs": [],
@@ -66,7 +69,7 @@
           "example_number": null,
           "parent_example_number": 1,
           "role": "direct_variant",
-          "role_ref": null,
+          "role_ref": "类型I 点关于直线对称",
           "source_docs": [
             45
           ],
@@ -92,11 +95,11 @@
       "cycle_id": "2.4-cycle-2",
       "sequence": 2,
       "title": "类型Ⅱ 直线关于点对称",
-      "course_keys": [
-        "point_line_symmetry_lower"
-      ],
+      "course_keys": [],
       "prerequisite_course_keys": [
-        "point_line_symmetry_upper"
+        "point_line_distance",
+        "point_line_symmetry_upper",
+        "point_line_symmetry_lower"
       ],
       "optional_course_keys": [],
       "knowledge_refs": [],
@@ -130,7 +133,6 @@
       "direct_variants": [],
       "exercise_questions": [],
       "action_order": [
-        "watch_current_courses",
         "learn_each_current_example_then_attempt_its_direct_variants",
         "assess_current_cycle"
       ],
@@ -144,9 +146,11 @@
       "sequence": 3,
       "title": "类型Ⅲ 直线关于直线对称",
       "course_keys": [
-        "line_line_symmetry_upper"
+        "line_line_symmetry_upper",
+        "line_line_symmetry_lower"
       ],
       "prerequisite_course_keys": [
+        "point_line_distance",
         "point_line_symmetry_upper",
         "point_line_symmetry_lower"
       ],
@@ -186,7 +190,7 @@
           "example_number": null,
           "parent_example_number": 3,
           "role": "direct_variant",
-          "role_ref": null,
+          "role_ref": "类型Ⅲ 直线关于直线对称",
           "source_docs": [
             46,
             47
@@ -204,7 +208,7 @@
           "example_number": null,
           "parent_example_number": 3,
           "role": "direct_variant",
-          "role_ref": null,
+          "role_ref": "类型Ⅲ 直线关于直线对称",
           "source_docs": [
             47,
             48
@@ -231,13 +235,13 @@
       "cycle_id": "2.4-cycle-4",
       "sequence": 4,
       "title": "类型IV 入射光线与反射光线的对称问题",
-      "course_keys": [
-        "line_line_symmetry_lower"
-      ],
+      "course_keys": [],
       "prerequisite_course_keys": [
+        "point_line_distance",
         "point_line_symmetry_upper",
         "point_line_symmetry_lower",
-        "line_line_symmetry_upper"
+        "line_line_symmetry_upper",
+        "line_line_symmetry_lower"
       ],
       "optional_course_keys": [],
       "knowledge_refs": [],
@@ -275,7 +279,7 @@
           "example_number": null,
           "parent_example_number": 4,
           "role": "direct_variant",
-          "role_ref": null,
+          "role_ref": "类型IV 入射光线与反射光线的对称问题",
           "source_docs": [
             48,
             49
@@ -293,7 +297,7 @@
           "example_number": null,
           "parent_example_number": 4,
           "role": "direct_variant",
-          "role_ref": null,
+          "role_ref": "类型IV 入射光线与反射光线的对称问题",
           "source_docs": [
             49
           ],
@@ -310,7 +314,7 @@
           "example_number": null,
           "parent_example_number": 4,
           "role": "direct_variant",
-          "role_ref": null,
+          "role_ref": "类型IV 入射光线与反射光线的对称问题",
           "source_docs": [
             49,
             50
@@ -324,7 +328,6 @@
       ],
       "exercise_questions": [],
       "action_order": [
-        "watch_current_courses",
         "learn_each_current_example_then_attempt_its_direct_variants",
         "assess_current_cycle"
       ],
@@ -341,6 +344,7 @@
         "line_family_fixed_point"
       ],
       "prerequisite_course_keys": [
+        "point_line_distance",
         "point_line_symmetry_upper",
         "point_line_symmetry_lower",
         "line_line_symmetry_upper",
@@ -382,7 +386,7 @@
           "example_number": null,
           "parent_example_number": 5,
           "role": "direct_variant",
-          "role_ref": null,
+          "role_ref": "类型V 利用对称解决线段的和、差最值问题",
           "source_docs": [
             50,
             51
@@ -400,7 +404,7 @@
           "example_number": null,
           "parent_example_number": 5,
           "role": "direct_variant",
-          "role_ref": null,
+          "role_ref": "类型V 利用对称解决线段的和、差最值问题",
           "source_docs": [
             51
           ],
@@ -428,6 +432,7 @@
       "title": "A组 夯实基础",
       "course_keys": [],
       "prerequisite_course_keys": [
+        "point_line_distance",
         "point_line_symmetry_upper",
         "point_line_symmetry_lower",
         "line_line_symmetry_upper",
@@ -437,20 +442,14 @@
       "optional_course_keys": [],
       "knowledge_refs": [],
       "prerequisite_knowledge_refs": [],
-      "type_refs": [
-        "类型I 点关于直线对称",
-        "类型Ⅱ 直线关于点对称",
-        "类型Ⅲ 直线关于直线对称",
-        "类型IV 入射光线与反射光线的对称问题",
-        "类型V 利用对称解决线段的和、差最值问题"
-      ],
+      "type_refs": [],
       "bridge_unit_ids": [],
       "method_checkpoints": [],
       "worked_examples": [],
       "direct_variants": [],
       "exercise_questions": [
         {
-          "qid": "Q-5e0715a92ba1f49a",
+          "qid": "Q-686ef0610485533c",
           "section": "2.4",
           "group": "A",
           "number": 1,
@@ -458,7 +457,7 @@
           "source_anchor": {
             "ocr_doc": 51,
             "pdf_page": 52,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_51.md"
+            "file": "data/ocr_live_current/second_chapter_109/doc_51.md"
           },
           "question_text": "1. (2024 · 全国模拟)\n\n已知直线 \\(l\\) 与直线 \\(l': 2x - 3y + 4 = 0\\) 关于直线 \\(x = 1\\) 对称，则直线 \\(l\\) 的方程为___。",
           "image_refs": [],
@@ -469,7 +468,7 @@
           ]
         },
         {
-          "qid": "Q-046d756bd8aa60e0",
+          "qid": "Q-000b6754e9fadbbc",
           "section": "2.4",
           "group": "A",
           "number": 2,
@@ -477,7 +476,7 @@
           "source_anchor": {
             "ocr_doc": 52,
             "pdf_page": 53,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_52.md"
+            "file": "data/ocr_live_current/second_chapter_109/doc_52.md"
           },
           "question_text": "2.（2025·贵州贵阳模拟）\n\n点 \\(P(2,3)\\)关于直线 \\(l:x+y+2=0\\)的对称点的坐标为（）\n\nA. \\((-3,-2)\\) B. \\((-2,-3)\\)\n\nC. \\((-4,-5)\\) D. \\((-5,-4)\\)",
           "image_refs": [],
@@ -488,7 +487,7 @@
           ]
         },
         {
-          "qid": "Q-4e86290f3b089f0f",
+          "qid": "Q-52c5c8e1617d43df",
           "section": "2.4",
           "group": "A",
           "number": 3,
@@ -496,7 +495,7 @@
           "source_anchor": {
             "ocr_doc": 52,
             "pdf_page": 53,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_52.md"
+            "file": "data/ocr_live_current/second_chapter_109/doc_52.md"
           },
           "question_text": "3.（2025·河北唐山期中）\n\n一条光线从点  \\(P(0,1)\\) 射出，与 x 轴相交于点  \\(Q(2,0)\\)，经 x 轴反射，则反射光线所在直线的方程为（）\n\nA. x-2y-1=0 B.  \\(x-2y+1=0\\)\n\nC.  \\(x-2y-2=0\\) D.  \\(x+2y-2=0\\)",
           "image_refs": [],
@@ -507,7 +506,7 @@
           ]
         },
         {
-          "qid": "Q-c042e341306a52c6",
+          "qid": "Q-8ba0e365a4bb943d",
           "section": "2.4",
           "group": "A",
           "number": 4,
@@ -515,13 +514,13 @@
           "source_anchor": {
             "ocr_doc": 52,
             "pdf_page": 53,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_52.md"
+            "file": "data/ocr_live_current/second_chapter_109/doc_52.md"
           },
           "question_text": "4.（2024·安徽芜湖期中）\n\n直线 \\(l_{1}:2x-y+1=0\\)关于直线 \\(l:x+y+2=0\\)对称的直线 \\(l_{2}\\)的方程为___。\n\n",
           "image_refs": [
             {
               "ref": "imgs/img_in_image_box_275_803_912_881.jpg",
-              "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\imgs\\img_in_image_box_275_803_912_881.jpg",
+              "path": "data/ocr_live_current/second_chapter_109/imgs/img_in_image_box_275_803_912_881.jpg",
               "exists": true
             }
           ],
@@ -579,6 +578,7 @@
       "title": "B组 强化能力",
       "course_keys": [],
       "prerequisite_course_keys": [
+        "point_line_distance",
         "point_line_symmetry_upper",
         "point_line_symmetry_lower",
         "line_line_symmetry_upper",
@@ -588,20 +588,14 @@
       "optional_course_keys": [],
       "knowledge_refs": [],
       "prerequisite_knowledge_refs": [],
-      "type_refs": [
-        "类型I 点关于直线对称",
-        "类型Ⅱ 直线关于点对称",
-        "类型Ⅲ 直线关于直线对称",
-        "类型IV 入射光线与反射光线的对称问题",
-        "类型V 利用对称解决线段的和、差最值问题"
-      ],
+      "type_refs": [],
       "bridge_unit_ids": [],
       "method_checkpoints": [],
       "worked_examples": [],
       "direct_variants": [],
       "exercise_questions": [
         {
-          "qid": "Q-9d23d960120846c3",
+          "qid": "Q-12532ef01c76c81d",
           "section": "2.4",
           "group": "B",
           "number": 5,
@@ -609,7 +603,7 @@
           "source_anchor": {
             "ocr_doc": 52,
             "pdf_page": 53,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_52.md",
+            "file": "data/ocr_live_current/second_chapter_109/doc_52.md",
             "recovery": "PADDLE_OCR_TEXT_B_GROUP_HEADER_THEN_B5_THEN_B6",
             "recovery_source_kind": "primary_ocr"
           },
@@ -624,7 +618,7 @@
           "recovery_reason": "printed_number_missing_from_paddle_ocr_after_b_group_header"
         },
         {
-          "qid": "Q-195b4c8f352c1709",
+          "qid": "Q-fe8a53956be22904",
           "section": "2.4",
           "group": "B",
           "number": 6,
@@ -632,7 +626,7 @@
           "source_anchor": {
             "ocr_doc": 52,
             "pdf_page": 53,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_52.md"
+            "file": "data/ocr_live_current/second_chapter_109/doc_52.md"
           },
           "question_text": "6.（2025·重庆模拟）\n\n直线 \\(l_1:2x - y + 3 = 0\\)关于点 \\(P(1,2)\\)对称的直线 \\(l_2\\)的方程为___。",
           "image_refs": [],
@@ -643,7 +637,7 @@
           ]
         },
         {
-          "qid": "Q-63a765605277cc49",
+          "qid": "Q-fdeec324d405409e",
           "section": "2.4",
           "group": "B",
           "number": 7,
@@ -651,7 +645,7 @@
           "source_anchor": {
             "ocr_doc": 52,
             "pdf_page": 53,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_52.md"
+            "file": "data/ocr_live_current/second_chapter_109/doc_52.md"
           },
           "question_text": "7.（2025·江苏苏州期末）\n\n直线 \\(l_{1}\\): x - y - 2 = 0 关于直线 \\(l: 3x - y + 3 = 0\\) 对称的直线 \\(l_{2}\\)的方程为（）\n\nA. 7x - y - 22 = 0 B.  \\(7x + y + 22 = 0\\)\n\nC.  \\(6x - y + 22 = 0\\) D.  \\(6x + y + 22 = 0\\)",
           "image_refs": [],
@@ -662,7 +656,7 @@
           ]
         },
         {
-          "qid": "Q-50c0713af3956417",
+          "qid": "Q-f11cdadf1d84082b",
           "section": "2.4",
           "group": "B",
           "number": 8,
@@ -670,7 +664,7 @@
           "source_anchor": {
             "ocr_doc": 53,
             "pdf_page": 54,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_53.md"
+            "file": "data/ocr_live_current/second_chapter_109/doc_53.md"
           },
           "question_text": "### 8. （2025 · 辽宁大连期中）\n\n已知直线  \\(l_1: 2x - y + 1 = 0\\)， \\(l_2: x - 2y - 1 = 0\\)，若直线  \\(l_1\\) 与  \\(l_2\\) 关于直线  \\(l\\) 对称，则直线  \\(l\\) 的方程为___。",
           "image_refs": [],
@@ -681,7 +675,7 @@
           ]
         },
         {
-          "qid": "Q-cad2df80833841f2",
+          "qid": "Q-342090e484b73156",
           "section": "2.4",
           "group": "B",
           "number": 9,
@@ -689,7 +683,7 @@
           "source_anchor": {
             "ocr_doc": 53,
             "pdf_page": 54,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_53.md"
+            "file": "data/ocr_live_current/second_chapter_109/doc_53.md"
           },
           "question_text": "### 9. （2025·广东广州期中）\n\n直线 \\(l:x-y-1=0\\)上的一点P到 \\(A(4,1)\\)与 \\(B(0,4)\\)的距离之差的绝对值的最大值为___.",
           "image_refs": [],
@@ -700,7 +694,7 @@
           ]
         },
         {
-          "qid": "Q-40323955f7ae810b",
+          "qid": "Q-42dce5b9f38e4d56",
           "section": "2.4",
           "group": "B",
           "number": 10,
@@ -708,7 +702,7 @@
           "source_anchor": {
             "ocr_doc": 53,
             "pdf_page": 54,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_53.md"
+            "file": "data/ocr_live_current/second_chapter_109/doc_53.md"
           },
           "question_text": "### 10. （2025·辽宁沈阳期中）\n\n已知\\(\\triangle ABC\\)中，顶点\\(A(3,-5)\\)，\\(AB\\)边上的高所在直线与直线\\(l_1:x-2y+2=0\\)平行，\\(\\angle ABC\\)的平分线所在直线为\\(l_2:x-y-5=0\\)。\n\n（1）求顶点B的坐标；\n\n（2）求边 BC 所在直线的一般式方程.",
           "image_refs": [],
@@ -719,7 +713,7 @@
           ]
         },
         {
-          "qid": "Q-0e2d3902e9951265",
+          "qid": "Q-052da827fab67dc3",
           "section": "2.4",
           "group": "B",
           "number": 11,
@@ -727,7 +721,7 @@
           "source_anchor": {
             "ocr_doc": 53,
             "pdf_page": 54,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_53.md"
+            "file": "data/ocr_live_current/second_chapter_109/doc_53.md"
           },
           "question_text": "### 11. （2025·四川绵阳期中）\n\n已知两直线  \\(l_{1}: x - y - 1 = 0\\)， \\(l_{2}: x + y - 5 = 0\\)。\n\n（1）求过两直线的交点，且垂直于直线3x+4y\n\n-5=0 的直线 l 的方程；\n\n（2）已知两点  \\(A(-1,1)\\)， \\(B(0,2)\\)，动点  \\(P\\) 在直线  \\(l_1\\) 上运动，求  \\(|PA| + |PB|\\) 的最小值.",
           "image_refs": [],
@@ -753,6 +747,7 @@
       "title": "C组 拓展提升",
       "course_keys": [],
       "prerequisite_course_keys": [
+        "point_line_distance",
         "point_line_symmetry_upper",
         "point_line_symmetry_lower",
         "line_line_symmetry_upper",
@@ -762,20 +757,14 @@
       "optional_course_keys": [],
       "knowledge_refs": [],
       "prerequisite_knowledge_refs": [],
-      "type_refs": [
-        "类型I 点关于直线对称",
-        "类型Ⅱ 直线关于点对称",
-        "类型Ⅲ 直线关于直线对称",
-        "类型IV 入射光线与反射光线的对称问题",
-        "类型V 利用对称解决线段的和、差最值问题"
-      ],
+      "type_refs": [],
       "bridge_unit_ids": [],
       "method_checkpoints": [],
       "worked_examples": [],
       "direct_variants": [],
       "exercise_questions": [
         {
-          "qid": "Q-c78565c548461f11",
+          "qid": "Q-6ac5740a0fa93753",
           "section": "2.4",
           "group": "C",
           "number": 12,
@@ -783,7 +772,7 @@
           "source_anchor": {
             "ocr_doc": 54,
             "pdf_page": 55,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_54.md"
+            "file": "data/ocr_live_current/second_chapter_109/doc_54.md"
           },
           "question_text": "### 12. （2025·上海奉贤期中）\n\n已知点  \\(A(-2,-3)\\)，在 y 轴和直线 y=x 上各取一点 B，C，则 \\(\\triangle ABC\\)的周长的最小值为 ___.",
           "image_refs": [],
@@ -794,7 +783,7 @@
           ]
         },
         {
-          "qid": "Q-a263490d9456aef4",
+          "qid": "Q-c203ad2b1eaebe82",
           "section": "2.4",
           "group": "C",
           "number": 13,
@@ -802,7 +791,7 @@
           "source_anchor": {
             "ocr_doc": 54,
             "pdf_page": 55,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_54.md"
+            "file": "data/ocr_live_current/second_chapter_109/doc_54.md"
           },
           "question_text": "### 13. （2025·海南期中）\n\n在平面直角坐标系中，动点  \\(P\\)， \\(Q\\) 关于直线  \\(l: y = -x\\) 对称（ \\(P\\) 在  \\(Q\\) 上方），且  \\(|PQ| = \\sqrt{2}\\)， \\(M(0,2)\\)， \\(N(0,-2)\\)，则  \\(|PM| + |QN|\\) 的最小值为___。",
           "image_refs": [],
@@ -813,7 +802,7 @@
           ]
         },
         {
-          "qid": "Q-baeb75215619f586",
+          "qid": "Q-001ac42a438304a2",
           "section": "2.4",
           "group": "C",
           "number": 14,
@@ -821,13 +810,13 @@
           "source_anchor": {
             "ocr_doc": 54,
             "pdf_page": 55,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_54.md"
+            "file": "data/ocr_live_current/second_chapter_109/doc_54.md"
           },
           "question_text": "### 14. （2025 · 江苏无锡模拟）\n\n如图，已知  \\(A(4,0)\\)， \\(B(0,4)\\)， \\(O(0,0)\\)，若光线  \\(l\\) 从  \\(P(2,0)\\) 射出，被直线  \\(AB\\) 反射后到直线  \\(OB\\) 上，再经直线  \\(OB\\) 反射回到点  \\(P\\)，则光线  \\(l\\) 所在直线的方程为（ ）\n\nA.  \\(y = 2x - 4\\)  \n\nB.  \\(y = \\frac{5}{2}x - 5\\)  \n\nC.  \\(y = 3x - 6\\)  \n\nD.  \\(y = 4x - 8\\)\n\n",
           "image_refs": [
             {
               "ref": "imgs/img_in_image_box_516_1135_706_1312.jpg",
-              "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\imgs\\img_in_image_box_516_1135_706_1312.jpg",
+              "path": "data/ocr_live_current/second_chapter_109/imgs/img_in_image_box_516_1135_706_1312.jpg",
               "exists": true
             }
           ],
@@ -908,7 +897,7 @@
           "vision_source_provenance": []
         },
         {
-          "qid": "Q-5eb69e4cc4e8a123",
+          "qid": "Q-11363f2287039519",
           "section": "2.4",
           "group": "C",
           "number": 15,
@@ -916,13 +905,13 @@
           "source_anchor": {
             "ocr_doc": 55,
             "pdf_page": 56,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_55.md"
+            "file": "data/ocr_live_current/second_chapter_109/doc_55.md"
           },
           "question_text": "15.（2025 · 江苏模拟）\n\n平面直角坐标系中，矩形的四个顶点为 \\(O(0,0)\\)， \\(A(8,0)\\)， \\(B(8,6)\\)， \\(C(0,6)\\)，光线从 \\(OA\\)边上一点 \\(P_0(4,0)\\)沿与 \\(x\\)轴正向成 \\(\\theta\\)角的方向发射到 \\(AB\\)边上的点 \\(P_1\\)，被 \\(AB\\)反射到 \\(BC\\)上的点 \\(P_2\\)，再被 \\(BC\\)反射到 \\(OC\\)上的点 \\(P_3\\)，最后被 \\(OC\\)反射到 \\(x\\)轴上的点 \\(P_4(t,0)\\)，若 \\(t\\in(4,8)\\)，则 \\(\\tan\\theta\\)的取值范围是___。\n\n",
           "image_refs": [
             {
               "ref": "imgs/img_in_image_box_489_301_727_483.jpg",
-              "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\imgs\\img_in_image_box_489_301_727_483.jpg",
+              "path": "data/ocr_live_current/second_chapter_109/imgs/img_in_image_box_489_301_727_483.jpg",
               "exists": true
             }
           ],
@@ -1112,7 +1101,7 @@
       "example_number": null,
       "parent_example_number": 1,
       "role": "direct_variant",
-      "role_ref": null,
+      "role_ref": "类型I 点关于直线对称",
       "source_docs": [
         45
       ],
@@ -1129,7 +1118,7 @@
       "example_number": null,
       "parent_example_number": 3,
       "role": "direct_variant",
-      "role_ref": null,
+      "role_ref": "类型Ⅲ 直线关于直线对称",
       "source_docs": [
         46,
         47
@@ -1147,7 +1136,7 @@
       "example_number": null,
       "parent_example_number": 3,
       "role": "direct_variant",
-      "role_ref": null,
+      "role_ref": "类型Ⅲ 直线关于直线对称",
       "source_docs": [
         47,
         48
@@ -1165,7 +1154,7 @@
       "example_number": null,
       "parent_example_number": 4,
       "role": "direct_variant",
-      "role_ref": null,
+      "role_ref": "类型IV 入射光线与反射光线的对称问题",
       "source_docs": [
         48,
         49
@@ -1183,7 +1172,7 @@
       "example_number": null,
       "parent_example_number": 4,
       "role": "direct_variant",
-      "role_ref": null,
+      "role_ref": "类型IV 入射光线与反射光线的对称问题",
       "source_docs": [
         49
       ],
@@ -1200,7 +1189,7 @@
       "example_number": null,
       "parent_example_number": 4,
       "role": "direct_variant",
-      "role_ref": null,
+      "role_ref": "类型IV 入射光线与反射光线的对称问题",
       "source_docs": [
         49,
         50
@@ -1218,7 +1207,7 @@
       "example_number": null,
       "parent_example_number": 5,
       "role": "direct_variant",
-      "role_ref": null,
+      "role_ref": "类型V 利用对称解决线段的和、差最值问题",
       "source_docs": [
         50,
         51
@@ -1236,7 +1225,7 @@
       "example_number": null,
       "parent_example_number": 5,
       "role": "direct_variant",
-      "role_ref": null,
+      "role_ref": "类型V 利用对称解决线段的和、差最值问题",
       "source_docs": [
         51
       ],
@@ -1250,7 +1239,7 @@
   "deduplicated_learning_items": [],
   "exercise_questions": [
     {
-      "qid": "Q-5e0715a92ba1f49a",
+      "qid": "Q-686ef0610485533c",
       "section": "2.4",
       "group": "A",
       "number": 1,
@@ -1258,7 +1247,7 @@
       "source_anchor": {
         "ocr_doc": 51,
         "pdf_page": 52,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_51.md"
+        "file": "data/ocr_live_current/second_chapter_109/doc_51.md"
       },
       "question_text": "1. (2024 · 全国模拟)\n\n已知直线 \\(l\\) 与直线 \\(l': 2x - 3y + 4 = 0\\) 关于直线 \\(x = 1\\) 对称，则直线 \\(l\\) 的方程为___。",
       "image_refs": [],
@@ -1269,7 +1258,7 @@
       ]
     },
     {
-      "qid": "Q-046d756bd8aa60e0",
+      "qid": "Q-000b6754e9fadbbc",
       "section": "2.4",
       "group": "A",
       "number": 2,
@@ -1277,7 +1266,7 @@
       "source_anchor": {
         "ocr_doc": 52,
         "pdf_page": 53,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_52.md"
+        "file": "data/ocr_live_current/second_chapter_109/doc_52.md"
       },
       "question_text": "2.（2025·贵州贵阳模拟）\n\n点 \\(P(2,3)\\)关于直线 \\(l:x+y+2=0\\)的对称点的坐标为（）\n\nA. \\((-3,-2)\\) B. \\((-2,-3)\\)\n\nC. \\((-4,-5)\\) D. \\((-5,-4)\\)",
       "image_refs": [],
@@ -1288,7 +1277,7 @@
       ]
     },
     {
-      "qid": "Q-4e86290f3b089f0f",
+      "qid": "Q-52c5c8e1617d43df",
       "section": "2.4",
       "group": "A",
       "number": 3,
@@ -1296,7 +1285,7 @@
       "source_anchor": {
         "ocr_doc": 52,
         "pdf_page": 53,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_52.md"
+        "file": "data/ocr_live_current/second_chapter_109/doc_52.md"
       },
       "question_text": "3.（2025·河北唐山期中）\n\n一条光线从点  \\(P(0,1)\\) 射出，与 x 轴相交于点  \\(Q(2,0)\\)，经 x 轴反射，则反射光线所在直线的方程为（）\n\nA. x-2y-1=0 B.  \\(x-2y+1=0\\)\n\nC.  \\(x-2y-2=0\\) D.  \\(x+2y-2=0\\)",
       "image_refs": [],
@@ -1307,7 +1296,7 @@
       ]
     },
     {
-      "qid": "Q-c042e341306a52c6",
+      "qid": "Q-8ba0e365a4bb943d",
       "section": "2.4",
       "group": "A",
       "number": 4,
@@ -1315,13 +1304,13 @@
       "source_anchor": {
         "ocr_doc": 52,
         "pdf_page": 53,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_52.md"
+        "file": "data/ocr_live_current/second_chapter_109/doc_52.md"
       },
       "question_text": "4.（2024·安徽芜湖期中）\n\n直线 \\(l_{1}:2x-y+1=0\\)关于直线 \\(l:x+y+2=0\\)对称的直线 \\(l_{2}\\)的方程为___。\n\n",
       "image_refs": [
         {
           "ref": "imgs/img_in_image_box_275_803_912_881.jpg",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\imgs\\img_in_image_box_275_803_912_881.jpg",
+          "path": "data/ocr_live_current/second_chapter_109/imgs/img_in_image_box_275_803_912_881.jpg",
           "exists": true
         }
       ],
@@ -1364,7 +1353,7 @@
       "vision_source_provenance": []
     },
     {
-      "qid": "Q-9d23d960120846c3",
+      "qid": "Q-12532ef01c76c81d",
       "section": "2.4",
       "group": "B",
       "number": 5,
@@ -1372,7 +1361,7 @@
       "source_anchor": {
         "ocr_doc": 52,
         "pdf_page": 53,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_52.md",
+        "file": "data/ocr_live_current/second_chapter_109/doc_52.md",
         "recovery": "PADDLE_OCR_TEXT_B_GROUP_HEADER_THEN_B5_THEN_B6",
         "recovery_source_kind": "primary_ocr"
       },
@@ -1387,7 +1376,7 @@
       "recovery_reason": "printed_number_missing_from_paddle_ocr_after_b_group_header"
     },
     {
-      "qid": "Q-195b4c8f352c1709",
+      "qid": "Q-fe8a53956be22904",
       "section": "2.4",
       "group": "B",
       "number": 6,
@@ -1395,7 +1384,7 @@
       "source_anchor": {
         "ocr_doc": 52,
         "pdf_page": 53,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_52.md"
+        "file": "data/ocr_live_current/second_chapter_109/doc_52.md"
       },
       "question_text": "6.（2025·重庆模拟）\n\n直线 \\(l_1:2x - y + 3 = 0\\)关于点 \\(P(1,2)\\)对称的直线 \\(l_2\\)的方程为___。",
       "image_refs": [],
@@ -1406,7 +1395,7 @@
       ]
     },
     {
-      "qid": "Q-63a765605277cc49",
+      "qid": "Q-fdeec324d405409e",
       "section": "2.4",
       "group": "B",
       "number": 7,
@@ -1414,7 +1403,7 @@
       "source_anchor": {
         "ocr_doc": 52,
         "pdf_page": 53,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_52.md"
+        "file": "data/ocr_live_current/second_chapter_109/doc_52.md"
       },
       "question_text": "7.（2025·江苏苏州期末）\n\n直线 \\(l_{1}\\): x - y - 2 = 0 关于直线 \\(l: 3x - y + 3 = 0\\) 对称的直线 \\(l_{2}\\)的方程为（）\n\nA. 7x - y - 22 = 0 B.  \\(7x + y + 22 = 0\\)\n\nC.  \\(6x - y + 22 = 0\\) D.  \\(6x + y + 22 = 0\\)",
       "image_refs": [],
@@ -1425,7 +1414,7 @@
       ]
     },
     {
-      "qid": "Q-50c0713af3956417",
+      "qid": "Q-f11cdadf1d84082b",
       "section": "2.4",
       "group": "B",
       "number": 8,
@@ -1433,7 +1422,7 @@
       "source_anchor": {
         "ocr_doc": 53,
         "pdf_page": 54,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_53.md"
+        "file": "data/ocr_live_current/second_chapter_109/doc_53.md"
       },
       "question_text": "### 8. （2025 · 辽宁大连期中）\n\n已知直线  \\(l_1: 2x - y + 1 = 0\\)， \\(l_2: x - 2y - 1 = 0\\)，若直线  \\(l_1\\) 与  \\(l_2\\) 关于直线  \\(l\\) 对称，则直线  \\(l\\) 的方程为___。",
       "image_refs": [],
@@ -1444,7 +1433,7 @@
       ]
     },
     {
-      "qid": "Q-cad2df80833841f2",
+      "qid": "Q-342090e484b73156",
       "section": "2.4",
       "group": "B",
       "number": 9,
@@ -1452,7 +1441,7 @@
       "source_anchor": {
         "ocr_doc": 53,
         "pdf_page": 54,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_53.md"
+        "file": "data/ocr_live_current/second_chapter_109/doc_53.md"
       },
       "question_text": "### 9. （2025·广东广州期中）\n\n直线 \\(l:x-y-1=0\\)上的一点P到 \\(A(4,1)\\)与 \\(B(0,4)\\)的距离之差的绝对值的最大值为___.",
       "image_refs": [],
@@ -1463,7 +1452,7 @@
       ]
     },
     {
-      "qid": "Q-40323955f7ae810b",
+      "qid": "Q-42dce5b9f38e4d56",
       "section": "2.4",
       "group": "B",
       "number": 10,
@@ -1471,7 +1460,7 @@
       "source_anchor": {
         "ocr_doc": 53,
         "pdf_page": 54,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_53.md"
+        "file": "data/ocr_live_current/second_chapter_109/doc_53.md"
       },
       "question_text": "### 10. （2025·辽宁沈阳期中）\n\n已知\\(\\triangle ABC\\)中，顶点\\(A(3,-5)\\)，\\(AB\\)边上的高所在直线与直线\\(l_1:x-2y+2=0\\)平行，\\(\\angle ABC\\)的平分线所在直线为\\(l_2:x-y-5=0\\)。\n\n（1）求顶点B的坐标；\n\n（2）求边 BC 所在直线的一般式方程.",
       "image_refs": [],
@@ -1482,7 +1471,7 @@
       ]
     },
     {
-      "qid": "Q-0e2d3902e9951265",
+      "qid": "Q-052da827fab67dc3",
       "section": "2.4",
       "group": "B",
       "number": 11,
@@ -1490,7 +1479,7 @@
       "source_anchor": {
         "ocr_doc": 53,
         "pdf_page": 54,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_53.md"
+        "file": "data/ocr_live_current/second_chapter_109/doc_53.md"
       },
       "question_text": "### 11. （2025·四川绵阳期中）\n\n已知两直线  \\(l_{1}: x - y - 1 = 0\\)， \\(l_{2}: x + y - 5 = 0\\)。\n\n（1）求过两直线的交点，且垂直于直线3x+4y\n\n-5=0 的直线 l 的方程；\n\n（2）已知两点  \\(A(-1,1)\\)， \\(B(0,2)\\)，动点  \\(P\\) 在直线  \\(l_1\\) 上运动，求  \\(|PA| + |PB|\\) 的最小值.",
       "image_refs": [],
@@ -1501,7 +1490,7 @@
       ]
     },
     {
-      "qid": "Q-c78565c548461f11",
+      "qid": "Q-6ac5740a0fa93753",
       "section": "2.4",
       "group": "C",
       "number": 12,
@@ -1509,7 +1498,7 @@
       "source_anchor": {
         "ocr_doc": 54,
         "pdf_page": 55,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_54.md"
+        "file": "data/ocr_live_current/second_chapter_109/doc_54.md"
       },
       "question_text": "### 12. （2025·上海奉贤期中）\n\n已知点  \\(A(-2,-3)\\)，在 y 轴和直线 y=x 上各取一点 B，C，则 \\(\\triangle ABC\\)的周长的最小值为 ___.",
       "image_refs": [],
@@ -1520,7 +1509,7 @@
       ]
     },
     {
-      "qid": "Q-a263490d9456aef4",
+      "qid": "Q-c203ad2b1eaebe82",
       "section": "2.4",
       "group": "C",
       "number": 13,
@@ -1528,7 +1517,7 @@
       "source_anchor": {
         "ocr_doc": 54,
         "pdf_page": 55,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_54.md"
+        "file": "data/ocr_live_current/second_chapter_109/doc_54.md"
       },
       "question_text": "### 13. （2025·海南期中）\n\n在平面直角坐标系中，动点  \\(P\\)， \\(Q\\) 关于直线  \\(l: y = -x\\) 对称（ \\(P\\) 在  \\(Q\\) 上方），且  \\(|PQ| = \\sqrt{2}\\)， \\(M(0,2)\\)， \\(N(0,-2)\\)，则  \\(|PM| + |QN|\\) 的最小值为___。",
       "image_refs": [],
@@ -1539,7 +1528,7 @@
       ]
     },
     {
-      "qid": "Q-baeb75215619f586",
+      "qid": "Q-001ac42a438304a2",
       "section": "2.4",
       "group": "C",
       "number": 14,
@@ -1547,13 +1536,13 @@
       "source_anchor": {
         "ocr_doc": 54,
         "pdf_page": 55,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_54.md"
+        "file": "data/ocr_live_current/second_chapter_109/doc_54.md"
       },
       "question_text": "### 14. （2025 · 江苏无锡模拟）\n\n如图，已知  \\(A(4,0)\\)， \\(B(0,4)\\)， \\(O(0,0)\\)，若光线  \\(l\\) 从  \\(P(2,0)\\) 射出，被直线  \\(AB\\) 反射后到直线  \\(OB\\) 上，再经直线  \\(OB\\) 反射回到点  \\(P\\)，则光线  \\(l\\) 所在直线的方程为（ ）\n\nA.  \\(y = 2x - 4\\)  \n\nB.  \\(y = \\frac{5}{2}x - 5\\)  \n\nC.  \\(y = 3x - 6\\)  \n\nD.  \\(y = 4x - 8\\)\n\n",
       "image_refs": [
         {
           "ref": "imgs/img_in_image_box_516_1135_706_1312.jpg",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\imgs\\img_in_image_box_516_1135_706_1312.jpg",
+          "path": "data/ocr_live_current/second_chapter_109/imgs/img_in_image_box_516_1135_706_1312.jpg",
           "exists": true
         }
       ],
@@ -1634,7 +1623,7 @@
       "vision_source_provenance": []
     },
     {
-      "qid": "Q-5eb69e4cc4e8a123",
+      "qid": "Q-11363f2287039519",
       "section": "2.4",
       "group": "C",
       "number": 15,
@@ -1642,13 +1631,13 @@
       "source_anchor": {
         "ocr_doc": 55,
         "pdf_page": 56,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_55.md"
+        "file": "data/ocr_live_current/second_chapter_109/doc_55.md"
       },
       "question_text": "15.（2025 · 江苏模拟）\n\n平面直角坐标系中，矩形的四个顶点为 \\(O(0,0)\\)， \\(A(8,0)\\)， \\(B(8,6)\\)， \\(C(0,6)\\)，光线从 \\(OA\\)边上一点 \\(P_0(4,0)\\)沿与 \\(x\\)轴正向成 \\(\\theta\\)角的方向发射到 \\(AB\\)边上的点 \\(P_1\\)，被 \\(AB\\)反射到 \\(BC\\)上的点 \\(P_2\\)，再被 \\(BC\\)反射到 \\(OC\\)上的点 \\(P_3\\)，最后被 \\(OC\\)反射到 \\(x\\)轴上的点 \\(P_4(t,0)\\)，若 \\(t\\in(4,8)\\)，则 \\(\\tan\\theta\\)的取值范围是___。\n\n",
       "image_refs": [
         {
           "ref": "imgs/img_in_image_box_489_301_727_483.jpg",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\imgs\\img_in_image_box_489_301_727_483.jpg",
+          "path": "data/ocr_live_current/second_chapter_109/imgs/img_in_image_box_489_301_727_483.jpg",
           "exists": true
         }
       ],

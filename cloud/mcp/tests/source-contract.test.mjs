@@ -5,7 +5,7 @@ import test from 'node:test'
 import { fileURLToPath } from 'node:url'
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
-const [source, packageText, schema, config, importer, learnerMigration, handoutMigration, handoutImporter, practiceMigration, practiceImporter] = await Promise.all([
+const [source, packageText, schema, config, importer, learnerMigration, handoutMigration, handoutImporter, practiceMigration, practiceImporter, annotationMigration] = await Promise.all([
   readFile(resolve(root, 'src/index.ts'), 'utf8'),
   readFile(resolve(root, 'package.json'), 'utf8'),
   readFile(resolve(root, 'migrations/0001_initial.sql'), 'utf8'),
@@ -16,6 +16,7 @@ const [source, packageText, schema, config, importer, learnerMigration, handoutM
   readFile(resolve(root, 'scripts/import_handouts.mjs'), 'utf8'),
   readFile(resolve(root, 'migrations/0004_practice_and_handwriting.sql'), 'utf8'),
   readFile(resolve(root, 'scripts/import_practice_book.mjs'), 'utf8'),
+  readFile(resolve(root, 'migrations/0005_handwriting_annotation_contract.sql'), 'utf8'),
 ])
 const packageJson = JSON.parse(packageText)
 
@@ -62,8 +63,21 @@ test('exposes complete learner-safe content reads', () => {
   assert.match(source, /math_get_practice_route/)
   assert.match(source, /math_get_course_learning_bundle/)
   assert.match(source, /math_get_course_first_route/)
+  assert.match(source, /practiceIsOptional: true/)
+  assert.match(source, /blocksYbtProgress: false/)
+  assert.match(source, /optional_after_course/)
+  assert.match(source, /charCodeAt\(0\) - 96/)
+  assert.match(source, /left\.course_key/)
   assert.match(source, /math_record_practice_attempt/)
   assert.match(source, /math_record_handwriting_analysis/)
+  assert.match(source, /transparent_svg_overlay/)
+  assert.match(source, /sourceImageMustRemainUnchanged/)
+  assert.match(source, /uncertainty_disclosure_required/)
+  assert.match(source, /userDisclosureRequired/)
+  assert.match(source, /bbox_out_of_bounds/)
+  assert.match(source, /line_mapping_mismatch/)
+  assert.match(source, /unique_first_wrong_required/)
+  assert.match(source, /annotation_spec_json/)
   assert.match(source, /math_get_handwriting_history/)
   assert.match(source, /image_pack_key/)
   assert.match(source, /timelineAvailable/)
@@ -90,4 +104,6 @@ test('ships additive production migrations and a fail-closed handout importer', 
   assert.match(practiceMigration, /CREATE TABLE IF NOT EXISTS handwriting_analyses/)
   assert.match(practiceImporter, /source_page_is_question_authority/)
   assert.match(practiceImporter, /answer_status/)
+  assert.match(annotationMigration, /uncertainties_json/)
+  assert.match(annotationMigration, /annotation_spec_json/)
 })

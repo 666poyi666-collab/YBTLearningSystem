@@ -214,7 +214,6 @@ def build_course_catalog(
     *,
     verify_hashes: bool = True,
 ) -> dict[str, Any]:
-    by_stem, by_id, inventory = _video_inventory()
     metadata: dict[str, dict[str, Any]] = {}
     used_keys: set[str] = set()
     for chapter, manifest in manifests.items():
@@ -225,6 +224,24 @@ def build_course_catalog(
             for cycle in section.get("learning_cycles", []):
                 for field in ("course_keys", "prerequisite_course_keys", "optional_course_keys"):
                     used_keys.update(str(key) for key in cycle.get(field, []))
+
+    if not verify_hashes:
+        frozen_path = ROOT / "data" / "all_chapters_course_catalog.json"
+        frozen = load_json(frozen_path)
+        frozen_by_key = {str(row["course_key"]): row for row in frozen.get("courses", [])}
+        missing = sorted(used_keys - set(frozen_by_key))
+        if missing:
+            raise ValueError(f"course keys missing from frozen catalog: {missing}")
+        rows = [frozen_by_key[key] for key in sorted(used_keys)]
+        return {
+            **frozen,
+            "status": "passed_frozen_video_hashes",
+            "course_count": len(rows),
+            "courses": rows,
+            "frozen_catalog_source": str(frozen_path.relative_to(ROOT)).replace("\\", "/"),
+        }
+
+    by_stem, by_id, inventory = _video_inventory()
 
     rows: list[dict[str, Any]] = []
     for key in sorted(used_keys):

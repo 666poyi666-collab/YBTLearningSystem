@@ -2,9 +2,9 @@
   "schema_version": "7.4",
   "packet_type": "DEEPSEEK_SEQUENTIAL_LEARNING_PACKET",
   "section": "5.2",
-  "status": "VERIFIED",
+  "status": "UNVERIFIED",
   "source": {
-    "ocr_root": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95",
+    "ocr_root": "data/ocr_live_current/chapter5_95",
     "ocr_docs": [
       9,
       20
@@ -122,9 +122,7 @@
       "cycle_id": "5.2-cycle-2",
       "sequence": 2,
       "title": "导数的四则运算法则",
-      "course_keys": [
-        "4.1.2.2 复合函数的导数"
-      ],
+      "course_keys": [],
       "prerequisite_course_keys": [
         "4.1.2.1 基本初等函数的导数及运算法则",
         "4.1.2.1 基本初等函数的导数及运算法则（进阶）"
@@ -161,7 +159,6 @@
       "direct_variants": [],
       "exercise_questions": [],
       "action_order": [
-        "watch_current_courses",
         "learn_each_current_example_then_attempt_its_direct_variants",
         "assess_current_cycle"
       ],
@@ -185,13 +182,11 @@
       "sequence": 3,
       "title": "简单复合函数的导数",
       "course_keys": [
-        "4.1.2.3 导数的原函数构造之速解技巧",
-        "4.1.2.3 导数的原函数构造（基础）"
+        "4.1.2.2 复合函数的导数"
       ],
       "prerequisite_course_keys": [
         "4.1.2.1 基本初等函数的导数及运算法则",
-        "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
-        "4.1.2.2 复合函数的导数"
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）"
       ],
       "optional_course_keys": [],
       "knowledge_refs": [
@@ -249,14 +244,13 @@
       "sequence": 4,
       "title": "导函数与原函数的性质关系",
       "course_keys": [
+        "4.1.2.3 导数的原函数构造（基础）",
         "4.1.2.3 导数的原函数构造（进阶）"
       ],
       "prerequisite_course_keys": [
         "4.1.2.1 基本初等函数的导数及运算法则",
         "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
-        "4.1.2.2 复合函数的导数",
-        "4.1.2.3 导数的原函数构造之速解技巧",
-        "4.1.2.3 导数的原函数构造（基础）"
+        "4.1.2.2 复合函数的导数"
       ],
       "optional_course_keys": [],
       "knowledge_refs": [
@@ -284,275 +278,9 @@
           "teaching_text": "【例 6】已知函数  \\(f(x)\\) 满足对任意的  \\(x \\in \\mathbb{R}\\)，都有  \\(f(2-x) = f(x)\\)，则  \\(f'(x)\\) 的图象关于___对称.\n解析：不难发现 \\(f(x)\\)关于直线x=1对称，\n则由知识点4的结论， \\(f'(x)\\)应关于点 \\((1,0)\\)\n对称，下面我们也给出严格的推导，\n由题意， \\(f(2-x)=f(x)\\)，两端对x求导得\n \\(-f'(2-x)=f'(x)\\)，所以 \\(f'(2-x)+f'(x)\\)\n=0，故 \\(f'(x)\\)的图象关于点(1,0)对称.\n答案：点 \\((1,0)\\)\n## 本节核心题型\n本节的重点是导数的运算，学完本节后，就无需再像上一节那样用导数的定义来求导了，可以直接代有关公式、法则来解决导数的计算。我们设计了一个类型Ⅰ专门给大家强化导数的计算；另外，切线问题也是导数板块常考的题型之一，尽管上一节我们已经涉及过这个题型，但由于当时还只能用定义求导，所以涉猎不深，于是这里我们又设计了一个类型Ⅱ来让大家进一步深化这类题的学习。",
           "solution_present": true,
           "vision_hint": "5.2-LI737be9ed82896285"
-        },
-        {
-          "item_id": "b995068fab8efb41",
-          "kind": "example",
-          "label": "例7",
-          "example_number": 7,
-          "parent_example_number": null,
-          "role": "knowledge_example",
-          "role_ref": "5.2-k4",
-          "source_docs": [
-            11,
-            12
-          ],
-          "question_text": "【例7】求下列函数的导函数：\n（1） \\(f(x)=x+\\cos x\\) （2） \\(f(x)=-x^{2}+3x-\\ln x\\)\n（3） \\(f(x)=(x+1)(x+2)(x+3)\\) （4） \\(y=\\frac{x+1}{x-1}\\)\n（5） \\(f(x)=\\cos2x\\) （6） \\(f(x)=\\ln\\frac{x+3}{x^{2}+3}\\)",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "teaching_text": "【例7】求下列函数的导函数：\n（1） \\(f(x)=x+\\cos x\\) （2） \\(f(x)=-x^{2}+3x-\\ln x\\)\n（3） \\(f(x)=(x+1)(x+2)(x+3)\\) （4） \\(y=\\frac{x+1}{x-1}\\)\n（5） \\(f(x)=\\cos2x\\) （6） \\(f(x)=\\ln\\frac{x+3}{x^{2}+3}\\)\n解：（1）由题意， \\(f'(x)=(x+\\cos x)'=x'+(\\cos x)'=1-\\sin x\\)\n \\[(2)\\  由题意 ,\\quad f^{\\prime}(x)=(-x^{2}+3x-\\ln x)^{\\prime}=(-x^{2})^{\\prime}+(3x)^{\\prime}+(-\\ln x)^{\\prime}=-(x^{2})^{\\prime}+3x^{\\prime}-(\\ln x)^{\\prime}=-2x+3-\\frac{1}{x}.\\] \n（3）（涉及三项之积求导，我们只有两项乘积的求导公式，怎么办？可将其中两项看作整体，再代公式求导）\n由题意， \\(f'(x)=[(x+1)(x+2)(x+3)]'=(x+1)'(x+2)(x+3)+(x+1)[(x+2)(x+3)]'=(x+2)(x+3)+(x+1)(x^2+5x+6)'=x^2+5x+6+(x+1)(2x+5)=x^2+5x+6+2x^2+7x+5=3x^2+12x+11\\)\n（4）由题意， \\(y'=\\left(\\frac{x+1}{x-1}\\right)'\\)= \\(\\frac{(x+1)'(x-1)-(x+1)(x-1)'}{(x-1)^2}\\)= \\(\\frac{(x-1)-(x+1)}{(x-1)^2}\\)=- \\(\\frac{2}{(x-1)^2}\\)．\n（5）（函数  \\(f(x)=\\cos 2x\\) 可看成是  \\(y=\\cos u\\) 与  \\(u=2x\\) 复合而成，故可用复合函数的求导法则求导）\n由题意， \\(f(x)\\) 由  \\(y=\\cos u\\) 与 u=2x 复合而成，所以  \\(f'(x)=y'_u u'_x=(\\cos u)' \\cdot (2x)' = -\\sin u \\cdot 2 = -2\\sin u = -2\\sin 2x\\)。\n（6）（函数  \\(f(x)\\) 可看成是由  \\(y = \\ln u\\) 与  \\(u = \\frac{x+3}{x^2+3}\\) 复合而成，可用复合函数的求导法则求导）\n由题意， \\(f(x)\\) 由  \\(y = \\ln u\\) 与  \\(u = \\frac{x+3}{x^2+3}\\) 复合而成，所以由复合函数求导法则，\n \\[\\begin{aligned}&f^{\\prime}(x)=y_{u}^{\\prime}u_{x}^{\\prime}=\\frac{1}{u}\\cdot\\frac{(x+3)^{\\prime}(x^{2}+3)-(x+3)(x^{2}+3)^{\\prime}}{(x^{2}+3)^{2}}=\\frac{1}{u}\\cdot\\frac{x^{2}+3-(x+3)\\cdot2x}{(x^{2}+3)^{2}}=\\frac{1}{u}\\cdot\\frac{-x^{2}-6x+3}{(x^{2}+3)^{2}}\\\\ &=\\frac{1}{\\frac{x+3}{x^{2}+3}}\\cdot\\frac{-x^{2}-6x+3}{(x^{2}+3)^{2}}=\\frac{x^{2}+3}{x+3}\\cdot\\frac{-x^{2}-6x+3}{(x^{2}+3)^{2}}=-\\frac{x^{2}+6x-3}{(x+3)(x^{2}+3)}\\cdot\\\\ \\end{aligned}\\] \n【反思】求导是一项基本功，大家需要熟练掌握基本初等函数的导数、导数的四则运算法则以及复合函数的求导法则。对于复合函数求导，首先要弄清复合过程，把  \\(y = f(x)\\) 写成  \\(y = g(u)\\) 和  \\(u = h(x)\\) 的复合过程，再由  \\(f'(x) = y'_u u'_x\\) 求出  \\(f'(x)\\)。",
-          "solution_present": true,
-          "vision_hint": "5.2-LIb995068fab8efb41"
-        },
-        {
-          "item_id": "bb3487b5ba9a816b",
-          "kind": "example",
-          "label": "例8",
-          "example_number": 8,
-          "parent_example_number": null,
-          "role": "knowledge_example",
-          "role_ref": "5.2-k4",
-          "source_docs": [
-            12
-          ],
-          "question_text": "【例8】函数 \\(f(x)=x+\\mathrm{e}^{x}\\)在x=0处的切线方程为___.",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "teaching_text": "【例8】函数 \\(f(x)=x+\\mathrm{e}^{x}\\)在x=0处的切线方程为___.\n解析：求切线方程只需求出切点和斜率，切点直接代解析式即可求得，斜率呢？斜率即为  \\(f'(0)\\)\n由题意， \\(f(0)=0+e^0=1\\)，所以切点为 \\((0,1)\\)，又 \\(f'(x)=(x+e^x)'=x'+(e^x)'=1+e^x\\)，所以 \\(f'(0)=1+e^0=2\\)，故 \\(f(x)\\)在 \\(x=0\\)处的切线方程为 \\(y-1=2(x-0)\\)，整理得： \\(y=2x+1\\)。\n答案：y=2x+1\n【反思】求切线方程的核心是求切点和切线斜率，后者能与导数联系起来。上一节也有这个题型，但那时求导还只能用定义，本节随着求导方法的完善，更复杂的求切线问题也能解决了。本题给出了切点的信息，让求切线，有时题干不会给切点的信息，又怎么处理呢？我们来看下面的两个变式。",
-          "solution_present": true,
-          "vision_hint": "5.2-LIbb3487b5ba9a816b"
-        },
-        {
-          "item_id": "e35f94e52d48001a",
-          "kind": "example",
-          "label": "例9",
-          "example_number": 9,
-          "parent_example_number": null,
-          "role": "knowledge_example",
-          "role_ref": "5.2-k4",
-          "source_docs": [
-            14,
-            15
-          ],
-          "question_text": "【例 9】已知直线  \\(y = kx + b\\) 既是曲线  \\(y = \\ln x\\) 的切线，也是曲线  \\(y = -\\ln(-x)\\) 的切线，则（ ）\nA.  \\(k = \\frac{1}{e}\\)， \\(b = 0\\)    B.  \\(k = 1\\)， \\(b = 0\\)    C.  \\(k = \\frac{1}{e}\\)， \\(b = -1\\)    D.  \\(k = 1\\)， \\(b = -1\\)",
-          "image_refs": [
-            {
-              "ref": "imgs/img_in_image_box_867_117_1093_340.jpg",
-              "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_867_117_1093_340.jpg",
-              "exists": true
-            }
-          ],
-          "visual_status": "VISION_VERIFIED",
-          "teaching_text": "【例 9】已知直线  \\(y = kx + b\\) 既是曲线  \\(y = \\ln x\\) 的切线，也是曲线  \\(y = -\\ln(-x)\\) 的切线，则（ ）\nA.  \\(k = \\frac{1}{e}\\)， \\(b = 0\\)    B.  \\(k = 1\\)， \\(b = 0\\)    C.  \\(k = \\frac{1}{e}\\)， \\(b = -1\\)    D.  \\(k = 1\\)， \\(b = -1\\)\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_867_117_1093_340.jpg\" alt=\"Image\" width=\"18%\" /></div>\n解法1：直线  \\(y = kx + b\\) 与两曲线的切点均未知，可设两个切点，分别写出切线  \\(l\\) 的斜截式方程，再作观察，如图1，设  \\(A(x_1, \\ln x_1)\\)， \\(B(x_2, -\\ln(-x_2))\\) 分别为  \\(y = kx + b\\) 与  \\(y = \\ln x\\) 和  \\(y = -\\ln(-x)\\) 的切点，因为  \\((\\ln x)' = \\frac{1}{x}\\)，所以  \\(y = \\ln x\\) 在点  \\(A\\) 处的切线方程为  \\(y - \\ln x_1 = \\frac{1}{x_1}(x - x_1)\\)，即  \\(y = \\frac{1}{x_1}x + \\ln x_1 - 1\\) ①，因为  \\([-\\ln(-x)]' = -\\frac{-1}{-x} = -\\frac{1}{x}\\)，所以  \\(y = -\\ln(-x)\\) 在点  \\(B\\) 处的切线方程为  \\(y + \\ln(-x_2) = -\\frac{1}{x_2}(x - x_2)\\)，即  \\(y = -\\frac{1}{x_2}x - \\ln(-x_2) + 1\\) ②，怎样求  \\(k\\) 和  \\(b\\)？可以想象，只要求出  \\(x_1\\) 或  \\(x_2\\)，就能代入①或②得到切线的方程，和  \\(b\\) 也就有了，由于①和②是同一条直线的方程，所以对应系数应相等，由此可建立方程组求  \\(x_1\\) 和  \\(x_2\\)，因为①和②都是直线  \\(y = kx + b\\) 的方程，所以  \\(\\begin{cases} \\frac{1}{x_1} = -\\frac{1}{x_2} \\\\ \\ln x_1 - 1 = -\\ln(-x_2) + 1 \\end{cases}\\) ③，由③可得  \\(x_2 = -x_1\\)，代入④得  \\(\\ln x_1 - 1 = -\\ln x_1 + 1\\)，解得： \\(x_1 = e\\)，代入①得切线的方程为  \\(y = \\frac{1}{e}x\\)，又由题意，该切线的方程为  \\(y = kx + b\\)，所以  \\(k = \\frac{1}{e}\\)， \\(b = 0\\)。\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_263_1033_555_1164.jpg\" alt=\"Image\" width=\"24%\" /></div>\n<div style=\"text-align: center;\">图1</div>\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_620_1033_930_1167.jpg\" alt=\"Image\" width=\"26%\" /></div>\n<div style=\"text-align: center;\">图2</div>\n解法 2：若注意到  \\(y = -\\ln(-x)\\) 和  \\(y = \\ln x\\) 的图象关于原点对称，则也可考虑从这一特征出发分析，看能否找到解题的突破口，如图 2，我们将  \\(y = \\ln x\\) 沿 y 轴翻折，得到  \\(y = \\ln(-x)\\)，再沿 x 轴翻折，得到  \\(y = -\\ln(-x)\\)，所以  \\(y = -\\ln(-x)\\) 与  \\(y = \\ln x\\) 关于原点对称，若  \\(y = kx + b\\) 是两曲线的公切线，则可想象，切点必定也关于原点对称，所以  \\(y = kx + b\\) 过原点，故问题转化为求  \\(y = \\ln x\\) 的过原点的切线，这可通过设切点来处理，设过原点的直线与  \\(y = \\ln x\\) 相切于点  \\((x_0, \\ln x_0)\\)，因为  \\((\\ln x)' = \\frac{1}{x}\\)，所以该直线的方程为  \\(y - \\ln x_0 = \\frac{1}{x_0}(x - x_0)\\) ⑤，将原点代入得  \\(0 - \\ln x_0 = \\frac{1}{x_0}(0 - x_0)\\)，解得： \\(x_0 = e\\)，代入⑤整理得： \\(y = \\frac{1}{e}x\\)，与  \\(y = kx + b\\) 对比得  \\(k = \\frac{1}{e}\\)， \\(b = 0\\)。\n答案：A\n【反思】不同切点处的公切线问题的通用思路：先设两个切点，分别写出切线 l 的方程，再比较系数建立方程组并求解.\n## 补充、拓展\n与导数有关的抽象函数问题往往难度比较大，对逻辑推理能力的要求较高，这里我们通过类型Ⅲ来给大家拓展导数与奇偶性、对称性、周期性综合的考题，请大家跟着解析中的蓝字注释仔细思考每一步推理的动机，并结合反思去总结一些常用的结论。",
-          "solution_present": true,
-          "vision_hint": "5.2-LIe35f94e52d48001a",
-          "vision_sidecars": [
-            {
-              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_867_117_1093_340.jpg",
-              "image_sha256": "aff5b045321604d453e63292a403f65db954d627dfaf173fed920c285daebd82",
-              "confidence": "E2",
-              "structured": {
-                "objects": [],
-                "relations": [],
-                "coordinates": [],
-                "ranges": [],
-                "text": [
-                  "y=3x-1",
-                  "y=e^x+2x"
-                ],
-                "uncertainties": [],
-                "confidence": "E2"
-              },
-              "source_provenance": null
-            }
-          ],
-          "vision_sidecar": {
-            "objects": [],
-            "relations": [],
-            "coordinates": [],
-            "ranges": [],
-            "text": [
-              "y=3x-1",
-              "y=e^x+2x"
-            ],
-            "uncertainties": [],
-            "confidence": "E2"
-          },
-          "vision_source_provenance": [],
-          "evidence": [
-            "E1",
-            "E2"
-          ]
-        },
-        {
-          "item_id": "2c46e77ba2dfd2a2",
-          "kind": "example",
-          "label": "例10",
-          "example_number": 10,
-          "parent_example_number": null,
-          "role": "knowledge_example",
-          "role_ref": "5.2-k4",
-          "source_docs": [
-            15
-          ],
-          "question_text": "【例 10】（多选）已知定义在  \\(\\mathbb{R}\\) 上的可导函数  \\(f(x)\\) 是偶函数，且满足  \\(f(2-x)+f(x)=0\\)，则下列结论一定正确的是（ ）\nA. 4 是  \\(f(x)\\) 的一个周期  \nB.  \\(f(x)\\) 的图象关于点  \\((3,0)\\) 对称  \nC.  \\(f'(x)\\) 的图象关于  \\(x=2\\) 对称  \nD.  \\(f'(100)=0\\)",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "teaching_text": "【例 10】（多选）已知定义在  \\(\\mathbb{R}\\) 上的可导函数  \\(f(x)\\) 是偶函数，且满足  \\(f(2-x)+f(x)=0\\)，则下列结论一定正确的是（ ）\nA. 4 是  \\(f(x)\\) 的一个周期  \nB.  \\(f(x)\\) 的图象关于点  \\((3,0)\\) 对称  \nC.  \\(f'(x)\\) 的图象关于  \\(x=2\\) 对称  \nD.  \\(f'(100)=0\\)\n解析：A 项，因为  \\(f(x)\\) 为偶函数，所以  \\(f(-x) = f(x)\\)，结合另一条件可知  \\(\\left\\{\\begin{array}{l}f(-x)=-f(x)\\\\f(2-x)+f(x)=0\\end{array}\\right.\\)\n怎样由①②分析  \\(f(x)\\) 的周期性？周期性满足的是  \\(f(x+T)=f(x)\\)，此式中 x 的系数都为正，故考虑消去  \\(f(-x)\\) 和  \\(f(2-x)\\)，再作观察，怎么消？可在①中将 x 换成 x-2，把  \\(f(-x)\\) 化成  \\(f(2-x)\\)，再代入②，在①中将 x 换成 x-2 得  \\(f(2-x)=f(x-2)\\)，代入②得  \\(f(x-2)+f(x)=0\\)，所以  \\(f(x-2)=-f(x)\\) ③，怎样由③分析周期？可以想象，自变量减 2，函数值就变成相反数，那么自变量若再减 2，则函数值再反一次，又变回去了，所以可朝此思路推导周期，在③中将 x 换成 x-2 可得  \\(f(x-4)=-f(x-2)\\)，结合式③可得  \\(f(x-4)=-[-f(x)]=f(x)\\)，再将 x 换成 x+4 得  \\(f(x)=f(x+4)\\)，所以 4 是  \\(f(x)\\) 的一个周期，故 A 项正确；B 项，结论等价于  \\(f(6-x)+f(x)=0\\)，为了朝此式的结构靠拢，可尝试用②变出  \\(f(6-x)\\)，在②中将 x 换成 x-4 得  \\(f(6-x)+f(x-4)=0\\)，又 4 是  \\(f(x)\\) 的一个周期，所以  \\(f(x-4)=f(x)\\)，从而  \\(f(6-x)+f(x)=0\\)，故  \\(f(x)\\) 关于点 (3,0) 对称，故 B 项正确；C 项，若结论成立，则  \\(f'(4+x)=f'(-x)\\)，由此想到结合导函数与原函数的周期性、奇偶性关系来分析，因为  \\(f(x)\\) 的周期为 4，所以  \\(f'(x)\\) 的周期也为 4，故  \\(f'(x+4)=f'(x)\\) ④，又  \\(f(x)\\) 为偶函数，所以  \\(f'(x)\\) 为奇函数，故  \\(f'(x)=-f'(-x)\\)，代入④得  \\(f'(x+4)=-f'(-x)\\)，所以  \\(f'(x+4)+f'(-x)=0\\)，从而  \\(f'(x)\\) 关于点 (2,0) 对称，不关于直线 x=2 对称，故 C 项错误；D 项，因为  \\(f'(x)\\) 的周期为 4，所以  \\(f'(100)=f'(0+25\\times4)=f'(0)\\)，又  \\(f'(x)\\) 为奇函数，所以  \\(f'(0)=0\\)，从而  \\(f'(100)=0\\)，故 D 项正确.\n答案：ABD\n【反思】①当函数  \\(f(x)\\) 有对称轴 x=a 和对称中心  \\((b,c)\\) 时， \\(f(x)\\) 一定是周期函数，且周期  \\(T=4|a-b|\\)。以本题为例， \\(f(2-x)+f(x)=0\\) 意味着  \\(f(x)\\) 有对称中心  \\((1,0)\\)， \\(f(x)\\) 为偶函数意味着  \\(f(x)\\) 有对称轴 x=0，所以  \\(f(x)\\) 为周期函数，周期为  \\(4|1-0|=4\\)。类似地，若  \\(f(x)\\) 有对称轴 x=a 和 x=b，则  \\(f(x)\\) 周期为  \\(2|a-b|\\)；若  \\(f(x)\\) 有对称中心  \\((a,c)\\) 和  \\((b,c)\\)，则  \\(f(x)\\) 周期为  \\(2|a-b|\\)。这些结论的推导方法与本题 A 项的分析类似，记忆的话，可以结合正弦或余弦函数的有关对称性质与周期的关系来记忆；\n②导函数与原函数的周期相同，偶函数的导函数是奇函数，奇函数的导函数是偶函数。但请注意，由导函数的奇偶性反推原函数的奇偶性时，不一定有此结论，我们通过下面的变式来给大家详细分析。",
-          "solution_present": true,
-          "vision_hint": "5.2-LI2c46e77ba2dfd2a2"
         }
       ],
-      "direct_variants": [
-        {
-          "item_id": "bd598d087a05f1ed",
-          "kind": "direct_variant",
-          "label": "变式",
-          "example_number": null,
-          "parent_example_number": 7,
-          "role": "direct_variant",
-          "role_ref": null,
-          "source_docs": [
-            12
-          ],
-          "question_text": "【变式】已知函数  \\(f(x)=f'(0)\\mathrm{e}^{2x}-\\mathrm{e}^{-x}\\)，则  \\(f(0)=\\) ___.",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "solution_isolated": true,
-          "vision_hint": "5.2-LIbd598d087a05f1ed"
-        },
-        {
-          "item_id": "2f773012326f81ca",
-          "kind": "direct_variant",
-          "label": "变式1",
-          "example_number": null,
-          "parent_example_number": 8,
-          "role": "direct_variant",
-          "role_ref": null,
-          "source_docs": [
-            12,
-            13
-          ],
-          "question_text": "【变式1】过点 \\((0,-4)\\)作函数 \\(f(x)=x-\\frac{4}{x}\\)图象的切线，则切线方程为（）\nA. y = 5x - 4 B. y = 4x - 4 C. y = 3x - 4 D. y = 2x - 4",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "solution_isolated": true,
-          "vision_hint": "5.2-LI2f773012326f81ca"
-        },
-        {
-          "item_id": "f816e7f850b58878",
-          "kind": "direct_variant",
-          "label": "变式2",
-          "example_number": null,
-          "parent_example_number": 8,
-          "role": "direct_variant",
-          "role_ref": null,
-          "source_docs": [
-            13
-          ],
-          "question_text": "【变式2】过坐标原点作曲线  \\(y=(x-a)e^{x}(a\\neq0)\\) 的切线，若切线有且只有一条，那么  \\(a=\\) （ ）\nA. -2              B. -4              C. 2              D. 4",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "solution_isolated": true,
-          "vision_hint": "5.2-LIf816e7f850b58878"
-        },
-        {
-          "item_id": "89d58501c9101dcf",
-          "kind": "direct_variant",
-          "label": "变式3",
-          "example_number": null,
-          "parent_example_number": 8,
-          "role": "direct_variant",
-          "role_ref": null,
-          "source_docs": [
-            13
-          ],
-          "question_text": "【变式 3】若  \\(f(x)=x+2\\sqrt{x}\\) 在点  \\((1,3)\\) 处的切线也是  \\(g(x)=\\ln x+x+a\\) 的切线，则  \\(a=\\) ___.\n由题意， \\(f'(x)=(x+2\\sqrt{x})'=x'+(2\\sqrt{x})'=1+2\\cdot\\frac{1}{2\\sqrt{x}}=1+\\frac{1}{\\sqrt{x}}\\)，所以 \\(f'(1)=2\\)，\n故 \\(f(x)\\) 在点 \\((1,3)\\) 处的切线方程为 \\(y-3=2(x-1)\\)，整理得：\\(y=2x+1\\)，\n怎样翻译该直线与 \\(g(x)\\) 也相切？此时的切点不知道了，可考虑设切点处理，\n设 \\(y=2x+1\\) 与 \\(g(x)\\) 相切于点 \\(A(x_0,g(x_0))\\)，由题意，\\(g'(x)=\\frac{1}{x}+1\\)，\n所以如图，\\(\\begin{cases}\\frac{1}{x_0}+1=2(g(x)\\text{在}x_0\\text{处的导数值等于切线斜率})\\\\2x_0+1=\\ln x_0+x_0+a(\\text{切点是切线与}g(x)\\text{图象的公共点})\\end{cases}\\)，解得：\\(x_0=1\\)，\\(a=2\\)。",
-          "image_refs": [
-            {
-              "ref": "imgs/img_in_image_box_934_976_1092_1166.jpg",
-              "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_934_976_1092_1166.jpg",
-              "exists": true
-            }
-          ],
-          "visual_status": "VISION_VERIFIED",
-          "solution_isolated": true,
-          "vision_hint": "5.2-LI89d58501c9101dcf",
-          "vision_sidecars": [
-            {
-              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_934_976_1092_1166.jpg",
-              "image_sha256": "2eb638d10b97dbb9a65c2cb1d34d8ef785989e84fa70b3ec166af92568e17c51",
-              "confidence": "E2",
-              "structured": {
-                "objects": [],
-                "relations": [],
-                "coordinates": [],
-                "ranges": [],
-                "text": [
-                  "y=2x+1",
-                  "y=g(x)"
-                ],
-                "uncertainties": [],
-                "confidence": "E2"
-              },
-              "source_provenance": null
-            }
-          ],
-          "vision_sidecar": {
-            "objects": [],
-            "relations": [],
-            "coordinates": [],
-            "ranges": [],
-            "text": [
-              "y=2x+1",
-              "y=g(x)"
-            ],
-            "uncertainties": [],
-            "confidence": "E2"
-          },
-          "vision_source_provenance": [],
-          "evidence": [
-            "E1",
-            "E2"
-          ]
-        },
-        {
-          "item_id": "61aea1db4af57e77",
-          "kind": "direct_variant",
-          "label": "变式4",
-          "example_number": null,
-          "parent_example_number": 8,
-          "role": "direct_variant",
-          "role_ref": null,
-          "source_docs": [
-            13,
-            14
-          ],
-          "question_text": "【变式4】M，N分别为曲线  \\(y=e^{x}+2x\\) 与直线 y=3x-1 上的点，则  \\(\\left|MN\\right|\\) 的最小值为 ___.",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "solution_isolated": true,
-          "vision_hint": "5.2-LI61aea1db4af57e77"
-        },
-        {
-          "item_id": "d1a00d15c0a251ed",
-          "kind": "direct_variant",
-          "label": "变式",
-          "example_number": null,
-          "parent_example_number": 10,
-          "role": "direct_variant",
-          "role_ref": null,
-          "source_docs": [
-            15,
-            16
-          ],
-          "question_text": "【变式】（多选）已知函数  \\(f(x)\\) 及其导函数  \\(f'(x)\\) 的定义域为  \\(\\mathbb{R}\\)，若  \\(f(x+1)\\) 与  \\(f'(x)\\) 均为偶函数，且  \\(f(-1) + f(1) = 2\\)，则下列结论正确的是（ ）\nA.  \\(f'(1)=0\\) B. 4 是  \\(f(x)\\) 的一个周期\nC.  \\(f(100)=0\\) D.  \\(f(x)\\) 的图象关于点 (2,1) 对称",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "solution_isolated": true,
-          "vision_hint": "5.2-LId1a00d15c0a251ed"
-        }
-      ],
+      "direct_variants": [],
       "exercise_questions": [],
       "action_order": [
         "watch_current_courses",
@@ -581,13 +309,12 @@
     {
       "cycle_id": "5.2-cycle-5",
       "sequence": 5,
-      "title": "A组 夯实基础",
+      "title": "类型I 导数的计算",
       "course_keys": [],
       "prerequisite_course_keys": [
         "4.1.2.1 基本初等函数的导数及运算法则",
         "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
         "4.1.2.2 复合函数的导数",
-        "4.1.2.3 导数的原函数构造之速解技巧",
         "4.1.2.3 导数的原函数构造（基础）",
         "4.1.2.3 导数的原函数构造（进阶）"
       ],
@@ -595,17 +322,306 @@
       "knowledge_refs": [],
       "prerequisite_knowledge_refs": [],
       "type_refs": [
-        "类型I 导数的计算",
-        "类型Ⅱ 切线问题",
+        "类型I 导数的计算"
+      ],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [
+        {
+          "item_id": "b995068fab8efb41",
+          "kind": "example",
+          "label": "例7",
+          "example_number": 7,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型I 导数的计算",
+          "source_docs": [
+            11,
+            12
+          ],
+          "question_text": "【例7】求下列函数的导函数：\n（1） \\(f(x)=x+\\cos x\\) （2） \\(f(x)=-x^{2}+3x-\\ln x\\)\n（3） \\(f(x)=(x+1)(x+2)(x+3)\\) （4） \\(y=\\frac{x+1}{x-1}\\)\n（5） \\(f(x)=\\cos2x\\) （6） \\(f(x)=\\ln\\frac{x+3}{x^{2}+3}\\)",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例7】求下列函数的导函数：\n（1） \\(f(x)=x+\\cos x\\) （2） \\(f(x)=-x^{2}+3x-\\ln x\\)\n（3） \\(f(x)=(x+1)(x+2)(x+3)\\) （4） \\(y=\\frac{x+1}{x-1}\\)\n（5） \\(f(x)=\\cos2x\\) （6） \\(f(x)=\\ln\\frac{x+3}{x^{2}+3}\\)\n解：（1）由题意， \\(f'(x)=(x+\\cos x)'=x'+(\\cos x)'=1-\\sin x\\)\n \\[(2)\\  由题意 ,\\quad f^{\\prime}(x)=(-x^{2}+3x-\\ln x)^{\\prime}=(-x^{2})^{\\prime}+(3x)^{\\prime}+(-\\ln x)^{\\prime}=-(x^{2})^{\\prime}+3x^{\\prime}-(\\ln x)^{\\prime}=-2x+3-\\frac{1}{x}.\\] \n（3）（涉及三项之积求导，我们只有两项乘积的求导公式，怎么办？可将其中两项看作整体，再代公式求导）\n由题意， \\(f'(x)=[(x+1)(x+2)(x+3)]'=(x+1)'(x+2)(x+3)+(x+1)[(x+2)(x+3)]'=(x+2)(x+3)+(x+1)(x^2+5x+6)'=x^2+5x+6+(x+1)(2x+5)=x^2+5x+6+2x^2+7x+5=3x^2+12x+11\\)\n（4）由题意， \\(y'=\\left(\\frac{x+1}{x-1}\\right)'\\)= \\(\\frac{(x+1)'(x-1)-(x+1)(x-1)'}{(x-1)^2}\\)= \\(\\frac{(x-1)-(x+1)}{(x-1)^2}\\)=- \\(\\frac{2}{(x-1)^2}\\)．\n（5）（函数  \\(f(x)=\\cos 2x\\) 可看成是  \\(y=\\cos u\\) 与  \\(u=2x\\) 复合而成，故可用复合函数的求导法则求导）\n由题意， \\(f(x)\\) 由  \\(y=\\cos u\\) 与 u=2x 复合而成，所以  \\(f'(x)=y'_u u'_x=(\\cos u)' \\cdot (2x)' = -\\sin u \\cdot 2 = -2\\sin u = -2\\sin 2x\\)。\n（6）（函数  \\(f(x)\\) 可看成是由  \\(y = \\ln u\\) 与  \\(u = \\frac{x+3}{x^2+3}\\) 复合而成，可用复合函数的求导法则求导）\n由题意， \\(f(x)\\) 由  \\(y = \\ln u\\) 与  \\(u = \\frac{x+3}{x^2+3}\\) 复合而成，所以由复合函数求导法则，\n \\[\\begin{aligned}&f^{\\prime}(x)=y_{u}^{\\prime}u_{x}^{\\prime}=\\frac{1}{u}\\cdot\\frac{(x+3)^{\\prime}(x^{2}+3)-(x+3)(x^{2}+3)^{\\prime}}{(x^{2}+3)^{2}}=\\frac{1}{u}\\cdot\\frac{x^{2}+3-(x+3)\\cdot2x}{(x^{2}+3)^{2}}=\\frac{1}{u}\\cdot\\frac{-x^{2}-6x+3}{(x^{2}+3)^{2}}\\\\ &=\\frac{1}{\\frac{x+3}{x^{2}+3}}\\cdot\\frac{-x^{2}-6x+3}{(x^{2}+3)^{2}}=\\frac{x^{2}+3}{x+3}\\cdot\\frac{-x^{2}-6x+3}{(x^{2}+3)^{2}}=-\\frac{x^{2}+6x-3}{(x+3)(x^{2}+3)}\\cdot\\\\ \\end{aligned}\\] \n【反思】求导是一项基本功，大家需要熟练掌握基本初等函数的导数、导数的四则运算法则以及复合函数的求导法则。对于复合函数求导，首先要弄清复合过程，把  \\(y = f(x)\\) 写成  \\(y = g(u)\\) 和  \\(u = h(x)\\) 的复合过程，再由  \\(f'(x) = y'_u u'_x\\) 求出  \\(f'(x)\\)。",
+          "solution_present": true,
+          "vision_hint": "5.2-LIb995068fab8efb41"
+        }
+      ],
+      "direct_variants": [
+        {
+          "item_id": "bd598d087a05f1ed",
+          "kind": "direct_variant",
+          "label": "变式",
+          "example_number": null,
+          "parent_example_number": 7,
+          "role": "direct_variant",
+          "role_ref": "类型I 导数的计算",
+          "source_docs": [
+            12
+          ],
+          "question_text": "【变式】已知函数  \\(f(x)=f'(0)\\mathrm{e}^{2x}-\\mathrm{e}^{-x}\\)，则  \\(f(0)=\\) ___.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "5.2-LIbd598d087a05f1ed"
+        }
+      ],
+      "exercise_questions": [],
+      "action_order": [
+        "learn_each_current_example_then_attempt_its_direct_variants",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [],
+      "prerequisite_knowledge_blocks": []
+    },
+    {
+      "cycle_id": "5.2-cycle-6",
+      "sequence": 6,
+      "title": "类型Ⅱ 切线问题",
+      "course_keys": [],
+      "prerequisite_course_keys": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
+        "4.1.2.2 复合函数的导数",
+        "4.1.2.3 导数的原函数构造（基础）",
+        "4.1.2.3 导数的原函数构造（进阶）"
+      ],
+      "optional_course_keys": [],
+      "knowledge_refs": [],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 切线问题"
+      ],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [
+        {
+          "item_id": "bb3487b5ba9a816b",
+          "kind": "example",
+          "label": "例8",
+          "example_number": 8,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型Ⅱ 切线问题",
+          "source_docs": [
+            12
+          ],
+          "question_text": "【例8】函数 \\(f(x)=x+\\mathrm{e}^{x}\\)在x=0处的切线方程为___.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例8】函数 \\(f(x)=x+\\mathrm{e}^{x}\\)在x=0处的切线方程为___.\n解析：求切线方程只需求出切点和斜率，切点直接代解析式即可求得，斜率呢？斜率即为  \\(f'(0)\\)\n由题意， \\(f(0)=0+e^0=1\\)，所以切点为 \\((0,1)\\)，又 \\(f'(x)=(x+e^x)'=x'+(e^x)'=1+e^x\\)，所以 \\(f'(0)=1+e^0=2\\)，故 \\(f(x)\\)在 \\(x=0\\)处的切线方程为 \\(y-1=2(x-0)\\)，整理得： \\(y=2x+1\\)。\n答案：y=2x+1\n【反思】求切线方程的核心是求切点和切线斜率，后者能与导数联系起来。上一节也有这个题型，但那时求导还只能用定义，本节随着求导方法的完善，更复杂的求切线问题也能解决了。本题给出了切点的信息，让求切线，有时题干不会给切点的信息，又怎么处理呢？我们来看下面的两个变式。",
+          "solution_present": true,
+          "vision_hint": "5.2-LIbb3487b5ba9a816b"
+        },
+        {
+          "item_id": "e35f94e52d48001a",
+          "kind": "example",
+          "label": "例9",
+          "example_number": 9,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型Ⅱ 切线问题",
+          "source_docs": [
+            14,
+            15
+          ],
+          "question_text": "【例 9】已知直线  \\(y = kx + b\\) 既是曲线  \\(y = \\ln x\\) 的切线，也是曲线  \\(y = -\\ln(-x)\\) 的切线，则（ ）\nA.  \\(k = \\frac{1}{e}\\)， \\(b = 0\\)    B.  \\(k = 1\\)， \\(b = 0\\)    C.  \\(k = \\frac{1}{e}\\)， \\(b = -1\\)    D.  \\(k = 1\\)， \\(b = -1\\)",
+          "image_refs": [
+            {
+              "ref": "imgs/img_in_image_box_867_117_1093_340.jpg",
+              "path": "data/ocr_live_current/chapter5_95/imgs/img_in_image_box_867_117_1093_340.jpg",
+              "exists": true
+            }
+          ],
+          "visual_status": "NEEDS_VISION_SIDECAR",
+          "teaching_text": "【例 9】已知直线  \\(y = kx + b\\) 既是曲线  \\(y = \\ln x\\) 的切线，也是曲线  \\(y = -\\ln(-x)\\) 的切线，则（ ）\nA.  \\(k = \\frac{1}{e}\\)， \\(b = 0\\)    B.  \\(k = 1\\)， \\(b = 0\\)    C.  \\(k = \\frac{1}{e}\\)， \\(b = -1\\)    D.  \\(k = 1\\)， \\(b = -1\\)\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_867_117_1093_340.jpg\" alt=\"Image\" width=\"18%\" /></div>\n解法1：直线  \\(y = kx + b\\) 与两曲线的切点均未知，可设两个切点，分别写出切线  \\(l\\) 的斜截式方程，再作观察，如图1，设  \\(A(x_1, \\ln x_1)\\)， \\(B(x_2, -\\ln(-x_2))\\) 分别为  \\(y = kx + b\\) 与  \\(y = \\ln x\\) 和  \\(y = -\\ln(-x)\\) 的切点，因为  \\((\\ln x)' = \\frac{1}{x}\\)，所以  \\(y = \\ln x\\) 在点  \\(A\\) 处的切线方程为  \\(y - \\ln x_1 = \\frac{1}{x_1}(x - x_1)\\)，即  \\(y = \\frac{1}{x_1}x + \\ln x_1 - 1\\) ①，因为  \\([-\\ln(-x)]' = -\\frac{-1}{-x} = -\\frac{1}{x}\\)，所以  \\(y = -\\ln(-x)\\) 在点  \\(B\\) 处的切线方程为  \\(y + \\ln(-x_2) = -\\frac{1}{x_2}(x - x_2)\\)，即  \\(y = -\\frac{1}{x_2}x - \\ln(-x_2) + 1\\) ②，怎样求  \\(k\\) 和  \\(b\\)？可以想象，只要求出  \\(x_1\\) 或  \\(x_2\\)，就能代入①或②得到切线的方程，和  \\(b\\) 也就有了，由于①和②是同一条直线的方程，所以对应系数应相等，由此可建立方程组求  \\(x_1\\) 和  \\(x_2\\)，因为①和②都是直线  \\(y = kx + b\\) 的方程，所以  \\(\\begin{cases} \\frac{1}{x_1} = -\\frac{1}{x_2} \\\\ \\ln x_1 - 1 = -\\ln(-x_2) + 1 \\end{cases}\\) ③，由③可得  \\(x_2 = -x_1\\)，代入④得  \\(\\ln x_1 - 1 = -\\ln x_1 + 1\\)，解得： \\(x_1 = e\\)，代入①得切线的方程为  \\(y = \\frac{1}{e}x\\)，又由题意，该切线的方程为  \\(y = kx + b\\)，所以  \\(k = \\frac{1}{e}\\)， \\(b = 0\\)。\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_263_1033_555_1164.jpg\" alt=\"Image\" width=\"24%\" /></div>\n<div style=\"text-align: center;\">图1</div>\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_620_1033_930_1167.jpg\" alt=\"Image\" width=\"26%\" /></div>\n<div style=\"text-align: center;\">图2</div>\n解法 2：若注意到  \\(y = -\\ln(-x)\\) 和  \\(y = \\ln x\\) 的图象关于原点对称，则也可考虑从这一特征出发分析，看能否找到解题的突破口，如图 2，我们将  \\(y = \\ln x\\) 沿 y 轴翻折，得到  \\(y = \\ln(-x)\\)，再沿 x 轴翻折，得到  \\(y = -\\ln(-x)\\)，所以  \\(y = -\\ln(-x)\\) 与  \\(y = \\ln x\\) 关于原点对称，若  \\(y = kx + b\\) 是两曲线的公切线，则可想象，切点必定也关于原点对称，所以  \\(y = kx + b\\) 过原点，故问题转化为求  \\(y = \\ln x\\) 的过原点的切线，这可通过设切点来处理，设过原点的直线与  \\(y = \\ln x\\) 相切于点  \\((x_0, \\ln x_0)\\)，因为  \\((\\ln x)' = \\frac{1}{x}\\)，所以该直线的方程为  \\(y - \\ln x_0 = \\frac{1}{x_0}(x - x_0)\\) ⑤，将原点代入得  \\(0 - \\ln x_0 = \\frac{1}{x_0}(0 - x_0)\\)，解得： \\(x_0 = e\\)，代入⑤整理得： \\(y = \\frac{1}{e}x\\)，与  \\(y = kx + b\\) 对比得  \\(k = \\frac{1}{e}\\)， \\(b = 0\\)。\n答案：A\n【反思】不同切点处的公切线问题的通用思路：先设两个切点，分别写出切线 l 的方程，再比较系数建立方程组并求解.\n## 补充、拓展\n与导数有关的抽象函数问题往往难度比较大，对逻辑推理能力的要求较高，这里我们通过类型Ⅲ来给大家拓展导数与奇偶性、对称性、周期性综合的考题，请大家跟着解析中的蓝字注释仔细思考每一步推理的动机，并结合反思去总结一些常用的结论。",
+          "solution_present": true,
+          "vision_hint": "5.2-LIe35f94e52d48001a"
+        }
+      ],
+      "direct_variants": [
+        {
+          "item_id": "2f773012326f81ca",
+          "kind": "direct_variant",
+          "label": "变式1",
+          "example_number": null,
+          "parent_example_number": 8,
+          "role": "direct_variant",
+          "role_ref": "类型Ⅱ 切线问题",
+          "source_docs": [
+            12,
+            13
+          ],
+          "question_text": "【变式1】过点 \\((0,-4)\\)作函数 \\(f(x)=x-\\frac{4}{x}\\)图象的切线，则切线方程为（）\nA. y = 5x - 4 B. y = 4x - 4 C. y = 3x - 4 D. y = 2x - 4",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "5.2-LI2f773012326f81ca"
+        },
+        {
+          "item_id": "f816e7f850b58878",
+          "kind": "direct_variant",
+          "label": "变式2",
+          "example_number": null,
+          "parent_example_number": 8,
+          "role": "direct_variant",
+          "role_ref": "类型Ⅱ 切线问题",
+          "source_docs": [
+            13
+          ],
+          "question_text": "【变式2】过坐标原点作曲线  \\(y=(x-a)e^{x}(a\\neq0)\\) 的切线，若切线有且只有一条，那么  \\(a=\\) （ ）\nA. -2              B. -4              C. 2              D. 4",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "5.2-LIf816e7f850b58878"
+        },
+        {
+          "item_id": "89d58501c9101dcf",
+          "kind": "direct_variant",
+          "label": "变式3",
+          "example_number": null,
+          "parent_example_number": 8,
+          "role": "direct_variant",
+          "role_ref": "类型Ⅱ 切线问题",
+          "source_docs": [
+            13
+          ],
+          "question_text": "【变式 3】若  \\(f(x)=x+2\\sqrt{x}\\) 在点  \\((1,3)\\) 处的切线也是  \\(g(x)=\\ln x+x+a\\) 的切线，则  \\(a=\\) ___.\n由题意， \\(f'(x)=(x+2\\sqrt{x})'=x'+(2\\sqrt{x})'=1+2\\cdot\\frac{1}{2\\sqrt{x}}=1+\\frac{1}{\\sqrt{x}}\\)，所以 \\(f'(1)=2\\)，\n故 \\(f(x)\\) 在点 \\((1,3)\\) 处的切线方程为 \\(y-3=2(x-1)\\)，整理得：\\(y=2x+1\\)，\n怎样翻译该直线与 \\(g(x)\\) 也相切？此时的切点不知道了，可考虑设切点处理，\n设 \\(y=2x+1\\) 与 \\(g(x)\\) 相切于点 \\(A(x_0,g(x_0))\\)，由题意，\\(g'(x)=\\frac{1}{x}+1\\)，\n所以如图，\\(\\begin{cases}\\frac{1}{x_0}+1=2(g(x)\\text{在}x_0\\text{处的导数值等于切线斜率})\\\\2x_0+1=\\ln x_0+x_0+a(\\text{切点是切线与}g(x)\\text{图象的公共点})\\end{cases}\\)，解得：\\(x_0=1\\)，\\(a=2\\)。",
+          "image_refs": [
+            {
+              "ref": "imgs/img_in_image_box_934_976_1092_1166.jpg",
+              "path": "data/ocr_live_current/chapter5_95/imgs/img_in_image_box_934_976_1092_1166.jpg",
+              "exists": true
+            }
+          ],
+          "visual_status": "NEEDS_VISION_SIDECAR",
+          "solution_isolated": true,
+          "vision_hint": "5.2-LI89d58501c9101dcf"
+        },
+        {
+          "item_id": "61aea1db4af57e77",
+          "kind": "direct_variant",
+          "label": "变式4",
+          "example_number": null,
+          "parent_example_number": 8,
+          "role": "direct_variant",
+          "role_ref": "类型Ⅱ 切线问题",
+          "source_docs": [
+            13,
+            14
+          ],
+          "question_text": "【变式4】M，N分别为曲线  \\(y=e^{x}+2x\\) 与直线 y=3x-1 上的点，则  \\(\\left|MN\\right|\\) 的最小值为 ___.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "5.2-LI61aea1db4af57e77"
+        }
+      ],
+      "exercise_questions": [],
+      "action_order": [
+        "learn_each_current_example_then_attempt_its_direct_variants",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [],
+      "prerequisite_knowledge_blocks": []
+    },
+    {
+      "cycle_id": "5.2-cycle-7",
+      "sequence": 7,
+      "title": "类型III 导数与奇偶性、对称性、周期性综合",
+      "course_keys": [],
+      "prerequisite_course_keys": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
+        "4.1.2.2 复合函数的导数",
+        "4.1.2.3 导数的原函数构造（基础）",
+        "4.1.2.3 导数的原函数构造（进阶）"
+      ],
+      "optional_course_keys": [],
+      "knowledge_refs": [],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [
         "类型III 导数与奇偶性、对称性、周期性综合"
       ],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [
+        {
+          "item_id": "2c46e77ba2dfd2a2",
+          "kind": "example",
+          "label": "例10",
+          "example_number": 10,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型III 导数与奇偶性、对称性、周期性综合",
+          "source_docs": [
+            15
+          ],
+          "question_text": "【例 10】（多选）已知定义在  \\(\\mathbb{R}\\) 上的可导函数  \\(f(x)\\) 是偶函数，且满足  \\(f(2-x)+f(x)=0\\)，则下列结论一定正确的是（ ）\nA. 4 是  \\(f(x)\\) 的一个周期  \nB.  \\(f(x)\\) 的图象关于点  \\((3,0)\\) 对称  \nC.  \\(f'(x)\\) 的图象关于  \\(x=2\\) 对称  \nD.  \\(f'(100)=0\\)",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例 10】（多选）已知定义在  \\(\\mathbb{R}\\) 上的可导函数  \\(f(x)\\) 是偶函数，且满足  \\(f(2-x)+f(x)=0\\)，则下列结论一定正确的是（ ）\nA. 4 是  \\(f(x)\\) 的一个周期  \nB.  \\(f(x)\\) 的图象关于点  \\((3,0)\\) 对称  \nC.  \\(f'(x)\\) 的图象关于  \\(x=2\\) 对称  \nD.  \\(f'(100)=0\\)\n解析：A 项，因为  \\(f(x)\\) 为偶函数，所以  \\(f(-x) = f(x)\\)，结合另一条件可知  \\(\\left\\{\\begin{array}{l}f(-x)=-f(x)\\\\f(2-x)+f(x)=0\\end{array}\\right.\\)\n怎样由①②分析  \\(f(x)\\) 的周期性？周期性满足的是  \\(f(x+T)=f(x)\\)，此式中 x 的系数都为正，故考虑消去  \\(f(-x)\\) 和  \\(f(2-x)\\)，再作观察，怎么消？可在①中将 x 换成 x-2，把  \\(f(-x)\\) 化成  \\(f(2-x)\\)，再代入②，在①中将 x 换成 x-2 得  \\(f(2-x)=f(x-2)\\)，代入②得  \\(f(x-2)+f(x)=0\\)，所以  \\(f(x-2)=-f(x)\\) ③，怎样由③分析周期？可以想象，自变量减 2，函数值就变成相反数，那么自变量若再减 2，则函数值再反一次，又变回去了，所以可朝此思路推导周期，在③中将 x 换成 x-2 可得  \\(f(x-4)=-f(x-2)\\)，结合式③可得  \\(f(x-4)=-[-f(x)]=f(x)\\)，再将 x 换成 x+4 得  \\(f(x)=f(x+4)\\)，所以 4 是  \\(f(x)\\) 的一个周期，故 A 项正确；B 项，结论等价于  \\(f(6-x)+f(x)=0\\)，为了朝此式的结构靠拢，可尝试用②变出  \\(f(6-x)\\)，在②中将 x 换成 x-4 得  \\(f(6-x)+f(x-4)=0\\)，又 4 是  \\(f(x)\\) 的一个周期，所以  \\(f(x-4)=f(x)\\)，从而  \\(f(6-x)+f(x)=0\\)，故  \\(f(x)\\) 关于点 (3,0) 对称，故 B 项正确；C 项，若结论成立，则  \\(f'(4+x)=f'(-x)\\)，由此想到结合导函数与原函数的周期性、奇偶性关系来分析，因为  \\(f(x)\\) 的周期为 4，所以  \\(f'(x)\\) 的周期也为 4，故  \\(f'(x+4)=f'(x)\\) ④，又  \\(f(x)\\) 为偶函数，所以  \\(f'(x)\\) 为奇函数，故  \\(f'(x)=-f'(-x)\\)，代入④得  \\(f'(x+4)=-f'(-x)\\)，所以  \\(f'(x+4)+f'(-x)=0\\)，从而  \\(f'(x)\\) 关于点 (2,0) 对称，不关于直线 x=2 对称，故 C 项错误；D 项，因为  \\(f'(x)\\) 的周期为 4，所以  \\(f'(100)=f'(0+25\\times4)=f'(0)\\)，又  \\(f'(x)\\) 为奇函数，所以  \\(f'(0)=0\\)，从而  \\(f'(100)=0\\)，故 D 项正确.\n答案：ABD\n【反思】①当函数  \\(f(x)\\) 有对称轴 x=a 和对称中心  \\((b,c)\\) 时， \\(f(x)\\) 一定是周期函数，且周期  \\(T=4|a-b|\\)。以本题为例， \\(f(2-x)+f(x)=0\\) 意味着  \\(f(x)\\) 有对称中心  \\((1,0)\\)， \\(f(x)\\) 为偶函数意味着  \\(f(x)\\) 有对称轴 x=0，所以  \\(f(x)\\) 为周期函数，周期为  \\(4|1-0|=4\\)。类似地，若  \\(f(x)\\) 有对称轴 x=a 和 x=b，则  \\(f(x)\\) 周期为  \\(2|a-b|\\)；若  \\(f(x)\\) 有对称中心  \\((a,c)\\) 和  \\((b,c)\\)，则  \\(f(x)\\) 周期为  \\(2|a-b|\\)。这些结论的推导方法与本题 A 项的分析类似，记忆的话，可以结合正弦或余弦函数的有关对称性质与周期的关系来记忆；\n②导函数与原函数的周期相同，偶函数的导函数是奇函数，奇函数的导函数是偶函数。但请注意，由导函数的奇偶性反推原函数的奇偶性时，不一定有此结论，我们通过下面的变式来给大家详细分析。",
+          "solution_present": true,
+          "vision_hint": "5.2-LI2c46e77ba2dfd2a2"
+        }
+      ],
+      "direct_variants": [
+        {
+          "item_id": "d1a00d15c0a251ed",
+          "kind": "direct_variant",
+          "label": "变式",
+          "example_number": null,
+          "parent_example_number": 10,
+          "role": "direct_variant",
+          "role_ref": "类型III 导数与奇偶性、对称性、周期性综合",
+          "source_docs": [
+            15,
+            16
+          ],
+          "question_text": "【变式】（多选）已知函数  \\(f(x)\\) 及其导函数  \\(f'(x)\\) 的定义域为  \\(\\mathbb{R}\\)，若  \\(f(x+1)\\) 与  \\(f'(x)\\) 均为偶函数，且  \\(f(-1) + f(1) = 2\\)，则下列结论正确的是（ ）\nA.  \\(f'(1)=0\\) B. 4 是  \\(f(x)\\) 的一个周期\nC.  \\(f(100)=0\\) D.  \\(f(x)\\) 的图象关于点 (2,1) 对称",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "5.2-LId1a00d15c0a251ed"
+        }
+      ],
+      "exercise_questions": [],
+      "action_order": [
+        "learn_each_current_example_then_attempt_its_direct_variants",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [],
+      "prerequisite_knowledge_blocks": []
+    },
+    {
+      "cycle_id": "5.2-cycle-8",
+      "sequence": 8,
+      "title": "A组 夯实基础",
+      "course_keys": [],
+      "prerequisite_course_keys": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
+        "4.1.2.2 复合函数的导数",
+        "4.1.2.3 导数的原函数构造（基础）",
+        "4.1.2.3 导数的原函数构造（进阶）"
+      ],
+      "optional_course_keys": [],
+      "knowledge_refs": [],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [],
       "bridge_unit_ids": [],
       "method_checkpoints": [],
       "worked_examples": [],
       "direct_variants": [],
       "exercise_questions": [
         {
-          "qid": "Q-f395d1a975ef9fcd",
+          "qid": "Q-0715bcaa59f3ebec",
           "section": "5.2",
           "group": "A",
           "number": 1,
@@ -613,7 +629,7 @@
           "source_anchor": {
             "ocr_doc": 16,
             "pdf_page": 17,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_16.md"
+            "file": "data/ocr_live_current/chapter5_95/doc_16.md"
           },
           "question_text": "1\\. (2025 · 全国模拟)\n\n曲线  \\(y = x + \\frac{2}{x}\\) 在 x = 1 处的切线斜率为（）\n\nA. 1 B. -1 C. 3 D. -3",
           "image_refs": [],
@@ -624,7 +640,7 @@
           ]
         },
         {
-          "qid": "Q-bde2517f541041dc",
+          "qid": "Q-ba0c13fbc250c590",
           "section": "5.2",
           "group": "A",
           "number": 2,
@@ -632,7 +648,7 @@
           "source_anchor": {
             "ocr_doc": 17,
             "pdf_page": 18,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_17.md"
+            "file": "data/ocr_live_current/chapter5_95/doc_17.md"
           },
           "question_text": "2.（2025·四川成都一模）\n\n函数  \\(f(x)=x+\\sin x\\) 的图象在点  \\(\\left(\\frac{\\pi}{2},f\\left(\\frac{\\pi}{2}\\right)\\right)\\) 处的切线方程为（）\n\nA.  \\(x + y - \\pi - 1 = 0\\) B.  \\(x + y - 1 = 0\\)\n\nC.  \\(x - y + 1 = 0\\) D. x - y = 0",
           "image_refs": [],
@@ -643,7 +659,7 @@
           ]
         },
         {
-          "qid": "Q-9fab4b7f7bf7c425",
+          "qid": "Q-59acd60a58035ae8",
           "section": "5.2",
           "group": "A",
           "number": 3,
@@ -651,7 +667,7 @@
           "source_anchor": {
             "ocr_doc": 17,
             "pdf_page": 18,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_17.md"
+            "file": "data/ocr_live_current/chapter5_95/doc_17.md"
           },
           "question_text": "### 3. （2025·全国模拟）\n\n求下列函数的导数：\n\n（1） \\(y=\\frac{x}{\\sqrt{2x+1}}\\);\n\n(2)  \\(y = (2x - 3)\\sin(2x + 5)\\);\n\n(3)  \\(y = \\frac{\\cos(3x - 2)}{2x}\\);\n\n(4)  \\(y = (3x + 1)^{2} \\ln(3x)\\);\n\n(5)  \\(y = 3^x e^{-3x}\\).",
           "image_refs": [],
@@ -672,33 +688,28 @@
       "prerequisite_knowledge_blocks": []
     },
     {
-      "cycle_id": "5.2-cycle-6",
-      "sequence": 6,
+      "cycle_id": "5.2-cycle-9",
+      "sequence": 9,
       "title": "B组 强化能力",
       "course_keys": [],
       "prerequisite_course_keys": [
         "4.1.2.1 基本初等函数的导数及运算法则",
         "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
         "4.1.2.2 复合函数的导数",
-        "4.1.2.3 导数的原函数构造之速解技巧",
         "4.1.2.3 导数的原函数构造（基础）",
         "4.1.2.3 导数的原函数构造（进阶）"
       ],
       "optional_course_keys": [],
       "knowledge_refs": [],
       "prerequisite_knowledge_refs": [],
-      "type_refs": [
-        "类型I 导数的计算",
-        "类型Ⅱ 切线问题",
-        "类型III 导数与奇偶性、对称性、周期性综合"
-      ],
+      "type_refs": [],
       "bridge_unit_ids": [],
       "method_checkpoints": [],
       "worked_examples": [],
       "direct_variants": [],
       "exercise_questions": [
         {
-          "qid": "Q-00c51ab952063423",
+          "qid": "Q-e4978234c96ee2f8",
           "section": "5.2",
           "group": "B",
           "number": 4,
@@ -706,7 +717,7 @@
           "source_anchor": {
             "ocr_doc": 17,
             "pdf_page": 18,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_17.md"
+            "file": "data/ocr_live_current/chapter5_95/doc_17.md"
           },
           "question_text": "### 4. （2025·全国模拟）\n\n函数  \\(f(x)=\\frac{e^{x}}{x}+x\\ln x\\) 在点  \\((1,f(1))\\) 处的切线方程为 ___.",
           "image_refs": [],
@@ -717,7 +728,7 @@
           ]
         },
         {
-          "qid": "Q-5d153c02ec347935",
+          "qid": "Q-f15c815945a34232",
           "section": "5.2",
           "group": "B",
           "number": 5,
@@ -725,7 +736,7 @@
           "source_anchor": {
             "ocr_doc": 18,
             "pdf_page": 19,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_18.md"
+            "file": "data/ocr_live_current/chapter5_95/doc_18.md"
           },
           "question_text": "5.（2025·四川雅安期末）\n\n已知函数  \\(f(x)\\) 的导函数为  \\(f'(x)\\)，且  \\(f(x)=2\\mathrm{e}^{x}-f'(1)x\\)，则  \\(f'(1)=\\)（ ）\n\nA.  \\(\\frac{e}{2}\\) B.  \\(\\frac{2}{e}\\)\n\nC. e D.  \\(\\frac{1}{e}\\)",
           "image_refs": [],
@@ -736,7 +747,7 @@
           ]
         },
         {
-          "qid": "Q-bab7b56a1982311e",
+          "qid": "Q-d95213336ebc7adf",
           "section": "5.2",
           "group": "B",
           "number": 6,
@@ -744,7 +755,7 @@
           "source_anchor": {
             "ocr_doc": 18,
             "pdf_page": 19,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_18.md"
+            "file": "data/ocr_live_current/chapter5_95/doc_18.md"
           },
           "question_text": "6.（2025·广东揭阳期末）\n\n已知曲线  \\(y = x + \\ln x\\) 在点  \\((1,1)\\) 处的切线与曲线  \\(y = e^{ax} - 1\\) 相切，则  \\(a\\) 的值为___。",
           "image_refs": [],
@@ -755,7 +766,7 @@
           ]
         },
         {
-          "qid": "Q-a40b1d3078a3610e",
+          "qid": "Q-2226a5cfc492b06e",
           "section": "5.2",
           "group": "B",
           "number": 7,
@@ -763,7 +774,7 @@
           "source_anchor": {
             "ocr_doc": 18,
             "pdf_page": 19,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_18.md"
+            "file": "data/ocr_live_current/chapter5_95/doc_18.md"
           },
           "question_text": "7.（2025·北京通州期中）\n\n过点  \\(P(0,-1)\\) 作曲线  \\(y=\\ln x\\) 的切线，则切点坐标为（）\n\nA.  \\((e,1)\\) B.  \\((1,-1)\\)\n\nC.  \\((1,0)\\) D.  \\(\\left(\\frac{1}{e},-1\\right)\\)",
           "image_refs": [],
@@ -774,7 +785,7 @@
           ]
         },
         {
-          "qid": "Q-a8b6ce421e8d2b3d",
+          "qid": "Q-6e38fb82fcfce072",
           "section": "5.2",
           "group": "B",
           "number": 8,
@@ -782,7 +793,7 @@
           "source_anchor": {
             "ocr_doc": 18,
             "pdf_page": 19,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_18.md"
+            "file": "data/ocr_live_current/chapter5_95/doc_18.md"
           },
           "question_text": "8.（2025·安徽开学考试）\n\n若直线  \\(y = x + a\\) 与曲线  \\(y = \\ln(x + b)\\) 相切，则\n\n \\(b - a =\\)___。",
           "image_refs": [],
@@ -793,7 +804,7 @@
           ]
         },
         {
-          "qid": "Q-5bb24c52cc4d6757",
+          "qid": "Q-1ebfd1bf2629edbc",
           "section": "5.2",
           "group": "B",
           "number": 9,
@@ -801,7 +812,7 @@
           "source_anchor": {
             "ocr_doc": 19,
             "pdf_page": 20,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_19.md"
+            "file": "data/ocr_live_current/chapter5_95/doc_19.md"
           },
           "question_text": "9. (2025·重庆开学考试)\n\n已知 m, n 是正实数，若  \\(f(x) = e^{x-n}\\) 的图象与  \\(g(x) = x + m\\) 的图象相切，则  \\(\\frac{1}{m} + \\frac{2}{n}\\) 的最小值是（）\n\nA.  \\(2\\sqrt{2}\\) B.  \\(3+2\\sqrt{2}\\) C.  \\(1+\\sqrt{2}\\) D. 3",
           "image_refs": [],
@@ -812,7 +823,7 @@
           ]
         },
         {
-          "qid": "Q-d7a724b37b15f402",
+          "qid": "Q-1d61f3d4eda34436",
           "section": "5.2",
           "group": "B",
           "number": 10,
@@ -820,7 +831,7 @@
           "source_anchor": {
             "ocr_doc": 19,
             "pdf_page": 20,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_19.md"
+            "file": "data/ocr_live_current/chapter5_95/doc_19.md"
           },
           "question_text": "10.（2025·云南丽江模拟）\n\n已知函数  \\(f(x) = \\mathrm{e}^x + 1\\)， \\(e\\) 为自然对数的底数， \\(g(x)\\)\n\n \\(= \\ln x + 3\\)，直线  \\(l\\) 既与  \\(f(x)\\) 相切又与  \\(g(x)\\) 相切，则直线  \\(l\\) 的方程是（ ）\n\nA.  \\(y = x + 1\\)\n\nB.  \\(y = -x + 2\\)\n\nC.  \\(y = \\mathrm{e}x + 1\\) 或  \\(y = x + 2\\)\n\nD.  \\(y = \\frac{1}{\\mathrm{e}}x + 2\\) 或  \\(y = x + 1\\)",
           "image_refs": [],
@@ -831,7 +842,7 @@
           ]
         },
         {
-          "qid": "Q-391858e50a9307da",
+          "qid": "Q-4ba3639dbc306709",
           "section": "5.2",
           "group": "B",
           "number": 11,
@@ -839,7 +850,7 @@
           "source_anchor": {
             "ocr_doc": 19,
             "pdf_page": 20,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_19.md"
+            "file": "data/ocr_live_current/chapter5_95/doc_19.md"
           },
           "question_text": "11.（2025·广东深圳期末）\n\n若点 P 是曲线  \\(y = e^{x} + x + a\\) 上任意一点，且点 P 到直线 l: y = 2x 的距离 d 的最小值为  \\(\\sqrt{5}\\)，则 a 的值为（）\n\nA. 0 B. 4 C. -6 D. 4 或 -6",
           "image_refs": [],
@@ -860,33 +871,28 @@
       "prerequisite_knowledge_blocks": []
     },
     {
-      "cycle_id": "5.2-cycle-7",
-      "sequence": 7,
+      "cycle_id": "5.2-cycle-10",
+      "sequence": 10,
       "title": "C组 拓展提升",
       "course_keys": [],
       "prerequisite_course_keys": [
         "4.1.2.1 基本初等函数的导数及运算法则",
         "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
         "4.1.2.2 复合函数的导数",
-        "4.1.2.3 导数的原函数构造之速解技巧",
         "4.1.2.3 导数的原函数构造（基础）",
         "4.1.2.3 导数的原函数构造（进阶）"
       ],
       "optional_course_keys": [],
       "knowledge_refs": [],
       "prerequisite_knowledge_refs": [],
-      "type_refs": [
-        "类型I 导数的计算",
-        "类型Ⅱ 切线问题",
-        "类型III 导数与奇偶性、对称性、周期性综合"
-      ],
+      "type_refs": [],
       "bridge_unit_ids": [],
       "method_checkpoints": [],
       "worked_examples": [],
       "direct_variants": [],
       "exercise_questions": [
         {
-          "qid": "Q-64a066b3d9f32d13",
+          "qid": "Q-a5def06383fd262e",
           "section": "5.2",
           "group": "C",
           "number": 12,
@@ -894,7 +900,7 @@
           "source_anchor": {
             "ocr_doc": 20,
             "pdf_page": 21,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_20.md"
+            "file": "data/ocr_live_current/chapter5_95/doc_20.md"
           },
           "question_text": "### 12. （2025·上海期末）\n\n设函数  \\(f(x) = -\\frac{x}{4} - \\ln x\\) 图象上任意一点  \\(P\\) 处的切线为  \\(l_1\\)，总存在函数  \\(g(x) = 2a \\sin x + x\\) ( \\(a > 0\\)) 图象上一点  \\(Q\\) 处的切线  \\(l_2\\)，使得  \\(l_1 \\perp l_2\\)，则实数  \\(a\\) 的最小值是___。",
           "image_refs": [],
@@ -905,7 +911,7 @@
           ]
         },
         {
-          "qid": "Q-02ce4aa6eec44dab",
+          "qid": "Q-4aa966d2cfcae2b2",
           "section": "5.2",
           "group": "C",
           "number": 13,
@@ -913,7 +919,7 @@
           "source_anchor": {
             "ocr_doc": 20,
             "pdf_page": 21,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_20.md"
+            "file": "data/ocr_live_current/chapter5_95/doc_20.md"
           },
           "question_text": "### 13 \\. (2025 · 广东模拟)\n\n已知函数  \\(f(x)\\) 及其导函数  \\(f'(x)\\) 的定义域均为  \\(\\mathbb{R}\\)，若  \\(f(x+1)\\)， \\(f'(x+2)\\) 都是偶函数，则  \\(f'(5) =\\) ___.",
           "image_refs": [],
@@ -924,7 +930,7 @@
           ]
         },
         {
-          "qid": "Q-7d7122230f6c2d61",
+          "qid": "Q-e6a4230bc4509f0f",
           "section": "5.2",
           "group": "C",
           "number": 14,
@@ -932,7 +938,7 @@
           "source_anchor": {
             "ocr_doc": 20,
             "pdf_page": 21,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_20.md"
+            "file": "data/ocr_live_current/chapter5_95/doc_20.md"
           },
           "question_text": "### 14. （2025·全国模拟）（多选）\n\n已知定义在  \\(\\mathbb{R}\\) 上的函数  \\(f(x)\\) 可导， \\(f(x)\\) 的导数为  \\(f'(x)\\)，若  \\(f\\left(x+\\frac{1}{2}\\right)\\) 是奇函数，且  \\(f(2-x)-f(2+x)+4x=0\\)，则（ ）\n\nA.  \\(f\\left(\\frac{1}{2}\\right)=0\\)\n\nB.  \\(f'(1)+f'(4)=4\\)\n\nC.  \\(f'(x)\\) 的图象关于点  \\((2,0)\\) 中心对称\n\nD.  \\(f'(2024)=2\\)",
           "image_refs": [],
@@ -1146,8 +1152,8 @@
       "label": "例7",
       "example_number": 7,
       "parent_example_number": null,
-      "role": "knowledge_example",
-      "role_ref": "5.2-k4",
+      "role": "type_example",
+      "role_ref": "类型I 导数的计算",
       "source_docs": [
         11,
         12
@@ -1165,8 +1171,8 @@
       "label": "例8",
       "example_number": 8,
       "parent_example_number": null,
-      "role": "knowledge_example",
-      "role_ref": "5.2-k4",
+      "role": "type_example",
+      "role_ref": "类型Ⅱ 切线问题",
       "source_docs": [
         12
       ],
@@ -1183,8 +1189,8 @@
       "label": "例9",
       "example_number": 9,
       "parent_example_number": null,
-      "role": "knowledge_example",
-      "role_ref": "5.2-k4",
+      "role": "type_example",
+      "role_ref": "类型Ⅱ 切线问题",
       "source_docs": [
         14,
         15
@@ -1193,51 +1199,14 @@
       "image_refs": [
         {
           "ref": "imgs/img_in_image_box_867_117_1093_340.jpg",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_867_117_1093_340.jpg",
+          "path": "data/ocr_live_current/chapter5_95/imgs/img_in_image_box_867_117_1093_340.jpg",
           "exists": true
         }
       ],
-      "visual_status": "VISION_VERIFIED",
+      "visual_status": "NEEDS_VISION_SIDECAR",
       "teaching_text": "【例 9】已知直线  \\(y = kx + b\\) 既是曲线  \\(y = \\ln x\\) 的切线，也是曲线  \\(y = -\\ln(-x)\\) 的切线，则（ ）\nA.  \\(k = \\frac{1}{e}\\)， \\(b = 0\\)    B.  \\(k = 1\\)， \\(b = 0\\)    C.  \\(k = \\frac{1}{e}\\)， \\(b = -1\\)    D.  \\(k = 1\\)， \\(b = -1\\)\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_867_117_1093_340.jpg\" alt=\"Image\" width=\"18%\" /></div>\n解法1：直线  \\(y = kx + b\\) 与两曲线的切点均未知，可设两个切点，分别写出切线  \\(l\\) 的斜截式方程，再作观察，如图1，设  \\(A(x_1, \\ln x_1)\\)， \\(B(x_2, -\\ln(-x_2))\\) 分别为  \\(y = kx + b\\) 与  \\(y = \\ln x\\) 和  \\(y = -\\ln(-x)\\) 的切点，因为  \\((\\ln x)' = \\frac{1}{x}\\)，所以  \\(y = \\ln x\\) 在点  \\(A\\) 处的切线方程为  \\(y - \\ln x_1 = \\frac{1}{x_1}(x - x_1)\\)，即  \\(y = \\frac{1}{x_1}x + \\ln x_1 - 1\\) ①，因为  \\([-\\ln(-x)]' = -\\frac{-1}{-x} = -\\frac{1}{x}\\)，所以  \\(y = -\\ln(-x)\\) 在点  \\(B\\) 处的切线方程为  \\(y + \\ln(-x_2) = -\\frac{1}{x_2}(x - x_2)\\)，即  \\(y = -\\frac{1}{x_2}x - \\ln(-x_2) + 1\\) ②，怎样求  \\(k\\) 和  \\(b\\)？可以想象，只要求出  \\(x_1\\) 或  \\(x_2\\)，就能代入①或②得到切线的方程，和  \\(b\\) 也就有了，由于①和②是同一条直线的方程，所以对应系数应相等，由此可建立方程组求  \\(x_1\\) 和  \\(x_2\\)，因为①和②都是直线  \\(y = kx + b\\) 的方程，所以  \\(\\begin{cases} \\frac{1}{x_1} = -\\frac{1}{x_2} \\\\ \\ln x_1 - 1 = -\\ln(-x_2) + 1 \\end{cases}\\) ③，由③可得  \\(x_2 = -x_1\\)，代入④得  \\(\\ln x_1 - 1 = -\\ln x_1 + 1\\)，解得： \\(x_1 = e\\)，代入①得切线的方程为  \\(y = \\frac{1}{e}x\\)，又由题意，该切线的方程为  \\(y = kx + b\\)，所以  \\(k = \\frac{1}{e}\\)， \\(b = 0\\)。\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_263_1033_555_1164.jpg\" alt=\"Image\" width=\"24%\" /></div>\n<div style=\"text-align: center;\">图1</div>\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_620_1033_930_1167.jpg\" alt=\"Image\" width=\"26%\" /></div>\n<div style=\"text-align: center;\">图2</div>\n解法 2：若注意到  \\(y = -\\ln(-x)\\) 和  \\(y = \\ln x\\) 的图象关于原点对称，则也可考虑从这一特征出发分析，看能否找到解题的突破口，如图 2，我们将  \\(y = \\ln x\\) 沿 y 轴翻折，得到  \\(y = \\ln(-x)\\)，再沿 x 轴翻折，得到  \\(y = -\\ln(-x)\\)，所以  \\(y = -\\ln(-x)\\) 与  \\(y = \\ln x\\) 关于原点对称，若  \\(y = kx + b\\) 是两曲线的公切线，则可想象，切点必定也关于原点对称，所以  \\(y = kx + b\\) 过原点，故问题转化为求  \\(y = \\ln x\\) 的过原点的切线，这可通过设切点来处理，设过原点的直线与  \\(y = \\ln x\\) 相切于点  \\((x_0, \\ln x_0)\\)，因为  \\((\\ln x)' = \\frac{1}{x}\\)，所以该直线的方程为  \\(y - \\ln x_0 = \\frac{1}{x_0}(x - x_0)\\) ⑤，将原点代入得  \\(0 - \\ln x_0 = \\frac{1}{x_0}(0 - x_0)\\)，解得： \\(x_0 = e\\)，代入⑤整理得： \\(y = \\frac{1}{e}x\\)，与  \\(y = kx + b\\) 对比得  \\(k = \\frac{1}{e}\\)， \\(b = 0\\)。\n答案：A\n【反思】不同切点处的公切线问题的通用思路：先设两个切点，分别写出切线 l 的方程，再比较系数建立方程组并求解.\n## 补充、拓展\n与导数有关的抽象函数问题往往难度比较大，对逻辑推理能力的要求较高，这里我们通过类型Ⅲ来给大家拓展导数与奇偶性、对称性、周期性综合的考题，请大家跟着解析中的蓝字注释仔细思考每一步推理的动机，并结合反思去总结一些常用的结论。",
       "solution_present": true,
-      "vision_hint": "5.2-LIe35f94e52d48001a",
-      "vision_sidecars": [
-        {
-          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_867_117_1093_340.jpg",
-          "image_sha256": "aff5b045321604d453e63292a403f65db954d627dfaf173fed920c285daebd82",
-          "confidence": "E2",
-          "structured": {
-            "objects": [],
-            "relations": [],
-            "coordinates": [],
-            "ranges": [],
-            "text": [
-              "y=3x-1",
-              "y=e^x+2x"
-            ],
-            "uncertainties": [],
-            "confidence": "E2"
-          },
-          "source_provenance": null
-        }
-      ],
-      "vision_sidecar": {
-        "objects": [],
-        "relations": [],
-        "coordinates": [],
-        "ranges": [],
-        "text": [
-          "y=3x-1",
-          "y=e^x+2x"
-        ],
-        "uncertainties": [],
-        "confidence": "E2"
-      },
-      "vision_source_provenance": [],
-      "evidence": [
-        "E1",
-        "E2"
-      ]
+      "vision_hint": "5.2-LIe35f94e52d48001a"
     },
     {
       "item_id": "2c46e77ba2dfd2a2",
@@ -1245,8 +1214,8 @@
       "label": "例10",
       "example_number": 10,
       "parent_example_number": null,
-      "role": "knowledge_example",
-      "role_ref": "5.2-k4",
+      "role": "type_example",
+      "role_ref": "类型III 导数与奇偶性、对称性、周期性综合",
       "source_docs": [
         15
       ],
@@ -1266,7 +1235,7 @@
       "example_number": null,
       "parent_example_number": 7,
       "role": "direct_variant",
-      "role_ref": null,
+      "role_ref": "类型I 导数的计算",
       "source_docs": [
         12
       ],
@@ -1283,7 +1252,7 @@
       "example_number": null,
       "parent_example_number": 8,
       "role": "direct_variant",
-      "role_ref": null,
+      "role_ref": "类型Ⅱ 切线问题",
       "source_docs": [
         12,
         13
@@ -1301,7 +1270,7 @@
       "example_number": null,
       "parent_example_number": 8,
       "role": "direct_variant",
-      "role_ref": null,
+      "role_ref": "类型Ⅱ 切线问题",
       "source_docs": [
         13
       ],
@@ -1318,7 +1287,7 @@
       "example_number": null,
       "parent_example_number": 8,
       "role": "direct_variant",
-      "role_ref": null,
+      "role_ref": "类型Ⅱ 切线问题",
       "source_docs": [
         13
       ],
@@ -1326,50 +1295,13 @@
       "image_refs": [
         {
           "ref": "imgs/img_in_image_box_934_976_1092_1166.jpg",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_934_976_1092_1166.jpg",
+          "path": "data/ocr_live_current/chapter5_95/imgs/img_in_image_box_934_976_1092_1166.jpg",
           "exists": true
         }
       ],
-      "visual_status": "VISION_VERIFIED",
+      "visual_status": "NEEDS_VISION_SIDECAR",
       "solution_isolated": true,
-      "vision_hint": "5.2-LI89d58501c9101dcf",
-      "vision_sidecars": [
-        {
-          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_934_976_1092_1166.jpg",
-          "image_sha256": "2eb638d10b97dbb9a65c2cb1d34d8ef785989e84fa70b3ec166af92568e17c51",
-          "confidence": "E2",
-          "structured": {
-            "objects": [],
-            "relations": [],
-            "coordinates": [],
-            "ranges": [],
-            "text": [
-              "y=2x+1",
-              "y=g(x)"
-            ],
-            "uncertainties": [],
-            "confidence": "E2"
-          },
-          "source_provenance": null
-        }
-      ],
-      "vision_sidecar": {
-        "objects": [],
-        "relations": [],
-        "coordinates": [],
-        "ranges": [],
-        "text": [
-          "y=2x+1",
-          "y=g(x)"
-        ],
-        "uncertainties": [],
-        "confidence": "E2"
-      },
-      "vision_source_provenance": [],
-      "evidence": [
-        "E1",
-        "E2"
-      ]
+      "vision_hint": "5.2-LI89d58501c9101dcf"
     },
     {
       "item_id": "61aea1db4af57e77",
@@ -1378,7 +1310,7 @@
       "example_number": null,
       "parent_example_number": 8,
       "role": "direct_variant",
-      "role_ref": null,
+      "role_ref": "类型Ⅱ 切线问题",
       "source_docs": [
         13,
         14
@@ -1396,7 +1328,7 @@
       "example_number": null,
       "parent_example_number": 10,
       "role": "direct_variant",
-      "role_ref": null,
+      "role_ref": "类型III 导数与奇偶性、对称性、周期性综合",
       "source_docs": [
         15,
         16
@@ -1411,7 +1343,7 @@
   "deduplicated_learning_items": [],
   "exercise_questions": [
     {
-      "qid": "Q-f395d1a975ef9fcd",
+      "qid": "Q-0715bcaa59f3ebec",
       "section": "5.2",
       "group": "A",
       "number": 1,
@@ -1419,7 +1351,7 @@
       "source_anchor": {
         "ocr_doc": 16,
         "pdf_page": 17,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_16.md"
+        "file": "data/ocr_live_current/chapter5_95/doc_16.md"
       },
       "question_text": "1\\. (2025 · 全国模拟)\n\n曲线  \\(y = x + \\frac{2}{x}\\) 在 x = 1 处的切线斜率为（）\n\nA. 1 B. -1 C. 3 D. -3",
       "image_refs": [],
@@ -1430,7 +1362,7 @@
       ]
     },
     {
-      "qid": "Q-bde2517f541041dc",
+      "qid": "Q-ba0c13fbc250c590",
       "section": "5.2",
       "group": "A",
       "number": 2,
@@ -1438,7 +1370,7 @@
       "source_anchor": {
         "ocr_doc": 17,
         "pdf_page": 18,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_17.md"
+        "file": "data/ocr_live_current/chapter5_95/doc_17.md"
       },
       "question_text": "2.（2025·四川成都一模）\n\n函数  \\(f(x)=x+\\sin x\\) 的图象在点  \\(\\left(\\frac{\\pi}{2},f\\left(\\frac{\\pi}{2}\\right)\\right)\\) 处的切线方程为（）\n\nA.  \\(x + y - \\pi - 1 = 0\\) B.  \\(x + y - 1 = 0\\)\n\nC.  \\(x - y + 1 = 0\\) D. x - y = 0",
       "image_refs": [],
@@ -1449,7 +1381,7 @@
       ]
     },
     {
-      "qid": "Q-9fab4b7f7bf7c425",
+      "qid": "Q-59acd60a58035ae8",
       "section": "5.2",
       "group": "A",
       "number": 3,
@@ -1457,7 +1389,7 @@
       "source_anchor": {
         "ocr_doc": 17,
         "pdf_page": 18,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_17.md"
+        "file": "data/ocr_live_current/chapter5_95/doc_17.md"
       },
       "question_text": "### 3. （2025·全国模拟）\n\n求下列函数的导数：\n\n（1） \\(y=\\frac{x}{\\sqrt{2x+1}}\\);\n\n(2)  \\(y = (2x - 3)\\sin(2x + 5)\\);\n\n(3)  \\(y = \\frac{\\cos(3x - 2)}{2x}\\);\n\n(4)  \\(y = (3x + 1)^{2} \\ln(3x)\\);\n\n(5)  \\(y = 3^x e^{-3x}\\).",
       "image_refs": [],
@@ -1468,7 +1400,7 @@
       ]
     },
     {
-      "qid": "Q-00c51ab952063423",
+      "qid": "Q-e4978234c96ee2f8",
       "section": "5.2",
       "group": "B",
       "number": 4,
@@ -1476,7 +1408,7 @@
       "source_anchor": {
         "ocr_doc": 17,
         "pdf_page": 18,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_17.md"
+        "file": "data/ocr_live_current/chapter5_95/doc_17.md"
       },
       "question_text": "### 4. （2025·全国模拟）\n\n函数  \\(f(x)=\\frac{e^{x}}{x}+x\\ln x\\) 在点  \\((1,f(1))\\) 处的切线方程为 ___.",
       "image_refs": [],
@@ -1487,7 +1419,7 @@
       ]
     },
     {
-      "qid": "Q-5d153c02ec347935",
+      "qid": "Q-f15c815945a34232",
       "section": "5.2",
       "group": "B",
       "number": 5,
@@ -1495,7 +1427,7 @@
       "source_anchor": {
         "ocr_doc": 18,
         "pdf_page": 19,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_18.md"
+        "file": "data/ocr_live_current/chapter5_95/doc_18.md"
       },
       "question_text": "5.（2025·四川雅安期末）\n\n已知函数  \\(f(x)\\) 的导函数为  \\(f'(x)\\)，且  \\(f(x)=2\\mathrm{e}^{x}-f'(1)x\\)，则  \\(f'(1)=\\)（ ）\n\nA.  \\(\\frac{e}{2}\\) B.  \\(\\frac{2}{e}\\)\n\nC. e D.  \\(\\frac{1}{e}\\)",
       "image_refs": [],
@@ -1506,7 +1438,7 @@
       ]
     },
     {
-      "qid": "Q-bab7b56a1982311e",
+      "qid": "Q-d95213336ebc7adf",
       "section": "5.2",
       "group": "B",
       "number": 6,
@@ -1514,7 +1446,7 @@
       "source_anchor": {
         "ocr_doc": 18,
         "pdf_page": 19,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_18.md"
+        "file": "data/ocr_live_current/chapter5_95/doc_18.md"
       },
       "question_text": "6.（2025·广东揭阳期末）\n\n已知曲线  \\(y = x + \\ln x\\) 在点  \\((1,1)\\) 处的切线与曲线  \\(y = e^{ax} - 1\\) 相切，则  \\(a\\) 的值为___。",
       "image_refs": [],
@@ -1525,7 +1457,7 @@
       ]
     },
     {
-      "qid": "Q-a40b1d3078a3610e",
+      "qid": "Q-2226a5cfc492b06e",
       "section": "5.2",
       "group": "B",
       "number": 7,
@@ -1533,7 +1465,7 @@
       "source_anchor": {
         "ocr_doc": 18,
         "pdf_page": 19,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_18.md"
+        "file": "data/ocr_live_current/chapter5_95/doc_18.md"
       },
       "question_text": "7.（2025·北京通州期中）\n\n过点  \\(P(0,-1)\\) 作曲线  \\(y=\\ln x\\) 的切线，则切点坐标为（）\n\nA.  \\((e,1)\\) B.  \\((1,-1)\\)\n\nC.  \\((1,0)\\) D.  \\(\\left(\\frac{1}{e},-1\\right)\\)",
       "image_refs": [],
@@ -1544,7 +1476,7 @@
       ]
     },
     {
-      "qid": "Q-a8b6ce421e8d2b3d",
+      "qid": "Q-6e38fb82fcfce072",
       "section": "5.2",
       "group": "B",
       "number": 8,
@@ -1552,7 +1484,7 @@
       "source_anchor": {
         "ocr_doc": 18,
         "pdf_page": 19,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_18.md"
+        "file": "data/ocr_live_current/chapter5_95/doc_18.md"
       },
       "question_text": "8.（2025·安徽开学考试）\n\n若直线  \\(y = x + a\\) 与曲线  \\(y = \\ln(x + b)\\) 相切，则\n\n \\(b - a =\\)___。",
       "image_refs": [],
@@ -1563,7 +1495,7 @@
       ]
     },
     {
-      "qid": "Q-5bb24c52cc4d6757",
+      "qid": "Q-1ebfd1bf2629edbc",
       "section": "5.2",
       "group": "B",
       "number": 9,
@@ -1571,7 +1503,7 @@
       "source_anchor": {
         "ocr_doc": 19,
         "pdf_page": 20,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_19.md"
+        "file": "data/ocr_live_current/chapter5_95/doc_19.md"
       },
       "question_text": "9. (2025·重庆开学考试)\n\n已知 m, n 是正实数，若  \\(f(x) = e^{x-n}\\) 的图象与  \\(g(x) = x + m\\) 的图象相切，则  \\(\\frac{1}{m} + \\frac{2}{n}\\) 的最小值是（）\n\nA.  \\(2\\sqrt{2}\\) B.  \\(3+2\\sqrt{2}\\) C.  \\(1+\\sqrt{2}\\) D. 3",
       "image_refs": [],
@@ -1582,7 +1514,7 @@
       ]
     },
     {
-      "qid": "Q-d7a724b37b15f402",
+      "qid": "Q-1d61f3d4eda34436",
       "section": "5.2",
       "group": "B",
       "number": 10,
@@ -1590,7 +1522,7 @@
       "source_anchor": {
         "ocr_doc": 19,
         "pdf_page": 20,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_19.md"
+        "file": "data/ocr_live_current/chapter5_95/doc_19.md"
       },
       "question_text": "10.（2025·云南丽江模拟）\n\n已知函数  \\(f(x) = \\mathrm{e}^x + 1\\)， \\(e\\) 为自然对数的底数， \\(g(x)\\)\n\n \\(= \\ln x + 3\\)，直线  \\(l\\) 既与  \\(f(x)\\) 相切又与  \\(g(x)\\) 相切，则直线  \\(l\\) 的方程是（ ）\n\nA.  \\(y = x + 1\\)\n\nB.  \\(y = -x + 2\\)\n\nC.  \\(y = \\mathrm{e}x + 1\\) 或  \\(y = x + 2\\)\n\nD.  \\(y = \\frac{1}{\\mathrm{e}}x + 2\\) 或  \\(y = x + 1\\)",
       "image_refs": [],
@@ -1601,7 +1533,7 @@
       ]
     },
     {
-      "qid": "Q-391858e50a9307da",
+      "qid": "Q-4ba3639dbc306709",
       "section": "5.2",
       "group": "B",
       "number": 11,
@@ -1609,7 +1541,7 @@
       "source_anchor": {
         "ocr_doc": 19,
         "pdf_page": 20,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_19.md"
+        "file": "data/ocr_live_current/chapter5_95/doc_19.md"
       },
       "question_text": "11.（2025·广东深圳期末）\n\n若点 P 是曲线  \\(y = e^{x} + x + a\\) 上任意一点，且点 P 到直线 l: y = 2x 的距离 d 的最小值为  \\(\\sqrt{5}\\)，则 a 的值为（）\n\nA. 0 B. 4 C. -6 D. 4 或 -6",
       "image_refs": [],
@@ -1620,7 +1552,7 @@
       ]
     },
     {
-      "qid": "Q-64a066b3d9f32d13",
+      "qid": "Q-a5def06383fd262e",
       "section": "5.2",
       "group": "C",
       "number": 12,
@@ -1628,7 +1560,7 @@
       "source_anchor": {
         "ocr_doc": 20,
         "pdf_page": 21,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_20.md"
+        "file": "data/ocr_live_current/chapter5_95/doc_20.md"
       },
       "question_text": "### 12. （2025·上海期末）\n\n设函数  \\(f(x) = -\\frac{x}{4} - \\ln x\\) 图象上任意一点  \\(P\\) 处的切线为  \\(l_1\\)，总存在函数  \\(g(x) = 2a \\sin x + x\\) ( \\(a > 0\\)) 图象上一点  \\(Q\\) 处的切线  \\(l_2\\)，使得  \\(l_1 \\perp l_2\\)，则实数  \\(a\\) 的最小值是___。",
       "image_refs": [],
@@ -1639,7 +1571,7 @@
       ]
     },
     {
-      "qid": "Q-02ce4aa6eec44dab",
+      "qid": "Q-4aa966d2cfcae2b2",
       "section": "5.2",
       "group": "C",
       "number": 13,
@@ -1647,7 +1579,7 @@
       "source_anchor": {
         "ocr_doc": 20,
         "pdf_page": 21,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_20.md"
+        "file": "data/ocr_live_current/chapter5_95/doc_20.md"
       },
       "question_text": "### 13 \\. (2025 · 广东模拟)\n\n已知函数  \\(f(x)\\) 及其导函数  \\(f'(x)\\) 的定义域均为  \\(\\mathbb{R}\\)，若  \\(f(x+1)\\)， \\(f'(x+2)\\) 都是偶函数，则  \\(f'(5) =\\) ___.",
       "image_refs": [],
@@ -1658,7 +1590,7 @@
       ]
     },
     {
-      "qid": "Q-7d7122230f6c2d61",
+      "qid": "Q-e6a4230bc4509f0f",
       "section": "5.2",
       "group": "C",
       "number": 14,
@@ -1666,7 +1598,7 @@
       "source_anchor": {
         "ocr_doc": 20,
         "pdf_page": 21,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_20.md"
+        "file": "data/ocr_live_current/chapter5_95/doc_20.md"
       },
       "question_text": "### 14. （2025·全国模拟）（多选）\n\n已知定义在  \\(\\mathbb{R}\\) 上的函数  \\(f(x)\\) 可导， \\(f(x)\\) 的导数为  \\(f'(x)\\)，若  \\(f\\left(x+\\frac{1}{2}\\right)\\) 是奇函数，且  \\(f(2-x)-f(2+x)+4x=0\\)，则（ ）\n\nA.  \\(f\\left(\\frac{1}{2}\\right)=0\\)\n\nB.  \\(f'(1)+f'(4)=4\\)\n\nC.  \\(f'(x)\\) 的图象关于点  \\((2,0)\\) 中心对称\n\nD.  \\(f'(2024)=2\\)",
       "image_refs": [],
@@ -1688,5 +1620,8 @@
     "direct_variants": "question only; solution isolated",
     "abc_exercises": "question only; answer sidecar forbidden"
   },
-  "unresolved": []
+  "unresolved": [
+    "5.2-LI89d58501c9101dcf:NEEDS_VISION_SIDECAR",
+    "5.2-LIe35f94e52d48001a:NEEDS_VISION_SIDECAR"
+  ]
 }

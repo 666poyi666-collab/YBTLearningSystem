@@ -33,6 +33,7 @@ class CompactChapterRendererTests(unittest.TestCase):
         self.assertIn("空间向量的相关概念", html)
         self.assertIn("类型Ⅰ 线性运算", html)
         self.assertIn("3.1.1.1 空间向量的运算", html)
+        self.assertGreater(html.find("3.1.4.6.b"), html.find("3.1.4.6.a"))
         self.assertIn("标记已听完", html)
         self.assertIn("data-star-item=", html)
         self.assertIn("data-cycle-question=", html)

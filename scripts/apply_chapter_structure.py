@@ -25,6 +25,152 @@ GROUP_OVERRIDES = {
     "2.4": {"A": [1, 4], "B": [5, 11], "C": [12, 15]},
 }
 
+# High-confidence course-to-textbook targets from the semantic review. Courses
+# omitted from a section stay in unplaced_course_keys instead of being spread
+# across unrelated cycles just to exhaust the catalog.
+COURSE_TARGET_OVERRIDES: dict[str, dict[str, int]] = {
+    "2.1": {"slope_angle_relation": 1, "moving_line_region": 13},
+    "2.2": {"line_five_forms": 1, "line_equation_application": 4, "line_parallel_perpendicular": 7},
+    "2.3": {"point_line_distance": 4},
+    "2.4": {
+        "point_line_symmetry_upper": 1, "point_line_symmetry_lower": 1,
+        "line_line_symmetry_upper": 3, "line_line_symmetry_lower": 3,
+        "line_family_fixed_point": 5,
+    },
+    "2.5": {"circle_standard_general": 1, "circle_determination": 7},
+    "2.6": {
+        "line_circle_position": 1, "tangent": 2, "chord_length": 6,
+        "longest_shortest_chord": 7, "line_circle_extreme": 10,
+    },
+    "2.7": {
+        "circle_circle_position": 1, "pole_polar_chord": 1,
+        "circle_equiv_algebra": 7, "circle_equiv_geometry": 8,
+    },
+    "ch3.s1": {"ellipse_definition": 1, "ellipse_standard_equations": 2},
+    "ch3.s2": {
+        "ellipse_eccentricity": 1,
+        "intersection_algebra_upper": 5, "intersection_algebra_lower": 5,
+    },
+    "ch3.s3": {
+        "focus_triangle_perimeter_area": 3,
+        "chord_midpoint_slope_constant": 4,
+    },
+    "ch3.s4": {"hyperbola_definition_equation": 1},
+    "ch3.s5": {
+        "hyperbola_eccentricity_asymptote": 1,
+        "intersection_algebra_upper": 4, "intersection_algebra_lower": 4,
+    },
+    "ch3.s6": {
+        "focus_triangle_perimeter_area": 4,
+        "chord_midpoint_slope_constant": 5, "chord_midpoint_extended": 6,
+    },
+    "ch3.s7": {"parabola_definition_equation": 1, "focal_radius_formula": 4},
+    "ch3.s8": {"parabola_properties": 1},
+    "ch3.s9": {
+        "chord_midpoint_extended": 1,
+        "polar_focal_chord_upper": 1, "polar_focal_chord_lower": 1,
+        "dot_product_double_root": 2,
+        "intersection_algebra_upper": 2, "intersection_algebra_lower": 2,
+    },
+    "ch3.s10": {
+        "chord_length_formula": 1, "in_curve_triangle_area": 1,
+        "in_curve_quad_area": 1, "evaluation_algebra": 1,
+        "evaluation_geometry": 2,
+        "intersection_algebra_upper": 2, "intersection_algebra_lower": 2,
+    },
+    "ch3.s11": {
+        "constant_value_1": 1, "constant_value_2": 1, "fixed_point_1": 2,
+        "fixed_point_2_upper": 2, "fixed_point_2_lower": 2,
+        "pole_polar_upper": 3, "pole_polar_lower": 3,
+        "intersection_algebra_upper": 3, "intersection_algebra_lower": 3,
+    },
+    "4.3": {"4.3.2.4 等差数列Sn的性质": 3},
+    "4.5": {"4.3.3.4 等比数列Sn性质": 2},
+    "4.7": {
+        "4.4.3.1.a 分式裂项（上）": 1, "4.4.3.1.b 分式裂项（下）": 1,
+        "4.4.3.2 根式裂项": 1,
+        "4.4.5.1.a 错位相减法（上）": 2, "4.4.5.1.b 错位相减法（下）": 2,
+        "4.4.4.1 分组求和法": 3, "4.4.4.2 倒序相加法": 4,
+    },
+    "4.8": {
+        "4.4.4.1 分组求和法": 2,
+        "4.4.1.1 累加法与累乘法": 3, "4.4.6.2 数列的周期性问题": 3,
+        "4.4.7.1 不等式与恒成立问题": 5,
+        "4.4.8.1 放缩为可裂项的数列": 5, "4.4.8.2 放缩为等比数列求和": 5,
+    },
+    "5.1": {
+        "4.1.1.1 导数的定义（上）": 1, "4.1.1.1 导数的定义（下）": 1,
+        "4.1.1.2 求在P点处的切线": 4, "4.1.1.3 求过P点的切线": 4,
+        "4.1.1.4 判断切线条数问题": 4, "4.1.1.5 公切线问题": 4,
+    },
+    "5.2": {
+        "4.1.2.1 基本初等函数的导数及运算法则": 1,
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）": 1,
+        "4.1.2.2 复合函数的导数": 5,
+        "4.1.2.3 导数的原函数构造（基础）": 6,
+        "4.1.2.3 导数的原函数构造（进阶）": 6,
+    },
+    "5.3": {
+        "4.1.4.1 不含参数的函数的单调性": 1,
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）": 3,
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）": 3,
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）": 3,
+        "4.1.4.3 含参函数单调性讨论之类二次型": 3,
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）": 3,
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）": 3,
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）": 3,
+        "4.1.4.5 含参函数单调性讨论之超越函数": 3,
+        "4.1.4.6 已知单调性求参之导数为二次型": 3,
+        "4.1.4.7 已知单调性求参之导数为非二次型": 3,
+    },
+    "5.4": {
+        "4.1.4.8 极值与极值点（基础）": 1, "4.1.4.8 极值与极值点（进阶）": 1,
+        "4.1.4.9 最值讨论与值域之具体函数": 3,
+        "4.1.4.10 最值讨论与值域之含参函数": 3,
+    },
+    "5.5": {
+        "4.2.1.2 参变分离法": 2,
+        "4.2.2.1 主元法（基础）": 2, "4.2.2.1 主元法（进阶）": 2,
+        "4.2.2.2 常用函数放缩": 2,
+        "4.2.2.3 分离函数法": 5, "4.2.4.2 双变量的换元构造": 5,
+        "4.2.4.1 极值点偏移模型（上）": 8, "4.2.4.1 极值点偏移模型（下）": 8,
+        "4.2.5.1 单极值点问题": 8,
+        "4.2.5.2 双极值点问题（上）": 8, "4.2.5.2 双极值点问题（下）": 8,
+    },
+    # 5.6 is a review set: it introduces no new mandatory course.
+    "5.6": {},
+}
+
+SECTION_INHERITED_COURSES: dict[str, list[str]] = {
+    "2.2": ["slope_angle_relation", "moving_line_region"],
+    "2.3": ["line_parallel_perpendicular"],
+    "2.4": ["point_line_distance"],
+    "2.5": ["line_family_fixed_point"],
+    "2.6": ["circle_determination"],
+    "2.7": ["circle_standard_general", "line_circle_extreme"],
+    "ch3.s3": ["ellipse_definition", "ellipse_standard_equations", "ellipse_eccentricity"],
+    "ch3.s6": ["hyperbola_definition_equation", "hyperbola_eccentricity_asymptote"],
+    "ch3.s7": ["parabola_definition_equation"],
+    "4.3": ["4.3.2.1 等差数列的基本公式"],
+    "4.5": ["4.3.3.1 等比数列的基本公式"],
+    "5.4": ["4.1.4.1 不含参数的函数的单调性"],
+    "5.6": [
+        "4.1.2.1 基本初等函数的导数及运算法则", "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线", "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性", "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数", "4.2.2.2 常用函数放缩",
+        "4.2.6.1 求和型放缩（上）", "4.2.6.1 求和型放缩（下）",
+    ],
+}
+
+SECTION_COURSE_EXCLUSIONS: dict[str, set[str]] = {
+    "2.3": {"line_family_fixed_point"},
+    "2.5": {"circle_equiv_algebra", "circle_equiv_geometry"},
+    "2.6": {"pole_polar_chord"},
+    "ch3.s3": {"midpoint_idea", "focal_radius_formula", "focal_chord_area"},
+    "ch3.s6": {"midpoint_idea", "focal_radius_formula", "focal_chord_area"},
+}
+
 
 def load_json(path: Path) -> Any:
     return json.loads(path.read_text(encoding="utf-8-sig"))
@@ -100,18 +246,7 @@ def ordered_example_blocks(section: dict[str, Any], example_numbers: list[int]) 
 
     blocks: list[dict[str, Any]] = []
     for number in sorted(example_numbers):
-        if number in knowledge_owner:
-            ref, label = knowledge_owner[number]
-            identity = ("knowledge", ref)
-            block = {
-                "kind": "knowledge",
-                "identity": identity,
-                "title": label,
-                "knowledge_refs": [ref],
-                "type_refs": [],
-                "example_numbers": [],
-            }
-        elif number in type_owner:
+        if number in type_owner:
             ref = type_owner[number]
             identity = ("type", ref)
             block = {
@@ -120,6 +255,17 @@ def ordered_example_blocks(section: dict[str, Any], example_numbers: list[int]) 
                 "title": ref,
                 "knowledge_refs": [],
                 "type_refs": [ref],
+                "example_numbers": [],
+            }
+        elif number in knowledge_owner:
+            ref, label = knowledge_owner[number]
+            identity = ("knowledge", ref)
+            block = {
+                "kind": "knowledge",
+                "identity": identity,
+                "title": label,
+                "knowledge_refs": [ref],
+                "type_refs": [],
                 "example_numbers": [],
             }
         else:
@@ -146,6 +292,31 @@ def distribute_courses(blocks: list[dict[str, Any]], course_keys: list[str]) -> 
         blocks[target].setdefault("course_keys", []).append(key)
 
 
+def assign_reviewed_courses(section: dict[str, Any], blocks: list[dict[str, Any]], course_keys: list[str]) -> None:
+    targets = COURSE_TARGET_OVERRIDES.get(str(section.get("id")))
+    if targets is None:
+        distribute_courses(blocks, course_keys)
+        section["unplaced_course_keys"] = []
+        section["course_mapping_status"] = "LEGACY_SOURCE_ORDER_NEEDS_SEMANTIC_REVIEW"
+        return
+    assigned: list[str] = []
+    for key in course_keys:
+        target_example = targets.get(key)
+        if target_example is None:
+            continue
+        block = next((row for row in blocks if target_example in row.get("example_numbers", [])), None)
+        if block is None:
+            raise ValueError(f"{section['id']} course target example is missing: {key} -> {target_example}")
+        block.setdefault("course_keys", []).append(key)
+        assigned.append(key)
+    inherited = set(SECTION_INHERITED_COURSES.get(str(section.get("id")), []))
+    section["unplaced_course_keys"] = [key for key in course_keys if key not in assigned and key not in inherited]
+    section["course_mapping_status"] = (
+        "SEMANTIC_TARGETS_REVIEWED"
+        if not section["unplaced_course_keys"] else "SEMANTIC_TARGETS_WITH_DISCLOSED_UNPLACED_COURSES"
+    )
+
+
 def build_cycles(section: dict[str, Any], example_numbers: list[int], groups: dict[str, list[int]]) -> list[dict[str, Any]]:
     required = list(section.get("required_course_keys") or [])
     support = list(section.get("support_course_keys") or [])
@@ -162,10 +333,10 @@ def build_cycles(section: dict[str, Any], example_numbers: list[int], groups: di
                 "example_numbers": [],
             }
         )
-    distribute_courses(blocks, all_courses)
+    assign_reviewed_courses(section, blocks, all_courses)
 
     cycles: list[dict[str, Any]] = []
-    learned_courses: list[str] = []
+    learned_courses: list[str] = list(SECTION_INHERITED_COURSES.get(str(section.get("id")), []))
     for block in blocks:
         new_courses = list(block.get("course_keys") or [])
         cycle = {
@@ -194,7 +365,9 @@ def build_cycles(section: dict[str, Any], example_numbers: list[int], groups: di
                 "course_keys": [],
                 "prerequisite_course_keys": list(learned_courses),
                 "knowledge_refs": [],
-                "type_refs": [str(row["type"]) for row in section.get("type_training") or []],
+                "type_refs": [],
+                "unclassified_item_ids": [f"{group}{number}" for number in range(start, end + 1)],
+                "type_mapping_status": "PENDING_ITEM_LEVEL_CLASSIFICATION",
                 "example_numbers": [],
                 "exercise_keys": [f"{group}{number}" for number in range(start, end + 1)],
                 "bridge_unit_ids": [],
@@ -251,16 +424,29 @@ def apply_section(
         "total": len(examples) + len(variants) + len(expected_keys),
     }
     required_keys, support_keys = clean_course_lists(chapter, manifest, section)
+    exclusions = SECTION_COURSE_EXCLUSIONS.get(section_id, set())
+    required_keys = [key for key in required_keys if key not in exclusions]
+    support_keys = [key for key in support_keys if key not in exclusions]
+    for key in SECTION_INHERITED_COURSES.get(section_id, []):
+        if key not in required_keys and key not in support_keys:
+            support_keys.append(key)
     section["required_course_keys"] = required_keys
     section["support_course_keys"] = support_keys
     section["learning_cycles"] = build_cycles(section, examples, groups)
-    section["learning_cycles_status"] = "SOURCE_ORDER_BASELINE_CURRENT"
+    section["learning_cycles_status"] = section.get("course_mapping_status", "SOURCE_ORDER_BASELINE_CURRENT")
     section["coverage_status"] = "SOURCE_STRUCTURE_READY_SIMULATION_PENDING"
     section["coverage_gate"] = (
         "教材页、题号、例题和直属变式已按当前 OCR 与源页恢复层闭合；"
         "视觉题侧车、逐题零基础模拟和冷复测未通过前不得宣称掌握。"
     )
-    section["coverage_gaps"] = []
+    section["coverage_gaps"] = [
+        {
+            "kind": "unplaced_course",
+            "course_key": key,
+            "reason": "语义审计未确认与具体教材循环的直接对应；课程仍保留在节次账本中。",
+        }
+        for key in section.get("unplaced_course_keys", [])
+    ]
 
 
 def apply_chapter(chapter: int, backup_root: Path) -> dict[str, Any]:
@@ -288,7 +474,7 @@ def apply_chapter(chapter: int, backup_root: Path) -> dict[str, Any]:
         apply_section(chapter, manifest, section, row, recovery_keys)
 
     source = manifest.setdefault("source_evidence", {})
-    source["ocr_root"] = str(OCR_ROOTS[chapter])
+    source["ocr_root"] = str(OCR_ROOTS[chapter].relative_to(ROOT)).replace("\\", "/")
     source["ocr_doc_range"] = [0, int(source.get("merged_pdf_pages", 0)) - 1]
     source["ocr_status"] = "PADDLE_AI_STUDIO_CURRENT_COMPLETE"
     source["question_number_recovery_source"] = "data/question_number_recoveries.json"

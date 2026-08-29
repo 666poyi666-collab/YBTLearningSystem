@@ -2,9 +2,9 @@
   "schema_version": "7.4",
   "packet_type": "DEEPSEEK_SEQUENTIAL_LEARNING_PACKET",
   "section": "5.1",
-  "status": "VERIFIED",
+  "status": "UNVERIFIED",
   "source": {
-    "ocr_root": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95",
+    "ocr_root": "data/ocr_live_current/chapter5_95",
     "ocr_docs": [
       0,
       8
@@ -27,8 +27,7 @@
       "title": "变化率与导数的概念",
       "course_keys": [
         "4.1.1.1 导数的定义（上）",
-        "4.1.1.1 导数的定义（下）",
-        "4.1.1.2 求在P点处的切线"
+        "4.1.1.1 导数的定义（下）"
       ],
       "prerequisite_course_keys": [],
       "optional_course_keys": [],
@@ -125,14 +124,14 @@
       "sequence": 2,
       "title": "导数的几何意义",
       "course_keys": [
+        "4.1.1.2 求在P点处的切线",
         "4.1.1.3 求过P点的切线",
         "4.1.1.4 判断切线条数问题",
         "4.1.1.5 公切线问题"
       ],
       "prerequisite_course_keys": [
         "4.1.1.1 导数的定义（上）",
-        "4.1.1.1 导数的定义（下）",
-        "4.1.1.2 求在P点处的切线"
+        "4.1.1.1 导数的定义（下）"
       ],
       "optional_course_keys": [],
       "knowledge_refs": [
@@ -177,93 +176,14 @@
           "image_refs": [
             {
               "ref": "imgs/img_in_image_box_800_1154_1014_1256.jpg",
-              "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_800_1154_1014_1256.jpg",
+              "path": "data/ocr_live_current/chapter5_95/imgs/img_in_image_box_800_1154_1014_1256.jpg",
               "exists": true
             }
           ],
-          "visual_status": "VISION_VERIFIED",
+          "visual_status": "NEEDS_VISION_SIDECAR",
           "teaching_text": "【例5】设 \\(y=f(x)\\)的导函数为 \\(f'(x)\\)，\n根据图中的函数图象，下列数值最小\n的是（）\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_800_1154_1014_1256.jpg\" alt=\"Image\" width=\"17%\" /></div>\nA.  \\(f'(a)\\) B.  \\(f'(b)\\)\nC.  \\(f'(c)\\) D.  \\(\\frac{f(b)-f(a)}{b-a}\\)\n解析：设  \\(f(x)\\) 在 A, B, C 三点处的切线斜率分别为  \\(k_{A}\\),  \\(k_{B}\\),  \\(k_{C}\\)，则  \\(k_{A} = f'(a)\\),\n \\(k_{B}=f'(b)\\)， \\(k_{C}=f'(c)\\)，\n由图可知， \\(k_{A}>k_{B}>0>k_{C}\\)\n所以  \\(f'(a) > f'(b) > 0 > f'(c)\\)\n \\(x = x_0\\) 时， \\(f'(x_0)\\) 是一个唯一确定的数。这样，当  \\(x\\) 变化时， \\(y = f'(x)\\) 就是关于  \\(x\\) 的函数，我们称它为  \\(y = f(x)\\) 的导函数（简称导数）， \\(y = f(x)\\) 的导函数有时也记作  \\(y'\\)，即  \\(f'(x) = y' = \\lim_{\\Delta x \\to 0} \\frac{f(x + \\Delta x) - f(x)}{\\Delta x}\\)。\n注：若题干的表述为“函数 \\(f(x)\\)在 \\(x=x_0\\)处的导数”，\n这里的导数实际上指的是导数值，即函数 \\(f(x)\\)的导函数\n \\(f'(x)\\)在 \\(x=x_0\\)处的函数值 \\(f'(x_0)\\).\n又 \\(\\frac{f(b)-f(a)}{b-a}=k_{AB}>0\\)，\n所以各选项中数值最小的是 \\(f'(c)\\).\n答案：C",
           "solution_present": true,
-          "vision_hint": "5.1-LIaf6aeaf2c5c1a783",
-          "vision_sidecars": [
-            {
-              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_800_1154_1014_1256.jpg",
-              "image_sha256": "d2a96649e62d567b43083713f5dce5e991c2ed1209ef195d3a1465f606c03404",
-              "confidence": "E2",
-              "structured": {
-                "objects": [
-                  "坐标轴",
-                  "曲线y=f(x)",
-                  "点O",
-                  "点A",
-                  "点B",
-                  "点C"
-                ],
-                "relations": [
-                  "点A在x=a处与x轴相交",
-                  "点B在x=b处达到峰值",
-                  "点C在x=c处",
-                  "曲线从A到B上升，从B到C下降"
-                ],
-                "coordinates": [
-                  "O(0,0)",
-                  "A(a, f(a))",
-                  "B(b, f(b))",
-                  "C(c, f(c))"
-                ],
-                "ranges": [
-                  "x轴区间[a, c]",
-                  "y轴正区间[f(a), f(b)]"
-                ],
-                "text": [
-                  "y",
-                  "x",
-                  "y = f(x)"
-                ],
-                "uncertainties": [],
-                "confidence": "E2"
-              },
-              "source_provenance": null
-            }
-          ],
-          "vision_sidecar": {
-            "objects": [
-              "坐标轴",
-              "曲线y=f(x)",
-              "点O",
-              "点A",
-              "点B",
-              "点C"
-            ],
-            "relations": [
-              "点A在x=a处与x轴相交",
-              "点B在x=b处达到峰值",
-              "点C在x=c处",
-              "曲线从A到B上升，从B到C下降"
-            ],
-            "coordinates": [
-              "O(0,0)",
-              "A(a, f(a))",
-              "B(b, f(b))",
-              "C(c, f(c))"
-            ],
-            "ranges": [
-              "x轴区间[a, c]",
-              "y轴正区间[f(a), f(b)]"
-            ],
-            "text": [
-              "y",
-              "x",
-              "y = f(x)"
-            ],
-            "uncertainties": [],
-            "confidence": "E2"
-          },
-          "vision_source_provenance": [],
-          "evidence": [
-            "E1",
-            "E2"
-          ]
+          "vision_hint": "5.1-LIaf6aeaf2c5c1a783"
         }
       ],
       "direct_variants": [],
@@ -293,10 +213,7 @@
       "cycle_id": "5.1-cycle-3",
       "sequence": 3,
       "title": "导函数",
-      "course_keys": [
-        "4.1.1.6 用切线算距离最值",
-        "4.1.1.7 隐函数求导"
-      ],
+      "course_keys": [],
       "prerequisite_course_keys": [
         "4.1.1.1 导数的定义（上）",
         "4.1.1.1 导数的定义（下）",
@@ -331,121 +248,11 @@
           "teaching_text": "【例6】求 \\(f(x)=3x^{2}\\)的导函数.\n解：由题意， \\(f'(x) = \\lim_{\\Delta x \\to 0} \\frac{f(x + \\Delta x) - f(x)}{\\Delta x}\\)\n \\(= \\lim_{\\Delta x \\to 0} \\frac{3(x + \\Delta x)^2 - 3x^2}{\\Delta x} = \\lim_{\\Delta x \\to 0} \\frac{6x \\Delta x + 3(\\Delta x)^2}{\\Delta x}\\)\n \\(= \\lim_{\\Delta x \\to 0} (6x + 3\\Delta x) = 6x\\).\n## 本节核心题型\n本节的核心知识点是导数的定义和导数的意义，而导数的定义是基于变化率的，所以我们先通过类型Ⅰ让大家熟悉变化率的计算方法；又设计了类型Ⅱ这一组题帮助大家强化对导数定义的理解；最后，关于导数的意义，常用于切线问题中，于是我们设计了类型Ⅲ这组题来给大家讲解已知切点和不知道切点这两类常见切线问题的处理方法。",
           "solution_present": true,
           "vision_hint": "5.1-LI759d6d57702d3417"
-        },
-        {
-          "item_id": "717717a2021e8eab",
-          "kind": "example",
-          "label": "例7",
-          "example_number": 7,
-          "parent_example_number": null,
-          "role": "knowledge_example",
-          "role_ref": "5.1-k3",
-          "source_docs": [
-            2
-          ],
-          "question_text": "【例 7】遥控飞机上升一段时间内，第 t 秒时的高度为  \\(f(t)=5t^{2}+45t+4\\)，其中上升高度  \\(f(t)\\) 的单位为 m，t 的单位为 s.\n（1）求飞机在 \\([1,2]\\)时间段内的平均速度；\n（2）求飞机在t=2时的瞬时速度.",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "teaching_text": "【例 7】遥控飞机上升一段时间内，第 t 秒时的高度为  \\(f(t)=5t^{2}+45t+4\\)，其中上升高度  \\(f(t)\\) 的单位为 m，t 的单位为 s.\n（1）求飞机在 \\([1,2]\\)时间段内的平均速度；\n（2）求飞机在t=2时的瞬时速度.\n解：（1）（平均速度  \\(\\overline{v} = \\frac{\\Delta f}{\\Delta t}\\)，其中  \\(\\Delta f\\) 和  \\(\\Delta t\\) 分别表示  \\(f(t)\\) 的改变量和时间  \\(t\\) 的改变量，下面先求  \\(\\Delta f\\) 和  \\(\\Delta t\\)）\n当  \\(t=1\\) 时， \\(f(1)=5\\times1^2+45\\times1+4=54\\)；当  \\(t=2\\) 时， \\(f(2)=5\\times2^2+45\\times2+4=114\\)，\n所以  \\(\\Delta f = f(2)-f(1)=114-54=60\\)，又  \\(\\Delta t=2-1=1\\)，所以飞机在  \\([1,2]\\) 时间段内的平均速度  \\(\\overline{v} = \\frac{\\Delta f}{\\Delta t} = 60 \\,(\\text{m/s})\\)。\n(2)（瞬时速度即为当 \\(\\Delta t \\to 0\\)时，飞机在 \\([2,2+\\Delta t]\\)时间段内的平均速度）\n由题意，在 \\(t=2\\)时的瞬时速度为 \\(\\lim_{\\Delta t \\to 0} \\frac{f(2+\\Delta t)-f(2)}{\\Delta t} = \\lim_{\\Delta t \\to 0} \\frac{5(2+\\Delta t)^2 + 45(2+\\Delta t)+4-114}{\\Delta t} = \\lim_{\\Delta t \\to 0} \\frac{5(\\Delta t)^2 + 65\\Delta t}{\\Delta t} = \\lim_{\\Delta t \\to 0}(5\\Delta t + 65) = 65 \\, \\text{m/s}\\).\n【反思】函数  \\(f(t)\\) 在  \\([a,b]\\) 上的平均变化率即为  \\(\\frac{f(b)-f(a)}{b-a}\\)，在  \\(t=a\\) 处的瞬时变化率即为  \\(\\lim_{\\Delta t\\to0}\\frac{f(a+\\Delta t)-f(a)}{\\Delta t}\\)，所以计算平均变化率和瞬时变化率，分别代入上面两个公式即可。例如本题飞机在  \\([1,2]\\) 上的平均速度，即为  \\(f(t)\\) 在  \\([1,2]\\) 上的平均变化率，在  \\(t=2\\) 时的瞬时速度，即为  \\(f(t)\\) 在  \\(t=2\\) 时的瞬时变化率。",
-          "solution_present": true,
-          "vision_hint": "5.1-LI717717a2021e8eab"
-        },
-        {
-          "item_id": "3c3c50ab6f0d3f6b",
-          "kind": "example",
-          "label": "例8",
-          "example_number": 8,
-          "parent_example_number": null,
-          "role": "knowledge_example",
-          "role_ref": "5.1-k3",
-          "source_docs": [
-            3,
-            4
-          ],
-          "question_text": "【例 8】若函数  \\(y = f(x)\\) 在  \\(x = x_{0}\\) 处可导，则  \\(\\lim_{\\Delta x \\to 0} \\frac{f(x_{0} - 3\\Delta x) - f(x_{0})}{\\Delta x} = (\\quad)\\)\nA.  \\(f'(x_{0})\\) B.  \\(-f'(x_{0})\\) C.  \\(3f'(x_{0})\\) D.  \\(-3f'(x_{0})\\)",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "teaching_text": "【例 8】若函数  \\(y = f(x)\\) 在  \\(x = x_{0}\\) 处可导，则  \\(\\lim_{\\Delta x \\to 0} \\frac{f(x_{0} - 3\\Delta x) - f(x_{0})}{\\Delta x} = (\\quad)\\)\nA.  \\(f'(x_{0})\\) B.  \\(-f'(x_{0})\\) C.  \\(3f'(x_{0})\\) D.  \\(-3f'(x_{0})\\)\n解析：分子中是 \\(-3\\Delta x\\)，分母是 \\(\\Delta x\\)，这与导数定义中的结构不一致，故考虑将其调整为一致，如何调整？把分母的 \\(\\Delta x\\)化为 \\(-\\frac{1}{3}\\times(-3\\Delta x)\\)即可， \\(\\lim_{\\Delta x\\to0}\\frac{f(x_0-3\\Delta x)-f(x_0)}{\\Delta x}=\\lim_{\\Delta x\\to0}\\frac{f(x_0-3\\Delta x)-f(x_0)}{-\\frac{1}{3}\\times(-3\\Delta x)}\\)\n= \\(\\lim_{\\Delta x\\to0}\\left[(-3)\\cdot\\frac{f[x_0+(-3\\Delta x)]-f(x_0)}{-3\\Delta x}\\right]=-3\\lim_{\\Delta x\\to0}\\frac{f[x_0+(-3\\Delta x)]-f(x_0)}{-3\\Delta x}\\) ①，\n式①中的 \\(\\lim_{\\Delta x\\to0}\\frac{f[x_0+(-3\\Delta x)]-f(x_0)}{-3\\Delta x}\\)表示什么？若看不出来，可将 \\(-3\\Delta x\\)换元，再作观察，\n令 \\(\\Delta t=-3\\Delta x\\)，则当 \\(\\Delta x\\to0\\)时， \\(\\Delta t\\to0\\)，所以 \\(\\lim_{\\Delta x\\to0}\\frac{f[x_0+(-3\\Delta x)]-f(x_0)}{-3\\Delta x}=\\lim_{\\Delta x\\to0}\\frac{f(x_0+\\Delta t)-f(x_0)}{\\Delta t}=f'(x_0)\\)，\n代入①得 \\(\\lim_{\\Delta x\\to0}\\frac{f(x_0-3\\Delta x)-f(x_0)}{\\Delta x}=-3f'(x_0)\\)。\n答案：D\n【反思】导数的定义  \\(f'(x_0) = \\lim_{\\Delta x \\to 0} \\frac{\\Delta y}{\\Delta x} = \\lim_{\\Delta x \\to 0} \\frac{f(x_0 + \\Delta x) - f(x_0)}{\\Delta x}\\) 中，对  \\(\\Delta x\\) 的理解需注意两点：①分子和分母的  \\(\\Delta x\\) 形式上要保持一致，因为分母表示的是“自变量的改变量”，也就是分子中两个  \\(f(\\cdots)\\) 括号内的差；②  \\(\\Delta x\\) 表示一\n个距离0要多近有多近的量，既可为正也可为负，也就是说， \\(\\Delta x\\)， \\(2\\Delta x\\)， \\(-\\Delta x\\)等都是无限趋近于0的量，所以都可以充当导数定义中 \\(\\Delta x\\)的角色，我们通过下面的变式来加深理解。",
-          "solution_present": true,
-          "vision_hint": "5.1-LI3c3c50ab6f0d3f6b"
-        },
-        {
-          "item_id": "01d2e55dd8b46765",
-          "kind": "example",
-          "label": "例9",
-          "example_number": 9,
-          "parent_example_number": null,
-          "role": "knowledge_example",
-          "role_ref": "5.1-k3",
-          "source_docs": [
-            4
-          ],
-          "question_text": "【例 9】函数  \\(f(x)=2x^{2}+4x\\) 在 x=3 处的切线方程是 ___.",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "teaching_text": "【例 9】函数  \\(f(x)=2x^{2}+4x\\) 在 x=3 处的切线方程是 ___.\n解析：（要求切线方程，需要切点坐标和切线斜率，前者直接代解析式求  \\(f(3)\\) 即可，后者即为  \\(f'(3)\\)，可用导数的定义求得）由题意， \\(f(3)=2\\times3^2+4\\times3=30\\)，所以切点为  \\((3,30)\\)，\n又  \\(\\lim_{\\Delta x \\to 0} \\frac{f(3 + \\Delta x) - f(3)}{\\Delta x} = \\lim_{\\Delta x \\to 0} \\frac{2(3 + \\Delta x)^2 + 4(3 + \\Delta x) - 30}{\\Delta x} = \\lim_{\\Delta x \\to 0} \\frac{2(\\Delta x)^2 + 16\\Delta x}{\\Delta x} = \\lim_{\\Delta x \\to 0} (2\\Delta x + 16) = 16\\)，\n所以  \\(f(x)\\) 在 x=3 处的切线斜率为 16，故该切线的方程为  \\(y-30=16(x-3)\\)，整理得：y=16x-18.\n答案：y=16x-18\n【反思】①函数在某一点处的导数值，即为函数在该点处的切线斜率；②由于切点既在函数图象上，又在切线上，是沟通函数与切线的桥梁，所以切线问题一定要牢牢抓住切点。本题已知切点，如果不知道切点，那么就需要设出切点来处理，我们来看下面的变式。",
-          "solution_present": true,
-          "vision_hint": "5.1-LI01d2e55dd8b46765"
         }
       ],
-      "direct_variants": [
-        {
-          "item_id": "15264d4821074d8d",
-          "kind": "direct_variant",
-          "label": "变式",
-          "example_number": null,
-          "parent_example_number": 7,
-          "role": "direct_variant",
-          "role_ref": null,
-          "source_docs": [
-            2,
-            3
-          ],
-          "question_text": "【变式】已知某容器的高度为 20cm，现向容器内注入液体，且容器内液体的高度 h（单位：cm）与\n时间 \\(t\\)(单位：s)的函数关系为 \\(h(t)=\\frac{1}{16}t^{3}+\\frac{1}{8}t^{2}\\)，当 \\(t=t_{0}\\)时，液体上升高度的瞬时变化率为 \\(\\frac{1}{4}\\)cm/s，则当 \\(t=t_{0}+\\frac{10}{3}\\)时，液体上升高度的瞬时变化率为（ ）\nA. 2cm/s B. 4cm/s C. 6cm/s D. 8cm/s",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "solution_isolated": true,
-          "vision_hint": "5.1-LI15264d4821074d8d"
-        },
-        {
-          "item_id": "5eb7fd416292ad79",
-          "kind": "direct_variant",
-          "label": "变式",
-          "example_number": null,
-          "parent_example_number": 8,
-          "role": "direct_variant",
-          "role_ref": null,
-          "source_docs": [
-            4
-          ],
-          "question_text": "【变式】若 \\(f'(2)=4\\)，则 \\(\\lim_{\\Delta x\\to0}\\frac{f(2+\\Delta x)-f(2-\\Delta x)}{\\Delta x}=\\)（）\nA. 2 B. 4 C. 6 D. 8",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "solution_isolated": true,
-          "vision_hint": "5.1-LI5eb7fd416292ad79"
-        },
-        {
-          "item_id": "53e9279508442f33",
-          "kind": "direct_variant",
-          "label": "变式",
-          "example_number": null,
-          "parent_example_number": 9,
-          "role": "direct_variant",
-          "role_ref": null,
-          "source_docs": [
-            4,
-            5
-          ],
-          "question_text": "【变式】已知函数  \\(f(x)=1-x^{3}\\)，则  \\(f(x)\\) 的过点  \\((-1,6)\\) 的切线方程为 ___.",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "solution_isolated": true,
-          "vision_hint": "5.1-LI53e9279508442f33"
-        }
-      ],
+      "direct_variants": [],
       "exercise_questions": [],
       "action_order": [
-        "watch_current_courses",
         "learn_each_current_example_then_attempt_its_direct_variants",
         "assess_current_cycle"
       ],
@@ -470,6 +277,219 @@
     {
       "cycle_id": "5.1-cycle-4",
       "sequence": 4,
+      "title": "类型I 变化率的计算",
+      "course_keys": [],
+      "prerequisite_course_keys": [
+        "4.1.1.1 导数的定义（上）",
+        "4.1.1.1 导数的定义（下）",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.1.4 判断切线条数问题",
+        "4.1.1.5 公切线问题"
+      ],
+      "optional_course_keys": [],
+      "knowledge_refs": [],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [
+        "类型I 变化率的计算"
+      ],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [
+        {
+          "item_id": "717717a2021e8eab",
+          "kind": "example",
+          "label": "例7",
+          "example_number": 7,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型I 变化率的计算",
+          "source_docs": [
+            2
+          ],
+          "question_text": "【例 7】遥控飞机上升一段时间内，第 t 秒时的高度为  \\(f(t)=5t^{2}+45t+4\\)，其中上升高度  \\(f(t)\\) 的单位为 m，t 的单位为 s.\n（1）求飞机在 \\([1,2]\\)时间段内的平均速度；\n（2）求飞机在t=2时的瞬时速度.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例 7】遥控飞机上升一段时间内，第 t 秒时的高度为  \\(f(t)=5t^{2}+45t+4\\)，其中上升高度  \\(f(t)\\) 的单位为 m，t 的单位为 s.\n（1）求飞机在 \\([1,2]\\)时间段内的平均速度；\n（2）求飞机在t=2时的瞬时速度.\n解：（1）（平均速度  \\(\\overline{v} = \\frac{\\Delta f}{\\Delta t}\\)，其中  \\(\\Delta f\\) 和  \\(\\Delta t\\) 分别表示  \\(f(t)\\) 的改变量和时间  \\(t\\) 的改变量，下面先求  \\(\\Delta f\\) 和  \\(\\Delta t\\)）\n当  \\(t=1\\) 时， \\(f(1)=5\\times1^2+45\\times1+4=54\\)；当  \\(t=2\\) 时， \\(f(2)=5\\times2^2+45\\times2+4=114\\)，\n所以  \\(\\Delta f = f(2)-f(1)=114-54=60\\)，又  \\(\\Delta t=2-1=1\\)，所以飞机在  \\([1,2]\\) 时间段内的平均速度  \\(\\overline{v} = \\frac{\\Delta f}{\\Delta t} = 60 \\,(\\text{m/s})\\)。\n(2)（瞬时速度即为当 \\(\\Delta t \\to 0\\)时，飞机在 \\([2,2+\\Delta t]\\)时间段内的平均速度）\n由题意，在 \\(t=2\\)时的瞬时速度为 \\(\\lim_{\\Delta t \\to 0} \\frac{f(2+\\Delta t)-f(2)}{\\Delta t} = \\lim_{\\Delta t \\to 0} \\frac{5(2+\\Delta t)^2 + 45(2+\\Delta t)+4-114}{\\Delta t} = \\lim_{\\Delta t \\to 0} \\frac{5(\\Delta t)^2 + 65\\Delta t}{\\Delta t} = \\lim_{\\Delta t \\to 0}(5\\Delta t + 65) = 65 \\, \\text{m/s}\\).\n【反思】函数  \\(f(t)\\) 在  \\([a,b]\\) 上的平均变化率即为  \\(\\frac{f(b)-f(a)}{b-a}\\)，在  \\(t=a\\) 处的瞬时变化率即为  \\(\\lim_{\\Delta t\\to0}\\frac{f(a+\\Delta t)-f(a)}{\\Delta t}\\)，所以计算平均变化率和瞬时变化率，分别代入上面两个公式即可。例如本题飞机在  \\([1,2]\\) 上的平均速度，即为  \\(f(t)\\) 在  \\([1,2]\\) 上的平均变化率，在  \\(t=2\\) 时的瞬时速度，即为  \\(f(t)\\) 在  \\(t=2\\) 时的瞬时变化率。",
+          "solution_present": true,
+          "vision_hint": "5.1-LI717717a2021e8eab"
+        }
+      ],
+      "direct_variants": [
+        {
+          "item_id": "15264d4821074d8d",
+          "kind": "direct_variant",
+          "label": "变式",
+          "example_number": null,
+          "parent_example_number": 7,
+          "role": "direct_variant",
+          "role_ref": "类型I 变化率的计算",
+          "source_docs": [
+            2,
+            3
+          ],
+          "question_text": "【变式】已知某容器的高度为 20cm，现向容器内注入液体，且容器内液体的高度 h（单位：cm）与\n时间 \\(t\\)(单位：s)的函数关系为 \\(h(t)=\\frac{1}{16}t^{3}+\\frac{1}{8}t^{2}\\)，当 \\(t=t_{0}\\)时，液体上升高度的瞬时变化率为 \\(\\frac{1}{4}\\)cm/s，则当 \\(t=t_{0}+\\frac{10}{3}\\)时，液体上升高度的瞬时变化率为（ ）\nA. 2cm/s B. 4cm/s C. 6cm/s D. 8cm/s",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "5.1-LI15264d4821074d8d"
+        }
+      ],
+      "exercise_questions": [],
+      "action_order": [
+        "learn_each_current_example_then_attempt_its_direct_variants",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [],
+      "prerequisite_knowledge_blocks": []
+    },
+    {
+      "cycle_id": "5.1-cycle-5",
+      "sequence": 5,
+      "title": "类型Ⅱ 导数定义式的应用",
+      "course_keys": [],
+      "prerequisite_course_keys": [
+        "4.1.1.1 导数的定义（上）",
+        "4.1.1.1 导数的定义（下）",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.1.4 判断切线条数问题",
+        "4.1.1.5 公切线问题"
+      ],
+      "optional_course_keys": [],
+      "knowledge_refs": [],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 导数定义式的应用"
+      ],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [
+        {
+          "item_id": "3c3c50ab6f0d3f6b",
+          "kind": "example",
+          "label": "例8",
+          "example_number": 8,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型Ⅱ 导数定义式的应用",
+          "source_docs": [
+            3,
+            4
+          ],
+          "question_text": "【例 8】若函数  \\(y = f(x)\\) 在  \\(x = x_{0}\\) 处可导，则  \\(\\lim_{\\Delta x \\to 0} \\frac{f(x_{0} - 3\\Delta x) - f(x_{0})}{\\Delta x} = (\\quad)\\)\nA.  \\(f'(x_{0})\\) B.  \\(-f'(x_{0})\\) C.  \\(3f'(x_{0})\\) D.  \\(-3f'(x_{0})\\)",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例 8】若函数  \\(y = f(x)\\) 在  \\(x = x_{0}\\) 处可导，则  \\(\\lim_{\\Delta x \\to 0} \\frac{f(x_{0} - 3\\Delta x) - f(x_{0})}{\\Delta x} = (\\quad)\\)\nA.  \\(f'(x_{0})\\) B.  \\(-f'(x_{0})\\) C.  \\(3f'(x_{0})\\) D.  \\(-3f'(x_{0})\\)\n解析：分子中是 \\(-3\\Delta x\\)，分母是 \\(\\Delta x\\)，这与导数定义中的结构不一致，故考虑将其调整为一致，如何调整？把分母的 \\(\\Delta x\\)化为 \\(-\\frac{1}{3}\\times(-3\\Delta x)\\)即可， \\(\\lim_{\\Delta x\\to0}\\frac{f(x_0-3\\Delta x)-f(x_0)}{\\Delta x}=\\lim_{\\Delta x\\to0}\\frac{f(x_0-3\\Delta x)-f(x_0)}{-\\frac{1}{3}\\times(-3\\Delta x)}\\)\n= \\(\\lim_{\\Delta x\\to0}\\left[(-3)\\cdot\\frac{f[x_0+(-3\\Delta x)]-f(x_0)}{-3\\Delta x}\\right]=-3\\lim_{\\Delta x\\to0}\\frac{f[x_0+(-3\\Delta x)]-f(x_0)}{-3\\Delta x}\\) ①，\n式①中的 \\(\\lim_{\\Delta x\\to0}\\frac{f[x_0+(-3\\Delta x)]-f(x_0)}{-3\\Delta x}\\)表示什么？若看不出来，可将 \\(-3\\Delta x\\)换元，再作观察，\n令 \\(\\Delta t=-3\\Delta x\\)，则当 \\(\\Delta x\\to0\\)时， \\(\\Delta t\\to0\\)，所以 \\(\\lim_{\\Delta x\\to0}\\frac{f[x_0+(-3\\Delta x)]-f(x_0)}{-3\\Delta x}=\\lim_{\\Delta x\\to0}\\frac{f(x_0+\\Delta t)-f(x_0)}{\\Delta t}=f'(x_0)\\)，\n代入①得 \\(\\lim_{\\Delta x\\to0}\\frac{f(x_0-3\\Delta x)-f(x_0)}{\\Delta x}=-3f'(x_0)\\)。\n答案：D\n【反思】导数的定义  \\(f'(x_0) = \\lim_{\\Delta x \\to 0} \\frac{\\Delta y}{\\Delta x} = \\lim_{\\Delta x \\to 0} \\frac{f(x_0 + \\Delta x) - f(x_0)}{\\Delta x}\\) 中，对  \\(\\Delta x\\) 的理解需注意两点：①分子和分母的  \\(\\Delta x\\) 形式上要保持一致，因为分母表示的是“自变量的改变量”，也就是分子中两个  \\(f(\\cdots)\\) 括号内的差；②  \\(\\Delta x\\) 表示一\n个距离0要多近有多近的量，既可为正也可为负，也就是说， \\(\\Delta x\\)， \\(2\\Delta x\\)， \\(-\\Delta x\\)等都是无限趋近于0的量，所以都可以充当导数定义中 \\(\\Delta x\\)的角色，我们通过下面的变式来加深理解。",
+          "solution_present": true,
+          "vision_hint": "5.1-LI3c3c50ab6f0d3f6b"
+        }
+      ],
+      "direct_variants": [
+        {
+          "item_id": "5eb7fd416292ad79",
+          "kind": "direct_variant",
+          "label": "变式",
+          "example_number": null,
+          "parent_example_number": 8,
+          "role": "direct_variant",
+          "role_ref": "类型Ⅱ 导数定义式的应用",
+          "source_docs": [
+            4
+          ],
+          "question_text": "【变式】若 \\(f'(2)=4\\)，则 \\(\\lim_{\\Delta x\\to0}\\frac{f(2+\\Delta x)-f(2-\\Delta x)}{\\Delta x}=\\)（）\nA. 2 B. 4 C. 6 D. 8",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "5.1-LI5eb7fd416292ad79"
+        }
+      ],
+      "exercise_questions": [],
+      "action_order": [
+        "learn_each_current_example_then_attempt_its_direct_variants",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [],
+      "prerequisite_knowledge_blocks": []
+    },
+    {
+      "cycle_id": "5.1-cycle-6",
+      "sequence": 6,
+      "title": "类型III 用导数定义求函数的切线",
+      "course_keys": [],
+      "prerequisite_course_keys": [
+        "4.1.1.1 导数的定义（上）",
+        "4.1.1.1 导数的定义（下）",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.1.4 判断切线条数问题",
+        "4.1.1.5 公切线问题"
+      ],
+      "optional_course_keys": [],
+      "knowledge_refs": [],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [
+        "类型III 用导数定义求函数的切线"
+      ],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [
+        {
+          "item_id": "01d2e55dd8b46765",
+          "kind": "example",
+          "label": "例9",
+          "example_number": 9,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型III 用导数定义求函数的切线",
+          "source_docs": [
+            4
+          ],
+          "question_text": "【例 9】函数  \\(f(x)=2x^{2}+4x\\) 在 x=3 处的切线方程是 ___.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例 9】函数  \\(f(x)=2x^{2}+4x\\) 在 x=3 处的切线方程是 ___.\n解析：（要求切线方程，需要切点坐标和切线斜率，前者直接代解析式求  \\(f(3)\\) 即可，后者即为  \\(f'(3)\\)，可用导数的定义求得）由题意， \\(f(3)=2\\times3^2+4\\times3=30\\)，所以切点为  \\((3,30)\\)，\n又  \\(\\lim_{\\Delta x \\to 0} \\frac{f(3 + \\Delta x) - f(3)}{\\Delta x} = \\lim_{\\Delta x \\to 0} \\frac{2(3 + \\Delta x)^2 + 4(3 + \\Delta x) - 30}{\\Delta x} = \\lim_{\\Delta x \\to 0} \\frac{2(\\Delta x)^2 + 16\\Delta x}{\\Delta x} = \\lim_{\\Delta x \\to 0} (2\\Delta x + 16) = 16\\)，\n所以  \\(f(x)\\) 在 x=3 处的切线斜率为 16，故该切线的方程为  \\(y-30=16(x-3)\\)，整理得：y=16x-18.\n答案：y=16x-18\n【反思】①函数在某一点处的导数值，即为函数在该点处的切线斜率；②由于切点既在函数图象上，又在切线上，是沟通函数与切线的桥梁，所以切线问题一定要牢牢抓住切点。本题已知切点，如果不知道切点，那么就需要设出切点来处理，我们来看下面的变式。",
+          "solution_present": true,
+          "vision_hint": "5.1-LI01d2e55dd8b46765"
+        }
+      ],
+      "direct_variants": [
+        {
+          "item_id": "53e9279508442f33",
+          "kind": "direct_variant",
+          "label": "变式",
+          "example_number": null,
+          "parent_example_number": 9,
+          "role": "direct_variant",
+          "role_ref": "类型III 用导数定义求函数的切线",
+          "source_docs": [
+            4,
+            5
+          ],
+          "question_text": "【变式】已知函数  \\(f(x)=1-x^{3}\\)，则  \\(f(x)\\) 的过点  \\((-1,6)\\) 的切线方程为 ___.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "5.1-LI53e9279508442f33"
+        }
+      ],
+      "exercise_questions": [],
+      "action_order": [
+        "learn_each_current_example_then_attempt_its_direct_variants",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [],
+      "prerequisite_knowledge_blocks": []
+    },
+    {
+      "cycle_id": "5.1-cycle-7",
+      "sequence": 7,
       "title": "A组 夯实基础",
       "course_keys": [],
       "prerequisite_course_keys": [
@@ -478,25 +498,19 @@
         "4.1.1.2 求在P点处的切线",
         "4.1.1.3 求过P点的切线",
         "4.1.1.4 判断切线条数问题",
-        "4.1.1.5 公切线问题",
-        "4.1.1.6 用切线算距离最值",
-        "4.1.1.7 隐函数求导"
+        "4.1.1.5 公切线问题"
       ],
       "optional_course_keys": [],
       "knowledge_refs": [],
       "prerequisite_knowledge_refs": [],
-      "type_refs": [
-        "类型I 变化率的计算",
-        "类型Ⅱ 导数定义式的应用",
-        "类型III 用导数定义求函数的切线"
-      ],
+      "type_refs": [],
       "bridge_unit_ids": [],
       "method_checkpoints": [],
       "worked_examples": [],
       "direct_variants": [],
       "exercise_questions": [
         {
-          "qid": "Q-705b5117443ba68c",
+          "qid": "Q-79950cd1b260b942",
           "section": "5.1",
           "group": "A",
           "number": 1,
@@ -504,7 +518,7 @@
           "source_anchor": {
             "ocr_doc": 5,
             "pdf_page": 6,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_5.md"
+            "file": "data/ocr_live_current/chapter5_95/doc_5.md"
           },
           "question_text": "1. (2025 · 江苏南通期末)\n\n已知函数  \\(f(x)=\\sqrt{x}\\)，则式子  \\(\\frac{\\sqrt{1+\\Delta x}-1}{\\Delta x}(\\Delta x>0)\\) 表示（）\n\nA.  \\(f(x)\\) 在  \\(x=1+\\Delta x\\) 处的导数\n\nB.  \\(f(x)\\) 在 x=1 处的导数\n\nC.  \\(f(x)\\) 在  \\([1,1+\\Delta x]\\) 上的平均变化率\n\nD.  \\(f(x)\\) 在  \\([1-\\Delta x,1]\\) 上的平均变化率",
           "image_refs": [],
@@ -515,7 +529,7 @@
           ]
         },
         {
-          "qid": "Q-200e79c769e4d275",
+          "qid": "Q-df564d3d5b0bb45d",
           "section": "5.1",
           "group": "A",
           "number": 2,
@@ -523,7 +537,7 @@
           "source_anchor": {
             "ocr_doc": 5,
             "pdf_page": 6,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_5.md"
+            "file": "data/ocr_live_current/chapter5_95/doc_5.md"
           },
           "question_text": "### 2. （2025·上海模拟）\n\n一质点做直线运动，已知其位移 \\(s\\) 与时间 \\(t\\) 的关系为 \\(s(t) = \\frac{1}{3}t^3 + 1\\)，设其在 \\([1,2]\\) 内的平均速度为 \\(v_1\\)，在 \\(t=2\\) 时的瞬时速度为 \\(v_2\\)，则 \\(\\frac{v_1}{v_2} =\\)___.",
           "image_refs": [],
@@ -534,7 +548,7 @@
           ]
         },
         {
-          "qid": "Q-c4edc15b886d806e",
+          "qid": "Q-9919666689e5005a",
           "section": "5.1",
           "group": "A",
           "number": 3,
@@ -542,7 +556,7 @@
           "source_anchor": {
             "ocr_doc": 6,
             "pdf_page": 7,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_6.md"
+            "file": "data/ocr_live_current/chapter5_95/doc_6.md"
           },
           "question_text": "3.（2025·吉林长春期中）\n\n若  \\(f'(x_0)=6\\)，则  \\(\\lim_{\\Delta x \\to 0} \\frac{f(x_0 + \\Delta x) - f(x_0)}{3\\Delta x} = (\\quad)\\)\n\nA. 2 B. 1\n\nC.  \\(\\frac{1}{2}\\) D. -2",
           "image_refs": [],
@@ -553,7 +567,7 @@
           ]
         },
         {
-          "qid": "Q-e6e065447dfe64bb",
+          "qid": "Q-bcfc9f4eb1db8dbc",
           "section": "5.1",
           "group": "A",
           "number": 4,
@@ -561,7 +575,7 @@
           "source_anchor": {
             "ocr_doc": 6,
             "pdf_page": 7,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_6.md"
+            "file": "data/ocr_live_current/chapter5_95/doc_6.md"
           },
           "question_text": "4.（2025·四川眉山期中）\n\n一物体的运动方程式为  \\(s(t)=t+\\frac{1}{t}\\)，则在  \\(t=2\\) 时的瞬时速度是（）\n\nA.  \\(\\frac{5}{2}\\) B.  \\(\\frac{3}{4}\\) C. 1 D. 2",
           "image_refs": [],
@@ -572,7 +586,7 @@
           ]
         },
         {
-          "qid": "Q-46ac7fd105d173ba",
+          "qid": "Q-902d152cfc44a93a",
           "section": "5.1",
           "group": "A",
           "number": 5,
@@ -580,7 +594,7 @@
           "source_anchor": {
             "ocr_doc": 6,
             "pdf_page": 7,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_6.md"
+            "file": "data/ocr_live_current/chapter5_95/doc_6.md"
           },
           "question_text": "5.（2025·全国模拟）\n\n若函数  \\(f(x)=x^{2}-3\\) 在  \\([1,b]\\) 上的平均变化率为 3，则实数 b 的值等于（）\n\nA. 1 B. 2 C. 3 D. 4",
           "image_refs": [],
@@ -601,8 +615,8 @@
       "prerequisite_knowledge_blocks": []
     },
     {
-      "cycle_id": "5.1-cycle-5",
-      "sequence": 5,
+      "cycle_id": "5.1-cycle-8",
+      "sequence": 8,
       "title": "B组 强化能力",
       "course_keys": [],
       "prerequisite_course_keys": [
@@ -611,25 +625,19 @@
         "4.1.1.2 求在P点处的切线",
         "4.1.1.3 求过P点的切线",
         "4.1.1.4 判断切线条数问题",
-        "4.1.1.5 公切线问题",
-        "4.1.1.6 用切线算距离最值",
-        "4.1.1.7 隐函数求导"
+        "4.1.1.5 公切线问题"
       ],
       "optional_course_keys": [],
       "knowledge_refs": [],
       "prerequisite_knowledge_refs": [],
-      "type_refs": [
-        "类型I 变化率的计算",
-        "类型Ⅱ 导数定义式的应用",
-        "类型III 用导数定义求函数的切线"
-      ],
+      "type_refs": [],
       "bridge_unit_ids": [],
       "method_checkpoints": [],
       "worked_examples": [],
       "direct_variants": [],
       "exercise_questions": [
         {
-          "qid": "Q-41f174757d9dec93",
+          "qid": "Q-66c6ce4fc0a7ab18",
           "section": "5.1",
           "group": "B",
           "number": 6,
@@ -637,7 +645,7 @@
           "source_anchor": {
             "ocr_doc": 6,
             "pdf_page": 7,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_6.md"
+            "file": "data/ocr_live_current/chapter5_95/doc_6.md"
           },
           "question_text": "6.（2025·安徽六安期末）\n\n若 \\(\\lim_{\\Delta x \\to 0} \\frac{f(1 - \\Delta x) - f(1)}{2\\Delta x} = 4\\)，则 \\(f'(1) = (\\quad)\\)\n\nA. -2 B. 2 C. -8 D. 8",
           "image_refs": [],
@@ -648,7 +656,7 @@
           ]
         },
         {
-          "qid": "Q-298b55fbcec47c28",
+          "qid": "Q-0a56588d82ab1902",
           "section": "5.1",
           "group": "B",
           "number": 7,
@@ -656,7 +664,7 @@
           "source_anchor": {
             "ocr_doc": 7,
             "pdf_page": 8,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_7.md"
+            "file": "data/ocr_live_current/chapter5_95/doc_7.md"
           },
           "question_text": "7.（2025·江苏扬州期中）\n\n已知定义在  \\(\\mathbb{R}\\) 上的函数  \\(f(x)\\) 的导函数为  \\(f'(x)\\)，若  \\(f'(1) = 2025\\)，则  \\(\\lim_{\\Delta x \\to 0} \\frac{f(1 + \\Delta x) - f(1 - \\Delta x)}{\\Delta x} =\\) ___.",
           "image_refs": [],
@@ -667,7 +675,7 @@
           ]
         },
         {
-          "qid": "Q-300e91f298d44932",
+          "qid": "Q-640f462d950da79b",
           "section": "5.1",
           "group": "B",
           "number": 8,
@@ -675,58 +683,24 @@
           "source_anchor": {
             "ocr_doc": 7,
             "pdf_page": 8,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_7.md"
+            "file": "data/ocr_live_current/chapter5_95/doc_7.md"
           },
           "question_text": "### 8. （2025 · 全国模拟）（多选）\n\n某池塘中野生水葫芦的面积与时间的函数关系如图所示。假设其关系为指数函数，并给出下列说法，其中说法正确的是（）\n\n\n\n\nA. 野生水葫芦每月的面积增长率为 1\n\nB. 野生水葫芦的面积从  \\(4m^2\\) 蔓延到  \\(12m^2\\) 只需 1.5 个月\n\nC. 设野生水葫芦面积蔓延到  \\(10m^2\\)， \\(20m^2\\)， \\(30m^2\\) 时的时间分别为  \\(t_1\\)， \\(t_2\\)， \\(t_3\\)，则有  \\(t_1 + t_3 < 2t_2\\)\n\nD. 野生水葫芦的面积从第 1 个月到第 3 个月蔓延的平均速度等于其从第 2 个月到第 4 个月蔓延的平均速度",
           "image_refs": [
             {
               "ref": "imgs/img_in_chart_box_492_578_912_886.jpg",
-              "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_chart_box_492_578_912_886.jpg",
+              "path": "data/ocr_live_current/chapter5_95/imgs/img_in_chart_box_492_578_912_886.jpg",
               "exists": true
             }
           ],
-          "visual_status": "VISION_VERIFIED",
+          "visual_status": "NEEDS_VISION_SIDECAR",
           "math_errors": [],
           "evidence": [
-            "E1",
-            "E2"
-          ],
-          "vision_sidecars": [
-            {
-              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_chart_box_492_578_912_886.jpg",
-              "image_sha256": "3a9f86387d2db7fcb3a7b44d6b897d2087a441defd79757dbddc573cb95f8f43",
-              "confidence": "E2",
-              "structured": {
-                "objects": [],
-                "relations": [],
-                "coordinates": [],
-                "ranges": [],
-                "text": [
-                  "面积/m²",
-                  "时间/月"
-                ],
-                "uncertainties": [],
-                "confidence": "E2"
-              },
-              "source_provenance": null
-            }
-          ],
-          "vision_sidecar": {
-            "objects": [],
-            "relations": [],
-            "coordinates": [],
-            "ranges": [],
-            "text": [
-              "面积/m²",
-              "时间/月"
-            ],
-            "uncertainties": [],
-            "confidence": "E2"
-          },
-          "vision_source_provenance": []
+            "E1"
+          ]
         },
         {
-          "qid": "Q-d4f83f6ef0e85610",
+          "qid": "Q-50dbc06078af7b63",
           "section": "5.1",
           "group": "B",
           "number": 9,
@@ -734,7 +708,7 @@
           "source_anchor": {
             "ocr_doc": 7,
             "pdf_page": 8,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_7.md"
+            "file": "data/ocr_live_current/chapter5_95/doc_7.md"
           },
           "question_text": "9.（2025·全国模拟）\n\n利用导数的定义，求  \\(f(x)=\\sqrt{x^{2}+1}\\) 在 x=1 处的导数.",
           "image_refs": [],
@@ -745,7 +719,7 @@
           ]
         },
         {
-          "qid": "Q-859f8d22e0064a8e",
+          "qid": "Q-4896e693d32f41d1",
           "section": "5.1",
           "group": "B",
           "number": 10,
@@ -753,7 +727,7 @@
           "source_anchor": {
             "ocr_doc": 8,
             "pdf_page": 9,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_8.md"
+            "file": "data/ocr_live_current/chapter5_95/doc_8.md"
           },
           "question_text": "10.（2025·上海模拟）\n\n一质点按规律  \\(s(t)=2t^{3}\\) 运动.\n\n（1）求其在时间段 \\([1,2]\\)内的平均速度；\n\n（2）求其在t=1时的瞬时速度.",
           "image_refs": [],
@@ -764,7 +738,7 @@
           ]
         },
         {
-          "qid": "Q-ed4a6116f23c939b",
+          "qid": "Q-7ca1110205cd0e25",
           "section": "5.1",
           "group": "B",
           "number": 11,
@@ -772,7 +746,7 @@
           "source_anchor": {
             "ocr_doc": 8,
             "pdf_page": 9,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_8.md"
+            "file": "data/ocr_live_current/chapter5_95/doc_8.md"
           },
           "question_text": "11.（2025·吉林白山模拟）\n\n（1）求曲线  \\(f(x)=x^{3}-2x\\) 在 x=1 处的切线；\n\n（2）求过点 \\((1,-1)\\)与曲线 \\(f(x)=x^{3}-2x\\)相切的直线的方程.",
           "image_refs": [],
@@ -793,8 +767,8 @@
       "prerequisite_knowledge_blocks": []
     },
     {
-      "cycle_id": "5.1-cycle-6",
-      "sequence": 6,
+      "cycle_id": "5.1-cycle-9",
+      "sequence": 9,
       "title": "C组 拓展提升",
       "course_keys": [],
       "prerequisite_course_keys": [
@@ -803,25 +777,19 @@
         "4.1.1.2 求在P点处的切线",
         "4.1.1.3 求过P点的切线",
         "4.1.1.4 判断切线条数问题",
-        "4.1.1.5 公切线问题",
-        "4.1.1.6 用切线算距离最值",
-        "4.1.1.7 隐函数求导"
+        "4.1.1.5 公切线问题"
       ],
       "optional_course_keys": [],
       "knowledge_refs": [],
       "prerequisite_knowledge_refs": [],
-      "type_refs": [
-        "类型I 变化率的计算",
-        "类型Ⅱ 导数定义式的应用",
-        "类型III 用导数定义求函数的切线"
-      ],
+      "type_refs": [],
       "bridge_unit_ids": [],
       "method_checkpoints": [],
       "worked_examples": [],
       "direct_variants": [],
       "exercise_questions": [
         {
-          "qid": "Q-1512a44262ab0164",
+          "qid": "Q-d80a5bd4220297bd",
           "section": "5.1",
           "group": "C",
           "number": 12,
@@ -829,63 +797,21 @@
           "source_anchor": {
             "ocr_doc": 8,
             "pdf_page": 9,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_8.md"
+            "file": "data/ocr_live_current/chapter5_95/doc_8.md"
           },
           "question_text": "### 12. （2025 · 辽宁模拟）（多选）\n\n午饭时间，小明从教室到食堂的路程 S 与时间 t 的函数关系如图，记 t 时刻的瞬时速度为  \\(V(t)\\)，区间  \\([0, t_1]\\)， \\([0, t_2]\\)， \\([t_1, t_2]\\) 上的平均速度分别为  \\(V_1\\)， \\(V_2\\)， \\(V_3\\)，则下列判断正确的有（）\n\n\n\n\nA.  \\(V_1 < V_2 < V_3\\)\n\nB.  \\(\\frac{V_1 + V_3}{2} < V_2\\)\n\nC. 整个过程小明行走的速度一直在加快\n\nD. 对于 \\(V_i (i=1,2,3)\\)，存在 \\(m_i \\in (0, t_2)\\)，使 \\(V(m_i) = V_i\\)",
           "image_refs": [
             {
               "ref": "imgs/img_in_chart_box_523_1110_698_1246.jpg",
-              "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_chart_box_523_1110_698_1246.jpg",
+              "path": "data/ocr_live_current/chapter5_95/imgs/img_in_chart_box_523_1110_698_1246.jpg",
               "exists": true
             }
           ],
-          "visual_status": "VISION_VERIFIED",
+          "visual_status": "NEEDS_VISION_SIDECAR",
           "math_errors": [],
           "evidence": [
-            "E1",
-            "E2"
-          ],
-          "vision_sidecars": [
-            {
-              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_chart_box_523_1110_698_1246.jpg",
-              "image_sha256": "b9d73c6433e14518f6fd36b3d209cb8d1653eec6d6c28e0eba3771337348322e",
-              "confidence": "E2",
-              "structured": {
-                "objects": [],
-                "relations": [],
-                "coordinates": [],
-                "ranges": [],
-                "text": [
-                  "S",
-                  "S0",
-                  "S0/2",
-                  "t",
-                  "t1",
-                  "t2"
-                ],
-                "uncertainties": [],
-                "confidence": "E2"
-              },
-              "source_provenance": null
-            }
-          ],
-          "vision_sidecar": {
-            "objects": [],
-            "relations": [],
-            "coordinates": [],
-            "ranges": [],
-            "text": [
-              "S",
-              "S0",
-              "S0/2",
-              "t",
-              "t1",
-              "t2"
-            ],
-            "uncertainties": [],
-            "confidence": "E2"
-          },
-          "vision_source_provenance": []
+            "E1"
+          ]
         }
       ],
       "action_order": [
@@ -1055,93 +981,14 @@
       "image_refs": [
         {
           "ref": "imgs/img_in_image_box_800_1154_1014_1256.jpg",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_800_1154_1014_1256.jpg",
+          "path": "data/ocr_live_current/chapter5_95/imgs/img_in_image_box_800_1154_1014_1256.jpg",
           "exists": true
         }
       ],
-      "visual_status": "VISION_VERIFIED",
+      "visual_status": "NEEDS_VISION_SIDECAR",
       "teaching_text": "【例5】设 \\(y=f(x)\\)的导函数为 \\(f'(x)\\)，\n根据图中的函数图象，下列数值最小\n的是（）\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_800_1154_1014_1256.jpg\" alt=\"Image\" width=\"17%\" /></div>\nA.  \\(f'(a)\\) B.  \\(f'(b)\\)\nC.  \\(f'(c)\\) D.  \\(\\frac{f(b)-f(a)}{b-a}\\)\n解析：设  \\(f(x)\\) 在 A, B, C 三点处的切线斜率分别为  \\(k_{A}\\),  \\(k_{B}\\),  \\(k_{C}\\)，则  \\(k_{A} = f'(a)\\),\n \\(k_{B}=f'(b)\\)， \\(k_{C}=f'(c)\\)，\n由图可知， \\(k_{A}>k_{B}>0>k_{C}\\)\n所以  \\(f'(a) > f'(b) > 0 > f'(c)\\)\n \\(x = x_0\\) 时， \\(f'(x_0)\\) 是一个唯一确定的数。这样，当  \\(x\\) 变化时， \\(y = f'(x)\\) 就是关于  \\(x\\) 的函数，我们称它为  \\(y = f(x)\\) 的导函数（简称导数）， \\(y = f(x)\\) 的导函数有时也记作  \\(y'\\)，即  \\(f'(x) = y' = \\lim_{\\Delta x \\to 0} \\frac{f(x + \\Delta x) - f(x)}{\\Delta x}\\)。\n注：若题干的表述为“函数 \\(f(x)\\)在 \\(x=x_0\\)处的导数”，\n这里的导数实际上指的是导数值，即函数 \\(f(x)\\)的导函数\n \\(f'(x)\\)在 \\(x=x_0\\)处的函数值 \\(f'(x_0)\\).\n又 \\(\\frac{f(b)-f(a)}{b-a}=k_{AB}>0\\)，\n所以各选项中数值最小的是 \\(f'(c)\\).\n答案：C",
       "solution_present": true,
-      "vision_hint": "5.1-LIaf6aeaf2c5c1a783",
-      "vision_sidecars": [
-        {
-          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_800_1154_1014_1256.jpg",
-          "image_sha256": "d2a96649e62d567b43083713f5dce5e991c2ed1209ef195d3a1465f606c03404",
-          "confidence": "E2",
-          "structured": {
-            "objects": [
-              "坐标轴",
-              "曲线y=f(x)",
-              "点O",
-              "点A",
-              "点B",
-              "点C"
-            ],
-            "relations": [
-              "点A在x=a处与x轴相交",
-              "点B在x=b处达到峰值",
-              "点C在x=c处",
-              "曲线从A到B上升，从B到C下降"
-            ],
-            "coordinates": [
-              "O(0,0)",
-              "A(a, f(a))",
-              "B(b, f(b))",
-              "C(c, f(c))"
-            ],
-            "ranges": [
-              "x轴区间[a, c]",
-              "y轴正区间[f(a), f(b)]"
-            ],
-            "text": [
-              "y",
-              "x",
-              "y = f(x)"
-            ],
-            "uncertainties": [],
-            "confidence": "E2"
-          },
-          "source_provenance": null
-        }
-      ],
-      "vision_sidecar": {
-        "objects": [
-          "坐标轴",
-          "曲线y=f(x)",
-          "点O",
-          "点A",
-          "点B",
-          "点C"
-        ],
-        "relations": [
-          "点A在x=a处与x轴相交",
-          "点B在x=b处达到峰值",
-          "点C在x=c处",
-          "曲线从A到B上升，从B到C下降"
-        ],
-        "coordinates": [
-          "O(0,0)",
-          "A(a, f(a))",
-          "B(b, f(b))",
-          "C(c, f(c))"
-        ],
-        "ranges": [
-          "x轴区间[a, c]",
-          "y轴正区间[f(a), f(b)]"
-        ],
-        "text": [
-          "y",
-          "x",
-          "y = f(x)"
-        ],
-        "uncertainties": [],
-        "confidence": "E2"
-      },
-      "vision_source_provenance": [],
-      "evidence": [
-        "E1",
-        "E2"
-      ]
+      "vision_hint": "5.1-LIaf6aeaf2c5c1a783"
     },
     {
       "item_id": "759d6d57702d3417",
@@ -1167,8 +1014,8 @@
       "label": "例7",
       "example_number": 7,
       "parent_example_number": null,
-      "role": "knowledge_example",
-      "role_ref": "5.1-k3",
+      "role": "type_example",
+      "role_ref": "类型I 变化率的计算",
       "source_docs": [
         2
       ],
@@ -1185,8 +1032,8 @@
       "label": "例8",
       "example_number": 8,
       "parent_example_number": null,
-      "role": "knowledge_example",
-      "role_ref": "5.1-k3",
+      "role": "type_example",
+      "role_ref": "类型Ⅱ 导数定义式的应用",
       "source_docs": [
         3,
         4
@@ -1204,8 +1051,8 @@
       "label": "例9",
       "example_number": 9,
       "parent_example_number": null,
-      "role": "knowledge_example",
-      "role_ref": "5.1-k3",
+      "role": "type_example",
+      "role_ref": "类型III 用导数定义求函数的切线",
       "source_docs": [
         4
       ],
@@ -1225,7 +1072,7 @@
       "example_number": null,
       "parent_example_number": 7,
       "role": "direct_variant",
-      "role_ref": null,
+      "role_ref": "类型I 变化率的计算",
       "source_docs": [
         2,
         3
@@ -1243,7 +1090,7 @@
       "example_number": null,
       "parent_example_number": 8,
       "role": "direct_variant",
-      "role_ref": null,
+      "role_ref": "类型Ⅱ 导数定义式的应用",
       "source_docs": [
         4
       ],
@@ -1260,7 +1107,7 @@
       "example_number": null,
       "parent_example_number": 9,
       "role": "direct_variant",
-      "role_ref": null,
+      "role_ref": "类型III 用导数定义求函数的切线",
       "source_docs": [
         4,
         5
@@ -1275,7 +1122,7 @@
   "deduplicated_learning_items": [],
   "exercise_questions": [
     {
-      "qid": "Q-705b5117443ba68c",
+      "qid": "Q-79950cd1b260b942",
       "section": "5.1",
       "group": "A",
       "number": 1,
@@ -1283,7 +1130,7 @@
       "source_anchor": {
         "ocr_doc": 5,
         "pdf_page": 6,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_5.md"
+        "file": "data/ocr_live_current/chapter5_95/doc_5.md"
       },
       "question_text": "1. (2025 · 江苏南通期末)\n\n已知函数  \\(f(x)=\\sqrt{x}\\)，则式子  \\(\\frac{\\sqrt{1+\\Delta x}-1}{\\Delta x}(\\Delta x>0)\\) 表示（）\n\nA.  \\(f(x)\\) 在  \\(x=1+\\Delta x\\) 处的导数\n\nB.  \\(f(x)\\) 在 x=1 处的导数\n\nC.  \\(f(x)\\) 在  \\([1,1+\\Delta x]\\) 上的平均变化率\n\nD.  \\(f(x)\\) 在  \\([1-\\Delta x,1]\\) 上的平均变化率",
       "image_refs": [],
@@ -1294,7 +1141,7 @@
       ]
     },
     {
-      "qid": "Q-200e79c769e4d275",
+      "qid": "Q-df564d3d5b0bb45d",
       "section": "5.1",
       "group": "A",
       "number": 2,
@@ -1302,7 +1149,7 @@
       "source_anchor": {
         "ocr_doc": 5,
         "pdf_page": 6,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_5.md"
+        "file": "data/ocr_live_current/chapter5_95/doc_5.md"
       },
       "question_text": "### 2. （2025·上海模拟）\n\n一质点做直线运动，已知其位移 \\(s\\) 与时间 \\(t\\) 的关系为 \\(s(t) = \\frac{1}{3}t^3 + 1\\)，设其在 \\([1,2]\\) 内的平均速度为 \\(v_1\\)，在 \\(t=2\\) 时的瞬时速度为 \\(v_2\\)，则 \\(\\frac{v_1}{v_2} =\\)___.",
       "image_refs": [],
@@ -1313,7 +1160,7 @@
       ]
     },
     {
-      "qid": "Q-c4edc15b886d806e",
+      "qid": "Q-9919666689e5005a",
       "section": "5.1",
       "group": "A",
       "number": 3,
@@ -1321,7 +1168,7 @@
       "source_anchor": {
         "ocr_doc": 6,
         "pdf_page": 7,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_6.md"
+        "file": "data/ocr_live_current/chapter5_95/doc_6.md"
       },
       "question_text": "3.（2025·吉林长春期中）\n\n若  \\(f'(x_0)=6\\)，则  \\(\\lim_{\\Delta x \\to 0} \\frac{f(x_0 + \\Delta x) - f(x_0)}{3\\Delta x} = (\\quad)\\)\n\nA. 2 B. 1\n\nC.  \\(\\frac{1}{2}\\) D. -2",
       "image_refs": [],
@@ -1332,7 +1179,7 @@
       ]
     },
     {
-      "qid": "Q-e6e065447dfe64bb",
+      "qid": "Q-bcfc9f4eb1db8dbc",
       "section": "5.1",
       "group": "A",
       "number": 4,
@@ -1340,7 +1187,7 @@
       "source_anchor": {
         "ocr_doc": 6,
         "pdf_page": 7,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_6.md"
+        "file": "data/ocr_live_current/chapter5_95/doc_6.md"
       },
       "question_text": "4.（2025·四川眉山期中）\n\n一物体的运动方程式为  \\(s(t)=t+\\frac{1}{t}\\)，则在  \\(t=2\\) 时的瞬时速度是（）\n\nA.  \\(\\frac{5}{2}\\) B.  \\(\\frac{3}{4}\\) C. 1 D. 2",
       "image_refs": [],
@@ -1351,7 +1198,7 @@
       ]
     },
     {
-      "qid": "Q-46ac7fd105d173ba",
+      "qid": "Q-902d152cfc44a93a",
       "section": "5.1",
       "group": "A",
       "number": 5,
@@ -1359,7 +1206,7 @@
       "source_anchor": {
         "ocr_doc": 6,
         "pdf_page": 7,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_6.md"
+        "file": "data/ocr_live_current/chapter5_95/doc_6.md"
       },
       "question_text": "5.（2025·全国模拟）\n\n若函数  \\(f(x)=x^{2}-3\\) 在  \\([1,b]\\) 上的平均变化率为 3，则实数 b 的值等于（）\n\nA. 1 B. 2 C. 3 D. 4",
       "image_refs": [],
@@ -1370,7 +1217,7 @@
       ]
     },
     {
-      "qid": "Q-41f174757d9dec93",
+      "qid": "Q-66c6ce4fc0a7ab18",
       "section": "5.1",
       "group": "B",
       "number": 6,
@@ -1378,7 +1225,7 @@
       "source_anchor": {
         "ocr_doc": 6,
         "pdf_page": 7,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_6.md"
+        "file": "data/ocr_live_current/chapter5_95/doc_6.md"
       },
       "question_text": "6.（2025·安徽六安期末）\n\n若 \\(\\lim_{\\Delta x \\to 0} \\frac{f(1 - \\Delta x) - f(1)}{2\\Delta x} = 4\\)，则 \\(f'(1) = (\\quad)\\)\n\nA. -2 B. 2 C. -8 D. 8",
       "image_refs": [],
@@ -1389,7 +1236,7 @@
       ]
     },
     {
-      "qid": "Q-298b55fbcec47c28",
+      "qid": "Q-0a56588d82ab1902",
       "section": "5.1",
       "group": "B",
       "number": 7,
@@ -1397,7 +1244,7 @@
       "source_anchor": {
         "ocr_doc": 7,
         "pdf_page": 8,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_7.md"
+        "file": "data/ocr_live_current/chapter5_95/doc_7.md"
       },
       "question_text": "7.（2025·江苏扬州期中）\n\n已知定义在  \\(\\mathbb{R}\\) 上的函数  \\(f(x)\\) 的导函数为  \\(f'(x)\\)，若  \\(f'(1) = 2025\\)，则  \\(\\lim_{\\Delta x \\to 0} \\frac{f(1 + \\Delta x) - f(1 - \\Delta x)}{\\Delta x} =\\) ___.",
       "image_refs": [],
@@ -1408,7 +1255,7 @@
       ]
     },
     {
-      "qid": "Q-300e91f298d44932",
+      "qid": "Q-640f462d950da79b",
       "section": "5.1",
       "group": "B",
       "number": 8,
@@ -1416,58 +1263,24 @@
       "source_anchor": {
         "ocr_doc": 7,
         "pdf_page": 8,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_7.md"
+        "file": "data/ocr_live_current/chapter5_95/doc_7.md"
       },
       "question_text": "### 8. （2025 · 全国模拟）（多选）\n\n某池塘中野生水葫芦的面积与时间的函数关系如图所示。假设其关系为指数函数，并给出下列说法，其中说法正确的是（）\n\n\n\n\nA. 野生水葫芦每月的面积增长率为 1\n\nB. 野生水葫芦的面积从  \\(4m^2\\) 蔓延到  \\(12m^2\\) 只需 1.5 个月\n\nC. 设野生水葫芦面积蔓延到  \\(10m^2\\)， \\(20m^2\\)， \\(30m^2\\) 时的时间分别为  \\(t_1\\)， \\(t_2\\)， \\(t_3\\)，则有  \\(t_1 + t_3 < 2t_2\\)\n\nD. 野生水葫芦的面积从第 1 个月到第 3 个月蔓延的平均速度等于其从第 2 个月到第 4 个月蔓延的平均速度",
       "image_refs": [
         {
           "ref": "imgs/img_in_chart_box_492_578_912_886.jpg",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_chart_box_492_578_912_886.jpg",
+          "path": "data/ocr_live_current/chapter5_95/imgs/img_in_chart_box_492_578_912_886.jpg",
           "exists": true
         }
       ],
-      "visual_status": "VISION_VERIFIED",
+      "visual_status": "NEEDS_VISION_SIDECAR",
       "math_errors": [],
       "evidence": [
-        "E1",
-        "E2"
-      ],
-      "vision_sidecars": [
-        {
-          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_chart_box_492_578_912_886.jpg",
-          "image_sha256": "3a9f86387d2db7fcb3a7b44d6b897d2087a441defd79757dbddc573cb95f8f43",
-          "confidence": "E2",
-          "structured": {
-            "objects": [],
-            "relations": [],
-            "coordinates": [],
-            "ranges": [],
-            "text": [
-              "面积/m²",
-              "时间/月"
-            ],
-            "uncertainties": [],
-            "confidence": "E2"
-          },
-          "source_provenance": null
-        }
-      ],
-      "vision_sidecar": {
-        "objects": [],
-        "relations": [],
-        "coordinates": [],
-        "ranges": [],
-        "text": [
-          "面积/m²",
-          "时间/月"
-        ],
-        "uncertainties": [],
-        "confidence": "E2"
-      },
-      "vision_source_provenance": []
+        "E1"
+      ]
     },
     {
-      "qid": "Q-d4f83f6ef0e85610",
+      "qid": "Q-50dbc06078af7b63",
       "section": "5.1",
       "group": "B",
       "number": 9,
@@ -1475,7 +1288,7 @@
       "source_anchor": {
         "ocr_doc": 7,
         "pdf_page": 8,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_7.md"
+        "file": "data/ocr_live_current/chapter5_95/doc_7.md"
       },
       "question_text": "9.（2025·全国模拟）\n\n利用导数的定义，求  \\(f(x)=\\sqrt{x^{2}+1}\\) 在 x=1 处的导数.",
       "image_refs": [],
@@ -1486,7 +1299,7 @@
       ]
     },
     {
-      "qid": "Q-859f8d22e0064a8e",
+      "qid": "Q-4896e693d32f41d1",
       "section": "5.1",
       "group": "B",
       "number": 10,
@@ -1494,7 +1307,7 @@
       "source_anchor": {
         "ocr_doc": 8,
         "pdf_page": 9,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_8.md"
+        "file": "data/ocr_live_current/chapter5_95/doc_8.md"
       },
       "question_text": "10.（2025·上海模拟）\n\n一质点按规律  \\(s(t)=2t^{3}\\) 运动.\n\n（1）求其在时间段 \\([1,2]\\)内的平均速度；\n\n（2）求其在t=1时的瞬时速度.",
       "image_refs": [],
@@ -1505,7 +1318,7 @@
       ]
     },
     {
-      "qid": "Q-ed4a6116f23c939b",
+      "qid": "Q-7ca1110205cd0e25",
       "section": "5.1",
       "group": "B",
       "number": 11,
@@ -1513,7 +1326,7 @@
       "source_anchor": {
         "ocr_doc": 8,
         "pdf_page": 9,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_8.md"
+        "file": "data/ocr_live_current/chapter5_95/doc_8.md"
       },
       "question_text": "11.（2025·吉林白山模拟）\n\n（1）求曲线  \\(f(x)=x^{3}-2x\\) 在 x=1 处的切线；\n\n（2）求过点 \\((1,-1)\\)与曲线 \\(f(x)=x^{3}-2x\\)相切的直线的方程.",
       "image_refs": [],
@@ -1524,7 +1337,7 @@
       ]
     },
     {
-      "qid": "Q-1512a44262ab0164",
+      "qid": "Q-d80a5bd4220297bd",
       "section": "5.1",
       "group": "C",
       "number": 12,
@@ -1532,63 +1345,21 @@
       "source_anchor": {
         "ocr_doc": 8,
         "pdf_page": 9,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\doc_8.md"
+        "file": "data/ocr_live_current/chapter5_95/doc_8.md"
       },
       "question_text": "### 12. （2025 · 辽宁模拟）（多选）\n\n午饭时间，小明从教室到食堂的路程 S 与时间 t 的函数关系如图，记 t 时刻的瞬时速度为  \\(V(t)\\)，区间  \\([0, t_1]\\)， \\([0, t_2]\\)， \\([t_1, t_2]\\) 上的平均速度分别为  \\(V_1\\)， \\(V_2\\)， \\(V_3\\)，则下列判断正确的有（）\n\n\n\n\nA.  \\(V_1 < V_2 < V_3\\)\n\nB.  \\(\\frac{V_1 + V_3}{2} < V_2\\)\n\nC. 整个过程小明行走的速度一直在加快\n\nD. 对于 \\(V_i (i=1,2,3)\\)，存在 \\(m_i \\in (0, t_2)\\)，使 \\(V(m_i) = V_i\\)",
       "image_refs": [
         {
           "ref": "imgs/img_in_chart_box_523_1110_698_1246.jpg",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_chart_box_523_1110_698_1246.jpg",
+          "path": "data/ocr_live_current/chapter5_95/imgs/img_in_chart_box_523_1110_698_1246.jpg",
           "exists": true
         }
       ],
-      "visual_status": "VISION_VERIFIED",
+      "visual_status": "NEEDS_VISION_SIDECAR",
       "math_errors": [],
       "evidence": [
-        "E1",
-        "E2"
-      ],
-      "vision_sidecars": [
-        {
-          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_chart_box_523_1110_698_1246.jpg",
-          "image_sha256": "b9d73c6433e14518f6fd36b3d209cb8d1653eec6d6c28e0eba3771337348322e",
-          "confidence": "E2",
-          "structured": {
-            "objects": [],
-            "relations": [],
-            "coordinates": [],
-            "ranges": [],
-            "text": [
-              "S",
-              "S0",
-              "S0/2",
-              "t",
-              "t1",
-              "t2"
-            ],
-            "uncertainties": [],
-            "confidence": "E2"
-          },
-          "source_provenance": null
-        }
-      ],
-      "vision_sidecar": {
-        "objects": [],
-        "relations": [],
-        "coordinates": [],
-        "ranges": [],
-        "text": [
-          "S",
-          "S0",
-          "S0/2",
-          "t",
-          "t1",
-          "t2"
-        ],
-        "uncertainties": [],
-        "confidence": "E2"
-      },
-      "vision_source_provenance": []
+        "E1"
+      ]
     }
   ],
   "counts": {
@@ -1602,5 +1373,9 @@
     "direct_variants": "question only; solution isolated",
     "abc_exercises": "question only; answer sidecar forbidden"
   },
-  "unresolved": []
+  "unresolved": [
+    "5.1-LIaf6aeaf2c5c1a783:NEEDS_VISION_SIDECAR",
+    "Q-640f462d950da79b:NEEDS_VISION_SIDECAR",
+    "Q-d80a5bd4220297bd:NEEDS_VISION_SIDECAR"
+  ]
 }

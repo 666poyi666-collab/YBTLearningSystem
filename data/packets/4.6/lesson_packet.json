@@ -4,7 +4,7 @@
   "section": "4.6",
   "label": "第6节 数学归纳法",
   "source": {
-    "ocr_root": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100",
+    "ocr_root": "data/ocr_live_current/chapter4_100",
     "ocr_docs": [
       77,
       81
@@ -28,7 +28,7 @@
   "pages": [
     {
       "ocr_doc": 77,
-      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_77.md",
+      "source_path": "data/ocr_live_current/chapter4_100/doc_77.md",
       "text": "### 4.4 \\(^{*}\\) 数学归纳法\n\n习题：P1\n\n## 知识梳理\n\n### 1. 数学归纳法\n\n在证明与自然数 n 有关的命题时，可以按下面两个步骤进行：\n\n①归纳奠基：证明当 n 取初始值  \\(n_{0}\\) 时，命题成立；\n\n②归纳递推：假设当  \\(n = k (k \\geq n_0, k \\in \\mathbb{N})\\) 时命题成立，并由此出发去证明当  \\(n = k + 1\\) 时，命题也成立。\n\n完成了上述的步骤①②，就能得出命题对任意的 \\(n \\geq n_0\\)都成立，这种证明与正整数 \\(n\\)有关的命题的方法叫做数学归纳法。\n\n### 2. 数学归纳法的原理解读\n\n上述步骤②说明在  \\(n = k (k \\geq n_0, k \\in \\mathbb{N})\\) 时命题成立，可以推出当  \\(n = k + 1\\) 时命题也成立。而我们在①中已经证明了当  \\(n = n_0\\) 时命题成立，故结合②就能得出当  \\(n = n_0 + 1\\) 时，命题成立；由  \\(n = n_0 + 1\\) 时命题成立结合②又能得出当  \\(n = n_0 + 2\\) 时命题也成立；如此递推下去，可发现对任意的  \\(n \\geq n_0\\)，命题都成立，这就是数学归纳法的原理。由此原理可以看出，步骤①不可或缺，它是后续递推的起点，没有这一步，后面的逐级递推可能都是无效的。\n\n## 本节核心题型\n\n数学归纳法的应用非常广泛，但考虑到教材上这一节是加了星号的，属于选学内容，不作考试要求，所以我们只举一些简单的例子，让大家初步了解数学归纳法在证明等式、不等式以及整除等问题中的应用，请大家跟着下面的类型Ⅰ、Ⅱ、Ⅲ的例题和反思去学习吧。\n\n类型 I：用数学归纳法证明等式\n\n【例 1】用数学归纳法证明： \\(1^3 + 2^3 + 3^3 + \\cdots + n^3 = \\left[\\frac{n(n+1)}{2}\\right]^2\\)。\n\n证明：（用数学归纳法证明与正整数n有关的结论，先验证当n取初始值时结论成立，这里n的初始值为1）\n\n(i)当 \\(n=1\\)时，左边 \\(=1^3=1\\)，右边 \\(\\left[\\frac{1\\times(1+1)}{2}\\right]^2=1\\)，所以结论成立；\n\n（接下来需假设当  \\(n = k (k \\geq 1)\\) 时结论成立，并由此出发去推导当  \\(n = k + 1\\) 时，结论也成立）\n\n(ii)假设当 \\(n=k(k\\geq1)\\)时，结论成立，即 \\(1^3+2^3+3^3+\\cdots+k^3=\\left[\\frac{k(k+1)}{2}\\right]^2\\)①，\n\n（接下来需要证明当 \\(n=k+1\\) 时结论也成立，也就是证明在题干所给等式中将 \\(n\\) 换成 \\(k+1\\) 所得的结果成立，即 \\(1^3 + 2^3 + 3^3 + \\cdots + k^3 + (k+1)^3 = \\left[\\frac{(k+1)(k+2)}{2}\\right]^2\\)，怎么证？只需运用归纳假设，将式①代入，化简整理即可）\n\n \\[1^{3}+2^{3}+3^{3}+\\cdots+k^{3}+(k+1)^{3}=\\left[\\frac{k(k+1)}{2}\\right]^{2}+(k+1)^{3}=(k+1)^{2}\\left(\\frac{k^{2}}{4}+k+1\\right)=(k+1)^{2}\\cdot\\frac{k^{2}+4k+4}{4}\\] ",
       "text_sha256": "46e337e067577ef0e10b0d65b7467322b46d7f3e045f0c0bd004d6cd4fe647ec",
       "image_refs": [],
@@ -36,7 +36,7 @@
     },
     {
       "ocr_doc": 78,
-      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_78.md",
+      "source_path": "data/ocr_live_current/chapter4_100/doc_78.md",
       "text": "\\[=(k+1)^2\\cdot\\left(\\frac{k+2}{2}\\right)^2=\\left[\\frac{(k+1)(k+2)}{2}\\right]^2\\]，故当 \\(n=k+1\\) 时，结论也成立；\n\n由(i)(ii)结合数学归纳法原理可知对任意的  \\(n \\in \\mathbb{N}^*\\)， \\(1^3 + 2^3 + 3^3 + \\cdots + n^3 = \\left[\\frac{n(n+1)}{2}\\right]^2\\) 都成立。\n\n【反思】可以看到，用数学归纳法证明结论的步骤是流程化的操作：先证明 \\(n\\) 取初始值 \\(n_0\\) 时（本题 \\(n_0=1\\)），结论成立，再假设当 \\(n=k\\) (\\(k \\geq n_0\\)) 时结论成立，由此出发推导出当 \\(n=k+1\\) 时结论也成立即可。本题的结论是直接给出的，只需证明，有时需要先猜测结论，再用数学归纳法证明，比如下面的变式。\n\n【变式】是否存在常数 \\(a\\), \\(b\\), 使 \\(1 \\times n + 2 \\times (n-1) + 3 \\times (n-2) + \\cdots + (n-1) \\times 2 + n \\times 1 = \\frac{1}{6}n(n+a)(n+b)\\) 对任意的 \\(n \\in \\mathbb{N}^*\\) 都成立？若存在，求出 \\(a\\), \\(b\\) 的值，并用数学归纳法证明你的结论；若不存在，请说明理由。\n\n解：（为了找到满足题设条件的 \\(a, b\\)，可考虑先取特值探路，即取 \\(n=1, 2\\)，建立关于 \\(a, b\\) 的方程组并求解）\n\n当 \\(n=1\\) 时，题设等式即为 \\(1 \\times 1 = \\frac{1}{6} \\times 1 \\times (1+a) \\times (1+b)\\)，化简得：\\((1+a)(1+b) = 6\\) ①，\n\n当 \\(n=2\\) 时，题设等式即为 \\(1 \\times 2 + 2 \\times 1 = \\frac{1}{6} \\times 2 \\times (2+a)(2+b)\\)，化简得：\\((2+a)(2+b) = 12\\) ②，\n\n联立①②解得：a=1，b=2或a=2，b=1，\n\n所以若满足题设等式的 a，b 存在，只能是 a=1，b=2 或 a=2，b=1，\n\n下面用数学归纳法证明它们都能使题设等式成立，\n\n（观察发现这两组解代入题干等式所得结果相同，故只需考虑其中任何一组，不妨选 \\(a=1\\)，\\(b=2\\) 来证当 \\(a=1\\)，\\(b=2\\) 时，题设等式即为 \\(1 \\times n + 2 \\times (n-1) + 3 \\times (n-2) + \\cdots + (n-1) \\times 2 + n \\times 1 = \\frac{1}{2} n(n+1)(n+2)\\) ③，\n\n当 \\(a=1\\)，\\(b=2\\) 时，题设等式即为 \\(1\\times n+2\\times(n-1)+3\\times(n-2)+\\cdots+(n-1)\\times2+n\\times1=\\frac{1}{6}n(n+1)(n+2)\\) ③\n\n(i) 当 \\(n=1\\) 时，式③的左边 \\(=1\\times1=1\\)，右边 \\(=\\frac{1}{6}\\times1\\times(1+1)\\times(1+2)=1\\)，式③成立；\n\n(ii)假设当 \\(n=k(k\\geq1)\\)时，式③成立，即 \\(1\\times k+2\\times(k-1)+3\\times(k-2)+\\cdots+(k-1)\\times2+k\\times1=\\frac{1}{6}k(k+1)(k+2)\\)，\n\n（怎样由此证明当 \\(n=k+1\\) 时结论也成立？先把目标式写出来，我们就是要证 \\(1\\times(k+1)+2\\times k+3\\times(k-1)+\\cdots+k\\times2+(k+1)\\times1=\\frac{1}{6}(k+1)(k+2)(k+3)\\)，怎么证呢？为了运用上面的假设，我们将目标式的左边拆分一个 \\(1\\times k+2\\times(k-1)+3\\times(k-2)+\\cdots+(k-1)\\times2+k\\times1\\) 出来）\n\n所以 \\(1\\times(k+1)+2\\times k+3\\times(k-1)+\\cdots+k\\times2+(k+1)\\times1=[(k+1)+k+(k-1)+\\cdots+1]+[1\\times k+2\\times(k-1)+\\cdots+(k-1)\\times2+k\\times1]=\\frac{(k+1)(k+1+1)}{2}+\\frac{1}{6}k(k+1)(k+2)\\)\n\n\\(=\\frac{(k+1)(k+2)}{2}+\\frac{1}{6}k(k+1)(k+2)=\\frac{1}{6}(k+1)(k+2)(k+3)\\)，即当 \\(n=k+1\\) 时，结论也成立；\n\n由(i)(ii)结合数学归纳法原理可知对任意的 \\(n\\in\\mathbf{N}^*\\)，式③都成立，当 \\(a=2\\)，\\(b=1\\) 时，题设等式与式③相同，\n\n所以存在 \\(a=1\\)，\\(b=2\\) 或 \\(a=2\\)，\\(b=1\\)，使题设等式对任意的 \\(n\\in\\mathbf{N}^*\\) 都成立。\n\n类型Ⅱ：用数学归纳法证明不等式\n\n【例 2】当  \\(n \\geq 2\\) 且  \\(n \\in \\mathbb{N}^*\\) 时，求证： \\(1 + \\frac{1}{2^2} + \\frac{1}{3^2} + \\cdots + \\frac{1}{n^2} < 2 - \\frac{1}{n}\\).\n\n证明：（要证的是与正整数 \\(n\\) 有关的不等式，与证明等式类似，还是分两步完成，但需注意，这里要证的是结论在 \\(n \\geq 2\\) 时恒成立，所以初始值不再是 \\(n=1\\) 了，而是 \\(n=2\\)）",
       "text_sha256": "4e85a91fcc6d6fd2da4a71563da5efa4f793d936a2d7d9ced930ebf1a2356cd6",
       "image_refs": [],
@@ -44,7 +44,7 @@
     },
     {
       "ocr_doc": 79,
-      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_79.md",
+      "source_path": "data/ocr_live_current/chapter4_100/doc_79.md",
       "text": "(i)当 \\(n=2\\) 时，结论的左边 \\(=1+\\frac{1}{2^2}=\\frac{5}{4}\\)，右边 \\(=2-\\frac{1}{2}=\\frac{3}{2}\\)，所以左边 < 右边，结论成立；\n\n(ii)假设当 \\(n=k(k \\geq 2)\\) 时，结论成立，即 \\(1+\\frac{1}{2^2}+\\frac{1}{3^2}+\\cdots+\\frac{1}{k^2}<2-\\frac{1}{k}\\) ①，\n\n（要证当 \\(n=k+1\\) 时结论也成立，即证 \\(1+\\frac{1}{2^2}+\\frac{1}{3^2}+\\cdots+\\frac{1}{k^2}+\\frac{1}{(k+1)^2}<2-\\frac{1}{k+1}\\)，怎么证？可以运用上面的假设将 \\(1+\\frac{1}{2^2}+\\frac{1}{3^2}+\\cdots+\\frac{1}{k^2}\\) 这部分进行放缩）由①可得 \\(1+\\frac{1}{2^2}+\\frac{1}{3^2}+\\cdots+\\frac{1}{k^2}+\\frac{1}{(k+1)^2}<2-\\frac{1}{k}+\\frac{1}{(k+1)^2}\\) ②，\n\n（于是只要再证 \\(2-\\frac{1}{k}+\\frac{1}{(k+1)^2}<2-\\frac{1}{k+1}\\)，就能得到 \\(1+\\frac{1}{2^2}+\\frac{1}{3^2}+\\cdots+\\frac{1}{k^2}+\\frac{1}{(k+1)^2}<2-\\frac{1}{k+1}\\)，可通过作差比较来证）因为 \\(2-\\frac{1}{k}+\\frac{1}{(k+1)^2}-\\left(2-\\frac{1}{k+1}\\right)=\\frac{1}{k+1}-\\frac{1}{k}+\\frac{1}{(k+1)^2}=\\frac{k(k+1)-(k+1)^2+k}{k(k+1)^2}=-\\frac{1}{k(k+1)^2}<0\\)，\n\n所以 \\(2-\\frac{1}{k}+\\frac{1}{(k+1)^2}<2-\\frac{1}{k+1}\\)，结合②可得 \\(1+\\frac{1}{2^2}+\\frac{1}{3^2}+\\cdots+\\frac{1}{k^2}+\\frac{1}{(k+1)^2}<2-\\frac{1}{k+1}\\)，\n\n故当 \\(n=k+1\\) 时，结论也成立；\n\n由(i)(ii)结合数学归纳法原理可知对任意的  \\(n \\geq 2\\) 且  \\(n \\in \\mathbb{N}^*\\)，都有  \\(1 + \\frac{1}{2^2} + \\frac{1}{3^2} + \\cdots + \\frac{1}{n^2} < 2 - \\frac{1}{n}\\)。\n\n【反思】①初始值是结论中规定的 \\(n\\) 的最小值，不一定是 1；②可以看到，用数学归纳法证明不等式与用数学归纳法证明等式的步骤类似，也是分两步完成：先证 \\(n\\) 取初始值 \\(n_0\\) 时不等式成立；再假设当 \\(n = k (k \\geq n_0)\\) 时不等式成立，由此出发推导出当 \\(n = k + 1\\) 时不等式也成立。本题的结论不等式除了 \\(n \\geq 2\\) 外，没有附加条件，有时也会遇到在特定情境下的数列问题中让我们证明某不等式成立的情形，比如下面的变式。\n\n【变式】已知数列 \\(\\{a_n\\}\\) 满足 \\(a_1 = \\frac{1}{2}\\)，且 \\(a_{n+1} = \\frac{1}{3}a_n^3 + \\frac{2}{3}a_n\\)，求证：\\(\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^{n+1} \\leq a_n \\leq \\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^{n+1}\\)。\n\n证法1：(i) 当 \\(n=1\\) 时，结论即为 \\(\\frac{1}{2} \\leq a_1 \\leq \\frac{1}{2}\\)，也即 \\(a_1 = \\frac{1}{2}\\)，由所给条件可知结论成立；\n\n(ii) 假设当 \\(n=k\\) (\\(k \\geq 1\\)) 时结论成立，即 \\(\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^{k-1} \\leq a_k \\leq \\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}\\) ①，（怎样证当 \\(n=k+1\\) 时结论也成立？只需证 \\(\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^k \\leq a_{k+1} \\leq \\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\)，条件给出了 \\(a_{n+1}\\) 与 \\(a_n\\) 的关系式，故运用该关系式，结合上面的假设来证明）\n\n由①可知 \\(a_k \\geq \\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^{k-1}\\)，所以 \\(a_{k+1} = \\frac{1}{3}a_k^3 + \\frac{2}{3}a_k \\geq \\frac{1}{3} \\times \\left[\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^{k-1}\\right]^{3} + \\frac{2}{3} \\times \\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^{k-1} = \\frac{1}{24}\\cdot\\left(\\frac{2}{3}\\right)^{3k-3} + \\frac{1}{3}\\cdot\\left(\\frac{2}{3}\\right)^{k-1}\\)\n\n\\(= \\frac{1}{24}\\cdot\\left(\\frac{2}{3}\\right)^{3k-3} + \\frac{1}{3}\\cdot\\left(\\frac{2}{3}\\right)^k \\cdot \\frac{3}{2} = \\frac{1}{24}\\cdot\\left(\\frac{2}{3}\\right)^{3k-3} + \\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^k \\geq \\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^k\\)，\n\n由①可知 \\(a_k \\leq \\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}\\)，所以 \\(a_{k+1} = \\frac{1}{3}a_k^3 + \\frac{2}{3}a_k \\leq \\frac{1}{3}\\cdot\\left[\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}\\right]^{3} + \\frac{2}{3} \\times \\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^{k-1} = \\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{3k-3} + \\frac{1}{3}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}\\) ②，\n\n（接下来只需证明 \\(\\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{3k-3} + \\frac{1}{3}\\cdot\\left(\\frac{3}{4}\\right)^{k-1} \\leq \\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\)，就能得出 \\(a_{k+1} \\leq \\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\)，怎么证？可尝试作差比较）\n\n\\(\\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{3k-3} + \\frac{1}{3}\\cdot\\left(\\frac{3}{4}\\right)^{k-1} - \\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k = \\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{3k-3} + \\frac{1}{3}\\cdot\\left(\\frac{3}{4}\\right)^{k-1} - \\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^{k-1} \\cdot \\frac{3}{4} = \\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{3k-3} + \\frac{1}{3}\\cdot\\left(\\frac{3}{4}\\right)^{k-1} - \\frac{3}{8}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}\\)\n\n\\(= \\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{3k-3} - \\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{k-1} = \\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}\\left[\\left(\\frac{3}{4}\\right)^{2k-2} - 1\\right]\\)，\n\n因为 \\(k \\geq 1\\)，所以 \\(\\left(\\frac{3}{4}\\right)^{2k-2} \\leq 1\\)，从而 \\(\\left(\\frac{3}{4}\\right)^{2k-2} - 1 \\leq 0\\)，故 \\(\\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}\\left[\\left(\\frac{3}{4}\\right)^{2k-2} - 1\\right] \\leq 0\\)，",
       "text_sha256": "14225b5bb1b61e1dfedd2e09e7b97f0e353ddf105f4b757cea42a0d4dfc6e050",
       "image_refs": [],
@@ -52,7 +52,7 @@
     },
     {
       "ocr_doc": 80,
-      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_80.md",
+      "source_path": "data/ocr_live_current/chapter4_100/doc_80.md",
       "text": "所以 \\(\\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{3k-3}+\\frac{1}{3}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}-\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\leq0\\)，故 \\(\\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{3k-3}+\\frac{1}{3}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}\\leq\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\)，\n\n结合②可得 \\(a_{k+1}\\leq\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\)，综上所述， \\(\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^k\\leq a_{k+1}\\leq\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\)，即当 \\(n=k+1\\)时结论也成立；\n\n由(i)(ii)结合数学归纳法原理可知对任意的 \\(n\\in\\mathbb{N}^*\\)，都有 \\(\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^{n-1}\\leq a_n\\leq\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^{n-1}\\)。\n\n证法2：（前面过程同证法1，得到不等式①后，要证当\\(n=k+1\\)时结论也成立，即证\\(\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^k\\leq a_{k+1}\\leq\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\)也成立，注意到递推公式\\(a_{k+1}=\\frac{1}{3}a_k^3+\\frac{2}{3}a_k\\)中\\(\\frac{1}{3}a_k^3\\)这部分较复杂，故也可尝试将其放缩掉）\n\n由①可知\\(a_k\\geq\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^{k-1}\\)，所以\\(a_{k+1}=\\frac{1}{3}a_k^3+\\frac{2}{3}a_k\\geq\\frac{2}{3}a_k\\geq\\frac{2}{3}\\times\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^{k-1}=\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^k\\)，\n\n由①可知\\(a_k\\leq\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}\\)，又因为\\(k\\geq1\\)，所以\\(\\left(\\frac{3}{4}\\right)^{k-1}\\leq1\\)，故\\(a_k\\leq\\frac{1}{2}\\)，\n\n所以\\(a_{k+1}=\\frac{1}{3}a_k^3+\\frac{2}{3}a_k=\\frac{1}{3}a_k^2\\cdot a_k+\\frac{2}{3}a_k\\leq\\frac{1}{3}\\times\\left(\\frac{1}{2}\\right)^2a_k+\\frac{2}{3}a_k=\\frac{3}{4}a_k\\leq\\frac{3}{4}\\times\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}=\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\)，\n\n综上所述，\\(\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^k\\leq a_{k+1}\\leq\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\)，接下来同证法1.\n\n## 类型Ⅲ：用数学归纳法证明整除有关的结论\n\n【例 3】用数学归纳法证明：对任意的正整数 n，数  \\(A_{n}=5^{n}+2\\times3^{n-1}+1\\) 都能被 8 整除.\n\n证明：(i)当 \\(n=1\\)时， \\(A_{1}=5^{1}+2\\times3^{1-1}+1=8\\)，所以 \\(A_{1}\\)能被8整除，结论成立；\n\n(ii) 假设当  \\(n = k (k \\geq 1)\\) 时，结论成立，即  \\(A_k = 5^k + 2 \\times 3^{k-1} + 1\\) 能被 8 整除，\n\n（如何证明当 \\(n=k+1\\) 时结论也成立？只需证 \\(A_{k+1}=5^{k+1}+2\\times3^k+1\\) 能被 8 整除，为了运用归纳假设，考虑将 \\(A_{k+1}\\) 凑出 \\(A_k=5^k+2\\times3^{k-1}+1\\) 这一结构）\n\n\\(A_{k+1}=5^{k+1}+2\\times3^k+1=5\\times5^k+2\\times3\\times3^{k-1}+1=4\\times5^k+5^k+4\\times3^{k-1}+2\\times3^{k-1}+1\\)\n\n\\(=4\\times5^k+4\\times3^{k-1}+5^k+2\\times3^{k-1}+1=4(5^k+3^{k-1})+A_k\\)，\n\n因为 \\(5^k\\)和 \\(3^{k-1}\\)都是奇数，所以 \\(5^k + 3^{k-1}\\)为偶数，故 \\(4(5^k + 3^{k-1})\\)必为8的倍数，它能被8整除，又因为 \\(A_k\\)也能被8整除，所以 \\(4(5^k + 3^{k-1}) + A_k\\)能被8整除，即 \\(A_{k+1}\\)能被8整除，故当 \\(n = k + 1\\)时，结论也成立；由(i)(ii)结合数学归纳法原理可知对任意的正整数 \\(n\\)，数 \\(A_n = 5^n + 2 \\times 3^{n-1} + 1\\)都能被8整除。\n\n【反思】用数学归纳法证明整除问题，基本步骤还是分两步，但需注意，解决这类问题的核心是将 \\(n=k+1\\)时的数拆分成当n=k时的数和余下部分，从而把问题转化为证明余下部分满足整除.\n\n## 强化训练\n\n考虑到本节涉及的题型都有一定的综合性和难度，故不设 A 组题；且由于本节是选学内容，要求不高，所以也不设 C 组题，只设计了 B 组题.\n\n## B组 强化能力\n\n### 1. (2025 · 全国模拟)\n\n用数学归纳法证明： \\((\\cos\\theta + i\\sin\\theta)^n = \\cos n\\theta + i\\sin n\\theta\\)，其中 \\(i\\)为虚数单位， \\(n \\in \\mathbb{N}^*\\)。",
       "text_sha256": "293db9ede04198c4406e110876debe654744137290312e960614ad4cfc1a0163",
       "image_refs": [],
@@ -60,7 +60,7 @@
     },
     {
       "ocr_doc": 81,
-      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_81.md",
+      "source_path": "data/ocr_live_current/chapter4_100/doc_81.md",
       "text": "### 2. （2025·全国模拟）\n\n用数学归纳法证明： \\(a_n = 9^{n+1} - 8n - 9 (n \\in \\mathbf{N}^*)\\) 能被 64 整除。\n\n### 3. （2025 · 全国模拟）\n\n是否存在常数 a, b, c, 使等式  \\(1^{2} + 2^{2} + \\cdots + n^{2} = an^{3} + bn^{2} + cn\\) 对任意的正整数 n 都成立？\n\n### 4. （2025·全国模拟）\n\n用数学归纳法证明不等式： \\(1 + \\frac{1}{\\sqrt{2}} + \\frac{1}{\\sqrt{3}} + \\cdots + \\frac{1}{\\sqrt{n}} > 2(\\sqrt{n+1}-1)\\)，其中  \\(n \\in \\mathbb{N}^*\\)。",
       "text_sha256": "d655ad3546c5730ac8396cf06d032f7f9c670180d1ac46b5800fa6ad4a919a9a",
       "image_refs": [],
@@ -69,7 +69,7 @@
   ],
   "questions": [
     {
-      "qid": "Q-a4c5853be5dea235",
+      "qid": "Q-63a96e92ee619cd7",
       "section": "4.6",
       "group": "B",
       "number": 1,
@@ -77,7 +77,7 @@
       "source_anchor": {
         "ocr_doc": 80,
         "pdf_page": 81,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_80.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_80.md"
       },
       "question_text": "### 1. (2025 · 全国模拟)\n\n用数学归纳法证明： \\((\\cos\\theta + i\\sin\\theta)^n = \\cos n\\theta + i\\sin n\\theta\\)，其中 \\(i\\)为虚数单位， \\(n \\in \\mathbb{N}^*\\)。",
       "image_refs": [],
@@ -88,7 +88,7 @@
       ]
     },
     {
-      "qid": "Q-081995c727235287",
+      "qid": "Q-38dd8eb411dc510b",
       "section": "4.6",
       "group": "B",
       "number": 2,
@@ -96,7 +96,7 @@
       "source_anchor": {
         "ocr_doc": 81,
         "pdf_page": 82,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_81.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_81.md"
       },
       "question_text": "### 2. （2025·全国模拟）\n\n用数学归纳法证明： \\(a_n = 9^{n+1} - 8n - 9 (n \\in \\mathbf{N}^*)\\) 能被 64 整除。",
       "image_refs": [],
@@ -107,7 +107,7 @@
       ]
     },
     {
-      "qid": "Q-79a15e9da205c5bc",
+      "qid": "Q-19a6a5c3bc10272f",
       "section": "4.6",
       "group": "B",
       "number": 3,
@@ -115,7 +115,7 @@
       "source_anchor": {
         "ocr_doc": 81,
         "pdf_page": 82,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_81.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_81.md"
       },
       "question_text": "### 3. （2025 · 全国模拟）\n\n是否存在常数 a, b, c, 使等式  \\(1^{2} + 2^{2} + \\cdots + n^{2} = an^{3} + bn^{2} + cn\\) 对任意的正整数 n 都成立？",
       "image_refs": [],
@@ -126,7 +126,7 @@
       ]
     },
     {
-      "qid": "Q-d75e5265af1bfe3e",
+      "qid": "Q-237a423c466336e0",
       "section": "4.6",
       "group": "B",
       "number": 4,
@@ -134,7 +134,7 @@
       "source_anchor": {
         "ocr_doc": 81,
         "pdf_page": 82,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_81.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_81.md"
       },
       "question_text": "### 4. （2025·全国模拟）\n\n用数学归纳法证明不等式： \\(1 + \\frac{1}{\\sqrt{2}} + \\frac{1}{\\sqrt{3}} + \\cdots + \\frac{1}{\\sqrt{n}} > 2(\\sqrt{n+1}-1)\\)，其中  \\(n \\in \\mathbb{N}^*\\)。",
       "image_refs": [],

@@ -4,7 +4,7 @@
   "section": "4.7",
   "label": "第7节 微专题1：几类常见的求前n项和的方法",
   "source": {
-    "ocr_root": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100",
+    "ocr_root": "data/ocr_live_current/chapter4_100",
     "ocr_docs": [
       82,
       90
@@ -32,7 +32,7 @@
   "pages": [
     {
       "ocr_doc": 82,
-      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_82.md",
+      "source_path": "data/ocr_live_current/chapter4_100/doc_82.md",
       "text": "# 微专题1：几类常见的求前n项和的方法\n\n习题：P1\n\n## 内容提要\n\n求数列的前 n 项和是数列板块的核心问题之一，在各类考试中，除了代等差、等比数列的前 n 项和公式求前 n 项和外，还需掌握以下几种常见的求和方法.\n\n1. 裂项相消法：若数列  \\(\\{a_{n}\\}\\) 无法直接代公式求前 n 项和，但可将  \\(a_{n}\\) 拆分成  \\(b_{n}-b_{n+1}\\) 或  \\(b_{n}-b_{n+2}\\) 这种形式，那么相加时就能抵消一些项，从而达到求和的目的，这种求和方法叫做裂项相消法.\n\n①常规裂项：设 \\(\\{a_n\\}\\) 是公差为 \\(d(d \\neq 0)\\) 的等差数列，\\(a_n \\neq 0\\)，则 \\(\\frac{1}{a_n a_{n+1}}\\) 可拆分成 \\(\\frac{1}{d}\\left(\\frac{1}{a_n} - \\frac{1}{a_{n+1}}\\right)\\)，\\(\\frac{1}{a_{n+2}}\\) 可拆分成 \\(\\frac{1}{2d}\\left(\\frac{1}{a_n} - \\frac{1}{a_{n+2}}\\right)\\)，按此裂项，可以求出数列 \\(\\left\\{\\frac{1}{a_n a_{n+1}}\\right\\}\\) 和 \\(\\left\\{\\frac{1}{a_n a_{n+2}}\\right\\}\\) 的前 \\(n\\) 项和。\n\n例如，若 \\(p_n = \\frac{1}{n(n+1)}\\)，则 \\(p_n = \\frac{1}{n} - \\frac{1}{n+1}\\)，\n\n所以数列 \\(\\{p_n\\}\\) 的前 \\(n\\) 项和 \\(P_n = 1 - \\frac{1}{2} + \\frac{1}{2} - \\frac{1}{3} + \\cdots + \\frac{1}{n} - \\frac{1}{n+1} = 1 - \\frac{1}{n+1} = \\frac{n}{n+1}\\)；\n\n若 \\(q_n = \\frac{1}{(2n-1)(2n+1)}\\)，则 \\(q_n = \\frac{1}{2}\\left(\\frac{1}{2n-1} - \\frac{1}{2n+1}\\right)\\)，\n\n所以数列 \\(\\{q_n\\}\\) 的前 \\(n\\) 项和 \\(Q_n = \\frac{1}{2}\\left(1 - \\frac{1}{3} + \\frac{1}{3} - \\frac{1}{5} + \\cdots + \\frac{1}{2n-1} - \\frac{1}{2n+1}\\right) = \\frac{1}{2}\\left(1 - \\frac{1}{2n+1}\\right) = \\frac{n}{2n+1}\\)；\n\n若 \\(r_n = \\frac{1}{n(n+2)}\\)，则 \\(r_n = \\frac{1}{2}\\left(\\frac{1}{n} - \\frac{1}{n+2}\\right)\\)，\n\n所以数列 \\(\\{r_n\\}\\) 的前 \\(n\\) 项和 \\(R_n = \\frac{1}{2}\\left(1 - \\frac{1}{3} + \\frac{1}{2} - \\frac{1}{4} + \\frac{1}{3} - \\frac{1}{5} + \\cdots + \\frac{1}{n} - \\frac{1}{n+2}\\right)\\)\n\n\\(= \\frac{1}{2}\\left[\\left(1 + \\frac{1}{2} + \\frac{1}{3} + \\cdots + \\frac{1}{n}\\right) - \\left(\\frac{1}{3} + \\frac{1}{4} + \\frac{1}{5} + \\cdots + \\frac{1}{n} + \\frac{1}{n+1} + \\frac{1}{n+2}\\right)\\right]\\)\n\n\\(= \\frac{1}{2}\\left(1 + \\frac{1}{2} - \\frac{1}{n+1} - \\frac{1}{n+2}\\right) = \\frac{3}{4} - \\frac{1}{2}\\left(\\frac{1}{n+1} + \\frac{1}{n+2}\\right)\\)。\n\n②非常规裂项：有的裂项更复杂，但本质仍是将 \\(a_{n}\\)拆分成 \\(b_{n}-b_{n+1}\\)，这类问题完成裂项的关键是寻找原数列通项中局部的前后项关系.\n\n例如，设  \\(a_n = \\frac{2^{n+1}}{(2^n - 1)(2^{n+1} - 1)}\\)，则观察可发现分母的  \\(2^n - 1\\) 和  \\(2^{n+1} - 1\\) 恰好为前后项关系，故可\n\n想象，若能将  \\(a_n\\) 变成  \\(\\frac{1}{2^n - 1} - \\frac{1}{2^{n+1} - 1}\\) 这种结构，就实现了裂项，但  \\(\\frac{1}{2^n - 1} - \\frac{1}{2^{n+1} - 1} = \\frac{2^{n+1} - 1 - (2^n - 1)}{(2^n - 1)(2^{n+1} - 1)}\\)",
       "text_sha256": "51afc7d1e6b24076a7f76105062aa03dc3fdd551bac0b7e0ce732b27559c7dda",
       "image_refs": [],
@@ -40,7 +40,7 @@
     },
     {
       "ocr_doc": 83,
-      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_83.md",
+      "source_path": "data/ocr_live_current/chapter4_100/doc_83.md",
       "text": "\\[= \\frac{2^{n+1} - 2^n}{(2^n - 1)(2^{n+1} - 1)} = \\frac{2 \\times 2^n - 2^n}{(2^n - 1)(2^{n+1} - 1)} = \\frac{2^n}{(2^n - 1)(2^{n+1} - 1)}\\]，于是 \\(a_n = 2\\left(\\frac{1}{2^n - 1} - \\frac{1}{2^{n+1} - 1}\\right)\\)，裂项就完成了；\n\n又比如 \\(\\frac{n + 2}{n(n+1) \\cdot 2^{n+1}}\\)，为了裂项，考虑在分母上凑出前后项结构，只需分子分母同时乘以 \\(2^n\\)，\n\n将其变成 \\(\\frac{(n+2) \\cdot 2^n}{n \\cdot 2^n \\cdot (n+1) \\cdot 2^{n+1}}\\)，就产生了前后项结构 \\(n \\cdot 2^n\\) 和 \\((n+1) \\cdot 2^{n+1}\\)，进而拆分得到 \\(\\frac{n + 2}{n(n+1) \\cdot 2^{n+1}} = \\frac{1}{n \\cdot 2^n} - \\frac{1}{(n+1) \\cdot 2^{n+1}}\\)；再比如 \\(\\frac{1}{\\sqrt{n} + \\sqrt{n+1}} = \\sqrt{n+1} - \\sqrt{n}\\) 等等。\n\n2. 错位相减法：适用于“等差×等比”这类数列求前n项和，详细过程请参考本节例2.\n\n3．分组求和法：常见的分组求和方法有两类.\n\n①分别求和再相加：设 \\(a_n = b_n \\pm c_n\\)，数列 \\(\\{b_n\\}\\)， \\(\\{c_n\\}\\)的前 \\(n\\)项和分别为 \\(B_n\\)和 \\(C_n\\)，则数列 \\(\\{a_n\\}\\)的前 \\(n\\)项和 \\(A_n = B_n \\pm C_n\\)。\n\n②项数分组再相加：将 \\(\\{a_{n}\\}\\)中的项按一定的规则分组，有明显规律，则可按项数分组再求和.\n\n4. 倒序相加法：若关于中间对称的两项相加好算，则可倒序再写一遍和式，与原和式相加.\n\n## 典型例题\n\n## 类型 I：裂项相消法求前 n 项和\n",
       "text_sha256": "12a520af906238251743b428770be11c04f29c135370b3bd7e0b7933df5beb1f",
       "image_refs": [],
@@ -48,7 +48,7 @@
     },
     {
       "ocr_doc": 84,
-      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_84.md",
+      "source_path": "data/ocr_live_current/chapter4_100/doc_84.md",
       "text": "（ocr_doc 84 为方法册教学续页；完整教学内容已进入 learning_packet.json，独立作答上下文仅保留此中性锚点。）",
       "text_sha256": "005a8843bfdd7f2af9303f3fccdd33c2339c5358269b52af5741df401565ff20",
       "image_refs": [],
@@ -56,7 +56,7 @@
     },
     {
       "ocr_doc": 85,
-      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_85.md",
+      "source_path": "data/ocr_live_current/chapter4_100/doc_85.md",
       "text": "## 类型Ⅱ：错位相减法求前 n 项和\n\n## 类型Ⅲ：分组求和法求前 n 项和\n",
       "text_sha256": "8e902b7e1130abcb8b906883dc8f6a63627f360535642606a973cb018506151d",
       "image_refs": [],
@@ -64,7 +64,7 @@
     },
     {
       "ocr_doc": 86,
-      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_86.md",
+      "source_path": "data/ocr_live_current/chapter4_100/doc_86.md",
       "text": "类型IV：倒序相加法求和",
       "text_sha256": "db8f64c2cb1bd6e23862cf4582c47f69a31758bfd5a0e2fe048d06acbd1ba90b",
       "image_refs": [],
@@ -72,7 +72,7 @@
     },
     {
       "ocr_doc": 87,
-      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_87.md",
+      "source_path": "data/ocr_live_current/chapter4_100/doc_87.md",
       "text": "## 强化训练\n\n## A 组 夯实基础\n\n1. (2025·广东模拟)\n\n已知数列 \\(\\{a_n\\}\\)，\\(\\{b_n\\}\\) 分别是等差、等比数列，且 \\(a_1 = -1\\)，\\(a_2 = b_1 = 1\\)，\\(b_2 = a_3\\)。\n\n（1）求 \\(\\{a_{n}\\}\\)， \\(\\{b_{n}\\}\\)的通项公式；\n\n（2）求数列 \\(\\left\\{a_{n}+2b_{n}\\right\\}\\)的前n项和 \\(S_{n}\\)\n\nB组 强化能力\n\n2.（2025·全国模拟）\n\n若  \\(f(x)=\\frac{2x}{2x-1}\\)，则  \\(f\\left(\\frac{1}{2025}\\right)+f\\left(\\frac{2}{2025}\\right)+\\cdots+\\)\n\n \\(f\\left(\\frac{2024}{2025}\\right)=\\) ___.",
       "text_sha256": "00fce2e77eebf5277132ffc3a164d379186bedcb07575eb9944cb8355838a7d3",
       "image_refs": [],
@@ -80,7 +80,7 @@
     },
     {
       "ocr_doc": 88,
-      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_88.md",
+      "source_path": "data/ocr_live_current/chapter4_100/doc_88.md",
       "text": "### 3. （2025·湖南长沙模拟）\n\n在正项数列 \\(\\{a_{n}\\}\\)中， \\(a_{1}=1\\)，且 \\(a_{n+1}^{2}-2a_{n+1}=a_{n}^{2}+2a_{n}\\)\n\n（1）求 \\(\\{a_{n}\\}\\)的通项公式；\n\n（2）若数列 \\(\\{b_{n}\\}\\)满足 \\(b_{n}=\\frac{1}{a_{n}a_{n+1}}\\)，求 \\(\\{b_{n}\\}\\)的前n项和 \\(S_{n}\\)\n\n### 4. （2025·全国模拟）\n\n记  \\(S_n\\)， \\(T_n\\) 分别为数列  \\(\\{a_n\\}\\)， \\(\\{b_n\\}\\) 的前  \\(n\\) 项和，已知  \\(9S_n = 12a_n - 4^{n+1} + 4\\)，且  \\(b_n = \\frac{2^n}{2\\sqrt{a_n} + \\sqrt{a_{n+1}}}\\)。\n\n（1）求 \\(\\{a_{n}\\}\\)的通项公式；\n\n（2）证明： \\(2T_{n}\\geq\\sqrt{2}-1\\)\n\n### 5. （2025 · 全国模拟）\n\n已知数列  \\(\\{a_{n}\\}\\) 的前 n 项和为  \\(S_{n}\\)，且  \\(3S_{n} + a_{n} = 1\\).\n\n（1）求数列 \\(\\{a_{n}\\}\\)的通项公式；\n\n（2）若  \\(b_{n}=\\log_{\\frac{1}{4}}a_{n}\\)，求数列  \\(\\left\\{\\frac{1}{b_{n}b_{n+2}}\\right\\}\\) 的前 n 项和  \\(T_{n}\\).",
       "text_sha256": "92399c39cfd8eb9ce5f9a0c85e080f24e1d9fcb42f538315a00a4f7f44b22873",
       "image_refs": [],
@@ -88,7 +88,7 @@
     },
     {
       "ocr_doc": 89,
-      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_89.md",
+      "source_path": "data/ocr_live_current/chapter4_100/doc_89.md",
       "text": "### 6. （2025·湖南长沙模拟）\n\n已知等差数列  \\(\\{a_{n}\\}\\) 满足  \\(a_{4}=7\\)， \\(a_{2n}=2a_{n}+1\\)。\n\n（1）求 \\(\\{a_{n}\\}\\)的通项公式；\n\n（2）若 \\(b_{n}=3^{n}\\cdot a_{n}\\)，求数列 \\(\\{b_{n}\\}\\)的前n项和 \\(S_{n}\\)\n\n### 7. （2025 · 全国模拟）\n\n设等比数列 \\(\\{a_n\\}\\) 的前 \\(n\\) 项和为 \\(S_n\\)，且 \\(a_1 = -1\\)，\\(2S_n = S_{n+1} + S_{n+2}\\)。\n\n（1）求 \\(\\{a_{n}\\}\\)的通项公式；\n\n（2）求数列 \\(\\left\\{\\frac{(-1)^{n}\\cdot n}{a_{n}}\\right\\}\\)的前n项和 \\(T_{n}\\)\n\n### 8. （2024·浙江宁波模拟）\n\n已知等差数列  \\(\\{a_{n}\\}\\) 的公差为 2，记数列  \\(\\{b_{n}\\}\\) 的前 n 项和为  \\(S_{n}\\)， \\(b_{1}=0\\)， \\(b_{2}=2\\)，且满足  \\(b_{n+1}=2S_{n}+a_{n}\\)\n\n（1）证明：数列 \\(\\{b_{n}+1\\}\\)是等比数列；\n\n（2）求数列 \\(\\{a_{n}b_{n}\\}\\)的前n项和 \\(T_{n}\\)",
       "text_sha256": "af597dc5e53c0aa964545ffc62a9639d15d0a9bb97164bed70da5885a811c33a",
       "image_refs": [],
@@ -96,7 +96,7 @@
     },
     {
       "ocr_doc": 90,
-      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_90.md",
+      "source_path": "data/ocr_live_current/chapter4_100/doc_90.md",
       "text": "### 9. （2025·全国模拟）\n\n已知数列 \\(\\{a_n\\}\\) 的前 \\(n\\) 项和为 \\(S_n\\)，且满足 \\(2S_n = 3n^2 + 5n\\)，数列 \\(\\{b_n\\}\\) 是等比数列，公比 \\(q > 0\\)，\\(b_1 = 6\\)，\\(b_3 = 2a_3 + 4\\)。\n\n（1）求数列 \\(\\{a_n\\}\\)，\\(\\{b_n\\}\\) 的通项公式；\n\n（2）设数列 \\(\\{c_n\\}\\) 满足 \\(c_1 = 1\\)，\\(c_n = \\begin{cases} 1, & 2^k < n < 2^{k+1} \\\\ b_k, & n = 2^k \\end{cases}\\)，其中 \\(k \\in \\mathbb{N}^*\\)。\n\n（i）求数列 \\(\\{c_{n}\\}\\)的前2026项和；\n\n（ii）求 \\(\\sum_{i=1}^{n}a_{2^{i}}c_{2^{i}}\\)\n\n### 10. （2025 · 全国模拟）\n\n记 \\(S_{n}\\)为数列 \\(\\{a_{n}\\}\\)的前n项和，已知 \\(a_{2}=3\\)， \\(\\left\\{\\frac{S_{n}}{a_{n}}\\right\\}\\)是公差为 \\(\\frac{1}{3}\\)的等差数列.\n\n（1）求数列 \\(\\{a_{n}\\}\\)的通项公式；\n\n（2）证明： \\(\\frac{1}{S_{1}}+\\frac{1}{S_{2}}+\\cdots+\\frac{1}{S_{n}}<\\frac{3}{2}\\)",
       "text_sha256": "aab119fb077f6957e925689575360879e9e9145e9b50d50515b6d87894cc2ce7",
       "image_refs": [],
@@ -105,7 +105,7 @@
   ],
   "questions": [
     {
-      "qid": "Q-4b287e69a2525156",
+      "qid": "Q-447fbf6f3b64a6c2",
       "section": "4.7",
       "group": "A",
       "number": 1,
@@ -113,7 +113,7 @@
       "source_anchor": {
         "ocr_doc": 87,
         "pdf_page": 88,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_87.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_87.md"
       },
       "question_text": "1. (2025·广东模拟)\n\n已知数列 \\(\\{a_n\\}\\)，\\(\\{b_n\\}\\) 分别是等差、等比数列，且 \\(a_1 = -1\\)，\\(a_2 = b_1 = 1\\)，\\(b_2 = a_3\\)。\n\n（1）求 \\(\\{a_{n}\\}\\)， \\(\\{b_{n}\\}\\)的通项公式；\n\n（2）求数列 \\(\\left\\{a_{n}+2b_{n}\\right\\}\\)的前n项和 \\(S_{n}\\)",
       "image_refs": [],
@@ -124,7 +124,7 @@
       ]
     },
     {
-      "qid": "Q-d9abe88886a6598e",
+      "qid": "Q-c31279928db3bf85",
       "section": "4.7",
       "group": "B",
       "number": 2,
@@ -132,7 +132,7 @@
       "source_anchor": {
         "ocr_doc": 87,
         "pdf_page": 88,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_87.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_87.md"
       },
       "question_text": "2.（2025·全国模拟）\n\n若  \\(f(x)=\\frac{2x}{2x-1}\\)，则  \\(f\\left(\\frac{1}{2025}\\right)+f\\left(\\frac{2}{2025}\\right)+\\cdots+\\)\n\n \\(f\\left(\\frac{2024}{2025}\\right)=\\) ___.",
       "image_refs": [],
@@ -143,7 +143,7 @@
       ]
     },
     {
-      "qid": "Q-1b47b305ec400240",
+      "qid": "Q-a62d4837f1ca6c87",
       "section": "4.7",
       "group": "B",
       "number": 3,
@@ -151,7 +151,7 @@
       "source_anchor": {
         "ocr_doc": 88,
         "pdf_page": 89,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_88.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_88.md"
       },
       "question_text": "### 3. （2025·湖南长沙模拟）\n\n在正项数列 \\(\\{a_{n}\\}\\)中， \\(a_{1}=1\\)，且 \\(a_{n+1}^{2}-2a_{n+1}=a_{n}^{2}+2a_{n}\\)\n\n（1）求 \\(\\{a_{n}\\}\\)的通项公式；\n\n（2）若数列 \\(\\{b_{n}\\}\\)满足 \\(b_{n}=\\frac{1}{a_{n}a_{n+1}}\\)，求 \\(\\{b_{n}\\}\\)的前n项和 \\(S_{n}\\)",
       "image_refs": [],
@@ -162,7 +162,7 @@
       ]
     },
     {
-      "qid": "Q-7be0ae79b68b05b7",
+      "qid": "Q-f59cf4ff9d8125c8",
       "section": "4.7",
       "group": "B",
       "number": 4,
@@ -170,7 +170,7 @@
       "source_anchor": {
         "ocr_doc": 88,
         "pdf_page": 89,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_88.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_88.md"
       },
       "question_text": "### 4. （2025·全国模拟）\n\n记  \\(S_n\\)， \\(T_n\\) 分别为数列  \\(\\{a_n\\}\\)， \\(\\{b_n\\}\\) 的前  \\(n\\) 项和，已知  \\(9S_n = 12a_n - 4^{n+1} + 4\\)，且  \\(b_n = \\frac{2^n}{2\\sqrt{a_n} + \\sqrt{a_{n+1}}}\\)。\n\n（1）求 \\(\\{a_{n}\\}\\)的通项公式；\n\n（2）证明： \\(2T_{n}\\geq\\sqrt{2}-1\\)",
       "image_refs": [],
@@ -181,7 +181,7 @@
       ]
     },
     {
-      "qid": "Q-468114862fe9f982",
+      "qid": "Q-5056a54807239d3e",
       "section": "4.7",
       "group": "B",
       "number": 5,
@@ -189,7 +189,7 @@
       "source_anchor": {
         "ocr_doc": 88,
         "pdf_page": 89,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_88.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_88.md"
       },
       "question_text": "### 5. （2025 · 全国模拟）\n\n已知数列  \\(\\{a_{n}\\}\\) 的前 n 项和为  \\(S_{n}\\)，且  \\(3S_{n} + a_{n} = 1\\).\n\n（1）求数列 \\(\\{a_{n}\\}\\)的通项公式；\n\n（2）若  \\(b_{n}=\\log_{\\frac{1}{4}}a_{n}\\)，求数列  \\(\\left\\{\\frac{1}{b_{n}b_{n+2}}\\right\\}\\) 的前 n 项和  \\(T_{n}\\).",
       "image_refs": [],
@@ -200,7 +200,7 @@
       ]
     },
     {
-      "qid": "Q-df96f9deefbe538a",
+      "qid": "Q-1ee8861e62715881",
       "section": "4.7",
       "group": "B",
       "number": 6,
@@ -208,7 +208,7 @@
       "source_anchor": {
         "ocr_doc": 89,
         "pdf_page": 90,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_89.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_89.md"
       },
       "question_text": "### 6. （2025·湖南长沙模拟）\n\n已知等差数列  \\(\\{a_{n}\\}\\) 满足  \\(a_{4}=7\\)， \\(a_{2n}=2a_{n}+1\\)。\n\n（1）求 \\(\\{a_{n}\\}\\)的通项公式；\n\n（2）若 \\(b_{n}=3^{n}\\cdot a_{n}\\)，求数列 \\(\\{b_{n}\\}\\)的前n项和 \\(S_{n}\\)",
       "image_refs": [],
@@ -219,7 +219,7 @@
       ]
     },
     {
-      "qid": "Q-f15536718aa6fa4e",
+      "qid": "Q-ca1aee5901ae6329",
       "section": "4.7",
       "group": "B",
       "number": 7,
@@ -227,7 +227,7 @@
       "source_anchor": {
         "ocr_doc": 89,
         "pdf_page": 90,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_89.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_89.md"
       },
       "question_text": "### 7. （2025 · 全国模拟）\n\n设等比数列 \\(\\{a_n\\}\\) 的前 \\(n\\) 项和为 \\(S_n\\)，且 \\(a_1 = -1\\)，\\(2S_n = S_{n+1} + S_{n+2}\\)。\n\n（1）求 \\(\\{a_{n}\\}\\)的通项公式；\n\n（2）求数列 \\(\\left\\{\\frac{(-1)^{n}\\cdot n}{a_{n}}\\right\\}\\)的前n项和 \\(T_{n}\\)",
       "image_refs": [],
@@ -238,7 +238,7 @@
       ]
     },
     {
-      "qid": "Q-dff7809677da19dc",
+      "qid": "Q-3a41f869f49eeaf0",
       "section": "4.7",
       "group": "B",
       "number": 8,
@@ -246,7 +246,7 @@
       "source_anchor": {
         "ocr_doc": 89,
         "pdf_page": 90,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_89.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_89.md"
       },
       "question_text": "### 8. （2024·浙江宁波模拟）\n\n已知等差数列  \\(\\{a_{n}\\}\\) 的公差为 2，记数列  \\(\\{b_{n}\\}\\) 的前 n 项和为  \\(S_{n}\\)， \\(b_{1}=0\\)， \\(b_{2}=2\\)，且满足  \\(b_{n+1}=2S_{n}+a_{n}\\)\n\n（1）证明：数列 \\(\\{b_{n}+1\\}\\)是等比数列；\n\n（2）求数列 \\(\\{a_{n}b_{n}\\}\\)的前n项和 \\(T_{n}\\)",
       "image_refs": [],
@@ -257,7 +257,7 @@
       ]
     },
     {
-      "qid": "Q-ea47177a28351fb4",
+      "qid": "Q-9b8af84268fab4fd",
       "section": "4.7",
       "group": "B",
       "number": 9,
@@ -265,7 +265,7 @@
       "source_anchor": {
         "ocr_doc": 90,
         "pdf_page": 91,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_90.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_90.md"
       },
       "question_text": "### 9. （2025·全国模拟）\n\n已知数列 \\(\\{a_n\\}\\) 的前 \\(n\\) 项和为 \\(S_n\\)，且满足 \\(2S_n = 3n^2 + 5n\\)，数列 \\(\\{b_n\\}\\) 是等比数列，公比 \\(q > 0\\)，\\(b_1 = 6\\)，\\(b_3 = 2a_3 + 4\\)。\n\n（1）求数列 \\(\\{a_n\\}\\)，\\(\\{b_n\\}\\) 的通项公式；\n\n（2）设数列 \\(\\{c_n\\}\\) 满足 \\(c_1 = 1\\)，\\(c_n = \\begin{cases} 1, & 2^k < n < 2^{k+1} \\\\ b_k, & n = 2^k \\end{cases}\\)，其中 \\(k \\in \\mathbb{N}^*\\)。\n\n（i）求数列 \\(\\{c_{n}\\}\\)的前2026项和；\n\n（ii）求 \\(\\sum_{i=1}^{n}a_{2^{i}}c_{2^{i}}\\)",
       "image_refs": [],
@@ -276,7 +276,7 @@
       ]
     },
     {
-      "qid": "Q-395cd7e44eb795c4",
+      "qid": "Q-96b31a35f3d241dc",
       "section": "4.7",
       "group": "B",
       "number": 10,
@@ -284,7 +284,7 @@
       "source_anchor": {
         "ocr_doc": 90,
         "pdf_page": 91,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_90.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_90.md"
       },
       "question_text": "### 10. （2025 · 全国模拟）\n\n记 \\(S_{n}\\)为数列 \\(\\{a_{n}\\}\\)的前n项和，已知 \\(a_{2}=3\\)， \\(\\left\\{\\frac{S_{n}}{a_{n}}\\right\\}\\)是公差为 \\(\\frac{1}{3}\\)的等差数列.\n\n（1）求数列 \\(\\{a_{n}\\}\\)的通项公式；\n\n（2）证明： \\(\\frac{1}{S_{1}}+\\frac{1}{S_{2}}+\\cdots+\\frac{1}{S_{n}}<\\frac{3}{2}\\)",
       "image_refs": [],

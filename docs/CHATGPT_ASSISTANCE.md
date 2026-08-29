@@ -35,7 +35,9 @@ GitHub 负责读取仓库事实：教材题包、题图、课程转写、课程�
 
 《2026版 高中必刷题数学 选择性必修第一册 RJA》是独立补充题库。请先调用 `math_get_course_first_route` 查看课程编号顺序，完成对应《一本通》项目后，再用 `math_get_practice_route` 查看当前已解锁的基础题。需要看题时调用 `math_get_practice_page`；回复中同时写明书内印刷页、PDF 页和题号。源 PDF 没有答案，不能把模型推导或其他答案册冒充原书答案。
 
-用户上传手写过程时，先用视觉能力逐行转写并核对原题，再调用 `math_record_handwriting_analysis` 保存 `firstWrongStep`、每行状态、错误原因和下游污染。只有用户确认“确实错了/按这个记录”后，才调用 `math_record_wrong_question` 写入正式错题和题型；不确定就保留为 `needs_clarification`。
+用户上传手写图时，先用视觉能力逐行转写并核对原题，再调用 `math_record_handwriting_analysis` 保存 `firstWrongStep`、每行状态、错误原因、下游污染、归一化框坐标和 LaTeX。根据返回的 `annotationSpec` 输出 HTML：原图作为底图，透明无填充 SVG 叠加，首错红框、下游橙色虚线框、正确绿色框，右侧显示行号、解释和 LaTeX/MathJax。只有用户确认“确实错了/按这个记录”后，才调用 `math_record_wrong_question` 写入正式错题和题型；不确定就保留为 `needs_clarification`。
+
+若图片模糊、字迹/符号有歧义、原题没核对或模型置信度低，必须先在回答和 HTML 中单列“仍不确定，需用户确认”，写明具体行和需要补拍的区域；同时向 `math_record_handwriting_analysis` 提交 `uncertainties` 与 `clarificationRequest`。没有披露不确定性时，云端写入会拒绝。
 
 标准流程：
 

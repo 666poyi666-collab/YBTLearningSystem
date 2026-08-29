@@ -16,7 +16,7 @@
       94
     ],
     "ocr_status": "PADDLE_AI_STUDIO_CURRENT_COMPLETE",
-    "ocr_root": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95",
+    "ocr_root": "data/ocr_live_current/chapter5_95",
     "course_root": {
       "4.1 一元函数的导数及其应用": "C:\\Users\\poyi\\Downloads\\课程合集\\4.1 一元函数的导数及其应用",
       "4.2 一元函数的导数及其应用的综合提升": "C:\\Users\\poyi\\Downloads\\课程合集\\4.2 一元函数的导数及其应用的综合提升"
@@ -306,10 +306,21 @@
         "4.1.1.7 隐函数求导"
       ],
       "support_course_ids": [],
-      "course_mapping_status": "TITLE_HYPOTHESIS_PENDING_VISION",
+      "course_mapping_status": "SEMANTIC_TARGETS_WITH_DISCLOSED_UNPLACED_COURSES",
       "course_keys": [],
       "micro_units": [],
-      "coverage_gaps": [],
+      "coverage_gaps": [
+        {
+          "kind": "unplaced_course",
+          "course_key": "4.1.1.6 用切线算距离最值",
+          "reason": "语义审计未确认与具体教材循环的直接对应；课程仍保留在节次账本中。"
+        },
+        {
+          "kind": "unplaced_course",
+          "course_key": "4.1.1.7 隐函数求导",
+          "reason": "语义审计未确认与具体教材循环的直接对应；课程仍保留在节次账本中。"
+        }
+      ],
       "bridge_units": [],
       "learning_cycles": [
         {
@@ -317,8 +328,7 @@
           "title": "变化率与导数的概念",
           "course_keys": [
             "4.1.1.1 导数的定义（上）",
-            "4.1.1.1 导数的定义（下）",
-            "4.1.1.2 求在P点处的切线"
+            "4.1.1.1 导数的定义（下）"
           ],
           "prerequisite_course_keys": [],
           "knowledge_refs": [
@@ -338,14 +348,14 @@
           "id": "5.1-cycle-2",
           "title": "导数的几何意义",
           "course_keys": [
+            "4.1.1.2 求在P点处的切线",
             "4.1.1.3 求过P点的切线",
             "4.1.1.4 判断切线条数问题",
             "4.1.1.5 公切线问题"
           ],
           "prerequisite_course_keys": [
             "4.1.1.1 导数的定义（上）",
-            "4.1.1.1 导数的定义（下）",
-            "4.1.1.2 求在P点处的切线"
+            "4.1.1.1 导数的定义（下）"
           ],
           "knowledge_refs": [
             "5.1-k2"
@@ -362,10 +372,7 @@
         {
           "id": "5.1-cycle-3",
           "title": "导函数",
-          "course_keys": [
-            "4.1.1.6 用切线算距离最值",
-            "4.1.1.7 隐函数求导"
-          ],
+          "course_keys": [],
           "prerequisite_course_keys": [
             "4.1.1.1 导数的定义（上）",
             "4.1.1.1 导数的定义（下）",
@@ -379,10 +386,7 @@
           ],
           "type_refs": [],
           "example_numbers": [
-            6,
-            7,
-            8,
-            9
+            6
           ],
           "exercise_keys": [],
           "bridge_unit_ids": [],
@@ -390,6 +394,75 @@
         },
         {
           "id": "5.1-cycle-4",
+          "title": "类型I 变化率的计算",
+          "course_keys": [],
+          "prerequisite_course_keys": [
+            "4.1.1.1 导数的定义（上）",
+            "4.1.1.1 导数的定义（下）",
+            "4.1.1.2 求在P点处的切线",
+            "4.1.1.3 求过P点的切线",
+            "4.1.1.4 判断切线条数问题",
+            "4.1.1.5 公切线问题"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型I 变化率的计算"
+          ],
+          "example_numbers": [
+            7
+          ],
+          "exercise_keys": [],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "5.1-cycle-5",
+          "title": "类型Ⅱ 导数定义式的应用",
+          "course_keys": [],
+          "prerequisite_course_keys": [
+            "4.1.1.1 导数的定义（上）",
+            "4.1.1.1 导数的定义（下）",
+            "4.1.1.2 求在P点处的切线",
+            "4.1.1.3 求过P点的切线",
+            "4.1.1.4 判断切线条数问题",
+            "4.1.1.5 公切线问题"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型Ⅱ 导数定义式的应用"
+          ],
+          "example_numbers": [
+            8
+          ],
+          "exercise_keys": [],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "5.1-cycle-6",
+          "title": "类型III 用导数定义求函数的切线",
+          "course_keys": [],
+          "prerequisite_course_keys": [
+            "4.1.1.1 导数的定义（上）",
+            "4.1.1.1 导数的定义（下）",
+            "4.1.1.2 求在P点处的切线",
+            "4.1.1.3 求过P点的切线",
+            "4.1.1.4 判断切线条数问题",
+            "4.1.1.5 公切线问题"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型III 用导数定义求函数的切线"
+          ],
+          "example_numbers": [
+            9
+          ],
+          "exercise_keys": [],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "5.1-cycle-7",
           "title": "A组 夯实基础",
           "course_keys": [],
           "prerequisite_course_keys": [
@@ -398,16 +471,18 @@
             "4.1.1.2 求在P点处的切线",
             "4.1.1.3 求过P点的切线",
             "4.1.1.4 判断切线条数问题",
-            "4.1.1.5 公切线问题",
-            "4.1.1.6 用切线算距离最值",
-            "4.1.1.7 隐函数求导"
+            "4.1.1.5 公切线问题"
           ],
           "knowledge_refs": [],
-          "type_refs": [
-            "类型I 变化率的计算",
-            "类型Ⅱ 导数定义式的应用",
-            "类型III 用导数定义求函数的切线"
+          "type_refs": [],
+          "unclassified_item_ids": [
+            "A1",
+            "A2",
+            "A3",
+            "A4",
+            "A5"
           ],
+          "type_mapping_status": "PENDING_ITEM_LEVEL_CLASSIFICATION",
           "example_numbers": [],
           "exercise_keys": [
             "A1",
@@ -420,7 +495,7 @@
           "method_checkpoints": []
         },
         {
-          "id": "5.1-cycle-5",
+          "id": "5.1-cycle-8",
           "title": "B组 强化能力",
           "course_keys": [],
           "prerequisite_course_keys": [
@@ -429,16 +504,19 @@
             "4.1.1.2 求在P点处的切线",
             "4.1.1.3 求过P点的切线",
             "4.1.1.4 判断切线条数问题",
-            "4.1.1.5 公切线问题",
-            "4.1.1.6 用切线算距离最值",
-            "4.1.1.7 隐函数求导"
+            "4.1.1.5 公切线问题"
           ],
           "knowledge_refs": [],
-          "type_refs": [
-            "类型I 变化率的计算",
-            "类型Ⅱ 导数定义式的应用",
-            "类型III 用导数定义求函数的切线"
+          "type_refs": [],
+          "unclassified_item_ids": [
+            "B6",
+            "B7",
+            "B8",
+            "B9",
+            "B10",
+            "B11"
           ],
+          "type_mapping_status": "PENDING_ITEM_LEVEL_CLASSIFICATION",
           "example_numbers": [],
           "exercise_keys": [
             "B6",
@@ -452,7 +530,7 @@
           "method_checkpoints": []
         },
         {
-          "id": "5.1-cycle-6",
+          "id": "5.1-cycle-9",
           "title": "C组 拓展提升",
           "course_keys": [],
           "prerequisite_course_keys": [
@@ -461,16 +539,14 @@
             "4.1.1.2 求在P点处的切线",
             "4.1.1.3 求过P点的切线",
             "4.1.1.4 判断切线条数问题",
-            "4.1.1.5 公切线问题",
-            "4.1.1.6 用切线算距离最值",
-            "4.1.1.7 隐函数求导"
+            "4.1.1.5 公切线问题"
           ],
           "knowledge_refs": [],
-          "type_refs": [
-            "类型I 变化率的计算",
-            "类型Ⅱ 导数定义式的应用",
-            "类型III 用导数定义求函数的切线"
+          "type_refs": [],
+          "unclassified_item_ids": [
+            "C12"
           ],
+          "type_mapping_status": "PENDING_ITEM_LEVEL_CLASSIFICATION",
           "example_numbers": [],
           "exercise_keys": [
             "C12"
@@ -479,7 +555,7 @@
           "method_checkpoints": []
         }
       ],
-      "learning_cycles_status": "SOURCE_ORDER_BASELINE_CURRENT",
+      "learning_cycles_status": "SEMANTIC_TARGETS_WITH_DISCLOSED_UNPLACED_COURSES",
       "exit_gate": "知识点闭卷复述；方法册代表题至少2题FULL_PASS；A组独立校准；一题隔天冷重做。",
       "coverage_status": "SOURCE_STRUCTURE_READY_SIMULATION_PENDING",
       "coverage_gate": "教材页、题号、例题和直属变式已按当前 OCR 与源页恢复层闭合；视觉题侧车、逐题零基础模拟和冷复测未通过前不得宣称掌握。",
@@ -493,7 +569,11 @@
         "4.1.1.6 用切线算距离最值",
         "4.1.1.7 隐函数求导"
       ],
-      "support_course_keys": []
+      "support_course_keys": [],
+      "unplaced_course_keys": [
+        "4.1.1.6 用切线算距离最值",
+        "4.1.1.7 隐函数求导"
+      ]
     },
     {
       "id": "5.2",
@@ -651,10 +731,16 @@
         "4.1.2.3 导数的原函数构造（进阶）"
       ],
       "support_course_ids": [],
-      "course_mapping_status": "TITLE_HYPOTHESIS_PENDING_VISION",
+      "course_mapping_status": "SEMANTIC_TARGETS_WITH_DISCLOSED_UNPLACED_COURSES",
       "course_keys": [],
       "micro_units": [],
-      "coverage_gaps": [],
+      "coverage_gaps": [
+        {
+          "kind": "unplaced_course",
+          "course_key": "4.1.2.3 导数的原函数构造之速解技巧",
+          "reason": "语义审计未确认与具体教材循环的直接对应；课程仍保留在节次账本中。"
+        }
+      ],
       "bridge_units": [],
       "learning_cycles": [
         {
@@ -681,9 +767,7 @@
         {
           "id": "5.2-cycle-2",
           "title": "导数的四则运算法则",
-          "course_keys": [
-            "4.1.2.2 复合函数的导数"
-          ],
+          "course_keys": [],
           "prerequisite_course_keys": [
             "4.1.2.1 基本初等函数的导数及运算法则",
             "4.1.2.1 基本初等函数的导数及运算法则（进阶）"
@@ -703,13 +787,11 @@
           "id": "5.2-cycle-3",
           "title": "简单复合函数的导数",
           "course_keys": [
-            "4.1.2.3 导数的原函数构造之速解技巧",
-            "4.1.2.3 导数的原函数构造（基础）"
+            "4.1.2.2 复合函数的导数"
           ],
           "prerequisite_course_keys": [
             "4.1.2.1 基本初等函数的导数及运算法则",
-            "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
-            "4.1.2.2 复合函数的导数"
+            "4.1.2.1 基本初等函数的导数及运算法则（进阶）"
           ],
           "knowledge_refs": [
             "5.2-k3"
@@ -726,25 +808,20 @@
           "id": "5.2-cycle-4",
           "title": "导函数与原函数的性质关系",
           "course_keys": [
+            "4.1.2.3 导数的原函数构造（基础）",
             "4.1.2.3 导数的原函数构造（进阶）"
           ],
           "prerequisite_course_keys": [
             "4.1.2.1 基本初等函数的导数及运算法则",
             "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
-            "4.1.2.2 复合函数的导数",
-            "4.1.2.3 导数的原函数构造之速解技巧",
-            "4.1.2.3 导数的原函数构造（基础）"
+            "4.1.2.2 复合函数的导数"
           ],
           "knowledge_refs": [
             "5.2-k4"
           ],
           "type_refs": [],
           "example_numbers": [
-            6,
-            7,
-            8,
-            9,
-            10
+            6
           ],
           "exercise_keys": [],
           "bridge_unit_ids": [],
@@ -752,22 +829,90 @@
         },
         {
           "id": "5.2-cycle-5",
+          "title": "类型I 导数的计算",
+          "course_keys": [],
+          "prerequisite_course_keys": [
+            "4.1.2.1 基本初等函数的导数及运算法则",
+            "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
+            "4.1.2.2 复合函数的导数",
+            "4.1.2.3 导数的原函数构造（基础）",
+            "4.1.2.3 导数的原函数构造（进阶）"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型I 导数的计算"
+          ],
+          "example_numbers": [
+            7
+          ],
+          "exercise_keys": [],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "5.2-cycle-6",
+          "title": "类型Ⅱ 切线问题",
+          "course_keys": [],
+          "prerequisite_course_keys": [
+            "4.1.2.1 基本初等函数的导数及运算法则",
+            "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
+            "4.1.2.2 复合函数的导数",
+            "4.1.2.3 导数的原函数构造（基础）",
+            "4.1.2.3 导数的原函数构造（进阶）"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型Ⅱ 切线问题"
+          ],
+          "example_numbers": [
+            8,
+            9
+          ],
+          "exercise_keys": [],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "5.2-cycle-7",
+          "title": "类型III 导数与奇偶性、对称性、周期性综合",
+          "course_keys": [],
+          "prerequisite_course_keys": [
+            "4.1.2.1 基本初等函数的导数及运算法则",
+            "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
+            "4.1.2.2 复合函数的导数",
+            "4.1.2.3 导数的原函数构造（基础）",
+            "4.1.2.3 导数的原函数构造（进阶）"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型III 导数与奇偶性、对称性、周期性综合"
+          ],
+          "example_numbers": [
+            10
+          ],
+          "exercise_keys": [],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "5.2-cycle-8",
           "title": "A组 夯实基础",
           "course_keys": [],
           "prerequisite_course_keys": [
             "4.1.2.1 基本初等函数的导数及运算法则",
             "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
             "4.1.2.2 复合函数的导数",
-            "4.1.2.3 导数的原函数构造之速解技巧",
             "4.1.2.3 导数的原函数构造（基础）",
             "4.1.2.3 导数的原函数构造（进阶）"
           ],
           "knowledge_refs": [],
-          "type_refs": [
-            "类型I 导数的计算",
-            "类型Ⅱ 切线问题",
-            "类型III 导数与奇偶性、对称性、周期性综合"
+          "type_refs": [],
+          "unclassified_item_ids": [
+            "A1",
+            "A2",
+            "A3"
           ],
+          "type_mapping_status": "PENDING_ITEM_LEVEL_CLASSIFICATION",
           "example_numbers": [],
           "exercise_keys": [
             "A1",
@@ -778,23 +923,29 @@
           "method_checkpoints": []
         },
         {
-          "id": "5.2-cycle-6",
+          "id": "5.2-cycle-9",
           "title": "B组 强化能力",
           "course_keys": [],
           "prerequisite_course_keys": [
             "4.1.2.1 基本初等函数的导数及运算法则",
             "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
             "4.1.2.2 复合函数的导数",
-            "4.1.2.3 导数的原函数构造之速解技巧",
             "4.1.2.3 导数的原函数构造（基础）",
             "4.1.2.3 导数的原函数构造（进阶）"
           ],
           "knowledge_refs": [],
-          "type_refs": [
-            "类型I 导数的计算",
-            "类型Ⅱ 切线问题",
-            "类型III 导数与奇偶性、对称性、周期性综合"
+          "type_refs": [],
+          "unclassified_item_ids": [
+            "B4",
+            "B5",
+            "B6",
+            "B7",
+            "B8",
+            "B9",
+            "B10",
+            "B11"
           ],
+          "type_mapping_status": "PENDING_ITEM_LEVEL_CLASSIFICATION",
           "example_numbers": [],
           "exercise_keys": [
             "B4",
@@ -810,23 +961,24 @@
           "method_checkpoints": []
         },
         {
-          "id": "5.2-cycle-7",
+          "id": "5.2-cycle-10",
           "title": "C组 拓展提升",
           "course_keys": [],
           "prerequisite_course_keys": [
             "4.1.2.1 基本初等函数的导数及运算法则",
             "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
             "4.1.2.2 复合函数的导数",
-            "4.1.2.3 导数的原函数构造之速解技巧",
             "4.1.2.3 导数的原函数构造（基础）",
             "4.1.2.3 导数的原函数构造（进阶）"
           ],
           "knowledge_refs": [],
-          "type_refs": [
-            "类型I 导数的计算",
-            "类型Ⅱ 切线问题",
-            "类型III 导数与奇偶性、对称性、周期性综合"
+          "type_refs": [],
+          "unclassified_item_ids": [
+            "C12",
+            "C13",
+            "C14"
           ],
+          "type_mapping_status": "PENDING_ITEM_LEVEL_CLASSIFICATION",
           "example_numbers": [],
           "exercise_keys": [
             "C12",
@@ -837,7 +989,7 @@
           "method_checkpoints": []
         }
       ],
-      "learning_cycles_status": "SOURCE_ORDER_BASELINE_CURRENT",
+      "learning_cycles_status": "SEMANTIC_TARGETS_WITH_DISCLOSED_UNPLACED_COURSES",
       "exit_gate": "知识点闭卷复述；方法册代表题至少2题FULL_PASS；A组独立校准；一题隔天冷重做。",
       "coverage_status": "SOURCE_STRUCTURE_READY_SIMULATION_PENDING",
       "coverage_gate": "教材页、题号、例题和直属变式已按当前 OCR 与源页恢复层闭合；视觉题侧车、逐题零基础模拟和冷复测未通过前不得宣称掌握。",
@@ -849,7 +1001,10 @@
         "4.1.2.3 导数的原函数构造（基础）",
         "4.1.2.3 导数的原函数构造（进阶）"
       ],
-      "support_course_keys": []
+      "support_course_keys": [],
+      "unplaced_course_keys": [
+        "4.1.2.3 导数的原函数构造之速解技巧"
+      ]
     },
     {
       "id": "5.3",
@@ -1081,24 +1236,38 @@
         "4.1.4.7 已知单调性求参之导数为非二次型"
       ],
       "support_course_ids": [],
-      "course_mapping_status": "TITLE_HYPOTHESIS_PENDING_VISION",
+      "course_mapping_status": "SEMANTIC_TARGETS_WITH_DISCLOSED_UNPLACED_COURSES",
       "course_keys": [],
       "micro_units": [],
-      "coverage_gaps": [],
+      "coverage_gaps": [
+        {
+          "kind": "unplaced_course",
+          "course_key": "4.1.3.1 含参二次不等式的分类技巧",
+          "reason": "语义审计未确认与具体教材循环的直接对应；课程仍保留在节次账本中。"
+        },
+        {
+          "kind": "unplaced_course",
+          "course_key": "4.1.3.2 二次方程根的分布（上）",
+          "reason": "语义审计未确认与具体教材循环的直接对应；课程仍保留在节次账本中。"
+        },
+        {
+          "kind": "unplaced_course",
+          "course_key": "4.1.3.2 二次方程根的分布（下）",
+          "reason": "语义审计未确认与具体教材循环的直接对应；课程仍保留在节次账本中。"
+        },
+        {
+          "kind": "unplaced_course",
+          "course_key": "4.1.3.3 二次恒成立模型",
+          "reason": "语义审计未确认与具体教材循环的直接对应；课程仍保留在节次账本中。"
+        }
+      ],
       "bridge_units": [],
       "learning_cycles": [
         {
           "id": "5.3-cycle-1",
           "title": "函数的单调性与导数",
           "course_keys": [
-            "4.1.3.1 含参二次不等式的分类技巧",
-            "4.1.3.2 二次方程根的分布（上）",
-            "4.1.3.2 二次方程根的分布（下）",
-            "4.1.3.3 二次恒成立模型",
-            "4.1.4.1 不含参数的函数的单调性",
-            "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
-            "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
-            "4.1.4.2 含参函数单调性讨论之可因式分解型（下）"
+            "4.1.4.1 不含参数的函数的单调性"
           ],
           "prerequisite_course_keys": [],
           "knowledge_refs": [
@@ -1117,6 +1286,9 @@
           "id": "5.3-cycle-2",
           "title": "利用导数判断函数的单调性",
           "course_keys": [
+            "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+            "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+            "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
             "4.1.4.3 含参函数单调性讨论之类二次型",
             "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
             "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
@@ -1126,29 +1298,14 @@
             "4.1.4.7 已知单调性求参之导数为非二次型"
           ],
           "prerequisite_course_keys": [
-            "4.1.3.1 含参二次不等式的分类技巧",
-            "4.1.3.2 二次方程根的分布（上）",
-            "4.1.3.2 二次方程根的分布（下）",
-            "4.1.3.3 二次恒成立模型",
-            "4.1.4.1 不含参数的函数的单调性",
-            "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
-            "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
-            "4.1.4.2 含参函数单调性讨论之可因式分解型（下）"
+            "4.1.4.1 不含参数的函数的单调性"
           ],
           "knowledge_refs": [
             "5.3-k2"
           ],
           "type_refs": [],
           "example_numbers": [
-            3,
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10,
-            11
+            3
           ],
           "exercise_keys": [],
           "bridge_unit_ids": [],
@@ -1156,13 +1313,9 @@
         },
         {
           "id": "5.3-cycle-3",
-          "title": "A组 夯实基础",
+          "title": "类型Ⅰ 导函数与原函数图象关联的分析",
           "course_keys": [],
           "prerequisite_course_keys": [
-            "4.1.3.1 含参二次不等式的分类技巧",
-            "4.1.3.2 二次方程根的分布（上）",
-            "4.1.3.2 二次方程根的分布（下）",
-            "4.1.3.3 二次恒成立模型",
             "4.1.4.1 不含参数的函数的单调性",
             "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
             "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
@@ -1177,13 +1330,182 @@
           ],
           "knowledge_refs": [],
           "type_refs": [
-            "类型Ⅰ 导函数与原函数图象关联的分析",
-            "类型Ⅱ 用导数研究无参函数的单调性",
-            "类型Ⅲ 讨论含参函数的单调性",
-            "类型IV 已知单调性求参数范围",
-            "类型V 利用导数研究函数的零点个数",
+            "类型Ⅰ 导函数与原函数图象关联的分析"
+          ],
+          "example_numbers": [
+            4
+          ],
+          "exercise_keys": [],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "5.3-cycle-4",
+          "title": "类型Ⅱ 用导数研究无参函数的单调性",
+          "course_keys": [],
+          "prerequisite_course_keys": [
+            "4.1.4.1 不含参数的函数的单调性",
+            "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+            "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+            "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+            "4.1.4.3 含参函数单调性讨论之类二次型",
+            "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+            "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+            "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+            "4.1.4.5 含参函数单调性讨论之超越函数",
+            "4.1.4.6 已知单调性求参之导数为二次型",
+            "4.1.4.7 已知单调性求参之导数为非二次型"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型Ⅱ 用导数研究无参函数的单调性"
+          ],
+          "example_numbers": [
+            5
+          ],
+          "exercise_keys": [],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "5.3-cycle-5",
+          "title": "类型Ⅲ 讨论含参函数的单调性",
+          "course_keys": [],
+          "prerequisite_course_keys": [
+            "4.1.4.1 不含参数的函数的单调性",
+            "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+            "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+            "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+            "4.1.4.3 含参函数单调性讨论之类二次型",
+            "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+            "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+            "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+            "4.1.4.5 含参函数单调性讨论之超越函数",
+            "4.1.4.6 已知单调性求参之导数为二次型",
+            "4.1.4.7 已知单调性求参之导数为非二次型"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型Ⅲ 讨论含参函数的单调性"
+          ],
+          "example_numbers": [
+            6,
+            7
+          ],
+          "exercise_keys": [],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "5.3-cycle-6",
+          "title": "类型IV 已知单调性求参数范围",
+          "course_keys": [],
+          "prerequisite_course_keys": [
+            "4.1.4.1 不含参数的函数的单调性",
+            "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+            "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+            "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+            "4.1.4.3 含参函数单调性讨论之类二次型",
+            "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+            "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+            "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+            "4.1.4.5 含参函数单调性讨论之超越函数",
+            "4.1.4.6 已知单调性求参之导数为二次型",
+            "4.1.4.7 已知单调性求参之导数为非二次型"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型IV 已知单调性求参数范围"
+          ],
+          "example_numbers": [
+            8
+          ],
+          "exercise_keys": [],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "5.3-cycle-7",
+          "title": "类型V 利用导数研究函数的零点个数",
+          "course_keys": [],
+          "prerequisite_course_keys": [
+            "4.1.4.1 不含参数的函数的单调性",
+            "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+            "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+            "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+            "4.1.4.3 含参函数单调性讨论之类二次型",
+            "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+            "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+            "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+            "4.1.4.5 含参函数单调性讨论之超越函数",
+            "4.1.4.6 已知单调性求参之导数为二次型",
+            "4.1.4.7 已知单调性求参之导数为非二次型"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型V 利用导数研究函数的零点个数"
+          ],
+          "example_numbers": [
+            9
+          ],
+          "exercise_keys": [],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "5.3-cycle-8",
+          "title": "类型VI 构造原函数",
+          "course_keys": [],
+          "prerequisite_course_keys": [
+            "4.1.4.1 不含参数的函数的单调性",
+            "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+            "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+            "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+            "4.1.4.3 含参函数单调性讨论之类二次型",
+            "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+            "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+            "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+            "4.1.4.5 含参函数单调性讨论之超越函数",
+            "4.1.4.6 已知单调性求参之导数为二次型",
+            "4.1.4.7 已知单调性求参之导数为非二次型"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
             "类型VI 构造原函数"
           ],
+          "example_numbers": [
+            10,
+            11
+          ],
+          "exercise_keys": [],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "5.3-cycle-9",
+          "title": "A组 夯实基础",
+          "course_keys": [],
+          "prerequisite_course_keys": [
+            "4.1.4.1 不含参数的函数的单调性",
+            "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+            "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+            "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+            "4.1.4.3 含参函数单调性讨论之类二次型",
+            "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+            "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+            "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+            "4.1.4.5 含参函数单调性讨论之超越函数",
+            "4.1.4.6 已知单调性求参之导数为二次型",
+            "4.1.4.7 已知单调性求参之导数为非二次型"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [],
+          "unclassified_item_ids": [
+            "A1",
+            "A2",
+            "A3"
+          ],
+          "type_mapping_status": "PENDING_ITEM_LEVEL_CLASSIFICATION",
           "example_numbers": [],
           "exercise_keys": [
             "A1",
@@ -1194,14 +1516,10 @@
           "method_checkpoints": []
         },
         {
-          "id": "5.3-cycle-4",
+          "id": "5.3-cycle-10",
           "title": "B组 强化能力",
           "course_keys": [],
           "prerequisite_course_keys": [
-            "4.1.3.1 含参二次不等式的分类技巧",
-            "4.1.3.2 二次方程根的分布（上）",
-            "4.1.3.2 二次方程根的分布（下）",
-            "4.1.3.3 二次恒成立模型",
             "4.1.4.1 不含参数的函数的单调性",
             "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
             "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
@@ -1215,14 +1533,24 @@
             "4.1.4.7 已知单调性求参之导数为非二次型"
           ],
           "knowledge_refs": [],
-          "type_refs": [
-            "类型Ⅰ 导函数与原函数图象关联的分析",
-            "类型Ⅱ 用导数研究无参函数的单调性",
-            "类型Ⅲ 讨论含参函数的单调性",
-            "类型IV 已知单调性求参数范围",
-            "类型V 利用导数研究函数的零点个数",
-            "类型VI 构造原函数"
+          "type_refs": [],
+          "unclassified_item_ids": [
+            "B4",
+            "B5",
+            "B6",
+            "B7",
+            "B8",
+            "B9",
+            "B10",
+            "B11",
+            "B12",
+            "B13",
+            "B14",
+            "B15",
+            "B16",
+            "B17"
           ],
+          "type_mapping_status": "PENDING_ITEM_LEVEL_CLASSIFICATION",
           "example_numbers": [],
           "exercise_keys": [
             "B4",
@@ -1244,14 +1572,10 @@
           "method_checkpoints": []
         },
         {
-          "id": "5.3-cycle-5",
+          "id": "5.3-cycle-11",
           "title": "C组 拓展提升",
           "course_keys": [],
           "prerequisite_course_keys": [
-            "4.1.3.1 含参二次不等式的分类技巧",
-            "4.1.3.2 二次方程根的分布（上）",
-            "4.1.3.2 二次方程根的分布（下）",
-            "4.1.3.3 二次恒成立模型",
             "4.1.4.1 不含参数的函数的单调性",
             "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
             "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
@@ -1265,14 +1589,13 @@
             "4.1.4.7 已知单调性求参之导数为非二次型"
           ],
           "knowledge_refs": [],
-          "type_refs": [
-            "类型Ⅰ 导函数与原函数图象关联的分析",
-            "类型Ⅱ 用导数研究无参函数的单调性",
-            "类型Ⅲ 讨论含参函数的单调性",
-            "类型IV 已知单调性求参数范围",
-            "类型V 利用导数研究函数的零点个数",
-            "类型VI 构造原函数"
+          "type_refs": [],
+          "unclassified_item_ids": [
+            "C18",
+            "C19",
+            "C20"
           ],
+          "type_mapping_status": "PENDING_ITEM_LEVEL_CLASSIFICATION",
           "example_numbers": [],
           "exercise_keys": [
             "C18",
@@ -1283,7 +1606,7 @@
           "method_checkpoints": []
         }
       ],
-      "learning_cycles_status": "SOURCE_ORDER_BASELINE_CURRENT",
+      "learning_cycles_status": "SEMANTIC_TARGETS_WITH_DISCLOSED_UNPLACED_COURSES",
       "exit_gate": "知识点闭卷复述；方法册代表题至少2题FULL_PASS；A组独立校准；一题隔天冷重做。",
       "coverage_status": "SOURCE_STRUCTURE_READY_SIMULATION_PENDING",
       "coverage_gate": "教材页、题号、例题和直属变式已按当前 OCR 与源页恢复层闭合；视觉题侧车、逐题零基础模拟和冷复测未通过前不得宣称掌握。",
@@ -1304,7 +1627,13 @@
         "4.1.4.6 已知单调性求参之导数为二次型",
         "4.1.4.7 已知单调性求参之导数为非二次型"
       ],
-      "support_course_keys": []
+      "support_course_keys": [],
+      "unplaced_course_keys": [
+        "4.1.3.1 含参二次不等式的分类技巧",
+        "4.1.3.2 二次方程根的分布（上）",
+        "4.1.3.2 二次方程根的分布（下）",
+        "4.1.3.3 二次恒成立模型"
+      ]
     },
     {
       "id": "5.4",
@@ -1489,10 +1818,16 @@
         "4.1.4.1 不含参数的函数的单调性",
         "4.1.4.2 含参函数单调性讨论之可因式分解型（上）"
       ],
-      "course_mapping_status": "TITLE_HYPOTHESIS_PENDING_VISION",
+      "course_mapping_status": "SEMANTIC_TARGETS_WITH_DISCLOSED_UNPLACED_COURSES",
       "course_keys": [],
       "micro_units": [],
-      "coverage_gaps": [],
+      "coverage_gaps": [
+        {
+          "kind": "unplaced_course",
+          "course_key": "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+          "reason": "语义审计未确认与具体教材循环的直接对应；课程仍保留在节次账本中。"
+        }
+      ],
       "bridge_units": [],
       "learning_cycles": [
         {
@@ -1502,7 +1837,9 @@
             "4.1.4.8 极值与极值点（基础）",
             "4.1.4.8 极值与极值点（进阶）"
           ],
-          "prerequisite_course_keys": [],
+          "prerequisite_course_keys": [
+            "4.1.4.1 不含参数的函数的单调性"
+          ],
           "knowledge_refs": [
             "5.4-k1"
           ],
@@ -1517,11 +1854,9 @@
         {
           "id": "5.4-cycle-2",
           "title": "函数极值与导数的关系",
-          "course_keys": [
-            "4.1.4.9 最值讨论与值域之具体函数",
-            "4.1.4.10 最值讨论与值域之含参函数"
-          ],
+          "course_keys": [],
           "prerequisite_course_keys": [
+            "4.1.4.1 不含参数的函数的单调性",
             "4.1.4.8 极值与极值点（基础）",
             "4.1.4.8 极值与极值点（进阶）"
           ],
@@ -1540,14 +1875,13 @@
           "id": "5.4-cycle-3",
           "title": "函数的最大值与最小值",
           "course_keys": [
-            "4.1.4.1 不含参数的函数的单调性",
-            "4.1.4.2 含参函数单调性讨论之可因式分解型（上）"
-          ],
-          "prerequisite_course_keys": [
-            "4.1.4.8 极值与极值点（基础）",
-            "4.1.4.8 极值与极值点（进阶）",
             "4.1.4.9 最值讨论与值域之具体函数",
             "4.1.4.10 最值讨论与值域之含参函数"
+          ],
+          "prerequisite_course_keys": [
+            "4.1.4.1 不含参数的函数的单调性",
+            "4.1.4.8 极值与极值点（基础）",
+            "4.1.4.8 极值与极值点（进阶）"
           ],
           "knowledge_refs": [
             "5.4-k3"
@@ -1555,12 +1889,7 @@
           "type_refs": [],
           "example_numbers": [
             3,
-            4,
-            5,
-            6,
-            7,
-            8,
-            9
+            4
           ],
           "exercise_keys": [],
           "bridge_unit_ids": [],
@@ -1568,24 +1897,133 @@
         },
         {
           "id": "5.4-cycle-4",
-          "title": "A组 夯实基础",
+          "title": "类型I 由图象分析函数的极值情况",
           "course_keys": [],
           "prerequisite_course_keys": [
+            "4.1.4.1 不含参数的函数的单调性",
             "4.1.4.8 极值与极值点（基础）",
             "4.1.4.8 极值与极值点（进阶）",
             "4.1.4.9 最值讨论与值域之具体函数",
-            "4.1.4.10 最值讨论与值域之含参函数",
-            "4.1.4.1 不含参数的函数的单调性",
-            "4.1.4.2 含参函数单调性讨论之可因式分解型（上）"
+            "4.1.4.10 最值讨论与值域之含参函数"
           ],
           "knowledge_refs": [],
           "type_refs": [
-            "类型I 由图象分析函数的极值情况",
-            "类型Ⅱ 求函数的极值点或极值",
-            "类型Ⅲ 根据极值点或极值求参",
-            "类型IV 函数的最值分析",
+            "类型I 由图象分析函数的极值情况"
+          ],
+          "example_numbers": [
+            5
+          ],
+          "exercise_keys": [],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "5.4-cycle-5",
+          "title": "类型Ⅱ 求函数的极值点或极值",
+          "course_keys": [],
+          "prerequisite_course_keys": [
+            "4.1.4.1 不含参数的函数的单调性",
+            "4.1.4.8 极值与极值点（基础）",
+            "4.1.4.8 极值与极值点（进阶）",
+            "4.1.4.9 最值讨论与值域之具体函数",
+            "4.1.4.10 最值讨论与值域之含参函数"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型Ⅱ 求函数的极值点或极值"
+          ],
+          "example_numbers": [
+            6
+          ],
+          "exercise_keys": [],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "5.4-cycle-6",
+          "title": "类型Ⅲ 根据极值点或极值求参",
+          "course_keys": [],
+          "prerequisite_course_keys": [
+            "4.1.4.1 不含参数的函数的单调性",
+            "4.1.4.8 极值与极值点（基础）",
+            "4.1.4.8 极值与极值点（进阶）",
+            "4.1.4.9 最值讨论与值域之具体函数",
+            "4.1.4.10 最值讨论与值域之含参函数"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型Ⅲ 根据极值点或极值求参"
+          ],
+          "example_numbers": [
+            7
+          ],
+          "exercise_keys": [],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "5.4-cycle-7",
+          "title": "类型IV 函数的最值分析",
+          "course_keys": [],
+          "prerequisite_course_keys": [
+            "4.1.4.1 不含参数的函数的单调性",
+            "4.1.4.8 极值与极值点（基础）",
+            "4.1.4.8 极值与极值点（进阶）",
+            "4.1.4.9 最值讨论与值域之具体函数",
+            "4.1.4.10 最值讨论与值域之含参函数"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
+            "类型IV 函数的最值分析"
+          ],
+          "example_numbers": [
+            8
+          ],
+          "exercise_keys": [],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "5.4-cycle-8",
+          "title": "类型V 利用导数证明不等式",
+          "course_keys": [],
+          "prerequisite_course_keys": [
+            "4.1.4.1 不含参数的函数的单调性",
+            "4.1.4.8 极值与极值点（基础）",
+            "4.1.4.8 极值与极值点（进阶）",
+            "4.1.4.9 最值讨论与值域之具体函数",
+            "4.1.4.10 最值讨论与值域之含参函数"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [
             "类型V 利用导数证明不等式"
           ],
+          "example_numbers": [
+            9
+          ],
+          "exercise_keys": [],
+          "bridge_unit_ids": [],
+          "method_checkpoints": []
+        },
+        {
+          "id": "5.4-cycle-9",
+          "title": "A组 夯实基础",
+          "course_keys": [],
+          "prerequisite_course_keys": [
+            "4.1.4.1 不含参数的函数的单调性",
+            "4.1.4.8 极值与极值点（基础）",
+            "4.1.4.8 极值与极值点（进阶）",
+            "4.1.4.9 最值讨论与值域之具体函数",
+            "4.1.4.10 最值讨论与值域之含参函数"
+          ],
+          "knowledge_refs": [],
+          "type_refs": [],
+          "unclassified_item_ids": [
+            "A1",
+            "A2",
+            "A3"
+          ],
+          "type_mapping_status": "PENDING_ITEM_LEVEL_CLASSIFICATION",
           "example_numbers": [],
           "exercise_keys": [
             "A1",
@@ -1596,25 +2034,32 @@
           "method_checkpoints": []
         },
         {
-          "id": "5.4-cycle-5",
+          "id": "5.4-cycle-10",
           "title": "B组 强化能力",
           "course_keys": [],
           "prerequisite_course_keys": [
+            "4.1.4.1 不含参数的函数的单调性",
             "4.1.4.8 极值与极值点（基础）",
             "4.1.4.8 极值与极值点（进阶）",
             "4.1.4.9 最值讨论与值域之具体函数",
-            "4.1.4.10 最值讨论与值域之含参函数",
-            "4.1.4.1 不含参数的函数的单调性",
-            "4.1.4.2 含参函数单调性讨论之可因式分解型（上）"
+            "4.1.4.10 最值讨论与值域之含参函数"
           ],
           "knowledge_refs": [],
-          "type_refs": [
-            "类型I 由图象分析函数的极值情况",
-            "类型Ⅱ 求函数的极值点或极值",
-            "类型Ⅲ 根据极值点或极值求参",
-            "类型IV 函数的最值分析",
-            "类型V 利用导数证明不等式"
+          "type_refs": [],
+          "unclassified_item_ids": [
+            "B4",
+            "B5",
+            "B6",
+            "B7",
+            "B8",
+            "B9",
+            "B10",
+            "B11",
+            "B12",
+            "B13",
+            "B14"
           ],
+          "type_mapping_status": "PENDING_ITEM_LEVEL_CLASSIFICATION",
           "example_numbers": [],
           "exercise_keys": [
             "B4",
@@ -1633,25 +2078,24 @@
           "method_checkpoints": []
         },
         {
-          "id": "5.4-cycle-6",
+          "id": "5.4-cycle-11",
           "title": "C组 拓展提升",
           "course_keys": [],
           "prerequisite_course_keys": [
+            "4.1.4.1 不含参数的函数的单调性",
             "4.1.4.8 极值与极值点（基础）",
             "4.1.4.8 极值与极值点（进阶）",
             "4.1.4.9 最值讨论与值域之具体函数",
-            "4.1.4.10 最值讨论与值域之含参函数",
-            "4.1.4.1 不含参数的函数的单调性",
-            "4.1.4.2 含参函数单调性讨论之可因式分解型（上）"
+            "4.1.4.10 最值讨论与值域之含参函数"
           ],
           "knowledge_refs": [],
-          "type_refs": [
-            "类型I 由图象分析函数的极值情况",
-            "类型Ⅱ 求函数的极值点或极值",
-            "类型Ⅲ 根据极值点或极值求参",
-            "类型IV 函数的最值分析",
-            "类型V 利用导数证明不等式"
+          "type_refs": [],
+          "unclassified_item_ids": [
+            "C15",
+            "C16",
+            "C17"
           ],
+          "type_mapping_status": "PENDING_ITEM_LEVEL_CLASSIFICATION",
           "example_numbers": [],
           "exercise_keys": [
             "C15",
@@ -1662,7 +2106,7 @@
           "method_checkpoints": []
         }
       ],
-      "learning_cycles_status": "SOURCE_ORDER_BASELINE_CURRENT",
+      "learning_cycles_status": "SEMANTIC_TARGETS_WITH_DISCLOSED_UNPLACED_COURSES",
       "exit_gate": "知识点闭卷复述；方法册代表题至少2题FULL_PASS；A组独立校准；一题隔天冷重做。",
       "coverage_status": "SOURCE_STRUCTURE_READY_SIMULATION_PENDING",
       "coverage_gate": "教材页、题号、例题和直属变式已按当前 OCR 与源页恢复层闭合；视觉题侧车、逐题零基础模拟和冷复测未通过前不得宣称掌握。",
@@ -1674,6 +2118,9 @@
       ],
       "support_course_keys": [
         "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）"
+      ],
+      "unplaced_course_keys": [
         "4.1.4.2 含参函数单调性讨论之可因式分解型（上）"
       ]
     },
@@ -1809,21 +2256,62 @@
         "4.2.5.2 双极值点问题（下）"
       ],
       "support_course_ids": [],
-      "course_mapping_status": "TITLE_HYPOTHESIS_PENDING_VISION",
+      "course_mapping_status": "SEMANTIC_TARGETS_WITH_DISCLOSED_UNPLACED_COURSES",
       "course_keys": [],
       "micro_units": [],
-      "coverage_gaps": [],
+      "coverage_gaps": [
+        {
+          "kind": "unplaced_course",
+          "course_key": "4.2.1.1 导数可因式分解型分类讨论",
+          "reason": "语义审计未确认与具体教材循环的直接对应；课程仍保留在节次账本中。"
+        },
+        {
+          "kind": "unplaced_course",
+          "course_key": "4.2.1.3 洛必达法则",
+          "reason": "语义审计未确认与具体教材循环的直接对应；课程仍保留在节次账本中。"
+        },
+        {
+          "kind": "unplaced_course",
+          "course_key": "4.2.1.4 双逻辑连接词的函数问题之单函数单调性构造",
+          "reason": "语义审计未确认与具体教材循环的直接对应；课程仍保留在节次账本中。"
+        },
+        {
+          "kind": "unplaced_course",
+          "course_key": "4.2.1.5 双逻辑连接词的函数问题之双函数最值构造",
+          "reason": "语义审计未确认与具体教材循环的直接对应；课程仍保留在节次账本中。"
+        },
+        {
+          "kind": "unplaced_course",
+          "course_key": "4.2.3.1 参变分离法（基础）",
+          "reason": "语义审计未确认与具体教材循环的直接对应；课程仍保留在节次账本中。"
+        },
+        {
+          "kind": "unplaced_course",
+          "course_key": "4.2.3.1 参变分离法（提高）",
+          "reason": "语义审计未确认与具体教材循环的直接对应；课程仍保留在节次账本中。"
+        },
+        {
+          "kind": "unplaced_course",
+          "course_key": "4.2.3.1 参变分离法（进阶）",
+          "reason": "语义审计未确认与具体教材循环的直接对应；课程仍保留在节次账本中。"
+        },
+        {
+          "kind": "unplaced_course",
+          "course_key": "4.2.3.2 导数可因式分解型分类讨论（基础）",
+          "reason": "语义审计未确认与具体教材循环的直接对应；课程仍保留在节次账本中。"
+        },
+        {
+          "kind": "unplaced_course",
+          "course_key": "4.2.3.2 导数可因式分解型分类讨论（进阶）",
+          "reason": "语义审计未确认与具体教材循环的直接对应；课程仍保留在节次账本中。"
+        }
+      ],
       "bridge_units": [],
       "learning_cycles": [
         {
           "id": "5.5-cycle-1",
           "title": "类型Ⅰ 隐零点问题",
-          "course_keys": [
-            "4.2.1.1 导数可因式分解型分类讨论",
-            "4.2.1.2 参变分离法",
-            "4.2.1.3 洛必达法则",
-            "4.2.1.4 双逻辑连接词的函数问题之单函数单调性构造"
-          ],
+          "course_keys": [],
           "prerequisite_course_keys": [],
           "knowledge_refs": [],
           "type_refs": [
@@ -1840,17 +2328,12 @@
           "id": "5.5-cycle-2",
           "title": "类型Ⅱ 含参不等式问题",
           "course_keys": [
-            "4.2.1.5 双逻辑连接词的函数问题之双函数最值构造",
+            "4.2.1.2 参变分离法",
             "4.2.2.1 主元法（基础）",
             "4.2.2.1 主元法（进阶）",
             "4.2.2.2 常用函数放缩"
           ],
-          "prerequisite_course_keys": [
-            "4.2.1.1 导数可因式分解型分类讨论",
-            "4.2.1.2 参变分离法",
-            "4.2.1.3 洛必达法则",
-            "4.2.1.4 双逻辑连接词的函数问题之单函数单调性构造"
-          ],
+          "prerequisite_course_keys": [],
           "knowledge_refs": [],
           "type_refs": [
             "类型Ⅱ 含参不等式问题"
@@ -1869,16 +2352,10 @@
           "title": "类型Ⅲ 多变量问题",
           "course_keys": [
             "4.2.2.3 分离函数法",
-            "4.2.3.1 参变分离法（基础）",
-            "4.2.3.1 参变分离法（提高）",
-            "4.2.3.1 参变分离法（进阶）"
+            "4.2.4.2 双变量的换元构造"
           ],
           "prerequisite_course_keys": [
-            "4.2.1.1 导数可因式分解型分类讨论",
             "4.2.1.2 参变分离法",
-            "4.2.1.3 洛必达法则",
-            "4.2.1.4 双逻辑连接词的函数问题之单函数单调性构造",
-            "4.2.1.5 双逻辑连接词的函数问题之双函数最值构造",
             "4.2.2.1 主元法（基础）",
             "4.2.2.1 主元法（进阶）",
             "4.2.2.2 常用函数放缩"
@@ -1900,24 +2377,19 @@
           "id": "5.5-cycle-4",
           "title": "类型IV 零点问题",
           "course_keys": [
-            "4.2.3.2 导数可因式分解型分类讨论（基础）",
-            "4.2.3.2 导数可因式分解型分类讨论（进阶）",
             "4.2.4.1 极值点偏移模型（上）",
-            "4.2.4.1 极值点偏移模型（下）"
+            "4.2.4.1 极值点偏移模型（下）",
+            "4.2.5.1 单极值点问题",
+            "4.2.5.2 双极值点问题（上）",
+            "4.2.5.2 双极值点问题（下）"
           ],
           "prerequisite_course_keys": [
-            "4.2.1.1 导数可因式分解型分类讨论",
             "4.2.1.2 参变分离法",
-            "4.2.1.3 洛必达法则",
-            "4.2.1.4 双逻辑连接词的函数问题之单函数单调性构造",
-            "4.2.1.5 双逻辑连接词的函数问题之双函数最值构造",
             "4.2.2.1 主元法（基础）",
             "4.2.2.1 主元法（进阶）",
             "4.2.2.2 常用函数放缩",
             "4.2.2.3 分离函数法",
-            "4.2.3.1 参变分离法（基础）",
-            "4.2.3.1 参变分离法（提高）",
-            "4.2.3.1 参变分离法（进阶）"
+            "4.2.4.2 双变量的换元构造"
           ],
           "knowledge_refs": [],
           "type_refs": [
@@ -1933,29 +2405,19 @@
         {
           "id": "5.5-cycle-5",
           "title": "类型V 求和不等式证明问题",
-          "course_keys": [
-            "4.2.4.2 双变量的换元构造",
-            "4.2.5.1 单极值点问题",
-            "4.2.5.2 双极值点问题（上）",
-            "4.2.5.2 双极值点问题（下）"
-          ],
+          "course_keys": [],
           "prerequisite_course_keys": [
-            "4.2.1.1 导数可因式分解型分类讨论",
             "4.2.1.2 参变分离法",
-            "4.2.1.3 洛必达法则",
-            "4.2.1.4 双逻辑连接词的函数问题之单函数单调性构造",
-            "4.2.1.5 双逻辑连接词的函数问题之双函数最值构造",
             "4.2.2.1 主元法（基础）",
             "4.2.2.1 主元法（进阶）",
             "4.2.2.2 常用函数放缩",
             "4.2.2.3 分离函数法",
-            "4.2.3.1 参变分离法（基础）",
-            "4.2.3.1 参变分离法（提高）",
-            "4.2.3.1 参变分离法（进阶）",
-            "4.2.3.2 导数可因式分解型分类讨论（基础）",
-            "4.2.3.2 导数可因式分解型分类讨论（进阶）",
+            "4.2.4.2 双变量的换元构造",
             "4.2.4.1 极值点偏移模型（上）",
-            "4.2.4.1 极值点偏移模型（下）"
+            "4.2.4.1 极值点偏移模型（下）",
+            "4.2.5.1 单极值点问题",
+            "4.2.5.2 双极值点问题（上）",
+            "4.2.5.2 双极值点问题（下）"
           ],
           "knowledge_refs": [],
           "type_refs": [
@@ -1973,35 +2435,25 @@
           "title": "B组 强化能力",
           "course_keys": [],
           "prerequisite_course_keys": [
-            "4.2.1.1 导数可因式分解型分类讨论",
             "4.2.1.2 参变分离法",
-            "4.2.1.3 洛必达法则",
-            "4.2.1.4 双逻辑连接词的函数问题之单函数单调性构造",
-            "4.2.1.5 双逻辑连接词的函数问题之双函数最值构造",
             "4.2.2.1 主元法（基础）",
             "4.2.2.1 主元法（进阶）",
             "4.2.2.2 常用函数放缩",
             "4.2.2.3 分离函数法",
-            "4.2.3.1 参变分离法（基础）",
-            "4.2.3.1 参变分离法（提高）",
-            "4.2.3.1 参变分离法（进阶）",
-            "4.2.3.2 导数可因式分解型分类讨论（基础）",
-            "4.2.3.2 导数可因式分解型分类讨论（进阶）",
+            "4.2.4.2 双变量的换元构造",
             "4.2.4.1 极值点偏移模型（上）",
             "4.2.4.1 极值点偏移模型（下）",
-            "4.2.4.2 双变量的换元构造",
             "4.2.5.1 单极值点问题",
             "4.2.5.2 双极值点问题（上）",
             "4.2.5.2 双极值点问题（下）"
           ],
           "knowledge_refs": [],
-          "type_refs": [
-            "类型Ⅰ 隐零点问题",
-            "类型Ⅱ 含参不等式问题",
-            "类型Ⅲ 多变量问题",
-            "类型IV 零点问题",
-            "类型V 求和不等式证明问题"
+          "type_refs": [],
+          "unclassified_item_ids": [
+            "B1",
+            "B2"
           ],
+          "type_mapping_status": "PENDING_ITEM_LEVEL_CLASSIFICATION",
           "example_numbers": [],
           "exercise_keys": [
             "B1",
@@ -2015,35 +2467,33 @@
           "title": "C组 拓展提升",
           "course_keys": [],
           "prerequisite_course_keys": [
-            "4.2.1.1 导数可因式分解型分类讨论",
             "4.2.1.2 参变分离法",
-            "4.2.1.3 洛必达法则",
-            "4.2.1.4 双逻辑连接词的函数问题之单函数单调性构造",
-            "4.2.1.5 双逻辑连接词的函数问题之双函数最值构造",
             "4.2.2.1 主元法（基础）",
             "4.2.2.1 主元法（进阶）",
             "4.2.2.2 常用函数放缩",
             "4.2.2.3 分离函数法",
-            "4.2.3.1 参变分离法（基础）",
-            "4.2.3.1 参变分离法（提高）",
-            "4.2.3.1 参变分离法（进阶）",
-            "4.2.3.2 导数可因式分解型分类讨论（基础）",
-            "4.2.3.2 导数可因式分解型分类讨论（进阶）",
+            "4.2.4.2 双变量的换元构造",
             "4.2.4.1 极值点偏移模型（上）",
             "4.2.4.1 极值点偏移模型（下）",
-            "4.2.4.2 双变量的换元构造",
             "4.2.5.1 单极值点问题",
             "4.2.5.2 双极值点问题（上）",
             "4.2.5.2 双极值点问题（下）"
           ],
           "knowledge_refs": [],
-          "type_refs": [
-            "类型Ⅰ 隐零点问题",
-            "类型Ⅱ 含参不等式问题",
-            "类型Ⅲ 多变量问题",
-            "类型IV 零点问题",
-            "类型V 求和不等式证明问题"
+          "type_refs": [],
+          "unclassified_item_ids": [
+            "C3",
+            "C4",
+            "C5",
+            "C6",
+            "C7",
+            "C8",
+            "C9",
+            "C10",
+            "C11",
+            "C12"
           ],
+          "type_mapping_status": "PENDING_ITEM_LEVEL_CLASSIFICATION",
           "example_numbers": [],
           "exercise_keys": [
             "C3",
@@ -2061,7 +2511,7 @@
           "method_checkpoints": []
         }
       ],
-      "learning_cycles_status": "SOURCE_ORDER_BASELINE_CURRENT",
+      "learning_cycles_status": "SEMANTIC_TARGETS_WITH_DISCLOSED_UNPLACED_COURSES",
       "exit_gate": "知识点闭卷复述；方法册代表题至少2题FULL_PASS；A组独立校准；一题隔天冷重做。",
       "coverage_status": "SOURCE_STRUCTURE_READY_SIMULATION_PENDING",
       "coverage_gate": "教材页、题号、例题和直属变式已按当前 OCR 与源页恢复层闭合；视觉题侧车、逐题零基础模拟和冷复测未通过前不得宣称掌握。",
@@ -2087,7 +2537,18 @@
         "4.2.5.2 双极值点问题（上）",
         "4.2.5.2 双极值点问题（下）"
       ],
-      "support_course_keys": []
+      "support_course_keys": [],
+      "unplaced_course_keys": [
+        "4.2.1.1 导数可因式分解型分类讨论",
+        "4.2.1.3 洛必达法则",
+        "4.2.1.4 双逻辑连接词的函数问题之单函数单调性构造",
+        "4.2.1.5 双逻辑连接词的函数问题之双函数最值构造",
+        "4.2.3.1 参变分离法（基础）",
+        "4.2.3.1 参变分离法（提高）",
+        "4.2.3.1 参变分离法（进阶）",
+        "4.2.3.2 导数可因式分解型分类讨论（基础）",
+        "4.2.3.2 导数可因式分解型分类讨论（进阶）"
+      ]
     },
     {
       "id": "5.6",
@@ -2242,7 +2703,7 @@
         "4.2.6.1 求和型放缩（下）"
       ],
       "support_course_ids": [],
-      "course_mapping_status": "TITLE_HYPOTHESIS_PENDING_VISION",
+      "course_mapping_status": "SEMANTIC_TARGETS_REVIEWED",
       "course_keys": [],
       "micro_units": [],
       "coverage_gaps": [],
@@ -2251,10 +2712,19 @@
         {
           "id": "5.6-cycle-1",
           "title": "类型I 导数的计算",
-          "course_keys": [
-            "4.2.6.1 求和型放缩（上）"
+          "course_keys": [],
+          "prerequisite_course_keys": [
+            "4.1.2.1 基本初等函数的导数及运算法则",
+            "4.1.2.2 复合函数的导数",
+            "4.1.1.2 求在P点处的切线",
+            "4.1.1.3 求过P点的切线",
+            "4.1.4.1 不含参数的函数的单调性",
+            "4.1.4.8 极值与极值点（基础）",
+            "4.1.4.9 最值讨论与值域之具体函数",
+            "4.2.2.2 常用函数放缩",
+            "4.2.6.1 求和型放缩（上）",
+            "4.2.6.1 求和型放缩（下）"
           ],
-          "prerequisite_course_keys": [],
           "knowledge_refs": [],
           "type_refs": [
             "类型I 导数的计算"
@@ -2271,7 +2741,16 @@
           "title": "类型Ⅱ 切线的计算及应用",
           "course_keys": [],
           "prerequisite_course_keys": [
-            "4.2.6.1 求和型放缩（上）"
+            "4.1.2.1 基本初等函数的导数及运算法则",
+            "4.1.2.2 复合函数的导数",
+            "4.1.1.2 求在P点处的切线",
+            "4.1.1.3 求过P点的切线",
+            "4.1.4.1 不含参数的函数的单调性",
+            "4.1.4.8 极值与极值点（基础）",
+            "4.1.4.9 最值讨论与值域之具体函数",
+            "4.2.2.2 常用函数放缩",
+            "4.2.6.1 求和型放缩（上）",
+            "4.2.6.1 求和型放缩（下）"
           ],
           "knowledge_refs": [],
           "type_refs": [
@@ -2289,7 +2768,16 @@
           "title": "类型Ⅲ 单调性、极值、最值的分析",
           "course_keys": [],
           "prerequisite_course_keys": [
-            "4.2.6.1 求和型放缩（上）"
+            "4.1.2.1 基本初等函数的导数及运算法则",
+            "4.1.2.2 复合函数的导数",
+            "4.1.1.2 求在P点处的切线",
+            "4.1.1.3 求过P点的切线",
+            "4.1.4.1 不含参数的函数的单调性",
+            "4.1.4.8 极值与极值点（基础）",
+            "4.1.4.9 最值讨论与值域之具体函数",
+            "4.2.2.2 常用函数放缩",
+            "4.2.6.1 求和型放缩（上）",
+            "4.2.6.1 求和型放缩（下）"
           ],
           "knowledge_refs": [],
           "type_refs": [
@@ -2308,11 +2796,18 @@
         {
           "id": "5.6-cycle-4",
           "title": "类型IV 讨论单调性",
-          "course_keys": [
-            "4.2.6.1 求和型放缩（下）"
-          ],
+          "course_keys": [],
           "prerequisite_course_keys": [
-            "4.2.6.1 求和型放缩（上）"
+            "4.1.2.1 基本初等函数的导数及运算法则",
+            "4.1.2.2 复合函数的导数",
+            "4.1.1.2 求在P点处的切线",
+            "4.1.1.3 求过P点的切线",
+            "4.1.4.1 不含参数的函数的单调性",
+            "4.1.4.8 极值与极值点（基础）",
+            "4.1.4.9 最值讨论与值域之具体函数",
+            "4.2.2.2 常用函数放缩",
+            "4.2.6.1 求和型放缩（上）",
+            "4.2.6.1 求和型放缩（下）"
           ],
           "knowledge_refs": [],
           "type_refs": [
@@ -2330,6 +2825,14 @@
           "title": "类型V 不等式证明",
           "course_keys": [],
           "prerequisite_course_keys": [
+            "4.1.2.1 基本初等函数的导数及运算法则",
+            "4.1.2.2 复合函数的导数",
+            "4.1.1.2 求在P点处的切线",
+            "4.1.1.3 求过P点的切线",
+            "4.1.4.1 不含参数的函数的单调性",
+            "4.1.4.8 极值与极值点（基础）",
+            "4.1.4.9 最值讨论与值域之具体函数",
+            "4.2.2.2 常用函数放缩",
             "4.2.6.1 求和型放缩（上）",
             "4.2.6.1 求和型放缩（下）"
           ],
@@ -2351,6 +2854,14 @@
           "title": "类型VI 三次函数",
           "course_keys": [],
           "prerequisite_course_keys": [
+            "4.1.2.1 基本初等函数的导数及运算法则",
+            "4.1.2.2 复合函数的导数",
+            "4.1.1.2 求在P点处的切线",
+            "4.1.1.3 求过P点的切线",
+            "4.1.4.1 不含参数的函数的单调性",
+            "4.1.4.8 极值与极值点（基础）",
+            "4.1.4.9 最值讨论与值域之具体函数",
+            "4.2.2.2 常用函数放缩",
             "4.2.6.1 求和型放缩（上）",
             "4.2.6.1 求和型放缩（下）"
           ],
@@ -2370,6 +2881,14 @@
           "title": "类型Ⅶ 综合大题",
           "course_keys": [],
           "prerequisite_course_keys": [
+            "4.1.2.1 基本初等函数的导数及运算法则",
+            "4.1.2.2 复合函数的导数",
+            "4.1.1.2 求在P点处的切线",
+            "4.1.1.3 求过P点的切线",
+            "4.1.4.1 不含参数的函数的单调性",
+            "4.1.4.8 极值与极值点（基础）",
+            "4.1.4.9 最值讨论与值域之具体函数",
+            "4.2.2.2 常用函数放缩",
             "4.2.6.1 求和型放缩（上）",
             "4.2.6.1 求和型放缩（下）"
           ],
@@ -2391,19 +2910,27 @@
           "title": "A组 夯实基础",
           "course_keys": [],
           "prerequisite_course_keys": [
+            "4.1.2.1 基本初等函数的导数及运算法则",
+            "4.1.2.2 复合函数的导数",
+            "4.1.1.2 求在P点处的切线",
+            "4.1.1.3 求过P点的切线",
+            "4.1.4.1 不含参数的函数的单调性",
+            "4.1.4.8 极值与极值点（基础）",
+            "4.1.4.9 最值讨论与值域之具体函数",
+            "4.2.2.2 常用函数放缩",
             "4.2.6.1 求和型放缩（上）",
             "4.2.6.1 求和型放缩（下）"
           ],
           "knowledge_refs": [],
-          "type_refs": [
-            "类型I 导数的计算",
-            "类型Ⅱ 切线的计算及应用",
-            "类型Ⅲ 单调性、极值、最值的分析",
-            "类型IV 讨论单调性",
-            "类型V 不等式证明",
-            "类型VI 三次函数",
-            "类型Ⅶ 综合大题"
+          "type_refs": [],
+          "unclassified_item_ids": [
+            "A1",
+            "A2",
+            "A3",
+            "A4",
+            "A5"
           ],
+          "type_mapping_status": "PENDING_ITEM_LEVEL_CLASSIFICATION",
           "example_numbers": [],
           "exercise_keys": [
             "A1",
@@ -2420,19 +2947,37 @@
           "title": "B组 强化能力",
           "course_keys": [],
           "prerequisite_course_keys": [
+            "4.1.2.1 基本初等函数的导数及运算法则",
+            "4.1.2.2 复合函数的导数",
+            "4.1.1.2 求在P点处的切线",
+            "4.1.1.3 求过P点的切线",
+            "4.1.4.1 不含参数的函数的单调性",
+            "4.1.4.8 极值与极值点（基础）",
+            "4.1.4.9 最值讨论与值域之具体函数",
+            "4.2.2.2 常用函数放缩",
             "4.2.6.1 求和型放缩（上）",
             "4.2.6.1 求和型放缩（下）"
           ],
           "knowledge_refs": [],
-          "type_refs": [
-            "类型I 导数的计算",
-            "类型Ⅱ 切线的计算及应用",
-            "类型Ⅲ 单调性、极值、最值的分析",
-            "类型IV 讨论单调性",
-            "类型V 不等式证明",
-            "类型VI 三次函数",
-            "类型Ⅶ 综合大题"
+          "type_refs": [],
+          "unclassified_item_ids": [
+            "B6",
+            "B7",
+            "B8",
+            "B9",
+            "B10",
+            "B11",
+            "B12",
+            "B13",
+            "B14",
+            "B15",
+            "B16",
+            "B17",
+            "B18",
+            "B19",
+            "B20"
           ],
+          "type_mapping_status": "PENDING_ITEM_LEVEL_CLASSIFICATION",
           "example_numbers": [],
           "exercise_keys": [
             "B6",
@@ -2459,19 +3004,29 @@
           "title": "C组 拓展提升",
           "course_keys": [],
           "prerequisite_course_keys": [
+            "4.1.2.1 基本初等函数的导数及运算法则",
+            "4.1.2.2 复合函数的导数",
+            "4.1.1.2 求在P点处的切线",
+            "4.1.1.3 求过P点的切线",
+            "4.1.4.1 不含参数的函数的单调性",
+            "4.1.4.8 极值与极值点（基础）",
+            "4.1.4.9 最值讨论与值域之具体函数",
+            "4.2.2.2 常用函数放缩",
             "4.2.6.1 求和型放缩（上）",
             "4.2.6.1 求和型放缩（下）"
           ],
           "knowledge_refs": [],
-          "type_refs": [
-            "类型I 导数的计算",
-            "类型Ⅱ 切线的计算及应用",
-            "类型Ⅲ 单调性、极值、最值的分析",
-            "类型IV 讨论单调性",
-            "类型V 不等式证明",
-            "类型VI 三次函数",
-            "类型Ⅶ 综合大题"
+          "type_refs": [],
+          "unclassified_item_ids": [
+            "C21",
+            "C22",
+            "C23",
+            "C24",
+            "C25",
+            "C26",
+            "C27"
           ],
+          "type_mapping_status": "PENDING_ITEM_LEVEL_CLASSIFICATION",
           "example_numbers": [],
           "exercise_keys": [
             "C21",
@@ -2486,7 +3041,7 @@
           "method_checkpoints": []
         }
       ],
-      "learning_cycles_status": "SOURCE_ORDER_BASELINE_CURRENT",
+      "learning_cycles_status": "SEMANTIC_TARGETS_REVIEWED",
       "exit_gate": "知识点闭卷复述；方法册代表题至少2题FULL_PASS；A组独立校准；一题隔天冷重做。",
       "coverage_status": "SOURCE_STRUCTURE_READY_SIMULATION_PENDING",
       "coverage_gate": "教材页、题号、例题和直属变式已按当前 OCR 与源页恢复层闭合；视觉题侧车、逐题零基础模拟和冷复测未通过前不得宣称掌握。",
@@ -2494,7 +3049,17 @@
         "4.2.6.1 求和型放缩（上）",
         "4.2.6.1 求和型放缩（下）"
       ],
-      "support_course_keys": []
+      "support_course_keys": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "unplaced_course_keys": []
     }
   ],
   "known_visual_recoveries": [
@@ -2574,7 +3139,7 @@
     "course_mapping": "TITLE_HYPOTHESIS",
     "packets": "BLOCKED (无 OCR 文档)"
   },
-  "structure_applied_at": "2026-08-16T19:37:53.878915+00:00",
+  "structure_applied_at": "2026-08-29T18:58:13.557072+00:00",
   "structure_source": "reports/builds/ch5-structure-current.json",
   "derived_question_corrections": []
 }

@@ -70,7 +70,7 @@ Forbidden contamination:
 - Courses outside the eight directories above.
 - Course or transcript files whose SHA does not match the current catalog.
 
-The supplementary `2026版 高中必刷题数学 选择性必修第一册 RJA` is a separate practice source. It may be used only after the linked course/YBT unit is unlocked. Its PDF has no answer content; OCR locates a source page, while the original page image verifies the exact problem.
+The supplementary `2026版 高中必刷题数学 选择性必修第一册 RJA` is a separate optional practice source. It may be recommended after the linked course/YBT unit is available, but it never blocks course, YBT, section, or chapter completion. Its PDF has no answer content; OCR locates a source page, while the original page image verifies the exact problem.
 
 ## 3. Artifact Chain
 

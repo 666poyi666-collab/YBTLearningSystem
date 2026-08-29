@@ -4,7 +4,7 @@
   "section": "micro专题1",
   "label": "第4节 微专题1：立体几何综合题",
   "source": {
-    "ocr_root": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69",
+    "ocr_root": "data/ocr_live_current/first_chapter_69",
     "ocr_docs": [
       55,
       68
@@ -32,13 +32,13 @@
   "pages": [
     {
       "ocr_doc": 55,
-      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_55.md",
+      "source_path": "data/ocr_live_current/first_chapter_69/doc_55.md",
       "text": "# 微专题1：立体几何综合题\n\n习题：P1\n\n# 内容提要\n\n立体几何作为高中数学的重点板块之一，在各类考试中经常出现一些难度中等偏上或难度偏高的综合性考题，本节我们就通过一些细分题型来给大家梳理如何用空间向量求解这类考题。\n\n## 典型例题\n\n## 类型Ⅰ：利用空间向量解决线上动点问题\n\n【例 1】如图，P 为圆锥的顶点，O 是圆锥底面的圆心，AC 为底面直径， \\(\\triangle ABD\\) 为底面圆 O 的内接正三角形，且边长为  \\(\\sqrt{3}\\)，点 E 在母线 PC 上，且  \\(AE = \\sqrt{3}\\)，CE = 1。\n\n（1）求证：直线PO∥平面BDE；\n\n（2）求证：平面 \\(BED \\perp\\)平面 \\(ABD\\);\n\n（3）已知 \\(M\\) 为线段 \\(PO\\) 上的一点，当直线 \\(DM\\) 与平面 \\(ABE\\) 所成角的正弦值为 \\(\\frac{2\\sqrt{7}}{7}\\) 时，求点 \\(M\\) 到平面 \\(ABE\\) 的距离。\n\n解：（1）(要证线面平行，先找线线平行，由图可猜想 \\(EF \\parallel PO\\)（点 \\(F\\) 的位置如下图所示），故尝试找设直线 \\(AC\\) 与 \\(BD\\) 交于点 \\(F\\)，连接 \\(EF\\)，由题意，\\(\\triangle ABD\\) 是边长为 \\(\\sqrt{3}\\) 的正三角形，\\(O\\) 是其外心，所以 \\(F\\) 是 \\(BD\\) 的中点，且 \\(OA = \\frac{2}{3}AF = \\frac{2}{3} \\times \\frac{\\sqrt{3}}{2} \\times \\sqrt{3} = 1\\)，\\(OF = \\frac{1}{2}OA = \\frac{1}{2}\\)，\n\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_852_501_1092_742.jpg\" alt=\"Image\" width=\"20%\" /></div>\n\n\n所以 OC = 1，AC = 2，且 F 是 OC 的中点，又  \\(AE = \\sqrt{3}\\)，CE = 1，所以  \\(AE^2 + CE^2 = 4 = AC^2\\)，故  \\(AE \\perp PC\\)，且  \\(\\cos \\angle ACE = \\frac{CE}{AC} = \\frac{1}{2}\\)，所以  \\(\\angle ACE = 60^\\circ\\)，结合 PA = PC 可得  \\(\\triangle PAC\\) 是正三角形，因为  \\(AE \\perp PC\\)，所以 E 为 PC 中点，结合 F 为 OC 中点可得  \\(EF \\parallel PO\\)，\n\n因为  \\(AE \\perp PC\\)，所以 E 为 PC 中点，结合 F 为 OC 中点可得  \\(EF \\parallel PO\\)，因为  \\(PO \\not\\subset\\) 平面 BDE， \\(EF \\subset\\) 平面 BDE，所以  \\(PO \\parallel\\) 平面 BDE。\n\n（2）由（1）得 EF∥PO，因为 PO⊥平面 ABD，所以 EF⊥平面 ABD，又 EF⊂平面 BED，所以平面 BED⊥平面 ABD.\n\n（3）（条件涉及线面角，考虑建系，用向量法来翻译. 在圆锥中，常以圆锥的高为 z 轴建系）\n\n以 O 为原点建立如图所示的空间直角坐标系，则  \\(D\\left(-\\frac{\\sqrt{3}}{2},\\frac{1}{2},0\\right)\\)， \\(A(0,-1,0)\\)， \\(B\\left(\\frac{\\sqrt{3}}{2},\\frac{1}{2},0\\right)\\)，\n\n因为  \\(\\triangle PAC\\) 是正三角形，所以  \\(PO = PA \\cdot \\sin \\angle PAO = 2 \\sin 60^\\circ = \\sqrt{3}\\)，故  \\(E\\left(0, \\frac{1}{2}, \\frac{\\sqrt{3}}{2}\\right)\\)，\n\n所以  \\(\\overrightarrow{AB} = \\left( \\frac{\\sqrt{3}}{2}, \\frac{3}{2}, 0 \\right)\\)， \\(\\overrightarrow{AE} = \\left( 0, \\frac{3}{2}, \\frac{\\sqrt{3}}{2} \\right)\\)，设平面  \\(ABE\\) 的法向量为  \\(\\boldsymbol{m} = (x, y, z)\\)，则  \\(\\left\\{ \\begin{array}{l} \\boldsymbol{m} \\cdot \\overrightarrow{AB} = \\frac{\\sqrt{3}}{2} x + \\frac{3}{2} y = 0 \\\\ \\boldsymbol{m} \\cdot \\overrightarrow{AE} = \\frac{3}{2} y + \\frac{\\sqrt{3}}{2} z = 0 \\end{array} \\right.\\)，令  \\(x = \\sqrt{3}\\)，则  \\(y = -1\\)， \\(z = \\sqrt{3}\\)，所以  \\(\\boldsymbol{m} = (\\sqrt{3}, -1, \\sqrt{3})\\) 是平面  \\(ABE\\) 的一个法向量，\n\n（求 DM 与平面 ABE 所成的角还差 M 的坐标，M 在线段 PO 上运动，只有 z 坐标会变，故可直接设 M 的坐标）\n\n设  \\(M(0,0,a)(0 \\leq a \\leq \\sqrt{3})\\)，则  \\(\\overrightarrow{DM} = \\left( \\frac{\\sqrt{3}}{2}, -\\frac{1}{2}, a \\right)\\)，设直线 DM 与平面 ABE 所成的角为  \\(\\theta\\)，",
       "text_sha256": "a8c8c6f16f52250ca607de3951dd4702fbd963966463576169b63a8e62faa704",
       "image_refs": [
         {
           "ref": "imgs/img_in_image_box_852_501_1092_742.jpg",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_852_501_1092_742.jpg",
+          "path": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_852_501_1092_742.jpg",
           "exists": true
         }
       ],
@@ -46,18 +46,18 @@
     },
     {
       "ocr_doc": 56,
-      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_56.md",
+      "source_path": "data/ocr_live_current/first_chapter_69/doc_56.md",
       "text": "则  \\(\\sin \\theta = \\left| \\cos < \\overrightarrow{DM}, \\boldsymbol{m} > \\right| = \\frac{\\left| \\overrightarrow{DM} \\cdot \\boldsymbol{m} \\right|}{\\left| \\overrightarrow{DM} \\right| \\cdot \\left| \\boldsymbol{m} \\right|} = \\frac{\\left| 2 + \\sqrt{3}a \\right|}{\\sqrt{1 + a^2} \\times \\sqrt{7}}\\)，由题意， \\(\\sin \\theta = \\frac{2\\sqrt{7}}{7}\\)，\n\n所以  \\(\\frac{\\left| 2 + \\sqrt{3}a \\right|}{\\sqrt{1 + a^2} \\times \\sqrt{7}} = \\frac{2\\sqrt{7}}{7}\\)，解得： \\(a = 0\\) 或  \\(4\\sqrt{3}\\)（不满足  \\(0 \\leq a \\leq \\sqrt{3}\\)，舍去）\n\n从而点  \\(M\\) 的坐标为  \\((0, 0, 0)\\)，故  \\(\\overrightarrow{AM} = (0, 1, 0)\\)，\n\n由点到平面的距离公式，点  \\(M\\) 到平面  \\(ABE\\) 的距离  \\(d = \\frac{\\left| \\overrightarrow{AM} \\cdot \\boldsymbol{m} \\right|}{\\left| \\boldsymbol{m} \\right|} = \\frac{\\sqrt{7}}{7}\\)。\n\n【反思】当点在直线上运动时，若直线较特殊（如本题的  \\(M\\) 在  \\(z\\) 轴上），则可直接设动点的坐标；若直线不特殊，那么就需要用共线向量定理，把动点的坐标化为单变量形式，方便后续计算，我们来看下面的变式。\n\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_852_119_1093_372.jpg\" alt=\"Image\" width=\"20%\" /></div>\n\n\n【变式】已知正四棱柱 \\(ABCD-A_1B_1C_1D_1\\) 中，\\(AB=1\\)，\\(AA_1=\\sqrt{3}\\)，\\(E\\) 为棱 \\(A_1B_1\\) 的中点，\\(P\\) 为直线 \\(EC\\) 上一动点，求当点 \\(P\\) 到直线 \\(BB_1\\) 距离最短时，线段 \\(EP\\) 的长。\n\n解法1：（正四棱柱是特殊的长方体，容易建系，故考虑建系，用向量法计算点P到直线 \\(BB_1\\)的距离）\n\n以 \\(D_1\\)为原点建立如图所示的空间直角坐标系，则 \\(B(1,1,\\sqrt{3})\\)， \\(B_1(1,1,0)\\)，\n\n所以 \\(\\overrightarrow{B_1B}=(0,0,\\sqrt{3})\\)，故直线 \\(BB_1\\)的单位方向量可以为 \\(\\boldsymbol{u}=(0,0,1)\\)，\n\n（求 \\(P\\) 到直线 \\(BB_1\\) 的距离还需要 \\(P\\) 的坐标，\\(P\\) 在直线 \\(EC\\) 上运动，显然无法直接看出其坐标的规律，怎么处理？\n\n由于 \\(P\\) 在 \\(EC\\) 上，所以 \\(\\overrightarrow{EP}\\) 与 \\(\\overrightarrow{EC}\\) 必共线，故可设 \\(\\overrightarrow{EP} = \\lambda \\overrightarrow{EC}\\)，并由此将 \\(P\\) 的坐标用 \\(\\lambda\\) 表示）\n\n设 \\(P(a, b, c)\\)，由图可知，\\(E\\left(1, \\frac{1}{2}, 0\\right)\\)，\\(C(0, 1, \\sqrt{3})\\)，所以 \\(\\overrightarrow{EP} = \\left(a-1, b-\\frac{1}{2}, c\\right)\\)，\\(\\overrightarrow{EC} = \\left(-1, \\frac{1}{2}, \\sqrt{3}\\right)\\)，\n\n因为 \\(P\\) 在直线 \\(EC\\) 上，所以 \\(\\overrightarrow{EP} \\parallel \\overrightarrow{EC}\\)，故可设 \\(\\overrightarrow{EP} = \\lambda \\overrightarrow{EC} (\\lambda \\in \\mathbf{R})\\)，则 \\(\\begin{cases} a-1 = -\\lambda \\\\ b-\\frac{1}{2} = \\frac{1}{2}\\lambda \\end{cases}\\)，所以 \\(\\begin{cases} a=1-\\lambda \\\\ b=\\frac{1+\\lambda}{2} \\\\ c=\\sqrt{3}\\lambda \\end{cases}\\)，\n\n从而 \\(P\\left(1-\\lambda, \\frac{1+\\lambda}{2}, \\sqrt{3}\\lambda\\right)\\)，故 \\(\\overrightarrow{B_1P} = \\left(-\\lambda, \\frac{\\lambda-1}{2}, \\sqrt{3}\\lambda\\right)\\)，由点到直线的距离公式，点 \\(P\\) 到直线 \\(BB_1\\) 的距离 \\(d = \\sqrt{\\overrightarrow{B_1P}^2 - (\\overrightarrow{B_1P} \\cdot \\mathbf{u})^2} = \\sqrt{(-\\lambda)^2 + \\left(\\frac{\\lambda-1}{2}\\right)^2 + (\\sqrt{3}\\lambda)^2} - \\left[-\\lambda \\times 0 + \\left(\\frac{\\lambda-1}{2}\\right) \\times 0 + \\sqrt{3}\\lambda \\times 1\\right]^2\\)\n\n\\(=\\frac{\\sqrt{5\\lambda^2 - 2\\lambda + 1}}{2} = \\frac{\\sqrt{5\\left(\\lambda - \\frac{1}{5}\\right)^2 + \\frac{4}{5}}}{2}\\)，所以当 \\(\\lambda = \\frac{1}{5}\\) 时，\\(d\\) 取得最小值，此时 \\(\\overrightarrow{EP} = \\frac{1}{5} \\overrightarrow{EC}\\)，\n\n所以 \\(EP = \\frac{1}{5}EC = \\frac{1}{5} \\left| \\overrightarrow{EC} \\right| = \\frac{1}{5} \\sqrt{(-1)^2 + \\left(\\frac{1}{2}\\right)^2 + (\\sqrt{3})^2} = \\frac{\\sqrt{17}}{10}\\)。\n\n\n\n解法 2：（建系的过程同解法 1，对于点 \\(P\\) 的处理，注意到我们需要的是 \\(\\overrightarrow{B_1P}\\) 的坐标，故\n\n也可考虑利用向量的线性运算规则直接求 \\(\\overrightarrow{B_1P}\\) 的坐标，而不用先求 \\(P\\) 的坐标，这样可以一定程度简化计算）\n\n\\(\\overrightarrow{B_1P} = \\overrightarrow{B_1E} + \\overrightarrow{EP} = \\overrightarrow{B_1E} + \\lambda\\overrightarrow{EC} = \\left(0, -\\frac{1}{2}, 0\\right) + \\lambda\\left(-1, \\frac{1}{2}, \\sqrt{3}\\right) = \\left(-\\lambda, \\frac{\\lambda-1}{2}, \\sqrt{3}\\lambda\\right)\\)，接下来同解法 1.\n\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_914_1027_1092_1270.jpg\" alt=\"Image\" width=\"14%\" /></div>\n\n\n【反思】当点在不特殊的直线上运动时（以本题的  \\(P\\) 在  \\(EC\\) 上运动为例），常考虑设  \\(\\overrightarrow{EP} = \\lambda \\overrightarrow{EC}\\)，由此将点  \\(P\\) 的坐标表示成关于  \\(\\lambda\\) 的单变量形式，再进行后续的计算。",
       "text_sha256": "091b134d455f27bd5f5489db5fead5c24311924dfc7ddc76205b3185cf693582",
       "image_refs": [
         {
           "ref": "imgs/img_in_image_box_852_119_1093_372.jpg",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_852_119_1093_372.jpg",
+          "path": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_852_119_1093_372.jpg",
           "exists": true
         },
         {
           "ref": "imgs/img_in_image_box_914_1027_1092_1270.jpg",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_914_1027_1092_1270.jpg",
+          "path": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_914_1027_1092_1270.jpg",
           "exists": true
         }
       ],
@@ -65,13 +65,13 @@
     },
     {
       "ocr_doc": 57,
-      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_57.md",
+      "source_path": "data/ocr_live_current/first_chapter_69/doc_57.md",
       "text": "类型Ⅱ：点的坐标难写时的处理方法\n\n【例 2】（2019·浙江卷）如图，已知三棱柱  \\(ABC-A_1B_1C_1\\) 中，平面  \\(AA_1C_1C \\perp\\) 平面  \\(ABC\\)， \\(\\angle ABC = 90^\\circ\\)， \\(\\angle BAC = 30^\\circ\\)， \\(A_1A = A_1C = AC\\)， \\(E\\)， \\(F\\) 分别是  \\(AC\\)， \\(A_1B_1\\) 的中点。\n\n（1）证明： \\(EF \\perp BC\\)；\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_828_184_1094_391.jpg\" alt=\"Image\" width=\"22%\" /></div>\n\n\n（2）求直线 EF 与平面  \\(A_{1}BC\\) 所成角的余弦值.\n\n解法1：（1）（条件中有面  \\(AA_1C_1C \\perp\\) 面  \\(ABC\\)，容易用面垂直的性质定理构造出面  \\(ABC\\) 的垂线，又有  \\(\\angle ABC = 90^\\circ\\)，所以建系比较方便，故可考虑建立空间直角坐标系，通过证明  \\(\\overrightarrow{EF} \\cdot \\overrightarrow{BC} = 0\\) 来证明  \\(EF \\perp BC\\)）连接  \\(A_1E\\)，因为  \\(A_1A = A_1C = AC\\)， \\(E\\) 为  \\(AC\\) 的中点，所以  \\(A_1E \\perp AC\\)，又因为平面  \\(AA_1C_1C \\perp\\) 平面  \\(ABC\\)， \\(A_1E \\subset\\) 平面  \\(AA_1C_1C\\)，平面  \\(AA_1C_1C \\cap\\) 平面  \\(ABC = AC\\)，所以  \\(A_1E \\perp\\) 平面  \\(ABC\\)，以  \\(A\\) 为原点建立如图1所示的空间直角坐标系，其中  \\(\\overrightarrow{AE} = \\overrightarrow{AC}\\)\n\n不妨设 \\(AC=2\\)，则 \\(B\\left(\\frac{\\sqrt{3}}{2},\\frac{3}{2},0\\right)\\)，\\(C(0,2,0)\\)，\\(E(0,1,0)\\)，所以 \\(\\overrightarrow{BC}=\\left(-\\frac{\\sqrt{3}}{2},\\frac{1}{2},0\\right)\\)，\n\n（要求 \\(\\overrightarrow{EF}\\) 的坐标，还差 \\(F\\) 的坐标，\\(F\\) 是 \\(A_1B_1\\) 的中点，要写出 \\(A_1\\)，\\(B_1\\) 的坐标，再用中点公式写 \\(F\\) 的坐标吗？这样做可行，但写 \\(B_1\\) 的坐标偏麻烦，注意到斜棱柱中 \\(\\overrightarrow{A_1F}=\\frac{1}{2}\\overrightarrow{AB}\\)，所以 \\(\\overrightarrow{EF}=\\overrightarrow{EA_1}+\\overrightarrow{A_1F}=\\overrightarrow{EA_1}+\\frac{1}{2}\\overrightarrow{AB}\\)，按此可回避写 \\(B_1\\) 的坐标，转化为用 \\(E\\)，\\(A_1\\)，\\(A\\)，\\(B\\) 的坐标直接求得 \\(\\overrightarrow{EF}\\) 的坐标）\n\n由图可知，\\(A(0,0,0)\\)，\\(A_1(0,1,\\sqrt{3})\\)，所以 \\(\\overrightarrow{EF}=\\overrightarrow{EA_1}+\\overrightarrow{A_1F}=\\overrightarrow{EA_1}+\\frac{1}{2}\\overrightarrow{AB}=(0,0,\\sqrt{3})+\\frac{1}{2}\\left(\\frac{\\sqrt{3}}{2},\\frac{3}{2},0\\right)=\\left(\\frac{\\sqrt{3}}{4},\\frac{3}{4},\\sqrt{3}\\right)\\)，\n\n从而 \\(\\overrightarrow{EF}\\cdot\\overrightarrow{BC}=\\frac{\\sqrt{3}}{4}\\times\\left(-\\frac{\\sqrt{3}}{2}\\right)+\\frac{3}{4}\\times\\frac{1}{2}+\\sqrt{3}\\times0=0\\)，故 \\(\\overrightarrow{EF}\\perp\\overrightarrow{BC}\\)，所以 \\(EF\\perp BC\\)。\n\n(2) (已有 \\(\\overrightarrow{EF}\\)，求直线EF与平面 \\(A_{1}BC\\)所成的角只差平面 \\(A_{1}BC\\)的法向量，下面先求此法向量)\n\n由（1）可得  \\(\\overrightarrow{A_1B} = \\left( \\frac{\\sqrt{3}}{2}, \\frac{1}{2}, -\\sqrt{3} \\right)\\)，设平面  \\(A_1BC\\) 的法向量  \\(\\boldsymbol{m} = (x, y, z)\\)，则  \\(\\begin{cases} \\boldsymbol{m} \\cdot \\overrightarrow{A_1B} = \\frac{\\sqrt{3}}{2}x + \\frac{1}{2}y - \\sqrt{3}z = 0 \\\\ \\boldsymbol{m} \\cdot \\overrightarrow{BC} = -\\frac{\\sqrt{3}}{2}x + \\frac{1}{2}y = 0 \\end{cases}\\)，\n\n令  \\(x = 1\\)，则  \\(\\begin{cases} y = \\sqrt{3} \\\\ z = 1 \\end{cases}\\)，所以  \\(\\boldsymbol{m} = (1, \\sqrt{3}, 1)\\) 是平面  \\(A_1BC\\) 的一个法向量，设直线  \\(EF\\) 与平面  \\(A_1BC\\) 所成的角为  \\(\\theta\\)，\n\n则  \\(\\sin \\theta = \\left| \\cos < \\overrightarrow{EF}, \\boldsymbol{m} > \\right| = \\frac{\\left| \\overrightarrow{EF} \\cdot \\boldsymbol{m} \\right|}{\\left| \\overrightarrow{EF} \\right| \\cdot \\left| \\boldsymbol{m} \\right|} = \\frac{\\left| \\frac{\\sqrt{3}}{4} \\times 1 + \\frac{3}{4} \\times \\sqrt{3} + \\sqrt{3} \\times 1 \\right|}{\\sqrt{\\left( \\frac{\\sqrt{3}}{4} \\right)^2 + \\left( \\frac{3}{4} \\right)^2 + (\\sqrt{3})^2} \\times \\sqrt{1^2 + (\\sqrt{3})^2 + 1^2}} = \\frac{4}{5}\\)，\n\n所以直线  \\(EF\\) 与平面  \\(A_1BC\\) 所成角的余弦值  \\(\\cos \\theta = \\sqrt{1 - \\sin^2 \\theta} = \\sqrt{1 - \\left( \\frac{4}{5} \\right)^2} = \\frac{3}{5}\\)。\n\n解法2：（1）（EF和BC是异面直线，证异面直线垂直，常考虑找线面垂直，怎么找？若无思路，可尝试逆推假设EF⊥BC，条件还给出面 \\(AA_1C_1C\\)⊥面ABC，由此不难证明 \\(BC \\perp A_1E\\)，两者结合可得出BC⊥平面 \\(A_1EF\\)，故可通过证此线面垂直来证明 \\(EF \\perp BC\\)）\n\n如图2，连接 \\(A_1E\\)，因为 \\(A_1A = A_1C = AC\\)，且E为AC的中点，所以 \\(A_1E \\perp AC\\)，\n\n又平面 \\(AA_1C_1C \\perp\\)平面 \\(ABC\\)， \\(A_1E \\subset\\)平面 \\(AA_1C_1C\\)，平面 \\(AA_1C_1C \\cap\\)平面 \\(ABC = AC\\)，所以 \\(A_1E \\perp\\)平面 \\(ABC\\)，\n\n因为 \\(BC \\subset\\)平面 \\(ABC\\)，所以 \\(BC \\perp A_1E\\)，由题意， \\(\\angle ABC = 90^\\circ\\)，所以 \\(AB \\perp BC\\)，又 \\(A_1B_1 \\parallel AB\\)，所以 \\(BC \\perp A_1B_1\\)",
       "text_sha256": "b27fffb5d76c616d1474e91c6ae6c0fd4f53fa73c35940c2eb92e86ea30e3578",
       "image_refs": [
         {
           "ref": "imgs/img_in_image_box_828_184_1094_391.jpg",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_828_184_1094_391.jpg",
+          "path": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_828_184_1094_391.jpg",
           "exists": true
         }
       ],
@@ -86,23 +86,23 @@
     },
     {
       "ocr_doc": 58,
-      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_58.md",
+      "source_path": "data/ocr_live_current/first_chapter_69/doc_58.md",
       "text": "结合  \\(A_1B_1\\)， \\(A_1E \\subset\\) 平面  \\(A_1EF\\)， \\(A_1B_1 \\cap A_1E = A_1\\) 可得  \\(BC \\perp\\) 平面  \\(A_1EF\\)，因为  \\(EF \\subset\\) 平面  \\(A_1EF\\)，所以  \\(EF \\perp BC\\)。\n\n（2）（第（1）问已证  \\(BC \\perp\\) 面  \\(A_1EF\\)，故面  \\(A_1BC \\perp\\) 面  \\(A_1EF\\)，由此容易结合面面垂直的性质定理过  \\(E\\) 作面  \\(A_1BC\\) 的垂线，故也可考虑用几何法处理。要对面  \\(A_1BC \\perp\\) 面  \\(A_1EF\\) 用面面垂直的性质定理，需先找到交线，观察图形发现只要过  \\(E\\) 作  \\(A_1F\\) 的平行线，就能把面  \\(A_1EF\\) 扩大，从而看出它与面  \\(A_1BC\\) 的交线）\n\n如图2，取  \\(BC\\) 中点  \\(G\\)，连接  \\(EG\\)， \\(FG\\)，因为  \\(E\\) 为  \\(AC\\) 中点，所以  \\(EG \\parallel AB\\) 且  \\(EG = \\frac{1}{2}AB\\)，\n\n又  \\(F\\) 为  \\(A_1B_1\\) 中点，所以  \\(A_1F \\parallel AB\\) 且  \\(A_1F = \\frac{1}{2}AB\\)，从而  \\(A_1F \\parallel EG\\) 且  \\(A_1F = EG\\)，故  \\(A_1EG\\) 为平行四边形，\n\n由（1）知  \\(A_1E \\perp\\) 平面  \\(ABC\\)，又  \\(EG \\subset\\) 平面  \\(ABC\\)，所以  \\(A_1E \\perp EG\\)，故  \\(A_1EG\\) 为矩形，\n\n连接  \\(A_1G\\) 交  \\(EF\\) 于  \\(O\\)，过  \\(E\\) 作  \\(ES \\perp A_1G\\) 于点  \\(S\\)，由（1）知  \\(BC \\perp\\) 平面  \\(A_1EG\\)，又  \\(ES \\subset\\) 平面  \\(A_1EG\\)，\n\n所以  \\(ES \\perp BC\\)，结合  \\(ES \\perp A_1G\\)，且  \\(BC\\)， \\(A_1G \\subset\\) 平面  \\(A_1BC\\)， \\(BC \\cap A_1G = G\\) 可得  \\(ES \\perp\\) 平面  \\(A_1BC\\)，\n\n所以  \\(\\angle EOS\\) 即为直线  \\(EF\\) 与平面  \\(A_1BC\\) 所成角，\n\n（故只需求\\(\\cos\\angle EOS\\)，需要\\(OS\\)和\\(OE\\)的长，可到矩形\\(A_1EGF\\)中来分析几何关系，计算它们）\n\n不妨设\\(AA_1=A_1C=AC=2\\)，则\\(A_1E=\\sqrt{3}\\)，\\(AB=AC\\cdot\\cos\\angle BAC=2\\cos30^\\circ=\\sqrt{3}\\)，\\(EG=\\frac{1}{2}AB=\\frac{\\sqrt{3}}{2}\\)，\\(EF=A_1G=\\sqrt{A_1E^2+EG^2}=\\sqrt{(\\sqrt{3})^2+\\left(\\frac{\\sqrt{3}}{2}\\right)^2}=\\frac{\\sqrt{15}}{2}\\)，\\(OE=\\frac{1}{2}EF=\\frac{\\sqrt{15}}{4}\\)，\n\n由  \\(S_{\\triangle A_1EG} = \\frac{1}{2} A_1E \\cdot EG = \\frac{1}{2} A_1G \\cdot ES\\) 可得  \\(ES = \\frac{A_1E \\cdot EG}{A_1G} = \\frac{\\sqrt{3} \\times \\frac{\\sqrt{3}}{2}}{\\frac{\\sqrt{15}}{2}} = \\frac{\\sqrt{15}}{5}\\)，所以  \\(OS = \\sqrt{OE^2 - ES^2} = \\frac{3\\sqrt{3}}{4\\sqrt{5}}\\)，从而  \\(\\cos \\angle EOS = \\frac{OS}{OE} = \\frac{3}{5}\\)，故直线 EF 与平面  \\(A_1BC\\) 所成角的余弦值为  \\(\\frac{3}{5}\\)。\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_286_840_591_1047.jpg\" alt=\"Image\" width=\"25%\" /></div>\n\n\n<div style=\"text-align: center;\">图1</div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_635_843_905_1045.jpg\" alt=\"Image\" width=\"22%\" /></div>\n\n\n<div style=\"text-align: center;\">图2</div>\n\n\n【反思】在斜棱柱中，由于侧棱与底面不垂直，所以往往存在着一些顶点在另一底面上的射影不好找，导致这些点的坐标不好写（例如本题的 \\(B_1\\)），此时常不写这些点的坐标，而利用向量的共线以及线性运算直接求与之相关的向量的坐标，从而化繁为简（例如本题的 \\(\\overrightarrow{EF}\\)就是按 \\(\\overrightarrow{EF} = \\overrightarrow{EA_1} + \\frac{1}{2}\\overrightarrow{AB}\\)求出的，而不是通过写 \\(B_1\\)的坐标来得到 \\(F\\)的坐标，再求 \\(\\overrightarrow{EF}\\)的坐标）。若图形不是斜棱柱，不方便用上述方法解决点的坐标不好写的问题，又怎么办呢？我们来看下面的例3。\n\n【例3】如图，已知四棱锥 \\(P-ABCE\\)中， \\(AB=1\\)， \\(BC=2\\)， \\(BE=2\\sqrt{2}\\)， \\(PA\\perp\\)平面 \\(ABCE\\)，平面 \\(PAB\\perp\\)平面 \\(PBC\\)。\n\n\n\n（1）证明： \\(AB \\perp BC\\)\n\n（2）若  \\(PA = 2\\sqrt{2}\\)，且 AC = AE，G 为  \\(\\triangle PCE\\) 的重心，求直线 CG 与平面 PBC 所成角的正弦值.\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_925_1314_1093_1509.jpg\" alt=\"Image\" width=\"14%\" /></div>\n",
       "text_sha256": "ef3d0b0f1f918f6d2e43fcf15191930acee8b1a37e978de04140588be9197d52",
       "image_refs": [
         {
           "ref": "imgs/img_in_image_box_286_840_591_1047.jpg",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_286_840_591_1047.jpg",
+          "path": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_286_840_591_1047.jpg",
           "exists": true
         },
         {
           "ref": "imgs/img_in_image_box_635_843_905_1045.jpg",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_635_843_905_1045.jpg",
+          "path": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_635_843_905_1045.jpg",
           "exists": true
         },
         {
           "ref": "imgs/img_in_image_box_925_1314_1093_1509.jpg",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_925_1314_1093_1509.jpg",
+          "path": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_925_1314_1093_1509.jpg",
           "exists": true
         }
       ],
@@ -110,23 +110,23 @@
     },
     {
       "ocr_doc": 59,
-      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_59.md",
+      "source_path": "data/ocr_live_current/first_chapter_69/doc_59.md",
       "text": "解：（1）（证线线垂直，往往先找线面垂直，若无思路，可尝试逆推. 假设  \\(AB \\perp BC\\)，由  \\(PA \\perp\\) 平面  \\(ABCE\\) 可得出  \\(BC \\perp PA\\)，两者结合可得到  \\(BC \\perp\\) 面  \\(PAB\\)，故可通过证此线面垂直来证  \\(AB \\perp BC\\)）\n\n如图，作  \\(AD \\perp PB\\) 于  \\(D\\)，因为平面  \\(PAB \\perp\\) 平面  \\(PBC\\)， \\(AD \\subset\\) 平面  \\(PAB\\)，平面  \\(PAB \\cap\\) 平面  \\(PBC = PB\\)，\n\n所以  \\(AD \\perp\\) 平面  \\(PBC\\)，因为  \\(BC \\subset\\) 平面  \\(PBC\\)，所以  \\(BC \\perp AD\\) ①，\n\n又  \\(PA \\perp\\) 平面  \\(ABCE\\)， \\(BC \\subset\\) 平面  \\(ABCE\\)，所以  \\(BC \\perp PA\\) ②，\n\n由①②结合  \\(AD\\)， \\(PA \\subset\\) 平面  \\(PAB\\)， \\(AD \\cap PA = A\\) 可得  \\(BC \\perp\\) 平面  \\(PAB\\)，因为  \\(AB \\subset\\) 平面  \\(PAB\\)，所以  \\(AB \\perp BC\\)。\n\n（2）以 \\(B\\) 为原点建立如图所示的空间直角坐标系，则 \\(B(0,0,0)\\)，\\(C(2,0,0)\\)，\\(P(0,1,2\\sqrt{2})\\)，\n\n所以 \\(\\overrightarrow{BC} = (2,0,0)\\)，\\(\\overrightarrow{BP} = (0,1,2\\sqrt{2})\\)，设平面 \\(PBC\\) 的法向量为 \\(\\boldsymbol{m} = (x,y,z)\\)，则 \\(\\begin{cases} \\boldsymbol{m} \\cdot \\overrightarrow{BC} = 2x = 0 \\\\ \\boldsymbol{m} \\cdot \\overrightarrow{BP} = y + 2\\sqrt{2}z = 0 \\end{cases}\\)，\n\n令 \\(y = 2\\sqrt{2}\\)，则 \\(x = 0\\)，\\(z = -1\\)，所以 \\(\\boldsymbol{m} = (0,2\\sqrt{2},-1)\\) 是平面 \\(PBC\\) 的一个法向量，\n\n（还需 \\(G\\) 的坐标，\\(G\\) 为 \\(\\triangle PCE\\) 的重心，可由 \\(P, C, E\\) 的坐标求出，故先找 \\(E\\) 的坐标，怎么找？含 \\(E\\) 的条件是 \\(AC = AE\\) 和 \\(BE = 2\\sqrt{2}\\)，不易由此通过分析几何关系找 \\(E\\) 的坐标，可考虑直接设 \\(E\\) 的坐标，用它们建立关于所设坐标的方程组并求解）\n\n由图可知，\\(A(0,1,0)\\)，\\(AC = \\sqrt{AB^2 + BC^2} = \\sqrt{5}\\)，设 \\(E(a,b,0) (a > 0, b > 0)\\)，\n\n因为 \\(\\begin{cases} AC = AE \\\\ BE = 2\\sqrt{2} \\end{cases}\\)，所以 \\(\\begin{cases} \\sqrt{5} = \\sqrt{a^2 + (b-1)^2} \\\\ \\sqrt{a^2 + b^2} = 2\\sqrt{2} \\end{cases}\\)，解得：\\(\\begin{cases} a = 2 \\\\ b = 2 \\end{cases}\\)，故 \\(E(2,2,0)\\)，\n\n由重心坐标公式，\\(x_G = \\frac{x_P + x_C + x_E}{3} = \\frac{4}{3}\\)，\\(y_G = \\frac{y_P + y_C + y_E}{3} = 1\\)，\\(z_G = \\frac{z_P + z_C + z_E}{3} = \\frac{2\\sqrt{2}}{3}\\)，\n\n所以 \\(G\\left(\\frac{4}{3},1,\\frac{2\\sqrt{2}}{3}\\right)\\)，故 \\(\\overrightarrow{CG} = \\left(-\\frac{2}{3},1,\\frac{2\\sqrt{2}}{3}\\right)\\)，设直线 \\(CG\\) 与平面 \\(PBC\\) 所成的角为 \\(\\theta\\)，\n\n则 \\(\\sin \\theta = \\left|\\cos < \\boldsymbol{m}, \\overrightarrow{CG} > \\right| = \\frac{\\left|\\boldsymbol{m} \\cdot \\overrightarrow{CG}\\right|}{\\left|\\boldsymbol{m}\\right| \\cdot \\left|\\overrightarrow{CG}\\right|} = \\frac{4\\sqrt{42}}{63}\\)，所以直线 \\(CG\\) 与平面 \\(PBC\\) 所成角的正弦值为 \\(\\frac{4\\sqrt{42}}{63}\\)。\n\n\n\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_862_438_1089_659.jpg\" alt=\"Image\" width=\"19%\" /></div>\n\n\n【反思】①通过本题我们给出了另一种找不好写的点的坐标的思路，即当建系后有点坐标不好找且无法像上面例2解法1的处理方法那样回避时，可直接设该点的坐标，翻译已知的各种条件（本题是长度）建立方程组，求解所设坐标；②在空间中，若 \\(G\\)为 \\(\\triangle ABC\\)的重心，则点 \\(G\\)的坐标为 \\(\\left(\\frac{x_A+x_B+x_C}{3},\\frac{y_A+y_B+y_C}{3},\\frac{z_A+z_B+z_C}{3}\\right)\\)。\n\n## 类型III：利用空间向量解决立体几何综合题\n\n【例4】（2015·四川卷）如图，四边形ABCD和ADPQ均为正方形，它们所在的平面互相垂直，动点M在线段PQ上，E，F分别为AB，BC的中点.设异面直线EM与AF所成的角为 \\(\\theta\\)，则 \\(\\cos\\theta\\)的最大值为___.\n\n解析：图中本身就有  \\(AB\\)， \\(AD\\)， \\(AQ\\) 两两垂直，故可考虑建系，用向量法计算  \\(\\cos\\theta\\)，以  \\(A\\) 为原点建立如图所示的空间直角坐标系，设  \\(AB = 2\\)，则  \\(A(0,0,0)\\)， \\(F(2,1,0)\\)， \\(E(1,0,0)\\)，\n\nM是线段  \\(PQ\\) 上的动点，由图可知其坐标只有  \\(y\\) 分量会变，故可直接设坐标，设  \\(M(0,a,2)(0 \\leq a \\leq 2)\\)，则  \\(\\overrightarrow{EM} = (-1,a,2)\\)， \\(\\overrightarrow{AF} = (2,1,0)\\)，\n\n \\[\\cos\\theta=\\left|\\cos<\\overrightarrow{E M},\\overrightarrow{A F}>\\right|=\\frac{\\left|\\overrightarrow{E M}\\cdot\\overrightarrow{A F}\\right|}{\\left|\\overrightarrow{E M}\\right|\\cdot\\left|\\overrightarrow{A F}\\right|}=\\frac{\\left|-2+a\\right|}{\\sqrt{a^{2}+5}\\cdot\\sqrt{5}}=\\frac{2-a}{\\sqrt{5(a^{2}+5)}}\\] \n\n上式结构较复杂，怎样分析其最大值？仔细观察会发现当 \\(0 \\leq a \\leq 2\\)时，分子和分母都非负，且二者都是单调的，故可尝试直接分析单调性，看能否得出最大值，\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_897_1046_1093_1254.jpg\" alt=\"Image\" width=\"16%\" /></div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_896_1278_1093_1526.jpg\" alt=\"Image\" width=\"16%\" /></div>\n",
       "text_sha256": "0446f4055f6ac9af1fee8e582852654654b54b74a1c043cae4e7e59af3b8a1dd",
       "image_refs": [
         {
           "ref": "imgs/img_in_image_box_862_438_1089_659.jpg",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_862_438_1089_659.jpg",
+          "path": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_862_438_1089_659.jpg",
           "exists": true
         },
         {
           "ref": "imgs/img_in_image_box_897_1046_1093_1254.jpg",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_897_1046_1093_1254.jpg",
+          "path": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_897_1046_1093_1254.jpg",
           "exists": true
         },
         {
           "ref": "imgs/img_in_image_box_896_1278_1093_1526.jpg",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_896_1278_1093_1526.jpg",
+          "path": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_896_1278_1093_1526.jpg",
           "exists": true
         }
       ],
@@ -134,18 +134,18 @@
     },
     {
       "ocr_doc": 60,
-      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_60.md",
+      "source_path": "data/ocr_live_current/first_chapter_69/doc_60.md",
       "text": "当\\(0 \\leq a \\leq 2\\)时，\\(2 - a \\geq 0\\)，\\(\\sqrt{5(a^2 + 5)} > 0\\)，且若\\(a\\)增大，则\\(2 - a\\)减小，\\(\\sqrt{5(a^2 + 5)}\\)增大，所以\\(\\cos \\theta = \\frac{2 - a}{\\sqrt{5(a^2 + 5)}}\\)}减小，故当\\(a = 0\\)时，\\(\\cos \\theta\\)取得最大值\\(\\frac{2}{5}\\)。\n\n答案：\\(\\frac{2}{5}\\)\n\n【反思】在立体几何的小题中，一般首先考虑几何法，但若几何法较难，则也可以考虑建系，用向量法解决问题。在一些综合性问题中，向量法具有思维量小、流程化操作的特点，可以作为几何法以外的兜底方案。\n\n【例5】（多选）在棱长为1的正方体\\(ABCD-A_1B_1C_1D_1\\)中，\\(P\\)为棱\\(BB_1\\)上一点，且\\(B_1P=2PB\\)，\\(Q\\)为正方形\\(BB_1C_1C\\)内一动点（含边界），则下列说法正确的是（ ）\n\nA. 若\\(D_1Q\\parallel\\)平面\\(A_1PD\\)，则动点\\(Q\\)的轨迹是一条长为\\(\\frac{2\\sqrt{2}}{3}\\)的线段\n\nB. 存在点\\(Q\\)，使得\\(D_1Q\\perp\\)平面\\(A_1PD\\)\n\nC. 三棱锥\\(Q-A_1PD\\)的最大体积为\\(\\frac{5}{18}\\)\n\nD. 若\\(D_1Q=\\frac{\\sqrt{6}}{2}\\)，且\\(D_1Q\\)与平面\\(A_1PD\\)所成的角为\\(\\theta\\)，则\\(\\sin\\theta\\)的最大值为\\(\\frac{\\sqrt{33}}{33}\\)\n\n解析：A 项， \\(D_1Q \\parallel\\) 平面  \\(A_1PD\\) 意味着  \\(D_1Q\\) 在过  \\(D_1\\) 且与平面  \\(A_1PD\\) 平行的平面内，故要找点  \\(Q\\) 的轨迹，只需作出该平面，再看它与正方形  \\(BB_1C_1C\\) 的交线，\n\n如图 1，过  \\(D_1\\) 作  \\(A_1P\\) 的平行线交  \\(CC_1\\) 于点  \\(G\\)，则由  \\(B_1P = 2PB\\) 可知  \\(C_1G = 2GC\\)，\n\n在正方体中， \\(B_1C \\parallel A_1D\\)，过  \\(G\\) 作  \\(B_1C\\) 的平行线交  \\(B_1C_1\\) 于点  \\(H\\)，则  \\(GH \\parallel A_1D\\)，\n\n结合  \\(D_1G \\parallel A_1P\\) 可得平面  \\(D_1GH \\parallel\\) 平面  \\(A_1PD\\)，所以当  \\(Q\\) 在线段  \\(HG\\) 上运动时， \\(D_1Q \\parallel\\) 平面  \\(A_1PD\\)，\n\n由图 1 可知  \\(\\triangle C_1HG \\sim \\triangle C_1B_1C\\)，所以  \\(\\frac{HG}{B_1C} = \\frac{C_1H}{C_1B_1} = \\frac{2}{3}\\)，从而  \\(HG = \\frac{2}{3}CB_1 = \\frac{2\\sqrt{2}}{3}\\)，\n\n故点  \\(Q\\) 的轨迹是一条长为  \\(\\frac{2\\sqrt{2}}{3}\\) 的线段，故 A 项正确；\n\nB 项， \\(D_1Q \\perp\\) 平面  \\(A_1PD\\) 可翻译为  \\(\\overrightarrow{D_1Q}\\) 与该平面的法向量平行，故可考虑建系处理，\n\n如图 2 建系，则  \\(A_1(1,0,1)\\)， \\(D(0,0,0)\\)， \\(P\\left(1,1,\\frac{1}{2}\\right)\\)， \\(D_1(0,0,1)\\)，设  \\(Q(a,1,b)\\)，其中  \\(0 \\leq a \\leq 1\\)， \\(0 \\leq b \\leq 1\\)，\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_354_1183_540_1353.jpg\" alt=\"Image\" width=\"15%\" /></div>\n\n\n<div style=\"text-align: center;\">图1</div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_610_1164_835_1356.jpg\" alt=\"Image\" width=\"18%\" /></div>\n\n\n<div style=\"text-align: center;\">图2</div>\n\n\n \\(\\overrightarrow{DA_1} = (1, 0, 1)\\)， \\(\\overrightarrow{DP} = \\left(1, 1, \\frac{1}{3}\\right)\\)， \\(\\overrightarrow{D_1Q} = (a, 1, b-1)\\)，设平面  \\(A_1PD\\) 的法向量为  \\(\\boldsymbol{m} = (x, y, z)\\)，\n\n则 \\(\\begin{cases} \\boldsymbol{m} \\cdot \\overrightarrow{DA_1} = x + z = 0 \\\\ \\boldsymbol{m} \\cdot \\overrightarrow{DP} = x + y + \\frac{1}{3}z = 0 \\end{cases}\\)，令x=3，则y=-2，z=-3，所以 \\(\\boldsymbol{m} = (3, -2, -3)\\)是平面 \\(A_1PD\\)的一个法向量，",
       "text_sha256": "61298553376e8989b73c8eb8d4b000cb865a36c3777d6d1e5b6e3bb65f0c36e0",
       "image_refs": [
         {
           "ref": "imgs/img_in_image_box_354_1183_540_1353.jpg",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_354_1183_540_1353.jpg",
+          "path": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_354_1183_540_1353.jpg",
           "exists": true
         },
         {
           "ref": "imgs/img_in_image_box_610_1164_835_1356.jpg",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_610_1164_835_1356.jpg",
+          "path": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_610_1164_835_1356.jpg",
           "exists": true
         }
       ],
@@ -153,7 +153,7 @@
     },
     {
       "ocr_doc": 61,
-      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_61.md",
+      "source_path": "data/ocr_live_current/first_chapter_69/doc_61.md",
       "text": "\\(D_1Q \\perp\\) 平面 \\(A_1PD\\) 等价于 \\(\\overrightarrow{DQ} // m\\)，即存在常数 \\(\\lambda\\) 使 \\(\\overrightarrow{DQ} = \\lambda m\\)，也即 \\(\\begin{cases} a = 3\\lambda \\\\ 1 = -2\\lambda \\\\ b - 1 = -3\\lambda \\end{cases}\\)，解得：\\(a = -\\frac{3}{2}\\)，\\(b = \\frac{5}{2}\\)，\n\n不满足 \\(0 \\leq a \\leq 1\\)，\\(0 \\leq b \\leq 1\\)，所以不存在点 \\(Q\\) 使 \\(D_1Q \\perp\\) 平面 \\(A_1PD\\)，故 B 项错误；\n\nC 项，\\(\\triangle A_1PD\\) 不变，要使 \\(V_{Q-APD}\\) 最大，只需点 \\(Q\\) 到平面 \\(A_1PD\\) 的距离最大，下面先用向量法求该距离，再分析最值，由 B 项的分析过程可知 \\(\\overrightarrow{DQ} = (a, 1, b)\\)，\\(m = (3, -2, -3)\\) 是平面 \\(A_1PD\\) 的一个法向量，\n\n所以点 \\(Q\\) 到平面 \\(A_1PD\\) 的距离 \\(d = \\frac{|\\overrightarrow{DQ} \\cdot m|}{|\\boldsymbol{m}|} = \\frac{|a \\times 3 + 1 \\times (-2) + b \\times (-3)|}{\\sqrt{3^2 + (-2)^2 + (-3)^2}} = \\frac{|3(a - b) - 2|}{\\sqrt{22}}\\)，\n\n因为 \\(a, b \\in [0,1]\\)，所以 \\(-1 \\leq a - b \\leq 1\\)，从而 \\(-5 \\leq 3(a - b) - 2 \\leq 1\\)，故 \\(d_{\\max} = \\frac{|-5|}{\\sqrt{22}} = \\frac{5}{\\sqrt{22}}\\)，\n\n再算 \\(S_{\\triangle APD}\\)，已有 \\(\\overrightarrow{DA_1}\\) 和 \\(\\overrightarrow{DP}\\) 的坐标，故可通过求模得到两边长，用夹角余弦公式求得夹角，进而算 \\(S_{\\triangle APD}\\)，\n\n\\(DA_1 = |\\overrightarrow{DA_1}| = \\sqrt{1^2 + 1^2} = \\sqrt{2}\\)，\\(DP = |\\overrightarrow{DP}| = \\sqrt{1^2 + 1^2 + \\left(\\frac{1}{3}\\right)^2} = \\frac{\\sqrt{19}}{3}\\)，\\(\\cos \\angle A_1DP = \\cos \\langle \\overrightarrow{DA_1}, \\overrightarrow{DP} \\rangle = \\frac{\\overrightarrow{DA_1} \\cdot \\overrightarrow{DP}}{|\\overrightarrow{DA_1}| \\cdot |\\overrightarrow{DP}|}\\)\n\n\\(= \\frac{1 \\times 1 + 0 \\times 1 + 1 \\times \\frac{1}{3}}{\\sqrt{2} \\times \\frac{\\sqrt{19}}{3}} = \\frac{2\\sqrt{2}}{\\sqrt{19}}\\)，所以 \\(\\sin \\angle A_1DP = \\sqrt{1 - \\cos^2 \\angle A_1DP} = \\frac{\\sqrt{11}}{\\sqrt{19}}\\)，故 \\(S_{\\triangle A_1PD} = \\frac{1}{2} DA_1 \\cdot DP \\cdot \\sin \\angle A_1DP\\)\n\n\\(= \\frac{1}{2} \\times \\sqrt{2} \\times \\frac{\\sqrt{19}}{3} \\times \\frac{\\sqrt{11}}{\\sqrt{19}} = \\frac{\\sqrt{22}}{6}\\)，所以 \\((V_{Q-APD})_{\\max} = \\frac{1}{3} S_{\\triangle A_1PD} \\cdot d_{\\max} = \\frac{1}{3} \\times \\frac{\\sqrt{22}}{6} \\times \\frac{5}{\\sqrt{22}} = \\frac{5}{18}\\)，故 C 项正确；\n\nD 项，已有 \\(\\overrightarrow{DQ}\\) 和平面 \\(A_1PD\\) 法向量的坐标，可直接计算 \\(\\sin \\theta\\)，由前面的分析过程可知，\\(\\sin \\theta = |\\cos < m, \\overrightarrow{DQ} >|\\)\n\n\\(= \\frac{|\\boldsymbol{m} \\cdot \\overrightarrow{D_1Q}|}{|\\boldsymbol{m}| \\cdot |\\overrightarrow{D_1Q}|} = \\frac{|3 \\times a + (-2) \\times 1 + (-3) \\times (b - 1)|}{\\sqrt{22} \\times \\sqrt{a^2 + 1^2 + (b - 1)^2}} = \\frac{|3(a - b) + 1|}{\\sqrt{22} \\times \\sqrt{a^2 + (b - 1)^2} + 1}\\) ①，\n\n上式中有 \\(a, b\\) 两个变量，求最值前应先消元，还有 \\(D_1Q = \\frac{\\sqrt{6}}{2}\\) 没有翻译，故先翻译它，再看如何消元，\n\n因为 \\(D_1Q = \\sqrt{a^2 + 1^2 + (b - 1)^2} = \\frac{\\sqrt{6}}{2}\\)，所以式①即为 \\(\\sin \\theta = \\frac{|3(a - b) + 1|}{\\sqrt{22} \\times \\frac{\\sqrt{6}}{2}} = \\frac{|3(a - b) + 1|}{\\sqrt{33}}\\)，且 \\(a^2 + (b - 1)^2 = \\frac{1}{2}\\) ②，\n\n故核心是由式②求 \\(|3(a - b) + 1|_{\\max}\\)，不易由式②反解出 \\(a\\) 或 \\(b\\)，再代入 \\(|3(a - b) + 1|\\) 消元，怎么办呢？由式②的平方和为常数结构可联想到 \\(\\cos^2 \\alpha + \\sin^2 \\alpha = 1\\)，由此进行三角换元，可将变量统一成 \\(\\alpha\\)，但式②的右边不是常数 \\(1\\)，怎么办呢？可先将其变形成 \\((\\sqrt{2}a)^2 + (\\sqrt{2}b - \\sqrt{2})^2 = 1\\)，再把 \\(\\sqrt{2}a\\) 和 \\(\\sqrt{2}b - \\sqrt{2}\\) 分别换成 \\(\\cos \\alpha\\) 和 \\(\\sin \\alpha\\) 即可，\n\n设 \\(\\begin{cases} a = \\frac{\\sqrt{2}}{2} \\cos \\alpha \\\\ b = 1 + \\frac{\\sqrt{2}}{2} \\sin \\alpha \\end{cases}\\)，则 \\(3(a - b) + 1 = 3\\left(\\frac{\\sqrt{2}}{2} \\cos \\alpha - 1 - \\frac{\\sqrt{2}}{2} \\sin \\alpha\\right) + 1 = 3\\left[\\cos\\left(\\alpha + \\frac{\\pi}{4}\\right) - 1\\right] + 1 = 3\\cos\\left(\\alpha + \\frac{\\pi}{4}\\right) - 2\\)，\n\n求上式的最值需要先分析 \\(\\alpha\\) 的范围，怎样分析？可结合 \\(0 \\leq a \\leq 1\\) 和 \\(0 \\leq b \\leq 1\\) 来看，\n\n由 \\(\\begin{cases} 0 \\leq a \\leq 1 \\\\ 0 \\leq b \\leq 1 \\end{cases}\\) 可得 \\(\\begin{cases} 0 \\leq \\frac{\\sqrt{2}}{2} \\cos \\alpha \\leq 1 \\\\ 0 \\leq 1 + \\frac{\\sqrt{2}}{2} \\sin \\alpha \\leq 1 \\end{cases}\\)，所以 \\(\\begin{cases} 0 \\leq \\cos \\alpha \\leq \\sqrt{2} \\\\ -\\sqrt{2} \\leq \\sin \\alpha \\leq 0 \\end{cases}\\)，即 \\(\\begin{cases} \\cos \\alpha \\geq 0 \\\\ \\sin \\alpha \\leq 0 \\end{cases}\\)，故不妨取 \\(\\alpha \\in \\left[-\\frac{\\pi}{2}, 0\\right]\\)，\n\n此时 \\(\\alpha + \\frac{\\pi}{2} \\in \\left[-\\frac{\\pi}{4}, \\frac{\\pi}{7}\\right]\\)，所以 \\(\\cos\\left(\\alpha + \\frac{\\pi}{4}\\right) \\in \\left[\\frac{\\sqrt{2}}{2}, 1\\right]\\)，故 \\(3(a - b) + 1 = 3\\cos\\left(\\alpha + \\frac{\\pi}{4}\\right) - 2 \\in \\left[\\frac{3\\sqrt{2}}{2} - 2, 1\\right]\\)，\n\n求上式的最值需要先分析\\(\\alpha\\)的范围，怎样分析？可结合\\(0\\leq a\\leq1\\)和\\(0\\leq b\\leq1\\)来看，\n\n由\\(\\begin{cases}0\\leq a\\leq1\\\\0\\leq b\\leq1\\end{cases}\\)可得\\(\\begin{cases}0\\leq\\frac{\\sqrt{2}}{2}\\cos\\alpha\\leq1\\\\0\\leq1+\\frac{\\sqrt{2}}{2}\\sin\\alpha\\leq1\\end{cases}\\)，所以\\(\\begin{cases}0\\leq\\cos\\alpha\\leq\\sqrt{2}\\\\-\\sqrt{2}\\leq\\sin\\alpha\\leq0\\end{cases}\\)，即\\(\\begin{cases}\\cos\\alpha\\geq0\\\\\\sin\\alpha\\leq0\\end{cases}\\)，故不妨取\\(\\alpha\\in\\left[-\\frac{\\pi}{2},0\\right]\\)，\n\n此时\\(\\alpha+\\frac{\\pi}{4}\\in\\left[-\\frac{\\pi}{4},\\frac{\\pi}{4}\\right]\\)，所以\\(\\cos\\left(\\alpha+\\frac{\\pi}{4}\\right)\\in\\left[\\frac{\\sqrt{2}}{2},1\\right]\\)，故\\(3(a-b)+1=3\\cos\\left(\\alpha+\\frac{\\pi}{4}\\right)-2\\in\\left[\\frac{3\\sqrt{2}}{2}-2,1\\right]\\)，\n\n所以\\(|3(a-b)+1|_{\\max}=1\\)，结合\\(\\sin\\theta=\\frac{|3(a-b)+1|}{\\sqrt{33}}\\)可得\\((\\sin\\theta)_{\\max}=\\frac{1}{\\sqrt{33}}=\\frac{\\sqrt{33}}{33}\\)，故D项正确。",
       "text_sha256": "3c5f39fafbe462929c43aa85a6c932fb37f6eb998fb9c1905ae0b3a65271d9be",
       "image_refs": [],
@@ -161,23 +161,23 @@
     },
     {
       "ocr_doc": 62,
-      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_62.md",
+      "source_path": "data/ocr_live_current/first_chapter_69/doc_62.md",
       "text": "答案：ACD\n\n【反思】遇到平方和为常数的双变量式子  \\([f(a)]^2 + [g(b)]^2 = M^2\\)，可尝试将其变形成  \\(\\left[\\frac{f(a)}{M}\\right]^2 + \\left[\\frac{g(b)}{M}\\right]^2 = 1\\)，再令  \\(\\frac{f(a)}{M} = \\cos\\alpha\\)， \\(\\frac{g(b)}{M} = \\sin\\alpha\\)，若由此二式能反解出  \\(a\\) 和  \\(b\\)，就能将变量统一成  \\(\\alpha\\)，便于后续分析。\n\n## 类型IV：动态二面角问题中的三角方法\n\n【例 6】（2012·浙江卷）已知矩形  \\(ABCD\\) 中， \\(AB=1\\)， \\(BC=\\sqrt{2}\\)，将  \\(\\triangle ABD\\) 沿对角线  \\(BD\\) 所在的直线翻折，在翻折过程中（ ）\n\nA. 存在某个位置，使得直线  \\(AC\\) 与直线  \\(BD\\) 垂直\n\nB. 存在某个位置，使得直线  \\(AB\\) 与直线  \\(CD\\) 垂直\n\nC. 存在某个位置，使得直线  \\(AD\\) 与直线  \\(BC\\) 垂直\n\nD. 对任意位置，直线 “ \\(AC\\) 与  \\(BD\\)”，“ \\(AB\\) 与  \\(CD\\)”，“ \\(AD\\) 与  \\(BC\\)” 均不垂直\n\n解：由角  \\(A-BD-C\\) 的大小确定，故先作出该二面角的平面角，再作观察，\n\n如图1，在矩形  \\(ABCD\\) 中，过  \\(A\\) 作  \\(AE \\perp BD\\) 于  \\(O\\) 交  \\(BC\\) 于  \\(E\\)，由题意， \\(BD = \\sqrt{3}\\)，\n\n由  \\(S_{\\triangle ABD} = \\frac{1}{2}AB \\cdot AD = \\frac{1}{2}BD \\cdot AO\\) 可得  \\(AO = \\frac{AB \\cdot AD}{BD} = \\frac{\\sqrt{6}}{3}\\)，所以  \\(BO = \\sqrt{AB^2 - AO^2} = \\frac{\\sqrt{3}}{3} = \\frac{1}{3}BD\\)，\n\n故  \\(O\\) 为  \\(BD\\) 的一个三等分点， \\(OD = \\frac{2\\sqrt{3}}{3}\\)，在如图2所示的三棱锥  \\(A-BCD\\) 中， \\(BD \\perp OA\\)， \\(BD \\perp OE\\)，\n\n所以  \\(BD \\perp\\) 平面  \\(AOE\\)，怎样建系比较方便？观察图2可发现，核心是要让点  \\(A\\) 的坐标好写，注意到点  \\(A\\) 的位置\n\n由  \\(\\angle AOE\\) 确定，故可考虑以  \\(O\\) 为原点建系，并设  \\(\\angle AOE\\) 为变量，用该变量表示点  \\(A\\) 的坐标，\n\n以  \\(O\\) 为原点建立如图2所示的空间直角坐标系，设  \\(\\angle AOE = \\theta\\)，其中  \\(0^\\circ \\leq \\theta < 180^\\circ\\)，\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_198_966_392_1111.jpg\" alt=\"Image\" width=\"16%\" /></div>\n\n\n<div style=\"text-align: center;\">图1</div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_461_956_724_1114.jpg\" alt=\"Image\" width=\"22%\" /></div>\n\n\n<div style=\"text-align: center;\">图2</div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_769_962_992_1123.jpg\" alt=\"Image\" width=\"18%\" /></div>\n\n\n<div style=\"text-align: center;\">图3</div>\n\n\n为了找到点  \\(A\\) 的坐标，需先作  \\(A\\) 在平面  \\(BCD\\) 内的射影，再分析几何关系。方便起见，先看  \\(\\theta\\) 为锐角的情形当  \\(\\theta\\) 为锐角时，如图2，作  \\(AI \\perp OE\\) 于点  \\(I\\)，由  \\(BD \\perp\\) 平面  \\(AOE\\) 可知， \\(AI \\perp BD\\)，所以  \\(AI \\perp\\) 平面  \\(BCD\\)，在  \\(\\triangle AOI\\) 中， \\(OI = AO \\cdot \\cos \\angle AOI = \\frac{\\sqrt{6}}{3} \\cos \\theta\\)， \\(AI = AO \\cdot \\sin \\angle AOI = \\frac{\\sqrt{6}}{3} \\sin \\theta\\)，所以  \\(A\\left(0, \\frac{\\sqrt{6}}{3} \\cos \\theta, \\frac{\\sqrt{6}}{3} \\sin \\theta\\right)\\)，可以想象，上述点  \\(A\\) 的坐标对  \\(\\theta = 0^\\circ\\) 或  \\(\\theta\\) 为直角、钝角时也成立，于是所有情况下点  \\(A\\) 的坐标就都有了，由图2和图3可知， \\(B\\left(\\frac{\\sqrt{3}}{3}, 0, 0\\right)\\)， \\(C\\left(-\\frac{\\sqrt{3}}{3}, \\frac{\\sqrt{6}}{3}, 0\\right)\\)， \\(D\\left(-\\frac{2\\sqrt{3}}{3}, 0, 0\\right)\\)，\n\n需要的点的坐标都有了，下面来看选项，四个选项均涉及线线垂直，可用数量积来翻译。\n\nA 项， \\(\\overrightarrow{AC}=\\left(-\\frac{\\sqrt{3}}{3},\\frac{\\sqrt{6}}{3}(1-\\cos\\theta),-\\frac{\\sqrt{6}}{3}\\sin\\theta\\right)\\)， \\(\\overrightarrow{BD}=(-\\sqrt{3},0,0)\\)，所以  \\(\\overrightarrow{AC}\\cdot\\overrightarrow{BD}=1\\neq0\\)，\n\n从而直线 AC 与直线 BD 始终不垂直，故 A 项错误；",
       "text_sha256": "2e998b6a69f157662ad3c891fc56c93d2b6f5597c5007bb89ff495cf9d83780b",
       "image_refs": [
         {
           "ref": "imgs/img_in_image_box_198_966_392_1111.jpg",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_198_966_392_1111.jpg",
+          "path": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_198_966_392_1111.jpg",
           "exists": true
         },
         {
           "ref": "imgs/img_in_image_box_461_956_724_1114.jpg",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_461_956_724_1114.jpg",
+          "path": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_461_956_724_1114.jpg",
           "exists": true
         },
         {
           "ref": "imgs/img_in_image_box_769_962_992_1123.jpg",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_769_962_992_1123.jpg",
+          "path": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_769_962_992_1123.jpg",
           "exists": true
         }
       ],
@@ -185,13 +185,13 @@
     },
     {
       "ocr_doc": 63,
-      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_63.md",
+      "source_path": "data/ocr_live_current/first_chapter_69/doc_63.md",
       "text": "B 项， \\(\\overrightarrow{AB}=\\left(\\frac{\\sqrt{3}}{3},-\\frac{\\sqrt{6}}{3}\\cos\\theta,-\\frac{\\sqrt{6}}{3}\\sin\\theta\\right)\\)， \\(\\overrightarrow{CD}=\\left(-\\frac{\\sqrt{3}}{3},-\\frac{\\sqrt{6}}{3},0\\right)\\)，所以  \\(\\overrightarrow{AB}\\cdot\\overrightarrow{CD}=\\frac{2\\cos\\theta-1}{3}\\)，\n\n从而当  \\(\\theta=60^\\circ\\) 时， \\(\\overrightarrow{AB}\\cdot\\overrightarrow{CD}=0\\)，此时  \\(AB\\perp CD\\)，故 B 项正确；\n\nC 项， \\(\\overrightarrow{AD}=\\left(-\\frac{2\\sqrt{3}}{3},-\\frac{\\sqrt{6}}{3}\\cos\\theta,-\\frac{\\sqrt{6}}{3}\\sin\\theta\\right)\\)， \\(\\overrightarrow{BC}=\\left(-\\frac{2\\sqrt{3}}{3},\\frac{\\sqrt{6}}{3},0\\right)\\)，所以  \\(\\overrightarrow{AD}\\cdot\\overrightarrow{BC}=\\frac{2(2-\\cos\\theta)}{3}>0\\)，\n\n从而直线  \\(AD\\) 与直线  \\(BC\\) 始终不垂直，故 C 项错误；\n\nD 项，由前面的分析过程可知 D 项错误，故选 B.\n\n答案：B\n\n【反思】作出二面角的平面角，并将其设为变量，再以该角的顶点为原点建系，从而把动点坐标表示成关于所设变量的三角形式，参与后续运算，这是动态二面角问题的常用处理方法，此法大题小题都能用，我们再来看一个例题.\n\n【例 7】正方形 ABCD 的边长为 2，E，F 分别为边 AD，BC 的中点，M 为线段 EF 的中点，将正方形 ABCD 沿 EF 折起，得到如图所示的二面角 A-EF-D.\n\n（1）直线 AM 与平面 BCF 相交于点 O，试确定点 O 的位置，并证明 OC∥平面 BDM;\n\n\n\n（2）若平面 BDM 与平面 BCM 所成的锐二面角的余弦值为  \\(\\frac{1}{3}\\)，求二面\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_843_601_1092_758.jpg\" alt=\"Image\" width=\"20%\" /></div>\n\n\n角 A-EF-D 的大小.\n\n解：（1）（观察发现 AM 和 BF 是平面 ABFE 内的相交直线，故它们的交点就是直线 AM 与平面 BCF 的交点，于是把 AM 和 BF 延长，再作分析）如图，延长 AM 和 BF 交于点 O，则点 O 即为直线 AM 与平面 BCF 的交点，由题意，MF∥AB，且 AB = 2MF，所以 MF 是 △OAB 的中位线，故 OF = BF = 1，OM = AM，\n\n（怎样证 OC∥平面 BDM？证线面平行，先找线线平行，怎么找？若无思路，可尝试逆推。假设 OC∥平面 BDM，则如图，由线面平行的性质定理，OC∥GM，故可通过证明 OC∥GM 来证 OC∥平面 BDM，已有 M 为 OA 的中点，于是只需证 G 为 AC 的中点）因为折叠前 E，F 分别是 AD，BC 的中点，所以 AB，EF，CD 平行且相等，折叠后，AB∥EF 且 AB = EF，CD∥EF 且 CD = EF，所以 AB∥CD 且 AB = CD，故四边形 ABCD 是平行四边形，连接 AC 交 BD 于点 G，则 G 为 AC 中点，又 M 是 OA 中点，所以 GM∥OC，中点可知 OC⊂平面 BDM，GM = 平面 BDM，所以 OC∥平面 BDM。\n\n又 M 是 OA 中点，所以 GM∥OC，由图可知 OC ⊂ 平面 BDM，GM ⊂ 平面 BDM，所以 OC∥平面 BDM.\n\n（2）（观察发现 ∠AED 是二面角 A−EF−D 的平面角，只要设出该角，就能方便地以 E 为原点建系，写出有关点的坐标，故按此处理，用向量法翻译条件所给的锐二面角的余弦值，建立方程求所设二面角的大小）\n\n由题意可知，EF ⊥ AE，EF ⊥ DE，所以 ∠AED 是二面角 A−EF−D 的平面角，\n\n以 \\(E\\) 为原点建立如图所示的空间直角坐标系，设 \\(\\angle AED = \\theta (0 < \\theta < \\pi)\\)，则 \\(D(\\cos \\theta, 0, \\sin \\theta)\\)，\\(M(0, 1, 0)\\)，\\(B(1, 2, 0)\\)，\\(C(\\cos \\theta, 2, \\sin \\theta)\\)，所以 \\(\\overrightarrow{MD} = (\\cos \\theta, -1, \\sin \\theta)\\)，\\(\\overrightarrow{MB} = (1, 1, 0)\\)，\\(\\overrightarrow{MC} = (\\cos \\theta, 1, \\sin \\theta)\\)，\n\n \\[\\boldsymbol{m}=(x_{1},y_{1},z_{1})\\] \n\n \\[\\boldsymbol{n}=(x_{2},y_{2},z_{2})\\] \n\n则\\(\\begin{cases} \\boldsymbol{m} \\cdot \\overrightarrow{MD} = x_1 \\cos \\theta - y_1 + z_1 \\sin \\theta = 0 \\textcircled{1} \\\\ \\boldsymbol{m} \\cdot \\overrightarrow{MB} = x_1 + y_1 = 0 \\textcircled{2} \\end{cases}\\)，（怎样由此求 \\(m\\) 的坐标？由式②不妨先令 \\(x_1 = 1\\)，则 \\(y_1 = -1\\)，代入①得 \\(z_1 = \\frac{-\\cos \\theta - 1}{\\sin \\theta}\\)，于是 \\(m = \\left(1, -1, \\frac{-\\cos \\theta - 1}{\\sin \\theta}\\right)\\)，为了后续计算方便，我们将各分量同时乘以 \\(\\sin \\theta\\)，去掉分母）令 \\(x_1 = \\sin \\theta\\)，则 \\(y_1 = -\\sin \\theta\\)，\\(z_1 = -\\cos \\theta - 1\\)，所以 \\(m = (\\sin \\theta, -\\sin \\theta, -\\cos \\theta - 1)\\) 是平面 \\(BDM\\) 的一个法向量，",
       "text_sha256": "d996b015f6307f71cb7f72216cbb871869e1164f4ea9a0f8b012c6c51ee79259",
       "image_refs": [
         {
           "ref": "imgs/img_in_image_box_843_601_1092_758.jpg",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_843_601_1092_758.jpg",
+          "path": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_843_601_1092_758.jpg",
           "exists": true
         }
       ],
@@ -199,18 +199,18 @@
     },
     {
       "ocr_doc": 64,
-      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_64.md",
+      "source_path": "data/ocr_live_current/first_chapter_69/doc_64.md",
       "text": "同理， \\(\\begin{cases} \\boldsymbol{n} \\cdot \\overrightarrow{MB} = x_2 + y_2 = 0 \\\\ \\boldsymbol{n} \\cdot \\overrightarrow{MC} = x_2 \\cos \\theta + y_2 + z_2 \\sin \\theta = 0 \\end{cases}\\)，\n\n令  \\(x_{2}=\\sin\\theta\\)，则  \\(y_{2}=-\\sin\\theta\\)， \\(z_{2}=1-\\cos\\theta\\)，\n\n所以  \\(\\boldsymbol{n} = (\\sin\\theta, -\\sin\\theta, 1 - \\cos\\theta)\\) 是平面 BCM 的一个法向量，\n\n \\[\\begin{aligned}& 故 \\left|\\cos<\\boldsymbol{m},\\boldsymbol{n}>\\right|=\\frac{\\left|\\boldsymbol{m}\\cdot\\boldsymbol{n}\\right|}{\\left|\\boldsymbol{m}\\right|\\cdot\\left|\\boldsymbol{n}\\right|}=\\frac{\\left|\\sin^{2}\\theta+(-\\sin\\theta)^{2}+(-\\cos\\theta-1)(1-\\cos\\theta)\\right|}{\\sqrt{2\\sin^{2}\\theta+(-\\cos\\theta-1)^{2}}\\cdot\\sqrt{2\\sin^{2}\\theta+(1-\\cos\\theta)^{2}}}\\\\ &=\\frac{\\left|2\\sin^{2}\\theta+\\cos^{2}\\theta-1\\right|}{\\sqrt{2\\sin^{2}\\theta+\\cos^{2}\\theta+2\\cos\\theta+1}\\cdot\\sqrt{2\\sin^{2}\\theta+\\cos^{2}\\theta-2\\cos\\theta+1}}=\\frac{1}{\\sqrt{(\\sin^{2}\\theta+2}}\\\\ &\\\\ &=\\frac{\\sin^{2}\\theta}{\\sqrt{(\\sin^{2}\\theta+2)^{2}-4\\cos^{2}\\theta}}=\\frac{\\sin^{2}\\theta}{\\sqrt{\\sin^{4}\\theta+4\\sin^{2}\\theta+4-4\\cos^{2}\\theta}}=\\frac{\\sin^{2}\\theta}{\\sqrt{\\sin^{4}\\theta+8\\sin^{2}\\theta}}\\\\ \\end{aligned}\\] \n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_769_137_1092_325.jpg\" alt=\"Image\" width=\"27%\" /></div>\n\n\n因为平面 BDM 与平面 BCM 所成的锐二面角的余弦值为  \\(\\frac{1}{3}\\)，所以  \\(\\frac{\\sin\\theta}{\\sqrt{\\sin^2\\theta+8}} = \\frac{1}{3}\\)，解得： \\(\\sin\\theta = 1\\)，结合  \\(0 < \\theta < \\pi\\) 可得  \\(\\theta = \\frac{\\pi}{2}\\)，所以二面角 A-EF-D 的大小为  \\(\\frac{\\pi}{7}\\)。\n\n## 强化训练\n\n考虑到本节涉及的题型都有一定的综合性和难度，故不设 A 组题，只设计了 B 组和 C 组题.\n\n## B组 强化能力\n\n如图，在棱长为4的正方体  \\(ABCD-A_{1}B_{1}C_{1}D_{1}\\) 中，点 E，F 分别在棱  \\(AA_{1}\\) 和 AB 上，且  \\(C_{1}E \\perp EF\\)，则 AF 的最大值为（ ）\n\nA.  \\(\\frac{1}{2}\\) B. 1 C.  \\(\\frac{3}{2}\\) D. 2\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_905_1029_1095_1209.jpg\" alt=\"Image\" width=\"15%\" /></div>\n",
       "text_sha256": "d80b1ad0642c1f5e58f5dec360c6f8b51c712db24ac8ec5e3ff1cc28d51b3e1a",
       "image_refs": [
         {
           "ref": "imgs/img_in_image_box_769_137_1092_325.jpg",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_769_137_1092_325.jpg",
+          "path": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_769_137_1092_325.jpg",
           "exists": true
         },
         {
           "ref": "imgs/img_in_image_box_905_1029_1095_1209.jpg",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_905_1029_1095_1209.jpg",
+          "path": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_905_1029_1095_1209.jpg",
           "exists": true
         }
       ],
@@ -218,18 +218,18 @@
     },
     {
       "ocr_doc": 65,
-      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_65.md",
+      "source_path": "data/ocr_live_current/first_chapter_69/doc_65.md",
       "text": "2.（2024·山东模拟）（多选）\n\n如图所示，在菱形  \\(ABCD\\) 中， \\(\\angle BAD = \\frac{\\pi}{3}\\)， \\(E\\)， \\(F\\)， \\(G\\) 分别是线段  \\(AD\\)， \\(CD\\)， \\(BC\\) 的中点，将  \\(\\triangle ABD\\) 沿直线  \\(BD\\) 折起得到三棱锥  \\(A-BCD\\)，则在该三棱锥中，下列说法正确的是（ ）\n\nA. 直线  \\(EF \\parallel\\) 平面  \\(ABC\\)\n\nB. 直线  \\(BE\\) 与  \\(DG\\) 是异面直线\n\nC. 直线  \\(BE\\) 与  \\(DG\\) 可能垂直\n\nD. 若  \\(EG = \\frac{\\sqrt{7}}{4}AB\\)，则二面角  \\(A-BD-C\\) 的大小为  \\(\\frac{\\pi}{3}\\)\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_472_462_717_628.jpg\" alt=\"Image\" width=\"20%\" /></div>\n\n\n## 一 数·高中数学一本通\n\n3.（2025·福建泉州期中）\n\n如图，四棱锥 P-ABCD 的底面为正方形，PA⊥平面 ABCD，M 是 PC 的中点，PA=AB.\n\n（1）求证： \\(AM \\perp\\) 平面 PBD；\n\n（2）设直线 AM 与平面 PBD 交于 O，求证： \\(AO = 2OM\\)\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_904_1063_1093_1270.jpg\" alt=\"Image\" width=\"15%\" /></div>\n",
       "text_sha256": "d41015d20fc945539413b9d104b4ed019b34fa201ca0e1db0fd6eaed60faff2a",
       "image_refs": [
         {
           "ref": "imgs/img_in_image_box_472_462_717_628.jpg",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_472_462_717_628.jpg",
+          "path": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_472_462_717_628.jpg",
           "exists": true
         },
         {
           "ref": "imgs/img_in_image_box_904_1063_1093_1270.jpg",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_904_1063_1093_1270.jpg",
+          "path": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_904_1063_1093_1270.jpg",
           "exists": true
         }
       ],
@@ -244,13 +244,13 @@
     },
     {
       "ocr_doc": 66,
-      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_66.md",
+      "source_path": "data/ocr_live_current/first_chapter_69/doc_66.md",
       "text": "4.（2015·浙江卷）\n\n如图，在三棱柱  \\(ABC-A_1B_1C_1\\) 中， \\(\\angle BAC=90^\\circ\\)， \\(AB=AC=2\\)， \\(A_1A=4\\)， \\(A_1\\) 在底面  \\(ABC\\) 的射影为  \\(BC\\) 的中点， \\(D\\) 是  \\(B_1C_1\\) 的中点。\n\n（1）证明： \\(A_{1}D\\perp\\) 平面 \\(A_{1}BC\\)；\n\n（2）求二面角  \\(A_{1}-BD-B_{1}\\) 的平面角的余弦值.\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_832_343_1093_610.jpg\" alt=\"Image\" width=\"21%\" /></div>\n\n\n# 一数·高中数学一本通\n\n## C组 拓展提升\n\n5.（2024·江苏南通三模）（多选）\n\n在棱长为2的正方体  \\(ABCD-A_{1}B_{1}C_{1}D_{1}\\) 中，点 E 是棱  \\(BB_{1}\\) 的中点，点 F 在底面 ABCD 内运动（含边界），则（）\n\nA. 若 F 是棱 CD 的中点，则 EF // 平面  \\(A_{1}BD\\)\n\nB. 若  \\(EF \\perp\\) 平面  \\(A_{1}C_{1}E\\)，则 F 是 BD 的中点\n\nC. 若 F 在棱 AD 上运动（含端点），则点 F 到直线  \\(A_{1}E\\) 的距离最小值为  \\(\\frac{4\\sqrt{5}}{5}\\)\n\nD. 若 F 与 B 重合，四面体  \\(A_{1}C_{1}EF\\) 的外接球的表面积为  \\(19\\pi\\)",
       "text_sha256": "a7447af3796fb3438038c1f4b08288274c837c7994627d40c632dde96062733f",
       "image_refs": [
         {
           "ref": "imgs/img_in_image_box_832_343_1093_610.jpg",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_832_343_1093_610.jpg",
+          "path": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_832_343_1093_610.jpg",
           "exists": true
         }
       ],
@@ -258,18 +258,18 @@
     },
     {
       "ocr_doc": 67,
-      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_67.md",
+      "source_path": "data/ocr_live_current/first_chapter_69/doc_67.md",
       "text": "6.（2025·河北模拟）\n\n如图，在四棱锥  \\(P-ABCD\\) 中， \\(PA \\perp\\) 平面  \\(ABCD\\)， \\(PB\\) 与底面  \\(ABCD\\) 所成角为  \\(45^\\circ\\)，四边形  \\(ABCD\\) 是梯形， \\(AD \\perp AB\\)， \\(BC \\parallel AD\\)， \\(AD = 2\\)， \\(PA = BC = 1\\)。\n\n（1）证明：平面  \\(PAC \\perp\\) 平面 PCD;\n\n（2）若点 T 是 CD 的中点，点 M 是 PT 的中点，求点 P 到平面 ABM 的距离；\n\n（3）点 T 是线段 CD 上的动点，PT 上是否存在一点 M，使 PT⊥平面 ABM？若存在，求出点 M 的坐标；若不存在，请说明理由.\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_829_403_1093_576.jpg\" alt=\"Image\" width=\"22%\" /></div>\n\n\n### 7. （2025·陕西模拟）\n\n如图，三棱柱  \\(ABC-A_{1}B_{1}C_{1}\\) 中， \\(\\triangle ABC\\) 是边长为 2 的正三角形， \\(AA_{1}=A_{1}C\\)\n\n（1）证明： \\(A_{1}C_{1}\\perp A_{1}B\\)\n\n（2）若三棱柱  \\(ABC-A_{1}B_{1}C_{1}\\) 的体积为 3，且二面角  \\(A_{1}-BC-A\\) 的余弦值为  \\(\\frac{\\sqrt{5}}{5}\\)，求直线  \\(AA_{1}\\) 与平面 ABC 所成角的正弦值.\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_876_1100_1093_1291.jpg\" alt=\"Image\" width=\"18%\" /></div>\n",
       "text_sha256": "6490132353bdb1e7cfb4b7fb7dacb0d05c3bd220c1a0ef05d8e9e3688cb887a7",
       "image_refs": [
         {
           "ref": "imgs/img_in_image_box_829_403_1093_576.jpg",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_829_403_1093_576.jpg",
+          "path": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_829_403_1093_576.jpg",
           "exists": true
         },
         {
           "ref": "imgs/img_in_image_box_876_1100_1093_1291.jpg",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_876_1100_1093_1291.jpg",
+          "path": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_876_1100_1093_1291.jpg",
           "exists": true
         }
       ],
@@ -284,13 +284,13 @@
     },
     {
       "ocr_doc": 68,
-      "source_path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_68.md",
+      "source_path": "data/ocr_live_current/first_chapter_69/doc_68.md",
       "text": "8.（2024·浙江模拟）\n\n如图，已知三棱台  \\(ABC-A_1B_1C_1\\) 中， \\(AB=BC=CA=AA_1=BB_1=2\\)， \\(A_1B_1=4\\)，点  \\(O\\) 为线段  \\(A_1B_1\\) 的中点，点  \\(D\\) 为线段  \\(OA_1\\) 的中点。\n\n（1）证明：直线AD∥平面 \\(OCC_{1}\\);\n\n（2）若平面  \\(BCC_{1}B_{1}\\perp\\) 平面  \\(ACC_{1}A_{1}\\)，求直线  \\(AA_{1}\\) 与平面  \\(BCC_{1}B_{1}\\) 所成线面角的大小.\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_854_340_1093_574.jpg\" alt=\"Image\" width=\"20%\" /></div>\n",
       "text_sha256": "1001650da1bf3e6765f70ea86bc9c169f24fda62a8401245e074baeaa5d4e7e6",
       "image_refs": [
         {
           "ref": "imgs/img_in_image_box_854_340_1093_574.jpg",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_854_340_1093_574.jpg",
+          "path": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_854_340_1093_574.jpg",
           "exists": true
         }
       ],
@@ -299,7 +299,7 @@
   ],
   "questions": [
     {
-      "qid": "Q-639bfa897cbfec5b",
+      "qid": "Q-4f2387986f40d011",
       "section": "micro专题1",
       "group": "B",
       "number": 1,
@@ -307,7 +307,7 @@
       "source_anchor": {
         "ocr_doc": 64,
         "pdf_page": 65,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_64.md",
+        "file": "data/ocr_live_current/first_chapter_69/doc_64.md",
         "recovery": "primary_ocr_question_recovery",
         "recovery_source_kind": "primary_ocr"
       },
@@ -315,7 +315,7 @@
       "image_refs": [
         {
           "ref": "imgs/img_in_image_box_905_1029_1095_1209.jpg",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_905_1029_1095_1209.jpg",
+          "path": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_905_1029_1095_1209.jpg",
           "exists": true
         }
       ],
@@ -687,7 +687,7 @@
       ]
     },
     {
-      "qid": "Q-504a0984daa421c7",
+      "qid": "Q-42451f7c34755fde",
       "section": "micro专题1",
       "group": "B",
       "number": 2,
@@ -695,13 +695,13 @@
       "source_anchor": {
         "ocr_doc": 65,
         "pdf_page": 66,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_65.md"
+        "file": "data/ocr_live_current/first_chapter_69/doc_65.md"
       },
       "question_text": "2.（2024·山东模拟）（多选）\n\n如图所示，在菱形  \\(ABCD\\) 中， \\(\\angle BAD = \\frac{\\pi}{3}\\)， \\(E\\)， \\(F\\)， \\(G\\) 分别是线段  \\(AD\\)， \\(CD\\)， \\(BC\\) 的中点，将  \\(\\triangle ABD\\) 沿直线  \\(BD\\) 折起得到三棱锥  \\(A-BCD\\)，则在该三棱锥中，下列说法正确的是（ ）\n\nA. 直线  \\(EF \\parallel\\) 平面  \\(ABC\\)\n\nB. 直线  \\(BE\\) 与  \\(DG\\) 是异面直线\n\nC. 直线  \\(BE\\) 与  \\(DG\\) 可能垂直\n\nD. 若  \\(EG = \\frac{\\sqrt{7}}{4}AB\\)，则二面角  \\(A-BD-C\\) 的大小为  \\(\\frac{\\pi}{3}\\)\n\n",
       "image_refs": [
         {
           "ref": "imgs/img_in_image_box_472_462_717_628.jpg",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_472_462_717_628.jpg",
+          "path": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_472_462_717_628.jpg",
           "exists": true
         }
       ],
@@ -756,7 +756,7 @@
       "vision_source_provenance": []
     },
     {
-      "qid": "Q-fd0b8a66eaccebff",
+      "qid": "Q-93ba33b755953388",
       "section": "micro专题1",
       "group": "B",
       "number": 3,
@@ -764,13 +764,13 @@
       "source_anchor": {
         "ocr_doc": 65,
         "pdf_page": 66,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_65.md"
+        "file": "data/ocr_live_current/first_chapter_69/doc_65.md"
       },
       "question_text": "3.（2025·福建泉州期中）\n\n如图，四棱锥 P-ABCD 的底面为正方形，PA⊥平面 ABCD，M 是 PC 的中点，PA=AB.\n\n（1）求证： \\(AM \\perp\\) 平面 PBD；\n\n（2）设直线 AM 与平面 PBD 交于 O，求证： \\(AO = 2OM\\)\n\n",
       "image_refs": [
         {
           "ref": "imgs/img_in_image_box_904_1063_1093_1270.jpg",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_904_1063_1093_1270.jpg",
+          "path": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_904_1063_1093_1270.jpg",
           "exists": true
         }
       ],
@@ -829,7 +829,7 @@
       "vision_source_provenance": []
     },
     {
-      "qid": "Q-263868214b39f6b0",
+      "qid": "Q-5e9f4253e7369536",
       "section": "micro专题1",
       "group": "B",
       "number": 4,
@@ -837,13 +837,13 @@
       "source_anchor": {
         "ocr_doc": 66,
         "pdf_page": 67,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_66.md"
+        "file": "data/ocr_live_current/first_chapter_69/doc_66.md"
       },
       "question_text": "4.（2015·浙江卷）\n\n如图，在三棱柱  \\(ABC-A_1B_1C_1\\) 中， \\(\\angle BAC=90^\\circ\\)， \\(AB=AC=2\\)， \\(A_1A=4\\)， \\(A_1\\) 在底面  \\(ABC\\) 的射影为  \\(BC\\) 的中点， \\(D\\) 是  \\(B_1C_1\\) 的中点。\n\n（1）证明： \\(A_{1}D\\perp\\) 平面 \\(A_{1}BC\\)；\n\n（2）求二面角  \\(A_{1}-BD-B_{1}\\) 的平面角的余弦值.\n\n",
       "image_refs": [
         {
           "ref": "imgs/img_in_image_box_832_343_1093_610.jpg",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_832_343_1093_610.jpg",
+          "path": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_832_343_1093_610.jpg",
           "exists": true
         }
       ],
@@ -1098,7 +1098,7 @@
       "vision_source_provenance": []
     },
     {
-      "qid": "Q-a2eecc6d8aa470ea",
+      "qid": "Q-ab24d2e6734637e8",
       "section": "micro专题1",
       "group": "C",
       "number": 5,
@@ -1106,7 +1106,7 @@
       "source_anchor": {
         "ocr_doc": 66,
         "pdf_page": 67,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_66.md"
+        "file": "data/ocr_live_current/first_chapter_69/doc_66.md"
       },
       "question_text": "5.（2024·江苏南通三模）（多选）\n\n在棱长为2的正方体  \\(ABCD-A_{1}B_{1}C_{1}D_{1}\\) 中，点 E 是棱  \\(BB_{1}\\) 的中点，点 F 在底面 ABCD 内运动（含边界），则（）\n\nA. 若 F 是棱 CD 的中点，则 EF // 平面  \\(A_{1}BD\\)\n\nB. 若  \\(EF \\perp\\) 平面  \\(A_{1}C_{1}E\\)，则 F 是 BD 的中点\n\nC. 若 F 在棱 AD 上运动（含端点），则点 F 到直线  \\(A_{1}E\\) 的距离最小值为  \\(\\frac{4\\sqrt{5}}{5}\\)\n\nD. 若 F 与 B 重合，四面体  \\(A_{1}C_{1}EF\\) 的外接球的表面积为  \\(19\\pi\\)",
       "image_refs": [],
@@ -1117,7 +1117,7 @@
       ]
     },
     {
-      "qid": "Q-b15f23afc701e63f",
+      "qid": "Q-99b92e20cec34b20",
       "section": "micro专题1",
       "group": "C",
       "number": 6,
@@ -1125,13 +1125,13 @@
       "source_anchor": {
         "ocr_doc": 67,
         "pdf_page": 68,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_67.md"
+        "file": "data/ocr_live_current/first_chapter_69/doc_67.md"
       },
       "question_text": "6.（2025·河北模拟）\n\n如图，在四棱锥  \\(P-ABCD\\) 中， \\(PA \\perp\\) 平面  \\(ABCD\\)， \\(PB\\) 与底面  \\(ABCD\\) 所成角为  \\(45^\\circ\\)，四边形  \\(ABCD\\) 是梯形， \\(AD \\perp AB\\)， \\(BC \\parallel AD\\)， \\(AD = 2\\)， \\(PA = BC = 1\\)。\n\n（1）证明：平面  \\(PAC \\perp\\) 平面 PCD;\n\n（2）若点 T 是 CD 的中点，点 M 是 PT 的中点，求点 P 到平面 ABM 的距离；\n\n（3）点 T 是线段 CD 上的动点，PT 上是否存在一点 M，使 PT⊥平面 ABM？若存在，求出点 M 的坐标；若不存在，请说明理由.\n\n",
       "image_refs": [
         {
           "ref": "imgs/img_in_image_box_829_403_1093_576.jpg",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_829_403_1093_576.jpg",
+          "path": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_829_403_1093_576.jpg",
           "exists": true
         }
       ],
@@ -1312,7 +1312,7 @@
       "vision_source_provenance": []
     },
     {
-      "qid": "Q-575acda8e8d5dfd3",
+      "qid": "Q-39bd2558138d842f",
       "section": "micro专题1",
       "group": "C",
       "number": 7,
@@ -1320,13 +1320,13 @@
       "source_anchor": {
         "ocr_doc": 67,
         "pdf_page": 68,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_67.md"
+        "file": "data/ocr_live_current/first_chapter_69/doc_67.md"
       },
       "question_text": "### 7. （2025·陕西模拟）\n\n如图，三棱柱  \\(ABC-A_{1}B_{1}C_{1}\\) 中， \\(\\triangle ABC\\) 是边长为 2 的正三角形， \\(AA_{1}=A_{1}C\\)\n\n（1）证明： \\(A_{1}C_{1}\\perp A_{1}B\\)\n\n（2）若三棱柱  \\(ABC-A_{1}B_{1}C_{1}\\) 的体积为 3，且二面角  \\(A_{1}-BC-A\\) 的余弦值为  \\(\\frac{\\sqrt{5}}{5}\\)，求直线  \\(AA_{1}\\) 与平面 ABC 所成角的正弦值.\n\n",
       "image_refs": [
         {
           "ref": "imgs/img_in_image_box_876_1100_1093_1291.jpg",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_876_1100_1093_1291.jpg",
+          "path": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_876_1100_1093_1291.jpg",
           "exists": true
         }
       ],
@@ -1529,7 +1529,7 @@
       "vision_source_provenance": []
     },
     {
-      "qid": "Q-420d45cfbbe47282",
+      "qid": "Q-2ee3a3fc10f4a542",
       "section": "micro专题1",
       "group": "C",
       "number": 8,
@@ -1537,13 +1537,13 @@
       "source_anchor": {
         "ocr_doc": 68,
         "pdf_page": 69,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\doc_68.md"
+        "file": "data/ocr_live_current/first_chapter_69/doc_68.md"
       },
       "question_text": "8.（2024·浙江模拟）\n\n如图，已知三棱台  \\(ABC-A_1B_1C_1\\) 中， \\(AB=BC=CA=AA_1=BB_1=2\\)， \\(A_1B_1=4\\)，点  \\(O\\) 为线段  \\(A_1B_1\\) 的中点，点  \\(D\\) 为线段  \\(OA_1\\) 的中点。\n\n（1）证明：直线AD∥平面 \\(OCC_{1}\\);\n\n（2）若平面  \\(BCC_{1}B_{1}\\perp\\) 平面  \\(ACC_{1}A_{1}\\)，求直线  \\(AA_{1}\\) 与平面  \\(BCC_{1}B_{1}\\) 所成线面角的大小.\n\n",
       "image_refs": [
         {
           "ref": "imgs/img_in_image_box_854_340_1093_574.jpg",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_854_340_1093_574.jpg",
+          "path": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_854_340_1093_574.jpg",
           "exists": true
         }
       ],

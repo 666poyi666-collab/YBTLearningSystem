@@ -118,8 +118,14 @@ def _course_sort_key(catalog: dict[str, dict[str, Any]], key: str) -> tuple[Any,
     number = _course_number(catalog, key)
     if number == "课程":
         return (9999, key)
-    parts = tuple(int(part) for part in re.findall(r"\d+", number))
-    return (*parts, -1, key)
+    match = re.match(r"^(\d+(?:\.\d+)+)(?:\.([a-z]))?$", number, re.I)
+    if not match:
+        return (9999, key)
+    parts = tuple(int(part) for part in match.group(1).split("."))
+    suffix_rank = ord(match.group(2).lower()) - 96 if match.group(2) else 0
+    title = _course_title(catalog, key)
+    segment_rank = next((rank for token, rank in (("（上）", 1), ("(上)", 1), ("（基础）", 1), ("(基础)", 1), ("（中）", 2), ("(中)", 2), ("（提高）", 2), ("(提高)", 2), ("（下）", 3), ("(下)", 3), ("（进阶）", 3), ("(进阶)", 3)) if token in title), 0)
+    return (*parts, suffix_rank, segment_rank, key)
 
 
 def _section_rows(facts: dict[str, Any]) -> dict[str, dict[str, Any]]:

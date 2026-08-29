@@ -19,10 +19,13 @@
 
 ### 当前动作 1：看本批视频
 
-- `3.1.3.2` 3.1.3.2 空间向量运算的坐标表示
-  - 文件：`C:\Users\poyi\Downloads\课程合集\3.1 空间向量与立体几何\3.1.3.2 空间向量运算的坐标表示.mp4`
 - `3.1.3.3` 3.1.3.3 直线的方向向量与平面的法向量
   - 文件：`C:\Users\poyi\Downloads\课程合集\3.1 空间向量与立体几何\3.1.3.3 直线的方向向量与平面的法向量.mp4`
+- `3.1.4.1` 3.1.4.1平行垂直证明
+  - 文件：`C:\Users\poyi\Downloads\课程合集\3.1 空间向量与立体几何\3.1.4.1平行垂直证明.mp4`
+- `3.1.4.2` 3.1.4.2 证明共面
+  - 文件：`C:\Users\poyi\Downloads\课程合集\3.1 空间向量与立体几何\3.1.4.2 证明共面.mp4`
+- 前置方法必须已通过：`coordinate_ops`
 
 > 看完本批视频后停下来，不要提前观看下一循环。
 
@@ -206,19 +209,19 @@ A. \((-4,-2,5)\) B. \((8,4,-10)\) C. \((6,3,-7)\) D. \((-3,5,4)\)
 
 ### 当前动作 1：看本批视频
 
-- `3.1.4.1` 3.1.4.1平行垂直证明
-  - 文件：`C:\Users\poyi\Downloads\课程合集\3.1 空间向量与立体几何\3.1.4.1平行垂直证明.mp4`
-- `3.1.4.2` 3.1.4.2 证明共面
-  - 文件：`C:\Users\poyi\Downloads\课程合集\3.1 空间向量与立体几何\3.1.4.2 证明共面.mp4`
 - `3.1.4.3` 3.1.4.3 向量夹角与直线夹角
   - 文件：`C:\Users\poyi\Downloads\课程合集\3.1 空间向量与立体几何\3.1.4.3 向量夹角与直线夹角.mp4`
 - `3.1.4.4` 3.1.4.4 直线与平面的夹角
   - 文件：`C:\Users\poyi\Downloads\课程合集\3.1 空间向量与立体几何\3.1.4.4 直线与平面的夹角.mp4`
 - `3.1.4.5` 3.1.4.5 平面与平面的夹角
   - 文件：`C:\Users\poyi\Downloads\课程合集\3.1 空间向量与立体几何\3.1.4.5 平面与平面的夹角.mp4`
+- `3.1.4.6.a` 3.1.4.6.a 平面方程与法向量（上）
+  - 文件：`C:\Users\poyi\Downloads\课程合集\3.1 空间向量与立体几何\3.1.4.6.a 平面方程与法向量（上）.mp4`
+- `3.1.4.6.b` 3.1.4.6.b 平面方程与法向量（下）
+  - 文件：`C:\Users\poyi\Downloads\课程合集\3.1 空间向量与立体几何\3.1.4.6.b 平面方程与法向量（下）.mp4`
 - `3.1.4.7` 3.1.4.7 距离问题
   - 文件：`C:\Users\poyi\Downloads\课程合集\3.1 空间向量与立体几何\3.1.4.7 距离问题.mp4`
-- 前置方法必须已通过：`direction_normal`
+- 前置方法必须已通过：`coordinate_ops, direction_normal, parallel_perpendicular, coplanar`
 
 > 看完本批视频后停下来，不要提前观看下一循环。
 
@@ -398,7 +401,7 @@ D.  \(\frac{\sqrt{2}}{2}\)
 ### 当前动作 1：看本批视频
 
 - 本循环没有新增视频，复用已通过的前置方法。
-- 前置方法必须已通过：`parallel_perpendicular, coplanar`
+- 前置方法必须已通过：`coordinate_ops, direction_normal, parallel_perpendicular, coplanar, plane_plane_angle`
 
 > 看完本批视频后停下来，不要提前观看下一循环。
 
@@ -525,7 +528,7 @@ D.  \(\frac{\sqrt{2}}{2}\)
 ### 当前动作 1：看本批视频
 
 - 本循环没有新增视频，复用已通过的前置方法。
-- 前置方法必须已通过：`line_line_angle, line_plane_angle, plane_plane_angle`
+- 前置方法必须已通过：`coordinate_ops, direction_normal, parallel_perpendicular, line_line_angle, line_plane_angle, plane_plane_angle, distance`
 
 > 看完本批视频后停下来，不要提前观看下一循环。
 
@@ -696,11 +699,8 @@ C. 12 D. 1 或 12
 
 ### 当前动作 1：看本批视频
 
-- `3.1.4.6.a` 3.1.4.6.a 平面方程与法向量（上）
-  - 文件：`C:\Users\poyi\Downloads\课程合集\3.1 空间向量与立体几何\3.1.4.6.a 平面方程与法向量（上）.mp4`
-- `3.1.4.6.b` 3.1.4.6.b 平面方程与法向量（下）
-  - 文件：`C:\Users\poyi\Downloads\课程合集\3.1 空间向量与立体几何\3.1.4.6.b 平面方程与法向量（下）.mp4`
-- 前置方法必须已通过：`distance, direction_normal, line_plane_angle`
+- 本循环没有新增视频，复用已通过的前置方法。
+- 前置方法必须已通过：`coordinate_ops, direction_normal, parallel_perpendicular, line_plane_angle, plane_plane_angle, plane_equation_upper, plane_equation_lower, distance`
 
 > 看完本批视频后停下来，不要提前观看下一循环。
 
@@ -708,13 +708,6 @@ C. 12 D. 1 或 12
 
 本批类型：
 - 类型Ⅳ 求距离：点线距、点面距、异面直线距离转化
-
-本批补充桥接：
-- **异面直线距离** (`micro-skew-distance`)
-  - 先判断两直线是否异面，再选择公垂线法、转化为点面距离或坐标距离法。
-  - 为两条直线分别取方向向量，写出公垂方向必须同时垂直的条件。
-  - 求出距离表达式后，用题设中的平行、垂直或对称关系做一次几何复核。
-  - 先练一组方向向量简单的自造题，再处理带图形的题面。
 
 #### 方法类型｜类型Ⅳ 求距离：点线距、点面距、异面直线距离转化
 
@@ -834,7 +827,7 @@ A.  \(\frac{\sqrt{10}}{10}\) B.  \(\frac{\sqrt{10}}{5}\) C.  \(\frac{\sqrt{5}}{1
 
 - `3.1.4.8` 3.1.4.8 动点问题
   - 文件：`C:\Users\poyi\Downloads\课程合集\3.1 空间向量与立体几何\3.1.4.8 动点问题.mp4`
-- 前置方法必须已通过：`direction_normal, line_plane_angle, plane_plane_angle, distance`
+- 前置方法必须已通过：`coordinate_ops, direction_normal, parallel_perpendicular, coplanar, line_plane_angle, plane_plane_angle, distance`
 
 > 看完本批视频后停下来，不要提前观看下一循环。
 
@@ -844,11 +837,6 @@ A.  \(\frac{\sqrt{10}}{10}\) B.  \(\frac{\sqrt{10}}{5}\) C.  \(\frac{\sqrt{5}}{1
 - 类型Ⅴ 点线在面内判断：点线位置关系与共面判断
 
 本批补充桥接：
-- **动态二面角三角参数化** (`bridge-1.4-dihedral-trig`)
-  - 固定公共棱，选取垂直于公共棱的截面，把动态位置用角参数或长度参数表示。
-  - 分别写出两个平面在截面中的方向，明确所求是锐二面角还是有向夹角。
-  - 用正弦、余弦或点积得到参数方程，保留参数的几何定义域。
-  - 对可能出现的多解做位置筛选，并用一条原始几何关系回代。
 - **补形与辅助平行体** (`bridge-micro-completion`)
   - 识别题目中缺少的平行边、平行面或公共顶点，先写出补形目标。
   - 证明补出的线或面确实存在，再把新增关系写成向量等式或比例关系。
@@ -951,7 +939,7 @@ A.  \(\frac{\sqrt{10}}{10}\) B.  \(\frac{\sqrt{10}}{5}\) C.  \(\frac{\sqrt{5}}{1
 ### 当前动作 1：看本批视频
 
 - 本循环没有新增视频，复用已通过的前置方法。
-- 前置方法必须已通过：`moving_point, plane_plane_angle, distance`
+- 前置方法必须已通过：`coordinate_ops, direction_normal, parallel_perpendicular, coplanar, line_plane_angle, plane_plane_angle, distance, moving_point`
 
 > 看完本批视频后停下来，不要提前观看下一循环。
 
@@ -964,11 +952,6 @@ A.  \(\frac{\sqrt{10}}{10}\) B.  \(\frac{\sqrt{10}}{5}\) C.  \(\frac{\sqrt{5}}{1
   - 在过折痕且垂直于折痕的截面中构造平面角，避免直接把空间角当平面角。
   - 把折后条件翻译为向量点积、法向量或三角关系，并保留参数范围。
   - 用一个只改变折叠位置的变式检查：哪些量守恒、哪些量会改变。
-- **动态二面角三角参数化** (`bridge-1.4-dihedral-trig`)
-  - 固定公共棱，选取垂直于公共棱的截面，把动态位置用角参数或长度参数表示。
-  - 分别写出两个平面在截面中的方向，明确所求是锐二面角还是有向夹角。
-  - 用正弦、余弦或点积得到参数方程，保留参数的几何定义域。
-  - 对可能出现的多解做位置筛选，并用一条原始几何关系回代。
 - **存在性双参数化** (`bridge-micro-existence`)
   - 分别给两个动点设参数 λ、μ，并在第一行写出各自的几何范围。
   - 把共线、距离、角度或垂直条件逐项变成方程，保持每个参数的来源可追踪。

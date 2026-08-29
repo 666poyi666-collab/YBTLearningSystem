@@ -27,6 +27,14 @@ interface Env {
 type Scope = 'math:read' | 'math:write'
 type JsonRecord = Record<string, unknown>
 type ImageContent = { type: 'image'; data: string; mimeType: string }
+type HandwritingStep = {
+  line: number
+  status: 'correct' | 'first_wrong' | 'uncertain' | 'downstream_contaminated'
+  explanation: string
+  bbox?: [number, number, number, number]
+  latex?: string
+  label?: string
+}
 
 const READ_SCOPE: Scope = 'math:read'
 const WRITE_SCOPE: Scope = 'math:write'
@@ -147,9 +155,41 @@ function parseJson(value: string | null): unknown {
 }
 
 function courseSortKey(value: string): string {
-  const match = value.match(/(?:^|\s)(\d+(?:\.\d+){1,4})(?:\s|$)/)
+  const match = value.match(/(?:^|\s)(\d+(?:\.\d+){1,5})(?:\.([a-z]))?(?:\s|$)/i)
   if (!match) return `9999.${value}`
-  return `${match[1].split('.').map((part) => part.padStart(4, '0')).join('.')}.${value}`
+  const suffix = match[2] ? String(match[2].toLowerCase().charCodeAt(0) - 96).padStart(3, '0') : '000'
+  const segment = value.includes('（上）') || value.includes('(上)') || value.includes('（基础）') || value.includes('(基础)') ? '001'
+    : value.includes('（中）') || value.includes('(中)') || value.includes('（提高）') || value.includes('(提高)') ? '002'
+      : value.includes('（下）') || value.includes('(下)') || value.includes('（进阶）') || value.includes('(进阶)') ? '003' : '000'
+  return `${match[1].split('.').map((part) => part.padStart(4, '0')).join('.')}.${suffix}.${segment}.${value}`
+}
+
+function handwritingAnnotationSpec(
+  imageEvidenceId: string,
+  steps: HandwritingStep[],
+  uncertainties: string[],
+  clarificationRequest?: string,
+) {
+  return {
+    schemaVersion: 'math-handwriting-annotation-v1',
+    renderMode: 'transparent_svg_overlay',
+    imageEvidenceId,
+    sourceImageMustRemainUnchanged: true,
+    fill: 'none',
+    formulaRenderer: 'LaTeX/MathJax',
+    uncertainties,
+    clarificationRequest: clarificationRequest ?? null,
+    userDisclosureRequired: uncertainties.length > 0,
+    overlays: steps.filter((step) => step.bbox).map((step) => ({
+      line: step.line,
+      status: step.status,
+      bbox: step.bbox,
+      label: step.label ?? null,
+      explanation: step.explanation,
+      latex: step.latex ?? null,
+    })),
+    verification: ['source image hash matches imageEvidenceId', 'first_wrong line is unique', 'overlay boxes stay inside the source image and do not use fill', 'transcription and step line numbers match exactly', 'downstream lines are not re-attributed as new root errors', 'all low-confidence observations are disclosed to the user'],
+  }
 }
 
 async function readContentJson(env: Env, key: string): Promise<JsonRecord | null> {
@@ -965,11 +1005,22 @@ function createServer(env: Env, scopes: readonly string[]): McpServer {
       const unlockStatus = requirements.length === 0 ? 'manual_review'
         : completedCount === requirements.length ? 'unlocked'
           : completedCount > 0 ? 'partially_unlocked' : 'locked'
-      return { ...row, routeKeys, requirements, unlockStatus }
+      return {
+        ...row,
+        routeKeys,
+        requirements,
+        unlockStatus: row.cadence === 'after_course'
+          ? courseRequirements.length && completedCount === requirements.length ? 'optional_available' : 'optional_after_course'
+          : unlockStatus,
+        optional: true,
+        blocksYbtProgress: false,
+      }
     })
     return result({
       ok: true,
-      routePolicy: '课程顺序优先：听课 -> 对应一本通 -> 已解锁必刷题基础题；节次综合和章节检测后置。页内按题号顺序。',
+      routePolicy: '课程顺序优先：听课 -> 对应一本通 -> 可选必刷题基础题；节次综合和章节检测后置。必刷题永远不阻塞一本通主线，页内按题号顺序。',
+      practiceIsOptional: true,
+      practiceDoesNotBlockYbtProgress: true,
       items,
     })
   })
@@ -1017,7 +1068,9 @@ function createServer(env: Env, scopes: readonly string[]): McpServer {
       ybtItems: ybtItems.results,
       practiceItems: practiceItems.results.map((item) => ({
         ...item,
-        unlockStatus: courseUnlocked ? 'unlocked' : 'locked_until_course_listened',
+        unlockStatus: courseUnlocked ? 'optional_available' : 'optional_after_course',
+        optional: true,
+        blocksYbtProgress: false,
       })),
       learnerState: state ? { version: Number(state.version), value: parseJson(String(state.value_json)), updatedAt: state.updated_at } : null,
       evidencePolicy: '老师文稿决定讲法顺序；讲义与必刷题 OCR 仅定位，公式题面必须读原页图；必刷题源 PDF 不含答案。',
@@ -1054,15 +1107,17 @@ function createServer(env: Env, scopes: readonly string[]): McpServer {
       )
       ORDER BY c.title
     `).bind(chapterKey, chapterKey, USER_ID, USER_ID, chapterKey, chapterKey).all<Record<string, string | number | null>>()
-    const orderedCourses = [...rows.results].sort((left, right) => courseSortKey(String(left.title ?? '')).localeCompare(courseSortKey(String(right.title ?? '')), 'en'))
+    const orderedCourses = [...rows.results].sort((left, right) =>
+      courseSortKey(`${String(left.title ?? '')} ${String(left.course_key ?? '')}`)
+        .localeCompare(courseSortKey(`${String(right.title ?? '')} ${String(right.course_key ?? '')}`), 'en'))
     return result({
       ok: true,
       chapterKey,
       policy: {
         primaryOrder: 'course_number',
-        perCourse: ['listen_course', 'read_teacher_handout_source_page', 'complete_ybt_items', 'complete_unlocked_practice_basic', 'complete_practice_advanced_if_needed'],
+        perCourse: ['listen_course', 'read_teacher_handout_source_page', 'complete_ybt_items', 'optionally_complete_practice_basic', 'optionally_complete_practice_advanced'],
         checkpoints: ['after_section', 'after_chapter'],
-        invariant: '每个一本通项目只出现一次；同一课程内保持教材原顺序，不能为了课程顺序重排题目内部结构。',
+        invariant: '每个一本通项目只出现一次；必刷题是选做，不阻塞一本通主线；同一课程内保持教材原顺序，不能为了课程顺序重排题目内部结构。',
       },
       courses: orderedCourses.map((row, index) => ({
         order: index + 1,
@@ -1087,11 +1142,18 @@ function createServer(env: Env, scopes: readonly string[]): McpServer {
       SELECT analysis_id,item_kind,item_ref,section_key,image_evidence_id,
              question_source_verified,transcription_json,steps_json,
              first_wrong_step,error_type,reason,minimal_correction,
-             downstream_status,confidence,analysis_status,created_at
+             downstream_status,confidence,analysis_status,uncertainties_json,
+             clarification_request,annotation_spec_json,created_at
       FROM handwriting_analyses WHERE user_id=? AND (?='' OR item_ref=?)
       ORDER BY created_at DESC LIMIT ?
     `).bind(USER_ID, itemRef, itemRef, limit).all<Record<string, string | number | null>>()
-    return result({ analyses: rows.results.map((row) => ({ ...row, transcription: parseJson(String(row.transcription_json)), steps: parseJson(String(row.steps_json)) })) })
+    return result({ analyses: rows.results.map((row) => ({
+      ...row,
+      transcription: parseJson(String(row.transcription_json)),
+      steps: parseJson(String(row.steps_json)),
+      uncertainties: parseJson(String(row.uncertainties_json)),
+      annotationSpec: parseJson(row.annotation_spec_json ? String(row.annotation_spec_json) : null),
+    })) })
   })
 
   server.registerTool('math_get_learning_context', {
@@ -1376,7 +1438,7 @@ function createServer(env: Env, scopes: readonly string[]): McpServer {
   })
 
   server.registerTool('math_record_handwriting_analysis', {
-    description: '保存手写过程逐行核对结果：先转写，再定位第一处分歧。初判保持 proposed；用户确认后再用 math_record_wrong_question 写入正式错题画像。',
+    description: '保存手写过程逐行核对结果：先转写，再定位第一处分歧，并返回可生成透明 SVG/LaTeX HTML 的标注规范。初判保持 proposed；用户确认后再用 math_record_wrong_question 写入正式错题画像。',
     inputSchema: {
       requestId: z.uuid(),
       itemKind: z.enum(['ybt', 'practice', 'teacher_handout', 'other']),
@@ -1385,7 +1447,14 @@ function createServer(env: Env, scopes: readonly string[]): McpServer {
       imageEvidenceId: z.string().min(1).max(300),
       questionSourceVerified: z.boolean(),
       transcription: z.array(z.object({ line: z.number().int().min(1).max(100), text: z.string().min(1).max(1000), legibility: z.enum(['clear', 'partial', 'uncertain']) })).min(1).max(100),
-      steps: z.array(z.object({ line: z.number().int().min(1).max(100), status: z.enum(['correct', 'first_wrong', 'uncertain', 'downstream_contaminated']), explanation: z.string().min(1).max(1500) })).min(1).max(100),
+      steps: z.array(z.object({
+        line: z.number().int().min(1).max(100),
+        status: z.enum(['correct', 'first_wrong', 'uncertain', 'downstream_contaminated']),
+        explanation: z.string().min(1).max(1500),
+        bbox: z.tuple([z.number().min(0).max(1), z.number().min(0).max(1), z.number().gt(0).max(1), z.number().gt(0).max(1)]).optional(),
+        latex: z.string().max(4000).optional(),
+        label: z.string().max(100).optional(),
+      })).min(1).max(100),
       firstWrongStep: z.number().int().min(1).max(100).optional(),
       errorType: z.string().max(160).optional(),
       reason: z.string().max(3000).optional(),
@@ -1393,27 +1462,57 @@ function createServer(env: Env, scopes: readonly string[]): McpServer {
       downstreamStatus: z.enum(['clean', 'contaminated_after_first_error', 'uncertain']),
       confidence: z.enum(['high', 'medium', 'low']),
       analysisStatus: z.enum(['proposed', 'no_error', 'needs_clarification']).default('proposed'),
+      uncertainties: z.array(z.string().min(1).max(1000)).max(20).default([]),
+      clarificationRequest: z.string().max(1500).optional(),
       baseVersion: z.number().int().nonnegative(),
     },
-  }, async ({ requestId, itemKind, itemRef, sectionKey, imageEvidenceId, questionSourceVerified, transcription, steps, firstWrongStep, errorType, reason, minimalCorrection, downstreamStatus, confidence, analysisStatus, baseVersion }) => {
+  }, async ({ requestId, itemKind, itemRef, sectionKey, imageEvidenceId, questionSourceVerified, transcription, steps, firstWrongStep, errorType, reason, minimalCorrection, downstreamStatus, confidence, analysisStatus, uncertainties, clarificationRequest, baseVersion }) => {
     if (!writeAllowed()) return failure('insufficient_scope', WRITE_SCOPE)
     if (!questionSourceVerified && analysisStatus !== 'needs_clarification') return failure('question_source_required', '未核对原题时只能标记 needs_clarification')
     if (analysisStatus === 'proposed' && firstWrongStep === undefined) return failure('first_wrong_step_required', '发现错误时必须定位第一处错误行')
+    if (analysisStatus === 'proposed' && steps.filter((step) => step.status === 'first_wrong').length !== 1) return failure('unique_first_wrong_required', 'proposed 分析必须且只能标记一处第一错误')
     if (firstWrongStep !== undefined && !steps.some((step) => step.line === firstWrongStep && step.status === 'first_wrong')) return failure('step_mismatch', 'firstWrongStep 必须对应 first_wrong 行')
+    const hasUncertainLine = transcription.some((line) => line.legibility === 'uncertain') || steps.some((step) => step.status === 'uncertain')
+    if ((confidence === 'low' || analysisStatus === 'needs_clarification' || hasUncertainLine) && uncertainties.length === 0) {
+      return failure('uncertainty_disclosure_required', '存在低置信或看不清内容时，必须向用户列出具体不确定项')
+    }
+    if (analysisStatus === 'needs_clarification' && !clarificationRequest?.trim()) {
+      return failure('clarification_request_required', '需要澄清时必须明确告诉用户补充什么')
+    }
+    const transcriptionLines = [...new Set(transcription.map((line) => line.line))].sort((a, b) => a - b)
+    const stepLines = [...new Set(steps.map((step) => step.line))].sort((a, b) => a - b)
+    if (transcriptionLines.length !== transcription.length || stepLines.length !== steps.length || JSON.stringify(transcriptionLines) !== JSON.stringify(stepLines)) {
+      return failure('line_mapping_mismatch', '转写行与批改步骤必须使用唯一且完全相同的行号')
+    }
+    for (const step of steps) {
+      if (!step.bbox) continue
+      const [x, y, width, height] = step.bbox
+      if (x + width > 1 || y + height > 1) return failure('bbox_out_of_bounds', '标注框必须完整位于原图范围内', { line: step.line, bbox: step.bbox })
+    }
+    const annotationSpec = handwritingAnnotationSpec(imageEvidenceId, steps as HandwritingStep[], uncertainties, clarificationRequest)
     const transcriptionJson = JSON.stringify(transcription); const stepsJson = JSON.stringify(steps)
+    const uncertaintiesJson = JSON.stringify(uncertainties); const annotationSpecJson = JSON.stringify(annotationSpec)
     const existing = await env.DB.prepare(`SELECT * FROM handwriting_analyses WHERE request_id=? AND user_id=?`).bind(requestId, USER_ID).first<JsonRecord>()
     if (existing) {
       const same = existing.item_kind === itemKind && existing.item_ref === itemRef
         && existing.image_evidence_id === imageEvidenceId && existing.transcription_json === transcriptionJson
         && existing.steps_json === stepsJson && Number(existing.first_wrong_step ?? -1) === Number(firstWrongStep ?? -1)
         && existing.analysis_status === analysisStatus
-      return same ? result({ ok: true, analysis: existing, replayed: true }) : failure('idempotency_conflict', 'requestId 已用于不同手写分析')
+        && String(existing.uncertainties_json ?? '[]') === uncertaintiesJson
+        && (existing.clarification_request ?? null) === (clarificationRequest ?? null)
+      return same ? result({ ok: true, analysis: existing, annotationSpec, replayed: true }) : failure('idempotency_conflict', 'requestId 已用于不同手写分析')
     }
     const count = await env.DB.prepare(`SELECT COUNT(*) AS count FROM handwriting_analyses WHERE user_id=? AND item_ref=?`).bind(USER_ID, itemRef).first<{ count: number | string }>()
     if (Number(count?.count ?? 0) !== baseVersion) return failure('version_conflict', '手写分析版本已变化', { expected: baseVersion, actual: Number(count?.count ?? 0) })
     const analysisId = crypto.randomUUID(); const createdAt = new Date().toISOString()
-    await env.DB.prepare(`INSERT INTO handwriting_analyses (analysis_id,request_id,user_id,item_kind,item_ref,section_key,image_evidence_id,question_source_verified,transcription_json,steps_json,first_wrong_step,error_type,reason,minimal_correction,downstream_status,confidence,analysis_status,created_at) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`).bind(analysisId, requestId, USER_ID, itemKind, itemRef, sectionKey ?? null, imageEvidenceId, questionSourceVerified ? 1 : 0, transcriptionJson, stepsJson, firstWrongStep ?? null, errorType ?? null, reason ?? null, minimalCorrection ?? null, downstreamStatus, confidence, analysisStatus, createdAt).run()
-    return result({ ok: true, analysis: { analysisId, itemKind, itemRef, firstWrongStep: firstWrongStep ?? null, errorType: errorType ?? null, minimalCorrection: minimalCorrection ?? null, confidence, analysisStatus, createdAt }, version: baseVersion + 1, replayed: false })
+    await env.DB.prepare(`INSERT INTO handwriting_analyses (analysis_id,request_id,user_id,item_kind,item_ref,section_key,image_evidence_id,question_source_verified,transcription_json,steps_json,first_wrong_step,error_type,reason,minimal_correction,downstream_status,confidence,analysis_status,uncertainties_json,clarification_request,annotation_spec_json,created_at) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`).bind(analysisId, requestId, USER_ID, itemKind, itemRef, sectionKey ?? null, imageEvidenceId, questionSourceVerified ? 1 : 0, transcriptionJson, stepsJson, firstWrongStep ?? null, errorType ?? null, reason ?? null, minimalCorrection ?? null, downstreamStatus, confidence, analysisStatus, uncertaintiesJson, clarificationRequest ?? null, annotationSpecJson, createdAt).run()
+    return result({
+      ok: true,
+      analysis: { analysisId, itemKind, itemRef, firstWrongStep: firstWrongStep ?? null, errorType: errorType ?? null, minimalCorrection: minimalCorrection ?? null, confidence, analysisStatus, createdAt },
+      annotationSpec,
+      version: baseVersion + 1,
+      replayed: false,
+    })
   })
 
   server.registerTool('math_record_memory', {

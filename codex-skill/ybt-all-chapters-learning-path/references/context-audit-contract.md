@@ -17,6 +17,7 @@ For each active section:
 - Cloud real-learner state: remote math MCP `learner_state` and idempotent `learning_events`; this is authoritative after a successful write.
 - Paired course handouts: `math_search_handout` for OCR location, `math_get_course_handout` for candidate page mapping, and `math_get_handout_page` for source-page visual verification. OCR alone is not formula or diagram authority.
 - Supplementary practice book: `math_get_practice_route` exposes course/cycle/section unlocks and book/PDF page numbers; `math_get_practice_page` exposes the source page image. It has no answer source and must remain separate from YBT item mastery.
+- The practice book is optional enhancement only: its attempts may enrich the learner profile, but no YBT/course/section/chapter completion gate may require them.
 
 ## Required audit command
 

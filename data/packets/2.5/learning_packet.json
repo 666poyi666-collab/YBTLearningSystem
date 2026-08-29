@@ -4,7 +4,7 @@
   "section": "2.5",
   "status": "VERIFIED",
   "source": {
-    "ocr_root": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109",
+    "ocr_root": "data/ocr_live_current/second_chapter_109",
     "ocr_docs": [
       56,
       70
@@ -26,10 +26,11 @@
       "sequence": 1,
       "title": "圆的标准方程",
       "course_keys": [
-        "circle_standard_general",
-        "circle_determination"
+        "circle_standard_general"
       ],
-      "prerequisite_course_keys": [],
+      "prerequisite_course_keys": [
+        "line_family_fixed_point"
+      ],
       "optional_course_keys": [],
       "knowledge_refs": [
         "2.5-k1"
@@ -103,12 +104,10 @@
       "cycle_id": "2.5-cycle-2",
       "sequence": 2,
       "title": "圆的一般方程",
-      "course_keys": [
-        "circle_equiv_algebra"
-      ],
+      "course_keys": [],
       "prerequisite_course_keys": [
-        "circle_standard_general",
-        "circle_determination"
+        "line_family_fixed_point",
+        "circle_standard_general"
       ],
       "optional_course_keys": [],
       "knowledge_refs": [
@@ -142,7 +141,6 @@
       "direct_variants": [],
       "exercise_questions": [],
       "action_order": [
-        "watch_current_courses",
         "learn_each_current_example_then_attempt_its_direct_variants",
         "assess_current_cycle"
       ],
@@ -165,13 +163,10 @@
       "cycle_id": "2.5-cycle-3",
       "sequence": 3,
       "title": "点与圆的位置关系",
-      "course_keys": [
-        "circle_equiv_geometry"
-      ],
+      "course_keys": [],
       "prerequisite_course_keys": [
-        "circle_standard_general",
-        "circle_determination",
-        "circle_equiv_algebra"
+        "line_family_fixed_point",
+        "circle_standard_general"
       ],
       "optional_course_keys": [],
       "knowledge_refs": [
@@ -199,15 +194,62 @@
           "teaching_text": "【例4】点(1,3)在圆 \\(x^{2}+y^{2}-6x+8y=0\\)的（）\nA. 外部 B. 内部\nC. 圆周上 D. 无法确定\n解析：将(1,3)代入所给方程的左边可得\n \\(1^{2}+3^{2}-6\\times1+8\\times3=28>0\\)\n所以点(1,3)在所给圆的外部.\n答案：A\n## 本节核心题型\n本节的核心知识是圆的标准方程和一般方程，为了巩固这些核心知识，我们先设计了类型Ⅰ这组题来帮助大家熟悉圆的方程以及方程中系数应满足的条件，又设计了类型Ⅱ这组题来让大家了解如何用圆的方程判断点与圆的位置关系. 在本节中，求圆的方程是一大核心题型，我们在类型Ⅲ中进行了详细的归纳. 除此之外，与圆相关的对称问题、轨迹方程问题、最值问题也比较常见，我们在类型Ⅳ、类型V和类型VI中设计了这三类问题，请大家跟着例题、解析和反思去学习吧.",
           "solution_present": true,
           "vision_hint": "2.5-LI611cd843dc20bf2d"
-        },
+        }
+      ],
+      "direct_variants": [],
+      "exercise_questions": [],
+      "action_order": [
+        "learn_each_current_example_then_attempt_its_direct_variants",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [
+        {
+          "id": "2.5-k3",
+          "label": "点与圆的位置关系",
+          "example_labels": [
+            "例4",
+            "例5",
+            "例6",
+            "例7",
+            "例8",
+            "例9",
+            "例10",
+            "例11"
+          ],
+          "text": "## 知识点 3：点与圆的位置关系\n\n设点 \\(M\\) 的坐标为 \\((x_0, y_0)\\)，圆 \\(A\\) 的标准方程为 \\((x-a)^2 + (y-b)^2 = r^2 (r > 0)\\)，一般方程为 \\(x^2 + y^2 + Dx + Ey + F = 0\\) (\\(D^2 + E^2 - 4F > 0\\))，则点 \\(M\\) 与圆 \\(A\\) 的位置关系的判断方法如下：\n\n（3）\\(D^2 + E^2 - 4F = (-3)^2 + 1^2 - 4 \\times 4\\)\n\n\\(=-6 < 0\\)，所以原方程不表示任何图形。\n\n（4）\\(D^2 + E^2 - 4F = (-2)^2 + (-4)^2 - 4 \\times 5\\)\n\n\\(=0\\)，所以原方程表示一个点，不表示圆，\n\n\\(x^2 + y^2 - 2x - 4y + 5 = 0 \\Leftrightarrow (x-1)^2 +\\)\n\n\\((y-2)^2 = 0 \\Leftrightarrow x - 1 = y - 2 = 0 \\Leftrightarrow \\begin{cases} x = 1 \\\\ y = 2 \\end{cases}\\)，\n\n所以原方程表示点 \\((1,2)\\)。\n\n\n\n\n<table border=1 style='margin: auto; word-wrap: break-word;'><tr><td rowspan=\"2\">位置关系</td><td colspan=\"2\">判断方法</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>几何法</td><td style='text-align: center; word-wrap: break-word;'>代数法</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>点M在圆A内</td><td style='text-align: center; word-wrap: break-word;'>\\(|MA|&lt;r\\)</td><td style='text-align: center; word-wrap: break-word;'>\\((x_0-a)^2+(y_0-b)^2&lt;r^2\\) 或  \\(x_0^2+y_0^2+Dx_0+Ey_0+F&lt;0\\)</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>点M在圆A上</td><td style='text-align: center; word-wrap: break-word;'>\\(|MA|=r\\)</td><td style='text-align: center; word-wrap: break-word;'>\\((x_0-a)^2+(y_0-b)^2=r^2\\) 或  \\(x_0^2+y_0^2+Dx_0+Ey_0+F=0\\)</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>点M在圆A外</td><td style='text-align: center; word-wrap: break-word;'>\\(|MA|&gt;r\\)</td><td style='text-align: center; word-wrap: break-word;'>\\((x_0-a)^2+(y_0-b)^2&gt;r^2\\) 或  \\(x_0^2+y_0^2+Dx_0+Ey_0+F&gt;0\\)</td></tr></table>\n\n\n## 类型 I：二元二次方程表示圆的系数条件\n\n## 类型Ⅱ：点与圆的位置关系的判断与求参\n\n## 类型Ⅲ：求圆的方程\n\n## 类型IV：圆相关的对称问题\n\n## 类型V：与圆有关的求轨迹方程问题\n\n## 类型VI：定点与圆上动点之间距离的最值问题",
+          "answer_free": true
+        }
+      ],
+      "prerequisite_knowledge_blocks": []
+    },
+    {
+      "cycle_id": "2.5-cycle-4",
+      "sequence": 4,
+      "title": "类型I 二元二次方程表示圆的系数条件",
+      "course_keys": [],
+      "prerequisite_course_keys": [
+        "line_family_fixed_point",
+        "circle_standard_general"
+      ],
+      "optional_course_keys": [],
+      "knowledge_refs": [],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [
+        "类型I 二元二次方程表示圆的系数条件"
+      ],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [
         {
           "item_id": "093137ab7d6e953a",
           "kind": "example",
           "label": "例5",
           "example_number": 5,
           "parent_example_number": null,
-          "role": "knowledge_example",
-          "role_ref": "2.5-k3",
+          "role": "type_example",
+          "role_ref": "类型I 二元二次方程表示圆的系数条件",
           "source_docs": [
             57,
             58
@@ -218,116 +260,6 @@
           "teaching_text": "【例5】判断下列方程分别表示什么图形，如果是圆，求出它的圆心坐标和半径.\n(1)\n \\[x^{2}+y^{2}-4x-6y=0\\] \n(2)\n(3)\n \\[x^{2}+y^{2}-8x-6y+25=0\\] \n \\[x^{2}+y^{2}+5x-6y=-20\\] \n(4)\n \\[x^{2}+y^{2}-2ax-4by+3b^{2}-1=0\\] \n(5)\n \\[2x^{2}+2xy+y^{2}-2x+1=0\\] \n解：（1）（要判断该方程是否表示圆，可比较 \\(D^2+E^2-4F\\)与0的大小关系）\n将 \\(x^2+y^2-4x-6y=0\\)与圆的一般方程 \\(x^2+y^2+Dx+Ey+F=0\\)对比，得 \\(D=-4\\)， \\(E=-6\\)， \\(F=0\\)，\n所以 \\(D^2+E^2-4F=(-4)^2+(-6)^2-4\\times0=52>0\\)，故该方程表示的图形为圆，\n（已知方程表示的图形为圆，可通过配方法找到圆心和半径）\n \\(x^2 + y^2 - 4x - 6y = 0 \\Leftrightarrow x^2 - 4x + 4 + y^2 - 6y + 9 = 4 + 9 \\Leftrightarrow (x - 2)^2 + (y - 3)^2 = 13\\)，\n所以圆心坐标为  \\((2,3)\\)，半径  \\(r = \\sqrt{13}\\)。\n（2）由题意， \\(D = -8\\)， \\(E = -6\\)， \\(F = 25\\)，所以 \\(D^2 + E^2 - 4F = (-8)^2 + (-6)^2 - 4 \\times 25 = 0\\)，故该方程不表示圆，（为了找到该方程表示何种图形，我们仍对x和y配方处理）\n \\(x^2 + y^2 - 8x - 6y + 25 = 0 \\Leftrightarrow x^2 - 8x + 16 + y^2 - 6y + 9 = 0 \\Leftrightarrow (x - 4)^2 + (y - 3)^2 = 0\\) ①，\n因为 \\((x - 4)^2 \\geq 0\\)， \\((y - 3)^2 \\geq 0\\)，所以结合①可得x - 4 = 0且y - 3 = 0，解得：x = 4且y = 3，\n故该方程表示的图形为点 \\((4,3)\\)。\n（3）（该方程等号右边不为 0，可先移项，以便于得到圆的一般方程中的系数 D，E，F 由  \\(x^2 + y^2 + 5x - 6y = -20\\) 可得  \\(x^2 + y^2 + 5x - 6y + 20 = 0\\)，所以  \\(D = 5\\)，E = -6，F = 20，从而  \\(D^2 + E^2 - 4F = 5^2 + (-6)^2 - 4 \\times 20 = -19 < 0\\)，故该方程不表示任何图形。\n（4）因为D = -2a，E = -4b，F = 3b² - 1，所以 \\(D^{2} + E^{2} - 4F = (-2a)^{2} + (-4b)^{2} - 4(3b^{2} - 1) = 4a^{2} + 4b^{2} + 4 > 0\\)，由 \\(x^{2} + y^{2} - 2ax - 4by + 3b^{2} - 1 = 0\\)得 \\(x^{2} - 2ax + a^{2} + y^{2} - 4by + 4b^{2} - a^{2} - b^{2} - 1 = 0\\)，即 \\((x - a)^{2} + (y - 2b)^{2} = a^{2} + b^{2} + 1\\)，因为 \\(a^{2} + b^{2} + 1 \\geq 1 > 0\\)，所以该方程表示圆心为 \\((a, 2b)\\)，半径 \\(r = \\sqrt{a^{2} + b^{2} + 1}\\)的圆。\n（5）（观察发现该方程中  \\(x^2\\) 与  \\(y^2\\) 的系数不同，且含有交叉项  \\(xy\\)，这两点中的任何一点都会导致原方程不表示圆，那它表示什么图形呢？涉及二次项，不妨考虑先对该方程配方，再作观察）\n \\(2x^2 + 2xy + y^2 - 2x + 1 = 0 \\Leftrightarrow x^2 + 2xy + y^2 + x^2 - 2x + 1 = 0 \\Leftrightarrow (x + y)^2 + (x - 1)^2 = 0\\) ②，\n因为  \\((x + y)^2 \\geq 0\\)， \\((x - 1)^2 \\geq 0\\)，所以结合②可得  \\(x + y = 0\\) 且  \\(x - 1 = 0\\)，解得： \\(x = 1\\)， \\(y = -1\\)，\n所以该方程表示的图形为点（1）。\n【反思】判断方程表示的图形是否为圆时，可先观察该方程的形式，若  \\(x^2\\) 与  \\(y^2\\) 的系数不同，或含有交叉项  \\(xy\\)，则可快速得出该方程不表示圆；若该方程的形式符合  \\(x^2 + y^2 + Dx + Ey + F = 0\\)，则再比较  \\(D^2 + E^2 - 4F\\) 与 0 的大小，按知识点 2 得出结论。反之，对于含参的关于  \\(x\\)， \\(y\\) 的二元二次方程，若题干已给出方程表示圆，则也可由  \\(x^2 + y^2 + Dx + Ey + F = 0\\) 的形式及  \\(D^2 + E^2 - 4F > 0\\) 确定参数满足的条件，我们来看两个变式。",
           "solution_present": true,
           "vision_hint": "2.5-LI093137ab7d6e953a"
-        },
-        {
-          "item_id": "b8eaf08567e2ae2f",
-          "kind": "example",
-          "label": "例6",
-          "example_number": 6,
-          "parent_example_number": null,
-          "role": "knowledge_example",
-          "role_ref": "2.5-k3",
-          "source_docs": [
-            59
-          ],
-          "question_text": "【例 6】已知点  \\(M(-1,2)\\) 和圆  \\(C: x^2 + y^2 - 2x - 4y - 1 - a^2 = 0 (a \\in \\mathbb{R})\\)，则（ ）\nA. 点  \\(M\\) 在圆  \\(C\\) 外\nB. 点  \\(M\\) 在圆  \\(C\\) 内\nC. 点  \\(M\\) 在圆  \\(C\\) 上\nD. 点  \\(M\\) 与圆  \\(C\\) 的位置关系与  \\(a\\) 有关",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "teaching_text": "【例 6】已知点  \\(M(-1,2)\\) 和圆  \\(C: x^2 + y^2 - 2x - 4y - 1 - a^2 = 0 (a \\in \\mathbb{R})\\)，则（ ）\nA. 点  \\(M\\) 在圆  \\(C\\) 外\nB. 点  \\(M\\) 在圆  \\(C\\) 内\nC. 点  \\(M\\) 在圆  \\(C\\) 上\nD. 点  \\(M\\) 与圆  \\(C\\) 的位置关系与  \\(a\\) 有关\n解析：判断点与圆的位置关系，只需将点的坐标代入圆的一般方程（或标准方程），观察它与右边0的大小，将 \\(M(-1,2)\\)代入所给方程得 \\((-1)^2 + 2^2 - 2 \\times (-1) - 4 \\times 2 - 1 - a^2 = -2 - a^2 < 0\\)，所以点 \\(M\\)在圆 \\(C\\)内.\n答案：B\n【反思】判断点与圆的位置关系，可将点的坐标代入圆的一般方程或标准方程，再比较它与方程右侧0的大小（结论见知识点3）。有时题干会给出点与圆的位置关系，让求参数，其处理方法类似，比如下面的变式。",
-          "solution_present": true,
-          "vision_hint": "2.5-LIb8eaf08567e2ae2f"
-        },
-        {
-          "item_id": "d69c15f5d8a1eb59",
-          "kind": "example",
-          "label": "例7",
-          "example_number": 7,
-          "parent_example_number": null,
-          "role": "knowledge_example",
-          "role_ref": "2.5-k3",
-          "source_docs": [
-            59,
-            60
-          ],
-          "question_text": "【例 7】已知圆心为 C 的圆经过  \\(A(4,2)\\)， \\(B(2,-2)\\) 两点，且圆心 C 在直线  \\(l: x - 2y + 1 = 0\\) 上.\n（1）分别求出直线AB的方程和线段AB的垂直平分线 \\(l'\\)的方程；\n（2）求圆 C 的标准方程.",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "teaching_text": "【例 7】已知圆心为 C 的圆经过  \\(A(4,2)\\)， \\(B(2,-2)\\) 两点，且圆心 C 在直线  \\(l: x - 2y + 1 = 0\\) 上.\n（1）分别求出直线AB的方程和线段AB的垂直平分线 \\(l'\\)的方程；\n（2）求圆 C 的标准方程.\n解：（1）由题意， \\(k_{AB}=\\frac{-2-2}{2-4}=2\\)，所以直线AB的方程为 \\(y-2=2(x-4)\\)，即 \\(2x-y-6=0\\)，又AB的中点为 \\((3,0)\\)，且线段AB的垂直平分线的斜率为 \\(-\\frac{1}{k_{AB}}=-\\frac{1}{2}\\)，所以线段AB的垂直平分线 \\(l'\\)的方程为 \\(y-0=-\\frac{1}{2}(x-3)\\)，即 \\(x+2y-3=0\\)。\n（2）解法1：（圆的标准方程中有  \\(a\\)， \\(b\\)， \\(r\\) 三个参数，翻译已知条件，恰好可以建立三个方程求解它们，故可尝试按此处理）设圆  \\(C\\) 的圆心为  \\(C(a,b)\\)，半径为  \\(r(r>0)\\)，则其标准方程为  \\((x-a)^2 + (y-b)^2 = r^2\\)，\n因为圆 C 经过 A，B 两点，所以  \\(\\left\\{\\begin{aligned}&(4-a)^{2}+(2-b)^{2}=r^{2}\\\\ &(2-a)^{2}+(-2-b)^{2}=r^{2}\\end{aligned}\\right.\\) ①，\n又圆心 C 在直线 l 上，所以  \\(a - 2b + 1 = 0\\) ③，\n（观察发现方程③不含 \\(r\\)，而由方程①②又容易消去 \\(r\\)，故考虑按此处理，先求解 \\(a\\)，\\(b\\)）\n由①②可得 \\((4-a)^2 + (2-b)^2 = (2-a)^2 + (-2-b)^2\\)，化简得：\\(a + 2b - 3 = 0\\)，结合③可解得：\\(a = b = 1\\)，代入①可得 \\(r = \\sqrt{10}\\)，所以圆 \\(C\\) 的标准方程为 \\((x-1)^2 + (y-1)^2 = 10\\)。\n解法2：（求圆的标准方程，核心是找圆心，求半径，已有圆心在/上，若能再找到过圆心C的另一条直线，就\n能与 \\(l\\) 联立求交点坐标，得到圆心，怎么找？第（1）问已求得 \\(AB\\) 垂直平分线 \\(l'\\) 的方程，如图，由垂径定理，\\(l'\\) 过圆心 \\(C\\)，另一条直线就找到了）\n联立 \\(\\begin{cases} x + 2y - 3 = 0 \\\\ x - 2y + 1 = 0 \\end{cases}\\) 解得：\\(x = y = 1\\)，所以圆心 \\(C\\) 的坐标为 \\((1,1)\\)，\n（半径 \\(r\\) 怎么求？圆心到圆上任意一点的距离都等于半径，故计算 \\(|CA|\\) 或 \\(|CB|\\) 均可）\n半径 \\(r = |CA| = \\sqrt{(4-1)^2 + (2-1)^2} = \\sqrt{10}\\)，故圆 \\(C\\) 的标准方程为 \\((x-1)^2 + (y-1)^2 = 10\\)。\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_890_362_1093_542.jpg\" alt=\"Image\" width=\"17%\" /></div>\n【反思】求圆的标准方程，核心是找圆心，求半径，常用思路有两个：①用待定系数法，即直接设圆的标准方程，翻译已知条件，建立关于a，b，r的方程组并求解，例如解法1；②结合几何性质分析.例如给出圆上两点，则可用垂径定理找到过圆心的一条直线，由两条过圆心的直线就能求出圆心，解法2就是这样处理的.",
-          "solution_present": true,
-          "vision_hint": "2.5-LId69c15f5d8a1eb59"
-        },
-        {
-          "item_id": "3c495e49c4b2ed62",
-          "kind": "example",
-          "label": "例8",
-          "example_number": 8,
-          "parent_example_number": null,
-          "role": "knowledge_example",
-          "role_ref": "2.5-k3",
-          "source_docs": [
-            61
-          ],
-          "question_text": "【例8】已知圆  \\(C: x^{2} + y^{2} + 2x - 8y = 0\\) 关于直线  \\(l: mx + y + 2 = 0\\) 对称，则实数 m = （ ）\nA. 4       B. 5       C. 6       D. 8",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "teaching_text": "【例8】已知圆  \\(C: x^{2} + y^{2} + 2x - 8y = 0\\) 关于直线  \\(l: mx + y + 2 = 0\\) 对称，则实数 m = （ ）\nA. 4       B. 5       C. 6       D. 8\n解析：圆关于直线对称意味着该直线过圆心，故直接将圆心坐标代入直线方程，即可求出参数  \\(m\\)， \\(x^2 + y^2 + 2x - 8y = 0 \\Leftrightarrow (x+1)^2 + (y-4)^2 = 17\\)，所以圆  \\(C\\) 的圆心为  \\(C(-1,4)\\)，\n代入直线  \\(l\\) 的方程得  \\(m \\cdot (-1) + 4 + 2 = 0\\)，解得： \\(m = 6\\)。\n答案：C\n【反思】圆本身关于某直线对称，则圆心在该直线上，此类问题只涉及一个圆，容易翻译，那如果是两个圆的对称问题呢？我们来看下面的变式1和变式2。",
-          "solution_present": true,
-          "vision_hint": "2.5-LI3c495e49c4b2ed62"
-        },
-        {
-          "item_id": "3cab676dc44a1ea0",
-          "kind": "example",
-          "label": "例9",
-          "example_number": 9,
-          "parent_example_number": null,
-          "role": "knowledge_example",
-          "role_ref": "2.5-k3",
-          "source_docs": [
-            62
-          ],
-          "question_text": "【例 9】已知点 \\(M\\) 是圆 \\(O: x^2 + y^2 = 1\\) 上的动点，点 \\(N(2,0)\\)，则 \\(MN\\) 的中点 \\(P\\) 的轨迹方程是（ ）\nA. \\((x-1)^2 + y^2 = \\frac{1}{4}\\)  \nB. \\((x-1)^2 + y^2 = \\frac{1}{2}\\)  \nC. \\((x+1)^2 + y^2 = \\frac{1}{2}\\)  \nD. \\((x+1)^2 + y^2 = \\frac{1}{4}\\)",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "teaching_text": "【例 9】已知点 \\(M\\) 是圆 \\(O: x^2 + y^2 = 1\\) 上的动点，点 \\(N(2,0)\\)，则 \\(MN\\) 的中点 \\(P\\) 的轨迹方程是（ ）\nA. \\((x-1)^2 + y^2 = \\frac{1}{4}\\)  \nB. \\((x-1)^2 + y^2 = \\frac{1}{2}\\)  \nC. \\((x+1)^2 + y^2 = \\frac{1}{2}\\)  \nD. \\((x+1)^2 + y^2 = \\frac{1}{4}\\)\n解法1：如图，M在圆上运动，带动P一起动，二者的坐标关系又容易获得，故可考虑用相关点法求P的轨迹，设 \\(P(x,y)\\)， \\(M(x_{0},y_{0})\\)，则由M在圆O上可得 \\(x_{0}^{2}+y_{0}^{2}=1\\) ①，\n因为P为MN的中点，所以 \\(\\left\\{\\begin{aligned}\\frac{x_{0}+2}{2}&=x\\textcircled{2}\\\\ \\frac{y_{0}}{2}&=y\\textcircled{3}\\end{aligned}\\right.\\)，已有关于 \\(x_{0}\\)， \\(y_{0}\\)的方程①，故考虑\n由②③反解出  \\(x_{0}\\)， \\(y_{0}\\)，代入①，得到关于 x，y 的方程，\n由②③可得  \\(\\left\\{\\begin{aligned}x_{0}&=2x-2\\\\ y_{0}&=2y\\end{aligned}\\right.\\)，代入①得  \\((2x-2)^{2}+(2y)^{2}=1\\)，化简得： \\((x-1)^{2}+y^{2}=\\frac{1}{4}\\).\n所以点 P 的轨迹方程是  \\((x-1)^{2}+y^{2}=\\frac{1}{4}\\).\n解法2：涉及中点，常联想到中位线，故也可尝试分析几何关系，但注意需单独考虑M，O，N共线的情况，当M不在x轴上时，如图，设ON的中点为Q，则 \\(Q(1,0)\\)，又因为P为MN的中点，所以 \\(\\left|PQ\\right|=\\frac{1}{2}\\left|OM\\right|=\\frac{1}{2}\\)，故点P在以Q为圆心， \\(\\frac{1}{2}\\)为半径的圆上，其方程为 \\((x-1)^{2}+y^{2}=\\frac{1}{4}\\)；\n当M在x轴上时，M的坐标为 \\((-1,0)\\)或 \\((1,0)\\)，此时对应的点P分别为 \\(\\left(\\frac{1}{2},0\\right)\\)， \\(\\left(\\frac{3}{2},0\\right)\\)，\n经检验，它们都在圆 \\((x-1)^{2}+y^{2}=\\frac{1}{4}\\)上；综上所述，点P的轨迹方程是 \\((x-1)^{2}+y^{2}=\\frac{1}{4}\\).\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_883_580_1092_737.jpg\" alt=\"Image\" width=\"17%\" /></div>\n答案：A\n【反思】①何时用相关点法求轨迹方程？满足三个特征即可：首先，求轨迹方程的点P是随着另一个点M的运动而运动的；其次，点M的运动轨迹是已知的；最后，P和M的坐标关系容易找到。具体操作步骤为：设求轨迹方程的点P的坐标为 \\((x,y)\\)（求谁的轨迹就设谁的坐标为 \\((x,y)\\)），设相关点M的坐标为 \\((x_{0},y_{0})\\)，将 \\(x_{0}\\)， \\(y_{0}\\)用x，y表示，代入已知的点M的轨迹方程，即可建立关于x，y的方程，得到点P的轨迹方程。\n②圆具有丰富的几何性质，所以与圆有关的求轨迹方程问题，除了代数的方法外，常还可考虑用几何的方法处理，我们再来看几个变式.",
-          "solution_present": true,
-          "vision_hint": "2.5-LI3cab676dc44a1ea0"
-        },
-        {
-          "item_id": "e162385985fbb973",
-          "kind": "example",
-          "label": "例10",
-          "example_number": 10,
-          "parent_example_number": null,
-          "role": "knowledge_example",
-          "role_ref": "2.5-k3",
-          "source_docs": [
-            63,
-            64
-          ],
-          "question_text": "【例 10】设  \\(A(-1,0)\\)， \\(P\\) 为圆  \\(C: (x-3)^2 + (y+2)^2 = 4\\) 上的动点，则  \\(|PA|\\) 的最大值为___。",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "teaching_text": "【例 10】设  \\(A(-1,0)\\)， \\(P\\) 为圆  \\(C: (x-3)^2 + (y+2)^2 = 4\\) 上的动点，则  \\(|PA|\\) 的最大值为___。\n解析：分析圆上动点与定点距离的最值，可尝试画图，看能否直接找到何时\\(|PA|\\)最大，如图，点\\(A\\)在圆\\(C\\)外，由图可知当\\(P\\)与\\(AC\\)的延长线与圆\\(C\\)的交点\\(P_0\\)重合时，\n|PA|最大，且最大值为 \\(|AC|+|CP_0|=|AC|+2=\\sqrt{[3-(-1)]^2+(-2-0)^2}+2=2\\sqrt{5}+2\\)。\n答案： \\(2\\sqrt{5}+2\\)\n【反思】当点 \\(P\\) 在圆 \\(C\\) 上运动时，对圆 \\(C\\) 外的定点 \\(A\\)，\\(|PA|\\) 的最大值为 \\(|AC| + r\\)，最小值为 \\(|AC|-r\\)。这是一个基础最值模型，它还能与其它知识结合，演变出稍复杂的问题，比如下面的变式1；另外，如果点 \\(A\\) 在圆内，\\(|PA|\\) 的最大值与最小值又在何处取得呢？后面的变式2会涉及。\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_926_117_1094_240.jpg\" alt=\"Image\" width=\"14%\" /></div>",
-          "solution_present": true,
-          "vision_hint": "2.5-LIe162385985fbb973"
-        },
-        {
-          "item_id": "64cda49a1d4ea0d3",
-          "kind": "example",
-          "label": "例11",
-          "example_number": 11,
-          "parent_example_number": null,
-          "role": "knowledge_example",
-          "role_ref": "2.5-k3",
-          "source_docs": [
-            65
-          ],
-          "question_text": "【例 11】圆  \\(C: x^{2} + y^{2} + ax - 2ay - 5 = 0\\) 恒过的定点为（ ）\nA.  \\((-2,1)\\),  \\((2,-1)\\) B.  \\((-1,-2)\\),  \\((2,1)\\) C.  \\((-1,-2)\\),  \\((1,2)\\) D.  \\((-2,-1)\\),  \\((2,1)\\)",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "teaching_text": "【例 11】圆  \\(C: x^{2} + y^{2} + ax - 2ay - 5 = 0\\) 恒过的定点为（ ）\nA.  \\((-2,1)\\),  \\((2,-1)\\) B.  \\((-1,-2)\\),  \\((2,1)\\) C.  \\((-1,-2)\\),  \\((1,2)\\) D.  \\((-2,-1)\\),  \\((2,1)\\)\n解析：与寻找含参直线所经过定点原理类似，要找圆所过的定点，我们也先把方程中含参的部分整合到一起，由题意，圆  \\(C\\) 的方程可化为  \\(x^2 + y^2 - 5 + a(x - 2y) = 0\\) ①，\n要使某特定的  \\(x\\)， \\(y\\) 总能满足方程①，不受  \\(a\\) 的影响，只能  \\(x - 2y = 0\\)，于是剩下的  \\(x^3 + y^2 - 5\\) 也等于 0，由此可建立方程组求  \\(x\\)， \\(y\\)，找到圆  \\(C\\) 过的定点，令  \\(\\begin{cases} x - 2y = 0 \\textcircled{2} \\\\ x^2 + y^2 - 5 = 0 \\textcircled{3} \\end{cases}\\)，由②得  \\(x = 2y\\)，代入③解得： \\(y = \\pm 1\\)，\n当  \\(y = 1\\) 时， \\(x = 2y = 2\\)；当  \\(y = -1\\) 时， \\(x = 2y = -2\\)，所以圆  \\(C\\) 经过定点  \\((2,1)\\) 和  \\((-2,-1)\\)。\n答案：D\n【反思】寻找含参曲线所经过的定点，常将曲线方程中含参的部分整合到一起，提出参数，化为形如  \\(f(x,y) + a \\cdot g(x,y) = 0\\) 的形式，由  \\(\\begin{cases} f(x,y) = 0 \\\\ g(x,y) = 0 \\end{cases}\\) 求解 x, y，得到定点坐标。本题圆的方程是直接给出的，若要增加题目的综合性，可以设置为先求圆的方程，再寻找定点，我们来看一个变式。",
-          "solution_present": true,
-          "vision_hint": "2.5-LI64cda49a1d4ea0d3"
         }
       ],
       "direct_variants": [
@@ -338,7 +270,7 @@
           "example_number": null,
           "parent_example_number": 5,
           "role": "direct_variant",
-          "role_ref": null,
+          "role_ref": "类型I 二元二次方程表示圆的系数条件",
           "source_docs": [
             58
           ],
@@ -355,7 +287,7 @@
           "example_number": null,
           "parent_example_number": 5,
           "role": "direct_variant",
-          "role_ref": null,
+          "role_ref": "类型I 二元二次方程表示圆的系数条件",
           "source_docs": [
             58,
             59
@@ -365,7 +297,56 @@
           "visual_status": "READY_TEXT_ONLY",
           "solution_isolated": true,
           "vision_hint": "2.5-LI9312451e89913c8c"
-        },
+        }
+      ],
+      "exercise_questions": [],
+      "action_order": [
+        "learn_each_current_example_then_attempt_its_direct_variants",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [],
+      "prerequisite_knowledge_blocks": []
+    },
+    {
+      "cycle_id": "2.5-cycle-5",
+      "sequence": 5,
+      "title": "类型Ⅱ 点与圆的位置关系的判断与求参",
+      "course_keys": [],
+      "prerequisite_course_keys": [
+        "line_family_fixed_point",
+        "circle_standard_general"
+      ],
+      "optional_course_keys": [],
+      "knowledge_refs": [],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 点与圆的位置关系的判断与求参"
+      ],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [
+        {
+          "item_id": "b8eaf08567e2ae2f",
+          "kind": "example",
+          "label": "例6",
+          "example_number": 6,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型Ⅱ 点与圆的位置关系的判断与求参",
+          "source_docs": [
+            59
+          ],
+          "question_text": "【例 6】已知点  \\(M(-1,2)\\) 和圆  \\(C: x^2 + y^2 - 2x - 4y - 1 - a^2 = 0 (a \\in \\mathbb{R})\\)，则（ ）\nA. 点  \\(M\\) 在圆  \\(C\\) 外\nB. 点  \\(M\\) 在圆  \\(C\\) 内\nC. 点  \\(M\\) 在圆  \\(C\\) 上\nD. 点  \\(M\\) 与圆  \\(C\\) 的位置关系与  \\(a\\) 有关",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例 6】已知点  \\(M(-1,2)\\) 和圆  \\(C: x^2 + y^2 - 2x - 4y - 1 - a^2 = 0 (a \\in \\mathbb{R})\\)，则（ ）\nA. 点  \\(M\\) 在圆  \\(C\\) 外\nB. 点  \\(M\\) 在圆  \\(C\\) 内\nC. 点  \\(M\\) 在圆  \\(C\\) 上\nD. 点  \\(M\\) 与圆  \\(C\\) 的位置关系与  \\(a\\) 有关\n解析：判断点与圆的位置关系，只需将点的坐标代入圆的一般方程（或标准方程），观察它与右边0的大小，将 \\(M(-1,2)\\)代入所给方程得 \\((-1)^2 + 2^2 - 2 \\times (-1) - 4 \\times 2 - 1 - a^2 = -2 - a^2 < 0\\)，所以点 \\(M\\)在圆 \\(C\\)内.\n答案：B\n【反思】判断点与圆的位置关系，可将点的坐标代入圆的一般方程或标准方程，再比较它与方程右侧0的大小（结论见知识点3）。有时题干会给出点与圆的位置关系，让求参数，其处理方法类似，比如下面的变式。",
+          "solution_present": true,
+          "vision_hint": "2.5-LIb8eaf08567e2ae2f"
+        }
+      ],
+      "direct_variants": [
         {
           "item_id": "76ee9de01c7e1814",
           "kind": "direct_variant",
@@ -373,7 +354,7 @@
           "example_number": null,
           "parent_example_number": 6,
           "role": "direct_variant",
-          "role_ref": null,
+          "role_ref": "类型Ⅱ 点与圆的位置关系的判断与求参",
           "source_docs": [
             59
           ],
@@ -382,7 +363,59 @@
           "visual_status": "READY_TEXT_ONLY",
           "solution_isolated": true,
           "vision_hint": "2.5-LI76ee9de01c7e1814"
-        },
+        }
+      ],
+      "exercise_questions": [],
+      "action_order": [
+        "learn_each_current_example_then_attempt_its_direct_variants",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [],
+      "prerequisite_knowledge_blocks": []
+    },
+    {
+      "cycle_id": "2.5-cycle-6",
+      "sequence": 6,
+      "title": "类型Ⅲ 求圆的方程",
+      "course_keys": [
+        "circle_determination"
+      ],
+      "prerequisite_course_keys": [
+        "line_family_fixed_point",
+        "circle_standard_general"
+      ],
+      "optional_course_keys": [],
+      "knowledge_refs": [],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 求圆的方程"
+      ],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [
+        {
+          "item_id": "d69c15f5d8a1eb59",
+          "kind": "example",
+          "label": "例7",
+          "example_number": 7,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型Ⅲ 求圆的方程",
+          "source_docs": [
+            59,
+            60
+          ],
+          "question_text": "【例 7】已知圆心为 C 的圆经过  \\(A(4,2)\\)， \\(B(2,-2)\\) 两点，且圆心 C 在直线  \\(l: x - 2y + 1 = 0\\) 上.\n（1）分别求出直线AB的方程和线段AB的垂直平分线 \\(l'\\)的方程；\n（2）求圆 C 的标准方程.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例 7】已知圆心为 C 的圆经过  \\(A(4,2)\\)， \\(B(2,-2)\\) 两点，且圆心 C 在直线  \\(l: x - 2y + 1 = 0\\) 上.\n（1）分别求出直线AB的方程和线段AB的垂直平分线 \\(l'\\)的方程；\n（2）求圆 C 的标准方程.\n解：（1）由题意， \\(k_{AB}=\\frac{-2-2}{2-4}=2\\)，所以直线AB的方程为 \\(y-2=2(x-4)\\)，即 \\(2x-y-6=0\\)，又AB的中点为 \\((3,0)\\)，且线段AB的垂直平分线的斜率为 \\(-\\frac{1}{k_{AB}}=-\\frac{1}{2}\\)，所以线段AB的垂直平分线 \\(l'\\)的方程为 \\(y-0=-\\frac{1}{2}(x-3)\\)，即 \\(x+2y-3=0\\)。\n（2）解法1：（圆的标准方程中有  \\(a\\)， \\(b\\)， \\(r\\) 三个参数，翻译已知条件，恰好可以建立三个方程求解它们，故可尝试按此处理）设圆  \\(C\\) 的圆心为  \\(C(a,b)\\)，半径为  \\(r(r>0)\\)，则其标准方程为  \\((x-a)^2 + (y-b)^2 = r^2\\)，\n因为圆 C 经过 A，B 两点，所以  \\(\\left\\{\\begin{aligned}&(4-a)^{2}+(2-b)^{2}=r^{2}\\\\ &(2-a)^{2}+(-2-b)^{2}=r^{2}\\end{aligned}\\right.\\) ①，\n又圆心 C 在直线 l 上，所以  \\(a - 2b + 1 = 0\\) ③，\n（观察发现方程③不含 \\(r\\)，而由方程①②又容易消去 \\(r\\)，故考虑按此处理，先求解 \\(a\\)，\\(b\\)）\n由①②可得 \\((4-a)^2 + (2-b)^2 = (2-a)^2 + (-2-b)^2\\)，化简得：\\(a + 2b - 3 = 0\\)，结合③可解得：\\(a = b = 1\\)，代入①可得 \\(r = \\sqrt{10}\\)，所以圆 \\(C\\) 的标准方程为 \\((x-1)^2 + (y-1)^2 = 10\\)。\n解法2：（求圆的标准方程，核心是找圆心，求半径，已有圆心在/上，若能再找到过圆心C的另一条直线，就\n能与 \\(l\\) 联立求交点坐标，得到圆心，怎么找？第（1）问已求得 \\(AB\\) 垂直平分线 \\(l'\\) 的方程，如图，由垂径定理，\\(l'\\) 过圆心 \\(C\\)，另一条直线就找到了）\n联立 \\(\\begin{cases} x + 2y - 3 = 0 \\\\ x - 2y + 1 = 0 \\end{cases}\\) 解得：\\(x = y = 1\\)，所以圆心 \\(C\\) 的坐标为 \\((1,1)\\)，\n（半径 \\(r\\) 怎么求？圆心到圆上任意一点的距离都等于半径，故计算 \\(|CA|\\) 或 \\(|CB|\\) 均可）\n半径 \\(r = |CA| = \\sqrt{(4-1)^2 + (2-1)^2} = \\sqrt{10}\\)，故圆 \\(C\\) 的标准方程为 \\((x-1)^2 + (y-1)^2 = 10\\)。\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_890_362_1093_542.jpg\" alt=\"Image\" width=\"17%\" /></div>\n【反思】求圆的标准方程，核心是找圆心，求半径，常用思路有两个：①用待定系数法，即直接设圆的标准方程，翻译已知条件，建立关于a，b，r的方程组并求解，例如解法1；②结合几何性质分析.例如给出圆上两点，则可用垂径定理找到过圆心的一条直线，由两条过圆心的直线就能求出圆心，解法2就是这样处理的.",
+          "solution_present": true,
+          "vision_hint": "2.5-LId69c15f5d8a1eb59"
+        }
+      ],
+      "direct_variants": [
         {
           "item_id": "d11040a98f4ab06e",
           "kind": "direct_variant",
@@ -390,7 +423,7 @@
           "example_number": null,
           "parent_example_number": 7,
           "role": "direct_variant",
-          "role_ref": null,
+          "role_ref": "类型Ⅲ 求圆的方程",
           "source_docs": [
             60
           ],
@@ -407,7 +440,7 @@
           "example_number": null,
           "parent_example_number": 7,
           "role": "direct_variant",
-          "role_ref": null,
+          "role_ref": "类型Ⅲ 求圆的方程",
           "source_docs": [
             60,
             61
@@ -417,7 +450,58 @@
           "visual_status": "READY_TEXT_ONLY",
           "solution_isolated": true,
           "vision_hint": "2.5-LIe1dac87be7f6f8b8"
-        },
+        }
+      ],
+      "exercise_questions": [],
+      "action_order": [
+        "watch_current_courses",
+        "learn_each_current_example_then_attempt_its_direct_variants",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [],
+      "prerequisite_knowledge_blocks": []
+    },
+    {
+      "cycle_id": "2.5-cycle-7",
+      "sequence": 7,
+      "title": "类型IV 圆相关的对称问题",
+      "course_keys": [],
+      "prerequisite_course_keys": [
+        "line_family_fixed_point",
+        "circle_standard_general",
+        "circle_determination"
+      ],
+      "optional_course_keys": [],
+      "knowledge_refs": [],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [
+        "类型IV 圆相关的对称问题"
+      ],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [
+        {
+          "item_id": "3c495e49c4b2ed62",
+          "kind": "example",
+          "label": "例8",
+          "example_number": 8,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型IV 圆相关的对称问题",
+          "source_docs": [
+            61
+          ],
+          "question_text": "【例8】已知圆  \\(C: x^{2} + y^{2} + 2x - 8y = 0\\) 关于直线  \\(l: mx + y + 2 = 0\\) 对称，则实数 m = （ ）\nA. 4       B. 5       C. 6       D. 8",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例8】已知圆  \\(C: x^{2} + y^{2} + 2x - 8y = 0\\) 关于直线  \\(l: mx + y + 2 = 0\\) 对称，则实数 m = （ ）\nA. 4       B. 5       C. 6       D. 8\n解析：圆关于直线对称意味着该直线过圆心，故直接将圆心坐标代入直线方程，即可求出参数  \\(m\\)， \\(x^2 + y^2 + 2x - 8y = 0 \\Leftrightarrow (x+1)^2 + (y-4)^2 = 17\\)，所以圆  \\(C\\) 的圆心为  \\(C(-1,4)\\)，\n代入直线  \\(l\\) 的方程得  \\(m \\cdot (-1) + 4 + 2 = 0\\)，解得： \\(m = 6\\)。\n答案：C\n【反思】圆本身关于某直线对称，则圆心在该直线上，此类问题只涉及一个圆，容易翻译，那如果是两个圆的对称问题呢？我们来看下面的变式1和变式2。",
+          "solution_present": true,
+          "vision_hint": "2.5-LI3c495e49c4b2ed62"
+        }
+      ],
+      "direct_variants": [
         {
           "item_id": "3cddc15229aba83f",
           "kind": "direct_variant",
@@ -425,7 +509,7 @@
           "example_number": null,
           "parent_example_number": 8,
           "role": "direct_variant",
-          "role_ref": null,
+          "role_ref": "类型IV 圆相关的对称问题",
           "source_docs": [
             61
           ],
@@ -442,7 +526,7 @@
           "example_number": null,
           "parent_example_number": 8,
           "role": "direct_variant",
-          "role_ref": null,
+          "role_ref": "类型IV 圆相关的对称问题",
           "source_docs": [
             61,
             62
@@ -452,7 +536,57 @@
           "visual_status": "READY_TEXT_ONLY",
           "solution_isolated": true,
           "vision_hint": "2.5-LIbd37524ddadd68b0"
-        },
+        }
+      ],
+      "exercise_questions": [],
+      "action_order": [
+        "learn_each_current_example_then_attempt_its_direct_variants",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [],
+      "prerequisite_knowledge_blocks": []
+    },
+    {
+      "cycle_id": "2.5-cycle-8",
+      "sequence": 8,
+      "title": "类型V 与圆有关的求轨迹方程问题",
+      "course_keys": [],
+      "prerequisite_course_keys": [
+        "line_family_fixed_point",
+        "circle_standard_general",
+        "circle_determination"
+      ],
+      "optional_course_keys": [],
+      "knowledge_refs": [],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [
+        "类型V 与圆有关的求轨迹方程问题"
+      ],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [
+        {
+          "item_id": "3cab676dc44a1ea0",
+          "kind": "example",
+          "label": "例9",
+          "example_number": 9,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型V 与圆有关的求轨迹方程问题",
+          "source_docs": [
+            62
+          ],
+          "question_text": "【例 9】已知点 \\(M\\) 是圆 \\(O: x^2 + y^2 = 1\\) 上的动点，点 \\(N(2,0)\\)，则 \\(MN\\) 的中点 \\(P\\) 的轨迹方程是（ ）\nA. \\((x-1)^2 + y^2 = \\frac{1}{4}\\)  \nB. \\((x-1)^2 + y^2 = \\frac{1}{2}\\)  \nC. \\((x+1)^2 + y^2 = \\frac{1}{2}\\)  \nD. \\((x+1)^2 + y^2 = \\frac{1}{4}\\)",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例 9】已知点 \\(M\\) 是圆 \\(O: x^2 + y^2 = 1\\) 上的动点，点 \\(N(2,0)\\)，则 \\(MN\\) 的中点 \\(P\\) 的轨迹方程是（ ）\nA. \\((x-1)^2 + y^2 = \\frac{1}{4}\\)  \nB. \\((x-1)^2 + y^2 = \\frac{1}{2}\\)  \nC. \\((x+1)^2 + y^2 = \\frac{1}{2}\\)  \nD. \\((x+1)^2 + y^2 = \\frac{1}{4}\\)\n解法1：如图，M在圆上运动，带动P一起动，二者的坐标关系又容易获得，故可考虑用相关点法求P的轨迹，设 \\(P(x,y)\\)， \\(M(x_{0},y_{0})\\)，则由M在圆O上可得 \\(x_{0}^{2}+y_{0}^{2}=1\\) ①，\n因为P为MN的中点，所以 \\(\\left\\{\\begin{aligned}\\frac{x_{0}+2}{2}&=x\\textcircled{2}\\\\ \\frac{y_{0}}{2}&=y\\textcircled{3}\\end{aligned}\\right.\\)，已有关于 \\(x_{0}\\)， \\(y_{0}\\)的方程①，故考虑\n由②③反解出  \\(x_{0}\\)， \\(y_{0}\\)，代入①，得到关于 x，y 的方程，\n由②③可得  \\(\\left\\{\\begin{aligned}x_{0}&=2x-2\\\\ y_{0}&=2y\\end{aligned}\\right.\\)，代入①得  \\((2x-2)^{2}+(2y)^{2}=1\\)，化简得： \\((x-1)^{2}+y^{2}=\\frac{1}{4}\\).\n所以点 P 的轨迹方程是  \\((x-1)^{2}+y^{2}=\\frac{1}{4}\\).\n解法2：涉及中点，常联想到中位线，故也可尝试分析几何关系，但注意需单独考虑M，O，N共线的情况，当M不在x轴上时，如图，设ON的中点为Q，则 \\(Q(1,0)\\)，又因为P为MN的中点，所以 \\(\\left|PQ\\right|=\\frac{1}{2}\\left|OM\\right|=\\frac{1}{2}\\)，故点P在以Q为圆心， \\(\\frac{1}{2}\\)为半径的圆上，其方程为 \\((x-1)^{2}+y^{2}=\\frac{1}{4}\\)；\n当M在x轴上时，M的坐标为 \\((-1,0)\\)或 \\((1,0)\\)，此时对应的点P分别为 \\(\\left(\\frac{1}{2},0\\right)\\)， \\(\\left(\\frac{3}{2},0\\right)\\)，\n经检验，它们都在圆 \\((x-1)^{2}+y^{2}=\\frac{1}{4}\\)上；综上所述，点P的轨迹方程是 \\((x-1)^{2}+y^{2}=\\frac{1}{4}\\).\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_883_580_1092_737.jpg\" alt=\"Image\" width=\"17%\" /></div>\n答案：A\n【反思】①何时用相关点法求轨迹方程？满足三个特征即可：首先，求轨迹方程的点P是随着另一个点M的运动而运动的；其次，点M的运动轨迹是已知的；最后，P和M的坐标关系容易找到。具体操作步骤为：设求轨迹方程的点P的坐标为 \\((x,y)\\)（求谁的轨迹就设谁的坐标为 \\((x,y)\\)），设相关点M的坐标为 \\((x_{0},y_{0})\\)，将 \\(x_{0}\\)， \\(y_{0}\\)用x，y表示，代入已知的点M的轨迹方程，即可建立关于x，y的方程，得到点P的轨迹方程。\n②圆具有丰富的几何性质，所以与圆有关的求轨迹方程问题，除了代数的方法外，常还可考虑用几何的方法处理，我们再来看几个变式.",
+          "solution_present": true,
+          "vision_hint": "2.5-LI3cab676dc44a1ea0"
+        }
+      ],
+      "direct_variants": [
         {
           "item_id": "97dbb108c03d3c4e",
           "kind": "direct_variant",
@@ -460,7 +594,7 @@
           "example_number": null,
           "parent_example_number": 9,
           "role": "direct_variant",
-          "role_ref": null,
+          "role_ref": "类型V 与圆有关的求轨迹方程问题",
           "source_docs": [
             62,
             63
@@ -478,7 +612,7 @@
           "example_number": null,
           "parent_example_number": 9,
           "role": "direct_variant",
-          "role_ref": null,
+          "role_ref": "类型V 与圆有关的求轨迹方程问题",
           "source_docs": [
             63
           ],
@@ -486,7 +620,7 @@
           "image_refs": [
             {
               "ref": "imgs/img_in_image_box_889_187_1092_361.jpg",
-              "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\imgs\\img_in_image_box_889_187_1092_361.jpg",
+              "path": "data/ocr_live_current/second_chapter_109/imgs/img_in_image_box_889_187_1092_361.jpg",
               "exists": true
             }
           ],
@@ -570,7 +704,58 @@
             "E1",
             "E2"
           ]
-        },
+        }
+      ],
+      "exercise_questions": [],
+      "action_order": [
+        "learn_each_current_example_then_attempt_its_direct_variants",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [],
+      "prerequisite_knowledge_blocks": []
+    },
+    {
+      "cycle_id": "2.5-cycle-9",
+      "sequence": 9,
+      "title": "类型VI 定点与圆上动点之间距离的最值问题",
+      "course_keys": [],
+      "prerequisite_course_keys": [
+        "line_family_fixed_point",
+        "circle_standard_general",
+        "circle_determination"
+      ],
+      "optional_course_keys": [],
+      "knowledge_refs": [],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [
+        "类型VI 定点与圆上动点之间距离的最值问题"
+      ],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [
+        {
+          "item_id": "e162385985fbb973",
+          "kind": "example",
+          "label": "例10",
+          "example_number": 10,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型VI 定点与圆上动点之间距离的最值问题",
+          "source_docs": [
+            63,
+            64
+          ],
+          "question_text": "【例 10】设  \\(A(-1,0)\\)， \\(P\\) 为圆  \\(C: (x-3)^2 + (y+2)^2 = 4\\) 上的动点，则  \\(|PA|\\) 的最大值为___。",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例 10】设  \\(A(-1,0)\\)， \\(P\\) 为圆  \\(C: (x-3)^2 + (y+2)^2 = 4\\) 上的动点，则  \\(|PA|\\) 的最大值为___。\n解析：分析圆上动点与定点距离的最值，可尝试画图，看能否直接找到何时\\(|PA|\\)最大，如图，点\\(A\\)在圆\\(C\\)外，由图可知当\\(P\\)与\\(AC\\)的延长线与圆\\(C\\)的交点\\(P_0\\)重合时，\n|PA|最大，且最大值为 \\(|AC|+|CP_0|=|AC|+2=\\sqrt{[3-(-1)]^2+(-2-0)^2}+2=2\\sqrt{5}+2\\)。\n答案： \\(2\\sqrt{5}+2\\)\n【反思】当点 \\(P\\) 在圆 \\(C\\) 上运动时，对圆 \\(C\\) 外的定点 \\(A\\)，\\(|PA|\\) 的最大值为 \\(|AC| + r\\)，最小值为 \\(|AC|-r\\)。这是一个基础最值模型，它还能与其它知识结合，演变出稍复杂的问题，比如下面的变式1；另外，如果点 \\(A\\) 在圆内，\\(|PA|\\) 的最大值与最小值又在何处取得呢？后面的变式2会涉及。\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_926_117_1094_240.jpg\" alt=\"Image\" width=\"14%\" /></div>",
+          "solution_present": true,
+          "vision_hint": "2.5-LIe162385985fbb973"
+        }
+      ],
+      "direct_variants": [
         {
           "item_id": "14e017e82119ca31",
           "kind": "direct_variant",
@@ -578,7 +763,7 @@
           "example_number": null,
           "parent_example_number": 10,
           "role": "direct_variant",
-          "role_ref": null,
+          "role_ref": "类型VI 定点与圆上动点之间距离的最值问题",
           "source_docs": [
             64
           ],
@@ -595,7 +780,7 @@
           "example_number": null,
           "parent_example_number": 10,
           "role": "direct_variant",
-          "role_ref": null,
+          "role_ref": "类型VI 定点与圆上动点之间距离的最值问题",
           "source_docs": [
             64,
             65
@@ -605,7 +790,57 @@
           "visual_status": "READY_TEXT_ONLY",
           "solution_isolated": true,
           "vision_hint": "2.5-LI6c019914172d4499"
-        },
+        }
+      ],
+      "exercise_questions": [],
+      "action_order": [
+        "learn_each_current_example_then_attempt_its_direct_variants",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [],
+      "prerequisite_knowledge_blocks": []
+    },
+    {
+      "cycle_id": "2.5-cycle-10",
+      "sequence": 10,
+      "title": "类型Ⅶ 圆过定点问题",
+      "course_keys": [],
+      "prerequisite_course_keys": [
+        "line_family_fixed_point",
+        "circle_standard_general",
+        "circle_determination"
+      ],
+      "optional_course_keys": [],
+      "knowledge_refs": [],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅶ 圆过定点问题"
+      ],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [
+        {
+          "item_id": "64cda49a1d4ea0d3",
+          "kind": "example",
+          "label": "例11",
+          "example_number": 11,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型Ⅶ 圆过定点问题",
+          "source_docs": [
+            65
+          ],
+          "question_text": "【例 11】圆  \\(C: x^{2} + y^{2} + ax - 2ay - 5 = 0\\) 恒过的定点为（ ）\nA.  \\((-2,1)\\),  \\((2,-1)\\) B.  \\((-1,-2)\\),  \\((2,1)\\) C.  \\((-1,-2)\\),  \\((1,2)\\) D.  \\((-2,-1)\\),  \\((2,1)\\)",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例 11】圆  \\(C: x^{2} + y^{2} + ax - 2ay - 5 = 0\\) 恒过的定点为（ ）\nA.  \\((-2,1)\\),  \\((2,-1)\\) B.  \\((-1,-2)\\),  \\((2,1)\\) C.  \\((-1,-2)\\),  \\((1,2)\\) D.  \\((-2,-1)\\),  \\((2,1)\\)\n解析：与寻找含参直线所经过定点原理类似，要找圆所过的定点，我们也先把方程中含参的部分整合到一起，由题意，圆  \\(C\\) 的方程可化为  \\(x^2 + y^2 - 5 + a(x - 2y) = 0\\) ①，\n要使某特定的  \\(x\\)， \\(y\\) 总能满足方程①，不受  \\(a\\) 的影响，只能  \\(x - 2y = 0\\)，于是剩下的  \\(x^3 + y^2 - 5\\) 也等于 0，由此可建立方程组求  \\(x\\)， \\(y\\)，找到圆  \\(C\\) 过的定点，令  \\(\\begin{cases} x - 2y = 0 \\textcircled{2} \\\\ x^2 + y^2 - 5 = 0 \\textcircled{3} \\end{cases}\\)，由②得  \\(x = 2y\\)，代入③解得： \\(y = \\pm 1\\)，\n当  \\(y = 1\\) 时， \\(x = 2y = 2\\)；当  \\(y = -1\\) 时， \\(x = 2y = -2\\)，所以圆  \\(C\\) 经过定点  \\((2,1)\\) 和  \\((-2,-1)\\)。\n答案：D\n【反思】寻找含参曲线所经过的定点，常将曲线方程中含参的部分整合到一起，提出参数，化为形如  \\(f(x,y) + a \\cdot g(x,y) = 0\\) 的形式，由  \\(\\begin{cases} f(x,y) = 0 \\\\ g(x,y) = 0 \\end{cases}\\) 求解 x, y，得到定点坐标。本题圆的方程是直接给出的，若要增加题目的综合性，可以设置为先求圆的方程，再寻找定点，我们来看一个变式。",
+          "solution_present": true,
+          "vision_hint": "2.5-LI64cda49a1d4ea0d3"
+        }
+      ],
+      "direct_variants": [
         {
           "item_id": "461d98408c2d18aa",
           "kind": "direct_variant",
@@ -613,7 +848,7 @@
           "example_number": null,
           "parent_example_number": 11,
           "role": "direct_variant",
-          "role_ref": null,
+          "role_ref": "类型Ⅶ 圆过定点问题",
           "source_docs": [
             65,
             66
@@ -627,62 +862,35 @@
       ],
       "exercise_questions": [],
       "action_order": [
-        "watch_current_courses",
         "learn_each_current_example_then_attempt_its_direct_variants",
         "assess_current_cycle"
       ],
       "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
       "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
-      "knowledge_blocks": [
-        {
-          "id": "2.5-k3",
-          "label": "点与圆的位置关系",
-          "example_labels": [
-            "例4",
-            "例5",
-            "例6",
-            "例7",
-            "例8",
-            "例9",
-            "例10",
-            "例11"
-          ],
-          "text": "## 知识点 3：点与圆的位置关系\n\n设点 \\(M\\) 的坐标为 \\((x_0, y_0)\\)，圆 \\(A\\) 的标准方程为 \\((x-a)^2 + (y-b)^2 = r^2 (r > 0)\\)，一般方程为 \\(x^2 + y^2 + Dx + Ey + F = 0\\) (\\(D^2 + E^2 - 4F > 0\\))，则点 \\(M\\) 与圆 \\(A\\) 的位置关系的判断方法如下：\n\n（3）\\(D^2 + E^2 - 4F = (-3)^2 + 1^2 - 4 \\times 4\\)\n\n\\(=-6 < 0\\)，所以原方程不表示任何图形。\n\n（4）\\(D^2 + E^2 - 4F = (-2)^2 + (-4)^2 - 4 \\times 5\\)\n\n\\(=0\\)，所以原方程表示一个点，不表示圆，\n\n\\(x^2 + y^2 - 2x - 4y + 5 = 0 \\Leftrightarrow (x-1)^2 +\\)\n\n\\((y-2)^2 = 0 \\Leftrightarrow x - 1 = y - 2 = 0 \\Leftrightarrow \\begin{cases} x = 1 \\\\ y = 2 \\end{cases}\\)，\n\n所以原方程表示点 \\((1,2)\\)。\n\n\n\n\n<table border=1 style='margin: auto; word-wrap: break-word;'><tr><td rowspan=\"2\">位置关系</td><td colspan=\"2\">判断方法</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>几何法</td><td style='text-align: center; word-wrap: break-word;'>代数法</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>点M在圆A内</td><td style='text-align: center; word-wrap: break-word;'>\\(|MA|&lt;r\\)</td><td style='text-align: center; word-wrap: break-word;'>\\((x_0-a)^2+(y_0-b)^2&lt;r^2\\) 或  \\(x_0^2+y_0^2+Dx_0+Ey_0+F&lt;0\\)</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>点M在圆A上</td><td style='text-align: center; word-wrap: break-word;'>\\(|MA|=r\\)</td><td style='text-align: center; word-wrap: break-word;'>\\((x_0-a)^2+(y_0-b)^2=r^2\\) 或  \\(x_0^2+y_0^2+Dx_0+Ey_0+F=0\\)</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>点M在圆A外</td><td style='text-align: center; word-wrap: break-word;'>\\(|MA|&gt;r\\)</td><td style='text-align: center; word-wrap: break-word;'>\\((x_0-a)^2+(y_0-b)^2&gt;r^2\\) 或  \\(x_0^2+y_0^2+Dx_0+Ey_0+F&gt;0\\)</td></tr></table>\n\n\n## 类型 I：二元二次方程表示圆的系数条件\n\n## 类型Ⅱ：点与圆的位置关系的判断与求参\n\n## 类型Ⅲ：求圆的方程\n\n## 类型IV：圆相关的对称问题\n\n## 类型V：与圆有关的求轨迹方程问题\n\n## 类型VI：定点与圆上动点之间距离的最值问题",
-          "answer_free": true
-        }
-      ],
+      "knowledge_blocks": [],
       "prerequisite_knowledge_blocks": []
     },
     {
-      "cycle_id": "2.5-cycle-4",
-      "sequence": 4,
+      "cycle_id": "2.5-cycle-11",
+      "sequence": 11,
       "title": "A组 夯实基础",
       "course_keys": [],
       "prerequisite_course_keys": [
+        "line_family_fixed_point",
         "circle_standard_general",
-        "circle_determination",
-        "circle_equiv_algebra",
-        "circle_equiv_geometry"
+        "circle_determination"
       ],
       "optional_course_keys": [],
       "knowledge_refs": [],
       "prerequisite_knowledge_refs": [],
-      "type_refs": [
-        "类型I 二元二次方程表示圆的系数条件",
-        "类型Ⅱ 点与圆的位置关系的判断与求参",
-        "类型Ⅲ 求圆的方程",
-        "类型IV 圆相关的对称问题",
-        "类型V 与圆有关的求轨迹方程问题",
-        "类型VI 定点与圆上动点之间距离的最值问题",
-        "类型Ⅶ 圆过定点问题"
-      ],
+      "type_refs": [],
       "bridge_unit_ids": [],
       "method_checkpoints": [],
       "worked_examples": [],
       "direct_variants": [],
       "exercise_questions": [
         {
-          "qid": "Q-79d495067334a074",
+          "qid": "Q-1d1c179ef62d3920",
           "section": "2.5",
           "group": "A",
           "number": 1,
@@ -690,7 +898,7 @@
           "source_anchor": {
             "ocr_doc": 67,
             "pdf_page": 68,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_67.md"
+            "file": "data/ocr_live_current/second_chapter_109/doc_67.md"
           },
           "question_text": "1. (2025·上海期末)\n\n设实数  \\(a > 0\\)，圆  \\(C: x^{2} + y^{2} - 4x + ay = 0\\) 的面积为  \\(8\\pi\\)，则  \\(a =\\) ___.",
           "image_refs": [],
@@ -701,7 +909,7 @@
           ]
         },
         {
-          "qid": "Q-f29b6f890b0c8f3a",
+          "qid": "Q-e94a897cdb8b2dad",
           "section": "2.5",
           "group": "A",
           "number": 2,
@@ -709,7 +917,7 @@
           "source_anchor": {
             "ocr_doc": 67,
             "pdf_page": 68,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_67.md"
+            "file": "data/ocr_live_current/second_chapter_109/doc_67.md"
           },
           "question_text": "2.（2025 · 重庆模拟）\n\n已知  \\(A(-1,0)\\)， \\(B(3,6)\\)，则以 AB 为直径的圆 C 的一般方程为（）\n\nA.  \\(x^{2}+y^{2}-2x-6y+3=0\\)\n\nB.  \\(x^{2}+y^{2}-2x-6y-3=0\\)\n\nC.  \\(x^{2}+y^{2}+2x-6y+3=0\\)\n\nD.  \\(x^{2}+y^{2}+2x-6y-3=0\\)",
           "image_refs": [],
@@ -720,7 +928,7 @@
           ]
         },
         {
-          "qid": "Q-eee2d6dfbcad9282",
+          "qid": "Q-a79b484c3228f737",
           "section": "2.5",
           "group": "A",
           "number": 3,
@@ -728,7 +936,7 @@
           "source_anchor": {
             "ocr_doc": 67,
             "pdf_page": 68,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_67.md"
+            "file": "data/ocr_live_current/second_chapter_109/doc_67.md"
           },
           "question_text": "3.（2025·贵州黔南三模）\n\n“关于 x，y 的方程  \\(x^{2}+y^{2}+ax+2y+2=0\\) 表示圆”是“a>2”的（）\n\nA. 充分不必要条件\n\nB. 必要不充分条件\n\nC. 充要条件\n\nD. 既不充分也不必要条件",
           "image_refs": [],
@@ -749,35 +957,26 @@
       "prerequisite_knowledge_blocks": []
     },
     {
-      "cycle_id": "2.5-cycle-5",
-      "sequence": 5,
+      "cycle_id": "2.5-cycle-12",
+      "sequence": 12,
       "title": "B组 强化能力",
       "course_keys": [],
       "prerequisite_course_keys": [
+        "line_family_fixed_point",
         "circle_standard_general",
-        "circle_determination",
-        "circle_equiv_algebra",
-        "circle_equiv_geometry"
+        "circle_determination"
       ],
       "optional_course_keys": [],
       "knowledge_refs": [],
       "prerequisite_knowledge_refs": [],
-      "type_refs": [
-        "类型I 二元二次方程表示圆的系数条件",
-        "类型Ⅱ 点与圆的位置关系的判断与求参",
-        "类型Ⅲ 求圆的方程",
-        "类型IV 圆相关的对称问题",
-        "类型V 与圆有关的求轨迹方程问题",
-        "类型VI 定点与圆上动点之间距离的最值问题",
-        "类型Ⅶ 圆过定点问题"
-      ],
+      "type_refs": [],
       "bridge_unit_ids": [],
       "method_checkpoints": [],
       "worked_examples": [],
       "direct_variants": [],
       "exercise_questions": [
         {
-          "qid": "Q-379b3b78620e0ed0",
+          "qid": "Q-a05912ce778125c5",
           "section": "2.5",
           "group": "B",
           "number": 4,
@@ -785,7 +984,7 @@
           "source_anchor": {
             "ocr_doc": 67,
             "pdf_page": 68,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_67.md"
+            "file": "data/ocr_live_current/second_chapter_109/doc_67.md"
           },
           "question_text": "4.（2025·上海模拟）\n\n已知  \\(a^2x^2 + (a+2)y^2 + 2ax + a = 0\\) 表示圆，则实数  \\(a\\) 的值为___。",
           "image_refs": [],
@@ -796,7 +995,7 @@
           ]
         },
         {
-          "qid": "Q-4dbbc796ee9ea661",
+          "qid": "Q-505f2963324b5f03",
           "section": "2.5",
           "group": "B",
           "number": 5,
@@ -804,7 +1003,7 @@
           "source_anchor": {
             "ocr_doc": 67,
             "pdf_page": 68,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_67.md"
+            "file": "data/ocr_live_current/second_chapter_109/doc_67.md"
           },
           "question_text": "5. (2025·安徽模拟)\n\n已知点(2,0)在圆 \\(x^2 + y^2 - 2mx + 4y + 8 = 0\\)的外部，则实数 \\(m\\)的取值范围为（ ）\n\nA.  \\((-\\infty, 3)\\) B.  \\((3, +\\infty)\\)\n\nC.  \\((-\\infty, -2) \\cup (2, 3)\\) D.  \\((-\\infty, -2) \\cup (2, +\\infty)\\)",
           "image_refs": [],
@@ -815,7 +1014,7 @@
           ]
         },
         {
-          "qid": "Q-1cff83fcf14ea5f9",
+          "qid": "Q-81dcbfc2490cda70",
           "section": "2.5",
           "group": "B",
           "number": 6,
@@ -823,7 +1022,7 @@
           "source_anchor": {
             "ocr_doc": 68,
             "pdf_page": 69,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_68.md"
+            "file": "data/ocr_live_current/second_chapter_109/doc_68.md"
           },
           "question_text": "6. (2025·广东惠州模拟)\n\n已知直线  \\(l: x - 2y - 1 = 0\\) 是圆  \\(C: x^2 + y^2 - 6x + ay + 1 = 0\\) ( \\(a \\in \\mathbb{R}\\)) 的对称轴，则实数  \\(a\\) 的值为（ ）\n\nA. 1\n\nB. -2\n\nC.  \\(4\\sqrt{3}\\)\n\nD. 2",
           "image_refs": [],
@@ -834,7 +1033,7 @@
           ]
         },
         {
-          "qid": "Q-c7da8c92e5d92cc5",
+          "qid": "Q-8850121c80954b15",
           "section": "2.5",
           "group": "B",
           "number": 7,
@@ -842,7 +1041,7 @@
           "source_anchor": {
             "ocr_doc": 68,
             "pdf_page": 69,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_68.md"
+            "file": "data/ocr_live_current/second_chapter_109/doc_68.md"
           },
           "question_text": "7.（2025·上海浦东期中）\n\n已知圆 C 与圆  \\(D: x^2 + y^2 - 4x - 2y + 3 = 0\\) 关于 x 轴对称，则圆 C 的标准方程为___。",
           "image_refs": [],
@@ -853,7 +1052,7 @@
           ]
         },
         {
-          "qid": "Q-2cba0ac5f19e3cd5",
+          "qid": "Q-aa50375a26d2c121",
           "section": "2.5",
           "group": "B",
           "number": 8,
@@ -861,7 +1060,7 @@
           "source_anchor": {
             "ocr_doc": 68,
             "pdf_page": 69,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_68.md"
+            "file": "data/ocr_live_current/second_chapter_109/doc_68.md"
           },
           "question_text": "8.（2025·云南红河期末）\n\n已知圆  \\(M: x^{2} + 2x + y^{2} + 4y + 4 = 0\\) 与圆  \\(N: x^{2} - 6x + y^{2} + 8y + 24 = 0\\) 关于直线 l 对称，则 l 的方程为（）\n\nA.  \\(x+2y+5=0\\) B. x-2y-5=0\n\nC.  \\(2x+y+5=0\\) D. 2x-y-5=0",
           "image_refs": [],
@@ -872,7 +1071,7 @@
           ]
         },
         {
-          "qid": "Q-81594ae207a0df60",
+          "qid": "Q-0944694dc2bc896d",
           "section": "2.5",
           "group": "B",
           "number": 9,
@@ -880,7 +1079,7 @@
           "source_anchor": {
             "ocr_doc": 68,
             "pdf_page": 69,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_68.md"
+            "file": "data/ocr_live_current/second_chapter_109/doc_68.md"
           },
           "question_text": "9.（2025·重庆长寿期末）\n\n已知点  \\(P(x,y)\\) 是圆  \\((x-2)^{2}+y^{2}=1\\) 上任意一点，则  \\((x+1)^{2}+(y-4)^{2}\\) 的最大值为（）\n\nA. 5 B. 6\n\nC. 25 D. 36",
           "image_refs": [],
@@ -891,7 +1090,7 @@
           ]
         },
         {
-          "qid": "Q-ab2b3edc5ed93d13",
+          "qid": "Q-2a25963af8c2e96b",
           "section": "2.5",
           "group": "B",
           "number": 10,
@@ -899,7 +1098,7 @@
           "source_anchor": {
             "ocr_doc": 68,
             "pdf_page": 69,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_68.md"
+            "file": "data/ocr_live_current/second_chapter_109/doc_68.md"
           },
           "question_text": "10.（2025·全国模拟）\n\n已知点  \\(A(-2,1)\\)， \\(B(-1,0)\\)， \\(C(2,3)\\)， \\(M(a,2)\\) 四点共圆，则  \\(a=\\)___。",
           "image_refs": [],
@@ -910,7 +1109,7 @@
           ]
         },
         {
-          "qid": "Q-a63990ea996d30b9",
+          "qid": "Q-e7af51c7ac4decdc",
           "section": "2.5",
           "group": "B",
           "number": 11,
@@ -918,7 +1117,7 @@
           "source_anchor": {
             "ocr_doc": 69,
             "pdf_page": 70,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_69.md"
+            "file": "data/ocr_live_current/second_chapter_109/doc_69.md"
           },
           "question_text": "### 11. （2025·四川南充期中）\n\n已知圆 C 的圆心在直线  \\(l: y = -x + 5\\) 上，且圆 C 过点  \\(A(2,6)\\)， \\(B(5,3)\\)，若圆  \\(C'\\) 与圆 C 关于直线  \\(m: x + 2y - 2 = 0\\) 对称，则圆  \\(C'\\) 的标准方程为___。\n\n## （2025·福建三明期末）",
           "image_refs": [],
@@ -929,7 +1128,7 @@
           ]
         },
         {
-          "qid": "Q-5c14e0153b917008",
+          "qid": "Q-1a7519f4800ccb42",
           "section": "2.5",
           "group": "B",
           "number": 12,
@@ -937,7 +1136,7 @@
           "source_anchor": {
             "ocr_doc": 69,
             "pdf_page": 70,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_69.md",
+            "file": "data/ocr_live_current/second_chapter_109/doc_69.md",
             "recovery": "PADDLE_OCR_TEXT_NEIGHBOR_SEQUENCE_B11_B12_B13",
             "recovery_source_kind": "primary_ocr"
           },
@@ -952,7 +1151,7 @@
           "recovery_reason": "printed_number_missing_from_paddle_ocr"
         },
         {
-          "qid": "Q-692b5f7c47d11352",
+          "qid": "Q-71eccd74698e096f",
           "section": "2.5",
           "group": "B",
           "number": 13,
@@ -960,7 +1159,7 @@
           "source_anchor": {
             "ocr_doc": 69,
             "pdf_page": 70,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_69.md"
+            "file": "data/ocr_live_current/second_chapter_109/doc_69.md"
           },
           "question_text": "### 13 \\. (2025 · 山西长治模拟)\n\n## 高中数学一本通\n\n已知圆  \\(G\\) 经过点  \\(O(0,0)\\)，且圆  \\(G\\) 恒被直线  \\(l: mx - y - m = 0 (m \\in \\mathbb{R})\\) 平行.\n\n（1）求圆 G 的一般方程：\n\n（2）设 \\(D(6,5)\\)，P是圆G上的动点，求线段DP的中点M的轨迹方程，并说明该方程表示何曲线？",
           "image_refs": [],
@@ -971,7 +1170,7 @@
           ]
         },
         {
-          "qid": "Q-aad3c4598ccb72fb",
+          "qid": "Q-4c504b01b18e6649",
           "section": "2.5",
           "group": "B",
           "number": 14,
@@ -979,7 +1178,7 @@
           "source_anchor": {
             "ocr_doc": 69,
             "pdf_page": 70,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_69.md"
+            "file": "data/ocr_live_current/second_chapter_109/doc_69.md"
           },
           "question_text": "### 14. （2025·河北衡水期中）\n\n已知过点(1,0)的动直线 l 与圆  \\(C_{1}: x^{2} + y^{2} - 4x = 0\\) 相交于不同的两点 A, B.\n\n（1）求圆 \\(C_{1}\\)的圆心坐标和半径；\n\n（2）求线段 AB 的中点 M 的轨迹 C 的方程.",
           "image_refs": [],
@@ -990,7 +1189,7 @@
           ]
         },
         {
-          "qid": "Q-118a106b8e11d663",
+          "qid": "Q-976814534568be46",
           "section": "2.5",
           "group": "B",
           "number": 15,
@@ -998,7 +1197,7 @@
           "source_anchor": {
             "ocr_doc": 70,
             "pdf_page": 71,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_70.md"
+            "file": "data/ocr_live_current/second_chapter_109/doc_70.md"
           },
           "question_text": "### 15. （2025·江苏常州模拟）\n\n正方形 ABCD 的边长为 2，在边 BC 上取线段  \\(BE=\\frac{2}{3}\\)，在边 DC 的延长线上取 CF=1，直线 AE 与 BF 交于 M.\n\n（1）求线段EM长；\n\n（2）求证：A，B，M，C四点共圆.",
           "image_refs": [],
@@ -1019,35 +1218,26 @@
       "prerequisite_knowledge_blocks": []
     },
     {
-      "cycle_id": "2.5-cycle-6",
-      "sequence": 6,
+      "cycle_id": "2.5-cycle-13",
+      "sequence": 13,
       "title": "C组 拓展提升",
       "course_keys": [],
       "prerequisite_course_keys": [
+        "line_family_fixed_point",
         "circle_standard_general",
-        "circle_determination",
-        "circle_equiv_algebra",
-        "circle_equiv_geometry"
+        "circle_determination"
       ],
       "optional_course_keys": [],
       "knowledge_refs": [],
       "prerequisite_knowledge_refs": [],
-      "type_refs": [
-        "类型I 二元二次方程表示圆的系数条件",
-        "类型Ⅱ 点与圆的位置关系的判断与求参",
-        "类型Ⅲ 求圆的方程",
-        "类型IV 圆相关的对称问题",
-        "类型V 与圆有关的求轨迹方程问题",
-        "类型VI 定点与圆上动点之间距离的最值问题",
-        "类型Ⅶ 圆过定点问题"
-      ],
+      "type_refs": [],
       "bridge_unit_ids": [],
       "method_checkpoints": [],
       "worked_examples": [],
       "direct_variants": [],
       "exercise_questions": [
         {
-          "qid": "Q-d8b9276536eaea8f",
+          "qid": "Q-620bbd5f21a156da",
           "section": "2.5",
           "group": "C",
           "number": 16,
@@ -1055,7 +1245,7 @@
           "source_anchor": {
             "ocr_doc": 70,
             "pdf_page": 71,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_70.md"
+            "file": "data/ocr_live_current/second_chapter_109/doc_70.md"
           },
           "question_text": "### 16. （2025 · 江西模拟）\n\n在平面直角坐标系 xOy 中，设二次函数  \\(f(x)=x^{2}+\\)\n\n2x + b(x \\in \\mathbf{R}) 的图象与两坐标轴共有 3 个不同的交点，经过这三个交点的圆记为圆 C.\n\n（1）求实数 b 的取值范围：\n\n（2）请问当 b 变化时，圆 C 是否经过某定点？请证明你的结论.",
           "image_refs": [],
@@ -1231,8 +1421,8 @@
       "label": "例5",
       "example_number": 5,
       "parent_example_number": null,
-      "role": "knowledge_example",
-      "role_ref": "2.5-k3",
+      "role": "type_example",
+      "role_ref": "类型I 二元二次方程表示圆的系数条件",
       "source_docs": [
         57,
         58
@@ -1250,8 +1440,8 @@
       "label": "例6",
       "example_number": 6,
       "parent_example_number": null,
-      "role": "knowledge_example",
-      "role_ref": "2.5-k3",
+      "role": "type_example",
+      "role_ref": "类型Ⅱ 点与圆的位置关系的判断与求参",
       "source_docs": [
         59
       ],
@@ -1268,8 +1458,8 @@
       "label": "例7",
       "example_number": 7,
       "parent_example_number": null,
-      "role": "knowledge_example",
-      "role_ref": "2.5-k3",
+      "role": "type_example",
+      "role_ref": "类型Ⅲ 求圆的方程",
       "source_docs": [
         59,
         60
@@ -1287,8 +1477,8 @@
       "label": "例8",
       "example_number": 8,
       "parent_example_number": null,
-      "role": "knowledge_example",
-      "role_ref": "2.5-k3",
+      "role": "type_example",
+      "role_ref": "类型IV 圆相关的对称问题",
       "source_docs": [
         61
       ],
@@ -1305,8 +1495,8 @@
       "label": "例9",
       "example_number": 9,
       "parent_example_number": null,
-      "role": "knowledge_example",
-      "role_ref": "2.5-k3",
+      "role": "type_example",
+      "role_ref": "类型V 与圆有关的求轨迹方程问题",
       "source_docs": [
         62
       ],
@@ -1323,8 +1513,8 @@
       "label": "例10",
       "example_number": 10,
       "parent_example_number": null,
-      "role": "knowledge_example",
-      "role_ref": "2.5-k3",
+      "role": "type_example",
+      "role_ref": "类型VI 定点与圆上动点之间距离的最值问题",
       "source_docs": [
         63,
         64
@@ -1342,8 +1532,8 @@
       "label": "例11",
       "example_number": 11,
       "parent_example_number": null,
-      "role": "knowledge_example",
-      "role_ref": "2.5-k3",
+      "role": "type_example",
+      "role_ref": "类型Ⅶ 圆过定点问题",
       "source_docs": [
         65
       ],
@@ -1363,7 +1553,7 @@
       "example_number": null,
       "parent_example_number": 5,
       "role": "direct_variant",
-      "role_ref": null,
+      "role_ref": "类型I 二元二次方程表示圆的系数条件",
       "source_docs": [
         58
       ],
@@ -1380,7 +1570,7 @@
       "example_number": null,
       "parent_example_number": 5,
       "role": "direct_variant",
-      "role_ref": null,
+      "role_ref": "类型I 二元二次方程表示圆的系数条件",
       "source_docs": [
         58,
         59
@@ -1398,7 +1588,7 @@
       "example_number": null,
       "parent_example_number": 6,
       "role": "direct_variant",
-      "role_ref": null,
+      "role_ref": "类型Ⅱ 点与圆的位置关系的判断与求参",
       "source_docs": [
         59
       ],
@@ -1415,7 +1605,7 @@
       "example_number": null,
       "parent_example_number": 7,
       "role": "direct_variant",
-      "role_ref": null,
+      "role_ref": "类型Ⅲ 求圆的方程",
       "source_docs": [
         60
       ],
@@ -1432,7 +1622,7 @@
       "example_number": null,
       "parent_example_number": 7,
       "role": "direct_variant",
-      "role_ref": null,
+      "role_ref": "类型Ⅲ 求圆的方程",
       "source_docs": [
         60,
         61
@@ -1450,7 +1640,7 @@
       "example_number": null,
       "parent_example_number": 8,
       "role": "direct_variant",
-      "role_ref": null,
+      "role_ref": "类型IV 圆相关的对称问题",
       "source_docs": [
         61
       ],
@@ -1467,7 +1657,7 @@
       "example_number": null,
       "parent_example_number": 8,
       "role": "direct_variant",
-      "role_ref": null,
+      "role_ref": "类型IV 圆相关的对称问题",
       "source_docs": [
         61,
         62
@@ -1485,7 +1675,7 @@
       "example_number": null,
       "parent_example_number": 9,
       "role": "direct_variant",
-      "role_ref": null,
+      "role_ref": "类型V 与圆有关的求轨迹方程问题",
       "source_docs": [
         62,
         63
@@ -1503,7 +1693,7 @@
       "example_number": null,
       "parent_example_number": 9,
       "role": "direct_variant",
-      "role_ref": null,
+      "role_ref": "类型V 与圆有关的求轨迹方程问题",
       "source_docs": [
         63
       ],
@@ -1511,7 +1701,7 @@
       "image_refs": [
         {
           "ref": "imgs/img_in_image_box_889_187_1092_361.jpg",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\imgs\\img_in_image_box_889_187_1092_361.jpg",
+          "path": "data/ocr_live_current/second_chapter_109/imgs/img_in_image_box_889_187_1092_361.jpg",
           "exists": true
         }
       ],
@@ -1603,7 +1793,7 @@
       "example_number": null,
       "parent_example_number": 10,
       "role": "direct_variant",
-      "role_ref": null,
+      "role_ref": "类型VI 定点与圆上动点之间距离的最值问题",
       "source_docs": [
         64
       ],
@@ -1620,7 +1810,7 @@
       "example_number": null,
       "parent_example_number": 10,
       "role": "direct_variant",
-      "role_ref": null,
+      "role_ref": "类型VI 定点与圆上动点之间距离的最值问题",
       "source_docs": [
         64,
         65
@@ -1638,7 +1828,7 @@
       "example_number": null,
       "parent_example_number": 11,
       "role": "direct_variant",
-      "role_ref": null,
+      "role_ref": "类型Ⅶ 圆过定点问题",
       "source_docs": [
         65,
         66
@@ -1653,7 +1843,7 @@
   "deduplicated_learning_items": [],
   "exercise_questions": [
     {
-      "qid": "Q-79d495067334a074",
+      "qid": "Q-1d1c179ef62d3920",
       "section": "2.5",
       "group": "A",
       "number": 1,
@@ -1661,7 +1851,7 @@
       "source_anchor": {
         "ocr_doc": 67,
         "pdf_page": 68,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_67.md"
+        "file": "data/ocr_live_current/second_chapter_109/doc_67.md"
       },
       "question_text": "1. (2025·上海期末)\n\n设实数  \\(a > 0\\)，圆  \\(C: x^{2} + y^{2} - 4x + ay = 0\\) 的面积为  \\(8\\pi\\)，则  \\(a =\\) ___.",
       "image_refs": [],
@@ -1672,7 +1862,7 @@
       ]
     },
     {
-      "qid": "Q-f29b6f890b0c8f3a",
+      "qid": "Q-e94a897cdb8b2dad",
       "section": "2.5",
       "group": "A",
       "number": 2,
@@ -1680,7 +1870,7 @@
       "source_anchor": {
         "ocr_doc": 67,
         "pdf_page": 68,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_67.md"
+        "file": "data/ocr_live_current/second_chapter_109/doc_67.md"
       },
       "question_text": "2.（2025 · 重庆模拟）\n\n已知  \\(A(-1,0)\\)， \\(B(3,6)\\)，则以 AB 为直径的圆 C 的一般方程为（）\n\nA.  \\(x^{2}+y^{2}-2x-6y+3=0\\)\n\nB.  \\(x^{2}+y^{2}-2x-6y-3=0\\)\n\nC.  \\(x^{2}+y^{2}+2x-6y+3=0\\)\n\nD.  \\(x^{2}+y^{2}+2x-6y-3=0\\)",
       "image_refs": [],
@@ -1691,7 +1881,7 @@
       ]
     },
     {
-      "qid": "Q-eee2d6dfbcad9282",
+      "qid": "Q-a79b484c3228f737",
       "section": "2.5",
       "group": "A",
       "number": 3,
@@ -1699,7 +1889,7 @@
       "source_anchor": {
         "ocr_doc": 67,
         "pdf_page": 68,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_67.md"
+        "file": "data/ocr_live_current/second_chapter_109/doc_67.md"
       },
       "question_text": "3.（2025·贵州黔南三模）\n\n“关于 x，y 的方程  \\(x^{2}+y^{2}+ax+2y+2=0\\) 表示圆”是“a>2”的（）\n\nA. 充分不必要条件\n\nB. 必要不充分条件\n\nC. 充要条件\n\nD. 既不充分也不必要条件",
       "image_refs": [],
@@ -1710,7 +1900,7 @@
       ]
     },
     {
-      "qid": "Q-379b3b78620e0ed0",
+      "qid": "Q-a05912ce778125c5",
       "section": "2.5",
       "group": "B",
       "number": 4,
@@ -1718,7 +1908,7 @@
       "source_anchor": {
         "ocr_doc": 67,
         "pdf_page": 68,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_67.md"
+        "file": "data/ocr_live_current/second_chapter_109/doc_67.md"
       },
       "question_text": "4.（2025·上海模拟）\n\n已知  \\(a^2x^2 + (a+2)y^2 + 2ax + a = 0\\) 表示圆，则实数  \\(a\\) 的值为___。",
       "image_refs": [],
@@ -1729,7 +1919,7 @@
       ]
     },
     {
-      "qid": "Q-4dbbc796ee9ea661",
+      "qid": "Q-505f2963324b5f03",
       "section": "2.5",
       "group": "B",
       "number": 5,
@@ -1737,7 +1927,7 @@
       "source_anchor": {
         "ocr_doc": 67,
         "pdf_page": 68,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_67.md"
+        "file": "data/ocr_live_current/second_chapter_109/doc_67.md"
       },
       "question_text": "5. (2025·安徽模拟)\n\n已知点(2,0)在圆 \\(x^2 + y^2 - 2mx + 4y + 8 = 0\\)的外部，则实数 \\(m\\)的取值范围为（ ）\n\nA.  \\((-\\infty, 3)\\) B.  \\((3, +\\infty)\\)\n\nC.  \\((-\\infty, -2) \\cup (2, 3)\\) D.  \\((-\\infty, -2) \\cup (2, +\\infty)\\)",
       "image_refs": [],
@@ -1748,7 +1938,7 @@
       ]
     },
     {
-      "qid": "Q-1cff83fcf14ea5f9",
+      "qid": "Q-81dcbfc2490cda70",
       "section": "2.5",
       "group": "B",
       "number": 6,
@@ -1756,7 +1946,7 @@
       "source_anchor": {
         "ocr_doc": 68,
         "pdf_page": 69,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_68.md"
+        "file": "data/ocr_live_current/second_chapter_109/doc_68.md"
       },
       "question_text": "6. (2025·广东惠州模拟)\n\n已知直线  \\(l: x - 2y - 1 = 0\\) 是圆  \\(C: x^2 + y^2 - 6x + ay + 1 = 0\\) ( \\(a \\in \\mathbb{R}\\)) 的对称轴，则实数  \\(a\\) 的值为（ ）\n\nA. 1\n\nB. -2\n\nC.  \\(4\\sqrt{3}\\)\n\nD. 2",
       "image_refs": [],
@@ -1767,7 +1957,7 @@
       ]
     },
     {
-      "qid": "Q-c7da8c92e5d92cc5",
+      "qid": "Q-8850121c80954b15",
       "section": "2.5",
       "group": "B",
       "number": 7,
@@ -1775,7 +1965,7 @@
       "source_anchor": {
         "ocr_doc": 68,
         "pdf_page": 69,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_68.md"
+        "file": "data/ocr_live_current/second_chapter_109/doc_68.md"
       },
       "question_text": "7.（2025·上海浦东期中）\n\n已知圆 C 与圆  \\(D: x^2 + y^2 - 4x - 2y + 3 = 0\\) 关于 x 轴对称，则圆 C 的标准方程为___。",
       "image_refs": [],
@@ -1786,7 +1976,7 @@
       ]
     },
     {
-      "qid": "Q-2cba0ac5f19e3cd5",
+      "qid": "Q-aa50375a26d2c121",
       "section": "2.5",
       "group": "B",
       "number": 8,
@@ -1794,7 +1984,7 @@
       "source_anchor": {
         "ocr_doc": 68,
         "pdf_page": 69,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_68.md"
+        "file": "data/ocr_live_current/second_chapter_109/doc_68.md"
       },
       "question_text": "8.（2025·云南红河期末）\n\n已知圆  \\(M: x^{2} + 2x + y^{2} + 4y + 4 = 0\\) 与圆  \\(N: x^{2} - 6x + y^{2} + 8y + 24 = 0\\) 关于直线 l 对称，则 l 的方程为（）\n\nA.  \\(x+2y+5=0\\) B. x-2y-5=0\n\nC.  \\(2x+y+5=0\\) D. 2x-y-5=0",
       "image_refs": [],
@@ -1805,7 +1995,7 @@
       ]
     },
     {
-      "qid": "Q-81594ae207a0df60",
+      "qid": "Q-0944694dc2bc896d",
       "section": "2.5",
       "group": "B",
       "number": 9,
@@ -1813,7 +2003,7 @@
       "source_anchor": {
         "ocr_doc": 68,
         "pdf_page": 69,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_68.md"
+        "file": "data/ocr_live_current/second_chapter_109/doc_68.md"
       },
       "question_text": "9.（2025·重庆长寿期末）\n\n已知点  \\(P(x,y)\\) 是圆  \\((x-2)^{2}+y^{2}=1\\) 上任意一点，则  \\((x+1)^{2}+(y-4)^{2}\\) 的最大值为（）\n\nA. 5 B. 6\n\nC. 25 D. 36",
       "image_refs": [],
@@ -1824,7 +2014,7 @@
       ]
     },
     {
-      "qid": "Q-ab2b3edc5ed93d13",
+      "qid": "Q-2a25963af8c2e96b",
       "section": "2.5",
       "group": "B",
       "number": 10,
@@ -1832,7 +2022,7 @@
       "source_anchor": {
         "ocr_doc": 68,
         "pdf_page": 69,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_68.md"
+        "file": "data/ocr_live_current/second_chapter_109/doc_68.md"
       },
       "question_text": "10.（2025·全国模拟）\n\n已知点  \\(A(-2,1)\\)， \\(B(-1,0)\\)， \\(C(2,3)\\)， \\(M(a,2)\\) 四点共圆，则  \\(a=\\)___。",
       "image_refs": [],
@@ -1843,7 +2033,7 @@
       ]
     },
     {
-      "qid": "Q-a63990ea996d30b9",
+      "qid": "Q-e7af51c7ac4decdc",
       "section": "2.5",
       "group": "B",
       "number": 11,
@@ -1851,7 +2041,7 @@
       "source_anchor": {
         "ocr_doc": 69,
         "pdf_page": 70,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_69.md"
+        "file": "data/ocr_live_current/second_chapter_109/doc_69.md"
       },
       "question_text": "### 11. （2025·四川南充期中）\n\n已知圆 C 的圆心在直线  \\(l: y = -x + 5\\) 上，且圆 C 过点  \\(A(2,6)\\)， \\(B(5,3)\\)，若圆  \\(C'\\) 与圆 C 关于直线  \\(m: x + 2y - 2 = 0\\) 对称，则圆  \\(C'\\) 的标准方程为___。\n\n## （2025·福建三明期末）",
       "image_refs": [],
@@ -1862,7 +2052,7 @@
       ]
     },
     {
-      "qid": "Q-5c14e0153b917008",
+      "qid": "Q-1a7519f4800ccb42",
       "section": "2.5",
       "group": "B",
       "number": 12,
@@ -1870,7 +2060,7 @@
       "source_anchor": {
         "ocr_doc": 69,
         "pdf_page": 70,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_69.md",
+        "file": "data/ocr_live_current/second_chapter_109/doc_69.md",
         "recovery": "PADDLE_OCR_TEXT_NEIGHBOR_SEQUENCE_B11_B12_B13",
         "recovery_source_kind": "primary_ocr"
       },
@@ -1885,7 +2075,7 @@
       "recovery_reason": "printed_number_missing_from_paddle_ocr"
     },
     {
-      "qid": "Q-692b5f7c47d11352",
+      "qid": "Q-71eccd74698e096f",
       "section": "2.5",
       "group": "B",
       "number": 13,
@@ -1893,7 +2083,7 @@
       "source_anchor": {
         "ocr_doc": 69,
         "pdf_page": 70,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_69.md"
+        "file": "data/ocr_live_current/second_chapter_109/doc_69.md"
       },
       "question_text": "### 13 \\. (2025 · 山西长治模拟)\n\n## 高中数学一本通\n\n已知圆  \\(G\\) 经过点  \\(O(0,0)\\)，且圆  \\(G\\) 恒被直线  \\(l: mx - y - m = 0 (m \\in \\mathbb{R})\\) 平行.\n\n（1）求圆 G 的一般方程：\n\n（2）设 \\(D(6,5)\\)，P是圆G上的动点，求线段DP的中点M的轨迹方程，并说明该方程表示何曲线？",
       "image_refs": [],
@@ -1904,7 +2094,7 @@
       ]
     },
     {
-      "qid": "Q-aad3c4598ccb72fb",
+      "qid": "Q-4c504b01b18e6649",
       "section": "2.5",
       "group": "B",
       "number": 14,
@@ -1912,7 +2102,7 @@
       "source_anchor": {
         "ocr_doc": 69,
         "pdf_page": 70,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_69.md"
+        "file": "data/ocr_live_current/second_chapter_109/doc_69.md"
       },
       "question_text": "### 14. （2025·河北衡水期中）\n\n已知过点(1,0)的动直线 l 与圆  \\(C_{1}: x^{2} + y^{2} - 4x = 0\\) 相交于不同的两点 A, B.\n\n（1）求圆 \\(C_{1}\\)的圆心坐标和半径；\n\n（2）求线段 AB 的中点 M 的轨迹 C 的方程.",
       "image_refs": [],
@@ -1923,7 +2113,7 @@
       ]
     },
     {
-      "qid": "Q-118a106b8e11d663",
+      "qid": "Q-976814534568be46",
       "section": "2.5",
       "group": "B",
       "number": 15,
@@ -1931,7 +2121,7 @@
       "source_anchor": {
         "ocr_doc": 70,
         "pdf_page": 71,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_70.md"
+        "file": "data/ocr_live_current/second_chapter_109/doc_70.md"
       },
       "question_text": "### 15. （2025·江苏常州模拟）\n\n正方形 ABCD 的边长为 2，在边 BC 上取线段  \\(BE=\\frac{2}{3}\\)，在边 DC 的延长线上取 CF=1，直线 AE 与 BF 交于 M.\n\n（1）求线段EM长；\n\n（2）求证：A，B，M，C四点共圆.",
       "image_refs": [],
@@ -1942,7 +2132,7 @@
       ]
     },
     {
-      "qid": "Q-d8b9276536eaea8f",
+      "qid": "Q-620bbd5f21a156da",
       "section": "2.5",
       "group": "C",
       "number": 16,
@@ -1950,7 +2140,7 @@
       "source_anchor": {
         "ocr_doc": 70,
         "pdf_page": 71,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\doc_70.md"
+        "file": "data/ocr_live_current/second_chapter_109/doc_70.md"
       },
       "question_text": "### 16. （2025 · 江西模拟）\n\n在平面直角坐标系 xOy 中，设二次函数  \\(f(x)=x^{2}+\\)\n\n2x + b(x \\in \\mathbf{R}) 的图象与两坐标轴共有 3 个不同的交点，经过这三个交点的圆记为圆 C.\n\n（1）求实数 b 的取值范围：\n\n（2）请问当 b 变化时，圆 C 是否经过某定点？请证明你的结论.",
       "image_refs": [],

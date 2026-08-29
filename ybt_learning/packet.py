@@ -26,10 +26,37 @@ CHOICE_JUDGEMENT_LINE_RE = re.compile(
     r"(?im)^.*(?:故\s*[A-D]\s*项(?:正确|错误)|正确选项|故选\s*[A-D]).*$"
 )
 HTML_IMAGE_MARKUP_RE = re.compile(r"(?is)<(?:div|img|/div|figure|/figure|p|/p)\b[^>]*>")
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
 
 
 class PacketError(ValueError):
     pass
+
+
+def _portable_source_identity(path: Path) -> str:
+    resolved = path.resolve()
+    try:
+        return resolved.relative_to(PROJECT_ROOT).as_posix()
+    except ValueError:
+        return resolved.name
+
+
+def _portable_artifact_paths(value: Any) -> Any:
+    if isinstance(value, dict):
+        return {key: _portable_artifact_paths(item) for key, item in value.items()}
+    if isinstance(value, list):
+        return [_portable_artifact_paths(item) for item in value]
+    if isinstance(value, tuple):
+        return [_portable_artifact_paths(item) for item in value]
+    if not isinstance(value, str) or not value:
+        return value
+    try:
+        path = Path(value)
+        if not path.is_absolute():
+            return value
+        return path.resolve().relative_to(PROJECT_ROOT).as_posix()
+    except (OSError, ValueError):
+        return value
 
 
 def _sha256_file(path: Path) -> str | None:
@@ -209,6 +236,13 @@ def _example_number(label: str) -> int | None:
 def _learning_role(section: dict[str, Any], number: int | None) -> tuple[str, str | None]:
     if number is None:
         return "worked_example", None
+    first_chapter_sections = {"1.1", "1.2+1.3", "1.4", "micro专题1"}
+    if str(section.get("id")) not in first_chapter_sections:
+        # OCR knowledge spans can include later type examples. Prefer the
+        # explicit type heading in the generic chapter 2-5 extraction.
+        for item in section.get("type_training", []):
+            if number in item.get("example_numbers", []):
+                return "type_example", item.get("type")
     for point in section.get("knowledge_points", []):
         examples = {str(item).replace(" ", "") for item in point.get("examples", [])}
         if f"例{number}" in examples:
@@ -427,7 +461,8 @@ def _extract_learning_items(pages: list[dict[str, Any]], section: dict[str, Any]
                 number = _example_number(label) if kind == "example" else None
                 if number is not None:
                     current_example = number
-                role, role_ref = _learning_role(section, number)
+                role_number = number if kind == "example" else current_example
+                role, role_ref = _learning_role(section, role_number)
                 current = {
                     "item_id": stable_id(section["id"], kind, doc, len(items), label),
                     "kind": kind,
@@ -1263,7 +1298,7 @@ class PacketBuilder:
         pages: list[dict[str, Any]] = []
         questions: list[dict[str, Any]] = []
         observed: set[tuple[str, int]] = set()
-        source_rel = str(self.ocr_root)
+        source_rel = _portable_source_identity(self.ocr_root)
         current_group: str | None = None
         sidecar_by_hint: dict[str, list[dict[str, Any]]] = {}
         for entry in (visual_sidecar or {}).get("results", []):
@@ -1484,11 +1519,11 @@ class PacketBuilder:
             "unresolved": sorted(set(unresolved)),
         }
         out = self.output_root / section["id"].replace("+", "_")
-        save_json(out / "packet.json", packet)
+        save_json(out / "packet.json", _portable_artifact_paths(packet))
         lesson_packet = dict(packet)
         lesson_packet["packet_type"] = "DEEPSEEK_LESSON_PACKET"
         lesson_packet["consumer_guard"] = "Lesson-only context: may include worked examples; never use for independent attempt or reward judgement."
-        save_json(out / "lesson_packet.json", lesson_packet)
+        save_json(out / "lesson_packet.json", _portable_artifact_paths(lesson_packet))
         learning_items = _extract_learning_items(pages, section)
         for item in [*learning_items["worked_examples"], *learning_items["direct_variants"]]:
             hint = _learning_item_vision_hint(section["id"], item)
@@ -1553,14 +1588,14 @@ class PacketBuilder:
             },
             "unresolved": learning_unresolved,
         }
-        save_json(out / "learning_packet.json", learning_packet)
+        save_json(out / "learning_packet.json", _portable_artifact_paths(learning_packet))
         save_json(
             out / "student_learning_items.json",
-            _student_learning_item_packet(
+            _portable_artifact_paths(_student_learning_item_packet(
                 section,
                 {**packet, "status": learning_status},
                 learning_items,
-            ),
+            )),
         )
         student_packet = dict(packet)
         student_packet["packet_type"] = "DEEPSEEK_STUDENT_PACKET"
@@ -1568,8 +1603,8 @@ class PacketBuilder:
         student_packet["consumer_guard"] = "Student/DeepSeek context: no answers. Consume only when status=VERIFIED."
         student_packet["pages"] = _student_lesson_free_pages(pages)
         student_packet["student_page_text_redacted"] = True
-        save_json(out / "student_packet.json", student_packet)
-        save_json(out / "answer_sidecar.json", {"schema_version": "7.1", "section": section["id"], "answers": answer_sidecar, "consumer_guard": "Never pass this file to a student diagnosis context."})
+        save_json(out / "student_packet.json", _portable_artifact_paths(student_packet))
+        save_json(out / "answer_sidecar.json", _portable_artifact_paths({"schema_version": "7.1", "section": section["id"], "answers": answer_sidecar, "consumer_guard": "Never pass this file to a student diagnosis context."}))
         save_json(
             out / "manifest.json",
             {
@@ -1584,7 +1619,7 @@ class PacketBuilder:
             },
         )
         (out / "packet.md").write_text(self.to_markdown(packet), encoding="utf-8")
-        return packet
+        return _portable_artifact_paths(packet)
 
     @staticmethod
     def _sidecar_matches_question(sidecar: dict[str, Any], images: list[dict[str, Any]]) -> bool:
@@ -1705,7 +1740,7 @@ class PacketBuilder:
         lines = [f"# {packet['label']}", "", f"状态：`{packet['status']}`", f"页数：{packet['manifest']['page_count']}", f"题目记录：{packet['manifest']['question_count']}", "", "## 题目索引", ""]
         for item in packet["questions"]:
             anchor = item["source_anchor"].get("pdf_page") or "?"
-            text = re.sub(r"\s+", " ", item.get("question_text", ""))[:180]
+            text = re.sub(r"\s+", " ", item.get("question_text", ""))[:180].rstrip()
             lines.append(f"- {item['group'] or '?'}{item['number']} / `{item['qid']}` / PDF页 {anchor} / {item['visual_status']} / {text}")
         if packet["unresolved"]:
             lines.extend(["", "## 未解决", ""])

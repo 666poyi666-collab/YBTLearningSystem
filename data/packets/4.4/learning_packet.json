@@ -2,9 +2,9 @@
   "schema_version": "7.4",
   "packet_type": "DEEPSEEK_SEQUENTIAL_LEARNING_PACKET",
   "section": "4.4",
-  "status": "VERIFIED",
+  "status": "UNVERIFIED",
   "source": {
-    "ocr_root": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100",
+    "ocr_root": "data/ocr_live_current/chapter4_100",
     "ocr_docs": [
       51,
       63
@@ -83,9 +83,7 @@
       "cycle_id": "4.4-cycle-2",
       "sequence": 2,
       "title": "等比中项",
-      "course_keys": [
-        "4.3.3.2 等比数列的判定"
-      ],
+      "course_keys": [],
       "prerequisite_course_keys": [
         "4.3.3.1 等比数列的基本公式"
       ],
@@ -139,7 +137,6 @@
       "direct_variants": [],
       "exercise_questions": [],
       "action_order": [
-        "watch_current_courses",
         "learn_each_current_example_then_attempt_its_direct_variants",
         "assess_current_cycle"
       ],
@@ -165,8 +162,7 @@
       "title": "等比数列的通项公式",
       "course_keys": [],
       "prerequisite_course_keys": [
-        "4.3.3.1 等比数列的基本公式",
-        "4.3.3.2 等比数列的判定"
+        "4.3.3.1 等比数列的基本公式"
       ],
       "optional_course_keys": [],
       "knowledge_refs": [
@@ -241,11 +237,10 @@
       "sequence": 4,
       "title": "等比数列与指数函数的关系",
       "course_keys": [
-        "4.3.3.3 等比数列角标和性质"
+        "4.3.3.2 等比数列的判定"
       ],
       "prerequisite_course_keys": [
-        "4.3.3.1 等比数列的基本公式",
-        "4.3.3.2 等比数列的判定"
+        "4.3.3.1 等比数列的基本公式"
       ],
       "optional_course_keys": [],
       "knowledge_refs": [
@@ -304,8 +299,7 @@
       "course_keys": [],
       "prerequisite_course_keys": [
         "4.3.3.1 等比数列的基本公式",
-        "4.3.3.2 等比数列的判定",
-        "4.3.3.3 等比数列角标和性质"
+        "4.3.3.2 等比数列的判定"
       ],
       "optional_course_keys": [],
       "knowledge_refs": [
@@ -333,240 +327,9 @@
           "teaching_text": "【例 7】正项等比数列 \\(\\{a_n\\}\\) 中，\\(a_2 a_6 = 5\\)，则 \\(a_3 a_5 =\\)___.\n解析：由题意， \\(\\{a_n\\}\\) 是等比数列，\n且  \\(2 + 6 = 3 + 5\\)，所以  \\(a_3a_5 = a_2a_6 = 5\\)。\n答案：5\n## 本节核心题型\n本节的核心内容是等比数列的判定、通项公式、性质等，我们先设计了类型Ⅰ这组题来讲解等比数列的证明方法；又设计了类型Ⅱ和类型Ⅲ这两组题来分别强化大家对等比数列的通项公式与下标和性质的理解；最后，等比数列在实际问题中也有广泛的应用，我们通过类型Ⅳ来给大家举了一个例子。",
           "solution_present": true,
           "vision_hint": "4.4-LIa9cdebb8cb50a4b7"
-        },
-        {
-          "item_id": "c290f00e5d9c2e7b",
-          "kind": "example",
-          "label": "例8",
-          "example_number": 8,
-          "parent_example_number": null,
-          "role": "knowledge_example",
-          "role_ref": "4.4-k5",
-          "source_docs": [
-            53
-          ],
-          "question_text": "【例 8】已知数列 \\(\\{a_n\\}\\) 满足 \\(a_1 = 2\\)，点 \\((a_n, a_{n+1})\\) 在函数 \\(f(x) = x^2 + 2x\\) 的图象上，其中 \\(n=1, 2, 3, \\cdots\\)，求证：数列 \\(\\{lg(a_n + 1)\\)} 为等比数列。",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "teaching_text": "【例 8】已知数列 \\(\\{a_n\\}\\) 满足 \\(a_1 = 2\\)，点 \\((a_n, a_{n+1})\\) 在函数 \\(f(x) = x^2 + 2x\\) 的图象上，其中 \\(n=1, 2, 3, \\cdots\\)，求证：数列 \\(\\{lg(a_n + 1)\\)} 为等比数列。\n证明：由题意，点 \\((a_{n},a_{n+1})\\)在 \\(f(x)=x^{2}+2x\\)的图象上，所以 \\(a_{n+1}=a_{n}^{2}+2a_{n}\\)①，\n（要证的是 \\(\\lg(a_n+1)\\)为等比数列，故考虑先构造出 \\(\\lg(a_n+1)\\)，观察发现将式①两端加1，再取对数即可）\n由①可得 \\(a_{n+1}+1=a_n^2+2a_n+1\\)，所以 \\(a_{n+1}+1=(a_n+1)^2\\)，故 \\(\\lg(a_{n+1}+1)=\\lg(a_n+1)^2=2\\lg(a_n+1)\\) ②，\n（此时能下结论 \\(\\{\\lg(a_n+1)\\}\\)为等比数列吗？务必注意，还需验证其首项 \\(\\lg(a_1+1)\\)不为0才行）\n又因为 \\(a_1=2\\)，所以 \\(\\lg(a_1+1)=\\lg3\\neq0\\)，结合式②可知数列 \\(\\{\\lg(a_n+1)\\}\\)所有项都不为0，\n所以式②可化为 \\(\\frac{\\lg(a_{n+1}+1)}{\\lg(a_n+1)}=2\\)，故数列 \\(\\{\\lg(a_n+1)\\}\\)是首项为 \\(\\lg3\\)，公比为2的等比数列.\n【反思】要证 \\(\\{b_n\\}\\)为等比数列，只需证 \\(\\frac{b_{n+1}}{b_n}\\)为常数。具体处理时，常将所给递推公式按 \\(b_n\\)的结构凑形式，如本题中的 \\(b_n = \\lg(a_n + 1)\\)，下面我们再来看几个变式。",
-          "solution_present": true,
-          "vision_hint": "4.4-LIc290f00e5d9c2e7b"
-        },
-        {
-          "item_id": "29afa4a743a188a2",
-          "kind": "example",
-          "label": "例9",
-          "example_number": 9,
-          "parent_example_number": null,
-          "role": "knowledge_example",
-          "role_ref": "4.4-k5",
-          "source_docs": [
-            55
-          ],
-          "question_text": "【例9】在等比数列 \\(\\{a_{n}\\}\\)中，已知 \\(a_{2}=2\\)， \\(a_{3}a_{4}=32\\)，则公比q=（ ）\nA. 1 B. 2 C. 4 D. 8",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "teaching_text": "【例9】在等比数列 \\(\\{a_{n}\\}\\)中，已知 \\(a_{2}=2\\)， \\(a_{3}a_{4}=32\\)，则公比q=（ ）\nA. 1 B. 2 C. 4 D. 8\n解析：所给条件都容易代公式，故直接用公式翻译它们，建立关于 \\(a_1\\)和 \\(q\\)的方程组并求解，\n由题意， \\(\\begin{cases}a_2=a_1q=2\\\\a_3a_4=a_1q^2\\cdot a_1q^3=a_1^2q^5=32\\end{cases}\\)，解得： \\(\\begin{cases}a_1=1\\\\q=2\\end{cases}\\)。\n答案：B\n【反思】在等比数列问题中，若给出与项有关的等式，则常考虑用通项公式来翻译该等式，建立关于 \\(a_{1}\\)和q的方程组，求解 \\(a_{1}\\)，q这些基本量，这是解决此类等比数列问题最常规的方法，我们再来看几个变式.",
-          "solution_present": true,
-          "vision_hint": "4.4-LI29afa4a743a188a2"
-        },
-        {
-          "item_id": "44c88bfc67602a80",
-          "kind": "example",
-          "label": "例10",
-          "example_number": 10,
-          "parent_example_number": null,
-          "role": "knowledge_example",
-          "role_ref": "4.4-k5",
-          "source_docs": [
-            55,
-            56
-          ],
-          "question_text": "【例 10】在正项等比数列 \\(\\{a_n\\}\\) 中，\\(a_3\\)，\\(a_5\\) 是方程 \\(x^2 - 15x + 9 = 0\\) 的两个根，则 \\(a_1 a_7 - a_4 =\\)（）\nA. 3\nB. 6\nC. 9\nD. 12",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "teaching_text": "【例 10】在正项等比数列 \\(\\{a_n\\}\\) 中，\\(a_3\\)，\\(a_5\\) 是方程 \\(x^2 - 15x + 9 = 0\\) 的两个根，则 \\(a_1 a_7 - a_4 =\\)（）\nA. 3\nB. 6\nC. 9\nD. 12\n解析：条件中的二次方程怎么用？观察不难发现条件和所求涉及到的下标满足 \\(3+5=1+7=2\\times4\\)，所以可利用\n韦达定理得到方程的两根之积  \\(a_3a_5\\)，那么  \\(a_1a_7\\) 和  \\(a_4\\) 也就有了，\n因为  \\(a_3\\)， \\(a_5\\) 是方程  \\(x^2 - 15x + 9 = 0\\) 的两个根，所以由韦达定理， \\(a_3a_5 = 9\\)，\n因为  \\(\\{a_n\\}\\) 为等比数列，所以  \\(a_1a_7 = a_3a_5 = 9\\)，且  \\(a_4^2 = a_3a_5 = 9\\)，解得： \\(a_4 = \\pm 3\\)，\n又因为  \\(\\{a_n\\}\\) 是正项数列，所以  \\(a_4 = 3\\)，故  \\(a_1a_7 - a_4 = 9 - 3 = 6\\)。\n答案：B\n【反思】涉及等比数列，若有相同项数的下标和也相同，则可优先尝试用下标和性质快速解题，并且在等比数列中的大部分运算都是乘法或幂运算，因此下标和性质常结合前n项积考察，我们来看下面的两个变式.",
-          "solution_present": true,
-          "vision_hint": "4.4-LI44c88bfc67602a80"
-        },
-        {
-          "item_id": "8bfe5ef5e0825d5e",
-          "kind": "example",
-          "label": "例11",
-          "example_number": 11,
-          "parent_example_number": null,
-          "role": "knowledge_example",
-          "role_ref": "4.4-k5",
-          "source_docs": [
-            57
-          ],
-          "question_text": "【例 11】某地区要进行沙漠治理，已知第 1 年该地区有土地 1 万平方千米，其中 70% 是沙漠，30% 是绿洲，从第 2 年起，该地区进行绿化改造，每年把原有沙漠的 16% 改造成绿洲，而原有绿洲的 4% 被沙漠所侵蚀后又变成沙漠，设第 n 年的绿洲面积为  \\(a_{n}\\) 万平方千米.\n（1）求数列 \\(\\{a_{n}\\}\\)的通项公式；\n（2）从第几年起，绿洲面积占土地面积的比例超过60%？（参考数据： \\(\\lg2\\approx0.301\\)）",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "teaching_text": "【例 11】某地区要进行沙漠治理，已知第 1 年该地区有土地 1 万平方千米，其中 70% 是沙漠，30% 是绿洲，从第 2 年起，该地区进行绿化改造，每年把原有沙漠的 16% 改造成绿洲，而原有绿洲的 4% 被沙漠所侵蚀后又变成沙漠，设第 n 年的绿洲面积为  \\(a_{n}\\) 万平方千米.\n（1）求数列 \\(\\{a_{n}\\}\\)的通项公式；\n（2）从第几年起，绿洲面积占土地面积的比例超过60%？（参考数据： \\(\\lg2\\approx0.301\\)）\n解：（1）（不难发现第n年的绿洲面积由上一年沙漠面积的16%和上一年绿洲面积的（1-4%）两部分组成，将此条件翻译成数学语言，就能得到数列 \\(\\{a_{n}\\}\\)的递推公式，再看如何求通项公式）\n由题意， \\(a_1 = 30\\%\\)，且当 \\(n \\geq 2\\)时， \\(a_n = (1 - a_{n-1}) \\times 16\\% + (1 - 4\\%)a_{n-1}\\)，整理得： \\(a_n = \\frac{4}{5}a_{n-1} + \\frac{4}{25}\\) ①，\n（这是形如 \\(a_n = A a_{n-1} + B (A \\neq 0, A \\neq 1, B \\neq 0)\\)的递推公式，可考虑用待定系数法构造等比数列求 \\(a_n\\)，设 \\(a_n + \\lambda = \\frac{4}{5}(a_{n-1} + \\lambda)\\)，则 \\(a_n = \\frac{4}{5}a_{n-1} - \\frac{1}{5}\\lambda\\)，与①对比可得 \\(-\\frac{1}{5}\\lambda = \\frac{4}{25}\\)，于是 \\(\\lambda = -\\frac{4}{5}\\)，构造的方法就有了）\n由①可得 \\(a_n - \\frac{4}{5} = \\frac{4}{5}a_{n-1} + \\frac{4}{25} - \\frac{4}{5} = \\frac{4}{5}\\left(a_{n-1} - \\frac{4}{5}\\right)\\)，又因为 \\(a_1 - \\frac{4}{5} = \\frac{3}{10} - \\frac{4}{5} = -\\frac{1}{2} \\neq 0\\)，所以 \\(\\left\\{a_n - \\frac{4}{5}\\right\\}\\)是首项为 \\(-\\frac{1}{2}\\)，公比为 \\(\\frac{4}{5}\\)的等比数列，从而 \\(a_n - \\frac{4}{5} = -\\frac{1}{2} \\cdot \\left(\\frac{4}{5}\\right)^{n-1}\\)，故 \\(a_n = \\frac{4}{5} - \\frac{1}{2} \\cdot \\left(\\frac{4}{5}\\right)^{n-1}\\)。\n（2）（绿洲面积占土地面积的比例超过60%即 \\(a_n > 60\\% = \\frac{2}{5}\\)，由此可建立不等式求 \\(n\\)的范围）\n令 \\(a_n = \\frac{4}{5} - \\frac{1}{2} \\cdot \\left(\\frac{4}{5}\\right)^{n-1} > \\frac{3}{5}\\)可得 \\(\\left(\\frac{4}{5}\\right)^{n-1} < \\frac{2}{5}\\) ②，（解指数不等式，考虑两端取对数，结合所给的参考数据，我们取常用对数）不等式②等价于 \\(\\lg\\left(\\frac{4}{5}\\right)^{n-1} < \\lg\\frac{2}{5} \\Leftrightarrow (n-1)\\lg\\frac{4}{5} < \\lg\\frac{2}{5}\\) ③，\n（所给的参考数据是 \\(\\lg2\\)，故考虑把③中的对数全部往 \\(\\lg2\\)上化）\n \\(\\lg \\frac{4}{5} = \\lg \\frac{8}{10} = \\lg 8 - \\lg 10 = \\lg 2^3 - 1 = 3 \\lg 2 - 1\\)， \\(\\lg \\frac{2}{5} = \\lg \\frac{4}{10} = \\lg 4 - \\lg 10 = \\lg 2^2 - 1 = 2 \\lg 2 - 1\\)，\n代入③得  \\((n-1)(3 \\lg 2 - 1) < 2 \\lg 2 - 1\\)，所以  \\(n - 1 > \\frac{2 \\lg 2 - 1}{3 \\lg 2 - 1}\\)，故  \\(n > 1 + \\frac{2 \\lg 2 - 1}{3 \\lg 2 - 1} \\approx 1 + \\frac{2 \\times 0.301 - 1}{3 \\times 0.301 - 1} \\approx 5.1\\)，\n结合  \\(n \\in \\mathbb{N}^*\\) 可知  \\(n\\) 的最小值为 6，所以从第 6 年起，绿洲面积占土地面积的比例超过 60%。\n【反思】等比数列在实际问题中有广泛的应用，解决有关问题的基本步骤是：①阅读材料，将其转化为等比数列模型，并设出有关变量，从而将实际问题转化为等比数列问题；②分析已知条件，求解数列问题；③回归实际，将求得的结果翻译成实际问题中的结果.\n## 补充、拓展\n有时题干虽然没有直接提及等比数列，但仔细分析后会发现可以通过构造等比数列来解决问题，我们通过下面的类型V来给大家举例.",
-          "solution_present": true,
-          "vision_hint": "4.4-LI8bfe5ef5e0825d5e"
-        },
-        {
-          "item_id": "9615feb501395c43",
-          "kind": "example",
-          "label": "例12",
-          "example_number": 12,
-          "parent_example_number": null,
-          "role": "knowledge_example",
-          "role_ref": "4.4-k5",
-          "source_docs": [
-            57,
-            58
-          ],
-          "question_text": "【例 12】设数列  \\(\\{a_{n}\\}\\) 的前 n 项和为  \\(S_{n}\\)，若  \\(S_{n}+n=2a_{n}\\)，求  \\(a_{n}\\)",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "teaching_text": "【例 12】设数列  \\(\\{a_{n}\\}\\) 的前 n 项和为  \\(S_{n}\\)，若  \\(S_{n}+n=2a_{n}\\)，求  \\(a_{n}\\)\n解：（条件给出  \\(S_{n}\\) 与  \\(a_{n}\\) 混搭的关系式，所求为  \\(a_{n}\\)，考虑退 n 相减，消去  \\(S_{n}\\)）\n因为  \\(S_{n} + n = 2a_{n}\\)，所以当  \\(n \\geq 2\\) 时， \\(S_{n-1} + n - 1 = 2a_{n-1}\\)，两式作差得  \\(S_{n} + n - (S_{n-1} + n - 1) = 2a_{n} - 2a_{n-1}\\)，\n所以  \\(S_{n}-S_{n-1}+1=2a_{n}-2a_{n-1}\\)，从而  \\(a_{n}+1=2a_{n}-2a_{n-1}\\)，故  \\(a_{n}=2a_{n-1}+1\\) ①，\n（怎样由①求 \\(a_{n}\\)？式①中除了 \\(a_{n}\\)和 \\(2a_{n-1}\\)外，还有个常数项，于是我们就想，若能把左、右两边的 \\(a_{n}\\)和 \\(a_{n-1}\\)配出相同的常数项，就能构造一个等比数列，求出 \\(a_{n}\\)，怎么配？可考虑用待定系数法，假设 \\(a_{n}+\\lambda=2(a_{n-1}+\\lambda)\\)，则 \\(a_{n}=2a_{n-1}+\\lambda\\)，与 \\(a_{n}=2a_{n-1}+1\\)对比得 \\(\\lambda=1\\)，构造的方法就有了）\n由  \\(a_{n}=2a_{n-1}+1\\) 可得  \\(a_{n}+1=2(a_{n-1}+1)\\)，（此时可以得出  \\(\\{a_{n}+1\\}\\) 是等比数列了吗？别急，还要看看首项  \\(a_{1}+1\\) 是否为 0，可在所给等式中取 n=1，求出  \\(a_{1}\\) 在  \\(S_{n}+n=2a_{n}\\) 中取 n=1 可得  \\(S_{1}+1=2a_{1}\\)，结合  \\(S_{1}=a_{1}\\) 可得  \\(a_{1}=1\\)，所以  \\(a_{1}+1=2\\)，从而  \\(\\{a_{n}+1\\}\\) 是首项和公比都为 2 的等比数列，故  \\(a_{n}+1=2^{n}\\)，所以  \\(a_{n}=2^{n}-1\\).\n【反思】遇到形如  \\(a_n = A a_{n-1} + B (A \\neq 0, A \\neq 1, B \\neq 0)\\) 的递推公式，可考虑通过待定系数法构造等比数列求  \\(a_n\\)，即设  \\(a_n + \\lambda = A (a_{n-1} + \\lambda)\\)，则  \\(a_n = A a_{n-1} + \\lambda (A-1)\\)，与  \\(a_n = A a_{n-1} + B\\) 对比可得  \\(\\lambda (A-1) = B\\)，于是  \\(\\lambda = \\frac{B}{A-1}\\)，构造的方法就有了。那如果将上述递推式中的 B 换成与 n 有关的代数式，又怎么办呢？我们来看下面的变式。",
-          "solution_present": true,
-          "vision_hint": "4.4-LI9615feb501395c43"
         }
       ],
-      "direct_variants": [
-        {
-          "item_id": "f9d2d2aaae5c64bf",
-          "kind": "direct_variant",
-          "label": "变式1",
-          "example_number": null,
-          "parent_example_number": 8,
-          "role": "direct_variant",
-          "role_ref": null,
-          "source_docs": [
-            53,
-            54
-          ],
-          "question_text": "【变式1】已知数列\\(\\{a_n\\}\\)和\\(\\{b_n\\}\\)满足\\(a_1=\\lambda\\)，\\(a_{n+1}=\\frac{2}{3}a_n+n-4\\)，\\(b_n=(-1)^n(a_n-3n+21)\\)，其中\\(\\lambda\\)为常数，\\(n\\)为正整数。\n（1）证明：对任意实数 \\(\\lambda\\)，数列 \\(\\{a_{n}\\}\\)不是等比数列；\n（2）试判断数列 \\(\\{b_{n}\\}\\)是否为等比数列.",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "solution_isolated": true,
-          "vision_hint": "4.4-LIf9d2d2aaae5c64bf"
-        },
-        {
-          "item_id": "c657c8b14fd96025",
-          "kind": "direct_variant",
-          "label": "变式2",
-          "example_number": null,
-          "parent_example_number": 8,
-          "role": "direct_variant",
-          "role_ref": null,
-          "source_docs": [
-            54
-          ],
-          "question_text": "【变式 2】设数列 \\(\\{a_n\\}\\) 的前 \\(n\\) 项和为 \\(S_n\\)，已知 \\(S_n = 2a_n - n\\)，证明：\\(\\{a_n + 1\\}\\) 为等比数列。",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "solution_isolated": true,
-          "vision_hint": "4.4-LIc657c8b14fd96025"
-        },
-        {
-          "item_id": "b9b515df124f1e66",
-          "kind": "direct_variant",
-          "label": "变式3",
-          "example_number": null,
-          "parent_example_number": 8,
-          "role": "direct_variant",
-          "role_ref": null,
-          "source_docs": [
-            54,
-            55
-          ],
-          "question_text": "【变式3】已知 a, b, c 是互不相等的实数，若 a, b, c 成等差数列，求证： \\(a+1\\)， \\(b+1\\)， \\(c+1\\) 不可能是等比数列.",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "solution_isolated": true,
-          "vision_hint": "4.4-LIb9b515df124f1e66"
-        },
-        {
-          "item_id": "b8eacec4b53ea51c",
-          "kind": "direct_variant",
-          "label": "变式1",
-          "example_number": null,
-          "parent_example_number": 9,
-          "role": "direct_variant",
-          "role_ref": null,
-          "source_docs": [
-            55
-          ],
-          "question_text": "【变式1】若等差数列\\(\\{a_n\\}\\)的公差不为零，且\\(a_2\\)，\\(a_5\\)，\\(a_9\\)成等比数列，则\\(\\frac{a_7}{a_3} =\\)（）\nA. \\(\\frac{7}{3}\\)\nB. \\(\\frac{3}{7}\\)\nC. \\(\\frac{7}{5}\\)\nD. \\(\\frac{5}{7}\\)",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "solution_isolated": true,
-          "vision_hint": "4.4-LIb8eacec4b53ea51c"
-        },
-        {
-          "item_id": "aa4352c23c70b21f",
-          "kind": "direct_variant",
-          "label": "变式2",
-          "example_number": null,
-          "parent_example_number": 9,
-          "role": "direct_variant",
-          "role_ref": null,
-          "source_docs": [
-            55
-          ],
-          "question_text": "【变式2】已知 \\(\\{a_n\\}\\)是等差数列，其前 \\(n\\)项和为 \\(S_n\\)， \\(\\{b_n\\}\\)是等比数列，且 \\(a_1=b_1=2\\)， \\(a_4+b_4=27\\)， \\(S_4-b_4=10\\)。求数列 \\(\\{a_n\\}\\)与 \\(\\{b_n\\}\\)的通项公式。",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "solution_isolated": true,
-          "vision_hint": "4.4-LIaa4352c23c70b21f"
-        },
-        {
-          "item_id": "a51623e6cfcb0507",
-          "kind": "direct_variant",
-          "label": "变式1",
-          "example_number": null,
-          "parent_example_number": 10,
-          "role": "direct_variant",
-          "role_ref": null,
-          "source_docs": [
-            56
-          ],
-          "question_text": "【变式1】已知等比数列\\(\\{a_n\\}\\)的各项均为正数，且\\(a_5a_6 + a_4a_7 = 6\\)，则\\(\\log_3 a_1 + \\log_3 a_2 + \\cdots + \\log_3 a_{10} =\\)（ ）\nA. 3       B. 5       C. \\(\\log_3 15\\)      D. 30",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "solution_isolated": true,
-          "vision_hint": "4.4-LIa51623e6cfcb0507"
-        },
-        {
-          "item_id": "870d6799d68ca6e0",
-          "kind": "direct_variant",
-          "label": "变式2",
-          "example_number": null,
-          "parent_example_number": 10,
-          "role": "direct_variant",
-          "role_ref": null,
-          "source_docs": [
-            56
-          ],
-          "question_text": "【变式 2】设等比数列 \\(\\{a_n\\}\\) 的公比为 \\(q\\)，其前 \\(n\\) 项积为 \\(T_n\\)，且满足以下条件：\\(a_1 > 1\\)，\\(a_{99}a_{100} - 1 > 0\\)，\\((a_{99} - 1)(a_{100} - 1) < 0\\)，给出下列结论：\n① \\(0 < q < 1\\)；② \\(a_{99} < a_{101}\\)；③ \\(T_{100}\\) 的值是 \\(\\{T_n\\}\\) 中最大的；④ 使 \\(T_n > 1\\) 成立的最大自然数 \\(n\\) 为 198。\n其中结论正确的是 ___。（填序号）",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "solution_isolated": true,
-          "vision_hint": "4.4-LI870d6799d68ca6e0"
-        },
-        {
-          "item_id": "932568e8828801c9",
-          "kind": "direct_variant",
-          "label": "变式",
-          "example_number": null,
-          "parent_example_number": 12,
-          "role": "direct_variant",
-          "role_ref": null,
-          "source_docs": [
-            58
-          ],
-          "question_text": "【变式】记 \\(S_{n}\\)为数列 \\(\\{a_{n}\\}\\)的前n项和，已知 \\(2S_{n}+a_{n}=3^{n}\\)\n（1）求 \\(a_{1}\\);\n（2）求数列 \\(\\{a_{n}\\}\\)的通项公式；\n（3）求 \\(S_{n}\\)的最小值.",
-          "image_refs": [],
-          "visual_status": "READY_TEXT_ONLY",
-          "solution_isolated": true,
-          "vision_hint": "4.4-LI932568e8828801c9"
-        }
-      ],
+      "direct_variants": [],
       "exercise_questions": [],
       "action_order": [
         "learn_each_current_example_then_attempt_its_direct_variants",
@@ -595,7 +358,195 @@
     {
       "cycle_id": "4.4-cycle-6",
       "sequence": 6,
-      "title": "A组 夯实基础",
+      "title": "类型I 等比数列的证明",
+      "course_keys": [],
+      "prerequisite_course_keys": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定"
+      ],
+      "optional_course_keys": [],
+      "knowledge_refs": [],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [
+        "类型I 等比数列的证明"
+      ],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [
+        {
+          "item_id": "c290f00e5d9c2e7b",
+          "kind": "example",
+          "label": "例8",
+          "example_number": 8,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型I 等比数列的证明",
+          "source_docs": [
+            53
+          ],
+          "question_text": "【例 8】已知数列 \\(\\{a_n\\}\\) 满足 \\(a_1 = 2\\)，点 \\((a_n, a_{n+1})\\) 在函数 \\(f(x) = x^2 + 2x\\) 的图象上，其中 \\(n=1, 2, 3, \\cdots\\)，求证：数列 \\(\\{lg(a_n + 1)\\)} 为等比数列。",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例 8】已知数列 \\(\\{a_n\\}\\) 满足 \\(a_1 = 2\\)，点 \\((a_n, a_{n+1})\\) 在函数 \\(f(x) = x^2 + 2x\\) 的图象上，其中 \\(n=1, 2, 3, \\cdots\\)，求证：数列 \\(\\{lg(a_n + 1)\\)} 为等比数列。\n证明：由题意，点 \\((a_{n},a_{n+1})\\)在 \\(f(x)=x^{2}+2x\\)的图象上，所以 \\(a_{n+1}=a_{n}^{2}+2a_{n}\\)①，\n（要证的是 \\(\\lg(a_n+1)\\)为等比数列，故考虑先构造出 \\(\\lg(a_n+1)\\)，观察发现将式①两端加1，再取对数即可）\n由①可得 \\(a_{n+1}+1=a_n^2+2a_n+1\\)，所以 \\(a_{n+1}+1=(a_n+1)^2\\)，故 \\(\\lg(a_{n+1}+1)=\\lg(a_n+1)^2=2\\lg(a_n+1)\\) ②，\n（此时能下结论 \\(\\{\\lg(a_n+1)\\}\\)为等比数列吗？务必注意，还需验证其首项 \\(\\lg(a_1+1)\\)不为0才行）\n又因为 \\(a_1=2\\)，所以 \\(\\lg(a_1+1)=\\lg3\\neq0\\)，结合式②可知数列 \\(\\{\\lg(a_n+1)\\}\\)所有项都不为0，\n所以式②可化为 \\(\\frac{\\lg(a_{n+1}+1)}{\\lg(a_n+1)}=2\\)，故数列 \\(\\{\\lg(a_n+1)\\}\\)是首项为 \\(\\lg3\\)，公比为2的等比数列.\n【反思】要证 \\(\\{b_n\\}\\)为等比数列，只需证 \\(\\frac{b_{n+1}}{b_n}\\)为常数。具体处理时，常将所给递推公式按 \\(b_n\\)的结构凑形式，如本题中的 \\(b_n = \\lg(a_n + 1)\\)，下面我们再来看几个变式。",
+          "solution_present": true,
+          "vision_hint": "4.4-LIc290f00e5d9c2e7b"
+        }
+      ],
+      "direct_variants": [
+        {
+          "item_id": "f9d2d2aaae5c64bf",
+          "kind": "direct_variant",
+          "label": "变式1",
+          "example_number": null,
+          "parent_example_number": 8,
+          "role": "direct_variant",
+          "role_ref": "类型I 等比数列的证明",
+          "source_docs": [
+            53,
+            54
+          ],
+          "question_text": "【变式1】已知数列\\(\\{a_n\\}\\)和\\(\\{b_n\\}\\)满足\\(a_1=\\lambda\\)，\\(a_{n+1}=\\frac{2}{3}a_n+n-4\\)，\\(b_n=(-1)^n(a_n-3n+21)\\)，其中\\(\\lambda\\)为常数，\\(n\\)为正整数。\n（1）证明：对任意实数 \\(\\lambda\\)，数列 \\(\\{a_{n}\\}\\)不是等比数列；\n（2）试判断数列 \\(\\{b_{n}\\}\\)是否为等比数列.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "4.4-LIf9d2d2aaae5c64bf"
+        },
+        {
+          "item_id": "c657c8b14fd96025",
+          "kind": "direct_variant",
+          "label": "变式2",
+          "example_number": null,
+          "parent_example_number": 8,
+          "role": "direct_variant",
+          "role_ref": "类型I 等比数列的证明",
+          "source_docs": [
+            54
+          ],
+          "question_text": "【变式 2】设数列 \\(\\{a_n\\}\\) 的前 \\(n\\) 项和为 \\(S_n\\)，已知 \\(S_n = 2a_n - n\\)，证明：\\(\\{a_n + 1\\}\\) 为等比数列。",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "4.4-LIc657c8b14fd96025"
+        },
+        {
+          "item_id": "b9b515df124f1e66",
+          "kind": "direct_variant",
+          "label": "变式3",
+          "example_number": null,
+          "parent_example_number": 8,
+          "role": "direct_variant",
+          "role_ref": "类型I 等比数列的证明",
+          "source_docs": [
+            54,
+            55
+          ],
+          "question_text": "【变式3】已知 a, b, c 是互不相等的实数，若 a, b, c 成等差数列，求证： \\(a+1\\)， \\(b+1\\)， \\(c+1\\) 不可能是等比数列.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "4.4-LIb9b515df124f1e66"
+        }
+      ],
+      "exercise_questions": [],
+      "action_order": [
+        "learn_each_current_example_then_attempt_its_direct_variants",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [],
+      "prerequisite_knowledge_blocks": []
+    },
+    {
+      "cycle_id": "4.4-cycle-7",
+      "sequence": 7,
+      "title": "类型Ⅱ 等比数列的通项公式及其应用",
+      "course_keys": [
+        "4.3.3.3 等比数列角标和性质"
+      ],
+      "prerequisite_course_keys": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定"
+      ],
+      "optional_course_keys": [],
+      "knowledge_refs": [],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 等比数列的通项公式及其应用"
+      ],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [
+        {
+          "item_id": "29afa4a743a188a2",
+          "kind": "example",
+          "label": "例9",
+          "example_number": 9,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型Ⅱ 等比数列的通项公式及其应用",
+          "source_docs": [
+            55
+          ],
+          "question_text": "【例9】在等比数列 \\(\\{a_{n}\\}\\)中，已知 \\(a_{2}=2\\)， \\(a_{3}a_{4}=32\\)，则公比q=（ ）\nA. 1 B. 2 C. 4 D. 8",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例9】在等比数列 \\(\\{a_{n}\\}\\)中，已知 \\(a_{2}=2\\)， \\(a_{3}a_{4}=32\\)，则公比q=（ ）\nA. 1 B. 2 C. 4 D. 8\n解析：所给条件都容易代公式，故直接用公式翻译它们，建立关于 \\(a_1\\)和 \\(q\\)的方程组并求解，\n由题意， \\(\\begin{cases}a_2=a_1q=2\\\\a_3a_4=a_1q^2\\cdot a_1q^3=a_1^2q^5=32\\end{cases}\\)，解得： \\(\\begin{cases}a_1=1\\\\q=2\\end{cases}\\)。\n答案：B\n【反思】在等比数列问题中，若给出与项有关的等式，则常考虑用通项公式来翻译该等式，建立关于 \\(a_{1}\\)和q的方程组，求解 \\(a_{1}\\)，q这些基本量，这是解决此类等比数列问题最常规的方法，我们再来看几个变式.",
+          "solution_present": true,
+          "vision_hint": "4.4-LI29afa4a743a188a2"
+        }
+      ],
+      "direct_variants": [
+        {
+          "item_id": "b8eacec4b53ea51c",
+          "kind": "direct_variant",
+          "label": "变式1",
+          "example_number": null,
+          "parent_example_number": 9,
+          "role": "direct_variant",
+          "role_ref": "类型Ⅱ 等比数列的通项公式及其应用",
+          "source_docs": [
+            55
+          ],
+          "question_text": "【变式1】若等差数列\\(\\{a_n\\}\\)的公差不为零，且\\(a_2\\)，\\(a_5\\)，\\(a_9\\)成等比数列，则\\(\\frac{a_7}{a_3} =\\)（）\nA. \\(\\frac{7}{3}\\)\nB. \\(\\frac{3}{7}\\)\nC. \\(\\frac{7}{5}\\)\nD. \\(\\frac{5}{7}\\)",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "4.4-LIb8eacec4b53ea51c"
+        },
+        {
+          "item_id": "aa4352c23c70b21f",
+          "kind": "direct_variant",
+          "label": "变式2",
+          "example_number": null,
+          "parent_example_number": 9,
+          "role": "direct_variant",
+          "role_ref": "类型Ⅱ 等比数列的通项公式及其应用",
+          "source_docs": [
+            55
+          ],
+          "question_text": "【变式2】已知 \\(\\{a_n\\}\\)是等差数列，其前 \\(n\\)项和为 \\(S_n\\)， \\(\\{b_n\\}\\)是等比数列，且 \\(a_1=b_1=2\\)， \\(a_4+b_4=27\\)， \\(S_4-b_4=10\\)。求数列 \\(\\{a_n\\}\\)与 \\(\\{b_n\\}\\)的通项公式。",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "4.4-LIaa4352c23c70b21f"
+        }
+      ],
+      "exercise_questions": [],
+      "action_order": [
+        "watch_current_courses",
+        "learn_each_current_example_then_attempt_its_direct_variants",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [],
+      "prerequisite_knowledge_blocks": []
+    },
+    {
+      "cycle_id": "4.4-cycle-8",
+      "sequence": 8,
+      "title": "类型III 等比数列下标和性质的应用",
       "course_keys": [],
       "prerequisite_course_keys": [
         "4.3.3.1 等比数列的基本公式",
@@ -606,19 +557,215 @@
       "knowledge_refs": [],
       "prerequisite_knowledge_refs": [],
       "type_refs": [
-        "类型I 等比数列的证明",
-        "类型Ⅱ 等比数列的通项公式及其应用",
-        "类型III 等比数列下标和性质的应用",
-        "类型IV 等比数列的实际应用",
+        "类型III 等比数列下标和性质的应用"
+      ],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [
+        {
+          "item_id": "44c88bfc67602a80",
+          "kind": "example",
+          "label": "例10",
+          "example_number": 10,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型III 等比数列下标和性质的应用",
+          "source_docs": [
+            55,
+            56
+          ],
+          "question_text": "【例 10】在正项等比数列 \\(\\{a_n\\}\\) 中，\\(a_3\\)，\\(a_5\\) 是方程 \\(x^2 - 15x + 9 = 0\\) 的两个根，则 \\(a_1 a_7 - a_4 =\\)（）\nA. 3\nB. 6\nC. 9\nD. 12",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例 10】在正项等比数列 \\(\\{a_n\\}\\) 中，\\(a_3\\)，\\(a_5\\) 是方程 \\(x^2 - 15x + 9 = 0\\) 的两个根，则 \\(a_1 a_7 - a_4 =\\)（）\nA. 3\nB. 6\nC. 9\nD. 12\n解析：条件中的二次方程怎么用？观察不难发现条件和所求涉及到的下标满足 \\(3+5=1+7=2\\times4\\)，所以可利用\n韦达定理得到方程的两根之积  \\(a_3a_5\\)，那么  \\(a_1a_7\\) 和  \\(a_4\\) 也就有了，\n因为  \\(a_3\\)， \\(a_5\\) 是方程  \\(x^2 - 15x + 9 = 0\\) 的两个根，所以由韦达定理， \\(a_3a_5 = 9\\)，\n因为  \\(\\{a_n\\}\\) 为等比数列，所以  \\(a_1a_7 = a_3a_5 = 9\\)，且  \\(a_4^2 = a_3a_5 = 9\\)，解得： \\(a_4 = \\pm 3\\)，\n又因为  \\(\\{a_n\\}\\) 是正项数列，所以  \\(a_4 = 3\\)，故  \\(a_1a_7 - a_4 = 9 - 3 = 6\\)。\n答案：B\n【反思】涉及等比数列，若有相同项数的下标和也相同，则可优先尝试用下标和性质快速解题，并且在等比数列中的大部分运算都是乘法或幂运算，因此下标和性质常结合前n项积考察，我们来看下面的两个变式.",
+          "solution_present": true,
+          "vision_hint": "4.4-LI44c88bfc67602a80"
+        }
+      ],
+      "direct_variants": [
+        {
+          "item_id": "a51623e6cfcb0507",
+          "kind": "direct_variant",
+          "label": "变式1",
+          "example_number": null,
+          "parent_example_number": 10,
+          "role": "direct_variant",
+          "role_ref": "类型III 等比数列下标和性质的应用",
+          "source_docs": [
+            56
+          ],
+          "question_text": "【变式1】已知等比数列\\(\\{a_n\\}\\)的各项均为正数，且\\(a_5a_6 + a_4a_7 = 6\\)，则\\(\\log_3 a_1 + \\log_3 a_2 + \\cdots + \\log_3 a_{10} =\\)（ ）\nA. 3       B. 5       C. \\(\\log_3 15\\)      D. 30",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "4.4-LIa51623e6cfcb0507"
+        },
+        {
+          "item_id": "870d6799d68ca6e0",
+          "kind": "direct_variant",
+          "label": "变式2",
+          "example_number": null,
+          "parent_example_number": 10,
+          "role": "direct_variant",
+          "role_ref": "类型III 等比数列下标和性质的应用",
+          "source_docs": [
+            56
+          ],
+          "question_text": "【变式 2】设等比数列 \\(\\{a_n\\}\\) 的公比为 \\(q\\)，其前 \\(n\\) 项积为 \\(T_n\\)，且满足以下条件：\\(a_1 > 1\\)，\\(a_{99}a_{100} - 1 > 0\\)，\\((a_{99} - 1)(a_{100} - 1) < 0\\)，给出下列结论：\n① \\(0 < q < 1\\)；② \\(a_{99} < a_{101}\\)；③ \\(T_{100}\\) 的值是 \\(\\{T_n\\}\\) 中最大的；④ 使 \\(T_n > 1\\) 成立的最大自然数 \\(n\\) 为 198。\n其中结论正确的是 ___。（填序号）",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "4.4-LI870d6799d68ca6e0"
+        }
+      ],
+      "exercise_questions": [],
+      "action_order": [
+        "learn_each_current_example_then_attempt_its_direct_variants",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [],
+      "prerequisite_knowledge_blocks": []
+    },
+    {
+      "cycle_id": "4.4-cycle-9",
+      "sequence": 9,
+      "title": "类型IV 等比数列的实际应用",
+      "course_keys": [],
+      "prerequisite_course_keys": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定",
+        "4.3.3.3 等比数列角标和性质"
+      ],
+      "optional_course_keys": [],
+      "knowledge_refs": [],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [
+        "类型IV 等比数列的实际应用"
+      ],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [
+        {
+          "item_id": "8bfe5ef5e0825d5e",
+          "kind": "example",
+          "label": "例11",
+          "example_number": 11,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型IV 等比数列的实际应用",
+          "source_docs": [
+            57
+          ],
+          "question_text": "【例 11】某地区要进行沙漠治理，已知第 1 年该地区有土地 1 万平方千米，其中 70% 是沙漠，30% 是绿洲，从第 2 年起，该地区进行绿化改造，每年把原有沙漠的 16% 改造成绿洲，而原有绿洲的 4% 被沙漠所侵蚀后又变成沙漠，设第 n 年的绿洲面积为  \\(a_{n}\\) 万平方千米.\n（1）求数列 \\(\\{a_{n}\\}\\)的通项公式；\n（2）从第几年起，绿洲面积占土地面积的比例超过60%？（参考数据： \\(\\lg2\\approx0.301\\)）",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例 11】某地区要进行沙漠治理，已知第 1 年该地区有土地 1 万平方千米，其中 70% 是沙漠，30% 是绿洲，从第 2 年起，该地区进行绿化改造，每年把原有沙漠的 16% 改造成绿洲，而原有绿洲的 4% 被沙漠所侵蚀后又变成沙漠，设第 n 年的绿洲面积为  \\(a_{n}\\) 万平方千米.\n（1）求数列 \\(\\{a_{n}\\}\\)的通项公式；\n（2）从第几年起，绿洲面积占土地面积的比例超过60%？（参考数据： \\(\\lg2\\approx0.301\\)）\n解：（1）（不难发现第n年的绿洲面积由上一年沙漠面积的16%和上一年绿洲面积的（1-4%）两部分组成，将此条件翻译成数学语言，就能得到数列 \\(\\{a_{n}\\}\\)的递推公式，再看如何求通项公式）\n由题意， \\(a_1 = 30\\%\\)，且当 \\(n \\geq 2\\)时， \\(a_n = (1 - a_{n-1}) \\times 16\\% + (1 - 4\\%)a_{n-1}\\)，整理得： \\(a_n = \\frac{4}{5}a_{n-1} + \\frac{4}{25}\\) ①，\n（这是形如 \\(a_n = A a_{n-1} + B (A \\neq 0, A \\neq 1, B \\neq 0)\\)的递推公式，可考虑用待定系数法构造等比数列求 \\(a_n\\)，设 \\(a_n + \\lambda = \\frac{4}{5}(a_{n-1} + \\lambda)\\)，则 \\(a_n = \\frac{4}{5}a_{n-1} - \\frac{1}{5}\\lambda\\)，与①对比可得 \\(-\\frac{1}{5}\\lambda = \\frac{4}{25}\\)，于是 \\(\\lambda = -\\frac{4}{5}\\)，构造的方法就有了）\n由①可得 \\(a_n - \\frac{4}{5} = \\frac{4}{5}a_{n-1} + \\frac{4}{25} - \\frac{4}{5} = \\frac{4}{5}\\left(a_{n-1} - \\frac{4}{5}\\right)\\)，又因为 \\(a_1 - \\frac{4}{5} = \\frac{3}{10} - \\frac{4}{5} = -\\frac{1}{2} \\neq 0\\)，所以 \\(\\left\\{a_n - \\frac{4}{5}\\right\\}\\)是首项为 \\(-\\frac{1}{2}\\)，公比为 \\(\\frac{4}{5}\\)的等比数列，从而 \\(a_n - \\frac{4}{5} = -\\frac{1}{2} \\cdot \\left(\\frac{4}{5}\\right)^{n-1}\\)，故 \\(a_n = \\frac{4}{5} - \\frac{1}{2} \\cdot \\left(\\frac{4}{5}\\right)^{n-1}\\)。\n（2）（绿洲面积占土地面积的比例超过60%即 \\(a_n > 60\\% = \\frac{2}{5}\\)，由此可建立不等式求 \\(n\\)的范围）\n令 \\(a_n = \\frac{4}{5} - \\frac{1}{2} \\cdot \\left(\\frac{4}{5}\\right)^{n-1} > \\frac{3}{5}\\)可得 \\(\\left(\\frac{4}{5}\\right)^{n-1} < \\frac{2}{5}\\) ②，（解指数不等式，考虑两端取对数，结合所给的参考数据，我们取常用对数）不等式②等价于 \\(\\lg\\left(\\frac{4}{5}\\right)^{n-1} < \\lg\\frac{2}{5} \\Leftrightarrow (n-1)\\lg\\frac{4}{5} < \\lg\\frac{2}{5}\\) ③，\n（所给的参考数据是 \\(\\lg2\\)，故考虑把③中的对数全部往 \\(\\lg2\\)上化）\n \\(\\lg \\frac{4}{5} = \\lg \\frac{8}{10} = \\lg 8 - \\lg 10 = \\lg 2^3 - 1 = 3 \\lg 2 - 1\\)， \\(\\lg \\frac{2}{5} = \\lg \\frac{4}{10} = \\lg 4 - \\lg 10 = \\lg 2^2 - 1 = 2 \\lg 2 - 1\\)，\n代入③得  \\((n-1)(3 \\lg 2 - 1) < 2 \\lg 2 - 1\\)，所以  \\(n - 1 > \\frac{2 \\lg 2 - 1}{3 \\lg 2 - 1}\\)，故  \\(n > 1 + \\frac{2 \\lg 2 - 1}{3 \\lg 2 - 1} \\approx 1 + \\frac{2 \\times 0.301 - 1}{3 \\times 0.301 - 1} \\approx 5.1\\)，\n结合  \\(n \\in \\mathbb{N}^*\\) 可知  \\(n\\) 的最小值为 6，所以从第 6 年起，绿洲面积占土地面积的比例超过 60%。\n【反思】等比数列在实际问题中有广泛的应用，解决有关问题的基本步骤是：①阅读材料，将其转化为等比数列模型，并设出有关变量，从而将实际问题转化为等比数列问题；②分析已知条件，求解数列问题；③回归实际，将求得的结果翻译成实际问题中的结果.\n## 补充、拓展\n有时题干虽然没有直接提及等比数列，但仔细分析后会发现可以通过构造等比数列来解决问题，我们通过下面的类型V来给大家举例.",
+          "solution_present": true,
+          "vision_hint": "4.4-LI8bfe5ef5e0825d5e"
+        }
+      ],
+      "direct_variants": [],
+      "exercise_questions": [],
+      "action_order": [
+        "learn_each_current_example_then_attempt_its_direct_variants",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [],
+      "prerequisite_knowledge_blocks": []
+    },
+    {
+      "cycle_id": "4.4-cycle-10",
+      "sequence": 10,
+      "title": "类型V 构造等比数列求通项",
+      "course_keys": [],
+      "prerequisite_course_keys": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定",
+        "4.3.3.3 等比数列角标和性质"
+      ],
+      "optional_course_keys": [],
+      "knowledge_refs": [],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [
         "类型V 构造等比数列求通项"
       ],
+      "bridge_unit_ids": [],
+      "method_checkpoints": [],
+      "worked_examples": [
+        {
+          "item_id": "9615feb501395c43",
+          "kind": "example",
+          "label": "例12",
+          "example_number": 12,
+          "parent_example_number": null,
+          "role": "type_example",
+          "role_ref": "类型V 构造等比数列求通项",
+          "source_docs": [
+            57,
+            58
+          ],
+          "question_text": "【例 12】设数列  \\(\\{a_{n}\\}\\) 的前 n 项和为  \\(S_{n}\\)，若  \\(S_{n}+n=2a_{n}\\)，求  \\(a_{n}\\)",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "teaching_text": "【例 12】设数列  \\(\\{a_{n}\\}\\) 的前 n 项和为  \\(S_{n}\\)，若  \\(S_{n}+n=2a_{n}\\)，求  \\(a_{n}\\)\n解：（条件给出  \\(S_{n}\\) 与  \\(a_{n}\\) 混搭的关系式，所求为  \\(a_{n}\\)，考虑退 n 相减，消去  \\(S_{n}\\)）\n因为  \\(S_{n} + n = 2a_{n}\\)，所以当  \\(n \\geq 2\\) 时， \\(S_{n-1} + n - 1 = 2a_{n-1}\\)，两式作差得  \\(S_{n} + n - (S_{n-1} + n - 1) = 2a_{n} - 2a_{n-1}\\)，\n所以  \\(S_{n}-S_{n-1}+1=2a_{n}-2a_{n-1}\\)，从而  \\(a_{n}+1=2a_{n}-2a_{n-1}\\)，故  \\(a_{n}=2a_{n-1}+1\\) ①，\n（怎样由①求 \\(a_{n}\\)？式①中除了 \\(a_{n}\\)和 \\(2a_{n-1}\\)外，还有个常数项，于是我们就想，若能把左、右两边的 \\(a_{n}\\)和 \\(a_{n-1}\\)配出相同的常数项，就能构造一个等比数列，求出 \\(a_{n}\\)，怎么配？可考虑用待定系数法，假设 \\(a_{n}+\\lambda=2(a_{n-1}+\\lambda)\\)，则 \\(a_{n}=2a_{n-1}+\\lambda\\)，与 \\(a_{n}=2a_{n-1}+1\\)对比得 \\(\\lambda=1\\)，构造的方法就有了）\n由  \\(a_{n}=2a_{n-1}+1\\) 可得  \\(a_{n}+1=2(a_{n-1}+1)\\)，（此时可以得出  \\(\\{a_{n}+1\\}\\) 是等比数列了吗？别急，还要看看首项  \\(a_{1}+1\\) 是否为 0，可在所给等式中取 n=1，求出  \\(a_{1}\\) 在  \\(S_{n}+n=2a_{n}\\) 中取 n=1 可得  \\(S_{1}+1=2a_{1}\\)，结合  \\(S_{1}=a_{1}\\) 可得  \\(a_{1}=1\\)，所以  \\(a_{1}+1=2\\)，从而  \\(\\{a_{n}+1\\}\\) 是首项和公比都为 2 的等比数列，故  \\(a_{n}+1=2^{n}\\)，所以  \\(a_{n}=2^{n}-1\\).\n【反思】遇到形如  \\(a_n = A a_{n-1} + B (A \\neq 0, A \\neq 1, B \\neq 0)\\) 的递推公式，可考虑通过待定系数法构造等比数列求  \\(a_n\\)，即设  \\(a_n + \\lambda = A (a_{n-1} + \\lambda)\\)，则  \\(a_n = A a_{n-1} + \\lambda (A-1)\\)，与  \\(a_n = A a_{n-1} + B\\) 对比可得  \\(\\lambda (A-1) = B\\)，于是  \\(\\lambda = \\frac{B}{A-1}\\)，构造的方法就有了。那如果将上述递推式中的 B 换成与 n 有关的代数式，又怎么办呢？我们来看下面的变式。",
+          "solution_present": true,
+          "vision_hint": "4.4-LI9615feb501395c43"
+        }
+      ],
+      "direct_variants": [
+        {
+          "item_id": "932568e8828801c9",
+          "kind": "direct_variant",
+          "label": "变式",
+          "example_number": null,
+          "parent_example_number": 12,
+          "role": "direct_variant",
+          "role_ref": "类型V 构造等比数列求通项",
+          "source_docs": [
+            58
+          ],
+          "question_text": "【变式】记 \\(S_{n}\\)为数列 \\(\\{a_{n}\\}\\)的前n项和，已知 \\(2S_{n}+a_{n}=3^{n}\\)\n（1）求 \\(a_{1}\\);\n（2）求数列 \\(\\{a_{n}\\}\\)的通项公式；\n（3）求 \\(S_{n}\\)的最小值.",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
+          "solution_isolated": true,
+          "vision_hint": "4.4-LI932568e8828801c9"
+        }
+      ],
+      "exercise_questions": [],
+      "action_order": [
+        "learn_each_current_example_then_attempt_its_direct_variants",
+        "assess_current_cycle"
+      ],
+      "advance_gate": "本批例题理解、直属变式、对应习题和独立复测证据齐全后才可进入下一批；提示或看答案的题必须以未见题或延迟闭卷复测补证。",
+      "failure_rule": "只报告第一处断点并给最小提示；不得提前展示下一批或当前题答案。",
+      "knowledge_blocks": [],
+      "prerequisite_knowledge_blocks": []
+    },
+    {
+      "cycle_id": "4.4-cycle-11",
+      "sequence": 11,
+      "title": "A组 夯实基础",
+      "course_keys": [],
+      "prerequisite_course_keys": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定",
+        "4.3.3.3 等比数列角标和性质"
+      ],
+      "optional_course_keys": [],
+      "knowledge_refs": [],
+      "prerequisite_knowledge_refs": [],
+      "type_refs": [],
       "bridge_unit_ids": [],
       "method_checkpoints": [],
       "worked_examples": [],
       "direct_variants": [],
       "exercise_questions": [
         {
-          "qid": "Q-f27cf7cb77f8153a",
+          "qid": "Q-2f3292190bd28753",
           "section": "4.4",
           "group": "A",
           "number": 1,
@@ -626,7 +773,7 @@
           "source_anchor": {
             "ocr_doc": 59,
             "pdf_page": 60,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_59.md"
+            "file": "data/ocr_live_current/chapter4_100/doc_59.md"
           },
           "question_text": "1.（2024·广东惠州一模）\n\n设正项等比数列 \\(\\{a_{n}\\}\\)的公比为q，若 \\(a_{2}\\)，3 \\(a_{1}\\)， \\(a_{3}\\)成等差数列，则q=（ ）\n\nA.  \\(\\frac{1}{2}\\) B. 2 C.  \\(\\frac{1}{3}\\) D. 3",
           "image_refs": [],
@@ -637,7 +784,7 @@
           ]
         },
         {
-          "qid": "Q-70f67920ba0324c8",
+          "qid": "Q-b929113a92e393ac",
           "section": "4.4",
           "group": "A",
           "number": 2,
@@ -645,53 +792,21 @@
           "source_anchor": {
             "ocr_doc": 59,
             "pdf_page": 60,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_59.md"
+            "file": "data/ocr_live_current/chapter4_100/doc_59.md"
           },
           "question_text": "### 2. （2025·甘肃兰州期中）\n\n已知数列 \\(\\{a_n\\}\\) 的前 \\(n\\) 项和为 \\(S_n\\)，且满足 \\(a_n = 2S_n - 1 (n \\in \\mathbb{N}^*)\\)。\n\n（1）求 \\(a_{1}\\)， \\(a_{2}\\)的值；\n\n（2）证明：数列 \\(\\{a_{n}\\}\\)为等比数列并求其通项公式.\n\n",
           "image_refs": [
             {
               "ref": "imgs/img_in_image_box_274_803_911_881.jpg",
-              "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_274_803_911_881.jpg",
+              "path": "data/ocr_live_current/chapter4_100/imgs/img_in_image_box_274_803_911_881.jpg",
               "exists": true
             }
           ],
-          "visual_status": "VISION_VERIFIED",
+          "visual_status": "NEEDS_VISION_SIDECAR",
           "math_errors": [],
           "evidence": [
-            "E1",
-            "E2"
-          ],
-          "vision_sidecars": [
-            {
-              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_274_803_911_881.jpg",
-              "image_sha256": "1632f5a7b2f13565b791cd2828395c3e78c987860e09167594387b533f4a8b93",
-              "confidence": "E2",
-              "structured": {
-                "objects": [],
-                "relations": [],
-                "coordinates": [],
-                "ranges": [],
-                "text": [
-                  "一数·高中数学一本通"
-                ],
-                "uncertainties": [],
-                "confidence": "E2"
-              },
-              "source_provenance": null
-            }
-          ],
-          "vision_sidecar": {
-            "objects": [],
-            "relations": [],
-            "coordinates": [],
-            "ranges": [],
-            "text": [
-              "一数·高中数学一本通"
-            ],
-            "uncertainties": [],
-            "confidence": "E2"
-          },
-          "vision_source_provenance": []
+            "E1"
+          ]
         }
       ],
       "action_order": [
@@ -704,8 +819,8 @@
       "prerequisite_knowledge_blocks": []
     },
     {
-      "cycle_id": "4.4-cycle-7",
-      "sequence": 7,
+      "cycle_id": "4.4-cycle-12",
+      "sequence": 12,
       "title": "B组 强化能力",
       "course_keys": [],
       "prerequisite_course_keys": [
@@ -716,20 +831,14 @@
       "optional_course_keys": [],
       "knowledge_refs": [],
       "prerequisite_knowledge_refs": [],
-      "type_refs": [
-        "类型I 等比数列的证明",
-        "类型Ⅱ 等比数列的通项公式及其应用",
-        "类型III 等比数列下标和性质的应用",
-        "类型IV 等比数列的实际应用",
-        "类型V 构造等比数列求通项"
-      ],
+      "type_refs": [],
       "bridge_unit_ids": [],
       "method_checkpoints": [],
       "worked_examples": [],
       "direct_variants": [],
       "exercise_questions": [
         {
-          "qid": "Q-d0e866fda19583c4",
+          "qid": "Q-b7786b05d4e9272c",
           "section": "4.4",
           "group": "B",
           "number": 3,
@@ -737,7 +846,7 @@
           "source_anchor": {
             "ocr_doc": 59,
             "pdf_page": 60,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_59.md"
+            "file": "data/ocr_live_current/chapter4_100/doc_59.md"
           },
           "question_text": "### 3. （2025·全国模拟）\n\n已知正项数列 \\(\\{a_n\\}\\) 满足 \\(\\log_3 a_{n+1} - \\log_3 a_n = 1\\) (\\(n \\in \\mathbb{N}^*\\))，且 \\(a_3 + a_5 + a_7 = 9\\)，则 \\(\\log_3 (a_2 + a_4 + a_6)\\) 的值是___。",
           "image_refs": [],
@@ -748,7 +857,7 @@
           ]
         },
         {
-          "qid": "Q-f9a247378a4e8526",
+          "qid": "Q-18d25bd877ea9ed7",
           "section": "4.4",
           "group": "B",
           "number": 4,
@@ -756,7 +865,7 @@
           "source_anchor": {
             "ocr_doc": 59,
             "pdf_page": 60,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_59.md"
+            "file": "data/ocr_live_current/chapter4_100/doc_59.md"
           },
           "question_text": "4.（2025·江苏南京开学考试）\n\n在等比数列\\(\\{a_n\\}\\)中，\\(a_3a_4a_5=8\\)，\\(a_4+a_8=20\\)，则\\(a_6=\\)（）\n\nA. 36\n\nB. \\(\\pm6\\)\n\nC. \\(-6\\)\n\nD. 6",
           "image_refs": [],
@@ -767,7 +876,7 @@
           ]
         },
         {
-          "qid": "Q-a9d1b7f81ca18b39",
+          "qid": "Q-4e2be73b93572f68",
           "section": "4.4",
           "group": "B",
           "number": 5,
@@ -775,7 +884,7 @@
           "source_anchor": {
             "ocr_doc": 60,
             "pdf_page": 61,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_60.md"
+            "file": "data/ocr_live_current/chapter4_100/doc_60.md"
           },
           "question_text": "5.（2025·江苏南通模拟）（多选）\n\n已知数列\\(\\{a_n\\}\\)是等差数列，\\(\\{b_n\\}\\)是等比数列，则下列说法中正确的是（）\n\nA. 将数列\\(\\{a_n\\}\\)的前\\(m\\)项去掉，其余各项依次构成的数列是等差数列\n\nB. 数列\\(a_1+a_2+a_3\\)，\\(a_4+a_5+a_6\\)，\\(a_7+a_8+a_9\\)，… 是等差数列\n\nC. 将数列\\(\\{b_n\\}\\)的前\\(m\\)项去掉，其余各项依次构成的数列不是等比数列\n\nD. 数列\\(b_1b_2\\)，\\(b_2b_3\\)，\\(b_3b_4\\)，\\(b_4b_5\\)，… 是等比数列",
           "image_refs": [],
@@ -786,7 +895,7 @@
           ]
         },
         {
-          "qid": "Q-f6a785bfc26589c8",
+          "qid": "Q-fd46d186b7e8c360",
           "section": "4.4",
           "group": "B",
           "number": 6,
@@ -794,7 +903,7 @@
           "source_anchor": {
             "ocr_doc": 60,
             "pdf_page": 61,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_60.md"
+            "file": "data/ocr_live_current/chapter4_100/doc_60.md"
           },
           "question_text": "6. (2025·广东江门期末)\n\n已知等比数列 \\(\\{a_{n}\\}\\)的首项 \\(a_{1}>0\\)，且满足 \\(a_{5}-a_{1}=15\\)， \\(a_{4}-a_{2}=6\\)，则公比q为（）\n\nA.  \\(\\frac{1}{2}\\) B. 2\n\nC.  \\(\\frac{1}{2}\\)或2 D. 3",
           "image_refs": [],
@@ -805,7 +914,7 @@
           ]
         },
         {
-          "qid": "Q-f0f6c534fffcf2a9",
+          "qid": "Q-37eadbbbfdf1684d",
           "section": "4.4",
           "group": "B",
           "number": 7,
@@ -813,7 +922,7 @@
           "source_anchor": {
             "ocr_doc": 60,
             "pdf_page": 61,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_60.md"
+            "file": "data/ocr_live_current/chapter4_100/doc_60.md"
           },
           "question_text": "7.（2025 · 全国模拟）\n\n已知  \\(a_{1}\\)， \\(a_{2}\\)，…， \\(a_{n}\\) 为各项大于零的等比数列，且公比不为 1，则（）\n\nA.  \\(a_{1}+a_{8}>a_{4}+a_{5}\\) B.  \\(a_{1}+a_{8}<a_{4}+a_{5}\\)\n\nC.  \\(a_{1}+a_{8}=a_{4}+a_{5}\\) D. 不能确定",
           "image_refs": [],
@@ -824,7 +933,7 @@
           ]
         },
         {
-          "qid": "Q-373c8f6e52696ff0",
+          "qid": "Q-639608dd33b805b6",
           "section": "4.4",
           "group": "B",
           "number": 8,
@@ -832,7 +941,7 @@
           "source_anchor": {
             "ocr_doc": 61,
             "pdf_page": 62,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_61.md"
+            "file": "data/ocr_live_current/chapter4_100/doc_61.md"
           },
           "question_text": "### 8. （2025 · 全国模拟）\n\n南宋数学家杨辉在《详解九章算法》中提出了关于一阶等差数列的问题：如果一个数列 \\(\\{a_n\\}\\) 从第二项开始，每一项与前一项的差构成等差数列，则称 \\(\\{a_n\\}\\) 为一阶等差数列。类比一阶等差数列的定义，我们亦可定义一阶等比数列，即一阶等比数列 \\(\\{a_n\\}\\) 满足从第二项开始，每一项与前一项的比值构成等比数列，设数列 \\(\\{a_n\\}\\)：\n\n1，1，2，8，64，… 是一阶等比数列，\\(b_n = \\frac{a_{n+1}}{a_n}\\)，则 \\(b_6 =\\)___；记 \\(c_n = \\frac{1}{\\log_2 a_n}\\)，则当 \\(n \\geq 3\\) 时，\\(c_3 + c_4 + \\cdots + c_n =\\)___。",
           "image_refs": [],
@@ -843,7 +952,7 @@
           ]
         },
         {
-          "qid": "Q-8fd31cd537870d76",
+          "qid": "Q-3abfc60bae94c8ab",
           "section": "4.4",
           "group": "B",
           "number": 9,
@@ -851,7 +960,7 @@
           "source_anchor": {
             "ocr_doc": 61,
             "pdf_page": 62,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_61.md"
+            "file": "data/ocr_live_current/chapter4_100/doc_61.md"
           },
           "question_text": "### 9. （2025·广东开学考试）\n\n已知数列 \\(\\{a_n\\}\\) 中，\\(a_1=1\\)，\\(a_{n+1}a_n+2a_{n+1}-a_n=0\\)，证明：数列 \\(\\left\\{\\frac{1}{a_n}+1\\right\\}\\) 为等比数列，并求数列 \\(\\{a_n\\}\\) 的通项公式。",
           "image_refs": [],
@@ -862,7 +971,7 @@
           ]
         },
         {
-          "qid": "Q-34f9c751e5e80fd4",
+          "qid": "Q-99da2d14a315a720",
           "section": "4.4",
           "group": "B",
           "number": 10,
@@ -870,7 +979,7 @@
           "source_anchor": {
             "ocr_doc": 61,
             "pdf_page": 62,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_61.md"
+            "file": "data/ocr_live_current/chapter4_100/doc_61.md"
           },
           "question_text": "### 10. （2025 · 全国模拟）\n\n记数列 \\(\\{a_n\\}\\) 的前 \\(n\\) 项和为 \\(S_n\\)，已知 \\(a_1 = 4\\)，\\(a_n = 3S_{n-1} + 3 \\times 2^{n+1} (n \\geq 2)\\)。\n\n（1）令 \\(b_{n}=\\frac{S_{n}}{2^{n}}\\)，证明： \\(\\{b_{n}+6\\}\\)为等比数列；\n\n（2）求 \\(\\{a_{n}\\}\\)的通项公式.",
           "image_refs": [],
@@ -881,7 +990,7 @@
           ]
         },
         {
-          "qid": "Q-45b14e0f81d5c729",
+          "qid": "Q-7d467947e34f7de5",
           "section": "4.4",
           "group": "B",
           "number": 11,
@@ -889,7 +998,7 @@
           "source_anchor": {
             "ocr_doc": 61,
             "pdf_page": 62,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_61.md"
+            "file": "data/ocr_live_current/chapter4_100/doc_61.md"
           },
           "question_text": "### 11. （2025 · 全国模拟）\n\n记 \\(S_{n}\\)为数列 \\(\\{a_{n}\\}\\)的前n项和，已知 \\(a_{n+1}=2(S_{n}+1)\\)， \\(a_{1}=2\\)。求 \\(S_{n}\\)。",
           "image_refs": [],
@@ -900,7 +1009,7 @@
           ]
         },
         {
-          "qid": "Q-fa91509c5a2ca472",
+          "qid": "Q-6b236784d17902ab",
           "section": "4.4",
           "group": "B",
           "number": 12,
@@ -908,7 +1017,7 @@
           "source_anchor": {
             "ocr_doc": 62,
             "pdf_page": 63,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_62.md"
+            "file": "data/ocr_live_current/chapter4_100/doc_62.md"
           },
           "question_text": "### 12. （2025 · 云南曲靖期末）\n\n在数列 \\(\\{a_{n}\\}\\)中， \\(a_{1}=1\\)，且 \\(\\frac{(n+1)^{2}}{a_{n+1}}-\\frac{n^{2}}{a_{n}}=1\\)。\n\n（1）证明： \\(\\frac{n}{a_{n}}\\) 为定值；\n\n（2）求数列 \\(\\left\\{\\frac{1}{a_{n}a_{n+1}}\\right\\}\\)的前n项和 \\(S_{n}\\);\n\n（3）若 \\(b_{n+1}=2b_n+a_n-1\\)， \\(b_3=a_5\\)，求数列 \\(\\{b_n\\}\\)的通项公式.",
           "image_refs": [],
@@ -919,7 +1028,7 @@
           ]
         },
         {
-          "qid": "Q-ca22823ee83aa3c2",
+          "qid": "Q-b369a1654a3cc497",
           "section": "4.4",
           "group": "B",
           "number": 13,
@@ -927,7 +1036,7 @@
           "source_anchor": {
             "ocr_doc": 62,
             "pdf_page": 63,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_62.md"
+            "file": "data/ocr_live_current/chapter4_100/doc_62.md"
           },
           "question_text": "### 13 \\. (2025 · 广西南宁模拟)\n\n某校杰出校友为回报母校，设立了教育基金，有 A 和 B 两种方案。方案 A 是在每年校庆日这天向基金账户存入 100 万元，当天举办仪式奖励优秀的教师和品学兼优的学生共计 40 万元，剩余资金用于投资，预计可实现 10% 的年收益。方案 B 是今年校庆日一次性给基金账户存入 1000 万元，校庆日奖励为第一年奖 40 万，每年增加 10 万，余下资金同样进行年化 10% 收益的投资。设  \\(a_{n}\\) 表示第 n 年校庆后基金账户上的资金数（万元）。\n\n（1）对于 A、B 两种方案，分别写出  \\(a_{1}\\)， \\(a_{2}\\)，及  \\(a_{n+1}\\) 与  \\(a_{n}\\) 的递推关系；\n\n（2）按两种方案基金连续运作10年后，求基金账户上资金数额.\n\n（精确到万，参考数据： \\(1.1^{9}=2.36\\)， \\(1.1^{10}=2.59\\)）",
           "image_refs": [],
@@ -948,8 +1057,8 @@
       "prerequisite_knowledge_blocks": []
     },
     {
-      "cycle_id": "4.4-cycle-8",
-      "sequence": 8,
+      "cycle_id": "4.4-cycle-13",
+      "sequence": 13,
       "title": "C组 拓展提升",
       "course_keys": [],
       "prerequisite_course_keys": [
@@ -960,20 +1069,14 @@
       "optional_course_keys": [],
       "knowledge_refs": [],
       "prerequisite_knowledge_refs": [],
-      "type_refs": [
-        "类型I 等比数列的证明",
-        "类型Ⅱ 等比数列的通项公式及其应用",
-        "类型III 等比数列下标和性质的应用",
-        "类型IV 等比数列的实际应用",
-        "类型V 构造等比数列求通项"
-      ],
+      "type_refs": [],
       "bridge_unit_ids": [],
       "method_checkpoints": [],
       "worked_examples": [],
       "direct_variants": [],
       "exercise_questions": [
         {
-          "qid": "Q-4c5d6de76eba5c05",
+          "qid": "Q-311b7aa4cb63fe9c",
           "section": "4.4",
           "group": "C",
           "number": 14,
@@ -981,7 +1084,7 @@
           "source_anchor": {
             "ocr_doc": 63,
             "pdf_page": 64,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_63.md"
+            "file": "data/ocr_live_current/chapter4_100/doc_63.md"
           },
           "question_text": "14.（2025·四川绵阳开学考试）\n\n在公差不为0的等差数列 \\(\\{a_{n}\\}\\)中， \\(a_{3}+a_{10}=15\\)，且 \\(a_{2}\\)， \\(a_{5}\\)， \\(a_{11}\\)成等比数列.\n\n（1）求 \\(\\{a_{n}\\}\\)的通项公式；\n\n（2）设 \\(b_{n}=\\frac{1}{a_{n}}+\\frac{1}{a_{n+1}}+\\cdots+\\frac{1}{a_{2n-1}}\\)，证明： \\(\\frac{1}{2}\\leq b_{n}<1\\).",
           "image_refs": [],
@@ -992,7 +1095,7 @@
           ]
         },
         {
-          "qid": "Q-da38c08fb91fd274",
+          "qid": "Q-4fea3c8d52a44e51",
           "section": "4.4",
           "group": "C",
           "number": 15,
@@ -1000,7 +1103,7 @@
           "source_anchor": {
             "ocr_doc": 63,
             "pdf_page": 64,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_63.md"
+            "file": "data/ocr_live_current/chapter4_100/doc_63.md"
           },
           "question_text": "### 15. （2025 · 云南模拟）\n\n已知数列 \\(\\{a_n\\}\\) 的前 \\(n\\) 项积为 \\(T_n\\)，满足 \\(T_n = 1 \\times 3 \\times 5 \\times \\cdots \\times (2n-1)\\)，其中 \\(n \\in \\mathbb{N}^*\\)。\n\n（1）求数列 \\(\\{a_{n}\\}\\)的通项公式；\n\n（2）已知数列 \\(\\{a_n\\}\\) 的前 \\(n\\) 项和为 \\(S_n\\)，数列 \\(\\{b_n\\}\\) 是公比大于 1 的等比数列，且 \\(b_1 = a_1\\)，\\(b_3 = S_5\\)，\\(c_n = (\\sqrt{2})^{a_{n+1}} - \\lambda b_{n+1}\\)，若数列 \\(\\{c_n\\}\\) 是递减数列，求实数 \\(\\lambda\\) 的取值范围。",
           "image_refs": [],
@@ -1011,7 +1114,7 @@
           ]
         },
         {
-          "qid": "Q-72d48b881226627a",
+          "qid": "Q-821eb5edcaa8d410",
           "section": "4.4",
           "group": "C",
           "number": 16,
@@ -1019,7 +1122,7 @@
           "source_anchor": {
             "ocr_doc": 63,
             "pdf_page": 64,
-            "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_63.md"
+            "file": "data/ocr_live_current/chapter4_100/doc_63.md"
           },
           "question_text": "### 16. （2025·浙江杭州期末（改））\n\n数列 \\(\\{a_{n}\\}\\)满足 \\(a_{n+1}=a_{n}^{2}+4a_{n}+2\\)， \\(a_{1}=8\\)。\n\n（1）证明数列  \\(\\{\\lg(a_n+2)\\}\\) 是等比数列，并求  \\(a_n\\)\n\n（2）若 \\(a_{p}\\)， \\(a_{p+1}\\)， \\(a_{p+2}\\)是 \\(\\{a_{n}\\}\\)中连续的三项，试证明：",
           "image_refs": [],
@@ -1260,8 +1363,8 @@
       "label": "例8",
       "example_number": 8,
       "parent_example_number": null,
-      "role": "knowledge_example",
-      "role_ref": "4.4-k5",
+      "role": "type_example",
+      "role_ref": "类型I 等比数列的证明",
       "source_docs": [
         53
       ],
@@ -1278,8 +1381,8 @@
       "label": "例9",
       "example_number": 9,
       "parent_example_number": null,
-      "role": "knowledge_example",
-      "role_ref": "4.4-k5",
+      "role": "type_example",
+      "role_ref": "类型Ⅱ 等比数列的通项公式及其应用",
       "source_docs": [
         55
       ],
@@ -1296,8 +1399,8 @@
       "label": "例10",
       "example_number": 10,
       "parent_example_number": null,
-      "role": "knowledge_example",
-      "role_ref": "4.4-k5",
+      "role": "type_example",
+      "role_ref": "类型III 等比数列下标和性质的应用",
       "source_docs": [
         55,
         56
@@ -1315,8 +1418,8 @@
       "label": "例11",
       "example_number": 11,
       "parent_example_number": null,
-      "role": "knowledge_example",
-      "role_ref": "4.4-k5",
+      "role": "type_example",
+      "role_ref": "类型IV 等比数列的实际应用",
       "source_docs": [
         57
       ],
@@ -1333,8 +1436,8 @@
       "label": "例12",
       "example_number": 12,
       "parent_example_number": null,
-      "role": "knowledge_example",
-      "role_ref": "4.4-k5",
+      "role": "type_example",
+      "role_ref": "类型V 构造等比数列求通项",
       "source_docs": [
         57,
         58
@@ -1355,7 +1458,7 @@
       "example_number": null,
       "parent_example_number": 8,
       "role": "direct_variant",
-      "role_ref": null,
+      "role_ref": "类型I 等比数列的证明",
       "source_docs": [
         53,
         54
@@ -1373,7 +1476,7 @@
       "example_number": null,
       "parent_example_number": 8,
       "role": "direct_variant",
-      "role_ref": null,
+      "role_ref": "类型I 等比数列的证明",
       "source_docs": [
         54
       ],
@@ -1390,7 +1493,7 @@
       "example_number": null,
       "parent_example_number": 8,
       "role": "direct_variant",
-      "role_ref": null,
+      "role_ref": "类型I 等比数列的证明",
       "source_docs": [
         54,
         55
@@ -1408,7 +1511,7 @@
       "example_number": null,
       "parent_example_number": 9,
       "role": "direct_variant",
-      "role_ref": null,
+      "role_ref": "类型Ⅱ 等比数列的通项公式及其应用",
       "source_docs": [
         55
       ],
@@ -1425,7 +1528,7 @@
       "example_number": null,
       "parent_example_number": 9,
       "role": "direct_variant",
-      "role_ref": null,
+      "role_ref": "类型Ⅱ 等比数列的通项公式及其应用",
       "source_docs": [
         55
       ],
@@ -1442,7 +1545,7 @@
       "example_number": null,
       "parent_example_number": 10,
       "role": "direct_variant",
-      "role_ref": null,
+      "role_ref": "类型III 等比数列下标和性质的应用",
       "source_docs": [
         56
       ],
@@ -1459,7 +1562,7 @@
       "example_number": null,
       "parent_example_number": 10,
       "role": "direct_variant",
-      "role_ref": null,
+      "role_ref": "类型III 等比数列下标和性质的应用",
       "source_docs": [
         56
       ],
@@ -1476,7 +1579,7 @@
       "example_number": null,
       "parent_example_number": 12,
       "role": "direct_variant",
-      "role_ref": null,
+      "role_ref": "类型V 构造等比数列求通项",
       "source_docs": [
         58
       ],
@@ -1490,7 +1593,7 @@
   "deduplicated_learning_items": [],
   "exercise_questions": [
     {
-      "qid": "Q-f27cf7cb77f8153a",
+      "qid": "Q-2f3292190bd28753",
       "section": "4.4",
       "group": "A",
       "number": 1,
@@ -1498,7 +1601,7 @@
       "source_anchor": {
         "ocr_doc": 59,
         "pdf_page": 60,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_59.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_59.md"
       },
       "question_text": "1.（2024·广东惠州一模）\n\n设正项等比数列 \\(\\{a_{n}\\}\\)的公比为q，若 \\(a_{2}\\)，3 \\(a_{1}\\)， \\(a_{3}\\)成等差数列，则q=（ ）\n\nA.  \\(\\frac{1}{2}\\) B. 2 C.  \\(\\frac{1}{3}\\) D. 3",
       "image_refs": [],
@@ -1509,7 +1612,7 @@
       ]
     },
     {
-      "qid": "Q-70f67920ba0324c8",
+      "qid": "Q-b929113a92e393ac",
       "section": "4.4",
       "group": "A",
       "number": 2,
@@ -1517,56 +1620,24 @@
       "source_anchor": {
         "ocr_doc": 59,
         "pdf_page": 60,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_59.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_59.md"
       },
       "question_text": "### 2. （2025·甘肃兰州期中）\n\n已知数列 \\(\\{a_n\\}\\) 的前 \\(n\\) 项和为 \\(S_n\\)，且满足 \\(a_n = 2S_n - 1 (n \\in \\mathbb{N}^*)\\)。\n\n（1）求 \\(a_{1}\\)， \\(a_{2}\\)的值；\n\n（2）证明：数列 \\(\\{a_{n}\\}\\)为等比数列并求其通项公式.\n\n",
       "image_refs": [
         {
           "ref": "imgs/img_in_image_box_274_803_911_881.jpg",
-          "path": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_274_803_911_881.jpg",
+          "path": "data/ocr_live_current/chapter4_100/imgs/img_in_image_box_274_803_911_881.jpg",
           "exists": true
         }
       ],
-      "visual_status": "VISION_VERIFIED",
+      "visual_status": "NEEDS_VISION_SIDECAR",
       "math_errors": [],
       "evidence": [
-        "E1",
-        "E2"
-      ],
-      "vision_sidecars": [
-        {
-          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_274_803_911_881.jpg",
-          "image_sha256": "1632f5a7b2f13565b791cd2828395c3e78c987860e09167594387b533f4a8b93",
-          "confidence": "E2",
-          "structured": {
-            "objects": [],
-            "relations": [],
-            "coordinates": [],
-            "ranges": [],
-            "text": [
-              "一数·高中数学一本通"
-            ],
-            "uncertainties": [],
-            "confidence": "E2"
-          },
-          "source_provenance": null
-        }
-      ],
-      "vision_sidecar": {
-        "objects": [],
-        "relations": [],
-        "coordinates": [],
-        "ranges": [],
-        "text": [
-          "一数·高中数学一本通"
-        ],
-        "uncertainties": [],
-        "confidence": "E2"
-      },
-      "vision_source_provenance": []
+        "E1"
+      ]
     },
     {
-      "qid": "Q-d0e866fda19583c4",
+      "qid": "Q-b7786b05d4e9272c",
       "section": "4.4",
       "group": "B",
       "number": 3,
@@ -1574,7 +1645,7 @@
       "source_anchor": {
         "ocr_doc": 59,
         "pdf_page": 60,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_59.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_59.md"
       },
       "question_text": "### 3. （2025·全国模拟）\n\n已知正项数列 \\(\\{a_n\\}\\) 满足 \\(\\log_3 a_{n+1} - \\log_3 a_n = 1\\) (\\(n \\in \\mathbb{N}^*\\))，且 \\(a_3 + a_5 + a_7 = 9\\)，则 \\(\\log_3 (a_2 + a_4 + a_6)\\) 的值是___。",
       "image_refs": [],
@@ -1585,7 +1656,7 @@
       ]
     },
     {
-      "qid": "Q-f9a247378a4e8526",
+      "qid": "Q-18d25bd877ea9ed7",
       "section": "4.4",
       "group": "B",
       "number": 4,
@@ -1593,7 +1664,7 @@
       "source_anchor": {
         "ocr_doc": 59,
         "pdf_page": 60,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_59.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_59.md"
       },
       "question_text": "4.（2025·江苏南京开学考试）\n\n在等比数列\\(\\{a_n\\}\\)中，\\(a_3a_4a_5=8\\)，\\(a_4+a_8=20\\)，则\\(a_6=\\)（）\n\nA. 36\n\nB. \\(\\pm6\\)\n\nC. \\(-6\\)\n\nD. 6",
       "image_refs": [],
@@ -1604,7 +1675,7 @@
       ]
     },
     {
-      "qid": "Q-a9d1b7f81ca18b39",
+      "qid": "Q-4e2be73b93572f68",
       "section": "4.4",
       "group": "B",
       "number": 5,
@@ -1612,7 +1683,7 @@
       "source_anchor": {
         "ocr_doc": 60,
         "pdf_page": 61,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_60.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_60.md"
       },
       "question_text": "5.（2025·江苏南通模拟）（多选）\n\n已知数列\\(\\{a_n\\}\\)是等差数列，\\(\\{b_n\\}\\)是等比数列，则下列说法中正确的是（）\n\nA. 将数列\\(\\{a_n\\}\\)的前\\(m\\)项去掉，其余各项依次构成的数列是等差数列\n\nB. 数列\\(a_1+a_2+a_3\\)，\\(a_4+a_5+a_6\\)，\\(a_7+a_8+a_9\\)，… 是等差数列\n\nC. 将数列\\(\\{b_n\\}\\)的前\\(m\\)项去掉，其余各项依次构成的数列不是等比数列\n\nD. 数列\\(b_1b_2\\)，\\(b_2b_3\\)，\\(b_3b_4\\)，\\(b_4b_5\\)，… 是等比数列",
       "image_refs": [],
@@ -1623,7 +1694,7 @@
       ]
     },
     {
-      "qid": "Q-f6a785bfc26589c8",
+      "qid": "Q-fd46d186b7e8c360",
       "section": "4.4",
       "group": "B",
       "number": 6,
@@ -1631,7 +1702,7 @@
       "source_anchor": {
         "ocr_doc": 60,
         "pdf_page": 61,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_60.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_60.md"
       },
       "question_text": "6. (2025·广东江门期末)\n\n已知等比数列 \\(\\{a_{n}\\}\\)的首项 \\(a_{1}>0\\)，且满足 \\(a_{5}-a_{1}=15\\)， \\(a_{4}-a_{2}=6\\)，则公比q为（）\n\nA.  \\(\\frac{1}{2}\\) B. 2\n\nC.  \\(\\frac{1}{2}\\)或2 D. 3",
       "image_refs": [],
@@ -1642,7 +1713,7 @@
       ]
     },
     {
-      "qid": "Q-f0f6c534fffcf2a9",
+      "qid": "Q-37eadbbbfdf1684d",
       "section": "4.4",
       "group": "B",
       "number": 7,
@@ -1650,7 +1721,7 @@
       "source_anchor": {
         "ocr_doc": 60,
         "pdf_page": 61,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_60.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_60.md"
       },
       "question_text": "7.（2025 · 全国模拟）\n\n已知  \\(a_{1}\\)， \\(a_{2}\\)，…， \\(a_{n}\\) 为各项大于零的等比数列，且公比不为 1，则（）\n\nA.  \\(a_{1}+a_{8}>a_{4}+a_{5}\\) B.  \\(a_{1}+a_{8}<a_{4}+a_{5}\\)\n\nC.  \\(a_{1}+a_{8}=a_{4}+a_{5}\\) D. 不能确定",
       "image_refs": [],
@@ -1661,7 +1732,7 @@
       ]
     },
     {
-      "qid": "Q-373c8f6e52696ff0",
+      "qid": "Q-639608dd33b805b6",
       "section": "4.4",
       "group": "B",
       "number": 8,
@@ -1669,7 +1740,7 @@
       "source_anchor": {
         "ocr_doc": 61,
         "pdf_page": 62,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_61.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_61.md"
       },
       "question_text": "### 8. （2025 · 全国模拟）\n\n南宋数学家杨辉在《详解九章算法》中提出了关于一阶等差数列的问题：如果一个数列 \\(\\{a_n\\}\\) 从第二项开始，每一项与前一项的差构成等差数列，则称 \\(\\{a_n\\}\\) 为一阶等差数列。类比一阶等差数列的定义，我们亦可定义一阶等比数列，即一阶等比数列 \\(\\{a_n\\}\\) 满足从第二项开始，每一项与前一项的比值构成等比数列，设数列 \\(\\{a_n\\}\\)：\n\n1，1，2，8，64，… 是一阶等比数列，\\(b_n = \\frac{a_{n+1}}{a_n}\\)，则 \\(b_6 =\\)___；记 \\(c_n = \\frac{1}{\\log_2 a_n}\\)，则当 \\(n \\geq 3\\) 时，\\(c_3 + c_4 + \\cdots + c_n =\\)___。",
       "image_refs": [],
@@ -1680,7 +1751,7 @@
       ]
     },
     {
-      "qid": "Q-8fd31cd537870d76",
+      "qid": "Q-3abfc60bae94c8ab",
       "section": "4.4",
       "group": "B",
       "number": 9,
@@ -1688,7 +1759,7 @@
       "source_anchor": {
         "ocr_doc": 61,
         "pdf_page": 62,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_61.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_61.md"
       },
       "question_text": "### 9. （2025·广东开学考试）\n\n已知数列 \\(\\{a_n\\}\\) 中，\\(a_1=1\\)，\\(a_{n+1}a_n+2a_{n+1}-a_n=0\\)，证明：数列 \\(\\left\\{\\frac{1}{a_n}+1\\right\\}\\) 为等比数列，并求数列 \\(\\{a_n\\}\\) 的通项公式。",
       "image_refs": [],
@@ -1699,7 +1770,7 @@
       ]
     },
     {
-      "qid": "Q-34f9c751e5e80fd4",
+      "qid": "Q-99da2d14a315a720",
       "section": "4.4",
       "group": "B",
       "number": 10,
@@ -1707,7 +1778,7 @@
       "source_anchor": {
         "ocr_doc": 61,
         "pdf_page": 62,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_61.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_61.md"
       },
       "question_text": "### 10. （2025 · 全国模拟）\n\n记数列 \\(\\{a_n\\}\\) 的前 \\(n\\) 项和为 \\(S_n\\)，已知 \\(a_1 = 4\\)，\\(a_n = 3S_{n-1} + 3 \\times 2^{n+1} (n \\geq 2)\\)。\n\n（1）令 \\(b_{n}=\\frac{S_{n}}{2^{n}}\\)，证明： \\(\\{b_{n}+6\\}\\)为等比数列；\n\n（2）求 \\(\\{a_{n}\\}\\)的通项公式.",
       "image_refs": [],
@@ -1718,7 +1789,7 @@
       ]
     },
     {
-      "qid": "Q-45b14e0f81d5c729",
+      "qid": "Q-7d467947e34f7de5",
       "section": "4.4",
       "group": "B",
       "number": 11,
@@ -1726,7 +1797,7 @@
       "source_anchor": {
         "ocr_doc": 61,
         "pdf_page": 62,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_61.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_61.md"
       },
       "question_text": "### 11. （2025 · 全国模拟）\n\n记 \\(S_{n}\\)为数列 \\(\\{a_{n}\\}\\)的前n项和，已知 \\(a_{n+1}=2(S_{n}+1)\\)， \\(a_{1}=2\\)。求 \\(S_{n}\\)。",
       "image_refs": [],
@@ -1737,7 +1808,7 @@
       ]
     },
     {
-      "qid": "Q-fa91509c5a2ca472",
+      "qid": "Q-6b236784d17902ab",
       "section": "4.4",
       "group": "B",
       "number": 12,
@@ -1745,7 +1816,7 @@
       "source_anchor": {
         "ocr_doc": 62,
         "pdf_page": 63,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_62.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_62.md"
       },
       "question_text": "### 12. （2025 · 云南曲靖期末）\n\n在数列 \\(\\{a_{n}\\}\\)中， \\(a_{1}=1\\)，且 \\(\\frac{(n+1)^{2}}{a_{n+1}}-\\frac{n^{2}}{a_{n}}=1\\)。\n\n（1）证明： \\(\\frac{n}{a_{n}}\\) 为定值；\n\n（2）求数列 \\(\\left\\{\\frac{1}{a_{n}a_{n+1}}\\right\\}\\)的前n项和 \\(S_{n}\\);\n\n（3）若 \\(b_{n+1}=2b_n+a_n-1\\)， \\(b_3=a_5\\)，求数列 \\(\\{b_n\\}\\)的通项公式.",
       "image_refs": [],
@@ -1756,7 +1827,7 @@
       ]
     },
     {
-      "qid": "Q-ca22823ee83aa3c2",
+      "qid": "Q-b369a1654a3cc497",
       "section": "4.4",
       "group": "B",
       "number": 13,
@@ -1764,7 +1835,7 @@
       "source_anchor": {
         "ocr_doc": 62,
         "pdf_page": 63,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_62.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_62.md"
       },
       "question_text": "### 13 \\. (2025 · 广西南宁模拟)\n\n某校杰出校友为回报母校，设立了教育基金，有 A 和 B 两种方案。方案 A 是在每年校庆日这天向基金账户存入 100 万元，当天举办仪式奖励优秀的教师和品学兼优的学生共计 40 万元，剩余资金用于投资，预计可实现 10% 的年收益。方案 B 是今年校庆日一次性给基金账户存入 1000 万元，校庆日奖励为第一年奖 40 万，每年增加 10 万，余下资金同样进行年化 10% 收益的投资。设  \\(a_{n}\\) 表示第 n 年校庆后基金账户上的资金数（万元）。\n\n（1）对于 A、B 两种方案，分别写出  \\(a_{1}\\)， \\(a_{2}\\)，及  \\(a_{n+1}\\) 与  \\(a_{n}\\) 的递推关系；\n\n（2）按两种方案基金连续运作10年后，求基金账户上资金数额.\n\n（精确到万，参考数据： \\(1.1^{9}=2.36\\)， \\(1.1^{10}=2.59\\)）",
       "image_refs": [],
@@ -1775,7 +1846,7 @@
       ]
     },
     {
-      "qid": "Q-4c5d6de76eba5c05",
+      "qid": "Q-311b7aa4cb63fe9c",
       "section": "4.4",
       "group": "C",
       "number": 14,
@@ -1783,7 +1854,7 @@
       "source_anchor": {
         "ocr_doc": 63,
         "pdf_page": 64,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_63.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_63.md"
       },
       "question_text": "14.（2025·四川绵阳开学考试）\n\n在公差不为0的等差数列 \\(\\{a_{n}\\}\\)中， \\(a_{3}+a_{10}=15\\)，且 \\(a_{2}\\)， \\(a_{5}\\)， \\(a_{11}\\)成等比数列.\n\n（1）求 \\(\\{a_{n}\\}\\)的通项公式；\n\n（2）设 \\(b_{n}=\\frac{1}{a_{n}}+\\frac{1}{a_{n+1}}+\\cdots+\\frac{1}{a_{2n-1}}\\)，证明： \\(\\frac{1}{2}\\leq b_{n}<1\\).",
       "image_refs": [],
@@ -1794,7 +1865,7 @@
       ]
     },
     {
-      "qid": "Q-da38c08fb91fd274",
+      "qid": "Q-4fea3c8d52a44e51",
       "section": "4.4",
       "group": "C",
       "number": 15,
@@ -1802,7 +1873,7 @@
       "source_anchor": {
         "ocr_doc": 63,
         "pdf_page": 64,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_63.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_63.md"
       },
       "question_text": "### 15. （2025 · 云南模拟）\n\n已知数列 \\(\\{a_n\\}\\) 的前 \\(n\\) 项积为 \\(T_n\\)，满足 \\(T_n = 1 \\times 3 \\times 5 \\times \\cdots \\times (2n-1)\\)，其中 \\(n \\in \\mathbb{N}^*\\)。\n\n（1）求数列 \\(\\{a_{n}\\}\\)的通项公式；\n\n（2）已知数列 \\(\\{a_n\\}\\) 的前 \\(n\\) 项和为 \\(S_n\\)，数列 \\(\\{b_n\\}\\) 是公比大于 1 的等比数列，且 \\(b_1 = a_1\\)，\\(b_3 = S_5\\)，\\(c_n = (\\sqrt{2})^{a_{n+1}} - \\lambda b_{n+1}\\)，若数列 \\(\\{c_n\\}\\) 是递减数列，求实数 \\(\\lambda\\) 的取值范围。",
       "image_refs": [],
@@ -1813,7 +1884,7 @@
       ]
     },
     {
-      "qid": "Q-72d48b881226627a",
+      "qid": "Q-821eb5edcaa8d410",
       "section": "4.4",
       "group": "C",
       "number": 16,
@@ -1821,7 +1892,7 @@
       "source_anchor": {
         "ocr_doc": 63,
         "pdf_page": 64,
-        "file": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\doc_63.md"
+        "file": "data/ocr_live_current/chapter4_100/doc_63.md"
       },
       "question_text": "### 16. （2025·浙江杭州期末（改））\n\n数列 \\(\\{a_{n}\\}\\)满足 \\(a_{n+1}=a_{n}^{2}+4a_{n}+2\\)， \\(a_{1}=8\\)。\n\n（1）证明数列  \\(\\{\\lg(a_n+2)\\}\\) 是等比数列，并求  \\(a_n\\)\n\n（2）若 \\(a_{p}\\)， \\(a_{p+1}\\)， \\(a_{p+2}\\)是 \\(\\{a_{n}\\}\\)中连续的三项，试证明：",
       "image_refs": [],
@@ -1843,5 +1914,7 @@
     "direct_variants": "question only; solution isolated",
     "abc_exercises": "question only; answer sidecar forbidden"
   },
-  "unresolved": []
+  "unresolved": [
+    "Q-b929113a92e393ac:NEEDS_VISION_SIDECAR"
+  ]
 }
