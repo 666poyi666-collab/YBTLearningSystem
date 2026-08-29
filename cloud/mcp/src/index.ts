@@ -461,6 +461,14 @@ async function wrongQuestionExport(env: Env, sectionKey: string, format: string)
     WHERE t.user_id = ? AND (? = '' OR t.section_key = ?)
     ORDER BY t.created_at
   `).bind(USER_ID, sectionKey, sectionKey).all<JsonRecord>()
+  const handwriting = await env.DB.prepare(`
+    SELECT analysis_id, item_kind, item_ref, section_key, first_wrong_step,
+           error_type, reason, minimal_correction, downstream_status,
+           confidence, analysis_status, created_at
+    FROM handwriting_analyses
+    WHERE user_id = ? AND (? = '' OR section_key = ?)
+    ORDER BY created_at
+  `).bind(USER_ID, sectionKey, sectionKey).all<JsonRecord>()
   const snapshot = await env.DB.prepare(`
     SELECT payload_json, created_at FROM learning_events
     WHERE user_id = ? AND event_type = 'progress_snapshot_synced'
@@ -518,6 +526,7 @@ async function wrongQuestionExport(env: Env, sectionKey: string, format: string)
     confirmedWrong: rows.results.filter((row) => row.final_status === 'confirmed_wrong').length,
     typeClassifications: classifications.results.length,
     memories: memories.results.length,
+    handwritingAnalyses: handwriting.results.length,
     completedCycles: reportCompletedCycles.length,
     deferredCycles: deferredCycles.length,
   }
@@ -535,6 +544,7 @@ async function wrongQuestionExport(env: Env, sectionKey: string, format: string)
     wrongQuestions: rows.results,
     typeClassifications: classifications.results,
     memories: memories.results,
+    handwritingAnalyses: handwriting.results,
   }
   if (format === 'json') return payload
 
@@ -576,6 +586,19 @@ async function wrongQuestionExport(env: Env, sectionKey: string, format: string)
     `- 对应题目：${row.label ?? '未绑定教材题号'}`,
     `- 归类依据：${row.basis}`,
     `- 置信度：${row.confidence}`,
+    '',
+  )
+  lines.push('## 手写过程批改', '')
+  if (!handwriting.results.length) lines.push('暂无手写过程批改记录。', '')
+  for (const row of handwriting.results) lines.push(
+    `### ${row.item_ref}`,
+    '',
+    `- 第一处错误：${row.first_wrong_step ? `第 ${row.first_wrong_step} 行` : '未定位'}`,
+    `- 错误类型：${row.error_type ?? '未分类'}`,
+    `- 说明：${row.reason ?? '未记录'}`,
+    `- 下游状态：${row.downstream_status ?? '未记录'}`,
+    `- 最小修正：${row.minimal_correction ?? '未记录'}`,
+    `- 分析状态：${row.analysis_status ?? '未记录'}（置信度 ${row.confidence ?? '未记录'}）`,
     '',
   )
   lines.push('## 循环复盘', '')
@@ -977,6 +1000,9 @@ function createServer(env: Env, scopes: readonly string[]): McpServer {
       WHERE l.route_type='course' AND l.route_key=? ORDER BY i.printed_page,i.question_number,i.occurrence LIMIT ?
     `).bind(courseKey, practiceLimit).all<JsonRecord>()
     const state = await env.DB.prepare(`SELECT version,value_json,updated_at FROM learner_state WHERE user_id=? AND state_key=?`).bind(USER_ID, `course:${courseKey}`).first<Record<string, string | number>>()
+    const courseState = state ? parseJson(String(state.value_json)) : null
+    const courseUnlocked = Boolean(courseState && typeof courseState === 'object' && !Array.isArray(courseState)
+      && ['course_listened', 'completed', 'simulated_completed'].includes(String((courseState as JsonRecord).status ?? '')))
     return result({
       ok: true,
       executionOrder: ['course_transcript', 'teacher_handout_source_page', 'ybt_items', 'practice_basic', 'practice_advanced', 'acceptance'],
@@ -989,7 +1015,10 @@ function createServer(env: Env, scopes: readonly string[]): McpServer {
       },
       handoutPages: handoutPages.results,
       ybtItems: ybtItems.results,
-      practiceItems: practiceItems.results,
+      practiceItems: practiceItems.results.map((item) => ({
+        ...item,
+        unlockStatus: courseUnlocked ? 'unlocked' : 'locked_until_course_listened',
+      })),
       learnerState: state ? { version: Number(state.version), value: parseJson(String(state.value_json)), updatedAt: state.updated_at } : null,
       evidencePolicy: '老师文稿决定讲法顺序；讲义与必刷题 OCR 仅定位，公式题面必须读原页图；必刷题源 PDF 不含答案。',
     })

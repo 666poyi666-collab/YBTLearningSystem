@@ -29,7 +29,7 @@
 
 当前内容快照为版本化导入计划：选择性必修 1 第一至第五章共 38 节、1,209 个教材项目、全部 170 门课程目录中的实际映射课程、课程转写和可用答案来源；R2 保存节次题包、课程转写包和题图包。导入计划由 `scripts/import_content.mjs` 生成，默认 dry-run，可用 `npm run import:dry` 重建；远程导入使用 `npm run import:remote`。学习路径仍只针对第一、二章。
 
-补充练习库版本化导入计划由 `scripts/import_practice_book.mjs` 生成，索引器为仓库根目录 `scripts/build_practice_book_index.py`。当前书源为 106 页、727 个唯一题目；第一章 194 题、第二章 230 题、第三章 269 题，另有 34 道模块综合题。题面 OCR 是搜索辅助，原页图是题面权威；源 PDF 本身没有答案。
+补充练习库版本化导入计划由 `scripts/import_practice_book.mjs` 生成，索引器为仓库根目录 `scripts/build_practice_book_index.py`。当前书源为 106 页、727 个唯一题目；第一章 194 题、第二章 230 题、第三章 269 题，另有 34 道模块综合题。生产版本 `practice-v1-914d4950e9156882` 已写入 D1/R2，题面 OCR 是搜索辅助，原页图是题面权威；源 PDF 本身没有答案。
 
 学习者安全的读取工具包括：`math_get_section_overview`（完整节次大纲与项目索引）、`math_get_item_content`（完整题面与题图，不返回答案侧车）、`math_get_course_transcript`（完整老师文稿及可靠时间轴）、三项讲义检索/原页工具和 `math_get_answer_sources`（已导入的一本通原书答案来源）。模型自己的解法不写入原书答案表，必须由 ChatGPT 单独标记为 `model_solution` 并给出推荐理由。没有可验证逐句时间轴时，返回 `timelineAvailable=false` 和空时间轴，不作估算。当前生产 Worker 为 `https://math-learning-mcp.focuslink-poyi-6465e9.workers.dev`，最新部署版本为 `638d3fbe-b9e6-45a5-a172-5fab36727be4`。
 
