@@ -2,6 +2,9 @@
 
 ## 2026-08-30
 
+- 新增数学试卷渐进练习合同：期中、期末、月考和入学检测卷保持独立可选来源；一道题可显式依赖多个循环、多个节次或整章，全部前置闭合后才显示可做。答案页不能替代原卷题面，OCR 仍只负责定位。
+- 新增试卷来源索引器、空清单和路由校验器；当前未收到可绑定的数学原卷，因此保持 `awaiting_question_papers`，不从单独答案 PDF 反推题面或编造题号。
+
 - 根据用户最新反馈明确《高中必刷题》为可选增强：它只在课程/一本通后推荐和记录，不能阻塞课程、一本通、节次或章节完成；MCP 路由和课程学习包返回 `optional=true` 与 `blocksYbtProgress=false`。
 - 升级手写批改合同：`math_record_handwriting_analysis` 现在要求逐行状态、第一处分歧、归一化框坐标、LaTeX，并返回 `transparent_svg_overlay` 标注规格；原图不变、SVG `fill=none`，首错/下游污染/正确/待确认使用不同颜色和线型。
 - 新增本地 `scripts/build_handwriting_annotation_html.py` 和两项回归测试，生成原图底图 + 透明 SVG 框 + 行号标签 + LaTeX/MathJax 侧栏的可见批改 HTML；未定位唯一首错的 proposed 分析直接拒绝。
