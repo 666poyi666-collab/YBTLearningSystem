@@ -1,0 +1,60 @@
+{
+  "schema_version": "ybt-math-cloud-import-verification-v1",
+  "verified_at": "2026-08-30T22:22:00+08:00",
+  "source_version": "v1-c08c593ea5db28bc",
+  "git_commit": "966a8854ee47f673e8ca5703feac9b44dd95fcc9",
+  "content": {
+    "chapters": 5,
+    "sections": 38,
+    "items": 1209,
+    "courses": 170,
+    "item_course_links": 5191,
+    "transcript_chunks": 19234,
+    "answer_sources": 50
+  },
+  "preserved_user_data": {
+    "learning_events": 7,
+    "learner_state": 51,
+    "learner_diagnostics": 3,
+    "memory_items": 3,
+    "type_classifications": 3,
+    "wrong_question_exports": 0,
+    "practice_attempts": 0,
+    "handwriting_analyses": 0
+  },
+  "r2": {
+    "objects": 40,
+    "passed": 40,
+    "failed": 0,
+    "report": "reports/all_chapters/cloud-r2-verification.json"
+  },
+  "http": {
+    "healthz_status": 200,
+    "healthz_body": "{\"ok\":true,\"service\":\"math-learning-mcp\",\"protocol\":\"2026-07-28\"}",
+    "readyz_status": 200,
+    "readyz_body": "{\"ok\":true,\"service\":\"math-learning-mcp\",\"storage\":\"ready\",\"oauth\":\"configured\"}"
+  },
+  "commands": [
+    {
+      "command": "npm run import:remote",
+      "literal_output": "import complete: v1-c08c593ea5db28bc",
+      "exit_status": 0
+    },
+    {
+      "command": "python scripts/verify_math_cloud_content.py --version v1-c08c593ea5db28bc --workers 4",
+      "literal_output": "{\"source_version\": \"v1-c08c593ea5db28bc\", \"objects\": 40, \"passed\": 40, \"failed\": []}",
+      "exit_status": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "literal_output": "Ran 163 tests; OK (skipped=1)",
+      "exit_status": 0
+    },
+    {
+      "command": "npm test",
+      "working_directory": "cloud/mcp",
+      "literal_output": "tests 7; pass 7; fail 0",
+      "exit_status": 0
+    }
+  ]
+}
