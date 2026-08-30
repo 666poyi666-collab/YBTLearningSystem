@@ -108,7 +108,7 @@ Packet status rules:
 - Verify READY, packet-build, course-catalog, packet, transcript, and visual hashes.
 - Reject stale or missing files.
 - Record exact source paths without copying secrets or credentials.
-- Run `build_chatgpt_context_audit.py`. For chapters 1 and 2, require `sections=11`, `canonical_items=401`, complete sections 11, all question content, all visual assets, and all teacher transcripts true.
+- Run the section context audit for the requested section and `scripts/audit_all_chapters_sources.py` plus `scripts/audit_all_section_learning_contracts.py` for the all-book release. The all-book static gate requires 5 chapters, 38 sections, 1,209 canonical items, verified packet/learning-packet status, no unresolved visual assets, and exactly-once route coverage.
 
 ### S2 Textbook Reconstruction
 

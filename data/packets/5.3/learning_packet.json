@@ -2,7 +2,7 @@
   "schema_version": "7.4",
   "packet_type": "DEEPSEEK_SEQUENTIAL_LEARNING_PACKET",
   "section": "5.3",
-  "status": "UNVERIFIED",
+  "status": "VERIFIED",
   "source": {
     "ocr_root": "data/ocr_live_current/chapter5_95",
     "ocr_docs": [
@@ -57,10 +57,49 @@
               "exists": true
             }
           ],
-          "visual_status": "NEEDS_VISION_SIDECAR",
+          "visual_status": "VISION_VERIFIED",
           "teaching_text": "【例1】若定义在(0,6]上的函数 \\(f(x)\\)的图象如图，则不等式 \\(f'(x)<0\\)的解集为___.\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_810_434_1005_596.jpg\" alt=\"Image\" width=\"16%\" /></div>\nA. (2,4) B. (0,2)\nC. (4,6) D. (2,6)\n解析：由所给图象可以看出  \\(f(x)\\) 的单调递减区间，从而推断出满足  \\(f'(x) < 0\\) 的区间，由图可知， \\(f(x)\\) 的单调递减区间是  \\((2,4)\\)，所以不等式  \\(f'(x) < 0\\) 的解集为  \\((2,4)\\).\n答案：A",
           "solution_present": true,
-          "vision_hint": "5.3-LI42d873f4c41e7188"
+          "vision_hint": "5.3-LI42d873f4c41e7188",
+          "vision_sidecars": [
+            {
+              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_810_434_1005_596.jpg",
+              "image_sha256": "a71a426b133c3fe176d430f4ebd115fc149730bd53af1aa37377f592963b7f80",
+              "confidence": "E2",
+              "structured": {
+                "objects": [],
+                "relations": [],
+                "coordinates": [],
+                "ranges": [],
+                "text": [
+                  "y",
+                  "x",
+                  "O"
+                ],
+                "uncertainties": [],
+                "confidence": "E2"
+              },
+              "source_provenance": null
+            }
+          ],
+          "vision_sidecar": {
+            "objects": [],
+            "relations": [],
+            "coordinates": [],
+            "ranges": [],
+            "text": [
+              "y",
+              "x",
+              "O"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "vision_source_provenance": [],
+          "evidence": [
+            "E1",
+            "E2"
+          ]
         },
         {
           "item_id": "1b9adce99417c31e",
@@ -119,7 +158,11 @@
         "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
         "4.1.4.5 含参函数单调性讨论之超越函数",
         "4.1.4.6 已知单调性求参之导数为二次型",
-        "4.1.4.7 已知单调性求参之导数为非二次型"
+        "4.1.4.7 已知单调性求参之导数为非二次型",
+        "4.1.3.1 含参二次不等式的分类技巧",
+        "4.1.3.2 二次方程根的分布（上）",
+        "4.1.3.2 二次方程根的分布（下）",
+        "4.1.3.3 二次恒成立模型"
       ],
       "prerequisite_course_keys": [
         "4.1.4.1 不含参数的函数的单调性"
@@ -248,10 +291,155 @@
               "exists": true
             }
           ],
-          "visual_status": "NEEDS_VISION_SIDECAR",
+          "visual_status": "VISION_VERIFIED",
           "teaching_text": "【例4】函数  \\(y = f(x)\\) 的图象如图（最左边的图）所示，则  \\(y = f'(x)\\) 的图象可能是（）\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_120_1056_277_1201.jpg\" alt=\"Image\" width=\"13%\" /></div>\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_292_1053_475_1255.jpg\" alt=\"Image\" width=\"15%\" /></div>\n<div style=\"text-align: center;\">A</div>\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_487_1053_674_1252.jpg\" alt=\"Image\" width=\"15%\" /></div>\n<div style=\"text-align: center;\">B</div>\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_690_1054_874_1227.jpg\" alt=\"Image\" width=\"15%\" /></div>\n<div style=\"text-align: center;\">C</div>\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_889_1052_1075_1225.jpg\" alt=\"Image\" width=\"15%\" /></div>\n<div style=\"text-align: center;\">D</div>\n解析：给出  \\(f(x)\\) 的图象，让选  \\(f'(x)\\) 的图象，可由  \\(f(x)\\) 的图象得到其单调性，该单调性与  \\(f'(x)\\) 的正负有关，由此推断  \\(f'(x)\\) 的图象，由所给图象可知  \\(f(x)\\) 在  \\((-\\infty, 0)\\) 上  \\(\\nearrow\\)，在  \\((0, +\\infty)\\) 上  \\(\\searrow\\)，所以在  \\((-\\infty, 0)\\) 上， \\(f'(x) > 0\\)，在  \\((0, +\\infty)\\) 上， \\(f'(x) < 0\\)，结合选项可知选 D.\n答案：D\n【反思】对于给出  \\(f(x)\\) 的图象，让选  \\(f'(x)\\) 的图象这类题，常由所给图象分析出  \\(f(x)\\) 的单调区间，进而得到  \\(f'(x)\\) 在对应区间上的正负情况，并由此判断选项。那如果是给出  \\(f'(x)\\) 的图象，让选  \\(f(x)\\) 的图象呢？这就需要由所给图象分析出  \\(f'(x)\\) 在哪些区间为正，哪些区间为负，得到  \\(f(x)\\) 在对应区间上的单调性，并由此判断选项，我们来看下面的变式1.",
           "solution_present": true,
-          "vision_hint": "5.3-LI5c4976572e9b3284"
+          "vision_hint": "5.3-LI5c4976572e9b3284",
+          "vision_sidecars": [
+            {
+              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_120_1056_277_1201.jpg",
+              "image_sha256": "dcd83a0b8a611d47340197b00e6d7d499aacb9b7ec57899b28951abadaa500cf",
+              "confidence": "E2",
+              "structured": {
+                "objects": [
+                  "坐标原点O",
+                  "y轴",
+                  "x轴",
+                  "曲线y=f(x)"
+                ],
+                "relations": [
+                  "曲线y=f(x)与y轴交于原点O",
+                  "曲线y=f(x)与x轴交于右侧某点"
+                ],
+                "coordinates": [
+                  "O(0,0)"
+                ],
+                "ranges": [],
+                "text": [
+                  "y",
+                  "x",
+                  "y = f(x)"
+                ],
+                "uncertainties": [],
+                "confidence": "E2"
+              },
+              "source_provenance": null
+            },
+            {
+              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_292_1053_475_1255.jpg",
+              "image_sha256": "e26712e9890f5df5da04d4a47950af84d956fbe92e4781e567091d55ba3dbfb8",
+              "confidence": "E2",
+              "structured": {
+                "objects": [
+                  "坐标轴",
+                  "曲线",
+                  "原点"
+                ],
+                "relations": [
+                  "曲线过原点O",
+                  "曲线在第二、四象限"
+                ],
+                "coordinates": [
+                  "O(0,0)"
+                ],
+                "ranges": [],
+                "text": [
+                  "y",
+                  "x",
+                  "A"
+                ],
+                "uncertainties": [],
+                "confidence": "E2"
+              },
+              "source_provenance": null
+            },
+            {
+              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_487_1053_674_1252.jpg",
+              "image_sha256": "c05fcd2f7410c30b2edc7ed8cbd66cffdd1e3e3672d2f51c09b5b6f1fb36016e",
+              "confidence": "E2",
+              "structured": {
+                "objects": [],
+                "relations": [],
+                "coordinates": [],
+                "ranges": [],
+                "text": [
+                  "y",
+                  "O",
+                  "x",
+                  "B"
+                ],
+                "uncertainties": [],
+                "confidence": "E2"
+              },
+              "source_provenance": null
+            },
+            {
+              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_690_1054_874_1227.jpg",
+              "image_sha256": "1302edcb7b21fd521981d928141b077d898f5a0fc1c5e93c060e3246708415f8",
+              "confidence": "E2",
+              "structured": {
+                "objects": [],
+                "relations": [],
+                "coordinates": [],
+                "ranges": [],
+                "text": [
+                  "y",
+                  "x",
+                  "O"
+                ],
+                "uncertainties": [],
+                "confidence": "E2"
+              },
+              "source_provenance": null
+            },
+            {
+              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_889_1052_1075_1225.jpg",
+              "image_sha256": "a5e4d7f2cd406f3178f1ab68ac09b46ec48a849183982cc999ab857ebbcb2c85",
+              "confidence": "E2",
+              "structured": {
+                "objects": [],
+                "relations": [],
+                "coordinates": [],
+                "ranges": [],
+                "text": [
+                  "y",
+                  "x",
+                  "O"
+                ],
+                "uncertainties": [],
+                "confidence": "E2"
+              },
+              "source_provenance": null
+            }
+          ],
+          "vision_sidecar": {
+            "objects": [
+              "坐标原点O",
+              "y轴",
+              "x轴",
+              "曲线y=f(x)"
+            ],
+            "relations": [
+              "曲线y=f(x)与y轴交于原点O",
+              "曲线y=f(x)与x轴交于右侧某点"
+            ],
+            "coordinates": [
+              "O(0,0)"
+            ],
+            "ranges": [],
+            "text": [
+              "y",
+              "x",
+              "y = f(x)"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "vision_source_provenance": [],
+          "evidence": [
+            "E1",
+            "E2"
+          ]
         }
       ],
       "direct_variants": [
@@ -295,9 +483,127 @@
               "exists": true
             }
           ],
-          "visual_status": "NEEDS_VISION_SIDECAR",
+          "visual_status": "VISION_VERIFIED",
           "solution_isolated": true,
-          "vision_hint": "5.3-LI50fc5c7694177dad"
+          "vision_hint": "5.3-LI50fc5c7694177dad",
+          "vision_sidecars": [
+            {
+              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_176_165_342_292.jpg",
+              "image_sha256": "3f1c45fc6340a3f3bc5963b477ed800fe83dcc60814bb7a4053b8532ebc863af",
+              "confidence": "E2",
+              "structured": {
+                "objects": [],
+                "relations": [],
+                "coordinates": [],
+                "ranges": [],
+                "text": [
+                  "y = f'(x)"
+                ],
+                "uncertainties": [],
+                "confidence": "E2"
+              },
+              "source_provenance": null
+            },
+            {
+              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_367_167_514_291.jpg",
+              "image_sha256": "50d641bc2d52ea91cb6651f0b750621ff24b3cde9ad42cec0d51158e2fee849d",
+              "confidence": "E2",
+              "structured": {
+                "objects": [],
+                "relations": [],
+                "coordinates": [],
+                "ranges": [],
+                "text": [
+                  "y",
+                  "x",
+                  "-2",
+                  "-1",
+                  "1",
+                  "O"
+                ],
+                "uncertainties": [],
+                "confidence": "E2"
+              },
+              "source_provenance": null
+            },
+            {
+              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_536_164_677_289.jpg",
+              "image_sha256": "567b33b2c471de7dde5141c6c6a31eee9c55dd27e6effd033b0dc0d703ae0383",
+              "confidence": "E2",
+              "structured": {
+                "objects": [],
+                "relations": [],
+                "coordinates": [],
+                "ranges": [],
+                "text": [
+                  "y",
+                  "x",
+                  "O"
+                ],
+                "uncertainties": [],
+                "confidence": "E2"
+              },
+              "source_provenance": null
+            },
+            {
+              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_702_165_851_287.jpg",
+              "image_sha256": "721ec691d19b193e2770a6dd446dd388d21dea7cebf126b600caf1c01d2209c4",
+              "confidence": "E2",
+              "structured": {
+                "objects": [],
+                "relations": [],
+                "coordinates": [],
+                "ranges": [],
+                "text": [
+                  "y",
+                  "x",
+                  "O",
+                  "-2",
+                  "-1",
+                  "1"
+                ],
+                "uncertainties": [],
+                "confidence": "E2"
+              },
+              "source_provenance": null
+            },
+            {
+              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_877_164_1016_290.jpg",
+              "image_sha256": "7db3852885559ff0e1dca3ac3b26691958c854b48b34ccbdc45d04c1a6896117",
+              "confidence": "E2",
+              "structured": {
+                "objects": [
+                  "二次函数图像"
+                ],
+                "relations": [],
+                "coordinates": [],
+                "ranges": [],
+                "text": [
+                  "y",
+                  "x"
+                ],
+                "uncertainties": [],
+                "confidence": "E2"
+              },
+              "source_provenance": null
+            }
+          ],
+          "vision_sidecar": {
+            "objects": [],
+            "relations": [],
+            "coordinates": [],
+            "ranges": [],
+            "text": [
+              "y = f'(x)"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "vision_source_provenance": [],
+          "evidence": [
+            "E1",
+            "E2"
+          ]
         },
         {
           "item_id": "4a741aebf8b1ab18",
@@ -998,11 +1304,43 @@
               "exists": true
             }
           ],
-          "visual_status": "NEEDS_VISION_SIDECAR",
+          "visual_status": "VISION_VERIFIED",
           "math_errors": [],
           "evidence": [
-            "E1"
-          ]
+            "E1",
+            "E2"
+          ],
+          "vision_sidecars": [
+            {
+              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_522_614_698_753.jpg",
+              "image_sha256": "a7117ff470fa4e32c5738f69ed8c50c4e532e2c16c404736522f5e53cdd8e79c",
+              "confidence": "E2",
+              "structured": {
+                "objects": [],
+                "relations": [],
+                "coordinates": [],
+                "ranges": [],
+                "text": [
+                  "y = f'(x)"
+                ],
+                "uncertainties": [],
+                "confidence": "E2"
+              },
+              "source_provenance": null
+            }
+          ],
+          "vision_sidecar": {
+            "objects": [],
+            "relations": [],
+            "coordinates": [],
+            "ranges": [],
+            "text": [
+              "y = f'(x)"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "vision_source_provenance": []
         },
         {
           "qid": "Q-56cca61040bece6d",
@@ -1043,11 +1381,186 @@
               "exists": true
             }
           ],
-          "visual_status": "NEEDS_VISION_SIDECAR",
+          "visual_status": "VISION_VERIFIED",
           "math_errors": [],
           "evidence": [
-            "E1"
-          ]
+            "E1",
+            "E2"
+          ],
+          "vision_sidecars": [
+            {
+              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_537_1121_722_1237.jpg",
+              "image_sha256": "b14e20d71da62b80408b519ca4964de0a0832a8a844b49c927ef2c01c48c0157",
+              "confidence": "E2",
+              "structured": {
+                "objects": [
+                  "坐标轴",
+                  "曲线y=f'(x)",
+                  "点O",
+                  "点(1,0)",
+                  "点(2,0)"
+                ],
+                "relations": [
+                  "曲线y=f'(x)经过点O",
+                  "曲线y=f'(x)经过点(1,0)",
+                  "曲线y=f'(x)经过点(2,0)"
+                ],
+                "coordinates": [
+                  "O(0,0)",
+                  "(1,0)",
+                  "(2,0)"
+                ],
+                "ranges": [
+                  "x∈[1,2]"
+                ],
+                "text": [
+                  "y",
+                  "y=f'(x)",
+                  "x"
+                ],
+                "uncertainties": [],
+                "confidence": "E2"
+              },
+              "source_provenance": null
+            },
+            {
+              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_435_1250_600_1369.jpg",
+              "image_sha256": "f4270c1e2bb221cc7a97eca98a995101823099394725ef2d0c1dfb2cdc13dd52",
+              "confidence": "E2",
+              "structured": {
+                "objects": [
+                  "坐标轴",
+                  "曲线"
+                ],
+                "relations": [
+                  "曲线与x轴交于两点",
+                  "曲线在x=1处有极小值点"
+                ],
+                "coordinates": [
+                  [
+                    0,
+                    0
+                  ]
+                ],
+                "ranges": [
+                  [
+                    1,
+                    2
+                  ]
+                ],
+                "text": [
+                  "y",
+                  "x",
+                  "O",
+                  "1",
+                  "2"
+                ],
+                "uncertainties": [],
+                "confidence": "E2"
+              },
+              "source_provenance": null
+            },
+            {
+              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_623_1251_788_1368.jpg",
+              "image_sha256": "99852f0b415b4ae27cc838a9a37dee0d302960b3ac8f43ef33981c2714703480",
+              "confidence": "E2",
+              "structured": {
+                "objects": [],
+                "relations": [],
+                "coordinates": [],
+                "ranges": [],
+                "text": [
+                  "y",
+                  "x",
+                  "O",
+                  "1",
+                  "2"
+                ],
+                "uncertainties": [],
+                "confidence": "E2"
+              },
+              "source_provenance": null
+            },
+            {
+              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_433_1399_599_1519.jpg",
+              "image_sha256": "417008080f5d35b769281b32fb749f5379ec3074289167fecc276ed91f85053b",
+              "confidence": "E2",
+              "structured": {
+                "objects": [
+                  "坐标轴",
+                  "曲线",
+                  "点O"
+                ],
+                "relations": [
+                  "曲线经过点O",
+                  "曲线与x轴交于点O和另一点",
+                  "曲线在x=1和x=2附近有极值点"
+                ],
+                "coordinates": [
+                  "O(0,0)"
+                ],
+                "ranges": [
+                  "x∈(1,2)"
+                ],
+                "text": [
+                  "1",
+                  "2"
+                ],
+                "uncertainties": [],
+                "confidence": "E2"
+              },
+              "source_provenance": null
+            },
+            {
+              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_622_1399_788_1519.jpg",
+              "image_sha256": "5125e2316acd3343b5a7a25ffe21c5d672286819de5ab6bb101953fb6a3ea901",
+              "confidence": "E2",
+              "structured": {
+                "objects": [],
+                "relations": [],
+                "coordinates": [],
+                "ranges": [],
+                "text": [
+                  "O",
+                  "1",
+                  "2"
+                ],
+                "uncertainties": [],
+                "confidence": "E2"
+              },
+              "source_provenance": null
+            }
+          ],
+          "vision_sidecar": {
+            "objects": [
+              "坐标轴",
+              "曲线y=f'(x)",
+              "点O",
+              "点(1,0)",
+              "点(2,0)"
+            ],
+            "relations": [
+              "曲线y=f'(x)经过点O",
+              "曲线y=f'(x)经过点(1,0)",
+              "曲线y=f'(x)经过点(2,0)"
+            ],
+            "coordinates": [
+              "O(0,0)",
+              "(1,0)",
+              "(2,0)"
+            ],
+            "ranges": [
+              "x∈[1,2]"
+            ],
+            "text": [
+              "y",
+              "y=f'(x)",
+              "x"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "vision_source_provenance": []
         },
         {
           "qid": "Q-3e6467b021790a50",
@@ -1124,11 +1637,45 @@
               "exists": true
             }
           ],
-          "visual_status": "NEEDS_VISION_SIDECAR",
+          "visual_status": "VISION_VERIFIED",
           "math_errors": [],
           "evidence": [
-            "E1"
-          ]
+            "E1",
+            "E2"
+          ],
+          "vision_sidecars": [
+            {
+              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_277_753_912_889.jpg",
+              "image_sha256": "c6442e4ab2588ef75f0eb203790bdde2312fb97d4fcb3c819c0206d95fd86cce",
+              "confidence": "E2",
+              "structured": {
+                "objects": [],
+                "relations": [],
+                "coordinates": [],
+                "ranges": [],
+                "text": [
+                  "一数·高",
+                  "数学一本通"
+                ],
+                "uncertainties": [],
+                "confidence": "E2"
+              },
+              "source_provenance": null
+            }
+          ],
+          "vision_sidecar": {
+            "objects": [],
+            "relations": [],
+            "coordinates": [],
+            "ranges": [],
+            "text": [
+              "一数·高",
+              "数学一本通"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "vision_source_provenance": []
         },
         {
           "qid": "Q-debbf5ad8450f103",
@@ -1579,10 +2126,49 @@
           "exists": true
         }
       ],
-      "visual_status": "NEEDS_VISION_SIDECAR",
+      "visual_status": "VISION_VERIFIED",
       "teaching_text": "【例1】若定义在(0,6]上的函数 \\(f(x)\\)的图象如图，则不等式 \\(f'(x)<0\\)的解集为___.\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_810_434_1005_596.jpg\" alt=\"Image\" width=\"16%\" /></div>\nA. (2,4) B. (0,2)\nC. (4,6) D. (2,6)\n解析：由所给图象可以看出  \\(f(x)\\) 的单调递减区间，从而推断出满足  \\(f'(x) < 0\\) 的区间，由图可知， \\(f(x)\\) 的单调递减区间是  \\((2,4)\\)，所以不等式  \\(f'(x) < 0\\) 的解集为  \\((2,4)\\).\n答案：A",
       "solution_present": true,
-      "vision_hint": "5.3-LI42d873f4c41e7188"
+      "vision_hint": "5.3-LI42d873f4c41e7188",
+      "vision_sidecars": [
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_810_434_1005_596.jpg",
+          "image_sha256": "a71a426b133c3fe176d430f4ebd115fc149730bd53af1aa37377f592963b7f80",
+          "confidence": "E2",
+          "structured": {
+            "objects": [],
+            "relations": [],
+            "coordinates": [],
+            "ranges": [],
+            "text": [
+              "y",
+              "x",
+              "O"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        }
+      ],
+      "vision_sidecar": {
+        "objects": [],
+        "relations": [],
+        "coordinates": [],
+        "ranges": [],
+        "text": [
+          "y",
+          "x",
+          "O"
+        ],
+        "uncertainties": [],
+        "confidence": "E2"
+      },
+      "vision_source_provenance": [],
+      "evidence": [
+        "E1",
+        "E2"
+      ]
     },
     {
       "item_id": "1b9adce99417c31e",
@@ -1660,10 +2246,155 @@
           "exists": true
         }
       ],
-      "visual_status": "NEEDS_VISION_SIDECAR",
+      "visual_status": "VISION_VERIFIED",
       "teaching_text": "【例4】函数  \\(y = f(x)\\) 的图象如图（最左边的图）所示，则  \\(y = f'(x)\\) 的图象可能是（）\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_120_1056_277_1201.jpg\" alt=\"Image\" width=\"13%\" /></div>\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_292_1053_475_1255.jpg\" alt=\"Image\" width=\"15%\" /></div>\n<div style=\"text-align: center;\">A</div>\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_487_1053_674_1252.jpg\" alt=\"Image\" width=\"15%\" /></div>\n<div style=\"text-align: center;\">B</div>\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_690_1054_874_1227.jpg\" alt=\"Image\" width=\"15%\" /></div>\n<div style=\"text-align: center;\">C</div>\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_889_1052_1075_1225.jpg\" alt=\"Image\" width=\"15%\" /></div>\n<div style=\"text-align: center;\">D</div>\n解析：给出  \\(f(x)\\) 的图象，让选  \\(f'(x)\\) 的图象，可由  \\(f(x)\\) 的图象得到其单调性，该单调性与  \\(f'(x)\\) 的正负有关，由此推断  \\(f'(x)\\) 的图象，由所给图象可知  \\(f(x)\\) 在  \\((-\\infty, 0)\\) 上  \\(\\nearrow\\)，在  \\((0, +\\infty)\\) 上  \\(\\searrow\\)，所以在  \\((-\\infty, 0)\\) 上， \\(f'(x) > 0\\)，在  \\((0, +\\infty)\\) 上， \\(f'(x) < 0\\)，结合选项可知选 D.\n答案：D\n【反思】对于给出  \\(f(x)\\) 的图象，让选  \\(f'(x)\\) 的图象这类题，常由所给图象分析出  \\(f(x)\\) 的单调区间，进而得到  \\(f'(x)\\) 在对应区间上的正负情况，并由此判断选项。那如果是给出  \\(f'(x)\\) 的图象，让选  \\(f(x)\\) 的图象呢？这就需要由所给图象分析出  \\(f'(x)\\) 在哪些区间为正，哪些区间为负，得到  \\(f(x)\\) 在对应区间上的单调性，并由此判断选项，我们来看下面的变式1.",
       "solution_present": true,
-      "vision_hint": "5.3-LI5c4976572e9b3284"
+      "vision_hint": "5.3-LI5c4976572e9b3284",
+      "vision_sidecars": [
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_120_1056_277_1201.jpg",
+          "image_sha256": "dcd83a0b8a611d47340197b00e6d7d499aacb9b7ec57899b28951abadaa500cf",
+          "confidence": "E2",
+          "structured": {
+            "objects": [
+              "坐标原点O",
+              "y轴",
+              "x轴",
+              "曲线y=f(x)"
+            ],
+            "relations": [
+              "曲线y=f(x)与y轴交于原点O",
+              "曲线y=f(x)与x轴交于右侧某点"
+            ],
+            "coordinates": [
+              "O(0,0)"
+            ],
+            "ranges": [],
+            "text": [
+              "y",
+              "x",
+              "y = f(x)"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        },
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_292_1053_475_1255.jpg",
+          "image_sha256": "e26712e9890f5df5da04d4a47950af84d956fbe92e4781e567091d55ba3dbfb8",
+          "confidence": "E2",
+          "structured": {
+            "objects": [
+              "坐标轴",
+              "曲线",
+              "原点"
+            ],
+            "relations": [
+              "曲线过原点O",
+              "曲线在第二、四象限"
+            ],
+            "coordinates": [
+              "O(0,0)"
+            ],
+            "ranges": [],
+            "text": [
+              "y",
+              "x",
+              "A"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        },
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_487_1053_674_1252.jpg",
+          "image_sha256": "c05fcd2f7410c30b2edc7ed8cbd66cffdd1e3e3672d2f51c09b5b6f1fb36016e",
+          "confidence": "E2",
+          "structured": {
+            "objects": [],
+            "relations": [],
+            "coordinates": [],
+            "ranges": [],
+            "text": [
+              "y",
+              "O",
+              "x",
+              "B"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        },
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_690_1054_874_1227.jpg",
+          "image_sha256": "1302edcb7b21fd521981d928141b077d898f5a0fc1c5e93c060e3246708415f8",
+          "confidence": "E2",
+          "structured": {
+            "objects": [],
+            "relations": [],
+            "coordinates": [],
+            "ranges": [],
+            "text": [
+              "y",
+              "x",
+              "O"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        },
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_889_1052_1075_1225.jpg",
+          "image_sha256": "a5e4d7f2cd406f3178f1ab68ac09b46ec48a849183982cc999ab857ebbcb2c85",
+          "confidence": "E2",
+          "structured": {
+            "objects": [],
+            "relations": [],
+            "coordinates": [],
+            "ranges": [],
+            "text": [
+              "y",
+              "x",
+              "O"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        }
+      ],
+      "vision_sidecar": {
+        "objects": [
+          "坐标原点O",
+          "y轴",
+          "x轴",
+          "曲线y=f(x)"
+        ],
+        "relations": [
+          "曲线y=f(x)与y轴交于原点O",
+          "曲线y=f(x)与x轴交于右侧某点"
+        ],
+        "coordinates": [
+          "O(0,0)"
+        ],
+        "ranges": [],
+        "text": [
+          "y",
+          "x",
+          "y = f(x)"
+        ],
+        "uncertainties": [],
+        "confidence": "E2"
+      },
+      "vision_source_provenance": [],
+      "evidence": [
+        "E1",
+        "E2"
+      ]
     },
     {
       "item_id": "11127f5d6bd6592e",
@@ -1834,9 +2565,127 @@
           "exists": true
         }
       ],
-      "visual_status": "NEEDS_VISION_SIDECAR",
+      "visual_status": "VISION_VERIFIED",
       "solution_isolated": true,
-      "vision_hint": "5.3-LI50fc5c7694177dad"
+      "vision_hint": "5.3-LI50fc5c7694177dad",
+      "vision_sidecars": [
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_176_165_342_292.jpg",
+          "image_sha256": "3f1c45fc6340a3f3bc5963b477ed800fe83dcc60814bb7a4053b8532ebc863af",
+          "confidence": "E2",
+          "structured": {
+            "objects": [],
+            "relations": [],
+            "coordinates": [],
+            "ranges": [],
+            "text": [
+              "y = f'(x)"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        },
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_367_167_514_291.jpg",
+          "image_sha256": "50d641bc2d52ea91cb6651f0b750621ff24b3cde9ad42cec0d51158e2fee849d",
+          "confidence": "E2",
+          "structured": {
+            "objects": [],
+            "relations": [],
+            "coordinates": [],
+            "ranges": [],
+            "text": [
+              "y",
+              "x",
+              "-2",
+              "-1",
+              "1",
+              "O"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        },
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_536_164_677_289.jpg",
+          "image_sha256": "567b33b2c471de7dde5141c6c6a31eee9c55dd27e6effd033b0dc0d703ae0383",
+          "confidence": "E2",
+          "structured": {
+            "objects": [],
+            "relations": [],
+            "coordinates": [],
+            "ranges": [],
+            "text": [
+              "y",
+              "x",
+              "O"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        },
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_702_165_851_287.jpg",
+          "image_sha256": "721ec691d19b193e2770a6dd446dd388d21dea7cebf126b600caf1c01d2209c4",
+          "confidence": "E2",
+          "structured": {
+            "objects": [],
+            "relations": [],
+            "coordinates": [],
+            "ranges": [],
+            "text": [
+              "y",
+              "x",
+              "O",
+              "-2",
+              "-1",
+              "1"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        },
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_877_164_1016_290.jpg",
+          "image_sha256": "7db3852885559ff0e1dca3ac3b26691958c854b48b34ccbdc45d04c1a6896117",
+          "confidence": "E2",
+          "structured": {
+            "objects": [
+              "二次函数图像"
+            ],
+            "relations": [],
+            "coordinates": [],
+            "ranges": [],
+            "text": [
+              "y",
+              "x"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        }
+      ],
+      "vision_sidecar": {
+        "objects": [],
+        "relations": [],
+        "coordinates": [],
+        "ranges": [],
+        "text": [
+          "y = f'(x)"
+        ],
+        "uncertainties": [],
+        "confidence": "E2"
+      },
+      "vision_source_provenance": [],
+      "evidence": [
+        "E1",
+        "E2"
+      ]
     },
     {
       "item_id": "4a741aebf8b1ab18",
@@ -2175,11 +3024,43 @@
           "exists": true
         }
       ],
-      "visual_status": "NEEDS_VISION_SIDECAR",
+      "visual_status": "VISION_VERIFIED",
       "math_errors": [],
       "evidence": [
-        "E1"
-      ]
+        "E1",
+        "E2"
+      ],
+      "vision_sidecars": [
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_522_614_698_753.jpg",
+          "image_sha256": "a7117ff470fa4e32c5738f69ed8c50c4e532e2c16c404736522f5e53cdd8e79c",
+          "confidence": "E2",
+          "structured": {
+            "objects": [],
+            "relations": [],
+            "coordinates": [],
+            "ranges": [],
+            "text": [
+              "y = f'(x)"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        }
+      ],
+      "vision_sidecar": {
+        "objects": [],
+        "relations": [],
+        "coordinates": [],
+        "ranges": [],
+        "text": [
+          "y = f'(x)"
+        ],
+        "uncertainties": [],
+        "confidence": "E2"
+      },
+      "vision_source_provenance": []
     },
     {
       "qid": "Q-56cca61040bece6d",
@@ -2220,11 +3101,186 @@
           "exists": true
         }
       ],
-      "visual_status": "NEEDS_VISION_SIDECAR",
+      "visual_status": "VISION_VERIFIED",
       "math_errors": [],
       "evidence": [
-        "E1"
-      ]
+        "E1",
+        "E2"
+      ],
+      "vision_sidecars": [
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_537_1121_722_1237.jpg",
+          "image_sha256": "b14e20d71da62b80408b519ca4964de0a0832a8a844b49c927ef2c01c48c0157",
+          "confidence": "E2",
+          "structured": {
+            "objects": [
+              "坐标轴",
+              "曲线y=f'(x)",
+              "点O",
+              "点(1,0)",
+              "点(2,0)"
+            ],
+            "relations": [
+              "曲线y=f'(x)经过点O",
+              "曲线y=f'(x)经过点(1,0)",
+              "曲线y=f'(x)经过点(2,0)"
+            ],
+            "coordinates": [
+              "O(0,0)",
+              "(1,0)",
+              "(2,0)"
+            ],
+            "ranges": [
+              "x∈[1,2]"
+            ],
+            "text": [
+              "y",
+              "y=f'(x)",
+              "x"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        },
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_435_1250_600_1369.jpg",
+          "image_sha256": "f4270c1e2bb221cc7a97eca98a995101823099394725ef2d0c1dfb2cdc13dd52",
+          "confidence": "E2",
+          "structured": {
+            "objects": [
+              "坐标轴",
+              "曲线"
+            ],
+            "relations": [
+              "曲线与x轴交于两点",
+              "曲线在x=1处有极小值点"
+            ],
+            "coordinates": [
+              [
+                0,
+                0
+              ]
+            ],
+            "ranges": [
+              [
+                1,
+                2
+              ]
+            ],
+            "text": [
+              "y",
+              "x",
+              "O",
+              "1",
+              "2"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        },
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_623_1251_788_1368.jpg",
+          "image_sha256": "99852f0b415b4ae27cc838a9a37dee0d302960b3ac8f43ef33981c2714703480",
+          "confidence": "E2",
+          "structured": {
+            "objects": [],
+            "relations": [],
+            "coordinates": [],
+            "ranges": [],
+            "text": [
+              "y",
+              "x",
+              "O",
+              "1",
+              "2"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        },
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_433_1399_599_1519.jpg",
+          "image_sha256": "417008080f5d35b769281b32fb749f5379ec3074289167fecc276ed91f85053b",
+          "confidence": "E2",
+          "structured": {
+            "objects": [
+              "坐标轴",
+              "曲线",
+              "点O"
+            ],
+            "relations": [
+              "曲线经过点O",
+              "曲线与x轴交于点O和另一点",
+              "曲线在x=1和x=2附近有极值点"
+            ],
+            "coordinates": [
+              "O(0,0)"
+            ],
+            "ranges": [
+              "x∈(1,2)"
+            ],
+            "text": [
+              "1",
+              "2"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        },
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_622_1399_788_1519.jpg",
+          "image_sha256": "5125e2316acd3343b5a7a25ffe21c5d672286819de5ab6bb101953fb6a3ea901",
+          "confidence": "E2",
+          "structured": {
+            "objects": [],
+            "relations": [],
+            "coordinates": [],
+            "ranges": [],
+            "text": [
+              "O",
+              "1",
+              "2"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        }
+      ],
+      "vision_sidecar": {
+        "objects": [
+          "坐标轴",
+          "曲线y=f'(x)",
+          "点O",
+          "点(1,0)",
+          "点(2,0)"
+        ],
+        "relations": [
+          "曲线y=f'(x)经过点O",
+          "曲线y=f'(x)经过点(1,0)",
+          "曲线y=f'(x)经过点(2,0)"
+        ],
+        "coordinates": [
+          "O(0,0)",
+          "(1,0)",
+          "(2,0)"
+        ],
+        "ranges": [
+          "x∈[1,2]"
+        ],
+        "text": [
+          "y",
+          "y=f'(x)",
+          "x"
+        ],
+        "uncertainties": [],
+        "confidence": "E2"
+      },
+      "vision_source_provenance": []
     },
     {
       "qid": "Q-3e6467b021790a50",
@@ -2264,11 +3320,45 @@
           "exists": true
         }
       ],
-      "visual_status": "NEEDS_VISION_SIDECAR",
+      "visual_status": "VISION_VERIFIED",
       "math_errors": [],
       "evidence": [
-        "E1"
-      ]
+        "E1",
+        "E2"
+      ],
+      "vision_sidecars": [
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_277_753_912_889.jpg",
+          "image_sha256": "c6442e4ab2588ef75f0eb203790bdde2312fb97d4fcb3c819c0206d95fd86cce",
+          "confidence": "E2",
+          "structured": {
+            "objects": [],
+            "relations": [],
+            "coordinates": [],
+            "ranges": [],
+            "text": [
+              "一数·高",
+              "数学一本通"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        }
+      ],
+      "vision_sidecar": {
+        "objects": [],
+        "relations": [],
+        "coordinates": [],
+        "ranges": [],
+        "text": [
+          "一数·高",
+          "数学一本通"
+        ],
+        "uncertainties": [],
+        "confidence": "E2"
+      },
+      "vision_source_provenance": []
     },
     {
       "qid": "Q-debbf5ad8450f103",
@@ -2590,12 +3680,5 @@
     "direct_variants": "question only; solution isolated",
     "abc_exercises": "question only; answer sidecar forbidden"
   },
-  "unresolved": [
-    "5.3-LI42d873f4c41e7188:NEEDS_VISION_SIDECAR",
-    "5.3-LI50fc5c7694177dad:NEEDS_VISION_SIDECAR",
-    "5.3-LI5c4976572e9b3284:NEEDS_VISION_SIDECAR",
-    "Q-56cca61040bece6d:NEEDS_VISION_SIDECAR",
-    "Q-6dcd49b4bbe1ba67:NEEDS_VISION_SIDECAR",
-    "Q-c7221a2f8c6e43f5:NEEDS_VISION_SIDECAR"
-  ]
+  "unresolved": []
 }

@@ -2,7 +2,7 @@
   "schema_version": "7.4",
   "packet_type": "DEEPSEEK_SEQUENTIAL_LEARNING_PACKET",
   "section": "5.4",
-  "status": "UNVERIFIED",
+  "status": "VERIFIED",
   "source": {
     "ocr_root": "data/ocr_live_current/chapter5_95",
     "ocr_docs": [
@@ -30,7 +30,8 @@
         "4.1.4.8 极值与极值点（进阶）"
       ],
       "prerequisite_course_keys": [
-        "4.1.4.1 不含参数的函数的单调性"
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）"
       ],
       "optional_course_keys": [],
       "knowledge_refs": [
@@ -182,10 +183,75 @@
               "exists": true
             }
           ],
-          "visual_status": "NEEDS_VISION_SIDECAR",
+          "visual_status": "VISION_VERIFIED",
           "teaching_text": "【例 3】如图所示为函数  \\(y = f(x)\\)， \\(x \\in [-3, 2]\\) 的图象，请说出图中所示的函数  \\(f(x)\\) 的最值.\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_793_739_1015_969.jpg\" alt=\"Image\" width=\"18%\" /></div>\n解：由图可知， \\(y = f(x)\\)有极值点 -2 和 0，\n所以  \\(f(x)\\) 的极值为  \\(f(-2)=2\\)， \\(f(0)=-3\\)，\n又因为  \\(f(-3)=-2\\)， \\(f(2)=3\\)，\n所以  \\(f(0)<f(-3)<f(-2)<f(2)\\)，\n故  \\(f(x)\\) 有最大值 3，最小值 -3。",
           "solution_present": true,
-          "vision_hint": "5.4-LI87e5b4af938c5b46"
+          "vision_hint": "5.4-LI87e5b4af938c5b46",
+          "vision_sidecars": [
+            {
+              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_793_739_1015_969.jpg",
+              "image_sha256": "3a1b887471cb9e59e8a00f11a7315453a2aae51db39332131251f7997f3751b0",
+              "confidence": "E2",
+              "structured": {
+                "objects": [],
+                "relations": [],
+                "coordinates": [
+                  {
+                    "x": -3,
+                    "y": -2
+                  },
+                  {
+                    "x": -2,
+                    "y": 2.5
+                  },
+                  {
+                    "x": 0,
+                    "y": -3
+                  },
+                  {
+                    "x": 2,
+                    "y": 3
+                  }
+                ],
+                "ranges": [],
+                "text": [],
+                "uncertainties": [],
+                "confidence": "E2"
+              },
+              "source_provenance": null
+            }
+          ],
+          "vision_sidecar": {
+            "objects": [],
+            "relations": [],
+            "coordinates": [
+              {
+                "x": -3,
+                "y": -2
+              },
+              {
+                "x": -2,
+                "y": 2.5
+              },
+              {
+                "x": 0,
+                "y": -3
+              },
+              {
+                "x": 2,
+                "y": 3
+              }
+            ],
+            "ranges": [],
+            "text": [],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "vision_source_provenance": [],
+          "evidence": [
+            "E1",
+            "E2"
+          ]
         },
         {
           "item_id": "983631d81644456f",
@@ -212,10 +278,90 @@
               "exists": true
             }
           ],
-          "visual_status": "NEEDS_VISION_SIDECAR",
+          "visual_status": "VISION_VERIFIED",
           "teaching_text": "【例4】下列说法正确的是（）\nA. 函数在某区间上的极大值不会小于它的极小值\nB．函数在某区间上的最大值不会小于它的最小值\nC．函数在某区间上的极大值就是它在该区间上的最大值\nD．函数在某区间上的最大值就是它\n一定有最值，例如图1中的函数无最大、最小值，图2中的函数无最大值.\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_194_213_361_338.jpg\" alt=\"Image\" width=\"14%\" /></div>\n<div style=\"text-align: center;\">图1</div>\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_408_213_591_339.jpg\" alt=\"Image\" width=\"15%\" /></div>\n<div style=\"text-align: center;\">图2</div>\n②若在区间 \\((a,b)\\)上函数 \\(f(x)\\)的图象连续不断，且 \\(f(x)\\)只有一个极值点，则该极值点就是最值点.\n③极值是对某一点附近而言的概念，最值是对定义域内的函数而言的概念，因此给定区间 \\([a,b]\\)内的极大（小）值可以有多个，但最大（小）值只能有一个.\n2. 求函数  \\(f(x)\\) 在  \\([a,b]\\) 上最值的一般步骤\n①求函数  \\(f(x)\\) 在区间  \\((a,b)\\) 内的极值；\n②将函数  \\(f(x)\\) 的各极值与端点处的函数值  \\(f(a)\\),  \\(f(b)\\) 比较，其中最大的一个是最大值，最小的一个是最小值.\n## 在该区间上的极大值\n解析：A项，极大值可能小于极小值，如图1，极大值 \\(f(x_{1})\\)小于极小值 \\(f(x_{2})\\)，故A项错误；\nB 项，最大值是所有函数值中最大的，最小值是所有函数值中最小的，所以最大值不小于最小值，故 B 项正确；\nC 项，极大值不一定是区间上的最大值，最大值也可能在区间端点处取得，反例如图2，极大值  \\(f(p)\\) 不是  \\(f(x)\\) 的最大值，故 C 项错误；\nD 项，最大值不一定是极大值，反例如图2，最大值  \\(f(n)\\) 不是极大值，故 D 项错误.\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_726_561_906_688.jpg\" alt=\"Image\" width=\"15%\" /></div>\n<div style=\"text-align: center;\">图1</div>\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_929_575_1086_688.jpg\" alt=\"Image\" width=\"13%\" /></div>\n<div style=\"text-align: center;\">图2</div>\n答案：B\n## 本节核心题型\n本节围绕函数的极值与最值展开，我们先用类型Ⅰ这组题，结合图象来帮大家强化对极值有关概念的理解；接着又设计了类型Ⅱ这组题来分析如何求函数的极值；有时题干会给出函数的极值点或极值，让求参数的值或范围，我们在类型Ⅲ中会详细分析这类题的处理方法；最后，我们还设计了类型Ⅳ这组题来给大家讲解如何求函数的最值。通过这些题目的学习，希望大家能深刻理解函数的极值、最值与函数单调性的关系。",
           "solution_present": true,
-          "vision_hint": "5.4-LI983631d81644456f"
+          "vision_hint": "5.4-LI983631d81644456f",
+          "vision_sidecars": [
+            {
+              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_194_213_361_338.jpg",
+              "image_sha256": "45d3cb64f0aeea6e9ad0c1d60cb85844bb564638a1e5b8424982aa4890fa6f13",
+              "confidence": "E2",
+              "structured": {
+                "objects": [],
+                "relations": [],
+                "coordinates": [],
+                "ranges": [],
+                "text": [
+                  "y",
+                  "x",
+                  "O",
+                  "y = f(x)"
+                ],
+                "uncertainties": [],
+                "confidence": "E2"
+              },
+              "source_provenance": null
+            },
+            {
+              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_408_213_591_339.jpg",
+              "image_sha256": "7cc50dd623a7c46a8f78acd5540de6c7f80b6c488796eda3e0ff2ad9e2413fc5",
+              "confidence": "E2",
+              "structured": {
+                "objects": [
+                  "坐标轴O",
+                  "函数图像y=f(x)",
+                  "顶点",
+                  "底边端点",
+                  "中点"
+                ],
+                "relations": [
+                  "顶点在底边中点正上方",
+                  "函数图像为三角形",
+                  "坐标轴原点O在左下角"
+                ],
+                "coordinates": [
+                  "O(0,0)",
+                  "顶点(x, y_max)",
+                  "左端点(x1, 0)",
+                  "右端点(x2, 0)",
+                  "中点((x1+x2)/2, 0)"
+                ],
+                "ranges": [
+                  "x∈[x1, x2]",
+                  "y∈[0, y_max]"
+                ],
+                "text": [
+                  "y",
+                  "x",
+                  "O",
+                  "y = f(x)"
+                ],
+                "uncertainties": [],
+                "confidence": "E2"
+              },
+              "source_provenance": null
+            }
+          ],
+          "vision_sidecar": {
+            "objects": [],
+            "relations": [],
+            "coordinates": [],
+            "ranges": [],
+            "text": [
+              "y",
+              "x",
+              "O",
+              "y = f(x)"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "vision_source_provenance": [],
+          "evidence": [
+            "E1",
+            "E2"
+          ]
         }
       ],
       "direct_variants": [],
@@ -287,10 +433,45 @@
               "exists": true
             }
           ],
-          "visual_status": "NEEDS_VISION_SIDECAR",
+          "visual_status": "VISION_VERIFIED",
           "teaching_text": "【例 5】导函数  \\(y = f'(x)\\) 的图象如图所示，在标记的点中，函数  \\(y = f(x)\\) 的极大值点为（）\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_469_1272_723_1429.jpg\" alt=\"Image\" width=\"21%\" /></div>\nA.  \\(x_{1}\\) B.  \\(x_{2}\\) C.  \\(x_{3}\\) D.  \\(x_{4}\\)\n解析：函数在极大值点左侧↗，右侧↘，于是在该点左侧附近 \\(f'(x)>0\\)，右侧附近 \\(f'(x)<0\\)，故从图上找这一特征，由图可知 \\(f'(x)\\)在 \\(x=x_1\\)的左侧附近为正，右侧附近为负，所以函数 \\(y=f(x)\\)的极大值点为 \\(x_1\\)。\n答案：A\n【反思】分析函数的极值点，就是分析导数的正负分界点。若  \\(f'(x)\\) 在  \\(x=x_0\\) 左侧附近为正，右侧附近为负，则  \\(x_0\\) 是  \\(f(x)\\) 的极大值点；若  \\(f'(x)\\) 在  \\(x=x_0\\) 左侧附近为负，右侧附近为正，则  \\(x_0\\) 是  \\(f(x)\\) 的极小值点。本题给的是  \\(f'(x)\\) 的图象，有时也会给出  \\(f(x)\\) 的图象，我们来看一个变式。",
           "solution_present": true,
-          "vision_hint": "5.4-LIa3dd12e45a094dd7"
+          "vision_hint": "5.4-LIa3dd12e45a094dd7",
+          "vision_sidecars": [
+            {
+              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_469_1272_723_1429.jpg",
+              "image_sha256": "ccfd068825d9ea57230f1cbd94b03ab1f81162731cdc1402a0285faf8f544ca6",
+              "confidence": "E2",
+              "structured": {
+                "objects": [],
+                "relations": [],
+                "coordinates": [],
+                "ranges": [],
+                "text": [
+                  "y = f'(x)"
+                ],
+                "uncertainties": [],
+                "confidence": "E2"
+              },
+              "source_provenance": null
+            }
+          ],
+          "vision_sidecar": {
+            "objects": [],
+            "relations": [],
+            "coordinates": [],
+            "ranges": [],
+            "text": [
+              "y = f'(x)"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "vision_source_provenance": [],
+          "evidence": [
+            "E1",
+            "E2"
+          ]
         }
       ],
       "direct_variants": [
@@ -730,11 +911,59 @@
               "exists": true
             }
           ],
-          "visual_status": "NEEDS_VISION_SIDECAR",
+          "visual_status": "VISION_VERIFIED",
           "math_errors": [],
           "evidence": [
-            "E1"
-          ]
+            "E1",
+            "E2"
+          ],
+          "vision_sidecars": [
+            {
+              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_493_294_729_418.jpg",
+              "image_sha256": "b3efaaa4382479155387eac7677df370efac027b57be6befdfc290c115c1808d",
+              "confidence": "E2",
+              "structured": {
+                "objects": [
+                  "坐标轴",
+                  "曲线"
+                ],
+                "relations": [],
+                "coordinates": [],
+                "ranges": [],
+                "text": [
+                  "y",
+                  "x",
+                  "-1",
+                  "O",
+                  "1",
+                  "3"
+                ],
+                "uncertainties": [],
+                "confidence": "E2"
+              },
+              "source_provenance": null
+            }
+          ],
+          "vision_sidecar": {
+            "objects": [
+              "坐标轴",
+              "曲线"
+            ],
+            "relations": [],
+            "coordinates": [],
+            "ranges": [],
+            "text": [
+              "y",
+              "x",
+              "-1",
+              "O",
+              "1",
+              "3"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "vision_source_provenance": []
         },
         {
           "qid": "Q-0d0449af3aa014f7",
@@ -824,11 +1053,65 @@
               "exists": true
             }
           ],
-          "visual_status": "NEEDS_VISION_SIDECAR",
+          "visual_status": "VISION_VERIFIED",
           "math_errors": [],
           "evidence": [
-            "E1"
-          ]
+            "E1",
+            "E2"
+          ],
+          "vision_sidecars": [
+            {
+              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_543_257_691_407.jpg",
+              "image_sha256": "4b5bdeb82a8d21cdc1f3b3622d7f25624332afe9d2e00854a0e2c5b9cf974534",
+              "confidence": "E2",
+              "structured": {
+                "objects": [
+                  {
+                    "type": "坐标轴",
+                    "label": "x"
+                  },
+                  {
+                    "type": "坐标轴",
+                    "label": "y"
+                  },
+                  {
+                    "type": "曲线",
+                    "label": "函数图像"
+                  }
+                ],
+                "relations": [],
+                "coordinates": [],
+                "ranges": [],
+                "text": [],
+                "uncertainties": [],
+                "confidence": "E2"
+              },
+              "source_provenance": null
+            }
+          ],
+          "vision_sidecar": {
+            "objects": [
+              {
+                "type": "坐标轴",
+                "label": "x"
+              },
+              {
+                "type": "坐标轴",
+                "label": "y"
+              },
+              {
+                "type": "曲线",
+                "label": "函数图像"
+              }
+            ],
+            "relations": [],
+            "coordinates": [],
+            "ranges": [],
+            "text": [],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "vision_source_provenance": []
         },
         {
           "qid": "Q-43095dde11805610",
@@ -1254,10 +1537,75 @@
           "exists": true
         }
       ],
-      "visual_status": "NEEDS_VISION_SIDECAR",
+      "visual_status": "VISION_VERIFIED",
       "teaching_text": "【例 3】如图所示为函数  \\(y = f(x)\\)， \\(x \\in [-3, 2]\\) 的图象，请说出图中所示的函数  \\(f(x)\\) 的最值.\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_793_739_1015_969.jpg\" alt=\"Image\" width=\"18%\" /></div>\n解：由图可知， \\(y = f(x)\\)有极值点 -2 和 0，\n所以  \\(f(x)\\) 的极值为  \\(f(-2)=2\\)， \\(f(0)=-3\\)，\n又因为  \\(f(-3)=-2\\)， \\(f(2)=3\\)，\n所以  \\(f(0)<f(-3)<f(-2)<f(2)\\)，\n故  \\(f(x)\\) 有最大值 3，最小值 -3。",
       "solution_present": true,
-      "vision_hint": "5.4-LI87e5b4af938c5b46"
+      "vision_hint": "5.4-LI87e5b4af938c5b46",
+      "vision_sidecars": [
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_793_739_1015_969.jpg",
+          "image_sha256": "3a1b887471cb9e59e8a00f11a7315453a2aae51db39332131251f7997f3751b0",
+          "confidence": "E2",
+          "structured": {
+            "objects": [],
+            "relations": [],
+            "coordinates": [
+              {
+                "x": -3,
+                "y": -2
+              },
+              {
+                "x": -2,
+                "y": 2.5
+              },
+              {
+                "x": 0,
+                "y": -3
+              },
+              {
+                "x": 2,
+                "y": 3
+              }
+            ],
+            "ranges": [],
+            "text": [],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        }
+      ],
+      "vision_sidecar": {
+        "objects": [],
+        "relations": [],
+        "coordinates": [
+          {
+            "x": -3,
+            "y": -2
+          },
+          {
+            "x": -2,
+            "y": 2.5
+          },
+          {
+            "x": 0,
+            "y": -3
+          },
+          {
+            "x": 2,
+            "y": 3
+          }
+        ],
+        "ranges": [],
+        "text": [],
+        "uncertainties": [],
+        "confidence": "E2"
+      },
+      "vision_source_provenance": [],
+      "evidence": [
+        "E1",
+        "E2"
+      ]
     },
     {
       "item_id": "983631d81644456f",
@@ -1284,10 +1632,90 @@
           "exists": true
         }
       ],
-      "visual_status": "NEEDS_VISION_SIDECAR",
+      "visual_status": "VISION_VERIFIED",
       "teaching_text": "【例4】下列说法正确的是（）\nA. 函数在某区间上的极大值不会小于它的极小值\nB．函数在某区间上的最大值不会小于它的最小值\nC．函数在某区间上的极大值就是它在该区间上的最大值\nD．函数在某区间上的最大值就是它\n一定有最值，例如图1中的函数无最大、最小值，图2中的函数无最大值.\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_194_213_361_338.jpg\" alt=\"Image\" width=\"14%\" /></div>\n<div style=\"text-align: center;\">图1</div>\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_408_213_591_339.jpg\" alt=\"Image\" width=\"15%\" /></div>\n<div style=\"text-align: center;\">图2</div>\n②若在区间 \\((a,b)\\)上函数 \\(f(x)\\)的图象连续不断，且 \\(f(x)\\)只有一个极值点，则该极值点就是最值点.\n③极值是对某一点附近而言的概念，最值是对定义域内的函数而言的概念，因此给定区间 \\([a,b]\\)内的极大（小）值可以有多个，但最大（小）值只能有一个.\n2. 求函数  \\(f(x)\\) 在  \\([a,b]\\) 上最值的一般步骤\n①求函数  \\(f(x)\\) 在区间  \\((a,b)\\) 内的极值；\n②将函数  \\(f(x)\\) 的各极值与端点处的函数值  \\(f(a)\\),  \\(f(b)\\) 比较，其中最大的一个是最大值，最小的一个是最小值.\n## 在该区间上的极大值\n解析：A项，极大值可能小于极小值，如图1，极大值 \\(f(x_{1})\\)小于极小值 \\(f(x_{2})\\)，故A项错误；\nB 项，最大值是所有函数值中最大的，最小值是所有函数值中最小的，所以最大值不小于最小值，故 B 项正确；\nC 项，极大值不一定是区间上的最大值，最大值也可能在区间端点处取得，反例如图2，极大值  \\(f(p)\\) 不是  \\(f(x)\\) 的最大值，故 C 项错误；\nD 项，最大值不一定是极大值，反例如图2，最大值  \\(f(n)\\) 不是极大值，故 D 项错误.\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_726_561_906_688.jpg\" alt=\"Image\" width=\"15%\" /></div>\n<div style=\"text-align: center;\">图1</div>\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_929_575_1086_688.jpg\" alt=\"Image\" width=\"13%\" /></div>\n<div style=\"text-align: center;\">图2</div>\n答案：B\n## 本节核心题型\n本节围绕函数的极值与最值展开，我们先用类型Ⅰ这组题，结合图象来帮大家强化对极值有关概念的理解；接着又设计了类型Ⅱ这组题来分析如何求函数的极值；有时题干会给出函数的极值点或极值，让求参数的值或范围，我们在类型Ⅲ中会详细分析这类题的处理方法；最后，我们还设计了类型Ⅳ这组题来给大家讲解如何求函数的最值。通过这些题目的学习，希望大家能深刻理解函数的极值、最值与函数单调性的关系。",
       "solution_present": true,
-      "vision_hint": "5.4-LI983631d81644456f"
+      "vision_hint": "5.4-LI983631d81644456f",
+      "vision_sidecars": [
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_194_213_361_338.jpg",
+          "image_sha256": "45d3cb64f0aeea6e9ad0c1d60cb85844bb564638a1e5b8424982aa4890fa6f13",
+          "confidence": "E2",
+          "structured": {
+            "objects": [],
+            "relations": [],
+            "coordinates": [],
+            "ranges": [],
+            "text": [
+              "y",
+              "x",
+              "O",
+              "y = f(x)"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        },
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_408_213_591_339.jpg",
+          "image_sha256": "7cc50dd623a7c46a8f78acd5540de6c7f80b6c488796eda3e0ff2ad9e2413fc5",
+          "confidence": "E2",
+          "structured": {
+            "objects": [
+              "坐标轴O",
+              "函数图像y=f(x)",
+              "顶点",
+              "底边端点",
+              "中点"
+            ],
+            "relations": [
+              "顶点在底边中点正上方",
+              "函数图像为三角形",
+              "坐标轴原点O在左下角"
+            ],
+            "coordinates": [
+              "O(0,0)",
+              "顶点(x, y_max)",
+              "左端点(x1, 0)",
+              "右端点(x2, 0)",
+              "中点((x1+x2)/2, 0)"
+            ],
+            "ranges": [
+              "x∈[x1, x2]",
+              "y∈[0, y_max]"
+            ],
+            "text": [
+              "y",
+              "x",
+              "O",
+              "y = f(x)"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        }
+      ],
+      "vision_sidecar": {
+        "objects": [],
+        "relations": [],
+        "coordinates": [],
+        "ranges": [],
+        "text": [
+          "y",
+          "x",
+          "O",
+          "y = f(x)"
+        ],
+        "uncertainties": [],
+        "confidence": "E2"
+      },
+      "vision_source_provenance": [],
+      "evidence": [
+        "E1",
+        "E2"
+      ]
     },
     {
       "item_id": "a3dd12e45a094dd7",
@@ -1309,10 +1737,45 @@
           "exists": true
         }
       ],
-      "visual_status": "NEEDS_VISION_SIDECAR",
+      "visual_status": "VISION_VERIFIED",
       "teaching_text": "【例 5】导函数  \\(y = f'(x)\\) 的图象如图所示，在标记的点中，函数  \\(y = f(x)\\) 的极大值点为（）\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_469_1272_723_1429.jpg\" alt=\"Image\" width=\"21%\" /></div>\nA.  \\(x_{1}\\) B.  \\(x_{2}\\) C.  \\(x_{3}\\) D.  \\(x_{4}\\)\n解析：函数在极大值点左侧↗，右侧↘，于是在该点左侧附近 \\(f'(x)>0\\)，右侧附近 \\(f'(x)<0\\)，故从图上找这一特征，由图可知 \\(f'(x)\\)在 \\(x=x_1\\)的左侧附近为正，右侧附近为负，所以函数 \\(y=f(x)\\)的极大值点为 \\(x_1\\)。\n答案：A\n【反思】分析函数的极值点，就是分析导数的正负分界点。若  \\(f'(x)\\) 在  \\(x=x_0\\) 左侧附近为正，右侧附近为负，则  \\(x_0\\) 是  \\(f(x)\\) 的极大值点；若  \\(f'(x)\\) 在  \\(x=x_0\\) 左侧附近为负，右侧附近为正，则  \\(x_0\\) 是  \\(f(x)\\) 的极小值点。本题给的是  \\(f'(x)\\) 的图象，有时也会给出  \\(f(x)\\) 的图象，我们来看一个变式。",
       "solution_present": true,
-      "vision_hint": "5.4-LIa3dd12e45a094dd7"
+      "vision_hint": "5.4-LIa3dd12e45a094dd7",
+      "vision_sidecars": [
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_469_1272_723_1429.jpg",
+          "image_sha256": "ccfd068825d9ea57230f1cbd94b03ab1f81162731cdc1402a0285faf8f544ca6",
+          "confidence": "E2",
+          "structured": {
+            "objects": [],
+            "relations": [],
+            "coordinates": [],
+            "ranges": [],
+            "text": [
+              "y = f'(x)"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        }
+      ],
+      "vision_sidecar": {
+        "objects": [],
+        "relations": [],
+        "coordinates": [],
+        "ranges": [],
+        "text": [
+          "y = f'(x)"
+        ],
+        "uncertainties": [],
+        "confidence": "E2"
+      },
+      "vision_source_provenance": [],
+      "evidence": [
+        "E1",
+        "E2"
+      ]
     },
     {
       "item_id": "4a9f45d73cd72b5f",
@@ -1587,11 +2050,59 @@
           "exists": true
         }
       ],
-      "visual_status": "NEEDS_VISION_SIDECAR",
+      "visual_status": "VISION_VERIFIED",
       "math_errors": [],
       "evidence": [
-        "E1"
-      ]
+        "E1",
+        "E2"
+      ],
+      "vision_sidecars": [
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_493_294_729_418.jpg",
+          "image_sha256": "b3efaaa4382479155387eac7677df370efac027b57be6befdfc290c115c1808d",
+          "confidence": "E2",
+          "structured": {
+            "objects": [
+              "坐标轴",
+              "曲线"
+            ],
+            "relations": [],
+            "coordinates": [],
+            "ranges": [],
+            "text": [
+              "y",
+              "x",
+              "-1",
+              "O",
+              "1",
+              "3"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        }
+      ],
+      "vision_sidecar": {
+        "objects": [
+          "坐标轴",
+          "曲线"
+        ],
+        "relations": [],
+        "coordinates": [],
+        "ranges": [],
+        "text": [
+          "y",
+          "x",
+          "-1",
+          "O",
+          "1",
+          "3"
+        ],
+        "uncertainties": [],
+        "confidence": "E2"
+      },
+      "vision_source_provenance": []
     },
     {
       "qid": "Q-0d0449af3aa014f7",
@@ -1650,11 +2161,65 @@
           "exists": true
         }
       ],
-      "visual_status": "NEEDS_VISION_SIDECAR",
+      "visual_status": "VISION_VERIFIED",
       "math_errors": [],
       "evidence": [
-        "E1"
-      ]
+        "E1",
+        "E2"
+      ],
+      "vision_sidecars": [
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_543_257_691_407.jpg",
+          "image_sha256": "4b5bdeb82a8d21cdc1f3b3622d7f25624332afe9d2e00854a0e2c5b9cf974534",
+          "confidence": "E2",
+          "structured": {
+            "objects": [
+              {
+                "type": "坐标轴",
+                "label": "x"
+              },
+              {
+                "type": "坐标轴",
+                "label": "y"
+              },
+              {
+                "type": "曲线",
+                "label": "函数图像"
+              }
+            ],
+            "relations": [],
+            "coordinates": [],
+            "ranges": [],
+            "text": [],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        }
+      ],
+      "vision_sidecar": {
+        "objects": [
+          {
+            "type": "坐标轴",
+            "label": "x"
+          },
+          {
+            "type": "坐标轴",
+            "label": "y"
+          },
+          {
+            "type": "曲线",
+            "label": "函数图像"
+          }
+        ],
+        "relations": [],
+        "coordinates": [],
+        "ranges": [],
+        "text": [],
+        "uncertainties": [],
+        "confidence": "E2"
+      },
+      "vision_source_provenance": []
     },
     {
       "qid": "Q-43095dde11805610",
@@ -1915,11 +2480,5 @@
     "direct_variants": "question only; solution isolated",
     "abc_exercises": "question only; answer sidecar forbidden"
   },
-  "unresolved": [
-    "5.4-LI87e5b4af938c5b46:NEEDS_VISION_SIDECAR",
-    "5.4-LI983631d81644456f:NEEDS_VISION_SIDECAR",
-    "5.4-LIa3dd12e45a094dd7:NEEDS_VISION_SIDECAR",
-    "Q-1e7caca06a87c09d:NEEDS_VISION_SIDECAR",
-    "Q-4192f78e8d6d7047:NEEDS_VISION_SIDECAR"
-  ]
+  "unresolved": []
 }

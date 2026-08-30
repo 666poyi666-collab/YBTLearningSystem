@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 import re
 from datetime import datetime, timezone
 from pathlib import Path
@@ -13,26 +14,24 @@ from typing import Any, Iterable
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DOWNLOADS = Path(r"C:\Users\poyi\Downloads")
-COURSE_ROOT = DOWNLOADS / "课程合集"
 REPORT_ROOT = ROOT / "reports" / "all_chapters"
 TRANSCRIPT_ROOT = ROOT / "data" / "course_transcripts"
 
 CHAPTERS: dict[int, dict[str, Any]] = {
     1: {
-        "pdf": DOWNLOADS / "【2025-2025版】选择性必修第1册" / "按章节合并（无答案册）" / "第1章 空间向量与立体几何（无答案册）.pdf",
+        "book_directory": "第1章 空间向量与立体几何",
         "ocr": ROOT / "data" / "ocr_live_current" / "first_chapter_69",
         "pages": 69,
         "courses": ("3.1 空间向量与立体几何",),
     },
     2: {
-        "pdf": DOWNLOADS / "【2025-2025版】选择性必修第1册" / "按章节合并（无答案册）" / "第2章 直线和圆的方程（无答案册）.pdf",
+        "book_directory": "第2章 直线和圆的方程",
         "ocr": ROOT / "data" / "ocr_live_current" / "second_chapter_109",
         "pages": 109,
         "courses": ("3.2 直线与圆的方程",),
     },
     3: {
-        "pdf": DOWNLOADS / "【2025-2025版】选择性必修第1册" / "按章节合并（无答案册）" / "第3章 圆锥曲线的方程（无答案册）.pdf",
+        "book_directory": "第3章 圆锥曲线的方程",
         "ocr": ROOT / "data" / "ocr_live_current" / "third_chapter_180",
         "pages": 180,
         "courses": ("3.3 圆锥曲线的方程", "3.4 圆锥曲线方程的综合提升"),
@@ -88,12 +87,46 @@ def pdf_page_count(path: Path) -> int | None:
     if not path.is_file():
         return None
     try:
-        import fitz
+        from pypdf import PdfReader
 
-        with fitz.open(path) as document:
-            return document.page_count
+        return len(PdfReader(str(path)).pages)
     except Exception:
-        return None
+        try:
+            import subprocess
+
+            result = subprocess.run(["pdfinfo", str(path)], capture_output=True, text=True, check=True)
+            match = re.search(r"(?m)^Pages:\s*(\d+)\s*$", result.stdout)
+            return int(match.group(1)) if match else None
+        except Exception:
+            return None
+
+
+def scan_pdf_source(config: dict[str, Any], book_root: Path | None) -> dict[str, Any]:
+    expected = int(config["pages"])
+    if config.get("pdf"):
+        paths = [Path(config["pdf"])]
+    elif book_root is not None:
+        directory = book_root / str(config["book_directory"])
+        paths = sorted(
+            path for path in directory.glob("*.pdf")
+            if "（方法册+习题册）" in path.name and "答案册" not in path.name
+        ) if directory.is_dir() else []
+    else:
+        paths = []
+    counts = [pdf_page_count(path) for path in paths]
+    actual = sum(value for value in counts if value is not None)
+    complete = bool(paths) and all(value is not None for value in counts) and actual == expected
+    return {
+        "status": "passed" if complete else "blocked",
+        "path": str(paths[0]) if len(paths) == 1 else None,
+        "paths": [str(path) for path in paths],
+        "file_count": len(paths),
+        "exists": bool(paths) and all(path.is_file() for path in paths),
+        "expected_pages": expected,
+        "actual_pages": actual,
+        "sha256": sha256_file(paths[0]) if len(paths) == 1 else (aggregate_hash(paths) if paths else None),
+        "source_mode": "single_chapter_pdf" if len(paths) == 1 else "section_pdfs",
+    }
 
 
 def section_folder(section_id: str) -> str:
@@ -161,11 +194,74 @@ def scan_ocr(directory: Path, expected_pages: int) -> dict[str, Any]:
     }
 
 
-def scan_courses(course_dirs: tuple[str, ...], validate_hashes: bool) -> dict[str, Any]:
+def manifest_course_keys(manifest: dict[str, Any]) -> set[str]:
+    keys: set[str] = set()
+    for section in manifest.get("sections", []):
+        keys.update(str(value) for value in section.get("required_course_keys", []))
+        keys.update(str(value) for value in section.get("support_course_keys", []))
+        for cycle in section.get("learning_cycles", []):
+            for field in ("course_keys", "prerequisite_course_keys", "optional_course_keys"):
+                keys.update(str(value) for value in cycle.get(field, []))
+    return keys
+
+
+def scan_frozen_courses(manifest: dict[str, Any]) -> dict[str, Any]:
+    catalog_path = ROOT / "data" / "all_chapters_course_catalog.json"
+    catalog_payload = load_json(catalog_path)
+    catalog = {str(row.get("course_key")): row for row in catalog_payload.get("courses", [])}
+    required = manifest_course_keys(manifest)
+    missing = sorted(required - set(catalog))
+    invalid: list[dict[str, str]] = []
+    rows: list[dict[str, Any]] = []
+    for key in sorted(required):
+        course = catalog.get(key, {})
+        transcript = ROOT / str(course.get("transcript_file") or "")
+        value = load_json(transcript)
+        full_text = str(value.get("full_text") or "")
+        recorded_video_sha = str(value.get("source_video_sha256") or "")
+        if not transcript.is_file() or len(full_text) < 100:
+            invalid.append({"course_key": key, "reason": "transcript_missing_or_short"})
+        elif recorded_video_sha != str(course.get("video_sha256") or ""):
+            invalid.append({"course_key": key, "reason": "frozen_video_hash_binding_mismatch"})
+        rows.append({
+            "course_key": key,
+            "course_id": course.get("course_id"),
+            "title": course.get("title"),
+            "video_file": course.get("video_file"),
+            "recorded_video_sha256": course.get("video_sha256"),
+            "transcript": str(transcript),
+            "transcript_present": transcript.is_file(),
+            "transcript_chars": len(full_text),
+            "sentence_count": len(value.get("sentences") or []),
+            "source_mode": "frozen_video_hash_plus_repository_transcript",
+        })
+    blockers = [
+        *(["frozen_course_keys_missing"] if missing else []),
+        *(["frozen_transcripts_invalid"] if invalid else []),
+    ]
+    return {
+        "status": "passed" if not blockers else "blocked",
+        "source_mode": "frozen_catalog",
+        "course_directories": [],
+        "missing_directories": [],
+        "video_count": len(rows),
+        "transcript_count": sum(row["transcript_present"] for row in rows),
+        "missing_course_keys": missing,
+        "invalid_transcripts": invalid,
+        "video_hash_mismatches": [],
+        "pollution_transcripts": [],
+        "blockers": blockers,
+        "rows": rows,
+    }
+
+
+def scan_courses(course_dirs: tuple[str, ...], validate_hashes: bool, course_root: Path | None, manifest: dict[str, Any]) -> dict[str, Any]:
+    if course_root is None:
+        return scan_frozen_courses(manifest)
     videos: list[Path] = []
     missing_dirs: list[str] = []
     for dirname in course_dirs:
-        directory = COURSE_ROOT / dirname
+        directory = course_root / dirname
         if not directory.is_dir():
             missing_dirs.append(str(directory))
             continue
@@ -260,6 +356,8 @@ def scan_packet(section: dict[str, Any]) -> dict[str, Any]:
 
 def simulation_status(section_id: str) -> dict[str, Any]:
     candidates = [
+        ROOT / "reports" / "all_section_simulations" / f"{section_id}-route-contract-simulation.json",
+        ROOT / "reports" / "all_section_simulations" / f"{section_folder(section_id)}-route-contract-simulation.json",
         ROOT / "reports" / "zero_base_cycles" / f"{section_id}-current-agent-simulation.json",
         ROOT / "reports" / "zero_base_cycles" / f"{section_folder(section_id)}-current-agent-simulation.json",
     ]
@@ -276,21 +374,18 @@ def simulation_status(section_id: str) -> dict[str, Any]:
     }
 
 
-def scan_chapter(number: int, config: dict[str, Any], validate_hashes: bool) -> dict[str, Any]:
+def scan_chapter(
+    number: int,
+    config: dict[str, Any],
+    validate_hashes: bool,
+    book_root: Path | None,
+    course_root: Path | None,
+) -> dict[str, Any]:
     manifest_path = ROOT / f"chapter{number}_manifest.json"
     manifest = load_json(manifest_path)
-    pdf = Path(config["pdf"])
-    page_count = pdf_page_count(pdf)
-    pdf_record = {
-        "status": "passed" if pdf.is_file() and page_count == config["pages"] else "blocked",
-        "path": str(pdf),
-        "exists": pdf.is_file(),
-        "expected_pages": config["pages"],
-        "actual_pages": page_count,
-        "sha256": sha256_file(pdf),
-    }
+    pdf_record = scan_pdf_source(config, book_root)
     ocr = scan_ocr(Path(config["ocr"]), config["pages"])
-    courses = scan_courses(config["courses"], validate_hashes)
+    courses = scan_courses(config["courses"], validate_hashes, course_root, manifest)
     sections: list[dict[str, Any]] = []
     for section in manifest.get("sections") or []:
         section_id = str(section.get("id") or "")
@@ -397,8 +492,8 @@ def markdown_report(payload: dict[str, Any]) -> str:
     return "\n".join(lines) + "\n"
 
 
-def build_report(validate_hashes: bool) -> dict[str, Any]:
-    chapters = [scan_chapter(number, config, validate_hashes) for number, config in CHAPTERS.items()]
+def build_report(validate_hashes: bool, book_root: Path | None = None, course_root: Path | None = None) -> dict[str, Any]:
+    chapters = [scan_chapter(number, config, validate_hashes, book_root, course_root) for number, config in CHAPTERS.items()]
     blockers: list[str] = []
     for chapter in chapters:
         number = chapter["chapter"]
@@ -431,10 +526,12 @@ def build_report(validate_hashes: bool) -> dict[str, Any]:
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--validate-video-hashes", action="store_true")
+    parser.add_argument("--book-root", type=Path, default=Path(os.environ["YBT_BOOK_ROOT"]) if os.environ.get("YBT_BOOK_ROOT") else None)
+    parser.add_argument("--course-root", type=Path, default=Path(os.environ["YBT_COURSE_ROOT"]) if os.environ.get("YBT_COURSE_ROOT") else None)
     parser.add_argument("--json", type=Path, default=REPORT_ROOT / "source-coverage-current.json")
     parser.add_argument("--markdown", type=Path, default=REPORT_ROOT / "source-coverage-current.md")
     args = parser.parse_args()
-    payload = build_report(args.validate_video_hashes)
+    payload = build_report(args.validate_video_hashes, args.book_root, args.course_root)
     args.json.parent.mkdir(parents=True, exist_ok=True)
     args.json.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     args.markdown.write_text(markdown_report(payload), encoding="utf-8-sig")

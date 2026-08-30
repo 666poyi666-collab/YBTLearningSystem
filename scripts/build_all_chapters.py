@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 import re
 import sys
 from pathlib import Path
@@ -19,8 +20,7 @@ from ybt_learning.common import save_json, stable_id
 from ybt_learning.packet import PacketBuilder
 
 
-DOWNLOADS = Path(r"C:\Users\poyi\Downloads")
-COURSE_ROOT = DOWNLOADS / "课程合集"
+COURSE_ROOT = Path(os.environ["YBT_COURSE_ROOT"]).expanduser().resolve() if os.environ.get("YBT_COURSE_ROOT") else ROOT / ".external-course-source-unavailable"
 TRANSCRIPT_ROOT = ROOT / "data" / "course_transcripts"
 PACKET_ROOT = ROOT / "data" / "packets"
 REPORT_ROOT = ROOT / "reports" / "all_chapters"
@@ -225,6 +225,11 @@ def build_course_catalog(
                 for field in ("course_keys", "prerequisite_course_keys", "optional_course_keys"):
                     used_keys.update(str(key) for key in cycle.get(field, []))
 
+    missing_course_directories = [name for name in COURSE_DIRS if not (COURSE_ROOT / name).is_dir()]
+    frozen_fallback = bool(verify_hashes and missing_course_directories)
+    if frozen_fallback:
+        verify_hashes = False
+
     if not verify_hashes:
         frozen_path = ROOT / "data" / "all_chapters_course_catalog.json"
         frozen = load_json(frozen_path)
@@ -267,6 +272,10 @@ def build_course_catalog(
             "used_course_count": len(used_keys),
             "courses": rows,
             "frozen_catalog_source": str(frozen_path.relative_to(ROOT)).replace("\\", "/"),
+            "frozen_fallback": frozen_fallback,
+            "missing_course_directories": missing_course_directories,
+            "allowed_course_directories": list(COURSE_DIRS),
+            "source_rule": "repository transcripts plus frozen source-video hashes when the original course directory is unavailable",
         }
 
     by_stem, by_id, inventory = _video_inventory()
@@ -310,14 +319,14 @@ def build_course_catalog(
                     if sentence_count
                     else "not_available_legacy_full_text"
                 ),
-                "source_rule": "Downloads/课程合集 only",
+                "source_rule": "configured YBT_COURSE_ROOT only",
             }
         )
     resolved_stems = {Path(row["video_file"]).stem for row in rows}
     return {
         "schema_version": 1,
         "status": "passed",
-        "allowed_course_directories": [str(COURSE_ROOT / name) for name in COURSE_DIRS],
+        "allowed_course_directories": list(COURSE_DIRS),
         "course_count": len(rows),
         "available_video_count": len(inventory),
         "unreferenced_allowed_videos": [

@@ -2,7 +2,7 @@
   "schema_version": "7.1",
   "packet_type": "DEEPSEEK_STUDENT_LEARNING_ITEMS",
   "section": "ch3.s7",
-  "status": "UNVERIFIED",
+  "status": "VERIFIED",
   "source": {
     "ocr_root": "data/ocr_live_current/third_chapter_180",
     "ocr_docs": [
@@ -177,8 +177,85 @@
           "exists": true
         }
       ],
-      "visual_status": "NEEDS_VISION_SIDECAR",
-      "evidence": []
+      "visual_status": "VISION_VERIFIED",
+      "vision_sidecars": [
+        {
+          "image_sha256": "d8a6ed486c8f6bdbc181ba60b836c79f493b9af1a93cbdf8dc8bf989ba340e1d",
+          "confidence": "E2",
+          "structured": {
+            "objects": [
+              {
+                "name": "射电望远镜",
+                "description": "大型抛物面天线"
+              },
+              {
+                "name": "支撑结构",
+                "description": "天线周围的多根立柱"
+              },
+              {
+                "name": "建筑主体",
+                "description": "抛物面下方连接的矩形建筑"
+              },
+              {
+                "name": "周围植被",
+                "description": "望远镜下方的树木和植被"
+              }
+            ],
+            "relations": [],
+            "coordinates": [],
+            "ranges": [],
+            "text": [],
+            "uncertainties": [],
+            "confidence": "E2"
+          }
+        },
+        {
+          "image_sha256": "7049c94cb3fafec628ff7bfb2fbd426153f7654847283b97a1a485da3a3a7def",
+          "confidence": "E2",
+          "structured": {
+            "objects": [],
+            "relations": [],
+            "coordinates": [],
+            "ranges": [],
+            "text": [
+              "4",
+              "1"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          }
+        }
+      ],
+      "vision_sidecar": {
+        "objects": [
+          {
+            "name": "射电望远镜",
+            "description": "大型抛物面天线"
+          },
+          {
+            "name": "支撑结构",
+            "description": "天线周围的多根立柱"
+          },
+          {
+            "name": "建筑主体",
+            "description": "抛物面下方连接的矩形建筑"
+          },
+          {
+            "name": "周围植被",
+            "description": "望远镜下方的树木和植被"
+          }
+        ],
+        "relations": [],
+        "coordinates": [],
+        "ranges": [],
+        "text": [],
+        "uncertainties": [],
+        "confidence": "E2"
+      },
+      "evidence": [
+        "E1",
+        "E2"
+      ]
     },
     {
       "item_id": "f8fe53b636f57231",
@@ -254,8 +331,93 @@
           "exists": true
         }
       ],
-      "visual_status": "NEEDS_VISION_SIDECAR",
-      "evidence": []
+      "visual_status": "VISION_VERIFIED",
+      "vision_sidecars": [
+        {
+          "image_sha256": "e120b45f067a49e667c92107023414214b6caab5d8541c280f6d969e63885203",
+          "confidence": "E2",
+          "structured": {
+            "objects": [
+              "坐标轴Ox,Oy",
+              "直线l",
+              "点O,F,M",
+              "圆M"
+            ],
+            "relations": [
+              "点F在Ox上，点M在Ox上方",
+              "圆M与Ox相切于点F",
+              "点M在直线l的右侧",
+              "直线l与Oy相切",
+              "点d在Oy上，点M在点d右侧",
+              "线段Md垂直于Oy"
+            ],
+            "coordinates": [
+              "O(0,0)",
+              "F(?,0)",
+              "M(?,?)",
+              "d(0,?)"
+            ],
+            "ranges": [
+              "r为圆M的半径，r>0",
+              "d为点M到Oy的距离，d>0",
+              "圆M与Ox相切，切点为F，故MF垂直Ox"
+            ],
+            "text": [
+              "l",
+              "y",
+              "x",
+              "d",
+              "M",
+              "r",
+              "F"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          }
+        }
+      ],
+      "vision_sidecar": {
+        "objects": [
+          "坐标轴Ox,Oy",
+          "直线l",
+          "点O,F,M",
+          "圆M"
+        ],
+        "relations": [
+          "点F在Ox上，点M在Ox上方",
+          "圆M与Ox相切于点F",
+          "点M在直线l的右侧",
+          "直线l与Oy相切",
+          "点d在Oy上，点M在点d右侧",
+          "线段Md垂直于Oy"
+        ],
+        "coordinates": [
+          "O(0,0)",
+          "F(?,0)",
+          "M(?,?)",
+          "d(0,?)"
+        ],
+        "ranges": [
+          "r为圆M的半径，r>0",
+          "d为点M到Oy的距离，d>0",
+          "圆M与Ox相切，切点为F，故MF垂直Ox"
+        ],
+        "text": [
+          "l",
+          "y",
+          "x",
+          "d",
+          "M",
+          "r",
+          "F"
+        ],
+        "uncertainties": [],
+        "confidence": "E2"
+      },
+      "evidence": [
+        "E1",
+        "E2"
+      ]
     },
     {
       "item_id": "d78cc13a85a64cad",

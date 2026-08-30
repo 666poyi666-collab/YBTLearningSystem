@@ -2,7 +2,7 @@
   "schema_version": "7.4",
   "packet_type": "DEEPSEEK_SEQUENTIAL_LEARNING_PACKET",
   "section": "ch3.s12",
-  "status": "UNVERIFIED",
+  "status": "VERIFIED",
   "source": {
     "ocr_root": "data/ocr_live_current/third_chapter_180",
     "ocr_docs": [
@@ -80,10 +80,97 @@
               "exists": true
             }
           ],
-          "visual_status": "NEEDS_VISION_SIDECAR",
+          "visual_status": "VISION_VERIFIED",
           "teaching_text": "【例2】设抛物线  \\(y^{2}=4x\\) 的焦点为 F，O 是坐标原点， \\(M(4,0)\\)，过点 F 的直线与抛物线交于 A，B 两点，延长 AM，BM 分别交抛物线于 C，D 两点，P，Q 分别是 AB，CD 的中点.\n（1）求直线 OP 的斜率的取值范围：\n(2) 求  \\(\\cos\\angle POQ\\) 的最小值.\n直线 \\(AB\\) 的方程）由题意，\\(F(1,0)\\)，垂直于 \\(y\\) 轴的直线与抛物线 \\(y^2 = 4x\\) 只有 1 个交点，所以 \\(AB\\) 不与 \\(y\\) 轴垂直，故可设其方程为 \\(x = my + 1\\)，代入 \\(y^2 = 4x\\) 消去 \\(x\\) 整理得：\\(y^2 - 4my - 4 = 0\\)，判别式 \\(\\Delta = (-4m)^2 - 4 \\times 1 \\times (-4) = 16(m^2 + 1) > 0\\)，设 \\(A(x_1, y_1)\\)，\\(B(x_2, y_2)\\)，由韦达定理，\\(y_1 + y_2 = 4m\\)，\\(y_1 y_2 = -4\\)，所以 \\(x_1 + x_2 = my_1 + 1 + my_2 + 1 = m(y_1 + y_2) + 2 = 4m^2 + 2\\)，故 \\(AB\\) 中点 \\(P\\) 的坐标为 \\((2m^2 + 1, 2m)\\)，所以 \\(k_{OP} = \\frac{2m}{2m^2 + 1}\\)，（怎样求 \\(k_{OP}\\) 的范围？可看成关于 \\(m\\) 的函数，该函数是奇函数，先看 \\(m > 0\\) 的情形，可上下同除以 \\(m\\)，用均值不等式处理）\n记 \\(f(m) = \\frac{2m}{2m^2 + 1}\\)，\\(m \\in \\mathbf{R}\\)，则 \\(f(-m) = \\frac{2(-m)}{2(-m)^2 + 1} = -\\frac{2m}{2m^2 + 1} = -f(m)\\)，所以 \\(f(m)\\) 为奇函数，当 \\(m > 0\\) 时，\\(f(m) = \\frac{2}{2m + \\frac{1}{m}}\\)，因为 \\(2m + \\frac{1}{m} \\geq 2\\sqrt{2m \\cdot \\frac{1}{m}} = 2\\sqrt{2}\\)，所以 \\(0 < f(m) \\leq \\frac{2}{2\\sqrt{2}} = \\frac{\\sqrt{2}}{2}\\)，当且仅当 \\(2m = \\frac{1}{m}\\)，即 \\(m = \\frac{\\sqrt{2}}{2}\\) 时取等号，所以 \\(f(m)\\) 在 \\((0, +\\infty)\\) 上的值域为 \\(\\left[0, \\frac{\\sqrt{2}}{2}\\right]\\)，由奇函数的对称性，\\(f(m)\\) 在 \\((-\\infty, 0)\\) 上的值域为 \\(\\left[-\\frac{\\sqrt{2}}{2}, 0\\right)\\)，结合 \\(f(0) = 0\\) 可得 \\(f(m)\\) 的值域为 \\(\\left[-\\frac{\\sqrt{2}}{2}, \\frac{\\sqrt{2}}{2}\\right]\\)，所以直线 \\(OP\\) 的斜率的取值范围是 \\(\\left[-\\frac{\\sqrt{2}}{2}, \\frac{\\sqrt{2}}{2}\\right]\\)。\n（2）（\\(\\angle POQ\\) 可看成 \\(\\overrightarrow{OP}\\) 与 \\(\\overrightarrow{OQ}\\) 的夹角，故考虑用夹角余弦公式处理，下面先求点 \\(Q\\) 的坐标. 因为 \\(Q\\) 为 \\(CD\\) 中点，于是又得先算 \\(C\\)，\\(D\\) 的坐标，可将直线 \\(AM\\)，\\(BM\\) 与抛物线联立，结合韦达定理来求 \\(C\\)，\\(D\\) 的坐标）\n由题意，\\(AM\\) 不与 \\(y\\) 轴垂直，可设其方程为 \\(x = ny + 4\\)，代入 \\(y^2 = 4x\\) 消去 \\(x\\) 整理得：\\(y^2 - 4ny - 16 = 0\\)，\\(\\Delta' = 16n^2 + 64 > 0\\)，因为直线 \\(AM\\) 与抛物线的两个交点是 \\(A\\)，\\(C\\)，所以由韦达定理，\\(y_1 y_C = -16\\)，\n从而 \\(y_C = -\\frac{16}{y_1}\\)，故 \\(x_C = \\frac{y_C^2}{4} = \\frac{64}{y_1^2}\\)，所以 \\(C\\left(\\frac{64}{y_1^2}, -\\frac{16}{y_1}\\right)\\)，同理，\\(D\\left(\\frac{64}{y_2^2}, -\\frac{16}{y_2}\\right)\\)，\n因为 \\(Q\\) 是 \\(CD\\) 中点，所以点 \\(Q\\) 的坐标为 \\(\\left(\\frac{32}{y_1^2} + \\frac{32}{y_2^2}, -\\frac{8}{y_1} - \\frac{8}{y_2}\\right)\\) ①，\n\\(\\frac{32}{y_1^2} + \\frac{32}{y_2^2} = \\frac{32(y_1^2 + y_2^2)}{y_1^2 + y_2^2} = \\frac{32[(y_1 + y_2)^2 - 2y_1y_2]}{y_1^2 + y_2^2} = \\frac{32(16m^2 + 8)}{16} = 16(2m^2 + 1)\\)，\n \\[-\\frac{8}{y_{1}}-\\frac{8}{y_{2}}=-\\frac{8(y_{1}+y_{2})}{y_{1}y_{2}}=-\\frac{8\\times4m}{-4}=8m\\] \n \\[(16(2m^{2}+1),8m)\\] \n\\((P, Q)\\)的坐标都有了，若直接算\\(OP\\)与\\(OQ\\)的夹角余弦，则结果较复杂，能否简化？观察发现\\(P, Q\\)的坐标结构很像，对应分量有明显的倍数关系，故可考虑将\\(\\overrightarrow{OP}, \\overrightarrow{OQ}\\)的坐标同除以\\(2m^2 + 1\\)，得到与\\(\\overrightarrow{OP}, \\overrightarrow{OQ}\\)同向的向量，用它们来算\\(\\cos \\angle POQ\\)）\\(\\overrightarrow{OP} = (2m^2 + 1, 2m)\\)，\\(\\overrightarrow{OQ} = (16(2m^2 + 1), 8m)\\)，\n记 \\(a=\\left(1,\\frac{2m}{2m^2+1}\\right)\\)， \\(b=\\left(16,\\frac{8m}{2m^2+1}\\right)\\)，则 \\(a\\)， \\(b\\)分别与 \\(\\overrightarrow{OP}\\)， \\(\\overrightarrow{OQ}\\)同向，\n令 \\(t=\\frac{2m}{2m^2+1}\\)，则 \\(t=f(m)\\)，由（1）可得 \\(-\\frac{\\sqrt{2}}{2}\\leq t\\leq\\frac{\\sqrt{2}}{2}\\)，且 \\(a=(1,t)\\)， \\(b=(16,4t)\\)，\n所以 \\(\\cos\\angle POQ=\\cos\\langle a,b\\rangle=\\frac{a\\cdot b}{|a|\\cdot|b|}=\\frac{16+4t^2}{\\sqrt{1+t^2}\\cdot\\sqrt{256+16t^2}}=\\frac{4+t^2}{\\sqrt{1+t^2}\\cdot\\sqrt{16+t^2}}\\)，\n（怎样求此式的最小值？不妨全拿进根号再看）\n故  \\(\\cos\\angle POQ=\\sqrt{\\frac{(4+t^{2})^{2}}{(1+t^{2})(16+t^{2})}}=\\sqrt{\\frac{t^{4}+8t^{2}+16}{16+17t^{2}+t^{4}}}=\\sqrt{\\frac{t^{4}+17t^{2}+16-9t^{2}}{t^{4}+17t^{2}+16}}=\\sqrt{1-\\frac{9t^{2}}{t^{4}+17t^{2}+16}}\\) ②，\n（要使  \\(\\cos \\angle POQ\\) 最小，只需  \\(\\frac{9t^2}{t^4 + 17t^2 + 16}\\) 最大，可上下同除以  \\(t^2\\)，将分子化为常数再看，但需先考虑  \\(t^2 = 0\\) 的情形）由  \\(-\\frac{\\sqrt{2}}{2} \\leq t \\leq \\frac{\\sqrt{2}}{2}\\) 可得  \\(0 \\leq t^2 \\leq \\frac{1}{2}\\)，当  \\(t^2 = 0\\) 时， \\(\\cos \\angle POQ = 1\\)；\n当  \\(0 < t^2 \\leq \\frac{1}{2}\\) 时， \\(\\frac{9t^2}{t^4 + 17t^2 + 16} = \\frac{9}{t^2 + \\frac{16}{t^2} + 17}\\) ③，（能用均值不等式吗？经尝试，等号取不到，所以不能，故直\n接分析单调性，显然将 \\(t^{2}\\)换元更容易看出单调性，故先换元）\n设  \\(u = t^2\\)，则  \\(0 < u \\leq \\frac{1}{2}\\)，且  \\(t^2 + \\frac{16}{t^2} = u + \\frac{16}{u}\\)，由双勾函数的性质可知函数  \\(y = u + \\frac{16}{u}\\) 在  \\(\\left(0, \\frac{1}{2}\\right]\\) 上单调递减，所以当  \\(u = \\frac{1}{2}\\) 时， \\(y = u + \\frac{16}{u}\\) 取得最小值  \\(\\frac{65}{2}\\)，故  \\(\\left(t^2 + \\frac{16}{t^2}\\right)_{\\min} = \\frac{65}{2}\\)，\n结合③可得 \\(\\frac{9t^{2}}{t^{4}+17t^{2}+16}\\)的最大值为 \\(\\frac{9}{\\frac{65}{2}+17}=\\frac{2}{11}\\)\n由②知当 \\(\\frac{9t^2}{t^4 + 17t^2 + 16}\\)最大时， \\(\\cos \\angle POQ\\)最小，所以 \\((\\cos \\angle POQ)_{\\min} = \\sqrt{1 - \\frac{2}{11}} = \\frac{3\\sqrt{11}}{11}\\)；综上所述， \\(\\cos \\angle POQ\\)的最小值为 \\(\\frac{3\\sqrt{11}}{11}\\)。\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_865_722_1092_940.jpg\" alt=\"Image\" width=\"19%\" /></div>\n【反思】若要具体计算某角的大小或其三角函数值，则可考虑将该角看成某两个向量的夹角，用夹角余弦公式处理.",
           "solution_present": true,
-          "vision_hint": "ch3.s12-LI35f25e4a25650379"
+          "vision_hint": "ch3.s12-LI35f25e4a25650379",
+          "vision_sidecars": [
+            {
+              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\imgs\\img_in_image_box_865_722_1092_940.jpg",
+              "image_sha256": "03ceac7cb096062c0b51ecbdef19ed72a4e67a6e7af3f45480c3ce47e9def70b",
+              "confidence": "E2",
+              "structured": {
+                "objects": [
+                  "坐标轴Ox,Oy",
+                  "抛物线",
+                  "点A,D,C,B",
+                  "线段AD,AC,CD,AB,BC,OD,OC",
+                  "线段PQ",
+                  "线段OF"
+                ],
+                "relations": [
+                  "点A在抛物线上",
+                  "点D在抛物线上",
+                  "点C在抛物线上",
+                  "点B在抛物线上",
+                  "点O在原点",
+                  "线段PQ过点M且平行于x轴"
+                ],
+                "coordinates": [
+                  "O(0,0)",
+                  "F在y轴上",
+                  "M在PQ上",
+                  "Q在x轴上",
+                  "A在抛物线左上方",
+                  "B在抛物线左下方"
+                ],
+                "ranges": [],
+                "text": [
+                  "y轴",
+                  "x轴",
+                  "D",
+                  "A",
+                  "C",
+                  "B"
+                ],
+                "uncertainties": [],
+                "confidence": "E2"
+              },
+              "source_provenance": null
+            }
+          ],
+          "vision_sidecar": {
+            "objects": [
+              "坐标轴Ox,Oy",
+              "抛物线",
+              "点A,D,C,B",
+              "线段AD,AC,CD,AB,BC,OD,OC",
+              "线段PQ",
+              "线段OF"
+            ],
+            "relations": [
+              "点A在抛物线上",
+              "点D在抛物线上",
+              "点C在抛物线上",
+              "点B在抛物线上",
+              "点O在原点",
+              "线段PQ过点M且平行于x轴"
+            ],
+            "coordinates": [
+              "O(0,0)",
+              "F在y轴上",
+              "M在PQ上",
+              "Q在x轴上",
+              "A在抛物线左上方",
+              "B在抛物线左下方"
+            ],
+            "ranges": [],
+            "text": [
+              "y轴",
+              "x轴",
+              "D",
+              "A",
+              "C",
+              "B"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "vision_source_provenance": [],
+          "evidence": [
+            "E1",
+            "E2"
+          ]
         }
       ],
       "direct_variants": [
@@ -431,10 +518,97 @@
           "exists": true
         }
       ],
-      "visual_status": "NEEDS_VISION_SIDECAR",
+      "visual_status": "VISION_VERIFIED",
       "teaching_text": "【例2】设抛物线  \\(y^{2}=4x\\) 的焦点为 F，O 是坐标原点， \\(M(4,0)\\)，过点 F 的直线与抛物线交于 A，B 两点，延长 AM，BM 分别交抛物线于 C，D 两点，P，Q 分别是 AB，CD 的中点.\n（1）求直线 OP 的斜率的取值范围：\n(2) 求  \\(\\cos\\angle POQ\\) 的最小值.\n直线 \\(AB\\) 的方程）由题意，\\(F(1,0)\\)，垂直于 \\(y\\) 轴的直线与抛物线 \\(y^2 = 4x\\) 只有 1 个交点，所以 \\(AB\\) 不与 \\(y\\) 轴垂直，故可设其方程为 \\(x = my + 1\\)，代入 \\(y^2 = 4x\\) 消去 \\(x\\) 整理得：\\(y^2 - 4my - 4 = 0\\)，判别式 \\(\\Delta = (-4m)^2 - 4 \\times 1 \\times (-4) = 16(m^2 + 1) > 0\\)，设 \\(A(x_1, y_1)\\)，\\(B(x_2, y_2)\\)，由韦达定理，\\(y_1 + y_2 = 4m\\)，\\(y_1 y_2 = -4\\)，所以 \\(x_1 + x_2 = my_1 + 1 + my_2 + 1 = m(y_1 + y_2) + 2 = 4m^2 + 2\\)，故 \\(AB\\) 中点 \\(P\\) 的坐标为 \\((2m^2 + 1, 2m)\\)，所以 \\(k_{OP} = \\frac{2m}{2m^2 + 1}\\)，（怎样求 \\(k_{OP}\\) 的范围？可看成关于 \\(m\\) 的函数，该函数是奇函数，先看 \\(m > 0\\) 的情形，可上下同除以 \\(m\\)，用均值不等式处理）\n记 \\(f(m) = \\frac{2m}{2m^2 + 1}\\)，\\(m \\in \\mathbf{R}\\)，则 \\(f(-m) = \\frac{2(-m)}{2(-m)^2 + 1} = -\\frac{2m}{2m^2 + 1} = -f(m)\\)，所以 \\(f(m)\\) 为奇函数，当 \\(m > 0\\) 时，\\(f(m) = \\frac{2}{2m + \\frac{1}{m}}\\)，因为 \\(2m + \\frac{1}{m} \\geq 2\\sqrt{2m \\cdot \\frac{1}{m}} = 2\\sqrt{2}\\)，所以 \\(0 < f(m) \\leq \\frac{2}{2\\sqrt{2}} = \\frac{\\sqrt{2}}{2}\\)，当且仅当 \\(2m = \\frac{1}{m}\\)，即 \\(m = \\frac{\\sqrt{2}}{2}\\) 时取等号，所以 \\(f(m)\\) 在 \\((0, +\\infty)\\) 上的值域为 \\(\\left[0, \\frac{\\sqrt{2}}{2}\\right]\\)，由奇函数的对称性，\\(f(m)\\) 在 \\((-\\infty, 0)\\) 上的值域为 \\(\\left[-\\frac{\\sqrt{2}}{2}, 0\\right)\\)，结合 \\(f(0) = 0\\) 可得 \\(f(m)\\) 的值域为 \\(\\left[-\\frac{\\sqrt{2}}{2}, \\frac{\\sqrt{2}}{2}\\right]\\)，所以直线 \\(OP\\) 的斜率的取值范围是 \\(\\left[-\\frac{\\sqrt{2}}{2}, \\frac{\\sqrt{2}}{2}\\right]\\)。\n（2）（\\(\\angle POQ\\) 可看成 \\(\\overrightarrow{OP}\\) 与 \\(\\overrightarrow{OQ}\\) 的夹角，故考虑用夹角余弦公式处理，下面先求点 \\(Q\\) 的坐标. 因为 \\(Q\\) 为 \\(CD\\) 中点，于是又得先算 \\(C\\)，\\(D\\) 的坐标，可将直线 \\(AM\\)，\\(BM\\) 与抛物线联立，结合韦达定理来求 \\(C\\)，\\(D\\) 的坐标）\n由题意，\\(AM\\) 不与 \\(y\\) 轴垂直，可设其方程为 \\(x = ny + 4\\)，代入 \\(y^2 = 4x\\) 消去 \\(x\\) 整理得：\\(y^2 - 4ny - 16 = 0\\)，\\(\\Delta' = 16n^2 + 64 > 0\\)，因为直线 \\(AM\\) 与抛物线的两个交点是 \\(A\\)，\\(C\\)，所以由韦达定理，\\(y_1 y_C = -16\\)，\n从而 \\(y_C = -\\frac{16}{y_1}\\)，故 \\(x_C = \\frac{y_C^2}{4} = \\frac{64}{y_1^2}\\)，所以 \\(C\\left(\\frac{64}{y_1^2}, -\\frac{16}{y_1}\\right)\\)，同理，\\(D\\left(\\frac{64}{y_2^2}, -\\frac{16}{y_2}\\right)\\)，\n因为 \\(Q\\) 是 \\(CD\\) 中点，所以点 \\(Q\\) 的坐标为 \\(\\left(\\frac{32}{y_1^2} + \\frac{32}{y_2^2}, -\\frac{8}{y_1} - \\frac{8}{y_2}\\right)\\) ①，\n\\(\\frac{32}{y_1^2} + \\frac{32}{y_2^2} = \\frac{32(y_1^2 + y_2^2)}{y_1^2 + y_2^2} = \\frac{32[(y_1 + y_2)^2 - 2y_1y_2]}{y_1^2 + y_2^2} = \\frac{32(16m^2 + 8)}{16} = 16(2m^2 + 1)\\)，\n \\[-\\frac{8}{y_{1}}-\\frac{8}{y_{2}}=-\\frac{8(y_{1}+y_{2})}{y_{1}y_{2}}=-\\frac{8\\times4m}{-4}=8m\\] \n \\[(16(2m^{2}+1),8m)\\] \n\\((P, Q)\\)的坐标都有了，若直接算\\(OP\\)与\\(OQ\\)的夹角余弦，则结果较复杂，能否简化？观察发现\\(P, Q\\)的坐标结构很像，对应分量有明显的倍数关系，故可考虑将\\(\\overrightarrow{OP}, \\overrightarrow{OQ}\\)的坐标同除以\\(2m^2 + 1\\)，得到与\\(\\overrightarrow{OP}, \\overrightarrow{OQ}\\)同向的向量，用它们来算\\(\\cos \\angle POQ\\)）\\(\\overrightarrow{OP} = (2m^2 + 1, 2m)\\)，\\(\\overrightarrow{OQ} = (16(2m^2 + 1), 8m)\\)，\n记 \\(a=\\left(1,\\frac{2m}{2m^2+1}\\right)\\)， \\(b=\\left(16,\\frac{8m}{2m^2+1}\\right)\\)，则 \\(a\\)， \\(b\\)分别与 \\(\\overrightarrow{OP}\\)， \\(\\overrightarrow{OQ}\\)同向，\n令 \\(t=\\frac{2m}{2m^2+1}\\)，则 \\(t=f(m)\\)，由（1）可得 \\(-\\frac{\\sqrt{2}}{2}\\leq t\\leq\\frac{\\sqrt{2}}{2}\\)，且 \\(a=(1,t)\\)， \\(b=(16,4t)\\)，\n所以 \\(\\cos\\angle POQ=\\cos\\langle a,b\\rangle=\\frac{a\\cdot b}{|a|\\cdot|b|}=\\frac{16+4t^2}{\\sqrt{1+t^2}\\cdot\\sqrt{256+16t^2}}=\\frac{4+t^2}{\\sqrt{1+t^2}\\cdot\\sqrt{16+t^2}}\\)，\n（怎样求此式的最小值？不妨全拿进根号再看）\n故  \\(\\cos\\angle POQ=\\sqrt{\\frac{(4+t^{2})^{2}}{(1+t^{2})(16+t^{2})}}=\\sqrt{\\frac{t^{4}+8t^{2}+16}{16+17t^{2}+t^{4}}}=\\sqrt{\\frac{t^{4}+17t^{2}+16-9t^{2}}{t^{4}+17t^{2}+16}}=\\sqrt{1-\\frac{9t^{2}}{t^{4}+17t^{2}+16}}\\) ②，\n（要使  \\(\\cos \\angle POQ\\) 最小，只需  \\(\\frac{9t^2}{t^4 + 17t^2 + 16}\\) 最大，可上下同除以  \\(t^2\\)，将分子化为常数再看，但需先考虑  \\(t^2 = 0\\) 的情形）由  \\(-\\frac{\\sqrt{2}}{2} \\leq t \\leq \\frac{\\sqrt{2}}{2}\\) 可得  \\(0 \\leq t^2 \\leq \\frac{1}{2}\\)，当  \\(t^2 = 0\\) 时， \\(\\cos \\angle POQ = 1\\)；\n当  \\(0 < t^2 \\leq \\frac{1}{2}\\) 时， \\(\\frac{9t^2}{t^4 + 17t^2 + 16} = \\frac{9}{t^2 + \\frac{16}{t^2} + 17}\\) ③，（能用均值不等式吗？经尝试，等号取不到，所以不能，故直\n接分析单调性，显然将 \\(t^{2}\\)换元更容易看出单调性，故先换元）\n设  \\(u = t^2\\)，则  \\(0 < u \\leq \\frac{1}{2}\\)，且  \\(t^2 + \\frac{16}{t^2} = u + \\frac{16}{u}\\)，由双勾函数的性质可知函数  \\(y = u + \\frac{16}{u}\\) 在  \\(\\left(0, \\frac{1}{2}\\right]\\) 上单调递减，所以当  \\(u = \\frac{1}{2}\\) 时， \\(y = u + \\frac{16}{u}\\) 取得最小值  \\(\\frac{65}{2}\\)，故  \\(\\left(t^2 + \\frac{16}{t^2}\\right)_{\\min} = \\frac{65}{2}\\)，\n结合③可得 \\(\\frac{9t^{2}}{t^{4}+17t^{2}+16}\\)的最大值为 \\(\\frac{9}{\\frac{65}{2}+17}=\\frac{2}{11}\\)\n由②知当 \\(\\frac{9t^2}{t^4 + 17t^2 + 16}\\)最大时， \\(\\cos \\angle POQ\\)最小，所以 \\((\\cos \\angle POQ)_{\\min} = \\sqrt{1 - \\frac{2}{11}} = \\frac{3\\sqrt{11}}{11}\\)；综上所述， \\(\\cos \\angle POQ\\)的最小值为 \\(\\frac{3\\sqrt{11}}{11}\\)。\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_865_722_1092_940.jpg\" alt=\"Image\" width=\"19%\" /></div>\n【反思】若要具体计算某角的大小或其三角函数值，则可考虑将该角看成某两个向量的夹角，用夹角余弦公式处理.",
       "solution_present": true,
-      "vision_hint": "ch3.s12-LI35f25e4a25650379"
+      "vision_hint": "ch3.s12-LI35f25e4a25650379",
+      "vision_sidecars": [
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\imgs\\img_in_image_box_865_722_1092_940.jpg",
+          "image_sha256": "03ceac7cb096062c0b51ecbdef19ed72a4e67a6e7af3f45480c3ce47e9def70b",
+          "confidence": "E2",
+          "structured": {
+            "objects": [
+              "坐标轴Ox,Oy",
+              "抛物线",
+              "点A,D,C,B",
+              "线段AD,AC,CD,AB,BC,OD,OC",
+              "线段PQ",
+              "线段OF"
+            ],
+            "relations": [
+              "点A在抛物线上",
+              "点D在抛物线上",
+              "点C在抛物线上",
+              "点B在抛物线上",
+              "点O在原点",
+              "线段PQ过点M且平行于x轴"
+            ],
+            "coordinates": [
+              "O(0,0)",
+              "F在y轴上",
+              "M在PQ上",
+              "Q在x轴上",
+              "A在抛物线左上方",
+              "B在抛物线左下方"
+            ],
+            "ranges": [],
+            "text": [
+              "y轴",
+              "x轴",
+              "D",
+              "A",
+              "C",
+              "B"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        }
+      ],
+      "vision_sidecar": {
+        "objects": [
+          "坐标轴Ox,Oy",
+          "抛物线",
+          "点A,D,C,B",
+          "线段AD,AC,CD,AB,BC,OD,OC",
+          "线段PQ",
+          "线段OF"
+        ],
+        "relations": [
+          "点A在抛物线上",
+          "点D在抛物线上",
+          "点C在抛物线上",
+          "点B在抛物线上",
+          "点O在原点",
+          "线段PQ过点M且平行于x轴"
+        ],
+        "coordinates": [
+          "O(0,0)",
+          "F在y轴上",
+          "M在PQ上",
+          "Q在x轴上",
+          "A在抛物线左上方",
+          "B在抛物线左下方"
+        ],
+        "ranges": [],
+        "text": [
+          "y轴",
+          "x轴",
+          "D",
+          "A",
+          "C",
+          "B"
+        ],
+        "uncertainties": [],
+        "confidence": "E2"
+      },
+      "vision_source_provenance": [],
+      "evidence": [
+        "E1",
+        "E2"
+      ]
     },
     {
       "item_id": "911ac7a4cbc0df8d",
@@ -622,7 +796,5 @@
     "direct_variants": "question only; solution isolated",
     "abc_exercises": "question only; answer sidecar forbidden"
   },
-  "unresolved": [
-    "ch3.s12-LI35f25e4a25650379:NEEDS_VISION_SIDECAR"
-  ]
+  "unresolved": []
 }

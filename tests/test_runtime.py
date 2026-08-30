@@ -272,6 +272,16 @@ class PacketRuntimeTests(unittest.TestCase):
             historical.write_bytes(b"different-figure")
             self.assertFalse(PacketBuilder._sidecar_matches_question(sidecar, refs))
 
+    def test_old_device_sidecar_resolves_all_chapter_ocr_roots(self) -> None:
+        root = Path(__file__).resolve().parents[1]
+        current = root / "data" / "ocr_live_current" / "third_chapter_180" / "imgs" / "img_in_image_box_295_274_488_436.jpg"
+        self.assertTrue(current.is_file())
+        sidecar = {
+            "image": rf"C:\old-device\一本通\third_chapter_180\imgs\{current.name}",
+            "image_sha256": _sha256_file(current),
+        }
+        self.assertTrue(PacketBuilder._sidecar_matches_question(sidecar, [{"path": str(current)}]))
+
     def test_source_pdf_provenance_binds_only_to_declared_question_image(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)

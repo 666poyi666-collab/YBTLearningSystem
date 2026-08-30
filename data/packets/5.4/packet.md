@@ -1,15 +1,15 @@
 # 第4节 函数的极值与最大（小）值
 
-状态：`UNVERIFIED`
+状态：`VERIFIED`
 页数：17
 题目记录：17
 
 ## 题目索引
 
-- A1 / `Q-1e7caca06a87c09d` / PDF页 54 / NEEDS_VISION_SIDECAR / 1. （2025·福建福州期中） 已知函数 \(f(x)\) 的定义域为 \(\mathbb{R}\)，其导函数 \(f'(x)\) 的部分图象如图所示，则（） A. \(f(x)\) 在 \((3,+\infty)\) 上单调递增 B. \(f(x)\) 的最大值为 f(1) C. \(f(x)\) 的一个极大值点为 -1 D. \(f(x)\) 的一个减
+- A1 / `Q-1e7caca06a87c09d` / PDF页 54 / VISION_VERIFIED / 1. （2025·福建福州期中） 已知函数 \(f(x)\) 的定义域为 \(\mathbb{R}\)，其导函数 \(f'(x)\) 的部分图象如图所示，则（） A. \(f(x)\) 在 \((3,+\infty)\) 上单调递增 B. \(f(x)\) 的最大值为 f(1) C. \(f(x)\) 的一个极大值点为 -1 D. \(f(x)\) 的一个减
 - A2 / `Q-0d0449af3aa014f7` / PDF页 54 / READY_TEXT_ONLY / 2.（2025·甘肃临夏期末） (2025·日照临夏期末) 已知函数 \(f(x)=(x+a)e^{x}\) 在 x=1 处有极值. （1）求a的值； （2）求 \(f(x)\)在 \([-1,3]\)上的最值.
 - A3 / `Q-9cb00b80cbb86c3e` / PDF页 54 / READY_TEXT_ONLY / 3.（2025·云南大理开学考试（节选）） 已知函数 \(f(x) = \tan x - x\)，证明： \(\forall x \in \left(0, \frac{\pi}{2}\right)\)， \(f(x) > 0\)。
-- B4 / `Q-4192f78e8d6d7047` / PDF页 55 / NEEDS_VISION_SIDECAR / 4.（2025·上海期末） 设 \(a,b,c,d \in \mathbb{R}\)，若函数 \(f(x) = ax^3 + bx^2 + cx + d\) 的部分图象如图所示，则下列结论正确的是（ ） A. bcd > 0 B. acd > 0 C. \(abd > 0\) D. abc < 0
+- B4 / `Q-4192f78e8d6d7047` / PDF页 55 / VISION_VERIFIED / 4.（2025·上海期末） 设 \(a,b,c,d \in \mathbb{R}\)，若函数 \(f(x) = ax^3 + bx^2 + cx + d\) 的部分图象如图所示，则下列结论正确的是（ ） A. bcd > 0 B. acd > 0 C. \(abd > 0\) D. abc < 0
 - B5 / `Q-43095dde11805610` / PDF页 55 / READY_TEXT_ONLY / 5.（2025·江西模拟）（多选） 已知函数 \(f(x)=2x^{3}-3x^{2}\)，则（） A. 1 是 \(f(x)\) 的极小值点 B. \(f(x)\) 的图象关于点 \(\left(\frac{1}{2}, -\frac{1}{2}\right)\) 对称 C. \(g(x)=f(x)+1\) 有 3 个零点 D. 当 0 < x < 1 时
 - B6 / `Q-f4f4bc5f14506092` / PDF页 55 / READY_TEXT_ONLY / 6.（2025·四川成都模拟） 设函数 \(f(x)=(x+2)\ln(x+1)-x\) （1）设函数 \(g(x)=f'(x)\)，求 \(g(x)\) 的单调区间； （2）求证： \(xf(x)\geq0\).
 - B7 / `Q-f16b699e288e24fa` / PDF页 56 / READY_TEXT_ONLY / ### 7. （2025·广西开学考试） 已知函数 \(f(x)=(x-2)\mathrm{e}^{x}+ax\)，曲线 \(y=f(x)\) 在 x=1 处的切线与直线 \(l:x+y+3=0\) 垂直. （1）求 a 的值： （2）求 \(f(x)\) 在 \([0,+\infty)\) 上的最小值.
@@ -23,8 +23,3 @@
 - C15 / `Q-adfb5d025b3fa9ed` / PDF页 58 / READY_TEXT_ONLY / 15.（2024·浙江模拟（节选）） 设 \(0 < x < \frac{\pi}{2}\)，证明： \(\frac{\tan x - x}{x - \sin x} > 2\)。
 - C16 / `Q-872a310c603b8711` / PDF页 58 / READY_TEXT_ONLY / ### 16. （2025 · 全国Ⅰ卷（节选）） 设函数 \(f(x)=5\cos x-\cos5x\)，求 \(f(x)\) 在区间 \(\left[0,\frac{\pi}{4}\right]\) 的最大值.
 - C17 / `Q-63310e86e88fb4d5` / PDF页 59 / READY_TEXT_ONLY / ### 17. （2025·四川模拟） 已知函数 \(f(x) = x \ln x - \frac{1}{2}ax^2 + (a-1)x\)，其中 \(a \in \mathbb{R}\)。 （1）若a=2，求 \(f(x)\)在x=1处的切线方程； （2）若 \(f(1)\) 是 \(f(x)\) 的极大值，求 a 的取值范围.
-
-## 未解决
-
-- Q-1e7caca06a87c09d:NEEDS_VISION_SIDECAR
-- Q-4192f78e8d6d7047:NEEDS_VISION_SIDECAR

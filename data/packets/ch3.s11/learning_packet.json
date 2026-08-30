@@ -2,7 +2,7 @@
   "schema_version": "7.4",
   "packet_type": "DEEPSEEK_SEQUENTIAL_LEARNING_PACKET",
   "section": "ch3.s11",
-  "status": "UNVERIFIED",
+  "status": "VERIFIED",
   "source": {
     "ocr_root": "data/ocr_live_current/third_chapter_180",
     "ocr_docs": [
@@ -209,10 +209,95 @@
               "exists": true
             }
           ],
-          "visual_status": "NEEDS_VISION_SIDECAR",
+          "visual_status": "VISION_VERIFIED",
           "teaching_text": "【例 4】已知双曲线  \\(C: \\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1 (a > 0, b > 0)\\) 的左顶点为  \\(A\\)，过其左焦点  \\(F\\) 的直线与双曲线  \\(C\\) 交于  \\(P\\)， \\(Q\\) 两点。当  \\(PQ \\perp x\\) 轴时， \\(|PA| = \\sqrt{10}\\)， \\(\\triangle PAQ\\) 的面积为 3。\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_889_502_1093_723.jpg\" alt=\"Image\" width=\"17%\" /></div>\n（1）求双曲线 C 的方程；\n（2）证明：以 PQ 为直径的圆经过定点.\n解：（1）设  \\(F(-c,0)\\)，当  \\(PQ \\perp x\\) 轴时，如图1，直线  \\(PQ\\) 的方程为  \\(x = -c\\)，代入  \\(\\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1\\) 可得  \\(\\frac{c^2}{a^2} - \\frac{y^2}{b^2} = 1\\)，所以  \\(y^2 = \\left(\\frac{c^2}{a^2} - 1\\right)b^2 = \\frac{c^2 - a^2}{a^2} \\cdot b^2 = \\frac{b^2}{a^2} \\cdot b^2 = \\frac{b^4}{a^2}\\)，解得： \\(y = \\pm \\frac{b^2}{a}\\)，故  \\(|PF| = \\frac{b^2}{a}\\)，又  \\(|AF| = c - a\\)，所以  \\(|PA| = \\sqrt{|PF|^2 + |AF|^2} = \\sqrt{\\frac{b^4}{a^2} + (c - a)^2}\\)，由题意， \\(|PA| = \\sqrt{10}\\)，所以  \\(\\sqrt{\\frac{b^4}{a^2} + (c - a)^2} = \\sqrt{10}\\) ①由题意， \\(S_{\\triangle PAQ} = \\frac{1}{2}|PQ| \\cdot |AF| = \\frac{1}{2} \\times \\frac{2b^2}{a} \\times (c - a) = \\frac{b^2(c - a)}{a} = 3\\) ②，\n（方程①②都较复杂，怎么解呢？观察发现字母以 \\(\\frac{b^2}{a}\\)和 \\(c-a\\)整体出现，可将它们换元，化简两个方程）设 \\(u=\\frac{b^2}{a}\\)， \\(v=c-a\\)，则由①②可得 \\(\\begin{cases}\\sqrt{u^2+v^2}=\\sqrt{10}\\textcircled{3}\\\\uv=3\\textcircled{4}\\end{cases}\\)，由④得 \\(v=\\frac{3}{u}\\)，\n代入③得  \\(\\sqrt{u^{2}+\\frac{9}{u^{2}}}=\\sqrt{10}\\)，解得：u=1或3，\n若u=1，则 \\(v=\\frac{3}{u}=3\\)，此时 \\(\\left\\{\\begin{aligned}&\\frac{b^{2}}{a}=1\\textcircled{5}\\\\&c-a=3\\textcircled{6}\\end{aligned}\\right.\\)，由⑤可得 \\(a=b^{2}=c^{2}-a^{2}=(c+a)(c-a)\\)，\n结合⑥得  \\(a=3(c+a)\\)，所以  \\(2a+3c=0\\)，因为 a>0，c>0，所以此方程无解；\n若  \\(u=3\\)，则  \\(v=\\frac{3}{u}=1\\)，此时  \\(\\left\\{\\begin{aligned}&\\frac{b^{2}}{a}=3\\textcircled{7}\\\\&c-a=1\\textcircled{8}\\end{aligned}\\right.\\)，由⑦可得  \\(3a=b^{2}=c^{2}-a^{2}=(c+a)(c-a)\\)\n结合⑧得  \\(3a = c + a\\)，所以  \\(c = 2a\\)，代入⑧解得： \\(a = 1\\)，所以  \\(c = 2a = 2\\)， \\(b = \\sqrt{c^2 - a^2} = \\sqrt{3}\\)，故双曲线 C 的方程为  \\(x^2 - \\frac{y^2}{3} = 1\\)。\n(2) (怎样翻译以  \\(P\\ov)Q\\) 为直径的圆过定点？不妨设定点为 T，则可翻译为  \\(\\overrightarrow{TP}\\cdot\\overrightarrow{TQ}=0\\) 。求数量积需要坐标，若直\n得到了两个圆，直径分别为  \\(PQ\\) 和  \\(P'Q'\\)，这两个圆也关于  \\(x\\) 轴对称，故它们的交点在  \\(x\\) 轴上，所以若题设的圆过定点，定点只能在  \\(x\\) 轴上）\n由对称性，以  \\(PQ\\) 为直径的圆所过的定点只可能在  \\(x\\) 轴上，设  \\(T(t,0)\\)， \\(P(x_1,y_1)\\)， \\(Q(x_2,y_2)\\)，\n则  \\(\\overrightarrow{TP} = (x_1 - t, y_1)\\)， \\(\\overrightarrow{TQ} = (x_2 - t, y_2)\\)，所以  \\(\\overrightarrow{TP} \\cdot \\overrightarrow{TQ} = (x_1 - t)(x_2 - t) + y_1y_2 = x_1x_2 - t(x_1 + x_2) + t^2 + y_1y_2\\) ⑨，\n（观察发现有  \\(x_1x_2\\)， \\(x_1 + x_2\\)， \\(y_1y_2\\) 这些结构，故又设直线  \\(PQ\\) 的方程，并代入双曲线，结合韦达定理计算它们）\n由（1）知  \\(F(-2,0)\\)，当  \\(PQ\\) 不与  \\(y\\) 轴垂直时，可设其方程为  \\(x = my - 2\\)，\n代入  \\(x^2 - \\frac{y^2}{3} = 1\\) 整理得： \\((3m^2 - 1)y^2 - 12my + 9 = 0\\)，\n因为直线  \\(PQ\\) 与双曲线  \\(C\\) 有两个交点，所以  \\(\\begin{cases} 3m^2 - 1 \\neq 0 \\\\ \\Delta = 144m^2 - 4(3m^2 - 1) \\times 9 > 0 \\end{cases}\\)，故  \\(m \\neq \\pm \\frac{\\sqrt{3}}{3}\\)，\n由韦达定理， \\(y_1 + y_2 = \\frac{12m}{3m^2 - 1}\\)， \\(y_1y_2 = \\frac{9}{3m^2 - 1}\\)，所以  \\(x_1 + x_2 = my_1 - 2 + my_2 - 2 = m(y_1 + y_2) - 4 = \\frac{4}{3m^2 - 1}\\)，\n \\(x_1x_2 = (my_1 - 2)(my_2 - 2) = m^2y_1y_2 - 2m(y_1 + y_2) + 4 = -\\frac{3m^2 + 4}{3m^2 - 1}\\)，\n代入⑨得  \\(\\overrightarrow{TP} \\cdot \\overrightarrow{TQ} = -\\frac{3m^2 + 4}{3m^2 - 1} - \\frac{4t}{3m^2 - 1} + t^2 + \\frac{9}{3m^2 - 1} = \\frac{(3t^2 - 3)m^2 - t^2 - 4t + 5}{3m^2 - 1}\\)，（注意上式的变量是  \\(m\\)，而  \\(t\\) 是我们要求的常数，所以要使上式恒为 0，不随  \\(m\\) 的改变而变化，只能分子的两个系数同时为 0）\n令  \\(\\begin{cases} 3t^2 - 3 = 0 \\\\ -t^2 - 4t + 5 = 0 \\end{cases}\\) 可得  \\(t = 1\\)，所以当且仅当  \\(t = 1\\) 时，总有  \\(\\overrightarrow{TP} \\cdot \\overrightarrow{TQ} = 0\\)，故以  \\(PQ\\) 为直径的圆始终过点  \\(T(1,0)\\)；\n（前面设了  \\(PQ\\) 的横截式方程，它不能表示垂直于  \\(y\\) 轴的情形，所以还需单独验证这种情况得到的圆是否也过上述定点  \\(T\\)）\n当  \\(PQ \\perp y\\) 轴时， \\(P\\)， \\(Q\\) 分别为双曲线的两个顶点，故以  \\(PQ\\) 为直径的圆为  \\(x^2 + y^2 = 1\\)，该圆也过点  \\(T(1,0)\\)；\n综上所述，以  \\(PQ\\) 为直径的圆过定点  \\(T(1,0)\\)。\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_359_890_540_1150.jpg\" alt=\"Image\" width=\"15%\" /></div>\n<div style=\"text-align: center;\">图1</div>\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_603_891_836_1150.jpg\" alt=\"Image\" width=\"19%\" /></div>\n<div style=\"text-align: center;\">图2</div>\n【反思】①利用图形的对称性来缩窄搜索的范围，这是解析几何大题中常用的高阶思维方法。例如本题我们利用图形的对称性，把点T的搜索范围从整个平面内缩窄到了x轴上，从而使问题明朗化；\n②对于圆过定点问题，不一定要先求出圆的方程，再找定点。例如本题的以  \\(PQ\\) 为直径的圆过定点  \\(T\\)，可以直接按  \\(\\overrightarrow{TP} \\cdot \\overrightarrow{TQ} = 0\\) 来翻译，从而建立方程求解定点  \\(T\\) 的坐标，无需求出该圆的方程。当然，如果圆的方程本身并不难求，结果也不复杂，那么也可以考虑先求圆的方程，再找定点，在练习题中我们会举相关的例子。",
           "solution_present": true,
-          "vision_hint": "ch3.s11-LIbdd896172b570edc"
+          "vision_hint": "ch3.s11-LIbdd896172b570edc",
+          "vision_sidecars": [
+            {
+              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\imgs\\img_in_image_box_889_502_1093_723.jpg",
+              "image_sha256": "dd2a45bf01efb1696ebb07d09b3b56659334935ff19e82bb99ec10f866f085a8",
+              "confidence": "E2",
+              "structured": {
+                "objects": [
+                  "椭圆",
+                  "双曲线",
+                  "坐标轴",
+                  "点P",
+                  "点Q",
+                  "点F",
+                  "点A",
+                  "点O"
+                ],
+                "relations": [
+                  "点P在椭圆上",
+                  "点Q在双曲线上",
+                  "点F在椭圆左焦点",
+                  "点A在x轴上",
+                  "点O在原点",
+                  "双曲线过原点O"
+                ],
+                "coordinates": [
+                  "椭圆中心在原点O",
+                  "双曲线中心在原点O",
+                  "点F在x轴负半轴",
+                  "点A在x轴正半轴",
+                  "点O在原点",
+                  "点P在第一象限"
+                ],
+                "ranges": [],
+                "text": [
+                  "椭圆用虚线表示",
+                  "双曲线用实线表示",
+                  "坐标轴标注x和y"
+                ],
+                "uncertainties": [],
+                "confidence": "E2"
+              },
+              "source_provenance": null
+            }
+          ],
+          "vision_sidecar": {
+            "objects": [
+              "椭圆",
+              "双曲线",
+              "坐标轴",
+              "点P",
+              "点Q",
+              "点F",
+              "点A",
+              "点O"
+            ],
+            "relations": [
+              "点P在椭圆上",
+              "点Q在双曲线上",
+              "点F在椭圆左焦点",
+              "点A在x轴上",
+              "点O在原点",
+              "双曲线过原点O"
+            ],
+            "coordinates": [
+              "椭圆中心在原点O",
+              "双曲线中心在原点O",
+              "点F在x轴负半轴",
+              "点A在x轴正半轴",
+              "点O在原点",
+              "点P在第一象限"
+            ],
+            "ranges": [],
+            "text": [
+              "椭圆用虚线表示",
+              "双曲线用实线表示",
+              "坐标轴标注x和y"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "vision_source_provenance": [],
+          "evidence": [
+            "E1",
+            "E2"
+          ]
         }
       ],
       "direct_variants": [
@@ -531,10 +616,95 @@
           "exists": true
         }
       ],
-      "visual_status": "NEEDS_VISION_SIDECAR",
+      "visual_status": "VISION_VERIFIED",
       "teaching_text": "【例 4】已知双曲线  \\(C: \\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1 (a > 0, b > 0)\\) 的左顶点为  \\(A\\)，过其左焦点  \\(F\\) 的直线与双曲线  \\(C\\) 交于  \\(P\\)， \\(Q\\) 两点。当  \\(PQ \\perp x\\) 轴时， \\(|PA| = \\sqrt{10}\\)， \\(\\triangle PAQ\\) 的面积为 3。\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_889_502_1093_723.jpg\" alt=\"Image\" width=\"17%\" /></div>\n（1）求双曲线 C 的方程；\n（2）证明：以 PQ 为直径的圆经过定点.\n解：（1）设  \\(F(-c,0)\\)，当  \\(PQ \\perp x\\) 轴时，如图1，直线  \\(PQ\\) 的方程为  \\(x = -c\\)，代入  \\(\\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1\\) 可得  \\(\\frac{c^2}{a^2} - \\frac{y^2}{b^2} = 1\\)，所以  \\(y^2 = \\left(\\frac{c^2}{a^2} - 1\\right)b^2 = \\frac{c^2 - a^2}{a^2} \\cdot b^2 = \\frac{b^2}{a^2} \\cdot b^2 = \\frac{b^4}{a^2}\\)，解得： \\(y = \\pm \\frac{b^2}{a}\\)，故  \\(|PF| = \\frac{b^2}{a}\\)，又  \\(|AF| = c - a\\)，所以  \\(|PA| = \\sqrt{|PF|^2 + |AF|^2} = \\sqrt{\\frac{b^4}{a^2} + (c - a)^2}\\)，由题意， \\(|PA| = \\sqrt{10}\\)，所以  \\(\\sqrt{\\frac{b^4}{a^2} + (c - a)^2} = \\sqrt{10}\\) ①由题意， \\(S_{\\triangle PAQ} = \\frac{1}{2}|PQ| \\cdot |AF| = \\frac{1}{2} \\times \\frac{2b^2}{a} \\times (c - a) = \\frac{b^2(c - a)}{a} = 3\\) ②，\n（方程①②都较复杂，怎么解呢？观察发现字母以 \\(\\frac{b^2}{a}\\)和 \\(c-a\\)整体出现，可将它们换元，化简两个方程）设 \\(u=\\frac{b^2}{a}\\)， \\(v=c-a\\)，则由①②可得 \\(\\begin{cases}\\sqrt{u^2+v^2}=\\sqrt{10}\\textcircled{3}\\\\uv=3\\textcircled{4}\\end{cases}\\)，由④得 \\(v=\\frac{3}{u}\\)，\n代入③得  \\(\\sqrt{u^{2}+\\frac{9}{u^{2}}}=\\sqrt{10}\\)，解得：u=1或3，\n若u=1，则 \\(v=\\frac{3}{u}=3\\)，此时 \\(\\left\\{\\begin{aligned}&\\frac{b^{2}}{a}=1\\textcircled{5}\\\\&c-a=3\\textcircled{6}\\end{aligned}\\right.\\)，由⑤可得 \\(a=b^{2}=c^{2}-a^{2}=(c+a)(c-a)\\)，\n结合⑥得  \\(a=3(c+a)\\)，所以  \\(2a+3c=0\\)，因为 a>0，c>0，所以此方程无解；\n若  \\(u=3\\)，则  \\(v=\\frac{3}{u}=1\\)，此时  \\(\\left\\{\\begin{aligned}&\\frac{b^{2}}{a}=3\\textcircled{7}\\\\&c-a=1\\textcircled{8}\\end{aligned}\\right.\\)，由⑦可得  \\(3a=b^{2}=c^{2}-a^{2}=(c+a)(c-a)\\)\n结合⑧得  \\(3a = c + a\\)，所以  \\(c = 2a\\)，代入⑧解得： \\(a = 1\\)，所以  \\(c = 2a = 2\\)， \\(b = \\sqrt{c^2 - a^2} = \\sqrt{3}\\)，故双曲线 C 的方程为  \\(x^2 - \\frac{y^2}{3} = 1\\)。\n(2) (怎样翻译以  \\(P\\ov)Q\\) 为直径的圆过定点？不妨设定点为 T，则可翻译为  \\(\\overrightarrow{TP}\\cdot\\overrightarrow{TQ}=0\\) 。求数量积需要坐标，若直\n得到了两个圆，直径分别为  \\(PQ\\) 和  \\(P'Q'\\)，这两个圆也关于  \\(x\\) 轴对称，故它们的交点在  \\(x\\) 轴上，所以若题设的圆过定点，定点只能在  \\(x\\) 轴上）\n由对称性，以  \\(PQ\\) 为直径的圆所过的定点只可能在  \\(x\\) 轴上，设  \\(T(t,0)\\)， \\(P(x_1,y_1)\\)， \\(Q(x_2,y_2)\\)，\n则  \\(\\overrightarrow{TP} = (x_1 - t, y_1)\\)， \\(\\overrightarrow{TQ} = (x_2 - t, y_2)\\)，所以  \\(\\overrightarrow{TP} \\cdot \\overrightarrow{TQ} = (x_1 - t)(x_2 - t) + y_1y_2 = x_1x_2 - t(x_1 + x_2) + t^2 + y_1y_2\\) ⑨，\n（观察发现有  \\(x_1x_2\\)， \\(x_1 + x_2\\)， \\(y_1y_2\\) 这些结构，故又设直线  \\(PQ\\) 的方程，并代入双曲线，结合韦达定理计算它们）\n由（1）知  \\(F(-2,0)\\)，当  \\(PQ\\) 不与  \\(y\\) 轴垂直时，可设其方程为  \\(x = my - 2\\)，\n代入  \\(x^2 - \\frac{y^2}{3} = 1\\) 整理得： \\((3m^2 - 1)y^2 - 12my + 9 = 0\\)，\n因为直线  \\(PQ\\) 与双曲线  \\(C\\) 有两个交点，所以  \\(\\begin{cases} 3m^2 - 1 \\neq 0 \\\\ \\Delta = 144m^2 - 4(3m^2 - 1) \\times 9 > 0 \\end{cases}\\)，故  \\(m \\neq \\pm \\frac{\\sqrt{3}}{3}\\)，\n由韦达定理， \\(y_1 + y_2 = \\frac{12m}{3m^2 - 1}\\)， \\(y_1y_2 = \\frac{9}{3m^2 - 1}\\)，所以  \\(x_1 + x_2 = my_1 - 2 + my_2 - 2 = m(y_1 + y_2) - 4 = \\frac{4}{3m^2 - 1}\\)，\n \\(x_1x_2 = (my_1 - 2)(my_2 - 2) = m^2y_1y_2 - 2m(y_1 + y_2) + 4 = -\\frac{3m^2 + 4}{3m^2 - 1}\\)，\n代入⑨得  \\(\\overrightarrow{TP} \\cdot \\overrightarrow{TQ} = -\\frac{3m^2 + 4}{3m^2 - 1} - \\frac{4t}{3m^2 - 1} + t^2 + \\frac{9}{3m^2 - 1} = \\frac{(3t^2 - 3)m^2 - t^2 - 4t + 5}{3m^2 - 1}\\)，（注意上式的变量是  \\(m\\)，而  \\(t\\) 是我们要求的常数，所以要使上式恒为 0，不随  \\(m\\) 的改变而变化，只能分子的两个系数同时为 0）\n令  \\(\\begin{cases} 3t^2 - 3 = 0 \\\\ -t^2 - 4t + 5 = 0 \\end{cases}\\) 可得  \\(t = 1\\)，所以当且仅当  \\(t = 1\\) 时，总有  \\(\\overrightarrow{TP} \\cdot \\overrightarrow{TQ} = 0\\)，故以  \\(PQ\\) 为直径的圆始终过点  \\(T(1,0)\\)；\n（前面设了  \\(PQ\\) 的横截式方程，它不能表示垂直于  \\(y\\) 轴的情形，所以还需单独验证这种情况得到的圆是否也过上述定点  \\(T\\)）\n当  \\(PQ \\perp y\\) 轴时， \\(P\\)， \\(Q\\) 分别为双曲线的两个顶点，故以  \\(PQ\\) 为直径的圆为  \\(x^2 + y^2 = 1\\)，该圆也过点  \\(T(1,0)\\)；\n综上所述，以  \\(PQ\\) 为直径的圆过定点  \\(T(1,0)\\)。\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_359_890_540_1150.jpg\" alt=\"Image\" width=\"15%\" /></div>\n<div style=\"text-align: center;\">图1</div>\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_603_891_836_1150.jpg\" alt=\"Image\" width=\"19%\" /></div>\n<div style=\"text-align: center;\">图2</div>\n【反思】①利用图形的对称性来缩窄搜索的范围，这是解析几何大题中常用的高阶思维方法。例如本题我们利用图形的对称性，把点T的搜索范围从整个平面内缩窄到了x轴上，从而使问题明朗化；\n②对于圆过定点问题，不一定要先求出圆的方程，再找定点。例如本题的以  \\(PQ\\) 为直径的圆过定点  \\(T\\)，可以直接按  \\(\\overrightarrow{TP} \\cdot \\overrightarrow{TQ} = 0\\) 来翻译，从而建立方程求解定点  \\(T\\) 的坐标，无需求出该圆的方程。当然，如果圆的方程本身并不难求，结果也不复杂，那么也可以考虑先求圆的方程，再找定点，在练习题中我们会举相关的例子。",
       "solution_present": true,
-      "vision_hint": "ch3.s11-LIbdd896172b570edc"
+      "vision_hint": "ch3.s11-LIbdd896172b570edc",
+      "vision_sidecars": [
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\imgs\\img_in_image_box_889_502_1093_723.jpg",
+          "image_sha256": "dd2a45bf01efb1696ebb07d09b3b56659334935ff19e82bb99ec10f866f085a8",
+          "confidence": "E2",
+          "structured": {
+            "objects": [
+              "椭圆",
+              "双曲线",
+              "坐标轴",
+              "点P",
+              "点Q",
+              "点F",
+              "点A",
+              "点O"
+            ],
+            "relations": [
+              "点P在椭圆上",
+              "点Q在双曲线上",
+              "点F在椭圆左焦点",
+              "点A在x轴上",
+              "点O在原点",
+              "双曲线过原点O"
+            ],
+            "coordinates": [
+              "椭圆中心在原点O",
+              "双曲线中心在原点O",
+              "点F在x轴负半轴",
+              "点A在x轴正半轴",
+              "点O在原点",
+              "点P在第一象限"
+            ],
+            "ranges": [],
+            "text": [
+              "椭圆用虚线表示",
+              "双曲线用实线表示",
+              "坐标轴标注x和y"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        }
+      ],
+      "vision_sidecar": {
+        "objects": [
+          "椭圆",
+          "双曲线",
+          "坐标轴",
+          "点P",
+          "点Q",
+          "点F",
+          "点A",
+          "点O"
+        ],
+        "relations": [
+          "点P在椭圆上",
+          "点Q在双曲线上",
+          "点F在椭圆左焦点",
+          "点A在x轴上",
+          "点O在原点",
+          "双曲线过原点O"
+        ],
+        "coordinates": [
+          "椭圆中心在原点O",
+          "双曲线中心在原点O",
+          "点F在x轴负半轴",
+          "点A在x轴正半轴",
+          "点O在原点",
+          "点P在第一象限"
+        ],
+        "ranges": [],
+        "text": [
+          "椭圆用虚线表示",
+          "双曲线用实线表示",
+          "坐标轴标注x和y"
+        ],
+        "uncertainties": [],
+        "confidence": "E2"
+      },
+      "vision_source_provenance": [],
+      "evidence": [
+        "E1",
+        "E2"
+      ]
     }
   ],
   "direct_variants": [
@@ -702,7 +872,5 @@
     "direct_variants": "question only; solution isolated",
     "abc_exercises": "question only; answer sidecar forbidden"
   },
-  "unresolved": [
-    "ch3.s11-LIbdd896172b570edc:NEEDS_VISION_SIDECAR"
-  ]
+  "unresolved": []
 }

@@ -2,10 +2,19 @@ from __future__ import annotations
 
 import unittest
 
-from scripts.build_all_chapters import CHAPTERS, COURSE_DIRS, load_json, manifest_totals, section_folder
+from scripts.build_all_chapters import CHAPTERS, COURSE_DIRS, build_course_catalog, load_json, manifest_totals, section_folder
 
 
 class AllChaptersBuildTests(unittest.TestCase):
+    def test_builder_falls_back_to_frozen_catalog_when_old_device_courses_are_absent(self) -> None:
+        manifests = {chapter: load_json(config["manifest"]) for chapter, config in CHAPTERS.items()}
+        catalog = build_course_catalog(manifests, verify_hashes=True)
+        self.assertEqual(catalog["course_count"], 170)
+        self.assertIn(catalog["status"], {"passed", "passed_frozen_video_hashes"})
+        if catalog["status"] == "passed_frozen_video_hashes":
+            self.assertTrue(catalog["frozen_fallback"])
+            self.assertTrue(catalog["missing_course_directories"])
+
     def test_current_manifest_totals_are_exact(self) -> None:
         manifests = {
             chapter: load_json(config["manifest"])

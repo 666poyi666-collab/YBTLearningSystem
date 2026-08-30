@@ -1,6 +1,6 @@
 # 第3节 微专题3：椭圆常用二级结论
 
-状态：`UNVERIFIED`
+状态：`VERIFIED`
 页数：18
 题目记录：13
 
@@ -18,8 +18,4 @@
 - C10 / `Q-f1260acb333e9e71` / PDF页 57 / READY_TEXT_ONLY / ### 10. （2025 · 江苏常州期末） 若椭圆 \(C: ax^2 + by^2 = 1\) 与直线 \(l: y = -x + 1\) 交于 \(A\), \(B\) 两点，点 \(M\) 为 \(AB\) 的中点，则直线 \(OM\)（ \(O\) 为原点）的斜率小于 \(\frac{1}{2}\)，则椭圆 \(C\) 的离心率的取值范围是（ ）
 - C11 / `Q-e14d6a5ecc2aebc6` / PDF页 57 / READY_TEXT_ONLY / 11.（2024·浙江模拟） 椭圆 \(E:\frac{x^2}{a^2}+\frac{y^2}{b^2}=1(a>b>0)\)， \(l:y=x-\sqrt{a^2-b^2}\) 与 \(E\) 交于 \(A\)， \(B\) 两点，且 \(\overrightarrow{OA}+\overrightarrow{OB}=(2\lambda,-\lambda
 - C12 / `Q-3ff67ee23d4d5220` / PDF页 58 / READY_TEXT_ONLY / ### 12. （2018·新课标Ⅲ卷（节选）） 斜率为 k 的直线 l 与椭圆 \(C: \frac{x^{2}}{4} + \frac{y^{2}}{3} = 1\) 交于 A, B 两点，线段 AB 的中点为 \(M(1, m) (m > 0)\)，证明： \(k < -\frac{1}{2}\).
-- C13 / `Q-7e486f94f8668c7e` / PDF页 58 / NEEDS_VISION_SIDECAR / ### 13. （2015·浙江卷（节选）） 已知椭圆 \(\frac{x^{2}}{2}+y^{2}=1\) 上两个不同的点 A，B 关于直线 l: \(y=mx+\frac{1}{2}\) 对称，求实数 m 的取值范围.
-
-## 未解决
-
-- Q-7e486f94f8668c7e:NEEDS_VISION_SIDECAR
+- C13 / `Q-7e486f94f8668c7e` / PDF页 58 / VISION_VERIFIED / ### 13. （2015·浙江卷（节选）） 已知椭圆 \(\frac{x^{2}}{2}+y^{2}=1\) 上两个不同的点 A，B 关于直线 l: \(y=mx+\frac{1}{2}\) 对称，求实数 m 的取值范围.

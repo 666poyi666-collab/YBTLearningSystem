@@ -45,7 +45,7 @@ test('generated import plans are compact, exact, idempotent, and preserve user-b
   assert.ok(contentPlan.sql.length <= 12, `content SQL chunks=${contentPlan.sql.length}`)
   assert.ok(practicePlan.sqlPaths.length <= 3, `practice SQL chunks=${practicePlan.sqlPaths.length}`)
   assert.equal(handoutPlan.sqlPaths.length, 1)
-  assert.equal(contentPlan.links, 5018)
+  assert.equal(contentPlan.links, 5191)
 
   const db = new DatabaseSync(':memory:')
   db.exec('PRAGMA foreign_keys=ON')
@@ -61,7 +61,7 @@ test('generated import plans are compact, exact, idempotent, and preserve user-b
   assert.equal(scalar(db, 'SELECT COUNT(*) AS value FROM sections'), 38)
   assert.equal(scalar(db, 'SELECT COUNT(*) AS value FROM items'), 1209)
   assert.equal(scalar(db, 'SELECT COUNT(*) AS value FROM courses'), 170)
-  assert.equal(scalar(db, 'SELECT COUNT(*) AS value FROM item_course_links'), 5018)
+  assert.equal(scalar(db, 'SELECT COUNT(*) AS value FROM item_course_links'), 5191)
   assert.equal(scalar(db, 'SELECT COUNT(*) AS value FROM transcript_chunks'), 19234)
   assert.equal(scalar(db, 'SELECT COUNT(*) AS value FROM practice_pages'), 106)
   assert.equal(scalar(db, 'SELECT COUNT(*) AS value FROM practice_items'), 727)

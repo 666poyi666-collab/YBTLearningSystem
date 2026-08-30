@@ -2,7 +2,7 @@
   "schema_version": "7.1",
   "packet_type": "DEEPSEEK_STUDENT_LEARNING_ITEMS",
   "section": "ch3.s11",
-  "status": "UNVERIFIED",
+  "status": "VERIFIED",
   "source": {
     "ocr_root": "data/ocr_live_current/third_chapter_180",
     "ocr_docs": [
@@ -89,8 +89,89 @@
           "exists": true
         }
       ],
-      "visual_status": "NEEDS_VISION_SIDECAR",
-      "evidence": []
+      "visual_status": "VISION_VERIFIED",
+      "vision_sidecars": [
+        {
+          "image_sha256": "dd2a45bf01efb1696ebb07d09b3b56659334935ff19e82bb99ec10f866f085a8",
+          "confidence": "E2",
+          "structured": {
+            "objects": [
+              "椭圆",
+              "双曲线",
+              "坐标轴",
+              "点P",
+              "点Q",
+              "点F",
+              "点A",
+              "点O"
+            ],
+            "relations": [
+              "点P在椭圆上",
+              "点Q在双曲线上",
+              "点F在椭圆左焦点",
+              "点A在x轴上",
+              "点O在原点",
+              "双曲线过原点O"
+            ],
+            "coordinates": [
+              "椭圆中心在原点O",
+              "双曲线中心在原点O",
+              "点F在x轴负半轴",
+              "点A在x轴正半轴",
+              "点O在原点",
+              "点P在第一象限"
+            ],
+            "ranges": [],
+            "text": [
+              "椭圆用虚线表示",
+              "双曲线用实线表示",
+              "坐标轴标注x和y"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          }
+        }
+      ],
+      "vision_sidecar": {
+        "objects": [
+          "椭圆",
+          "双曲线",
+          "坐标轴",
+          "点P",
+          "点Q",
+          "点F",
+          "点A",
+          "点O"
+        ],
+        "relations": [
+          "点P在椭圆上",
+          "点Q在双曲线上",
+          "点F在椭圆左焦点",
+          "点A在x轴上",
+          "点O在原点",
+          "双曲线过原点O"
+        ],
+        "coordinates": [
+          "椭圆中心在原点O",
+          "双曲线中心在原点O",
+          "点F在x轴负半轴",
+          "点A在x轴正半轴",
+          "点O在原点",
+          "点P在第一象限"
+        ],
+        "ranges": [],
+        "text": [
+          "椭圆用虚线表示",
+          "双曲线用实线表示",
+          "坐标轴标注x和y"
+        ],
+        "uncertainties": [],
+        "confidence": "E2"
+      },
+      "evidence": [
+        "E1",
+        "E2"
+      ]
     }
   ],
   "direct_variants": [

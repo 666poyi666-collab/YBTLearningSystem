@@ -1,6 +1,6 @@
 ---
 name: ybt-all-chapters-learning-path
-description: Build, audit, simulate, and refine Chinese high-school mathematics 一本通 learning routes from verified textbook/OCR evidence and the approved course transcripts. Use for 一本通第一、二章优先打磨、按真实版面重建知识点/例题/变式/强化训练、课程覆盖与完成账本、持续成长零基础用户模拟、固定人格压力测试、缺题漏题审计、视觉交叉核验和紧凑无答案 Markdown/HTML 交付。
+description: Build, audit, simulate, and refine all five chapters and 38 sections of Chinese high-school mathematics 一本通 learning routes from verified textbook/OCR evidence and approved course transcripts. Use for 按真实版面重建知识点/例题/变式/强化训练、课程覆盖与完成账本、持续成长零基础用户模拟、固定人格压力测试、缺题漏题审计、视觉交叉核验和紧凑无答案 Markdown/HTML 交付。
 ---
 
 # 一本通学习路径
@@ -22,7 +22,7 @@ description: Build, audit, simulate, and refine Chinese high-school mathematics 
 4. Read [output-schema.md](references/output-schema.md) before writing a delivery.
 5. Read [simulation-gates.md](references/simulation-gates.md) before running learner simulation.
 6. Read [ocr-vision-crosscheck.md](references/ocr-vision-crosscheck.md) before consuming OCR or diagrams.
-7. Read [product requirements](../../docs/PRODUCT-REQUIREMENTS.md) when it exists. Chapters 1 and 2 are the default active scope unless the user explicitly expands it.
+7. Read [product requirements](../../docs/PRODUCT-REQUIREMENTS.md) when it exists. The active static-delivery scope is all five chapters and all 38 canonical sections.
 8. Before claiming a chapter or section is complete, run `scripts/build_chatgpt_context_audit.py` and require its complete flags.
 9. Stay inside the assignment's exact sections and write scope. Other tasks may share the same filesystem.
 
@@ -39,10 +39,12 @@ description: Build, audit, simulate, and refine Chinese high-school mathematics 
 - For every numbered item, provide exact course calls, recognition cues, first written line, continuation actions, likely blockers, correction prompts, and independent self-checks.
 - Keep course coverage, scheduled learning, simulated completion, and real-user completion separate. A route reference is not proof that a course was learned.
 - Mark a course as new only at its first use in the active chapter route. Within a cycle, still list every already-learned course the item calls.
-- Treat section 1.1 as the golden workflow sample. Do not fan out to other sections until 1.1 passes the current schema and semantic validator.
+- Treat section 1.1 as the continuously maintained golden regression sample. Apply confirmed interaction fixes across all 38 sections without using 1.1 as a reason to postpone their static routes.
 - Prefer Luna/Paddle cross-check evidence. When a current capability probe proves the Luna host cannot consume images, use the READY-bound, exact-image-SHA GLM vision sidecar plus PaddleOCR and record Luna as `blocked`; never relabel fallback evidence as Luna. A visual item is unusable without one of these current immutable paths.
 - Keep the fixed five-persona suite as an internal route stress test. It does not model the current user.
 - After section routes are merged, run one sequential `primary-user-proxy` across the chapter. Start with only a zero-base assumption and update its persistent profile only from frozen attempt evidence.
+- Default the real learner plan to one section per day. A cycle is a short execution unit inside that day unless the learner explicitly changes the pace.
+- Treat speech-recognition text as fallible evidence. When an option, subscript, sign, or symbol may have been corrupted, confirm the intended expression before judging or recording a wrong question.
 - Every simulated attempt must preserve the learner's actual course call, recognition statement, first line, continuation attempt, and self-check. Boolean-only simulation is invalid.
 - Keep route stress testing, the growing learner, independent verification, human learning, and 24-hour cold retest separate. Human and 24-hour gates remain `not_run` unless real evidence exists.
 - For the real learner, use the remote math MCP as the live state authority. A browser `localStorage` flag or a conversation statement is not cloud progress until an idempotent MCP write succeeds.
@@ -55,7 +57,7 @@ description: Build, audit, simulate, and refine Chinese high-school mathematics 
 - Disclose uncertainty to the learner immediately. If the source question is unverified, handwriting/symbols are ambiguous, a bounding box is uncertain, or confidence is low, name the exact uncertainty and required clarification; never silently choose one interpretation and continue grading.
 - Preserve `passed`, `failed`, `blocked`, `not_run`, `unknown`, and `stale` as distinct states.
 - Never call a section “资料不足” because `human_learning_status=not_started`. `not_started` means learning has not happened; it is not a source defect.
-- Never call a chapter statically complete unless `sections=11`, `canonical_items=401`, `complete_sections=11`, `all_question_content_complete=true`, `all_visual_assets_present=true`, and `all_teacher_transcripts_ready=true` for the active first-two-chapter audit.
+- Never call the all-chapter static route complete unless `chapters=5`, `sections=38`, `canonical_items=1209`, all 38 packet and learning-packet statuses are `VERIFIED`, every canonical item appears exactly once in a learner route, and source/visual audits have no blockers.
 
 ## Section Workflow
 

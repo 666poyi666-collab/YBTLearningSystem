@@ -2,7 +2,7 @@
   "schema_version": "7.4",
   "packet_type": "DEEPSEEK_SEQUENTIAL_LEARNING_PACKET",
   "section": "ch3.s4",
-  "status": "UNVERIFIED",
+  "status": "VERIFIED",
   "source": {
     "ocr_root": "data/ocr_live_current/third_chapter_180",
     "ocr_docs": [
@@ -583,10 +583,51 @@
               "exists": true
             }
           ],
-          "visual_status": "NEEDS_VISION_SIDECAR",
+          "visual_status": "VISION_VERIFIED",
           "teaching_text": "【例 10】如图，某苗圃有两个入口  \\(A\\)， \\(B\\)， \\(|AB|=100\\)，现欲在苗圃内开辟一块区域来种植观赏植物，现有若干树苗放在苗圃外的 C 处，已知  \\(|CA|=80\\)， \\(|CB|=88\\)，以 AB 所在直线为 x 轴，AB 中点为原点建立如图所示的平面直角坐标系。\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_476_989_718_1174.jpg\" alt=\"Image\" width=\"20%\" /></div>\n（1）工人计划将树苗分别沿 C-A-P 和 C-B-P 两条折线路线搬运至 P(7,1)，请判断哪条搬运路线最短？并说明理由.\n（2）工人准备将 C 处树苗运送到苗圃内的点 P 处，计划合理设计点 P 的位置，使得沿 C-A-P 和 C-B-P 两条折线路线运输的距离相等. 请写出所有满足要求的点 P 的轨迹方程.\n解：（1）（ \\(\\left|CA\\right| 和 \\left|CB\\right|\\) 已知，只要求出  \\(\\left|PA\\right|\\) 和  \\(\\left|PB\\right|\\)，就能得到两条路径各自的长，进而比较哪条路更短。有  \\(P, A, B\\) 的坐标，可用平面两点间的距离公式求  \\(\\left|PA\\right|\\) 和  \\(\\left|PB\\right|\\) 由题意， \\(A(-50,0)\\)， \\(B(50,0)\\)， \\(P(7,1)\\)，所以  \\(\\left|AP\\right| = \\sqrt{[7 - (-50))^2 + (1 - 0)^2} = 5\\sqrt{130}\\)， \\(\\left|BP\\right| = \\sqrt{(7 - 50)^2 + (1 - 0)^2} = 5\\sqrt{74}\\)，\n故路径 \\(C-A-P\\) 的长 \\(L_1 = |CA| + |AP| = 80 + 5\\sqrt{130}\\)，路径 \\(C-B-P\\) 的长 \\(L_2 = |CB| + |BP| = 88 + 5\\sqrt{74}\\)，（不易直接看出 \\(L_1\\)，\\(L_2\\) 谁更大，可考虑作差比较）\\(L_1 - L_2 = 80 + 5\\sqrt{130} - (88 + 5\\sqrt{74}) = 5(\\sqrt{130} - \\sqrt{74}) - 8\\)\n \\(>5(\\sqrt{125}-\\sqrt{80})-8=5\\sqrt{5}-8>5\\times2-8=2>0\\)，所以 \\(L_{1}>L_{2}\\)，故路线C-B-P更短.\n（2）由题意， \\(|CA| + |AP| = |CB| + |BP|\\)，（所求为  \\(P\\) 的轨迹方程，可以将含有  \\(P\\) 的部分移到等号一侧，再作观察）所以  \\(|AP| - |BP| = |CB| - |CA| = 88 - 80 = 8 < |AB|\\)，故点  \\(P\\) 在以  \\(A\\)， \\(B\\) 为焦点的双曲线的右支上，可设该双曲线的方程为  \\(\\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1 (a > 0, b > 0)\\)，则  \\(|AP| - |BP| = 2a = 8\\)，且半焦距  \\(c = 50\\)，所以  \\(4\\sqrt{a^2 + b^2} = \\sqrt{2^2 + 50^2} = 4^2 = 2484\\)。\n所以a=4，故 \\(b^{2}=c^{2}-a^{2}=50^{2}-4^{2}=2484\\)，\n又由题意，点 P 在苗圃内（第一象限），所以点 P 的轨迹方程为  \\(\\frac{x^{2}}{16}-\\frac{y^{2}}{2484}=1(x>0,y>0)\\).\n【反思】对于与双曲线有关的实际应用题，解题的关键是将实际问题翻译成与双曲线有关的数学模型，再结合双曲线的知识求解问题.\n## 补充、拓展\n当点在双曲线上运动时，可以衍生出一些有关的最值问题，这类问题按解决方法不同，主要有两类，本节我们先给大家拓展基于双曲线定义的这一类最值问题，还有一类基于双曲线方程的最值问题，因为要用到双曲线中变量 x，y 的范围，我们下一节再涉及.",
           "solution_present": true,
-          "vision_hint": "ch3.s4-LI5b1d55af34742b56"
+          "vision_hint": "ch3.s4-LI5b1d55af34742b56",
+          "vision_sidecars": [
+            {
+              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\imgs\\img_in_image_box_476_989_718_1174.jpg",
+              "image_sha256": "cf4fd39ccf5bdaa97abdbfdf1d261a3bbaaaab85f06e3cb4c3eb4d5bf4a2883a",
+              "confidence": "E2",
+              "structured": {
+                "objects": [],
+                "relations": [],
+                "coordinates": [],
+                "ranges": [],
+                "text": [
+                  "y",
+                  "x",
+                  "苗圃",
+                  "苗圃"
+                ],
+                "uncertainties": [],
+                "confidence": "E2"
+              },
+              "source_provenance": null
+            }
+          ],
+          "vision_sidecar": {
+            "objects": [],
+            "relations": [],
+            "coordinates": [],
+            "ranges": [],
+            "text": [
+              "y",
+              "x",
+              "苗圃",
+              "苗圃"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "vision_source_provenance": [],
+          "evidence": [
+            "E1",
+            "E2"
+          ]
         }
       ],
       "direct_variants": [],
@@ -792,7 +833,10 @@
       "cycle_id": "ch3.s4-cycle-9",
       "sequence": 9,
       "title": "B组 强化能力",
-      "course_keys": [],
+      "course_keys": [
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
       "prerequisite_course_keys": [
         "hyperbola_definition_equation"
       ],
@@ -976,14 +1020,49 @@
               "exists": true
             }
           ],
-          "visual_status": "NEEDS_VISION_SIDECAR",
+          "visual_status": "VISION_VERIFIED",
           "math_errors": [],
           "evidence": [
-            "E1"
-          ]
+            "E1",
+            "E2"
+          ],
+          "vision_sidecars": [
+            {
+              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\imgs\\img_in_image_box_841_1372_1098_1551.jpg",
+              "image_sha256": "60b7d74a522221e7923b78953b6e03cb7cbbd6a23776f1f53833b6e04aa6df01",
+              "confidence": "E2",
+              "structured": {
+                "objects": [],
+                "relations": [],
+                "coordinates": [],
+                "ranges": [],
+                "text": [
+                  "北",
+                  "东"
+                ],
+                "uncertainties": [],
+                "confidence": "E2"
+              },
+              "source_provenance": null
+            }
+          ],
+          "vision_sidecar": {
+            "objects": [],
+            "relations": [],
+            "coordinates": [],
+            "ranges": [],
+            "text": [
+              "北",
+              "东"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "vision_source_provenance": []
         }
       ],
       "action_order": [
+        "watch_current_courses",
         "attempt_current_abc_exercises_without_answers",
         "assess_current_cycle"
       ],
@@ -1316,10 +1395,51 @@
           "exists": true
         }
       ],
-      "visual_status": "NEEDS_VISION_SIDECAR",
+      "visual_status": "VISION_VERIFIED",
       "teaching_text": "【例 10】如图，某苗圃有两个入口  \\(A\\)， \\(B\\)， \\(|AB|=100\\)，现欲在苗圃内开辟一块区域来种植观赏植物，现有若干树苗放在苗圃外的 C 处，已知  \\(|CA|=80\\)， \\(|CB|=88\\)，以 AB 所在直线为 x 轴，AB 中点为原点建立如图所示的平面直角坐标系。\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_476_989_718_1174.jpg\" alt=\"Image\" width=\"20%\" /></div>\n（1）工人计划将树苗分别沿 C-A-P 和 C-B-P 两条折线路线搬运至 P(7,1)，请判断哪条搬运路线最短？并说明理由.\n（2）工人准备将 C 处树苗运送到苗圃内的点 P 处，计划合理设计点 P 的位置，使得沿 C-A-P 和 C-B-P 两条折线路线运输的距离相等. 请写出所有满足要求的点 P 的轨迹方程.\n解：（1）（ \\(\\left|CA\\right| 和 \\left|CB\\right|\\) 已知，只要求出  \\(\\left|PA\\right|\\) 和  \\(\\left|PB\\right|\\)，就能得到两条路径各自的长，进而比较哪条路更短。有  \\(P, A, B\\) 的坐标，可用平面两点间的距离公式求  \\(\\left|PA\\right|\\) 和  \\(\\left|PB\\right|\\) 由题意， \\(A(-50,0)\\)， \\(B(50,0)\\)， \\(P(7,1)\\)，所以  \\(\\left|AP\\right| = \\sqrt{[7 - (-50))^2 + (1 - 0)^2} = 5\\sqrt{130}\\)， \\(\\left|BP\\right| = \\sqrt{(7 - 50)^2 + (1 - 0)^2} = 5\\sqrt{74}\\)，\n故路径 \\(C-A-P\\) 的长 \\(L_1 = |CA| + |AP| = 80 + 5\\sqrt{130}\\)，路径 \\(C-B-P\\) 的长 \\(L_2 = |CB| + |BP| = 88 + 5\\sqrt{74}\\)，（不易直接看出 \\(L_1\\)，\\(L_2\\) 谁更大，可考虑作差比较）\\(L_1 - L_2 = 80 + 5\\sqrt{130} - (88 + 5\\sqrt{74}) = 5(\\sqrt{130} - \\sqrt{74}) - 8\\)\n \\(>5(\\sqrt{125}-\\sqrt{80})-8=5\\sqrt{5}-8>5\\times2-8=2>0\\)，所以 \\(L_{1}>L_{2}\\)，故路线C-B-P更短.\n（2）由题意， \\(|CA| + |AP| = |CB| + |BP|\\)，（所求为  \\(P\\) 的轨迹方程，可以将含有  \\(P\\) 的部分移到等号一侧，再作观察）所以  \\(|AP| - |BP| = |CB| - |CA| = 88 - 80 = 8 < |AB|\\)，故点  \\(P\\) 在以  \\(A\\)， \\(B\\) 为焦点的双曲线的右支上，可设该双曲线的方程为  \\(\\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1 (a > 0, b > 0)\\)，则  \\(|AP| - |BP| = 2a = 8\\)，且半焦距  \\(c = 50\\)，所以  \\(4\\sqrt{a^2 + b^2} = \\sqrt{2^2 + 50^2} = 4^2 = 2484\\)。\n所以a=4，故 \\(b^{2}=c^{2}-a^{2}=50^{2}-4^{2}=2484\\)，\n又由题意，点 P 在苗圃内（第一象限），所以点 P 的轨迹方程为  \\(\\frac{x^{2}}{16}-\\frac{y^{2}}{2484}=1(x>0,y>0)\\).\n【反思】对于与双曲线有关的实际应用题，解题的关键是将实际问题翻译成与双曲线有关的数学模型，再结合双曲线的知识求解问题.\n## 补充、拓展\n当点在双曲线上运动时，可以衍生出一些有关的最值问题，这类问题按解决方法不同，主要有两类，本节我们先给大家拓展基于双曲线定义的这一类最值问题，还有一类基于双曲线方程的最值问题，因为要用到双曲线中变量 x，y 的范围，我们下一节再涉及.",
       "solution_present": true,
-      "vision_hint": "ch3.s4-LI5b1d55af34742b56"
+      "vision_hint": "ch3.s4-LI5b1d55af34742b56",
+      "vision_sidecars": [
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\imgs\\img_in_image_box_476_989_718_1174.jpg",
+          "image_sha256": "cf4fd39ccf5bdaa97abdbfdf1d261a3bbaaaab85f06e3cb4c3eb4d5bf4a2883a",
+          "confidence": "E2",
+          "structured": {
+            "objects": [],
+            "relations": [],
+            "coordinates": [],
+            "ranges": [],
+            "text": [
+              "y",
+              "x",
+              "苗圃",
+              "苗圃"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        }
+      ],
+      "vision_sidecar": {
+        "objects": [],
+        "relations": [],
+        "coordinates": [],
+        "ranges": [],
+        "text": [
+          "y",
+          "x",
+          "苗圃",
+          "苗圃"
+        ],
+        "uncertainties": [],
+        "confidence": "E2"
+      },
+      "vision_source_provenance": [],
+      "evidence": [
+        "E1",
+        "E2"
+      ]
     },
     {
       "item_id": "4d733f9a5a3fd863",
@@ -1818,11 +1938,45 @@
           "exists": true
         }
       ],
-      "visual_status": "NEEDS_VISION_SIDECAR",
+      "visual_status": "VISION_VERIFIED",
       "math_errors": [],
       "evidence": [
-        "E1"
-      ]
+        "E1",
+        "E2"
+      ],
+      "vision_sidecars": [
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\imgs\\img_in_image_box_841_1372_1098_1551.jpg",
+          "image_sha256": "60b7d74a522221e7923b78953b6e03cb7cbbd6a23776f1f53833b6e04aa6df01",
+          "confidence": "E2",
+          "structured": {
+            "objects": [],
+            "relations": [],
+            "coordinates": [],
+            "ranges": [],
+            "text": [
+              "北",
+              "东"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        }
+      ],
+      "vision_sidecar": {
+        "objects": [],
+        "relations": [],
+        "coordinates": [],
+        "ranges": [],
+        "text": [
+          "北",
+          "东"
+        ],
+        "uncertainties": [],
+        "confidence": "E2"
+      },
+      "vision_source_provenance": []
     },
     {
       "qid": "Q-0d6aa37fd9899ce2",
@@ -1874,8 +2028,5 @@
     "direct_variants": "question only; solution isolated",
     "abc_exercises": "question only; answer sidecar forbidden"
   },
-  "unresolved": [
-    "Q-266b3f765c3bca31:NEEDS_VISION_SIDECAR",
-    "ch3.s4-LI5b1d55af34742b56:NEEDS_VISION_SIDECAR"
-  ]
+  "unresolved": []
 }

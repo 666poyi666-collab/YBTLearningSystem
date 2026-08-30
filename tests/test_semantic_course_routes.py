@@ -42,15 +42,15 @@ class SemanticCourseRouteTests(unittest.TestCase):
         self.assertTrue(all(item["role"] == "type_example" and item["role_ref"] for item in type_examples))
         self.assertTrue(all(item["role_ref"] for item in packet["direct_variants"]))
 
-    def test_unplaced_courses_are_disclosed_instead_of_forced_into_cycles(self) -> None:
+    def test_reviewed_courses_are_placed_with_transcript_bound_evidence(self) -> None:
         row = section(5, "5.5")
-        self.assertEqual(row["course_mapping_status"], "SEMANTIC_TARGETS_WITH_DISCLOSED_UNPLACED_COURSES")
-        placed = {key for cycle in row["learning_cycles"] for key in cycle.get("course_keys", [])}
-        self.assertFalse(placed & set(row["unplaced_course_keys"]))
-        self.assertEqual(
-            {gap["course_key"] for gap in row["coverage_gaps"]},
-            set(row["unplaced_course_keys"]),
-        )
+        self.assertEqual(row["course_mapping_status"], "SEMANTIC_TARGETS_REVIEWED_AND_PLACED")
+        self.assertEqual(row["unplaced_course_keys"], [])
+        self.assertFalse(any(gap.get("kind") == "unplaced_course" for gap in row["coverage_gaps"]))
+        cycles = {cycle["id"]: cycle for cycle in row["learning_cycles"]}
+        for placement in row["course_mapping_review"]["placements"]:
+            self.assertEqual(len(placement["transcript_sha256"]), 64)
+            self.assertIn(placement["course_key"], cycles[placement["cycle_id"]][placement["field"]])
 
     def test_review_section_does_not_introduce_misbound_courses(self) -> None:
         row = section(5, "5.6")

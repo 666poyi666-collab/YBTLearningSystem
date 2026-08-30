@@ -1640,11 +1640,19 @@ class PacketBuilder:
             reference = Path(str(value or ""))
             if reference.is_file() or _is_answer_book_path(str(reference)):
                 return reference
+            current_roots = (
+                "first_chapter_69",
+                "second_chapter_109",
+                "third_chapter_180",
+                "chapter4_100",
+                "chapter5_95",
+            )
             candidates = (
-                project_root / "data" / "ocr_live_current" / "first_chapter_69" / "imgs" / reference.name,
-                project_root / "data" / "ocr_live_current" / "second_chapter_109" / "imgs" / reference.name,
-                project_root / "data" / "ocr_live_current" / "first_chapter_69" / reference.name,
-                project_root / "data" / "ocr_live_current" / "second_chapter_109" / reference.name,
+                *(
+                    project_root / "data" / "ocr_live_current" / root / folder / reference.name
+                    for root in current_roots
+                    for folder in ("imgs", "")
+                ),
                 project_root / "data" / "ocr_live_full" / "imgs" / reference.name,
                 project_root / "reports" / "source_visuals2" / reference.name,
                 project_root / "reports" / "source_visuals" / reference.name,

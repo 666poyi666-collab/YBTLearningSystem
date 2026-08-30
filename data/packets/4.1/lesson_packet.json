@@ -31,7 +31,7 @@
     },
     "derived_question_correction_count": 1
   },
-  "status": "UNVERIFIED",
+  "status": "VERIFIED",
   "consumer_guard": "Lesson-only context: may include worked examples; never use for independent attempt or reward judgement.",
   "pages": [
     {
@@ -484,11 +484,389 @@
           "exists": true
         }
       ],
-      "visual_status": "NEEDS_VISION_SIDECAR",
+      "visual_status": "VISION_VERIFIED",
       "math_errors": [],
       "evidence": [
-        "E1"
-      ]
+        "E1",
+        "E2"
+      ],
+      "vision_sidecars": [
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_458_417_504_481.jpg",
+          "image_sha256": "bc53404d5e8f16b4886393ed3f06bb7f46314c8050b256f70734385725a3216f",
+          "confidence": "E2",
+          "structured": {
+            "objects": [],
+            "relations": [],
+            "coordinates": [],
+            "ranges": [],
+            "text": [
+              "3"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        },
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_558_388_635_459.jpg",
+          "image_sha256": "db51d1f7581660614c252a5c0e8d7b181ba64e8a83fdd9db6433d907b925b006",
+          "confidence": "E2",
+          "structured": {
+            "objects": [
+              "顶点",
+              "边",
+              "三角形",
+              "线段",
+              "点",
+              "线段"
+            ],
+            "relations": [
+              "顶点连接",
+              "边构成三角形",
+              "线段连接点",
+              "点构成线段",
+              "线段构成三角形",
+              "点连接边"
+            ],
+            "coordinates": [
+              "[0.5, 0.8]",
+              "[0.3, 0.5]",
+              "[0.7, 0.5]",
+              "[0.1, 0.2]",
+              "[0.5, 0.2]",
+              "[0.9, 0.2]"
+            ],
+            "ranges": [
+              "[0.1, 0.2]:[0.5, 0.8]",
+              "[0.3, 0.5]:[0.1, 0.2]",
+              "[0.7, 0.5]:[0.5, 0.2]",
+              "[0.1, 0.2]:[0.9, 0.2]",
+              "[0.5, 0.2]:[0.9, 0.2]",
+              "[0.5, 0.8]:[0.3, 0.5]"
+            ],
+            "text": [],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        },
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_688_361_799_461.jpg",
+          "image_sha256": "d92b0d7702938696e63910f09867f248e86b9be74d14a244aa3a075935f7d52e",
+          "confidence": "E2",
+          "structured": {
+            "objects": [
+              {
+                "name": "三角形顶点",
+                "type": "点"
+              },
+              {
+                "name": "三角形边",
+                "type": "线段"
+              },
+              {
+                "name": "内部线段",
+                "type": "线段"
+              },
+              {
+                "name": "内部点",
+                "type": "点"
+              }
+            ],
+            "relations": [
+              {
+                "from": "三角形顶点",
+                "to": "三角形边",
+                "type": "连接"
+              },
+              {
+                "from": "内部点",
+                "to": "内部线段",
+                "type": "连接"
+              },
+              {
+                "from": "三角形边",
+                "to": "内部点",
+                "type": "连接"
+              },
+              {
+                "from": "内部线段",
+                "to": "三角形边",
+                "type": "连接"
+              }
+            ],
+            "coordinates": [
+              {
+                "name": "三角形顶点",
+                "values": [
+                  [
+                    5,
+                    0
+                  ],
+                  [
+                    2.5,
+                    3
+                  ],
+                  [
+                    7.5,
+                    3
+                  ]
+                ]
+              },
+              {
+                "name": "内部点",
+                "values": [
+                  [
+                    3.5,
+                    1.5
+                  ],
+                  [
+                    4.5,
+                    2
+                  ],
+                  [
+                    5.5,
+                    1.5
+                  ],
+                  [
+                    6,
+                    1.5
+                  ],
+                  [
+                    5,
+                    2
+                  ]
+                ]
+              },
+              {
+                "name": "内部线段端点",
+                "values": [
+                  [
+                    3.5,
+                    1.5
+                  ],
+                  [
+                    4.5,
+                    2
+                  ],
+                  [
+                    5.5,
+                    1.5
+                  ],
+                  [
+                    6,
+                    1.5
+                  ]
+                ]
+              }
+            ],
+            "ranges": [],
+            "text": [],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        },
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_458_559_504_606.jpg",
+          "image_sha256": "f2632efdc66a6c13bfa5acfc9c1201b1b58bf418dd7d75b8246395ce9ee4c82a",
+          "confidence": "E2",
+          "structured": {
+            "objects": [
+              "正方形"
+            ],
+            "relations": [
+              "正方形的四条边"
+            ],
+            "coordinates": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                0
+              ]
+            ],
+            "ranges": [],
+            "text": [],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        },
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_557_526_635_604.jpg",
+          "image_sha256": "6eb34d835c64ab8188cfae4790f50406394721014d211229dfe841e2ffef81d9",
+          "confidence": "E2",
+          "structured": {
+            "objects": [
+              "正方形",
+              "内嵌小正方形"
+            ],
+            "relations": [],
+            "coordinates": [
+              [
+                11,
+                11
+              ],
+              [
+                11,
+                33
+              ],
+              [
+                33,
+                11
+              ],
+              [
+                33,
+                33
+              ],
+              [
+                19,
+                19
+              ],
+              [
+                23,
+                23
+              ]
+            ],
+            "ranges": [],
+            "text": [],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        },
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_689_494_799_604.jpg",
+          "image_sha256": "98205a1aa429f9d70cfd6c6b6372d3067fce4d47d31bed6817fc9b01f910c6f7",
+          "confidence": "E2",
+          "structured": {
+            "objects": [
+              "矩形框",
+              "内嵌矩形框"
+            ],
+            "relations": [],
+            "coordinates": [],
+            "ranges": [],
+            "text": [],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        },
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_447_734_517_805.jpg",
+          "image_sha256": "fc167d6b94ac64a9898f9b90a2e154be0ebf5fc081a91cdd0cc77ebe902bb2ce",
+          "confidence": "E2",
+          "structured": {
+            "objects": [],
+            "relations": [
+              "五边形顶点连接",
+              "边连接顶点"
+            ],
+            "coordinates": [
+              "顶点坐标",
+              "边端点坐标"
+            ],
+            "ranges": [],
+            "text": [],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        },
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_535_687_655_803.jpg",
+          "image_sha256": "7608763aa2f03dfa9d1c868d4d9455dc9b860a9d862c4254370874d2e68eed68",
+          "confidence": "E2",
+          "structured": {
+            "objects": [
+              {
+                "name": "五边形",
+                "type": "多边形"
+              },
+              {
+                "name": "内五边形",
+                "type": "多边形"
+              }
+            ],
+            "relations": [],
+            "coordinates": [
+              [
+                0,
+                0
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                0.5
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                1.5,
+                0.2
+              ],
+              [
+                1,
+                0.5
+              ]
+            ],
+            "ranges": [],
+            "text": [],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        },
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_658_639_828_802.jpg",
+          "image_sha256": "35a0874815953b1f34c2b6764e965b1a1059a4e33ab3113d21a0e43b75295e3f",
+          "confidence": "E2",
+          "structured": {
+            "objects": [
+              "五边形",
+              "内嵌四边形",
+              "内嵌小四边形"
+            ],
+            "relations": [],
+            "coordinates": [],
+            "ranges": [],
+            "text": [],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        }
+      ],
+      "vision_sidecar": {
+        "objects": [],
+        "relations": [],
+        "coordinates": [],
+        "ranges": [],
+        "text": [
+          "3"
+        ],
+        "uncertainties": [],
+        "confidence": "E2"
+      },
+      "vision_source_provenance": []
     },
     {
       "qid": "Q-52fe385ca95d135a",
@@ -795,7 +1173,5 @@
       ]
     }
   ],
-  "unresolved": [
-    "Q-7a807fed0f895d14:NEEDS_VISION_SIDECAR"
-  ]
+  "unresolved": []
 }

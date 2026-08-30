@@ -2,7 +2,7 @@
   "schema_version": "7.4",
   "packet_type": "DEEPSEEK_SEQUENTIAL_LEARNING_PACKET",
   "section": "5.1",
-  "status": "UNVERIFIED",
+  "status": "VERIFIED",
   "source": {
     "ocr_root": "data/ocr_live_current/chapter5_95",
     "ocr_docs": [
@@ -180,10 +180,89 @@
               "exists": true
             }
           ],
-          "visual_status": "NEEDS_VISION_SIDECAR",
+          "visual_status": "VISION_VERIFIED",
           "teaching_text": "【例5】设 \\(y=f(x)\\)的导函数为 \\(f'(x)\\)，\n根据图中的函数图象，下列数值最小\n的是（）\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_800_1154_1014_1256.jpg\" alt=\"Image\" width=\"17%\" /></div>\nA.  \\(f'(a)\\) B.  \\(f'(b)\\)\nC.  \\(f'(c)\\) D.  \\(\\frac{f(b)-f(a)}{b-a}\\)\n解析：设  \\(f(x)\\) 在 A, B, C 三点处的切线斜率分别为  \\(k_{A}\\),  \\(k_{B}\\),  \\(k_{C}\\)，则  \\(k_{A} = f'(a)\\),\n \\(k_{B}=f'(b)\\)， \\(k_{C}=f'(c)\\)，\n由图可知， \\(k_{A}>k_{B}>0>k_{C}\\)\n所以  \\(f'(a) > f'(b) > 0 > f'(c)\\)\n \\(x = x_0\\) 时， \\(f'(x_0)\\) 是一个唯一确定的数。这样，当  \\(x\\) 变化时， \\(y = f'(x)\\) 就是关于  \\(x\\) 的函数，我们称它为  \\(y = f(x)\\) 的导函数（简称导数）， \\(y = f(x)\\) 的导函数有时也记作  \\(y'\\)，即  \\(f'(x) = y' = \\lim_{\\Delta x \\to 0} \\frac{f(x + \\Delta x) - f(x)}{\\Delta x}\\)。\n注：若题干的表述为“函数 \\(f(x)\\)在 \\(x=x_0\\)处的导数”，\n这里的导数实际上指的是导数值，即函数 \\(f(x)\\)的导函数\n \\(f'(x)\\)在 \\(x=x_0\\)处的函数值 \\(f'(x_0)\\).\n又 \\(\\frac{f(b)-f(a)}{b-a}=k_{AB}>0\\)，\n所以各选项中数值最小的是 \\(f'(c)\\).\n答案：C",
           "solution_present": true,
-          "vision_hint": "5.1-LIaf6aeaf2c5c1a783"
+          "vision_hint": "5.1-LIaf6aeaf2c5c1a783",
+          "vision_sidecars": [
+            {
+              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_800_1154_1014_1256.jpg",
+              "image_sha256": "d2a96649e62d567b43083713f5dce5e991c2ed1209ef195d3a1465f606c03404",
+              "confidence": "E2",
+              "structured": {
+                "objects": [
+                  "坐标轴",
+                  "曲线y=f(x)",
+                  "点O",
+                  "点A",
+                  "点B",
+                  "点C"
+                ],
+                "relations": [
+                  "点A在x=a处与x轴相交",
+                  "点B在x=b处达到峰值",
+                  "点C在x=c处",
+                  "曲线从A到B上升，从B到C下降"
+                ],
+                "coordinates": [
+                  "O(0,0)",
+                  "A(a, f(a))",
+                  "B(b, f(b))",
+                  "C(c, f(c))"
+                ],
+                "ranges": [
+                  "x轴区间[a, c]",
+                  "y轴正区间[f(a), f(b)]"
+                ],
+                "text": [
+                  "y",
+                  "x",
+                  "y = f(x)"
+                ],
+                "uncertainties": [],
+                "confidence": "E2"
+              },
+              "source_provenance": null
+            }
+          ],
+          "vision_sidecar": {
+            "objects": [
+              "坐标轴",
+              "曲线y=f(x)",
+              "点O",
+              "点A",
+              "点B",
+              "点C"
+            ],
+            "relations": [
+              "点A在x=a处与x轴相交",
+              "点B在x=b处达到峰值",
+              "点C在x=c处",
+              "曲线从A到B上升，从B到C下降"
+            ],
+            "coordinates": [
+              "O(0,0)",
+              "A(a, f(a))",
+              "B(b, f(b))",
+              "C(c, f(c))"
+            ],
+            "ranges": [
+              "x轴区间[a, c]",
+              "y轴正区间[f(a), f(b)]"
+            ],
+            "text": [
+              "y",
+              "x",
+              "y = f(x)"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "vision_source_provenance": [],
+          "evidence": [
+            "E1",
+            "E2"
+          ]
         }
       ],
       "direct_variants": [],
@@ -618,7 +697,9 @@
       "cycle_id": "5.1-cycle-8",
       "sequence": 8,
       "title": "B组 强化能力",
-      "course_keys": [],
+      "course_keys": [
+        "4.1.1.6 用切线算距离最值"
+      ],
       "prerequisite_course_keys": [
         "4.1.1.1 导数的定义（上）",
         "4.1.1.1 导数的定义（下）",
@@ -693,11 +774,45 @@
               "exists": true
             }
           ],
-          "visual_status": "NEEDS_VISION_SIDECAR",
+          "visual_status": "VISION_VERIFIED",
           "math_errors": [],
           "evidence": [
-            "E1"
-          ]
+            "E1",
+            "E2"
+          ],
+          "vision_sidecars": [
+            {
+              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_chart_box_492_578_912_886.jpg",
+              "image_sha256": "3a9f86387d2db7fcb3a7b44d6b897d2087a441defd79757dbddc573cb95f8f43",
+              "confidence": "E2",
+              "structured": {
+                "objects": [],
+                "relations": [],
+                "coordinates": [],
+                "ranges": [],
+                "text": [
+                  "面积/m²",
+                  "时间/月"
+                ],
+                "uncertainties": [],
+                "confidence": "E2"
+              },
+              "source_provenance": null
+            }
+          ],
+          "vision_sidecar": {
+            "objects": [],
+            "relations": [],
+            "coordinates": [],
+            "ranges": [],
+            "text": [
+              "面积/m²",
+              "时间/月"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "vision_source_provenance": []
         },
         {
           "qid": "Q-50dbc06078af7b63",
@@ -758,6 +873,7 @@
         }
       ],
       "action_order": [
+        "watch_current_courses",
         "attempt_current_abc_exercises_without_answers",
         "assess_current_cycle"
       ],
@@ -770,7 +886,9 @@
       "cycle_id": "5.1-cycle-9",
       "sequence": 9,
       "title": "C组 拓展提升",
-      "course_keys": [],
+      "course_keys": [
+        "4.1.1.7 隐函数求导"
+      ],
       "prerequisite_course_keys": [
         "4.1.1.1 导数的定义（上）",
         "4.1.1.1 导数的定义（下）",
@@ -807,14 +925,57 @@
               "exists": true
             }
           ],
-          "visual_status": "NEEDS_VISION_SIDECAR",
+          "visual_status": "VISION_VERIFIED",
           "math_errors": [],
           "evidence": [
-            "E1"
-          ]
+            "E1",
+            "E2"
+          ],
+          "vision_sidecars": [
+            {
+              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_chart_box_523_1110_698_1246.jpg",
+              "image_sha256": "b9d73c6433e14518f6fd36b3d209cb8d1653eec6d6c28e0eba3771337348322e",
+              "confidence": "E2",
+              "structured": {
+                "objects": [],
+                "relations": [],
+                "coordinates": [],
+                "ranges": [],
+                "text": [
+                  "S",
+                  "S0",
+                  "S0/2",
+                  "t",
+                  "t1",
+                  "t2"
+                ],
+                "uncertainties": [],
+                "confidence": "E2"
+              },
+              "source_provenance": null
+            }
+          ],
+          "vision_sidecar": {
+            "objects": [],
+            "relations": [],
+            "coordinates": [],
+            "ranges": [],
+            "text": [
+              "S",
+              "S0",
+              "S0/2",
+              "t",
+              "t1",
+              "t2"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "vision_source_provenance": []
         }
       ],
       "action_order": [
+        "watch_current_courses",
         "attempt_current_abc_exercises_without_answers",
         "assess_current_cycle"
       ],
@@ -985,10 +1146,89 @@
           "exists": true
         }
       ],
-      "visual_status": "NEEDS_VISION_SIDECAR",
+      "visual_status": "VISION_VERIFIED",
       "teaching_text": "【例5】设 \\(y=f(x)\\)的导函数为 \\(f'(x)\\)，\n根据图中的函数图象，下列数值最小\n的是（）\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_800_1154_1014_1256.jpg\" alt=\"Image\" width=\"17%\" /></div>\nA.  \\(f'(a)\\) B.  \\(f'(b)\\)\nC.  \\(f'(c)\\) D.  \\(\\frac{f(b)-f(a)}{b-a}\\)\n解析：设  \\(f(x)\\) 在 A, B, C 三点处的切线斜率分别为  \\(k_{A}\\),  \\(k_{B}\\),  \\(k_{C}\\)，则  \\(k_{A} = f'(a)\\),\n \\(k_{B}=f'(b)\\)， \\(k_{C}=f'(c)\\)，\n由图可知， \\(k_{A}>k_{B}>0>k_{C}\\)\n所以  \\(f'(a) > f'(b) > 0 > f'(c)\\)\n \\(x = x_0\\) 时， \\(f'(x_0)\\) 是一个唯一确定的数。这样，当  \\(x\\) 变化时， \\(y = f'(x)\\) 就是关于  \\(x\\) 的函数，我们称它为  \\(y = f(x)\\) 的导函数（简称导数）， \\(y = f(x)\\) 的导函数有时也记作  \\(y'\\)，即  \\(f'(x) = y' = \\lim_{\\Delta x \\to 0} \\frac{f(x + \\Delta x) - f(x)}{\\Delta x}\\)。\n注：若题干的表述为“函数 \\(f(x)\\)在 \\(x=x_0\\)处的导数”，\n这里的导数实际上指的是导数值，即函数 \\(f(x)\\)的导函数\n \\(f'(x)\\)在 \\(x=x_0\\)处的函数值 \\(f'(x_0)\\).\n又 \\(\\frac{f(b)-f(a)}{b-a}=k_{AB}>0\\)，\n所以各选项中数值最小的是 \\(f'(c)\\).\n答案：C",
       "solution_present": true,
-      "vision_hint": "5.1-LIaf6aeaf2c5c1a783"
+      "vision_hint": "5.1-LIaf6aeaf2c5c1a783",
+      "vision_sidecars": [
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_800_1154_1014_1256.jpg",
+          "image_sha256": "d2a96649e62d567b43083713f5dce5e991c2ed1209ef195d3a1465f606c03404",
+          "confidence": "E2",
+          "structured": {
+            "objects": [
+              "坐标轴",
+              "曲线y=f(x)",
+              "点O",
+              "点A",
+              "点B",
+              "点C"
+            ],
+            "relations": [
+              "点A在x=a处与x轴相交",
+              "点B在x=b处达到峰值",
+              "点C在x=c处",
+              "曲线从A到B上升，从B到C下降"
+            ],
+            "coordinates": [
+              "O(0,0)",
+              "A(a, f(a))",
+              "B(b, f(b))",
+              "C(c, f(c))"
+            ],
+            "ranges": [
+              "x轴区间[a, c]",
+              "y轴正区间[f(a), f(b)]"
+            ],
+            "text": [
+              "y",
+              "x",
+              "y = f(x)"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        }
+      ],
+      "vision_sidecar": {
+        "objects": [
+          "坐标轴",
+          "曲线y=f(x)",
+          "点O",
+          "点A",
+          "点B",
+          "点C"
+        ],
+        "relations": [
+          "点A在x=a处与x轴相交",
+          "点B在x=b处达到峰值",
+          "点C在x=c处",
+          "曲线从A到B上升，从B到C下降"
+        ],
+        "coordinates": [
+          "O(0,0)",
+          "A(a, f(a))",
+          "B(b, f(b))",
+          "C(c, f(c))"
+        ],
+        "ranges": [
+          "x轴区间[a, c]",
+          "y轴正区间[f(a), f(b)]"
+        ],
+        "text": [
+          "y",
+          "x",
+          "y = f(x)"
+        ],
+        "uncertainties": [],
+        "confidence": "E2"
+      },
+      "vision_source_provenance": [],
+      "evidence": [
+        "E1",
+        "E2"
+      ]
     },
     {
       "item_id": "759d6d57702d3417",
@@ -1273,11 +1513,45 @@
           "exists": true
         }
       ],
-      "visual_status": "NEEDS_VISION_SIDECAR",
+      "visual_status": "VISION_VERIFIED",
       "math_errors": [],
       "evidence": [
-        "E1"
-      ]
+        "E1",
+        "E2"
+      ],
+      "vision_sidecars": [
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_chart_box_492_578_912_886.jpg",
+          "image_sha256": "3a9f86387d2db7fcb3a7b44d6b897d2087a441defd79757dbddc573cb95f8f43",
+          "confidence": "E2",
+          "structured": {
+            "objects": [],
+            "relations": [],
+            "coordinates": [],
+            "ranges": [],
+            "text": [
+              "面积/m²",
+              "时间/月"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        }
+      ],
+      "vision_sidecar": {
+        "objects": [],
+        "relations": [],
+        "coordinates": [],
+        "ranges": [],
+        "text": [
+          "面积/m²",
+          "时间/月"
+        ],
+        "uncertainties": [],
+        "confidence": "E2"
+      },
+      "vision_source_provenance": []
     },
     {
       "qid": "Q-50dbc06078af7b63",
@@ -1355,11 +1629,53 @@
           "exists": true
         }
       ],
-      "visual_status": "NEEDS_VISION_SIDECAR",
+      "visual_status": "VISION_VERIFIED",
       "math_errors": [],
       "evidence": [
-        "E1"
-      ]
+        "E1",
+        "E2"
+      ],
+      "vision_sidecars": [
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_chart_box_523_1110_698_1246.jpg",
+          "image_sha256": "b9d73c6433e14518f6fd36b3d209cb8d1653eec6d6c28e0eba3771337348322e",
+          "confidence": "E2",
+          "structured": {
+            "objects": [],
+            "relations": [],
+            "coordinates": [],
+            "ranges": [],
+            "text": [
+              "S",
+              "S0",
+              "S0/2",
+              "t",
+              "t1",
+              "t2"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        }
+      ],
+      "vision_sidecar": {
+        "objects": [],
+        "relations": [],
+        "coordinates": [],
+        "ranges": [],
+        "text": [
+          "S",
+          "S0",
+          "S0/2",
+          "t",
+          "t1",
+          "t2"
+        ],
+        "uncertainties": [],
+        "confidence": "E2"
+      },
+      "vision_source_provenance": []
     }
   ],
   "counts": {
@@ -1373,9 +1689,5 @@
     "direct_variants": "question only; solution isolated",
     "abc_exercises": "question only; answer sidecar forbidden"
   },
-  "unresolved": [
-    "5.1-LIaf6aeaf2c5c1a783:NEEDS_VISION_SIDECAR",
-    "Q-640f462d950da79b:NEEDS_VISION_SIDECAR",
-    "Q-d80a5bd4220297bd:NEEDS_VISION_SIDECAR"
-  ]
+  "unresolved": []
 }

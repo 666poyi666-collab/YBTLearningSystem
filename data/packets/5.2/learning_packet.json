@@ -2,7 +2,7 @@
   "schema_version": "7.4",
   "packet_type": "DEEPSEEK_SEQUENTIAL_LEARNING_PACKET",
   "section": "5.2",
-  "status": "UNVERIFIED",
+  "status": "VERIFIED",
   "source": {
     "ocr_root": "data/ocr_live_current/chapter5_95",
     "ocr_docs": [
@@ -245,7 +245,8 @@
       "title": "导函数与原函数的性质关系",
       "course_keys": [
         "4.1.2.3 导数的原函数构造（基础）",
-        "4.1.2.3 导数的原函数构造（进阶）"
+        "4.1.2.3 导数的原函数构造（进阶）",
+        "4.1.2.3 导数的原函数构造之速解技巧"
       ],
       "prerequisite_course_keys": [
         "4.1.2.1 基本初等函数的导数及运算法则",
@@ -435,10 +436,47 @@
               "exists": true
             }
           ],
-          "visual_status": "NEEDS_VISION_SIDECAR",
+          "visual_status": "VISION_VERIFIED",
           "teaching_text": "【例 9】已知直线  \\(y = kx + b\\) 既是曲线  \\(y = \\ln x\\) 的切线，也是曲线  \\(y = -\\ln(-x)\\) 的切线，则（ ）\nA.  \\(k = \\frac{1}{e}\\)， \\(b = 0\\)    B.  \\(k = 1\\)， \\(b = 0\\)    C.  \\(k = \\frac{1}{e}\\)， \\(b = -1\\)    D.  \\(k = 1\\)， \\(b = -1\\)\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_867_117_1093_340.jpg\" alt=\"Image\" width=\"18%\" /></div>\n解法1：直线  \\(y = kx + b\\) 与两曲线的切点均未知，可设两个切点，分别写出切线  \\(l\\) 的斜截式方程，再作观察，如图1，设  \\(A(x_1, \\ln x_1)\\)， \\(B(x_2, -\\ln(-x_2))\\) 分别为  \\(y = kx + b\\) 与  \\(y = \\ln x\\) 和  \\(y = -\\ln(-x)\\) 的切点，因为  \\((\\ln x)' = \\frac{1}{x}\\)，所以  \\(y = \\ln x\\) 在点  \\(A\\) 处的切线方程为  \\(y - \\ln x_1 = \\frac{1}{x_1}(x - x_1)\\)，即  \\(y = \\frac{1}{x_1}x + \\ln x_1 - 1\\) ①，因为  \\([-\\ln(-x)]' = -\\frac{-1}{-x} = -\\frac{1}{x}\\)，所以  \\(y = -\\ln(-x)\\) 在点  \\(B\\) 处的切线方程为  \\(y + \\ln(-x_2) = -\\frac{1}{x_2}(x - x_2)\\)，即  \\(y = -\\frac{1}{x_2}x - \\ln(-x_2) + 1\\) ②，怎样求  \\(k\\) 和  \\(b\\)？可以想象，只要求出  \\(x_1\\) 或  \\(x_2\\)，就能代入①或②得到切线的方程，和  \\(b\\) 也就有了，由于①和②是同一条直线的方程，所以对应系数应相等，由此可建立方程组求  \\(x_1\\) 和  \\(x_2\\)，因为①和②都是直线  \\(y = kx + b\\) 的方程，所以  \\(\\begin{cases} \\frac{1}{x_1} = -\\frac{1}{x_2} \\\\ \\ln x_1 - 1 = -\\ln(-x_2) + 1 \\end{cases}\\) ③，由③可得  \\(x_2 = -x_1\\)，代入④得  \\(\\ln x_1 - 1 = -\\ln x_1 + 1\\)，解得： \\(x_1 = e\\)，代入①得切线的方程为  \\(y = \\frac{1}{e}x\\)，又由题意，该切线的方程为  \\(y = kx + b\\)，所以  \\(k = \\frac{1}{e}\\)， \\(b = 0\\)。\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_263_1033_555_1164.jpg\" alt=\"Image\" width=\"24%\" /></div>\n<div style=\"text-align: center;\">图1</div>\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_620_1033_930_1167.jpg\" alt=\"Image\" width=\"26%\" /></div>\n<div style=\"text-align: center;\">图2</div>\n解法 2：若注意到  \\(y = -\\ln(-x)\\) 和  \\(y = \\ln x\\) 的图象关于原点对称，则也可考虑从这一特征出发分析，看能否找到解题的突破口，如图 2，我们将  \\(y = \\ln x\\) 沿 y 轴翻折，得到  \\(y = \\ln(-x)\\)，再沿 x 轴翻折，得到  \\(y = -\\ln(-x)\\)，所以  \\(y = -\\ln(-x)\\) 与  \\(y = \\ln x\\) 关于原点对称，若  \\(y = kx + b\\) 是两曲线的公切线，则可想象，切点必定也关于原点对称，所以  \\(y = kx + b\\) 过原点，故问题转化为求  \\(y = \\ln x\\) 的过原点的切线，这可通过设切点来处理，设过原点的直线与  \\(y = \\ln x\\) 相切于点  \\((x_0, \\ln x_0)\\)，因为  \\((\\ln x)' = \\frac{1}{x}\\)，所以该直线的方程为  \\(y - \\ln x_0 = \\frac{1}{x_0}(x - x_0)\\) ⑤，将原点代入得  \\(0 - \\ln x_0 = \\frac{1}{x_0}(0 - x_0)\\)，解得： \\(x_0 = e\\)，代入⑤整理得： \\(y = \\frac{1}{e}x\\)，与  \\(y = kx + b\\) 对比得  \\(k = \\frac{1}{e}\\)， \\(b = 0\\)。\n答案：A\n【反思】不同切点处的公切线问题的通用思路：先设两个切点，分别写出切线 l 的方程，再比较系数建立方程组并求解.\n## 补充、拓展\n与导数有关的抽象函数问题往往难度比较大，对逻辑推理能力的要求较高，这里我们通过类型Ⅲ来给大家拓展导数与奇偶性、对称性、周期性综合的考题，请大家跟着解析中的蓝字注释仔细思考每一步推理的动机，并结合反思去总结一些常用的结论。",
           "solution_present": true,
-          "vision_hint": "5.2-LIe35f94e52d48001a"
+          "vision_hint": "5.2-LIe35f94e52d48001a",
+          "vision_sidecars": [
+            {
+              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_867_117_1093_340.jpg",
+              "image_sha256": "aff5b045321604d453e63292a403f65db954d627dfaf173fed920c285daebd82",
+              "confidence": "E2",
+              "structured": {
+                "objects": [],
+                "relations": [],
+                "coordinates": [],
+                "ranges": [],
+                "text": [
+                  "y=3x-1",
+                  "y=e^x+2x"
+                ],
+                "uncertainties": [],
+                "confidence": "E2"
+              },
+              "source_provenance": null
+            }
+          ],
+          "vision_sidecar": {
+            "objects": [],
+            "relations": [],
+            "coordinates": [],
+            "ranges": [],
+            "text": [
+              "y=3x-1",
+              "y=e^x+2x"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "vision_source_provenance": [],
+          "evidence": [
+            "E1",
+            "E2"
+          ]
         }
       ],
       "direct_variants": [
@@ -496,9 +534,46 @@
               "exists": true
             }
           ],
-          "visual_status": "NEEDS_VISION_SIDECAR",
+          "visual_status": "VISION_VERIFIED",
           "solution_isolated": true,
-          "vision_hint": "5.2-LI89d58501c9101dcf"
+          "vision_hint": "5.2-LI89d58501c9101dcf",
+          "vision_sidecars": [
+            {
+              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_934_976_1092_1166.jpg",
+              "image_sha256": "2eb638d10b97dbb9a65c2cb1d34d8ef785989e84fa70b3ec166af92568e17c51",
+              "confidence": "E2",
+              "structured": {
+                "objects": [],
+                "relations": [],
+                "coordinates": [],
+                "ranges": [],
+                "text": [
+                  "y=2x+1",
+                  "y=g(x)"
+                ],
+                "uncertainties": [],
+                "confidence": "E2"
+              },
+              "source_provenance": null
+            }
+          ],
+          "vision_sidecar": {
+            "objects": [],
+            "relations": [],
+            "coordinates": [],
+            "ranges": [],
+            "text": [
+              "y=2x+1",
+              "y=g(x)"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "vision_source_provenance": [],
+          "evidence": [
+            "E1",
+            "E2"
+          ]
         },
         {
           "item_id": "61aea1db4af57e77",
@@ -1203,10 +1278,47 @@
           "exists": true
         }
       ],
-      "visual_status": "NEEDS_VISION_SIDECAR",
+      "visual_status": "VISION_VERIFIED",
       "teaching_text": "【例 9】已知直线  \\(y = kx + b\\) 既是曲线  \\(y = \\ln x\\) 的切线，也是曲线  \\(y = -\\ln(-x)\\) 的切线，则（ ）\nA.  \\(k = \\frac{1}{e}\\)， \\(b = 0\\)    B.  \\(k = 1\\)， \\(b = 0\\)    C.  \\(k = \\frac{1}{e}\\)， \\(b = -1\\)    D.  \\(k = 1\\)， \\(b = -1\\)\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_867_117_1093_340.jpg\" alt=\"Image\" width=\"18%\" /></div>\n解法1：直线  \\(y = kx + b\\) 与两曲线的切点均未知，可设两个切点，分别写出切线  \\(l\\) 的斜截式方程，再作观察，如图1，设  \\(A(x_1, \\ln x_1)\\)， \\(B(x_2, -\\ln(-x_2))\\) 分别为  \\(y = kx + b\\) 与  \\(y = \\ln x\\) 和  \\(y = -\\ln(-x)\\) 的切点，因为  \\((\\ln x)' = \\frac{1}{x}\\)，所以  \\(y = \\ln x\\) 在点  \\(A\\) 处的切线方程为  \\(y - \\ln x_1 = \\frac{1}{x_1}(x - x_1)\\)，即  \\(y = \\frac{1}{x_1}x + \\ln x_1 - 1\\) ①，因为  \\([-\\ln(-x)]' = -\\frac{-1}{-x} = -\\frac{1}{x}\\)，所以  \\(y = -\\ln(-x)\\) 在点  \\(B\\) 处的切线方程为  \\(y + \\ln(-x_2) = -\\frac{1}{x_2}(x - x_2)\\)，即  \\(y = -\\frac{1}{x_2}x - \\ln(-x_2) + 1\\) ②，怎样求  \\(k\\) 和  \\(b\\)？可以想象，只要求出  \\(x_1\\) 或  \\(x_2\\)，就能代入①或②得到切线的方程，和  \\(b\\) 也就有了，由于①和②是同一条直线的方程，所以对应系数应相等，由此可建立方程组求  \\(x_1\\) 和  \\(x_2\\)，因为①和②都是直线  \\(y = kx + b\\) 的方程，所以  \\(\\begin{cases} \\frac{1}{x_1} = -\\frac{1}{x_2} \\\\ \\ln x_1 - 1 = -\\ln(-x_2) + 1 \\end{cases}\\) ③，由③可得  \\(x_2 = -x_1\\)，代入④得  \\(\\ln x_1 - 1 = -\\ln x_1 + 1\\)，解得： \\(x_1 = e\\)，代入①得切线的方程为  \\(y = \\frac{1}{e}x\\)，又由题意，该切线的方程为  \\(y = kx + b\\)，所以  \\(k = \\frac{1}{e}\\)， \\(b = 0\\)。\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_263_1033_555_1164.jpg\" alt=\"Image\" width=\"24%\" /></div>\n<div style=\"text-align: center;\">图1</div>\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_620_1033_930_1167.jpg\" alt=\"Image\" width=\"26%\" /></div>\n<div style=\"text-align: center;\">图2</div>\n解法 2：若注意到  \\(y = -\\ln(-x)\\) 和  \\(y = \\ln x\\) 的图象关于原点对称，则也可考虑从这一特征出发分析，看能否找到解题的突破口，如图 2，我们将  \\(y = \\ln x\\) 沿 y 轴翻折，得到  \\(y = \\ln(-x)\\)，再沿 x 轴翻折，得到  \\(y = -\\ln(-x)\\)，所以  \\(y = -\\ln(-x)\\) 与  \\(y = \\ln x\\) 关于原点对称，若  \\(y = kx + b\\) 是两曲线的公切线，则可想象，切点必定也关于原点对称，所以  \\(y = kx + b\\) 过原点，故问题转化为求  \\(y = \\ln x\\) 的过原点的切线，这可通过设切点来处理，设过原点的直线与  \\(y = \\ln x\\) 相切于点  \\((x_0, \\ln x_0)\\)，因为  \\((\\ln x)' = \\frac{1}{x}\\)，所以该直线的方程为  \\(y - \\ln x_0 = \\frac{1}{x_0}(x - x_0)\\) ⑤，将原点代入得  \\(0 - \\ln x_0 = \\frac{1}{x_0}(0 - x_0)\\)，解得： \\(x_0 = e\\)，代入⑤整理得： \\(y = \\frac{1}{e}x\\)，与  \\(y = kx + b\\) 对比得  \\(k = \\frac{1}{e}\\)， \\(b = 0\\)。\n答案：A\n【反思】不同切点处的公切线问题的通用思路：先设两个切点，分别写出切线 l 的方程，再比较系数建立方程组并求解.\n## 补充、拓展\n与导数有关的抽象函数问题往往难度比较大，对逻辑推理能力的要求较高，这里我们通过类型Ⅲ来给大家拓展导数与奇偶性、对称性、周期性综合的考题，请大家跟着解析中的蓝字注释仔细思考每一步推理的动机，并结合反思去总结一些常用的结论。",
       "solution_present": true,
-      "vision_hint": "5.2-LIe35f94e52d48001a"
+      "vision_hint": "5.2-LIe35f94e52d48001a",
+      "vision_sidecars": [
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_867_117_1093_340.jpg",
+          "image_sha256": "aff5b045321604d453e63292a403f65db954d627dfaf173fed920c285daebd82",
+          "confidence": "E2",
+          "structured": {
+            "objects": [],
+            "relations": [],
+            "coordinates": [],
+            "ranges": [],
+            "text": [
+              "y=3x-1",
+              "y=e^x+2x"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        }
+      ],
+      "vision_sidecar": {
+        "objects": [],
+        "relations": [],
+        "coordinates": [],
+        "ranges": [],
+        "text": [
+          "y=3x-1",
+          "y=e^x+2x"
+        ],
+        "uncertainties": [],
+        "confidence": "E2"
+      },
+      "vision_source_provenance": [],
+      "evidence": [
+        "E1",
+        "E2"
+      ]
     },
     {
       "item_id": "2c46e77ba2dfd2a2",
@@ -1299,9 +1411,46 @@
           "exists": true
         }
       ],
-      "visual_status": "NEEDS_VISION_SIDECAR",
+      "visual_status": "VISION_VERIFIED",
       "solution_isolated": true,
-      "vision_hint": "5.2-LI89d58501c9101dcf"
+      "vision_hint": "5.2-LI89d58501c9101dcf",
+      "vision_sidecars": [
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_934_976_1092_1166.jpg",
+          "image_sha256": "2eb638d10b97dbb9a65c2cb1d34d8ef785989e84fa70b3ec166af92568e17c51",
+          "confidence": "E2",
+          "structured": {
+            "objects": [],
+            "relations": [],
+            "coordinates": [],
+            "ranges": [],
+            "text": [
+              "y=2x+1",
+              "y=g(x)"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        }
+      ],
+      "vision_sidecar": {
+        "objects": [],
+        "relations": [],
+        "coordinates": [],
+        "ranges": [],
+        "text": [
+          "y=2x+1",
+          "y=g(x)"
+        ],
+        "uncertainties": [],
+        "confidence": "E2"
+      },
+      "vision_source_provenance": [],
+      "evidence": [
+        "E1",
+        "E2"
+      ]
     },
     {
       "item_id": "61aea1db4af57e77",
@@ -1620,8 +1769,5 @@
     "direct_variants": "question only; solution isolated",
     "abc_exercises": "question only; answer sidecar forbidden"
   },
-  "unresolved": [
-    "5.2-LI89d58501c9101dcf:NEEDS_VISION_SIDECAR",
-    "5.2-LIe35f94e52d48001a:NEEDS_VISION_SIDECAR"
-  ]
+  "unresolved": []
 }

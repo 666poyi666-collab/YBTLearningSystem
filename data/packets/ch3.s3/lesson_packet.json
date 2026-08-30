@@ -27,7 +27,7 @@
     },
     "derived_question_correction_count": 0
   },
-  "status": "UNVERIFIED",
+  "status": "VERIFIED",
   "consumer_guard": "Lesson-only context: may include worked examples; never use for independent attempt or reward judgement.",
   "pages": [
     {
@@ -565,14 +565,72 @@
           "exists": true
         }
       ],
-      "visual_status": "NEEDS_VISION_SIDECAR",
+      "visual_status": "VISION_VERIFIED",
       "math_errors": [],
       "evidence": [
-        "E1"
-      ]
+        "E1",
+        "E2"
+      ],
+      "vision_sidecars": [
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\third_chapter_180\\imgs\\img_in_image_box_860_671_1094_849.jpg",
+          "image_sha256": "b1fb6d05475d44ee8598cbbab4d062e0bb757197ae49bc4b637604af326a471c",
+          "confidence": "E2",
+          "structured": {
+            "objects": [
+              "椭圆",
+              "直线l",
+              "点O",
+              "点A",
+              "点B"
+            ],
+            "relations": [
+              "直线l与椭圆相交",
+              "点O是椭圆中心",
+              "点A在椭圆右顶点",
+              "点B在椭圆左下方"
+            ],
+            "coordinates": [
+              "O(0,0)",
+              "A(x,0)",
+              "B(x,y)",
+              "直线l: y=kx+b"
+            ],
+            "ranges": [],
+            "text": [],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        }
+      ],
+      "vision_sidecar": {
+        "objects": [
+          "椭圆",
+          "直线l",
+          "点O",
+          "点A",
+          "点B"
+        ],
+        "relations": [
+          "直线l与椭圆相交",
+          "点O是椭圆中心",
+          "点A在椭圆右顶点",
+          "点B在椭圆左下方"
+        ],
+        "coordinates": [
+          "O(0,0)",
+          "A(x,0)",
+          "B(x,y)",
+          "直线l: y=kx+b"
+        ],
+        "ranges": [],
+        "text": [],
+        "uncertainties": [],
+        "confidence": "E2"
+      },
+      "vision_source_provenance": []
     }
   ],
-  "unresolved": [
-    "Q-7e486f94f8668c7e:NEEDS_VISION_SIDECAR"
-  ]
+  "unresolved": []
 }

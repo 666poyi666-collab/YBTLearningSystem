@@ -2,7 +2,7 @@
   "schema_version": "7.4",
   "packet_type": "DEEPSEEK_SEQUENTIAL_LEARNING_PACKET",
   "section": "4.3",
-  "status": "UNVERIFIED",
+  "status": "VERIFIED",
   "source": {
     "ocr_root": "data/ocr_live_current/chapter4_100",
     "ocr_docs": [
@@ -491,9 +491,80 @@
               "exists": true
             }
           ],
-          "visual_status": "NEEDS_VISION_SIDECAR",
+          "visual_status": "VISION_VERIFIED",
           "solution_isolated": true,
-          "vision_hint": "4.3-LIed8e1fc2f5a21082"
+          "vision_hint": "4.3-LIed8e1fc2f5a21082",
+          "vision_sidecars": [
+            {
+              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_872_345_1099_646.jpg",
+              "image_sha256": "e905b52407eb2724883195e97db659d35b3f79beb5f362862faf699f441723d7",
+              "confidence": "E2",
+              "structured": {
+                "objects": [
+                  "环形台阶",
+                  "建筑顶部塔楼"
+                ],
+                "relations": [
+                  "建筑顶部塔楼位于环形台阶后方中央",
+                  "环形台阶环绕建筑入口"
+                ],
+                "coordinates": [
+                  [
+                    "建筑入口位置：环形台阶中心上方建筑入口位置"
+                  ],
+                  [
+                    "环形台阶：从下至上分为多个同心圆层"
+                  ]
+                ],
+                "ranges": [
+                  [
+                    "环形台阶的同心圆层数：约3-4层"
+                  ],
+                  [
+                    "建筑顶部塔楼高度：高于周围建筑"
+                  ]
+                ],
+                "text": [],
+                "uncertainties": [],
+                "confidence": "E2"
+              },
+              "source_provenance": null
+            }
+          ],
+          "vision_sidecar": {
+            "objects": [
+              "环形台阶",
+              "建筑顶部塔楼"
+            ],
+            "relations": [
+              "建筑顶部塔楼位于环形台阶后方中央",
+              "环形台阶环绕建筑入口"
+            ],
+            "coordinates": [
+              [
+                "建筑入口位置：环形台阶中心上方建筑入口位置"
+              ],
+              [
+                "环形台阶：从下至上分为多个同心圆层"
+              ]
+            ],
+            "ranges": [
+              [
+                "环形台阶的同心圆层数：约3-4层"
+              ],
+              [
+                "建筑顶部塔楼高度：高于周围建筑"
+              ]
+            ],
+            "text": [],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "vision_source_provenance": [],
+          "evidence": [
+            "E1",
+            "E2"
+          ]
         },
         {
           "item_id": "44c778cb60a541b3",
@@ -1674,9 +1745,80 @@
           "exists": true
         }
       ],
-      "visual_status": "NEEDS_VISION_SIDECAR",
+      "visual_status": "VISION_VERIFIED",
       "solution_isolated": true,
-      "vision_hint": "4.3-LIed8e1fc2f5a21082"
+      "vision_hint": "4.3-LIed8e1fc2f5a21082",
+      "vision_sidecars": [
+        {
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_872_345_1099_646.jpg",
+          "image_sha256": "e905b52407eb2724883195e97db659d35b3f79beb5f362862faf699f441723d7",
+          "confidence": "E2",
+          "structured": {
+            "objects": [
+              "环形台阶",
+              "建筑顶部塔楼"
+            ],
+            "relations": [
+              "建筑顶部塔楼位于环形台阶后方中央",
+              "环形台阶环绕建筑入口"
+            ],
+            "coordinates": [
+              [
+                "建筑入口位置：环形台阶中心上方建筑入口位置"
+              ],
+              [
+                "环形台阶：从下至上分为多个同心圆层"
+              ]
+            ],
+            "ranges": [
+              [
+                "环形台阶的同心圆层数：约3-4层"
+              ],
+              [
+                "建筑顶部塔楼高度：高于周围建筑"
+              ]
+            ],
+            "text": [],
+            "uncertainties": [],
+            "confidence": "E2"
+          },
+          "source_provenance": null
+        }
+      ],
+      "vision_sidecar": {
+        "objects": [
+          "环形台阶",
+          "建筑顶部塔楼"
+        ],
+        "relations": [
+          "建筑顶部塔楼位于环形台阶后方中央",
+          "环形台阶环绕建筑入口"
+        ],
+        "coordinates": [
+          [
+            "建筑入口位置：环形台阶中心上方建筑入口位置"
+          ],
+          [
+            "环形台阶：从下至上分为多个同心圆层"
+          ]
+        ],
+        "ranges": [
+          [
+            "环形台阶的同心圆层数：约3-4层"
+          ],
+          [
+            "建筑顶部塔楼高度：高于周围建筑"
+          ]
+        ],
+        "text": [],
+        "uncertainties": [],
+        "confidence": "E2"
+      },
+      "vision_source_provenance": [],
+      "evidence": [
+        "E1",
+        "E2"
+      ]
     },
     {
       "item_id": "44c778cb60a541b3",
@@ -2132,7 +2274,5 @@
     "direct_variants": "question only; solution isolated",
     "abc_exercises": "question only; answer sidecar forbidden"
   },
-  "unresolved": [
-    "4.3-LIed8e1fc2f5a21082:NEEDS_VISION_SIDECAR"
-  ]
+  "unresolved": []
 }

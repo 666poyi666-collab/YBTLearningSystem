@@ -2,7 +2,7 @@
   "schema_version": "7.1",
   "packet_type": "DEEPSEEK_STUDENT_LEARNING_ITEMS",
   "section": "ch3.s1",
-  "status": "UNVERIFIED",
+  "status": "VERIFIED",
   "source": {
     "ocr_root": "data/ocr_live_current/third_chapter_180",
     "ocr_docs": [
@@ -120,8 +120,87 @@
           "exists": true
         }
       ],
-      "visual_status": "NEEDS_VISION_SIDECAR",
-      "evidence": []
+      "visual_status": "VISION_VERIFIED",
+      "vision_sidecars": [
+        {
+          "image_sha256": "98bbddbe52af50dbb78890c23d708228c894b4b7333a07d3c38027a2e8cc3261",
+          "confidence": "E2",
+          "structured": {
+            "objects": [
+              "椭圆",
+              "点M",
+              "点F1",
+              "点O",
+              "点F2",
+              "点N"
+            ],
+            "relations": [
+              "点M在y轴正半轴",
+              "点N在y轴负半轴",
+              "点F1在x轴负半轴",
+              "点F2在x轴正半轴",
+              "F1O=F2O",
+              "F1N=F1C=F2C=F2N"
+            ],
+            "coordinates": [
+              "M(0,b)",
+              "F1(c,0)",
+              "O(0,0)",
+              "F2(c,0)",
+              "N(0,-b)"
+            ],
+            "ranges": [],
+            "text": [
+              "y轴",
+              "x轴",
+              "a",
+              "b",
+              "c"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          }
+        }
+      ],
+      "vision_sidecar": {
+        "objects": [
+          "椭圆",
+          "点M",
+          "点F1",
+          "点O",
+          "点F2",
+          "点N"
+        ],
+        "relations": [
+          "点M在y轴正半轴",
+          "点N在y轴负半轴",
+          "点F1在x轴负半轴",
+          "点F2在x轴正半轴",
+          "F1O=F2O",
+          "F1N=F1C=F2C=F2N"
+        ],
+        "coordinates": [
+          "M(0,b)",
+          "F1(c,0)",
+          "O(0,0)",
+          "F2(c,0)",
+          "N(0,-b)"
+        ],
+        "ranges": [],
+        "text": [
+          "y轴",
+          "x轴",
+          "a",
+          "b",
+          "c"
+        ],
+        "uncertainties": [],
+        "confidence": "E2"
+      },
+      "evidence": [
+        "E1",
+        "E2"
+      ]
     },
     {
       "item_id": "858d0d5fb23d9c3c",
@@ -440,8 +519,93 @@
           "exists": true
         }
       ],
-      "visual_status": "NEEDS_VISION_SIDECAR",
-      "evidence": []
+      "visual_status": "VISION_VERIFIED",
+      "vision_sidecars": [
+        {
+          "image_sha256": "1c382af8916e33a8cf192079f8585217a5cff1583e341dbfa95dfe0b3333202c",
+          "confidence": "E2",
+          "structured": {
+            "objects": [
+              "椭圆",
+              "椭圆",
+              "点M",
+              "点N",
+              "点F1",
+              "点F2"
+            ],
+            "relations": [
+              "点M在椭圆上",
+              "点N在椭圆上",
+              "点M在椭圆上",
+              "点N在椭圆上",
+              "F1和F2在x轴上，关于O对称",
+              "M连接F1和F2，N连接F2"
+            ],
+            "coordinates": [
+              "F1(-,0)",
+              "O(0,0)",
+              "F2(,0)",
+              "M(,)",
+              "N(, -)",
+              "M(,)"
+            ],
+            "ranges": [],
+            "text": [
+              "y",
+              "x",
+              "F1",
+              "O",
+              "F2",
+              "M",
+              "N"
+            ],
+            "uncertainties": [],
+            "confidence": "E2"
+          }
+        }
+      ],
+      "vision_sidecar": {
+        "objects": [
+          "椭圆",
+          "椭圆",
+          "点M",
+          "点N",
+          "点F1",
+          "点F2"
+        ],
+        "relations": [
+          "点M在椭圆上",
+          "点N在椭圆上",
+          "点M在椭圆上",
+          "点N在椭圆上",
+          "F1和F2在x轴上，关于O对称",
+          "M连接F1和F2，N连接F2"
+        ],
+        "coordinates": [
+          "F1(-,0)",
+          "O(0,0)",
+          "F2(,0)",
+          "M(,)",
+          "N(, -)",
+          "M(,)"
+        ],
+        "ranges": [],
+        "text": [
+          "y",
+          "x",
+          "F1",
+          "O",
+          "F2",
+          "M",
+          "N"
+        ],
+        "uncertainties": [],
+        "confidence": "E2"
+      },
+      "evidence": [
+        "E1",
+        "E2"
+      ]
     },
     {
       "item_id": "af992e79c41bf3e9",
