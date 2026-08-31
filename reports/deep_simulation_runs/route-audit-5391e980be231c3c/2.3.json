@@ -1,0 +1,3216 @@
+{
+  "schema_version": "ybt-deep-section-simulation-v3",
+  "generated_at": "2026-08-31T04:06:30.529672+00:00",
+  "chapter": 2,
+  "section": "2.3",
+  "label": "第3节 直线的交点坐标与距离公式",
+  "simulation_kind": "answer_isolated_synthetic_route_stress",
+  "honesty_boundary": "Attempts test route actionability. They contain no final learner answer, so mathematical correctness and mastery are not claimed.",
+  "source_binding": {
+    "manifest_sha256": "a8def4704d9fb9a238e2bfe951aabb9e51fea58ca556060da9010b87a8f92c20",
+    "student_learning_items_sha256": "d7936d042de90e8e5f2da31d4214495da35c87a37c817a59d222bd5f4b08105b",
+    "student_packet_sha256": "48c40e29bcb2f61dd39693c0df349049df8d154e0f74761d68d4be66f70bf825",
+    "grader_learning_packet_sha256": "69734b6c2d6939e6f161dadfee338c78274bbc97347b93fe78c4088952f31048",
+    "route_sha256": "04bbb63cf9a2f03a734f4be87b5ee91cd61973add0c9670e254f00e7c565661e",
+    "learner_input_snapshot_sha256": "fdf780fc8ef793f4a12302a7abb52d8eb5a6eb4d05dec58fcad7317c243ee660"
+  },
+  "answer_isolation": {
+    "frozen_attempts_path": "reports/deep_simulation_runs/route-audit-5391e980be231c3c/frozen/2.3.jsonl.gz",
+    "frozen_attempts_sha256": "855042c7a00aa48e7698b40b993d397f5b816fa31ee8b9d6b6b75b0ca5c793c3",
+    "route_assessments_path": "reports/deep_simulation_runs/route-audit-5391e980be231c3c/route_assessments/2.3.jsonl.gz",
+    "route_assessments_sha256": "e1d3072d318e3ac123f859180aba61c96cbb9cbdd7a2500418777d6418435089",
+    "learner_answer_material_loaded": false,
+    "grader_material_loaded_after_freeze": true,
+    "grader_evidence": {
+      "parsed_automatic": 20,
+      "review_required_text": 2,
+      "source_page_bound": 9,
+      "textbook_solution": 14,
+      "blocked": 0
+    },
+    "status": "passed"
+  },
+  "items": [
+    {
+      "item_key": "LI:3a58ae8e02fd193f",
+      "item_id": "3a58ae8e02fd193f",
+      "ordinal": 1,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例1",
+      "group": null,
+      "cycle_id": "2.3-cycle-1",
+      "cycle_sequence": 1,
+      "cycle_title": "两条直线的交点坐标",
+      "course_refs": [
+        "line_parallel_perpendicular"
+      ],
+      "course_titles": [
+        "直线间的位置关系：平行与垂直"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "line_parallel_perpendicular"
+      ],
+      "knowledge_refs": [
+        "2.3-k1"
+      ],
+      "type_refs": [],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "line",
+      "recognition_cues": [
+        "直线"
+      ],
+      "method_model": "直线解析模型",
+      "first_written_line_template": "先判断斜率是否存在，再选择点斜式、一般式、方向向量或距离关系。",
+      "continuation_actions": [
+        "写出直线或点的参数表示",
+        "代入平行、垂直、距离或对称条件",
+        "处理分母、绝对值和参数范围"
+      ],
+      "independent_self_check": "检查竖直线、重合、分母、同倍方程、绝对值与位置关系。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "2c31b4f6bd7d40c55bc96958d80b22017e9f8191a067a393078979fb0abf1683",
+      "source_question_text_sha256": "2c31b4f6bd7d40c55bc96958d80b22017e9f8191a067a393078979fb0abf1683",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "2c31b4f6bd7d40c55bc96958d80b22017e9f8191a067a393078979fb0abf1683",
+        "learner_question_text_sha256": "2c31b4f6bd7d40c55bc96958d80b22017e9f8191a067a393078979fb0abf1683"
+      },
+      "question_signal_excerpt": "直线",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:e3c423043e596505",
+      "item_id": "e3c423043e596505",
+      "ordinal": 2,
+      "ordinal_in_cycle": 2,
+      "kind": "worked_example",
+      "label": "例2",
+      "group": null,
+      "cycle_id": "2.3-cycle-1",
+      "cycle_sequence": 1,
+      "cycle_title": "两条直线的交点坐标",
+      "course_refs": [
+        "line_parallel_perpendicular"
+      ],
+      "course_titles": [
+        "直线间的位置关系：平行与垂直"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "line_parallel_perpendicular"
+      ],
+      "knowledge_refs": [
+        "2.3-k1"
+      ],
+      "type_refs": [],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "line",
+      "recognition_cues": [
+        "向量",
+        "直线",
+        "l_",
+        "x",
+        "y"
+      ],
+      "method_model": "直线解析模型",
+      "first_written_line_template": "先判断斜率是否存在，再选择点斜式、一般式、方向向量或距离关系。",
+      "continuation_actions": [
+        "写出直线或点的参数表示",
+        "代入平行、垂直、距离或对称条件",
+        "处理分母、绝对值和参数范围"
+      ],
+      "independent_self_check": "检查竖直线、重合、分母、同倍方程、绝对值与位置关系。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "3228fed78c67c418bd4c30a9985f55d208a591d693929cd80c8c8d9c0becbf61",
+      "source_question_text_sha256": "3228fed78c67c418bd4c30a9985f55d208a591d693929cd80c8c8d9c0becbf61",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "3228fed78c67c418bd4c30a9985f55d208a591d693929cd80c8c8d9c0becbf61",
+        "learner_question_text_sha256": "3228fed78c67c418bd4c30a9985f55d208a591d693929cd80c8c8d9c0becbf61"
+      },
+      "question_signal_excerpt": "向量、直线、l_、x、y",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:b30fa88033796072",
+      "item_id": "b30fa88033796072",
+      "ordinal": 3,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例3",
+      "group": null,
+      "cycle_id": "2.3-cycle-2",
+      "cycle_sequence": 2,
+      "cycle_title": "平面两点间的距离",
+      "course_refs": [
+        "line_parallel_perpendicular"
+      ],
+      "course_titles": [
+        "直线间的位置关系：平行与垂直"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "line_parallel_perpendicular"
+      ],
+      "knowledge_refs": [
+        "2.3-k2"
+      ],
+      "type_refs": [],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "line",
+      "recognition_cues": [
+        "A",
+        "B",
+        "left",
+        "AB"
+      ],
+      "method_model": "直线解析模型",
+      "first_written_line_template": "先判断斜率是否存在，再选择点斜式、一般式、方向向量或距离关系。",
+      "continuation_actions": [
+        "写出直线或点的参数表示",
+        "代入平行、垂直、距离或对称条件",
+        "处理分母、绝对值和参数范围"
+      ],
+      "independent_self_check": "检查竖直线、重合、分母、同倍方程、绝对值与位置关系。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "71164afe192a5194c1edf59b04e9609bdd584525a04d2a62a55dca9edcd06c42",
+      "source_question_text_sha256": "71164afe192a5194c1edf59b04e9609bdd584525a04d2a62a55dca9edcd06c42",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "71164afe192a5194c1edf59b04e9609bdd584525a04d2a62a55dca9edcd06c42",
+        "learner_question_text_sha256": "71164afe192a5194c1edf59b04e9609bdd584525a04d2a62a55dca9edcd06c42"
+      },
+      "question_signal_excerpt": "A、B、left、AB",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:b416e972fff8861f",
+      "item_id": "b416e972fff8861f",
+      "ordinal": 4,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例4",
+      "group": null,
+      "cycle_id": "2.3-cycle-3",
+      "cycle_sequence": 3,
+      "cycle_title": "点到直线的距离",
+      "course_refs": [
+        "point_line_distance",
+        "line_parallel_perpendicular"
+      ],
+      "course_titles": [
+        "点到直线以及平行直线距离公式",
+        "直线间的位置关系：平行与垂直"
+      ],
+      "required_course_refs": [
+        "point_line_distance"
+      ],
+      "prerequisite_course_refs": [
+        "line_parallel_perpendicular"
+      ],
+      "knowledge_refs": [
+        "2.3-k3"
+      ],
+      "type_refs": [],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "line",
+      "recognition_cues": [
+        "直线",
+        "距离",
+        "P",
+        "l",
+        "x",
+        "y"
+      ],
+      "method_model": "直线解析模型",
+      "first_written_line_template": "先判断斜率是否存在，再选择点斜式、一般式、方向向量或距离关系。",
+      "continuation_actions": [
+        "写出直线或点的参数表示",
+        "代入平行、垂直、距离或对称条件",
+        "处理分母、绝对值和参数范围"
+      ],
+      "independent_self_check": "检查竖直线、重合、分母、同倍方程、绝对值与位置关系。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "288e5cf15b02e30dc0285a5d44e05b5230b9fcb90e3ff37d61966c1457ec1153",
+      "source_question_text_sha256": "288e5cf15b02e30dc0285a5d44e05b5230b9fcb90e3ff37d61966c1457ec1153",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "288e5cf15b02e30dc0285a5d44e05b5230b9fcb90e3ff37d61966c1457ec1153",
+        "learner_question_text_sha256": "288e5cf15b02e30dc0285a5d44e05b5230b9fcb90e3ff37d61966c1457ec1153"
+      },
+      "question_signal_excerpt": "直线、距离、P、l、x、y",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:c7981911fbbfa206",
+      "item_id": "c7981911fbbfa206",
+      "ordinal": 5,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例5",
+      "group": null,
+      "cycle_id": "2.3-cycle-4",
+      "cycle_sequence": 4,
+      "cycle_title": "两条平行直线间的距离",
+      "course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "course_titles": [
+        "直线间的位置关系：平行与垂直",
+        "点到直线以及平行直线距离公式"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "knowledge_refs": [
+        "2.3-k4"
+      ],
+      "type_refs": [],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "line",
+      "recognition_cues": [
+        "直线",
+        "距离",
+        "l_1",
+        "x",
+        "y",
+        "l_2"
+      ],
+      "method_model": "直线解析模型",
+      "first_written_line_template": "先判断斜率是否存在，再选择点斜式、一般式、方向向量或距离关系。",
+      "continuation_actions": [
+        "写出直线或点的参数表示",
+        "代入平行、垂直、距离或对称条件",
+        "处理分母、绝对值和参数范围"
+      ],
+      "independent_self_check": "检查竖直线、重合、分母、同倍方程、绝对值与位置关系。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "4dd04f11e61d12734c6a1a16229ee436ab1d1c40fdefbd50f5b5a6b45b292da6",
+      "source_question_text_sha256": "4dd04f11e61d12734c6a1a16229ee436ab1d1c40fdefbd50f5b5a6b45b292da6",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "4dd04f11e61d12734c6a1a16229ee436ab1d1c40fdefbd50f5b5a6b45b292da6",
+        "learner_question_text_sha256": "4dd04f11e61d12734c6a1a16229ee436ab1d1c40fdefbd50f5b5a6b45b292da6"
+      },
+      "question_signal_excerpt": "直线、距离、l_1、x、y、l_2",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:67fcb19994a05a56",
+      "item_id": "67fcb19994a05a56",
+      "ordinal": 6,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例6",
+      "group": null,
+      "cycle_id": "2.3-cycle-5",
+      "cycle_sequence": 5,
+      "cycle_title": "类型I 直线的交点问题、过两直线交点的直线系方程的应用",
+      "course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "course_titles": [
+        "直线间的位置关系：平行与垂直",
+        "点到直线以及平行直线距离公式"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 直线的交点问题、过两直线交点的直线系方程的应用"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "line",
+      "recognition_cues": [
+        "直线",
+        "范围",
+        "l_",
+        "x",
+        "y"
+      ],
+      "method_model": "直线解析模型",
+      "first_written_line_template": "先判断斜率是否存在，再选择点斜式、一般式、方向向量或距离关系。",
+      "continuation_actions": [
+        "写出直线或点的参数表示",
+        "代入平行、垂直、距离或对称条件",
+        "处理分母、绝对值和参数范围"
+      ],
+      "independent_self_check": "检查竖直线、重合、分母、同倍方程、绝对值与位置关系。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "1c16ca6dc7c06dd6f2f4d4c701cab046e687e98c67b73f2ec31c928f8e74c27b",
+      "source_question_text_sha256": "1c16ca6dc7c06dd6f2f4d4c701cab046e687e98c67b73f2ec31c928f8e74c27b",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "1c16ca6dc7c06dd6f2f4d4c701cab046e687e98c67b73f2ec31c928f8e74c27b",
+        "learner_question_text_sha256": "1c16ca6dc7c06dd6f2f4d4c701cab046e687e98c67b73f2ec31c928f8e74c27b"
+      },
+      "question_signal_excerpt": "直线、范围、l_、x、y",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:d060a2a4cf2640ec",
+      "item_id": "d060a2a4cf2640ec",
+      "ordinal": 7,
+      "ordinal_in_cycle": 2,
+      "kind": "worked_example",
+      "label": "例7",
+      "group": null,
+      "cycle_id": "2.3-cycle-5",
+      "cycle_sequence": 5,
+      "cycle_title": "类型I 直线的交点问题、过两直线交点的直线系方程的应用",
+      "course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "course_titles": [
+        "直线间的位置关系：平行与垂直",
+        "点到直线以及平行直线距离公式"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 直线的交点问题、过两直线交点的直线系方程的应用"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "line",
+      "recognition_cues": [
+        "直线",
+        "l_1",
+        "x",
+        "y",
+        "l_2"
+      ],
+      "method_model": "直线解析模型",
+      "first_written_line_template": "先判断斜率是否存在，再选择点斜式、一般式、方向向量或距离关系。",
+      "continuation_actions": [
+        "写出直线或点的参数表示",
+        "代入平行、垂直、距离或对称条件",
+        "处理分母、绝对值和参数范围"
+      ],
+      "independent_self_check": "检查竖直线、重合、分母、同倍方程、绝对值与位置关系。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "c483a70c0e5f50ba7bb6e00a0c873c84a986225058514a4d8d80546edd4c835d",
+      "source_question_text_sha256": "c483a70c0e5f50ba7bb6e00a0c873c84a986225058514a4d8d80546edd4c835d",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "c483a70c0e5f50ba7bb6e00a0c873c84a986225058514a4d8d80546edd4c835d",
+        "learner_question_text_sha256": "c483a70c0e5f50ba7bb6e00a0c873c84a986225058514a4d8d80546edd4c835d"
+      },
+      "question_signal_excerpt": "直线、l_1、x、y、l_2",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:f7396b4701aae7f7",
+      "item_id": "f7396b4701aae7f7",
+      "ordinal": 8,
+      "ordinal_in_cycle": 3,
+      "kind": "direct_variant",
+      "label": "例6 变式1",
+      "group": null,
+      "cycle_id": "2.3-cycle-5",
+      "cycle_sequence": 5,
+      "cycle_title": "类型I 直线的交点问题、过两直线交点的直线系方程的应用",
+      "course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "course_titles": [
+        "直线间的位置关系：平行与垂直",
+        "点到直线以及平行直线距离公式"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 直线的交点问题、过两直线交点的直线系方程的应用"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "line",
+      "recognition_cues": [
+        "直线",
+        "mx",
+        "y",
+        "x"
+      ],
+      "method_model": "直线解析模型",
+      "first_written_line_template": "先判断斜率是否存在，再选择点斜式、一般式、方向向量或距离关系。",
+      "continuation_actions": [
+        "写出直线或点的参数表示",
+        "代入平行、垂直、距离或对称条件",
+        "处理分母、绝对值和参数范围"
+      ],
+      "independent_self_check": "检查竖直线、重合、分母、同倍方程、绝对值与位置关系。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "e054e5cff388c0a3bde005cee2a4da35042ca817fbc25341cfe9699180906934",
+      "source_question_text_sha256": "e054e5cff388c0a3bde005cee2a4da35042ca817fbc25341cfe9699180906934",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "e054e5cff388c0a3bde005cee2a4da35042ca817fbc25341cfe9699180906934",
+        "learner_question_text_sha256": "e054e5cff388c0a3bde005cee2a4da35042ca817fbc25341cfe9699180906934"
+      },
+      "question_signal_excerpt": "直线、mx、y、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:dd95018d21ef8154",
+      "item_id": "dd95018d21ef8154",
+      "ordinal": 9,
+      "ordinal_in_cycle": 4,
+      "kind": "direct_variant",
+      "label": "例6 变式2",
+      "group": null,
+      "cycle_id": "2.3-cycle-5",
+      "cycle_sequence": 5,
+      "cycle_title": "类型I 直线的交点问题、过两直线交点的直线系方程的应用",
+      "course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "course_titles": [
+        "直线间的位置关系：平行与垂直",
+        "点到直线以及平行直线距离公式"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 直线的交点问题、过两直线交点的直线系方程的应用"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "line",
+      "recognition_cues": [
+        "直线",
+        "l_",
+        "ax",
+        "y"
+      ],
+      "method_model": "直线解析模型",
+      "first_written_line_template": "先判断斜率是否存在，再选择点斜式、一般式、方向向量或距离关系。",
+      "continuation_actions": [
+        "写出直线或点的参数表示",
+        "代入平行、垂直、距离或对称条件",
+        "处理分母、绝对值和参数范围"
+      ],
+      "independent_self_check": "检查竖直线、重合、分母、同倍方程、绝对值与位置关系。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "93f8d4a95925bb13f037a07a4490c0d61bd45e89ead58bc4aa83ed2258447acc",
+      "source_question_text_sha256": "93f8d4a95925bb13f037a07a4490c0d61bd45e89ead58bc4aa83ed2258447acc",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "93f8d4a95925bb13f037a07a4490c0d61bd45e89ead58bc4aa83ed2258447acc",
+        "learner_question_text_sha256": "93f8d4a95925bb13f037a07a4490c0d61bd45e89ead58bc4aa83ed2258447acc"
+      },
+      "question_signal_excerpt": "直线、l_、ax、y",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:c9adddd82bd45928",
+      "item_id": "c9adddd82bd45928",
+      "ordinal": 10,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例8",
+      "group": null,
+      "cycle_id": "2.3-cycle-6",
+      "cycle_sequence": 6,
+      "cycle_title": "类型Ⅱ 两点间距离公式的应用",
+      "course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "course_titles": [
+        "直线间的位置关系：平行与垂直",
+        "点到直线以及平行直线距离公式"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 两点间距离公式的应用"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "line",
+      "recognition_cues": [
+        "直线",
+        "l_1",
+        "x",
+        "y",
+        "l_2"
+      ],
+      "method_model": "直线解析模型",
+      "first_written_line_template": "先判断斜率是否存在，再选择点斜式、一般式、方向向量或距离关系。",
+      "continuation_actions": [
+        "写出直线或点的参数表示",
+        "代入平行、垂直、距离或对称条件",
+        "处理分母、绝对值和参数范围"
+      ],
+      "independent_self_check": "检查竖直线、重合、分母、同倍方程、绝对值与位置关系。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "1c7953b4447aa7d828330bae00fbb8057e70a7e6c536a73f7f36aa28a99bc517",
+      "source_question_text_sha256": "1c7953b4447aa7d828330bae00fbb8057e70a7e6c536a73f7f36aa28a99bc517",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "1c7953b4447aa7d828330bae00fbb8057e70a7e6c536a73f7f36aa28a99bc517",
+        "learner_question_text_sha256": "1c7953b4447aa7d828330bae00fbb8057e70a7e6c536a73f7f36aa28a99bc517"
+      },
+      "question_signal_excerpt": "直线、l_1、x、y、l_2",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:1125efb5cd397199",
+      "item_id": "1125efb5cd397199",
+      "ordinal": 11,
+      "ordinal_in_cycle": 2,
+      "kind": "worked_example",
+      "label": "例9",
+      "group": null,
+      "cycle_id": "2.3-cycle-6",
+      "cycle_sequence": 6,
+      "cycle_title": "类型Ⅱ 两点间距离公式的应用",
+      "course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "course_titles": [
+        "直线间的位置关系：平行与垂直",
+        "点到直线以及平行直线距离公式"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 两点间距离公式的应用"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "line",
+      "recognition_cues": [
+        "f",
+        "x",
+        "\\sqrt"
+      ],
+      "method_model": "直线解析模型",
+      "first_written_line_template": "先判断斜率是否存在，再选择点斜式、一般式、方向向量或距离关系。",
+      "continuation_actions": [
+        "写出直线或点的参数表示",
+        "代入平行、垂直、距离或对称条件",
+        "处理分母、绝对值和参数范围"
+      ],
+      "independent_self_check": "检查竖直线、重合、分母、同倍方程、绝对值与位置关系。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "ac5b6929398cd62fb677b71e25da18e706d8089c8e95462564e4d35b5ac6682b",
+      "source_question_text_sha256": "ac5b6929398cd62fb677b71e25da18e706d8089c8e95462564e4d35b5ac6682b",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "ac5b6929398cd62fb677b71e25da18e706d8089c8e95462564e4d35b5ac6682b",
+        "learner_question_text_sha256": "ac5b6929398cd62fb677b71e25da18e706d8089c8e95462564e4d35b5ac6682b"
+      },
+      "question_signal_excerpt": "f、x、\\sqrt",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:eed740e4254f85b3",
+      "item_id": "eed740e4254f85b3",
+      "ordinal": 12,
+      "ordinal_in_cycle": 3,
+      "kind": "direct_variant",
+      "label": "例8 变式",
+      "group": null,
+      "cycle_id": "2.3-cycle-6",
+      "cycle_sequence": 6,
+      "cycle_title": "类型Ⅱ 两点间距离公式的应用",
+      "course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "course_titles": [
+        "直线间的位置关系：平行与垂直",
+        "点到直线以及平行直线距离公式"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 两点间距离公式的应用"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "line",
+      "recognition_cues": [
+        "直线",
+        "tria",
+        "ngle",
+        "ABC",
+        "A"
+      ],
+      "method_model": "直线解析模型",
+      "first_written_line_template": "先判断斜率是否存在，再选择点斜式、一般式、方向向量或距离关系。",
+      "continuation_actions": [
+        "写出直线或点的参数表示",
+        "代入平行、垂直、距离或对称条件",
+        "处理分母、绝对值和参数范围"
+      ],
+      "independent_self_check": "检查竖直线、重合、分母、同倍方程、绝对值与位置关系。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "3ecc354264c8147f5ad7e87f5ca35b8e7292995f639e2ca608a4070a12de10a2",
+      "source_question_text_sha256": "3ecc354264c8147f5ad7e87f5ca35b8e7292995f639e2ca608a4070a12de10a2",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "3ecc354264c8147f5ad7e87f5ca35b8e7292995f639e2ca608a4070a12de10a2",
+        "learner_question_text_sha256": "3ecc354264c8147f5ad7e87f5ca35b8e7292995f639e2ca608a4070a12de10a2"
+      },
+      "question_signal_excerpt": "直线、tria、ngle、ABC、A",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:bd13e474dcd2d02b",
+      "item_id": "bd13e474dcd2d02b",
+      "ordinal": 13,
+      "ordinal_in_cycle": 4,
+      "kind": "direct_variant",
+      "label": "例9 变式",
+      "group": null,
+      "cycle_id": "2.3-cycle-6",
+      "cycle_sequence": 6,
+      "cycle_title": "类型Ⅱ 两点间距离公式的应用",
+      "course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "course_titles": [
+        "直线间的位置关系：平行与垂直",
+        "点到直线以及平行直线距离公式"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 两点间距离公式的应用"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "line",
+      "recognition_cues": [
+        "距离",
+        "xOy",
+        "A",
+        "a"
+      ],
+      "method_model": "直线解析模型",
+      "first_written_line_template": "先判断斜率是否存在，再选择点斜式、一般式、方向向量或距离关系。",
+      "continuation_actions": [
+        "写出直线或点的参数表示",
+        "代入平行、垂直、距离或对称条件",
+        "处理分母、绝对值和参数范围"
+      ],
+      "independent_self_check": "检查竖直线、重合、分母、同倍方程、绝对值与位置关系。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "591fcac31a4775f5bf847efdbd92d258dc26f66978e4fc36959f5b062e729a85",
+      "source_question_text_sha256": "591fcac31a4775f5bf847efdbd92d258dc26f66978e4fc36959f5b062e729a85",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "591fcac31a4775f5bf847efdbd92d258dc26f66978e4fc36959f5b062e729a85",
+        "learner_question_text_sha256": "591fcac31a4775f5bf847efdbd92d258dc26f66978e4fc36959f5b062e729a85"
+      },
+      "question_signal_excerpt": "距离、xOy、A、a",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:a5c4329eea07eff6",
+      "item_id": "a5c4329eea07eff6",
+      "ordinal": 14,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例10",
+      "group": null,
+      "cycle_id": "2.3-cycle-7",
+      "cycle_sequence": 7,
+      "cycle_title": "类型III 点到直线距离公式的应用",
+      "course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "course_titles": [
+        "直线间的位置关系：平行与垂直",
+        "点到直线以及平行直线距离公式"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型III 点到直线距离公式的应用"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "line",
+      "recognition_cues": [
+        "直线",
+        "距离",
+        "A",
+        "B",
+        "l",
+        "x"
+      ],
+      "method_model": "直线解析模型",
+      "first_written_line_template": "先判断斜率是否存在，再选择点斜式、一般式、方向向量或距离关系。",
+      "continuation_actions": [
+        "写出直线或点的参数表示",
+        "代入平行、垂直、距离或对称条件",
+        "处理分母、绝对值和参数范围"
+      ],
+      "independent_self_check": "检查竖直线、重合、分母、同倍方程、绝对值与位置关系。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "3b16227e2681fce5667ab9c6338a20b798ac3451b5f42578a615d22b9ad4f8f3",
+      "source_question_text_sha256": "3b16227e2681fce5667ab9c6338a20b798ac3451b5f42578a615d22b9ad4f8f3",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "3b16227e2681fce5667ab9c6338a20b798ac3451b5f42578a615d22b9ad4f8f3",
+        "learner_question_text_sha256": "3b16227e2681fce5667ab9c6338a20b798ac3451b5f42578a615d22b9ad4f8f3"
+      },
+      "question_signal_excerpt": "直线、距离、A、B、l、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:ceb2438651fc30e2",
+      "item_id": "ceb2438651fc30e2",
+      "ordinal": 15,
+      "ordinal_in_cycle": 2,
+      "kind": "worked_example",
+      "label": "例11",
+      "group": null,
+      "cycle_id": "2.3-cycle-7",
+      "cycle_sequence": 7,
+      "cycle_title": "类型III 点到直线距离公式的应用",
+      "course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "course_titles": [
+        "直线间的位置关系：平行与垂直",
+        "点到直线以及平行直线距离公式"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型III 点到直线距离公式的应用"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "line",
+      "recognition_cues": [
+        "面积",
+        "ABCD",
+        "A",
+        "B",
+        "C"
+      ],
+      "method_model": "直线解析模型",
+      "first_written_line_template": "先判断斜率是否存在，再选择点斜式、一般式、方向向量或距离关系。",
+      "continuation_actions": [
+        "写出直线或点的参数表示",
+        "代入平行、垂直、距离或对称条件",
+        "处理分母、绝对值和参数范围"
+      ],
+      "independent_self_check": "检查竖直线、重合、分母、同倍方程、绝对值与位置关系。",
+      "visual_dependency": {
+        "status": "VISION_VERIFIED",
+        "image_refs": [
+          {
+            "ref": "imgs/img_in_image_box_881_1016_1093_1231.jpg",
+            "path": "data/ocr_live_current/second_chapter_109/imgs/img_in_image_box_881_1016_1093_1231.jpg",
+            "exists": true
+          }
+        ]
+      },
+      "question_text_sha256": "340bbd3127e558402bca8f64b71c3debaf5227909c4edef01bac4430b5c42093",
+      "source_question_text_sha256": "340bbd3127e558402bca8f64b71c3debaf5227909c4edef01bac4430b5c42093",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "340bbd3127e558402bca8f64b71c3debaf5227909c4edef01bac4430b5c42093",
+        "learner_question_text_sha256": "340bbd3127e558402bca8f64b71c3debaf5227909c4edef01bac4430b5c42093"
+      },
+      "question_signal_excerpt": "面积、ABCD、A、B、C",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:7e576d462d7e0ac5",
+      "item_id": "7e576d462d7e0ac5",
+      "ordinal": 16,
+      "ordinal_in_cycle": 3,
+      "kind": "direct_variant",
+      "label": "例10 变式1",
+      "group": null,
+      "cycle_id": "2.3-cycle-7",
+      "cycle_sequence": 7,
+      "cycle_title": "类型III 点到直线距离公式的应用",
+      "course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "course_titles": [
+        "直线间的位置关系：平行与垂直",
+        "点到直线以及平行直线距离公式"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型III 点到直线距离公式的应用"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "line",
+      "recognition_cues": [
+        "直线",
+        "距离",
+        "P",
+        "l",
+        "lamb",
+        "da"
+      ],
+      "method_model": "直线解析模型",
+      "first_written_line_template": "先判断斜率是否存在，再选择点斜式、一般式、方向向量或距离关系。",
+      "continuation_actions": [
+        "写出直线或点的参数表示",
+        "代入平行、垂直、距离或对称条件",
+        "处理分母、绝对值和参数范围"
+      ],
+      "independent_self_check": "检查竖直线、重合、分母、同倍方程、绝对值与位置关系。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "5827d820ef0b9e45e40271b0404fbd5dd2cadf824698a1ae3cf883580ba5a232",
+      "source_question_text_sha256": "5827d820ef0b9e45e40271b0404fbd5dd2cadf824698a1ae3cf883580ba5a232",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "5827d820ef0b9e45e40271b0404fbd5dd2cadf824698a1ae3cf883580ba5a232",
+        "learner_question_text_sha256": "5827d820ef0b9e45e40271b0404fbd5dd2cadf824698a1ae3cf883580ba5a232"
+      },
+      "question_signal_excerpt": "直线、距离、P、l、lamb、da",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:e461fcae3871489e",
+      "item_id": "e461fcae3871489e",
+      "ordinal": 17,
+      "ordinal_in_cycle": 4,
+      "kind": "direct_variant",
+      "label": "例10 变式2",
+      "group": null,
+      "cycle_id": "2.3-cycle-7",
+      "cycle_sequence": 7,
+      "cycle_title": "类型III 点到直线距离公式的应用",
+      "course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "course_titles": [
+        "直线间的位置关系：平行与垂直",
+        "点到直线以及平行直线距离公式"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型III 点到直线距离公式的应用"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "line",
+      "recognition_cues": [
+        "直线",
+        "P",
+        "l",
+        "y",
+        "x"
+      ],
+      "method_model": "直线解析模型",
+      "first_written_line_template": "先判断斜率是否存在，再选择点斜式、一般式、方向向量或距离关系。",
+      "continuation_actions": [
+        "写出直线或点的参数表示",
+        "代入平行、垂直、距离或对称条件",
+        "处理分母、绝对值和参数范围"
+      ],
+      "independent_self_check": "检查竖直线、重合、分母、同倍方程、绝对值与位置关系。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "f99d63dbb2f56249290226fc163d671ce25c2b9c90549216ab0f8ea5d91a91be",
+      "source_question_text_sha256": "f99d63dbb2f56249290226fc163d671ce25c2b9c90549216ab0f8ea5d91a91be",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "f99d63dbb2f56249290226fc163d671ce25c2b9c90549216ab0f8ea5d91a91be",
+        "learner_question_text_sha256": "f99d63dbb2f56249290226fc163d671ce25c2b9c90549216ab0f8ea5d91a91be"
+      },
+      "question_signal_excerpt": "直线、P、l、y、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:41b359062ba93228",
+      "item_id": "41b359062ba93228",
+      "ordinal": 18,
+      "ordinal_in_cycle": 5,
+      "kind": "direct_variant",
+      "label": "例11 变式",
+      "group": null,
+      "cycle_id": "2.3-cycle-7",
+      "cycle_sequence": 7,
+      "cycle_title": "类型III 点到直线距离公式的应用",
+      "course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "course_titles": [
+        "直线间的位置关系：平行与垂直",
+        "点到直线以及平行直线距离公式"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型III 点到直线距离公式的应用"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "line",
+      "recognition_cues": [
+        "直线",
+        "面积",
+        "xOy",
+        "tria",
+        "ngle",
+        "ABC"
+      ],
+      "method_model": "直线解析模型",
+      "first_written_line_template": "先判断斜率是否存在，再选择点斜式、一般式、方向向量或距离关系。",
+      "continuation_actions": [
+        "写出直线或点的参数表示",
+        "代入平行、垂直、距离或对称条件",
+        "处理分母、绝对值和参数范围"
+      ],
+      "independent_self_check": "检查竖直线、重合、分母、同倍方程、绝对值与位置关系。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "1a0f12581b3f37cc46473dae021066d65ecc1b9c3c017a450161269114b584a9",
+      "source_question_text_sha256": "1a0f12581b3f37cc46473dae021066d65ecc1b9c3c017a450161269114b584a9",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "1a0f12581b3f37cc46473dae021066d65ecc1b9c3c017a450161269114b584a9",
+        "learner_question_text_sha256": "1a0f12581b3f37cc46473dae021066d65ecc1b9c3c017a450161269114b584a9"
+      },
+      "question_signal_excerpt": "直线、面积、xOy、tria、ngle、ABC",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:379f203fe07d5c42",
+      "item_id": "379f203fe07d5c42",
+      "ordinal": 19,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例12",
+      "group": null,
+      "cycle_id": "2.3-cycle-8",
+      "cycle_sequence": 8,
+      "cycle_title": "类型IV 两条平行线间距离公式的应用",
+      "course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "course_titles": [
+        "直线间的位置关系：平行与垂直",
+        "点到直线以及平行直线距离公式"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型IV 两条平行线间距离公式的应用"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "line",
+      "recognition_cues": [
+        "直线",
+        "距离",
+        "l_1",
+        "x",
+        "t",
+        "y"
+      ],
+      "method_model": "直线解析模型",
+      "first_written_line_template": "先判断斜率是否存在，再选择点斜式、一般式、方向向量或距离关系。",
+      "continuation_actions": [
+        "写出直线或点的参数表示",
+        "代入平行、垂直、距离或对称条件",
+        "处理分母、绝对值和参数范围"
+      ],
+      "independent_self_check": "检查竖直线、重合、分母、同倍方程、绝对值与位置关系。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "94ea04999341e300dddb5a3361bd6af3851439a332946ce2a7e57328f4354c08",
+      "source_question_text_sha256": "94ea04999341e300dddb5a3361bd6af3851439a332946ce2a7e57328f4354c08",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "94ea04999341e300dddb5a3361bd6af3851439a332946ce2a7e57328f4354c08",
+        "learner_question_text_sha256": "94ea04999341e300dddb5a3361bd6af3851439a332946ce2a7e57328f4354c08"
+      },
+      "question_signal_excerpt": "直线、距离、l_1、x、t、y",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:083a81a2f24c558f",
+      "item_id": "083a81a2f24c558f",
+      "ordinal": 20,
+      "ordinal_in_cycle": 2,
+      "kind": "direct_variant",
+      "label": "例12 变式1",
+      "group": null,
+      "cycle_id": "2.3-cycle-8",
+      "cycle_sequence": 8,
+      "cycle_title": "类型IV 两条平行线间距离公式的应用",
+      "course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "course_titles": [
+        "直线间的位置关系：平行与垂直",
+        "点到直线以及平行直线距离公式"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型IV 两条平行线间距离公式的应用"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "line",
+      "recognition_cues": [
+        "直线",
+        "P",
+        "Q",
+        "l_1",
+        "x"
+      ],
+      "method_model": "直线解析模型",
+      "first_written_line_template": "先判断斜率是否存在，再选择点斜式、一般式、方向向量或距离关系。",
+      "continuation_actions": [
+        "写出直线或点的参数表示",
+        "代入平行、垂直、距离或对称条件",
+        "处理分母、绝对值和参数范围"
+      ],
+      "independent_self_check": "检查竖直线、重合、分母、同倍方程、绝对值与位置关系。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "755a1c9b646a599aafca2c98409466b22e05db4ce779d55d6c2bd1a743c56274",
+      "source_question_text_sha256": "755a1c9b646a599aafca2c98409466b22e05db4ce779d55d6c2bd1a743c56274",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "755a1c9b646a599aafca2c98409466b22e05db4ce779d55d6c2bd1a743c56274",
+        "learner_question_text_sha256": "755a1c9b646a599aafca2c98409466b22e05db4ce779d55d6c2bd1a743c56274"
+      },
+      "question_signal_excerpt": "直线、P、Q、l_1、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:cd9051c8bc0206db",
+      "item_id": "cd9051c8bc0206db",
+      "ordinal": 21,
+      "ordinal_in_cycle": 3,
+      "kind": "direct_variant",
+      "label": "例12 变式2",
+      "group": null,
+      "cycle_id": "2.3-cycle-8",
+      "cycle_sequence": 8,
+      "cycle_title": "类型IV 两条平行线间距离公式的应用",
+      "course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "course_titles": [
+        "直线间的位置关系：平行与垂直",
+        "点到直线以及平行直线距离公式"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型IV 两条平行线间距离公式的应用"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "line",
+      "recognition_cues": [
+        "m",
+        "n",
+        "p",
+        "q"
+      ],
+      "method_model": "直线解析模型",
+      "first_written_line_template": "先判断斜率是否存在，再选择点斜式、一般式、方向向量或距离关系。",
+      "continuation_actions": [
+        "写出直线或点的参数表示",
+        "代入平行、垂直、距离或对称条件",
+        "处理分母、绝对值和参数范围"
+      ],
+      "independent_self_check": "检查竖直线、重合、分母、同倍方程、绝对值与位置关系。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "7b127e4179fb60d525ee884858559c83c543d3ed3ec86c342c163cfa4620a013",
+      "source_question_text_sha256": "7b127e4179fb60d525ee884858559c83c543d3ed3ec86c342c163cfa4620a013",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "7b127e4179fb60d525ee884858559c83c543d3ed3ec86c342c163cfa4620a013",
+        "learner_question_text_sha256": "7b127e4179fb60d525ee884858559c83c543d3ed3ec86c342c163cfa4620a013"
+      },
+      "question_signal_excerpt": "m、n、p、q",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:afc1fd60bfe397d5",
+      "item_id": "afc1fd60bfe397d5",
+      "ordinal": 22,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例13",
+      "group": null,
+      "cycle_id": "2.3-cycle-9",
+      "cycle_sequence": 9,
+      "cycle_title": "类型V 综合大题",
+      "course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "course_titles": [
+        "直线间的位置关系：平行与垂直",
+        "点到直线以及平行直线距离公式"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型V 综合大题"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "line",
+      "recognition_cues": [
+        "直线",
+        "tria",
+        "ngle",
+        "ABC",
+        "B"
+      ],
+      "method_model": "直线解析模型",
+      "first_written_line_template": "先判断斜率是否存在，再选择点斜式、一般式、方向向量或距离关系。",
+      "continuation_actions": [
+        "写出直线或点的参数表示",
+        "代入平行、垂直、距离或对称条件",
+        "处理分母、绝对值和参数范围"
+      ],
+      "independent_self_check": "检查竖直线、重合、分母、同倍方程、绝对值与位置关系。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "48dba2ee54d63ff59555ddcc9eccfbd1c55285ec55d5a668b1d0cb039ce9d157",
+      "source_question_text_sha256": "48dba2ee54d63ff59555ddcc9eccfbd1c55285ec55d5a668b1d0cb039ce9d157",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "48dba2ee54d63ff59555ddcc9eccfbd1c55285ec55d5a668b1d0cb039ce9d157",
+        "learner_question_text_sha256": "48dba2ee54d63ff59555ddcc9eccfbd1c55285ec55d5a668b1d0cb039ce9d157"
+      },
+      "question_signal_excerpt": "直线、tria、ngle、ABC、B",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:c2c2e437d09878dd",
+      "item_id": "c2c2e437d09878dd",
+      "ordinal": 23,
+      "ordinal_in_cycle": 2,
+      "kind": "worked_example",
+      "label": "例14",
+      "group": null,
+      "cycle_id": "2.3-cycle-9",
+      "cycle_sequence": 9,
+      "cycle_title": "类型V 综合大题",
+      "course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "course_titles": [
+        "直线间的位置关系：平行与垂直",
+        "点到直线以及平行直线距离公式"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型V 综合大题"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "line",
+      "recognition_cues": [
+        "直线",
+        "证明",
+        "面积",
+        "l_1",
+        "y",
+        "kx",
+        "b"
+      ],
+      "method_model": "直线解析模型",
+      "first_written_line_template": "先判断斜率是否存在，再选择点斜式、一般式、方向向量或距离关系。",
+      "continuation_actions": [
+        "写出直线或点的参数表示",
+        "代入平行、垂直、距离或对称条件",
+        "处理分母、绝对值和参数范围"
+      ],
+      "independent_self_check": "检查竖直线、重合、分母、同倍方程、绝对值与位置关系。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "8270f4394c078d8c303a440796221b0f307265c9a8612f3ff35b4d43c3dd5aab",
+      "source_question_text_sha256": "8270f4394c078d8c303a440796221b0f307265c9a8612f3ff35b4d43c3dd5aab",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "8270f4394c078d8c303a440796221b0f307265c9a8612f3ff35b4d43c3dd5aab",
+        "learner_question_text_sha256": "8270f4394c078d8c303a440796221b0f307265c9a8612f3ff35b4d43c3dd5aab"
+      },
+      "question_signal_excerpt": "直线、证明、面积、l_1、y、kx、b",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-ced557a824d3d557",
+      "item_id": "Q-ced557a824d3d557",
+      "ordinal": 24,
+      "ordinal_in_cycle": 1,
+      "kind": "abc_exercise",
+      "label": "A1",
+      "group": "A",
+      "cycle_id": "2.3-cycle-10",
+      "cycle_sequence": 10,
+      "cycle_title": "A组 夯实基础",
+      "course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "course_titles": [
+        "直线间的位置关系：平行与垂直",
+        "点到直线以及平行直线距离公式"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 直线的交点问题、过两直线交点的直线系方程的应用"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "line",
+      "recognition_cues": [
+        "直线",
+        "l_",
+        "x",
+        "y"
+      ],
+      "method_model": "直线解析模型",
+      "first_written_line_template": "先判断斜率是否存在，再选择点斜式、一般式、方向向量或距离关系。",
+      "continuation_actions": [
+        "写出直线或点的参数表示",
+        "代入平行、垂直、距离或对称条件",
+        "处理分母、绝对值和参数范围"
+      ],
+      "independent_self_check": "检查竖直线、重合、分母、同倍方程、绝对值与位置关系。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "a8c88a5285ab9d5c1143990654f5e3152defe8f1a14da07db6bd17a68295d0b2",
+      "source_question_text_sha256": "a8c88a5285ab9d5c1143990654f5e3152defe8f1a14da07db6bd17a68295d0b2",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "a8c88a5285ab9d5c1143990654f5e3152defe8f1a14da07db6bd17a68295d0b2",
+        "learner_question_text_sha256": "a8c88a5285ab9d5c1143990654f5e3152defe8f1a14da07db6bd17a68295d0b2"
+      },
+      "question_signal_excerpt": "直线、l_、x、y",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-29812ebaf23a2cb0",
+      "item_id": "Q-29812ebaf23a2cb0",
+      "ordinal": 25,
+      "ordinal_in_cycle": 2,
+      "kind": "abc_exercise",
+      "label": "A2",
+      "group": "A",
+      "cycle_id": "2.3-cycle-10",
+      "cycle_sequence": 10,
+      "cycle_title": "A组 夯实基础",
+      "course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "course_titles": [
+        "直线间的位置关系：平行与垂直",
+        "点到直线以及平行直线距离公式"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 直线的交点问题、过两直线交点的直线系方程的应用"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "line",
+      "recognition_cues": [
+        "向量",
+        "直线",
+        "x",
+        "y"
+      ],
+      "method_model": "直线解析模型",
+      "first_written_line_template": "先判断斜率是否存在，再选择点斜式、一般式、方向向量或距离关系。",
+      "continuation_actions": [
+        "写出直线或点的参数表示",
+        "代入平行、垂直、距离或对称条件",
+        "处理分母、绝对值和参数范围"
+      ],
+      "independent_self_check": "检查竖直线、重合、分母、同倍方程、绝对值与位置关系。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "a47e4246af30ca6481a6c1983cd9a25305c55602dacba471eaea09223434a21a",
+      "source_question_text_sha256": "a47e4246af30ca6481a6c1983cd9a25305c55602dacba471eaea09223434a21a",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "a47e4246af30ca6481a6c1983cd9a25305c55602dacba471eaea09223434a21a",
+        "learner_question_text_sha256": "a47e4246af30ca6481a6c1983cd9a25305c55602dacba471eaea09223434a21a"
+      },
+      "question_signal_excerpt": "向量、直线、x、y",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-8c7e3eeb0a906257",
+      "item_id": "Q-8c7e3eeb0a906257",
+      "ordinal": 26,
+      "ordinal_in_cycle": 3,
+      "kind": "abc_exercise",
+      "label": "A3",
+      "group": "A",
+      "cycle_id": "2.3-cycle-10",
+      "cycle_sequence": 10,
+      "cycle_title": "A组 夯实基础",
+      "course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "course_titles": [
+        "直线间的位置关系：平行与垂直",
+        "点到直线以及平行直线距离公式"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型III 点到直线距离公式的应用"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "line",
+      "recognition_cues": [
+        "倾斜角",
+        "直线",
+        "距离",
+        "l",
+        "P",
+        "circ",
+        "Q"
+      ],
+      "method_model": "直线解析模型",
+      "first_written_line_template": "先判断斜率是否存在，再选择点斜式、一般式、方向向量或距离关系。",
+      "continuation_actions": [
+        "写出直线或点的参数表示",
+        "代入平行、垂直、距离或对称条件",
+        "处理分母、绝对值和参数范围"
+      ],
+      "independent_self_check": "检查竖直线、重合、分母、同倍方程、绝对值与位置关系。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "59ddfa16f75b4d9e83463d227d24b6a73def165047e8cf955656574e9bfa6dd0",
+      "source_question_text_sha256": "59ddfa16f75b4d9e83463d227d24b6a73def165047e8cf955656574e9bfa6dd0",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "59ddfa16f75b4d9e83463d227d24b6a73def165047e8cf955656574e9bfa6dd0",
+        "learner_question_text_sha256": "59ddfa16f75b4d9e83463d227d24b6a73def165047e8cf955656574e9bfa6dd0"
+      },
+      "question_signal_excerpt": "倾斜角、直线、距离、l、P、circ、Q",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-e21be9d01e196fc0",
+      "item_id": "Q-e21be9d01e196fc0",
+      "ordinal": 27,
+      "ordinal_in_cycle": 4,
+      "kind": "abc_exercise",
+      "label": "A4",
+      "group": "A",
+      "cycle_id": "2.3-cycle-10",
+      "cycle_sequence": 10,
+      "cycle_title": "A组 夯实基础",
+      "course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "course_titles": [
+        "直线间的位置关系：平行与垂直",
+        "点到直线以及平行直线距离公式"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型IV 两条平行线间距离公式的应用"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "line",
+      "recognition_cues": [
+        "直线",
+        "距离",
+        "x",
+        "y"
+      ],
+      "method_model": "直线解析模型",
+      "first_written_line_template": "先判断斜率是否存在，再选择点斜式、一般式、方向向量或距离关系。",
+      "continuation_actions": [
+        "写出直线或点的参数表示",
+        "代入平行、垂直、距离或对称条件",
+        "处理分母、绝对值和参数范围"
+      ],
+      "independent_self_check": "检查竖直线、重合、分母、同倍方程、绝对值与位置关系。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "e57e58113bfb3a30fd2b33eab9a1a845d429a203ca7ef99b5167f5de3e1c55dd",
+      "source_question_text_sha256": "e57e58113bfb3a30fd2b33eab9a1a845d429a203ca7ef99b5167f5de3e1c55dd",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "e57e58113bfb3a30fd2b33eab9a1a845d429a203ca7ef99b5167f5de3e1c55dd",
+        "learner_question_text_sha256": "e57e58113bfb3a30fd2b33eab9a1a845d429a203ca7ef99b5167f5de3e1c55dd"
+      },
+      "question_signal_excerpt": "直线、距离、x、y",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-5e9eb78446721aee",
+      "item_id": "Q-5e9eb78446721aee",
+      "ordinal": 28,
+      "ordinal_in_cycle": 1,
+      "kind": "abc_exercise",
+      "label": "B5",
+      "group": "B",
+      "cycle_id": "2.3-cycle-11",
+      "cycle_sequence": 11,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "course_titles": [
+        "直线间的位置关系：平行与垂直",
+        "点到直线以及平行直线距离公式"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 直线的交点问题、过两直线交点的直线系方程的应用"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "line",
+      "recognition_cues": [
+        "直线",
+        "x",
+        "ay",
+        "l_"
+      ],
+      "method_model": "直线解析模型",
+      "first_written_line_template": "先判断斜率是否存在，再选择点斜式、一般式、方向向量或距离关系。",
+      "continuation_actions": [
+        "写出直线或点的参数表示",
+        "代入平行、垂直、距离或对称条件",
+        "处理分母、绝对值和参数范围"
+      ],
+      "independent_self_check": "检查竖直线、重合、分母、同倍方程、绝对值与位置关系。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "63606ef01c07182d9cad8ca732e1bad2fad440a4d08c2a8b767610012736c5b1",
+      "source_question_text_sha256": "63606ef01c07182d9cad8ca732e1bad2fad440a4d08c2a8b767610012736c5b1",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "63606ef01c07182d9cad8ca732e1bad2fad440a4d08c2a8b767610012736c5b1",
+        "learner_question_text_sha256": "63606ef01c07182d9cad8ca732e1bad2fad440a4d08c2a8b767610012736c5b1"
+      },
+      "question_signal_excerpt": "直线、x、ay、l_",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-a11526b932e77934",
+      "item_id": "Q-a11526b932e77934",
+      "ordinal": 29,
+      "ordinal_in_cycle": 2,
+      "kind": "abc_exercise",
+      "label": "B6",
+      "group": "B",
+      "cycle_id": "2.3-cycle-11",
+      "cycle_sequence": 11,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "course_titles": [
+        "直线间的位置关系：平行与垂直",
+        "点到直线以及平行直线距离公式"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型IV 两条平行线间距离公式的应用"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "line",
+      "recognition_cues": [
+        "直线",
+        "距离",
+        "x",
+        "y",
+        "m"
+      ],
+      "method_model": "直线解析模型",
+      "first_written_line_template": "先判断斜率是否存在，再选择点斜式、一般式、方向向量或距离关系。",
+      "continuation_actions": [
+        "写出直线或点的参数表示",
+        "代入平行、垂直、距离或对称条件",
+        "处理分母、绝对值和参数范围"
+      ],
+      "independent_self_check": "检查竖直线、重合、分母、同倍方程、绝对值与位置关系。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "c3502a811ec2225b87532bcaec000d29ad48c7c2eb6b6bac5a8898f4992c5349",
+      "source_question_text_sha256": "c3502a811ec2225b87532bcaec000d29ad48c7c2eb6b6bac5a8898f4992c5349",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "c3502a811ec2225b87532bcaec000d29ad48c7c2eb6b6bac5a8898f4992c5349",
+        "learner_question_text_sha256": "c3502a811ec2225b87532bcaec000d29ad48c7c2eb6b6bac5a8898f4992c5349"
+      },
+      "question_signal_excerpt": "直线、距离、x、y、m",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-8e5e2a4bf9efa56a",
+      "item_id": "Q-8e5e2a4bf9efa56a",
+      "ordinal": 30,
+      "ordinal_in_cycle": 3,
+      "kind": "abc_exercise",
+      "label": "B7",
+      "group": "B",
+      "cycle_id": "2.3-cycle-11",
+      "cycle_sequence": 11,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "course_titles": [
+        "直线间的位置关系：平行与垂直",
+        "点到直线以及平行直线距离公式"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 直线的交点问题、过两直线交点的直线系方程的应用"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "line",
+      "recognition_cues": [
+        "直线",
+        "范围",
+        "x",
+        "y"
+      ],
+      "method_model": "直线解析模型",
+      "first_written_line_template": "先判断斜率是否存在，再选择点斜式、一般式、方向向量或距离关系。",
+      "continuation_actions": [
+        "写出直线或点的参数表示",
+        "代入平行、垂直、距离或对称条件",
+        "处理分母、绝对值和参数范围"
+      ],
+      "independent_self_check": "检查竖直线、重合、分母、同倍方程、绝对值与位置关系。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "0be82e921e6474e670581cebc676f8583f50a7336a1f7a3c667aeabe20f90112",
+      "source_question_text_sha256": "0be82e921e6474e670581cebc676f8583f50a7336a1f7a3c667aeabe20f90112",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "0be82e921e6474e670581cebc676f8583f50a7336a1f7a3c667aeabe20f90112",
+        "learner_question_text_sha256": "0be82e921e6474e670581cebc676f8583f50a7336a1f7a3c667aeabe20f90112"
+      },
+      "question_signal_excerpt": "直线、范围、x、y",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-df9a8fb3ee6eef2c",
+      "item_id": "Q-df9a8fb3ee6eef2c",
+      "ordinal": 31,
+      "ordinal_in_cycle": 4,
+      "kind": "abc_exercise",
+      "label": "B8",
+      "group": "B",
+      "cycle_id": "2.3-cycle-11",
+      "cycle_sequence": 11,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "course_titles": [
+        "直线间的位置关系：平行与垂直",
+        "点到直线以及平行直线距离公式"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 直线的交点问题、过两直线交点的直线系方程的应用"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "line",
+      "recognition_cues": [
+        "直线",
+        "xOy",
+        "l_",
+        "x",
+        "y"
+      ],
+      "method_model": "直线解析模型",
+      "first_written_line_template": "先判断斜率是否存在，再选择点斜式、一般式、方向向量或距离关系。",
+      "continuation_actions": [
+        "写出直线或点的参数表示",
+        "代入平行、垂直、距离或对称条件",
+        "处理分母、绝对值和参数范围"
+      ],
+      "independent_self_check": "检查竖直线、重合、分母、同倍方程、绝对值与位置关系。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "952f9ff51d8374cf668568fe128b3c3ad242fc914152f7b37936487ec399d9a6",
+      "source_question_text_sha256": "952f9ff51d8374cf668568fe128b3c3ad242fc914152f7b37936487ec399d9a6",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "952f9ff51d8374cf668568fe128b3c3ad242fc914152f7b37936487ec399d9a6",
+        "learner_question_text_sha256": "952f9ff51d8374cf668568fe128b3c3ad242fc914152f7b37936487ec399d9a6"
+      },
+      "question_signal_excerpt": "直线、xOy、l_、x、y",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-055c9f3bacafd137",
+      "item_id": "Q-055c9f3bacafd137",
+      "ordinal": 32,
+      "ordinal_in_cycle": 5,
+      "kind": "abc_exercise",
+      "label": "B9",
+      "group": "B",
+      "cycle_id": "2.3-cycle-11",
+      "cycle_sequence": 11,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "course_titles": [
+        "直线间的位置关系：平行与垂直",
+        "点到直线以及平行直线距离公式"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型IV 两条平行线间距离公式的应用"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "line",
+      "recognition_cues": [
+        "直线",
+        "对称",
+        "l_",
+        "x",
+        "y"
+      ],
+      "method_model": "直线解析模型",
+      "first_written_line_template": "先判断斜率是否存在，再选择点斜式、一般式、方向向量或距离关系。",
+      "continuation_actions": [
+        "写出直线或点的参数表示",
+        "代入平行、垂直、距离或对称条件",
+        "处理分母、绝对值和参数范围"
+      ],
+      "independent_self_check": "检查竖直线、重合、分母、同倍方程、绝对值与位置关系。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "9bfc5da0c2159b1423634fc5d6ad99d9f34fb066a3a3b3830437c445d3504c80",
+      "source_question_text_sha256": "9bfc5da0c2159b1423634fc5d6ad99d9f34fb066a3a3b3830437c445d3504c80",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "9bfc5da0c2159b1423634fc5d6ad99d9f34fb066a3a3b3830437c445d3504c80",
+        "learner_question_text_sha256": "9bfc5da0c2159b1423634fc5d6ad99d9f34fb066a3a3b3830437c445d3504c80"
+      },
+      "question_signal_excerpt": "直线、对称、l_、x、y",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-86ff78f9b3dc3390",
+      "item_id": "Q-86ff78f9b3dc3390",
+      "ordinal": 33,
+      "ordinal_in_cycle": 6,
+      "kind": "abc_exercise",
+      "label": "B10",
+      "group": "B",
+      "cycle_id": "2.3-cycle-11",
+      "cycle_sequence": 11,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "course_titles": [
+        "直线间的位置关系：平行与垂直",
+        "点到直线以及平行直线距离公式"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型IV 两条平行线间距离公式的应用",
+        "类型Ⅱ 两点间距离公式的应用"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "line",
+      "recognition_cues": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "method_model": "直线解析模型",
+      "first_written_line_template": "先判断斜率是否存在，再选择点斜式、一般式、方向向量或距离关系。",
+      "continuation_actions": [
+        "写出直线或点的参数表示",
+        "代入平行、垂直、距离或对称条件",
+        "处理分母、绝对值和参数范围"
+      ],
+      "independent_self_check": "检查竖直线、重合、分母、同倍方程、绝对值与位置关系。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "351146042b728837d1a10a572b2a6d8aba6e0872130dd930fe00edfe170aaaa8",
+      "source_question_text_sha256": "351146042b728837d1a10a572b2a6d8aba6e0872130dd930fe00edfe170aaaa8",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "351146042b728837d1a10a572b2a6d8aba6e0872130dd930fe00edfe170aaaa8",
+        "learner_question_text_sha256": "351146042b728837d1a10a572b2a6d8aba6e0872130dd930fe00edfe170aaaa8"
+      },
+      "question_signal_excerpt": "a、b、c、d",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-a1bca3bac3dc0534",
+      "item_id": "Q-a1bca3bac3dc0534",
+      "ordinal": 34,
+      "ordinal_in_cycle": 7,
+      "kind": "abc_exercise",
+      "label": "B11",
+      "group": "B",
+      "cycle_id": "2.3-cycle-11",
+      "cycle_sequence": 11,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "course_titles": [
+        "直线间的位置关系：平行与垂直",
+        "点到直线以及平行直线距离公式"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 直线的交点问题、过两直线交点的直线系方程的应用"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "line",
+      "recognition_cues": [
+        "直线",
+        "x",
+        "y"
+      ],
+      "method_model": "直线解析模型",
+      "first_written_line_template": "先判断斜率是否存在，再选择点斜式、一般式、方向向量或距离关系。",
+      "continuation_actions": [
+        "写出直线或点的参数表示",
+        "代入平行、垂直、距离或对称条件",
+        "处理分母、绝对值和参数范围"
+      ],
+      "independent_self_check": "检查竖直线、重合、分母、同倍方程、绝对值与位置关系。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "57251be9e6011388d3f6ded86427012d9b3c7f1dcfa89585b3c0df3f09899b7f",
+      "source_question_text_sha256": "57251be9e6011388d3f6ded86427012d9b3c7f1dcfa89585b3c0df3f09899b7f",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "57251be9e6011388d3f6ded86427012d9b3c7f1dcfa89585b3c0df3f09899b7f",
+        "learner_question_text_sha256": "57251be9e6011388d3f6ded86427012d9b3c7f1dcfa89585b3c0df3f09899b7f"
+      },
+      "question_signal_excerpt": "直线、x、y",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-64c8837896b1c374",
+      "item_id": "Q-64c8837896b1c374",
+      "ordinal": 35,
+      "ordinal_in_cycle": 8,
+      "kind": "abc_exercise",
+      "label": "B12",
+      "group": "B",
+      "cycle_id": "2.3-cycle-11",
+      "cycle_sequence": 11,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "course_titles": [
+        "直线间的位置关系：平行与垂直",
+        "点到直线以及平行直线距离公式"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型III 点到直线距离公式的应用"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "line",
+      "recognition_cues": [
+        "直线",
+        "距离",
+        "A",
+        "l",
+        "x",
+        "y"
+      ],
+      "method_model": "直线解析模型",
+      "first_written_line_template": "先判断斜率是否存在，再选择点斜式、一般式、方向向量或距离关系。",
+      "continuation_actions": [
+        "写出直线或点的参数表示",
+        "代入平行、垂直、距离或对称条件",
+        "处理分母、绝对值和参数范围"
+      ],
+      "independent_self_check": "检查竖直线、重合、分母、同倍方程、绝对值与位置关系。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "1040601576fbc9e71c099bc9c656f182a13d3820bcec39f7c97bac659534e453",
+      "source_question_text_sha256": "1040601576fbc9e71c099bc9c656f182a13d3820bcec39f7c97bac659534e453",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "1040601576fbc9e71c099bc9c656f182a13d3820bcec39f7c97bac659534e453",
+        "learner_question_text_sha256": "1040601576fbc9e71c099bc9c656f182a13d3820bcec39f7c97bac659534e453"
+      },
+      "question_signal_excerpt": "直线、距离、A、l、x、y",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-90360edf0941d5d3",
+      "item_id": "Q-90360edf0941d5d3",
+      "ordinal": 36,
+      "ordinal_in_cycle": 9,
+      "kind": "abc_exercise",
+      "label": "B13",
+      "group": "B",
+      "cycle_id": "2.3-cycle-11",
+      "cycle_sequence": 11,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "course_titles": [
+        "直线间的位置关系：平行与垂直",
+        "点到直线以及平行直线距离公式"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型III 点到直线距离公式的应用",
+        "类型I 直线的交点问题、过两直线交点的直线系方程的应用"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "line",
+      "recognition_cues": [
+        "直线",
+        "距离",
+        "l",
+        "P",
+        "A",
+        "B"
+      ],
+      "method_model": "直线解析模型",
+      "first_written_line_template": "先判断斜率是否存在，再选择点斜式、一般式、方向向量或距离关系。",
+      "continuation_actions": [
+        "写出直线或点的参数表示",
+        "代入平行、垂直、距离或对称条件",
+        "处理分母、绝对值和参数范围"
+      ],
+      "independent_self_check": "检查竖直线、重合、分母、同倍方程、绝对值与位置关系。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "fe46847da514f2edf34e97957553666981e61adcb6ca42636aaef1571c5bc3f1",
+      "source_question_text_sha256": "fe46847da514f2edf34e97957553666981e61adcb6ca42636aaef1571c5bc3f1",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "fe46847da514f2edf34e97957553666981e61adcb6ca42636aaef1571c5bc3f1",
+        "learner_question_text_sha256": "fe46847da514f2edf34e97957553666981e61adcb6ca42636aaef1571c5bc3f1"
+      },
+      "question_signal_excerpt": "直线、距离、l、P、A、B",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-1f21c01d24034f22",
+      "item_id": "Q-1f21c01d24034f22",
+      "ordinal": 37,
+      "ordinal_in_cycle": 10,
+      "kind": "abc_exercise",
+      "label": "B14",
+      "group": "B",
+      "cycle_id": "2.3-cycle-11",
+      "cycle_sequence": 11,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "course_titles": [
+        "直线间的位置关系：平行与垂直",
+        "点到直线以及平行直线距离公式"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型III 点到直线距离公式的应用",
+        "类型I 直线的交点问题、过两直线交点的直线系方程的应用"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "line",
+      "recognition_cues": [
+        "直线",
+        "距离",
+        "P",
+        "l",
+        "lamb",
+        "da"
+      ],
+      "method_model": "直线解析模型",
+      "first_written_line_template": "先判断斜率是否存在，再选择点斜式、一般式、方向向量或距离关系。",
+      "continuation_actions": [
+        "写出直线或点的参数表示",
+        "代入平行、垂直、距离或对称条件",
+        "处理分母、绝对值和参数范围"
+      ],
+      "independent_self_check": "检查竖直线、重合、分母、同倍方程、绝对值与位置关系。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "84c0e3e2395f072458ee63ad2d59b53becd79e2f3e8d6a528f6dcf9e4e89fb6c",
+      "source_question_text_sha256": "84c0e3e2395f072458ee63ad2d59b53becd79e2f3e8d6a528f6dcf9e4e89fb6c",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "84c0e3e2395f072458ee63ad2d59b53becd79e2f3e8d6a528f6dcf9e4e89fb6c",
+        "learner_question_text_sha256": "84c0e3e2395f072458ee63ad2d59b53becd79e2f3e8d6a528f6dcf9e4e89fb6c"
+      },
+      "question_signal_excerpt": "直线、距离、P、l、lamb、da",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-c22af89ebe5ec08e",
+      "item_id": "Q-c22af89ebe5ec08e",
+      "ordinal": 38,
+      "ordinal_in_cycle": 11,
+      "kind": "abc_exercise",
+      "label": "B15",
+      "group": "B",
+      "cycle_id": "2.3-cycle-11",
+      "cycle_sequence": 11,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "course_titles": [
+        "直线间的位置关系：平行与垂直",
+        "点到直线以及平行直线距离公式"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 两点间距离公式的应用"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "line",
+      "recognition_cues": [
+        "f",
+        "x",
+        "\\sqrt"
+      ],
+      "method_model": "直线解析模型",
+      "first_written_line_template": "先判断斜率是否存在，再选择点斜式、一般式、方向向量或距离关系。",
+      "continuation_actions": [
+        "写出直线或点的参数表示",
+        "代入平行、垂直、距离或对称条件",
+        "处理分母、绝对值和参数范围"
+      ],
+      "independent_self_check": "检查竖直线、重合、分母、同倍方程、绝对值与位置关系。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "5092308d165f901566a4cc1f1aba15193fef24eb95a3d018f92a9368d6d90ae7",
+      "source_question_text_sha256": "5092308d165f901566a4cc1f1aba15193fef24eb95a3d018f92a9368d6d90ae7",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "5092308d165f901566a4cc1f1aba15193fef24eb95a3d018f92a9368d6d90ae7",
+        "learner_question_text_sha256": "5092308d165f901566a4cc1f1aba15193fef24eb95a3d018f92a9368d6d90ae7"
+      },
+      "question_signal_excerpt": "f、x、\\sqrt",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-c23c8d0a70cbf347",
+      "item_id": "Q-c23c8d0a70cbf347",
+      "ordinal": 39,
+      "ordinal_in_cycle": 12,
+      "kind": "abc_exercise",
+      "label": "B16",
+      "group": "B",
+      "cycle_id": "2.3-cycle-11",
+      "cycle_sequence": 11,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "course_titles": [
+        "直线间的位置关系：平行与垂直",
+        "点到直线以及平行直线距离公式"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型V 综合大题"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "circle",
+      "recognition_cues": [
+        "直线",
+        "圆",
+        "tria",
+        "ngle",
+        "ABC",
+        "A"
+      ],
+      "method_model": "圆与距离模型",
+      "first_written_line_template": "先把圆整理为可读出圆心和半径的形式，并标出待研究的点或直线。",
+      "continuation_actions": [
+        "判断点、线、圆的位置关系",
+        "使用圆心距、垂径或根与系数关系",
+        "回到切点、弦长或两圆条件"
+      ],
+      "independent_self_check": "检查半径为正、相切等号、弦长范围和交点数量。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "a1b91388301dc0b3f6a13b41cbf765c89f47ce47209a53a5e11d3b58e2a66055",
+      "source_question_text_sha256": "a1b91388301dc0b3f6a13b41cbf765c89f47ce47209a53a5e11d3b58e2a66055",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "a1b91388301dc0b3f6a13b41cbf765c89f47ce47209a53a5e11d3b58e2a66055",
+        "learner_question_text_sha256": "a1b91388301dc0b3f6a13b41cbf765c89f47ce47209a53a5e11d3b58e2a66055"
+      },
+      "question_signal_excerpt": "直线、圆、tria、ngle、ABC、A",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-421aed873c295d39",
+      "item_id": "Q-421aed873c295d39",
+      "ordinal": 40,
+      "ordinal_in_cycle": 13,
+      "kind": "abc_exercise",
+      "label": "B17",
+      "group": "B",
+      "cycle_id": "2.3-cycle-11",
+      "cycle_sequence": 11,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "course_titles": [
+        "直线间的位置关系：平行与垂直",
+        "点到直线以及平行直线距离公式"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型V 综合大题",
+        "类型III 点到直线距离公式的应用",
+        "类型I 直线的交点问题、过两直线交点的直线系方程的应用"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "line",
+      "recognition_cues": [
+        "向量",
+        "tria",
+        "ngle",
+        "ABC",
+        "A"
+      ],
+      "method_model": "直线解析模型",
+      "first_written_line_template": "先判断斜率是否存在，再选择点斜式、一般式、方向向量或距离关系。",
+      "continuation_actions": [
+        "写出直线或点的参数表示",
+        "代入平行、垂直、距离或对称条件",
+        "处理分母、绝对值和参数范围"
+      ],
+      "independent_self_check": "检查竖直线、重合、分母、同倍方程、绝对值与位置关系。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "3d82960728ead2af1c478068dbb380cd447f3b77470aadca49eb5908e07057e5",
+      "source_question_text_sha256": "3d82960728ead2af1c478068dbb380cd447f3b77470aadca49eb5908e07057e5",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "3d82960728ead2af1c478068dbb380cd447f3b77470aadca49eb5908e07057e5",
+        "learner_question_text_sha256": "3d82960728ead2af1c478068dbb380cd447f3b77470aadca49eb5908e07057e5"
+      },
+      "question_signal_excerpt": "向量、tria、ngle、ABC、A",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-37dcb04b91f64b9f",
+      "item_id": "Q-37dcb04b91f64b9f",
+      "ordinal": 41,
+      "ordinal_in_cycle": 14,
+      "kind": "abc_exercise",
+      "label": "B18",
+      "group": "B",
+      "cycle_id": "2.3-cycle-11",
+      "cycle_sequence": 11,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "course_titles": [
+        "直线间的位置关系：平行与垂直",
+        "点到直线以及平行直线距离公式"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型V 综合大题",
+        "类型I 直线的交点问题、过两直线交点的直线系方程的应用"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "line",
+      "recognition_cues": [
+        "直线",
+        "l_",
+        "x",
+        "y"
+      ],
+      "method_model": "直线解析模型",
+      "first_written_line_template": "先判断斜率是否存在，再选择点斜式、一般式、方向向量或距离关系。",
+      "continuation_actions": [
+        "写出直线或点的参数表示",
+        "代入平行、垂直、距离或对称条件",
+        "处理分母、绝对值和参数范围"
+      ],
+      "independent_self_check": "检查竖直线、重合、分母、同倍方程、绝对值与位置关系。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "f176cf1295a1e192cbd6b0ea04ef63d866f0e915632294200ec4dc9bfc56ac63",
+      "source_question_text_sha256": "f176cf1295a1e192cbd6b0ea04ef63d866f0e915632294200ec4dc9bfc56ac63",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "f176cf1295a1e192cbd6b0ea04ef63d866f0e915632294200ec4dc9bfc56ac63",
+        "learner_question_text_sha256": "f176cf1295a1e192cbd6b0ea04ef63d866f0e915632294200ec4dc9bfc56ac63"
+      },
+      "question_signal_excerpt": "直线、l_、x、y",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-854394d4abc08b04",
+      "item_id": "Q-854394d4abc08b04",
+      "ordinal": 42,
+      "ordinal_in_cycle": 15,
+      "kind": "abc_exercise",
+      "label": "B19",
+      "group": "B",
+      "cycle_id": "2.3-cycle-11",
+      "cycle_sequence": 11,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "course_titles": [
+        "直线间的位置关系：平行与垂直",
+        "点到直线以及平行直线距离公式"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型V 综合大题",
+        "类型I 直线的交点问题、过两直线交点的直线系方程的应用"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "line",
+      "recognition_cues": [
+        "斜率",
+        "直线",
+        "tria",
+        "ngle",
+        "ABC",
+        "AB"
+      ],
+      "method_model": "直线解析模型",
+      "first_written_line_template": "先判断斜率是否存在，再选择点斜式、一般式、方向向量或距离关系。",
+      "continuation_actions": [
+        "写出直线或点的参数表示",
+        "代入平行、垂直、距离或对称条件",
+        "处理分母、绝对值和参数范围"
+      ],
+      "independent_self_check": "检查竖直线、重合、分母、同倍方程、绝对值与位置关系。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "f48423bc40948003a3650bb1c985aeb0737b47010c4b14efde465b0de215e898",
+      "source_question_text_sha256": "f48423bc40948003a3650bb1c985aeb0737b47010c4b14efde465b0de215e898",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "f48423bc40948003a3650bb1c985aeb0737b47010c4b14efde465b0de215e898",
+        "learner_question_text_sha256": "f48423bc40948003a3650bb1c985aeb0737b47010c4b14efde465b0de215e898"
+      },
+      "question_signal_excerpt": "斜率、直线、tria、ngle、ABC、AB",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-a72f2821fd83ff5c",
+      "item_id": "Q-a72f2821fd83ff5c",
+      "ordinal": 43,
+      "ordinal_in_cycle": 16,
+      "kind": "abc_exercise",
+      "label": "B20",
+      "group": "B",
+      "cycle_id": "2.3-cycle-11",
+      "cycle_sequence": 11,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "course_titles": [
+        "直线间的位置关系：平行与垂直",
+        "点到直线以及平行直线距离公式"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型V 综合大题",
+        "类型I 直线的交点问题、过两直线交点的直线系方程的应用"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "line",
+      "recognition_cues": [
+        "直线",
+        "ABCD",
+        "A",
+        "C",
+        "BC"
+      ],
+      "method_model": "直线解析模型",
+      "first_written_line_template": "先判断斜率是否存在，再选择点斜式、一般式、方向向量或距离关系。",
+      "continuation_actions": [
+        "写出直线或点的参数表示",
+        "代入平行、垂直、距离或对称条件",
+        "处理分母、绝对值和参数范围"
+      ],
+      "independent_self_check": "检查竖直线、重合、分母、同倍方程、绝对值与位置关系。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "078105fb82281a9daed760f944a72112ae21050b7e4eb2564101deb432fe9faf",
+      "source_question_text_sha256": "078105fb82281a9daed760f944a72112ae21050b7e4eb2564101deb432fe9faf",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "078105fb82281a9daed760f944a72112ae21050b7e4eb2564101deb432fe9faf",
+        "learner_question_text_sha256": "078105fb82281a9daed760f944a72112ae21050b7e4eb2564101deb432fe9faf"
+      },
+      "question_signal_excerpt": "直线、ABCD、A、C、BC",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-664a0619efb7b133",
+      "item_id": "Q-664a0619efb7b133",
+      "ordinal": 44,
+      "ordinal_in_cycle": 1,
+      "kind": "abc_exercise",
+      "label": "C21",
+      "group": "C",
+      "cycle_id": "2.3-cycle-12",
+      "cycle_sequence": 12,
+      "cycle_title": "C组 拓展提升",
+      "course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "course_titles": [
+        "直线间的位置关系：平行与垂直",
+        "点到直线以及平行直线距离公式"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型V 综合大题",
+        "类型I 直线的交点问题、过两直线交点的直线系方程的应用"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "line",
+      "recognition_cues": [
+        "直线",
+        "A",
+        "a_",
+        "b_",
+        "B"
+      ],
+      "method_model": "直线解析模型",
+      "first_written_line_template": "先判断斜率是否存在，再选择点斜式、一般式、方向向量或距离关系。",
+      "continuation_actions": [
+        "写出直线或点的参数表示",
+        "代入平行、垂直、距离或对称条件",
+        "处理分母、绝对值和参数范围"
+      ],
+      "independent_self_check": "检查竖直线、重合、分母、同倍方程、绝对值与位置关系。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "9de86ac1c35decc55697e8f97e5c53f3dff9484768633afa994e17b09770fc82",
+      "source_question_text_sha256": "9de86ac1c35decc55697e8f97e5c53f3dff9484768633afa994e17b09770fc82",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "9de86ac1c35decc55697e8f97e5c53f3dff9484768633afa994e17b09770fc82",
+        "learner_question_text_sha256": "9de86ac1c35decc55697e8f97e5c53f3dff9484768633afa994e17b09770fc82"
+      },
+      "question_signal_excerpt": "直线、A、a_、b_、B",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-9feb8feb1adaaaee",
+      "item_id": "Q-9feb8feb1adaaaee",
+      "ordinal": 45,
+      "ordinal_in_cycle": 2,
+      "kind": "abc_exercise",
+      "label": "C22",
+      "group": "C",
+      "cycle_id": "2.3-cycle-12",
+      "cycle_sequence": 12,
+      "cycle_title": "C组 拓展提升",
+      "course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "course_titles": [
+        "直线间的位置关系：平行与垂直",
+        "点到直线以及平行直线距离公式"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "line_parallel_perpendicular",
+        "point_line_distance"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型V 综合大题",
+        "类型I 直线的交点问题、过两直线交点的直线系方程的应用"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "line",
+      "recognition_cues": [
+        "直线",
+        "范围",
+        "面积",
+        "A",
+        "B",
+        "l",
+        "mx"
+      ],
+      "method_model": "直线解析模型",
+      "first_written_line_template": "先判断斜率是否存在，再选择点斜式、一般式、方向向量或距离关系。",
+      "continuation_actions": [
+        "写出直线或点的参数表示",
+        "代入平行、垂直、距离或对称条件",
+        "处理分母、绝对值和参数范围"
+      ],
+      "independent_self_check": "检查竖直线、重合、分母、同倍方程、绝对值与位置关系。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "486fcbb5ef262be8b460b085243f49a0d9dcf62375d34be10e8e3fd10547e87f",
+      "source_question_text_sha256": "486fcbb5ef262be8b460b085243f49a0d9dcf62375d34be10e8e3fd10547e87f",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "486fcbb5ef262be8b460b085243f49a0d9dcf62375d34be10e8e3fd10547e87f",
+        "learner_question_text_sha256": "486fcbb5ef262be8b460b085243f49a0d9dcf62375d34be10e8e3fd10547e87f"
+      },
+      "question_signal_excerpt": "直线、范围、面积、A、B、l、mx",
+      "source_blocked": false
+    }
+  ],
+  "route_versions": [
+    {
+      "version": 1,
+      "route_hash": "42a691d721f5a3874ea573fecd5988fc435abce4fa36dfb1298e11ae07601ffb"
+    },
+    {
+      "version": 2,
+      "route_hash": "80808655f5e15b599c05dc3fcdccaac8ca039615e0c61b841349625b01f04e28"
+    },
+    {
+      "version": 3,
+      "route_hash": "8ab9de49a86f92e517aa42fe4ca0fe9dc1ab5a264348a8ca6b8e0a9eef81313b"
+    }
+  ],
+  "final_route_hash": "8ab9de49a86f92e517aa42fe4ca0fe9dc1ab5a264348a8ca6b8e0a9eef81313b",
+  "simulation": {
+    "protocol": "five-round-five-persona-v3-answer-isolated",
+    "generation_mode": "synthetic_route_stress_from_actual_item_features",
+    "rounds": [
+      {
+        "round": 1,
+        "purpose": "baseline_entry",
+        "route_version": 1,
+        "route_hash": "42a691d721f5a3874ea573fecd5988fc435abce4fa36dfb1298e11ae07601ffb",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 45,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 45,
+            "blocked": 14
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 45,
+            "blocked": 15
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 45,
+            "blocked": 1
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 45,
+            "blocked": 22
+          }
+        ],
+        "failed_item_keys": [
+          "LI:379f203fe07d5c42",
+          "LI:3a58ae8e02fd193f",
+          "LI:67fcb19994a05a56",
+          "LI:7e576d462d7e0ac5",
+          "LI:a5c4329eea07eff6",
+          "LI:b30fa88033796072",
+          "LI:b416e972fff8861f",
+          "LI:bd13e474dcd2d02b",
+          "LI:c7981911fbbfa206",
+          "LI:ceb2438651fc30e2",
+          "LI:e3c423043e596505",
+          "Q:Q-055c9f3bacafd137",
+          "Q:Q-1f21c01d24034f22",
+          "Q:Q-29812ebaf23a2cb0",
+          "Q:Q-37dcb04b91f64b9f",
+          "Q:Q-421aed873c295d39",
+          "Q:Q-5e9eb78446721aee",
+          "Q:Q-64c8837896b1c374",
+          "Q:Q-664a0619efb7b133",
+          "Q:Q-854394d4abc08b04",
+          "Q:Q-86ff78f9b3dc3390",
+          "Q:Q-8c7e3eeb0a906257",
+          "Q:Q-8e5e2a4bf9efa56a",
+          "Q:Q-90360edf0941d5d3",
+          "Q:Q-9feb8feb1adaaaee",
+          "Q:Q-a11526b932e77934",
+          "Q:Q-a1bca3bac3dc0534",
+          "Q:Q-a72f2821fd83ff5c",
+          "Q:Q-c22af89ebe5ec08e",
+          "Q:Q-c23c8d0a70cbf347",
+          "Q:Q-ced557a824d3d557",
+          "Q:Q-df9a8fb3ee6eef2c",
+          "Q:Q-e21be9d01e196fc0"
+        ],
+        "route_repairs": [
+          {
+            "item_keys": [
+              "LI:3a58ae8e02fd193f",
+              "LI:b30fa88033796072",
+              "LI:b416e972fff8861f",
+              "LI:c7981911fbbfa206",
+              "LI:e3c423043e596505",
+              "Q:Q-1f21c01d24034f22",
+              "Q:Q-37dcb04b91f64b9f",
+              "Q:Q-421aed873c295d39",
+              "Q:Q-664a0619efb7b133",
+              "Q:Q-854394d4abc08b04",
+              "Q:Q-86ff78f9b3dc3390",
+              "Q:Q-90360edf0941d5d3",
+              "Q:Q-9feb8feb1adaaaee",
+              "Q:Q-a72f2821fd83ff5c"
+            ],
+            "field": "recognition_cues",
+            "before": "第1轮冻结尝试记录了 recognition-weak 的首个阻断。",
+            "after": "下一轮只加入 recognition-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 14 题；不是随机题号注入。"
+          },
+          {
+            "item_keys": [
+              "LI:379f203fe07d5c42",
+              "LI:67fcb19994a05a56",
+              "LI:7e576d462d7e0ac5",
+              "LI:a5c4329eea07eff6",
+              "LI:b416e972fff8861f",
+              "LI:bd13e474dcd2d02b",
+              "LI:c7981911fbbfa206",
+              "Q:Q-1f21c01d24034f22",
+              "Q:Q-64c8837896b1c374",
+              "Q:Q-8c7e3eeb0a906257",
+              "Q:Q-8e5e2a4bf9efa56a",
+              "Q:Q-90360edf0941d5d3",
+              "Q:Q-9feb8feb1adaaaee",
+              "Q:Q-a11526b932e77934",
+              "Q:Q-e21be9d01e196fc0"
+            ],
+            "field": "continuation_checkpoints",
+            "before": "第1轮冻结尝试记录了 algebra-weak 的首个阻断。",
+            "after": "下一轮只加入 algebra-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 15 题；不是随机题号注入。"
+          },
+          {
+            "item_keys": [
+              "LI:ceb2438651fc30e2"
+            ],
+            "field": "visual_translation",
+            "before": "第1轮冻结尝试记录了 visual-weak 的首个阻断。",
+            "after": "下一轮只加入 visual-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 1 题；不是随机题号注入。"
+          },
+          {
+            "item_keys": [
+              "Q:Q-055c9f3bacafd137",
+              "Q:Q-1f21c01d24034f22",
+              "Q:Q-29812ebaf23a2cb0",
+              "Q:Q-37dcb04b91f64b9f",
+              "Q:Q-421aed873c295d39",
+              "Q:Q-5e9eb78446721aee",
+              "Q:Q-64c8837896b1c374",
+              "Q:Q-664a0619efb7b133",
+              "Q:Q-854394d4abc08b04",
+              "Q:Q-86ff78f9b3dc3390",
+              "Q:Q-8c7e3eeb0a906257",
+              "Q:Q-8e5e2a4bf9efa56a",
+              "Q:Q-90360edf0941d5d3",
+              "Q:Q-9feb8feb1adaaaee",
+              "Q:Q-a11526b932e77934",
+              "Q:Q-a1bca3bac3dc0534",
+              "Q:Q-a72f2821fd83ff5c",
+              "Q:Q-c22af89ebe5ec08e",
+              "Q:Q-c23c8d0a70cbf347",
+              "Q:Q-ced557a824d3d557",
+              "Q:Q-df9a8fb3ee6eef2c",
+              "Q:Q-e21be9d01e196fc0"
+            ],
+            "field": "independent_self_check",
+            "before": "第1轮冻结尝试记录了 self-check-weak 的首个阻断。",
+            "after": "下一轮只加入 self-check-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 22 题；不是随机题号注入。"
+          }
+        ]
+      },
+      {
+        "round": 2,
+        "purpose": "prerequisite_repair",
+        "route_version": 2,
+        "route_hash": "80808655f5e15b599c05dc3fcdccaac8ca039615e0c61b841349625b01f04e28",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 45,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 45,
+            "blocked": 0
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 45,
+            "blocked": 0
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 45,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 45,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [],
+        "route_repairs": []
+      },
+      {
+        "round": 3,
+        "purpose": "continuation_transfer",
+        "route_version": 2,
+        "route_hash": "80808655f5e15b599c05dc3fcdccaac8ca039615e0c61b841349625b01f04e28",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 45,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 45,
+            "blocked": 9
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 45,
+            "blocked": 9
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 45,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 45,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [
+          "LI:083a81a2f24c558f",
+          "LI:41b359062ba93228",
+          "LI:7e576d462d7e0ac5",
+          "LI:bd13e474dcd2d02b",
+          "LI:cd9051c8bc0206db",
+          "LI:dd95018d21ef8154",
+          "LI:e461fcae3871489e",
+          "LI:eed740e4254f85b3",
+          "LI:f7396b4701aae7f7"
+        ],
+        "route_repairs": [
+          {
+            "item_keys": [
+              "LI:083a81a2f24c558f",
+              "LI:41b359062ba93228",
+              "LI:7e576d462d7e0ac5",
+              "LI:bd13e474dcd2d02b",
+              "LI:cd9051c8bc0206db",
+              "LI:dd95018d21ef8154",
+              "LI:e461fcae3871489e",
+              "LI:eed740e4254f85b3",
+              "LI:f7396b4701aae7f7"
+            ],
+            "field": "recognition_cues",
+            "before": "第3轮冻结尝试记录了 recognition-weak 的首个阻断。",
+            "after": "下一轮只加入 recognition-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 9 题；不是随机题号注入。"
+          },
+          {
+            "item_keys": [
+              "LI:083a81a2f24c558f",
+              "LI:41b359062ba93228",
+              "LI:7e576d462d7e0ac5",
+              "LI:bd13e474dcd2d02b",
+              "LI:cd9051c8bc0206db",
+              "LI:dd95018d21ef8154",
+              "LI:e461fcae3871489e",
+              "LI:eed740e4254f85b3",
+              "LI:f7396b4701aae7f7"
+            ],
+            "field": "continuation_checkpoints",
+            "before": "第3轮冻结尝试记录了 algebra-weak 的首个阻断。",
+            "after": "下一轮只加入 algebra-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 9 题；不是随机题号注入。"
+          }
+        ]
+      },
+      {
+        "round": 4,
+        "purpose": "mixed_retrieval",
+        "route_version": 3,
+        "route_hash": "8ab9de49a86f92e517aa42fe4ca0fe9dc1ab5a264348a8ca6b8e0a9eef81313b",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 45,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 45,
+            "blocked": 0
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 45,
+            "blocked": 0
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 45,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 45,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [],
+        "route_repairs": []
+      },
+      {
+        "round": 5,
+        "purpose": "fresh_context",
+        "route_version": 3,
+        "route_hash": "8ab9de49a86f92e517aa42fe4ca0fe9dc1ab5a264348a8ca6b8e0a9eef81313b",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 45,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 45,
+            "blocked": 0
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 45,
+            "blocked": 0
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 45,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 45,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [],
+        "route_repairs": []
+      }
+    ],
+    "expected_attempts_per_item": 25,
+    "actual_attempts_per_item": 25,
+    "unresolved_item_keys": [],
+    "mathematical_correctness": "not_evaluated_no_final_answer",
+    "mastery_claimed": false,
+    "status": "passed"
+  },
+  "summary": {
+    "items": 45,
+    "attempts": 1125,
+    "route_assessments": 1125,
+    "rounds": 5,
+    "personas_per_round": 5,
+    "repairs": 6,
+    "round_5_failed_items": 0,
+    "validator_errors": []
+  },
+  "human_learning_status": "remote_math_mcp_only",
+  "cold_24h_retest": "not_run",
+  "mastery_claimed": false,
+  "claim_scope": "route_actionability_only",
+  "mathematical_assessment_status": "not_run",
+  "route_audit_status": "passed",
+  "status": "passed"
+}

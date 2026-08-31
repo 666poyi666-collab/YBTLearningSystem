@@ -140,10 +140,54 @@
             79,
             80
           ],
-          "question_text": "【变式】已知数列 \\(\\{a_n\\}\\) 满足 \\(a_1 = \\frac{1}{2}\\)，且 \\(a_{n+1} = \\frac{1}{3}a_n^3 + \\frac{2}{3}a_n\\)，求证：\\(\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^{n+1} \\leq a_n \\leq \\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^{n+1}\\)。\n证法1：(i) 当 \\(n=1\\) 时，结论即为 \\(\\frac{1}{2} \\leq a_1 \\leq \\frac{1}{2}\\)，也即 \\(a_1 = \\frac{1}{2}\\)，由所给条件可知结论成立；\n(ii) 假设当 \\(n=k\\) (\\(k \\geq 1\\)) 时结论成立，即 \\(\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^{k-1} \\leq a_k \\leq \\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}\\) ①，（怎样证当 \\(n=k+1\\) 时结论也成立？只需证 \\(\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^k \\leq a_{k+1} \\leq \\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\)，条件给出了 \\(a_{n+1}\\) 与 \\(a_n\\) 的关系式，故运用该关系式，结合上面的假设来证明）\n由①可知 \\(a_k \\geq \\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^{k-1}\\)，所以 \\(a_{k+1} = \\frac{1}{3}a_k^3 + \\frac{2}{3}a_k \\geq \\frac{1}{3} \\times \\left[\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^{k-1}\\right]^{3} + \\frac{2}{3} \\times \\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^{k-1} = \\frac{1}{24}\\cdot\\left(\\frac{2}{3}\\right)^{3k-3} + \\frac{1}{3}\\cdot\\left(\\frac{2}{3}\\right)^{k-1}\\)\n\\(= \\frac{1}{24}\\cdot\\left(\\frac{2}{3}\\right)^{3k-3} + \\frac{1}{3}\\cdot\\left(\\frac{2}{3}\\right)^k \\cdot \\frac{3}{2} = \\frac{1}{24}\\cdot\\left(\\frac{2}{3}\\right)^{3k-3} + \\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^k \\geq \\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^k\\)，\n由①可知 \\(a_k \\leq \\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}\\)，所以 \\(a_{k+1} = \\frac{1}{3}a_k^3 + \\frac{2}{3}a_k \\leq \\frac{1}{3}\\cdot\\left[\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}\\right]^{3} + \\frac{2}{3} \\times \\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^{k-1} = \\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{3k-3} + \\frac{1}{3}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}\\) ②，\n（接下来只需证明 \\(\\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{3k-3} + \\frac{1}{3}\\cdot\\left(\\frac{3}{4}\\right)^{k-1} \\leq \\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\)，就能得出 \\(a_{k+1} \\leq \\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\)，怎么证？可尝试作差比较）\n\\(\\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{3k-3} + \\frac{1}{3}\\cdot\\left(\\frac{3}{4}\\right)^{k-1} - \\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k = \\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{3k-3} + \\frac{1}{3}\\cdot\\left(\\frac{3}{4}\\right)^{k-1} - \\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^{k-1} \\cdot \\frac{3}{4} = \\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{3k-3} + \\frac{1}{3}\\cdot\\left(\\frac{3}{4}\\right)^{k-1} - \\frac{3}{8}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}\\)\n\\(= \\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{3k-3} - \\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{k-1} = \\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}\\left[\\left(\\frac{3}{4}\\right)^{2k-2} - 1\\right]\\)，\n因为 \\(k \\geq 1\\)，所以 \\(\\left(\\frac{3}{4}\\right)^{2k-2} \\leq 1\\)，从而 \\(\\left(\\frac{3}{4}\\right)^{2k-2} - 1 \\leq 0\\)，故 \\(\\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}\\left[\\left(\\frac{3}{4}\\right)^{2k-2} - 1\\right] \\leq 0\\)，\n所以 \\(\\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{3k-3}+\\frac{1}{3}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}-\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\leq0\\)，故 \\(\\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{3k-3}+\\frac{1}{3}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}\\leq\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\)，\n结合②可得 \\(a_{k+1}\\leq\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\)，综上所述， \\(\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^k\\leq a_{k+1}\\leq\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\)，即当 \\(n=k+1\\)时结论也成立；\n由(i)(ii)结合数学归纳法原理可知对任意的 \\(n\\in\\mathbb{N}^*\\)，都有 \\(\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^{n-1}\\leq a_n\\leq\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^{n-1}\\)。\n证法2：（前面过程同证法1，得到不等式①后，要证当\\(n=k+1\\)时结论也成立，即证\\(\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^k\\leq a_{k+1}\\leq\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\)也成立，注意到递推公式\\(a_{k+1}=\\frac{1}{3}a_k^3+\\frac{2}{3}a_k\\)中\\(\\frac{1}{3}a_k^3\\)这部分较复杂，故也可尝试将其放缩掉）\n由①可知\\(a_k\\geq\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^{k-1}\\)，所以\\(a_{k+1}=\\frac{1}{3}a_k^3+\\frac{2}{3}a_k\\geq\\frac{2}{3}a_k\\geq\\frac{2}{3}\\times\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^{k-1}=\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^k\\)，\n由①可知\\(a_k\\leq\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}\\)，又因为\\(k\\geq1\\)，所以\\(\\left(\\frac{3}{4}\\right)^{k-1}\\leq1\\)，故\\(a_k\\leq\\frac{1}{2}\\)，\n所以\\(a_{k+1}=\\frac{1}{3}a_k^3+\\frac{2}{3}a_k=\\frac{1}{3}a_k^2\\cdot a_k+\\frac{2}{3}a_k\\leq\\frac{1}{3}\\times\\left(\\frac{1}{2}\\right)^2a_k+\\frac{2}{3}a_k=\\frac{3}{4}a_k\\leq\\frac{3}{4}\\times\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}=\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\)，\n综上所述，\\(\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^k\\leq a_{k+1}\\leq\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\)，接下来同证法1.",
+          "question_text": "【变式】已知数列 \\(\\{a_n\\}\\) 满足 \\(a_1=\\frac{1}{2}\\)，且 \\(a_{n+1}=\\frac{1}{3}a_n^3+\\frac{2}{3}a_n\\)，求证：\\(\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^{n-1}\\leq a_n\\leq\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^{n-1}\\)。",
           "image_refs": [],
           "visual_status": "READY_TEXT_ONLY",
           "solution_isolated": true,
+          "source_question_stem_review": {
+            "status": "SOURCE_REVIEWED_ANSWER_FREE",
+            "review_path": "reports/deep_simulation_reviews/clean-stems-ch4-ch5.json",
+            "review_sha256": "1ace2265926aa6df1a55cbf856d0737271968b94b2398bb48956c48e833c1030",
+            "old_reported_question_text_sha256": "b388550ba872303db4aa3c4c6310d5f179d2275ab9460dca88f8188dcfe63351",
+            "pre_override_question_text_sha256": "afcc9d77e3572e8d1ab9da2d4b36bde832867555ce1f4fadfdd6485c53b609e1",
+            "question_text_sha256": "1eaafc8f6f114643509b42bc6d3abab4b479ae14f4647c78572ddca68e354e02",
+            "confidence": "high",
+            "boundary_basis": "Original PDF page 80 visually shows the complete stem and both exponents as n-1. The current packet's first line incorrectly has n+1, while its own proof immediately switches to n-1. The stem ends before '证法1'; proof method 1 continues onto page 81 and proof method 2 is also excluded.",
+            "source": {
+              "packet": "data/packets/4.6/packet.json",
+              "generated_item_source": "data/packets/4.6/learning_packet.json",
+              "ocr_docs": [
+                79,
+                80
+              ],
+              "ocr_files": [
+                {
+                  "file": "data/ocr_live_current/chapter4_100/doc_79.md",
+                  "sha256": "9d3b325350f96d0fa223aca5bdadf930cbeb61e36b95813d9818fe6b8728c677"
+                },
+                {
+                  "file": "data/ocr_live_current/chapter4_100/doc_80.md",
+                  "sha256": "8bfa3cbff7672b3e865dff389dec57d6be1e0c3a4e9dc34bff206366d4cb3646"
+                }
+              ],
+              "pdf_file": "data/ocr_sources/第4章 数列（无答案册）.pdf",
+              "pdf_pages": [
+                80,
+                81
+              ],
+              "original_page_images": [
+                {
+                  "file": "data/ocr_live_current/chapter4_100/layout_det_res_79.jpg",
+                  "sha256": "04a69aebd1d454b3c0fea3a19568cf13c191fcae90191f2df2ec2b760c5ec002"
+                },
+                {
+                  "file": "data/ocr_live_current/chapter4_100/layout_det_res_80.jpg",
+                  "sha256": "688e11fad296c1443a059055822fbdd55bcdb5cfd49bb86f01850301a21d9f60"
+                }
+              ],
+              "visual_evidence": "original PDF pages 80-81 and OCR layout pages 79-80"
+            }
+          },
           "vision_hint": "4.6-LIc7a1f7856662363b"
         }
       ],
@@ -218,7 +262,11 @@
       "optional_course_keys": [],
       "knowledge_refs": [],
       "prerequisite_knowledge_refs": [],
-      "type_refs": [],
+      "type_refs": [
+        "类型I 用数学归纳法证明等式",
+        "类型Ⅲ 用数学归纳法证明整除有关的结论",
+        "类型Ⅱ 用数学归纳法证明不等式"
+      ],
       "bridge_unit_ids": [],
       "method_checkpoints": [],
       "worked_examples": [],
@@ -420,10 +468,54 @@
         79,
         80
       ],
-      "question_text": "【变式】已知数列 \\(\\{a_n\\}\\) 满足 \\(a_1 = \\frac{1}{2}\\)，且 \\(a_{n+1} = \\frac{1}{3}a_n^3 + \\frac{2}{3}a_n\\)，求证：\\(\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^{n+1} \\leq a_n \\leq \\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^{n+1}\\)。\n证法1：(i) 当 \\(n=1\\) 时，结论即为 \\(\\frac{1}{2} \\leq a_1 \\leq \\frac{1}{2}\\)，也即 \\(a_1 = \\frac{1}{2}\\)，由所给条件可知结论成立；\n(ii) 假设当 \\(n=k\\) (\\(k \\geq 1\\)) 时结论成立，即 \\(\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^{k-1} \\leq a_k \\leq \\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}\\) ①，（怎样证当 \\(n=k+1\\) 时结论也成立？只需证 \\(\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^k \\leq a_{k+1} \\leq \\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\)，条件给出了 \\(a_{n+1}\\) 与 \\(a_n\\) 的关系式，故运用该关系式，结合上面的假设来证明）\n由①可知 \\(a_k \\geq \\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^{k-1}\\)，所以 \\(a_{k+1} = \\frac{1}{3}a_k^3 + \\frac{2}{3}a_k \\geq \\frac{1}{3} \\times \\left[\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^{k-1}\\right]^{3} + \\frac{2}{3} \\times \\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^{k-1} = \\frac{1}{24}\\cdot\\left(\\frac{2}{3}\\right)^{3k-3} + \\frac{1}{3}\\cdot\\left(\\frac{2}{3}\\right)^{k-1}\\)\n\\(= \\frac{1}{24}\\cdot\\left(\\frac{2}{3}\\right)^{3k-3} + \\frac{1}{3}\\cdot\\left(\\frac{2}{3}\\right)^k \\cdot \\frac{3}{2} = \\frac{1}{24}\\cdot\\left(\\frac{2}{3}\\right)^{3k-3} + \\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^k \\geq \\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^k\\)，\n由①可知 \\(a_k \\leq \\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}\\)，所以 \\(a_{k+1} = \\frac{1}{3}a_k^3 + \\frac{2}{3}a_k \\leq \\frac{1}{3}\\cdot\\left[\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}\\right]^{3} + \\frac{2}{3} \\times \\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^{k-1} = \\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{3k-3} + \\frac{1}{3}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}\\) ②，\n（接下来只需证明 \\(\\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{3k-3} + \\frac{1}{3}\\cdot\\left(\\frac{3}{4}\\right)^{k-1} \\leq \\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\)，就能得出 \\(a_{k+1} \\leq \\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\)，怎么证？可尝试作差比较）\n\\(\\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{3k-3} + \\frac{1}{3}\\cdot\\left(\\frac{3}{4}\\right)^{k-1} - \\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k = \\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{3k-3} + \\frac{1}{3}\\cdot\\left(\\frac{3}{4}\\right)^{k-1} - \\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^{k-1} \\cdot \\frac{3}{4} = \\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{3k-3} + \\frac{1}{3}\\cdot\\left(\\frac{3}{4}\\right)^{k-1} - \\frac{3}{8}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}\\)\n\\(= \\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{3k-3} - \\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{k-1} = \\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}\\left[\\left(\\frac{3}{4}\\right)^{2k-2} - 1\\right]\\)，\n因为 \\(k \\geq 1\\)，所以 \\(\\left(\\frac{3}{4}\\right)^{2k-2} \\leq 1\\)，从而 \\(\\left(\\frac{3}{4}\\right)^{2k-2} - 1 \\leq 0\\)，故 \\(\\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}\\left[\\left(\\frac{3}{4}\\right)^{2k-2} - 1\\right] \\leq 0\\)，\n所以 \\(\\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{3k-3}+\\frac{1}{3}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}-\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\leq0\\)，故 \\(\\frac{1}{24}\\cdot\\left(\\frac{3}{4}\\right)^{3k-3}+\\frac{1}{3}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}\\leq\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\)，\n结合②可得 \\(a_{k+1}\\leq\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\)，综上所述， \\(\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^k\\leq a_{k+1}\\leq\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\)，即当 \\(n=k+1\\)时结论也成立；\n由(i)(ii)结合数学归纳法原理可知对任意的 \\(n\\in\\mathbb{N}^*\\)，都有 \\(\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^{n-1}\\leq a_n\\leq\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^{n-1}\\)。\n证法2：（前面过程同证法1，得到不等式①后，要证当\\(n=k+1\\)时结论也成立，即证\\(\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^k\\leq a_{k+1}\\leq\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\)也成立，注意到递推公式\\(a_{k+1}=\\frac{1}{3}a_k^3+\\frac{2}{3}a_k\\)中\\(\\frac{1}{3}a_k^3\\)这部分较复杂，故也可尝试将其放缩掉）\n由①可知\\(a_k\\geq\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^{k-1}\\)，所以\\(a_{k+1}=\\frac{1}{3}a_k^3+\\frac{2}{3}a_k\\geq\\frac{2}{3}a_k\\geq\\frac{2}{3}\\times\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^{k-1}=\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^k\\)，\n由①可知\\(a_k\\leq\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}\\)，又因为\\(k\\geq1\\)，所以\\(\\left(\\frac{3}{4}\\right)^{k-1}\\leq1\\)，故\\(a_k\\leq\\frac{1}{2}\\)，\n所以\\(a_{k+1}=\\frac{1}{3}a_k^3+\\frac{2}{3}a_k=\\frac{1}{3}a_k^2\\cdot a_k+\\frac{2}{3}a_k\\leq\\frac{1}{3}\\times\\left(\\frac{1}{2}\\right)^2a_k+\\frac{2}{3}a_k=\\frac{3}{4}a_k\\leq\\frac{3}{4}\\times\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^{k-1}=\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\)，\n综上所述，\\(\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^k\\leq a_{k+1}\\leq\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^k\\)，接下来同证法1.",
+      "question_text": "【变式】已知数列 \\(\\{a_n\\}\\) 满足 \\(a_1=\\frac{1}{2}\\)，且 \\(a_{n+1}=\\frac{1}{3}a_n^3+\\frac{2}{3}a_n\\)，求证：\\(\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^{n-1}\\leq a_n\\leq\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^{n-1}\\)。",
       "image_refs": [],
       "visual_status": "READY_TEXT_ONLY",
       "solution_isolated": true,
+      "source_question_stem_review": {
+        "status": "SOURCE_REVIEWED_ANSWER_FREE",
+        "review_path": "reports/deep_simulation_reviews/clean-stems-ch4-ch5.json",
+        "review_sha256": "1ace2265926aa6df1a55cbf856d0737271968b94b2398bb48956c48e833c1030",
+        "old_reported_question_text_sha256": "b388550ba872303db4aa3c4c6310d5f179d2275ab9460dca88f8188dcfe63351",
+        "pre_override_question_text_sha256": "afcc9d77e3572e8d1ab9da2d4b36bde832867555ce1f4fadfdd6485c53b609e1",
+        "question_text_sha256": "1eaafc8f6f114643509b42bc6d3abab4b479ae14f4647c78572ddca68e354e02",
+        "confidence": "high",
+        "boundary_basis": "Original PDF page 80 visually shows the complete stem and both exponents as n-1. The current packet's first line incorrectly has n+1, while its own proof immediately switches to n-1. The stem ends before '证法1'; proof method 1 continues onto page 81 and proof method 2 is also excluded.",
+        "source": {
+          "packet": "data/packets/4.6/packet.json",
+          "generated_item_source": "data/packets/4.6/learning_packet.json",
+          "ocr_docs": [
+            79,
+            80
+          ],
+          "ocr_files": [
+            {
+              "file": "data/ocr_live_current/chapter4_100/doc_79.md",
+              "sha256": "9d3b325350f96d0fa223aca5bdadf930cbeb61e36b95813d9818fe6b8728c677"
+            },
+            {
+              "file": "data/ocr_live_current/chapter4_100/doc_80.md",
+              "sha256": "8bfa3cbff7672b3e865dff389dec57d6be1e0c3a4e9dc34bff206366d4cb3646"
+            }
+          ],
+          "pdf_file": "data/ocr_sources/第4章 数列（无答案册）.pdf",
+          "pdf_pages": [
+            80,
+            81
+          ],
+          "original_page_images": [
+            {
+              "file": "data/ocr_live_current/chapter4_100/layout_det_res_79.jpg",
+              "sha256": "04a69aebd1d454b3c0fea3a19568cf13c191fcae90191f2df2ec2b760c5ec002"
+            },
+            {
+              "file": "data/ocr_live_current/chapter4_100/layout_det_res_80.jpg",
+              "sha256": "688e11fad296c1443a059055822fbdd55bcdb5cfd49bb86f01850301a21d9f60"
+            }
+          ],
+          "visual_evidence": "original PDF pages 80-81 and OCR layout pages 79-80"
+        }
+      },
       "vision_hint": "4.6-LIc7a1f7856662363b"
     }
   ],

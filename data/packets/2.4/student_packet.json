@@ -201,50 +201,20 @@
         "file": "data/ocr_live_current/second_chapter_109/doc_52.md"
       },
       "question_text": "4.（2024·安徽芜湖期中）\n\n直线 \\(l_{1}:2x-y+1=0\\)关于直线 \\(l:x+y+2=0\\)对称的直线 \\(l_{2}\\)的方程为___。\n\n",
-      "image_refs": [
-        {
-          "ref": "imgs/img_in_image_box_275_803_912_881.jpg",
-          "path": "data/ocr_live_current/second_chapter_109/imgs/img_in_image_box_275_803_912_881.jpg",
-          "exists": true
-        }
-      ],
-      "visual_status": "VISION_VERIFIED",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
       "math_errors": [],
       "evidence": [
-        "E1",
-        "E2"
+        "E1"
       ],
-      "vision_sidecars": [
+      "source_repairs": [
         {
-          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\imgs\\img_in_image_box_275_803_912_881.jpg",
-          "image_sha256": "9e14d20fdf569d4fa2e4930c0395ab37a9f2f89a20433a50a926d3db775c9f4d",
-          "confidence": "E2",
-          "structured": {
-            "objects": [],
-            "relations": [],
-            "coordinates": [],
-            "ranges": [],
-            "text": [
-              "一数·高中数学一本通"
-            ],
-            "uncertainties": [],
-            "confidence": "E2"
-          },
-          "source_provenance": null
+          "id": "2.4-Q-8ba0e365a4bb943d-drop-footer-watermark",
+          "kind": "image_attachment",
+          "reason": "The crop is only the page footer watermark; the source page shows no item-specific figure for A4.",
+          "review_ref": "reports/deep_simulation_reviews/visual-fixes-ch23.json"
         }
-      ],
-      "vision_sidecar": {
-        "objects": [],
-        "relations": [],
-        "coordinates": [],
-        "ranges": [],
-        "text": [
-          "一数·高中数学一本通"
-        ],
-        "uncertainties": [],
-        "confidence": "E2"
-      },
-      "vision_source_provenance": []
+      ]
     },
     {
       "qid": "Q-12532ef01c76c81d",
@@ -543,37 +513,73 @@
       ],
       "vision_sidecars": [
         {
-          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\second_chapter_109\\imgs\\img_in_image_box_489_301_727_483.jpg",
+          "image": "data/ocr_live_current/second_chapter_109/imgs/img_in_image_box_489_301_727_483.jpg",
           "image_sha256": "54a176aec67f7a8a97fade2edcbf05c30d37dc2044b2c4c537788d0524ad6059",
           "confidence": "E2",
           "structured": {
-            "objects": [],
-            "relations": [],
+            "objects": [
+              "平面直角坐标系、矩形OABC、折线路径P0P1P2P3P4"
+            ],
+            "relations": [
+              "O、A、B、C依次位于矩形的左下、右下、右上、左上顶点",
+              "x轴沿OA向右，y轴沿OC向上",
+              "P0、P4位于OA上，P1位于AB上，P2位于CB上，P3位于CO上",
+              "图中依次连接P0-P1-P2-P3-P4"
+            ],
             "coordinates": [],
             "ranges": [],
             "text": [
-              "y",
-              "x"
+              "x、y、O、A、B、C、P0、P1、P2、P3、P4"
             ],
-            "uncertainties": [],
+            "uncertainties": [
+              "示意图未标坐标数值且不按比例，数值位置需以题干为准"
+            ],
             "confidence": "E2"
           },
-          "source_provenance": null
+          "source_provenance": {
+            "source_kind": "manual_primary_pdf_visual_review",
+            "source_pdf": "第4节 微专题2：直线有关的对称问题（方法册+习题册）.pdf",
+            "source_pdf_sha256": "ee5a7b10c737fec93e46fe4783bf18f42f927370d12677a6248736d9aef17171",
+            "pdf_page": 12,
+            "review_result": "restored_rectangle_axes_boundary_points_and_reflection_path",
+            "review_report": "reports/deep_simulation_reviews/visual-fixes-ch23.json",
+            "review_report_sha256": "177fe11b1bf2fd3ab9acd42a1a9fa2de6c5424e976bc25fdad1d2990a98a7d7e",
+            "original_image_sha256": "54a176aec67f7a8a97fade2edcbf05c30d37dc2044b2c4c537788d0524ad6059"
+          }
         }
       ],
       "vision_sidecar": {
-        "objects": [],
-        "relations": [],
+        "objects": [
+          "平面直角坐标系、矩形OABC、折线路径P0P1P2P3P4"
+        ],
+        "relations": [
+          "O、A、B、C依次位于矩形的左下、右下、右上、左上顶点",
+          "x轴沿OA向右，y轴沿OC向上",
+          "P0、P4位于OA上，P1位于AB上，P2位于CB上，P3位于CO上",
+          "图中依次连接P0-P1-P2-P3-P4"
+        ],
         "coordinates": [],
         "ranges": [],
         "text": [
-          "y",
-          "x"
+          "x、y、O、A、B、C、P0、P1、P2、P3、P4"
         ],
-        "uncertainties": [],
+        "uncertainties": [
+          "示意图未标坐标数值且不按比例，数值位置需以题干为准"
+        ],
         "confidence": "E2"
       },
-      "vision_source_provenance": []
+      "vision_source_provenance": [
+        {
+          "source_kind": "manual_primary_pdf_visual_review",
+          "source_pdf": "第4节 微专题2：直线有关的对称问题（方法册+习题册）.pdf",
+          "source_pdf_sha256": "ee5a7b10c737fec93e46fe4783bf18f42f927370d12677a6248736d9aef17171",
+          "pdf_page": 12,
+          "review_result": "restored_rectangle_axes_boundary_points_and_reflection_path",
+          "review_report": "reports/deep_simulation_reviews/visual-fixes-ch23.json",
+          "review_report_sha256": "177fe11b1bf2fd3ab9acd42a1a9fa2de6c5424e976bc25fdad1d2990a98a7d7e",
+          "original_image_sha256": "54a176aec67f7a8a97fade2edcbf05c30d37dc2044b2c4c537788d0524ad6059"
+        }
+      ]
     }
   ],
   "unresolved": [],

@@ -24,6 +24,7 @@ from ybt_learning.vision import (  # noqa: E402
     VISION_PROMPT,
     describe_image,
     structured_answer_leaks,
+    structured_visual_errors,
 )
 
 
@@ -169,6 +170,7 @@ def row_errors(row: dict[str, Any], target: VisionTarget) -> list[str]:
         errors.append("empty_structured_payload")
     if structured_answer_leaks(structured):
         errors.append("answer_language_in_visual_sidecar")
+    errors.extend(structured_visual_errors(structured, item_id=target.item_id))
     return errors
 
 

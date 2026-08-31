@@ -52,9 +52,17 @@ class SemanticCourseRouteTests(unittest.TestCase):
             self.assertEqual(len(placement["transcript_sha256"]), 64)
             self.assertIn(placement["course_key"], cycles[placement["cycle_id"]][placement["field"]])
 
-    def test_review_section_does_not_introduce_misbound_courses(self) -> None:
+    def test_review_section_introduces_sum_bounds_only_at_reviewed_first_use(self) -> None:
         row = section(5, "5.6")
-        self.assertTrue(all(not cycle["course_keys"] for cycle in row["learning_cycles"]))
+        expected = {"4.2.6.1 求和型放缩（上）", "4.2.6.1 求和型放缩（下）"}
+        introductions = [cycle for cycle in row["learning_cycles"] if expected & set(cycle["course_keys"])]
+        self.assertEqual(len(introductions), 1)
+        self.assertEqual(set(introductions[0]["course_keys"]), expected)
+        self.assertEqual(introductions[0]["example_numbers"], [12, 13, 14])
+        self.assertTrue(all(
+            not (expected & set(cycle["prerequisite_course_keys"]))
+            for cycle in row["learning_cycles"]
+        ))
         self.assertEqual(row["unplaced_course_keys"], [])
 
 

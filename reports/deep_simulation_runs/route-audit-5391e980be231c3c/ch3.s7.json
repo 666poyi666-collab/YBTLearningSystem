@@ -1,0 +1,2739 @@
+{
+  "schema_version": "ybt-deep-section-simulation-v3",
+  "generated_at": "2026-08-31T04:06:31.604131+00:00",
+  "chapter": 3,
+  "section": "ch3.s7",
+  "label": "第7节 抛物线及其标准方程",
+  "simulation_kind": "answer_isolated_synthetic_route_stress",
+  "honesty_boundary": "Attempts test route actionability. They contain no final learner answer, so mathematical correctness and mastery are not claimed.",
+  "source_binding": {
+    "manifest_sha256": "5983a4e8eaae43e9f4c90c3e2b6b2a13e3ad4f167c8aae55ef5cbef7ef013654",
+    "student_learning_items_sha256": "9fbfebc34c2ef33c8dac3491fd13f76d14b8409aa4a0952be17bbe317f61743f",
+    "student_packet_sha256": "a2f9da29dda97c001d1a3d915249e3066422386918741b041f2f18d79769c27e",
+    "grader_learning_packet_sha256": "58bed231a31a1b2ba378f5172c3d79ad10b6e779571a6db5c14510dfd7f70584",
+    "route_sha256": "9548cf2b6d097f45489dde99915fa8528e99dc3d6b69468ecb4a62caec366cf0",
+    "learner_input_snapshot_sha256": "e618e3dba018e7b51b8293f2481f584648075ad165531e652a24702a7a3b2d4e"
+  },
+  "answer_isolation": {
+    "frozen_attempts_path": "reports/deep_simulation_runs/route-audit-5391e980be231c3c/frozen/ch3.s7.jsonl.gz",
+    "frozen_attempts_sha256": "09fa85d68f80adde02603965456db61f75cfac4130dde4ff025b7b5e4aee351b",
+    "route_assessments_path": "reports/deep_simulation_runs/route-audit-5391e980be231c3c/route_assessments/ch3.s7.jsonl.gz",
+    "route_assessments_sha256": "a2edfd63e8d2e0409688c6872da8a046863f04090cc0365acac66b7eb25b79e5",
+    "learner_answer_material_loaded": false,
+    "grader_material_loaded_after_freeze": true,
+    "grader_evidence": {
+      "parsed_automatic": 13,
+      "review_required_text": 3,
+      "source_page_bound": 8,
+      "textbook_solution": 10,
+      "blocked": 0
+    },
+    "status": "passed"
+  },
+  "items": [
+    {
+      "item_key": "LI:76e9608cab0edca8",
+      "item_id": "76e9608cab0edca8",
+      "ordinal": 1,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例1",
+      "group": null,
+      "cycle_id": "ch3.s7-cycle-1",
+      "cycle_sequence": 1,
+      "cycle_title": "抛物线的定义",
+      "course_refs": [
+        "parabola_definition_equation"
+      ],
+      "course_titles": [
+        "抛物线的定义及其方程"
+      ],
+      "required_course_refs": [
+        "parabola_definition_equation"
+      ],
+      "prerequisite_course_refs": [
+        "parabola_definition_equation"
+      ],
+      "knowledge_refs": [
+        "ch3.s7-k1"
+      ],
+      "type_refs": [],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "直线",
+        "距离",
+        "圆",
+        "椭圆",
+        "双曲线",
+        "P",
+        "x",
+        "A"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "ce7d131c62567610b7d9e5e2266c52bf6ab0b47bdb4b6e2f4315ee8229493fee",
+      "source_question_text_sha256": "ce7d131c62567610b7d9e5e2266c52bf6ab0b47bdb4b6e2f4315ee8229493fee",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "ce7d131c62567610b7d9e5e2266c52bf6ab0b47bdb4b6e2f4315ee8229493fee",
+        "learner_question_text_sha256": "ce7d131c62567610b7d9e5e2266c52bf6ab0b47bdb4b6e2f4315ee8229493fee"
+      },
+      "question_signal_excerpt": "直线、距离、圆、椭圆、双曲线、P、x、A",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:ca336811597133fe",
+      "item_id": "ca336811597133fe",
+      "ordinal": 2,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例2",
+      "group": null,
+      "cycle_id": "ch3.s7-cycle-2",
+      "cycle_sequence": 2,
+      "cycle_title": "抛物线的标准方程",
+      "course_refs": [
+        "parabola_definition_equation"
+      ],
+      "course_titles": [
+        "抛物线的定义及其方程"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "parabola_definition_equation"
+      ],
+      "knowledge_refs": [
+        "ch3.s7-k2"
+      ],
+      "type_refs": [],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "抛物线",
+        "准线",
+        "x",
+        "\\frac",
+        "y",
+        "A"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "d67aafd0e3540749d31d653a32299eda7a707e4ab3cd1ecbb00a35201cd30fe4",
+      "source_question_text_sha256": "d67aafd0e3540749d31d653a32299eda7a707e4ab3cd1ecbb00a35201cd30fe4",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "d67aafd0e3540749d31d653a32299eda7a707e4ab3cd1ecbb00a35201cd30fe4",
+        "learner_question_text_sha256": "d67aafd0e3540749d31d653a32299eda7a707e4ab3cd1ecbb00a35201cd30fe4"
+      },
+      "question_signal_excerpt": "抛物线、准线、x、\\frac、y、A",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:e7c3c730e1eec0cf",
+      "item_id": "e7c3c730e1eec0cf",
+      "ordinal": 3,
+      "ordinal_in_cycle": 2,
+      "kind": "worked_example",
+      "label": "例3",
+      "group": null,
+      "cycle_id": "ch3.s7-cycle-2",
+      "cycle_sequence": 2,
+      "cycle_title": "抛物线的标准方程",
+      "course_refs": [
+        "parabola_definition_equation"
+      ],
+      "course_titles": [
+        "抛物线的定义及其方程"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "parabola_definition_equation"
+      ],
+      "knowledge_refs": [
+        "ch3.s7-k2"
+      ],
+      "type_refs": [],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "距离",
+        "抛物线",
+        "焦点",
+        "准线",
+        "y",
+        "x",
+        "A",
+        "\\frac"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "294ccf40eb89b9f1ae061f63c9aac2e9def3cfea3c93e21f22e7e175f09e4166",
+      "source_question_text_sha256": "294ccf40eb89b9f1ae061f63c9aac2e9def3cfea3c93e21f22e7e175f09e4166",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "294ccf40eb89b9f1ae061f63c9aac2e9def3cfea3c93e21f22e7e175f09e4166",
+        "learner_question_text_sha256": "294ccf40eb89b9f1ae061f63c9aac2e9def3cfea3c93e21f22e7e175f09e4166"
+      },
+      "question_signal_excerpt": "距离、抛物线、焦点、准线、y、x、A、\\frac",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:adeb7084cf3fe24c",
+      "item_id": "adeb7084cf3fe24c",
+      "ordinal": 4,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例4",
+      "group": null,
+      "cycle_id": "ch3.s7-cycle-3",
+      "cycle_sequence": 3,
+      "cycle_title": "抛物线的焦半径公式",
+      "course_refs": [
+        "focal_radius_formula",
+        "focal_chord_area",
+        "parabola_definition_equation"
+      ],
+      "course_titles": [
+        "焦半径公式",
+        "焦点弦公式与面积",
+        "抛物线的定义及其方程"
+      ],
+      "required_course_refs": [
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "prerequisite_course_refs": [
+        "parabola_definition_equation"
+      ],
+      "knowledge_refs": [
+        "ch3.s7-k3"
+      ],
+      "type_refs": [],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "距离",
+        "抛物线",
+        "焦点",
+        "y",
+        "x",
+        "A"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "107c8aea4e6f0b905f4c7f4bd0fa84eec696b2cc60d47b1039d70da9c808c977",
+      "source_question_text_sha256": "107c8aea4e6f0b905f4c7f4bd0fa84eec696b2cc60d47b1039d70da9c808c977",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "107c8aea4e6f0b905f4c7f4bd0fa84eec696b2cc60d47b1039d70da9c808c977",
+        "learner_question_text_sha256": "107c8aea4e6f0b905f4c7f4bd0fa84eec696b2cc60d47b1039d70da9c808c977"
+      },
+      "question_signal_excerpt": "距离、抛物线、焦点、y、x、A",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:0eb69ef5bbe1b581",
+      "item_id": "0eb69ef5bbe1b581",
+      "ordinal": 5,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例5",
+      "group": null,
+      "cycle_id": "ch3.s7-cycle-4",
+      "cycle_sequence": 4,
+      "cycle_title": "类型I 抛物线的标准方程有关概念题",
+      "course_refs": [
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "course_titles": [
+        "抛物线的定义及其方程",
+        "焦半径公式",
+        "焦点弦公式与面积"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 抛物线的标准方程有关概念题"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "距离",
+        "圆",
+        "抛物线",
+        "焦点",
+        "准线",
+        "y",
+        "px",
+        "p",
+        ">"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "a52c726835b296574a8edea1a7ac69539521fdc2dab6eedbe7e28f3427f5c9fc",
+      "source_question_text_sha256": "a52c726835b296574a8edea1a7ac69539521fdc2dab6eedbe7e28f3427f5c9fc",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "a52c726835b296574a8edea1a7ac69539521fdc2dab6eedbe7e28f3427f5c9fc",
+        "learner_question_text_sha256": "a52c726835b296574a8edea1a7ac69539521fdc2dab6eedbe7e28f3427f5c9fc"
+      },
+      "question_signal_excerpt": "距离、圆、抛物线、焦点、准线、y、px、p、>",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:e378ae2b1b64e57f",
+      "item_id": "e378ae2b1b64e57f",
+      "ordinal": 6,
+      "ordinal_in_cycle": 2,
+      "kind": "direct_variant",
+      "label": "例5 变式1",
+      "group": null,
+      "cycle_id": "ch3.s7-cycle-4",
+      "cycle_sequence": 4,
+      "cycle_title": "类型I 抛物线的标准方程有关概念题",
+      "course_refs": [
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "course_titles": [
+        "抛物线的定义及其方程",
+        "焦半径公式",
+        "焦点弦公式与面积"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 抛物线的标准方程有关概念题"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "抛物线",
+        "准线",
+        "y",
+        "x"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "26987ba313de546c87aaa80b951729bd08075fa982cbdf67a12b264316e90311",
+      "source_question_text_sha256": "26987ba313de546c87aaa80b951729bd08075fa982cbdf67a12b264316e90311",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "26987ba313de546c87aaa80b951729bd08075fa982cbdf67a12b264316e90311",
+        "learner_question_text_sha256": "26987ba313de546c87aaa80b951729bd08075fa982cbdf67a12b264316e90311"
+      },
+      "question_signal_excerpt": "抛物线、准线、y、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:5ba69d1b3039afab",
+      "item_id": "5ba69d1b3039afab",
+      "ordinal": 7,
+      "ordinal_in_cycle": 3,
+      "kind": "direct_variant",
+      "label": "例5 变式2",
+      "group": null,
+      "cycle_id": "ch3.s7-cycle-4",
+      "cycle_sequence": 4,
+      "cycle_title": "类型I 抛物线的标准方程有关概念题",
+      "course_refs": [
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "course_titles": [
+        "抛物线的定义及其方程",
+        "焦半径公式",
+        "焦点弦公式与面积"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 抛物线的标准方程有关概念题"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "抛物线",
+        "焦点",
+        "准线",
+        "y",
+        "A",
+        "x"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "5a66eb08559568ebd4b51eac81aa26fc03c13d892344edb3cc657783e6b27e93",
+      "source_question_text_sha256": "5a66eb08559568ebd4b51eac81aa26fc03c13d892344edb3cc657783e6b27e93",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "5a66eb08559568ebd4b51eac81aa26fc03c13d892344edb3cc657783e6b27e93",
+        "learner_question_text_sha256": "5a66eb08559568ebd4b51eac81aa26fc03c13d892344edb3cc657783e6b27e93"
+      },
+      "question_signal_excerpt": "抛物线、焦点、准线、y、A、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:5da9e9f4344dbfd5",
+      "item_id": "5da9e9f4344dbfd5",
+      "ordinal": 8,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例6",
+      "group": null,
+      "cycle_id": "ch3.s7-cycle-5",
+      "cycle_sequence": 5,
+      "cycle_title": "类型Ⅱ 定义法求抛物线的轨迹方程",
+      "course_refs": [
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "course_titles": [
+        "抛物线的定义及其方程",
+        "焦半径公式",
+        "焦点弦公式与面积"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 定义法求抛物线的轨迹方程"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "直线",
+        "圆",
+        "xOy",
+        "M",
+        "F",
+        "l"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "62bc4e9887750104d7841afd7545e0552855397eb6b5ee7c2ab2f041477a662d",
+      "source_question_text_sha256": "62bc4e9887750104d7841afd7545e0552855397eb6b5ee7c2ab2f041477a662d",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "62bc4e9887750104d7841afd7545e0552855397eb6b5ee7c2ab2f041477a662d",
+        "learner_question_text_sha256": "62bc4e9887750104d7841afd7545e0552855397eb6b5ee7c2ab2f041477a662d"
+      },
+      "question_signal_excerpt": "直线、圆、xOy、M、F、l",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:1110316c7adf2824",
+      "item_id": "1110316c7adf2824",
+      "ordinal": 9,
+      "ordinal_in_cycle": 2,
+      "kind": "direct_variant",
+      "label": "例6 变式",
+      "group": null,
+      "cycle_id": "ch3.s7-cycle-5",
+      "cycle_sequence": 5,
+      "cycle_title": "类型Ⅱ 定义法求抛物线的轨迹方程",
+      "course_refs": [
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "course_titles": [
+        "抛物线的定义及其方程",
+        "焦半径公式",
+        "焦点弦公式与面积"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 定义法求抛物线的轨迹方程"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "直线",
+        "圆",
+        "N",
+        "x",
+        "y",
+        "l"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "c795b869f2b1a8cc72a4f1fdb8eec5b7aad324008ba471ff2adfe84f92af583f",
+      "source_question_text_sha256": "c795b869f2b1a8cc72a4f1fdb8eec5b7aad324008ba471ff2adfe84f92af583f",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "c795b869f2b1a8cc72a4f1fdb8eec5b7aad324008ba471ff2adfe84f92af583f",
+        "learner_question_text_sha256": "c795b869f2b1a8cc72a4f1fdb8eec5b7aad324008ba471ff2adfe84f92af583f"
+      },
+      "question_signal_excerpt": "直线、圆、N、x、y、l",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:2fb96088301fc158",
+      "item_id": "2fb96088301fc158",
+      "ordinal": 10,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例7",
+      "group": null,
+      "cycle_id": "ch3.s7-cycle-6",
+      "cycle_sequence": 6,
+      "cycle_title": "类型Ⅲ 用抛物线定义计算焦半径",
+      "course_refs": [
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "course_titles": [
+        "抛物线的定义及其方程",
+        "焦半径公式",
+        "焦点弦公式与面积"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 用抛物线定义计算焦半径"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "抛物线",
+        "焦点",
+        "P",
+        "x_0",
+        "C",
+        "y"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "111aee796cf52358b15095410a6fbce763f3abb69b6966fa544e65602df9d503",
+      "source_question_text_sha256": "111aee796cf52358b15095410a6fbce763f3abb69b6966fa544e65602df9d503",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "111aee796cf52358b15095410a6fbce763f3abb69b6966fa544e65602df9d503",
+        "learner_question_text_sha256": "111aee796cf52358b15095410a6fbce763f3abb69b6966fa544e65602df9d503"
+      },
+      "question_signal_excerpt": "抛物线、焦点、P、x_0、C、y",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:d78cc13a85a64cad",
+      "item_id": "d78cc13a85a64cad",
+      "ordinal": 11,
+      "ordinal_in_cycle": 2,
+      "kind": "direct_variant",
+      "label": "例7 变式",
+      "group": null,
+      "cycle_id": "ch3.s7-cycle-6",
+      "cycle_sequence": 6,
+      "cycle_title": "类型Ⅲ 用抛物线定义计算焦半径",
+      "course_refs": [
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "course_titles": [
+        "抛物线的定义及其方程",
+        "焦半径公式",
+        "焦点弦公式与面积"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 用抛物线定义计算焦半径"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "直线",
+        "抛物线",
+        "焦点",
+        "准线",
+        "C",
+        "y",
+        "px",
+        "p"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "7cd4ada253ce1cbab51f6afe9453e30657aba9a2ca296e59c36aeb64da05219e",
+      "source_question_text_sha256": "7cd4ada253ce1cbab51f6afe9453e30657aba9a2ca296e59c36aeb64da05219e",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "7cd4ada253ce1cbab51f6afe9453e30657aba9a2ca296e59c36aeb64da05219e",
+        "learner_question_text_sha256": "7cd4ada253ce1cbab51f6afe9453e30657aba9a2ca296e59c36aeb64da05219e"
+      },
+      "question_signal_excerpt": "直线、抛物线、焦点、准线、C、y、px、p",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:f54abf3acf1232de",
+      "item_id": "f54abf3acf1232de",
+      "ordinal": 12,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例8",
+      "group": null,
+      "cycle_id": "ch3.s7-cycle-7",
+      "cycle_sequence": 7,
+      "cycle_title": "类型IV 抛物线定义与几何性质综合题",
+      "course_refs": [
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "course_titles": [
+        "抛物线的定义及其方程",
+        "焦半径公式",
+        "焦点弦公式与面积"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型IV 抛物线定义与几何性质综合题"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "抛物线",
+        "焦点",
+        "准线",
+        "P",
+        "C",
+        "y",
+        "px"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "78e9c6dc3312276e7a7a111eed9899bb97c36ca82f84bf65a1a78ac3c8cc5376",
+      "source_question_text_sha256": "78e9c6dc3312276e7a7a111eed9899bb97c36ca82f84bf65a1a78ac3c8cc5376",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "78e9c6dc3312276e7a7a111eed9899bb97c36ca82f84bf65a1a78ac3c8cc5376",
+        "learner_question_text_sha256": "78e9c6dc3312276e7a7a111eed9899bb97c36ca82f84bf65a1a78ac3c8cc5376"
+      },
+      "question_signal_excerpt": "抛物线、焦点、准线、P、C、y、px",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:609b92217658091b",
+      "item_id": "609b92217658091b",
+      "ordinal": 13,
+      "ordinal_in_cycle": 2,
+      "kind": "direct_variant",
+      "label": "例8 变式1",
+      "group": null,
+      "cycle_id": "ch3.s7-cycle-7",
+      "cycle_sequence": 7,
+      "cycle_title": "类型IV 抛物线定义与几何性质综合题",
+      "course_refs": [
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "course_titles": [
+        "抛物线的定义及其方程",
+        "焦半径公式",
+        "焦点弦公式与面积"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型IV 抛物线定义与几何性质综合题"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "抛物线",
+        "焦点",
+        "y",
+        "px",
+        "p",
+        ">"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "8d697b0b79ec624180717db808728c5a090ba343e6ff092999679f044dbc26d5",
+      "source_question_text_sha256": "8d697b0b79ec624180717db808728c5a090ba343e6ff092999679f044dbc26d5",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "8d697b0b79ec624180717db808728c5a090ba343e6ff092999679f044dbc26d5",
+        "learner_question_text_sha256": "8d697b0b79ec624180717db808728c5a090ba343e6ff092999679f044dbc26d5"
+      },
+      "question_signal_excerpt": "抛物线、焦点、y、px、p、>",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:bee968a42f7d4325",
+      "item_id": "bee968a42f7d4325",
+      "ordinal": 14,
+      "ordinal_in_cycle": 3,
+      "kind": "direct_variant",
+      "label": "例8 变式2",
+      "group": null,
+      "cycle_id": "ch3.s7-cycle-7",
+      "cycle_sequence": 7,
+      "cycle_title": "类型IV 抛物线定义与几何性质综合题",
+      "course_refs": [
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "course_titles": [
+        "抛物线的定义及其方程",
+        "焦半径公式",
+        "焦点弦公式与面积"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型IV 抛物线定义与几何性质综合题"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "直线",
+        "抛物线",
+        "焦点",
+        "面积",
+        "y",
+        "x",
+        "F",
+        "A"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "f36125cd5ef147a5b3bb92cb627f3c3ca53a5062118edb55f61902d5f8e8c7cb",
+      "source_question_text_sha256": "f36125cd5ef147a5b3bb92cb627f3c3ca53a5062118edb55f61902d5f8e8c7cb",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "f36125cd5ef147a5b3bb92cb627f3c3ca53a5062118edb55f61902d5f8e8c7cb",
+        "learner_question_text_sha256": "f36125cd5ef147a5b3bb92cb627f3c3ca53a5062118edb55f61902d5f8e8c7cb"
+      },
+      "question_signal_excerpt": "直线、抛物线、焦点、面积、y、x、F、A",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:cfa0b66be896c44a",
+      "item_id": "cfa0b66be896c44a",
+      "ordinal": 15,
+      "ordinal_in_cycle": 4,
+      "kind": "direct_variant",
+      "label": "例8 变式3",
+      "group": null,
+      "cycle_id": "ch3.s7-cycle-7",
+      "cycle_sequence": 7,
+      "cycle_title": "类型IV 抛物线定义与几何性质综合题",
+      "course_refs": [
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "course_titles": [
+        "抛物线的定义及其方程",
+        "焦半径公式",
+        "焦点弦公式与面积"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型IV 抛物线定义与几何性质综合题"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "直线",
+        "抛物线",
+        "焦点",
+        "准线",
+        "y",
+        "x",
+        "F",
+        "A"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "7062ced39ba114b89e0c50e268b0791a988c5418a57ee316722a5e7e0a8a1a57",
+      "source_question_text_sha256": "7062ced39ba114b89e0c50e268b0791a988c5418a57ee316722a5e7e0a8a1a57",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "7062ced39ba114b89e0c50e268b0791a988c5418a57ee316722a5e7e0a8a1a57",
+        "learner_question_text_sha256": "7062ced39ba114b89e0c50e268b0791a988c5418a57ee316722a5e7e0a8a1a57"
+      },
+      "question_signal_excerpt": "直线、抛物线、焦点、准线、y、x、F、A",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:a215ddfe943e1ba2",
+      "item_id": "a215ddfe943e1ba2",
+      "ordinal": 16,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例9",
+      "group": null,
+      "cycle_id": "ch3.s7-cycle-8",
+      "cycle_sequence": 8,
+      "cycle_title": "类型V 抛物线的实际应用",
+      "course_refs": [
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "course_titles": [
+        "抛物线的定义及其方程",
+        "焦半径公式",
+        "焦点弦公式与面积"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型V 抛物线的实际应用"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "距离",
+        "抛物线",
+        "焦点",
+        "FAST",
+        "A",
+        "B"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "VISION_VERIFIED",
+        "image_refs": [
+          {
+            "ref": "imgs/img_in_image_box_375_859_542_970.jpg",
+            "path": "data/ocr_live_current/third_chapter_180/imgs/img_in_image_box_375_859_542_970.jpg",
+            "exists": true
+          },
+          {
+            "ref": "imgs/img_in_image_box_577_858_810_968.jpg",
+            "path": "data/ocr_live_current/third_chapter_180/imgs/img_in_image_box_577_858_810_968.jpg",
+            "exists": true
+          }
+        ]
+      },
+      "question_text_sha256": "d35e5c10248dd063fe2bd8471cb89bb73128d8fa1b99d4477220a0772549c18d",
+      "source_question_text_sha256": "d35e5c10248dd063fe2bd8471cb89bb73128d8fa1b99d4477220a0772549c18d",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "d35e5c10248dd063fe2bd8471cb89bb73128d8fa1b99d4477220a0772549c18d",
+        "learner_question_text_sha256": "d35e5c10248dd063fe2bd8471cb89bb73128d8fa1b99d4477220a0772549c18d"
+      },
+      "question_signal_excerpt": "距离、抛物线、焦点、FAST、A、B",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:f8fe53b636f57231",
+      "item_id": "f8fe53b636f57231",
+      "ordinal": 17,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例10",
+      "group": null,
+      "cycle_id": "ch3.s7-cycle-9",
+      "cycle_sequence": 9,
+      "cycle_title": "类型VI 基于抛物线定义的一类最值问题",
+      "course_refs": [
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "course_titles": [
+        "抛物线的定义及其方程",
+        "焦半径公式",
+        "焦点弦公式与面积"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型VI 基于抛物线定义的一类最值问题"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "抛物线",
+        "焦点",
+        "x",
+        "y",
+        "F",
+        "P"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "c6bb44613d6999650563bc5de8417f75221ce06807e41b5108c395fd445563db",
+      "source_question_text_sha256": "c6bb44613d6999650563bc5de8417f75221ce06807e41b5108c395fd445563db",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "c6bb44613d6999650563bc5de8417f75221ce06807e41b5108c395fd445563db",
+        "learner_question_text_sha256": "c6bb44613d6999650563bc5de8417f75221ce06807e41b5108c395fd445563db"
+      },
+      "question_signal_excerpt": "抛物线、焦点、x、y、F、P",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:7384f92b50d73ba8",
+      "item_id": "7384f92b50d73ba8",
+      "ordinal": 18,
+      "ordinal_in_cycle": 2,
+      "kind": "direct_variant",
+      "label": "例10 变式",
+      "group": null,
+      "cycle_id": "ch3.s7-cycle-9",
+      "cycle_sequence": 9,
+      "cycle_title": "类型VI 基于抛物线定义的一类最值问题",
+      "course_refs": [
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "course_titles": [
+        "抛物线的定义及其方程",
+        "焦半径公式",
+        "焦点弦公式与面积"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型VI 基于抛物线定义的一类最值问题"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "直线",
+        "距离",
+        "抛物线",
+        "准线",
+        "P",
+        "C",
+        "y",
+        "x"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "a8e27039a924462d84e79435837f04ea220eb92d5b35832ba2323c0f38a20014",
+      "source_question_text_sha256": "a8e27039a924462d84e79435837f04ea220eb92d5b35832ba2323c0f38a20014",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "a8e27039a924462d84e79435837f04ea220eb92d5b35832ba2323c0f38a20014",
+        "learner_question_text_sha256": "a8e27039a924462d84e79435837f04ea220eb92d5b35832ba2323c0f38a20014"
+      },
+      "question_signal_excerpt": "直线、距离、抛物线、准线、P、C、y、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-30dd8fe1cc711b5a",
+      "item_id": "Q-30dd8fe1cc711b5a",
+      "ordinal": 19,
+      "ordinal_in_cycle": 1,
+      "kind": "abc_exercise",
+      "label": "A1",
+      "group": "A",
+      "cycle_id": "ch3.s7-cycle-10",
+      "cycle_sequence": 10,
+      "cycle_title": "A组 夯实基础",
+      "course_refs": [
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "course_titles": [
+        "抛物线的定义及其方程",
+        "焦半径公式",
+        "焦点弦公式与面积"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 抛物线的标准方程有关概念题"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "抛物线",
+        "焦点",
+        "y",
+        "x"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "4b4c90be1a8aaacce482707393fcafd26412d4829711608e4c5b05ff738b67e1",
+      "source_question_text_sha256": "4b4c90be1a8aaacce482707393fcafd26412d4829711608e4c5b05ff738b67e1",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "4b4c90be1a8aaacce482707393fcafd26412d4829711608e4c5b05ff738b67e1",
+        "learner_question_text_sha256": "4b4c90be1a8aaacce482707393fcafd26412d4829711608e4c5b05ff738b67e1"
+      },
+      "question_signal_excerpt": "抛物线、焦点、y、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-95148a3593c0f4aa",
+      "item_id": "Q-95148a3593c0f4aa",
+      "ordinal": 20,
+      "ordinal_in_cycle": 2,
+      "kind": "abc_exercise",
+      "label": "A2",
+      "group": "A",
+      "cycle_id": "ch3.s7-cycle-10",
+      "cycle_sequence": 10,
+      "cycle_title": "A组 夯实基础",
+      "course_refs": [
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "course_titles": [
+        "抛物线的定义及其方程",
+        "焦半径公式",
+        "焦点弦公式与面积"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型IV 抛物线定义与几何性质综合题",
+        "类型Ⅲ 用抛物线定义计算焦半径"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "直线",
+        "抛物线",
+        "焦点",
+        "准线",
+        "O",
+        "F",
+        "l",
+        "P"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "aa58ce05d5511d40e8dc313ea765bcd0e0753be0116d46259bd8615373b2b50d",
+      "source_question_text_sha256": "aa58ce05d5511d40e8dc313ea765bcd0e0753be0116d46259bd8615373b2b50d",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "aa58ce05d5511d40e8dc313ea765bcd0e0753be0116d46259bd8615373b2b50d",
+        "learner_question_text_sha256": "aa58ce05d5511d40e8dc313ea765bcd0e0753be0116d46259bd8615373b2b50d"
+      },
+      "question_signal_excerpt": "直线、抛物线、焦点、准线、O、F、l、P",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-d5c6ac678e05dd08",
+      "item_id": "Q-d5c6ac678e05dd08",
+      "ordinal": 21,
+      "ordinal_in_cycle": 3,
+      "kind": "abc_exercise",
+      "label": "A3",
+      "group": "A",
+      "cycle_id": "ch3.s7-cycle-10",
+      "cycle_sequence": 10,
+      "cycle_title": "A组 夯实基础",
+      "course_refs": [
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "course_titles": [
+        "抛物线的定义及其方程",
+        "焦半径公式",
+        "焦点弦公式与面积"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 抛物线的标准方程有关概念题"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "直线",
+        "距离",
+        "抛物线",
+        "焦点",
+        "y",
+        "px",
+        "p",
+        ">"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "574f56659dd5b0499f9ba65951fd219a8e1b8c5c382954474d39de05cb734cf6",
+      "source_question_text_sha256": "574f56659dd5b0499f9ba65951fd219a8e1b8c5c382954474d39de05cb734cf6",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "574f56659dd5b0499f9ba65951fd219a8e1b8c5c382954474d39de05cb734cf6",
+        "learner_question_text_sha256": "574f56659dd5b0499f9ba65951fd219a8e1b8c5c382954474d39de05cb734cf6"
+      },
+      "question_signal_excerpt": "直线、距离、抛物线、焦点、y、px、p、>",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-298e0348f87eb8dd",
+      "item_id": "Q-298e0348f87eb8dd",
+      "ordinal": 22,
+      "ordinal_in_cycle": 4,
+      "kind": "abc_exercise",
+      "label": "A4",
+      "group": "A",
+      "cycle_id": "ch3.s7-cycle-10",
+      "cycle_sequence": 10,
+      "cycle_title": "A组 夯实基础",
+      "course_refs": [
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "course_titles": [
+        "抛物线的定义及其方程",
+        "焦半径公式",
+        "焦点弦公式与面积"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 用抛物线定义计算焦半径"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "距离",
+        "抛物线",
+        "准线",
+        "A",
+        "\\sqrt",
+        "C",
+        "y"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "2308b9fa612be174f8e71c602a0111edb15571be55ee51a41c5388182b48a3f7",
+      "source_question_text_sha256": "2308b9fa612be174f8e71c602a0111edb15571be55ee51a41c5388182b48a3f7",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "2308b9fa612be174f8e71c602a0111edb15571be55ee51a41c5388182b48a3f7",
+        "learner_question_text_sha256": "2308b9fa612be174f8e71c602a0111edb15571be55ee51a41c5388182b48a3f7"
+      },
+      "question_signal_excerpt": "距离、抛物线、准线、A、\\sqrt、C、y",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-e7a4bb06992acb05",
+      "item_id": "Q-e7a4bb06992acb05",
+      "ordinal": 23,
+      "ordinal_in_cycle": 5,
+      "kind": "abc_exercise",
+      "label": "A5",
+      "group": "A",
+      "cycle_id": "ch3.s7-cycle-10",
+      "cycle_sequence": 10,
+      "cycle_title": "A组 夯实基础",
+      "course_refs": [
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "course_titles": [
+        "抛物线的定义及其方程",
+        "焦半径公式",
+        "焦点弦公式与面积"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 用抛物线定义计算焦半径"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "距离",
+        "抛物线",
+        "准线",
+        "y",
+        "x",
+        "P"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "ee7135897690d1946262e31475ea140c60142ab5f4f266079545021cc8cf067b",
+      "source_question_text_sha256": "ee7135897690d1946262e31475ea140c60142ab5f4f266079545021cc8cf067b",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "ee7135897690d1946262e31475ea140c60142ab5f4f266079545021cc8cf067b",
+        "learner_question_text_sha256": "ee7135897690d1946262e31475ea140c60142ab5f4f266079545021cc8cf067b"
+      },
+      "question_signal_excerpt": "距离、抛物线、准线、y、x、P",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-e4c1301cc5a01c8f",
+      "item_id": "Q-e4c1301cc5a01c8f",
+      "ordinal": 24,
+      "ordinal_in_cycle": 6,
+      "kind": "abc_exercise",
+      "label": "A6",
+      "group": "A",
+      "cycle_id": "ch3.s7-cycle-10",
+      "cycle_sequence": 10,
+      "cycle_title": "A组 夯实基础",
+      "course_refs": [
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "course_titles": [
+        "抛物线的定义及其方程",
+        "焦半径公式",
+        "焦点弦公式与面积"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 用抛物线定义计算焦半径"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "距离",
+        "抛物线",
+        "焦点",
+        "A",
+        "C",
+        "y",
+        "px"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "a73d1d285e62421f7c26d651c8c7511f47f0a377b6510581eebfaaba74ac92e1",
+      "source_question_text_sha256": "a73d1d285e62421f7c26d651c8c7511f47f0a377b6510581eebfaaba74ac92e1",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "a73d1d285e62421f7c26d651c8c7511f47f0a377b6510581eebfaaba74ac92e1",
+        "learner_question_text_sha256": "a73d1d285e62421f7c26d651c8c7511f47f0a377b6510581eebfaaba74ac92e1"
+      },
+      "question_signal_excerpt": "距离、抛物线、焦点、A、C、y、px",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-6672999a418a8429",
+      "item_id": "Q-6672999a418a8429",
+      "ordinal": 25,
+      "ordinal_in_cycle": 1,
+      "kind": "abc_exercise",
+      "label": "B7",
+      "group": "B",
+      "cycle_id": "ch3.s7-cycle-11",
+      "cycle_sequence": 11,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "intersection_algebra_upper",
+        "intersection_algebra_lower",
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "course_titles": [
+        "交点问题的基本代数处理（上·题型辨识）",
+        "交点问题的基本代数处理（下·点线设法与处理）",
+        "抛物线的定义及其方程",
+        "焦半径公式",
+        "焦点弦公式与面积"
+      ],
+      "required_course_refs": [
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "prerequisite_course_refs": [
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型IV 抛物线定义与几何性质综合题",
+        "类型Ⅲ 用抛物线定义计算焦半径"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "抛物线",
+        "焦点",
+        "y",
+        "px",
+        "p",
+        ">"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "cff408331d10609847837f9b94f9c56a83e63dc27da97357eef14e43bf3ca405",
+      "source_question_text_sha256": "cff408331d10609847837f9b94f9c56a83e63dc27da97357eef14e43bf3ca405",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "cff408331d10609847837f9b94f9c56a83e63dc27da97357eef14e43bf3ca405",
+        "learner_question_text_sha256": "cff408331d10609847837f9b94f9c56a83e63dc27da97357eef14e43bf3ca405"
+      },
+      "question_signal_excerpt": "抛物线、焦点、y、px、p、>",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-45e7cffcbe157842",
+      "item_id": "Q-45e7cffcbe157842",
+      "ordinal": 26,
+      "ordinal_in_cycle": 2,
+      "kind": "abc_exercise",
+      "label": "B8",
+      "group": "B",
+      "cycle_id": "ch3.s7-cycle-11",
+      "cycle_sequence": 11,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "intersection_algebra_upper",
+        "intersection_algebra_lower",
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "course_titles": [
+        "交点问题的基本代数处理（上·题型辨识）",
+        "交点问题的基本代数处理（下·点线设法与处理）",
+        "抛物线的定义及其方程",
+        "焦半径公式",
+        "焦点弦公式与面积"
+      ],
+      "required_course_refs": [
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "prerequisite_course_refs": [
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型IV 抛物线定义与几何性质综合题",
+        "类型Ⅲ 用抛物线定义计算焦半径"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "直线",
+        "抛物线",
+        "焦点",
+        "准线",
+        "C",
+        "y",
+        "x",
+        "F"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "87c1f0b525972e329ca43dfa0e5586fa63ba0f6368ccb67d38c614bf7d4f1795",
+      "source_question_text_sha256": "87c1f0b525972e329ca43dfa0e5586fa63ba0f6368ccb67d38c614bf7d4f1795",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "87c1f0b525972e329ca43dfa0e5586fa63ba0f6368ccb67d38c614bf7d4f1795",
+        "learner_question_text_sha256": "87c1f0b525972e329ca43dfa0e5586fa63ba0f6368ccb67d38c614bf7d4f1795"
+      },
+      "question_signal_excerpt": "直线、抛物线、焦点、准线、C、y、x、F",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-783746af0af3001d",
+      "item_id": "Q-783746af0af3001d",
+      "ordinal": 27,
+      "ordinal_in_cycle": 3,
+      "kind": "abc_exercise",
+      "label": "B9",
+      "group": "B",
+      "cycle_id": "ch3.s7-cycle-11",
+      "cycle_sequence": 11,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "intersection_algebra_upper",
+        "intersection_algebra_lower",
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "course_titles": [
+        "交点问题的基本代数处理（上·题型辨识）",
+        "交点问题的基本代数处理（下·点线设法与处理）",
+        "抛物线的定义及其方程",
+        "焦半径公式",
+        "焦点弦公式与面积"
+      ],
+      "required_course_refs": [
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "prerequisite_course_refs": [
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型V 抛物线的实际应用"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "距离",
+        "抛物线",
+        "m",
+        "A"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "4cc38d78eada366350e2ff60abf4ec7ecfbce6e0057fb07187c6a8fd1ab601a1",
+      "source_question_text_sha256": "4cc38d78eada366350e2ff60abf4ec7ecfbce6e0057fb07187c6a8fd1ab601a1",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "4cc38d78eada366350e2ff60abf4ec7ecfbce6e0057fb07187c6a8fd1ab601a1",
+        "learner_question_text_sha256": "4cc38d78eada366350e2ff60abf4ec7ecfbce6e0057fb07187c6a8fd1ab601a1"
+      },
+      "question_signal_excerpt": "距离、抛物线、m、A",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-760501242190c44e",
+      "item_id": "Q-760501242190c44e",
+      "ordinal": 28,
+      "ordinal_in_cycle": 4,
+      "kind": "abc_exercise",
+      "label": "B10",
+      "group": "B",
+      "cycle_id": "ch3.s7-cycle-11",
+      "cycle_sequence": 11,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "intersection_algebra_upper",
+        "intersection_algebra_lower",
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "course_titles": [
+        "交点问题的基本代数处理（上·题型辨识）",
+        "交点问题的基本代数处理（下·点线设法与处理）",
+        "抛物线的定义及其方程",
+        "焦半径公式",
+        "焦点弦公式与面积"
+      ],
+      "required_course_refs": [
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "prerequisite_course_refs": [
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型IV 抛物线定义与几何性质综合题",
+        "类型Ⅲ 用抛物线定义计算焦半径"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "抛物线",
+        "焦点",
+        "准线",
+        "O",
+        "C",
+        "y",
+        "px"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "5bb22b740902b2f08dad9f179678a01051d5b740629b14ca924e5bda1d6b2166",
+      "source_question_text_sha256": "5bb22b740902b2f08dad9f179678a01051d5b740629b14ca924e5bda1d6b2166",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "5bb22b740902b2f08dad9f179678a01051d5b740629b14ca924e5bda1d6b2166",
+        "learner_question_text_sha256": "5bb22b740902b2f08dad9f179678a01051d5b740629b14ca924e5bda1d6b2166"
+      },
+      "question_signal_excerpt": "抛物线、焦点、准线、O、C、y、px",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-d25af2953ce50dfc",
+      "item_id": "Q-d25af2953ce50dfc",
+      "ordinal": 29,
+      "ordinal_in_cycle": 5,
+      "kind": "abc_exercise",
+      "label": "B11",
+      "group": "B",
+      "cycle_id": "ch3.s7-cycle-11",
+      "cycle_sequence": 11,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "intersection_algebra_upper",
+        "intersection_algebra_lower",
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "course_titles": [
+        "交点问题的基本代数处理（上·题型辨识）",
+        "交点问题的基本代数处理（下·点线设法与处理）",
+        "抛物线的定义及其方程",
+        "焦半径公式",
+        "焦点弦公式与面积"
+      ],
+      "required_course_refs": [
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "prerequisite_course_refs": [
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型IV 抛物线定义与几何性质综合题",
+        "类型Ⅲ 用抛物线定义计算焦半径"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "抛物线",
+        "焦点",
+        "准线",
+        "C",
+        "y",
+        "px",
+        "p"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "72187ec1d4e97b01d2ef02a34fdb8e57686f1c981531d1678570bbabeac2690f",
+      "source_question_text_sha256": "72187ec1d4e97b01d2ef02a34fdb8e57686f1c981531d1678570bbabeac2690f",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "72187ec1d4e97b01d2ef02a34fdb8e57686f1c981531d1678570bbabeac2690f",
+        "learner_question_text_sha256": "72187ec1d4e97b01d2ef02a34fdb8e57686f1c981531d1678570bbabeac2690f"
+      },
+      "question_signal_excerpt": "抛物线、焦点、准线、C、y、px、p",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-4f47d638a482dbb3",
+      "item_id": "Q-4f47d638a482dbb3",
+      "ordinal": 30,
+      "ordinal_in_cycle": 6,
+      "kind": "abc_exercise",
+      "label": "B12",
+      "group": "B",
+      "cycle_id": "ch3.s7-cycle-11",
+      "cycle_sequence": 11,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "intersection_algebra_upper",
+        "intersection_algebra_lower",
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "course_titles": [
+        "交点问题的基本代数处理（上·题型辨识）",
+        "交点问题的基本代数处理（下·点线设法与处理）",
+        "抛物线的定义及其方程",
+        "焦半径公式",
+        "焦点弦公式与面积"
+      ],
+      "required_course_refs": [
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "prerequisite_course_refs": [
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型VI 基于抛物线定义的一类最值问题",
+        "类型Ⅲ 用抛物线定义计算焦半径"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "倾斜角",
+        "直线",
+        "抛物线",
+        "焦点",
+        "\\frac",
+        "pi",
+        "C",
+        "y"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "313a2ef82a2b9e46f9bad0860d6b3a8cbbe4a8312852163816b7b16ce9cb0763",
+      "source_question_text_sha256": "313a2ef82a2b9e46f9bad0860d6b3a8cbbe4a8312852163816b7b16ce9cb0763",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "313a2ef82a2b9e46f9bad0860d6b3a8cbbe4a8312852163816b7b16ce9cb0763",
+        "learner_question_text_sha256": "313a2ef82a2b9e46f9bad0860d6b3a8cbbe4a8312852163816b7b16ce9cb0763"
+      },
+      "question_signal_excerpt": "倾斜角、直线、抛物线、焦点、\\frac、pi、C、y",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-42b9849d6a3c5d67",
+      "item_id": "Q-42b9849d6a3c5d67",
+      "ordinal": 31,
+      "ordinal_in_cycle": 7,
+      "kind": "abc_exercise",
+      "label": "B13",
+      "group": "B",
+      "cycle_id": "ch3.s7-cycle-11",
+      "cycle_sequence": 11,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "intersection_algebra_upper",
+        "intersection_algebra_lower",
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "course_titles": [
+        "交点问题的基本代数处理（上·题型辨识）",
+        "交点问题的基本代数处理（下·点线设法与处理）",
+        "抛物线的定义及其方程",
+        "焦半径公式",
+        "焦点弦公式与面积"
+      ],
+      "required_course_refs": [
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "prerequisite_course_refs": [
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型IV 抛物线定义与几何性质综合题",
+        "类型Ⅲ 用抛物线定义计算焦半径"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "斜率",
+        "直线",
+        "抛物线",
+        "焦点",
+        "y",
+        "px",
+        "p",
+        ">"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "cd9773e6b3d112d5027675116c3686c48f0f4cbd7cc19935b0aee36019784b38",
+      "source_question_text_sha256": "cd9773e6b3d112d5027675116c3686c48f0f4cbd7cc19935b0aee36019784b38",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "cd9773e6b3d112d5027675116c3686c48f0f4cbd7cc19935b0aee36019784b38",
+        "learner_question_text_sha256": "cd9773e6b3d112d5027675116c3686c48f0f4cbd7cc19935b0aee36019784b38"
+      },
+      "question_signal_excerpt": "斜率、直线、抛物线、焦点、y、px、p、>",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-becac461362694d0",
+      "item_id": "Q-becac461362694d0",
+      "ordinal": 32,
+      "ordinal_in_cycle": 8,
+      "kind": "abc_exercise",
+      "label": "B14",
+      "group": "B",
+      "cycle_id": "ch3.s7-cycle-11",
+      "cycle_sequence": 11,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "intersection_algebra_upper",
+        "intersection_algebra_lower",
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "course_titles": [
+        "交点问题的基本代数处理（上·题型辨识）",
+        "交点问题的基本代数处理（下·点线设法与处理）",
+        "抛物线的定义及其方程",
+        "焦半径公式",
+        "焦点弦公式与面积"
+      ],
+      "required_course_refs": [
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "prerequisite_course_refs": [
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 定义法求抛物线的轨迹方程"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "直线",
+        "对称",
+        "O",
+        "F",
+        "M",
+        "x"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "d78ae779cd2813ff191b5357b1b69aa8cef629c1ecf26d836128afc6c96a857a",
+      "source_question_text_sha256": "d78ae779cd2813ff191b5357b1b69aa8cef629c1ecf26d836128afc6c96a857a",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "d78ae779cd2813ff191b5357b1b69aa8cef629c1ecf26d836128afc6c96a857a",
+        "learner_question_text_sha256": "d78ae779cd2813ff191b5357b1b69aa8cef629c1ecf26d836128afc6c96a857a"
+      },
+      "question_signal_excerpt": "直线、对称、O、F、M、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-18b878346880800b",
+      "item_id": "Q-18b878346880800b",
+      "ordinal": 33,
+      "ordinal_in_cycle": 1,
+      "kind": "abc_exercise",
+      "label": "C15",
+      "group": "C",
+      "cycle_id": "ch3.s7-cycle-12",
+      "cycle_sequence": 12,
+      "cycle_title": "C组 拓展提升",
+      "course_refs": [
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "course_titles": [
+        "抛物线的定义及其方程",
+        "焦半径公式",
+        "焦点弦公式与面积"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型VI 基于抛物线定义的一类最值问题"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "直线",
+        "距离",
+        "抛物线",
+        "P",
+        "y",
+        "x"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "5e020a833710a760f0bd1f62998398e3b9f3b89a7c3179bf2a3107d79ebaba0d",
+      "source_question_text_sha256": "5e020a833710a760f0bd1f62998398e3b9f3b89a7c3179bf2a3107d79ebaba0d",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "5e020a833710a760f0bd1f62998398e3b9f3b89a7c3179bf2a3107d79ebaba0d",
+        "learner_question_text_sha256": "5e020a833710a760f0bd1f62998398e3b9f3b89a7c3179bf2a3107d79ebaba0d"
+      },
+      "question_signal_excerpt": "直线、距离、抛物线、P、y、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-1b905a4990831a74",
+      "item_id": "Q-1b905a4990831a74",
+      "ordinal": 34,
+      "ordinal_in_cycle": 2,
+      "kind": "abc_exercise",
+      "label": "C16",
+      "group": "C",
+      "cycle_id": "ch3.s7-cycle-12",
+      "cycle_sequence": 12,
+      "cycle_title": "C组 拓展提升",
+      "course_refs": [
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "course_titles": [
+        "抛物线的定义及其方程",
+        "焦半径公式",
+        "焦点弦公式与面积"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "parabola_definition_equation",
+        "focal_radius_formula",
+        "focal_chord_area"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型IV 抛物线定义与几何性质综合题",
+        "类型VI 基于抛物线定义的一类最值问题"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "抛物线",
+        "焦点",
+        "准线",
+        "xOy",
+        "C",
+        "y",
+        "x"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "3e9ea997dfa64c2904f8a96138ed31096c5644b0e8d8444ced8716e2067ed215",
+      "source_question_text_sha256": "3e9ea997dfa64c2904f8a96138ed31096c5644b0e8d8444ced8716e2067ed215",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "3e9ea997dfa64c2904f8a96138ed31096c5644b0e8d8444ced8716e2067ed215",
+        "learner_question_text_sha256": "3e9ea997dfa64c2904f8a96138ed31096c5644b0e8d8444ced8716e2067ed215"
+      },
+      "question_signal_excerpt": "抛物线、焦点、准线、xOy、C、y、x",
+      "source_blocked": false
+    }
+  ],
+  "route_versions": [
+    {
+      "version": 1,
+      "route_hash": "a65821d4bacb6f1da1ea09b0d2664a79637dcc86a609ff187ed7f10ea7bba70c"
+    },
+    {
+      "version": 2,
+      "route_hash": "4da9a73c355cf1e5e222a9eeaafb70dacb7f9195e85d1925671b60f514506e1a"
+    },
+    {
+      "version": 3,
+      "route_hash": "bd46b6871af9048082e1db070ef0fba7978bfef6e80e229a33129fe5b86fcf6f"
+    }
+  ],
+  "final_route_hash": "bd46b6871af9048082e1db070ef0fba7978bfef6e80e229a33129fe5b86fcf6f",
+  "simulation": {
+    "protocol": "five-round-five-persona-v3-answer-isolated",
+    "generation_mode": "synthetic_route_stress_from_actual_item_features",
+    "rounds": [
+      {
+        "round": 1,
+        "purpose": "baseline_entry",
+        "route_version": 1,
+        "route_hash": "a65821d4bacb6f1da1ea09b0d2664a79637dcc86a609ff187ed7f10ea7bba70c",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 34,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 34,
+            "blocked": 12
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 34,
+            "blocked": 12
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 34,
+            "blocked": 1
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 34,
+            "blocked": 16
+          }
+        ],
+        "failed_item_keys": [
+          "LI:0eb69ef5bbe1b581",
+          "LI:7384f92b50d73ba8",
+          "LI:76e9608cab0edca8",
+          "LI:a215ddfe943e1ba2",
+          "LI:adeb7084cf3fe24c",
+          "LI:ca336811597133fe",
+          "LI:e7c3c730e1eec0cf",
+          "Q:Q-18b878346880800b",
+          "Q:Q-1b905a4990831a74",
+          "Q:Q-298e0348f87eb8dd",
+          "Q:Q-30dd8fe1cc711b5a",
+          "Q:Q-42b9849d6a3c5d67",
+          "Q:Q-45e7cffcbe157842",
+          "Q:Q-4f47d638a482dbb3",
+          "Q:Q-6672999a418a8429",
+          "Q:Q-760501242190c44e",
+          "Q:Q-783746af0af3001d",
+          "Q:Q-95148a3593c0f4aa",
+          "Q:Q-becac461362694d0",
+          "Q:Q-d25af2953ce50dfc",
+          "Q:Q-d5c6ac678e05dd08",
+          "Q:Q-e4c1301cc5a01c8f",
+          "Q:Q-e7a4bb06992acb05"
+        ],
+        "route_repairs": [
+          {
+            "item_keys": [
+              "LI:76e9608cab0edca8",
+              "LI:adeb7084cf3fe24c",
+              "LI:ca336811597133fe",
+              "LI:e7c3c730e1eec0cf",
+              "Q:Q-1b905a4990831a74",
+              "Q:Q-42b9849d6a3c5d67",
+              "Q:Q-45e7cffcbe157842",
+              "Q:Q-4f47d638a482dbb3",
+              "Q:Q-6672999a418a8429",
+              "Q:Q-760501242190c44e",
+              "Q:Q-95148a3593c0f4aa",
+              "Q:Q-d25af2953ce50dfc"
+            ],
+            "field": "recognition_cues",
+            "before": "第1轮冻结尝试记录了 recognition-weak 的首个阻断。",
+            "after": "下一轮只加入 recognition-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 12 题；不是随机题号注入。"
+          },
+          {
+            "item_keys": [
+              "LI:0eb69ef5bbe1b581",
+              "LI:7384f92b50d73ba8",
+              "LI:76e9608cab0edca8",
+              "LI:a215ddfe943e1ba2",
+              "LI:adeb7084cf3fe24c",
+              "LI:e7c3c730e1eec0cf",
+              "Q:Q-18b878346880800b",
+              "Q:Q-298e0348f87eb8dd",
+              "Q:Q-783746af0af3001d",
+              "Q:Q-d5c6ac678e05dd08",
+              "Q:Q-e4c1301cc5a01c8f",
+              "Q:Q-e7a4bb06992acb05"
+            ],
+            "field": "continuation_checkpoints",
+            "before": "第1轮冻结尝试记录了 algebra-weak 的首个阻断。",
+            "after": "下一轮只加入 algebra-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 12 题；不是随机题号注入。"
+          },
+          {
+            "item_keys": [
+              "LI:a215ddfe943e1ba2"
+            ],
+            "field": "visual_translation",
+            "before": "第1轮冻结尝试记录了 visual-weak 的首个阻断。",
+            "after": "下一轮只加入 visual-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 1 题；不是随机题号注入。"
+          },
+          {
+            "item_keys": [
+              "Q:Q-18b878346880800b",
+              "Q:Q-1b905a4990831a74",
+              "Q:Q-298e0348f87eb8dd",
+              "Q:Q-30dd8fe1cc711b5a",
+              "Q:Q-42b9849d6a3c5d67",
+              "Q:Q-45e7cffcbe157842",
+              "Q:Q-4f47d638a482dbb3",
+              "Q:Q-6672999a418a8429",
+              "Q:Q-760501242190c44e",
+              "Q:Q-783746af0af3001d",
+              "Q:Q-95148a3593c0f4aa",
+              "Q:Q-becac461362694d0",
+              "Q:Q-d25af2953ce50dfc",
+              "Q:Q-d5c6ac678e05dd08",
+              "Q:Q-e4c1301cc5a01c8f",
+              "Q:Q-e7a4bb06992acb05"
+            ],
+            "field": "independent_self_check",
+            "before": "第1轮冻结尝试记录了 self-check-weak 的首个阻断。",
+            "after": "下一轮只加入 self-check-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 16 题；不是随机题号注入。"
+          }
+        ]
+      },
+      {
+        "round": 2,
+        "purpose": "prerequisite_repair",
+        "route_version": 2,
+        "route_hash": "4da9a73c355cf1e5e222a9eeaafb70dacb7f9195e85d1925671b60f514506e1a",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 34,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 34,
+            "blocked": 0
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 34,
+            "blocked": 0
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 34,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 34,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [],
+        "route_repairs": []
+      },
+      {
+        "round": 3,
+        "purpose": "continuation_transfer",
+        "route_version": 2,
+        "route_hash": "4da9a73c355cf1e5e222a9eeaafb70dacb7f9195e85d1925671b60f514506e1a",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 34,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 34,
+            "blocked": 8
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 34,
+            "blocked": 8
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 34,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 34,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [
+          "LI:1110316c7adf2824",
+          "LI:5ba69d1b3039afab",
+          "LI:609b92217658091b",
+          "LI:7384f92b50d73ba8",
+          "LI:bee968a42f7d4325",
+          "LI:cfa0b66be896c44a",
+          "LI:d78cc13a85a64cad",
+          "LI:e378ae2b1b64e57f"
+        ],
+        "route_repairs": [
+          {
+            "item_keys": [
+              "LI:1110316c7adf2824",
+              "LI:5ba69d1b3039afab",
+              "LI:609b92217658091b",
+              "LI:7384f92b50d73ba8",
+              "LI:bee968a42f7d4325",
+              "LI:cfa0b66be896c44a",
+              "LI:d78cc13a85a64cad",
+              "LI:e378ae2b1b64e57f"
+            ],
+            "field": "recognition_cues",
+            "before": "第3轮冻结尝试记录了 recognition-weak 的首个阻断。",
+            "after": "下一轮只加入 recognition-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 8 题；不是随机题号注入。"
+          },
+          {
+            "item_keys": [
+              "LI:1110316c7adf2824",
+              "LI:5ba69d1b3039afab",
+              "LI:609b92217658091b",
+              "LI:7384f92b50d73ba8",
+              "LI:bee968a42f7d4325",
+              "LI:cfa0b66be896c44a",
+              "LI:d78cc13a85a64cad",
+              "LI:e378ae2b1b64e57f"
+            ],
+            "field": "continuation_checkpoints",
+            "before": "第3轮冻结尝试记录了 algebra-weak 的首个阻断。",
+            "after": "下一轮只加入 algebra-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 8 题；不是随机题号注入。"
+          }
+        ]
+      },
+      {
+        "round": 4,
+        "purpose": "mixed_retrieval",
+        "route_version": 3,
+        "route_hash": "bd46b6871af9048082e1db070ef0fba7978bfef6e80e229a33129fe5b86fcf6f",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 34,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 34,
+            "blocked": 0
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 34,
+            "blocked": 0
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 34,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 34,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [],
+        "route_repairs": []
+      },
+      {
+        "round": 5,
+        "purpose": "fresh_context",
+        "route_version": 3,
+        "route_hash": "bd46b6871af9048082e1db070ef0fba7978bfef6e80e229a33129fe5b86fcf6f",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 34,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 34,
+            "blocked": 0
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 34,
+            "blocked": 0
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 34,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 34,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [],
+        "route_repairs": []
+      }
+    ],
+    "expected_attempts_per_item": 25,
+    "actual_attempts_per_item": 25,
+    "unresolved_item_keys": [],
+    "mathematical_correctness": "not_evaluated_no_final_answer",
+    "mastery_claimed": false,
+    "status": "passed"
+  },
+  "summary": {
+    "items": 34,
+    "attempts": 850,
+    "route_assessments": 850,
+    "rounds": 5,
+    "personas_per_round": 5,
+    "repairs": 6,
+    "round_5_failed_items": 0,
+    "validator_errors": []
+  },
+  "human_learning_status": "remote_math_mcp_only",
+  "cold_24h_retest": "not_run",
+  "mastery_claimed": false,
+  "claim_scope": "route_actionability_only",
+  "mathematical_assessment_status": "not_run",
+  "route_audit_status": "passed",
+  "status": "passed"
+}

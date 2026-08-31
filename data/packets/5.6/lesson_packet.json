@@ -29,7 +29,7 @@
         27
       ]
     },
-    "derived_question_correction_count": 0
+    "derived_question_correction_count": 1
   },
   "status": "VERIFIED",
   "consumer_guard": "Lesson-only context: may include worked examples; never use for independent attempt or reward judgement.",
@@ -110,10 +110,17 @@
     {
       "ocr_doc": 80,
       "source_path": "data/ocr_live_current/chapter5_95/doc_80.md",
-      "text": "当  \\(a \\leq 0\\) 时， \\(ax^2 - 2 < 0\\)， \\(x^3 > 0\\)，所以  \\(f'(x) < 0 \\Leftrightarrow x - 1 > 0 \\Leftrightarrow x > 1\\)， \\(f'(x) > 0 \\Leftrightarrow 0 < x < 1\\)，故  \\(f(x)\\) 在  \\((0,1)\\) 上单调递增，在  \\((1,+\\infty)\\) 上单调递减；\n\n（再看 \\(a>0\\) 的情况，此时 \\(ax^2-2\\) 要变号，为了看出零点，可先将 \\(f'(x)\\) 化为 \\(\\frac{a(x-1)\\left(x-\\sqrt{\\frac{2}{a}}\\right)\\left(x+\\sqrt{\\frac{2}{a}}\\right)}{x^3}\\)，只需关注 \\((x-1)\\left(x-\\sqrt{\\frac{2}{a}}\\right)\\) 这部分，其余项全为正，两个零点是 \\(1\\) 和 \\(\\sqrt{\\frac{2}{a}}\\)，它们的大小关系对 \\(f'(x)\\) 在各段上的正负有影响，故又讨论两个零点的大小）\n\n当 \\(0<a<2\\) 时，\\(\\sqrt{\\frac{2}{a}}>1\\)，所以 \\(f'(x)>0 \\Leftrightarrow 0<x<1\\) 或 \\(x>\\sqrt{\\frac{2}{a}}\\)，\\(f'(x)<0 \\Leftrightarrow 1<x<\\sqrt{\\frac{2}{a}}\\)，\n\n故 \\(f(x)\\) 在 \\((0,1)\\) 上单调递增，在 \\(\\left(1,\\sqrt{\\frac{2}{a}}\\right)\\) 上单调递减，在 \\(\\left(\\sqrt{\\frac{2}{a}},+\\infty\\right)\\) 上单调递增；\n\n当 \\(a=2\\) 时，\\(f'(x)=\\frac{2(x+1)(x-1)^2}{x^3} \\geq 0\\)，所以 \\(f(x)\\) 在 \\((0,+\\infty)\\) 上单调递增；\n\n当 \\(a>2\\) 时，\\(0<\\sqrt{\\frac{2}{a}}<1\\)，所以 \\(f'(x)>0 \\Leftrightarrow 0<x<\\sqrt{\\frac{2}{a}}\\) 或 \\(x>1\\)，\\(f'(x)<0 \\Leftrightarrow \\sqrt{\\frac{2}{a}}<x<1\\)，\n\n故 \\(f(x)\\) 在 \\(\\left(0,\\sqrt{\\frac{2}{a}}\\right)\\) 上单调递增，在 \\(\\left(\\sqrt{\\frac{2}{a}},1\\right)\\) 上单调递减，在 \\((1,+\\infty)\\) 上单调递增。\n\n## 类型V：不等式证明\n\n【例 8】（2018·新课标Ⅱ卷（节选））已知  \\(f(x) = \\mathrm{e}^x - ax^2\\)，若  \\(a=1\\)，证明：当  \\(x \\geq 0\\) 时， \\(f(x) \\geq 1\\)。\n\n证法1：若  \\(a=1\\)，则  \\(f(x) = \\mathrm{e}^x - x^2\\)，要证  \\(f(x) \\geq 1\\)，只需证  \\(\\mathrm{e}^x - x^2 \\geq 1\\) ①，\n\n（上述不等式中有  \\(\\mathrm{e}^x\\)，考虑变形成  \\(\\varphi(x)\\mathrm{e}^x\\) 或  \\(\\frac{\\varphi(x)}{\\mathrm{e}^x}\\) 这种结构，求导分析可能更容易）\n\n要证不等式①成立，只需证  \\(\\mathrm{e}^x \\geq x^2 + 1\\)，即证  \\(\\frac{x^2 + 1}{\\mathrm{e}^x} \\leq 1\\)，\n\n令  \\(g(x) = \\frac{x^2 + 1}{\\mathrm{e}^x}\\)， \\(x \\geq 0\\)，则  \\(g'(x) = \\frac{2x\\mathrm{e}^x - \\mathrm{e}^x(x^2 + 1)}{(\\mathrm{e}^x)^2} = -\\frac{(x - 1)^2}{\\mathrm{e}^x} \\leq 0\\)，当且仅当  \\(x=1\\) 时  \\(g'(x) = 0\\)，\n\n所以  \\(g(x)\\) 在  \\([0, +\\infty)\\) 上单调递减，又  \\(g(0) = 1\\)，所以  \\(g(x) \\leq 1\\)，即  \\(\\frac{x^2 + 1}{x^2} \\leq 1\\)，故  \\(f(x) \\geq 1\\) 成立。\n\n证法2：（按证法1得到要证目标不等式成立，只需证①成立后，考虑到不等式①不算复杂，故也可尝试直接移项，构造函数求导分析）要证不等式①成立，只需证 \\(e^x - x^2 - 1 \\geq 0\\)，设 \\(h(x) = e^x - x^2 - 1\\)， \\(x \\geq 0\\)，则 \\(h'(x) = e^x - 2x\\)，（不易直接判断正负，可继续求导） \\(h''(x) = e^x - 2\\)，\n\n所以  \\(h''(x) < 0 \\Leftrightarrow 0 \\leq x < \\ln 2\\)， \\(h''(x) > 0 \\Leftrightarrow x > \\ln 2\\)，从而  \\(h'(x)\\) 在  \\([0, \\ln 2)\\) 上单调递减，在  \\((\\ln 2, +\\infty)\\) 上单调递增，故  \\(h'(x) \\geq h'(\\ln 2) = \\mathrm{e}^{\\ln 2} - 2 \\ln 2 = 2 - 2 \\ln 2 > 0\\)，所以  \\(h(x)\\) 在  \\([0, +\\infty)\\) 上单调递增，又  \\(h(0) = \\mathrm{e}^0 - 0^2 - 1 = 0\\)，所以  \\(h(x) \\geq 0\\)，即  \\(\\mathrm{e}^x - x^2 - 1 \\geq 0\\)，故当  \\(x \\geq 0\\) 时， \\(f(x) \\geq 1\\) 成立。",
+      "text": "当  \\(a \\leq 0\\) 时， \\(ax^2 - 2 < 0\\)， \\(x^3 > 0\\)，所以  \\(f'(x) < 0 \\Leftrightarrow x - 1 > 0 \\Leftrightarrow x > 1\\)， \\(f'(x) > 0 \\Leftrightarrow 0 < x < 1\\)，故  \\(f(x)\\) 在  \\((0,1)\\) 上单调递增，在  \\((1,+\\infty)\\) 上单调递减；\n\n（再看 \\(a>0\\) 的情况，此时 \\(ax^2-2\\) 要变号，为了看出零点，可先将 \\(f'(x)\\) 化为 \\(\\frac{a(x-1)\\left(x-\\sqrt{\\frac{2}{a}}\\right)\\left(x+\\sqrt{\\frac{2}{a}}\\right)}{x^3}\\)，只需关注 \\((x-1)\\left(x-\\sqrt{\\frac{2}{a}}\\right)\\) 这部分，其余项全为正，两个零点是 \\(1\\) 和 \\(\\sqrt{\\frac{2}{a}}\\)，它们的大小关系对 \\(f'(x)\\) 在各段上的正负有影响，故又讨论两个零点的大小）\n\n当 \\(0<a<2\\) 时，\\(\\sqrt{\\frac{2}{a}}>1\\)，所以 \\(f'(x)>0 \\Leftrightarrow 0<x<1\\) 或 \\(x>\\sqrt{\\frac{2}{a}}\\)，\\(f'(x)<0 \\Leftrightarrow 1<x<\\sqrt{\\frac{2}{a}}\\)，\n\n故 \\(f(x)\\) 在 \\((0,1)\\) 上单调递增，在 \\(\\left(1,\\sqrt{\\frac{2}{a}}\\right)\\) 上单调递减，在 \\(\\left(\\sqrt{\\frac{2}{a}},+\\infty\\right)\\) 上单调递增；\n\n当 \\(a=2\\) 时，\\(f'(x)=\\frac{2(x+1)(x-1)^2}{x^3} \\geq 0\\)，所以 \\(f(x)\\) 在 \\((0,+\\infty)\\) 上单调递增；\n\n当 \\(a>2\\) 时，\\(0<\\sqrt{\\frac{2}{a}}<1\\)，所以 \\(f'(x)>0 \\Leftrightarrow 0<x<\\sqrt{\\frac{2}{a}}\\) 或 \\(x>1\\)，\\(f'(x)<0 \\Leftrightarrow \\sqrt{\\frac{2}{a}}<x<1\\)，\n\n故 \\(f(x)\\) 在 \\(\\left(0,\\sqrt{\\frac{2}{a}}\\right)\\) 上单调递增，在 \\(\\left(\\sqrt{\\frac{2}{a}},1\\right)\\) 上单调递减，在 \\((1,+\\infty)\\) 上单调递增。\n\n## 类型V：不等式证明\n\n【例 8】（2018·新课标Ⅱ卷（节选））已知  \\(f(x) = \\mathrm{e}^x - ax^2\\)，若  \\(a=1\\)，证明：当  \\(x \\geq 0\\) 时， \\(f(x) \\geq 1\\)。\n\n证法1：若  \\(a=1\\)，则  \\(f(x) = \\mathrm{e}^x - x^2\\)，要证  \\(f(x) \\geq 1\\)，只需证  \\(\\mathrm{e}^x - x^2 \\geq 1\\) ①，\n\n（上述不等式中有  \\(\\mathrm{e}^x\\)，考虑变形成  \\(\\varphi(x)\\mathrm{e}^x\\) 或  \\(\\frac{\\varphi(x)}{\\mathrm{e}^x}\\) 这种结构，求导分析可能更容易）\n\n要证不等式①成立，只需证  \\(\\mathrm{e}^x \\geq x^2 + 1\\)，即证  \\(\\frac{x^2 + 1}{\\mathrm{e}^x} \\leq 1\\)，\n\n令  \\(g(x) = \\frac{x^2 + 1}{\\mathrm{e}^x}\\)， \\(x \\geq 0\\)，则  \\(g'(x) = \\frac{2x\\mathrm{e}^x - \\mathrm{e}^x(x^2 + 1)}{(\\mathrm{e}^x)^2} = -\\frac{(x - 1)^2}{\\mathrm{e}^x} \\leq 0\\)，当且仅当  \\(x=1\\) 时  \\(g'(x) = 0\\)，\n\n所以  \\(g(x)\\) 在  \\([0, +\\infty)\\) 上单调递减，又  \\(g(0) = 1\\)，所以  \\(g(x) \\leq 1\\)，即  \\(\\frac{x^2 + 1}{\\mathrm{e}^x} \\leq 1\\)，故  \\(f(x) \\geq 1\\) 成立。\n\n证法2：（按证法1得到要证目标不等式成立，只需证①成立后，考虑到不等式①不算复杂，故也可尝试直接移项，构造函数求导分析）要证不等式①成立，只需证 \\(e^x - x^2 - 1 \\geq 0\\)，设 \\(h(x) = e^x - x^2 - 1\\)， \\(x \\geq 0\\)，则 \\(h'(x) = e^x - 2x\\)，（不易直接判断正负，可继续求导） \\(h''(x) = e^x - 2\\)，\n\n所以  \\(h''(x) < 0 \\Leftrightarrow 0 \\leq x < \\ln 2\\)， \\(h''(x) > 0 \\Leftrightarrow x > \\ln 2\\)，从而  \\(h'(x)\\) 在  \\([0, \\ln 2)\\) 上单调递减，在  \\((\\ln 2, +\\infty)\\) 上单调递增，故  \\(h'(x) \\geq h'(\\ln 2) = \\mathrm{e}^{\\ln 2} - 2 \\ln 2 = 2 - 2 \\ln 2 > 0\\)，所以  \\(h(x)\\) 在  \\([0, +\\infty)\\) 上单调递增，又  \\(h(0) = \\mathrm{e}^0 - 0^2 - 1 = 0\\)，所以  \\(h(x) \\geq 0\\)，即  \\(\\mathrm{e}^x - x^2 - 1 \\geq 0\\)，故当  \\(x \\geq 0\\) 时， \\(f(x) \\geq 1\\) 成立。",
       "text_sha256": "70806b4c03bc446e4ccdb8b6139249d32cf36cc8ac6ffddedb32a72d7a58cf14",
       "image_refs": [],
-      "math_errors": []
+      "math_errors": [],
+      "derived_corrections": [
+        {
+          "from": "\\frac{x^2 + 1}{x^2}",
+          "to": "\\frac{x^2 + 1}{\\mathrm{e}^x}",
+          "reason": "source merged PDF page 81 shows the same quotient by e^x before and after the monotonicity argument"
+        }
+      ]
     },
     {
       "ocr_doc": 81,
@@ -256,10 +263,18 @@
     {
       "ocr_doc": 91,
       "source_path": "data/ocr_live_current/chapter5_95/doc_91.md",
-      "text": "17.（2016·四川卷（节选））\n\n设函数  \\(f(x) = ax^2 - a - \\ln x\\)，其中  \\(a \\in \\mathbb{R}\\)，讨论  \\(f(x)\\) 的单调性.\n\n18.（2017·新课标Ⅰ卷（节选））\n\n已知函数  \\(f(x)=\\mathrm{e}^{x}(\\mathrm{e}^{x}-a)-a^{2}x\\)，讨论  \\(f(x)\\) 的单调性.\n\n19.（2021·北京卷）数·高中数学一本通已知函数 \\(f(x)=\\frac{3-2x}{x^{2}+a}\\).\n\n（1）若 a=0，求曲线  \\(y=f(x)\\) 在点  \\((1,f(1))\\) 处的切线方程；\n\n（2）若函数  \\(f(x)\\) 在 x = -1 处取得极值，求  \\(f(x)\\) 的单调区间，以及最大值与最小值.\n\n20.（2016·新课标Ⅰ卷（节选））\n\n已知函数  \\(f(x)=(x-2)e^{x}+a(x-1)^{2}\\)，讨论  \\(f(x)\\) 的单调性.",
+      "text": "17.（2016·四川卷（节选））\n\n设函数  \\(f(x) = ax^2 - a - \\ln x\\)，其中  \\(a \\in \\mathbb{R}\\)，讨论  \\(f(x)\\) 的单调性.\n\n18.（2017·新课标Ⅰ卷（节选））\n\n已知函数  \\(f(x)=\\mathrm{e}^{x}(\\mathrm{e}^{x}-a)-a^{2}x\\)，讨论  \\(f(x)\\) 的单调性.\n\n19.（2021·北京卷）\n\n已知函数 \\(f(x)=\\frac{3-2x}{x^{2}+a}\\)。\n\n（1）若 a=0，求曲线  \\(y=f(x)\\) 在点  \\((1,f(1))\\) 处的切线方程；\n\n（2）若函数  \\(f(x)\\) 在 x = -1 处取得极值，求  \\(f(x)\\) 的单调区间，以及最大值与最小值.\n\n20.（2016·新课标Ⅰ卷（节选））\n\n已知函数  \\(f(x)=(x-2)e^{x}+a(x-1)^{2}\\)，讨论  \\(f(x)\\) 的单调性.",
       "text_sha256": "534d2c8ee8e107a9e206a6d8a92e1689e333bb29a252155e0dadd1a6d9c8919c",
       "image_refs": [],
-      "math_errors": []
+      "math_errors": [],
+      "derived_question_corrections": [
+        {
+          "id": "DQC-5.6-B19-RUNNING-HEADER",
+          "action": "replace_line",
+          "evidence": "MERGED_SOURCE_PDF_PAGE_92_VISUAL_REVIEW",
+          "reason": "running_header_was_fused_between_citation_and_question"
+        }
+      ]
     },
     {
       "ocr_doc": 92,
@@ -652,7 +667,7 @@
         "pdf_page": 92,
         "file": "data/ocr_live_current/chapter5_95/doc_91.md"
       },
-      "question_text": "19.（2021·北京卷）数·高中数学一本通已知函数 \\(f(x)=\\frac{3-2x}{x^{2}+a}\\).\n\n（1）若 a=0，求曲线  \\(y=f(x)\\) 在点  \\((1,f(1))\\) 处的切线方程；\n\n（2）若函数  \\(f(x)\\) 在 x = -1 处取得极值，求  \\(f(x)\\) 的单调区间，以及最大值与最小值.",
+      "question_text": "19.（2021·北京卷）\n\n已知函数 \\(f(x)=\\frac{3-2x}{x^{2}+a}\\)。\n\n（1）若 a=0，求曲线  \\(y=f(x)\\) 在点  \\((1,f(1))\\) 处的切线方程；\n\n（2）若函数  \\(f(x)\\) 在 x = -1 处取得极值，求  \\(f(x)\\) 的单调区间，以及最大值与最小值.",
       "image_refs": [],
       "visual_status": "READY_TEXT_ONLY",
       "math_errors": [],

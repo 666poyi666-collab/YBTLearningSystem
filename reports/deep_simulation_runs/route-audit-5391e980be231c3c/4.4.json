@@ -1,0 +1,2709 @@
+{
+  "schema_version": "ybt-deep-section-simulation-v3",
+  "generated_at": "2026-08-31T04:06:32.308856+00:00",
+  "chapter": 4,
+  "section": "4.4",
+  "label": "第4节 等比数列的概念",
+  "simulation_kind": "answer_isolated_synthetic_route_stress",
+  "honesty_boundary": "Attempts test route actionability. They contain no final learner answer, so mathematical correctness and mastery are not claimed.",
+  "source_binding": {
+    "manifest_sha256": "bcc498c040cdd2126617700aef4f26bc6ac11a420c7f2af4b083ca2e838c4ad6",
+    "student_learning_items_sha256": "37cecd92c026915dcb3831b7536134bf9452de2bc7b052f0c2d6d6b978f08b4d",
+    "student_packet_sha256": "1441d67707ae4c3a26bccc3e2b4b5167da43005ceb4644dfd0e666ecfc82f90a",
+    "grader_learning_packet_sha256": "306658b5f71a8f5831701dcc3461d29f5ee03a840e5200f8b4380a1d3c5d1758",
+    "route_sha256": "b449a47e1b27e1068c9f9f7dfed467267c4eb2c82231032e309acfbd8b340d23",
+    "learner_input_snapshot_sha256": "7b5cfe41ee2583ac0caf9f985e92e97840add88d480553d261c0136817aa9611"
+  },
+  "answer_isolation": {
+    "frozen_attempts_path": "reports/deep_simulation_runs/route-audit-5391e980be231c3c/frozen/4.4.jsonl.gz",
+    "frozen_attempts_sha256": "cc847e41d75417d5963e227d43f8cba37ba302d65544cfe189d1b2d86aa31009",
+    "route_assessments_path": "reports/deep_simulation_runs/route-audit-5391e980be231c3c/route_assessments/4.4.jsonl.gz",
+    "route_assessments_sha256": "bb9a9e2bf9a7c4f73096e29f0a9e0b5b0e9a8fc63cbdcbde6286dbcac8265ff7",
+    "learner_answer_material_loaded": false,
+    "grader_material_loaded_after_freeze": true,
+    "grader_evidence": {
+      "parsed_automatic": 14,
+      "review_required_text": 2,
+      "source_page_bound": 9,
+      "textbook_solution": 11,
+      "blocked": 0
+    },
+    "status": "passed"
+  },
+  "items": [
+    {
+      "item_key": "LI:2e923d430421f49d",
+      "item_id": "2e923d430421f49d",
+      "ordinal": 1,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例1",
+      "group": null,
+      "cycle_id": "4.4-cycle-1",
+      "cycle_sequence": 1,
+      "cycle_title": "等比数列的定义",
+      "course_refs": [
+        "4.3.3.1 等比数列的基本公式"
+      ],
+      "course_titles": [
+        "等比数列的基本公式"
+      ],
+      "required_course_refs": [
+        "4.3.3.1 等比数列的基本公式"
+      ],
+      "prerequisite_course_refs": [],
+      "knowledge_refs": [
+        "4.4-k1"
+      ],
+      "type_refs": [],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "sequence",
+      "recognition_cues": [
+        "数列",
+        "等比",
+        "a"
+      ],
+      "method_model": "数列下标与递推模型",
+      "first_written_line_template": "先写明目标是通项、递推还是前 n 项和，并标出首项和下标范围。",
+      "continuation_actions": [
+        "把条件化为通项、求和或递推关系",
+        "选择裂项、错位相减、分组、待定系数或归纳",
+        "整理首尾项和边界项"
+      ],
+      "independent_self_check": "检查首项、项数、下标错位、公比特值、分母和归纳起点。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "66db0afb5369dd855d3df5b98e85e6edde3d5e478420db01c364573db26b835a",
+      "source_question_text_sha256": "66db0afb5369dd855d3df5b98e85e6edde3d5e478420db01c364573db26b835a",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "66db0afb5369dd855d3df5b98e85e6edde3d5e478420db01c364573db26b835a",
+        "learner_question_text_sha256": "66db0afb5369dd855d3df5b98e85e6edde3d5e478420db01c364573db26b835a"
+      },
+      "question_signal_excerpt": "数列、等比、a",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:fe0dacbb7ae1ff5f",
+      "item_id": "fe0dacbb7ae1ff5f",
+      "ordinal": 2,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例2",
+      "group": null,
+      "cycle_id": "4.4-cycle-2",
+      "cycle_sequence": 2,
+      "cycle_title": "等比中项",
+      "course_refs": [
+        "4.3.3.1 等比数列的基本公式"
+      ],
+      "course_titles": [
+        "等比数列的基本公式"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.3.3.1 等比数列的基本公式"
+      ],
+      "knowledge_refs": [
+        "4.4-k2"
+      ],
+      "type_refs": [],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "sequence",
+      "recognition_cues": [
+        "等比",
+        "m",
+        "A",
+        "pm4"
+      ],
+      "method_model": "数列下标与递推模型",
+      "first_written_line_template": "先写明目标是通项、递推还是前 n 项和，并标出首项和下标范围。",
+      "continuation_actions": [
+        "把条件化为通项、求和或递推关系",
+        "选择裂项、错位相减、分组、待定系数或归纳",
+        "整理首尾项和边界项"
+      ],
+      "independent_self_check": "检查首项、项数、下标错位、公比特值、分母和归纳起点。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "9bbca54ccedb3801fc9132302d7dbff73e9b595b2e03af95f298e76108d9eb88",
+      "source_question_text_sha256": "9bbca54ccedb3801fc9132302d7dbff73e9b595b2e03af95f298e76108d9eb88",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "9bbca54ccedb3801fc9132302d7dbff73e9b595b2e03af95f298e76108d9eb88",
+        "learner_question_text_sha256": "9bbca54ccedb3801fc9132302d7dbff73e9b595b2e03af95f298e76108d9eb88"
+      },
+      "question_signal_excerpt": "等比、m、A、pm4",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:8ca7e5641fa6ca9d",
+      "item_id": "8ca7e5641fa6ca9d",
+      "ordinal": 3,
+      "ordinal_in_cycle": 2,
+      "kind": "worked_example",
+      "label": "例3",
+      "group": null,
+      "cycle_id": "4.4-cycle-2",
+      "cycle_sequence": 2,
+      "cycle_title": "等比中项",
+      "course_refs": [
+        "4.3.3.1 等比数列的基本公式"
+      ],
+      "course_titles": [
+        "等比数列的基本公式"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.3.3.1 等比数列的基本公式"
+      ],
+      "knowledge_refs": [
+        "4.4-k2"
+      ],
+      "type_refs": [],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "sequence",
+      "recognition_cues": [
+        "数列",
+        "等比",
+        "a"
+      ],
+      "method_model": "数列下标与递推模型",
+      "first_written_line_template": "先写明目标是通项、递推还是前 n 项和，并标出首项和下标范围。",
+      "continuation_actions": [
+        "把条件化为通项、求和或递推关系",
+        "选择裂项、错位相减、分组、待定系数或归纳",
+        "整理首尾项和边界项"
+      ],
+      "independent_self_check": "检查首项、项数、下标错位、公比特值、分母和归纳起点。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "219a47c117901f77d458c43db39b98d048209543789dbedcd15c171f5a6b706f",
+      "source_question_text_sha256": "219a47c117901f77d458c43db39b98d048209543789dbedcd15c171f5a6b706f",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "219a47c117901f77d458c43db39b98d048209543789dbedcd15c171f5a6b706f",
+        "learner_question_text_sha256": "219a47c117901f77d458c43db39b98d048209543789dbedcd15c171f5a6b706f"
+      },
+      "question_signal_excerpt": "数列、等比、a",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:023d7c7caf71be7b",
+      "item_id": "023d7c7caf71be7b",
+      "ordinal": 4,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例4",
+      "group": null,
+      "cycle_id": "4.4-cycle-3",
+      "cycle_sequence": 3,
+      "cycle_title": "等比数列的通项公式",
+      "course_refs": [
+        "4.3.3.1 等比数列的基本公式"
+      ],
+      "course_titles": [
+        "等比数列的基本公式"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.3.3.1 等比数列的基本公式"
+      ],
+      "knowledge_refs": [
+        "4.4-k3"
+      ],
+      "type_refs": [],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "sequence",
+      "recognition_cues": [
+        "数列",
+        "a_",
+        "n"
+      ],
+      "method_model": "数列下标与递推模型",
+      "first_written_line_template": "先写明目标是通项、递推还是前 n 项和，并标出首项和下标范围。",
+      "continuation_actions": [
+        "把条件化为通项、求和或递推关系",
+        "选择裂项、错位相减、分组、待定系数或归纳",
+        "整理首尾项和边界项"
+      ],
+      "independent_self_check": "检查首项、项数、下标错位、公比特值、分母和归纳起点。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "ea7b66e9a8ee7dbc2f43431c00600dce97b0e0e4420bec3d6a69dbf3791349f3",
+      "source_question_text_sha256": "ea7b66e9a8ee7dbc2f43431c00600dce97b0e0e4420bec3d6a69dbf3791349f3",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "ea7b66e9a8ee7dbc2f43431c00600dce97b0e0e4420bec3d6a69dbf3791349f3",
+        "learner_question_text_sha256": "ea7b66e9a8ee7dbc2f43431c00600dce97b0e0e4420bec3d6a69dbf3791349f3"
+      },
+      "question_signal_excerpt": "数列、a_、n",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:8864576e44d1a121",
+      "item_id": "8864576e44d1a121",
+      "ordinal": 5,
+      "ordinal_in_cycle": 2,
+      "kind": "worked_example",
+      "label": "例5",
+      "group": null,
+      "cycle_id": "4.4-cycle-3",
+      "cycle_sequence": 3,
+      "cycle_title": "等比数列的通项公式",
+      "course_refs": [
+        "4.3.3.1 等比数列的基本公式"
+      ],
+      "course_titles": [
+        "等比数列的基本公式"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.3.3.1 等比数列的基本公式"
+      ],
+      "knowledge_refs": [
+        "4.4-k3"
+      ],
+      "type_refs": [],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "sequence",
+      "recognition_cues": [
+        "数列",
+        "等比",
+        "a_n",
+        "a_3",
+        "a_7"
+      ],
+      "method_model": "数列下标与递推模型",
+      "first_written_line_template": "先写明目标是通项、递推还是前 n 项和，并标出首项和下标范围。",
+      "continuation_actions": [
+        "把条件化为通项、求和或递推关系",
+        "选择裂项、错位相减、分组、待定系数或归纳",
+        "整理首尾项和边界项"
+      ],
+      "independent_self_check": "检查首项、项数、下标错位、公比特值、分母和归纳起点。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "64621bef00ee4e77359c066876163729c504a2371fc7f8b64b843004c54ec633",
+      "source_question_text_sha256": "64621bef00ee4e77359c066876163729c504a2371fc7f8b64b843004c54ec633",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "64621bef00ee4e77359c066876163729c504a2371fc7f8b64b843004c54ec633",
+        "learner_question_text_sha256": "64621bef00ee4e77359c066876163729c504a2371fc7f8b64b843004c54ec633"
+      },
+      "question_signal_excerpt": "数列、等比、a_n、a_3、a_7",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:0e5887227aedcbf0",
+      "item_id": "0e5887227aedcbf0",
+      "ordinal": 6,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例6",
+      "group": null,
+      "cycle_id": "4.4-cycle-4",
+      "cycle_sequence": 4,
+      "cycle_title": "等比数列与指数函数的关系",
+      "course_refs": [
+        "4.3.3.2 等比数列的判定",
+        "4.3.3.1 等比数列的基本公式"
+      ],
+      "course_titles": [
+        "等比数列的判定",
+        "等比数列的基本公式"
+      ],
+      "required_course_refs": [
+        "4.3.3.2 等比数列的判定"
+      ],
+      "prerequisite_course_refs": [
+        "4.3.3.1 等比数列的基本公式"
+      ],
+      "knowledge_refs": [
+        "4.4-k4"
+      ],
+      "type_refs": [],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "sequence",
+      "recognition_cues": [
+        "数列",
+        "a_n",
+        "a_1",
+        ">",
+        "n"
+      ],
+      "method_model": "数列下标与递推模型",
+      "first_written_line_template": "先写明目标是通项、递推还是前 n 项和，并标出首项和下标范围。",
+      "continuation_actions": [
+        "把条件化为通项、求和或递推关系",
+        "选择裂项、错位相减、分组、待定系数或归纳",
+        "整理首尾项和边界项"
+      ],
+      "independent_self_check": "检查首项、项数、下标错位、公比特值、分母和归纳起点。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "0c2d11e49a3bedf99eaed9723e281ce4da2403013336d6294449dd6f78fdad99",
+      "source_question_text_sha256": "0c2d11e49a3bedf99eaed9723e281ce4da2403013336d6294449dd6f78fdad99",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "0c2d11e49a3bedf99eaed9723e281ce4da2403013336d6294449dd6f78fdad99",
+        "learner_question_text_sha256": "0c2d11e49a3bedf99eaed9723e281ce4da2403013336d6294449dd6f78fdad99"
+      },
+      "question_signal_excerpt": "数列、a_n、a_1、>、n",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:a9cdebb8cb50a4b7",
+      "item_id": "a9cdebb8cb50a4b7",
+      "ordinal": 7,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例7",
+      "group": null,
+      "cycle_id": "4.4-cycle-5",
+      "cycle_sequence": 5,
+      "cycle_title": "等比数列的性质",
+      "course_refs": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定"
+      ],
+      "course_titles": [
+        "等比数列的基本公式",
+        "等比数列的判定"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定"
+      ],
+      "knowledge_refs": [
+        "4.4-k5"
+      ],
+      "type_refs": [],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "sequence",
+      "recognition_cues": [
+        "数列",
+        "等比",
+        "a_n",
+        "a_2",
+        "a_6",
+        "a_3"
+      ],
+      "method_model": "数列下标与递推模型",
+      "first_written_line_template": "先写明目标是通项、递推还是前 n 项和，并标出首项和下标范围。",
+      "continuation_actions": [
+        "把条件化为通项、求和或递推关系",
+        "选择裂项、错位相减、分组、待定系数或归纳",
+        "整理首尾项和边界项"
+      ],
+      "independent_self_check": "检查首项、项数、下标错位、公比特值、分母和归纳起点。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "cb7b3c224361602deb075c53c06e9a59b23edc3f2446833a1c6994918968f1c3",
+      "source_question_text_sha256": "cb7b3c224361602deb075c53c06e9a59b23edc3f2446833a1c6994918968f1c3",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "cb7b3c224361602deb075c53c06e9a59b23edc3f2446833a1c6994918968f1c3",
+        "learner_question_text_sha256": "cb7b3c224361602deb075c53c06e9a59b23edc3f2446833a1c6994918968f1c3"
+      },
+      "question_signal_excerpt": "数列、等比、a_n、a_2、a_6、a_3",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:c290f00e5d9c2e7b",
+      "item_id": "c290f00e5d9c2e7b",
+      "ordinal": 8,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例8",
+      "group": null,
+      "cycle_id": "4.4-cycle-6",
+      "cycle_sequence": 6,
+      "cycle_title": "类型I 等比数列的证明",
+      "course_refs": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定"
+      ],
+      "course_titles": [
+        "等比数列的基本公式",
+        "等比数列的判定"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 等比数列的证明"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "sequence",
+      "recognition_cues": [
+        "数列",
+        "等比",
+        "a_n",
+        "a_1",
+        "a_"
+      ],
+      "method_model": "数列下标与递推模型",
+      "first_written_line_template": "先写明目标是通项、递推还是前 n 项和，并标出首项和下标范围。",
+      "continuation_actions": [
+        "把条件化为通项、求和或递推关系",
+        "选择裂项、错位相减、分组、待定系数或归纳",
+        "整理首尾项和边界项"
+      ],
+      "independent_self_check": "检查首项、项数、下标错位、公比特值、分母和归纳起点。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "adb7a086bee23ab2eed636fab3df9da0fc0681f5efdfc872750c9e6a48d3a7f9",
+      "source_question_text_sha256": "adb7a086bee23ab2eed636fab3df9da0fc0681f5efdfc872750c9e6a48d3a7f9",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "adb7a086bee23ab2eed636fab3df9da0fc0681f5efdfc872750c9e6a48d3a7f9",
+        "learner_question_text_sha256": "adb7a086bee23ab2eed636fab3df9da0fc0681f5efdfc872750c9e6a48d3a7f9"
+      },
+      "question_signal_excerpt": "数列、等比、a_n、a_1、a_",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:f9d2d2aaae5c64bf",
+      "item_id": "f9d2d2aaae5c64bf",
+      "ordinal": 9,
+      "ordinal_in_cycle": 2,
+      "kind": "direct_variant",
+      "label": "例8 变式1",
+      "group": null,
+      "cycle_id": "4.4-cycle-6",
+      "cycle_sequence": 6,
+      "cycle_title": "类型I 等比数列的证明",
+      "course_refs": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定"
+      ],
+      "course_titles": [
+        "等比数列的基本公式",
+        "等比数列的判定"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 等比数列的证明"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "sequence",
+      "recognition_cues": [
+        "数列",
+        "等比",
+        "证明",
+        "a_n",
+        "b_n",
+        "a_1",
+        "lamb"
+      ],
+      "method_model": "数列下标与递推模型",
+      "first_written_line_template": "先写明目标是通项、递推还是前 n 项和，并标出首项和下标范围。",
+      "continuation_actions": [
+        "把条件化为通项、求和或递推关系",
+        "选择裂项、错位相减、分组、待定系数或归纳",
+        "整理首尾项和边界项"
+      ],
+      "independent_self_check": "检查首项、项数、下标错位、公比特值、分母和归纳起点。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "14484efc0bf089f5ee830ade2337eceda78c11fa65968250d79d5b643ad4c7a0",
+      "source_question_text_sha256": "14484efc0bf089f5ee830ade2337eceda78c11fa65968250d79d5b643ad4c7a0",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "14484efc0bf089f5ee830ade2337eceda78c11fa65968250d79d5b643ad4c7a0",
+        "learner_question_text_sha256": "14484efc0bf089f5ee830ade2337eceda78c11fa65968250d79d5b643ad4c7a0"
+      },
+      "question_signal_excerpt": "数列、等比、证明、a_n、b_n、a_1、lamb",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:c657c8b14fd96025",
+      "item_id": "c657c8b14fd96025",
+      "ordinal": 10,
+      "ordinal_in_cycle": 3,
+      "kind": "direct_variant",
+      "label": "例8 变式2",
+      "group": null,
+      "cycle_id": "4.4-cycle-6",
+      "cycle_sequence": 6,
+      "cycle_title": "类型I 等比数列的证明",
+      "course_refs": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定"
+      ],
+      "course_titles": [
+        "等比数列的基本公式",
+        "等比数列的判定"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 等比数列的证明"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "sequence",
+      "recognition_cues": [
+        "数列",
+        "等比",
+        "证明",
+        "a_n",
+        "n",
+        "S_n"
+      ],
+      "method_model": "数列下标与递推模型",
+      "first_written_line_template": "先写明目标是通项、递推还是前 n 项和，并标出首项和下标范围。",
+      "continuation_actions": [
+        "把条件化为通项、求和或递推关系",
+        "选择裂项、错位相减、分组、待定系数或归纳",
+        "整理首尾项和边界项"
+      ],
+      "independent_self_check": "检查首项、项数、下标错位、公比特值、分母和归纳起点。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "71fb2902c200678b716e14408c001bd0b6312d6f62bdb2c33dbb4f0f5ef6c39e",
+      "source_question_text_sha256": "71fb2902c200678b716e14408c001bd0b6312d6f62bdb2c33dbb4f0f5ef6c39e",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "71fb2902c200678b716e14408c001bd0b6312d6f62bdb2c33dbb4f0f5ef6c39e",
+        "learner_question_text_sha256": "71fb2902c200678b716e14408c001bd0b6312d6f62bdb2c33dbb4f0f5ef6c39e"
+      },
+      "question_signal_excerpt": "数列、等比、证明、a_n、n、S_n",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:b9b515df124f1e66",
+      "item_id": "b9b515df124f1e66",
+      "ordinal": 11,
+      "ordinal_in_cycle": 4,
+      "kind": "direct_variant",
+      "label": "例8 变式3",
+      "group": null,
+      "cycle_id": "4.4-cycle-6",
+      "cycle_sequence": 6,
+      "cycle_title": "类型I 等比数列的证明",
+      "course_refs": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定"
+      ],
+      "course_titles": [
+        "等比数列的基本公式",
+        "等比数列的判定"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 等比数列的证明"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "sequence",
+      "recognition_cues": [
+        "数列",
+        "等差",
+        "等比",
+        "a",
+        "b",
+        "c"
+      ],
+      "method_model": "数列下标与递推模型",
+      "first_written_line_template": "先写明目标是通项、递推还是前 n 项和，并标出首项和下标范围。",
+      "continuation_actions": [
+        "把条件化为通项、求和或递推关系",
+        "选择裂项、错位相减、分组、待定系数或归纳",
+        "整理首尾项和边界项"
+      ],
+      "independent_self_check": "检查首项、项数、下标错位、公比特值、分母和归纳起点。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "b779d760840b5fe5a505f17f5135f25d11e22f9689f46f1d7a0c8b9a51ef46e8",
+      "source_question_text_sha256": "b779d760840b5fe5a505f17f5135f25d11e22f9689f46f1d7a0c8b9a51ef46e8",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "b779d760840b5fe5a505f17f5135f25d11e22f9689f46f1d7a0c8b9a51ef46e8",
+        "learner_question_text_sha256": "b779d760840b5fe5a505f17f5135f25d11e22f9689f46f1d7a0c8b9a51ef46e8"
+      },
+      "question_signal_excerpt": "数列、等差、等比、a、b、c",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:29afa4a743a188a2",
+      "item_id": "29afa4a743a188a2",
+      "ordinal": 12,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例9",
+      "group": null,
+      "cycle_id": "4.4-cycle-7",
+      "cycle_sequence": 7,
+      "cycle_title": "类型Ⅱ 等比数列的通项公式及其应用",
+      "course_refs": [
+        "4.3.3.3 等比数列角标和性质",
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定"
+      ],
+      "course_titles": [
+        "等比数列角标和性质",
+        "等比数列的基本公式",
+        "等比数列的判定"
+      ],
+      "required_course_refs": [
+        "4.3.3.3 等比数列角标和性质"
+      ],
+      "prerequisite_course_refs": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 等比数列的通项公式及其应用"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "sequence",
+      "recognition_cues": [
+        "数列",
+        "等比",
+        "a_",
+        "n"
+      ],
+      "method_model": "数列下标与递推模型",
+      "first_written_line_template": "先写明目标是通项、递推还是前 n 项和，并标出首项和下标范围。",
+      "continuation_actions": [
+        "把条件化为通项、求和或递推关系",
+        "选择裂项、错位相减、分组、待定系数或归纳",
+        "整理首尾项和边界项"
+      ],
+      "independent_self_check": "检查首项、项数、下标错位、公比特值、分母和归纳起点。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "0258c3dd43fd4e5903121f4f5d7ed73d37453888fb52dbffb4b4846090decbb6",
+      "source_question_text_sha256": "0258c3dd43fd4e5903121f4f5d7ed73d37453888fb52dbffb4b4846090decbb6",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "0258c3dd43fd4e5903121f4f5d7ed73d37453888fb52dbffb4b4846090decbb6",
+        "learner_question_text_sha256": "0258c3dd43fd4e5903121f4f5d7ed73d37453888fb52dbffb4b4846090decbb6"
+      },
+      "question_signal_excerpt": "数列、等比、a_、n",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:b8eacec4b53ea51c",
+      "item_id": "b8eacec4b53ea51c",
+      "ordinal": 13,
+      "ordinal_in_cycle": 2,
+      "kind": "direct_variant",
+      "label": "例9 变式1",
+      "group": null,
+      "cycle_id": "4.4-cycle-7",
+      "cycle_sequence": 7,
+      "cycle_title": "类型Ⅱ 等比数列的通项公式及其应用",
+      "course_refs": [
+        "4.3.3.3 等比数列角标和性质",
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定"
+      ],
+      "course_titles": [
+        "等比数列角标和性质",
+        "等比数列的基本公式",
+        "等比数列的判定"
+      ],
+      "required_course_refs": [
+        "4.3.3.3 等比数列角标和性质"
+      ],
+      "prerequisite_course_refs": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 等比数列的通项公式及其应用"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "sequence",
+      "recognition_cues": [
+        "数列",
+        "等差",
+        "等比",
+        "a_n",
+        "a_2",
+        "a_5",
+        "a_9"
+      ],
+      "method_model": "数列下标与递推模型",
+      "first_written_line_template": "先写明目标是通项、递推还是前 n 项和，并标出首项和下标范围。",
+      "continuation_actions": [
+        "把条件化为通项、求和或递推关系",
+        "选择裂项、错位相减、分组、待定系数或归纳",
+        "整理首尾项和边界项"
+      ],
+      "independent_self_check": "检查首项、项数、下标错位、公比特值、分母和归纳起点。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "65a7db0c6e6b80cc3d5c1a0eb11acf697693eb1dcb6adbdab45f1c3405ff8fd3",
+      "source_question_text_sha256": "65a7db0c6e6b80cc3d5c1a0eb11acf697693eb1dcb6adbdab45f1c3405ff8fd3",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "65a7db0c6e6b80cc3d5c1a0eb11acf697693eb1dcb6adbdab45f1c3405ff8fd3",
+        "learner_question_text_sha256": "65a7db0c6e6b80cc3d5c1a0eb11acf697693eb1dcb6adbdab45f1c3405ff8fd3"
+      },
+      "question_signal_excerpt": "数列、等差、等比、a_n、a_2、a_5、a_9",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:aa4352c23c70b21f",
+      "item_id": "aa4352c23c70b21f",
+      "ordinal": 14,
+      "ordinal_in_cycle": 3,
+      "kind": "direct_variant",
+      "label": "例9 变式2",
+      "group": null,
+      "cycle_id": "4.4-cycle-7",
+      "cycle_sequence": 7,
+      "cycle_title": "类型Ⅱ 等比数列的通项公式及其应用",
+      "course_refs": [
+        "4.3.3.3 等比数列角标和性质",
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定"
+      ],
+      "course_titles": [
+        "等比数列角标和性质",
+        "等比数列的基本公式",
+        "等比数列的判定"
+      ],
+      "required_course_refs": [
+        "4.3.3.3 等比数列角标和性质"
+      ],
+      "prerequisite_course_refs": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 等比数列的通项公式及其应用"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "sequence",
+      "recognition_cues": [
+        "数列",
+        "通项",
+        "等差",
+        "等比",
+        "a_n",
+        "n",
+        "S_n",
+        "b_n"
+      ],
+      "method_model": "数列下标与递推模型",
+      "first_written_line_template": "先写明目标是通项、递推还是前 n 项和，并标出首项和下标范围。",
+      "continuation_actions": [
+        "把条件化为通项、求和或递推关系",
+        "选择裂项、错位相减、分组、待定系数或归纳",
+        "整理首尾项和边界项"
+      ],
+      "independent_self_check": "检查首项、项数、下标错位、公比特值、分母和归纳起点。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "b8a3d314ebc3705c1bce414ad9adb63c9938505607cd1e99bb560dffeec5370b",
+      "source_question_text_sha256": "b8a3d314ebc3705c1bce414ad9adb63c9938505607cd1e99bb560dffeec5370b",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "b8a3d314ebc3705c1bce414ad9adb63c9938505607cd1e99bb560dffeec5370b",
+        "learner_question_text_sha256": "b8a3d314ebc3705c1bce414ad9adb63c9938505607cd1e99bb560dffeec5370b"
+      },
+      "question_signal_excerpt": "数列、通项、等差、等比、a_n、n、S_n、b_n",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:44c88bfc67602a80",
+      "item_id": "44c88bfc67602a80",
+      "ordinal": 15,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例10",
+      "group": null,
+      "cycle_id": "4.4-cycle-8",
+      "cycle_sequence": 8,
+      "cycle_title": "类型III 等比数列下标和性质的应用",
+      "course_refs": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定",
+        "4.3.3.3 等比数列角标和性质"
+      ],
+      "course_titles": [
+        "等比数列的基本公式",
+        "等比数列的判定",
+        "等比数列角标和性质"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定",
+        "4.3.3.3 等比数列角标和性质"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型III 等比数列下标和性质的应用"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "sequence",
+      "recognition_cues": [
+        "数列",
+        "等比",
+        "a_n",
+        "a_3",
+        "a_5",
+        "x"
+      ],
+      "method_model": "数列下标与递推模型",
+      "first_written_line_template": "先写明目标是通项、递推还是前 n 项和，并标出首项和下标范围。",
+      "continuation_actions": [
+        "把条件化为通项、求和或递推关系",
+        "选择裂项、错位相减、分组、待定系数或归纳",
+        "整理首尾项和边界项"
+      ],
+      "independent_self_check": "检查首项、项数、下标错位、公比特值、分母和归纳起点。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "c1daea68ecef21547170e3ea552bc1e5d3f591223dce4c564c53e187c0fe5c31",
+      "source_question_text_sha256": "c1daea68ecef21547170e3ea552bc1e5d3f591223dce4c564c53e187c0fe5c31",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "c1daea68ecef21547170e3ea552bc1e5d3f591223dce4c564c53e187c0fe5c31",
+        "learner_question_text_sha256": "c1daea68ecef21547170e3ea552bc1e5d3f591223dce4c564c53e187c0fe5c31"
+      },
+      "question_signal_excerpt": "数列、等比、a_n、a_3、a_5、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:a51623e6cfcb0507",
+      "item_id": "a51623e6cfcb0507",
+      "ordinal": 16,
+      "ordinal_in_cycle": 2,
+      "kind": "direct_variant",
+      "label": "例10 变式1",
+      "group": null,
+      "cycle_id": "4.4-cycle-8",
+      "cycle_sequence": 8,
+      "cycle_title": "类型III 等比数列下标和性质的应用",
+      "course_refs": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定",
+        "4.3.3.3 等比数列角标和性质"
+      ],
+      "course_titles": [
+        "等比数列的基本公式",
+        "等比数列的判定",
+        "等比数列角标和性质"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定",
+        "4.3.3.3 等比数列角标和性质"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型III 等比数列下标和性质的应用"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "sequence",
+      "recognition_cues": [
+        "数列",
+        "等比",
+        "a_n",
+        "a_5a",
+        "a_4a",
+        "log_"
+      ],
+      "method_model": "数列下标与递推模型",
+      "first_written_line_template": "先写明目标是通项、递推还是前 n 项和，并标出首项和下标范围。",
+      "continuation_actions": [
+        "把条件化为通项、求和或递推关系",
+        "选择裂项、错位相减、分组、待定系数或归纳",
+        "整理首尾项和边界项"
+      ],
+      "independent_self_check": "检查首项、项数、下标错位、公比特值、分母和归纳起点。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "0f8a1e18cc9f4efb85de1e924fd163e3a2dba713178f76f08c7cdbee2fd8c63c",
+      "source_question_text_sha256": "0f8a1e18cc9f4efb85de1e924fd163e3a2dba713178f76f08c7cdbee2fd8c63c",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "0f8a1e18cc9f4efb85de1e924fd163e3a2dba713178f76f08c7cdbee2fd8c63c",
+        "learner_question_text_sha256": "0f8a1e18cc9f4efb85de1e924fd163e3a2dba713178f76f08c7cdbee2fd8c63c"
+      },
+      "question_signal_excerpt": "数列、等比、a_n、a_5a、a_4a、log_",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:870d6799d68ca6e0",
+      "item_id": "870d6799d68ca6e0",
+      "ordinal": 17,
+      "ordinal_in_cycle": 3,
+      "kind": "direct_variant",
+      "label": "例10 变式2",
+      "group": null,
+      "cycle_id": "4.4-cycle-8",
+      "cycle_sequence": 8,
+      "cycle_title": "类型III 等比数列下标和性质的应用",
+      "course_refs": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定",
+        "4.3.3.3 等比数列角标和性质"
+      ],
+      "course_titles": [
+        "等比数列的基本公式",
+        "等比数列的判定",
+        "等比数列角标和性质"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定",
+        "4.3.3.3 等比数列角标和性质"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型III 等比数列下标和性质的应用"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "sequence",
+      "recognition_cues": [
+        "数列",
+        "等比",
+        "a_n",
+        "q",
+        "n",
+        "T_n"
+      ],
+      "method_model": "数列下标与递推模型",
+      "first_written_line_template": "先写明目标是通项、递推还是前 n 项和，并标出首项和下标范围。",
+      "continuation_actions": [
+        "把条件化为通项、求和或递推关系",
+        "选择裂项、错位相减、分组、待定系数或归纳",
+        "整理首尾项和边界项"
+      ],
+      "independent_self_check": "检查首项、项数、下标错位、公比特值、分母和归纳起点。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "f9686c4c2cfae103ee81ef6b6aaf402237d48e67a2a95086897902c10117c11d",
+      "source_question_text_sha256": "f9686c4c2cfae103ee81ef6b6aaf402237d48e67a2a95086897902c10117c11d",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "f9686c4c2cfae103ee81ef6b6aaf402237d48e67a2a95086897902c10117c11d",
+        "learner_question_text_sha256": "f9686c4c2cfae103ee81ef6b6aaf402237d48e67a2a95086897902c10117c11d"
+      },
+      "question_signal_excerpt": "数列、等比、a_n、q、n、T_n",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:8bfe5ef5e0825d5e",
+      "item_id": "8bfe5ef5e0825d5e",
+      "ordinal": 18,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例11",
+      "group": null,
+      "cycle_id": "4.4-cycle-9",
+      "cycle_sequence": 9,
+      "cycle_title": "类型IV 等比数列的实际应用",
+      "course_refs": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定",
+        "4.3.3.3 等比数列角标和性质"
+      ],
+      "course_titles": [
+        "等比数列的基本公式",
+        "等比数列的判定",
+        "等比数列角标和性质"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定",
+        "4.3.3.3 等比数列角标和性质"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型IV 等比数列的实际应用"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "sequence",
+      "recognition_cues": [
+        "数列",
+        "通项",
+        "面积",
+        "n",
+        "a_"
+      ],
+      "method_model": "数列下标与递推模型",
+      "first_written_line_template": "先写明目标是通项、递推还是前 n 项和，并标出首项和下标范围。",
+      "continuation_actions": [
+        "把条件化为通项、求和或递推关系",
+        "选择裂项、错位相减、分组、待定系数或归纳",
+        "整理首尾项和边界项"
+      ],
+      "independent_self_check": "检查首项、项数、下标错位、公比特值、分母和归纳起点。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "7ebf6df7ae03008c439e1e751ee99d04aca15bd1ceae4b13e86dde497135a556",
+      "source_question_text_sha256": "7ebf6df7ae03008c439e1e751ee99d04aca15bd1ceae4b13e86dde497135a556",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "7ebf6df7ae03008c439e1e751ee99d04aca15bd1ceae4b13e86dde497135a556",
+        "learner_question_text_sha256": "7ebf6df7ae03008c439e1e751ee99d04aca15bd1ceae4b13e86dde497135a556"
+      },
+      "question_signal_excerpt": "数列、通项、面积、n、a_",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:9615feb501395c43",
+      "item_id": "9615feb501395c43",
+      "ordinal": 19,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例12",
+      "group": null,
+      "cycle_id": "4.4-cycle-10",
+      "cycle_sequence": 10,
+      "cycle_title": "类型V 构造等比数列求通项",
+      "course_refs": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定",
+        "4.3.3.3 等比数列角标和性质"
+      ],
+      "course_titles": [
+        "等比数列的基本公式",
+        "等比数列的判定",
+        "等比数列角标和性质"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定",
+        "4.3.3.3 等比数列角标和性质"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型V 构造等比数列求通项"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "sequence",
+      "recognition_cues": [
+        "数列",
+        "a_",
+        "n",
+        "S_"
+      ],
+      "method_model": "数列下标与递推模型",
+      "first_written_line_template": "先写明目标是通项、递推还是前 n 项和，并标出首项和下标范围。",
+      "continuation_actions": [
+        "把条件化为通项、求和或递推关系",
+        "选择裂项、错位相减、分组、待定系数或归纳",
+        "整理首尾项和边界项"
+      ],
+      "independent_self_check": "检查首项、项数、下标错位、公比特值、分母和归纳起点。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "2b6eb104791bb16feccae4f7d90c2877c6c9da7b772b9c41e89b0759acfec931",
+      "source_question_text_sha256": "2b6eb104791bb16feccae4f7d90c2877c6c9da7b772b9c41e89b0759acfec931",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "2b6eb104791bb16feccae4f7d90c2877c6c9da7b772b9c41e89b0759acfec931",
+        "learner_question_text_sha256": "2b6eb104791bb16feccae4f7d90c2877c6c9da7b772b9c41e89b0759acfec931"
+      },
+      "question_signal_excerpt": "数列、a_、n、S_",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:932568e8828801c9",
+      "item_id": "932568e8828801c9",
+      "ordinal": 20,
+      "ordinal_in_cycle": 2,
+      "kind": "direct_variant",
+      "label": "例12 变式",
+      "group": null,
+      "cycle_id": "4.4-cycle-10",
+      "cycle_sequence": 10,
+      "cycle_title": "类型V 构造等比数列求通项",
+      "course_refs": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定",
+        "4.3.3.3 等比数列角标和性质"
+      ],
+      "course_titles": [
+        "等比数列的基本公式",
+        "等比数列的判定",
+        "等比数列角标和性质"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定",
+        "4.3.3.3 等比数列角标和性质"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型V 构造等比数列求通项"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "sequence",
+      "recognition_cues": [
+        "数列",
+        "通项",
+        "前n项和",
+        "S_",
+        "n",
+        "a_"
+      ],
+      "method_model": "数列下标与递推模型",
+      "first_written_line_template": "先写明目标是通项、递推还是前 n 项和，并标出首项和下标范围。",
+      "continuation_actions": [
+        "把条件化为通项、求和或递推关系",
+        "选择裂项、错位相减、分组、待定系数或归纳",
+        "整理首尾项和边界项"
+      ],
+      "independent_self_check": "检查首项、项数、下标错位、公比特值、分母和归纳起点。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "886075858fea008489e9631346a9cbf47176b5283d09e2710099787a675e8818",
+      "source_question_text_sha256": "886075858fea008489e9631346a9cbf47176b5283d09e2710099787a675e8818",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "886075858fea008489e9631346a9cbf47176b5283d09e2710099787a675e8818",
+        "learner_question_text_sha256": "886075858fea008489e9631346a9cbf47176b5283d09e2710099787a675e8818"
+      },
+      "question_signal_excerpt": "数列、通项、前n项和、S_、n、a_",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-2f3292190bd28753",
+      "item_id": "Q-2f3292190bd28753",
+      "ordinal": 21,
+      "ordinal_in_cycle": 1,
+      "kind": "abc_exercise",
+      "label": "A1",
+      "group": "A",
+      "cycle_id": "4.4-cycle-11",
+      "cycle_sequence": 11,
+      "cycle_title": "A组 夯实基础",
+      "course_refs": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定",
+        "4.3.3.3 等比数列角标和性质"
+      ],
+      "course_titles": [
+        "等比数列的基本公式",
+        "等比数列的判定",
+        "等比数列角标和性质"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定",
+        "4.3.3.3 等比数列角标和性质"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型III 等比数列下标和性质的应用"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "sequence",
+      "recognition_cues": [
+        "数列",
+        "等差",
+        "等比",
+        "a_",
+        "n",
+        "q"
+      ],
+      "method_model": "数列下标与递推模型",
+      "first_written_line_template": "先写明目标是通项、递推还是前 n 项和，并标出首项和下标范围。",
+      "continuation_actions": [
+        "把条件化为通项、求和或递推关系",
+        "选择裂项、错位相减、分组、待定系数或归纳",
+        "整理首尾项和边界项"
+      ],
+      "independent_self_check": "检查首项、项数、下标错位、公比特值、分母和归纳起点。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "27eacc45e9e602edd4c37a92d1181ca3d6ae851a2dad6921cb58d3dbfb686292",
+      "source_question_text_sha256": "27eacc45e9e602edd4c37a92d1181ca3d6ae851a2dad6921cb58d3dbfb686292",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "27eacc45e9e602edd4c37a92d1181ca3d6ae851a2dad6921cb58d3dbfb686292",
+        "learner_question_text_sha256": "27eacc45e9e602edd4c37a92d1181ca3d6ae851a2dad6921cb58d3dbfb686292"
+      },
+      "question_signal_excerpt": "数列、等差、等比、a_、n、q",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-b929113a92e393ac",
+      "item_id": "Q-b929113a92e393ac",
+      "ordinal": 22,
+      "ordinal_in_cycle": 2,
+      "kind": "abc_exercise",
+      "label": "A2",
+      "group": "A",
+      "cycle_id": "4.4-cycle-11",
+      "cycle_sequence": 11,
+      "cycle_title": "A组 夯实基础",
+      "course_refs": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定",
+        "4.3.3.3 等比数列角标和性质"
+      ],
+      "course_titles": [
+        "等比数列的基本公式",
+        "等比数列的判定",
+        "等比数列角标和性质"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定",
+        "4.3.3.3 等比数列角标和性质"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 等比数列的证明",
+        "类型V 构造等比数列求通项"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "sequence",
+      "recognition_cues": [
+        "数列",
+        "通项",
+        "等比",
+        "证明",
+        "a_n",
+        "n",
+        "S_n"
+      ],
+      "method_model": "数列下标与递推模型",
+      "first_written_line_template": "先写明目标是通项、递推还是前 n 项和，并标出首项和下标范围。",
+      "continuation_actions": [
+        "把条件化为通项、求和或递推关系",
+        "选择裂项、错位相减、分组、待定系数或归纳",
+        "整理首尾项和边界项"
+      ],
+      "independent_self_check": "检查首项、项数、下标错位、公比特值、分母和归纳起点。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "6ecb4fdf9d6afb263d1d2f74d010b96418046fb77b2cabd407bd80599240c2f7",
+      "source_question_text_sha256": "6ecb4fdf9d6afb263d1d2f74d010b96418046fb77b2cabd407bd80599240c2f7",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "6ecb4fdf9d6afb263d1d2f74d010b96418046fb77b2cabd407bd80599240c2f7",
+        "learner_question_text_sha256": "6ecb4fdf9d6afb263d1d2f74d010b96418046fb77b2cabd407bd80599240c2f7"
+      },
+      "question_signal_excerpt": "数列、通项、等比、证明、a_n、n、S_n",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-b7786b05d4e9272c",
+      "item_id": "Q-b7786b05d4e9272c",
+      "ordinal": 23,
+      "ordinal_in_cycle": 1,
+      "kind": "abc_exercise",
+      "label": "B3",
+      "group": "B",
+      "cycle_id": "4.4-cycle-12",
+      "cycle_sequence": 12,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定",
+        "4.3.3.3 等比数列角标和性质"
+      ],
+      "course_titles": [
+        "等比数列的基本公式",
+        "等比数列的判定",
+        "等比数列角标和性质"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定",
+        "4.3.3.3 等比数列角标和性质"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型III 等比数列下标和性质的应用"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "sequence",
+      "recognition_cues": [
+        "数列",
+        "a_n",
+        "log_",
+        "a_",
+        "n"
+      ],
+      "method_model": "数列下标与递推模型",
+      "first_written_line_template": "先写明目标是通项、递推还是前 n 项和，并标出首项和下标范围。",
+      "continuation_actions": [
+        "把条件化为通项、求和或递推关系",
+        "选择裂项、错位相减、分组、待定系数或归纳",
+        "整理首尾项和边界项"
+      ],
+      "independent_self_check": "检查首项、项数、下标错位、公比特值、分母和归纳起点。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "1142147158bc40744313b5d4c43b7efd312da8118ef0fab1aa6920ab67922932",
+      "source_question_text_sha256": "1142147158bc40744313b5d4c43b7efd312da8118ef0fab1aa6920ab67922932",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "1142147158bc40744313b5d4c43b7efd312da8118ef0fab1aa6920ab67922932",
+        "learner_question_text_sha256": "1142147158bc40744313b5d4c43b7efd312da8118ef0fab1aa6920ab67922932"
+      },
+      "question_signal_excerpt": "数列、a_n、log_、a_、n",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-18d25bd877ea9ed7",
+      "item_id": "Q-18d25bd877ea9ed7",
+      "ordinal": 24,
+      "ordinal_in_cycle": 2,
+      "kind": "abc_exercise",
+      "label": "B4",
+      "group": "B",
+      "cycle_id": "4.4-cycle-12",
+      "cycle_sequence": 12,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定",
+        "4.3.3.3 等比数列角标和性质"
+      ],
+      "course_titles": [
+        "等比数列的基本公式",
+        "等比数列的判定",
+        "等比数列角标和性质"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定",
+        "4.3.3.3 等比数列角标和性质"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型III 等比数列下标和性质的应用"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "sequence",
+      "recognition_cues": [
+        "数列",
+        "等比",
+        "a_n",
+        "a_3a",
+        "a_5",
+        "a_4"
+      ],
+      "method_model": "数列下标与递推模型",
+      "first_written_line_template": "先写明目标是通项、递推还是前 n 项和，并标出首项和下标范围。",
+      "continuation_actions": [
+        "把条件化为通项、求和或递推关系",
+        "选择裂项、错位相减、分组、待定系数或归纳",
+        "整理首尾项和边界项"
+      ],
+      "independent_self_check": "检查首项、项数、下标错位、公比特值、分母和归纳起点。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "53382616a4d6632d811c3e5fe0cfc88cea9d7fc244874d06af0669209b7a46bb",
+      "source_question_text_sha256": "53382616a4d6632d811c3e5fe0cfc88cea9d7fc244874d06af0669209b7a46bb",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "53382616a4d6632d811c3e5fe0cfc88cea9d7fc244874d06af0669209b7a46bb",
+        "learner_question_text_sha256": "53382616a4d6632d811c3e5fe0cfc88cea9d7fc244874d06af0669209b7a46bb"
+      },
+      "question_signal_excerpt": "数列、等比、a_n、a_3a、a_5、a_4",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-4e2be73b93572f68",
+      "item_id": "Q-4e2be73b93572f68",
+      "ordinal": 25,
+      "ordinal_in_cycle": 3,
+      "kind": "abc_exercise",
+      "label": "B5",
+      "group": "B",
+      "cycle_id": "4.4-cycle-12",
+      "cycle_sequence": 12,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定",
+        "4.3.3.3 等比数列角标和性质"
+      ],
+      "course_titles": [
+        "等比数列的基本公式",
+        "等比数列的判定",
+        "等比数列角标和性质"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定",
+        "4.3.3.3 等比数列角标和性质"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 等比数列的证明",
+        "类型III 等比数列下标和性质的应用"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "sequence",
+      "recognition_cues": [
+        "数列",
+        "等差",
+        "等比",
+        "a_n",
+        "b_n",
+        "A"
+      ],
+      "method_model": "数列下标与递推模型",
+      "first_written_line_template": "先写明目标是通项、递推还是前 n 项和，并标出首项和下标范围。",
+      "continuation_actions": [
+        "把条件化为通项、求和或递推关系",
+        "选择裂项、错位相减、分组、待定系数或归纳",
+        "整理首尾项和边界项"
+      ],
+      "independent_self_check": "检查首项、项数、下标错位、公比特值、分母和归纳起点。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "e0283d16894765690339a9dea71fce0797136ceb9dea41d4f8e6a828af64171f",
+      "source_question_text_sha256": "e0283d16894765690339a9dea71fce0797136ceb9dea41d4f8e6a828af64171f",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "e0283d16894765690339a9dea71fce0797136ceb9dea41d4f8e6a828af64171f",
+        "learner_question_text_sha256": "e0283d16894765690339a9dea71fce0797136ceb9dea41d4f8e6a828af64171f"
+      },
+      "question_signal_excerpt": "数列、等差、等比、a_n、b_n、A",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-fd46d186b7e8c360",
+      "item_id": "Q-fd46d186b7e8c360",
+      "ordinal": 26,
+      "ordinal_in_cycle": 4,
+      "kind": "abc_exercise",
+      "label": "B6",
+      "group": "B",
+      "cycle_id": "4.4-cycle-12",
+      "cycle_sequence": 12,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定",
+        "4.3.3.3 等比数列角标和性质"
+      ],
+      "course_titles": [
+        "等比数列的基本公式",
+        "等比数列的判定",
+        "等比数列角标和性质"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定",
+        "4.3.3.3 等比数列角标和性质"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 等比数列的通项公式及其应用"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "sequence",
+      "recognition_cues": [
+        "数列",
+        "等比",
+        "a_",
+        "n",
+        ">"
+      ],
+      "method_model": "数列下标与递推模型",
+      "first_written_line_template": "先写明目标是通项、递推还是前 n 项和，并标出首项和下标范围。",
+      "continuation_actions": [
+        "把条件化为通项、求和或递推关系",
+        "选择裂项、错位相减、分组、待定系数或归纳",
+        "整理首尾项和边界项"
+      ],
+      "independent_self_check": "检查首项、项数、下标错位、公比特值、分母和归纳起点。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "d55eba930b1afb26876e3c391ecb7cdf9b7064228c6d5998fa475cb98421ee5c",
+      "source_question_text_sha256": "d55eba930b1afb26876e3c391ecb7cdf9b7064228c6d5998fa475cb98421ee5c",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "d55eba930b1afb26876e3c391ecb7cdf9b7064228c6d5998fa475cb98421ee5c",
+        "learner_question_text_sha256": "d55eba930b1afb26876e3c391ecb7cdf9b7064228c6d5998fa475cb98421ee5c"
+      },
+      "question_signal_excerpt": "数列、等比、a_、n、>",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-37eadbbbfdf1684d",
+      "item_id": "Q-37eadbbbfdf1684d",
+      "ordinal": 27,
+      "ordinal_in_cycle": 5,
+      "kind": "abc_exercise",
+      "label": "B7",
+      "group": "B",
+      "cycle_id": "4.4-cycle-12",
+      "cycle_sequence": 12,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定",
+        "4.3.3.3 等比数列角标和性质"
+      ],
+      "course_titles": [
+        "等比数列的基本公式",
+        "等比数列的判定",
+        "等比数列角标和性质"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定",
+        "4.3.3.3 等比数列角标和性质"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型III 等比数列下标和性质的应用"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "sequence",
+      "recognition_cues": [
+        "数列",
+        "等比",
+        "a_",
+        "n"
+      ],
+      "method_model": "数列下标与递推模型",
+      "first_written_line_template": "先写明目标是通项、递推还是前 n 项和，并标出首项和下标范围。",
+      "continuation_actions": [
+        "把条件化为通项、求和或递推关系",
+        "选择裂项、错位相减、分组、待定系数或归纳",
+        "整理首尾项和边界项"
+      ],
+      "independent_self_check": "检查首项、项数、下标错位、公比特值、分母和归纳起点。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "3052d9bf511d92b6e94b16956691f1a9b89c4d5649f23ab97525833a7d621355",
+      "source_question_text_sha256": "3052d9bf511d92b6e94b16956691f1a9b89c4d5649f23ab97525833a7d621355",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "3052d9bf511d92b6e94b16956691f1a9b89c4d5649f23ab97525833a7d621355",
+        "learner_question_text_sha256": "3052d9bf511d92b6e94b16956691f1a9b89c4d5649f23ab97525833a7d621355"
+      },
+      "question_signal_excerpt": "数列、等比、a_、n",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-639608dd33b805b6",
+      "item_id": "Q-639608dd33b805b6",
+      "ordinal": 28,
+      "ordinal_in_cycle": 6,
+      "kind": "abc_exercise",
+      "label": "B8",
+      "group": "B",
+      "cycle_id": "4.4-cycle-12",
+      "cycle_sequence": 12,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定",
+        "4.3.3.3 等比数列角标和性质"
+      ],
+      "course_titles": [
+        "等比数列的基本公式",
+        "等比数列的判定",
+        "等比数列角标和性质"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定",
+        "4.3.3.3 等比数列角标和性质"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 等比数列的证明",
+        "类型III 等比数列下标和性质的应用"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "sequence",
+      "recognition_cues": [
+        "数列",
+        "等差",
+        "等比",
+        "a_n"
+      ],
+      "method_model": "数列下标与递推模型",
+      "first_written_line_template": "先写明目标是通项、递推还是前 n 项和，并标出首项和下标范围。",
+      "continuation_actions": [
+        "把条件化为通项、求和或递推关系",
+        "选择裂项、错位相减、分组、待定系数或归纳",
+        "整理首尾项和边界项"
+      ],
+      "independent_self_check": "检查首项、项数、下标错位、公比特值、分母和归纳起点。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "d0582edd3fdc6ce377c4da7640c8516c06cb555ab5e83457068982066f40b0bc",
+      "source_question_text_sha256": "d0582edd3fdc6ce377c4da7640c8516c06cb555ab5e83457068982066f40b0bc",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "d0582edd3fdc6ce377c4da7640c8516c06cb555ab5e83457068982066f40b0bc",
+        "learner_question_text_sha256": "d0582edd3fdc6ce377c4da7640c8516c06cb555ab5e83457068982066f40b0bc"
+      },
+      "question_signal_excerpt": "数列、等差、等比、a_n",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-3abfc60bae94c8ab",
+      "item_id": "Q-3abfc60bae94c8ab",
+      "ordinal": 29,
+      "ordinal_in_cycle": 7,
+      "kind": "abc_exercise",
+      "label": "B9",
+      "group": "B",
+      "cycle_id": "4.4-cycle-12",
+      "cycle_sequence": 12,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定",
+        "4.3.3.3 等比数列角标和性质"
+      ],
+      "course_titles": [
+        "等比数列的基本公式",
+        "等比数列的判定",
+        "等比数列角标和性质"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定",
+        "4.3.3.3 等比数列角标和性质"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型V 构造等比数列求通项"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "sequence",
+      "recognition_cues": [
+        "数列",
+        "通项",
+        "等比",
+        "证明",
+        "a_n",
+        "a_1",
+        "a_",
+        "n"
+      ],
+      "method_model": "数列下标与递推模型",
+      "first_written_line_template": "先写明目标是通项、递推还是前 n 项和，并标出首项和下标范围。",
+      "continuation_actions": [
+        "把条件化为通项、求和或递推关系",
+        "选择裂项、错位相减、分组、待定系数或归纳",
+        "整理首尾项和边界项"
+      ],
+      "independent_self_check": "检查首项、项数、下标错位、公比特值、分母和归纳起点。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "f5155d92e58b77ce6618efd4d31ade55a3470d4cd92d1a118fb475f81bd350ca",
+      "source_question_text_sha256": "f5155d92e58b77ce6618efd4d31ade55a3470d4cd92d1a118fb475f81bd350ca",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "f5155d92e58b77ce6618efd4d31ade55a3470d4cd92d1a118fb475f81bd350ca",
+        "learner_question_text_sha256": "f5155d92e58b77ce6618efd4d31ade55a3470d4cd92d1a118fb475f81bd350ca"
+      },
+      "question_signal_excerpt": "数列、通项、等比、证明、a_n、a_1、a_、n",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-99da2d14a315a720",
+      "item_id": "Q-99da2d14a315a720",
+      "ordinal": 30,
+      "ordinal_in_cycle": 8,
+      "kind": "abc_exercise",
+      "label": "B10",
+      "group": "B",
+      "cycle_id": "4.4-cycle-12",
+      "cycle_sequence": 12,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定",
+        "4.3.3.3 等比数列角标和性质"
+      ],
+      "course_titles": [
+        "等比数列的基本公式",
+        "等比数列的判定",
+        "等比数列角标和性质"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定",
+        "4.3.3.3 等比数列角标和性质"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型V 构造等比数列求通项"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "sequence",
+      "recognition_cues": [
+        "数列",
+        "通项",
+        "等比",
+        "证明",
+        "a_n",
+        "n",
+        "S_n",
+        "a_1"
+      ],
+      "method_model": "数列下标与递推模型",
+      "first_written_line_template": "先写明目标是通项、递推还是前 n 项和，并标出首项和下标范围。",
+      "continuation_actions": [
+        "把条件化为通项、求和或递推关系",
+        "选择裂项、错位相减、分组、待定系数或归纳",
+        "整理首尾项和边界项"
+      ],
+      "independent_self_check": "检查首项、项数、下标错位、公比特值、分母和归纳起点。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "58e17f0c37bc43a9be65e9e6773098b87742f785bd1de203287e2caa124aa8b5",
+      "source_question_text_sha256": "58e17f0c37bc43a9be65e9e6773098b87742f785bd1de203287e2caa124aa8b5",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "58e17f0c37bc43a9be65e9e6773098b87742f785bd1de203287e2caa124aa8b5",
+        "learner_question_text_sha256": "58e17f0c37bc43a9be65e9e6773098b87742f785bd1de203287e2caa124aa8b5"
+      },
+      "question_signal_excerpt": "数列、通项、等比、证明、a_n、n、S_n、a_1",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-7d467947e34f7de5",
+      "item_id": "Q-7d467947e34f7de5",
+      "ordinal": 31,
+      "ordinal_in_cycle": 9,
+      "kind": "abc_exercise",
+      "label": "B11",
+      "group": "B",
+      "cycle_id": "4.4-cycle-12",
+      "cycle_sequence": 12,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定",
+        "4.3.3.3 等比数列角标和性质"
+      ],
+      "course_titles": [
+        "等比数列的基本公式",
+        "等比数列的判定",
+        "等比数列角标和性质"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定",
+        "4.3.3.3 等比数列角标和性质"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型V 构造等比数列求通项"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "sequence",
+      "recognition_cues": [
+        "数列",
+        "前n项和",
+        "S_",
+        "n",
+        "a_"
+      ],
+      "method_model": "数列下标与递推模型",
+      "first_written_line_template": "先写明目标是通项、递推还是前 n 项和，并标出首项和下标范围。",
+      "continuation_actions": [
+        "把条件化为通项、求和或递推关系",
+        "选择裂项、错位相减、分组、待定系数或归纳",
+        "整理首尾项和边界项"
+      ],
+      "independent_self_check": "检查首项、项数、下标错位、公比特值、分母和归纳起点。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "bd7a46ad2fc7e4144206c18dad3f7113805a0c86758f3fe7061e693a9c5d23e4",
+      "source_question_text_sha256": "bd7a46ad2fc7e4144206c18dad3f7113805a0c86758f3fe7061e693a9c5d23e4",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "bd7a46ad2fc7e4144206c18dad3f7113805a0c86758f3fe7061e693a9c5d23e4",
+        "learner_question_text_sha256": "bd7a46ad2fc7e4144206c18dad3f7113805a0c86758f3fe7061e693a9c5d23e4"
+      },
+      "question_signal_excerpt": "数列、前n项和、S_、n、a_",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-6b236784d17902ab",
+      "item_id": "Q-6b236784d17902ab",
+      "ordinal": 32,
+      "ordinal_in_cycle": 10,
+      "kind": "abc_exercise",
+      "label": "B12",
+      "group": "B",
+      "cycle_id": "4.4-cycle-12",
+      "cycle_sequence": 12,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定",
+        "4.3.3.3 等比数列角标和性质"
+      ],
+      "course_titles": [
+        "等比数列的基本公式",
+        "等比数列的判定",
+        "等比数列角标和性质"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定",
+        "4.3.3.3 等比数列角标和性质"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型V 构造等比数列求通项",
+        "类型Ⅱ 等比数列的通项公式及其应用"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "sequence",
+      "recognition_cues": [
+        "数列",
+        "通项",
+        "前n项和",
+        "证明",
+        "a_",
+        "n",
+        "\\frac"
+      ],
+      "method_model": "数列下标与递推模型",
+      "first_written_line_template": "先写明目标是通项、递推还是前 n 项和，并标出首项和下标范围。",
+      "continuation_actions": [
+        "把条件化为通项、求和或递推关系",
+        "选择裂项、错位相减、分组、待定系数或归纳",
+        "整理首尾项和边界项"
+      ],
+      "independent_self_check": "检查首项、项数、下标错位、公比特值、分母和归纳起点。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "50730c90bd3da37ba71bde3e09c04da2cf4aa73690d56aa10f1bf8b7a838b760",
+      "source_question_text_sha256": "50730c90bd3da37ba71bde3e09c04da2cf4aa73690d56aa10f1bf8b7a838b760",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "50730c90bd3da37ba71bde3e09c04da2cf4aa73690d56aa10f1bf8b7a838b760",
+        "learner_question_text_sha256": "50730c90bd3da37ba71bde3e09c04da2cf4aa73690d56aa10f1bf8b7a838b760"
+      },
+      "question_signal_excerpt": "数列、通项、前n项和、证明、a_、n、\\frac",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-b369a1654a3cc497",
+      "item_id": "Q-b369a1654a3cc497",
+      "ordinal": 33,
+      "ordinal_in_cycle": 11,
+      "kind": "abc_exercise",
+      "label": "B13",
+      "group": "B",
+      "cycle_id": "4.4-cycle-12",
+      "cycle_sequence": 12,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定",
+        "4.3.3.3 等比数列角标和性质"
+      ],
+      "course_titles": [
+        "等比数列的基本公式",
+        "等比数列的判定",
+        "等比数列角标和性质"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定",
+        "4.3.3.3 等比数列角标和性质"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型IV 等比数列的实际应用"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "sequence",
+      "recognition_cues": [
+        "递推",
+        "A",
+        "B"
+      ],
+      "method_model": "数列下标与递推模型",
+      "first_written_line_template": "先写明目标是通项、递推还是前 n 项和，并标出首项和下标范围。",
+      "continuation_actions": [
+        "把条件化为通项、求和或递推关系",
+        "选择裂项、错位相减、分组、待定系数或归纳",
+        "整理首尾项和边界项"
+      ],
+      "independent_self_check": "检查首项、项数、下标错位、公比特值、分母和归纳起点。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "c4d6a230b49c59581ee432f57e71c4d7e3e381ce50ca21f672348a6ec670940d",
+      "source_question_text_sha256": "c4d6a230b49c59581ee432f57e71c4d7e3e381ce50ca21f672348a6ec670940d",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "c4d6a230b49c59581ee432f57e71c4d7e3e381ce50ca21f672348a6ec670940d",
+        "learner_question_text_sha256": "c4d6a230b49c59581ee432f57e71c4d7e3e381ce50ca21f672348a6ec670940d"
+      },
+      "question_signal_excerpt": "递推、A、B",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-311b7aa4cb63fe9c",
+      "item_id": "Q-311b7aa4cb63fe9c",
+      "ordinal": 34,
+      "ordinal_in_cycle": 1,
+      "kind": "abc_exercise",
+      "label": "C14",
+      "group": "C",
+      "cycle_id": "4.4-cycle-13",
+      "cycle_sequence": 13,
+      "cycle_title": "C组 拓展提升",
+      "course_refs": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定",
+        "4.3.3.3 等比数列角标和性质"
+      ],
+      "course_titles": [
+        "等比数列的基本公式",
+        "等比数列的判定",
+        "等比数列角标和性质"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定",
+        "4.3.3.3 等比数列角标和性质"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型III 等比数列下标和性质的应用",
+        "类型Ⅱ 等比数列的通项公式及其应用"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "sequence",
+      "recognition_cues": [
+        "数列",
+        "通项",
+        "等差",
+        "等比",
+        "证明",
+        "a_",
+        "n"
+      ],
+      "method_model": "数列下标与递推模型",
+      "first_written_line_template": "先写明目标是通项、递推还是前 n 项和，并标出首项和下标范围。",
+      "continuation_actions": [
+        "把条件化为通项、求和或递推关系",
+        "选择裂项、错位相减、分组、待定系数或归纳",
+        "整理首尾项和边界项"
+      ],
+      "independent_self_check": "检查首项、项数、下标错位、公比特值、分母和归纳起点。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "74cf18d5fb12e9f44bfcede3f03ed4eceb5346a8066b4b268a5db2ccf80c398d",
+      "source_question_text_sha256": "74cf18d5fb12e9f44bfcede3f03ed4eceb5346a8066b4b268a5db2ccf80c398d",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "74cf18d5fb12e9f44bfcede3f03ed4eceb5346a8066b4b268a5db2ccf80c398d",
+        "learner_question_text_sha256": "74cf18d5fb12e9f44bfcede3f03ed4eceb5346a8066b4b268a5db2ccf80c398d"
+      },
+      "question_signal_excerpt": "数列、通项、等差、等比、证明、a_、n",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-4fea3c8d52a44e51",
+      "item_id": "Q-4fea3c8d52a44e51",
+      "ordinal": 35,
+      "ordinal_in_cycle": 2,
+      "kind": "abc_exercise",
+      "label": "C15",
+      "group": "C",
+      "cycle_id": "4.4-cycle-13",
+      "cycle_sequence": 13,
+      "cycle_title": "C组 拓展提升",
+      "course_refs": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定",
+        "4.3.3.3 等比数列角标和性质"
+      ],
+      "course_titles": [
+        "等比数列的基本公式",
+        "等比数列的判定",
+        "等比数列角标和性质"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定",
+        "4.3.3.3 等比数列角标和性质"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 等比数列的通项公式及其应用",
+        "类型III 等比数列下标和性质的应用"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "sequence",
+      "recognition_cues": [
+        "数列",
+        "通项",
+        "等比",
+        "范围",
+        "a_n",
+        "n",
+        "T_n"
+      ],
+      "method_model": "数列下标与递推模型",
+      "first_written_line_template": "先写明目标是通项、递推还是前 n 项和，并标出首项和下标范围。",
+      "continuation_actions": [
+        "把条件化为通项、求和或递推关系",
+        "选择裂项、错位相减、分组、待定系数或归纳",
+        "整理首尾项和边界项"
+      ],
+      "independent_self_check": "检查首项、项数、下标错位、公比特值、分母和归纳起点。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "5ebdca52d618c208cd867d6165cc5c90af05b814f6efc4738df4b4615cfc96ff",
+      "source_question_text_sha256": "5ebdca52d618c208cd867d6165cc5c90af05b814f6efc4738df4b4615cfc96ff",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "5ebdca52d618c208cd867d6165cc5c90af05b814f6efc4738df4b4615cfc96ff",
+        "learner_question_text_sha256": "5ebdca52d618c208cd867d6165cc5c90af05b814f6efc4738df4b4615cfc96ff"
+      },
+      "question_signal_excerpt": "数列、通项、等比、范围、a_n、n、T_n",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-821eb5edcaa8d410",
+      "item_id": "Q-821eb5edcaa8d410",
+      "ordinal": 36,
+      "ordinal_in_cycle": 3,
+      "kind": "abc_exercise",
+      "label": "C16",
+      "group": "C",
+      "cycle_id": "4.4-cycle-13",
+      "cycle_sequence": 13,
+      "cycle_title": "C组 拓展提升",
+      "course_refs": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定",
+        "4.3.3.3 等比数列角标和性质"
+      ],
+      "course_titles": [
+        "等比数列的基本公式",
+        "等比数列的判定",
+        "等比数列角标和性质"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.3.3.1 等比数列的基本公式",
+        "4.3.3.2 等比数列的判定",
+        "4.3.3.3 等比数列角标和性质"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 等比数列的证明"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "sequence",
+      "recognition_cues": [
+        "数列",
+        "等比",
+        "证明",
+        "a_",
+        "n"
+      ],
+      "method_model": "数列下标与递推模型",
+      "first_written_line_template": "先写明目标是通项、递推还是前 n 项和，并标出首项和下标范围。",
+      "continuation_actions": [
+        "把条件化为通项、求和或递推关系",
+        "选择裂项、错位相减、分组、待定系数或归纳",
+        "整理首尾项和边界项"
+      ],
+      "independent_self_check": "检查首项、项数、下标错位、公比特值、分母和归纳起点。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "de871a920b01dbbc68f7f1b338b427463d5f5897824cf3a56ac674b2a6928844",
+      "source_question_text_sha256": "de871a920b01dbbc68f7f1b338b427463d5f5897824cf3a56ac674b2a6928844",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "de871a920b01dbbc68f7f1b338b427463d5f5897824cf3a56ac674b2a6928844",
+        "learner_question_text_sha256": "de871a920b01dbbc68f7f1b338b427463d5f5897824cf3a56ac674b2a6928844"
+      },
+      "question_signal_excerpt": "数列、等比、证明、a_、n",
+      "source_blocked": false
+    }
+  ],
+  "route_versions": [
+    {
+      "version": 1,
+      "route_hash": "57b560861fbc05e883653b18e4309942ac2f3c8e1c88a558956d4f0fc6049459"
+    },
+    {
+      "version": 2,
+      "route_hash": "86b55f9660a64fb833f614e2dfb0fec8da8309d8405a35d662ec962639dda7c5"
+    },
+    {
+      "version": 3,
+      "route_hash": "69f1dc96714488ac3ce378308af07f6d18183a1edb4b8b120f8cdb7605f979f3"
+    }
+  ],
+  "final_route_hash": "69f1dc96714488ac3ce378308af07f6d18183a1edb4b8b120f8cdb7605f979f3",
+  "simulation": {
+    "protocol": "five-round-five-persona-v3-answer-isolated",
+    "generation_mode": "synthetic_route_stress_from_actual_item_features",
+    "rounds": [
+      {
+        "round": 1,
+        "purpose": "baseline_entry",
+        "route_version": 1,
+        "route_hash": "57b560861fbc05e883653b18e4309942ac2f3c8e1c88a558956d4f0fc6049459",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 36,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 36,
+            "blocked": 13
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 36,
+            "blocked": 1
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 36,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 36,
+            "blocked": 16
+          }
+        ],
+        "failed_item_keys": [
+          "LI:023d7c7caf71be7b",
+          "LI:0e5887227aedcbf0",
+          "LI:2e923d430421f49d",
+          "LI:8864576e44d1a121",
+          "LI:8ca7e5641fa6ca9d",
+          "LI:a9cdebb8cb50a4b7",
+          "LI:fe0dacbb7ae1ff5f",
+          "Q:Q-18d25bd877ea9ed7",
+          "Q:Q-2f3292190bd28753",
+          "Q:Q-311b7aa4cb63fe9c",
+          "Q:Q-37eadbbbfdf1684d",
+          "Q:Q-3abfc60bae94c8ab",
+          "Q:Q-4e2be73b93572f68",
+          "Q:Q-4fea3c8d52a44e51",
+          "Q:Q-639608dd33b805b6",
+          "Q:Q-6b236784d17902ab",
+          "Q:Q-7d467947e34f7de5",
+          "Q:Q-821eb5edcaa8d410",
+          "Q:Q-99da2d14a315a720",
+          "Q:Q-b369a1654a3cc497",
+          "Q:Q-b7786b05d4e9272c",
+          "Q:Q-b929113a92e393ac",
+          "Q:Q-fd46d186b7e8c360"
+        ],
+        "route_repairs": [
+          {
+            "item_keys": [
+              "LI:023d7c7caf71be7b",
+              "LI:0e5887227aedcbf0",
+              "LI:2e923d430421f49d",
+              "LI:8864576e44d1a121",
+              "LI:8ca7e5641fa6ca9d",
+              "LI:a9cdebb8cb50a4b7",
+              "LI:fe0dacbb7ae1ff5f",
+              "Q:Q-311b7aa4cb63fe9c",
+              "Q:Q-4e2be73b93572f68",
+              "Q:Q-4fea3c8d52a44e51",
+              "Q:Q-639608dd33b805b6",
+              "Q:Q-6b236784d17902ab",
+              "Q:Q-b929113a92e393ac"
+            ],
+            "field": "recognition_cues",
+            "before": "第1轮冻结尝试记录了 recognition-weak 的首个阻断。",
+            "after": "下一轮只加入 recognition-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 13 题；不是随机题号注入。"
+          },
+          {
+            "item_keys": [
+              "Q:Q-4fea3c8d52a44e51"
+            ],
+            "field": "continuation_checkpoints",
+            "before": "第1轮冻结尝试记录了 algebra-weak 的首个阻断。",
+            "after": "下一轮只加入 algebra-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 1 题；不是随机题号注入。"
+          },
+          {
+            "item_keys": [
+              "Q:Q-18d25bd877ea9ed7",
+              "Q:Q-2f3292190bd28753",
+              "Q:Q-311b7aa4cb63fe9c",
+              "Q:Q-37eadbbbfdf1684d",
+              "Q:Q-3abfc60bae94c8ab",
+              "Q:Q-4e2be73b93572f68",
+              "Q:Q-4fea3c8d52a44e51",
+              "Q:Q-639608dd33b805b6",
+              "Q:Q-6b236784d17902ab",
+              "Q:Q-7d467947e34f7de5",
+              "Q:Q-821eb5edcaa8d410",
+              "Q:Q-99da2d14a315a720",
+              "Q:Q-b369a1654a3cc497",
+              "Q:Q-b7786b05d4e9272c",
+              "Q:Q-b929113a92e393ac",
+              "Q:Q-fd46d186b7e8c360"
+            ],
+            "field": "independent_self_check",
+            "before": "第1轮冻结尝试记录了 self-check-weak 的首个阻断。",
+            "after": "下一轮只加入 self-check-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 16 题；不是随机题号注入。"
+          }
+        ]
+      },
+      {
+        "round": 2,
+        "purpose": "prerequisite_repair",
+        "route_version": 2,
+        "route_hash": "86b55f9660a64fb833f614e2dfb0fec8da8309d8405a35d662ec962639dda7c5",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 36,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 36,
+            "blocked": 0
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 36,
+            "blocked": 0
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 36,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 36,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [],
+        "route_repairs": []
+      },
+      {
+        "round": 3,
+        "purpose": "continuation_transfer",
+        "route_version": 2,
+        "route_hash": "86b55f9660a64fb833f614e2dfb0fec8da8309d8405a35d662ec962639dda7c5",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 36,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 36,
+            "blocked": 8
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 36,
+            "blocked": 8
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 36,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 36,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [
+          "LI:870d6799d68ca6e0",
+          "LI:932568e8828801c9",
+          "LI:a51623e6cfcb0507",
+          "LI:aa4352c23c70b21f",
+          "LI:b8eacec4b53ea51c",
+          "LI:b9b515df124f1e66",
+          "LI:c657c8b14fd96025",
+          "LI:f9d2d2aaae5c64bf"
+        ],
+        "route_repairs": [
+          {
+            "item_keys": [
+              "LI:870d6799d68ca6e0",
+              "LI:932568e8828801c9",
+              "LI:a51623e6cfcb0507",
+              "LI:aa4352c23c70b21f",
+              "LI:b8eacec4b53ea51c",
+              "LI:b9b515df124f1e66",
+              "LI:c657c8b14fd96025",
+              "LI:f9d2d2aaae5c64bf"
+            ],
+            "field": "recognition_cues",
+            "before": "第3轮冻结尝试记录了 recognition-weak 的首个阻断。",
+            "after": "下一轮只加入 recognition-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 8 题；不是随机题号注入。"
+          },
+          {
+            "item_keys": [
+              "LI:870d6799d68ca6e0",
+              "LI:932568e8828801c9",
+              "LI:a51623e6cfcb0507",
+              "LI:aa4352c23c70b21f",
+              "LI:b8eacec4b53ea51c",
+              "LI:b9b515df124f1e66",
+              "LI:c657c8b14fd96025",
+              "LI:f9d2d2aaae5c64bf"
+            ],
+            "field": "continuation_checkpoints",
+            "before": "第3轮冻结尝试记录了 algebra-weak 的首个阻断。",
+            "after": "下一轮只加入 algebra-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 8 题；不是随机题号注入。"
+          }
+        ]
+      },
+      {
+        "round": 4,
+        "purpose": "mixed_retrieval",
+        "route_version": 3,
+        "route_hash": "69f1dc96714488ac3ce378308af07f6d18183a1edb4b8b120f8cdb7605f979f3",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 36,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 36,
+            "blocked": 0
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 36,
+            "blocked": 0
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 36,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 36,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [],
+        "route_repairs": []
+      },
+      {
+        "round": 5,
+        "purpose": "fresh_context",
+        "route_version": 3,
+        "route_hash": "69f1dc96714488ac3ce378308af07f6d18183a1edb4b8b120f8cdb7605f979f3",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 36,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 36,
+            "blocked": 0
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 36,
+            "blocked": 0
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 36,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 36,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [],
+        "route_repairs": []
+      }
+    ],
+    "expected_attempts_per_item": 25,
+    "actual_attempts_per_item": 25,
+    "unresolved_item_keys": [],
+    "mathematical_correctness": "not_evaluated_no_final_answer",
+    "mastery_claimed": false,
+    "status": "passed"
+  },
+  "summary": {
+    "items": 36,
+    "attempts": 900,
+    "route_assessments": 900,
+    "rounds": 5,
+    "personas_per_round": 5,
+    "repairs": 5,
+    "round_5_failed_items": 0,
+    "validator_errors": []
+  },
+  "human_learning_status": "remote_math_mcp_only",
+  "cold_24h_retest": "not_run",
+  "mastery_claimed": false,
+  "claim_scope": "route_actionability_only",
+  "mathematical_assessment_status": "not_run",
+  "route_audit_status": "passed",
+  "status": "passed"
+}

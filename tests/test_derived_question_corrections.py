@@ -13,6 +13,8 @@ from ybt_learning.packet import (
     _usable_vision_sidecar,
 )
 
+ROOT = Path(__file__).resolve().parents[1]
+
 
 def section(question_range: list[int]) -> dict:
     return {
@@ -26,6 +28,25 @@ def section(question_range: list[int]) -> dict:
 
 
 class DerivedQuestionCorrectionTests(unittest.TestCase):
+    def test_unrelated_preceding_figure_is_removed_from_learning_item(self) -> None:
+        packet = json.loads((ROOT / "data/packets/1.1/student_learning_items.json").read_text(encoding="utf-8"))
+        item = next(row for row in packet["direct_variants"] if row["item_id"] == "b2a2e4099db3ab67")
+        self.assertEqual(
+            [Path(row["ref"]).name for row in item["image_refs"]],
+            ["img_in_image_box_878_574_1093_765.jpg"],
+        )
+
+        ch3 = json.loads((ROOT / "data/packets/ch3.s7/student_learning_items.json").read_text(encoding="utf-8"))
+        variant = next(row for row in ch3["direct_variants"] if row["item_id"] == "1110316c7adf2824")
+        self.assertEqual(variant["image_refs"], [])
+        self.assertEqual(variant["visual_status"], "READY_TEXT_ONLY")
+
+        for section_id, qid in (("2.4", "Q-8ba0e365a4bb943d"), ("4.4", "Q-b929113a92e393ac")):
+            questions = json.loads((ROOT / f"data/packets/{section_id}/student_packet.json").read_text(encoding="utf-8"))["questions"]
+            item = next(row for row in questions if row["qid"] == qid)
+            self.assertEqual(item["image_refs"], [])
+            self.assertEqual(item["visual_status"], "READY_TEXT_ONLY")
+
     def build(self, text: str, question_range: list[int], corrections: list[dict]) -> dict:
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)

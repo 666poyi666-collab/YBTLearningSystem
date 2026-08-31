@@ -260,13 +260,23 @@
           "role": "knowledge_example",
           "role_ref": "4.4-k4",
           "source_docs": [
-            52
+            52,
+            53
           ],
           "question_text": "【例 6】已知数列 \\(\\{a_n\\}\\) 满足 \\(a_1 > 0\\)，对一切 \\(n \\in \\mathbb{N}^*\\)，\\(\\frac{a_{n+1}}{a_n} = \\frac{1}{2}\\)，则数列 \\(\\{a_n\\}\\) 是（ ）\nA. 递增数列    B. 递减数列\nC. 摆动数列    D. 不确定",
           "image_refs": [],
           "visual_status": "READY_TEXT_ONLY",
-          "teaching_text": "【例 6】已知数列 \\(\\{a_n\\}\\) 满足 \\(a_1 > 0\\)，对一切 \\(n \\in \\mathbb{N}^*\\)，\\(\\frac{a_{n+1}}{a_n} = \\frac{1}{2}\\)，则数列 \\(\\{a_n\\}\\) 是（ ）\nA. 递增数列    B. 递减数列\nC. 摆动数列    D. 不确定",
-          "solution_present": false,
+          "teaching_text": "【例 6】已知数列 \\(\\{a_n\\}\\) 满足 \\(a_1 > 0\\)，对一切 \\(n \\in \\mathbb{N}^*\\)，\\(\\frac{a_{n+1}}{a_n} = \\frac{1}{2}\\)，则数列 \\(\\{a_n\\}\\) 是（ ）\nA. 递增数列    B. 递减数列\nC. 摆动数列    D. 不确定\n\n解析：由 \\(\\frac{a_{n+1}}{a_n} = \\frac{1}{2}\\) 可知 \\(\\{a_n\\}\\) 是公比为 \\(\\frac{1}{2}\\) 的等比数列，又 \\(a_1 > 0\\)，所以 \\(a_n = a_1 \\left( \\frac{1}{2} \\right)^{n-1}\\) 在 \\(n \\in \\mathbb{N}^*\\) 上 \\(\\searrow\\)，故数列 \\(\\{a_n\\}\\) 为递减数列。\n\n\n\n答案：B",
+          "solution_present": true,
+          "source_layout_repair": {
+            "status": "SOURCE_PDF_VISUALLY_VERIFIED",
+            "source_pdf_sha256": "e32b88dc4c34007ae8ec16ee0faed3a2949ae1952235d1b9a8e5aea5f2d59f5c",
+            "pdf_pages": [
+              53,
+              54
+            ],
+            "reason": "例6题干在第53页右栏，解析位于第54页右栏且被OCR排到下一知识点标题之后。"
+          },
           "vision_hint": "4.4-LI0e5887227aedcbf0"
         }
       ],
@@ -758,7 +768,11 @@
       "optional_course_keys": [],
       "knowledge_refs": [],
       "prerequisite_knowledge_refs": [],
-      "type_refs": [],
+      "type_refs": [
+        "类型III 等比数列下标和性质的应用",
+        "类型I 等比数列的证明",
+        "类型V 构造等比数列求通项"
+      ],
       "bridge_unit_ids": [],
       "method_checkpoints": [],
       "worked_examples": [],
@@ -795,50 +809,20 @@
             "file": "data/ocr_live_current/chapter4_100/doc_59.md"
           },
           "question_text": "### 2. （2025·甘肃兰州期中）\n\n已知数列 \\(\\{a_n\\}\\) 的前 \\(n\\) 项和为 \\(S_n\\)，且满足 \\(a_n = 2S_n - 1 (n \\in \\mathbb{N}^*)\\)。\n\n（1）求 \\(a_{1}\\)， \\(a_{2}\\)的值；\n\n（2）证明：数列 \\(\\{a_{n}\\}\\)为等比数列并求其通项公式.\n\n",
-          "image_refs": [
-            {
-              "ref": "imgs/img_in_image_box_274_803_911_881.jpg",
-              "path": "data/ocr_live_current/chapter4_100/imgs/img_in_image_box_274_803_911_881.jpg",
-              "exists": true
-            }
-          ],
-          "visual_status": "VISION_VERIFIED",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
           "math_errors": [],
           "evidence": [
-            "E1",
-            "E2"
+            "E1"
           ],
-          "vision_sidecars": [
+          "source_repairs": [
             {
-              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_274_803_911_881.jpg",
-              "image_sha256": "1632f5a7b2f13565b791cd2828395c3e78c987860e09167594387b533f4a8b93",
-              "confidence": "E2",
-              "structured": {
-                "objects": [],
-                "relations": [],
-                "coordinates": [],
-                "ranges": [],
-                "text": [
-                  "一数·高中数学一本通"
-                ],
-                "uncertainties": [],
-                "confidence": "E2"
-              },
-              "source_provenance": null
+              "id": "4.4-Q-b929113a92e393ac-drop-footer-watermark",
+              "kind": "image_attachment",
+              "reason": "The crop contains only an incomplete textbook watermark and no mathematical figure for A2.",
+              "review_ref": "reports/deep_simulation_reviews/visual-fixes-ch45.json"
             }
-          ],
-          "vision_sidecar": {
-            "objects": [],
-            "relations": [],
-            "coordinates": [],
-            "ranges": [],
-            "text": [
-              "一数·高中数学一本通"
-            ],
-            "uncertainties": [],
-            "confidence": "E2"
-          },
-          "vision_source_provenance": []
+          ]
         }
       ],
       "action_order": [
@@ -863,7 +847,13 @@
       "optional_course_keys": [],
       "knowledge_refs": [],
       "prerequisite_knowledge_refs": [],
-      "type_refs": [],
+      "type_refs": [
+        "类型III 等比数列下标和性质的应用",
+        "类型I 等比数列的证明",
+        "类型Ⅱ 等比数列的通项公式及其应用",
+        "类型V 构造等比数列求通项",
+        "类型IV 等比数列的实际应用"
+      ],
       "bridge_unit_ids": [],
       "method_checkpoints": [],
       "worked_examples": [],
@@ -1101,7 +1091,11 @@
       "optional_course_keys": [],
       "knowledge_refs": [],
       "prerequisite_knowledge_refs": [],
-      "type_refs": [],
+      "type_refs": [
+        "类型III 等比数列下标和性质的应用",
+        "类型Ⅱ 等比数列的通项公式及其应用",
+        "类型I 等比数列的证明"
+      ],
       "bridge_unit_ids": [],
       "method_checkpoints": [],
       "worked_examples": [],
@@ -1156,7 +1150,7 @@
             "pdf_page": 64,
             "file": "data/ocr_live_current/chapter4_100/doc_63.md"
           },
-          "question_text": "### 16. （2025·浙江杭州期末（改））\n\n数列 \\(\\{a_{n}\\}\\)满足 \\(a_{n+1}=a_{n}^{2}+4a_{n}+2\\)， \\(a_{1}=8\\)。\n\n（1）证明数列  \\(\\{\\lg(a_n+2)\\}\\) 是等比数列，并求  \\(a_n\\)\n\n（2）若 \\(a_{p}\\)， \\(a_{p+1}\\)， \\(a_{p+2}\\)是 \\(\\{a_{n}\\}\\)中连续的三项，试证明：",
+          "question_text": "### 16. （2025·浙江杭州期末（改））\n\n数列 \\(\\{a_{n}\\}\\)满足 \\(a_{n+1}=a_{n}^{2}+4a_{n}+2\\)， \\(a_{1}=8\\)。\n\n（1）证明数列  \\(\\{\\lg(a_n+2)\\}\\) 是等比数列，并求  \\(a_n\\)\n\n（2）若 \\(a_p\\)，\\(a_{p+1}\\)，\\(a_{p+2}\\) 是 \\(\\{a_n\\}\\) 中连续的三项，试证明：\\(a_p\\)，\\(a_{p+1}\\)，\\(a_{p+2}\\) 不可能成等比数列。",
           "image_refs": [],
           "visual_status": "READY_TEXT_ONLY",
           "math_errors": [],
@@ -1362,13 +1356,23 @@
       "role": "knowledge_example",
       "role_ref": "4.4-k4",
       "source_docs": [
-        52
+        52,
+        53
       ],
       "question_text": "【例 6】已知数列 \\(\\{a_n\\}\\) 满足 \\(a_1 > 0\\)，对一切 \\(n \\in \\mathbb{N}^*\\)，\\(\\frac{a_{n+1}}{a_n} = \\frac{1}{2}\\)，则数列 \\(\\{a_n\\}\\) 是（ ）\nA. 递增数列    B. 递减数列\nC. 摆动数列    D. 不确定",
       "image_refs": [],
       "visual_status": "READY_TEXT_ONLY",
-      "teaching_text": "【例 6】已知数列 \\(\\{a_n\\}\\) 满足 \\(a_1 > 0\\)，对一切 \\(n \\in \\mathbb{N}^*\\)，\\(\\frac{a_{n+1}}{a_n} = \\frac{1}{2}\\)，则数列 \\(\\{a_n\\}\\) 是（ ）\nA. 递增数列    B. 递减数列\nC. 摆动数列    D. 不确定",
-      "solution_present": false,
+      "teaching_text": "【例 6】已知数列 \\(\\{a_n\\}\\) 满足 \\(a_1 > 0\\)，对一切 \\(n \\in \\mathbb{N}^*\\)，\\(\\frac{a_{n+1}}{a_n} = \\frac{1}{2}\\)，则数列 \\(\\{a_n\\}\\) 是（ ）\nA. 递增数列    B. 递减数列\nC. 摆动数列    D. 不确定\n\n解析：由 \\(\\frac{a_{n+1}}{a_n} = \\frac{1}{2}\\) 可知 \\(\\{a_n\\}\\) 是公比为 \\(\\frac{1}{2}\\) 的等比数列，又 \\(a_1 > 0\\)，所以 \\(a_n = a_1 \\left( \\frac{1}{2} \\right)^{n-1}\\) 在 \\(n \\in \\mathbb{N}^*\\) 上 \\(\\searrow\\)，故数列 \\(\\{a_n\\}\\) 为递减数列。\n\n\n\n答案：B",
+      "solution_present": true,
+      "source_layout_repair": {
+        "status": "SOURCE_PDF_VISUALLY_VERIFIED",
+        "source_pdf_sha256": "e32b88dc4c34007ae8ec16ee0faed3a2949ae1952235d1b9a8e5aea5f2d59f5c",
+        "pdf_pages": [
+          53,
+          54
+        ],
+        "reason": "例6题干在第53页右栏，解析位于第54页右栏且被OCR排到下一知识点标题之后。"
+      },
       "vision_hint": "4.4-LI0e5887227aedcbf0"
     },
     {
@@ -1655,50 +1659,20 @@
         "file": "data/ocr_live_current/chapter4_100/doc_59.md"
       },
       "question_text": "### 2. （2025·甘肃兰州期中）\n\n已知数列 \\(\\{a_n\\}\\) 的前 \\(n\\) 项和为 \\(S_n\\)，且满足 \\(a_n = 2S_n - 1 (n \\in \\mathbb{N}^*)\\)。\n\n（1）求 \\(a_{1}\\)， \\(a_{2}\\)的值；\n\n（2）证明：数列 \\(\\{a_{n}\\}\\)为等比数列并求其通项公式.\n\n",
-      "image_refs": [
-        {
-          "ref": "imgs/img_in_image_box_274_803_911_881.jpg",
-          "path": "data/ocr_live_current/chapter4_100/imgs/img_in_image_box_274_803_911_881.jpg",
-          "exists": true
-        }
-      ],
-      "visual_status": "VISION_VERIFIED",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
       "math_errors": [],
       "evidence": [
-        "E1",
-        "E2"
+        "E1"
       ],
-      "vision_sidecars": [
+      "source_repairs": [
         {
-          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_274_803_911_881.jpg",
-          "image_sha256": "1632f5a7b2f13565b791cd2828395c3e78c987860e09167594387b533f4a8b93",
-          "confidence": "E2",
-          "structured": {
-            "objects": [],
-            "relations": [],
-            "coordinates": [],
-            "ranges": [],
-            "text": [
-              "一数·高中数学一本通"
-            ],
-            "uncertainties": [],
-            "confidence": "E2"
-          },
-          "source_provenance": null
+          "id": "4.4-Q-b929113a92e393ac-drop-footer-watermark",
+          "kind": "image_attachment",
+          "reason": "The crop contains only an incomplete textbook watermark and no mathematical figure for A2.",
+          "review_ref": "reports/deep_simulation_reviews/visual-fixes-ch45.json"
         }
-      ],
-      "vision_sidecar": {
-        "objects": [],
-        "relations": [],
-        "coordinates": [],
-        "ranges": [],
-        "text": [
-          "一数·高中数学一本通"
-        ],
-        "uncertainties": [],
-        "confidence": "E2"
-      },
-      "vision_source_provenance": []
+      ]
     },
     {
       "qid": "Q-b7786b05d4e9272c",
@@ -1958,7 +1932,7 @@
         "pdf_page": 64,
         "file": "data/ocr_live_current/chapter4_100/doc_63.md"
       },
-      "question_text": "### 16. （2025·浙江杭州期末（改））\n\n数列 \\(\\{a_{n}\\}\\)满足 \\(a_{n+1}=a_{n}^{2}+4a_{n}+2\\)， \\(a_{1}=8\\)。\n\n（1）证明数列  \\(\\{\\lg(a_n+2)\\}\\) 是等比数列，并求  \\(a_n\\)\n\n（2）若 \\(a_{p}\\)， \\(a_{p+1}\\)， \\(a_{p+2}\\)是 \\(\\{a_{n}\\}\\)中连续的三项，试证明：",
+      "question_text": "### 16. （2025·浙江杭州期末（改））\n\n数列 \\(\\{a_{n}\\}\\)满足 \\(a_{n+1}=a_{n}^{2}+4a_{n}+2\\)， \\(a_{1}=8\\)。\n\n（1）证明数列  \\(\\{\\lg(a_n+2)\\}\\) 是等比数列，并求  \\(a_n\\)\n\n（2）若 \\(a_p\\)，\\(a_{p+1}\\)，\\(a_{p+2}\\) 是 \\(\\{a_n\\}\\) 中连续的三项，试证明：\\(a_p\\)，\\(a_{p+1}\\)，\\(a_{p+2}\\) 不可能成等比数列。",
       "image_refs": [],
       "visual_status": "READY_TEXT_ONLY",
       "math_errors": [],

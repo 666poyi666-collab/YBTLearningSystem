@@ -39,7 +39,11 @@
         "1.4-k2"
       ],
       "prerequisite_knowledge_refs": [],
-      "type_refs": [],
+      "type_refs": [
+        "类型Ⅱ 研究垂直关系",
+        "类型Ⅰ 研究平行关系",
+        "类型Ⅴ 夹角与模"
+      ],
       "bridge_unit_ids": [],
       "method_checkpoints": [
         {
@@ -363,56 +367,31 @@
           ],
           "vision_sidecars": [
             {
-              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_full\\imgs\\img_in_image_box_833_1138_1095_1313.jpg",
+              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_833_1138_1095_1313.jpg",
               "image_sha256": "65c773278b5de0c868bf52682d7ffc1e9a2b45d7e5e6651be470287276151e8a",
               "confidence": "E2",
               "structured": {
-                "objects": [],
-                "relations": [],
-                "coordinates": [
-                  {
-                    "name": "A",
-                    "position": "底面左下"
-                  },
-                  {
-                    "name": "B",
-                    "position": "底面右下"
-                  },
-                  {
-                    "name": "C",
-                    "position": "底面右中"
-                  },
-                  {
-                    "name": "D",
-                    "position": "底面左中"
-                  },
-                  {
-                    "name": "A1",
-                    "position": "顶面左上（A上方）"
-                  },
-                  {
-                    "name": "D1",
-                    "position": "顶面左上"
-                  },
-                  {
-                    "name": "B1",
-                    "position": "顶面右中"
-                  },
-                  {
-                    "name": "C1",
-                    "position": "顶面右中"
-                  }
+                "objects": [
+                  "平行六面体ABCD-A1B1C1D1",
+                  "顶点A,B,C,D,A1,B1,C1,D1"
                 ],
+                "relations": [
+                  "A连接B,D,C,A1连接B1,D1,C1",
+                  "D连接A1,B1,C",
+                  "B连接D1,A1,C1",
+                  "D连接D1,A,A1"
+                ],
+                "coordinates": [],
                 "ranges": [],
                 "text": [
-                  "A",
-                  "B",
-                  "C",
-                  "D",
-                  "A1",
                   "D1",
                   "B1",
-                  "C1"
+                  "C1",
+                  "A1",
+                  "D",
+                  "C",
+                  "B",
+                  "A"
                 ],
                 "uncertainties": [],
                 "confidence": "E2"
@@ -421,52 +400,27 @@
             }
           ],
           "vision_sidecar": {
-            "objects": [],
-            "relations": [],
-            "coordinates": [
-              {
-                "name": "A",
-                "position": "底面左下"
-              },
-              {
-                "name": "B",
-                "position": "底面右下"
-              },
-              {
-                "name": "C",
-                "position": "底面右中"
-              },
-              {
-                "name": "D",
-                "position": "底面左中"
-              },
-              {
-                "name": "A1",
-                "position": "顶面左上（A上方）"
-              },
-              {
-                "name": "D1",
-                "position": "顶面左上"
-              },
-              {
-                "name": "B1",
-                "position": "顶面右中"
-              },
-              {
-                "name": "C1",
-                "position": "顶面右中"
-              }
+            "objects": [
+              "平行六面体ABCD-A1B1C1D1",
+              "顶点A,B,C,D,A1,B1,C1,D1"
             ],
+            "relations": [
+              "A连接B,D,C,A1连接B1,D1,C1",
+              "D连接A1,B1,C",
+              "B连接D1,A1,C1",
+              "D连接D1,A,A1"
+            ],
+            "coordinates": [],
             "ranges": [],
             "text": [
-              "A",
-              "B",
-              "C",
-              "D",
-              "A1",
               "D1",
               "B1",
-              "C1"
+              "C1",
+              "A1",
+              "D",
+              "C",
+              "B",
+              "A"
             ],
             "uncertainties": [],
             "confidence": "E2"
@@ -647,7 +601,7 @@
             36,
             37
           ],
-          "question_text": "【例9】在空间直角坐标系中，已知平面 \\(\\alpha\\)， \\(\\beta\\)的一个法向量分别为 \\(m=\\)\n若异面直线  \\(l_1\\)， \\(l_2\\) 所成的角为  \\(\\theta\\) ( \\(0 < \\theta \\leq \\frac{\\pi}{2}\\))，其方向向量分别是  \\(\\boldsymbol{u}\\)， \\(\\boldsymbol{v}\\)，则  \\(\\cos \\theta = |\\cos \\langle \\boldsymbol{u}, \\boldsymbol{v} \\rangle| = \\frac{|\\boldsymbol{u} \\cdot \\boldsymbol{v}|}{|\\boldsymbol{u}| \\cdot |\\boldsymbol{v}|}\\)。\n如图，直线 \\(l\\) 与平面 \\(\\alpha\\) 相交于点 \\(B\\)，\\(A\\) 为 \\(l\\) 上的另外一点，过 \\(A\\) 作 \\(\\alpha\\) 的垂线，垂足为 \\(P\\)，设直线 \\(l\\) 与平面 \\(\\alpha\\) 所成的角为 \\(\\theta\\left(0 < \\theta \\leq \\frac{\\pi}{2}\\right)\\)，平面 \\(\\alpha\\) 的法向量为 \\(\\boldsymbol{n}\\)，则由图可知，\\(\\theta = \\frac{\\pi}{2} - \\angle BAP\\)，而 \\(\\cos \\angle BAP = \\left|\\cos \\langle \\overrightarrow{AB}, \\boldsymbol{n} \\rangle\\right| = \\frac{\\left|\\overrightarrow{AB} \\cdot \\boldsymbol{n}\\right|}{\\left|\\overrightarrow{AB}\\right| \\cdot \\left|\\boldsymbol{n}\\right|}\\)，所以 \\(\\sin \\theta = \\sin\\left(\\frac{\\pi}{2} - \\angle BAP\\right) = \\cos \\angle BAP = \\frac{\\left|\\overrightarrow{AB} \\cdot \\boldsymbol{n}\\right|}{\\left|\\overrightarrow{AB}\\right| \\cdot \\left|\\boldsymbol{n}\\right|}\\)。\n\n③平面与平面的夹角\n平面  \\(\\alpha\\) 与平面  \\(\\beta\\) 相交，形成四个二面角，我们把这四个二面角中不大于  \\(90^{\\circ}\\) 的二面角称为平面  \\(\\alpha\\) 与平面  \\(\\beta\\) 的夹角.\n类似于两条异面直线所成的角，若平面  \\(\\alpha\\)， \\(\\beta\\) 的法向量分别是  \\(m_1\\)， \\(m_2\\)，则平面  \\(\\alpha\\) 与平面  \\(\\beta\\) 的夹角即为向量  \\(m_1\\) 和  \\(m_2\\) 的夹角或其补角。设平面  \\(\\alpha\\) 与平面  \\(\\beta\\) 的夹角为  \\(\\theta\\)，则  \\(\\cos\\theta = |\\cos\\langle m_1, m_2 \\rangle| = \\frac{|m_1 \\cdot m_2|}{|m_1| \\cdot |m_2|}\\)。\n注：①平面与平面的夹角的取值范围是  \\(\\left[0, \\frac{\\pi}{2}\\right]\\)，二面角的取值范围是  \\([0, \\pi]\\)；\n②如图 1，二面角  \\(\\alpha - l - \\beta\\) 的余弦值  \\(\\cos\\theta = \\pm\\cos\\langle m_1, (0, -1, -1), n = (-2, 1, 2)\\)，则  \\(\\alpha\\) 与  \\(\\beta\\) 的夹角的余弦值为（ ）\nA.  \\(\\frac{2}{3}\\)\nB.  \\(\\frac{\\sqrt{2}}{3}\\)\nC.  \\(-\\frac{\\sqrt{2}}{2}\\)\nD.  \\(\\frac{\\sqrt{2}}{2}\\)",
+          "question_text": "【例9】在空间直角坐标系中，已知平面 \\(\\alpha\\)，\\(\\beta\\) 的一个法向量分别为 \\(\\boldsymbol{m}=(0,-1,-1)\\)，\\(\\boldsymbol{n}=(-2,1,2)\\)，则 \\(\\alpha\\) 与 \\(\\beta\\) 的夹角的余弦值为（ ）\nA. \\(\\frac{2}{3}\\)\nB. \\(\\frac{\\sqrt{2}}{3}\\)\nC. \\(-\\frac{\\sqrt{2}}{2}\\)\nD. \\(\\frac{\\sqrt{2}}{2}\\)",
           "image_refs": [
             {
               "ref": "imgs/img_in_image_box_286_730_475_878.jpg",
@@ -656,8 +610,43 @@
             }
           ],
           "visual_status": "VISION_VERIFIED",
-          "teaching_text": "【例9】在空间直角坐标系中，已知平面 \\(\\alpha\\)， \\(\\beta\\)的一个法向量分别为 \\(m=\\)\n若异面直线  \\(l_1\\)， \\(l_2\\) 所成的角为  \\(\\theta\\) ( \\(0 < \\theta \\leq \\frac{\\pi}{2}\\))，其方向向量分别是  \\(\\boldsymbol{u}\\)， \\(\\boldsymbol{v}\\)，则  \\(\\cos \\theta = |\\cos \\langle \\boldsymbol{u}, \\boldsymbol{v} \\rangle| = \\frac{|\\boldsymbol{u} \\cdot \\boldsymbol{v}|}{|\\boldsymbol{u}| \\cdot |\\boldsymbol{v}|}\\)。\n如图，直线 \\(l\\) 与平面 \\(\\alpha\\) 相交于点 \\(B\\)，\\(A\\) 为 \\(l\\) 上的另外一点，过 \\(A\\) 作 \\(\\alpha\\) 的垂线，垂足为 \\(P\\)，设直线 \\(l\\) 与平面 \\(\\alpha\\) 所成的角为 \\(\\theta\\left(0 < \\theta \\leq \\frac{\\pi}{2}\\right)\\)，平面 \\(\\alpha\\) 的法向量为 \\(\\boldsymbol{n}\\)，则由图可知，\\(\\theta = \\frac{\\pi}{2} - \\angle BAP\\)，而 \\(\\cos \\angle BAP = \\left|\\cos \\langle \\overrightarrow{AB}, \\boldsymbol{n} \\rangle\\right| = \\frac{\\left|\\overrightarrow{AB} \\cdot \\boldsymbol{n}\\right|}{\\left|\\overrightarrow{AB}\\right| \\cdot \\left|\\boldsymbol{n}\\right|}\\)，所以 \\(\\sin \\theta = \\sin\\left(\\frac{\\pi}{2} - \\angle BAP\\right) = \\cos \\angle BAP = \\frac{\\left|\\overrightarrow{AB} \\cdot \\boldsymbol{n}\\right|}{\\left|\\overrightarrow{AB}\\right| \\cdot \\left|\\boldsymbol{n}\\right|}\\)。\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_286_730_475_878.jpg\" alt=\"Image\" width=\"15%\" /></div>\n③平面与平面的夹角\n平面  \\(\\alpha\\) 与平面  \\(\\beta\\) 相交，形成四个二面角，我们把这四个二面角中不大于  \\(90^{\\circ}\\) 的二面角称为平面  \\(\\alpha\\) 与平面  \\(\\beta\\) 的夹角.\n类似于两条异面直线所成的角，若平面  \\(\\alpha\\)， \\(\\beta\\) 的法向量分别是  \\(m_1\\)， \\(m_2\\)，则平面  \\(\\alpha\\) 与平面  \\(\\beta\\) 的夹角即为向量  \\(m_1\\) 和  \\(m_2\\) 的夹角或其补角。设平面  \\(\\alpha\\) 与平面  \\(\\beta\\) 的夹角为  \\(\\theta\\)，则  \\(\\cos\\theta = |\\cos\\langle m_1, m_2 \\rangle| = \\frac{|m_1 \\cdot m_2|}{|m_1| \\cdot |m_2|}\\)。\n注：①平面与平面的夹角的取值范围是  \\(\\left[0, \\frac{\\pi}{2}\\right]\\)，二面角的取值范围是  \\([0, \\pi]\\)；\n②如图 1，二面角  \\(\\alpha - l - \\beta\\) 的余弦值  \\(\\cos\\theta = \\pm\\cos\\langle m_1, (0, -1, -1), n = (-2, 1, 2)\\)，则  \\(\\alpha\\) 与  \\(\\beta\\) 的夹角的余弦值为（ ）\nA.  \\(\\frac{2}{3}\\)\nB.  \\(\\frac{\\sqrt{2}}{3}\\)\nC.  \\(-\\frac{\\sqrt{2}}{2}\\)\nD.  \\(\\frac{\\sqrt{2}}{2}\\)\n解析：已知两个平面的法向量，可直接代公式  \\(\\cos\\theta = |\\cos\\langle\\mathbf{m}, \\mathbf{n}\\rangle| = \\frac{|\\mathbf{m} \\cdot \\mathbf{n}|}{|\\mathbf{m}| \\cdot |\\mathbf{n}|}\\) 来求平面  \\(\\alpha\\) 与平面  \\(\\beta\\) 的夹角的余弦值，设平面  \\(\\alpha\\) 与平面  \\(\\beta\\) 的夹角为  \\(\\theta\\)，则  \\(\\cos\\theta = |\\cos\\langle\\mathbf{m}, \\mathbf{n}\\rangle| = \\frac{|\\mathbf{m} \\cdot \\mathbf{n}|}{|\\mathbf{m}| \\cdot |\\mathbf{n}|}\\)\n \\(= \\frac{|0 \\times (-2) + (-1) \\times 1 + (-1) \\times 2|}{\\sqrt{(-1)^2 + (-1)^2} \\cdot \\sqrt{(-2)^2 + 1^2 + 2^2}} = \\frac{\\sqrt{2}}{2}\\)，所以平面  \\(\\alpha\\) 与  \\(\\beta\\) 的夹角的余弦值为  \\(\\frac{\\sqrt{2}}{2}\\)。\n答案：D",
+          "teaching_text": "【例9】在空间直角坐标系中，已知平面 \\(\\alpha\\)，\\(\\beta\\) 的一个法向量分别为 \\(\\boldsymbol m=(0,-1,-1)\\)，\\(\\boldsymbol n=(-2,1,2)\\)，则 \\(\\alpha\\) 与 \\(\\beta\\) 的夹角的余弦值为（ ）\nA. \\(\\frac{2}{3}\\)  B. \\(\\frac{\\sqrt{2}}{3}\\)  C. \\(-\\frac{\\sqrt{2}}{2}\\)  D. \\(\\frac{\\sqrt{2}}{2}\\)\n\n解析：设两平面的夹角为 \\(\\theta\\)，则 \\(\\cos\\theta=\\frac{|\\boldsymbol m\\cdot\\boldsymbol n|}{|\\boldsymbol m|\\,|\\boldsymbol n|}=\\frac{|0\\times(-2)+(-1)\\times1+(-1)\\times2|}{\\sqrt{2}\\times3}=\\frac{\\sqrt{2}}{2}\\)。\n\n答案：D",
           "solution_present": true,
+          "source_layout_repair": {
+            "status": "SOURCE_PDF_VISUALLY_VERIFIED",
+            "pdf_pages": [
+              4,
+              5
+            ],
+            "reason": "例9题干和法向量坐标跨页，OCR将左栏三类空间角知识正文插入题干。"
+          },
+          "source_question_stem_review": {
+            "status": "SOURCE_REVIEWED_ANSWER_FREE",
+            "review_path": "reports/deep_simulation_reviews/clean-stems-ch1-ch3.json",
+            "review_sha256": "49c435c709a768f0f095b33d0a1d1768f254563ff37e93ed796b921c51daa1aa",
+            "old_reported_question_text_sha256": "d48305ea6e8fff712ff1f488a7eb75370614d08046bdf26bb347b91f285caa1b",
+            "pre_override_question_text_sha256": "b905d0011a877341480540a38e52eeb36e41aeaade2adf3b8edb7977188d8a91",
+            "question_text_sha256": "89e44c4c4f0b9e1882491ab8588ea3f8423f0da84ee360c6d7e80538f476bfe3",
+            "confidence": "high",
+            "boundary_basis": "The printed stem begins at the bottom of original PDF page 37 and continues at the top-right of page 38. The PDF visually confirms both normal vectors and all four choices. The following '解析：' is excluded. OCR doc 37 lines 1-16 are left-column knowledge text interleaved ahead of the right-column continuation and are not part of the item.",
+            "source": {
+              "packet": "data/packets/1.4/packet.json",
+              "ocr_docs": [
+                36,
+                37
+              ],
+              "ocr_files": [
+                "data/ocr_live_current/first_chapter_69/doc_36.md",
+                "data/ocr_live_current/first_chapter_69/doc_37.md"
+              ],
+              "pdf_file": "output/pdf/第一章_空间向量与立体几何_原书_方法册习题册.pdf",
+              "pdf_pages": [
+                37,
+                38
+              ],
+              "visual_evidence": "original PDF pages 37-38"
+            }
+          },
           "vision_hint": "1.4-LI2a2eaf5c7869332b",
           "vision_sidecars": [
             {
@@ -883,57 +872,39 @@
             38,
             39
           ],
-          "question_text": "【例 11】如图，在长方体  \\(ABCD-A_1B_1C_1D_1\\) 中， \\(AB = 4\\)， \\(BC = CC_1 = 2\\)，线段  \\(B_1C\\) 的中点为  \\(P\\)，证明： \\(A_1P \\parallel\\) 平面  \\(ACD_1\\)。\n证法1：（怎样证  \\(A_1P \\parallel\\) 平面  \\(ACD_1\\)？只需证  \\(\\overrightarrow{A_1P}\\) 是平面  \\(ACD_1\\) 内的向量，即证存在实数  \\(\\lambda\\)， \\(\\mu\\)，使  \\(\\overrightarrow{A_1P} = \\lambda \\overrightarrow{AD_1} + \\mu \\overrightarrow{AC}\\)，下面我们按此建立方程组，求解  \\(\\lambda\\) 和  \\(\\mu\\)）\n由题意， \\(A_1(2,0,2)\\)， \\(P(1,4,1)\\)， \\(A(2,0,0)\\)， \\(C(0,4,0)\\)， \\(D_1(0,0,2)\\)，\n所以  \\(\\overrightarrow{A_1P} = (-1,4,-1)\\)， \\(\\overrightarrow{AD_1} = (-2,0,2)\\)， \\(\\overrightarrow{AC} = (-2,4,0)\\)，设  \\(\\overrightarrow{A_1P} = \\lambda \\overrightarrow{AD_1} + \\mu \\overrightarrow{AC}\\)，\n\n则  \\((-1,4,-1)=\\lambda(-2,0,2)+\\mu(-2,4,0)\\)，所以  \\(\\begin{cases} 4\\mu=4 \\\\ 2\\lambda=-1 \\end{cases}\\)，解得： \\(\\lambda=-\\frac{1}{2}\\)， \\(\\mu=1\\)，\n所以  \\(\\overrightarrow{A_1P}=-\\frac{1}{2}\\overrightarrow{AD_1}+\\overrightarrow{AC}\\)，故  \\(\\overrightarrow{A_1P}\\) 是平面  \\(ACD_1\\) 内的向量，又  \\(A_1P\\not\\subset\\) 平面  \\(ACD_1\\)，所以  \\(A_1P\\parallel\\) 平面  \\(ACD_1\\)。\n证法 2：（由知识点 3 第 1 点的表格，要证  \\(A_1P\\parallel\\) 平面  \\(ACD_1\\)，也可转化为证  \\(\\overrightarrow{A_1P}\\) 与平面  \\(ACD_1\\) 的法向量垂直）\n求  \\(\\overrightarrow{A_1P}\\)， \\(\\overrightarrow{AD_1}\\)， \\(\\overrightarrow{AC}\\) 坐标的过程同解法 1，此处不再赘述，设平面  \\(ACD_1\\) 的法向量为  \\(\\boldsymbol{m}=(x,y,z)\\)，\n则  \\(\\begin{cases} \\boldsymbol{m}\\cdot\\overrightarrow{AD_1}=-2x+2z=0 \\\\ \\boldsymbol{m}\\cdot\\overrightarrow{AC}=-2x+4y=0 \\end{cases}\\)，令  \\(x=2\\) 得  \\(y=1\\)， \\(z=2\\)，所以  \\(\\boldsymbol{m}=(2,1,2)\\) 是平面  \\(ACD_1\\) 的一个法向量，\n因为  \\(\\overrightarrow{A_1P}\\cdot\\boldsymbol{m}=-1\\times2+4\\times1+(-1)\\times2=0\\)，所以  \\(\\overrightarrow{A_1P}\\perp\\boldsymbol{m}\\)，结合  \\(A_1P\\not\\subset\\) 平面  \\(ACD_1\\) 可得  \\(A_1P\\parallel\\) 平面  \\(ACD_1\\)。",
-          "image_refs": [
-            {
-              "ref": "imgs/img_in_image_box_842_1277_1092_1455.jpg",
-              "path": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_842_1277_1092_1455.jpg",
-              "exists": true
-            }
-          ],
-          "visual_status": "VISION_VERIFIED",
+          "question_text": "【例11】如图，在长方体 \\(ABCD-A_1B_1C_1D_1\\) 中，\\(AB=4\\)，\\(BC=CC_1=2\\)，线段 \\(B_1C\\) 的中点为 \\(P\\)，证明：\\(A_1P\\parallel\\) 平面 \\(ACD_1\\)。",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
           "teaching_text": "【例 11】如图，在长方体  \\(ABCD-A_1B_1C_1D_1\\) 中， \\(AB = 4\\)， \\(BC = CC_1 = 2\\)，线段  \\(B_1C\\) 的中点为  \\(P\\)，证明： \\(A_1P \\parallel\\) 平面  \\(ACD_1\\)。\n证法1：（怎样证  \\(A_1P \\parallel\\) 平面  \\(ACD_1\\)？只需证  \\(\\overrightarrow{A_1P}\\) 是平面  \\(ACD_1\\) 内的向量，即证存在实数  \\(\\lambda\\)， \\(\\mu\\)，使  \\(\\overrightarrow{A_1P} = \\lambda \\overrightarrow{AD_1} + \\mu \\overrightarrow{AC}\\)，下面我们按此建立方程组，求解  \\(\\lambda\\) 和  \\(\\mu\\)）\n由题意， \\(A_1(2,0,2)\\)， \\(P(1,4,1)\\)， \\(A(2,0,0)\\)， \\(C(0,4,0)\\)， \\(D_1(0,0,2)\\)，\n所以  \\(\\overrightarrow{A_1P} = (-1,4,-1)\\)， \\(\\overrightarrow{AD_1} = (-2,0,2)\\)， \\(\\overrightarrow{AC} = (-2,4,0)\\)，设  \\(\\overrightarrow{A_1P} = \\lambda \\overrightarrow{AD_1} + \\mu \\overrightarrow{AC}\\)，\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_842_1277_1092_1455.jpg\" alt=\"Image\" width=\"20%\" /></div>\n则  \\((-1,4,-1)=\\lambda(-2,0,2)+\\mu(-2,4,0)\\)，所以  \\(\\begin{cases} 4\\mu=4 \\\\ 2\\lambda=-1 \\end{cases}\\)，解得： \\(\\lambda=-\\frac{1}{2}\\)， \\(\\mu=1\\)，\n所以  \\(\\overrightarrow{A_1P}=-\\frac{1}{2}\\overrightarrow{AD_1}+\\overrightarrow{AC}\\)，故  \\(\\overrightarrow{A_1P}\\) 是平面  \\(ACD_1\\) 内的向量，又  \\(A_1P\\not\\subset\\) 平面  \\(ACD_1\\)，所以  \\(A_1P\\parallel\\) 平面  \\(ACD_1\\)。\n证法 2：（由知识点 3 第 1 点的表格，要证  \\(A_1P\\parallel\\) 平面  \\(ACD_1\\)，也可转化为证  \\(\\overrightarrow{A_1P}\\) 与平面  \\(ACD_1\\) 的法向量垂直）\n求  \\(\\overrightarrow{A_1P}\\)， \\(\\overrightarrow{AD_1}\\)， \\(\\overrightarrow{AC}\\) 坐标的过程同解法 1，此处不再赘述，设平面  \\(ACD_1\\) 的法向量为  \\(\\boldsymbol{m}=(x,y,z)\\)，\n则  \\(\\begin{cases} \\boldsymbol{m}\\cdot\\overrightarrow{AD_1}=-2x+2z=0 \\\\ \\boldsymbol{m}\\cdot\\overrightarrow{AC}=-2x+4y=0 \\end{cases}\\)，令  \\(x=2\\) 得  \\(y=1\\)， \\(z=2\\)，所以  \\(\\boldsymbol{m}=(2,1,2)\\) 是平面  \\(ACD_1\\) 的一个法向量，\n因为  \\(\\overrightarrow{A_1P}\\cdot\\boldsymbol{m}=-1\\times2+4\\times1+(-1)\\times2=0\\)，所以  \\(\\overrightarrow{A_1P}\\perp\\boldsymbol{m}\\)，结合  \\(A_1P\\not\\subset\\) 平面  \\(ACD_1\\) 可得  \\(A_1P\\parallel\\) 平面  \\(ACD_1\\)。\n【反思】上面的两个证法都能证明线面平行，但证法2通过证明直线上的一个向量与平面的法向量垂直来证线面平行，计算量稍小一些，所以后续有关问题中，我们都采用证法2来证线面平行。",
           "solution_present": true,
-          "vision_hint": "1.4-LIc28ca305f7a1fba9",
-          "vision_sidecars": [
-            {
-              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_842_1277_1092_1455.jpg",
-              "image_sha256": "e5498a7ed5c84a7c517b431a3535532c49cfe59180774081db8eb219303c7518",
-              "confidence": "E2",
-              "structured": {
-                "objects": [],
-                "relations": [],
-                "coordinates": [],
-                "ranges": [],
-                "text": [
-                  "x",
-                  "y",
-                  "z"
-                ],
-                "uncertainties": [],
-                "confidence": "E2"
-              },
-              "source_provenance": null
+          "source_question_stem_review": {
+            "status": "SOURCE_REVIEWED_ANSWER_FREE",
+            "review_path": "reports/deep_simulation_reviews/clean-stems-ch1-ch3.json",
+            "review_sha256": "49c435c709a768f0f095b33d0a1d1768f254563ff37e93ed796b921c51daa1aa",
+            "old_reported_question_text_sha256": "a9c041cf96a37d30da4c707b8ee563386e3434fc178be7eb4de969a6e03b85d1",
+            "pre_override_question_text_sha256": "eaef68d57a60ac12651e29342356cd01b9d339d2bb9c4550381adcc334fb5009",
+            "question_text_sha256": "0256c579cd472bf2c757db937bc96f7de8261348be5a32b5b662afe98f33cc27",
+            "confidence": "high",
+            "boundary_basis": "OCR doc 38 line 52 is a complete proof prompt. The next line starts '证法1', so all proof text in docs 38-39 is excluded.",
+            "source": {
+              "packet": "data/packets/1.4/packet.json",
+              "ocr_docs": [
+                38,
+                39
+              ],
+              "ocr_files": [
+                "data/ocr_live_current/first_chapter_69/doc_38.md",
+                "data/ocr_live_current/first_chapter_69/doc_39.md"
+              ],
+              "pdf_file": "output/pdf/第一章_空间向量与立体几何_原书_方法册习题册.pdf",
+              "pdf_pages": [
+                39,
+                40
+              ],
+              "visual_evidence": "packet OCR and source-page sequence"
             }
-          ],
-          "vision_sidecar": {
-            "objects": [],
-            "relations": [],
-            "coordinates": [],
-            "ranges": [],
-            "text": [
-              "x",
-              "y",
-              "z"
-            ],
-            "uncertainties": [],
-            "confidence": "E2"
           },
-          "vision_source_provenance": [],
-          "evidence": [
-            "E1",
-            "E2"
-          ]
+          "vision_hint": "1.4-LIc28ca305f7a1fba9"
         },
         {
           "item_id": "47eb16359e70391b",
@@ -1395,79 +1366,120 @@
           "vision_hint": "1.4-LIb1d2d187ff980da9",
           "vision_sidecars": [
             {
-              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_352_499_584_606.jpg",
+              "image": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_352_499_584_606.jpg",
               "image_sha256": "fc55bb596c7b5a6696d06695cc7dfb378458abaa05916022af32086bf74f6cce",
               "confidence": "E2",
               "structured": {
-                "objects": [],
-                "relations": [],
+                "objects": [
+                  "平面图形EFBC、分割线段AD"
+                ],
+                "relations": [
+                  "E、D、C依次位于上方水平线段上",
+                  "F、A、B依次位于下方折线边上",
+                  "EF与AD竖直绘制",
+                  "BC为斜边",
+                  "AD连接上下边"
+                ],
                 "coordinates": [],
                 "ranges": [],
                 "text": [
-                  "E",
-                  "D",
-                  "C",
-                  "F",
-                  "A",
-                  "B"
+                  "E、F、D、A、C、B"
                 ],
-                "uncertainties": [],
+                "uncertainties": [
+                  "图中未画垂直或平行符号"
+                ],
                 "confidence": "E2"
               },
-              "source_provenance": null
+              "source_provenance": {
+                "source_kind": "manual_current_original_image_review",
+                "item_source": "data/packets/1.4/student_learning_items.json",
+                "original_image": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_352_499_584_606.jpg",
+                "original_image_sha256": "fc55bb596c7b5a6696d06695cc7dfb378458abaa05916022af32086bf74f6cce",
+                "review_result": "current_original_crop_visually_verified_as_figure_1",
+                "review_report": "reports/deep_simulation_reviews/visual-fixes-ch1.json",
+                "review_report_sha256": "93c60397448a7d96d94e05e20433a38e46c9a5db78618a90d80586799e754f5c"
+              }
             },
             {
-              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_622_457_836_610.jpg",
+              "image": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_622_457_836_610.jpg",
               "image_sha256": "4bd9c2809300d1e6f7de4925d996270d5d2bdcae43fa2be530f47ca94f159b08",
-              "confidence": "E2",
+              "confidence": "E1",
               "structured": {
-                "objects": [],
+                "objects": [
+                  "折叠后的立体图形、点A、B、C、D、E、F"
+                ],
                 "relations": [
-                  "E连接F、D、C",
-                  "F连接D、A",
-                  "D连接F、A、E",
-                  "A连接D、B",
-                  "B连接A、D、E、C",
-                  "C连接B、E",
-                  "各点通过线段连接形成多面体结构"
+                  "F位于线段EA上",
+                  "E与B、C之间画有实线",
+                  "A与B、B与C之间画有实线",
+                  "A与D、D与C之间以虚线连接",
+                  "D位于图形内部"
                 ],
-                "coordinates": [
-                  "E在上方顶点",
-                  "F在E下方左侧",
-                  "D在F下方左侧，A上方",
-                  "A在左下方，D左侧",
-                  "B在A右下方，D右方",
-                  "C在右下方，B右方",
-                  "各点位置按多面体结构排列"
-                ],
+                "coordinates": [],
                 "ranges": [],
-                "text": [],
-                "uncertainties": [],
-                "confidence": "E2"
+                "text": [
+                  "A、B、C、D、E、F"
+                ],
+                "uncertainties": [
+                  "D附近多条实虚线交叠，未据投影位置推断空间垂直关系"
+                ],
+                "confidence": "E1"
               },
-              "source_provenance": null
+              "source_provenance": {
+                "source_kind": "manual_current_original_image_review",
+                "item_source": "data/packets/1.4/student_learning_items.json",
+                "original_image": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_622_457_836_610.jpg",
+                "original_image_sha256": "4bd9c2809300d1e6f7de4925d996270d5d2bdcae43fa2be530f47ca94f159b08",
+                "review_result": "current_original_crop_visually_verified_as_figure_2",
+                "review_report": "reports/deep_simulation_reviews/visual-fixes-ch1.json",
+                "review_report_sha256": "93c60397448a7d96d94e05e20433a38e46c9a5db78618a90d80586799e754f5c"
+              }
             }
           ],
           "vision_sidecar": {
-            "objects": [],
-            "relations": [],
+            "objects": [
+              "平面图形EFBC、分割线段AD"
+            ],
+            "relations": [
+              "E、D、C依次位于上方水平线段上",
+              "F、A、B依次位于下方折线边上",
+              "EF与AD竖直绘制",
+              "BC为斜边",
+              "AD连接上下边"
+            ],
             "coordinates": [],
             "ranges": [],
             "text": [
-              "E",
-              "D",
-              "C",
-              "F",
-              "A",
-              "B"
+              "E、F、D、A、C、B"
             ],
-            "uncertainties": [],
+            "uncertainties": [
+              "图中未画垂直或平行符号"
+            ],
             "confidence": "E2"
           },
-          "vision_source_provenance": [],
+          "vision_source_provenance": [
+            {
+              "source_kind": "manual_current_original_image_review",
+              "item_source": "data/packets/1.4/student_learning_items.json",
+              "original_image": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_352_499_584_606.jpg",
+              "original_image_sha256": "fc55bb596c7b5a6696d06695cc7dfb378458abaa05916022af32086bf74f6cce",
+              "review_result": "current_original_crop_visually_verified_as_figure_1",
+              "review_report": "reports/deep_simulation_reviews/visual-fixes-ch1.json",
+              "review_report_sha256": "93c60397448a7d96d94e05e20433a38e46c9a5db78618a90d80586799e754f5c"
+            },
+            {
+              "source_kind": "manual_current_original_image_review",
+              "item_source": "data/packets/1.4/student_learning_items.json",
+              "original_image": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_622_457_836_610.jpg",
+              "original_image_sha256": "4bd9c2809300d1e6f7de4925d996270d5d2bdcae43fa2be530f47ca94f159b08",
+              "review_result": "current_original_crop_visually_verified_as_figure_2",
+              "review_report": "reports/deep_simulation_reviews/visual-fixes-ch1.json",
+              "review_report_sha256": "93c60397448a7d96d94e05e20433a38e46c9a5db78618a90d80586799e754f5c"
+            }
+          ],
           "evidence": [
             "E1",
-            "E2"
+            "E1"
           ]
         },
         {
@@ -1498,19 +1510,20 @@
           "source_anchor": {
             "ocr_doc": 49,
             "pdf_page": 50,
-            "file": "data/ocr_live_current/first_chapter_69/doc_49.md",
-            "recovery": "primary_ocr_question_recovery",
-            "recovery_source_kind": "primary_ocr"
+            "file": "data/ocr_live_current/first_chapter_69/doc_49.md"
           },
-          "question_text": "已知直线  \\(l_{1}\\) 的方向向量  \\(\\boldsymbol{\\bar{s}}_{1}=(1,0,1)\\) 与直线  \\(l_{2}\\) 的方向向量  \\(\\boldsymbol{\\bar{s}}_{2}=(-1,2,-2)\\)，则  \\(l_{1}\\) 和  \\(l_{2}\\) 夹角的余弦值为（）\n\nA.  \\(\\frac{\\sqrt{2}}{4}\\) B.  \\(\\frac{1}{2}\\) C.  \\(\\frac{\\sqrt{2}}{2}\\) D.  \\(\\frac{\\sqrt{3}}{2}\\)",
+          "question_text": "1.（2025·全国模拟）\n\n已知直线 \\(l_1\\) 的方向向量 \\(\\boldsymbol{s}_1=(1,0,1)\\) 与直线 \\(l_2\\) 的方向向量 \\(\\boldsymbol{s}_2=(-1,2,-2)\\)，则 \\(l_1\\) 和 \\(l_2\\) 夹角的余弦值为（ ）\n\nA.  \\(\\frac{\\sqrt{2}}{4}\\) B.  \\(\\frac{1}{2}\\) C.  \\(\\frac{\\sqrt{2}}{2}\\) D.  \\(\\frac{\\sqrt{3}}{2}\\)",
           "image_refs": [],
           "visual_status": "READY_TEXT_ONLY",
           "math_errors": [],
           "evidence": [
-            "E1",
-            "primary_ocr_question_recovery"
+            "E1"
           ],
-          "recovery_reason": "正册 OCR 题号丢失；章节合并无答案册 doc_49 有完整题干和选项"
+          "canonical_qid_binding": {
+            "status": "PRESERVED_ACROSS_SOURCE_TEXT_REPAIR",
+            "correction_id": "DQC-1.4-A1-RESTORE-NUMBER-AND-CITATION",
+            "evidence": "SOURCE_PDF_SHA256_69644C_PAGE_50_VISUALLY_CONFIRMS_A1"
+          }
         },
         {
           "qid": "Q-454cdf226d9af1aa",
@@ -1558,113 +1571,43 @@
           ],
           "vision_sidecars": [
             {
-              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_full\\imgs\\img_in_image_box_846_360_1093_546.jpg",
+              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_846_360_1093_546.jpg",
               "image_sha256": "c09e41cc475cb8810754adbeee86eefaf54481b2c69a5693a85f8681d27bcb26",
               "confidence": "E2",
               "structured": {
                 "objects": [
-                  [
-                    "点",
-                    "P"
-                  ],
-                  [
-                    "点",
-                    "A"
-                  ],
-                  [
-                    "点",
-                    "B"
-                  ],
-                  [
-                    "点",
-                    "C"
-                  ],
-                  [
-                    "点",
-                    "D"
-                  ],
-                  [
-                    "点",
-                    "O"
-                  ],
-                  [
-                    "点",
-                    "E"
-                  ],
-                  [
-                    "线段",
-                    "PA"
-                  ],
-                  [
-                    "线段",
-                    "PB"
-                  ],
-                  [
-                    "线段",
-                    "PC"
-                  ],
-                  [
-                    "线段",
-                    "PD"
-                  ],
-                  [
-                    "线段",
-                    "AB"
-                  ],
-                  [
-                    "线段",
-                    "BC"
-                  ],
-                  [
-                    "线段",
-                    "CD"
-                  ],
-                  [
-                    "线段",
-                    "DA"
-                  ],
-                  [
-                    "线段",
-                    "PO"
-                  ],
-                  [
-                    "线段",
-                    "DE"
-                  ]
+                  "四棱锥P-ABCD",
+                  "点P",
+                  "点A",
+                  "点B",
+                  "点C",
+                  "点D",
+                  "点O",
+                  "点E"
                 ],
                 "relations": [
-                  [
-                    "垂直",
-                    "PO",
-                    "平面ABCD"
-                  ],
-                  [
-                    "在...上",
-                    "E",
-                    "PD"
-                  ],
-                  [
-                    "平行",
-                    "AD",
-                    "BC"
-                  ],
-                  [
-                    "交于",
-                    "PO",
-                    "AD",
-                    "O"
-                  ]
+                  "PA连接P和A",
+                  "PB连接P和B",
+                  "PC连接P和C",
+                  "PD连接P和D",
+                  "PO连接P和O",
+                  "PE连接P和E"
                 ],
-                "coordinates": [],
+                "coordinates": [
+                  "P在顶部",
+                  "A在左下方",
+                  "B在A右下方",
+                  "C在B右下方",
+                  "D在C右方",
+                  "O在AD中点上方",
+                  "E在PD上"
+                ],
                 "ranges": [],
                 "text": [
-                  "P",
-                  "A",
-                  "B",
-                  "C",
-                  "D",
-                  "O",
-                  "E"
+                  "A---D为底边",
+                  "B---C为底边",
+                  "O为AD中点",
+                  "E在PD上"
                 ],
                 "uncertainties": [],
                 "confidence": "E2"
@@ -1674,108 +1617,38 @@
           ],
           "vision_sidecar": {
             "objects": [
-              [
-                "点",
-                "P"
-              ],
-              [
-                "点",
-                "A"
-              ],
-              [
-                "点",
-                "B"
-              ],
-              [
-                "点",
-                "C"
-              ],
-              [
-                "点",
-                "D"
-              ],
-              [
-                "点",
-                "O"
-              ],
-              [
-                "点",
-                "E"
-              ],
-              [
-                "线段",
-                "PA"
-              ],
-              [
-                "线段",
-                "PB"
-              ],
-              [
-                "线段",
-                "PC"
-              ],
-              [
-                "线段",
-                "PD"
-              ],
-              [
-                "线段",
-                "AB"
-              ],
-              [
-                "线段",
-                "BC"
-              ],
-              [
-                "线段",
-                "CD"
-              ],
-              [
-                "线段",
-                "DA"
-              ],
-              [
-                "线段",
-                "PO"
-              ],
-              [
-                "线段",
-                "DE"
-              ]
+              "四棱锥P-ABCD",
+              "点P",
+              "点A",
+              "点B",
+              "点C",
+              "点D",
+              "点O",
+              "点E"
             ],
             "relations": [
-              [
-                "垂直",
-                "PO",
-                "平面ABCD"
-              ],
-              [
-                "在...上",
-                "E",
-                "PD"
-              ],
-              [
-                "平行",
-                "AD",
-                "BC"
-              ],
-              [
-                "交于",
-                "PO",
-                "AD",
-                "O"
-              ]
+              "PA连接P和A",
+              "PB连接P和B",
+              "PC连接P和C",
+              "PD连接P和D",
+              "PO连接P和O",
+              "PE连接P和E"
             ],
-            "coordinates": [],
+            "coordinates": [
+              "P在顶部",
+              "A在左下方",
+              "B在A右下方",
+              "C在B右下方",
+              "D在C右方",
+              "O在AD中点上方",
+              "E在PD上"
+            ],
             "ranges": [],
             "text": [
-              "P",
-              "A",
-              "B",
-              "C",
-              "D",
-              "O",
-              "E"
+              "A---D为底边",
+              "B---C为底边",
+              "O为AD中点",
+              "E在PD上"
             ],
             "uncertainties": [],
             "confidence": "E2"
@@ -1809,118 +1682,29 @@
           ],
           "vision_sidecars": [
             {
-              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_full\\imgs\\img_in_image_box_848_1062_1094_1228.jpg",
+              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_848_1062_1094_1228.jpg",
               "image_sha256": "34903c45a8282d1d387f953e3186d4cd9059444f78847e67c0cd37316d1a3672",
               "confidence": "E2",
               "structured": {
                 "objects": [
-                  [
-                    "P",
-                    "M",
-                    "C",
-                    "D",
-                    "A",
-                    "B"
-                  ]
+                  "点P",
+                  "点A",
+                  "点B",
+                  "点C",
+                  "点D",
+                  "点M"
                 ],
                 "relations": [
-                  [
-                    "P",
-                    "A"
-                  ],
-                  [
-                    "P",
-                    "M"
-                  ],
-                  [
-                    "P",
-                    "C"
-                  ],
-                  [
-                    "P",
-                    "D"
-                  ],
-                  [
-                    "A",
-                    "D"
-                  ],
-                  [
-                    "A",
-                    "B"
-                  ],
-                  [
-                    "B",
-                    "C"
-                  ],
-                  [
-                    "C",
-                    "M"
-                  ],
-                  [
-                    "D",
-                    "M"
-                  ],
-                  [
-                    "B",
-                    "M"
-                  ]
+                  "线段PA",
+                  "线段PB",
+                  "线段PC",
+                  "线段PD",
+                  "线段AM",
+                  "线段BM",
+                  "线段CM"
                 ],
-                "coordinates": [
-                  [
-                    [
-                      "P",
-                      [
-                        0,
-                        2
-                      ]
-                    ],
-                    [
-                      [
-                        "M",
-                        [
-                          0.5,
-                          1
-                        ]
-                      ],
-                      [
-                        [
-                          "C",
-                          [
-                            1,
-                            1
-                          ]
-                        ],
-                        [
-                          [
-                            "D",
-                            [
-                              0,
-                              0.5
-                            ]
-                          ],
-                          [
-                            [
-                              "A",
-                              [
-                                0,
-                                0
-                              ]
-                            ],
-                            [
-                              [
-                                "B",
-                                [
-                                  1,
-                                  0
-                                ]
-                              ]
-                            ]
-                          ]
-                        ]
-                      ]
-                    ]
-                  ]
-                ],
+                "coordinates": [],
+                "ranges": [],
                 "text": [],
                 "uncertainties": [],
                 "confidence": "E2"
@@ -1930,113 +1714,24 @@
           ],
           "vision_sidecar": {
             "objects": [
-              [
-                "P",
-                "M",
-                "C",
-                "D",
-                "A",
-                "B"
-              ]
+              "点P",
+              "点A",
+              "点B",
+              "点C",
+              "点D",
+              "点M"
             ],
             "relations": [
-              [
-                "P",
-                "A"
-              ],
-              [
-                "P",
-                "M"
-              ],
-              [
-                "P",
-                "C"
-              ],
-              [
-                "P",
-                "D"
-              ],
-              [
-                "A",
-                "D"
-              ],
-              [
-                "A",
-                "B"
-              ],
-              [
-                "B",
-                "C"
-              ],
-              [
-                "C",
-                "M"
-              ],
-              [
-                "D",
-                "M"
-              ],
-              [
-                "B",
-                "M"
-              ]
+              "线段PA",
+              "线段PB",
+              "线段PC",
+              "线段PD",
+              "线段AM",
+              "线段BM",
+              "线段CM"
             ],
-            "coordinates": [
-              [
-                [
-                  "P",
-                  [
-                    0,
-                    2
-                  ]
-                ],
-                [
-                  [
-                    "M",
-                    [
-                      0.5,
-                      1
-                    ]
-                  ],
-                  [
-                    [
-                      "C",
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    [
-                      [
-                        "D",
-                        [
-                          0,
-                          0.5
-                        ]
-                      ],
-                      [
-                        [
-                          "A",
-                          [
-                            0,
-                            0
-                          ]
-                        ],
-                        [
-                          [
-                            "B",
-                            [
-                              1,
-                              0
-                            ]
-                          ]
-                        ]
-                      ]
-                    ]
-                  ]
-                ]
-              ]
-            ],
+            "coordinates": [],
+            "ranges": [],
             "text": [],
             "uncertainties": [],
             "confidence": "E2"
@@ -2076,7 +1771,10 @@
       "type_refs": [
         "类型Ⅳ 求距离"
       ],
-      "bridge_unit_ids": [],
+      "bridge_unit_ids": [
+        "micro-skew-distance",
+        "bridge-1.4-folding"
+      ],
       "method_checkpoints": [
         {
           "id": "1.4-distance-check-1",
@@ -2334,147 +2032,77 @@
           "math_errors": [],
           "evidence": [
             "E1",
-            "E2"
+            "E1"
           ],
           "vision_sidecars": [
             {
-              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_full\\imgs\\img_in_image_box_836_403_1094_599.jpg",
+              "image": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_836_403_1094_599.jpg",
               "image_sha256": "8c901a0abedad0a569ef2ab5d792cc95bafa4bdc24401e6685eda89cc91ede37",
-              "confidence": "E2",
+              "confidence": "E1",
               "structured": {
-                "objects": [],
-                "relations": [],
-                "coordinates": [
-                  {
-                    "name": "A",
-                    "pos": [
-                      0,
-                      0,
-                      0
-                    ]
-                  },
-                  {
-                    "name": "A1",
-                    "pos": [
-                      0.5,
-                      0,
-                      1
-                    ]
-                  },
-                  {
-                    "name": "B",
-                    "pos": [
-                      1,
-                      0,
-                      0
-                    ]
-                  },
-                  {
-                    "name": "B1",
-                    "pos": [
-                      1,
-                      0.5,
-                      1
-                    ]
-                  },
-                  {
-                    "name": "C",
-                    "pos": [
-                      2,
-                      1,
-                      0
-                    ]
-                  },
-                  {
-                    "name": "C1",
-                    "pos": [
-                      2,
-                      1.5,
-                      1
-                    ]
-                  }
+                "objects": [
+                  "三棱柱ABC-A1B1C1、若干内部辅助线"
                 ],
+                "relations": [
+                  "AA1以虚线绘制",
+                  "BB1与CC1为侧棱",
+                  "A1、B1、C1构成上方三角形",
+                  "A、B、C构成下方三角形",
+                  "B1与C之间画有实线"
+                ],
+                "coordinates": [],
                 "ranges": [],
                 "text": [
-                  "A",
-                  "A1",
-                  "B",
-                  "B1",
-                  "C",
-                  "C1"
+                  "A、B、C、A1、B1、C1"
                 ],
-                "uncertainties": [],
-                "confidence": "E2"
+                "uncertainties": [
+                  "多条辅助线在图中央交叠，未据交叠位置推断交点名称或垂直关系"
+                ],
+                "confidence": "E1"
               },
-              "source_provenance": null
+              "source_provenance": {
+                "source_kind": "manual_current_original_image_review",
+                "item_source": "data/packets/1.4/student_packet.json",
+                "original_image": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_836_403_1094_599.jpg",
+                "original_image_sha256": "8c901a0abedad0a569ef2ab5d792cc95bafa4bdc24401e6685eda89cc91ede37",
+                "review_result": "current_original_crop_visually_verified_with_overlapping_lines",
+                "review_report": "reports/deep_simulation_reviews/visual-fixes-ch1.json",
+                "review_report_sha256": "93c60397448a7d96d94e05e20433a38e46c9a5db78618a90d80586799e754f5c"
+              }
             }
           ],
           "vision_sidecar": {
-            "objects": [],
-            "relations": [],
-            "coordinates": [
-              {
-                "name": "A",
-                "pos": [
-                  0,
-                  0,
-                  0
-                ]
-              },
-              {
-                "name": "A1",
-                "pos": [
-                  0.5,
-                  0,
-                  1
-                ]
-              },
-              {
-                "name": "B",
-                "pos": [
-                  1,
-                  0,
-                  0
-                ]
-              },
-              {
-                "name": "B1",
-                "pos": [
-                  1,
-                  0.5,
-                  1
-                ]
-              },
-              {
-                "name": "C",
-                "pos": [
-                  2,
-                  1,
-                  0
-                ]
-              },
-              {
-                "name": "C1",
-                "pos": [
-                  2,
-                  1.5,
-                  1
-                ]
-              }
+            "objects": [
+              "三棱柱ABC-A1B1C1、若干内部辅助线"
             ],
+            "relations": [
+              "AA1以虚线绘制",
+              "BB1与CC1为侧棱",
+              "A1、B1、C1构成上方三角形",
+              "A、B、C构成下方三角形",
+              "B1与C之间画有实线"
+            ],
+            "coordinates": [],
             "ranges": [],
             "text": [
-              "A",
-              "A1",
-              "B",
-              "B1",
-              "C",
-              "C1"
+              "A、B、C、A1、B1、C1"
             ],
-            "uncertainties": [],
-            "confidence": "E2"
+            "uncertainties": [
+              "多条辅助线在图中央交叠，未据交叠位置推断交点名称或垂直关系"
+            ],
+            "confidence": "E1"
           },
-          "vision_source_provenance": []
+          "vision_source_provenance": [
+            {
+              "source_kind": "manual_current_original_image_review",
+              "item_source": "data/packets/1.4/student_packet.json",
+              "original_image": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_836_403_1094_599.jpg",
+              "original_image_sha256": "8c901a0abedad0a569ef2ab5d792cc95bafa4bdc24401e6685eda89cc91ede37",
+              "review_result": "current_original_crop_visually_verified_with_overlapping_lines",
+              "review_report": "reports/deep_simulation_reviews/visual-fixes-ch1.json",
+              "review_report_sha256": "93c60397448a7d96d94e05e20433a38e46c9a5db78618a90d80586799e754f5c"
+            }
+          ]
         },
         {
           "qid": "Q-e23bcf15c26de84a",
@@ -2530,7 +2158,8 @@
         "类型Ⅴ 点线在面内判断"
       ],
       "bridge_unit_ids": [
-        "bridge-micro-completion"
+        "bridge-micro-completion",
+        "bridge-1.4-dihedral-trig"
       ],
       "method_checkpoints": [
         {
@@ -2556,141 +2185,39 @@
             47,
             48
           ],
-          "question_text": "【例 21】（2020·新课标Ⅲ卷（节选））如图，在长方体 \\(ABCD-A_1B_1C_1D_1\\) 中，点 \\(E\\)，\\(F\\) 分别在棱 \\(DD_1\\)，\\(BB_1\\) 上，且 \\(2DE = ED_1\\)，\\(BF = 2FB_1\\)，证明：点 \\(C_1\\) 在平面 \\(AEF\\) 内。\n证法1：（观察图形发现  \\(EC_1 \\parallel AF\\)，故可通过证明这一平行关系来证结论成立）\n如图，在  \\(AA_1\\) 上取点  \\(G\\)，使得  \\(A_1G = 2AG\\)，连接  \\(B_1G\\)， \\(EG\\)， \\(EC_1\\)，\n\n则  \\(AG \\parallel B_{1}F\\) 且  \\(AG = B_{1}F\\)，所以四边形  \\(AGB_{1}F\\) 为平行四边形，故  \\(AF \\parallel B_{1}G\\)，\n又  \\(2DE = ED_{1}\\)，所以  \\(EG \\parallel A_{1}D_{1} \\parallel B_{1}C_{1}\\) 且  \\(EG = A_{1}D_{1} = B_{1}C_{1}\\)，故  \\(EGB_{1}C_{1}\\) 为平行四边形，\n所以  \\(EC_{1} \\parallel B_{1}G\\) ，从而  \\(EC_{1} \\parallel AF\\) ，故 A，E， \\(C_{1}\\)，F 四点共面，\n所以点  \\(C_{1}\\) 在平面 AEF 内.\n证法2：（点 \\(C_1\\)在平面 \\(AEF\\)内 \\(\\Leftrightarrow C_1\\overrightarrow{A}\\)是平面 \\(AEF\\)内的向量 \\(\\Leftrightarrow \\overrightarrow{C_1A}\\perp\\)平面 \\(AEF\\)的法向量，故也可通过证明 \\(\\overrightarrow{C_1A}\\perp\\)平面 \\(AEF\\)的法向量来证点 \\(C_1\\)在平面 \\(AEF\\)内）\n以 \\(C_1\\)为原点建立如图所示的空间直角坐标系，设 \\(AD=1\\)， \\(CD=a\\)， \\(CC_1=3b\\)，\n则 \\(A(a,1,3b)\\)， \\(E(a,0,2b)\\)， \\(F(0,1,b)\\)， \\(C_1(0,0,0)\\)，\n所以 \\(\\overrightarrow{C_1A}=(a,1,3b)\\)， \\(\\overrightarrow{EA}=(0,1,b)\\)， \\(\\overrightarrow{FA}=(a,0,2b)\\)，\n设平面 \\(AEF\\)的法向量为 \\(\\boldsymbol{m}=(x,y,z)\\)，则 \\(\\begin{cases}\\boldsymbol{m}\\cdot\\overrightarrow{EA}=y+bz=0\\\\\\boldsymbol{m}\\cdot\\overrightarrow{FA}=ax+2bz=0\\end{cases}\\)，\n令 \\(x=2b\\)，则 \\(\\begin{cases}y=ab\\\\z=-a\\end{cases}\\)，所以 \\(\\boldsymbol{m}=(2b,ab,-a)\\)是平面 \\(AEF\\)的一个法向量，\n从而 \\(\\overrightarrow{C_1A}\\cdot\\boldsymbol{m}=a\\cdot2b+1\\cdot ab+3b\\cdot(-a)=0\\)，故点 \\(C_1\\)在平面 \\(AEF\\)内.",
-          "image_refs": [
-            {
-              "ref": "imgs/img_in_image_box_912_1316_1094_1635.jpg",
-              "path": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_912_1316_1094_1635.jpg",
-              "exists": true
-            },
-            {
-              "ref": "imgs/img_in_image_box_882_281_1091_646.jpg",
-              "path": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_882_281_1091_646.jpg",
-              "exists": true
-            }
-          ],
-          "visual_status": "VISION_VERIFIED",
+          "question_text": "【例21】（2020·新课标Ⅲ卷（节选））如图，在长方体 \\(ABCD-A_1B_1C_1D_1\\) 中，点 \\(E\\)，\\(F\\) 分别在棱 \\(DD_1\\)，\\(BB_1\\) 上，且 \\(2DE=ED_1\\)，\\(BF=2FB_1\\)，证明：点 \\(C_1\\) 在平面 \\(AEF\\) 内。",
+          "image_refs": [],
+          "visual_status": "READY_TEXT_ONLY",
           "teaching_text": "【例 21】（2020·新课标Ⅲ卷（节选））如图，在长方体 \\(ABCD-A_1B_1C_1D_1\\) 中，点 \\(E\\)，\\(F\\) 分别在棱 \\(DD_1\\)，\\(BB_1\\) 上，且 \\(2DE = ED_1\\)，\\(BF = 2FB_1\\)，证明：点 \\(C_1\\) 在平面 \\(AEF\\) 内。\n证法1：（观察图形发现  \\(EC_1 \\parallel AF\\)，故可通过证明这一平行关系来证结论成立）\n如图，在  \\(AA_1\\) 上取点  \\(G\\)，使得  \\(A_1G = 2AG\\)，连接  \\(B_1G\\)， \\(EG\\)， \\(EC_1\\)，\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_912_1316_1094_1635.jpg\" alt=\"Image\" width=\"15%\" /></div>\n则  \\(AG \\parallel B_{1}F\\) 且  \\(AG = B_{1}F\\)，所以四边形  \\(AGB_{1}F\\) 为平行四边形，故  \\(AF \\parallel B_{1}G\\)，\n又  \\(2DE = ED_{1}\\)，所以  \\(EG \\parallel A_{1}D_{1} \\parallel B_{1}C_{1}\\) 且  \\(EG = A_{1}D_{1} = B_{1}C_{1}\\)，故  \\(EGB_{1}C_{1}\\) 为平行四边形，\n所以  \\(EC_{1} \\parallel B_{1}G\\) ，从而  \\(EC_{1} \\parallel AF\\) ，故 A，E， \\(C_{1}\\)，F 四点共面，\n所以点  \\(C_{1}\\) 在平面 AEF 内.\n证法2：（点 \\(C_1\\)在平面 \\(AEF\\)内 \\(\\Leftrightarrow C_1\\overrightarrow{A}\\)是平面 \\(AEF\\)内的向量 \\(\\Leftrightarrow \\overrightarrow{C_1A}\\perp\\)平面 \\(AEF\\)的法向量，故也可通过证明 \\(\\overrightarrow{C_1A}\\perp\\)平面 \\(AEF\\)的法向量来证点 \\(C_1\\)在平面 \\(AEF\\)内）\n以 \\(C_1\\)为原点建立如图所示的空间直角坐标系，设 \\(AD=1\\)， \\(CD=a\\)， \\(CC_1=3b\\)，\n则 \\(A(a,1,3b)\\)， \\(E(a,0,2b)\\)， \\(F(0,1,b)\\)， \\(C_1(0,0,0)\\)，\n所以 \\(\\overrightarrow{C_1A}=(a,1,3b)\\)， \\(\\overrightarrow{EA}=(0,1,b)\\)， \\(\\overrightarrow{FA}=(a,0,2b)\\)，\n设平面 \\(AEF\\)的法向量为 \\(\\boldsymbol{m}=(x,y,z)\\)，则 \\(\\begin{cases}\\boldsymbol{m}\\cdot\\overrightarrow{EA}=y+bz=0\\\\\\boldsymbol{m}\\cdot\\overrightarrow{FA}=ax+2bz=0\\end{cases}\\)，\n令 \\(x=2b\\)，则 \\(\\begin{cases}y=ab\\\\z=-a\\end{cases}\\)，所以 \\(\\boldsymbol{m}=(2b,ab,-a)\\)是平面 \\(AEF\\)的一个法向量，\n从而 \\(\\overrightarrow{C_1A}\\cdot\\boldsymbol{m}=a\\cdot2b+1\\cdot ab+3b\\cdot(-a)=0\\)，故点 \\(C_1\\)在平面 \\(AEF\\)内.\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_882_281_1091_646.jpg\" alt=\"Image\" width=\"17%\" /></div>\n【反思】判断空间中的点 \\(P\\) 是否在平面 \\(\\alpha\\) 内，可在 \\(\\alpha\\) 内另取一点 \\(Q\\)，看看 \\(\\overrightarrow{PQ}\\) 是不是 \\(x\\) 是 \\(\\alpha\\) 内的向量。若是，则应有 \\(\\overrightarrow{PQ} \\cdot n = 0\\)；否则，\\(\\overrightarrow{PQ} \\cdot n \\neq 0\\)，其中 \\(n\\) 为平面 \\(\\alpha\\) 的法向量。",
           "solution_present": true,
-          "vision_hint": "1.4-LIeaaf1bb065d2f647",
-          "vision_sidecars": [
-            {
-              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_912_1316_1094_1635.jpg",
-              "image_sha256": "fd176ced53ca004fc95233b8848774d227fb57275973938fe7db1d84c799b7eb",
-              "confidence": "E2",
-              "structured": {
-                "objects": [
-                  "长方体CDA1B1BCC1A1",
-                  "线段AC1",
-                  "线段A1C1",
-                  "线段AE",
-                  "线段AF",
-                  "线段A1F"
-                ],
-                "relations": [
-                  "点C、C1、A1共线",
-                  "点D、E、D1共线",
-                  "点B、B1、F共线",
-                  "线段AC1平行于线段A1F",
-                  "线段AE平行于线段AF",
-                  "线段A1F平行于线段AC1"
-                ],
-                "coordinates": [
-                  "点C在点B正上方",
-                  "点D在点C正左方",
-                  "点D1在点E正下方",
-                  "点B1在点F正下方",
-                  "点A1在点C1正下方",
-                  "点A在点C1正上方"
-                ],
-                "ranges": [],
-                "text": [
-                  "点C、D、E、D1标注于左侧面",
-                  "点B、A、F、B1标注于右侧面",
-                  "点C1、A1标注于底面",
-                  "点A标注于上底面与右侧面的交线",
-                  "点E标注于左侧面与前面交线",
-                  "点F标注于右侧面与前面交线"
-                ],
-                "uncertainties": [],
-                "confidence": "E2"
-              },
-              "source_provenance": null
-            },
-            {
-              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_882_281_1091_646.jpg",
-              "image_sha256": "76fc9199f1783b0d73d25414b386e5a51b0ad09466a0bdddfbdd7821e514a86d",
-              "confidence": "E2",
-              "structured": {
-                "objects": [
-                  "长方体ABCD-A1B1C1D1",
-                  "点A、B、C、D、E、F、G、C1、B1、A1、D1",
-                  "线段AB、BC、CD、DA、AA1、BB1、CC1、DD1、AE、EF、FG、A1B1、B1C1、C1D1、D1A1",
-                  "坐标轴x、y、z",
-                  "平面ABCD、ABB1A1、A1B1C1A1、ADD1A1",
-                  "虚线CC1、C1D1、D1A1、A1B1、B1C1、AE、EG、A1G、A1F、EF"
-                ],
-                "relations": [
-                  "A在BC上，E在AD上，G在AB上，F在BB1上，A1在CC1上",
-                  "A1在A正下方，B1在B正下方，C1在C正下方，D1在D正下方",
-                  "E连接A1和F，G连接E和F，A1连接G和F",
-                  "A连接E和G，A1连接A和A1"
-                ],
-                "coordinates": [
-                  "A(?, ?, ?), B(?, ?, ?), C(?, ?, ?), D(?, ?, ?), E(?, ?, ?), F(?, ?, ?), G(?, ?, ?), C1(?, ?, ?), B1(?, ?, ?), A1(?, ?, ?), D1(?, ?, ?)"
-                ],
-                "ranges": [],
-                "text": [
-                  "坐标轴标注x、y、z"
-                ],
-                "uncertainties": [],
-                "confidence": "E2"
-              },
-              "source_provenance": null
+          "source_question_stem_review": {
+            "status": "SOURCE_REVIEWED_ANSWER_FREE",
+            "review_path": "reports/deep_simulation_reviews/clean-stems-ch1-ch3.json",
+            "review_sha256": "49c435c709a768f0f095b33d0a1d1768f254563ff37e93ed796b921c51daa1aa",
+            "old_reported_question_text_sha256": "b67e9b1f0fa0e1ebaeaae771fb2f4f292463b2836a40c368ba70af520b6aa5ce",
+            "pre_override_question_text_sha256": "830a75a38fbef48873fff882f19b94e4235dcbfdd4b6f9324f0da1718051eae5",
+            "question_text_sha256": "d43bc2ebfacb371b4e16cf72c5e2bdeb98bf7b50f1771de9eac752f78449ed59",
+            "confidence": "high",
+            "boundary_basis": "OCR doc 47 line 41 contains the complete prompt. Line 43 starts '证法1', so both proof methods in docs 47-48 are excluded.",
+            "source": {
+              "packet": "data/packets/1.4/packet.json",
+              "ocr_docs": [
+                47,
+                48
+              ],
+              "ocr_files": [
+                "data/ocr_live_current/first_chapter_69/doc_47.md",
+                "data/ocr_live_current/first_chapter_69/doc_48.md"
+              ],
+              "pdf_file": "output/pdf/第一章_空间向量与立体几何_原书_方法册习题册.pdf",
+              "pdf_pages": [
+                48,
+                49
+              ],
+              "visual_evidence": "packet OCR and source-page sequence"
             }
-          ],
-          "vision_sidecar": {
-            "objects": [
-              "长方体CDA1B1BCC1A1",
-              "线段AC1",
-              "线段A1C1",
-              "线段AE",
-              "线段AF",
-              "线段A1F"
-            ],
-            "relations": [
-              "点C、C1、A1共线",
-              "点D、E、D1共线",
-              "点B、B1、F共线",
-              "线段AC1平行于线段A1F",
-              "线段AE平行于线段AF",
-              "线段A1F平行于线段AC1"
-            ],
-            "coordinates": [
-              "点C在点B正上方",
-              "点D在点C正左方",
-              "点D1在点E正下方",
-              "点B1在点F正下方",
-              "点A1在点C1正下方",
-              "点A在点C1正上方"
-            ],
-            "ranges": [],
-            "text": [
-              "点C、D、E、D1标注于左侧面",
-              "点B、A、F、B1标注于右侧面",
-              "点C1、A1标注于底面",
-              "点A标注于上底面与右侧面的交线",
-              "点E标注于左侧面与前面交线",
-              "点F标注于右侧面与前面交线"
-            ],
-            "uncertainties": [],
-            "confidence": "E2"
           },
-          "vision_source_provenance": [],
-          "evidence": [
-            "E1",
-            "E2"
-          ]
+          "vision_hint": "1.4-LIeaaf1bb065d2f647"
         },
         {
           "item_id": "d283fa7f2700a159",
@@ -2822,202 +2349,38 @@
           ],
           "vision_sidecars": [
             {
-              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_full\\imgs\\img_in_image_box_871_1163_1093_1335.jpg",
+              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_871_1163_1093_1335.jpg",
               "image_sha256": "0920f7b8980cf8cf4a9cdee4eaf6dba9e2074e85a56a10cd7c2324f9e5f41c91",
               "confidence": "E2",
               "structured": {
                 "objects": [
-                  [
-                    "点",
-                    "P"
-                  ],
-                  [
-                    "点",
-                    "E"
-                  ],
-                  [
-                    "点",
-                    "F"
-                  ],
-                  [
-                    "点",
-                    "G"
-                  ],
-                  [
-                    "点",
-                    "A"
-                  ],
-                  [
-                    "点",
-                    "D"
-                  ],
-                  [
-                    "点",
-                    "C"
-                  ],
-                  [
-                    "点",
-                    "B"
-                  ]
+                  "三棱锥P-BCD",
+                  "点P",
+                  "点A",
+                  "点E",
+                  "点F",
+                  "点G"
                 ],
                 "relations": [
-                  [
-                    "线段",
-                    [
-                      "P",
-                      "B"
-                    ]
-                  ],
-                  [
-                    "线段",
-                    [
-                      "P",
-                      "D"
-                    ]
-                  ],
-                  [
-                    "线段",
-                    [
-                      "B",
-                      "C"
-                    ]
-                  ],
-                  [
-                    "线段",
-                    [
-                      "C",
-                      "D"
-                    ]
-                  ],
-                  [
-                    "线段",
-                    [
-                      "D",
-                      "B"
-                    ]
-                  ],
-                  [
-                    "线段",
-                    [
-                      "P",
-                      "A"
-                    ]
-                  ],
-                  [
-                    "线段",
-                    [
-                      "A",
-                      "D"
-                    ]
-                  ],
-                  [
-                    "线段",
-                    [
-                      "A",
-                      "C"
-                    ]
-                  ],
-                  [
-                    "线段",
-                    [
-                      "A",
-                      "B"
-                    ]
-                  ],
-                  [
-                    "线段",
-                    [
-                      "P",
-                      "E"
-                    ]
-                  ],
-                  [
-                    "线段",
-                    [
-                      "E",
-                      "D"
-                    ]
-                  ],
-                  [
-                    "线段",
-                    [
-                      "P",
-                      "F"
-                    ]
-                  ],
-                  [
-                    "线段",
-                    [
-                      "F",
-                      "E"
-                    ]
-                  ],
-                  [
-                    "线段",
-                    [
-                      "P",
-                      "G"
-                    ]
-                  ],
-                  [
-                    "线段",
-                    [
-                      "G",
-                      "B"
-                    ]
-                  ],
-                  [
-                    "线段",
-                    [
-                      "A",
-                      "F"
-                    ]
-                  ]
+                  "PA垂直平面BCD",
+                  "E在PD上",
+                  "F在PE上",
+                  "G在PB上",
+                  "A在BCD平面上",
+                  "F在AE上"
                 ],
-                "coordinates": [
-                  [
-                    "P",
-                    null,
-                    null
-                  ],
-                  [
-                    "E",
-                    null,
-                    null
-                  ],
-                  [
-                    "F",
-                    null,
-                    null
-                  ],
-                  [
-                    "G",
-                    null,
-                    null
-                  ],
-                  [
-                    "A",
-                    null,
-                    null
-                  ],
-                  [
-                    "D",
-                    null,
-                    null
-                  ],
-                  [
-                    "C",
-                    null,
-                    null
-                  ],
-                  [
-                    "B",
-                    null,
-                    null
-                  ]
-                ],
+                "coordinates": [],
                 "ranges": [],
-                "text": [],
+                "text": [
+                  "P",
+                  "B",
+                  "C",
+                  "D",
+                  "A",
+                  "E",
+                  "F",
+                  "G"
+                ],
                 "uncertainties": [],
                 "confidence": "E2"
               },
@@ -3026,197 +2389,33 @@
           ],
           "vision_sidecar": {
             "objects": [
-              [
-                "点",
-                "P"
-              ],
-              [
-                "点",
-                "E"
-              ],
-              [
-                "点",
-                "F"
-              ],
-              [
-                "点",
-                "G"
-              ],
-              [
-                "点",
-                "A"
-              ],
-              [
-                "点",
-                "D"
-              ],
-              [
-                "点",
-                "C"
-              ],
-              [
-                "点",
-                "B"
-              ]
+              "三棱锥P-BCD",
+              "点P",
+              "点A",
+              "点E",
+              "点F",
+              "点G"
             ],
             "relations": [
-              [
-                "线段",
-                [
-                  "P",
-                  "B"
-                ]
-              ],
-              [
-                "线段",
-                [
-                  "P",
-                  "D"
-                ]
-              ],
-              [
-                "线段",
-                [
-                  "B",
-                  "C"
-                ]
-              ],
-              [
-                "线段",
-                [
-                  "C",
-                  "D"
-                ]
-              ],
-              [
-                "线段",
-                [
-                  "D",
-                  "B"
-                ]
-              ],
-              [
-                "线段",
-                [
-                  "P",
-                  "A"
-                ]
-              ],
-              [
-                "线段",
-                [
-                  "A",
-                  "D"
-                ]
-              ],
-              [
-                "线段",
-                [
-                  "A",
-                  "C"
-                ]
-              ],
-              [
-                "线段",
-                [
-                  "A",
-                  "B"
-                ]
-              ],
-              [
-                "线段",
-                [
-                  "P",
-                  "E"
-                ]
-              ],
-              [
-                "线段",
-                [
-                  "E",
-                  "D"
-                ]
-              ],
-              [
-                "线段",
-                [
-                  "P",
-                  "F"
-                ]
-              ],
-              [
-                "线段",
-                [
-                  "F",
-                  "E"
-                ]
-              ],
-              [
-                "线段",
-                [
-                  "P",
-                  "G"
-                ]
-              ],
-              [
-                "线段",
-                [
-                  "G",
-                  "B"
-                ]
-              ],
-              [
-                "线段",
-                [
-                  "A",
-                  "F"
-                ]
-              ]
+              "PA垂直平面BCD",
+              "E在PD上",
+              "F在PE上",
+              "G在PB上",
+              "A在BCD平面上",
+              "F在AE上"
             ],
-            "coordinates": [
-              [
-                "P",
-                null,
-                null
-              ],
-              [
-                "E",
-                null,
-                null
-              ],
-              [
-                "F",
-                null,
-                null
-              ],
-              [
-                "G",
-                null,
-                null
-              ],
-              [
-                "A",
-                null,
-                null
-              ],
-              [
-                "D",
-                null,
-                null
-              ],
-              [
-                "C",
-                null,
-                null
-              ],
-              [
-                "B",
-                null,
-                null
-              ]
-            ],
+            "coordinates": [],
             "ranges": [],
-            "text": [],
+            "text": [
+              "P",
+              "B",
+              "C",
+              "D",
+              "A",
+              "E",
+              "F",
+              "G"
+            ],
             "uncertainties": [],
             "confidence": "E2"
           },
@@ -3253,10 +2452,17 @@
       "optional_course_keys": [],
       "knowledge_refs": [],
       "prerequisite_knowledge_refs": [],
-      "type_refs": [],
+      "type_refs": [
+        "翻折守恒与动态二面角综合",
+        "类型Ⅱ 研究垂直关系",
+        "类型Ⅲ 求空间角",
+        "空间角与面内存在性综合",
+        "类型Ⅴ 点线在面内判断"
+      ],
       "bridge_unit_ids": [
         "bridge-1.4-folding",
-        "bridge-micro-existence"
+        "bridge-micro-existence",
+        "bridge-1.4-dihedral-trig"
       ],
       "method_checkpoints": [
         {
@@ -3313,326 +2519,112 @@
           ],
           "vision_sidecars": [
             {
-              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_full\\imgs\\img_in_image_box_383_282_622_439.jpg",
+              "image": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_383_282_622_439.jpg",
               "image_sha256": "e028e49fb9240af2c72fc50b6f90d0acf4b54d7a9baa58d530a52130161b886c",
               "confidence": "E2",
               "structured": {
                 "objects": [
-                  [
-                    "平行四边形",
-                    "ABCD"
-                  ],
-                  [
-                    "对角线",
-                    "AC"
-                  ],
-                  [
-                    "对角线",
-                    "BD"
-                  ],
-                  [
-                    "点",
-                    "E"
-                  ],
-                  [
-                    "交点",
-                    "O"
-                  ]
+                  "四边形ABCD、对角线AC、BD、点E、O"
                 ],
                 "relations": [
-                  [
-                    "A",
-                    "连接",
-                    "B"
-                  ],
-                  [
-                    "B",
-                    "连接",
-                    "C"
-                  ],
-                  [
-                    "C",
-                    "连接",
-                    "D"
-                  ],
-                  [
-                    "D",
-                    "连接",
-                    "A"
-                  ],
-                  [
-                    "A",
-                    "连接",
-                    "C"
-                  ],
-                  [
-                    "B",
-                    "连接",
-                    "D"
-                  ],
-                  [
-                    "A",
-                    "E",
-                    "O",
-                    "C",
-                    "共线"
-                  ],
-                  [
-                    "B",
-                    "D",
-                    "交",
-                    "A",
-                    "C",
-                    "于",
-                    "O"
-                  ]
+                  "AC与BD相交于O",
+                  "E位于线段AO上",
+                  "A、E、O、C依次位于对角线AC上",
+                  "A、B、C、D为四边形顶点"
                 ],
-                "coordinates": [
-                  [
-                    "A",
-                    "(0, 2)"
-                  ],
-                  [
-                    "B",
-                    "(-1, 0)"
-                  ],
-                  [
-                    "C",
-                    "(2, 0)"
-                  ],
-                  [
-                    "D",
-                    "(1, 2)"
-                  ],
-                  [
-                    "E",
-                    "(0.5, 1.5)"
-                  ],
-                  [
-                    "O",
-                    "(1, 1)"
-                  ]
-                ],
+                "coordinates": [],
                 "ranges": [],
                 "text": [
-                  [
-                    "点",
-                    "A"
-                  ],
-                  [
-                    "点",
-                    "B"
-                  ],
-                  [
-                    "点",
-                    "C"
-                  ],
-                  [
-                    "点",
-                    "D"
-                  ],
-                  [
-                    "点",
-                    "E"
-                  ],
-                  [
-                    "点",
-                    "O"
-                  ]
+                  "A、B、C、D、E、O"
                 ],
-                "uncertainties": [],
+                "uncertainties": [
+                  "图中没有等边、等长或角度标记"
+                ],
                 "confidence": "E2"
               },
-              "source_provenance": null
+              "source_provenance": {
+                "source_kind": "manual_current_original_image_review",
+                "item_source": "data/packets/1.4/student_packet.json",
+                "original_image": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_383_282_622_439.jpg",
+                "original_image_sha256": "e028e49fb9240af2c72fc50b6f90d0acf4b54d7a9baa58d530a52130161b886c",
+                "review_result": "current_original_crop_visually_verified_as_figure_1",
+                "review_report": "reports/deep_simulation_reviews/visual-fixes-ch1.json",
+                "review_report_sha256": "93c60397448a7d96d94e05e20433a38e46c9a5db78618a90d80586799e754f5c"
+              }
             },
             {
-              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_full\\imgs\\img_in_image_box_638_267_835_434.jpg",
+              "image": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_638_267_835_434.jpg",
               "image_sha256": "66fee4503a25f8d7803ac95c879be8dec9ed66cb230ddd2e890de22c32128e16",
               "confidence": "E2",
               "structured": {
-                "objects": [],
+                "objects": [
+                  "三棱锥A-BCD、点E、O"
+                ],
                 "relations": [
-                  "line segment AB",
-                  "line segment AC",
-                  "line segment BC",
-                  "line segment AD",
-                  "line segment AE",
-                  "line segment ED",
-                  "line segment EO",
-                  "line segment BD",
-                  "line segment CD",
-                  "line segment BO",
-                  "line segment CO"
+                  "A、B、C构成外部三角形轮廓",
+                  "A、E、O位于同一条虚线段上",
+                  "B、O、D位于同一条虚线段上",
+                  "AD、DC与AO以虚线绘制"
                 ],
-                "coordinates": [
-                  {
-                    "name": "A",
-                    "position": "top vertex"
-                  },
-                  {
-                    "name": "B",
-                    "position": "bottom left"
-                  },
-                  {
-                    "name": "C",
-                    "position": "bottom right"
-                  },
-                  {
-                    "name": "O",
-                    "position": "mid BC, below center"
-                  },
-                  {
-                    "name": "E",
-                    "position": "on AB, near A"
-                  },
-                  {
-                    "name": "D",
-                    "position": "on AC, near A"
-                  }
-                ],
+                "coordinates": [],
                 "ranges": [],
                 "text": [
-                  "A",
-                  "B",
-                  "C",
-                  "D",
-                  "E",
-                  "O"
+                  "A、B、C、D、E、O"
                 ],
                 "uncertainties": [],
                 "confidence": "E2"
               },
-              "source_provenance": null
+              "source_provenance": {
+                "source_kind": "manual_current_original_image_review",
+                "item_source": "data/packets/1.4/student_packet.json",
+                "original_image": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_638_267_835_434.jpg",
+                "original_image_sha256": "66fee4503a25f8d7803ac95c879be8dec9ed66cb230ddd2e890de22c32128e16",
+                "review_result": "current_original_crop_visually_verified_as_figure_2",
+                "review_report": "reports/deep_simulation_reviews/visual-fixes-ch1.json",
+                "review_report_sha256": "93c60397448a7d96d94e05e20433a38e46c9a5db78618a90d80586799e754f5c"
+              }
             }
           ],
           "vision_sidecar": {
             "objects": [
-              [
-                "平行四边形",
-                "ABCD"
-              ],
-              [
-                "对角线",
-                "AC"
-              ],
-              [
-                "对角线",
-                "BD"
-              ],
-              [
-                "点",
-                "E"
-              ],
-              [
-                "交点",
-                "O"
-              ]
+              "四边形ABCD、对角线AC、BD、点E、O"
             ],
             "relations": [
-              [
-                "A",
-                "连接",
-                "B"
-              ],
-              [
-                "B",
-                "连接",
-                "C"
-              ],
-              [
-                "C",
-                "连接",
-                "D"
-              ],
-              [
-                "D",
-                "连接",
-                "A"
-              ],
-              [
-                "A",
-                "连接",
-                "C"
-              ],
-              [
-                "B",
-                "连接",
-                "D"
-              ],
-              [
-                "A",
-                "E",
-                "O",
-                "C",
-                "共线"
-              ],
-              [
-                "B",
-                "D",
-                "交",
-                "A",
-                "C",
-                "于",
-                "O"
-              ]
+              "AC与BD相交于O",
+              "E位于线段AO上",
+              "A、E、O、C依次位于对角线AC上",
+              "A、B、C、D为四边形顶点"
             ],
-            "coordinates": [
-              [
-                "A",
-                "(0, 2)"
-              ],
-              [
-                "B",
-                "(-1, 0)"
-              ],
-              [
-                "C",
-                "(2, 0)"
-              ],
-              [
-                "D",
-                "(1, 2)"
-              ],
-              [
-                "E",
-                "(0.5, 1.5)"
-              ],
-              [
-                "O",
-                "(1, 1)"
-              ]
-            ],
+            "coordinates": [],
             "ranges": [],
             "text": [
-              [
-                "点",
-                "A"
-              ],
-              [
-                "点",
-                "B"
-              ],
-              [
-                "点",
-                "C"
-              ],
-              [
-                "点",
-                "D"
-              ],
-              [
-                "点",
-                "E"
-              ],
-              [
-                "点",
-                "O"
-              ]
+              "A、B、C、D、E、O"
             ],
-            "uncertainties": [],
+            "uncertainties": [
+              "图中没有等边、等长或角度标记"
+            ],
             "confidence": "E2"
           },
-          "vision_source_provenance": []
+          "vision_source_provenance": [
+            {
+              "source_kind": "manual_current_original_image_review",
+              "item_source": "data/packets/1.4/student_packet.json",
+              "original_image": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_383_282_622_439.jpg",
+              "original_image_sha256": "e028e49fb9240af2c72fc50b6f90d0acf4b54d7a9baa58d530a52130161b886c",
+              "review_result": "current_original_crop_visually_verified_as_figure_1",
+              "review_report": "reports/deep_simulation_reviews/visual-fixes-ch1.json",
+              "review_report_sha256": "93c60397448a7d96d94e05e20433a38e46c9a5db78618a90d80586799e754f5c"
+            },
+            {
+              "source_kind": "manual_current_original_image_review",
+              "item_source": "data/packets/1.4/student_packet.json",
+              "original_image": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_638_267_835_434.jpg",
+              "original_image_sha256": "66fee4503a25f8d7803ac95c879be8dec9ed66cb230ddd2e890de22c32128e16",
+              "review_result": "current_original_crop_visually_verified_as_figure_2",
+              "review_report": "reports/deep_simulation_reviews/visual-fixes-ch1.json",
+              "review_report_sha256": "93c60397448a7d96d94e05e20433a38e46c9a5db78618a90d80586799e754f5c"
+            }
+          ]
         },
         {
           "qid": "Q-6f6ec75aef2de938",
@@ -3661,47 +2653,73 @@
           ],
           "vision_sidecars": [
             {
-              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_full\\imgs\\img_in_image_box_891_353_1093_547.jpg",
+              "image": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_891_353_1093_547.jpg",
               "image_sha256": "c487b6528512e8ce8a24d76bf2505d3fcdcac23db2b756e2bc26a055b70b34e9",
               "confidence": "E2",
               "structured": {
-                "objects": [],
-                "relations": [],
+                "objects": [
+                  "四棱锥P-ABCD、点E、F"
+                ],
+                "relations": [
+                  "E位于线段PB上",
+                  "F位于线段BC上",
+                  "PA、AB、AD以虚线绘制",
+                  "A与F之间画有实线",
+                  "P与F之间画有虚线"
+                ],
                 "coordinates": [],
                 "ranges": [],
                 "text": [
-                  "P",
-                  "E",
-                  "A",
-                  "B",
-                  "F",
-                  "C",
-                  "D"
+                  "P、A、B、C、D、E、F"
                 ],
-                "uncertainties": [],
+                "uncertainties": [
+                  "图中未用刻痕标出E、F的中点性质"
+                ],
                 "confidence": "E2"
               },
-              "source_provenance": null
+              "source_provenance": {
+                "source_kind": "manual_current_original_image_review",
+                "item_source": "data/packets/1.4/student_packet.json",
+                "original_image": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_891_353_1093_547.jpg",
+                "original_image_sha256": "c487b6528512e8ce8a24d76bf2505d3fcdcac23db2b756e2bc26a055b70b34e9",
+                "review_result": "current_original_crop_visually_verified",
+                "review_report": "reports/deep_simulation_reviews/visual-fixes-ch1.json",
+                "review_report_sha256": "93c60397448a7d96d94e05e20433a38e46c9a5db78618a90d80586799e754f5c"
+              }
             }
           ],
           "vision_sidecar": {
-            "objects": [],
-            "relations": [],
+            "objects": [
+              "四棱锥P-ABCD、点E、F"
+            ],
+            "relations": [
+              "E位于线段PB上",
+              "F位于线段BC上",
+              "PA、AB、AD以虚线绘制",
+              "A与F之间画有实线",
+              "P与F之间画有虚线"
+            ],
             "coordinates": [],
             "ranges": [],
             "text": [
-              "P",
-              "E",
-              "A",
-              "B",
-              "F",
-              "C",
-              "D"
+              "P、A、B、C、D、E、F"
             ],
-            "uncertainties": [],
+            "uncertainties": [
+              "图中未用刻痕标出E、F的中点性质"
+            ],
             "confidence": "E2"
           },
-          "vision_source_provenance": []
+          "vision_source_provenance": [
+            {
+              "source_kind": "manual_current_original_image_review",
+              "item_source": "data/packets/1.4/student_packet.json",
+              "original_image": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_891_353_1093_547.jpg",
+              "original_image_sha256": "c487b6528512e8ce8a24d76bf2505d3fcdcac23db2b756e2bc26a055b70b34e9",
+              "review_result": "current_original_crop_visually_verified",
+              "review_report": "reports/deep_simulation_reviews/visual-fixes-ch1.json",
+              "review_report_sha256": "93c60397448a7d96d94e05e20433a38e46c9a5db78618a90d80586799e754f5c"
+            }
+          ]
         }
       ],
       "action_order": [
@@ -4090,7 +3108,7 @@
         36,
         37
       ],
-      "question_text": "【例9】在空间直角坐标系中，已知平面 \\(\\alpha\\)， \\(\\beta\\)的一个法向量分别为 \\(m=\\)\n若异面直线  \\(l_1\\)， \\(l_2\\) 所成的角为  \\(\\theta\\) ( \\(0 < \\theta \\leq \\frac{\\pi}{2}\\))，其方向向量分别是  \\(\\boldsymbol{u}\\)， \\(\\boldsymbol{v}\\)，则  \\(\\cos \\theta = |\\cos \\langle \\boldsymbol{u}, \\boldsymbol{v} \\rangle| = \\frac{|\\boldsymbol{u} \\cdot \\boldsymbol{v}|}{|\\boldsymbol{u}| \\cdot |\\boldsymbol{v}|}\\)。\n如图，直线 \\(l\\) 与平面 \\(\\alpha\\) 相交于点 \\(B\\)，\\(A\\) 为 \\(l\\) 上的另外一点，过 \\(A\\) 作 \\(\\alpha\\) 的垂线，垂足为 \\(P\\)，设直线 \\(l\\) 与平面 \\(\\alpha\\) 所成的角为 \\(\\theta\\left(0 < \\theta \\leq \\frac{\\pi}{2}\\right)\\)，平面 \\(\\alpha\\) 的法向量为 \\(\\boldsymbol{n}\\)，则由图可知，\\(\\theta = \\frac{\\pi}{2} - \\angle BAP\\)，而 \\(\\cos \\angle BAP = \\left|\\cos \\langle \\overrightarrow{AB}, \\boldsymbol{n} \\rangle\\right| = \\frac{\\left|\\overrightarrow{AB} \\cdot \\boldsymbol{n}\\right|}{\\left|\\overrightarrow{AB}\\right| \\cdot \\left|\\boldsymbol{n}\\right|}\\)，所以 \\(\\sin \\theta = \\sin\\left(\\frac{\\pi}{2} - \\angle BAP\\right) = \\cos \\angle BAP = \\frac{\\left|\\overrightarrow{AB} \\cdot \\boldsymbol{n}\\right|}{\\left|\\overrightarrow{AB}\\right| \\cdot \\left|\\boldsymbol{n}\\right|}\\)。\n\n③平面与平面的夹角\n平面  \\(\\alpha\\) 与平面  \\(\\beta\\) 相交，形成四个二面角，我们把这四个二面角中不大于  \\(90^{\\circ}\\) 的二面角称为平面  \\(\\alpha\\) 与平面  \\(\\beta\\) 的夹角.\n类似于两条异面直线所成的角，若平面  \\(\\alpha\\)， \\(\\beta\\) 的法向量分别是  \\(m_1\\)， \\(m_2\\)，则平面  \\(\\alpha\\) 与平面  \\(\\beta\\) 的夹角即为向量  \\(m_1\\) 和  \\(m_2\\) 的夹角或其补角。设平面  \\(\\alpha\\) 与平面  \\(\\beta\\) 的夹角为  \\(\\theta\\)，则  \\(\\cos\\theta = |\\cos\\langle m_1, m_2 \\rangle| = \\frac{|m_1 \\cdot m_2|}{|m_1| \\cdot |m_2|}\\)。\n注：①平面与平面的夹角的取值范围是  \\(\\left[0, \\frac{\\pi}{2}\\right]\\)，二面角的取值范围是  \\([0, \\pi]\\)；\n②如图 1，二面角  \\(\\alpha - l - \\beta\\) 的余弦值  \\(\\cos\\theta = \\pm\\cos\\langle m_1, (0, -1, -1), n = (-2, 1, 2)\\)，则  \\(\\alpha\\) 与  \\(\\beta\\) 的夹角的余弦值为（ ）\nA.  \\(\\frac{2}{3}\\)\nB.  \\(\\frac{\\sqrt{2}}{3}\\)\nC.  \\(-\\frac{\\sqrt{2}}{2}\\)\nD.  \\(\\frac{\\sqrt{2}}{2}\\)",
+      "question_text": "【例9】在空间直角坐标系中，已知平面 \\(\\alpha\\)，\\(\\beta\\) 的一个法向量分别为 \\(\\boldsymbol{m}=(0,-1,-1)\\)，\\(\\boldsymbol{n}=(-2,1,2)\\)，则 \\(\\alpha\\) 与 \\(\\beta\\) 的夹角的余弦值为（ ）\nA. \\(\\frac{2}{3}\\)\nB. \\(\\frac{\\sqrt{2}}{3}\\)\nC. \\(-\\frac{\\sqrt{2}}{2}\\)\nD. \\(\\frac{\\sqrt{2}}{2}\\)",
       "image_refs": [
         {
           "ref": "imgs/img_in_image_box_286_730_475_878.jpg",
@@ -4099,8 +3117,43 @@
         }
       ],
       "visual_status": "VISION_VERIFIED",
-      "teaching_text": "【例9】在空间直角坐标系中，已知平面 \\(\\alpha\\)， \\(\\beta\\)的一个法向量分别为 \\(m=\\)\n若异面直线  \\(l_1\\)， \\(l_2\\) 所成的角为  \\(\\theta\\) ( \\(0 < \\theta \\leq \\frac{\\pi}{2}\\))，其方向向量分别是  \\(\\boldsymbol{u}\\)， \\(\\boldsymbol{v}\\)，则  \\(\\cos \\theta = |\\cos \\langle \\boldsymbol{u}, \\boldsymbol{v} \\rangle| = \\frac{|\\boldsymbol{u} \\cdot \\boldsymbol{v}|}{|\\boldsymbol{u}| \\cdot |\\boldsymbol{v}|}\\)。\n如图，直线 \\(l\\) 与平面 \\(\\alpha\\) 相交于点 \\(B\\)，\\(A\\) 为 \\(l\\) 上的另外一点，过 \\(A\\) 作 \\(\\alpha\\) 的垂线，垂足为 \\(P\\)，设直线 \\(l\\) 与平面 \\(\\alpha\\) 所成的角为 \\(\\theta\\left(0 < \\theta \\leq \\frac{\\pi}{2}\\right)\\)，平面 \\(\\alpha\\) 的法向量为 \\(\\boldsymbol{n}\\)，则由图可知，\\(\\theta = \\frac{\\pi}{2} - \\angle BAP\\)，而 \\(\\cos \\angle BAP = \\left|\\cos \\langle \\overrightarrow{AB}, \\boldsymbol{n} \\rangle\\right| = \\frac{\\left|\\overrightarrow{AB} \\cdot \\boldsymbol{n}\\right|}{\\left|\\overrightarrow{AB}\\right| \\cdot \\left|\\boldsymbol{n}\\right|}\\)，所以 \\(\\sin \\theta = \\sin\\left(\\frac{\\pi}{2} - \\angle BAP\\right) = \\cos \\angle BAP = \\frac{\\left|\\overrightarrow{AB} \\cdot \\boldsymbol{n}\\right|}{\\left|\\overrightarrow{AB}\\right| \\cdot \\left|\\boldsymbol{n}\\right|}\\)。\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_286_730_475_878.jpg\" alt=\"Image\" width=\"15%\" /></div>\n③平面与平面的夹角\n平面  \\(\\alpha\\) 与平面  \\(\\beta\\) 相交，形成四个二面角，我们把这四个二面角中不大于  \\(90^{\\circ}\\) 的二面角称为平面  \\(\\alpha\\) 与平面  \\(\\beta\\) 的夹角.\n类似于两条异面直线所成的角，若平面  \\(\\alpha\\)， \\(\\beta\\) 的法向量分别是  \\(m_1\\)， \\(m_2\\)，则平面  \\(\\alpha\\) 与平面  \\(\\beta\\) 的夹角即为向量  \\(m_1\\) 和  \\(m_2\\) 的夹角或其补角。设平面  \\(\\alpha\\) 与平面  \\(\\beta\\) 的夹角为  \\(\\theta\\)，则  \\(\\cos\\theta = |\\cos\\langle m_1, m_2 \\rangle| = \\frac{|m_1 \\cdot m_2|}{|m_1| \\cdot |m_2|}\\)。\n注：①平面与平面的夹角的取值范围是  \\(\\left[0, \\frac{\\pi}{2}\\right]\\)，二面角的取值范围是  \\([0, \\pi]\\)；\n②如图 1，二面角  \\(\\alpha - l - \\beta\\) 的余弦值  \\(\\cos\\theta = \\pm\\cos\\langle m_1, (0, -1, -1), n = (-2, 1, 2)\\)，则  \\(\\alpha\\) 与  \\(\\beta\\) 的夹角的余弦值为（ ）\nA.  \\(\\frac{2}{3}\\)\nB.  \\(\\frac{\\sqrt{2}}{3}\\)\nC.  \\(-\\frac{\\sqrt{2}}{2}\\)\nD.  \\(\\frac{\\sqrt{2}}{2}\\)\n解析：已知两个平面的法向量，可直接代公式  \\(\\cos\\theta = |\\cos\\langle\\mathbf{m}, \\mathbf{n}\\rangle| = \\frac{|\\mathbf{m} \\cdot \\mathbf{n}|}{|\\mathbf{m}| \\cdot |\\mathbf{n}|}\\) 来求平面  \\(\\alpha\\) 与平面  \\(\\beta\\) 的夹角的余弦值，设平面  \\(\\alpha\\) 与平面  \\(\\beta\\) 的夹角为  \\(\\theta\\)，则  \\(\\cos\\theta = |\\cos\\langle\\mathbf{m}, \\mathbf{n}\\rangle| = \\frac{|\\mathbf{m} \\cdot \\mathbf{n}|}{|\\mathbf{m}| \\cdot |\\mathbf{n}|}\\)\n \\(= \\frac{|0 \\times (-2) + (-1) \\times 1 + (-1) \\times 2|}{\\sqrt{(-1)^2 + (-1)^2} \\cdot \\sqrt{(-2)^2 + 1^2 + 2^2}} = \\frac{\\sqrt{2}}{2}\\)，所以平面  \\(\\alpha\\) 与  \\(\\beta\\) 的夹角的余弦值为  \\(\\frac{\\sqrt{2}}{2}\\)。\n答案：D",
+      "teaching_text": "【例9】在空间直角坐标系中，已知平面 \\(\\alpha\\)，\\(\\beta\\) 的一个法向量分别为 \\(\\boldsymbol m=(0,-1,-1)\\)，\\(\\boldsymbol n=(-2,1,2)\\)，则 \\(\\alpha\\) 与 \\(\\beta\\) 的夹角的余弦值为（ ）\nA. \\(\\frac{2}{3}\\)  B. \\(\\frac{\\sqrt{2}}{3}\\)  C. \\(-\\frac{\\sqrt{2}}{2}\\)  D. \\(\\frac{\\sqrt{2}}{2}\\)\n\n解析：设两平面的夹角为 \\(\\theta\\)，则 \\(\\cos\\theta=\\frac{|\\boldsymbol m\\cdot\\boldsymbol n|}{|\\boldsymbol m|\\,|\\boldsymbol n|}=\\frac{|0\\times(-2)+(-1)\\times1+(-1)\\times2|}{\\sqrt{2}\\times3}=\\frac{\\sqrt{2}}{2}\\)。\n\n答案：D",
       "solution_present": true,
+      "source_layout_repair": {
+        "status": "SOURCE_PDF_VISUALLY_VERIFIED",
+        "pdf_pages": [
+          4,
+          5
+        ],
+        "reason": "例9题干和法向量坐标跨页，OCR将左栏三类空间角知识正文插入题干。"
+      },
+      "source_question_stem_review": {
+        "status": "SOURCE_REVIEWED_ANSWER_FREE",
+        "review_path": "reports/deep_simulation_reviews/clean-stems-ch1-ch3.json",
+        "review_sha256": "49c435c709a768f0f095b33d0a1d1768f254563ff37e93ed796b921c51daa1aa",
+        "old_reported_question_text_sha256": "d48305ea6e8fff712ff1f488a7eb75370614d08046bdf26bb347b91f285caa1b",
+        "pre_override_question_text_sha256": "b905d0011a877341480540a38e52eeb36e41aeaade2adf3b8edb7977188d8a91",
+        "question_text_sha256": "89e44c4c4f0b9e1882491ab8588ea3f8423f0da84ee360c6d7e80538f476bfe3",
+        "confidence": "high",
+        "boundary_basis": "The printed stem begins at the bottom of original PDF page 37 and continues at the top-right of page 38. The PDF visually confirms both normal vectors and all four choices. The following '解析：' is excluded. OCR doc 37 lines 1-16 are left-column knowledge text interleaved ahead of the right-column continuation and are not part of the item.",
+        "source": {
+          "packet": "data/packets/1.4/packet.json",
+          "ocr_docs": [
+            36,
+            37
+          ],
+          "ocr_files": [
+            "data/ocr_live_current/first_chapter_69/doc_36.md",
+            "data/ocr_live_current/first_chapter_69/doc_37.md"
+          ],
+          "pdf_file": "output/pdf/第一章_空间向量与立体几何_原书_方法册习题册.pdf",
+          "pdf_pages": [
+            37,
+            38
+          ],
+          "visual_evidence": "original PDF pages 37-38"
+        }
+      },
       "vision_hint": "1.4-LI2a2eaf5c7869332b",
       "vision_sidecars": [
         {
@@ -4264,57 +3317,39 @@
         38,
         39
       ],
-      "question_text": "【例 11】如图，在长方体  \\(ABCD-A_1B_1C_1D_1\\) 中， \\(AB = 4\\)， \\(BC = CC_1 = 2\\)，线段  \\(B_1C\\) 的中点为  \\(P\\)，证明： \\(A_1P \\parallel\\) 平面  \\(ACD_1\\)。\n证法1：（怎样证  \\(A_1P \\parallel\\) 平面  \\(ACD_1\\)？只需证  \\(\\overrightarrow{A_1P}\\) 是平面  \\(ACD_1\\) 内的向量，即证存在实数  \\(\\lambda\\)， \\(\\mu\\)，使  \\(\\overrightarrow{A_1P} = \\lambda \\overrightarrow{AD_1} + \\mu \\overrightarrow{AC}\\)，下面我们按此建立方程组，求解  \\(\\lambda\\) 和  \\(\\mu\\)）\n由题意， \\(A_1(2,0,2)\\)， \\(P(1,4,1)\\)， \\(A(2,0,0)\\)， \\(C(0,4,0)\\)， \\(D_1(0,0,2)\\)，\n所以  \\(\\overrightarrow{A_1P} = (-1,4,-1)\\)， \\(\\overrightarrow{AD_1} = (-2,0,2)\\)， \\(\\overrightarrow{AC} = (-2,4,0)\\)，设  \\(\\overrightarrow{A_1P} = \\lambda \\overrightarrow{AD_1} + \\mu \\overrightarrow{AC}\\)，\n\n则  \\((-1,4,-1)=\\lambda(-2,0,2)+\\mu(-2,4,0)\\)，所以  \\(\\begin{cases} 4\\mu=4 \\\\ 2\\lambda=-1 \\end{cases}\\)，解得： \\(\\lambda=-\\frac{1}{2}\\)， \\(\\mu=1\\)，\n所以  \\(\\overrightarrow{A_1P}=-\\frac{1}{2}\\overrightarrow{AD_1}+\\overrightarrow{AC}\\)，故  \\(\\overrightarrow{A_1P}\\) 是平面  \\(ACD_1\\) 内的向量，又  \\(A_1P\\not\\subset\\) 平面  \\(ACD_1\\)，所以  \\(A_1P\\parallel\\) 平面  \\(ACD_1\\)。\n证法 2：（由知识点 3 第 1 点的表格，要证  \\(A_1P\\parallel\\) 平面  \\(ACD_1\\)，也可转化为证  \\(\\overrightarrow{A_1P}\\) 与平面  \\(ACD_1\\) 的法向量垂直）\n求  \\(\\overrightarrow{A_1P}\\)， \\(\\overrightarrow{AD_1}\\)， \\(\\overrightarrow{AC}\\) 坐标的过程同解法 1，此处不再赘述，设平面  \\(ACD_1\\) 的法向量为  \\(\\boldsymbol{m}=(x,y,z)\\)，\n则  \\(\\begin{cases} \\boldsymbol{m}\\cdot\\overrightarrow{AD_1}=-2x+2z=0 \\\\ \\boldsymbol{m}\\cdot\\overrightarrow{AC}=-2x+4y=0 \\end{cases}\\)，令  \\(x=2\\) 得  \\(y=1\\)， \\(z=2\\)，所以  \\(\\boldsymbol{m}=(2,1,2)\\) 是平面  \\(ACD_1\\) 的一个法向量，\n因为  \\(\\overrightarrow{A_1P}\\cdot\\boldsymbol{m}=-1\\times2+4\\times1+(-1)\\times2=0\\)，所以  \\(\\overrightarrow{A_1P}\\perp\\boldsymbol{m}\\)，结合  \\(A_1P\\not\\subset\\) 平面  \\(ACD_1\\) 可得  \\(A_1P\\parallel\\) 平面  \\(ACD_1\\)。",
-      "image_refs": [
-        {
-          "ref": "imgs/img_in_image_box_842_1277_1092_1455.jpg",
-          "path": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_842_1277_1092_1455.jpg",
-          "exists": true
-        }
-      ],
-      "visual_status": "VISION_VERIFIED",
+      "question_text": "【例11】如图，在长方体 \\(ABCD-A_1B_1C_1D_1\\) 中，\\(AB=4\\)，\\(BC=CC_1=2\\)，线段 \\(B_1C\\) 的中点为 \\(P\\)，证明：\\(A_1P\\parallel\\) 平面 \\(ACD_1\\)。",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
       "teaching_text": "【例 11】如图，在长方体  \\(ABCD-A_1B_1C_1D_1\\) 中， \\(AB = 4\\)， \\(BC = CC_1 = 2\\)，线段  \\(B_1C\\) 的中点为  \\(P\\)，证明： \\(A_1P \\parallel\\) 平面  \\(ACD_1\\)。\n证法1：（怎样证  \\(A_1P \\parallel\\) 平面  \\(ACD_1\\)？只需证  \\(\\overrightarrow{A_1P}\\) 是平面  \\(ACD_1\\) 内的向量，即证存在实数  \\(\\lambda\\)， \\(\\mu\\)，使  \\(\\overrightarrow{A_1P} = \\lambda \\overrightarrow{AD_1} + \\mu \\overrightarrow{AC}\\)，下面我们按此建立方程组，求解  \\(\\lambda\\) 和  \\(\\mu\\)）\n由题意， \\(A_1(2,0,2)\\)， \\(P(1,4,1)\\)， \\(A(2,0,0)\\)， \\(C(0,4,0)\\)， \\(D_1(0,0,2)\\)，\n所以  \\(\\overrightarrow{A_1P} = (-1,4,-1)\\)， \\(\\overrightarrow{AD_1} = (-2,0,2)\\)， \\(\\overrightarrow{AC} = (-2,4,0)\\)，设  \\(\\overrightarrow{A_1P} = \\lambda \\overrightarrow{AD_1} + \\mu \\overrightarrow{AC}\\)，\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_842_1277_1092_1455.jpg\" alt=\"Image\" width=\"20%\" /></div>\n则  \\((-1,4,-1)=\\lambda(-2,0,2)+\\mu(-2,4,0)\\)，所以  \\(\\begin{cases} 4\\mu=4 \\\\ 2\\lambda=-1 \\end{cases}\\)，解得： \\(\\lambda=-\\frac{1}{2}\\)， \\(\\mu=1\\)，\n所以  \\(\\overrightarrow{A_1P}=-\\frac{1}{2}\\overrightarrow{AD_1}+\\overrightarrow{AC}\\)，故  \\(\\overrightarrow{A_1P}\\) 是平面  \\(ACD_1\\) 内的向量，又  \\(A_1P\\not\\subset\\) 平面  \\(ACD_1\\)，所以  \\(A_1P\\parallel\\) 平面  \\(ACD_1\\)。\n证法 2：（由知识点 3 第 1 点的表格，要证  \\(A_1P\\parallel\\) 平面  \\(ACD_1\\)，也可转化为证  \\(\\overrightarrow{A_1P}\\) 与平面  \\(ACD_1\\) 的法向量垂直）\n求  \\(\\overrightarrow{A_1P}\\)， \\(\\overrightarrow{AD_1}\\)， \\(\\overrightarrow{AC}\\) 坐标的过程同解法 1，此处不再赘述，设平面  \\(ACD_1\\) 的法向量为  \\(\\boldsymbol{m}=(x,y,z)\\)，\n则  \\(\\begin{cases} \\boldsymbol{m}\\cdot\\overrightarrow{AD_1}=-2x+2z=0 \\\\ \\boldsymbol{m}\\cdot\\overrightarrow{AC}=-2x+4y=0 \\end{cases}\\)，令  \\(x=2\\) 得  \\(y=1\\)， \\(z=2\\)，所以  \\(\\boldsymbol{m}=(2,1,2)\\) 是平面  \\(ACD_1\\) 的一个法向量，\n因为  \\(\\overrightarrow{A_1P}\\cdot\\boldsymbol{m}=-1\\times2+4\\times1+(-1)\\times2=0\\)，所以  \\(\\overrightarrow{A_1P}\\perp\\boldsymbol{m}\\)，结合  \\(A_1P\\not\\subset\\) 平面  \\(ACD_1\\) 可得  \\(A_1P\\parallel\\) 平面  \\(ACD_1\\)。\n【反思】上面的两个证法都能证明线面平行，但证法2通过证明直线上的一个向量与平面的法向量垂直来证线面平行，计算量稍小一些，所以后续有关问题中，我们都采用证法2来证线面平行。",
       "solution_present": true,
-      "vision_hint": "1.4-LIc28ca305f7a1fba9",
-      "vision_sidecars": [
-        {
-          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_842_1277_1092_1455.jpg",
-          "image_sha256": "e5498a7ed5c84a7c517b431a3535532c49cfe59180774081db8eb219303c7518",
-          "confidence": "E2",
-          "structured": {
-            "objects": [],
-            "relations": [],
-            "coordinates": [],
-            "ranges": [],
-            "text": [
-              "x",
-              "y",
-              "z"
-            ],
-            "uncertainties": [],
-            "confidence": "E2"
-          },
-          "source_provenance": null
+      "source_question_stem_review": {
+        "status": "SOURCE_REVIEWED_ANSWER_FREE",
+        "review_path": "reports/deep_simulation_reviews/clean-stems-ch1-ch3.json",
+        "review_sha256": "49c435c709a768f0f095b33d0a1d1768f254563ff37e93ed796b921c51daa1aa",
+        "old_reported_question_text_sha256": "a9c041cf96a37d30da4c707b8ee563386e3434fc178be7eb4de969a6e03b85d1",
+        "pre_override_question_text_sha256": "eaef68d57a60ac12651e29342356cd01b9d339d2bb9c4550381adcc334fb5009",
+        "question_text_sha256": "0256c579cd472bf2c757db937bc96f7de8261348be5a32b5b662afe98f33cc27",
+        "confidence": "high",
+        "boundary_basis": "OCR doc 38 line 52 is a complete proof prompt. The next line starts '证法1', so all proof text in docs 38-39 is excluded.",
+        "source": {
+          "packet": "data/packets/1.4/packet.json",
+          "ocr_docs": [
+            38,
+            39
+          ],
+          "ocr_files": [
+            "data/ocr_live_current/first_chapter_69/doc_38.md",
+            "data/ocr_live_current/first_chapter_69/doc_39.md"
+          ],
+          "pdf_file": "output/pdf/第一章_空间向量与立体几何_原书_方法册习题册.pdf",
+          "pdf_pages": [
+            39,
+            40
+          ],
+          "visual_evidence": "packet OCR and source-page sequence"
         }
-      ],
-      "vision_sidecar": {
-        "objects": [],
-        "relations": [],
-        "coordinates": [],
-        "ranges": [],
-        "text": [
-          "x",
-          "y",
-          "z"
-        ],
-        "uncertainties": [],
-        "confidence": "E2"
       },
-      "vision_source_provenance": [],
-      "evidence": [
-        "E1",
-        "E2"
-      ]
+      "vision_hint": "1.4-LIc28ca305f7a1fba9"
     },
     {
       "item_id": "47eb16359e70391b",
@@ -4703,141 +3738,39 @@
         47,
         48
       ],
-      "question_text": "【例 21】（2020·新课标Ⅲ卷（节选））如图，在长方体 \\(ABCD-A_1B_1C_1D_1\\) 中，点 \\(E\\)，\\(F\\) 分别在棱 \\(DD_1\\)，\\(BB_1\\) 上，且 \\(2DE = ED_1\\)，\\(BF = 2FB_1\\)，证明：点 \\(C_1\\) 在平面 \\(AEF\\) 内。\n证法1：（观察图形发现  \\(EC_1 \\parallel AF\\)，故可通过证明这一平行关系来证结论成立）\n如图，在  \\(AA_1\\) 上取点  \\(G\\)，使得  \\(A_1G = 2AG\\)，连接  \\(B_1G\\)， \\(EG\\)， \\(EC_1\\)，\n\n则  \\(AG \\parallel B_{1}F\\) 且  \\(AG = B_{1}F\\)，所以四边形  \\(AGB_{1}F\\) 为平行四边形，故  \\(AF \\parallel B_{1}G\\)，\n又  \\(2DE = ED_{1}\\)，所以  \\(EG \\parallel A_{1}D_{1} \\parallel B_{1}C_{1}\\) 且  \\(EG = A_{1}D_{1} = B_{1}C_{1}\\)，故  \\(EGB_{1}C_{1}\\) 为平行四边形，\n所以  \\(EC_{1} \\parallel B_{1}G\\) ，从而  \\(EC_{1} \\parallel AF\\) ，故 A，E， \\(C_{1}\\)，F 四点共面，\n所以点  \\(C_{1}\\) 在平面 AEF 内.\n证法2：（点 \\(C_1\\)在平面 \\(AEF\\)内 \\(\\Leftrightarrow C_1\\overrightarrow{A}\\)是平面 \\(AEF\\)内的向量 \\(\\Leftrightarrow \\overrightarrow{C_1A}\\perp\\)平面 \\(AEF\\)的法向量，故也可通过证明 \\(\\overrightarrow{C_1A}\\perp\\)平面 \\(AEF\\)的法向量来证点 \\(C_1\\)在平面 \\(AEF\\)内）\n以 \\(C_1\\)为原点建立如图所示的空间直角坐标系，设 \\(AD=1\\)， \\(CD=a\\)， \\(CC_1=3b\\)，\n则 \\(A(a,1,3b)\\)， \\(E(a,0,2b)\\)， \\(F(0,1,b)\\)， \\(C_1(0,0,0)\\)，\n所以 \\(\\overrightarrow{C_1A}=(a,1,3b)\\)， \\(\\overrightarrow{EA}=(0,1,b)\\)， \\(\\overrightarrow{FA}=(a,0,2b)\\)，\n设平面 \\(AEF\\)的法向量为 \\(\\boldsymbol{m}=(x,y,z)\\)，则 \\(\\begin{cases}\\boldsymbol{m}\\cdot\\overrightarrow{EA}=y+bz=0\\\\\\boldsymbol{m}\\cdot\\overrightarrow{FA}=ax+2bz=0\\end{cases}\\)，\n令 \\(x=2b\\)，则 \\(\\begin{cases}y=ab\\\\z=-a\\end{cases}\\)，所以 \\(\\boldsymbol{m}=(2b,ab,-a)\\)是平面 \\(AEF\\)的一个法向量，\n从而 \\(\\overrightarrow{C_1A}\\cdot\\boldsymbol{m}=a\\cdot2b+1\\cdot ab+3b\\cdot(-a)=0\\)，故点 \\(C_1\\)在平面 \\(AEF\\)内.",
-      "image_refs": [
-        {
-          "ref": "imgs/img_in_image_box_912_1316_1094_1635.jpg",
-          "path": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_912_1316_1094_1635.jpg",
-          "exists": true
-        },
-        {
-          "ref": "imgs/img_in_image_box_882_281_1091_646.jpg",
-          "path": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_882_281_1091_646.jpg",
-          "exists": true
-        }
-      ],
-      "visual_status": "VISION_VERIFIED",
+      "question_text": "【例21】（2020·新课标Ⅲ卷（节选））如图，在长方体 \\(ABCD-A_1B_1C_1D_1\\) 中，点 \\(E\\)，\\(F\\) 分别在棱 \\(DD_1\\)，\\(BB_1\\) 上，且 \\(2DE=ED_1\\)，\\(BF=2FB_1\\)，证明：点 \\(C_1\\) 在平面 \\(AEF\\) 内。",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
       "teaching_text": "【例 21】（2020·新课标Ⅲ卷（节选））如图，在长方体 \\(ABCD-A_1B_1C_1D_1\\) 中，点 \\(E\\)，\\(F\\) 分别在棱 \\(DD_1\\)，\\(BB_1\\) 上，且 \\(2DE = ED_1\\)，\\(BF = 2FB_1\\)，证明：点 \\(C_1\\) 在平面 \\(AEF\\) 内。\n证法1：（观察图形发现  \\(EC_1 \\parallel AF\\)，故可通过证明这一平行关系来证结论成立）\n如图，在  \\(AA_1\\) 上取点  \\(G\\)，使得  \\(A_1G = 2AG\\)，连接  \\(B_1G\\)， \\(EG\\)， \\(EC_1\\)，\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_912_1316_1094_1635.jpg\" alt=\"Image\" width=\"15%\" /></div>\n则  \\(AG \\parallel B_{1}F\\) 且  \\(AG = B_{1}F\\)，所以四边形  \\(AGB_{1}F\\) 为平行四边形，故  \\(AF \\parallel B_{1}G\\)，\n又  \\(2DE = ED_{1}\\)，所以  \\(EG \\parallel A_{1}D_{1} \\parallel B_{1}C_{1}\\) 且  \\(EG = A_{1}D_{1} = B_{1}C_{1}\\)，故  \\(EGB_{1}C_{1}\\) 为平行四边形，\n所以  \\(EC_{1} \\parallel B_{1}G\\) ，从而  \\(EC_{1} \\parallel AF\\) ，故 A，E， \\(C_{1}\\)，F 四点共面，\n所以点  \\(C_{1}\\) 在平面 AEF 内.\n证法2：（点 \\(C_1\\)在平面 \\(AEF\\)内 \\(\\Leftrightarrow C_1\\overrightarrow{A}\\)是平面 \\(AEF\\)内的向量 \\(\\Leftrightarrow \\overrightarrow{C_1A}\\perp\\)平面 \\(AEF\\)的法向量，故也可通过证明 \\(\\overrightarrow{C_1A}\\perp\\)平面 \\(AEF\\)的法向量来证点 \\(C_1\\)在平面 \\(AEF\\)内）\n以 \\(C_1\\)为原点建立如图所示的空间直角坐标系，设 \\(AD=1\\)， \\(CD=a\\)， \\(CC_1=3b\\)，\n则 \\(A(a,1,3b)\\)， \\(E(a,0,2b)\\)， \\(F(0,1,b)\\)， \\(C_1(0,0,0)\\)，\n所以 \\(\\overrightarrow{C_1A}=(a,1,3b)\\)， \\(\\overrightarrow{EA}=(0,1,b)\\)， \\(\\overrightarrow{FA}=(a,0,2b)\\)，\n设平面 \\(AEF\\)的法向量为 \\(\\boldsymbol{m}=(x,y,z)\\)，则 \\(\\begin{cases}\\boldsymbol{m}\\cdot\\overrightarrow{EA}=y+bz=0\\\\\\boldsymbol{m}\\cdot\\overrightarrow{FA}=ax+2bz=0\\end{cases}\\)，\n令 \\(x=2b\\)，则 \\(\\begin{cases}y=ab\\\\z=-a\\end{cases}\\)，所以 \\(\\boldsymbol{m}=(2b,ab,-a)\\)是平面 \\(AEF\\)的一个法向量，\n从而 \\(\\overrightarrow{C_1A}\\cdot\\boldsymbol{m}=a\\cdot2b+1\\cdot ab+3b\\cdot(-a)=0\\)，故点 \\(C_1\\)在平面 \\(AEF\\)内.\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_882_281_1091_646.jpg\" alt=\"Image\" width=\"17%\" /></div>\n【反思】判断空间中的点 \\(P\\) 是否在平面 \\(\\alpha\\) 内，可在 \\(\\alpha\\) 内另取一点 \\(Q\\)，看看 \\(\\overrightarrow{PQ}\\) 是不是 \\(x\\) 是 \\(\\alpha\\) 内的向量。若是，则应有 \\(\\overrightarrow{PQ} \\cdot n = 0\\)；否则，\\(\\overrightarrow{PQ} \\cdot n \\neq 0\\)，其中 \\(n\\) 为平面 \\(\\alpha\\) 的法向量。",
       "solution_present": true,
-      "vision_hint": "1.4-LIeaaf1bb065d2f647",
-      "vision_sidecars": [
-        {
-          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_912_1316_1094_1635.jpg",
-          "image_sha256": "fd176ced53ca004fc95233b8848774d227fb57275973938fe7db1d84c799b7eb",
-          "confidence": "E2",
-          "structured": {
-            "objects": [
-              "长方体CDA1B1BCC1A1",
-              "线段AC1",
-              "线段A1C1",
-              "线段AE",
-              "线段AF",
-              "线段A1F"
-            ],
-            "relations": [
-              "点C、C1、A1共线",
-              "点D、E、D1共线",
-              "点B、B1、F共线",
-              "线段AC1平行于线段A1F",
-              "线段AE平行于线段AF",
-              "线段A1F平行于线段AC1"
-            ],
-            "coordinates": [
-              "点C在点B正上方",
-              "点D在点C正左方",
-              "点D1在点E正下方",
-              "点B1在点F正下方",
-              "点A1在点C1正下方",
-              "点A在点C1正上方"
-            ],
-            "ranges": [],
-            "text": [
-              "点C、D、E、D1标注于左侧面",
-              "点B、A、F、B1标注于右侧面",
-              "点C1、A1标注于底面",
-              "点A标注于上底面与右侧面的交线",
-              "点E标注于左侧面与前面交线",
-              "点F标注于右侧面与前面交线"
-            ],
-            "uncertainties": [],
-            "confidence": "E2"
-          },
-          "source_provenance": null
-        },
-        {
-          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_882_281_1091_646.jpg",
-          "image_sha256": "76fc9199f1783b0d73d25414b386e5a51b0ad09466a0bdddfbdd7821e514a86d",
-          "confidence": "E2",
-          "structured": {
-            "objects": [
-              "长方体ABCD-A1B1C1D1",
-              "点A、B、C、D、E、F、G、C1、B1、A1、D1",
-              "线段AB、BC、CD、DA、AA1、BB1、CC1、DD1、AE、EF、FG、A1B1、B1C1、C1D1、D1A1",
-              "坐标轴x、y、z",
-              "平面ABCD、ABB1A1、A1B1C1A1、ADD1A1",
-              "虚线CC1、C1D1、D1A1、A1B1、B1C1、AE、EG、A1G、A1F、EF"
-            ],
-            "relations": [
-              "A在BC上，E在AD上，G在AB上，F在BB1上，A1在CC1上",
-              "A1在A正下方，B1在B正下方，C1在C正下方，D1在D正下方",
-              "E连接A1和F，G连接E和F，A1连接G和F",
-              "A连接E和G，A1连接A和A1"
-            ],
-            "coordinates": [
-              "A(?, ?, ?), B(?, ?, ?), C(?, ?, ?), D(?, ?, ?), E(?, ?, ?), F(?, ?, ?), G(?, ?, ?), C1(?, ?, ?), B1(?, ?, ?), A1(?, ?, ?), D1(?, ?, ?)"
-            ],
-            "ranges": [],
-            "text": [
-              "坐标轴标注x、y、z"
-            ],
-            "uncertainties": [],
-            "confidence": "E2"
-          },
-          "source_provenance": null
+      "source_question_stem_review": {
+        "status": "SOURCE_REVIEWED_ANSWER_FREE",
+        "review_path": "reports/deep_simulation_reviews/clean-stems-ch1-ch3.json",
+        "review_sha256": "49c435c709a768f0f095b33d0a1d1768f254563ff37e93ed796b921c51daa1aa",
+        "old_reported_question_text_sha256": "b67e9b1f0fa0e1ebaeaae771fb2f4f292463b2836a40c368ba70af520b6aa5ce",
+        "pre_override_question_text_sha256": "830a75a38fbef48873fff882f19b94e4235dcbfdd4b6f9324f0da1718051eae5",
+        "question_text_sha256": "d43bc2ebfacb371b4e16cf72c5e2bdeb98bf7b50f1771de9eac752f78449ed59",
+        "confidence": "high",
+        "boundary_basis": "OCR doc 47 line 41 contains the complete prompt. Line 43 starts '证法1', so both proof methods in docs 47-48 are excluded.",
+        "source": {
+          "packet": "data/packets/1.4/packet.json",
+          "ocr_docs": [
+            47,
+            48
+          ],
+          "ocr_files": [
+            "data/ocr_live_current/first_chapter_69/doc_47.md",
+            "data/ocr_live_current/first_chapter_69/doc_48.md"
+          ],
+          "pdf_file": "output/pdf/第一章_空间向量与立体几何_原书_方法册习题册.pdf",
+          "pdf_pages": [
+            48,
+            49
+          ],
+          "visual_evidence": "packet OCR and source-page sequence"
         }
-      ],
-      "vision_sidecar": {
-        "objects": [
-          "长方体CDA1B1BCC1A1",
-          "线段AC1",
-          "线段A1C1",
-          "线段AE",
-          "线段AF",
-          "线段A1F"
-        ],
-        "relations": [
-          "点C、C1、A1共线",
-          "点D、E、D1共线",
-          "点B、B1、F共线",
-          "线段AC1平行于线段A1F",
-          "线段AE平行于线段AF",
-          "线段A1F平行于线段AC1"
-        ],
-        "coordinates": [
-          "点C在点B正上方",
-          "点D在点C正左方",
-          "点D1在点E正下方",
-          "点B1在点F正下方",
-          "点A1在点C1正下方",
-          "点A在点C1正上方"
-        ],
-        "ranges": [],
-        "text": [
-          "点C、D、E、D1标注于左侧面",
-          "点B、A、F、B1标注于右侧面",
-          "点C1、A1标注于底面",
-          "点A标注于上底面与右侧面的交线",
-          "点E标注于左侧面与前面交线",
-          "点F标注于右侧面与前面交线"
-        ],
-        "uncertainties": [],
-        "confidence": "E2"
       },
-      "vision_source_provenance": [],
-      "evidence": [
-        "E1",
-        "E2"
-      ]
+      "vision_hint": "1.4-LIeaaf1bb065d2f647"
     },
     {
       "item_id": "d283fa7f2700a159",
@@ -4970,79 +3903,120 @@
       "vision_hint": "1.4-LIb1d2d187ff980da9",
       "vision_sidecars": [
         {
-          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_352_499_584_606.jpg",
+          "image": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_352_499_584_606.jpg",
           "image_sha256": "fc55bb596c7b5a6696d06695cc7dfb378458abaa05916022af32086bf74f6cce",
           "confidence": "E2",
           "structured": {
-            "objects": [],
-            "relations": [],
+            "objects": [
+              "平面图形EFBC、分割线段AD"
+            ],
+            "relations": [
+              "E、D、C依次位于上方水平线段上",
+              "F、A、B依次位于下方折线边上",
+              "EF与AD竖直绘制",
+              "BC为斜边",
+              "AD连接上下边"
+            ],
             "coordinates": [],
             "ranges": [],
             "text": [
-              "E",
-              "D",
-              "C",
-              "F",
-              "A",
-              "B"
+              "E、F、D、A、C、B"
             ],
-            "uncertainties": [],
+            "uncertainties": [
+              "图中未画垂直或平行符号"
+            ],
             "confidence": "E2"
           },
-          "source_provenance": null
+          "source_provenance": {
+            "source_kind": "manual_current_original_image_review",
+            "item_source": "data/packets/1.4/student_learning_items.json",
+            "original_image": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_352_499_584_606.jpg",
+            "original_image_sha256": "fc55bb596c7b5a6696d06695cc7dfb378458abaa05916022af32086bf74f6cce",
+            "review_result": "current_original_crop_visually_verified_as_figure_1",
+            "review_report": "reports/deep_simulation_reviews/visual-fixes-ch1.json",
+            "review_report_sha256": "93c60397448a7d96d94e05e20433a38e46c9a5db78618a90d80586799e754f5c"
+          }
         },
         {
-          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_622_457_836_610.jpg",
+          "image": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_622_457_836_610.jpg",
           "image_sha256": "4bd9c2809300d1e6f7de4925d996270d5d2bdcae43fa2be530f47ca94f159b08",
-          "confidence": "E2",
+          "confidence": "E1",
           "structured": {
-            "objects": [],
+            "objects": [
+              "折叠后的立体图形、点A、B、C、D、E、F"
+            ],
             "relations": [
-              "E连接F、D、C",
-              "F连接D、A",
-              "D连接F、A、E",
-              "A连接D、B",
-              "B连接A、D、E、C",
-              "C连接B、E",
-              "各点通过线段连接形成多面体结构"
+              "F位于线段EA上",
+              "E与B、C之间画有实线",
+              "A与B、B与C之间画有实线",
+              "A与D、D与C之间以虚线连接",
+              "D位于图形内部"
             ],
-            "coordinates": [
-              "E在上方顶点",
-              "F在E下方左侧",
-              "D在F下方左侧，A上方",
-              "A在左下方，D左侧",
-              "B在A右下方，D右方",
-              "C在右下方，B右方",
-              "各点位置按多面体结构排列"
-            ],
+            "coordinates": [],
             "ranges": [],
-            "text": [],
-            "uncertainties": [],
-            "confidence": "E2"
+            "text": [
+              "A、B、C、D、E、F"
+            ],
+            "uncertainties": [
+              "D附近多条实虚线交叠，未据投影位置推断空间垂直关系"
+            ],
+            "confidence": "E1"
           },
-          "source_provenance": null
+          "source_provenance": {
+            "source_kind": "manual_current_original_image_review",
+            "item_source": "data/packets/1.4/student_learning_items.json",
+            "original_image": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_622_457_836_610.jpg",
+            "original_image_sha256": "4bd9c2809300d1e6f7de4925d996270d5d2bdcae43fa2be530f47ca94f159b08",
+            "review_result": "current_original_crop_visually_verified_as_figure_2",
+            "review_report": "reports/deep_simulation_reviews/visual-fixes-ch1.json",
+            "review_report_sha256": "93c60397448a7d96d94e05e20433a38e46c9a5db78618a90d80586799e754f5c"
+          }
         }
       ],
       "vision_sidecar": {
-        "objects": [],
-        "relations": [],
+        "objects": [
+          "平面图形EFBC、分割线段AD"
+        ],
+        "relations": [
+          "E、D、C依次位于上方水平线段上",
+          "F、A、B依次位于下方折线边上",
+          "EF与AD竖直绘制",
+          "BC为斜边",
+          "AD连接上下边"
+        ],
         "coordinates": [],
         "ranges": [],
         "text": [
-          "E",
-          "D",
-          "C",
-          "F",
-          "A",
-          "B"
+          "E、F、D、A、C、B"
         ],
-        "uncertainties": [],
+        "uncertainties": [
+          "图中未画垂直或平行符号"
+        ],
         "confidence": "E2"
       },
-      "vision_source_provenance": [],
+      "vision_source_provenance": [
+        {
+          "source_kind": "manual_current_original_image_review",
+          "item_source": "data/packets/1.4/student_learning_items.json",
+          "original_image": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_352_499_584_606.jpg",
+          "original_image_sha256": "fc55bb596c7b5a6696d06695cc7dfb378458abaa05916022af32086bf74f6cce",
+          "review_result": "current_original_crop_visually_verified_as_figure_1",
+          "review_report": "reports/deep_simulation_reviews/visual-fixes-ch1.json",
+          "review_report_sha256": "93c60397448a7d96d94e05e20433a38e46c9a5db78618a90d80586799e754f5c"
+        },
+        {
+          "source_kind": "manual_current_original_image_review",
+          "item_source": "data/packets/1.4/student_learning_items.json",
+          "original_image": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_622_457_836_610.jpg",
+          "original_image_sha256": "4bd9c2809300d1e6f7de4925d996270d5d2bdcae43fa2be530f47ca94f159b08",
+          "review_result": "current_original_crop_visually_verified_as_figure_2",
+          "review_report": "reports/deep_simulation_reviews/visual-fixes-ch1.json",
+          "review_report_sha256": "93c60397448a7d96d94e05e20433a38e46c9a5db78618a90d80586799e754f5c"
+        }
+      ],
       "evidence": [
         "E1",
-        "E2"
+        "E1"
       ]
     },
     {
@@ -5092,19 +4066,20 @@
       "source_anchor": {
         "ocr_doc": 49,
         "pdf_page": 50,
-        "file": "data/ocr_live_current/first_chapter_69/doc_49.md",
-        "recovery": "primary_ocr_question_recovery",
-        "recovery_source_kind": "primary_ocr"
+        "file": "data/ocr_live_current/first_chapter_69/doc_49.md"
       },
-      "question_text": "已知直线  \\(l_{1}\\) 的方向向量  \\(\\boldsymbol{\\bar{s}}_{1}=(1,0,1)\\) 与直线  \\(l_{2}\\) 的方向向量  \\(\\boldsymbol{\\bar{s}}_{2}=(-1,2,-2)\\)，则  \\(l_{1}\\) 和  \\(l_{2}\\) 夹角的余弦值为（）\n\nA.  \\(\\frac{\\sqrt{2}}{4}\\) B.  \\(\\frac{1}{2}\\) C.  \\(\\frac{\\sqrt{2}}{2}\\) D.  \\(\\frac{\\sqrt{3}}{2}\\)",
+      "question_text": "1.（2025·全国模拟）\n\n已知直线 \\(l_1\\) 的方向向量 \\(\\boldsymbol{s}_1=(1,0,1)\\) 与直线 \\(l_2\\) 的方向向量 \\(\\boldsymbol{s}_2=(-1,2,-2)\\)，则 \\(l_1\\) 和 \\(l_2\\) 夹角的余弦值为（ ）\n\nA.  \\(\\frac{\\sqrt{2}}{4}\\) B.  \\(\\frac{1}{2}\\) C.  \\(\\frac{\\sqrt{2}}{2}\\) D.  \\(\\frac{\\sqrt{3}}{2}\\)",
       "image_refs": [],
       "visual_status": "READY_TEXT_ONLY",
       "math_errors": [],
       "evidence": [
-        "E1",
-        "primary_ocr_question_recovery"
+        "E1"
       ],
-      "recovery_reason": "正册 OCR 题号丢失；章节合并无答案册 doc_49 有完整题干和选项"
+      "canonical_qid_binding": {
+        "status": "PRESERVED_ACROSS_SOURCE_TEXT_REPAIR",
+        "correction_id": "DQC-1.4-A1-RESTORE-NUMBER-AND-CITATION",
+        "evidence": "SOURCE_PDF_SHA256_69644C_PAGE_50_VISUALLY_CONFIRMS_A1"
+      }
     },
     {
       "qid": "Q-fc2e49b951d6c08d",
@@ -5444,56 +4419,31 @@
       ],
       "vision_sidecars": [
         {
-          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_full\\imgs\\img_in_image_box_833_1138_1095_1313.jpg",
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_833_1138_1095_1313.jpg",
           "image_sha256": "65c773278b5de0c868bf52682d7ffc1e9a2b45d7e5e6651be470287276151e8a",
           "confidence": "E2",
           "structured": {
-            "objects": [],
-            "relations": [],
-            "coordinates": [
-              {
-                "name": "A",
-                "position": "底面左下"
-              },
-              {
-                "name": "B",
-                "position": "底面右下"
-              },
-              {
-                "name": "C",
-                "position": "底面右中"
-              },
-              {
-                "name": "D",
-                "position": "底面左中"
-              },
-              {
-                "name": "A1",
-                "position": "顶面左上（A上方）"
-              },
-              {
-                "name": "D1",
-                "position": "顶面左上"
-              },
-              {
-                "name": "B1",
-                "position": "顶面右中"
-              },
-              {
-                "name": "C1",
-                "position": "顶面右中"
-              }
+            "objects": [
+              "平行六面体ABCD-A1B1C1D1",
+              "顶点A,B,C,D,A1,B1,C1,D1"
             ],
+            "relations": [
+              "A连接B,D,C,A1连接B1,D1,C1",
+              "D连接A1,B1,C",
+              "B连接D1,A1,C1",
+              "D连接D1,A,A1"
+            ],
+            "coordinates": [],
             "ranges": [],
             "text": [
-              "A",
-              "B",
-              "C",
-              "D",
-              "A1",
               "D1",
               "B1",
-              "C1"
+              "C1",
+              "A1",
+              "D",
+              "C",
+              "B",
+              "A"
             ],
             "uncertainties": [],
             "confidence": "E2"
@@ -5502,52 +4452,27 @@
         }
       ],
       "vision_sidecar": {
-        "objects": [],
-        "relations": [],
-        "coordinates": [
-          {
-            "name": "A",
-            "position": "底面左下"
-          },
-          {
-            "name": "B",
-            "position": "底面右下"
-          },
-          {
-            "name": "C",
-            "position": "底面右中"
-          },
-          {
-            "name": "D",
-            "position": "底面左中"
-          },
-          {
-            "name": "A1",
-            "position": "顶面左上（A上方）"
-          },
-          {
-            "name": "D1",
-            "position": "顶面左上"
-          },
-          {
-            "name": "B1",
-            "position": "顶面右中"
-          },
-          {
-            "name": "C1",
-            "position": "顶面右中"
-          }
+        "objects": [
+          "平行六面体ABCD-A1B1C1D1",
+          "顶点A,B,C,D,A1,B1,C1,D1"
         ],
+        "relations": [
+          "A连接B,D,C,A1连接B1,D1,C1",
+          "D连接A1,B1,C",
+          "B连接D1,A1,C1",
+          "D连接D1,A,A1"
+        ],
+        "coordinates": [],
         "ranges": [],
         "text": [
-          "A",
-          "B",
-          "C",
-          "D",
-          "A1",
           "D1",
           "B1",
-          "C1"
+          "C1",
+          "A1",
+          "D",
+          "C",
+          "B",
+          "A"
         ],
         "uncertainties": [],
         "confidence": "E2"
@@ -5581,113 +4506,43 @@
       ],
       "vision_sidecars": [
         {
-          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_full\\imgs\\img_in_image_box_846_360_1093_546.jpg",
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_846_360_1093_546.jpg",
           "image_sha256": "c09e41cc475cb8810754adbeee86eefaf54481b2c69a5693a85f8681d27bcb26",
           "confidence": "E2",
           "structured": {
             "objects": [
-              [
-                "点",
-                "P"
-              ],
-              [
-                "点",
-                "A"
-              ],
-              [
-                "点",
-                "B"
-              ],
-              [
-                "点",
-                "C"
-              ],
-              [
-                "点",
-                "D"
-              ],
-              [
-                "点",
-                "O"
-              ],
-              [
-                "点",
-                "E"
-              ],
-              [
-                "线段",
-                "PA"
-              ],
-              [
-                "线段",
-                "PB"
-              ],
-              [
-                "线段",
-                "PC"
-              ],
-              [
-                "线段",
-                "PD"
-              ],
-              [
-                "线段",
-                "AB"
-              ],
-              [
-                "线段",
-                "BC"
-              ],
-              [
-                "线段",
-                "CD"
-              ],
-              [
-                "线段",
-                "DA"
-              ],
-              [
-                "线段",
-                "PO"
-              ],
-              [
-                "线段",
-                "DE"
-              ]
+              "四棱锥P-ABCD",
+              "点P",
+              "点A",
+              "点B",
+              "点C",
+              "点D",
+              "点O",
+              "点E"
             ],
             "relations": [
-              [
-                "垂直",
-                "PO",
-                "平面ABCD"
-              ],
-              [
-                "在...上",
-                "E",
-                "PD"
-              ],
-              [
-                "平行",
-                "AD",
-                "BC"
-              ],
-              [
-                "交于",
-                "PO",
-                "AD",
-                "O"
-              ]
+              "PA连接P和A",
+              "PB连接P和B",
+              "PC连接P和C",
+              "PD连接P和D",
+              "PO连接P和O",
+              "PE连接P和E"
             ],
-            "coordinates": [],
+            "coordinates": [
+              "P在顶部",
+              "A在左下方",
+              "B在A右下方",
+              "C在B右下方",
+              "D在C右方",
+              "O在AD中点上方",
+              "E在PD上"
+            ],
             "ranges": [],
             "text": [
-              "P",
-              "A",
-              "B",
-              "C",
-              "D",
-              "O",
-              "E"
+              "A---D为底边",
+              "B---C为底边",
+              "O为AD中点",
+              "E在PD上"
             ],
             "uncertainties": [],
             "confidence": "E2"
@@ -5697,108 +4552,38 @@
       ],
       "vision_sidecar": {
         "objects": [
-          [
-            "点",
-            "P"
-          ],
-          [
-            "点",
-            "A"
-          ],
-          [
-            "点",
-            "B"
-          ],
-          [
-            "点",
-            "C"
-          ],
-          [
-            "点",
-            "D"
-          ],
-          [
-            "点",
-            "O"
-          ],
-          [
-            "点",
-            "E"
-          ],
-          [
-            "线段",
-            "PA"
-          ],
-          [
-            "线段",
-            "PB"
-          ],
-          [
-            "线段",
-            "PC"
-          ],
-          [
-            "线段",
-            "PD"
-          ],
-          [
-            "线段",
-            "AB"
-          ],
-          [
-            "线段",
-            "BC"
-          ],
-          [
-            "线段",
-            "CD"
-          ],
-          [
-            "线段",
-            "DA"
-          ],
-          [
-            "线段",
-            "PO"
-          ],
-          [
-            "线段",
-            "DE"
-          ]
+          "四棱锥P-ABCD",
+          "点P",
+          "点A",
+          "点B",
+          "点C",
+          "点D",
+          "点O",
+          "点E"
         ],
         "relations": [
-          [
-            "垂直",
-            "PO",
-            "平面ABCD"
-          ],
-          [
-            "在...上",
-            "E",
-            "PD"
-          ],
-          [
-            "平行",
-            "AD",
-            "BC"
-          ],
-          [
-            "交于",
-            "PO",
-            "AD",
-            "O"
-          ]
+          "PA连接P和A",
+          "PB连接P和B",
+          "PC连接P和C",
+          "PD连接P和D",
+          "PO连接P和O",
+          "PE连接P和E"
         ],
-        "coordinates": [],
+        "coordinates": [
+          "P在顶部",
+          "A在左下方",
+          "B在A右下方",
+          "C在B右下方",
+          "D在C右方",
+          "O在AD中点上方",
+          "E在PD上"
+        ],
         "ranges": [],
         "text": [
-          "P",
-          "A",
-          "B",
-          "C",
-          "D",
-          "O",
-          "E"
+          "A---D为底边",
+          "B---C为底边",
+          "O为AD中点",
+          "E在PD上"
         ],
         "uncertainties": [],
         "confidence": "E2"
@@ -5832,118 +4617,29 @@
       ],
       "vision_sidecars": [
         {
-          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_full\\imgs\\img_in_image_box_848_1062_1094_1228.jpg",
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_848_1062_1094_1228.jpg",
           "image_sha256": "34903c45a8282d1d387f953e3186d4cd9059444f78847e67c0cd37316d1a3672",
           "confidence": "E2",
           "structured": {
             "objects": [
-              [
-                "P",
-                "M",
-                "C",
-                "D",
-                "A",
-                "B"
-              ]
+              "点P",
+              "点A",
+              "点B",
+              "点C",
+              "点D",
+              "点M"
             ],
             "relations": [
-              [
-                "P",
-                "A"
-              ],
-              [
-                "P",
-                "M"
-              ],
-              [
-                "P",
-                "C"
-              ],
-              [
-                "P",
-                "D"
-              ],
-              [
-                "A",
-                "D"
-              ],
-              [
-                "A",
-                "B"
-              ],
-              [
-                "B",
-                "C"
-              ],
-              [
-                "C",
-                "M"
-              ],
-              [
-                "D",
-                "M"
-              ],
-              [
-                "B",
-                "M"
-              ]
+              "线段PA",
+              "线段PB",
+              "线段PC",
+              "线段PD",
+              "线段AM",
+              "线段BM",
+              "线段CM"
             ],
-            "coordinates": [
-              [
-                [
-                  "P",
-                  [
-                    0,
-                    2
-                  ]
-                ],
-                [
-                  [
-                    "M",
-                    [
-                      0.5,
-                      1
-                    ]
-                  ],
-                  [
-                    [
-                      "C",
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    [
-                      [
-                        "D",
-                        [
-                          0,
-                          0.5
-                        ]
-                      ],
-                      [
-                        [
-                          "A",
-                          [
-                            0,
-                            0
-                          ]
-                        ],
-                        [
-                          [
-                            "B",
-                            [
-                              1,
-                              0
-                            ]
-                          ]
-                        ]
-                      ]
-                    ]
-                  ]
-                ]
-              ]
-            ],
+            "coordinates": [],
+            "ranges": [],
             "text": [],
             "uncertainties": [],
             "confidence": "E2"
@@ -5953,113 +4649,24 @@
       ],
       "vision_sidecar": {
         "objects": [
-          [
-            "P",
-            "M",
-            "C",
-            "D",
-            "A",
-            "B"
-          ]
+          "点P",
+          "点A",
+          "点B",
+          "点C",
+          "点D",
+          "点M"
         ],
         "relations": [
-          [
-            "P",
-            "A"
-          ],
-          [
-            "P",
-            "M"
-          ],
-          [
-            "P",
-            "C"
-          ],
-          [
-            "P",
-            "D"
-          ],
-          [
-            "A",
-            "D"
-          ],
-          [
-            "A",
-            "B"
-          ],
-          [
-            "B",
-            "C"
-          ],
-          [
-            "C",
-            "M"
-          ],
-          [
-            "D",
-            "M"
-          ],
-          [
-            "B",
-            "M"
-          ]
+          "线段PA",
+          "线段PB",
+          "线段PC",
+          "线段PD",
+          "线段AM",
+          "线段BM",
+          "线段CM"
         ],
-        "coordinates": [
-          [
-            [
-              "P",
-              [
-                0,
-                2
-              ]
-            ],
-            [
-              [
-                "M",
-                [
-                  0.5,
-                  1
-                ]
-              ],
-              [
-                [
-                  "C",
-                  [
-                    1,
-                    1
-                  ]
-                ],
-                [
-                  [
-                    "D",
-                    [
-                      0,
-                      0.5
-                    ]
-                  ],
-                  [
-                    [
-                      "A",
-                      [
-                        0,
-                        0
-                      ]
-                    ],
-                    [
-                      [
-                        "B",
-                        [
-                          1,
-                          0
-                        ]
-                      ]
-                    ]
-                  ]
-                ]
-              ]
-            ]
-          ]
-        ],
+        "coordinates": [],
+        "ranges": [],
         "text": [],
         "uncertainties": [],
         "confidence": "E2"
@@ -6089,147 +4696,77 @@
       "math_errors": [],
       "evidence": [
         "E1",
-        "E2"
+        "E1"
       ],
       "vision_sidecars": [
         {
-          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_full\\imgs\\img_in_image_box_836_403_1094_599.jpg",
+          "image": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_836_403_1094_599.jpg",
           "image_sha256": "8c901a0abedad0a569ef2ab5d792cc95bafa4bdc24401e6685eda89cc91ede37",
-          "confidence": "E2",
+          "confidence": "E1",
           "structured": {
-            "objects": [],
-            "relations": [],
-            "coordinates": [
-              {
-                "name": "A",
-                "pos": [
-                  0,
-                  0,
-                  0
-                ]
-              },
-              {
-                "name": "A1",
-                "pos": [
-                  0.5,
-                  0,
-                  1
-                ]
-              },
-              {
-                "name": "B",
-                "pos": [
-                  1,
-                  0,
-                  0
-                ]
-              },
-              {
-                "name": "B1",
-                "pos": [
-                  1,
-                  0.5,
-                  1
-                ]
-              },
-              {
-                "name": "C",
-                "pos": [
-                  2,
-                  1,
-                  0
-                ]
-              },
-              {
-                "name": "C1",
-                "pos": [
-                  2,
-                  1.5,
-                  1
-                ]
-              }
+            "objects": [
+              "三棱柱ABC-A1B1C1、若干内部辅助线"
             ],
+            "relations": [
+              "AA1以虚线绘制",
+              "BB1与CC1为侧棱",
+              "A1、B1、C1构成上方三角形",
+              "A、B、C构成下方三角形",
+              "B1与C之间画有实线"
+            ],
+            "coordinates": [],
             "ranges": [],
             "text": [
-              "A",
-              "A1",
-              "B",
-              "B1",
-              "C",
-              "C1"
+              "A、B、C、A1、B1、C1"
             ],
-            "uncertainties": [],
-            "confidence": "E2"
+            "uncertainties": [
+              "多条辅助线在图中央交叠，未据交叠位置推断交点名称或垂直关系"
+            ],
+            "confidence": "E1"
           },
-          "source_provenance": null
+          "source_provenance": {
+            "source_kind": "manual_current_original_image_review",
+            "item_source": "data/packets/1.4/student_packet.json",
+            "original_image": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_836_403_1094_599.jpg",
+            "original_image_sha256": "8c901a0abedad0a569ef2ab5d792cc95bafa4bdc24401e6685eda89cc91ede37",
+            "review_result": "current_original_crop_visually_verified_with_overlapping_lines",
+            "review_report": "reports/deep_simulation_reviews/visual-fixes-ch1.json",
+            "review_report_sha256": "93c60397448a7d96d94e05e20433a38e46c9a5db78618a90d80586799e754f5c"
+          }
         }
       ],
       "vision_sidecar": {
-        "objects": [],
-        "relations": [],
-        "coordinates": [
-          {
-            "name": "A",
-            "pos": [
-              0,
-              0,
-              0
-            ]
-          },
-          {
-            "name": "A1",
-            "pos": [
-              0.5,
-              0,
-              1
-            ]
-          },
-          {
-            "name": "B",
-            "pos": [
-              1,
-              0,
-              0
-            ]
-          },
-          {
-            "name": "B1",
-            "pos": [
-              1,
-              0.5,
-              1
-            ]
-          },
-          {
-            "name": "C",
-            "pos": [
-              2,
-              1,
-              0
-            ]
-          },
-          {
-            "name": "C1",
-            "pos": [
-              2,
-              1.5,
-              1
-            ]
-          }
+        "objects": [
+          "三棱柱ABC-A1B1C1、若干内部辅助线"
         ],
+        "relations": [
+          "AA1以虚线绘制",
+          "BB1与CC1为侧棱",
+          "A1、B1、C1构成上方三角形",
+          "A、B、C构成下方三角形",
+          "B1与C之间画有实线"
+        ],
+        "coordinates": [],
         "ranges": [],
         "text": [
-          "A",
-          "A1",
-          "B",
-          "B1",
-          "C",
-          "C1"
+          "A、B、C、A1、B1、C1"
         ],
-        "uncertainties": [],
-        "confidence": "E2"
+        "uncertainties": [
+          "多条辅助线在图中央交叠，未据交叠位置推断交点名称或垂直关系"
+        ],
+        "confidence": "E1"
       },
-      "vision_source_provenance": []
+      "vision_source_provenance": [
+        {
+          "source_kind": "manual_current_original_image_review",
+          "item_source": "data/packets/1.4/student_packet.json",
+          "original_image": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_836_403_1094_599.jpg",
+          "original_image_sha256": "8c901a0abedad0a569ef2ab5d792cc95bafa4bdc24401e6685eda89cc91ede37",
+          "review_result": "current_original_crop_visually_verified_with_overlapping_lines",
+          "review_report": "reports/deep_simulation_reviews/visual-fixes-ch1.json",
+          "review_report_sha256": "93c60397448a7d96d94e05e20433a38e46c9a5db78618a90d80586799e754f5c"
+        }
+      ]
     },
     {
       "qid": "Q-e23bcf15c26de84a",
@@ -6282,326 +4819,112 @@
       ],
       "vision_sidecars": [
         {
-          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_full\\imgs\\img_in_image_box_383_282_622_439.jpg",
+          "image": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_383_282_622_439.jpg",
           "image_sha256": "e028e49fb9240af2c72fc50b6f90d0acf4b54d7a9baa58d530a52130161b886c",
           "confidence": "E2",
           "structured": {
             "objects": [
-              [
-                "平行四边形",
-                "ABCD"
-              ],
-              [
-                "对角线",
-                "AC"
-              ],
-              [
-                "对角线",
-                "BD"
-              ],
-              [
-                "点",
-                "E"
-              ],
-              [
-                "交点",
-                "O"
-              ]
+              "四边形ABCD、对角线AC、BD、点E、O"
             ],
             "relations": [
-              [
-                "A",
-                "连接",
-                "B"
-              ],
-              [
-                "B",
-                "连接",
-                "C"
-              ],
-              [
-                "C",
-                "连接",
-                "D"
-              ],
-              [
-                "D",
-                "连接",
-                "A"
-              ],
-              [
-                "A",
-                "连接",
-                "C"
-              ],
-              [
-                "B",
-                "连接",
-                "D"
-              ],
-              [
-                "A",
-                "E",
-                "O",
-                "C",
-                "共线"
-              ],
-              [
-                "B",
-                "D",
-                "交",
-                "A",
-                "C",
-                "于",
-                "O"
-              ]
+              "AC与BD相交于O",
+              "E位于线段AO上",
+              "A、E、O、C依次位于对角线AC上",
+              "A、B、C、D为四边形顶点"
             ],
-            "coordinates": [
-              [
-                "A",
-                "(0, 2)"
-              ],
-              [
-                "B",
-                "(-1, 0)"
-              ],
-              [
-                "C",
-                "(2, 0)"
-              ],
-              [
-                "D",
-                "(1, 2)"
-              ],
-              [
-                "E",
-                "(0.5, 1.5)"
-              ],
-              [
-                "O",
-                "(1, 1)"
-              ]
-            ],
+            "coordinates": [],
             "ranges": [],
             "text": [
-              [
-                "点",
-                "A"
-              ],
-              [
-                "点",
-                "B"
-              ],
-              [
-                "点",
-                "C"
-              ],
-              [
-                "点",
-                "D"
-              ],
-              [
-                "点",
-                "E"
-              ],
-              [
-                "点",
-                "O"
-              ]
+              "A、B、C、D、E、O"
             ],
-            "uncertainties": [],
+            "uncertainties": [
+              "图中没有等边、等长或角度标记"
+            ],
             "confidence": "E2"
           },
-          "source_provenance": null
+          "source_provenance": {
+            "source_kind": "manual_current_original_image_review",
+            "item_source": "data/packets/1.4/student_packet.json",
+            "original_image": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_383_282_622_439.jpg",
+            "original_image_sha256": "e028e49fb9240af2c72fc50b6f90d0acf4b54d7a9baa58d530a52130161b886c",
+            "review_result": "current_original_crop_visually_verified_as_figure_1",
+            "review_report": "reports/deep_simulation_reviews/visual-fixes-ch1.json",
+            "review_report_sha256": "93c60397448a7d96d94e05e20433a38e46c9a5db78618a90d80586799e754f5c"
+          }
         },
         {
-          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_full\\imgs\\img_in_image_box_638_267_835_434.jpg",
+          "image": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_638_267_835_434.jpg",
           "image_sha256": "66fee4503a25f8d7803ac95c879be8dec9ed66cb230ddd2e890de22c32128e16",
           "confidence": "E2",
           "structured": {
-            "objects": [],
+            "objects": [
+              "三棱锥A-BCD、点E、O"
+            ],
             "relations": [
-              "line segment AB",
-              "line segment AC",
-              "line segment BC",
-              "line segment AD",
-              "line segment AE",
-              "line segment ED",
-              "line segment EO",
-              "line segment BD",
-              "line segment CD",
-              "line segment BO",
-              "line segment CO"
+              "A、B、C构成外部三角形轮廓",
+              "A、E、O位于同一条虚线段上",
+              "B、O、D位于同一条虚线段上",
+              "AD、DC与AO以虚线绘制"
             ],
-            "coordinates": [
-              {
-                "name": "A",
-                "position": "top vertex"
-              },
-              {
-                "name": "B",
-                "position": "bottom left"
-              },
-              {
-                "name": "C",
-                "position": "bottom right"
-              },
-              {
-                "name": "O",
-                "position": "mid BC, below center"
-              },
-              {
-                "name": "E",
-                "position": "on AB, near A"
-              },
-              {
-                "name": "D",
-                "position": "on AC, near A"
-              }
-            ],
+            "coordinates": [],
             "ranges": [],
             "text": [
-              "A",
-              "B",
-              "C",
-              "D",
-              "E",
-              "O"
+              "A、B、C、D、E、O"
             ],
             "uncertainties": [],
             "confidence": "E2"
           },
-          "source_provenance": null
+          "source_provenance": {
+            "source_kind": "manual_current_original_image_review",
+            "item_source": "data/packets/1.4/student_packet.json",
+            "original_image": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_638_267_835_434.jpg",
+            "original_image_sha256": "66fee4503a25f8d7803ac95c879be8dec9ed66cb230ddd2e890de22c32128e16",
+            "review_result": "current_original_crop_visually_verified_as_figure_2",
+            "review_report": "reports/deep_simulation_reviews/visual-fixes-ch1.json",
+            "review_report_sha256": "93c60397448a7d96d94e05e20433a38e46c9a5db78618a90d80586799e754f5c"
+          }
         }
       ],
       "vision_sidecar": {
         "objects": [
-          [
-            "平行四边形",
-            "ABCD"
-          ],
-          [
-            "对角线",
-            "AC"
-          ],
-          [
-            "对角线",
-            "BD"
-          ],
-          [
-            "点",
-            "E"
-          ],
-          [
-            "交点",
-            "O"
-          ]
+          "四边形ABCD、对角线AC、BD、点E、O"
         ],
         "relations": [
-          [
-            "A",
-            "连接",
-            "B"
-          ],
-          [
-            "B",
-            "连接",
-            "C"
-          ],
-          [
-            "C",
-            "连接",
-            "D"
-          ],
-          [
-            "D",
-            "连接",
-            "A"
-          ],
-          [
-            "A",
-            "连接",
-            "C"
-          ],
-          [
-            "B",
-            "连接",
-            "D"
-          ],
-          [
-            "A",
-            "E",
-            "O",
-            "C",
-            "共线"
-          ],
-          [
-            "B",
-            "D",
-            "交",
-            "A",
-            "C",
-            "于",
-            "O"
-          ]
+          "AC与BD相交于O",
+          "E位于线段AO上",
+          "A、E、O、C依次位于对角线AC上",
+          "A、B、C、D为四边形顶点"
         ],
-        "coordinates": [
-          [
-            "A",
-            "(0, 2)"
-          ],
-          [
-            "B",
-            "(-1, 0)"
-          ],
-          [
-            "C",
-            "(2, 0)"
-          ],
-          [
-            "D",
-            "(1, 2)"
-          ],
-          [
-            "E",
-            "(0.5, 1.5)"
-          ],
-          [
-            "O",
-            "(1, 1)"
-          ]
-        ],
+        "coordinates": [],
         "ranges": [],
         "text": [
-          [
-            "点",
-            "A"
-          ],
-          [
-            "点",
-            "B"
-          ],
-          [
-            "点",
-            "C"
-          ],
-          [
-            "点",
-            "D"
-          ],
-          [
-            "点",
-            "E"
-          ],
-          [
-            "点",
-            "O"
-          ]
+          "A、B、C、D、E、O"
         ],
-        "uncertainties": [],
+        "uncertainties": [
+          "图中没有等边、等长或角度标记"
+        ],
         "confidence": "E2"
       },
-      "vision_source_provenance": []
+      "vision_source_provenance": [
+        {
+          "source_kind": "manual_current_original_image_review",
+          "item_source": "data/packets/1.4/student_packet.json",
+          "original_image": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_383_282_622_439.jpg",
+          "original_image_sha256": "e028e49fb9240af2c72fc50b6f90d0acf4b54d7a9baa58d530a52130161b886c",
+          "review_result": "current_original_crop_visually_verified_as_figure_1",
+          "review_report": "reports/deep_simulation_reviews/visual-fixes-ch1.json",
+          "review_report_sha256": "93c60397448a7d96d94e05e20433a38e46c9a5db78618a90d80586799e754f5c"
+        },
+        {
+          "source_kind": "manual_current_original_image_review",
+          "item_source": "data/packets/1.4/student_packet.json",
+          "original_image": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_638_267_835_434.jpg",
+          "original_image_sha256": "66fee4503a25f8d7803ac95c879be8dec9ed66cb230ddd2e890de22c32128e16",
+          "review_result": "current_original_crop_visually_verified_as_figure_2",
+          "review_report": "reports/deep_simulation_reviews/visual-fixes-ch1.json",
+          "review_report_sha256": "93c60397448a7d96d94e05e20433a38e46c9a5db78618a90d80586799e754f5c"
+        }
+      ]
     },
     {
       "qid": "Q-2dbf5412ca19ea55",
@@ -6630,202 +4953,38 @@
       ],
       "vision_sidecars": [
         {
-          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_full\\imgs\\img_in_image_box_871_1163_1093_1335.jpg",
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_871_1163_1093_1335.jpg",
           "image_sha256": "0920f7b8980cf8cf4a9cdee4eaf6dba9e2074e85a56a10cd7c2324f9e5f41c91",
           "confidence": "E2",
           "structured": {
             "objects": [
-              [
-                "点",
-                "P"
-              ],
-              [
-                "点",
-                "E"
-              ],
-              [
-                "点",
-                "F"
-              ],
-              [
-                "点",
-                "G"
-              ],
-              [
-                "点",
-                "A"
-              ],
-              [
-                "点",
-                "D"
-              ],
-              [
-                "点",
-                "C"
-              ],
-              [
-                "点",
-                "B"
-              ]
+              "三棱锥P-BCD",
+              "点P",
+              "点A",
+              "点E",
+              "点F",
+              "点G"
             ],
             "relations": [
-              [
-                "线段",
-                [
-                  "P",
-                  "B"
-                ]
-              ],
-              [
-                "线段",
-                [
-                  "P",
-                  "D"
-                ]
-              ],
-              [
-                "线段",
-                [
-                  "B",
-                  "C"
-                ]
-              ],
-              [
-                "线段",
-                [
-                  "C",
-                  "D"
-                ]
-              ],
-              [
-                "线段",
-                [
-                  "D",
-                  "B"
-                ]
-              ],
-              [
-                "线段",
-                [
-                  "P",
-                  "A"
-                ]
-              ],
-              [
-                "线段",
-                [
-                  "A",
-                  "D"
-                ]
-              ],
-              [
-                "线段",
-                [
-                  "A",
-                  "C"
-                ]
-              ],
-              [
-                "线段",
-                [
-                  "A",
-                  "B"
-                ]
-              ],
-              [
-                "线段",
-                [
-                  "P",
-                  "E"
-                ]
-              ],
-              [
-                "线段",
-                [
-                  "E",
-                  "D"
-                ]
-              ],
-              [
-                "线段",
-                [
-                  "P",
-                  "F"
-                ]
-              ],
-              [
-                "线段",
-                [
-                  "F",
-                  "E"
-                ]
-              ],
-              [
-                "线段",
-                [
-                  "P",
-                  "G"
-                ]
-              ],
-              [
-                "线段",
-                [
-                  "G",
-                  "B"
-                ]
-              ],
-              [
-                "线段",
-                [
-                  "A",
-                  "F"
-                ]
-              ]
+              "PA垂直平面BCD",
+              "E在PD上",
+              "F在PE上",
+              "G在PB上",
+              "A在BCD平面上",
+              "F在AE上"
             ],
-            "coordinates": [
-              [
-                "P",
-                null,
-                null
-              ],
-              [
-                "E",
-                null,
-                null
-              ],
-              [
-                "F",
-                null,
-                null
-              ],
-              [
-                "G",
-                null,
-                null
-              ],
-              [
-                "A",
-                null,
-                null
-              ],
-              [
-                "D",
-                null,
-                null
-              ],
-              [
-                "C",
-                null,
-                null
-              ],
-              [
-                "B",
-                null,
-                null
-              ]
-            ],
+            "coordinates": [],
             "ranges": [],
-            "text": [],
+            "text": [
+              "P",
+              "B",
+              "C",
+              "D",
+              "A",
+              "E",
+              "F",
+              "G"
+            ],
             "uncertainties": [],
             "confidence": "E2"
           },
@@ -6834,197 +4993,33 @@
       ],
       "vision_sidecar": {
         "objects": [
-          [
-            "点",
-            "P"
-          ],
-          [
-            "点",
-            "E"
-          ],
-          [
-            "点",
-            "F"
-          ],
-          [
-            "点",
-            "G"
-          ],
-          [
-            "点",
-            "A"
-          ],
-          [
-            "点",
-            "D"
-          ],
-          [
-            "点",
-            "C"
-          ],
-          [
-            "点",
-            "B"
-          ]
+          "三棱锥P-BCD",
+          "点P",
+          "点A",
+          "点E",
+          "点F",
+          "点G"
         ],
         "relations": [
-          [
-            "线段",
-            [
-              "P",
-              "B"
-            ]
-          ],
-          [
-            "线段",
-            [
-              "P",
-              "D"
-            ]
-          ],
-          [
-            "线段",
-            [
-              "B",
-              "C"
-            ]
-          ],
-          [
-            "线段",
-            [
-              "C",
-              "D"
-            ]
-          ],
-          [
-            "线段",
-            [
-              "D",
-              "B"
-            ]
-          ],
-          [
-            "线段",
-            [
-              "P",
-              "A"
-            ]
-          ],
-          [
-            "线段",
-            [
-              "A",
-              "D"
-            ]
-          ],
-          [
-            "线段",
-            [
-              "A",
-              "C"
-            ]
-          ],
-          [
-            "线段",
-            [
-              "A",
-              "B"
-            ]
-          ],
-          [
-            "线段",
-            [
-              "P",
-              "E"
-            ]
-          ],
-          [
-            "线段",
-            [
-              "E",
-              "D"
-            ]
-          ],
-          [
-            "线段",
-            [
-              "P",
-              "F"
-            ]
-          ],
-          [
-            "线段",
-            [
-              "F",
-              "E"
-            ]
-          ],
-          [
-            "线段",
-            [
-              "P",
-              "G"
-            ]
-          ],
-          [
-            "线段",
-            [
-              "G",
-              "B"
-            ]
-          ],
-          [
-            "线段",
-            [
-              "A",
-              "F"
-            ]
-          ]
+          "PA垂直平面BCD",
+          "E在PD上",
+          "F在PE上",
+          "G在PB上",
+          "A在BCD平面上",
+          "F在AE上"
         ],
-        "coordinates": [
-          [
-            "P",
-            null,
-            null
-          ],
-          [
-            "E",
-            null,
-            null
-          ],
-          [
-            "F",
-            null,
-            null
-          ],
-          [
-            "G",
-            null,
-            null
-          ],
-          [
-            "A",
-            null,
-            null
-          ],
-          [
-            "D",
-            null,
-            null
-          ],
-          [
-            "C",
-            null,
-            null
-          ],
-          [
-            "B",
-            null,
-            null
-          ]
-        ],
+        "coordinates": [],
         "ranges": [],
-        "text": [],
+        "text": [
+          "P",
+          "B",
+          "C",
+          "D",
+          "A",
+          "E",
+          "F",
+          "G"
+        ],
         "uncertainties": [],
         "confidence": "E2"
       },
@@ -7057,47 +5052,73 @@
       ],
       "vision_sidecars": [
         {
-          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_full\\imgs\\img_in_image_box_891_353_1093_547.jpg",
+          "image": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_891_353_1093_547.jpg",
           "image_sha256": "c487b6528512e8ce8a24d76bf2505d3fcdcac23db2b756e2bc26a055b70b34e9",
           "confidence": "E2",
           "structured": {
-            "objects": [],
-            "relations": [],
+            "objects": [
+              "四棱锥P-ABCD、点E、F"
+            ],
+            "relations": [
+              "E位于线段PB上",
+              "F位于线段BC上",
+              "PA、AB、AD以虚线绘制",
+              "A与F之间画有实线",
+              "P与F之间画有虚线"
+            ],
             "coordinates": [],
             "ranges": [],
             "text": [
-              "P",
-              "E",
-              "A",
-              "B",
-              "F",
-              "C",
-              "D"
+              "P、A、B、C、D、E、F"
             ],
-            "uncertainties": [],
+            "uncertainties": [
+              "图中未用刻痕标出E、F的中点性质"
+            ],
             "confidence": "E2"
           },
-          "source_provenance": null
+          "source_provenance": {
+            "source_kind": "manual_current_original_image_review",
+            "item_source": "data/packets/1.4/student_packet.json",
+            "original_image": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_891_353_1093_547.jpg",
+            "original_image_sha256": "c487b6528512e8ce8a24d76bf2505d3fcdcac23db2b756e2bc26a055b70b34e9",
+            "review_result": "current_original_crop_visually_verified",
+            "review_report": "reports/deep_simulation_reviews/visual-fixes-ch1.json",
+            "review_report_sha256": "93c60397448a7d96d94e05e20433a38e46c9a5db78618a90d80586799e754f5c"
+          }
         }
       ],
       "vision_sidecar": {
-        "objects": [],
-        "relations": [],
+        "objects": [
+          "四棱锥P-ABCD、点E、F"
+        ],
+        "relations": [
+          "E位于线段PB上",
+          "F位于线段BC上",
+          "PA、AB、AD以虚线绘制",
+          "A与F之间画有实线",
+          "P与F之间画有虚线"
+        ],
         "coordinates": [],
         "ranges": [],
         "text": [
-          "P",
-          "E",
-          "A",
-          "B",
-          "F",
-          "C",
-          "D"
+          "P、A、B、C、D、E、F"
         ],
-        "uncertainties": [],
+        "uncertainties": [
+          "图中未用刻痕标出E、F的中点性质"
+        ],
         "confidence": "E2"
       },
-      "vision_source_provenance": []
+      "vision_source_provenance": [
+        {
+          "source_kind": "manual_current_original_image_review",
+          "item_source": "data/packets/1.4/student_packet.json",
+          "original_image": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_891_353_1093_547.jpg",
+          "original_image_sha256": "c487b6528512e8ce8a24d76bf2505d3fcdcac23db2b756e2bc26a055b70b34e9",
+          "review_result": "current_original_crop_visually_verified",
+          "review_report": "reports/deep_simulation_reviews/visual-fixes-ch1.json",
+          "review_report_sha256": "93c60397448a7d96d94e05e20433a38e46c9a5db78618a90d80586799e754f5c"
+        }
+      ]
     }
   ],
   "counts": {

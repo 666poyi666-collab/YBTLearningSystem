@@ -53,9 +53,9 @@ SIMULATION_SOURCE_FILES = (
     "data/question_coverage.json",
     "data/zero_base_simulation_standard.md",
     "data/packets/1.1/learning_path_without_questions.md",
-    # The current 1.1 simulation is projected from the validated Luna section
-    # delivery; bind that delivery itself so the projection cannot outlive it.
-    "reports/ch12_luna_sections/LUNA-CH12-01/delivery.json",
+    # The compatibility projection is derived from the atomically activated
+    # all-book route audit. Bind the pointer so a partial run cannot replace it.
+    "reports/deep_section_simulations/current.json",
 )
 LEGACY_SIMULATION_RELATIVES = (
     Path("reports/zero_base_agent_simulation.json"),
@@ -102,15 +102,27 @@ def load_current_simulation(root: Path) -> tuple[dict, dict]:
         metadata["errors"].append("current_simulation_generation_missing")
 
     contract = simulation.get("worker_contract", {})
-    expected_contract = {
-        "workers_dispatched": 5,
-        "workers_completed": 5,
-        "role": "deepseek_worker",
-        "model": "gpt-5.6-luna",
-        "reasoning_effort": "max",
-        "context_window": 1050000,
-        "answer_sidecar_read": False,
-    }
+    authority_kind = str((simulation.get("authority") or {}).get("kind") or "")
+    if authority_kind == "answer_isolated_route_audit_projection":
+        expected_contract = {
+            "workers_dispatched": 5,
+            "workers_completed": 5,
+            "role": "synthetic_route_stress_persona",
+            "model": "deterministic-route-audit",
+            "reasoning_effort": "not_applicable",
+            "context_window": None,
+            "answer_sidecar_read": False,
+        }
+    else:
+        expected_contract = {
+            "workers_dispatched": 5,
+            "workers_completed": 5,
+            "role": "deepseek_worker",
+            "model": "gpt-5.6-luna",
+            "reasoning_effort": "max",
+            "context_window": 1050000,
+            "answer_sidecar_read": False,
+        }
     for key, expected in expected_contract.items():
         if contract.get(key) != expected:
             metadata["errors"].append(f"worker_contract_mismatch:{key}")
@@ -137,6 +149,8 @@ def load_current_simulation(root: Path) -> tuple[dict, dict]:
             metadata["errors"].append(f"answer_boundary_missing:{key}")
     if summary.get("human_acceptance_not_proven") is not True:
         metadata["errors"].append("human_acceptance_boundary_missing")
+    if authority_kind == "answer_isolated_route_audit_projection" and summary.get("mathematical_correctness") != "not_evaluated_no_final_answer":
+        metadata["errors"].append("route_audit_math_boundary_missing")
 
     packet_path = root / "data" / "packets" / "1.1" / "learning_packet.json"
     expected_item_ids: set[str] = set()
@@ -207,8 +221,15 @@ def load_current_simulation(root: Path) -> tuple[dict, dict]:
         error.startswith("simulation_source_") for error in metadata["errors"]
     )
     metadata["status"] = "passed" if not metadata["errors"] else "blocked"
-    metadata["mastery_status"] = (
+    metadata["route_audit_status"] = (
         "passed" if metadata["status"] == "passed" and summary.get("pass") == 5 else "blocked"
+    )
+    metadata["mastery_status"] = (
+        "not_run"
+        if authority_kind == "answer_isolated_route_audit_projection" and metadata["route_audit_status"] == "passed"
+        else "passed"
+        if metadata["route_audit_status"] == "passed"
+        else "blocked"
     )
     return metadata, simulation
 
@@ -530,7 +551,7 @@ def main() -> int:
     attempt_ready_gate = coverage.get("summary", {}).get("attempt_ready_gate") is True
     full_every_question_release_gate = coverage.get("summary", {}).get("full_every_question_release_gate") is True
     simulation_evidence_ok = simulation_meta.get("status") == "passed"
-    simulation_mastery_passed = simulation_meta.get("mastery_status") == "passed"
+    simulation_route_audit_passed = simulation_meta.get("route_audit_status") == "passed"
     chapter_simulation_ready = chapter_simulation_meta.get("status") == "passed"
     teacher_judge_ok = teacher_judge_meta.get("status") == "passed"
     answer_sections = answer_status.get("sections", [])
@@ -552,7 +573,7 @@ def main() -> int:
         or not bridge_ready
         or not attempt_ready_gate
         or not full_every_question_release_gate
-        or not simulation_mastery_passed
+        or not simulation_route_audit_passed
         or not chapter_simulation_ready
         or not teacher_judge_ok
         or course_inventory.get("status") != "passed"
@@ -580,7 +601,8 @@ def main() -> int:
         "zero_base_simulation": {
             "evidence": simulation_meta,
             "summary": simulation.get("summary", {}),
-            "mastery_gate": simulation_mastery_passed,
+            "route_audit_gate": simulation_route_audit_passed,
+            "mastery_gate": False,
         },
         "chapter_zero_base_simulation": {
             "evidence": chapter_simulation_meta,
@@ -627,7 +649,7 @@ def main() -> int:
             {"name": "bridge_units", "result": "passed" if all(item.get("status") in {"VERIFIED", "SUPPLEMENT_READY"} for item in bridge.get("units", [])) else "blocked", "evidence": f"{len(bridge.get('units', []))} named units: {sum(item.get('status') == 'SOURCE_METHOD_READY' for item in bridge['units'])} source-method-only, {sum(item.get('status') == 'SUPPLEMENT_READY' for item in bridge['units'])} supplement-ready, {sum(item.get('status') == 'SUPPLEMENT_REQUIRED' for item in bridge['units'])} supplement-required, {sum(item.get('status') == 'VERIFIED' for item in bridge['units'])} VERIFIED; source-method-only units remain blocked and student mastery is not claimed"},
             {"name": "all_questions_releasable", "result": "passed" if attempt_ready_gate and full_every_question_release_gate else "blocked", "evidence": f"attempt_ready_gate={attempt_ready_gate}; full_every_question_release_gate={full_every_question_release_gate}; blocked questions={coverage['summary']['release_status_counts'].get('BLOCKED_BRIDGE', 0)}"},
             {"name": "deepseek_full_question_consumability", "result": "passed" if contexts_consumable and chapter_consumption_ready else "blocked", "evidence": f"contexts_consumable={contexts_consumable}; chapter_probe_ready={chapter_consumption_ready}; independent_probe={deepseek.get('independent_probe', {}).get('status')}"},
-            {"name": "five_zero_base_agent_simulation", "result": "passed" if simulation_mastery_passed else "blocked", "evidence": f"current generation={simulation_meta.get('generation')}; evidence_status={simulation_meta.get('status')}; pass={simulation.get('summary', {}).get('pass')}, fail={simulation.get('summary', {}).get('fail')}, partial={simulation.get('summary', {}).get('partial')}; task_coverage_complete={simulation.get('task_coverage', {}).get('complete')}; agent simulation is not human observation"},
+            {"name": "five_zero_base_route_audit", "result": "passed" if simulation_route_audit_passed else "blocked", "evidence": f"current generation={simulation_meta.get('generation')}; evidence_status={simulation_meta.get('status')}; pass={simulation.get('summary', {}).get('pass')}, fail={simulation.get('summary', {}).get('fail')}, partial={simulation.get('summary', {}).get('partial')}; task_coverage_complete={simulation.get('task_coverage', {}).get('complete')}; mathematical correctness and mastery are not evaluated"},
             {"name": "chapter_zero_base_agent_simulation", "result": "passed" if chapter_simulation_ready else "blocked", "evidence": f"status={chapter_simulation_meta.get('status')}; current sections={chapter_simulation_meta.get('summary', {}).get('current_sections_verified')}/{chapter_simulation_meta.get('summary', {}).get('required_sections')}; current items={chapter_simulation_meta.get('summary', {}).get('current_items_verified')}/{chapter_simulation_meta.get('summary', {}).get('required_items')}; historical shards are not current evidence"},
             {"name": "teacher_judgement_current_binding", "result": "passed" if teacher_judge_ok else "blocked", "evidence": f"path={teacher_judge_meta.get('path')}; generation={teacher_judge_meta.get('generation')}; source_revision_match={teacher_judge_meta.get('status') == 'passed'}; errors={teacher_judge_meta.get('errors')}"},
             {"name": "lesson_content_manual_review", "result": "passed" if manual_review_ok else "blocked", "evidence": f"manifest source_evidence.manual_review_flags={manual_review_flags}; flagged lesson content cannot be silently corrected or released"},

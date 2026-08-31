@@ -26,15 +26,7 @@ Authority order:
 
 Resolve the active project from the current repository or the task's explicit path.
 
-The current delivery target is chapters 1 and 2:
-
-- 2 chapters.
-- 11 packet sections.
-- 401 numbered learning items.
-
-Chapters 3-5 remain preserved source and historical delivery assets. Do not generate or claim new completion for them unless the user explicitly expands the active scope.
-
-The full repository baseline remains 5 chapters, 38 sections, and 1,209 items. These counts are not an excuse to skip live verification. Compare active chapter counts with `reports/all_chapters/packet-build-current.json` and the chapter manifests.
+The current static-route and audit target is the complete book: 5 chapters, 38 canonical sections, and 1,209 numbered learning items. Chapter 1 Section 1 remains the golden regression sample, but it does not delay Sections 1.2 through Chapter 5. These counts are not an excuse to skip live verification; compare them with `reports/all_chapters/packet-build-current.json` and the chapter manifests.
 
 ## 2. Source Boundary
 
@@ -76,7 +68,7 @@ The supplementary `2026版 高中必刷题数学 选择性必修第一册 RJA` i
 
 Read the artifacts in this order:
 
-1. The active scope's `READY.json` and `assignments.json` (currently `reports/ch12_luna_dispatch/`).
+1. The active scope's current source audit and assignment binding. Legacy `reports/ch12_luna_dispatch/` files cover only their named chapter subset and cannot prove the five-chapter release.
 2. `reports/all_chapters/packet-build-current.json`.
 3. `data/all_chapters_course_catalog.json`.
 4. Assigned chapter manifests.
@@ -157,10 +149,12 @@ For every item, produce:
 
 ### S7 Learner Simulation
 
-- Use the five-round/five-persona protocol in `simulation-gates.md` as an internal route stress test.
+- Use the five-round/five-persona protocol in `simulation-gates.md` as a synthetic internal route stress audit.
 - Every persona attempts every item.
-- Freeze learner attempts before any evaluator view.
+- Build persona input only from whitelisted fields in `student_learning_items.json`, `student_packet.json`, manifests and the answer-free route. Run the all-item question-isolation audit first.
+- Persist and hash learner attempts before loading `learning_packet.json`, `packet.json`, answer sidecars, teaching solutions or grader evidence.
 - Record the learner's actual course call, recognition statement, first line, continuation attempt, self-check attempt, and first break. Boolean-only rows are not evidence.
+- When no final mathematical answer exists, set mathematical correctness to `not_evaluated_no_final_answer`. Route assessment cannot become a correctness or mastery result.
 
 ### S8 Route Repair
 
@@ -243,6 +237,14 @@ Learner contexts may not include:
 - A previous persona's solved attempt.
 - Evaluator conclusions.
 
+The isolation boundary is executable, not descriptive:
+
+1. `scripts/audit_student_question_isolation.py` must report 1,209 passed and zero blocked learner projections.
+2. `student_learning_items.json` and `student_packet.json` are projected through a field whitelist. Any solution tail, next knowledge block, abnormal-length extraction, or unresolved OCR/source defect blocks the item before persona signals are derived.
+3. Frozen attempt JSONL is written first and binds section, item, input snapshot and attempt SHA.
+4. Only then may the route assessor load grader-only sources. The assessor records source availability and route actionability; it cannot mark mathematical correctness without a final learner answer.
+5. Answer OCR states remain distinct: automatic, text requiring review, and source-page-only. The latter two prohibit automatic grading.
+
 Delivery Markdown/HTML omits question text because the learner reads the real book. It names the textbook item and teaches how to approach it.
 
 ## 8. Versioning and Evidence States
@@ -258,7 +260,7 @@ Bind every route version to:
 
 Status definitions:
 
-- `passed`: current hash satisfies the named machine gate.
+- `passed`: current hash satisfies the explicitly named machine gate. A passed route audit is not a passed mathematical assessment.
 - `failed`: gate ran and found a defect.
 - `blocked`: required source, visual, permission, or dependency is unavailable.
 - `not_run`: required action was not executed.
@@ -283,8 +285,8 @@ After all active chapter section routes validate:
 
 1. The controller merges sections in manifest order and builds the exact union of item-level required courses.
 2. It initializes or loads `data/learner_progress/chapter<chapter>.json` using schema `ybt-growing-learner-chapter-v1`.
-3. `primary-user-proxy` consumes course transcripts and attempts items sequentially. Course consumption and attempts are separate evidence events.
+3. `primary-user-proxy` loads course transcripts and attempts items sequentially. Transcript availability, transcript consumption, route attempt and final mathematical answer are separate evidence events; a file hash proves only availability.
 4. The profile starts with only the zero-base assumption. Every profile change cites frozen attempt evidence and increments `profile_version`.
-5. The chapter status lists unfinished required courses and unresolved canonical items. It is `completed` only when both are empty and the progress validator passes.
+5. The chapter status lists unfinished required courses and unresolved canonical items. It is `completed` only when both are empty, final answers were independently graded, and the progress validator passes. Route-only runs remain unfinished.
 6. Real-user and 24-hour states remain independent fields.
 7. Browser-local stars, listened cycles, passed items, and questions are exported through the page progress snapshot; they are not silently written into the chapter proxy ledger.

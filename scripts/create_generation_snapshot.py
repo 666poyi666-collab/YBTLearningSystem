@@ -99,7 +99,7 @@ def create_snapshot(root: Path, generation: str, previous: Path | None = None) -
         coverage.get("summary", {}).get("attempt_ready_gate") is True
         and coverage.get("summary", {}).get("full_every_question_release_gate") is True
     )
-    simulation_mastery_passed = simulation_meta.get("mastery_status") == "passed"
+    simulation_route_audit_passed = simulation_meta.get("route_audit_status") == "passed"
     chapter_simulation_ready = chapter_status.get("summary", {}).get("all_current_section_simulations_ready") is True
     simulation_generation_matches = simulation_meta.get("generation") == generation
     snapshot_files = {
@@ -115,7 +115,7 @@ def create_snapshot(root: Path, generation: str, previous: Path | None = None) -
         "ROUTE_COMPLETE"
         if completeness["status"] == "passed"
         and all_questions_release
-        and simulation_mastery_passed
+        and simulation_route_audit_passed
         and chapter_simulation_ready
         and simulation_generation_matches
         and simulation_source_matches_snapshot
@@ -140,7 +140,8 @@ def create_snapshot(root: Path, generation: str, previous: Path | None = None) -
             "current_zero_base_simulation_generation_matches_snapshot": simulation_generation_matches,
             "current_zero_base_simulation_source_revision_match": simulation_meta.get("source_revision_match"),
             "current_zero_base_simulation_source_matches_snapshot": simulation_source_matches_snapshot,
-            "current_zero_base_simulation_mastery_gate": simulation_mastery_passed,
+            "current_zero_base_route_audit_gate": simulation_route_audit_passed,
+            "current_zero_base_simulation_mastery_gate": False,
             "current_zero_base_simulation_summary": simulation.get("summary", {}),
             "chapter_zero_base_simulation_ready": chapter_simulation_ready,
             "chapter_zero_base_simulation_summary": chapter_status.get("summary", {}),

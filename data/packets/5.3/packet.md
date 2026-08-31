@@ -13,7 +13,7 @@
 - B5 / `Q-debbf5ad8450f103` / PDF页 37 / READY_TEXT_ONLY / 5.（2025·吉林长春期末） 已知定义在 \(\mathbb{R}\) 上的函数 \(f(x)\) 的导函数为 \(f'(x)\)，若 \(f'(x) < 1\) 恒成立，且 \(f(0) = 0\)，则 \(f(x) \leq x\) 的解集为（ ） A. \(\mathbb{R}\) B. \((-\infty, 0]\) C. \([1, +\inf
 - B6 / `Q-2d43019cb70e2072` / PDF页 38 / READY_TEXT_ONLY / 6.（2025·全国模拟） 已知 \(f'(x)\) 是定义域为 \(\mathbb{R}\) 的函数 \(f(x)\) 的导函数，满足 \(f'(x) - f(x) > 0\)，且 \(f(1) = 2e\)，则不等式 \(f(x) - 2e^x > 0\) 的解集为（ ） A. \(\left(\frac{1}{e}, 1\right)\) B. \(\
 - B7 / `Q-ad967b8b2931d0c9` / PDF页 38 / READY_TEXT_ONLY / 7.（2025·浙江杭州期末） 已知函数 \(f(x)\) 的定义域为 \(\mathbb{R}\)， \(f(0)=0\)，若对任意的 \(x \in \mathbb{R}\)，都有 \(f(x) > -1 + f'(x)\)，则不等式 \(f(x) < -1 + e^x\) 的解集是（ ） A. \((-\infty, 0)\) B. \((0, +\i
-- B8 / `Q-4c8051bb16292394` / PDF页 38 / READY_TEXT_ONLY / 已知 \(f'(x)\) 是函数 \(f(x)\) 的导函数，且对 \(\forall x \in \left(0, \frac{\pi}{2}\right)\)， \(f'(x)\cos x > f(x)\sin(-x)\)，则下列不等式一定不成立的是（ ） A. \(\frac{\sqrt{3}}{2}f\left(\frac{\pi}{3}\right
+- B8 / `Q-4c8051bb16292394` / PDF页 38 / READY_TEXT_ONLY / 8.（2025·四川阿坝期末） 已知 \(f'(x)\) 是函数 \(f(x)\) 的导函数，且对 \(\forall x\in\left(0,\frac{\pi}{2}\right)\)，\(f'(x)\cos x>f(x)\sin(-x)\)，则下列不等式一定不成立的是（ ） A. \(\frac{\sqrt{3}}{2}f\left(\frac{\pi
 - B9 / `Q-56eabd19e3f3ae90` / PDF页 39 / READY_TEXT_ONLY / ### 9. （2025 · 山东威海期末） 已知函数 \(f(x)=\ln x + ax - x^{2}\)，若 \(f(x)\) 在 \([1, +\infty)\) 上单调递减，求实数 a 的取值范围.
 - B10 / `Q-f485a1f1cb73b395` / PDF页 39 / READY_TEXT_ONLY / 10.（2025·内蒙古包头期中（节选）） 已知函数 \(f(x)=\ln x - ax\)，讨论 \(f(x)\) 的单调性.
 - B11 / `Q-7c869708ca99eecf` / PDF页 39 / READY_TEXT_ONLY / 11.（2025 · 全国模拟） 已知函数 \(f(x)=x^{2}-\pi x+2\sin x\)，求 \(f(x)\) 的单调区间.
@@ -25,4 +25,4 @@
 - B17 / `Q-31de6dda9fc8d8e9` / PDF页 41 / READY_TEXT_ONLY / ### 17. （2025·重庆沙坪坝期末（节选）) 已知函数 \(f(x)=xe^{x}-a\left(\frac{1}{2}x^{2}+x\right)\)，讨论 \(f(x)\) 的单调性.
 - C18 / `Q-1ccdda5b2f9656c5` / PDF页 41 / READY_TEXT_ONLY / ### 18. （2025 · 全国模拟） 已知 \(f(x)=(a+1)\ln x+ax^2+1\) ( \(a<-1\))，若对 \(\forall x_1\)， \(x_2\in(0,+\infty)\) 且 \(x_1\neq x_2\)， \(\left|f(x_1)-f(x_2)\right|>4\left|x_1-x_2\right|\)，求
 - C19 / `Q-9c1bf7bbbb5313ea` / PDF页 41 / READY_TEXT_ONLY / ### 19. （2025·内蒙古模拟） 已知函数 \(f(x)=\mathrm{e}^{x}-ax^{2}-x\) （1）当a=-1时，讨论 \(f(x)\)的单调性； （2）若 \(f(x)\) 在 \((0,+\infty)\) 上单调递增，求实数 a 的取值范围.
-- C20 / `Q-979c0e6d96423ab0` / PDF页 42 / READY_TEXT_ONLY / 20.（2019·新课标Ⅰ卷（改）) 已知函数 \(f(x)=\sin x-\ln(x+1)\)，设 \(g(x)=f'(x)\).
+- C20 / `Q-979c0e6d96423ab0` / PDF页 42 / READY_TEXT_ONLY / 20.（2019·新课标Ⅰ卷（改）) 已知函数 \(f(x)=\sin x-\ln(x+1)\)，设 \(g(x)=f'(x)\)。 （1）证明 \(g'(x)\) 在区间 \(\left(-1,\frac{\pi}{2}\right)\) 存在唯一的零点； （2）证明 \(f(x)\) 有且仅有 2 个零点。

@@ -1,0 +1,4419 @@
+{
+  "schema_version": "ybt-deep-section-simulation-v3",
+  "generated_at": "2026-08-31T04:06:33.215161+00:00",
+  "chapter": 5,
+  "section": "5.6",
+  "label": "第6节 微专题4：导数真题集训",
+  "simulation_kind": "answer_isolated_synthetic_route_stress",
+  "honesty_boundary": "Attempts test route actionability. They contain no final learner answer, so mathematical correctness and mastery are not claimed.",
+  "source_binding": {
+    "manifest_sha256": "db9d20c619d78b202750a5416105a3f8510f5b074d81eabb8a248314b585f5c6",
+    "student_learning_items_sha256": "6476547cf7652353807c76448e904434df697e2de2c3b2c0906e99f89c8cbffd",
+    "student_packet_sha256": "f72b84a331e9a663527a421da94ef34e1829b65b76dc84f250723d6ecab9098e",
+    "grader_learning_packet_sha256": "2a608f7e2754e71518e359f5db4ab686ce14df53a546a77db96a48a06cbda9b3",
+    "route_sha256": "ad4efd1c38aef01d498d4832eee7263c846fb40d2a7144c63afe88c2f06a10e7",
+    "learner_input_snapshot_sha256": "9a8d16089a1c7bc05bd7fe228fe5eb0c849b8471f1311e893e0c88b3b6b6d1b4"
+  },
+  "answer_isolation": {
+    "frozen_attempts_path": "reports/deep_simulation_runs/route-audit-5391e980be231c3c/frozen/5.6.jsonl.gz",
+    "frozen_attempts_sha256": "9a38324d5a80f68bab0177fe9f6e979f83b10bbf605ee72578c4c7e093223140",
+    "route_assessments_path": "reports/deep_simulation_runs/route-audit-5391e980be231c3c/route_assessments/5.6.jsonl.gz",
+    "route_assessments_sha256": "25522823f752738caf1055a04a956519096937863835026805a6d1fd5493ecb2",
+    "learner_answer_material_loaded": false,
+    "grader_material_loaded_after_freeze": true,
+    "grader_evidence": {
+      "parsed_automatic": 26,
+      "review_required_text": 1,
+      "source_page_bound": 10,
+      "textbook_solution": 13,
+      "blocked": 0
+    },
+    "status": "passed"
+  },
+  "items": [
+    {
+      "item_key": "LI:65d48ba8ed18c7eb",
+      "item_id": "65d48ba8ed18c7eb",
+      "ordinal": 1,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例1",
+      "group": null,
+      "cycle_id": "5.6-cycle-1",
+      "cycle_sequence": 1,
+      "cycle_title": "类型I 导数的计算",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "复合函数的导数",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "最值讨论与值域之具体函数",
+        "常用函数放缩"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 导数的计算"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "f",
+        "x",
+        "\\mathrm",
+        "e"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "769d2b81fc8173df169f8325a345870548f35509db4696359730872f874533c5",
+      "source_question_text_sha256": "769d2b81fc8173df169f8325a345870548f35509db4696359730872f874533c5",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "769d2b81fc8173df169f8325a345870548f35509db4696359730872f874533c5",
+        "learner_question_text_sha256": "769d2b81fc8173df169f8325a345870548f35509db4696359730872f874533c5"
+      },
+      "question_signal_excerpt": "f、x、\\mathrm、e",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:df2b1ac00bf2f701",
+      "item_id": "df2b1ac00bf2f701",
+      "ordinal": 2,
+      "ordinal_in_cycle": 2,
+      "kind": "direct_variant",
+      "label": "例1 变式",
+      "group": null,
+      "cycle_id": "5.6-cycle-1",
+      "cycle_sequence": 1,
+      "cycle_title": "类型I 导数的计算",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "复合函数的导数",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "最值讨论与值域之具体函数",
+        "常用函数放缩"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 导数的计算"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "f",
+        "x",
+        "\\frac",
+        "e"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "3b3d46e76c00cb0cd143ccec591c017183bfd99e950f1e71e6b8d23fcf183299",
+      "source_question_text_sha256": "3b3d46e76c00cb0cd143ccec591c017183bfd99e950f1e71e6b8d23fcf183299",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "3b3d46e76c00cb0cd143ccec591c017183bfd99e950f1e71e6b8d23fcf183299",
+        "learner_question_text_sha256": "3b3d46e76c00cb0cd143ccec591c017183bfd99e950f1e71e6b8d23fcf183299"
+      },
+      "question_signal_excerpt": "f、x、\\frac、e",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:8cc0df82fb29f514",
+      "item_id": "8cc0df82fb29f514",
+      "ordinal": 3,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例2",
+      "group": null,
+      "cycle_id": "5.6-cycle-2",
+      "cycle_sequence": 2,
+      "cycle_title": "类型Ⅱ 切线的计算及应用",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "复合函数的导数",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "最值讨论与值域之具体函数",
+        "常用函数放缩"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 切线的计算及应用"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "切线",
+        "y",
+        "\\ln",
+        "x"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "d5aa87412104782d4fd9ed0ef8fa379288dc89497eccf0ceb63b43f9d73eae41",
+      "source_question_text_sha256": "d5aa87412104782d4fd9ed0ef8fa379288dc89497eccf0ceb63b43f9d73eae41",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "d5aa87412104782d4fd9ed0ef8fa379288dc89497eccf0ceb63b43f9d73eae41",
+        "learner_question_text_sha256": "d5aa87412104782d4fd9ed0ef8fa379288dc89497eccf0ceb63b43f9d73eae41"
+      },
+      "question_signal_excerpt": "切线、y、\\ln、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:97362f898184b4d7",
+      "item_id": "97362f898184b4d7",
+      "ordinal": 4,
+      "ordinal_in_cycle": 2,
+      "kind": "direct_variant",
+      "label": "例2 变式1",
+      "group": null,
+      "cycle_id": "5.6-cycle-2",
+      "cycle_sequence": 2,
+      "cycle_title": "类型Ⅱ 切线的计算及应用",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "复合函数的导数",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "最值讨论与值域之具体函数",
+        "常用函数放缩"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 切线的计算及应用"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "切线",
+        "y",
+        "\\frac",
+        "e",
+        "x"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "786eaed396a85f21d282f948fdf32ac5ec04b60ea65ad1f227b1ed2b2f792c7c",
+      "source_question_text_sha256": "786eaed396a85f21d282f948fdf32ac5ec04b60ea65ad1f227b1ed2b2f792c7c",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "786eaed396a85f21d282f948fdf32ac5ec04b60ea65ad1f227b1ed2b2f792c7c",
+        "learner_question_text_sha256": "786eaed396a85f21d282f948fdf32ac5ec04b60ea65ad1f227b1ed2b2f792c7c"
+      },
+      "question_signal_excerpt": "切线、y、\\frac、e、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:96ba4cb8767a5c8b",
+      "item_id": "96ba4cb8767a5c8b",
+      "ordinal": 5,
+      "ordinal_in_cycle": 3,
+      "kind": "direct_variant",
+      "label": "例2 变式2",
+      "group": null,
+      "cycle_id": "5.6-cycle-2",
+      "cycle_sequence": 2,
+      "cycle_title": "类型Ⅱ 切线的计算及应用",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "复合函数的导数",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "最值讨论与值域之具体函数",
+        "常用函数放缩"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 切线的计算及应用"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "切线",
+        "f",
+        "x",
+        "a"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "7488a2f6c6fffc683f1b852e5feab44166b53221d4a5f89afd341826392f46ba",
+      "source_question_text_sha256": "7488a2f6c6fffc683f1b852e5feab44166b53221d4a5f89afd341826392f46ba",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "7488a2f6c6fffc683f1b852e5feab44166b53221d4a5f89afd341826392f46ba",
+        "learner_question_text_sha256": "7488a2f6c6fffc683f1b852e5feab44166b53221d4a5f89afd341826392f46ba"
+      },
+      "question_signal_excerpt": "切线、f、x、a",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:9015508f30f49ddd",
+      "item_id": "9015508f30f49ddd",
+      "ordinal": 6,
+      "ordinal_in_cycle": 4,
+      "kind": "direct_variant",
+      "label": "例2 变式3",
+      "group": null,
+      "cycle_id": "5.6-cycle-2",
+      "cycle_sequence": 2,
+      "cycle_title": "类型Ⅱ 切线的计算及应用",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "复合函数的导数",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "最值讨论与值域之具体函数",
+        "常用函数放缩"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 切线的计算及应用"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "切线",
+        "f",
+        "x",
+        "<"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "c1a2de812801c8a38a1002a743c41d161c851d8fd5055d54b206267b9e46a8e9",
+      "source_question_text_sha256": "c1a2de812801c8a38a1002a743c41d161c851d8fd5055d54b206267b9e46a8e9",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "c1a2de812801c8a38a1002a743c41d161c851d8fd5055d54b206267b9e46a8e9",
+        "learner_question_text_sha256": "c1a2de812801c8a38a1002a743c41d161c851d8fd5055d54b206267b9e46a8e9"
+      },
+      "question_signal_excerpt": "切线、f、x、<",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:89178ddf0d4a8766",
+      "item_id": "89178ddf0d4a8766",
+      "ordinal": 7,
+      "ordinal_in_cycle": 5,
+      "kind": "direct_variant",
+      "label": "例2 变式4",
+      "group": null,
+      "cycle_id": "5.6-cycle-2",
+      "cycle_sequence": 2,
+      "cycle_title": "类型Ⅱ 切线的计算及应用",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "复合函数的导数",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "最值讨论与值域之具体函数",
+        "常用函数放缩"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 切线的计算及应用"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "切线",
+        "xOy",
+        "A",
+        "y",
+        "\\ln"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "14d23cd427a8ae684295991cecb7babfea7f31cf3ad397cc5db9bb8800227b2c",
+      "source_question_text_sha256": "14d23cd427a8ae684295991cecb7babfea7f31cf3ad397cc5db9bb8800227b2c",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "14d23cd427a8ae684295991cecb7babfea7f31cf3ad397cc5db9bb8800227b2c",
+        "learner_question_text_sha256": "14d23cd427a8ae684295991cecb7babfea7f31cf3ad397cc5db9bb8800227b2c"
+      },
+      "question_signal_excerpt": "切线、xOy、A、y、\\ln",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:50ceb76c09ec09a2",
+      "item_id": "50ceb76c09ec09a2",
+      "ordinal": 8,
+      "ordinal_in_cycle": 6,
+      "kind": "direct_variant",
+      "label": "例2 变式5",
+      "group": null,
+      "cycle_id": "5.6-cycle-2",
+      "cycle_sequence": 2,
+      "cycle_title": "类型Ⅱ 切线的计算及应用",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "复合函数的导数",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "最值讨论与值域之具体函数",
+        "常用函数放缩"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 切线的计算及应用"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "切线",
+        "y",
+        "x",
+        "\\ln"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "f3872dde6a283803853ba46c2de6d1b3c8cc10d0120772c1e554c83b5c2feb68",
+      "source_question_text_sha256": "f3872dde6a283803853ba46c2de6d1b3c8cc10d0120772c1e554c83b5c2feb68",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "f3872dde6a283803853ba46c2de6d1b3c8cc10d0120772c1e554c83b5c2feb68",
+        "learner_question_text_sha256": "f3872dde6a283803853ba46c2de6d1b3c8cc10d0120772c1e554c83b5c2feb68"
+      },
+      "question_signal_excerpt": "切线、y、x、\\ln",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:6d1510b6259bdc46",
+      "item_id": "6d1510b6259bdc46",
+      "ordinal": 9,
+      "ordinal_in_cycle": 7,
+      "kind": "direct_variant",
+      "label": "例2 变式6",
+      "group": null,
+      "cycle_id": "5.6-cycle-2",
+      "cycle_sequence": 2,
+      "cycle_title": "类型Ⅱ 切线的计算及应用",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "复合函数的导数",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "最值讨论与值域之具体函数",
+        "常用函数放缩"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 切线的计算及应用"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "直线",
+        "距离",
+        "xOy",
+        "P",
+        "y",
+        "x"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "3bf46ea80961015966de9aae98779cd1d761aedd3a61907397788e7ec697ad9a",
+      "source_question_text_sha256": "3bf46ea80961015966de9aae98779cd1d761aedd3a61907397788e7ec697ad9a",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "3bf46ea80961015966de9aae98779cd1d761aedd3a61907397788e7ec697ad9a",
+        "learner_question_text_sha256": "3bf46ea80961015966de9aae98779cd1d761aedd3a61907397788e7ec697ad9a"
+      },
+      "question_signal_excerpt": "直线、距离、xOy、P、y、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:2339a7d2a78cc9ea",
+      "item_id": "2339a7d2a78cc9ea",
+      "ordinal": 10,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例3",
+      "group": null,
+      "cycle_id": "5.6-cycle-3",
+      "cycle_sequence": 3,
+      "cycle_title": "类型Ⅲ 单调性、极值、最值的分析",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "复合函数的导数",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "最值讨论与值域之具体函数",
+        "常用函数放缩"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 单调性、极值、最值的分析"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "f",
+        "x",
+        "ax",
+        "bx"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "c147c7ee07febc21d3b8a18a244fefda8626025432df788fd7cfca730329ffdf",
+      "source_question_text_sha256": "c147c7ee07febc21d3b8a18a244fefda8626025432df788fd7cfca730329ffdf",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "c147c7ee07febc21d3b8a18a244fefda8626025432df788fd7cfca730329ffdf",
+        "learner_question_text_sha256": "c147c7ee07febc21d3b8a18a244fefda8626025432df788fd7cfca730329ffdf"
+      },
+      "question_signal_excerpt": "f、x、ax、bx",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:931382f3dd54ac7d",
+      "item_id": "931382f3dd54ac7d",
+      "ordinal": 11,
+      "ordinal_in_cycle": 2,
+      "kind": "worked_example",
+      "label": "例4",
+      "group": null,
+      "cycle_id": "5.6-cycle-3",
+      "cycle_sequence": 3,
+      "cycle_title": "类型Ⅲ 单调性、极值、最值的分析",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "复合函数的导数",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "最值讨论与值域之具体函数",
+        "常用函数放缩"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 单调性、极值、最值的分析"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "单调",
+        "f",
+        "x",
+        "ax",
+        "\\frac"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "78ad1958f2076ee4a81b179ba29ecbd668b0bea9d1bea2e7d01805384d2b83df",
+      "source_question_text_sha256": "78ad1958f2076ee4a81b179ba29ecbd668b0bea9d1bea2e7d01805384d2b83df",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "78ad1958f2076ee4a81b179ba29ecbd668b0bea9d1bea2e7d01805384d2b83df",
+        "learner_question_text_sha256": "78ad1958f2076ee4a81b179ba29ecbd668b0bea9d1bea2e7d01805384d2b83df"
+      },
+      "question_signal_excerpt": "单调、f、x、ax、\\frac",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:566a99b0465a521c",
+      "item_id": "566a99b0465a521c",
+      "ordinal": 12,
+      "ordinal_in_cycle": 3,
+      "kind": "worked_example",
+      "label": "例5",
+      "group": null,
+      "cycle_id": "5.6-cycle-3",
+      "cycle_sequence": 3,
+      "cycle_title": "类型Ⅲ 单调性、极值、最值的分析",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "复合函数的导数",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "最值讨论与值域之具体函数",
+        "常用函数放缩"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 单调性、极值、最值的分析"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "e",
+        "f",
+        "x",
+        "\\mathrm"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "fc407c00f0e55a51c73449a3913c84ef6866519944c55ad5b736470e6dca125e",
+      "source_question_text_sha256": "fc407c00f0e55a51c73449a3913c84ef6866519944c55ad5b736470e6dca125e",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "fc407c00f0e55a51c73449a3913c84ef6866519944c55ad5b736470e6dca125e",
+        "learner_question_text_sha256": "fc407c00f0e55a51c73449a3913c84ef6866519944c55ad5b736470e6dca125e"
+      },
+      "question_signal_excerpt": "e、f、x、\\mathrm",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:6b5bc0bdaaf0109c",
+      "item_id": "6b5bc0bdaaf0109c",
+      "ordinal": 13,
+      "ordinal_in_cycle": 4,
+      "kind": "worked_example",
+      "label": "例6",
+      "group": null,
+      "cycle_id": "5.6-cycle-3",
+      "cycle_sequence": 3,
+      "cycle_title": "类型Ⅲ 单调性、极值、最值的分析",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "复合函数的导数",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "最值讨论与值域之具体函数",
+        "常用函数放缩"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 单调性、极值、最值的分析"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "f",
+        "x",
+        "left"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "f7b7a78bf320fa559f840b0314c1dfc9f118afe417b0fcdcd2f346a209b1be90",
+      "source_question_text_sha256": "f7b7a78bf320fa559f840b0314c1dfc9f118afe417b0fcdcd2f346a209b1be90",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "f7b7a78bf320fa559f840b0314c1dfc9f118afe417b0fcdcd2f346a209b1be90",
+        "learner_question_text_sha256": "f7b7a78bf320fa559f840b0314c1dfc9f118afe417b0fcdcd2f346a209b1be90"
+      },
+      "question_signal_excerpt": "f、x、left",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:ccc49d82555c4377",
+      "item_id": "ccc49d82555c4377",
+      "ordinal": 14,
+      "ordinal_in_cycle": 5,
+      "kind": "direct_variant",
+      "label": "例4 变式",
+      "group": null,
+      "cycle_id": "5.6-cycle-3",
+      "cycle_sequence": 3,
+      "cycle_title": "类型Ⅲ 单调性、极值、最值的分析",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "复合函数的导数",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "最值讨论与值域之具体函数",
+        "常用函数放缩"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 单调性、极值、最值的分析"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "单调",
+        "范围",
+        "f",
+        "x",
+        "\\frac"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "6e377ab0d2321bee7790fc70664ac754fa8e8840242634a111282eb8f50f76a9",
+      "source_question_text_sha256": "6e377ab0d2321bee7790fc70664ac754fa8e8840242634a111282eb8f50f76a9",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "6e377ab0d2321bee7790fc70664ac754fa8e8840242634a111282eb8f50f76a9",
+        "learner_question_text_sha256": "6e377ab0d2321bee7790fc70664ac754fa8e8840242634a111282eb8f50f76a9"
+      },
+      "question_signal_excerpt": "单调、范围、f、x、\\frac",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:674b20f557bb03ca",
+      "item_id": "674b20f557bb03ca",
+      "ordinal": 15,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例7",
+      "group": null,
+      "cycle_id": "5.6-cycle-4",
+      "cycle_sequence": 4,
+      "cycle_title": "类型IV 讨论单调性",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "复合函数的导数",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "最值讨论与值域之具体函数",
+        "常用函数放缩"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型IV 讨论单调性"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "单调",
+        "I",
+        "f",
+        "x",
+        "a"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "dd2257654038009221caa4ab7e857a729f8632053fe310bae12f6326ceb1c163",
+      "source_question_text_sha256": "dd2257654038009221caa4ab7e857a729f8632053fe310bae12f6326ceb1c163",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "dd2257654038009221caa4ab7e857a729f8632053fe310bae12f6326ceb1c163",
+        "learner_question_text_sha256": "dd2257654038009221caa4ab7e857a729f8632053fe310bae12f6326ceb1c163"
+      },
+      "question_signal_excerpt": "单调、I、f、x、a",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:1aced95c1fb17689",
+      "item_id": "1aced95c1fb17689",
+      "ordinal": 16,
+      "ordinal_in_cycle": 2,
+      "kind": "direct_variant",
+      "label": "例7 变式",
+      "group": null,
+      "cycle_id": "5.6-cycle-4",
+      "cycle_sequence": 4,
+      "cycle_title": "类型IV 讨论单调性",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "复合函数的导数",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "最值讨论与值域之具体函数",
+        "常用函数放缩"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型IV 讨论单调性"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "单调",
+        "f",
+        "x",
+        "a"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "92117312d02f11b0c0cc562ab9aa7418b3fd22b8e2be04b327ab537e55df45af",
+      "source_question_text_sha256": "92117312d02f11b0c0cc562ab9aa7418b3fd22b8e2be04b327ab537e55df45af",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "92117312d02f11b0c0cc562ab9aa7418b3fd22b8e2be04b327ab537e55df45af",
+        "learner_question_text_sha256": "92117312d02f11b0c0cc562ab9aa7418b3fd22b8e2be04b327ab537e55df45af"
+      },
+      "question_signal_excerpt": "单调、f、x、a",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:4de21b0cdecbde16",
+      "item_id": "4de21b0cdecbde16",
+      "ordinal": 17,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例8",
+      "group": null,
+      "cycle_id": "5.6-cycle-5",
+      "cycle_sequence": 5,
+      "cycle_title": "类型V 不等式证明",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "复合函数的导数",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "最值讨论与值域之具体函数",
+        "常用函数放缩"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型V 不等式证明"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "证明",
+        "f",
+        "x",
+        "\\mathrm",
+        "e"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "65f5a649b1b57e4f7195944e618378904653551ee2150130a5ca1521da113e4c",
+      "source_question_text_sha256": "65f5a649b1b57e4f7195944e618378904653551ee2150130a5ca1521da113e4c",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "65f5a649b1b57e4f7195944e618378904653551ee2150130a5ca1521da113e4c",
+        "learner_question_text_sha256": "65f5a649b1b57e4f7195944e618378904653551ee2150130a5ca1521da113e4c"
+      },
+      "question_signal_excerpt": "证明、f、x、\\mathrm、e",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:01ebe3f5cc1b7a54",
+      "item_id": "01ebe3f5cc1b7a54",
+      "ordinal": 18,
+      "ordinal_in_cycle": 2,
+      "kind": "worked_example",
+      "label": "例9",
+      "group": null,
+      "cycle_id": "5.6-cycle-5",
+      "cycle_sequence": 5,
+      "cycle_title": "类型V 不等式证明",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "复合函数的导数",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "最值讨论与值域之具体函数",
+        "常用函数放缩"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型V 不等式证明"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "切线",
+        "f",
+        "x",
+        "\\ln",
+        "\\frac"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "9c5ee1bbc0a39fa50fc4ce3a9ce76683158d12fb1a379a5f02bea1dcbb1d90fd",
+      "source_question_text_sha256": "9c5ee1bbc0a39fa50fc4ce3a9ce76683158d12fb1a379a5f02bea1dcbb1d90fd",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "9c5ee1bbc0a39fa50fc4ce3a9ce76683158d12fb1a379a5f02bea1dcbb1d90fd",
+        "learner_question_text_sha256": "9c5ee1bbc0a39fa50fc4ce3a9ce76683158d12fb1a379a5f02bea1dcbb1d90fd"
+      },
+      "question_signal_excerpt": "切线、f、x、\\ln、\\frac",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:ecef4fdbd1a6adac",
+      "item_id": "ecef4fdbd1a6adac",
+      "ordinal": 19,
+      "ordinal_in_cycle": 3,
+      "kind": "worked_example",
+      "label": "例10",
+      "group": null,
+      "cycle_id": "5.6-cycle-5",
+      "cycle_sequence": 5,
+      "cycle_title": "类型V 不等式证明",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "复合函数的导数",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "最值讨论与值域之具体函数",
+        "常用函数放缩"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型V 不等式证明"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "切线",
+        "证明",
+        "f",
+        "x",
+        "\\frac",
+        "ax"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "76b0ea247f6c9423b7e44dbf0545d5bb57fb95ba1d9013594c31de7abb7ad621",
+      "source_question_text_sha256": "76b0ea247f6c9423b7e44dbf0545d5bb57fb95ba1d9013594c31de7abb7ad621",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "76b0ea247f6c9423b7e44dbf0545d5bb57fb95ba1d9013594c31de7abb7ad621",
+        "learner_question_text_sha256": "76b0ea247f6c9423b7e44dbf0545d5bb57fb95ba1d9013594c31de7abb7ad621"
+      },
+      "question_signal_excerpt": "切线、证明、f、x、\\frac、ax",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:3c09a7bbb2d09996",
+      "item_id": "3c09a7bbb2d09996",
+      "ordinal": 20,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例11",
+      "group": null,
+      "cycle_id": "5.6-cycle-6",
+      "cycle_sequence": 6,
+      "cycle_title": "类型VI 三次函数",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "复合函数的导数",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "最值讨论与值域之具体函数",
+        "常用函数放缩"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型VI 三次函数"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "x",
+        "ax",
+        "b",
+        "a"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "a48b5382a35142146377b9c64c71577a7862e41323d58bc7433c270c1d21a86b",
+      "source_question_text_sha256": "a48b5382a35142146377b9c64c71577a7862e41323d58bc7433c270c1d21a86b",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "a48b5382a35142146377b9c64c71577a7862e41323d58bc7433c270c1d21a86b",
+        "learner_question_text_sha256": "a48b5382a35142146377b9c64c71577a7862e41323d58bc7433c270c1d21a86b"
+      },
+      "question_signal_excerpt": "x、ax、b、a",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:642a1de018578b0f",
+      "item_id": "642a1de018578b0f",
+      "ordinal": 21,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例12",
+      "group": null,
+      "cycle_id": "5.6-cycle-7",
+      "cycle_sequence": 7,
+      "cycle_title": "类型Ⅶ 综合大题",
+      "course_refs": [
+        "4.2.6.1 求和型放缩（上）",
+        "4.2.6.1 求和型放缩（下）",
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "course_titles": [
+        "求和型放缩（上）",
+        "求和型放缩（下）",
+        "基本初等函数的导数及运算法则",
+        "复合函数的导数",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "最值讨论与值域之具体函数",
+        "常用函数放缩"
+      ],
+      "required_course_refs": [
+        "4.2.6.1 求和型放缩（上）",
+        "4.2.6.1 求和型放缩（下）"
+      ],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅶ 综合大题"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "切线",
+        "单调",
+        "零点",
+        "证明",
+        "f",
+        "x",
+        "\\ln"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "b8074848a293974375263dedb2fa849d82ff688c8c9731bc766d896023cc6112",
+      "source_question_text_sha256": "b8074848a293974375263dedb2fa849d82ff688c8c9731bc766d896023cc6112",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "b8074848a293974375263dedb2fa849d82ff688c8c9731bc766d896023cc6112",
+        "learner_question_text_sha256": "b8074848a293974375263dedb2fa849d82ff688c8c9731bc766d896023cc6112"
+      },
+      "question_signal_excerpt": "切线、单调、零点、证明、f、x、\\ln",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:f9b04feb4e35b426",
+      "item_id": "f9b04feb4e35b426",
+      "ordinal": 22,
+      "ordinal_in_cycle": 2,
+      "kind": "worked_example",
+      "label": "例13",
+      "group": null,
+      "cycle_id": "5.6-cycle-7",
+      "cycle_sequence": 7,
+      "cycle_title": "类型Ⅶ 综合大题",
+      "course_refs": [
+        "4.2.6.1 求和型放缩（上）",
+        "4.2.6.1 求和型放缩（下）",
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "course_titles": [
+        "求和型放缩（上）",
+        "求和型放缩（下）",
+        "基本初等函数的导数及运算法则",
+        "复合函数的导数",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "最值讨论与值域之具体函数",
+        "常用函数放缩"
+      ],
+      "required_course_refs": [
+        "4.2.6.1 求和型放缩（上）",
+        "4.2.6.1 求和型放缩（下）"
+      ],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅶ 综合大题"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "零点",
+        "证明",
+        "范围",
+        "f",
+        "x",
+        "\\frac",
+        "e"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "f7500085245809d1241774e36873bfa1fc7c914587710f100f35d54a3f1e5262",
+      "source_question_text_sha256": "f7500085245809d1241774e36873bfa1fc7c914587710f100f35d54a3f1e5262",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "f7500085245809d1241774e36873bfa1fc7c914587710f100f35d54a3f1e5262",
+        "learner_question_text_sha256": "f7500085245809d1241774e36873bfa1fc7c914587710f100f35d54a3f1e5262"
+      },
+      "question_signal_excerpt": "零点、证明、范围、f、x、\\frac、e",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:8be3804c0082ca8e",
+      "item_id": "8be3804c0082ca8e",
+      "ordinal": 23,
+      "ordinal_in_cycle": 3,
+      "kind": "worked_example",
+      "label": "例14",
+      "group": null,
+      "cycle_id": "5.6-cycle-7",
+      "cycle_sequence": 7,
+      "cycle_title": "类型Ⅶ 综合大题",
+      "course_refs": [
+        "4.2.6.1 求和型放缩（上）",
+        "4.2.6.1 求和型放缩（下）",
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "course_titles": [
+        "求和型放缩（上）",
+        "求和型放缩（下）",
+        "基本初等函数的导数及运算法则",
+        "复合函数的导数",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "最值讨论与值域之具体函数",
+        "常用函数放缩"
+      ],
+      "required_course_refs": [
+        "4.2.6.1 求和型放缩（上）",
+        "4.2.6.1 求和型放缩（下）"
+      ],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅶ 综合大题"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "单调",
+        "证明",
+        "范围",
+        "f",
+        "x",
+        "xe",
+        "ax"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "6b7d6c989cc62638ebfb02452081001077bca10609a5a04fac7c515e5c17a4b5",
+      "source_question_text_sha256": "6b7d6c989cc62638ebfb02452081001077bca10609a5a04fac7c515e5c17a4b5",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "6b7d6c989cc62638ebfb02452081001077bca10609a5a04fac7c515e5c17a4b5",
+        "learner_question_text_sha256": "6b7d6c989cc62638ebfb02452081001077bca10609a5a04fac7c515e5c17a4b5"
+      },
+      "question_signal_excerpt": "单调、证明、范围、f、x、xe、ax",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-7533f0bbf3d154f5",
+      "item_id": "Q-7533f0bbf3d154f5",
+      "ordinal": 24,
+      "ordinal_in_cycle": 1,
+      "kind": "abc_exercise",
+      "label": "A1",
+      "group": "A",
+      "cycle_id": "5.6-cycle-8",
+      "cycle_sequence": 8,
+      "cycle_title": "A组 夯实基础",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "复合函数的导数",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "最值讨论与值域之具体函数",
+        "常用函数放缩"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 导数的计算"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "f",
+        "x",
+        "\\mathrm"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "afdd1f9726b06b954f75266ea35f2ba2d88aafbcaa64eaffdbe840b924941069",
+      "source_question_text_sha256": "afdd1f9726b06b954f75266ea35f2ba2d88aafbcaa64eaffdbe840b924941069",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "afdd1f9726b06b954f75266ea35f2ba2d88aafbcaa64eaffdbe840b924941069",
+        "learner_question_text_sha256": "afdd1f9726b06b954f75266ea35f2ba2d88aafbcaa64eaffdbe840b924941069"
+      },
+      "question_signal_excerpt": "f、x、\\mathrm",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-5faa974baf32bf05",
+      "item_id": "Q-5faa974baf32bf05",
+      "ordinal": 25,
+      "ordinal_in_cycle": 2,
+      "kind": "abc_exercise",
+      "label": "A2",
+      "group": "A",
+      "cycle_id": "5.6-cycle-8",
+      "cycle_sequence": 8,
+      "cycle_title": "A组 夯实基础",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "复合函数的导数",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "最值讨论与值域之具体函数",
+        "常用函数放缩"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 导数的计算"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "f",
+        "x",
+        "ax",
+        "\\ln"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "77e41905691ac26a7b781a2fe89a5e1064231312d7565be32b94779c776ca707",
+      "source_question_text_sha256": "77e41905691ac26a7b781a2fe89a5e1064231312d7565be32b94779c776ca707",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "77e41905691ac26a7b781a2fe89a5e1064231312d7565be32b94779c776ca707",
+        "learner_question_text_sha256": "77e41905691ac26a7b781a2fe89a5e1064231312d7565be32b94779c776ca707"
+      },
+      "question_signal_excerpt": "f、x、ax、\\ln",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-ca5ecaa1a1685ba0",
+      "item_id": "Q-ca5ecaa1a1685ba0",
+      "ordinal": 26,
+      "ordinal_in_cycle": 3,
+      "kind": "abc_exercise",
+      "label": "A3",
+      "group": "A",
+      "cycle_id": "5.6-cycle-8",
+      "cycle_sequence": 8,
+      "cycle_title": "A组 夯实基础",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "复合函数的导数",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "最值讨论与值域之具体函数",
+        "常用函数放缩"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 切线的计算及应用"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "切线",
+        "y",
+        "\\ln",
+        "x"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "4fa8c3ea2f81c924f2c216ddc35bfe614dc6db87d14c8660b8b05447e0ce31cf",
+      "source_question_text_sha256": "4fa8c3ea2f81c924f2c216ddc35bfe614dc6db87d14c8660b8b05447e0ce31cf",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "4fa8c3ea2f81c924f2c216ddc35bfe614dc6db87d14c8660b8b05447e0ce31cf",
+        "learner_question_text_sha256": "4fa8c3ea2f81c924f2c216ddc35bfe614dc6db87d14c8660b8b05447e0ce31cf"
+      },
+      "question_signal_excerpt": "切线、y、\\ln、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-133140858cac9038",
+      "item_id": "Q-133140858cac9038",
+      "ordinal": 27,
+      "ordinal_in_cycle": 4,
+      "kind": "abc_exercise",
+      "label": "A4",
+      "group": "A",
+      "cycle_id": "5.6-cycle-8",
+      "cycle_sequence": 8,
+      "cycle_title": "A组 夯实基础",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "复合函数的导数",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "最值讨论与值域之具体函数",
+        "常用函数放缩"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 切线的计算及应用"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "切线",
+        "y",
+        "\\frac",
+        "x"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "c37a42c76b05ca259018d52e002553f620134eb7bedbe8f2551c57b1eb08bf96",
+      "source_question_text_sha256": "c37a42c76b05ca259018d52e002553f620134eb7bedbe8f2551c57b1eb08bf96",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "c37a42c76b05ca259018d52e002553f620134eb7bedbe8f2551c57b1eb08bf96",
+        "learner_question_text_sha256": "c37a42c76b05ca259018d52e002553f620134eb7bedbe8f2551c57b1eb08bf96"
+      },
+      "question_signal_excerpt": "切线、y、\\frac、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-7f03de694c3a2c81",
+      "item_id": "Q-7f03de694c3a2c81",
+      "ordinal": 28,
+      "ordinal_in_cycle": 5,
+      "kind": "abc_exercise",
+      "label": "A5",
+      "group": "A",
+      "cycle_id": "5.6-cycle-8",
+      "cycle_sequence": 8,
+      "cycle_title": "A组 夯实基础",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "复合函数的导数",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "最值讨论与值域之具体函数",
+        "常用函数放缩"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 切线的计算及应用"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "切线",
+        "y",
+        "x",
+        "e"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "235d44c784abef7fe3c82e2ca29f6076ec74e793759c1eb3b279cb3838ca5cd3",
+      "source_question_text_sha256": "235d44c784abef7fe3c82e2ca29f6076ec74e793759c1eb3b279cb3838ca5cd3",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "235d44c784abef7fe3c82e2ca29f6076ec74e793759c1eb3b279cb3838ca5cd3",
+        "learner_question_text_sha256": "235d44c784abef7fe3c82e2ca29f6076ec74e793759c1eb3b279cb3838ca5cd3"
+      },
+      "question_signal_excerpt": "切线、y、x、e",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-6373b56444748c98",
+      "item_id": "Q-6373b56444748c98",
+      "ordinal": 29,
+      "ordinal_in_cycle": 1,
+      "kind": "abc_exercise",
+      "label": "B6",
+      "group": "B",
+      "cycle_id": "5.6-cycle-9",
+      "cycle_sequence": 9,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "复合函数的导数",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "最值讨论与值域之具体函数",
+        "常用函数放缩"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 切线的计算及应用"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "切线",
+        "f",
+        "x",
+        "ax"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "9342c9fbd6f28d5987fabfae54134a07245565b86f74a3a63f75eb53cd56689e",
+      "source_question_text_sha256": "9342c9fbd6f28d5987fabfae54134a07245565b86f74a3a63f75eb53cd56689e",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "9342c9fbd6f28d5987fabfae54134a07245565b86f74a3a63f75eb53cd56689e",
+        "learner_question_text_sha256": "9342c9fbd6f28d5987fabfae54134a07245565b86f74a3a63f75eb53cd56689e"
+      },
+      "question_signal_excerpt": "切线、f、x、ax",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-d49a403549d51dbe",
+      "item_id": "Q-d49a403549d51dbe",
+      "ordinal": 30,
+      "ordinal_in_cycle": 2,
+      "kind": "abc_exercise",
+      "label": "B7",
+      "group": "B",
+      "cycle_id": "5.6-cycle-9",
+      "cycle_sequence": 9,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "复合函数的导数",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "最值讨论与值域之具体函数",
+        "常用函数放缩"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 切线的计算及应用"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "斜率",
+        "切线",
+        "y",
+        "\\ln",
+        "x"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "2139f2cd05ee74cc5877103ec49c6a92eaee52b3ce428033277fb10a49685acb",
+      "source_question_text_sha256": "2139f2cd05ee74cc5877103ec49c6a92eaee52b3ce428033277fb10a49685acb",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "2139f2cd05ee74cc5877103ec49c6a92eaee52b3ce428033277fb10a49685acb",
+        "learner_question_text_sha256": "2139f2cd05ee74cc5877103ec49c6a92eaee52b3ce428033277fb10a49685acb"
+      },
+      "question_signal_excerpt": "斜率、切线、y、\\ln、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-19787a3c6abb0464",
+      "item_id": "Q-19787a3c6abb0464",
+      "ordinal": 31,
+      "ordinal_in_cycle": 3,
+      "kind": "abc_exercise",
+      "label": "B8",
+      "group": "B",
+      "cycle_id": "5.6-cycle-9",
+      "cycle_sequence": 9,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "复合函数的导数",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "最值讨论与值域之具体函数",
+        "常用函数放缩"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 切线的计算及应用"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "切线",
+        "f",
+        "x",
+        "leq"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "a18217bcee5e6ed69f92ec98120bbfef11c601cf9810281507765788a47c0323",
+      "source_question_text_sha256": "a18217bcee5e6ed69f92ec98120bbfef11c601cf9810281507765788a47c0323",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "a18217bcee5e6ed69f92ec98120bbfef11c601cf9810281507765788a47c0323",
+        "learner_question_text_sha256": "a18217bcee5e6ed69f92ec98120bbfef11c601cf9810281507765788a47c0323"
+      },
+      "question_signal_excerpt": "切线、f、x、leq",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-23a417361e80e6fb",
+      "item_id": "Q-23a417361e80e6fb",
+      "ordinal": 32,
+      "ordinal_in_cycle": 4,
+      "kind": "abc_exercise",
+      "label": "B9",
+      "group": "B",
+      "cycle_id": "5.6-cycle-9",
+      "cycle_sequence": 9,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "复合函数的导数",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "最值讨论与值域之具体函数",
+        "常用函数放缩"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 切线的计算及应用"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "切线",
+        "y",
+        "ae",
+        "x"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "4c374c2c2338b84ac3cd94e7eaaad0b6253fd51f121688f9ba8a5f9fa0aa8703",
+      "source_question_text_sha256": "4c374c2c2338b84ac3cd94e7eaaad0b6253fd51f121688f9ba8a5f9fa0aa8703",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "4c374c2c2338b84ac3cd94e7eaaad0b6253fd51f121688f9ba8a5f9fa0aa8703",
+        "learner_question_text_sha256": "4c374c2c2338b84ac3cd94e7eaaad0b6253fd51f121688f9ba8a5f9fa0aa8703"
+      },
+      "question_signal_excerpt": "切线、y、ae、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-3fb022d065e9e136",
+      "item_id": "Q-3fb022d065e9e136",
+      "ordinal": 33,
+      "ordinal_in_cycle": 5,
+      "kind": "abc_exercise",
+      "label": "B10",
+      "group": "B",
+      "cycle_id": "5.6-cycle-9",
+      "cycle_sequence": 9,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "复合函数的导数",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "最值讨论与值域之具体函数",
+        "常用函数放缩"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 切线的计算及应用",
+        "类型Ⅲ 单调性、极值、最值的分析"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "切线",
+        "范围",
+        "y",
+        "x",
+        "a",
+        "e"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "abd690f044f6028964c841ca4ed6496a1319fac90698e096232f293715a03a81",
+      "source_question_text_sha256": "abd690f044f6028964c841ca4ed6496a1319fac90698e096232f293715a03a81",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "abd690f044f6028964c841ca4ed6496a1319fac90698e096232f293715a03a81",
+        "learner_question_text_sha256": "abd690f044f6028964c841ca4ed6496a1319fac90698e096232f293715a03a81"
+      },
+      "question_signal_excerpt": "切线、范围、y、x、a、e",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-3c6fc8d5339a2f60",
+      "item_id": "Q-3c6fc8d5339a2f60",
+      "ordinal": 34,
+      "ordinal_in_cycle": 6,
+      "kind": "abc_exercise",
+      "label": "B11",
+      "group": "B",
+      "cycle_id": "5.6-cycle-9",
+      "cycle_sequence": 9,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "复合函数的导数",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "最值讨论与值域之具体函数",
+        "常用函数放缩"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 单调性、极值、最值的分析"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "极值",
+        "x",
+        "f"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "22f9d03c7fe252192046c16420afd298e366f6778eb97c8f630f1c4921c4cf38",
+      "source_question_text_sha256": "22f9d03c7fe252192046c16420afd298e366f6778eb97c8f630f1c4921c4cf38",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "22f9d03c7fe252192046c16420afd298e366f6778eb97c8f630f1c4921c4cf38",
+        "learner_question_text_sha256": "22f9d03c7fe252192046c16420afd298e366f6778eb97c8f630f1c4921c4cf38"
+      },
+      "question_signal_excerpt": "极值、x、f",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-e4a9fd43fed0d3cc",
+      "item_id": "Q-e4a9fd43fed0d3cc",
+      "ordinal": 35,
+      "ordinal_in_cycle": 7,
+      "kind": "abc_exercise",
+      "label": "B12",
+      "group": "B",
+      "cycle_id": "5.6-cycle-9",
+      "cycle_sequence": 9,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "复合函数的导数",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "最值讨论与值域之具体函数",
+        "常用函数放缩"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 单调性、极值、最值的分析"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "f",
+        "x",
+        "\\cos"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "b784c26c003268e643da5f75fa80792e4c10ef43eaba32bee09d6e82ab69d73f",
+      "source_question_text_sha256": "b784c26c003268e643da5f75fa80792e4c10ef43eaba32bee09d6e82ab69d73f",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "b784c26c003268e643da5f75fa80792e4c10ef43eaba32bee09d6e82ab69d73f",
+        "learner_question_text_sha256": "b784c26c003268e643da5f75fa80792e4c10ef43eaba32bee09d6e82ab69d73f"
+      },
+      "question_signal_excerpt": "f、x、\\cos",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-77e1281ea72be71a",
+      "item_id": "Q-77e1281ea72be71a",
+      "ordinal": 36,
+      "ordinal_in_cycle": 8,
+      "kind": "abc_exercise",
+      "label": "B13",
+      "group": "B",
+      "cycle_id": "5.6-cycle-9",
+      "cycle_sequence": 9,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "复合函数的导数",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "最值讨论与值域之具体函数",
+        "常用函数放缩"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 单调性、极值、最值的分析",
+        "类型IV 讨论单调性"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "范围",
+        "f",
+        "x"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "315a28328403f5cae54da3187084805a53549de6f46d626815700d314ab5cd2f",
+      "source_question_text_sha256": "315a28328403f5cae54da3187084805a53549de6f46d626815700d314ab5cd2f",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "315a28328403f5cae54da3187084805a53549de6f46d626815700d314ab5cd2f",
+        "learner_question_text_sha256": "315a28328403f5cae54da3187084805a53549de6f46d626815700d314ab5cd2f"
+      },
+      "question_signal_excerpt": "范围、f、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-37f9e290e239bd35",
+      "item_id": "Q-37f9e290e239bd35",
+      "ordinal": 37,
+      "ordinal_in_cycle": 9,
+      "kind": "abc_exercise",
+      "label": "B14",
+      "group": "B",
+      "cycle_id": "5.6-cycle-9",
+      "cycle_sequence": 9,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "复合函数的导数",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "最值讨论与值域之具体函数",
+        "常用函数放缩"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 单调性、极值、最值的分析"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "math",
+        "bb",
+        "R",
+        "f"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "c5ad18757598b5459e084db2a6fac26ae1c94900416852bf4ea7966991b56848",
+      "source_question_text_sha256": "c5ad18757598b5459e084db2a6fac26ae1c94900416852bf4ea7966991b56848",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "c5ad18757598b5459e084db2a6fac26ae1c94900416852bf4ea7966991b56848",
+        "learner_question_text_sha256": "c5ad18757598b5459e084db2a6fac26ae1c94900416852bf4ea7966991b56848"
+      },
+      "question_signal_excerpt": "math、bb、R、f",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-805b2ba078136e23",
+      "item_id": "Q-805b2ba078136e23",
+      "ordinal": 38,
+      "ordinal_in_cycle": 10,
+      "kind": "abc_exercise",
+      "label": "B15",
+      "group": "B",
+      "cycle_id": "5.6-cycle-9",
+      "cycle_sequence": 9,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "复合函数的导数",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "最值讨论与值域之具体函数",
+        "常用函数放缩"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 切线的计算及应用"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "切线",
+        "f",
+        "x",
+        "ax"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "b3653a3ef128d0e62a89e5301ac6811c0885de27677b835502d78a2278567e4b",
+      "source_question_text_sha256": "b3653a3ef128d0e62a89e5301ac6811c0885de27677b835502d78a2278567e4b",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "b3653a3ef128d0e62a89e5301ac6811c0885de27677b835502d78a2278567e4b",
+        "learner_question_text_sha256": "b3653a3ef128d0e62a89e5301ac6811c0885de27677b835502d78a2278567e4b"
+      },
+      "question_signal_excerpt": "切线、f、x、ax",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-60fedd27301e4965",
+      "item_id": "Q-60fedd27301e4965",
+      "ordinal": 39,
+      "ordinal_in_cycle": 11,
+      "kind": "abc_exercise",
+      "label": "B16",
+      "group": "B",
+      "cycle_id": "5.6-cycle-9",
+      "cycle_sequence": 9,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "复合函数的导数",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "最值讨论与值域之具体函数",
+        "常用函数放缩"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 单调性、极值、最值的分析",
+        "类型Ⅱ 切线的计算及应用"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "切线",
+        "f",
+        "x",
+        "\\mathrm",
+        "e"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "d6fdeb14511f007ae8e96ce5e5b856edd25d3d2c5ac956cd07c8a8168d1dd7a6",
+      "source_question_text_sha256": "d6fdeb14511f007ae8e96ce5e5b856edd25d3d2c5ac956cd07c8a8168d1dd7a6",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "d6fdeb14511f007ae8e96ce5e5b856edd25d3d2c5ac956cd07c8a8168d1dd7a6",
+        "learner_question_text_sha256": "d6fdeb14511f007ae8e96ce5e5b856edd25d3d2c5ac956cd07c8a8168d1dd7a6"
+      },
+      "question_signal_excerpt": "切线、f、x、\\mathrm、e",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-29fd0e6c65b835f8",
+      "item_id": "Q-29fd0e6c65b835f8",
+      "ordinal": 40,
+      "ordinal_in_cycle": 12,
+      "kind": "abc_exercise",
+      "label": "B17",
+      "group": "B",
+      "cycle_id": "5.6-cycle-9",
+      "cycle_sequence": 9,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "复合函数的导数",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "最值讨论与值域之具体函数",
+        "常用函数放缩"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型IV 讨论单调性"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "单调",
+        "f",
+        "x",
+        "ax",
+        "a"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "396e5dd9b372c7e5d3c7faf4e9c069ab810aab7719b86a1697b510d78beb6905",
+      "source_question_text_sha256": "396e5dd9b372c7e5d3c7faf4e9c069ab810aab7719b86a1697b510d78beb6905",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "396e5dd9b372c7e5d3c7faf4e9c069ab810aab7719b86a1697b510d78beb6905",
+        "learner_question_text_sha256": "396e5dd9b372c7e5d3c7faf4e9c069ab810aab7719b86a1697b510d78beb6905"
+      },
+      "question_signal_excerpt": "单调、f、x、ax、a",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-3a4ca9e2af04eea7",
+      "item_id": "Q-3a4ca9e2af04eea7",
+      "ordinal": 41,
+      "ordinal_in_cycle": 13,
+      "kind": "abc_exercise",
+      "label": "B18",
+      "group": "B",
+      "cycle_id": "5.6-cycle-9",
+      "cycle_sequence": 9,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "复合函数的导数",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "最值讨论与值域之具体函数",
+        "常用函数放缩"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型IV 讨论单调性"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "单调",
+        "f",
+        "x",
+        "\\mathrm",
+        "e"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "72a9a72ffca18ae930b2ccd26e4c1806e60cde6c60dd63980096a8480d15459a",
+      "source_question_text_sha256": "72a9a72ffca18ae930b2ccd26e4c1806e60cde6c60dd63980096a8480d15459a",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "72a9a72ffca18ae930b2ccd26e4c1806e60cde6c60dd63980096a8480d15459a",
+        "learner_question_text_sha256": "72a9a72ffca18ae930b2ccd26e4c1806e60cde6c60dd63980096a8480d15459a"
+      },
+      "question_signal_excerpt": "单调、f、x、\\mathrm、e",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-04a3bf0c2bf84e1a",
+      "item_id": "Q-04a3bf0c2bf84e1a",
+      "ordinal": 42,
+      "ordinal_in_cycle": 14,
+      "kind": "abc_exercise",
+      "label": "B19",
+      "group": "B",
+      "cycle_id": "5.6-cycle-9",
+      "cycle_sequence": 9,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "复合函数的导数",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "最值讨论与值域之具体函数",
+        "常用函数放缩"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅶ 综合大题",
+        "类型Ⅱ 切线的计算及应用",
+        "类型Ⅲ 单调性、极值、最值的分析"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "切线",
+        "单调",
+        "极值",
+        "f",
+        "x",
+        "\\frac"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "b67d9f1e1f305bebdc48214698382fd0c16f478d8b3370f21387e7595269245d",
+      "source_question_text_sha256": "b67d9f1e1f305bebdc48214698382fd0c16f478d8b3370f21387e7595269245d",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "b67d9f1e1f305bebdc48214698382fd0c16f478d8b3370f21387e7595269245d",
+        "learner_question_text_sha256": "b67d9f1e1f305bebdc48214698382fd0c16f478d8b3370f21387e7595269245d"
+      },
+      "question_signal_excerpt": "切线、单调、极值、f、x、\\frac",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-9977da2fc478c076",
+      "item_id": "Q-9977da2fc478c076",
+      "ordinal": 43,
+      "ordinal_in_cycle": 15,
+      "kind": "abc_exercise",
+      "label": "B20",
+      "group": "B",
+      "cycle_id": "5.6-cycle-9",
+      "cycle_sequence": 9,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "复合函数的导数",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "最值讨论与值域之具体函数",
+        "常用函数放缩"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型IV 讨论单调性"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "单调",
+        "f",
+        "x",
+        "e"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "2579ca62d53f8ef3ef4d32948fc4784a666de6344d3b7e25e38eedf7215f67e0",
+      "source_question_text_sha256": "2579ca62d53f8ef3ef4d32948fc4784a666de6344d3b7e25e38eedf7215f67e0",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "2579ca62d53f8ef3ef4d32948fc4784a666de6344d3b7e25e38eedf7215f67e0",
+        "learner_question_text_sha256": "2579ca62d53f8ef3ef4d32948fc4784a666de6344d3b7e25e38eedf7215f67e0"
+      },
+      "question_signal_excerpt": "单调、f、x、e",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-e5328486887b2750",
+      "item_id": "Q-e5328486887b2750",
+      "ordinal": 44,
+      "ordinal_in_cycle": 1,
+      "kind": "abc_exercise",
+      "label": "C21",
+      "group": "C",
+      "cycle_id": "5.6-cycle-10",
+      "cycle_sequence": 10,
+      "cycle_title": "C组 拓展提升",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "复合函数的导数",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "最值讨论与值域之具体函数",
+        "常用函数放缩"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 单调性、极值、最值的分析"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "f",
+        "x",
+        "a",
+        "\\ln"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "ede1ccfebe815dbb19123d978e487ef0221ea8b7b30edfd4a3937442f9d88cf6",
+      "source_question_text_sha256": "ede1ccfebe815dbb19123d978e487ef0221ea8b7b30edfd4a3937442f9d88cf6",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "ede1ccfebe815dbb19123d978e487ef0221ea8b7b30edfd4a3937442f9d88cf6",
+        "learner_question_text_sha256": "ede1ccfebe815dbb19123d978e487ef0221ea8b7b30edfd4a3937442f9d88cf6"
+      },
+      "question_signal_excerpt": "f、x、a、\\ln",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-a28d0d2dcdf91771",
+      "item_id": "Q-a28d0d2dcdf91771",
+      "ordinal": 45,
+      "ordinal_in_cycle": 2,
+      "kind": "abc_exercise",
+      "label": "C22",
+      "group": "C",
+      "cycle_id": "5.6-cycle-10",
+      "cycle_sequence": 10,
+      "cycle_title": "C组 拓展提升",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "复合函数的导数",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "最值讨论与值域之具体函数",
+        "常用函数放缩"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型VI 三次函数",
+        "类型Ⅲ 单调性、极值、最值的分析"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "a",
+        "neq",
+        "x"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "3ce062222a3d678221d2028455f9787fbfe42f7231d3a803ede272fb402410f2",
+      "source_question_text_sha256": "3ce062222a3d678221d2028455f9787fbfe42f7231d3a803ede272fb402410f2",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "3ce062222a3d678221d2028455f9787fbfe42f7231d3a803ede272fb402410f2",
+        "learner_question_text_sha256": "3ce062222a3d678221d2028455f9787fbfe42f7231d3a803ede272fb402410f2"
+      },
+      "question_signal_excerpt": "a、neq、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-36f65c68e05bd9f0",
+      "item_id": "Q-36f65c68e05bd9f0",
+      "ordinal": 46,
+      "ordinal_in_cycle": 3,
+      "kind": "abc_exercise",
+      "label": "C23",
+      "group": "C",
+      "cycle_id": "5.6-cycle-10",
+      "cycle_sequence": 10,
+      "cycle_title": "C组 拓展提升",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "复合函数的导数",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "最值讨论与值域之具体函数",
+        "常用函数放缩"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 切线的计算及应用",
+        "类型Ⅲ 单调性、极值、最值的分析"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "直线",
+        "切线",
+        "范围",
+        "面积",
+        "l_",
+        "f",
+        "x"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "f07ce4c3e5c90b41b67d76ef8e71a942791e6f3d694b479b2ff1532e0f0e54a8",
+      "source_question_text_sha256": "f07ce4c3e5c90b41b67d76ef8e71a942791e6f3d694b479b2ff1532e0f0e54a8",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "f07ce4c3e5c90b41b67d76ef8e71a942791e6f3d694b479b2ff1532e0f0e54a8",
+        "learner_question_text_sha256": "f07ce4c3e5c90b41b67d76ef8e71a942791e6f3d694b479b2ff1532e0f0e54a8"
+      },
+      "question_signal_excerpt": "直线、切线、范围、面积、l_、f、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-6d064904705e8a0f",
+      "item_id": "Q-6d064904705e8a0f",
+      "ordinal": 47,
+      "ordinal_in_cycle": 4,
+      "kind": "abc_exercise",
+      "label": "C24",
+      "group": "C",
+      "cycle_id": "5.6-cycle-10",
+      "cycle_sequence": 10,
+      "cycle_title": "C组 拓展提升",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "复合函数的导数",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "最值讨论与值域之具体函数",
+        "常用函数放缩"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅶ 综合大题",
+        "类型IV 讨论单调性",
+        "类型V 不等式证明"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "单调",
+        "证明",
+        "f",
+        "x",
+        "a",
+        "\\mathrm"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "aa87e95fd27ba99587397ecb9c315042cf440d87877188522a1e59632b67414f",
+      "source_question_text_sha256": "aa87e95fd27ba99587397ecb9c315042cf440d87877188522a1e59632b67414f",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "aa87e95fd27ba99587397ecb9c315042cf440d87877188522a1e59632b67414f",
+        "learner_question_text_sha256": "aa87e95fd27ba99587397ecb9c315042cf440d87877188522a1e59632b67414f"
+      },
+      "question_signal_excerpt": "单调、证明、f、x、a、\\mathrm",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-53ff1ec32cedf22c",
+      "item_id": "Q-53ff1ec32cedf22c",
+      "ordinal": 48,
+      "ordinal_in_cycle": 5,
+      "kind": "abc_exercise",
+      "label": "C25",
+      "group": "C",
+      "cycle_id": "5.6-cycle-10",
+      "cycle_sequence": 10,
+      "cycle_title": "C组 拓展提升",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "复合函数的导数",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "最值讨论与值域之具体函数",
+        "常用函数放缩"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅶ 综合大题",
+        "类型Ⅲ 单调性、极值、最值的分析",
+        "类型V 不等式证明"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "极值",
+        "证明",
+        "f",
+        "x",
+        "\\ln",
+        "a"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "360fc2f20eadb8ae0a90749ca116b9839c062b630d7f17a75b83f7ad691bbb10",
+      "source_question_text_sha256": "360fc2f20eadb8ae0a90749ca116b9839c062b630d7f17a75b83f7ad691bbb10",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "360fc2f20eadb8ae0a90749ca116b9839c062b630d7f17a75b83f7ad691bbb10",
+        "learner_question_text_sha256": "360fc2f20eadb8ae0a90749ca116b9839c062b630d7f17a75b83f7ad691bbb10"
+      },
+      "question_signal_excerpt": "极值、证明、f、x、\\ln、a",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-4dd06e863223c02d",
+      "item_id": "Q-4dd06e863223c02d",
+      "ordinal": 49,
+      "ordinal_in_cycle": 6,
+      "kind": "abc_exercise",
+      "label": "C26",
+      "group": "C",
+      "cycle_id": "5.6-cycle-10",
+      "cycle_sequence": 10,
+      "cycle_title": "C组 拓展提升",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "复合函数的导数",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "最值讨论与值域之具体函数",
+        "常用函数放缩"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型VI 三次函数",
+        "类型Ⅲ 单调性、极值、最值的分析",
+        "类型Ⅶ 综合大题"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "单调",
+        "f",
+        "x",
+        "ax"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "04a66a188adee9ebcf226207013533fcb6fdf902fdee70e78bf9063bfbb13667",
+      "source_question_text_sha256": "04a66a188adee9ebcf226207013533fcb6fdf902fdee70e78bf9063bfbb13667",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "04a66a188adee9ebcf226207013533fcb6fdf902fdee70e78bf9063bfbb13667",
+        "learner_question_text_sha256": "04a66a188adee9ebcf226207013533fcb6fdf902fdee70e78bf9063bfbb13667"
+      },
+      "question_signal_excerpt": "单调、f、x、ax",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-86173eceb08d5444",
+      "item_id": "Q-86173eceb08d5444",
+      "ordinal": 50,
+      "ordinal_in_cycle": 7,
+      "kind": "abc_exercise",
+      "label": "C27",
+      "group": "C",
+      "cycle_id": "5.6-cycle-10",
+      "cycle_sequence": 10,
+      "cycle_title": "C组 拓展提升",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "复合函数的导数",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "最值讨论与值域之具体函数",
+        "常用函数放缩"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.2 复合函数的导数",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅶ 综合大题",
+        "类型IV 讨论单调性",
+        "类型V 不等式证明"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "对称",
+        "证明",
+        "范围",
+        "f",
+        "x",
+        "\\ln",
+        "\\frac"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "1fd8ec5a79998c6324a8dbba72ee6c2c8f04da7b84401f38be4e5fc68d92de74",
+      "source_question_text_sha256": "1fd8ec5a79998c6324a8dbba72ee6c2c8f04da7b84401f38be4e5fc68d92de74",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "1fd8ec5a79998c6324a8dbba72ee6c2c8f04da7b84401f38be4e5fc68d92de74",
+        "learner_question_text_sha256": "1fd8ec5a79998c6324a8dbba72ee6c2c8f04da7b84401f38be4e5fc68d92de74"
+      },
+      "question_signal_excerpt": "对称、证明、范围、f、x、\\ln、\\frac",
+      "source_blocked": false
+    }
+  ],
+  "route_versions": [
+    {
+      "version": 1,
+      "route_hash": "ea21d4a89a64dd568107a56a544ae4b7efdf852c89d5fd5a93e09fbe86c27001"
+    },
+    {
+      "version": 2,
+      "route_hash": "7acdeac79dbb56e3ad99ea25d4d5cad3a0620b077137108786d9de8580ce6f6d"
+    },
+    {
+      "version": 3,
+      "route_hash": "d0ae1ca7fd26a78f5d8d5fdf9c1798d56de5180d6d88b971cc48f02432adf282"
+    }
+  ],
+  "final_route_hash": "d0ae1ca7fd26a78f5d8d5fdf9c1798d56de5180d6d88b971cc48f02432adf282",
+  "simulation": {
+    "protocol": "five-round-five-persona-v3-answer-isolated",
+    "generation_mode": "synthetic_route_stress_from_actual_item_features",
+    "rounds": [
+      {
+        "round": 1,
+        "purpose": "baseline_entry",
+        "route_version": 1,
+        "route_hash": "ea21d4a89a64dd568107a56a544ae4b7efdf852c89d5fd5a93e09fbe86c27001",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 50,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 50,
+            "blocked": 10
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 50,
+            "blocked": 8
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 50,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 50,
+            "blocked": 27
+          }
+        ],
+        "failed_item_keys": [
+          "LI:6d1510b6259bdc46",
+          "LI:8be3804c0082ca8e",
+          "LI:ccc49d82555c4377",
+          "LI:f9b04feb4e35b426",
+          "Q:Q-04a3bf0c2bf84e1a",
+          "Q:Q-133140858cac9038",
+          "Q:Q-19787a3c6abb0464",
+          "Q:Q-23a417361e80e6fb",
+          "Q:Q-29fd0e6c65b835f8",
+          "Q:Q-36f65c68e05bd9f0",
+          "Q:Q-37f9e290e239bd35",
+          "Q:Q-3a4ca9e2af04eea7",
+          "Q:Q-3c6fc8d5339a2f60",
+          "Q:Q-3fb022d065e9e136",
+          "Q:Q-4dd06e863223c02d",
+          "Q:Q-53ff1ec32cedf22c",
+          "Q:Q-5faa974baf32bf05",
+          "Q:Q-60fedd27301e4965",
+          "Q:Q-6373b56444748c98",
+          "Q:Q-6d064904705e8a0f",
+          "Q:Q-7533f0bbf3d154f5",
+          "Q:Q-77e1281ea72be71a",
+          "Q:Q-7f03de694c3a2c81",
+          "Q:Q-805b2ba078136e23",
+          "Q:Q-86173eceb08d5444",
+          "Q:Q-9977da2fc478c076",
+          "Q:Q-a28d0d2dcdf91771",
+          "Q:Q-ca5ecaa1a1685ba0",
+          "Q:Q-d49a403549d51dbe",
+          "Q:Q-e4a9fd43fed0d3cc",
+          "Q:Q-e5328486887b2750"
+        ],
+        "route_repairs": [
+          {
+            "item_keys": [
+              "Q:Q-04a3bf0c2bf84e1a",
+              "Q:Q-36f65c68e05bd9f0",
+              "Q:Q-3fb022d065e9e136",
+              "Q:Q-4dd06e863223c02d",
+              "Q:Q-53ff1ec32cedf22c",
+              "Q:Q-60fedd27301e4965",
+              "Q:Q-6d064904705e8a0f",
+              "Q:Q-77e1281ea72be71a",
+              "Q:Q-86173eceb08d5444",
+              "Q:Q-a28d0d2dcdf91771"
+            ],
+            "field": "recognition_cues",
+            "before": "第1轮冻结尝试记录了 recognition-weak 的首个阻断。",
+            "after": "下一轮只加入 recognition-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 10 题；不是随机题号注入。"
+          },
+          {
+            "item_keys": [
+              "LI:6d1510b6259bdc46",
+              "LI:8be3804c0082ca8e",
+              "LI:ccc49d82555c4377",
+              "LI:f9b04feb4e35b426",
+              "Q:Q-36f65c68e05bd9f0",
+              "Q:Q-3fb022d065e9e136",
+              "Q:Q-77e1281ea72be71a",
+              "Q:Q-86173eceb08d5444"
+            ],
+            "field": "continuation_checkpoints",
+            "before": "第1轮冻结尝试记录了 algebra-weak 的首个阻断。",
+            "after": "下一轮只加入 algebra-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 8 题；不是随机题号注入。"
+          },
+          {
+            "item_keys": [
+              "Q:Q-04a3bf0c2bf84e1a",
+              "Q:Q-133140858cac9038",
+              "Q:Q-19787a3c6abb0464",
+              "Q:Q-23a417361e80e6fb",
+              "Q:Q-29fd0e6c65b835f8",
+              "Q:Q-36f65c68e05bd9f0",
+              "Q:Q-37f9e290e239bd35",
+              "Q:Q-3a4ca9e2af04eea7",
+              "Q:Q-3c6fc8d5339a2f60",
+              "Q:Q-3fb022d065e9e136",
+              "Q:Q-4dd06e863223c02d",
+              "Q:Q-53ff1ec32cedf22c",
+              "Q:Q-5faa974baf32bf05",
+              "Q:Q-60fedd27301e4965",
+              "Q:Q-6373b56444748c98",
+              "Q:Q-6d064904705e8a0f",
+              "Q:Q-7533f0bbf3d154f5",
+              "Q:Q-77e1281ea72be71a",
+              "Q:Q-7f03de694c3a2c81",
+              "Q:Q-805b2ba078136e23",
+              "Q:Q-86173eceb08d5444",
+              "Q:Q-9977da2fc478c076",
+              "Q:Q-a28d0d2dcdf91771",
+              "Q:Q-ca5ecaa1a1685ba0",
+              "Q:Q-d49a403549d51dbe",
+              "Q:Q-e4a9fd43fed0d3cc",
+              "Q:Q-e5328486887b2750"
+            ],
+            "field": "independent_self_check",
+            "before": "第1轮冻结尝试记录了 self-check-weak 的首个阻断。",
+            "after": "下一轮只加入 self-check-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 27 题；不是随机题号注入。"
+          }
+        ]
+      },
+      {
+        "round": 2,
+        "purpose": "prerequisite_repair",
+        "route_version": 2,
+        "route_hash": "7acdeac79dbb56e3ad99ea25d4d5cad3a0620b077137108786d9de8580ce6f6d",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 50,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 50,
+            "blocked": 0
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 50,
+            "blocked": 0
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 50,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 50,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [],
+        "route_repairs": []
+      },
+      {
+        "round": 3,
+        "purpose": "continuation_transfer",
+        "route_version": 2,
+        "route_hash": "7acdeac79dbb56e3ad99ea25d4d5cad3a0620b077137108786d9de8580ce6f6d",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 50,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 50,
+            "blocked": 9
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 50,
+            "blocked": 9
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 50,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 50,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [
+          "LI:1aced95c1fb17689",
+          "LI:50ceb76c09ec09a2",
+          "LI:6d1510b6259bdc46",
+          "LI:89178ddf0d4a8766",
+          "LI:9015508f30f49ddd",
+          "LI:96ba4cb8767a5c8b",
+          "LI:97362f898184b4d7",
+          "LI:ccc49d82555c4377",
+          "LI:df2b1ac00bf2f701"
+        ],
+        "route_repairs": [
+          {
+            "item_keys": [
+              "LI:1aced95c1fb17689",
+              "LI:50ceb76c09ec09a2",
+              "LI:6d1510b6259bdc46",
+              "LI:89178ddf0d4a8766",
+              "LI:9015508f30f49ddd",
+              "LI:96ba4cb8767a5c8b",
+              "LI:97362f898184b4d7",
+              "LI:ccc49d82555c4377",
+              "LI:df2b1ac00bf2f701"
+            ],
+            "field": "recognition_cues",
+            "before": "第3轮冻结尝试记录了 recognition-weak 的首个阻断。",
+            "after": "下一轮只加入 recognition-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 9 题；不是随机题号注入。"
+          },
+          {
+            "item_keys": [
+              "LI:1aced95c1fb17689",
+              "LI:50ceb76c09ec09a2",
+              "LI:6d1510b6259bdc46",
+              "LI:89178ddf0d4a8766",
+              "LI:9015508f30f49ddd",
+              "LI:96ba4cb8767a5c8b",
+              "LI:97362f898184b4d7",
+              "LI:ccc49d82555c4377",
+              "LI:df2b1ac00bf2f701"
+            ],
+            "field": "continuation_checkpoints",
+            "before": "第3轮冻结尝试记录了 algebra-weak 的首个阻断。",
+            "after": "下一轮只加入 algebra-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 9 题；不是随机题号注入。"
+          }
+        ]
+      },
+      {
+        "round": 4,
+        "purpose": "mixed_retrieval",
+        "route_version": 3,
+        "route_hash": "d0ae1ca7fd26a78f5d8d5fdf9c1798d56de5180d6d88b971cc48f02432adf282",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 50,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 50,
+            "blocked": 0
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 50,
+            "blocked": 0
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 50,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 50,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [],
+        "route_repairs": []
+      },
+      {
+        "round": 5,
+        "purpose": "fresh_context",
+        "route_version": 3,
+        "route_hash": "d0ae1ca7fd26a78f5d8d5fdf9c1798d56de5180d6d88b971cc48f02432adf282",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 50,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 50,
+            "blocked": 0
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 50,
+            "blocked": 0
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 50,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 50,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [],
+        "route_repairs": []
+      }
+    ],
+    "expected_attempts_per_item": 25,
+    "actual_attempts_per_item": 25,
+    "unresolved_item_keys": [],
+    "mathematical_correctness": "not_evaluated_no_final_answer",
+    "mastery_claimed": false,
+    "status": "passed"
+  },
+  "summary": {
+    "items": 50,
+    "attempts": 1250,
+    "route_assessments": 1250,
+    "rounds": 5,
+    "personas_per_round": 5,
+    "repairs": 5,
+    "round_5_failed_items": 0,
+    "validator_errors": []
+  },
+  "human_learning_status": "remote_math_mcp_only",
+  "cold_24h_retest": "not_run",
+  "mastery_claimed": false,
+  "claim_scope": "route_actionability_only",
+  "mathematical_assessment_status": "not_run",
+  "route_audit_status": "passed",
+  "status": "passed"
+}

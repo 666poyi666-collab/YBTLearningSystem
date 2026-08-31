@@ -39,13 +39,27 @@
           "image_sha256": "a71a426b133c3fe176d430f4ebd115fc149730bd53af1aa37377f592963b7f80",
           "confidence": "E2",
           "structured": {
-            "objects": [],
-            "relations": [],
-            "coordinates": [],
-            "ranges": [],
+            "objects": [
+              "x轴、y轴、具有两个转折点的曲线、三条竖直虚线"
+            ],
+            "relations": [
+              "曲线在x=2处达到局部极大",
+              "曲线随后下降并在x=4处达到局部极小",
+              "越过x=4后曲线快速上升到x=6对应位置"
+            ],
+            "coordinates": [
+              "局部极大点横坐标2",
+              "局部极小点横坐标4"
+            ],
+            "ranges": [
+              "横轴标记2、4、6"
+            ],
             "text": [
-              "y",
               "x",
+              "y",
+              "2",
+              "4",
+              "6",
               "O"
             ],
             "uncertainties": [],
@@ -54,13 +68,27 @@
         }
       ],
       "vision_sidecar": {
-        "objects": [],
-        "relations": [],
-        "coordinates": [],
-        "ranges": [],
+        "objects": [
+          "x轴、y轴、具有两个转折点的曲线、三条竖直虚线"
+        ],
+        "relations": [
+          "曲线在x=2处达到局部极大",
+          "曲线随后下降并在x=4处达到局部极小",
+          "越过x=4后曲线快速上升到x=6对应位置"
+        ],
+        "coordinates": [
+          "局部极大点横坐标2",
+          "局部极小点横坐标4"
+        ],
+        "ranges": [
+          "横轴标记2、4、6"
+        ],
         "text": [
-          "y",
           "x",
+          "y",
+          "2",
+          "4",
+          "6",
           "O"
         ],
         "uncertainties": [],
@@ -153,25 +181,28 @@
           "confidence": "E2",
           "structured": {
             "objects": [
-              "坐标原点O",
-              "y轴",
-              "x轴",
-              "曲线y=f(x)"
+              "x轴、y轴、函数曲线y=f(x)的左右两支"
             ],
             "relations": [
-              "曲线y=f(x)与y轴交于原点O",
-              "曲线y=f(x)与x轴交于右侧某点"
+              "左支位于x轴上方并在接近y轴左侧时陡升",
+              "右支从y轴右侧高处单调下降并穿过x轴"
             ],
             "coordinates": [
-              "O(0,0)"
+              "O为坐标原点"
             ],
-            "ranges": [],
+            "ranges": [
+              "左支位于x<0区域",
+              "右支位于x>0区域"
+            ],
             "text": [
-              "y",
+              "y=f(x)",
               "x",
-              "y = f(x)"
+              "y",
+              "O"
             ],
-            "uncertainties": [],
+            "uncertainties": [
+              "图中未用线型标出渐近线"
+            ],
             "confidence": "E2"
           }
         },
@@ -180,21 +211,24 @@
           "confidence": "E2",
           "structured": {
             "objects": [
-              "坐标轴",
-              "曲线",
-              "原点"
+              "x轴、y轴、分居y轴两侧的两条曲线支"
             ],
             "relations": [
-              "曲线过原点O",
-              "曲线在第二、四象限"
+              "左支位于x轴下方并在接近y轴左侧时向下陡降",
+              "右支位于x轴上方并从y轴右侧高处向右下降",
+              "两支向远离y轴方向接近x轴"
             ],
             "coordinates": [
-              "O(0,0)"
+              "O为坐标原点"
             ],
-            "ranges": [],
+            "ranges": [
+              "左支位于x<0且y<0",
+              "右支位于x>0且y>0"
+            ],
             "text": [
-              "y",
               "x",
+              "y",
+              "O",
               "A"
             ],
             "uncertainties": [],
@@ -205,14 +239,23 @@
           "image_sha256": "c05fcd2f7410c30b2edc7ed8cbd66cffdd1e3e3672d2f51c09b5b6f1fb36016e",
           "confidence": "E2",
           "structured": {
-            "objects": [],
-            "relations": [],
-            "coordinates": [],
-            "ranges": [],
+            "objects": [
+              "x轴、y轴、分居y轴两侧的两条曲线支"
+            ],
+            "relations": [
+              "左右两支均位于x轴下方",
+              "两支在接近y轴时向下陡降，在远离y轴时接近x轴"
+            ],
+            "coordinates": [
+              "O为坐标原点"
+            ],
+            "ranges": [
+              "两支均满足y<0"
+            ],
             "text": [
+              "x",
               "y",
               "O",
-              "x",
               "B"
             ],
             "uncertainties": [],
@@ -223,16 +266,27 @@
           "image_sha256": "1302edcb7b21fd521981d928141b077d898f5a0fc1c5e93c060e3246708415f8",
           "confidence": "E2",
           "structured": {
-            "objects": [],
-            "relations": [],
-            "coordinates": [],
-            "ranges": [],
+            "objects": [
+              "x轴、y轴、分居y轴两侧的两条曲线支"
+            ],
+            "relations": [
+              "左右两支均位于x轴上方",
+              "两支在接近y轴时向上陡升，在远离y轴时接近x轴"
+            ],
+            "coordinates": [
+              "O为坐标原点"
+            ],
+            "ranges": [
+              "两支均满足y>0"
+            ],
             "text": [
-              "y",
               "x",
+              "y",
               "O"
             ],
-            "uncertainties": [],
+            "uncertainties": [
+              "选项字母未包含在裁剪范围内"
+            ],
             "confidence": "E2"
           }
         },
@@ -240,41 +294,57 @@
           "image_sha256": "a5e4d7f2cd406f3178f1ab68ac09b46ec48a849183982cc999ab857ebbcb2c85",
           "confidence": "E2",
           "structured": {
-            "objects": [],
-            "relations": [],
-            "coordinates": [],
-            "ranges": [],
+            "objects": [
+              "x轴、y轴、分居y轴两侧的两条曲线支"
+            ],
+            "relations": [
+              "左支位于x轴上方并在接近y轴左侧时向上陡升",
+              "右支位于x轴下方并从y轴右侧低处向右上升",
+              "两支向远离y轴方向接近x轴"
+            ],
+            "coordinates": [
+              "O为坐标原点"
+            ],
+            "ranges": [
+              "左支位于x<0且y>0",
+              "右支位于x>0且y<0"
+            ],
             "text": [
-              "y",
               "x",
+              "y",
               "O"
             ],
-            "uncertainties": [],
+            "uncertainties": [
+              "选项字母未包含在裁剪范围内"
+            ],
             "confidence": "E2"
           }
         }
       ],
       "vision_sidecar": {
         "objects": [
-          "坐标原点O",
-          "y轴",
-          "x轴",
-          "曲线y=f(x)"
+          "x轴、y轴、函数曲线y=f(x)的左右两支"
         ],
         "relations": [
-          "曲线y=f(x)与y轴交于原点O",
-          "曲线y=f(x)与x轴交于右侧某点"
+          "左支位于x轴上方并在接近y轴左侧时陡升",
+          "右支从y轴右侧高处单调下降并穿过x轴"
         ],
         "coordinates": [
-          "O(0,0)"
+          "O为坐标原点"
         ],
-        "ranges": [],
+        "ranges": [
+          "左支位于x<0区域",
+          "右支位于x>0区域"
+        ],
         "text": [
-          "y",
+          "y=f(x)",
           "x",
-          "y = f(x)"
+          "y",
+          "O"
         ],
-        "uncertainties": [],
+        "uncertainties": [
+          "图中未用线型标出渐近线"
+        ],
         "confidence": "E2"
       },
       "evidence": [
@@ -451,28 +521,23 @@
           "image_sha256": "3f1c45fc6340a3f3bc5963b477ed800fe83dcc60814bb7a4053b8532ebc863af",
           "confidence": "E2",
           "structured": {
-            "objects": [],
-            "relations": [],
-            "coordinates": [],
-            "ranges": [],
-            "text": [
-              "y = f'(x)"
+            "objects": [
+              "x轴、y轴、曲线y=f'(x)"
             ],
-            "uncertainties": [],
-            "confidence": "E2"
-          }
-        },
-        {
-          "image_sha256": "50d641bc2d52ea91cb6651f0b750621ff24b3cde9ad42cec0d51158e2fee849d",
-          "confidence": "E2",
-          "structured": {
-            "objects": [],
-            "relations": [],
-            "coordinates": [],
-            "ranges": [],
+            "relations": [
+              "曲线从左下方上升并穿过x=-2处",
+              "在-2与-1之间达到局部极大后下降并穿过x=-1处",
+              "曲线在O附近达到局部极小，随后上升并穿过x=1处"
+            ],
+            "coordinates": [
+              "x轴交点横坐标-2、-1、1",
+              "O为坐标原点"
+            ],
+            "ranges": [
+              "横轴标记-2、-1、1"
+            ],
             "text": [
-              "y",
-              "x",
+              "y=f'(x)",
               "-2",
               "-1",
               "1",
@@ -483,16 +548,28 @@
           }
         },
         {
-          "image_sha256": "567b33b2c471de7dde5141c6c6a31eee9c55dd27e6effd033b0dc0d703ae0383",
+          "image_sha256": "50d641bc2d52ea91cb6651f0b750621ff24b3cde9ad42cec0d51158e2fee849d",
           "confidence": "E2",
           "structured": {
-            "objects": [],
-            "relations": [],
-            "coordinates": [],
-            "ranges": [],
+            "objects": [
+              "x轴、y轴、具有一个局部极大点和一个局部极小点的曲线"
+            ],
+            "relations": [
+              "曲线从左下方上升并在-2与0之间达到局部极大",
+              "曲线随后下降并通过O",
+              "曲线在0与1之间达到局部极小后上升并在x=1处附近穿过x轴"
+            ],
+            "coordinates": [
+              "O(0,0)"
+            ],
+            "ranges": [
+              "横轴标记-2、1"
+            ],
             "text": [
-              "y",
               "x",
+              "y",
+              "-2",
+              "1",
               "O"
             ],
             "uncertainties": [],
@@ -500,23 +577,67 @@
           }
         },
         {
-          "image_sha256": "721ec691d19b193e2770a6dd446dd388d21dea7cebf126b600caf1c01d2209c4",
-          "confidence": "E2",
+          "image_sha256": "567b33b2c471de7dde5141c6c6a31eee9c55dd27e6effd033b0dc0d703ae0383",
+          "confidence": "E1",
           "structured": {
-            "objects": [],
-            "relations": [],
-            "coordinates": [],
-            "ranges": [],
+            "objects": [
+              "x轴、y轴、两端向上的波动曲线"
+            ],
+            "relations": [
+              "曲线在x=-2附近有一个浅局部极小，在x=-1附近有一个局部极大",
+              "曲线通过O附近后下降，在x=1附近达到较深局部极小",
+              "越过右侧局部极小点后曲线向上"
+            ],
+            "coordinates": [
+              "O为坐标原点"
+            ],
+            "ranges": [
+              "横轴标记-2、-1、1"
+            ],
             "text": [
-              "y",
               "x",
-              "O",
+              "y",
               "-2",
               "-1",
-              "1"
+              "1",
+              "O"
             ],
-            "uncertainties": [],
-            "confidence": "E2"
+            "uncertainties": [
+              "裁剪图未用虚线标明三个转折点的精确横坐标"
+            ],
+            "confidence": "E1"
+          }
+        },
+        {
+          "image_sha256": "721ec691d19b193e2770a6dd446dd388d21dea7cebf126b600caf1c01d2209c4",
+          "confidence": "E1",
+          "structured": {
+            "objects": [
+              "x轴、y轴、两端向上的波动曲线"
+            ],
+            "relations": [
+              "曲线在-2与-1之间达到左侧局部极小",
+              "随后上升并在0与1之间达到局部极大",
+              "曲线再下降并在x=1附近达到右侧局部极小后向上"
+            ],
+            "coordinates": [
+              "O为坐标原点"
+            ],
+            "ranges": [
+              "横轴标记-2、-1、1"
+            ],
+            "text": [
+              "x",
+              "y",
+              "-2",
+              "-1",
+              "1",
+              "O"
+            ],
+            "uncertainties": [
+              "裁剪图未用虚线标明三个转折点的精确横坐标"
+            ],
+            "confidence": "E1"
           }
         },
         {
@@ -524,14 +645,26 @@
           "confidence": "E2",
           "structured": {
             "objects": [
-              "二次函数图像"
+              "x轴、y轴、两端向上的W形曲线"
             ],
-            "relations": [],
-            "coordinates": [],
-            "ranges": [],
+            "relations": [
+              "曲线在x=-1附近和x=1附近各有一个位于x轴下方的局部极小",
+              "曲线在y轴处有一个位于x轴上方的局部极大",
+              "曲线在横轴上有四个可见交点"
+            ],
+            "coordinates": [
+              "中央局部极大点横坐标为0"
+            ],
+            "ranges": [
+              "横轴标记-2、-1、1"
+            ],
             "text": [
+              "x",
               "y",
-              "x"
+              "-2",
+              "-1",
+              "1",
+              "O"
             ],
             "uncertainties": [],
             "confidence": "E2"
@@ -539,19 +672,34 @@
         }
       ],
       "vision_sidecar": {
-        "objects": [],
-        "relations": [],
-        "coordinates": [],
-        "ranges": [],
+        "objects": [
+          "x轴、y轴、曲线y=f'(x)"
+        ],
+        "relations": [
+          "曲线从左下方上升并穿过x=-2处",
+          "在-2与-1之间达到局部极大后下降并穿过x=-1处",
+          "曲线在O附近达到局部极小，随后上升并穿过x=1处"
+        ],
+        "coordinates": [
+          "x轴交点横坐标-2、-1、1",
+          "O为坐标原点"
+        ],
+        "ranges": [
+          "横轴标记-2、-1、1"
+        ],
         "text": [
-          "y = f'(x)"
+          "y=f'(x)",
+          "-2",
+          "-1",
+          "1",
+          "O"
         ],
         "uncertainties": [],
         "confidence": "E2"
       },
       "evidence": [
         "E1",
-        "E2"
+        "E1"
       ]
     },
     {

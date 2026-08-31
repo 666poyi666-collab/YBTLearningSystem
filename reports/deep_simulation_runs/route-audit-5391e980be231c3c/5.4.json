@@ -1,0 +1,2978 @@
+{
+  "schema_version": "ybt-deep-section-simulation-v3",
+  "generated_at": "2026-08-31T04:06:32.954483+00:00",
+  "chapter": 5,
+  "section": "5.4",
+  "label": "第4节 函数的极值与最大（小）值",
+  "simulation_kind": "answer_isolated_synthetic_route_stress",
+  "honesty_boundary": "Attempts test route actionability. They contain no final learner answer, so mathematical correctness and mastery are not claimed.",
+  "source_binding": {
+    "manifest_sha256": "db9d20c619d78b202750a5416105a3f8510f5b074d81eabb8a248314b585f5c6",
+    "student_learning_items_sha256": "6ab767a33661fe065a01bcb86fb0a924468e25f6ca7afd8a27cf4820b9563a16",
+    "student_packet_sha256": "8234c97fca0783f7d7ab8f378ed25d98018a28a9f4c90cc20f9bd52a074ea98a",
+    "grader_learning_packet_sha256": "9d3eb45e828480c66c361575d7f5d22233de12c5289a3f8eefc9679b526371a1",
+    "route_sha256": "f7106e8111890cf545148b44ef10f30f7dd3f93a97fed7235eb9ba50a515c1a7",
+    "learner_input_snapshot_sha256": "71c5376a223965d964ff54717dfb739aa2cdce009932cd732a1033564eb960c1"
+  },
+  "answer_isolation": {
+    "frozen_attempts_path": "reports/deep_simulation_runs/route-audit-5391e980be231c3c/frozen/5.4.jsonl.gz",
+    "frozen_attempts_sha256": "a506956f0f80bda99c254ee80f7ff793b3c45bf5d0c1fbdba747b8dc80036167",
+    "route_assessments_path": "reports/deep_simulation_runs/route-audit-5391e980be231c3c/route_assessments/5.4.jsonl.gz",
+    "route_assessments_sha256": "22d3012904e7c11d28853ec7f084a0d765b14c1c44beda6f40d02fc35f5e5cc6",
+    "learner_answer_material_loaded": false,
+    "grader_material_loaded_after_freeze": true,
+    "grader_evidence": {
+      "parsed_automatic": 14,
+      "review_required_text": 3,
+      "source_page_bound": 11,
+      "textbook_solution": 8,
+      "blocked": 0
+    },
+    "status": "passed"
+  },
+  "items": [
+    {
+      "item_key": "LI:e4a9f856e9c5d145",
+      "item_id": "e4a9f856e9c5d145",
+      "ordinal": 1,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例1",
+      "group": null,
+      "cycle_id": "5.4-cycle-1",
+      "cycle_sequence": 1,
+      "cycle_title": "函数极值的概念",
+      "course_refs": [
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）"
+      ],
+      "course_titles": [
+        "极值与极值点（基础）",
+        "极值与极值点（进阶）",
+        "不含参数的函数的单调性",
+        "含参函数单调性讨论之可因式分解型（上）"
+      ],
+      "required_course_refs": [
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）"
+      ],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）"
+      ],
+      "knowledge_refs": [
+        "5.4-k1"
+      ],
+      "type_refs": [],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "f",
+        "x"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "aeda0bdf63c00cfec4880d61160824472c0a6738164c2368486769e8227dae4b",
+      "source_question_text_sha256": "aeda0bdf63c00cfec4880d61160824472c0a6738164c2368486769e8227dae4b",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "aeda0bdf63c00cfec4880d61160824472c0a6738164c2368486769e8227dae4b",
+        "learner_question_text_sha256": "aeda0bdf63c00cfec4880d61160824472c0a6738164c2368486769e8227dae4b"
+      },
+      "question_signal_excerpt": "f、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:b352b3cabe43637f",
+      "item_id": "b352b3cabe43637f",
+      "ordinal": 2,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例2",
+      "group": null,
+      "cycle_id": "5.4-cycle-2",
+      "cycle_sequence": 2,
+      "cycle_title": "函数极值与导数的关系",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "极值与极值点（进阶）"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）"
+      ],
+      "knowledge_refs": [
+        "5.4-k2"
+      ],
+      "type_refs": [],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "极值",
+        "f",
+        "x",
+        "\\frac"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "29fb009beef4dcd5064a22e5d8d6b937222d24a09e94e6b40c323d3ac433f476",
+      "source_question_text_sha256": "29fb009beef4dcd5064a22e5d8d6b937222d24a09e94e6b40c323d3ac433f476",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "29fb009beef4dcd5064a22e5d8d6b937222d24a09e94e6b40c323d3ac433f476",
+        "learner_question_text_sha256": "29fb009beef4dcd5064a22e5d8d6b937222d24a09e94e6b40c323d3ac433f476"
+      },
+      "question_signal_excerpt": "极值、f、x、\\frac",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:87e5b4af938c5b46",
+      "item_id": "87e5b4af938c5b46",
+      "ordinal": 3,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例3",
+      "group": null,
+      "cycle_id": "5.4-cycle-3",
+      "cycle_sequence": 3,
+      "cycle_title": "函数的最大值与最小值",
+      "course_refs": [
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）"
+      ],
+      "course_titles": [
+        "最值讨论与值域之具体函数",
+        "最值讨论与值域之含参函数",
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "极值与极值点（进阶）"
+      ],
+      "required_course_refs": [
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）"
+      ],
+      "knowledge_refs": [
+        "5.4-k3"
+      ],
+      "type_refs": [],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "y",
+        "f",
+        "x"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "VISION_VERIFIED",
+        "image_refs": [
+          {
+            "ref": "imgs/img_in_image_box_793_739_1015_969.jpg",
+            "path": "data/ocr_live_current/chapter5_95/imgs/img_in_image_box_793_739_1015_969.jpg",
+            "exists": true
+          }
+        ]
+      },
+      "question_text_sha256": "df83e757ece94031f7545d634aed98b2204d589c915df9c3cdce2e3519398105",
+      "source_question_text_sha256": "df83e757ece94031f7545d634aed98b2204d589c915df9c3cdce2e3519398105",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "df83e757ece94031f7545d634aed98b2204d589c915df9c3cdce2e3519398105",
+        "learner_question_text_sha256": "df83e757ece94031f7545d634aed98b2204d589c915df9c3cdce2e3519398105"
+      },
+      "question_signal_excerpt": "y、f、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:983631d81644456f",
+      "item_id": "983631d81644456f",
+      "ordinal": 4,
+      "ordinal_in_cycle": 2,
+      "kind": "worked_example",
+      "label": "例4",
+      "group": null,
+      "cycle_id": "5.4-cycle-3",
+      "cycle_sequence": 3,
+      "cycle_title": "函数的最大值与最小值",
+      "course_refs": [
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数",
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）"
+      ],
+      "course_titles": [
+        "最值讨论与值域之具体函数",
+        "最值讨论与值域之含参函数",
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "极值与极值点（进阶）"
+      ],
+      "required_course_refs": [
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）"
+      ],
+      "knowledge_refs": [
+        "5.4-k3"
+      ],
+      "type_refs": [],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "极值",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "VISION_VERIFIED",
+        "image_refs": [
+          {
+            "ref": "imgs/img_in_image_box_194_213_361_338.jpg",
+            "path": "data/ocr_live_current/chapter5_95/imgs/img_in_image_box_194_213_361_338.jpg",
+            "exists": true
+          },
+          {
+            "ref": "imgs/img_in_image_box_408_213_591_339.jpg",
+            "path": "data/ocr_live_current/chapter5_95/imgs/img_in_image_box_408_213_591_339.jpg",
+            "exists": true
+          }
+        ]
+      },
+      "question_text_sha256": "ab0c0309fd758c53ef4a70466152e7664d02bb23470a787b4632feadee692993",
+      "source_question_text_sha256": "ab0c0309fd758c53ef4a70466152e7664d02bb23470a787b4632feadee692993",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "ab0c0309fd758c53ef4a70466152e7664d02bb23470a787b4632feadee692993",
+        "learner_question_text_sha256": "ab0c0309fd758c53ef4a70466152e7664d02bb23470a787b4632feadee692993"
+      },
+      "question_signal_excerpt": "极值、A、B、C、D",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:a3dd12e45a094dd7",
+      "item_id": "a3dd12e45a094dd7",
+      "ordinal": 5,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例5",
+      "group": null,
+      "cycle_id": "5.4-cycle-4",
+      "cycle_sequence": 4,
+      "cycle_title": "类型I 由图象分析函数的极值情况",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "极值与极值点（进阶）",
+        "最值讨论与值域之具体函数",
+        "最值讨论与值域之含参函数"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 由图象分析函数的极值情况"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "y",
+        "f",
+        "x"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "VISION_VERIFIED",
+        "image_refs": [
+          {
+            "ref": "imgs/img_in_image_box_469_1272_723_1429.jpg",
+            "path": "data/ocr_live_current/chapter5_95/imgs/img_in_image_box_469_1272_723_1429.jpg",
+            "exists": true
+          }
+        ]
+      },
+      "question_text_sha256": "54454f68b08b486acc13036525e0d44e06b97773565ad36fc08af82b448dac49",
+      "source_question_text_sha256": "54454f68b08b486acc13036525e0d44e06b97773565ad36fc08af82b448dac49",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "54454f68b08b486acc13036525e0d44e06b97773565ad36fc08af82b448dac49",
+        "learner_question_text_sha256": "54454f68b08b486acc13036525e0d44e06b97773565ad36fc08af82b448dac49"
+      },
+      "question_signal_excerpt": "y、f、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:3e827d16aadff7fd",
+      "item_id": "3e827d16aadff7fd",
+      "ordinal": 6,
+      "ordinal_in_cycle": 2,
+      "kind": "direct_variant",
+      "label": "例5 变式",
+      "group": null,
+      "cycle_id": "5.4-cycle-4",
+      "cycle_sequence": 4,
+      "cycle_title": "类型I 由图象分析函数的极值情况",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "极值与极值点（进阶）",
+        "最值讨论与值域之具体函数",
+        "最值讨论与值域之含参函数"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 由图象分析函数的极值情况"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "f",
+        "x"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "b024219e0e5dc4753327f7c077cfcc95fdacdfc91a07bad289578cb72a3934d4",
+      "source_question_text_sha256": "b024219e0e5dc4753327f7c077cfcc95fdacdfc91a07bad289578cb72a3934d4",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "b024219e0e5dc4753327f7c077cfcc95fdacdfc91a07bad289578cb72a3934d4",
+        "learner_question_text_sha256": "b024219e0e5dc4753327f7c077cfcc95fdacdfc91a07bad289578cb72a3934d4"
+      },
+      "question_signal_excerpt": "f、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:4a9f45d73cd72b5f",
+      "item_id": "4a9f45d73cd72b5f",
+      "ordinal": 7,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例6",
+      "group": null,
+      "cycle_id": "5.4-cycle-5",
+      "cycle_sequence": 5,
+      "cycle_title": "类型Ⅱ 求函数的极值点或极值",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "极值与极值点（进阶）",
+        "最值讨论与值域之具体函数",
+        "最值讨论与值域之含参函数"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 求函数的极值点或极值"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "直线",
+        "切线",
+        "极值",
+        "f",
+        "x",
+        "\\ln"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "53cef4b7a954cfcf78507c6d06cd1b220e0f2446b2f4cc7fb2d98a27f0cd73e4",
+      "source_question_text_sha256": "53cef4b7a954cfcf78507c6d06cd1b220e0f2446b2f4cc7fb2d98a27f0cd73e4",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "53cef4b7a954cfcf78507c6d06cd1b220e0f2446b2f4cc7fb2d98a27f0cd73e4",
+        "learner_question_text_sha256": "53cef4b7a954cfcf78507c6d06cd1b220e0f2446b2f4cc7fb2d98a27f0cd73e4"
+      },
+      "question_signal_excerpt": "直线、切线、极值、f、x、\\ln",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:faf7580e6a1f6552",
+      "item_id": "faf7580e6a1f6552",
+      "ordinal": 8,
+      "ordinal_in_cycle": 2,
+      "kind": "direct_variant",
+      "label": "例6 变式1",
+      "group": null,
+      "cycle_id": "5.4-cycle-5",
+      "cycle_sequence": 5,
+      "cycle_title": "类型Ⅱ 求函数的极值点或极值",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "极值与极值点（进阶）",
+        "最值讨论与值域之具体函数",
+        "最值讨论与值域之含参函数"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 求函数的极值点或极值"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "切线",
+        "极值",
+        "f",
+        "x",
+        "\\mathrm",
+        "e"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "e8b3718540cb63aaad98d91e5954b1e126d6c0a5d647398c4a51f4ceee06c2f8",
+      "source_question_text_sha256": "e8b3718540cb63aaad98d91e5954b1e126d6c0a5d647398c4a51f4ceee06c2f8",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "e8b3718540cb63aaad98d91e5954b1e126d6c0a5d647398c4a51f4ceee06c2f8",
+        "learner_question_text_sha256": "e8b3718540cb63aaad98d91e5954b1e126d6c0a5d647398c4a51f4ceee06c2f8"
+      },
+      "question_signal_excerpt": "切线、极值、f、x、\\mathrm、e",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:4c0b2cd1a74fb520",
+      "item_id": "4c0b2cd1a74fb520",
+      "ordinal": 9,
+      "ordinal_in_cycle": 3,
+      "kind": "direct_variant",
+      "label": "例6 变式2",
+      "group": null,
+      "cycle_id": "5.4-cycle-5",
+      "cycle_sequence": 5,
+      "cycle_title": "类型Ⅱ 求函数的极值点或极值",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "极值与极值点（进阶）",
+        "最值讨论与值域之具体函数",
+        "最值讨论与值域之含参函数"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 求函数的极值点或极值"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "极值",
+        "f",
+        "x",
+        "a",
+        "\\mathrm"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "b73e0bf549f21d034067552726d1d4deb435e31767ed7f71a90b6d9b10216c08",
+      "source_question_text_sha256": "b73e0bf549f21d034067552726d1d4deb435e31767ed7f71a90b6d9b10216c08",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "b73e0bf549f21d034067552726d1d4deb435e31767ed7f71a90b6d9b10216c08",
+        "learner_question_text_sha256": "b73e0bf549f21d034067552726d1d4deb435e31767ed7f71a90b6d9b10216c08"
+      },
+      "question_signal_excerpt": "极值、f、x、a、\\mathrm",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:ad5a1dfe39a3adcf",
+      "item_id": "ad5a1dfe39a3adcf",
+      "ordinal": 10,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例7",
+      "group": null,
+      "cycle_id": "5.4-cycle-6",
+      "cycle_sequence": 6,
+      "cycle_title": "类型Ⅲ 根据极值点或极值求参",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "极值与极值点（进阶）",
+        "最值讨论与值域之具体函数",
+        "最值讨论与值域之含参函数"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 根据极值点或极值求参"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "f",
+        "x",
+        "\\ln"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "d543bd61c9cb74dc98c7c0b6f830d16e764b02a794a1d2c5e5adc1bb21c0e61e",
+      "source_question_text_sha256": "d543bd61c9cb74dc98c7c0b6f830d16e764b02a794a1d2c5e5adc1bb21c0e61e",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "d543bd61c9cb74dc98c7c0b6f830d16e764b02a794a1d2c5e5adc1bb21c0e61e",
+        "learner_question_text_sha256": "d543bd61c9cb74dc98c7c0b6f830d16e764b02a794a1d2c5e5adc1bb21c0e61e"
+      },
+      "question_signal_excerpt": "f、x、\\ln",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:684ad93a5ba35489",
+      "item_id": "684ad93a5ba35489",
+      "ordinal": 11,
+      "ordinal_in_cycle": 2,
+      "kind": "direct_variant",
+      "label": "例7 变式",
+      "group": null,
+      "cycle_id": "5.4-cycle-6",
+      "cycle_sequence": 6,
+      "cycle_title": "类型Ⅲ 根据极值点或极值求参",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "极值与极值点（进阶）",
+        "最值讨论与值域之具体函数",
+        "最值讨论与值域之含参函数"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 根据极值点或极值求参"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "范围",
+        "x",
+        "f"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "1f6c8064fc7c489dff2b0a1b84782f9f219d106a3ce861a44916b712c18aaba1",
+      "source_question_text_sha256": "1f6c8064fc7c489dff2b0a1b84782f9f219d106a3ce861a44916b712c18aaba1",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "1f6c8064fc7c489dff2b0a1b84782f9f219d106a3ce861a44916b712c18aaba1",
+        "learner_question_text_sha256": "1f6c8064fc7c489dff2b0a1b84782f9f219d106a3ce861a44916b712c18aaba1"
+      },
+      "question_signal_excerpt": "范围、x、f",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:d55c8ada9c2660f4",
+      "item_id": "d55c8ada9c2660f4",
+      "ordinal": 12,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例8",
+      "group": null,
+      "cycle_id": "5.4-cycle-7",
+      "cycle_sequence": 7,
+      "cycle_title": "类型IV 函数的最值分析",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "极值与极值点（进阶）",
+        "最值讨论与值域之具体函数",
+        "最值讨论与值域之含参函数"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型IV 函数的最值分析"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "切线",
+        "f",
+        "x",
+        "ax"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "578fcfc3e3db75d138f59d29a7123672d1b6b4701084d9682bc960ecb5467c4c",
+      "source_question_text_sha256": "578fcfc3e3db75d138f59d29a7123672d1b6b4701084d9682bc960ecb5467c4c",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "578fcfc3e3db75d138f59d29a7123672d1b6b4701084d9682bc960ecb5467c4c",
+        "learner_question_text_sha256": "578fcfc3e3db75d138f59d29a7123672d1b6b4701084d9682bc960ecb5467c4c"
+      },
+      "question_signal_excerpt": "切线、f、x、ax",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:126f8905b8a60bdd",
+      "item_id": "126f8905b8a60bdd",
+      "ordinal": 13,
+      "ordinal_in_cycle": 2,
+      "kind": "direct_variant",
+      "label": "例8 变式1",
+      "group": null,
+      "cycle_id": "5.4-cycle-7",
+      "cycle_sequence": 7,
+      "cycle_title": "类型IV 函数的最值分析",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "极值与极值点（进阶）",
+        "最值讨论与值域之具体函数",
+        "最值讨论与值域之含参函数"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型IV 函数的最值分析"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "f",
+        "x",
+        "\\sin"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "d0d9022dafe2fc87cc35cd32348d6297083bb7392c0040fd028401a67e408705",
+      "source_question_text_sha256": "d0d9022dafe2fc87cc35cd32348d6297083bb7392c0040fd028401a67e408705",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "d0d9022dafe2fc87cc35cd32348d6297083bb7392c0040fd028401a67e408705",
+        "learner_question_text_sha256": "d0d9022dafe2fc87cc35cd32348d6297083bb7392c0040fd028401a67e408705"
+      },
+      "question_signal_excerpt": "f、x、\\sin",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:95a72f8b873d32d5",
+      "item_id": "95a72f8b873d32d5",
+      "ordinal": 14,
+      "ordinal_in_cycle": 3,
+      "kind": "direct_variant",
+      "label": "例8 变式1",
+      "group": null,
+      "cycle_id": "5.4-cycle-7",
+      "cycle_sequence": 7,
+      "cycle_title": "类型IV 函数的最值分析",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "极值与极值点（进阶）",
+        "最值讨论与值域之具体函数",
+        "最值讨论与值域之含参函数"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型IV 函数的最值分析"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "f",
+        "x",
+        "\\sin"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "3ce80377cfbdfacace79c384be8bf64b014f9752fc6a02b878f5a8782b42969d",
+      "source_question_text_sha256": "3ce80377cfbdfacace79c384be8bf64b014f9752fc6a02b878f5a8782b42969d",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "3ce80377cfbdfacace79c384be8bf64b014f9752fc6a02b878f5a8782b42969d",
+        "learner_question_text_sha256": "3ce80377cfbdfacace79c384be8bf64b014f9752fc6a02b878f5a8782b42969d"
+      },
+      "question_signal_excerpt": "f、x、\\sin",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:9a13635d43badf2d",
+      "item_id": "9a13635d43badf2d",
+      "ordinal": 15,
+      "ordinal_in_cycle": 4,
+      "kind": "direct_variant",
+      "label": "例8 变式2",
+      "group": null,
+      "cycle_id": "5.4-cycle-7",
+      "cycle_sequence": 7,
+      "cycle_title": "类型IV 函数的最值分析",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "极值与极值点（进阶）",
+        "最值讨论与值域之具体函数",
+        "最值讨论与值域之含参函数"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型IV 函数的最值分析"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "f",
+        "x",
+        "\\ln"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "1256555502d7de1facc1642d555d1e0f2ab66eca62ef646771e579e99f8107e9",
+      "source_question_text_sha256": "1256555502d7de1facc1642d555d1e0f2ab66eca62ef646771e579e99f8107e9",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "1256555502d7de1facc1642d555d1e0f2ab66eca62ef646771e579e99f8107e9",
+        "learner_question_text_sha256": "1256555502d7de1facc1642d555d1e0f2ab66eca62ef646771e579e99f8107e9"
+      },
+      "question_signal_excerpt": "f、x、\\ln",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:ca84af98092253d9",
+      "item_id": "ca84af98092253d9",
+      "ordinal": 16,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例9",
+      "group": null,
+      "cycle_id": "5.4-cycle-8",
+      "cycle_sequence": 8,
+      "cycle_title": "类型V 利用导数证明不等式",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "极值与极值点（进阶）",
+        "最值讨论与值域之具体函数",
+        "最值讨论与值域之含参函数"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型V 利用导数证明不等式"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "证明",
+        "e",
+        "x",
+        "ge"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "c11ac4752075a0637671e4027b022ca6ff08582f5ea76adeb1e17a7bfc0983e0",
+      "source_question_text_sha256": "c11ac4752075a0637671e4027b022ca6ff08582f5ea76adeb1e17a7bfc0983e0",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "c11ac4752075a0637671e4027b022ca6ff08582f5ea76adeb1e17a7bfc0983e0",
+        "learner_question_text_sha256": "c11ac4752075a0637671e4027b022ca6ff08582f5ea76adeb1e17a7bfc0983e0"
+      },
+      "question_signal_excerpt": "证明、e、x、ge",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:1403f6b08572b0ac",
+      "item_id": "1403f6b08572b0ac",
+      "ordinal": 17,
+      "ordinal_in_cycle": 2,
+      "kind": "direct_variant",
+      "label": "例9 变式1",
+      "group": null,
+      "cycle_id": "5.4-cycle-8",
+      "cycle_sequence": 8,
+      "cycle_title": "类型V 利用导数证明不等式",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "极值与极值点（进阶）",
+        "最值讨论与值域之具体函数",
+        "最值讨论与值域之含参函数"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型V 利用导数证明不等式"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "证明",
+        "f",
+        "x",
+        "\\mathrm",
+        "e"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "08048065281a853929c38bbb809f45eca6ffa4c4c557b466340b6d8dc575be33",
+      "source_question_text_sha256": "08048065281a853929c38bbb809f45eca6ffa4c4c557b466340b6d8dc575be33",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "08048065281a853929c38bbb809f45eca6ffa4c4c557b466340b6d8dc575be33",
+        "learner_question_text_sha256": "08048065281a853929c38bbb809f45eca6ffa4c4c557b466340b6d8dc575be33"
+      },
+      "question_signal_excerpt": "证明、f、x、\\mathrm、e",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:f2070d1901aa5888",
+      "item_id": "f2070d1901aa5888",
+      "ordinal": 18,
+      "ordinal_in_cycle": 3,
+      "kind": "direct_variant",
+      "label": "例9 变式2",
+      "group": null,
+      "cycle_id": "5.4-cycle-8",
+      "cycle_sequence": 8,
+      "cycle_title": "类型V 利用导数证明不等式",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "极值与极值点（进阶）",
+        "最值讨论与值域之具体函数",
+        "最值讨论与值域之含参函数"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型V 利用导数证明不等式"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "不等式",
+        "证明",
+        "left",
+        "\\frac",
+        "x",
+        "righ"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "cf81d43a2dc1f37e523e5d50cc4a865905f5852f168123e037d165726c7c452b",
+      "source_question_text_sha256": "cf81d43a2dc1f37e523e5d50cc4a865905f5852f168123e037d165726c7c452b",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "cf81d43a2dc1f37e523e5d50cc4a865905f5852f168123e037d165726c7c452b",
+        "learner_question_text_sha256": "cf81d43a2dc1f37e523e5d50cc4a865905f5852f168123e037d165726c7c452b"
+      },
+      "question_signal_excerpt": "不等式、证明、left、\\frac、x、righ",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:1e008cea6e011210",
+      "item_id": "1e008cea6e011210",
+      "ordinal": 19,
+      "ordinal_in_cycle": 4,
+      "kind": "direct_variant",
+      "label": "例9 变式3",
+      "group": null,
+      "cycle_id": "5.4-cycle-8",
+      "cycle_sequence": 8,
+      "cycle_title": "类型V 利用导数证明不等式",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "极值与极值点（进阶）",
+        "最值讨论与值域之具体函数",
+        "最值讨论与值域之含参函数"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型V 利用导数证明不等式"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "证明",
+        "f",
+        "x",
+        "e"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "a68a513563e879635ee98ed11be146fde559bbae78e34ffafaa60ca53f3c0439",
+      "source_question_text_sha256": "a68a513563e879635ee98ed11be146fde559bbae78e34ffafaa60ca53f3c0439",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "a68a513563e879635ee98ed11be146fde559bbae78e34ffafaa60ca53f3c0439",
+        "learner_question_text_sha256": "a68a513563e879635ee98ed11be146fde559bbae78e34ffafaa60ca53f3c0439"
+      },
+      "question_signal_excerpt": "证明、f、x、e",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-1e7caca06a87c09d",
+      "item_id": "Q-1e7caca06a87c09d",
+      "ordinal": 20,
+      "ordinal_in_cycle": 1,
+      "kind": "abc_exercise",
+      "label": "A1",
+      "group": "A",
+      "cycle_id": "5.4-cycle-9",
+      "cycle_sequence": 9,
+      "cycle_title": "A组 夯实基础",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "极值与极值点（进阶）",
+        "最值讨论与值域之具体函数",
+        "最值讨论与值域之含参函数"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 由图象分析函数的极值情况"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "单调",
+        "f",
+        "x",
+        "math",
+        "bb"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "VISION_VERIFIED",
+        "image_refs": [
+          {
+            "ref": "imgs/img_in_image_box_493_294_729_418.jpg",
+            "path": "data/ocr_live_current/chapter5_95/imgs/img_in_image_box_493_294_729_418.jpg",
+            "exists": true
+          }
+        ]
+      },
+      "question_text_sha256": "325baf4081b32e86a1e9fcb02c90afb7a833101b637305ff1485cbef5bda40e0",
+      "source_question_text_sha256": "325baf4081b32e86a1e9fcb02c90afb7a833101b637305ff1485cbef5bda40e0",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "325baf4081b32e86a1e9fcb02c90afb7a833101b637305ff1485cbef5bda40e0",
+        "learner_question_text_sha256": "325baf4081b32e86a1e9fcb02c90afb7a833101b637305ff1485cbef5bda40e0"
+      },
+      "question_signal_excerpt": "单调、f、x、math、bb",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-0d0449af3aa014f7",
+      "item_id": "Q-0d0449af3aa014f7",
+      "ordinal": 21,
+      "ordinal_in_cycle": 2,
+      "kind": "abc_exercise",
+      "label": "A2",
+      "group": "A",
+      "cycle_id": "5.4-cycle-9",
+      "cycle_sequence": 9,
+      "cycle_title": "A组 夯实基础",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "极值与极值点（进阶）",
+        "最值讨论与值域之具体函数",
+        "最值讨论与值域之含参函数"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 根据极值点或极值求参",
+        "类型IV 函数的最值分析"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "极值",
+        "f",
+        "x",
+        "a"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "abbbf661df0a376009b0ab1073a89a640230a72c27577a6dd45f05ce0197f005",
+      "source_question_text_sha256": "abbbf661df0a376009b0ab1073a89a640230a72c27577a6dd45f05ce0197f005",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "abbbf661df0a376009b0ab1073a89a640230a72c27577a6dd45f05ce0197f005",
+        "learner_question_text_sha256": "abbbf661df0a376009b0ab1073a89a640230a72c27577a6dd45f05ce0197f005"
+      },
+      "question_signal_excerpt": "极值、f、x、a",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-9cb00b80cbb86c3e",
+      "item_id": "Q-9cb00b80cbb86c3e",
+      "ordinal": 22,
+      "ordinal_in_cycle": 3,
+      "kind": "abc_exercise",
+      "label": "A3",
+      "group": "A",
+      "cycle_id": "5.4-cycle-9",
+      "cycle_sequence": 9,
+      "cycle_title": "A组 夯实基础",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "极值与极值点（进阶）",
+        "最值讨论与值域之具体函数",
+        "最值讨论与值域之含参函数"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型V 利用导数证明不等式"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "证明",
+        "f",
+        "x",
+        "\\tan"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "28345584a844b8234a4211e12f29b0df0d34b8a5a124a00356a0e13baa6f0d64",
+      "source_question_text_sha256": "28345584a844b8234a4211e12f29b0df0d34b8a5a124a00356a0e13baa6f0d64",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "28345584a844b8234a4211e12f29b0df0d34b8a5a124a00356a0e13baa6f0d64",
+        "learner_question_text_sha256": "28345584a844b8234a4211e12f29b0df0d34b8a5a124a00356a0e13baa6f0d64"
+      },
+      "question_signal_excerpt": "证明、f、x、\\tan",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-4192f78e8d6d7047",
+      "item_id": "Q-4192f78e8d6d7047",
+      "ordinal": 23,
+      "ordinal_in_cycle": 1,
+      "kind": "abc_exercise",
+      "label": "B4",
+      "group": "B",
+      "cycle_id": "5.4-cycle-10",
+      "cycle_sequence": 10,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "极值与极值点（进阶）",
+        "最值讨论与值域之具体函数",
+        "最值讨论与值域之含参函数"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 由图象分析函数的极值情况"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "VISION_VERIFIED",
+        "image_refs": [
+          {
+            "ref": "imgs/img_in_image_box_543_257_691_407.jpg",
+            "path": "data/ocr_live_current/chapter5_95/imgs/img_in_image_box_543_257_691_407.jpg",
+            "exists": true
+          }
+        ]
+      },
+      "question_text_sha256": "63d9d15a7b5e0bd273cd68921862e3875e01f9390caa714353834ba22e2a72e8",
+      "source_question_text_sha256": "63d9d15a7b5e0bd273cd68921862e3875e01f9390caa714353834ba22e2a72e8",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "63d9d15a7b5e0bd273cd68921862e3875e01f9390caa714353834ba22e2a72e8",
+        "learner_question_text_sha256": "63d9d15a7b5e0bd273cd68921862e3875e01f9390caa714353834ba22e2a72e8"
+      },
+      "question_signal_excerpt": "a、b、c、d",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-43095dde11805610",
+      "item_id": "Q-43095dde11805610",
+      "ordinal": 24,
+      "ordinal_in_cycle": 2,
+      "kind": "abc_exercise",
+      "label": "B5",
+      "group": "B",
+      "cycle_id": "5.4-cycle-10",
+      "cycle_sequence": 10,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "极值与极值点（进阶）",
+        "最值讨论与值域之具体函数",
+        "最值讨论与值域之含参函数"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 求函数的极值点或极值",
+        "类型I 由图象分析函数的极值情况"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "对称",
+        "零点",
+        "f",
+        "x"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "adddec3d1ed6af5639dad862f786abe8781112ce8359b60f86f081fbf3b9f35c",
+      "source_question_text_sha256": "adddec3d1ed6af5639dad862f786abe8781112ce8359b60f86f081fbf3b9f35c",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "adddec3d1ed6af5639dad862f786abe8781112ce8359b60f86f081fbf3b9f35c",
+        "learner_question_text_sha256": "adddec3d1ed6af5639dad862f786abe8781112ce8359b60f86f081fbf3b9f35c"
+      },
+      "question_signal_excerpt": "对称、零点、f、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-f4f4bc5f14506092",
+      "item_id": "Q-f4f4bc5f14506092",
+      "ordinal": 25,
+      "ordinal_in_cycle": 3,
+      "kind": "abc_exercise",
+      "label": "B6",
+      "group": "B",
+      "cycle_id": "5.4-cycle-10",
+      "cycle_sequence": 10,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "极值与极值点（进阶）",
+        "最值讨论与值域之具体函数",
+        "最值讨论与值域之含参函数"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型V 利用导数证明不等式"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "单调",
+        "f",
+        "x",
+        "\\ln"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "37b9cfe2d0328144cf2bf2457b112d87a92c0a8467bf4998a4301c9f1438f7a2",
+      "source_question_text_sha256": "37b9cfe2d0328144cf2bf2457b112d87a92c0a8467bf4998a4301c9f1438f7a2",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "37b9cfe2d0328144cf2bf2457b112d87a92c0a8467bf4998a4301c9f1438f7a2",
+        "learner_question_text_sha256": "37b9cfe2d0328144cf2bf2457b112d87a92c0a8467bf4998a4301c9f1438f7a2"
+      },
+      "question_signal_excerpt": "单调、f、x、\\ln",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-f16b699e288e24fa",
+      "item_id": "Q-f16b699e288e24fa",
+      "ordinal": 26,
+      "ordinal_in_cycle": 4,
+      "kind": "abc_exercise",
+      "label": "B7",
+      "group": "B",
+      "cycle_id": "5.4-cycle-10",
+      "cycle_sequence": 10,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "极值与极值点（进阶）",
+        "最值讨论与值域之具体函数",
+        "最值讨论与值域之含参函数"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型IV 函数的最值分析",
+        "类型Ⅱ 求函数的极值点或极值"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "直线",
+        "切线",
+        "f",
+        "x",
+        "\\mathrm"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "7143a7f00f8b9a5b4e3c1119e00695458380d97d000de0f30f6259f5232b506d",
+      "source_question_text_sha256": "7143a7f00f8b9a5b4e3c1119e00695458380d97d000de0f30f6259f5232b506d",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "7143a7f00f8b9a5b4e3c1119e00695458380d97d000de0f30f6259f5232b506d",
+        "learner_question_text_sha256": "7143a7f00f8b9a5b4e3c1119e00695458380d97d000de0f30f6259f5232b506d"
+      },
+      "question_signal_excerpt": "直线、切线、f、x、\\mathrm",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-538871b780914eb1",
+      "item_id": "Q-538871b780914eb1",
+      "ordinal": 27,
+      "ordinal_in_cycle": 5,
+      "kind": "abc_exercise",
+      "label": "B8",
+      "group": "B",
+      "cycle_id": "5.4-cycle-10",
+      "cycle_sequence": 10,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "极值与极值点（进阶）",
+        "最值讨论与值域之具体函数",
+        "最值讨论与值域之含参函数"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 根据极值点或极值求参",
+        "类型IV 函数的最值分析"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "切线",
+        "范围",
+        "f",
+        "x",
+        "\\ln"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "3c0efbbf07adb3c8f9444022a86ab8102a2715c2d5e2dcb9089d910807583512",
+      "source_question_text_sha256": "3c0efbbf07adb3c8f9444022a86ab8102a2715c2d5e2dcb9089d910807583512",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "3c0efbbf07adb3c8f9444022a86ab8102a2715c2d5e2dcb9089d910807583512",
+        "learner_question_text_sha256": "3c0efbbf07adb3c8f9444022a86ab8102a2715c2d5e2dcb9089d910807583512"
+      },
+      "question_signal_excerpt": "切线、范围、f、x、\\ln",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-e21cbc8d3210dda7",
+      "item_id": "Q-e21cbc8d3210dda7",
+      "ordinal": 28,
+      "ordinal_in_cycle": 6,
+      "kind": "abc_exercise",
+      "label": "B9",
+      "group": "B",
+      "cycle_id": "5.4-cycle-10",
+      "cycle_sequence": 10,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "极值与极值点（进阶）",
+        "最值讨论与值域之具体函数",
+        "最值讨论与值域之含参函数"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 根据极值点或极值求参",
+        "类型IV 函数的最值分析"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "f",
+        "x",
+        "ax",
+        "bx"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "0eff676a5f7dbfc26326af3f34c359e5c147148651a825be6c441b2194a3f58c",
+      "source_question_text_sha256": "0eff676a5f7dbfc26326af3f34c359e5c147148651a825be6c441b2194a3f58c",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "0eff676a5f7dbfc26326af3f34c359e5c147148651a825be6c441b2194a3f58c",
+        "learner_question_text_sha256": "0eff676a5f7dbfc26326af3f34c359e5c147148651a825be6c441b2194a3f58c"
+      },
+      "question_signal_excerpt": "f、x、ax、bx",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-d79e6a3147bb1057",
+      "item_id": "Q-d79e6a3147bb1057",
+      "ordinal": 29,
+      "ordinal_in_cycle": 7,
+      "kind": "abc_exercise",
+      "label": "B10",
+      "group": "B",
+      "cycle_id": "5.4-cycle-10",
+      "cycle_sequence": 10,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "极值与极值点（进阶）",
+        "最值讨论与值域之具体函数",
+        "最值讨论与值域之含参函数"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型IV 函数的最值分析",
+        "类型Ⅱ 求函数的极值点或极值"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "单调",
+        "f",
+        "x",
+        "\\ln"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "7c7b0873c98842c3e11c409efd27b69a12ce963778d2548ee246d7062638646d",
+      "source_question_text_sha256": "7c7b0873c98842c3e11c409efd27b69a12ce963778d2548ee246d7062638646d",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "7c7b0873c98842c3e11c409efd27b69a12ce963778d2548ee246d7062638646d",
+        "learner_question_text_sha256": "7c7b0873c98842c3e11c409efd27b69a12ce963778d2548ee246d7062638646d"
+      },
+      "question_signal_excerpt": "单调、f、x、\\ln",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-ef80b64be9071b73",
+      "item_id": "Q-ef80b64be9071b73",
+      "ordinal": 30,
+      "ordinal_in_cycle": 8,
+      "kind": "abc_exercise",
+      "label": "B11",
+      "group": "B",
+      "cycle_id": "5.4-cycle-10",
+      "cycle_sequence": 10,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "极值与极值点（进阶）",
+        "最值讨论与值域之具体函数",
+        "最值讨论与值域之含参函数"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型V 利用导数证明不等式",
+        "类型IV 函数的最值分析"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "单调",
+        "恒成立",
+        "f",
+        "x",
+        "\\ln"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "8678271c10e7974de2b0fae9d19fc1bfaa7c6ada7d088b05406ef72deb08d00e",
+      "source_question_text_sha256": "8678271c10e7974de2b0fae9d19fc1bfaa7c6ada7d088b05406ef72deb08d00e",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "8678271c10e7974de2b0fae9d19fc1bfaa7c6ada7d088b05406ef72deb08d00e",
+        "learner_question_text_sha256": "8678271c10e7974de2b0fae9d19fc1bfaa7c6ada7d088b05406ef72deb08d00e"
+      },
+      "question_signal_excerpt": "单调、恒成立、f、x、\\ln",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-3d37ac171d4d8dde",
+      "item_id": "Q-3d37ac171d4d8dde",
+      "ordinal": 31,
+      "ordinal_in_cycle": 9,
+      "kind": "abc_exercise",
+      "label": "B12",
+      "group": "B",
+      "cycle_id": "5.4-cycle-10",
+      "cycle_sequence": 10,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "极值与极值点（进阶）",
+        "最值讨论与值域之具体函数",
+        "最值讨论与值域之含参函数"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 求函数的极值点或极值"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "切线",
+        "证明",
+        "f",
+        "x",
+        "\\ln"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "db0e9b01f824d109bec4ff096b61b881c499caed36e39fe3d9cc6bba3ec6109c",
+      "source_question_text_sha256": "db0e9b01f824d109bec4ff096b61b881c499caed36e39fe3d9cc6bba3ec6109c",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "db0e9b01f824d109bec4ff096b61b881c499caed36e39fe3d9cc6bba3ec6109c",
+        "learner_question_text_sha256": "db0e9b01f824d109bec4ff096b61b881c499caed36e39fe3d9cc6bba3ec6109c"
+      },
+      "question_signal_excerpt": "切线、证明、f、x、\\ln",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-1fda751c8749c657",
+      "item_id": "Q-1fda751c8749c657",
+      "ordinal": 32,
+      "ordinal_in_cycle": 10,
+      "kind": "abc_exercise",
+      "label": "B13",
+      "group": "B",
+      "cycle_id": "5.4-cycle-10",
+      "cycle_sequence": 10,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "极值与极值点（进阶）",
+        "最值讨论与值域之具体函数",
+        "最值讨论与值域之含参函数"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 根据极值点或极值求参",
+        "类型Ⅱ 求函数的极值点或极值"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "直线",
+        "切线",
+        "f",
+        "x",
+        "xe"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "17fb3a09200e1b5cdebad0ef10d638ab0c349feb77ab768a7216e6f1132f128b",
+      "source_question_text_sha256": "17fb3a09200e1b5cdebad0ef10d638ab0c349feb77ab768a7216e6f1132f128b",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "17fb3a09200e1b5cdebad0ef10d638ab0c349feb77ab768a7216e6f1132f128b",
+        "learner_question_text_sha256": "17fb3a09200e1b5cdebad0ef10d638ab0c349feb77ab768a7216e6f1132f128b"
+      },
+      "question_signal_excerpt": "直线、切线、f、x、xe",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-9e6d72039ee011ba",
+      "item_id": "Q-9e6d72039ee011ba",
+      "ordinal": 33,
+      "ordinal_in_cycle": 11,
+      "kind": "abc_exercise",
+      "label": "B14",
+      "group": "B",
+      "cycle_id": "5.4-cycle-10",
+      "cycle_sequence": 10,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "极值与极值点（进阶）",
+        "最值讨论与值域之具体函数",
+        "最值讨论与值域之含参函数"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型V 利用导数证明不等式",
+        "类型Ⅱ 求函数的极值点或极值"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "切线",
+        "证明",
+        "f",
+        "x",
+        "ax",
+        "\\mathrm"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "60c8e0a6ae32430e59644e1169ec5f7a7c739431b86fd43825842d965e907f22",
+      "source_question_text_sha256": "60c8e0a6ae32430e59644e1169ec5f7a7c739431b86fd43825842d965e907f22",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "60c8e0a6ae32430e59644e1169ec5f7a7c739431b86fd43825842d965e907f22",
+        "learner_question_text_sha256": "60c8e0a6ae32430e59644e1169ec5f7a7c739431b86fd43825842d965e907f22"
+      },
+      "question_signal_excerpt": "切线、证明、f、x、ax、\\mathrm",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-adfb5d025b3fa9ed",
+      "item_id": "Q-adfb5d025b3fa9ed",
+      "ordinal": 34,
+      "ordinal_in_cycle": 1,
+      "kind": "abc_exercise",
+      "label": "C15",
+      "group": "C",
+      "cycle_id": "5.4-cycle-11",
+      "cycle_sequence": 11,
+      "cycle_title": "C组 拓展提升",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "极值与极值点（进阶）",
+        "最值讨论与值域之具体函数",
+        "最值讨论与值域之含参函数"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型V 利用导数证明不等式"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "证明",
+        "<",
+        "x",
+        "\\frac"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "8963633772963e4ddd3181791b3d770a7fa348f04512a3b4428b13d3c719405f",
+      "source_question_text_sha256": "8963633772963e4ddd3181791b3d770a7fa348f04512a3b4428b13d3c719405f",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "8963633772963e4ddd3181791b3d770a7fa348f04512a3b4428b13d3c719405f",
+        "learner_question_text_sha256": "8963633772963e4ddd3181791b3d770a7fa348f04512a3b4428b13d3c719405f"
+      },
+      "question_signal_excerpt": "证明、<、x、\\frac",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-872a310c603b8711",
+      "item_id": "Q-872a310c603b8711",
+      "ordinal": 35,
+      "ordinal_in_cycle": 2,
+      "kind": "abc_exercise",
+      "label": "C16",
+      "group": "C",
+      "cycle_id": "5.4-cycle-11",
+      "cycle_sequence": 11,
+      "cycle_title": "C组 拓展提升",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "极值与极值点（进阶）",
+        "最值讨论与值域之具体函数",
+        "最值讨论与值域之含参函数"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型IV 函数的最值分析"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "f",
+        "x",
+        "\\cos"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "2be66c5eacb2248ea4c8c5a29cdeee4771379103efe3fad40f760239f9a8a25f",
+      "source_question_text_sha256": "2be66c5eacb2248ea4c8c5a29cdeee4771379103efe3fad40f760239f9a8a25f",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "2be66c5eacb2248ea4c8c5a29cdeee4771379103efe3fad40f760239f9a8a25f",
+        "learner_question_text_sha256": "2be66c5eacb2248ea4c8c5a29cdeee4771379103efe3fad40f760239f9a8a25f"
+      },
+      "question_signal_excerpt": "f、x、\\cos",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-63310e86e88fb4d5",
+      "item_id": "Q-63310e86e88fb4d5",
+      "ordinal": 36,
+      "ordinal_in_cycle": 3,
+      "kind": "abc_exercise",
+      "label": "C17",
+      "group": "C",
+      "cycle_id": "5.4-cycle-11",
+      "cycle_sequence": 11,
+      "cycle_title": "C组 拓展提升",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "极值与极值点（基础）",
+        "极值与极值点（进阶）",
+        "最值讨论与值域之具体函数",
+        "最值讨论与值域之含参函数"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.8 极值与极值点（基础）",
+        "4.1.4.8 极值与极值点（进阶）",
+        "4.1.4.9 最值讨论与值域之具体函数",
+        "4.1.4.10 最值讨论与值域之含参函数"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 根据极值点或极值求参",
+        "类型Ⅱ 求函数的极值点或极值"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "切线",
+        "范围",
+        "f",
+        "x",
+        "\\ln"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "967869edd02d07fa567037613dc68e5b7f402e0f1313f11794a0a4029fe8c60a",
+      "source_question_text_sha256": "967869edd02d07fa567037613dc68e5b7f402e0f1313f11794a0a4029fe8c60a",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "967869edd02d07fa567037613dc68e5b7f402e0f1313f11794a0a4029fe8c60a",
+        "learner_question_text_sha256": "967869edd02d07fa567037613dc68e5b7f402e0f1313f11794a0a4029fe8c60a"
+      },
+      "question_signal_excerpt": "切线、范围、f、x、\\ln",
+      "source_blocked": false
+    }
+  ],
+  "route_versions": [
+    {
+      "version": 1,
+      "route_hash": "ffd065c92b151ea5ac205cc86a86bd84444b9739b839001dd0b46e11df6a2415"
+    },
+    {
+      "version": 2,
+      "route_hash": "f244a9fc1861ae41f33298142127246d264afadb892930385749220c489e0394"
+    },
+    {
+      "version": 3,
+      "route_hash": "1381052a7baeff5983d5ea0b0377a0a0a3f478bd4ac8ed0fd9a9e1f571cac957"
+    }
+  ],
+  "final_route_hash": "1381052a7baeff5983d5ea0b0377a0a0a3f478bd4ac8ed0fd9a9e1f571cac957",
+  "simulation": {
+    "protocol": "five-round-five-persona-v3-answer-isolated",
+    "generation_mode": "synthetic_route_stress_from_actual_item_features",
+    "rounds": [
+      {
+        "round": 1,
+        "purpose": "baseline_entry",
+        "route_version": 1,
+        "route_hash": "ffd065c92b151ea5ac205cc86a86bd84444b9739b839001dd0b46e11df6a2415",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 36,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 36,
+            "blocked": 14
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 36,
+            "blocked": 4
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 36,
+            "blocked": 5
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 36,
+            "blocked": 17
+          }
+        ],
+        "failed_item_keys": [
+          "LI:684ad93a5ba35489",
+          "LI:87e5b4af938c5b46",
+          "LI:983631d81644456f",
+          "LI:a3dd12e45a094dd7",
+          "LI:b352b3cabe43637f",
+          "LI:e4a9f856e9c5d145",
+          "Q:Q-0d0449af3aa014f7",
+          "Q:Q-1e7caca06a87c09d",
+          "Q:Q-1fda751c8749c657",
+          "Q:Q-3d37ac171d4d8dde",
+          "Q:Q-4192f78e8d6d7047",
+          "Q:Q-43095dde11805610",
+          "Q:Q-538871b780914eb1",
+          "Q:Q-63310e86e88fb4d5",
+          "Q:Q-872a310c603b8711",
+          "Q:Q-9cb00b80cbb86c3e",
+          "Q:Q-9e6d72039ee011ba",
+          "Q:Q-adfb5d025b3fa9ed",
+          "Q:Q-d79e6a3147bb1057",
+          "Q:Q-e21cbc8d3210dda7",
+          "Q:Q-ef80b64be9071b73",
+          "Q:Q-f16b699e288e24fa",
+          "Q:Q-f4f4bc5f14506092"
+        ],
+        "route_repairs": [
+          {
+            "item_keys": [
+              "LI:87e5b4af938c5b46",
+              "LI:983631d81644456f",
+              "LI:b352b3cabe43637f",
+              "LI:e4a9f856e9c5d145",
+              "Q:Q-0d0449af3aa014f7",
+              "Q:Q-1fda751c8749c657",
+              "Q:Q-43095dde11805610",
+              "Q:Q-538871b780914eb1",
+              "Q:Q-63310e86e88fb4d5",
+              "Q:Q-9e6d72039ee011ba",
+              "Q:Q-d79e6a3147bb1057",
+              "Q:Q-e21cbc8d3210dda7",
+              "Q:Q-ef80b64be9071b73",
+              "Q:Q-f16b699e288e24fa"
+            ],
+            "field": "recognition_cues",
+            "before": "第1轮冻结尝试记录了 recognition-weak 的首个阻断。",
+            "after": "下一轮只加入 recognition-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 14 题；不是随机题号注入。"
+          },
+          {
+            "item_keys": [
+              "LI:684ad93a5ba35489",
+              "Q:Q-538871b780914eb1",
+              "Q:Q-63310e86e88fb4d5",
+              "Q:Q-ef80b64be9071b73"
+            ],
+            "field": "continuation_checkpoints",
+            "before": "第1轮冻结尝试记录了 algebra-weak 的首个阻断。",
+            "after": "下一轮只加入 algebra-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 4 题；不是随机题号注入。"
+          },
+          {
+            "item_keys": [
+              "LI:87e5b4af938c5b46",
+              "LI:983631d81644456f",
+              "LI:a3dd12e45a094dd7",
+              "Q:Q-1e7caca06a87c09d",
+              "Q:Q-4192f78e8d6d7047"
+            ],
+            "field": "visual_translation",
+            "before": "第1轮冻结尝试记录了 visual-weak 的首个阻断。",
+            "after": "下一轮只加入 visual-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 5 题；不是随机题号注入。"
+          },
+          {
+            "item_keys": [
+              "Q:Q-0d0449af3aa014f7",
+              "Q:Q-1e7caca06a87c09d",
+              "Q:Q-1fda751c8749c657",
+              "Q:Q-3d37ac171d4d8dde",
+              "Q:Q-4192f78e8d6d7047",
+              "Q:Q-43095dde11805610",
+              "Q:Q-538871b780914eb1",
+              "Q:Q-63310e86e88fb4d5",
+              "Q:Q-872a310c603b8711",
+              "Q:Q-9cb00b80cbb86c3e",
+              "Q:Q-9e6d72039ee011ba",
+              "Q:Q-adfb5d025b3fa9ed",
+              "Q:Q-d79e6a3147bb1057",
+              "Q:Q-e21cbc8d3210dda7",
+              "Q:Q-ef80b64be9071b73",
+              "Q:Q-f16b699e288e24fa",
+              "Q:Q-f4f4bc5f14506092"
+            ],
+            "field": "independent_self_check",
+            "before": "第1轮冻结尝试记录了 self-check-weak 的首个阻断。",
+            "after": "下一轮只加入 self-check-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 17 题；不是随机题号注入。"
+          }
+        ]
+      },
+      {
+        "round": 2,
+        "purpose": "prerequisite_repair",
+        "route_version": 2,
+        "route_hash": "f244a9fc1861ae41f33298142127246d264afadb892930385749220c489e0394",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 36,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 36,
+            "blocked": 0
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 36,
+            "blocked": 0
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 36,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 36,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [],
+        "route_repairs": []
+      },
+      {
+        "round": 3,
+        "purpose": "continuation_transfer",
+        "route_version": 2,
+        "route_hash": "f244a9fc1861ae41f33298142127246d264afadb892930385749220c489e0394",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 36,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 36,
+            "blocked": 10
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 36,
+            "blocked": 10
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 36,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 36,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [
+          "LI:126f8905b8a60bdd",
+          "LI:1403f6b08572b0ac",
+          "LI:1e008cea6e011210",
+          "LI:3e827d16aadff7fd",
+          "LI:4c0b2cd1a74fb520",
+          "LI:684ad93a5ba35489",
+          "LI:95a72f8b873d32d5",
+          "LI:9a13635d43badf2d",
+          "LI:f2070d1901aa5888",
+          "LI:faf7580e6a1f6552"
+        ],
+        "route_repairs": [
+          {
+            "item_keys": [
+              "LI:126f8905b8a60bdd",
+              "LI:1403f6b08572b0ac",
+              "LI:1e008cea6e011210",
+              "LI:3e827d16aadff7fd",
+              "LI:4c0b2cd1a74fb520",
+              "LI:684ad93a5ba35489",
+              "LI:95a72f8b873d32d5",
+              "LI:9a13635d43badf2d",
+              "LI:f2070d1901aa5888",
+              "LI:faf7580e6a1f6552"
+            ],
+            "field": "recognition_cues",
+            "before": "第3轮冻结尝试记录了 recognition-weak 的首个阻断。",
+            "after": "下一轮只加入 recognition-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 10 题；不是随机题号注入。"
+          },
+          {
+            "item_keys": [
+              "LI:126f8905b8a60bdd",
+              "LI:1403f6b08572b0ac",
+              "LI:1e008cea6e011210",
+              "LI:3e827d16aadff7fd",
+              "LI:4c0b2cd1a74fb520",
+              "LI:684ad93a5ba35489",
+              "LI:95a72f8b873d32d5",
+              "LI:9a13635d43badf2d",
+              "LI:f2070d1901aa5888",
+              "LI:faf7580e6a1f6552"
+            ],
+            "field": "continuation_checkpoints",
+            "before": "第3轮冻结尝试记录了 algebra-weak 的首个阻断。",
+            "after": "下一轮只加入 algebra-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 10 题；不是随机题号注入。"
+          }
+        ]
+      },
+      {
+        "round": 4,
+        "purpose": "mixed_retrieval",
+        "route_version": 3,
+        "route_hash": "1381052a7baeff5983d5ea0b0377a0a0a3f478bd4ac8ed0fd9a9e1f571cac957",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 36,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 36,
+            "blocked": 0
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 36,
+            "blocked": 0
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 36,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 36,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [],
+        "route_repairs": []
+      },
+      {
+        "round": 5,
+        "purpose": "fresh_context",
+        "route_version": 3,
+        "route_hash": "1381052a7baeff5983d5ea0b0377a0a0a3f478bd4ac8ed0fd9a9e1f571cac957",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 36,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 36,
+            "blocked": 0
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 36,
+            "blocked": 0
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 36,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 36,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [],
+        "route_repairs": []
+      }
+    ],
+    "expected_attempts_per_item": 25,
+    "actual_attempts_per_item": 25,
+    "unresolved_item_keys": [],
+    "mathematical_correctness": "not_evaluated_no_final_answer",
+    "mastery_claimed": false,
+    "status": "passed"
+  },
+  "summary": {
+    "items": 36,
+    "attempts": 900,
+    "route_assessments": 900,
+    "rounds": 5,
+    "personas_per_round": 5,
+    "repairs": 6,
+    "round_5_failed_items": 0,
+    "validator_errors": []
+  },
+  "human_learning_status": "remote_math_mcp_only",
+  "cold_24h_retest": "not_run",
+  "mastery_claimed": false,
+  "claim_scope": "route_actionability_only",
+  "mathematical_assessment_status": "not_run",
+  "route_audit_status": "passed",
+  "status": "passed"
+}

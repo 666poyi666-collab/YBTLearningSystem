@@ -1,101 +1,89 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "2.0",
   "artifact": "CHAPTER_ZERO_BASE_SIMULATION_STATUS",
-  "generated_at": "2026-08-22T12:47:41+08:00",
-  "scope": "第一章 1.2+1.3、1.4、micro专题1 当前代逐题零基础代理模拟",
-  "worker_contract": {
-    "role": "deepseek_worker",
-    "model": "opencode-go/deepseek-v4-flash",
-    "reasoning_effort": "max",
-    "context_window": 1000000,
-    "answer_sidecar_read": false
+  "generated_at": "2026-08-31T12:07:41+08:00",
+  "scope": "第一章 1.2+1.3、1.4、micro专题1 当前答案隔离路线审计状态",
+  "authority": {
+    "kind": "answer_isolated_route_audit_current_pointer",
+    "pointer": "reports/deep_section_simulations/current.json",
+    "run_id": "route-audit-5391e980be231c3c"
   },
   "sections": [
     {
-      "section": "1.2_1.3",
-      "worker_file": "reports/ch12_luna_sections/LUNA-CH12-02/delivery.json",
-      "generation": "delivery-05df0aeaf3294cf9",
-      "context_sha256": null,
-      "item_count": 33,
+      "section": "1.2+1.3",
+      "current_worker_file": "reports/deep_simulation_runs/route-audit-5391e980be231c3c/1.2_1.3.json",
+      "current_worker_present": true,
       "expected_item_count": 33,
-      "method_check_count": 0,
-      "verdict_counts": {
-        "PASS": 33
-      },
-      "status": "PASS",
+      "current_item_count": 33,
+      "current_status": "VERIFIED",
+      "run_id": "route-audit-5391e980be231c3c",
       "source_revision": {
-        "ready_sha256": "f451e81c86e520577e176b12b73702945fdbf5cbac341ba9e4a93fa046a8c267",
-        "packet_build_sha256": "848c158cfe8dc8ab3b0ce49bc5ce50b0ba17ead8f85e7c34ccda530b282c8884",
-        "course_catalog_sha256": "fd5a35abb8d8471a975089c9af44b2284ae4ca295e54f6d294cc37c26339c048",
-        "vision_sidecar_sha256": "ee371622be9032f834480bc8dab3e37e7119f2236081459cf7897065ae1f03fc",
-        "skill_contract_sha256": "08736c8e05e7815106339585f37f69bc171d3343a226839a653863064d03d7c0"
-      }
+        "manifest_sha256": "071cd794cb2d44b17cfa117e50da06c25097867878c30918da6abd5f7268929f",
+        "student_learning_items_sha256": "59a924c40adf16cea039ced63e4d105f883ea7b0dc60fcb3adec3746cbfc259e",
+        "student_packet_sha256": "ba0ab49281ea68c5b31a76c7909281f2dbc84849b2e9e33277a8660ac207b757",
+        "grader_learning_packet_sha256": "1a469a2f18a0bd254eb383ce3718d443a34a374371efad78e888324891eccb80",
+        "route_sha256": "70ec1090876df18ef90d6d02133389f4db0fafd4e3d434aa1bd7fe4b8ed53376",
+        "learner_input_snapshot_sha256": "5aa58d30871f66ac678c14f27b6329dda3050f297a4279e9da2790b72d455557"
+      },
+      "mathematical_correctness": "not_evaluated_no_final_answer",
+      "errors": []
     },
     {
       "section": "1.4",
-      "worker_file": "reports/ch12_luna_sections/LUNA-CH12-03/delivery.json",
-      "generation": "delivery-6f21d6f9997b0e97",
-      "context_sha256": null,
-      "item_count": 37,
+      "current_worker_file": "reports/deep_simulation_runs/route-audit-5391e980be231c3c/1.4.json",
+      "current_worker_present": true,
       "expected_item_count": 37,
-      "method_check_count": 0,
-      "verdict_counts": {
-        "PASS": 37
-      },
-      "status": "PASS",
+      "current_item_count": 37,
+      "current_status": "VERIFIED",
+      "run_id": "route-audit-5391e980be231c3c",
       "source_revision": {
-        "ready_sha256": "f451e81c86e520577e176b12b73702945fdbf5cbac341ba9e4a93fa046a8c267",
-        "packet_build_sha256": "848c158cfe8dc8ab3b0ce49bc5ce50b0ba17ead8f85e7c34ccda530b282c8884",
-        "course_catalog_sha256": "fd5a35abb8d8471a975089c9af44b2284ae4ca295e54f6d294cc37c26339c048",
-        "vision_sidecar_sha256": "ee371622be9032f834480bc8dab3e37e7119f2236081459cf7897065ae1f03fc",
-        "skill_contract_sha256": "08736c8e05e7815106339585f37f69bc171d3343a226839a653863064d03d7c0"
-      }
+        "manifest_sha256": "071cd794cb2d44b17cfa117e50da06c25097867878c30918da6abd5f7268929f",
+        "student_learning_items_sha256": "1a3ff24e2e91ac83244744efb233f623147fdedf488abfb1e024763d8549bbd9",
+        "student_packet_sha256": "b5581febb5454604a4823516494a3a80adfe33773a8c38938eb1a80d4f7d150a",
+        "grader_learning_packet_sha256": "98cbc59975b9d9366ec2f1680823acdaa5dc237c8885579f52eec9f53920e90b",
+        "route_sha256": "fa8f34cb25efe947d2456237ef94f4a88d64ddf352d45176d06dc587eda7cd97",
+        "learner_input_snapshot_sha256": "f1e3105032ba7b42c9796f10dd0e5d102fe14a619e2de222e96f017d7315b839"
+      },
+      "mathematical_correctness": "not_evaluated_no_final_answer",
+      "errors": []
     },
     {
       "section": "micro专题1",
-      "worker_file": "reports/ch12_luna_sections/LUNA-CH12-04/delivery.json",
-      "generation": "delivery-9c6f4e14ab10caa6",
-      "context_sha256": null,
-      "item_count": 16,
+      "current_worker_file": "reports/deep_simulation_runs/route-audit-5391e980be231c3c/micro专题1.json",
+      "current_worker_present": true,
       "expected_item_count": 16,
-      "method_check_count": 0,
-      "verdict_counts": {
-        "PASS": 16
-      },
-      "status": "PASS",
+      "current_item_count": 16,
+      "current_status": "VERIFIED",
+      "run_id": "route-audit-5391e980be231c3c",
       "source_revision": {
-        "ready_sha256": "f451e81c86e520577e176b12b73702945fdbf5cbac341ba9e4a93fa046a8c267",
-        "packet_build_sha256": "848c158cfe8dc8ab3b0ce49bc5ce50b0ba17ead8f85e7c34ccda530b282c8884",
-        "course_catalog_sha256": "fd5a35abb8d8471a975089c9af44b2284ae4ca295e54f6d294cc37c26339c048",
-        "vision_sidecar_sha256": "ee371622be9032f834480bc8dab3e37e7119f2236081459cf7897065ae1f03fc",
-        "skill_contract_sha256": "08736c8e05e7815106339585f37f69bc171d3343a226839a653863064d03d7c0",
-        "ocr_vision_evidence_sha256": "3a419c40b6f600dd708fde00190f6f830ca9237dd5ece3ac7dbcd4dc0d213e3a"
-      }
+        "manifest_sha256": "071cd794cb2d44b17cfa117e50da06c25097867878c30918da6abd5f7268929f",
+        "student_learning_items_sha256": "8f8ccfd935209312e54695b60c4239d9dcd8bef65a6bcdc7f38bd9499f19c16f",
+        "student_packet_sha256": "d3b8a86191ac9ede719a80cd83bbdd86b9c90a3acf802da00051383eef6d8d82",
+        "grader_learning_packet_sha256": "93a51ca9fbef36ecb97aa187adbf4608dd6bee925744dba78b75238861e2aa51",
+        "route_sha256": "f9487eb15cfcf4db85ea0e5ea8764bc435dcd4445e2798865d4f40eaf6f39e23",
+        "learner_input_snapshot_sha256": "8416d93399ca98257e5081aa52972eb78e9d162022051571dafb4d54e1b4c42d"
+      },
+      "mathematical_correctness": "not_evaluated_no_final_answer",
+      "errors": []
     }
   ],
   "summary": {
     "section_count": 3,
-    "item_count": 86,
-    "expected_item_count": 86,
-    "required_sections": 3,
-    "required_items": 86,
     "current_sections_verified": 3,
-    "all_current_section_simulations_ready": true,
+    "required_sections": 3,
     "current_items_verified": 86,
-    "item_coverage_complete": true,
-    "method_check_count": 0,
-    "verdict_counts": {
-      "PASS": 86
-    },
-    "proxy_mastery_status": "PASS",
+    "required_items": 86,
+    "all_current_section_simulations_ready": true,
+    "route_actionability_only": true,
+    "mathematical_correctness": "not_evaluated_no_final_answer",
     "human_acceptance_not_proven": true,
     "cold_retest_24h": "not_run",
     "real_user_observation": "not_run"
   },
-  "answer_free_boundary": {
-    "answer_sidecar_read": false,
-    "answer_ocr_read": false,
-    "answer_text_in_context": false,
+  "release_boundary": {
+    "route_audit_is_student_mastery": false,
+    "answer_sidecar_in_persona_context": false,
     "student_mastery_claim": false
-  }
+  },
+  "blockers": []
 }

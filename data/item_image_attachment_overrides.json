@@ -1,0 +1,67 @@
+{
+  "schema_version": "ybt-item-image-attachment-overrides-v1",
+  "consumer_guard": "Source-bound learner image attachment corrections only; no answer or solution content.",
+  "overrides": [
+    {
+      "id": "1.1-LIb2a2e4099db3ab67-drop-preceding-tetrahedron",
+      "section": "1.1",
+      "item_id": "b2a2e4099db3ab67",
+      "kind": "direct_variant",
+      "source_docs": [8],
+      "drop": {
+        "ref": "imgs/img_in_image_box_913_257_1092_430.jpg",
+        "image_sha256": "c85f7a603b6d40a9e87e731cd9fc26791af405ecc181c3afe77cb9aea38903e4"
+      },
+      "keep": [
+        {
+          "ref": "imgs/img_in_image_box_878_574_1093_765.jpg",
+          "image_sha256": "f18572579918966cd43c5ebaf6a597b85d7a008750f32f262fc560182a9d81ac"
+        }
+      ],
+      "reason": "The dropped crop visibly shows tetrahedron A-BCD with E and belongs to the preceding item; the retained crop shows the parallel hexahedron named by this variant.",
+      "review_ref": "reports/deep_simulation_reviews/visual-fixes-ch1.json"
+    },
+    {
+      "id": "2.4-Q-8ba0e365a4bb943d-drop-footer-watermark",
+      "section": "2.4",
+      "item_id": "Q-8ba0e365a4bb943d",
+      "kind": "abc_exercise",
+      "source_docs": [52],
+      "drop": {
+        "ref": "imgs/img_in_image_box_275_803_912_881.jpg",
+        "image_sha256": "9e14d20fdf569d4fa2e4930c0395ab37a9f2f89a20433a50a926d3db775c9f4d"
+      },
+      "keep": [],
+      "reason": "The crop is only the page footer watermark; the source page shows no item-specific figure for A4.",
+      "review_ref": "reports/deep_simulation_reviews/visual-fixes-ch23.json"
+    },
+    {
+      "id": "ch3.s7-LI1110316c7adf2824-drop-preceding-example-diagram",
+      "section": "ch3.s7",
+      "item_id": "1110316c7adf2824",
+      "kind": "direct_variant",
+      "source_docs": [108],
+      "drop": {
+        "ref": "imgs/img_in_image_box_917_116_1095_295.jpg",
+        "image_sha256": "e120b45f067a49e667c92107023414214b6caab5d8541c280f6d969e63885203"
+      },
+      "keep": [],
+      "reason": "The source page places this circle diagram before the variant and binds it to the preceding example, not this variant.",
+      "review_ref": "reports/deep_simulation_reviews/visual-fixes-ch23.json"
+    },
+    {
+      "id": "4.4-Q-b929113a92e393ac-drop-footer-watermark",
+      "section": "4.4",
+      "item_id": "Q-b929113a92e393ac",
+      "kind": "abc_exercise",
+      "source_docs": [59],
+      "drop": {
+        "ref": "imgs/img_in_image_box_274_803_911_881.jpg",
+        "image_sha256": "1632f5a7b2f13565b791cd2828395c3e78c987860e09167594387b533f4a8b93"
+      },
+      "keep": [],
+      "reason": "The crop contains only an incomplete textbook watermark and no mathematical figure for A2.",
+      "review_ref": "reports/deep_simulation_reviews/visual-fixes-ch45.json"
+    }
+  ]
+}

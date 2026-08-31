@@ -25,7 +25,7 @@
         8
       ]
     },
-    "derived_question_correction_count": 0
+    "derived_question_correction_count": 1
   },
   "status": "VERIFIED",
   "consumer_guard": "Student/DeepSeek context: no answers. Consume only when status=VERIFIED.",
@@ -112,10 +112,18 @@
     {
       "ocr_doc": 64,
       "source_path": "data/ocr_live_current/first_chapter_69/doc_64.md",
-      "text": "## 强化训练\n\n考虑到本节涉及的题型都有一定的综合性和难度，故不设 A 组题，只设计了 B 组和 C 组题.\n\n## B组 强化能力\n\n如图，在棱长为4的正方体  \\(ABCD-A_{1}B_{1}C_{1}D_{1}\\) 中，点 E，F 分别在棱  \\(AA_{1}\\) 和 AB 上，且  \\(C_{1}E \\perp EF\\)，则 AF 的最大值为（ ）\n\nA.  \\(\\frac{1}{2}\\) B. 1 C.  \\(\\frac{3}{2}\\) D. 2\n\n",
+      "text": "## 强化训练\n\n考虑到本节涉及的题型都有一定的综合性和难度，故不设 A 组题，只设计了 B 组和 C 组题.\n\n## B组 强化能力\n\n1.（2025·四川绵阳模拟）\n\n如图，在棱长为 4 的正方体 \\(ABCD-A_1B_1C_1D_1\\) 中，点 \\(E\\)，\\(F\\) 分别在棱 \\(AA_1\\) 和 \\(AB\\) 上，且 \\(C_1E\\perp EF\\)，则 \\(AF\\) 的最大值为（ ）\n\nA.  \\(\\frac{1}{2}\\) B. 1 C.  \\(\\frac{3}{2}\\) D. 2\n\n",
       "text_sha256": "d80b1ad0642c1f5e58f5dec360c6f8b51c712db24ac8ec5e3ff1cc28d51b3e1a",
       "image_refs": [],
-      "math_errors": []
+      "math_errors": [],
+      "derived_question_corrections": [
+        {
+          "id": "DQC-MICRO1-B1-RESTORE-NUMBER-AND-CITATION",
+          "action": "replace_line",
+          "evidence": "SOURCE_PDF_SHA256_69644C_PAGE_65_VISUALLY_CONFIRMS_B1",
+          "reason": "paddle_ocr_dropped_printed_b1_number_and_citation"
+        }
+      ]
     },
     {
       "ocr_doc": 65,
@@ -174,11 +182,9 @@
       "source_anchor": {
         "ocr_doc": 64,
         "pdf_page": 65,
-        "file": "data/ocr_live_current/first_chapter_69/doc_64.md",
-        "recovery": "primary_ocr_question_recovery",
-        "recovery_source_kind": "primary_ocr"
+        "file": "data/ocr_live_current/first_chapter_69/doc_64.md"
       },
-      "question_text": "如图，在棱长为4的正方体  \\(ABCD-A_{1}B_{1}C_{1}D_{1}\\) 中，点 E，F 分别在棱  \\(AA_{1}\\) 和 AB 上，且  \\(C_{1}E \\perp EF\\)，则 AF 的最大值为（ ）\n\nA.  \\(\\frac{1}{2}\\) B. 1 C.  \\(\\frac{3}{2}\\) D. 2\n\n",
+      "question_text": "1.（2025·四川绵阳模拟）\n\n如图，在棱长为 4 的正方体 \\(ABCD-A_1B_1C_1D_1\\) 中，点 \\(E\\)，\\(F\\) 分别在棱 \\(AA_1\\) 和 \\(AB\\) 上，且 \\(C_1E\\perp EF\\)，则 \\(AF\\) 的最大值为（ ）\n\nA.  \\(\\frac{1}{2}\\) B. 1 C.  \\(\\frac{3}{2}\\) D. 2\n\n",
       "image_refs": [
         {
           "ref": "imgs/img_in_image_box_905_1029_1095_1209.jpg",
@@ -192,7 +198,11 @@
         "E1",
         "E1"
       ],
-      "recovery_reason": "正册 OCR 题号丢失；章节合并无答案册 doc_64 有完整题干和图引用",
+      "canonical_qid_binding": {
+        "status": "PRESERVED_ACROSS_SOURCE_TEXT_REPAIR",
+        "correction_id": "DQC-MICRO1-B1-RESTORE-NUMBER-AND-CITATION",
+        "evidence": "SOURCE_PDF_SHA256_69644C_PAGE_65_VISUALLY_CONFIRMS_B1"
+      },
       "vision_sidecars": [
         {
           "image": "C:\\开发\\小工具\\一本通学习系统_v7\\reports\\source_visuals2\\micro_b1_source_page_065_crop.png",
@@ -580,12 +590,23 @@
       ],
       "vision_sidecars": [
         {
-          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_full\\imgs\\img_in_image_box_472_462_717_628.jpg",
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_472_462_717_628.jpg",
           "image_sha256": "ca0b271070dee9f7bfa753440b56403fdd6f1fa85f1b1b63e065fcbf1c581683",
           "confidence": "E2",
           "structured": {
-            "objects": [],
-            "relations": [],
+            "objects": [
+              "菱形ABCD",
+              "线段DE",
+              "线段DF",
+              "线段DG"
+            ],
+            "relations": [
+              "D-A-B连接成折线",
+              "D-C-B连接成折线",
+              "D-E连接",
+              "D-F连接",
+              "D-G连接"
+            ],
             "coordinates": [],
             "ranges": [],
             "text": [
@@ -604,8 +625,19 @@
         }
       ],
       "vision_sidecar": {
-        "objects": [],
-        "relations": [],
+        "objects": [
+          "菱形ABCD",
+          "线段DE",
+          "线段DF",
+          "线段DG"
+        ],
+        "relations": [
+          "D-A-B连接成折线",
+          "D-C-B连接成折线",
+          "D-E连接",
+          "D-F连接",
+          "D-G连接"
+        ],
         "coordinates": [],
         "ranges": [],
         "text": [
@@ -649,51 +681,73 @@
       ],
       "vision_sidecars": [
         {
-          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_full\\imgs\\img_in_image_box_904_1063_1093_1270.jpg",
+          "image": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_904_1063_1093_1270.jpg",
           "image_sha256": "c5843a38d8004ebc18ce317bcf4e71742e0eb69f157fdaa2599dbfd46b8aa613",
           "confidence": "E2",
           "structured": {
-            "objects": [],
-            "relations": [],
-            "coordinates": [
-              [
-                "P",
-                "B",
-                "C",
-                "D",
-                "A",
-                "O",
-                "M"
-              ]
+            "objects": [
+              "四棱锥P-ABCD、点M、O"
             ],
+            "relations": [
+              "M位于线段PC上",
+              "O位于线段AM上",
+              "PA、AB、AD、BD以虚线绘制",
+              "P与B、C、D之间画有实线",
+              "A位于底面内部的投影位置"
+            ],
+            "coordinates": [],
             "ranges": [],
-            "text": [],
-            "uncertainties": [],
+            "text": [
+              "P、A、B、C、D、M、O"
+            ],
+            "uncertainties": [
+              "图中未用刻痕标出M的中点性质"
+            ],
             "confidence": "E2"
           },
-          "source_provenance": null
+          "source_provenance": {
+            "source_kind": "manual_current_original_image_review",
+            "item_source": "data/packets/micro专题1/student_packet.json",
+            "original_image": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_904_1063_1093_1270.jpg",
+            "original_image_sha256": "c5843a38d8004ebc18ce317bcf4e71742e0eb69f157fdaa2599dbfd46b8aa613",
+            "review_result": "current_original_crop_visually_verified",
+            "review_report": "reports/deep_simulation_reviews/visual-fixes-ch1.json",
+            "review_report_sha256": "93c60397448a7d96d94e05e20433a38e46c9a5db78618a90d80586799e754f5c"
+          }
         }
       ],
       "vision_sidecar": {
-        "objects": [],
-        "relations": [],
-        "coordinates": [
-          [
-            "P",
-            "B",
-            "C",
-            "D",
-            "A",
-            "O",
-            "M"
-          ]
+        "objects": [
+          "四棱锥P-ABCD、点M、O"
         ],
+        "relations": [
+          "M位于线段PC上",
+          "O位于线段AM上",
+          "PA、AB、AD、BD以虚线绘制",
+          "P与B、C、D之间画有实线",
+          "A位于底面内部的投影位置"
+        ],
+        "coordinates": [],
         "ranges": [],
-        "text": [],
-        "uncertainties": [],
+        "text": [
+          "P、A、B、C、D、M、O"
+        ],
+        "uncertainties": [
+          "图中未用刻痕标出M的中点性质"
+        ],
         "confidence": "E2"
       },
-      "vision_source_provenance": []
+      "vision_source_provenance": [
+        {
+          "source_kind": "manual_current_original_image_review",
+          "item_source": "data/packets/micro专题1/student_packet.json",
+          "original_image": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_904_1063_1093_1270.jpg",
+          "original_image_sha256": "c5843a38d8004ebc18ce317bcf4e71742e0eb69f157fdaa2599dbfd46b8aa613",
+          "review_result": "current_original_crop_visually_verified",
+          "review_report": "reports/deep_simulation_reviews/visual-fixes-ch1.json",
+          "review_report_sha256": "93c60397448a7d96d94e05e20433a38e46c9a5db78618a90d80586799e754f5c"
+        }
+      ]
     },
     {
       "qid": "Q-5e9f4253e7369536",
@@ -722,122 +776,31 @@
       ],
       "vision_sidecars": [
         {
-          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_full\\imgs\\img_in_image_box_832_343_1093_610.jpg",
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_832_343_1093_610.jpg",
           "image_sha256": "0b8cedf9130463e50c21c184ef53aed595195dae033aa65680c5275f0e66cf67",
           "confidence": "E2",
           "structured": {
             "objects": [
-              {
-                "type": "point",
-                "label": "A"
-              },
-              {
-                "type": "point",
-                "label": "B"
-              },
-              {
-                "type": "point",
-                "label": "C"
-              },
-              {
-                "type": "point",
-                "label": "C1"
-              },
-              {
-                "type": "point",
-                "label": "D"
-              },
-              {
-                "type": "point",
-                "label": "A1"
-              },
-              {
-                "type": "point",
-                "label": "B1"
-              }
+              "四棱柱A-BB1C1C",
+              "点A1在CC1上",
+              "点D在B1C1上",
+              "点A1连接A、B、D"
             ],
             "relations": [
-              {
-                "type": "line",
-                "points": [
-                  "A",
-                  "A1"
-                ]
-              },
-              {
-                "type": "line",
-                "points": [
-                  "A1",
-                  "B1"
-                ]
-              },
-              {
-                "type": "line",
-                "points": [
-                  "A1",
-                  "D"
-                ]
-              },
-              {
-                "type": "line",
-                "points": [
-                  "A1",
-                  "C1"
-                ]
-              },
-              {
-                "type": "line",
-                "points": [
-                  "A1",
-                  "B"
-                ]
-              },
-              {
-                "type": "line",
-                "points": [
-                  "A",
-                  "B"
-                ]
-              },
-              {
-                "type": "line",
-                "points": [
-                  "A",
-                  "C"
-                ]
-              },
-              {
-                "type": "line",
-                "points": [
-                  "B",
-                  "C"
-                ]
-              },
-              {
-                "type": "line",
-                "points": [
-                  "B1",
-                  "C1"
-                ]
-              },
-              {
-                "type": "line",
-                "points": [
-                  "B1",
-                  "D"
-                ]
-              }
+              "A1-A连接A1与A",
+              "A1-B连接A1与B",
+              "A1-D连接A1与D",
+              "A1-C1连接A1与C1"
             ],
             "coordinates": [],
             "ranges": [],
             "text": [
-              "A",
-              "B",
-              "C",
               "C1",
               "D",
+              "B1",
               "A1",
-              "B1"
+              "A",
+              "B"
             ],
             "uncertainties": [],
             "confidence": "E2"
@@ -847,117 +810,26 @@
       ],
       "vision_sidecar": {
         "objects": [
-          {
-            "type": "point",
-            "label": "A"
-          },
-          {
-            "type": "point",
-            "label": "B"
-          },
-          {
-            "type": "point",
-            "label": "C"
-          },
-          {
-            "type": "point",
-            "label": "C1"
-          },
-          {
-            "type": "point",
-            "label": "D"
-          },
-          {
-            "type": "point",
-            "label": "A1"
-          },
-          {
-            "type": "point",
-            "label": "B1"
-          }
+          "四棱柱A-BB1C1C",
+          "点A1在CC1上",
+          "点D在B1C1上",
+          "点A1连接A、B、D"
         ],
         "relations": [
-          {
-            "type": "line",
-            "points": [
-              "A",
-              "A1"
-            ]
-          },
-          {
-            "type": "line",
-            "points": [
-              "A1",
-              "B1"
-            ]
-          },
-          {
-            "type": "line",
-            "points": [
-              "A1",
-              "D"
-            ]
-          },
-          {
-            "type": "line",
-            "points": [
-              "A1",
-              "C1"
-            ]
-          },
-          {
-            "type": "line",
-            "points": [
-              "A1",
-              "B"
-            ]
-          },
-          {
-            "type": "line",
-            "points": [
-              "A",
-              "B"
-            ]
-          },
-          {
-            "type": "line",
-            "points": [
-              "A",
-              "C"
-            ]
-          },
-          {
-            "type": "line",
-            "points": [
-              "B",
-              "C"
-            ]
-          },
-          {
-            "type": "line",
-            "points": [
-              "B1",
-              "C1"
-            ]
-          },
-          {
-            "type": "line",
-            "points": [
-              "B1",
-              "D"
-            ]
-          }
+          "A1-A连接A1与A",
+          "A1-B连接A1与B",
+          "A1-D连接A1与D",
+          "A1-C1连接A1与C1"
         ],
         "coordinates": [],
         "ranges": [],
         "text": [
-          "A",
-          "B",
-          "C",
           "C1",
           "D",
+          "B1",
           "A1",
-          "B1"
+          "A",
+          "B"
         ],
         "uncertainties": [],
         "confidence": "E2"
@@ -1010,82 +882,24 @@
       ],
       "vision_sidecars": [
         {
-          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_full\\imgs\\img_in_image_box_829_403_1093_576.jpg",
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_829_403_1093_576.jpg",
           "image_sha256": "10efed117c13874f282c88cb2f2a36700004cbf1db5a6222bd6355dd1d89857a",
           "confidence": "E2",
           "structured": {
             "objects": [
-              [
-                "P"
-              ],
-              [
-                "B"
-              ],
-              [
-                "A"
-              ],
-              [
-                "C"
-              ],
-              [
-                "D"
-              ],
-              [
-                "M"
-              ],
-              [
-                "T"
-              ]
+              "点P",
+              "点A",
+              "点B",
+              "点C",
+              "点D",
+              "点M",
+              "点T"
             ],
             "relations": [
-              [
-                "P",
-                "B"
-              ],
-              [
-                "P",
-                "A"
-              ],
-              [
-                "P",
-                "C"
-              ],
-              [
-                "P",
-                "D"
-              ],
-              [
-                "B",
-                "A"
-              ],
-              [
-                "A",
-                "C"
-              ],
-              [
-                "B",
-                "C"
-              ],
-              [
-                "C",
-                "D"
-              ],
-              [
-                "D",
-                "A"
-              ],
-              [
-                "D",
-                "T"
-              ],
-              [
-                "P",
-                "M"
-              ],
-              [
-                "P",
-                "T"
-              ]
+              "PA垂直平面BCD",
+              "AB平行CD",
+              "M在PD上",
+              "T在CD上"
             ],
             "coordinates": [],
             "ranges": [],
@@ -1098,77 +912,19 @@
       ],
       "vision_sidecar": {
         "objects": [
-          [
-            "P"
-          ],
-          [
-            "B"
-          ],
-          [
-            "A"
-          ],
-          [
-            "C"
-          ],
-          [
-            "D"
-          ],
-          [
-            "M"
-          ],
-          [
-            "T"
-          ]
+          "点P",
+          "点A",
+          "点B",
+          "点C",
+          "点D",
+          "点M",
+          "点T"
         ],
         "relations": [
-          [
-            "P",
-            "B"
-          ],
-          [
-            "P",
-            "A"
-          ],
-          [
-            "P",
-            "C"
-          ],
-          [
-            "P",
-            "D"
-          ],
-          [
-            "B",
-            "A"
-          ],
-          [
-            "A",
-            "C"
-          ],
-          [
-            "B",
-            "C"
-          ],
-          [
-            "C",
-            "D"
-          ],
-          [
-            "D",
-            "A"
-          ],
-          [
-            "D",
-            "T"
-          ],
-          [
-            "P",
-            "M"
-          ],
-          [
-            "P",
-            "T"
-          ]
+          "PA垂直平面BCD",
+          "AB平行CD",
+          "M在PD上",
+          "T在CD上"
         ],
         "coordinates": [],
         "ranges": [],
@@ -1205,195 +961,73 @@
       ],
       "vision_sidecars": [
         {
-          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_full\\imgs\\img_in_image_box_876_1100_1093_1291.jpg",
+          "image": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_876_1100_1093_1291.jpg",
           "image_sha256": "0144be006283223e72ca3b24e9e316ebad58bd4e081afaea35ba0c9239ec61ca",
           "confidence": "E2",
           "structured": {
             "objects": [
-              [
-                "点",
-                "A"
-              ],
-              [
-                "点",
-                "B"
-              ],
-              [
-                "点",
-                "C"
-              ],
-              [
-                "点",
-                "C1"
-              ],
-              [
-                "点",
-                "B1"
-              ]
+              "三棱柱ABC-A1B1C1"
             ],
             "relations": [
-              [
-                "连接",
-                "A",
-                "C"
-              ],
-              [
-                "连接",
-                "A",
-                "B"
-              ],
-              [
-                "连接",
-                "B",
-                "C"
-              ],
-              [
-                "连接",
-                "A",
-                "A1"
-              ],
-              [
-                "连接",
-                "B",
-                "B1"
-              ],
-              [
-                "连接",
-                "C",
-                "C1"
-              ],
-              [
-                "连接",
-                "A1",
-                "B1"
-              ],
-              [
-                "连接",
-                "B1",
-                "C1"
-              ],
-              [
-                "连接",
-                "C1",
-                "A1"
-              ],
-              [
-                "连接",
-                "A",
-                "B1"
-              ],
-              [
-                "连接",
-                "B",
-                "C1"
-              ],
-              [
-                "连接",
-                "C",
-                "A1"
-              ]
+              "A、B、C构成下方三角形",
+              "A1、B1、C1构成上方三角形",
+              "AA1、BB1、CC1为对应顶点连线",
+              "AC与CC1以虚线绘制",
+              "A1与B之间画有线段"
             ],
             "coordinates": [],
             "ranges": [],
-            "text": [],
-            "uncertainties": [],
+            "text": [
+              "A、B、C、A1、B1、C1"
+            ],
+            "uncertainties": [
+              "图中没有垂直或等长标记"
+            ],
             "confidence": "E2"
           },
-          "source_provenance": null
+          "source_provenance": {
+            "source_kind": "manual_current_original_image_review",
+            "item_source": "data/packets/micro专题1/student_packet.json",
+            "original_image": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_876_1100_1093_1291.jpg",
+            "original_image_sha256": "0144be006283223e72ca3b24e9e316ebad58bd4e081afaea35ba0c9239ec61ca",
+            "review_result": "current_original_crop_visually_verified",
+            "review_report": "reports/deep_simulation_reviews/visual-fixes-ch1.json",
+            "review_report_sha256": "93c60397448a7d96d94e05e20433a38e46c9a5db78618a90d80586799e754f5c"
+          }
         }
       ],
       "vision_sidecar": {
         "objects": [
-          [
-            "点",
-            "A"
-          ],
-          [
-            "点",
-            "B"
-          ],
-          [
-            "点",
-            "C"
-          ],
-          [
-            "点",
-            "C1"
-          ],
-          [
-            "点",
-            "B1"
-          ]
+          "三棱柱ABC-A1B1C1"
         ],
         "relations": [
-          [
-            "连接",
-            "A",
-            "C"
-          ],
-          [
-            "连接",
-            "A",
-            "B"
-          ],
-          [
-            "连接",
-            "B",
-            "C"
-          ],
-          [
-            "连接",
-            "A",
-            "A1"
-          ],
-          [
-            "连接",
-            "B",
-            "B1"
-          ],
-          [
-            "连接",
-            "C",
-            "C1"
-          ],
-          [
-            "连接",
-            "A1",
-            "B1"
-          ],
-          [
-            "连接",
-            "B1",
-            "C1"
-          ],
-          [
-            "连接",
-            "C1",
-            "A1"
-          ],
-          [
-            "连接",
-            "A",
-            "B1"
-          ],
-          [
-            "连接",
-            "B",
-            "C1"
-          ],
-          [
-            "连接",
-            "C",
-            "A1"
-          ]
+          "A、B、C构成下方三角形",
+          "A1、B1、C1构成上方三角形",
+          "AA1、BB1、CC1为对应顶点连线",
+          "AC与CC1以虚线绘制",
+          "A1与B之间画有线段"
         ],
         "coordinates": [],
         "ranges": [],
-        "text": [],
-        "uncertainties": [],
+        "text": [
+          "A、B、C、A1、B1、C1"
+        ],
+        "uncertainties": [
+          "图中没有垂直或等长标记"
+        ],
         "confidence": "E2"
       },
-      "vision_source_provenance": []
+      "vision_source_provenance": [
+        {
+          "source_kind": "manual_current_original_image_review",
+          "item_source": "data/packets/micro专题1/student_packet.json",
+          "original_image": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_876_1100_1093_1291.jpg",
+          "original_image_sha256": "0144be006283223e72ca3b24e9e316ebad58bd4e081afaea35ba0c9239ec61ca",
+          "review_result": "current_original_crop_visually_verified",
+          "review_report": "reports/deep_simulation_reviews/visual-fixes-ch1.json",
+          "review_report_sha256": "93c60397448a7d96d94e05e20433a38e46c9a5db78618a90d80586799e754f5c"
+        }
+      ]
     },
     {
       "qid": "Q-2ee3a3fc10f4a542",
@@ -1422,165 +1056,73 @@
       ],
       "vision_sidecars": [
         {
-          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_full\\imgs\\img_in_image_box_854_340_1093_574.jpg",
+          "image": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_854_340_1093_574.jpg",
           "image_sha256": "6a43d77704d5610fbb307112c92bf4680a1785cb74f516fdb6d65c394d7ad150",
           "confidence": "E2",
           "structured": {
-            "objects": [],
+            "objects": [
+              "三棱台ABC-A1B1C1、点O、D"
+            ],
             "relations": [
-              [
-                "C1",
-                "B1"
-              ],
-              [
-                "C1",
-                "C"
-              ],
-              [
-                "C1",
-                "O"
-              ],
-              [
-                "C1",
-                "A"
-              ],
-              [
-                "C1",
-                "D"
-              ],
-              [
-                "B1",
-                "B"
-              ],
-              [
-                "B",
-                "C"
-              ],
-              [
-                "C",
-                "A"
-              ],
-              [
-                "A",
-                "A1"
-              ],
-              [
-                "A1",
-                "D"
-              ],
-              [
-                "D",
-                "O"
-              ],
-              [
-                "O",
-                "C"
-              ]
+              "A、B、C构成下方三角形",
+              "A1、B1、C1构成上方三角形",
+              "AA1、BB1、CC1为对应顶点连线",
+              "O位于线段B1A1上",
+              "D位于线段OA1上"
             ],
-            "coordinates": [
-              "C1",
-              "B1",
-              "B",
-              "C",
-              "O",
-              "D",
-              "A",
-              "A1"
-            ],
+            "coordinates": [],
             "ranges": [],
             "text": [
-              "C1",
-              "B1",
-              "B",
-              "C",
-              "O",
-              "D",
-              "A",
-              "A1"
+              "A、B、C、A1、B1、C1、O、D"
             ],
-            "uncertainties": [],
+            "uncertainties": [
+              "图中未用刻痕标出O、D的中点性质"
+            ],
             "confidence": "E2"
           },
-          "source_provenance": null
+          "source_provenance": {
+            "source_kind": "manual_current_original_image_review",
+            "item_source": "data/packets/micro专题1/student_packet.json",
+            "original_image": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_854_340_1093_574.jpg",
+            "original_image_sha256": "6a43d77704d5610fbb307112c92bf4680a1785cb74f516fdb6d65c394d7ad150",
+            "review_result": "current_original_crop_visually_verified",
+            "review_report": "reports/deep_simulation_reviews/visual-fixes-ch1.json",
+            "review_report_sha256": "93c60397448a7d96d94e05e20433a38e46c9a5db78618a90d80586799e754f5c"
+          }
         }
       ],
       "vision_sidecar": {
-        "objects": [],
+        "objects": [
+          "三棱台ABC-A1B1C1、点O、D"
+        ],
         "relations": [
-          [
-            "C1",
-            "B1"
-          ],
-          [
-            "C1",
-            "C"
-          ],
-          [
-            "C1",
-            "O"
-          ],
-          [
-            "C1",
-            "A"
-          ],
-          [
-            "C1",
-            "D"
-          ],
-          [
-            "B1",
-            "B"
-          ],
-          [
-            "B",
-            "C"
-          ],
-          [
-            "C",
-            "A"
-          ],
-          [
-            "A",
-            "A1"
-          ],
-          [
-            "A1",
-            "D"
-          ],
-          [
-            "D",
-            "O"
-          ],
-          [
-            "O",
-            "C"
-          ]
+          "A、B、C构成下方三角形",
+          "A1、B1、C1构成上方三角形",
+          "AA1、BB1、CC1为对应顶点连线",
+          "O位于线段B1A1上",
+          "D位于线段OA1上"
         ],
-        "coordinates": [
-          "C1",
-          "B1",
-          "B",
-          "C",
-          "O",
-          "D",
-          "A",
-          "A1"
-        ],
+        "coordinates": [],
         "ranges": [],
         "text": [
-          "C1",
-          "B1",
-          "B",
-          "C",
-          "O",
-          "D",
-          "A",
-          "A1"
+          "A、B、C、A1、B1、C1、O、D"
         ],
-        "uncertainties": [],
+        "uncertainties": [
+          "图中未用刻痕标出O、D的中点性质"
+        ],
         "confidence": "E2"
       },
-      "vision_source_provenance": []
+      "vision_source_provenance": [
+        {
+          "source_kind": "manual_current_original_image_review",
+          "item_source": "data/packets/micro专题1/student_packet.json",
+          "original_image": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_854_340_1093_574.jpg",
+          "original_image_sha256": "6a43d77704d5610fbb307112c92bf4680a1785cb74f516fdb6d65c394d7ad150",
+          "review_result": "current_original_crop_visually_verified",
+          "review_report": "reports/deep_simulation_reviews/visual-fixes-ch1.json",
+          "review_report_sha256": "93c60397448a7d96d94e05e20433a38e46c9a5db78618a90d80586799e754f5c"
+        }
+      ]
     }
   ],
   "unresolved": [],

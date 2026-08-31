@@ -29,7 +29,7 @@
         27
       ]
     },
-    "derived_question_correction_count": 0
+    "derived_question_correction_count": 1
   },
   "status": "VERIFIED",
   "consumer_guard": "Student/DeepSeek context: no answers. Consume only when status=VERIFIED.",
@@ -80,7 +80,14 @@
       "text": "## 类型V：不等式证明\n",
       "text_sha256": "70806b4c03bc446e4ccdb8b6139249d32cf36cc8ac6ffddedb32a72d7a58cf14",
       "image_refs": [],
-      "math_errors": []
+      "math_errors": [],
+      "derived_corrections": [
+        {
+          "from": "\\frac{x^2 + 1}{x^2}",
+          "to": "\\frac{x^2 + 1}{\\mathrm{e}^x}",
+          "reason": "source merged PDF page 81 shows the same quotient by e^x before and after the monotonicity argument"
+        }
+      ]
     },
     {
       "ocr_doc": 81,
@@ -165,10 +172,18 @@
     {
       "ocr_doc": 91,
       "source_path": "data/ocr_live_current/chapter5_95/doc_91.md",
-      "text": "17.（2016·四川卷（节选））\n\n设函数  \\(f(x) = ax^2 - a - \\ln x\\)，其中  \\(a \\in \\mathbb{R}\\)，讨论  \\(f(x)\\) 的单调性.\n\n18.（2017·新课标Ⅰ卷（节选））\n\n已知函数  \\(f(x)=\\mathrm{e}^{x}(\\mathrm{e}^{x}-a)-a^{2}x\\)，讨论  \\(f(x)\\) 的单调性.\n\n19.（2021·北京卷）数·高中数学一本通已知函数 \\(f(x)=\\frac{3-2x}{x^{2}+a}\\).\n\n（1）若 a=0，求曲线  \\(y=f(x)\\) 在点  \\((1,f(1))\\) 处的切线方程；\n\n（2）若函数  \\(f(x)\\) 在 x = -1 处取得极值，求  \\(f(x)\\) 的单调区间，以及最大值与最小值.\n\n20.（2016·新课标Ⅰ卷（节选））\n\n已知函数  \\(f(x)=(x-2)e^{x}+a(x-1)^{2}\\)，讨论  \\(f(x)\\) 的单调性.",
+      "text": "17.（2016·四川卷（节选））\n\n设函数  \\(f(x) = ax^2 - a - \\ln x\\)，其中  \\(a \\in \\mathbb{R}\\)，讨论  \\(f(x)\\) 的单调性.\n\n18.（2017·新课标Ⅰ卷（节选））\n\n已知函数  \\(f(x)=\\mathrm{e}^{x}(\\mathrm{e}^{x}-a)-a^{2}x\\)，讨论  \\(f(x)\\) 的单调性.\n\n19.（2021·北京卷）\n\n已知函数 \\(f(x)=\\frac{3-2x}{x^{2}+a}\\)。\n\n（1）若 a=0，求曲线  \\(y=f(x)\\) 在点  \\((1,f(1))\\) 处的切线方程；\n\n（2）若函数  \\(f(x)\\) 在 x = -1 处取得极值，求  \\(f(x)\\) 的单调区间，以及最大值与最小值.\n\n20.（2016·新课标Ⅰ卷（节选））\n\n已知函数  \\(f(x)=(x-2)e^{x}+a(x-1)^{2}\\)，讨论  \\(f(x)\\) 的单调性.",
       "text_sha256": "534d2c8ee8e107a9e206a6d8a92e1689e333bb29a252155e0dadd1a6d9c8919c",
       "image_refs": [],
-      "math_errors": []
+      "math_errors": [],
+      "derived_question_corrections": [
+        {
+          "id": "DQC-5.6-B19-RUNNING-HEADER",
+          "action": "replace_line",
+          "evidence": "MERGED_SOURCE_PDF_PAGE_92_VISUAL_REVIEW",
+          "reason": "running_header_was_fused_between_citation_and_question"
+        }
+      ]
     },
     {
       "ocr_doc": 92,
@@ -561,7 +576,7 @@
         "pdf_page": 92,
         "file": "data/ocr_live_current/chapter5_95/doc_91.md"
       },
-      "question_text": "19.（2021·北京卷）数·高中数学一本通已知函数 \\(f(x)=\\frac{3-2x}{x^{2}+a}\\).\n\n（1）若 a=0，求曲线  \\(y=f(x)\\) 在点  \\((1,f(1))\\) 处的切线方程；\n\n（2）若函数  \\(f(x)\\) 在 x = -1 处取得极值，求  \\(f(x)\\) 的单调区间，以及最大值与最小值.",
+      "question_text": "19.（2021·北京卷）\n\n已知函数 \\(f(x)=\\frac{3-2x}{x^{2}+a}\\)。\n\n（1）若 a=0，求曲线  \\(y=f(x)\\) 在点  \\((1,f(1))\\) 处的切线方程；\n\n（2）若函数  \\(f(x)\\) 在 x = -1 处取得极值，求  \\(f(x)\\) 的单调区间，以及最大值与最小值.",
       "image_refs": [],
       "visual_status": "READY_TEXT_ONLY",
       "math_errors": [],

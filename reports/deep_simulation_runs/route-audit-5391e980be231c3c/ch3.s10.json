@@ -1,0 +1,1406 @@
+{
+  "schema_version": "ybt-deep-section-simulation-v3",
+  "generated_at": "2026-08-31T04:06:31.763728+00:00",
+  "chapter": 3,
+  "section": "ch3.s10",
+  "label": "第10节 微专题6：解析几何大题——长度与面积",
+  "simulation_kind": "answer_isolated_synthetic_route_stress",
+  "honesty_boundary": "Attempts test route actionability. They contain no final learner answer, so mathematical correctness and mastery are not claimed.",
+  "source_binding": {
+    "manifest_sha256": "5983a4e8eaae43e9f4c90c3e2b6b2a13e3ad4f167c8aae55ef5cbef7ef013654",
+    "student_learning_items_sha256": "2b188f0b49b6f15f6fc7c0a87bb55e1f76c31bee8fa0a55bec5d86e845023cc1",
+    "student_packet_sha256": "c5f5fa67ac8a886c78b49073f6157f27f6e1c00eef90315ecdf075670f1c7de9",
+    "grader_learning_packet_sha256": "4f9e4325d2ed209add87d6b9cd2b2f399238554b3a46d243bcab6cfeb026c69e",
+    "route_sha256": "29a91f8c60bc8f67da00ff388d9f4aedb32ba9692a14ef170e828a1c480ef204",
+    "learner_input_snapshot_sha256": "c15a9e641cd8adec0febb12c5c09ab2238ab756d9a80810df3142fc946a66d77"
+  },
+  "answer_isolation": {
+    "frozen_attempts_path": "reports/deep_simulation_runs/route-audit-5391e980be231c3c/frozen/ch3.s10.jsonl.gz",
+    "frozen_attempts_sha256": "21ec9ea279f7ca534163ab5376683f362c93b893eb58dfa2ab1111a8c8e7efab",
+    "route_assessments_path": "reports/deep_simulation_runs/route-audit-5391e980be231c3c/route_assessments/ch3.s10.jsonl.gz",
+    "route_assessments_sha256": "88890ef1563bc2ed25489f68028f6535d85ff82806657f80bdd7f1db94d08918",
+    "learner_answer_material_loaded": false,
+    "grader_material_loaded_after_freeze": true,
+    "grader_evidence": {
+      "parsed_automatic": 7,
+      "review_required_text": 1,
+      "source_page_bound": 3,
+      "textbook_solution": 2,
+      "blocked": 0
+    },
+    "status": "passed"
+  },
+  "items": [
+    {
+      "item_key": "LI:cd38385a51fb8b0f",
+      "item_id": "cd38385a51fb8b0f",
+      "ordinal": 1,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例1",
+      "group": null,
+      "cycle_id": "ch3.s10-cycle-1",
+      "cycle_sequence": 1,
+      "cycle_title": "类型Ⅰ 弦长的计算",
+      "course_refs": [
+        "chord_length_formula",
+        "in_curve_triangle_area",
+        "in_curve_quad_area",
+        "evaluation_algebra"
+      ],
+      "course_titles": [
+        "直线与曲线上的弦长公式",
+        "曲线内三角形面积公式",
+        "曲线内四边形面积公式",
+        "求值问题（代数法）"
+      ],
+      "required_course_refs": [
+        "chord_length_formula",
+        "in_curve_triangle_area",
+        "in_curve_quad_area",
+        "evaluation_algebra"
+      ],
+      "prerequisite_course_refs": [],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅰ 弦长的计算"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "直线",
+        "双曲线",
+        "焦点",
+        "证明",
+        "E",
+        "\\frac",
+        "x",
+        "y"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "f5c509f8d61f61516e2712f0726dfff0f0d190a868e7202fa4f32f7ca007685b",
+      "source_question_text_sha256": "f5c509f8d61f61516e2712f0726dfff0f0d190a868e7202fa4f32f7ca007685b",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "f5c509f8d61f61516e2712f0726dfff0f0d190a868e7202fa4f32f7ca007685b",
+        "learner_question_text_sha256": "f5c509f8d61f61516e2712f0726dfff0f0d190a868e7202fa4f32f7ca007685b"
+      },
+      "question_signal_excerpt": "直线、双曲线、焦点、证明、E、\\frac、x、y",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:af3da4001d71bb12",
+      "item_id": "af3da4001d71bb12",
+      "ordinal": 2,
+      "ordinal_in_cycle": 2,
+      "kind": "direct_variant",
+      "label": "例1 变式",
+      "group": null,
+      "cycle_id": "ch3.s10-cycle-1",
+      "cycle_sequence": 1,
+      "cycle_title": "类型Ⅰ 弦长的计算",
+      "course_refs": [
+        "chord_length_formula",
+        "in_curve_triangle_area",
+        "in_curve_quad_area",
+        "evaluation_algebra"
+      ],
+      "course_titles": [
+        "直线与曲线上的弦长公式",
+        "曲线内三角形面积公式",
+        "曲线内四边形面积公式",
+        "求值问题（代数法）"
+      ],
+      "required_course_refs": [
+        "chord_length_formula",
+        "in_curve_triangle_area",
+        "in_curve_quad_area",
+        "evaluation_algebra"
+      ],
+      "prerequisite_course_refs": [],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅰ 弦长的计算"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "直线",
+        "圆",
+        "弦",
+        "椭圆",
+        "焦点",
+        "C",
+        "\\frac",
+        "x",
+        "a"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "39ddb821ec465dd814363cbf1415ede234be526b9952a9c6488a3a4ddcab2fb7",
+      "source_question_text_sha256": "39ddb821ec465dd814363cbf1415ede234be526b9952a9c6488a3a4ddcab2fb7",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "39ddb821ec465dd814363cbf1415ede234be526b9952a9c6488a3a4ddcab2fb7",
+        "learner_question_text_sha256": "39ddb821ec465dd814363cbf1415ede234be526b9952a9c6488a3a4ddcab2fb7"
+      },
+      "question_signal_excerpt": "直线、圆、弦、椭圆、焦点、C、\\frac、x、a",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:09dc11e2d74b726d",
+      "item_id": "09dc11e2d74b726d",
+      "ordinal": 3,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例2",
+      "group": null,
+      "cycle_id": "ch3.s10-cycle-2",
+      "cycle_sequence": 2,
+      "cycle_title": "类型Ⅱ 面积的计算",
+      "course_refs": [
+        "evaluation_geometry",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower",
+        "chord_length_formula",
+        "in_curve_triangle_area",
+        "in_curve_quad_area",
+        "evaluation_algebra"
+      ],
+      "course_titles": [
+        "求值问题（几何法）",
+        "交点问题的基本代数处理（上·题型辨识）",
+        "交点问题的基本代数处理（下·点线设法与处理）",
+        "直线与曲线上的弦长公式",
+        "曲线内三角形面积公式",
+        "曲线内四边形面积公式",
+        "求值问题（代数法）"
+      ],
+      "required_course_refs": [
+        "evaluation_geometry",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "prerequisite_course_refs": [
+        "chord_length_formula",
+        "in_curve_triangle_area",
+        "in_curve_quad_area",
+        "evaluation_algebra"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 面积的计算"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "斜率",
+        "直线",
+        "圆",
+        "椭圆",
+        "面积",
+        "C",
+        "\\frac",
+        "x",
+        "y"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "7cc99ef4aac7b80cf28252a483ce45babb2ce49a02cc03d9390695d51ab39973",
+      "source_question_text_sha256": "7cc99ef4aac7b80cf28252a483ce45babb2ce49a02cc03d9390695d51ab39973",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "7cc99ef4aac7b80cf28252a483ce45babb2ce49a02cc03d9390695d51ab39973",
+        "learner_question_text_sha256": "7cc99ef4aac7b80cf28252a483ce45babb2ce49a02cc03d9390695d51ab39973"
+      },
+      "question_signal_excerpt": "斜率、直线、圆、椭圆、面积、C、\\frac、x、y",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:99bf0ae024ec74e3",
+      "item_id": "99bf0ae024ec74e3",
+      "ordinal": 4,
+      "ordinal_in_cycle": 2,
+      "kind": "worked_example",
+      "label": "例3",
+      "group": null,
+      "cycle_id": "ch3.s10-cycle-2",
+      "cycle_sequence": 2,
+      "cycle_title": "类型Ⅱ 面积的计算",
+      "course_refs": [
+        "evaluation_geometry",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower",
+        "chord_length_formula",
+        "in_curve_triangle_area",
+        "in_curve_quad_area",
+        "evaluation_algebra"
+      ],
+      "course_titles": [
+        "求值问题（几何法）",
+        "交点问题的基本代数处理（上·题型辨识）",
+        "交点问题的基本代数处理（下·点线设法与处理）",
+        "直线与曲线上的弦长公式",
+        "曲线内三角形面积公式",
+        "曲线内四边形面积公式",
+        "求值问题（代数法）"
+      ],
+      "required_course_refs": [
+        "evaluation_geometry",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "prerequisite_course_refs": [
+        "chord_length_formula",
+        "in_curve_triangle_area",
+        "in_curve_quad_area",
+        "evaluation_algebra"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 面积的计算"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "直线",
+        "双曲线",
+        "焦点",
+        "面积",
+        "E",
+        "\\frac",
+        "x",
+        "y"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "522e19a088cc8458e697438d8bb3b878a82e46cd30ed6ef229133f4a4aa18ce7",
+      "source_question_text_sha256": "522e19a088cc8458e697438d8bb3b878a82e46cd30ed6ef229133f4a4aa18ce7",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "522e19a088cc8458e697438d8bb3b878a82e46cd30ed6ef229133f4a4aa18ce7",
+        "learner_question_text_sha256": "522e19a088cc8458e697438d8bb3b878a82e46cd30ed6ef229133f4a4aa18ce7"
+      },
+      "question_signal_excerpt": "直线、双曲线、焦点、面积、E、\\frac、x、y",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:21480dd33f54d0c6",
+      "item_id": "21480dd33f54d0c6",
+      "ordinal": 5,
+      "ordinal_in_cycle": 3,
+      "kind": "direct_variant",
+      "label": "例3 变式",
+      "group": null,
+      "cycle_id": "ch3.s10-cycle-2",
+      "cycle_sequence": 2,
+      "cycle_title": "类型Ⅱ 面积的计算",
+      "course_refs": [
+        "evaluation_geometry",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower",
+        "chord_length_formula",
+        "in_curve_triangle_area",
+        "in_curve_quad_area",
+        "evaluation_algebra"
+      ],
+      "course_titles": [
+        "求值问题（几何法）",
+        "交点问题的基本代数处理（上·题型辨识）",
+        "交点问题的基本代数处理（下·点线设法与处理）",
+        "直线与曲线上的弦长公式",
+        "曲线内三角形面积公式",
+        "曲线内四边形面积公式",
+        "求值问题（代数法）"
+      ],
+      "required_course_refs": [
+        "evaluation_geometry",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "prerequisite_course_refs": [
+        "chord_length_formula",
+        "in_curve_triangle_area",
+        "in_curve_quad_area",
+        "evaluation_algebra"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 面积的计算"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "斜率",
+        "直线",
+        "圆",
+        "椭圆",
+        "离心率",
+        "C",
+        "\\frac",
+        "x",
+        "a"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "c8371a9673120616c7eeba2476d58aee1c8ffa135811a42c5d4776ad580b6b96",
+      "source_question_text_sha256": "c8371a9673120616c7eeba2476d58aee1c8ffa135811a42c5d4776ad580b6b96",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "c8371a9673120616c7eeba2476d58aee1c8ffa135811a42c5d4776ad580b6b96",
+        "learner_question_text_sha256": "c8371a9673120616c7eeba2476d58aee1c8ffa135811a42c5d4776ad580b6b96"
+      },
+      "question_signal_excerpt": "斜率、直线、圆、椭圆、离心率、C、\\frac、x、a",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-ef5c95149871fca5",
+      "item_id": "Q-ef5c95149871fca5",
+      "ordinal": 6,
+      "ordinal_in_cycle": 1,
+      "kind": "abc_exercise",
+      "label": "B1",
+      "group": "B",
+      "cycle_id": "ch3.s10-cycle-3",
+      "cycle_sequence": 3,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "chord_length_formula",
+        "in_curve_triangle_area",
+        "in_curve_quad_area",
+        "evaluation_algebra",
+        "evaluation_geometry",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "course_titles": [
+        "直线与曲线上的弦长公式",
+        "曲线内三角形面积公式",
+        "曲线内四边形面积公式",
+        "求值问题（代数法）",
+        "求值问题（几何法）",
+        "交点问题的基本代数处理（上·题型辨识）",
+        "交点问题的基本代数处理（下·点线设法与处理）"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "chord_length_formula",
+        "in_curve_triangle_area",
+        "in_curve_quad_area",
+        "evaluation_algebra",
+        "evaluation_geometry",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 面积的计算"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "直线",
+        "圆",
+        "椭圆",
+        "焦点",
+        "面积",
+        "A",
+        "F",
+        "E",
+        "\\frac"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "7ec3f3dbd1072ccb2dcca650676b2e62af96f9682009bceb6c91488494c72a78",
+      "source_question_text_sha256": "7ec3f3dbd1072ccb2dcca650676b2e62af96f9682009bceb6c91488494c72a78",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "7ec3f3dbd1072ccb2dcca650676b2e62af96f9682009bceb6c91488494c72a78",
+        "learner_question_text_sha256": "7ec3f3dbd1072ccb2dcca650676b2e62af96f9682009bceb6c91488494c72a78"
+      },
+      "question_signal_excerpt": "直线、圆、椭圆、焦点、面积、A、F、E、\\frac",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-4911713b17d4eb7e",
+      "item_id": "Q-4911713b17d4eb7e",
+      "ordinal": 7,
+      "ordinal_in_cycle": 2,
+      "kind": "abc_exercise",
+      "label": "B2",
+      "group": "B",
+      "cycle_id": "ch3.s10-cycle-3",
+      "cycle_sequence": 3,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "chord_length_formula",
+        "in_curve_triangle_area",
+        "in_curve_quad_area",
+        "evaluation_algebra",
+        "evaluation_geometry",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "course_titles": [
+        "直线与曲线上的弦长公式",
+        "曲线内三角形面积公式",
+        "曲线内四边形面积公式",
+        "求值问题（代数法）",
+        "求值问题（几何法）",
+        "交点问题的基本代数处理（上·题型辨识）",
+        "交点问题的基本代数处理（下·点线设法与处理）"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "chord_length_formula",
+        "in_curve_triangle_area",
+        "in_curve_quad_area",
+        "evaluation_algebra",
+        "evaluation_geometry",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 面积的计算",
+        "类型Ⅰ 弦长的计算"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "直线",
+        "双曲线",
+        "范围",
+        "面积",
+        "C",
+        "x",
+        "y",
+        "l"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "e69f2a6eb16f5db2fb38453f57aefc342ea1018f83607afad4caf53645d03e21",
+      "source_question_text_sha256": "e69f2a6eb16f5db2fb38453f57aefc342ea1018f83607afad4caf53645d03e21",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "e69f2a6eb16f5db2fb38453f57aefc342ea1018f83607afad4caf53645d03e21",
+        "learner_question_text_sha256": "e69f2a6eb16f5db2fb38453f57aefc342ea1018f83607afad4caf53645d03e21"
+      },
+      "question_signal_excerpt": "直线、双曲线、范围、面积、C、x、y、l",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-635b932e0c3d79b7",
+      "item_id": "Q-635b932e0c3d79b7",
+      "ordinal": 8,
+      "ordinal_in_cycle": 3,
+      "kind": "abc_exercise",
+      "label": "B3",
+      "group": "B",
+      "cycle_id": "ch3.s10-cycle-3",
+      "cycle_sequence": 3,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "chord_length_formula",
+        "in_curve_triangle_area",
+        "in_curve_quad_area",
+        "evaluation_algebra",
+        "evaluation_geometry",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "course_titles": [
+        "直线与曲线上的弦长公式",
+        "曲线内三角形面积公式",
+        "曲线内四边形面积公式",
+        "求值问题（代数法）",
+        "求值问题（几何法）",
+        "交点问题的基本代数处理（上·题型辨识）",
+        "交点问题的基本代数处理（下·点线设法与处理）"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "chord_length_formula",
+        "in_curve_triangle_area",
+        "in_curve_quad_area",
+        "evaluation_algebra",
+        "evaluation_geometry",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 面积的计算",
+        "类型Ⅰ 弦长的计算"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "直线",
+        "双曲线",
+        "焦点",
+        "面积",
+        "C",
+        "\\frac",
+        "x",
+        "a"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "aab251425ca1f7f0f2f8c3dc82c19a5a9a58cdb6d00e80471d19b0ad9d6ed234",
+      "source_question_text_sha256": "aab251425ca1f7f0f2f8c3dc82c19a5a9a58cdb6d00e80471d19b0ad9d6ed234",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "aab251425ca1f7f0f2f8c3dc82c19a5a9a58cdb6d00e80471d19b0ad9d6ed234",
+        "learner_question_text_sha256": "aab251425ca1f7f0f2f8c3dc82c19a5a9a58cdb6d00e80471d19b0ad9d6ed234"
+      },
+      "question_signal_excerpt": "直线、双曲线、焦点、面积、C、\\frac、x、a",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-8b6d01c6b3303b78",
+      "item_id": "Q-8b6d01c6b3303b78",
+      "ordinal": 9,
+      "ordinal_in_cycle": 4,
+      "kind": "abc_exercise",
+      "label": "B4",
+      "group": "B",
+      "cycle_id": "ch3.s10-cycle-3",
+      "cycle_sequence": 3,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "chord_length_formula",
+        "in_curve_triangle_area",
+        "in_curve_quad_area",
+        "evaluation_algebra",
+        "evaluation_geometry",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "course_titles": [
+        "直线与曲线上的弦长公式",
+        "曲线内三角形面积公式",
+        "曲线内四边形面积公式",
+        "求值问题（代数法）",
+        "求值问题（几何法）",
+        "交点问题的基本代数处理（上·题型辨识）",
+        "交点问题的基本代数处理（下·点线设法与处理）"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "chord_length_formula",
+        "in_curve_triangle_area",
+        "in_curve_quad_area",
+        "evaluation_algebra",
+        "evaluation_geometry",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅰ 弦长的计算",
+        "类型Ⅱ 面积的计算"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "直线",
+        "圆",
+        "椭圆",
+        "焦点",
+        "离心率",
+        "\\frac",
+        "x",
+        "a"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "1da91026730ce29f7c39be9be2a7f8e0d2d8194292e34a3708f72abe11d24868",
+      "source_question_text_sha256": "1da91026730ce29f7c39be9be2a7f8e0d2d8194292e34a3708f72abe11d24868",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "1da91026730ce29f7c39be9be2a7f8e0d2d8194292e34a3708f72abe11d24868",
+        "learner_question_text_sha256": "1da91026730ce29f7c39be9be2a7f8e0d2d8194292e34a3708f72abe11d24868"
+      },
+      "question_signal_excerpt": "直线、圆、椭圆、焦点、离心率、\\frac、x、a",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-db2a72fd81660df8",
+      "item_id": "Q-db2a72fd81660df8",
+      "ordinal": 10,
+      "ordinal_in_cycle": 5,
+      "kind": "abc_exercise",
+      "label": "B5",
+      "group": "B",
+      "cycle_id": "ch3.s10-cycle-3",
+      "cycle_sequence": 3,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "chord_length_formula",
+        "in_curve_triangle_area",
+        "in_curve_quad_area",
+        "evaluation_algebra",
+        "evaluation_geometry",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "course_titles": [
+        "直线与曲线上的弦长公式",
+        "曲线内三角形面积公式",
+        "曲线内四边形面积公式",
+        "求值问题（代数法）",
+        "求值问题（几何法）",
+        "交点问题的基本代数处理（上·题型辨识）",
+        "交点问题的基本代数处理（下·点线设法与处理）"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "chord_length_formula",
+        "in_curve_triangle_area",
+        "in_curve_quad_area",
+        "evaluation_algebra",
+        "evaluation_geometry",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 面积的计算",
+        "类型Ⅰ 弦长的计算"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "直线",
+        "圆",
+        "椭圆",
+        "焦点",
+        "离心率",
+        "C",
+        "\\frac",
+        "x",
+        "a"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "400bd0c43c9237159d3e6585ceffbe549041f61df913897590538c271d01c4d4",
+      "source_question_text_sha256": "400bd0c43c9237159d3e6585ceffbe549041f61df913897590538c271d01c4d4",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "400bd0c43c9237159d3e6585ceffbe549041f61df913897590538c271d01c4d4",
+        "learner_question_text_sha256": "400bd0c43c9237159d3e6585ceffbe549041f61df913897590538c271d01c4d4"
+      },
+      "question_signal_excerpt": "直线、圆、椭圆、焦点、离心率、C、\\frac、x、a",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-a563c12abd5b1346",
+      "item_id": "Q-a563c12abd5b1346",
+      "ordinal": 11,
+      "ordinal_in_cycle": 1,
+      "kind": "abc_exercise",
+      "label": "C6",
+      "group": "C",
+      "cycle_id": "ch3.s10-cycle-4",
+      "cycle_sequence": 4,
+      "cycle_title": "C组 拓展提升",
+      "course_refs": [
+        "chord_length_formula",
+        "in_curve_triangle_area",
+        "in_curve_quad_area",
+        "evaluation_algebra",
+        "evaluation_geometry",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "course_titles": [
+        "直线与曲线上的弦长公式",
+        "曲线内三角形面积公式",
+        "曲线内四边形面积公式",
+        "求值问题（代数法）",
+        "求值问题（几何法）",
+        "交点问题的基本代数处理（上·题型辨识）",
+        "交点问题的基本代数处理（下·点线设法与处理）"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "chord_length_formula",
+        "in_curve_triangle_area",
+        "in_curve_quad_area",
+        "evaluation_algebra",
+        "evaluation_geometry",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅰ 弦长的计算",
+        "类型Ⅱ 面积的计算"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "斜率",
+        "直线",
+        "圆",
+        "椭圆",
+        "焦点",
+        "C",
+        "\\frac",
+        "x",
+        "a"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "94abfaf15b1402f0ff206bba326bc7a29572a2ab51de455f11763d5440b79be8",
+      "source_question_text_sha256": "94abfaf15b1402f0ff206bba326bc7a29572a2ab51de455f11763d5440b79be8",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "94abfaf15b1402f0ff206bba326bc7a29572a2ab51de455f11763d5440b79be8",
+        "learner_question_text_sha256": "94abfaf15b1402f0ff206bba326bc7a29572a2ab51de455f11763d5440b79be8"
+      },
+      "question_signal_excerpt": "斜率、直线、圆、椭圆、焦点、C、\\frac、x、a",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-0293b0b370cb677f",
+      "item_id": "Q-0293b0b370cb677f",
+      "ordinal": 12,
+      "ordinal_in_cycle": 2,
+      "kind": "abc_exercise",
+      "label": "C7",
+      "group": "C",
+      "cycle_id": "ch3.s10-cycle-4",
+      "cycle_sequence": 4,
+      "cycle_title": "C组 拓展提升",
+      "course_refs": [
+        "chord_length_formula",
+        "in_curve_triangle_area",
+        "in_curve_quad_area",
+        "evaluation_algebra",
+        "evaluation_geometry",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "course_titles": [
+        "直线与曲线上的弦长公式",
+        "曲线内三角形面积公式",
+        "曲线内四边形面积公式",
+        "求值问题（代数法）",
+        "求值问题（几何法）",
+        "交点问题的基本代数处理（上·题型辨识）",
+        "交点问题的基本代数处理（下·点线设法与处理）"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "chord_length_formula",
+        "in_curve_triangle_area",
+        "in_curve_quad_area",
+        "evaluation_algebra",
+        "evaluation_geometry",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 面积的计算",
+        "类型Ⅰ 弦长的计算"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "直线",
+        "圆",
+        "椭圆",
+        "焦点",
+        "范围",
+        "E",
+        "\\frac",
+        "x",
+        "a"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "ea4b0e87f05e0737b01bffe190ec062d069c5764e710bba3cfcfed9e7e5bfb3e",
+      "source_question_text_sha256": "ea4b0e87f05e0737b01bffe190ec062d069c5764e710bba3cfcfed9e7e5bfb3e",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "ea4b0e87f05e0737b01bffe190ec062d069c5764e710bba3cfcfed9e7e5bfb3e",
+        "learner_question_text_sha256": "ea4b0e87f05e0737b01bffe190ec062d069c5764e710bba3cfcfed9e7e5bfb3e"
+      },
+      "question_signal_excerpt": "直线、圆、椭圆、焦点、范围、E、\\frac、x、a",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-2da8dc1d007cede4",
+      "item_id": "Q-2da8dc1d007cede4",
+      "ordinal": 13,
+      "ordinal_in_cycle": 3,
+      "kind": "abc_exercise",
+      "label": "C8",
+      "group": "C",
+      "cycle_id": "ch3.s10-cycle-4",
+      "cycle_sequence": 4,
+      "cycle_title": "C组 拓展提升",
+      "course_refs": [
+        "chord_length_formula",
+        "in_curve_triangle_area",
+        "in_curve_quad_area",
+        "evaluation_algebra",
+        "evaluation_geometry",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "course_titles": [
+        "直线与曲线上的弦长公式",
+        "曲线内三角形面积公式",
+        "曲线内四边形面积公式",
+        "求值问题（代数法）",
+        "求值问题（几何法）",
+        "交点问题的基本代数处理（上·题型辨识）",
+        "交点问题的基本代数处理（下·点线设法与处理）"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "chord_length_formula",
+        "in_curve_triangle_area",
+        "in_curve_quad_area",
+        "evaluation_algebra",
+        "evaluation_geometry",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 面积的计算",
+        "类型Ⅰ 弦长的计算"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "直线",
+        "圆",
+        "范围",
+        "面积",
+        "Q",
+        "F_2",
+        "x",
+        "y"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "eb49a589c5539e0fbde78c541dcf689cefa9d6e071a81aed3bb0231db8c3e6da",
+      "source_question_text_sha256": "eb49a589c5539e0fbde78c541dcf689cefa9d6e071a81aed3bb0231db8c3e6da",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "eb49a589c5539e0fbde78c541dcf689cefa9d6e071a81aed3bb0231db8c3e6da",
+        "learner_question_text_sha256": "eb49a589c5539e0fbde78c541dcf689cefa9d6e071a81aed3bb0231db8c3e6da"
+      },
+      "question_signal_excerpt": "直线、圆、范围、面积、Q、F_2、x、y",
+      "source_blocked": false
+    }
+  ],
+  "route_versions": [
+    {
+      "version": 1,
+      "route_hash": "8362c4308bebd46e4c7635a362a54491ef4eb1b269b3a5154bd6bbbc1f26de8b"
+    },
+    {
+      "version": 2,
+      "route_hash": "4f7151317252910a220c9fc37a0d2a96eb7dd680b13888b673a522e14d9919fe"
+    },
+    {
+      "version": 3,
+      "route_hash": "cd47d655916b6fb31def1c894f1954c12db9e55cc7cf8c3ad3d865150d89c34c"
+    }
+  ],
+  "final_route_hash": "cd47d655916b6fb31def1c894f1954c12db9e55cc7cf8c3ad3d865150d89c34c",
+  "simulation": {
+    "protocol": "five-round-five-persona-v3-answer-isolated",
+    "generation_mode": "synthetic_route_stress_from_actual_item_features",
+    "rounds": [
+      {
+        "round": 1,
+        "purpose": "baseline_entry",
+        "route_version": 1,
+        "route_hash": "8362c4308bebd46e4c7635a362a54491ef4eb1b269b3a5154bd6bbbc1f26de8b",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 13,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 13,
+            "blocked": 7
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 13,
+            "blocked": 3
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 13,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 13,
+            "blocked": 8
+          }
+        ],
+        "failed_item_keys": [
+          "Q:Q-0293b0b370cb677f",
+          "Q:Q-2da8dc1d007cede4",
+          "Q:Q-4911713b17d4eb7e",
+          "Q:Q-635b932e0c3d79b7",
+          "Q:Q-8b6d01c6b3303b78",
+          "Q:Q-a563c12abd5b1346",
+          "Q:Q-db2a72fd81660df8",
+          "Q:Q-ef5c95149871fca5"
+        ],
+        "route_repairs": [
+          {
+            "item_keys": [
+              "Q:Q-0293b0b370cb677f",
+              "Q:Q-2da8dc1d007cede4",
+              "Q:Q-4911713b17d4eb7e",
+              "Q:Q-635b932e0c3d79b7",
+              "Q:Q-8b6d01c6b3303b78",
+              "Q:Q-a563c12abd5b1346",
+              "Q:Q-db2a72fd81660df8"
+            ],
+            "field": "recognition_cues",
+            "before": "第1轮冻结尝试记录了 recognition-weak 的首个阻断。",
+            "after": "下一轮只加入 recognition-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 7 题；不是随机题号注入。"
+          },
+          {
+            "item_keys": [
+              "Q:Q-0293b0b370cb677f",
+              "Q:Q-2da8dc1d007cede4",
+              "Q:Q-4911713b17d4eb7e"
+            ],
+            "field": "continuation_checkpoints",
+            "before": "第1轮冻结尝试记录了 algebra-weak 的首个阻断。",
+            "after": "下一轮只加入 algebra-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 3 题；不是随机题号注入。"
+          },
+          {
+            "item_keys": [
+              "Q:Q-0293b0b370cb677f",
+              "Q:Q-2da8dc1d007cede4",
+              "Q:Q-4911713b17d4eb7e",
+              "Q:Q-635b932e0c3d79b7",
+              "Q:Q-8b6d01c6b3303b78",
+              "Q:Q-a563c12abd5b1346",
+              "Q:Q-db2a72fd81660df8",
+              "Q:Q-ef5c95149871fca5"
+            ],
+            "field": "independent_self_check",
+            "before": "第1轮冻结尝试记录了 self-check-weak 的首个阻断。",
+            "after": "下一轮只加入 self-check-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 8 题；不是随机题号注入。"
+          }
+        ]
+      },
+      {
+        "round": 2,
+        "purpose": "prerequisite_repair",
+        "route_version": 2,
+        "route_hash": "4f7151317252910a220c9fc37a0d2a96eb7dd680b13888b673a522e14d9919fe",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 13,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 13,
+            "blocked": 0
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 13,
+            "blocked": 0
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 13,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 13,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [],
+        "route_repairs": []
+      },
+      {
+        "round": 3,
+        "purpose": "continuation_transfer",
+        "route_version": 2,
+        "route_hash": "4f7151317252910a220c9fc37a0d2a96eb7dd680b13888b673a522e14d9919fe",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 13,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 13,
+            "blocked": 2
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 13,
+            "blocked": 2
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 13,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 13,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [
+          "LI:21480dd33f54d0c6",
+          "LI:af3da4001d71bb12"
+        ],
+        "route_repairs": [
+          {
+            "item_keys": [
+              "LI:21480dd33f54d0c6",
+              "LI:af3da4001d71bb12"
+            ],
+            "field": "recognition_cues",
+            "before": "第3轮冻结尝试记录了 recognition-weak 的首个阻断。",
+            "after": "下一轮只加入 recognition-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 2 题；不是随机题号注入。"
+          },
+          {
+            "item_keys": [
+              "LI:21480dd33f54d0c6",
+              "LI:af3da4001d71bb12"
+            ],
+            "field": "continuation_checkpoints",
+            "before": "第3轮冻结尝试记录了 algebra-weak 的首个阻断。",
+            "after": "下一轮只加入 algebra-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 2 题；不是随机题号注入。"
+          }
+        ]
+      },
+      {
+        "round": 4,
+        "purpose": "mixed_retrieval",
+        "route_version": 3,
+        "route_hash": "cd47d655916b6fb31def1c894f1954c12db9e55cc7cf8c3ad3d865150d89c34c",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 13,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 13,
+            "blocked": 0
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 13,
+            "blocked": 0
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 13,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 13,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [],
+        "route_repairs": []
+      },
+      {
+        "round": 5,
+        "purpose": "fresh_context",
+        "route_version": 3,
+        "route_hash": "cd47d655916b6fb31def1c894f1954c12db9e55cc7cf8c3ad3d865150d89c34c",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 13,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 13,
+            "blocked": 0
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 13,
+            "blocked": 0
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 13,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 13,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [],
+        "route_repairs": []
+      }
+    ],
+    "expected_attempts_per_item": 25,
+    "actual_attempts_per_item": 25,
+    "unresolved_item_keys": [],
+    "mathematical_correctness": "not_evaluated_no_final_answer",
+    "mastery_claimed": false,
+    "status": "passed"
+  },
+  "summary": {
+    "items": 13,
+    "attempts": 325,
+    "route_assessments": 325,
+    "rounds": 5,
+    "personas_per_round": 5,
+    "repairs": 5,
+    "round_5_failed_items": 0,
+    "validator_errors": []
+  },
+  "human_learning_status": "remote_math_mcp_only",
+  "cold_24h_retest": "not_run",
+  "mastery_claimed": false,
+  "claim_scope": "route_actionability_only",
+  "mathematical_assessment_status": "not_run",
+  "route_audit_status": "passed",
+  "status": "passed"
+}

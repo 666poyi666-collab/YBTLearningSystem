@@ -1,0 +1,2470 @@
+{
+  "schema_version": "ybt-deep-section-simulation-v3",
+  "generated_at": "2026-08-31T04:06:32.672322+00:00",
+  "chapter": 5,
+  "section": "5.2",
+  "label": "第2节 导数的运算",
+  "simulation_kind": "answer_isolated_synthetic_route_stress",
+  "honesty_boundary": "Attempts test route actionability. They contain no final learner answer, so mathematical correctness and mastery are not claimed.",
+  "source_binding": {
+    "manifest_sha256": "db9d20c619d78b202750a5416105a3f8510f5b074d81eabb8a248314b585f5c6",
+    "student_learning_items_sha256": "2fe2eccf3e903e8c1a98830955747da7358c5f1020828c084afa3aceac848aa5",
+    "student_packet_sha256": "ecae85f151da40a2abfbb28ffc8f8f4398c9ed920a97073b6736596a6b755c40",
+    "grader_learning_packet_sha256": "75b6ba0ccdde21c6d1d18225ef5d7ad89c7b2a3f234f937a5a7ca21afdc6e38f",
+    "route_sha256": "d6b411667cbffa9aef9dcc51f0a6fe8c0f19b6b086669a1a7512d13fd661b533",
+    "learner_input_snapshot_sha256": "6ea546545ece495ecc457642179f1cf52db8673772f831a56642891a03c5de10"
+  },
+  "answer_isolation": {
+    "frozen_attempts_path": "reports/deep_simulation_runs/route-audit-5391e980be231c3c/frozen/5.2.jsonl.gz",
+    "frozen_attempts_sha256": "db50225e6d7e7d2c7a22922e6e3f93a4a268123f2a9601882c642f71e1faa3d5",
+    "route_assessments_path": "reports/deep_simulation_runs/route-audit-5391e980be231c3c/route_assessments/5.2.jsonl.gz",
+    "route_assessments_sha256": "783a93ec7ba8c55b825a85b0c015afaf1e962a4e736e09075f1f4f15508817b2",
+    "learner_answer_material_loaded": false,
+    "grader_material_loaded_after_freeze": true,
+    "grader_evidence": {
+      "parsed_automatic": 11,
+      "review_required_text": 3,
+      "source_page_bound": 6,
+      "textbook_solution": 10,
+      "blocked": 0
+    },
+    "status": "passed"
+  },
+  "items": [
+    {
+      "item_key": "LI:b6ce8a5b8fff869a",
+      "item_id": "b6ce8a5b8fff869a",
+      "ordinal": 1,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例1",
+      "group": null,
+      "cycle_id": "5.2-cycle-1",
+      "cycle_sequence": 1,
+      "cycle_title": "基本初等函数的导数",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "基本初等函数的导数及运算法则（进阶）"
+      ],
+      "required_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）"
+      ],
+      "prerequisite_course_refs": [],
+      "knowledge_refs": [
+        "5.2-k1"
+      ],
+      "type_refs": [],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "f",
+        "x",
+        "\\sin"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "c652f2f696a3b010e5dd5657f9f7fb1266c25e4c6334a1cab37df0924c489dd0",
+      "source_question_text_sha256": "c652f2f696a3b010e5dd5657f9f7fb1266c25e4c6334a1cab37df0924c489dd0",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "c652f2f696a3b010e5dd5657f9f7fb1266c25e4c6334a1cab37df0924c489dd0",
+        "learner_question_text_sha256": "c652f2f696a3b010e5dd5657f9f7fb1266c25e4c6334a1cab37df0924c489dd0"
+      },
+      "question_signal_excerpt": "f、x、\\sin",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:5084d7d82e62b21b",
+      "item_id": "5084d7d82e62b21b",
+      "ordinal": 2,
+      "ordinal_in_cycle": 2,
+      "kind": "worked_example",
+      "label": "例2",
+      "group": null,
+      "cycle_id": "5.2-cycle-1",
+      "cycle_sequence": 1,
+      "cycle_title": "基本初等函数的导数",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "基本初等函数的导数及运算法则（进阶）"
+      ],
+      "required_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）"
+      ],
+      "prerequisite_course_refs": [],
+      "knowledge_refs": [
+        "5.2-k1"
+      ],
+      "type_refs": [],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "f",
+        "x",
+        "\\mathrm",
+        "e"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "743b9b2500367b2728f659feafa145a70362f0bfb9e50b3ecd62abe7445ba26a",
+      "source_question_text_sha256": "743b9b2500367b2728f659feafa145a70362f0bfb9e50b3ecd62abe7445ba26a",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "743b9b2500367b2728f659feafa145a70362f0bfb9e50b3ecd62abe7445ba26a",
+        "learner_question_text_sha256": "743b9b2500367b2728f659feafa145a70362f0bfb9e50b3ecd62abe7445ba26a"
+      },
+      "question_signal_excerpt": "f、x、\\mathrm、e",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:7964787318e5546c",
+      "item_id": "7964787318e5546c",
+      "ordinal": 3,
+      "ordinal_in_cycle": 3,
+      "kind": "worked_example",
+      "label": "例3",
+      "group": null,
+      "cycle_id": "5.2-cycle-1",
+      "cycle_sequence": 1,
+      "cycle_title": "基本初等函数的导数",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "基本初等函数的导数及运算法则（进阶）"
+      ],
+      "required_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）"
+      ],
+      "prerequisite_course_refs": [],
+      "knowledge_refs": [
+        "5.2-k1"
+      ],
+      "type_refs": [],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "斜率",
+        "切线",
+        "f",
+        "x",
+        "\\ln"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "73df58de1b2377150a5f47dec71544fe911a2ae984ce12f731565bfc4fd32dc5",
+      "source_question_text_sha256": "73df58de1b2377150a5f47dec71544fe911a2ae984ce12f731565bfc4fd32dc5",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "73df58de1b2377150a5f47dec71544fe911a2ae984ce12f731565bfc4fd32dc5",
+        "learner_question_text_sha256": "73df58de1b2377150a5f47dec71544fe911a2ae984ce12f731565bfc4fd32dc5"
+      },
+      "question_signal_excerpt": "斜率、切线、f、x、\\ln",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:5bb1db5a471fafee",
+      "item_id": "5bb1db5a471fafee",
+      "ordinal": 4,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例4",
+      "group": null,
+      "cycle_id": "5.2-cycle-2",
+      "cycle_sequence": 2,
+      "cycle_title": "导数的四则运算法则",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "基本初等函数的导数及运算法则（进阶）"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）"
+      ],
+      "knowledge_refs": [
+        "5.2-k2"
+      ],
+      "type_refs": [],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "导数",
+        "f",
+        "x"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "ef3c7e2a954ab90a883eb35dd7c0d8ea1949e4771e2fa15c7921239f957a3c4d",
+      "source_question_text_sha256": "ef3c7e2a954ab90a883eb35dd7c0d8ea1949e4771e2fa15c7921239f957a3c4d",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "ef3c7e2a954ab90a883eb35dd7c0d8ea1949e4771e2fa15c7921239f957a3c4d",
+        "learner_question_text_sha256": "ef3c7e2a954ab90a883eb35dd7c0d8ea1949e4771e2fa15c7921239f957a3c4d"
+      },
+      "question_signal_excerpt": "导数、f、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:8c6d83a7199ef333",
+      "item_id": "8c6d83a7199ef333",
+      "ordinal": 5,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例5",
+      "group": null,
+      "cycle_id": "5.2-cycle-3",
+      "cycle_sequence": 3,
+      "cycle_title": "简单复合函数的导数",
+      "course_refs": [
+        "4.1.2.2 复合函数的导数",
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）"
+      ],
+      "course_titles": [
+        "复合函数的导数",
+        "基本初等函数的导数及运算法则",
+        "基本初等函数的导数及运算法则（进阶）"
+      ],
+      "required_course_refs": [
+        "4.1.2.2 复合函数的导数"
+      ],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）"
+      ],
+      "knowledge_refs": [
+        "5.2-k3"
+      ],
+      "type_refs": [],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "f",
+        "x"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "6b4b49013ed9cd597e30bc96b05638c7ddfb89cee6c3cb12f691506869bdbd39",
+      "source_question_text_sha256": "6b4b49013ed9cd597e30bc96b05638c7ddfb89cee6c3cb12f691506869bdbd39",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "6b4b49013ed9cd597e30bc96b05638c7ddfb89cee6c3cb12f691506869bdbd39",
+        "learner_question_text_sha256": "6b4b49013ed9cd597e30bc96b05638c7ddfb89cee6c3cb12f691506869bdbd39"
+      },
+      "question_signal_excerpt": "f、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:737be9ed82896285",
+      "item_id": "737be9ed82896285",
+      "ordinal": 6,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例6",
+      "group": null,
+      "cycle_id": "5.2-cycle-4",
+      "cycle_sequence": 4,
+      "cycle_title": "导函数与原函数的性质关系",
+      "course_refs": [
+        "4.1.2.3 导数的原函数构造（基础）",
+        "4.1.2.3 导数的原函数构造（进阶）",
+        "4.1.2.3 导数的原函数构造之速解技巧",
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
+        "4.1.2.2 复合函数的导数"
+      ],
+      "course_titles": [
+        "导数的原函数构造（基础）",
+        "导数的原函数构造（进阶）",
+        "导数的原函数构造之速解技巧",
+        "基本初等函数的导数及运算法则",
+        "基本初等函数的导数及运算法则（进阶）",
+        "复合函数的导数"
+      ],
+      "required_course_refs": [
+        "4.1.2.3 导数的原函数构造（基础）",
+        "4.1.2.3 导数的原函数构造（进阶）",
+        "4.1.2.3 导数的原函数构造之速解技巧"
+      ],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
+        "4.1.2.2 复合函数的导数"
+      ],
+      "knowledge_refs": [
+        "5.2-k4"
+      ],
+      "type_refs": [],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "对称",
+        "f",
+        "x",
+        "in"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "30b0e8b5c8534dcdee5381412480a7efc0a3e7a2063703a71276dbe461cd3b92",
+      "source_question_text_sha256": "30b0e8b5c8534dcdee5381412480a7efc0a3e7a2063703a71276dbe461cd3b92",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "30b0e8b5c8534dcdee5381412480a7efc0a3e7a2063703a71276dbe461cd3b92",
+        "learner_question_text_sha256": "30b0e8b5c8534dcdee5381412480a7efc0a3e7a2063703a71276dbe461cd3b92"
+      },
+      "question_signal_excerpt": "对称、f、x、in",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:b995068fab8efb41",
+      "item_id": "b995068fab8efb41",
+      "ordinal": 7,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例7",
+      "group": null,
+      "cycle_id": "5.2-cycle-5",
+      "cycle_sequence": 5,
+      "cycle_title": "类型I 导数的计算",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
+        "4.1.2.2 复合函数的导数",
+        "4.1.2.3 导数的原函数构造（基础）",
+        "4.1.2.3 导数的原函数构造（进阶）"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "基本初等函数的导数及运算法则（进阶）",
+        "复合函数的导数",
+        "导数的原函数构造（基础）",
+        "导数的原函数构造（进阶）"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
+        "4.1.2.2 复合函数的导数",
+        "4.1.2.3 导数的原函数构造（基础）",
+        "4.1.2.3 导数的原函数构造（进阶）"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 导数的计算"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "f",
+        "x",
+        "\\cos"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "a5c3b6767ff7ab3d75c86f25969f56e9b69c592a3ee408e29890d4fcdfc7588b",
+      "source_question_text_sha256": "a5c3b6767ff7ab3d75c86f25969f56e9b69c592a3ee408e29890d4fcdfc7588b",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "a5c3b6767ff7ab3d75c86f25969f56e9b69c592a3ee408e29890d4fcdfc7588b",
+        "learner_question_text_sha256": "a5c3b6767ff7ab3d75c86f25969f56e9b69c592a3ee408e29890d4fcdfc7588b"
+      },
+      "question_signal_excerpt": "f、x、\\cos",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:bd598d087a05f1ed",
+      "item_id": "bd598d087a05f1ed",
+      "ordinal": 8,
+      "ordinal_in_cycle": 2,
+      "kind": "direct_variant",
+      "label": "例7 变式",
+      "group": null,
+      "cycle_id": "5.2-cycle-5",
+      "cycle_sequence": 5,
+      "cycle_title": "类型I 导数的计算",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
+        "4.1.2.2 复合函数的导数",
+        "4.1.2.3 导数的原函数构造（基础）",
+        "4.1.2.3 导数的原函数构造（进阶）"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "基本初等函数的导数及运算法则（进阶）",
+        "复合函数的导数",
+        "导数的原函数构造（基础）",
+        "导数的原函数构造（进阶）"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
+        "4.1.2.2 复合函数的导数",
+        "4.1.2.3 导数的原函数构造（基础）",
+        "4.1.2.3 导数的原函数构造（进阶）"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 导数的计算"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "f",
+        "x",
+        "\\mathrm"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "e6341ff486674335502688f44672ef83e4488518d3069890a679e1c659b2ab71",
+      "source_question_text_sha256": "e6341ff486674335502688f44672ef83e4488518d3069890a679e1c659b2ab71",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "e6341ff486674335502688f44672ef83e4488518d3069890a679e1c659b2ab71",
+        "learner_question_text_sha256": "e6341ff486674335502688f44672ef83e4488518d3069890a679e1c659b2ab71"
+      },
+      "question_signal_excerpt": "f、x、\\mathrm",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:bb3487b5ba9a816b",
+      "item_id": "bb3487b5ba9a816b",
+      "ordinal": 9,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例8",
+      "group": null,
+      "cycle_id": "5.2-cycle-6",
+      "cycle_sequence": 6,
+      "cycle_title": "类型Ⅱ 切线问题",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
+        "4.1.2.2 复合函数的导数",
+        "4.1.2.3 导数的原函数构造（基础）",
+        "4.1.2.3 导数的原函数构造（进阶）"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "基本初等函数的导数及运算法则（进阶）",
+        "复合函数的导数",
+        "导数的原函数构造（基础）",
+        "导数的原函数构造（进阶）"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
+        "4.1.2.2 复合函数的导数",
+        "4.1.2.3 导数的原函数构造（基础）",
+        "4.1.2.3 导数的原函数构造（进阶）"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 切线问题"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "切线",
+        "f",
+        "x",
+        "\\mathrm"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "c515e070d9cf21f83401f7d99ed6ce4a674e559eb3b69984d1d46cffce9c41a1",
+      "source_question_text_sha256": "c515e070d9cf21f83401f7d99ed6ce4a674e559eb3b69984d1d46cffce9c41a1",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "c515e070d9cf21f83401f7d99ed6ce4a674e559eb3b69984d1d46cffce9c41a1",
+        "learner_question_text_sha256": "c515e070d9cf21f83401f7d99ed6ce4a674e559eb3b69984d1d46cffce9c41a1"
+      },
+      "question_signal_excerpt": "切线、f、x、\\mathrm",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:e35f94e52d48001a",
+      "item_id": "e35f94e52d48001a",
+      "ordinal": 10,
+      "ordinal_in_cycle": 2,
+      "kind": "worked_example",
+      "label": "例9",
+      "group": null,
+      "cycle_id": "5.2-cycle-6",
+      "cycle_sequence": 6,
+      "cycle_title": "类型Ⅱ 切线问题",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
+        "4.1.2.2 复合函数的导数",
+        "4.1.2.3 导数的原函数构造（基础）",
+        "4.1.2.3 导数的原函数构造（进阶）"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "基本初等函数的导数及运算法则（进阶）",
+        "复合函数的导数",
+        "导数的原函数构造（基础）",
+        "导数的原函数构造（进阶）"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
+        "4.1.2.2 复合函数的导数",
+        "4.1.2.3 导数的原函数构造（基础）",
+        "4.1.2.3 导数的原函数构造（进阶）"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 切线问题"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "直线",
+        "切线",
+        "y",
+        "kx",
+        "b"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "VISION_VERIFIED",
+        "image_refs": [
+          {
+            "ref": "imgs/img_in_image_box_867_117_1093_340.jpg",
+            "path": "data/ocr_live_current/chapter5_95/imgs/img_in_image_box_867_117_1093_340.jpg",
+            "exists": true
+          }
+        ]
+      },
+      "question_text_sha256": "087824acb8c3cb550c086a9505af18aeb125640e41f341e24191c9f6afc42e21",
+      "source_question_text_sha256": "087824acb8c3cb550c086a9505af18aeb125640e41f341e24191c9f6afc42e21",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "087824acb8c3cb550c086a9505af18aeb125640e41f341e24191c9f6afc42e21",
+        "learner_question_text_sha256": "087824acb8c3cb550c086a9505af18aeb125640e41f341e24191c9f6afc42e21"
+      },
+      "question_signal_excerpt": "直线、切线、y、kx、b",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:2f773012326f81ca",
+      "item_id": "2f773012326f81ca",
+      "ordinal": 11,
+      "ordinal_in_cycle": 3,
+      "kind": "direct_variant",
+      "label": "例8 变式1",
+      "group": null,
+      "cycle_id": "5.2-cycle-6",
+      "cycle_sequence": 6,
+      "cycle_title": "类型Ⅱ 切线问题",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
+        "4.1.2.2 复合函数的导数",
+        "4.1.2.3 导数的原函数构造（基础）",
+        "4.1.2.3 导数的原函数构造（进阶）"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "基本初等函数的导数及运算法则（进阶）",
+        "复合函数的导数",
+        "导数的原函数构造（基础）",
+        "导数的原函数构造（进阶）"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
+        "4.1.2.2 复合函数的导数",
+        "4.1.2.3 导数的原函数构造（基础）",
+        "4.1.2.3 导数的原函数构造（进阶）"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 切线问题"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "切线",
+        "f",
+        "x",
+        "\\frac"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "ec4afb31b61acde62cedcd516e12040629b92bb3ac462f5cb859067a4d690c9c",
+      "source_question_text_sha256": "ec4afb31b61acde62cedcd516e12040629b92bb3ac462f5cb859067a4d690c9c",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "ec4afb31b61acde62cedcd516e12040629b92bb3ac462f5cb859067a4d690c9c",
+        "learner_question_text_sha256": "ec4afb31b61acde62cedcd516e12040629b92bb3ac462f5cb859067a4d690c9c"
+      },
+      "question_signal_excerpt": "切线、f、x、\\frac",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:f816e7f850b58878",
+      "item_id": "f816e7f850b58878",
+      "ordinal": 12,
+      "ordinal_in_cycle": 4,
+      "kind": "direct_variant",
+      "label": "例8 变式2",
+      "group": null,
+      "cycle_id": "5.2-cycle-6",
+      "cycle_sequence": 6,
+      "cycle_title": "类型Ⅱ 切线问题",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
+        "4.1.2.2 复合函数的导数",
+        "4.1.2.3 导数的原函数构造（基础）",
+        "4.1.2.3 导数的原函数构造（进阶）"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "基本初等函数的导数及运算法则（进阶）",
+        "复合函数的导数",
+        "导数的原函数构造（基础）",
+        "导数的原函数构造（进阶）"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
+        "4.1.2.2 复合函数的导数",
+        "4.1.2.3 导数的原函数构造（基础）",
+        "4.1.2.3 导数的原函数构造（进阶）"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 切线问题"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "切线",
+        "y",
+        "x",
+        "a",
+        "e"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "27bd52e9f88cbcf9eaa0fc142abb2b261dbd055dcaf95cc800842fc7e712dfc7",
+      "source_question_text_sha256": "27bd52e9f88cbcf9eaa0fc142abb2b261dbd055dcaf95cc800842fc7e712dfc7",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "27bd52e9f88cbcf9eaa0fc142abb2b261dbd055dcaf95cc800842fc7e712dfc7",
+        "learner_question_text_sha256": "27bd52e9f88cbcf9eaa0fc142abb2b261dbd055dcaf95cc800842fc7e712dfc7"
+      },
+      "question_signal_excerpt": "切线、y、x、a、e",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:89d58501c9101dcf",
+      "item_id": "89d58501c9101dcf",
+      "ordinal": 13,
+      "ordinal_in_cycle": 5,
+      "kind": "direct_variant",
+      "label": "例8 变式3",
+      "group": null,
+      "cycle_id": "5.2-cycle-6",
+      "cycle_sequence": 6,
+      "cycle_title": "类型Ⅱ 切线问题",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
+        "4.1.2.2 复合函数的导数",
+        "4.1.2.3 导数的原函数构造（基础）",
+        "4.1.2.3 导数的原函数构造（进阶）"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "基本初等函数的导数及运算法则（进阶）",
+        "复合函数的导数",
+        "导数的原函数构造（基础）",
+        "导数的原函数构造（进阶）"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
+        "4.1.2.2 复合函数的导数",
+        "4.1.2.3 导数的原函数构造（基础）",
+        "4.1.2.3 导数的原函数构造（进阶）"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 切线问题"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "切线",
+        "f",
+        "x",
+        "\\sqrt"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "VISION_VERIFIED",
+        "image_refs": [
+          {
+            "ref": "imgs/img_in_image_box_934_976_1092_1166.jpg",
+            "path": "data/ocr_live_current/chapter5_95/imgs/img_in_image_box_934_976_1092_1166.jpg",
+            "exists": true
+          }
+        ]
+      },
+      "question_text_sha256": "7a3583a83f123d5f192964bca58b4994aadc36656faf77c1b2011ed944cc40ad",
+      "source_question_text_sha256": "7a3583a83f123d5f192964bca58b4994aadc36656faf77c1b2011ed944cc40ad",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "7a3583a83f123d5f192964bca58b4994aadc36656faf77c1b2011ed944cc40ad",
+        "learner_question_text_sha256": "7a3583a83f123d5f192964bca58b4994aadc36656faf77c1b2011ed944cc40ad"
+      },
+      "question_signal_excerpt": "切线、f、x、\\sqrt",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:61aea1db4af57e77",
+      "item_id": "61aea1db4af57e77",
+      "ordinal": 14,
+      "ordinal_in_cycle": 6,
+      "kind": "direct_variant",
+      "label": "例8 变式4",
+      "group": null,
+      "cycle_id": "5.2-cycle-6",
+      "cycle_sequence": 6,
+      "cycle_title": "类型Ⅱ 切线问题",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
+        "4.1.2.2 复合函数的导数",
+        "4.1.2.3 导数的原函数构造（基础）",
+        "4.1.2.3 导数的原函数构造（进阶）"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "基本初等函数的导数及运算法则（进阶）",
+        "复合函数的导数",
+        "导数的原函数构造（基础）",
+        "导数的原函数构造（进阶）"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
+        "4.1.2.2 复合函数的导数",
+        "4.1.2.3 导数的原函数构造（基础）",
+        "4.1.2.3 导数的原函数构造（进阶）"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 切线问题"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "直线",
+        "M",
+        "N",
+        "y",
+        "e"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "42b68f21ff7311426b835aadf1a56f47a5a6209fd9a3218ea3b6d3f77a0543b1",
+      "source_question_text_sha256": "42b68f21ff7311426b835aadf1a56f47a5a6209fd9a3218ea3b6d3f77a0543b1",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "42b68f21ff7311426b835aadf1a56f47a5a6209fd9a3218ea3b6d3f77a0543b1",
+        "learner_question_text_sha256": "42b68f21ff7311426b835aadf1a56f47a5a6209fd9a3218ea3b6d3f77a0543b1"
+      },
+      "question_signal_excerpt": "直线、M、N、y、e",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:2c46e77ba2dfd2a2",
+      "item_id": "2c46e77ba2dfd2a2",
+      "ordinal": 15,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例10",
+      "group": null,
+      "cycle_id": "5.2-cycle-7",
+      "cycle_sequence": 7,
+      "cycle_title": "类型III 导数与奇偶性、对称性、周期性综合",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
+        "4.1.2.2 复合函数的导数",
+        "4.1.2.3 导数的原函数构造（基础）",
+        "4.1.2.3 导数的原函数构造（进阶）"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "基本初等函数的导数及运算法则（进阶）",
+        "复合函数的导数",
+        "导数的原函数构造（基础）",
+        "导数的原函数构造（进阶）"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
+        "4.1.2.2 复合函数的导数",
+        "4.1.2.3 导数的原函数构造（基础）",
+        "4.1.2.3 导数的原函数构造（进阶）"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型III 导数与奇偶性、对称性、周期性综合"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "对称",
+        "math",
+        "bb",
+        "R",
+        "f"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "542c98bacfaeb27fcf2f0ea0eadb6e642652c00bf7553d18d77d51364b915343",
+      "source_question_text_sha256": "542c98bacfaeb27fcf2f0ea0eadb6e642652c00bf7553d18d77d51364b915343",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "542c98bacfaeb27fcf2f0ea0eadb6e642652c00bf7553d18d77d51364b915343",
+        "learner_question_text_sha256": "542c98bacfaeb27fcf2f0ea0eadb6e642652c00bf7553d18d77d51364b915343"
+      },
+      "question_signal_excerpt": "对称、math、bb、R、f",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:d1a00d15c0a251ed",
+      "item_id": "d1a00d15c0a251ed",
+      "ordinal": 16,
+      "ordinal_in_cycle": 2,
+      "kind": "direct_variant",
+      "label": "例10 变式",
+      "group": null,
+      "cycle_id": "5.2-cycle-7",
+      "cycle_sequence": 7,
+      "cycle_title": "类型III 导数与奇偶性、对称性、周期性综合",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
+        "4.1.2.2 复合函数的导数",
+        "4.1.2.3 导数的原函数构造（基础）",
+        "4.1.2.3 导数的原函数构造（进阶）"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "基本初等函数的导数及运算法则（进阶）",
+        "复合函数的导数",
+        "导数的原函数构造（基础）",
+        "导数的原函数构造（进阶）"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
+        "4.1.2.2 复合函数的导数",
+        "4.1.2.3 导数的原函数构造（基础）",
+        "4.1.2.3 导数的原函数构造（进阶）"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型III 导数与奇偶性、对称性、周期性综合"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "对称",
+        "f",
+        "x"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "0c725db4ad6fa4c7ef3f0f58357297547164929704936e491fa4e561bd5e103f",
+      "source_question_text_sha256": "0c725db4ad6fa4c7ef3f0f58357297547164929704936e491fa4e561bd5e103f",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "0c725db4ad6fa4c7ef3f0f58357297547164929704936e491fa4e561bd5e103f",
+        "learner_question_text_sha256": "0c725db4ad6fa4c7ef3f0f58357297547164929704936e491fa4e561bd5e103f"
+      },
+      "question_signal_excerpt": "对称、f、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-0715bcaa59f3ebec",
+      "item_id": "Q-0715bcaa59f3ebec",
+      "ordinal": 17,
+      "ordinal_in_cycle": 1,
+      "kind": "abc_exercise",
+      "label": "A1",
+      "group": "A",
+      "cycle_id": "5.2-cycle-8",
+      "cycle_sequence": 8,
+      "cycle_title": "A组 夯实基础",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
+        "4.1.2.2 复合函数的导数",
+        "4.1.2.3 导数的原函数构造（基础）",
+        "4.1.2.3 导数的原函数构造（进阶）"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "基本初等函数的导数及运算法则（进阶）",
+        "复合函数的导数",
+        "导数的原函数构造（基础）",
+        "导数的原函数构造（进阶）"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
+        "4.1.2.2 复合函数的导数",
+        "4.1.2.3 导数的原函数构造（基础）",
+        "4.1.2.3 导数的原函数构造（进阶）"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 切线问题"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "斜率",
+        "切线",
+        "y",
+        "x",
+        "\\frac"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "b00bc17c9d2a02be8ce01036c934204909835e4ce205d243ec86b4860a2ffb72",
+      "source_question_text_sha256": "b00bc17c9d2a02be8ce01036c934204909835e4ce205d243ec86b4860a2ffb72",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "b00bc17c9d2a02be8ce01036c934204909835e4ce205d243ec86b4860a2ffb72",
+        "learner_question_text_sha256": "b00bc17c9d2a02be8ce01036c934204909835e4ce205d243ec86b4860a2ffb72"
+      },
+      "question_signal_excerpt": "斜率、切线、y、x、\\frac",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-ba0c13fbc250c590",
+      "item_id": "Q-ba0c13fbc250c590",
+      "ordinal": 18,
+      "ordinal_in_cycle": 2,
+      "kind": "abc_exercise",
+      "label": "A2",
+      "group": "A",
+      "cycle_id": "5.2-cycle-8",
+      "cycle_sequence": 8,
+      "cycle_title": "A组 夯实基础",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
+        "4.1.2.2 复合函数的导数",
+        "4.1.2.3 导数的原函数构造（基础）",
+        "4.1.2.3 导数的原函数构造（进阶）"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "基本初等函数的导数及运算法则（进阶）",
+        "复合函数的导数",
+        "导数的原函数构造（基础）",
+        "导数的原函数构造（进阶）"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
+        "4.1.2.2 复合函数的导数",
+        "4.1.2.3 导数的原函数构造（基础）",
+        "4.1.2.3 导数的原函数构造（进阶）"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 切线问题"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "切线",
+        "f",
+        "x",
+        "\\sin"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "5165efc9f8b866eb65fea74c7bd6dc46757b033c8e83832578b77e3882db05b0",
+      "source_question_text_sha256": "5165efc9f8b866eb65fea74c7bd6dc46757b033c8e83832578b77e3882db05b0",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "5165efc9f8b866eb65fea74c7bd6dc46757b033c8e83832578b77e3882db05b0",
+        "learner_question_text_sha256": "5165efc9f8b866eb65fea74c7bd6dc46757b033c8e83832578b77e3882db05b0"
+      },
+      "question_signal_excerpt": "切线、f、x、\\sin",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-59acd60a58035ae8",
+      "item_id": "Q-59acd60a58035ae8",
+      "ordinal": 19,
+      "ordinal_in_cycle": 3,
+      "kind": "abc_exercise",
+      "label": "A3",
+      "group": "A",
+      "cycle_id": "5.2-cycle-8",
+      "cycle_sequence": 8,
+      "cycle_title": "A组 夯实基础",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
+        "4.1.2.2 复合函数的导数",
+        "4.1.2.3 导数的原函数构造（基础）",
+        "4.1.2.3 导数的原函数构造（进阶）"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "基本初等函数的导数及运算法则（进阶）",
+        "复合函数的导数",
+        "导数的原函数构造（基础）",
+        "导数的原函数构造（进阶）"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
+        "4.1.2.2 复合函数的导数",
+        "4.1.2.3 导数的原函数构造（基础）",
+        "4.1.2.3 导数的原函数构造（进阶）"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 导数的计算"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "导数",
+        "y",
+        "\\frac",
+        "x",
+        "\\sqrt"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "b66ef25c65ecd7ee7a44750e4f149fd2fdebabdee54c88ccfbd03dad50223dd2",
+      "source_question_text_sha256": "b66ef25c65ecd7ee7a44750e4f149fd2fdebabdee54c88ccfbd03dad50223dd2",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "b66ef25c65ecd7ee7a44750e4f149fd2fdebabdee54c88ccfbd03dad50223dd2",
+        "learner_question_text_sha256": "b66ef25c65ecd7ee7a44750e4f149fd2fdebabdee54c88ccfbd03dad50223dd2"
+      },
+      "question_signal_excerpt": "导数、y、\\frac、x、\\sqrt",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-e4978234c96ee2f8",
+      "item_id": "Q-e4978234c96ee2f8",
+      "ordinal": 20,
+      "ordinal_in_cycle": 1,
+      "kind": "abc_exercise",
+      "label": "B4",
+      "group": "B",
+      "cycle_id": "5.2-cycle-9",
+      "cycle_sequence": 9,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
+        "4.1.2.2 复合函数的导数",
+        "4.1.2.3 导数的原函数构造（基础）",
+        "4.1.2.3 导数的原函数构造（进阶）"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "基本初等函数的导数及运算法则（进阶）",
+        "复合函数的导数",
+        "导数的原函数构造（基础）",
+        "导数的原函数构造（进阶）"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
+        "4.1.2.2 复合函数的导数",
+        "4.1.2.3 导数的原函数构造（基础）",
+        "4.1.2.3 导数的原函数构造（进阶）"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 切线问题"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "切线",
+        "f",
+        "x",
+        "\\frac",
+        "e"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "825344eb57f6af2e8cbe2f1c5a4d0cb6032bc844f3005f1233ee2df4272e7a91",
+      "source_question_text_sha256": "825344eb57f6af2e8cbe2f1c5a4d0cb6032bc844f3005f1233ee2df4272e7a91",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "825344eb57f6af2e8cbe2f1c5a4d0cb6032bc844f3005f1233ee2df4272e7a91",
+        "learner_question_text_sha256": "825344eb57f6af2e8cbe2f1c5a4d0cb6032bc844f3005f1233ee2df4272e7a91"
+      },
+      "question_signal_excerpt": "切线、f、x、\\frac、e",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-f15c815945a34232",
+      "item_id": "Q-f15c815945a34232",
+      "ordinal": 21,
+      "ordinal_in_cycle": 2,
+      "kind": "abc_exercise",
+      "label": "B5",
+      "group": "B",
+      "cycle_id": "5.2-cycle-9",
+      "cycle_sequence": 9,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
+        "4.1.2.2 复合函数的导数",
+        "4.1.2.3 导数的原函数构造（基础）",
+        "4.1.2.3 导数的原函数构造（进阶）"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "基本初等函数的导数及运算法则（进阶）",
+        "复合函数的导数",
+        "导数的原函数构造（基础）",
+        "导数的原函数构造（进阶）"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
+        "4.1.2.2 复合函数的导数",
+        "4.1.2.3 导数的原函数构造（基础）",
+        "4.1.2.3 导数的原函数构造（进阶）"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 导数的计算"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "f",
+        "x"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "dd31f29d4118a993e8b5de36d1cc17694e91992997c9fb4157a48357e083a525",
+      "source_question_text_sha256": "dd31f29d4118a993e8b5de36d1cc17694e91992997c9fb4157a48357e083a525",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "dd31f29d4118a993e8b5de36d1cc17694e91992997c9fb4157a48357e083a525",
+        "learner_question_text_sha256": "dd31f29d4118a993e8b5de36d1cc17694e91992997c9fb4157a48357e083a525"
+      },
+      "question_signal_excerpt": "f、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-d95213336ebc7adf",
+      "item_id": "Q-d95213336ebc7adf",
+      "ordinal": 22,
+      "ordinal_in_cycle": 3,
+      "kind": "abc_exercise",
+      "label": "B6",
+      "group": "B",
+      "cycle_id": "5.2-cycle-9",
+      "cycle_sequence": 9,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
+        "4.1.2.2 复合函数的导数",
+        "4.1.2.3 导数的原函数构造（基础）",
+        "4.1.2.3 导数的原函数构造（进阶）"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "基本初等函数的导数及运算法则（进阶）",
+        "复合函数的导数",
+        "导数的原函数构造（基础）",
+        "导数的原函数构造（进阶）"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
+        "4.1.2.2 复合函数的导数",
+        "4.1.2.3 导数的原函数构造（基础）",
+        "4.1.2.3 导数的原函数构造（进阶）"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 切线问题"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "切线",
+        "y",
+        "x",
+        "\\ln"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "92819ec1ab11e7ebf31da5f306382362dd23db2cf13c56251e672b23c1d813bb",
+      "source_question_text_sha256": "92819ec1ab11e7ebf31da5f306382362dd23db2cf13c56251e672b23c1d813bb",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "92819ec1ab11e7ebf31da5f306382362dd23db2cf13c56251e672b23c1d813bb",
+        "learner_question_text_sha256": "92819ec1ab11e7ebf31da5f306382362dd23db2cf13c56251e672b23c1d813bb"
+      },
+      "question_signal_excerpt": "切线、y、x、\\ln",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-2226a5cfc492b06e",
+      "item_id": "Q-2226a5cfc492b06e",
+      "ordinal": 23,
+      "ordinal_in_cycle": 4,
+      "kind": "abc_exercise",
+      "label": "B7",
+      "group": "B",
+      "cycle_id": "5.2-cycle-9",
+      "cycle_sequence": 9,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
+        "4.1.2.2 复合函数的导数",
+        "4.1.2.3 导数的原函数构造（基础）",
+        "4.1.2.3 导数的原函数构造（进阶）"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "基本初等函数的导数及运算法则（进阶）",
+        "复合函数的导数",
+        "导数的原函数构造（基础）",
+        "导数的原函数构造（进阶）"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
+        "4.1.2.2 复合函数的导数",
+        "4.1.2.3 导数的原函数构造（基础）",
+        "4.1.2.3 导数的原函数构造（进阶）"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 切线问题"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "切线",
+        "P",
+        "y",
+        "\\ln",
+        "x"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "a71a0d9c659e066ec1c7692c8773a7284e432c2f26abe72540f206410dc2635d",
+      "source_question_text_sha256": "a71a0d9c659e066ec1c7692c8773a7284e432c2f26abe72540f206410dc2635d",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "a71a0d9c659e066ec1c7692c8773a7284e432c2f26abe72540f206410dc2635d",
+        "learner_question_text_sha256": "a71a0d9c659e066ec1c7692c8773a7284e432c2f26abe72540f206410dc2635d"
+      },
+      "question_signal_excerpt": "切线、P、y、\\ln、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-6e38fb82fcfce072",
+      "item_id": "Q-6e38fb82fcfce072",
+      "ordinal": 24,
+      "ordinal_in_cycle": 5,
+      "kind": "abc_exercise",
+      "label": "B8",
+      "group": "B",
+      "cycle_id": "5.2-cycle-9",
+      "cycle_sequence": 9,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
+        "4.1.2.2 复合函数的导数",
+        "4.1.2.3 导数的原函数构造（基础）",
+        "4.1.2.3 导数的原函数构造（进阶）"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "基本初等函数的导数及运算法则（进阶）",
+        "复合函数的导数",
+        "导数的原函数构造（基础）",
+        "导数的原函数构造（进阶）"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
+        "4.1.2.2 复合函数的导数",
+        "4.1.2.3 导数的原函数构造（基础）",
+        "4.1.2.3 导数的原函数构造（进阶）"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 切线问题"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "直线",
+        "y",
+        "x",
+        "a"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "6a37d8a8b22a461f17fa6b2e931e21a5e6abe2ed27e54a6619655084174a1e6f",
+      "source_question_text_sha256": "6a37d8a8b22a461f17fa6b2e931e21a5e6abe2ed27e54a6619655084174a1e6f",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "6a37d8a8b22a461f17fa6b2e931e21a5e6abe2ed27e54a6619655084174a1e6f",
+        "learner_question_text_sha256": "6a37d8a8b22a461f17fa6b2e931e21a5e6abe2ed27e54a6619655084174a1e6f"
+      },
+      "question_signal_excerpt": "直线、y、x、a",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-1ebfd1bf2629edbc",
+      "item_id": "Q-1ebfd1bf2629edbc",
+      "ordinal": 25,
+      "ordinal_in_cycle": 6,
+      "kind": "abc_exercise",
+      "label": "B9",
+      "group": "B",
+      "cycle_id": "5.2-cycle-9",
+      "cycle_sequence": 9,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
+        "4.1.2.2 复合函数的导数",
+        "4.1.2.3 导数的原函数构造（基础）",
+        "4.1.2.3 导数的原函数构造（进阶）"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "基本初等函数的导数及运算法则（进阶）",
+        "复合函数的导数",
+        "导数的原函数构造（基础）",
+        "导数的原函数构造（进阶）"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
+        "4.1.2.2 复合函数的导数",
+        "4.1.2.3 导数的原函数构造（基础）",
+        "4.1.2.3 导数的原函数构造（进阶）"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 切线问题"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "m",
+        "n",
+        "f",
+        "x"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "fa3b97e6e970256d395953e087eea0a7877dbda258d98ef72ec9aaf04396c77e",
+      "source_question_text_sha256": "fa3b97e6e970256d395953e087eea0a7877dbda258d98ef72ec9aaf04396c77e",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "fa3b97e6e970256d395953e087eea0a7877dbda258d98ef72ec9aaf04396c77e",
+        "learner_question_text_sha256": "fa3b97e6e970256d395953e087eea0a7877dbda258d98ef72ec9aaf04396c77e"
+      },
+      "question_signal_excerpt": "m、n、f、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-1d61f3d4eda34436",
+      "item_id": "Q-1d61f3d4eda34436",
+      "ordinal": 26,
+      "ordinal_in_cycle": 7,
+      "kind": "abc_exercise",
+      "label": "B10",
+      "group": "B",
+      "cycle_id": "5.2-cycle-9",
+      "cycle_sequence": 9,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
+        "4.1.2.2 复合函数的导数",
+        "4.1.2.3 导数的原函数构造（基础）",
+        "4.1.2.3 导数的原函数构造（进阶）"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "基本初等函数的导数及运算法则（进阶）",
+        "复合函数的导数",
+        "导数的原函数构造（基础）",
+        "导数的原函数构造（进阶）"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
+        "4.1.2.2 复合函数的导数",
+        "4.1.2.3 导数的原函数构造（基础）",
+        "4.1.2.3 导数的原函数构造（进阶）"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 切线问题"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "直线",
+        "f",
+        "x",
+        "\\mathrm",
+        "e"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "73a2b157da23c6c2bfcf4f0ebdcd46adffc4db5ae17e7dad84f2e654a817f69e",
+      "source_question_text_sha256": "73a2b157da23c6c2bfcf4f0ebdcd46adffc4db5ae17e7dad84f2e654a817f69e",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "73a2b157da23c6c2bfcf4f0ebdcd46adffc4db5ae17e7dad84f2e654a817f69e",
+        "learner_question_text_sha256": "73a2b157da23c6c2bfcf4f0ebdcd46adffc4db5ae17e7dad84f2e654a817f69e"
+      },
+      "question_signal_excerpt": "直线、f、x、\\mathrm、e",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-4ba3639dbc306709",
+      "item_id": "Q-4ba3639dbc306709",
+      "ordinal": 27,
+      "ordinal_in_cycle": 8,
+      "kind": "abc_exercise",
+      "label": "B11",
+      "group": "B",
+      "cycle_id": "5.2-cycle-9",
+      "cycle_sequence": 9,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
+        "4.1.2.2 复合函数的导数",
+        "4.1.2.3 导数的原函数构造（基础）",
+        "4.1.2.3 导数的原函数构造（进阶）"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "基本初等函数的导数及运算法则（进阶）",
+        "复合函数的导数",
+        "导数的原函数构造（基础）",
+        "导数的原函数构造（进阶）"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
+        "4.1.2.2 复合函数的导数",
+        "4.1.2.3 导数的原函数构造（基础）",
+        "4.1.2.3 导数的原函数构造（进阶）"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 切线问题"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "直线",
+        "距离",
+        "P",
+        "y",
+        "e",
+        "x"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "145777ac4e2a0d8ccea947cc09f55ebf5f9bdaaea1cac812fa6e80a30e7a9c1b",
+      "source_question_text_sha256": "145777ac4e2a0d8ccea947cc09f55ebf5f9bdaaea1cac812fa6e80a30e7a9c1b",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "145777ac4e2a0d8ccea947cc09f55ebf5f9bdaaea1cac812fa6e80a30e7a9c1b",
+        "learner_question_text_sha256": "145777ac4e2a0d8ccea947cc09f55ebf5f9bdaaea1cac812fa6e80a30e7a9c1b"
+      },
+      "question_signal_excerpt": "直线、距离、P、y、e、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-a5def06383fd262e",
+      "item_id": "Q-a5def06383fd262e",
+      "ordinal": 28,
+      "ordinal_in_cycle": 1,
+      "kind": "abc_exercise",
+      "label": "C12",
+      "group": "C",
+      "cycle_id": "5.2-cycle-10",
+      "cycle_sequence": 10,
+      "cycle_title": "C组 拓展提升",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
+        "4.1.2.2 复合函数的导数",
+        "4.1.2.3 导数的原函数构造（基础）",
+        "4.1.2.3 导数的原函数构造（进阶）"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "基本初等函数的导数及运算法则（进阶）",
+        "复合函数的导数",
+        "导数的原函数构造（基础）",
+        "导数的原函数构造（进阶）"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
+        "4.1.2.2 复合函数的导数",
+        "4.1.2.3 导数的原函数构造（基础）",
+        "4.1.2.3 导数的原函数构造（进阶）"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 切线问题"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "切线",
+        "f",
+        "x",
+        "\\frac"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "4fe3342a99704de3f7178d44d24861b707e57cf03036c7b455f68ab68717847a",
+      "source_question_text_sha256": "4fe3342a99704de3f7178d44d24861b707e57cf03036c7b455f68ab68717847a",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "4fe3342a99704de3f7178d44d24861b707e57cf03036c7b455f68ab68717847a",
+        "learner_question_text_sha256": "4fe3342a99704de3f7178d44d24861b707e57cf03036c7b455f68ab68717847a"
+      },
+      "question_signal_excerpt": "切线、f、x、\\frac",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-4aa966d2cfcae2b2",
+      "item_id": "Q-4aa966d2cfcae2b2",
+      "ordinal": 29,
+      "ordinal_in_cycle": 2,
+      "kind": "abc_exercise",
+      "label": "C13",
+      "group": "C",
+      "cycle_id": "5.2-cycle-10",
+      "cycle_sequence": 10,
+      "cycle_title": "C组 拓展提升",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
+        "4.1.2.2 复合函数的导数",
+        "4.1.2.3 导数的原函数构造（基础）",
+        "4.1.2.3 导数的原函数构造（进阶）"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "基本初等函数的导数及运算法则（进阶）",
+        "复合函数的导数",
+        "导数的原函数构造（基础）",
+        "导数的原函数构造（进阶）"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
+        "4.1.2.2 复合函数的导数",
+        "4.1.2.3 导数的原函数构造（基础）",
+        "4.1.2.3 导数的原函数构造（进阶）"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型III 导数与奇偶性、对称性、周期性综合"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "f",
+        "x"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "6f006fad41edebfd1496980fa16831f8efab3a96031c1299b0cc7e9690985a1c",
+      "source_question_text_sha256": "6f006fad41edebfd1496980fa16831f8efab3a96031c1299b0cc7e9690985a1c",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "6f006fad41edebfd1496980fa16831f8efab3a96031c1299b0cc7e9690985a1c",
+        "learner_question_text_sha256": "6f006fad41edebfd1496980fa16831f8efab3a96031c1299b0cc7e9690985a1c"
+      },
+      "question_signal_excerpt": "f、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-e6a4230bc4509f0f",
+      "item_id": "Q-e6a4230bc4509f0f",
+      "ordinal": 30,
+      "ordinal_in_cycle": 3,
+      "kind": "abc_exercise",
+      "label": "C14",
+      "group": "C",
+      "cycle_id": "5.2-cycle-10",
+      "cycle_sequence": 10,
+      "cycle_title": "C组 拓展提升",
+      "course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
+        "4.1.2.2 复合函数的导数",
+        "4.1.2.3 导数的原函数构造（基础）",
+        "4.1.2.3 导数的原函数构造（进阶）"
+      ],
+      "course_titles": [
+        "基本初等函数的导数及运算法则",
+        "基本初等函数的导数及运算法则（进阶）",
+        "复合函数的导数",
+        "导数的原函数构造（基础）",
+        "导数的原函数构造（进阶）"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.2.1 基本初等函数的导数及运算法则",
+        "4.1.2.1 基本初等函数的导数及运算法则（进阶）",
+        "4.1.2.2 复合函数的导数",
+        "4.1.2.3 导数的原函数构造（基础）",
+        "4.1.2.3 导数的原函数构造（进阶）"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型III 导数与奇偶性、对称性、周期性综合"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "对称",
+        "导数",
+        "math",
+        "bb",
+        "R",
+        "f"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "812e9ee41910df69c846c9cc1b1a2f02f0af8dee6b853c618bee8e004803d089",
+      "source_question_text_sha256": "812e9ee41910df69c846c9cc1b1a2f02f0af8dee6b853c618bee8e004803d089",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "812e9ee41910df69c846c9cc1b1a2f02f0af8dee6b853c618bee8e004803d089",
+        "learner_question_text_sha256": "812e9ee41910df69c846c9cc1b1a2f02f0af8dee6b853c618bee8e004803d089"
+      },
+      "question_signal_excerpt": "对称、导数、math、bb、R、f",
+      "source_blocked": false
+    }
+  ],
+  "route_versions": [
+    {
+      "version": 1,
+      "route_hash": "a38d9c0f3f1fd790c310ce455c4a0e6059e3a93b8c35f5b5c8e869c698df9def"
+    },
+    {
+      "version": 2,
+      "route_hash": "a65b798dcf3229bb3158b2dbc29ec6be95b8e8c45cbf7c8cde4a73cd1baa2e65"
+    },
+    {
+      "version": 3,
+      "route_hash": "5d189de9713009190eeb0873169f0bf1c0b762f6f30b70dec495694669f1eacc"
+    }
+  ],
+  "final_route_hash": "5d189de9713009190eeb0873169f0bf1c0b762f6f30b70dec495694669f1eacc",
+  "simulation": {
+    "protocol": "five-round-five-persona-v3-answer-isolated",
+    "generation_mode": "synthetic_route_stress_from_actual_item_features",
+    "rounds": [
+      {
+        "round": 1,
+        "purpose": "baseline_entry",
+        "route_version": 1,
+        "route_hash": "a38d9c0f3f1fd790c310ce455c4a0e6059e3a93b8c35f5b5c8e869c698df9def",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 30,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 30,
+            "blocked": 6
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 30,
+            "blocked": 4
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 30,
+            "blocked": 2
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 30,
+            "blocked": 14
+          }
+        ],
+        "failed_item_keys": [
+          "LI:5084d7d82e62b21b",
+          "LI:5bb1db5a471fafee",
+          "LI:737be9ed82896285",
+          "LI:7964787318e5546c",
+          "LI:89d58501c9101dcf",
+          "LI:8c6d83a7199ef333",
+          "LI:b6ce8a5b8fff869a",
+          "LI:e35f94e52d48001a",
+          "Q:Q-0715bcaa59f3ebec",
+          "Q:Q-1d61f3d4eda34436",
+          "Q:Q-1ebfd1bf2629edbc",
+          "Q:Q-2226a5cfc492b06e",
+          "Q:Q-4aa966d2cfcae2b2",
+          "Q:Q-4ba3639dbc306709",
+          "Q:Q-59acd60a58035ae8",
+          "Q:Q-6e38fb82fcfce072",
+          "Q:Q-a5def06383fd262e",
+          "Q:Q-ba0c13fbc250c590",
+          "Q:Q-d95213336ebc7adf",
+          "Q:Q-e4978234c96ee2f8",
+          "Q:Q-e6a4230bc4509f0f",
+          "Q:Q-f15c815945a34232"
+        ],
+        "route_repairs": [
+          {
+            "item_keys": [
+              "LI:5084d7d82e62b21b",
+              "LI:5bb1db5a471fafee",
+              "LI:737be9ed82896285",
+              "LI:7964787318e5546c",
+              "LI:8c6d83a7199ef333",
+              "LI:b6ce8a5b8fff869a"
+            ],
+            "field": "recognition_cues",
+            "before": "第1轮冻结尝试记录了 recognition-weak 的首个阻断。",
+            "after": "下一轮只加入 recognition-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 6 题；不是随机题号注入。"
+          },
+          {
+            "item_keys": [
+              "LI:5bb1db5a471fafee",
+              "Q:Q-4ba3639dbc306709",
+              "Q:Q-59acd60a58035ae8",
+              "Q:Q-e6a4230bc4509f0f"
+            ],
+            "field": "continuation_checkpoints",
+            "before": "第1轮冻结尝试记录了 algebra-weak 的首个阻断。",
+            "after": "下一轮只加入 algebra-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 4 题；不是随机题号注入。"
+          },
+          {
+            "item_keys": [
+              "LI:89d58501c9101dcf",
+              "LI:e35f94e52d48001a"
+            ],
+            "field": "visual_translation",
+            "before": "第1轮冻结尝试记录了 visual-weak 的首个阻断。",
+            "after": "下一轮只加入 visual-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 2 题；不是随机题号注入。"
+          },
+          {
+            "item_keys": [
+              "Q:Q-0715bcaa59f3ebec",
+              "Q:Q-1d61f3d4eda34436",
+              "Q:Q-1ebfd1bf2629edbc",
+              "Q:Q-2226a5cfc492b06e",
+              "Q:Q-4aa966d2cfcae2b2",
+              "Q:Q-4ba3639dbc306709",
+              "Q:Q-59acd60a58035ae8",
+              "Q:Q-6e38fb82fcfce072",
+              "Q:Q-a5def06383fd262e",
+              "Q:Q-ba0c13fbc250c590",
+              "Q:Q-d95213336ebc7adf",
+              "Q:Q-e4978234c96ee2f8",
+              "Q:Q-e6a4230bc4509f0f",
+              "Q:Q-f15c815945a34232"
+            ],
+            "field": "independent_self_check",
+            "before": "第1轮冻结尝试记录了 self-check-weak 的首个阻断。",
+            "after": "下一轮只加入 self-check-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 14 题；不是随机题号注入。"
+          }
+        ]
+      },
+      {
+        "round": 2,
+        "purpose": "prerequisite_repair",
+        "route_version": 2,
+        "route_hash": "a65b798dcf3229bb3158b2dbc29ec6be95b8e8c45cbf7c8cde4a73cd1baa2e65",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 30,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 30,
+            "blocked": 0
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 30,
+            "blocked": 0
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 30,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 30,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [],
+        "route_repairs": []
+      },
+      {
+        "round": 3,
+        "purpose": "continuation_transfer",
+        "route_version": 2,
+        "route_hash": "a65b798dcf3229bb3158b2dbc29ec6be95b8e8c45cbf7c8cde4a73cd1baa2e65",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 30,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 30,
+            "blocked": 6
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 30,
+            "blocked": 6
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 30,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 30,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [
+          "LI:2f773012326f81ca",
+          "LI:61aea1db4af57e77",
+          "LI:89d58501c9101dcf",
+          "LI:bd598d087a05f1ed",
+          "LI:d1a00d15c0a251ed",
+          "LI:f816e7f850b58878"
+        ],
+        "route_repairs": [
+          {
+            "item_keys": [
+              "LI:2f773012326f81ca",
+              "LI:61aea1db4af57e77",
+              "LI:89d58501c9101dcf",
+              "LI:bd598d087a05f1ed",
+              "LI:d1a00d15c0a251ed",
+              "LI:f816e7f850b58878"
+            ],
+            "field": "recognition_cues",
+            "before": "第3轮冻结尝试记录了 recognition-weak 的首个阻断。",
+            "after": "下一轮只加入 recognition-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 6 题；不是随机题号注入。"
+          },
+          {
+            "item_keys": [
+              "LI:2f773012326f81ca",
+              "LI:61aea1db4af57e77",
+              "LI:89d58501c9101dcf",
+              "LI:bd598d087a05f1ed",
+              "LI:d1a00d15c0a251ed",
+              "LI:f816e7f850b58878"
+            ],
+            "field": "continuation_checkpoints",
+            "before": "第3轮冻结尝试记录了 algebra-weak 的首个阻断。",
+            "after": "下一轮只加入 algebra-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 6 题；不是随机题号注入。"
+          }
+        ]
+      },
+      {
+        "round": 4,
+        "purpose": "mixed_retrieval",
+        "route_version": 3,
+        "route_hash": "5d189de9713009190eeb0873169f0bf1c0b762f6f30b70dec495694669f1eacc",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 30,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 30,
+            "blocked": 0
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 30,
+            "blocked": 0
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 30,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 30,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [],
+        "route_repairs": []
+      },
+      {
+        "round": 5,
+        "purpose": "fresh_context",
+        "route_version": 3,
+        "route_hash": "5d189de9713009190eeb0873169f0bf1c0b762f6f30b70dec495694669f1eacc",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 30,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 30,
+            "blocked": 0
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 30,
+            "blocked": 0
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 30,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 30,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [],
+        "route_repairs": []
+      }
+    ],
+    "expected_attempts_per_item": 25,
+    "actual_attempts_per_item": 25,
+    "unresolved_item_keys": [],
+    "mathematical_correctness": "not_evaluated_no_final_answer",
+    "mastery_claimed": false,
+    "status": "passed"
+  },
+  "summary": {
+    "items": 30,
+    "attempts": 750,
+    "route_assessments": 750,
+    "rounds": 5,
+    "personas_per_round": 5,
+    "repairs": 6,
+    "round_5_failed_items": 0,
+    "validator_errors": []
+  },
+  "human_learning_status": "remote_math_mcp_only",
+  "cold_24h_retest": "not_run",
+  "mastery_claimed": false,
+  "claim_scope": "route_actionability_only",
+  "mathematical_assessment_status": "not_run",
+  "route_audit_status": "passed",
+  "status": "passed"
+}

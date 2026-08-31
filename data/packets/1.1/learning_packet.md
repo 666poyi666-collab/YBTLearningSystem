@@ -1,7 +1,7 @@
 ﻿# 第1节 空间向量及其运算：按课程循环学习路径
 
-> 状态：`VERIFIED`  
-> 共 10 个学习循环；教学例题 16 道、直接变式 8 道、A/B/C 习题 14 道。  
+> 状态：`VERIFIED`
+> 共 10 个学习循环；教学例题 16 道、直接变式 8 道、A/B/C 习题 14 道。
 > 这是一张完整路线图。实际学习时一次只执行“当前循环”的一个动作，本批未通过不得进入下一批。
 > `任务 01` 起为整节连续学习序号；例题、变式和 A/B/C 标签保留教材原编号，教材例号跳跃不代表漏题。
 
@@ -734,9 +734,7 @@ D.  \(4\sqrt{2}\)
 【变式】如图，在平行六面体  \(ABCD - A_1B_1C_1D_1\) 中， \(AB = AD = AA_1 = 1\)， \(\angle A_1AB = \angle A_1AD = \angle BAD = 60^\circ\)，则  \(\overrightarrow{BD_1} \cdot \overrightarrow{AC}\) 的值为（ ）
 A. 1          B.  \(\sqrt{2}\)          C.  \(\sqrt{3}\)          D. -1
 
-![配图1](../../ocr_live_current/first_chapter_69/imgs/img_in_image_box_913_257_1092_430.jpg)
-
-![配图2](../../ocr_live_current/first_chapter_69/imgs/img_in_image_box_878_574_1093_765.jpg)
+![配图1](../../ocr_live_current/first_chapter_69/imgs/img_in_image_box_878_574_1093_765.jpg)
 
 #### 任务 25｜例14
 

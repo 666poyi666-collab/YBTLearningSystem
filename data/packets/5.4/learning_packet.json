@@ -284,80 +284,138 @@
           "vision_hint": "5.4-LI983631d81644456f",
           "vision_sidecars": [
             {
-              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_194_213_361_338.jpg",
+              "image": "data/ocr_live_current/chapter5_95/imgs/img_in_image_box_194_213_361_338.jpg",
               "image_sha256": "45d3cb64f0aeea6e9ad0c1d60cb85844bb564638a1e5b8424982aa4890fa6f13",
               "confidence": "E2",
               "structured": {
-                "objects": [],
-                "relations": [],
-                "coordinates": [],
-                "ranges": [],
-                "text": [
-                  "y",
-                  "x",
-                  "O",
-                  "y = f(x)"
+                "objects": [
+                  "x轴、y轴、平滑曲线y=f(x)、左右两个空心端点"
                 ],
-                "uncertainties": [],
+                "relations": [
+                  "曲线从左侧空心端点上升到局部极大，再下降到局部极小",
+                  "越过局部极小点后曲线上升到右侧空心端点",
+                  "整条可见曲线位于x轴上方"
+                ],
+                "coordinates": [
+                  "O为坐标原点"
+                ],
+                "ranges": [
+                  "曲线定义在两个空心端点之间的可见区间"
+                ],
+                "text": [
+                  "y=f(x)",
+                  "x",
+                  "y",
+                  "O"
+                ],
+                "uncertainties": [
+                  "端点横坐标未标数值"
+                ],
                 "confidence": "E2"
               },
-              "source_provenance": null
+              "source_provenance": {
+                "inventory": "reports/all_chapters/visual-inventory-current.json",
+                "source_docs": [
+                  43,
+                  44
+                ],
+                "review_method": "direct_view_image",
+                "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+                "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+                "original_image_sha256": "45d3cb64f0aeea6e9ad0c1d60cb85844bb564638a1e5b8424982aa4890fa6f13"
+              }
             },
             {
-              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_408_213_591_339.jpg",
+              "image": "data/ocr_live_current/chapter5_95/imgs/img_in_image_box_408_213_591_339.jpg",
               "image_sha256": "7cc50dd623a7c46a8f78acd5540de6c7f80b6c488796eda3e0ff2ad9e2413fc5",
               "confidence": "E2",
               "structured": {
                 "objects": [
-                  "坐标轴O",
-                  "函数图像y=f(x)",
-                  "顶点",
-                  "底边端点",
-                  "中点"
+                  "x轴、y轴、两条斜线段、顶部空心点、三个实心点、竖直虚线"
                 ],
                 "relations": [
-                  "顶点在底边中点正上方",
-                  "函数图像为三角形",
-                  "坐标轴原点O在左下角"
+                  "两条斜线段由左右两个x轴实心点分别连向同一个顶部空心点",
+                  "顶部空心点正下方有一个实心点",
+                  "该实心点与顶部空心点位于同一条竖直虚线上"
                 ],
                 "coordinates": [
-                  "O(0,0)",
-                  "顶点(x, y_max)",
-                  "左端点(x1, 0)",
-                  "右端点(x2, 0)",
-                  "中点((x1+x2)/2, 0)"
+                  "O为坐标原点"
                 ],
-                "ranges": [
-                  "x∈[x1, x2]",
-                  "y∈[0, y_max]"
-                ],
+                "ranges": [],
                 "text": [
-                  "y",
+                  "y=f(x)",
                   "x",
-                  "O",
-                  "y = f(x)"
+                  "y",
+                  "O"
                 ],
-                "uncertainties": [],
+                "uncertainties": [
+                  "各特殊点横纵坐标未标数值"
+                ],
                 "confidence": "E2"
               },
-              "source_provenance": null
+              "source_provenance": {
+                "inventory": "reports/all_chapters/visual-inventory-current.json",
+                "source_docs": [
+                  43,
+                  44
+                ],
+                "review_method": "direct_view_image",
+                "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+                "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+                "original_image_sha256": "7cc50dd623a7c46a8f78acd5540de6c7f80b6c488796eda3e0ff2ad9e2413fc5"
+              }
             }
           ],
           "vision_sidecar": {
-            "objects": [],
-            "relations": [],
-            "coordinates": [],
-            "ranges": [],
-            "text": [
-              "y",
-              "x",
-              "O",
-              "y = f(x)"
+            "objects": [
+              "x轴、y轴、平滑曲线y=f(x)、左右两个空心端点"
             ],
-            "uncertainties": [],
+            "relations": [
+              "曲线从左侧空心端点上升到局部极大，再下降到局部极小",
+              "越过局部极小点后曲线上升到右侧空心端点",
+              "整条可见曲线位于x轴上方"
+            ],
+            "coordinates": [
+              "O为坐标原点"
+            ],
+            "ranges": [
+              "曲线定义在两个空心端点之间的可见区间"
+            ],
+            "text": [
+              "y=f(x)",
+              "x",
+              "y",
+              "O"
+            ],
+            "uncertainties": [
+              "端点横坐标未标数值"
+            ],
             "confidence": "E2"
           },
-          "vision_source_provenance": [],
+          "vision_source_provenance": [
+            {
+              "inventory": "reports/all_chapters/visual-inventory-current.json",
+              "source_docs": [
+                43,
+                44
+              ],
+              "review_method": "direct_view_image",
+              "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+              "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+              "original_image_sha256": "45d3cb64f0aeea6e9ad0c1d60cb85844bb564638a1e5b8424982aa4890fa6f13"
+            },
+            {
+              "inventory": "reports/all_chapters/visual-inventory-current.json",
+              "source_docs": [
+                43,
+                44
+              ],
+              "review_method": "direct_view_image",
+              "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+              "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+              "original_image_sha256": "7cc50dd623a7c46a8f78acd5540de6c7f80b6c488796eda3e0ff2ad9e2413fc5"
+            }
+          ],
           "evidence": [
             "E1",
             "E2"
@@ -439,35 +497,91 @@
           "vision_hint": "5.4-LIa3dd12e45a094dd7",
           "vision_sidecars": [
             {
-              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_469_1272_723_1429.jpg",
+              "image": "data/ocr_live_current/chapter5_95/imgs/img_in_image_box_469_1272_723_1429.jpg",
               "image_sha256": "ccfd068825d9ea57230f1cbd94b03ab1f81162731cdc1402a0285faf8f544ca6",
               "confidence": "E2",
               "structured": {
-                "objects": [],
-                "relations": [],
-                "coordinates": [],
-                "ranges": [],
+                "objects": [
+                  "x轴、y轴、曲线y=f'(x)、x2与x4处的竖直虚线"
+                ],
+                "relations": [
+                  "曲线从左上方下降并在x1处穿过x轴",
+                  "曲线在x2处达到位于x轴下方的局部极小，再上升并在x3处穿过x轴",
+                  "曲线在x4处达到位于x轴上方的局部极大，之后小幅下降再上升"
+                ],
+                "coordinates": [
+                  "局部极小点横坐标x2",
+                  "局部极大点横坐标x4",
+                  "O为坐标原点"
+                ],
+                "ranges": [
+                  "图中横轴次序为x1、x2、x3、O、x4"
+                ],
                 "text": [
-                  "y = f'(x)"
+                  "y=f'(x)",
+                  "x1",
+                  "x2",
+                  "x3",
+                  "x4",
+                  "O"
                 ],
                 "uncertainties": [],
                 "confidence": "E2"
               },
-              "source_provenance": null
+              "source_provenance": {
+                "inventory": "reports/all_chapters/visual-inventory-current.json",
+                "source_docs": [
+                  44,
+                  45
+                ],
+                "review_method": "direct_view_image",
+                "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+                "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+                "original_image_sha256": "ccfd068825d9ea57230f1cbd94b03ab1f81162731cdc1402a0285faf8f544ca6"
+              }
             }
           ],
           "vision_sidecar": {
-            "objects": [],
-            "relations": [],
-            "coordinates": [],
-            "ranges": [],
+            "objects": [
+              "x轴、y轴、曲线y=f'(x)、x2与x4处的竖直虚线"
+            ],
+            "relations": [
+              "曲线从左上方下降并在x1处穿过x轴",
+              "曲线在x2处达到位于x轴下方的局部极小，再上升并在x3处穿过x轴",
+              "曲线在x4处达到位于x轴上方的局部极大，之后小幅下降再上升"
+            ],
+            "coordinates": [
+              "局部极小点横坐标x2",
+              "局部极大点横坐标x4",
+              "O为坐标原点"
+            ],
+            "ranges": [
+              "图中横轴次序为x1、x2、x3、O、x4"
+            ],
             "text": [
-              "y = f'(x)"
+              "y=f'(x)",
+              "x1",
+              "x2",
+              "x3",
+              "x4",
+              "O"
             ],
             "uncertainties": [],
             "confidence": "E2"
           },
-          "vision_source_provenance": [],
+          "vision_source_provenance": [
+            {
+              "inventory": "reports/all_chapters/visual-inventory-current.json",
+              "source_docs": [
+                44,
+                45
+              ],
+              "review_method": "direct_view_image",
+              "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+              "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+              "original_image_sha256": "ccfd068825d9ea57230f1cbd94b03ab1f81162731cdc1402a0285faf8f544ca6"
+            }
+          ],
           "evidence": [
             "E1",
             "E2"
@@ -819,10 +933,54 @@
             50,
             51
           ],
-          "question_text": "【变式1】已知函数  \\(f(x)=2\\mathrm{e}^{x}-ax\\)，其中  \\(a\\geq0\\)，证明： \\(f(a)\\geq2a+2\\)。\n证法1：要证  \\(f(a) \\geq 2a + 2\\)，即证  \\(2\\mathrm{e}^a - a^2 \\geq 2a + 2\\)，（此不等式结构不算复杂，可尝试直接移项，构造函数求导分析）令  \\(g(a) = 2\\mathrm{e}^a - a^2 - 2a - 2\\)， \\(a \\geq 0\\)，则  \\(g'(a) = 2\\mathrm{e}^a - 2a - 2 = 2[\\mathrm{e}^a - (a+1)]\\)，\n（由前面的经典切线放缩不等式， \\(e^a \\geq a+1\\)，所以  \\(e^a - (a+1) \\geq 0\\)，于是  \\(g'(a) \\geq 0\\)，但此为解答题，不宜直接用切线放缩不等式的结论，我们给出严格的证明过程，只需对  \\(g'(a)\\) 再求导分析）\n所以  \\(g''(a) = 2(e^a - 1) \\geq 0\\)，从而  \\(g'(a)\\) 在  \\([0, +\\infty)\\) 上单调递增，故  \\(g'(a) \\geq g'(0) = 2[e^0 - (0 + 1)] = 0\\)，所以  \\(g(a)\\) 在  \\([0, +\\infty)\\) 上单调递增，故  \\(g(a) \\geq g(0) = 2e^0 - 0^2 - 2 \\times 0 - 2 = 0\\)，即  \\(2e^a - a^2 - 2a - 2 \\geq 0\\)，所以  \\(2e^a - a^2 \\geq 2a + 2\\)，即  \\(f(a) \\geq 2a + 2\\)。\n证法2：（按证法1得到只需证 \\(2\\mathrm{e}^a - a^2 \\geq 2a + 2\\)后，注意到有 \\(\\mathrm{e}^a\\)这一结构，而对任意的函数 \\(\\varphi(a)\\)，都有 \\(\\left[\\frac{\\varphi(a)}{\\mathrm{e}^a}\\right] = \\frac{\\varphi'(a) - \\varphi(a)}{\\mathrm{e}^a}\\)，其正负与 \\(\\varphi'(a) - \\varphi(a)\\)相同，可不再考虑 \\(\\mathrm{e}^a\\)，这意味着可将 \\(2\\mathrm{e}^a - a^2 \\geq 2a + 2\\)进一步转化为 \\(\\frac{a^2 + 2a + 2}{\\mathrm{e}^a} \\leq 2\\)来证，也许能简化求导分析的过程）\n要证  \\(f(a) \\geq 2a + 2\\)，只需证  \\(2\\mathrm{e}^a - a^2 \\geq 2a + 2\\)，即证  \\(2\\mathrm{e}^a \\geq a^2 + 2a + 2\\)，也即证  \\(\\frac{a^2 + 2a + 2}{\\mathrm{e}^a} \\leq 2\\) ①，\n令  \\(h(a) = \\frac{a^2 + 2a + 2}{\\mathrm{e}^a}\\)， \\(a \\geq 0\\)，则  \\(h'(a) = \\frac{(2a + 2)\\mathrm{e}^a - \\mathrm{e}^a(a^2 + 2a + 2)}{(\\mathrm{e}^a)^2} = -\\frac{a^2}{\\mathrm{e}^a} \\leq 0\\)，所以  \\(h(a)\\) 在  \\([0, +\\infty)\\) 上单调递减，\n又  \\(h(0) = \\frac{0^2 + 2 \\times 0 + 2}{\\mathrm{e}^0} = 2\\)，所以  \\(h(a) \\leq 2\\)，即  \\(\\frac{a^2 + 2a + 2}{\\mathrm{e}^a} \\leq 2\\)，从而不等式①成立，故  \\(f(a) \\geq 2a + 2\\) 成立。",
+          "question_text": "【变式1】已知函数 \\(f(x)=2\\mathrm{e}^{x}-ax\\)，其中 \\(a\\geq0\\)，证明：\\(f(a)\\geq2a+2\\)。",
           "image_refs": [],
           "visual_status": "READY_TEXT_ONLY",
           "solution_isolated": true,
+          "source_question_stem_review": {
+            "status": "SOURCE_REVIEWED_ANSWER_FREE",
+            "review_path": "reports/deep_simulation_reviews/clean-stems-ch4-ch5.json",
+            "review_sha256": "1ace2265926aa6df1a55cbf856d0737271968b94b2398bb48956c48e833c1030",
+            "old_reported_question_text_sha256": "86a5d1ad7ac531721be953e988b2a55595f99c75f0e4ae35dfe43c1a271fe5b0",
+            "pre_override_question_text_sha256": "c718e056827673fce7a82dfc39406a7bca814960ef2495f3b3c16b524f5464fd",
+            "question_text_sha256": "08048065281a853929c38bbb809f45eca6ffa4c4c557b466340b6d8dc575be33",
+            "confidence": "high",
+            "boundary_basis": "Original PDF page 51 visually shows the complete proof prompt after the preceding reflection. The next block begins '证法1'; proof method 1 and the continuation as '证法2' on page 52 are excluded.",
+            "source": {
+              "packet": "data/packets/5.4/packet.json",
+              "generated_item_source": "data/packets/5.4/learning_packet.json",
+              "ocr_docs": [
+                50,
+                51
+              ],
+              "ocr_files": [
+                {
+                  "file": "data/ocr_live_current/chapter5_95/doc_50.md",
+                  "sha256": "decfd021f0848caeef706d92f44b9773d5a4749a60e56b0238c8ee04d91aa6d2"
+                },
+                {
+                  "file": "data/ocr_live_current/chapter5_95/doc_51.md",
+                  "sha256": "2a8aa84eb6a67cf198357a2b156a4a4b387091f3bf6b90df08430634ff420891"
+                }
+              ],
+              "pdf_file": "data/ocr_sources/第5章 一元函数的导数及其应用（无答案册）.pdf",
+              "pdf_pages": [
+                51,
+                52
+              ],
+              "original_page_images": [
+                {
+                  "file": "data/ocr_live_current/chapter5_95/layout_det_res_50.jpg",
+                  "sha256": "2b84667cbac8c3734ded6fb41a9aaa1bde2bfce1f0b57c9d88e4908521923297"
+                },
+                {
+                  "file": "data/ocr_live_current/chapter5_95/layout_det_res_51.jpg",
+                  "sha256": "4bfc3408ba55a8eb2e2dd201796f9c8c1d2cd4360b160ee1d5b4f2aa163f6d85"
+                }
+              ],
+              "visual_evidence": "original PDF pages 51-52 and OCR layout pages 50-51"
+            }
+          },
           "vision_hint": "5.4-LI1403f6b08572b0ac"
         },
         {
@@ -837,10 +995,60 @@
             51,
             52
           ],
-          "question_text": "【变式2】证明不等式：\n证法1：（要证的不等式结构不算复杂，可尝试直接移项，构造函数求导分析）\n设  \\(f(x)=\\left(1-\\frac{2}{x}\\right)\\ln x+\\frac{1}{2}\\)， \\(x>0\\)，则  \\(f'(x)=\\frac{2}{x^2}\\ln x+\\left(1-\\frac{2}{x}\\right)\\frac{1}{x}=\\frac{2\\ln x+x-2}{x^2}\\)，\n（不易直接判断正负，考虑继续求导，但可想象，若直接求导，则会变得很复杂，怎么办呢？注意到分母的 \\(x^2\\)始终为正，于是 \\(f'(x)\\)的正负仅由分子决定，故可考虑把分子单独拿出来求导分析）设 \\(g(x)=2\\ln x+x-2\\)， \\(x>0\\)，则 \\(g'(x)=\\frac{2}{x}+1>0\\)，所以 \\(g(x)\\)在 \\((0,+\\infty)\\)上单调递增，\n（有了 \\(g(x) \\nearrow\\)，则 \\(g(x)\\)的零点即为其正负分界点，但经尝试，此处零点无法求出，怎么办呢？像这种零点不可求的情况，可考虑虚设零点，再用它来继续分析）\n因为 \\(g(1) = -1 < 0\\)， \\(g(2) = 2\\ln 2 > 0\\)，所以 \\(g(x)\\)在 \\((0, +\\infty)\\)上有唯一的零点，设为 \\(x_0\\)，则 \\(1 < x_0 < 2\\)，\n当 \\(0 < x < x_0\\)时， \\(g(x) < 0\\)，所以 \\(f'(x) < 0\\)， \\(f(x)\\)在 \\((0, x_0)\\)上单调递减，\n当 \\(x > x_0\\)时， \\(g(x) > 0\\)，所以 \\(f'(x) > 0\\)， \\(f(x)\\)在 \\((x_0, +\\infty)\\)上单调递增，所以 \\(f(x)_{\\min} = f(x_0) = \\left(1 - \\frac{2}{x_0}\\right)\\ln x_0 + \\frac{1}{2}\\) ①，\n（要证结论成立，只需证 \\(f(x_0) > 0\\)，显然直接由式①无法看出正负，怎么办呢？注意到 \\(x_0\\)是 \\(g(x)\\)的零点，于是有 \\(g(x_0) = 0\\)，可尝试利用这一层关系化简式①，再判断正负）\n因为 \\(g(x_0) = 2\\ln x_0 + x_0 - 2 = 0\\)，所以 \\(\\ln x_0 = \\frac{2 - x_0}{2}\\)，代入①得 \\(f(x_0) = \\left(1 - \\frac{2}{x_0}\\right)\\frac{2 - x_0}{2} + \\frac{1}{2} = \\frac{5}{2} - \\frac{1}{2}\\left(x_0 + \\frac{4}{x_0}\\right)\\)，\n由 \\(1 < x_0 < 2\\)知 \\(4 < x_0 + \\frac{4}{x_0} < 5\\)，所以 \\(f(x_0) > 0\\)，从而 \\(f(x) > 0\\)，故不等式 \\(\\left(1 - \\frac{2}{x}\\right)\\ln x > -\\frac{1}{2}\\)成立。\n证法2：（证法1思维量较大，有无其它方法？可以想象，对任意的函数 \\(\\varphi(x)\\)，都有 \\([\\ln x+\\varphi(x)]'=\\frac{1}{x}+\\varphi'(x)\\)，所以若能将要证的不等式中的 \\(\\ln x\\)与 \\(1-\\frac{2}{x}\\)分开，孤立出 \\(\\ln x\\)，则求导后就不再含有 \\(\\ln x\\)了，可能会更好分析，故按此尝试.注意到当 \\(1-\\frac{2}{x}\\)与 \\(\\ln x\\)同号时，结论显然成立，于是我们先单独分析同号的这两种情况）当 \\(0<x\\leq1\\)时， \\(1-\\frac{2}{x}<0\\)， \\(\\ln x\\leq0\\)，所以 \\(\\left(1-\\frac{2}{x}\\right)\\ln x\\geq0>-\\frac{1}{2}\\)，原不等式成立；\n当\\(x \\geq 2\\)时，\\(1 - \\frac{2}{x} \\geq 0\\)，\\(\\ln x > 0\\)，所以\\(\\left(1 - \\frac{2}{x}\\right)\\ln x \\geq 0 > -\\frac{1}{2}\\)，原不等式成立；\n（最后来看\\(1 < x < 2\\)的情形，此时\\(1 - \\frac{2}{x} < 0\\)，可将要证的不等式两端同除以\\(1 - \\frac{2}{x}\\)，将\\(\\ln x\\)孤立出来）\n当\\(1 < x < 2\\)时，\\(1 - \\frac{2}{x} < 0\\)，要证\\(\\left(1 - \\frac{2}{x}\\right)\\ln x > -\\frac{1}{2}\\)，只需证\\(\\ln x < -\\frac{x}{2(x-2)}\\)，即证\\(\\ln x + \\frac{x}{2(x-2)} < 0\\)，\n设\\(h(x) = \\ln x + \\frac{x}{2(x-2)}\\)，\\(1 < x < 2\\)，则\\(h'(x) = \\frac{1}{x} + \\frac{x - 2 - x}{2(x-2)^2} = \\frac{1}{x} - \\frac{1}{(x-2)^2} = \\frac{(x-1)(x-4)}{x(x-2)^2} < 0\\)，\n所以\\(h(x)\\)在\\((1,2)\\)上单调递减，结合\\(h(1) = -\\frac{1}{2} < 0\\)知\\(h(x) < 0\\)，即\\(\\ln x + \\frac{x}{2(x-2)} < 0\\)，故原不等式成立；\n综上所述，不等式\\(\\left(1 - \\frac{2}{x}\\right)\\ln x > -\\frac{1}{2}\\)对任意的\\(x > 0\\)成立。",
+          "question_text": "【变式2】证明不等式：\\(\\left(1-\\frac{2}{x}\\right)\\ln x>-\\frac{1}{2}\\)。",
           "image_refs": [],
           "visual_status": "READY_TEXT_ONLY",
           "solution_isolated": true,
+          "source_layout_repair": {
+            "status": "SOURCE_PDF_VISUALLY_VERIFIED",
+            "source_pdf_sha256": "205282fd79c60a2539cd231044a6d06c5f78a44845a9879d931766851789fa25",
+            "pdf_page": 52,
+            "reason": "OCR漏掉“证明不等式：”后的整条公式，原页公式已逐字恢复；证法1起隔离为解答。"
+          },
+          "source_question_stem_review": {
+            "status": "SOURCE_REVIEWED_ANSWER_FREE",
+            "review_path": "reports/deep_simulation_reviews/clean-stems-ch4-ch5.json",
+            "review_sha256": "1ace2265926aa6df1a55cbf856d0737271968b94b2398bb48956c48e833c1030",
+            "old_reported_question_text_sha256": "1cca63f2642fd90c1f34ba0e34e839c443b67f463e45f336a368dcfaef1a01ce",
+            "pre_override_question_text_sha256": "cdc81e631e18f652805e9689c27ba6af10f65e39f3607d369f738786b098e7c9",
+            "question_text_sha256": "cf81d43a2dc1f37e523e5d50cc4a865905f5852f168123e037d165726c7c452b",
+            "confidence": "high",
+            "boundary_basis": "OCR doc 51 retained only '证明不等式：' and dropped the displayed inequality. Original PDF page 52 visually restores the complete expression. The same inequality is repeated verbatim in proof method 1 and at the start of proof method 2, while page 53 concludes that it holds for arbitrary x>0. No extra domain clause is added because it is not printed in the stem.",
+            "source": {
+              "packet": "data/packets/5.4/packet.json",
+              "generated_item_source": "data/packets/5.4/learning_packet.json",
+              "ocr_docs": [
+                51,
+                52
+              ],
+              "ocr_files": [
+                {
+                  "file": "data/ocr_live_current/chapter5_95/doc_51.md",
+                  "sha256": "2a8aa84eb6a67cf198357a2b156a4a4b387091f3bf6b90df08430634ff420891"
+                },
+                {
+                  "file": "data/ocr_live_current/chapter5_95/doc_52.md",
+                  "sha256": "222624c9843b905d0ab2cb375b4e5bec0f1c7bfcb21278d239d4101a6c938797"
+                }
+              ],
+              "pdf_file": "data/ocr_sources/第5章 一元函数的导数及其应用（无答案册）.pdf",
+              "pdf_pages": [
+                52,
+                53
+              ],
+              "original_page_images": [
+                {
+                  "file": "data/ocr_live_current/chapter5_95/layout_det_res_51.jpg",
+                  "sha256": "4bfc3408ba55a8eb2e2dd201796f9c8c1d2cd4360b160ee1d5b4f2aa163f6d85"
+                },
+                {
+                  "file": "data/ocr_live_current/chapter5_95/layout_det_res_52.jpg",
+                  "sha256": "21fa406363cf0c3be8cb1adf0e325de67bc9d771e979a450c7004598b6a7ff4e"
+                }
+              ],
+              "visual_evidence": "original PDF pages 52-53 and OCR layout pages 51-52"
+            }
+          },
           "vision_hint": "5.4-LIf2070d1901aa5888"
         },
         {
@@ -886,7 +1094,12 @@
       "optional_course_keys": [],
       "knowledge_refs": [],
       "prerequisite_knowledge_refs": [],
-      "type_refs": [],
+      "type_refs": [
+        "类型I 由图象分析函数的极值情况",
+        "类型Ⅲ 根据极值点或极值求参",
+        "类型IV 函数的最值分析",
+        "类型V 利用导数证明不等式"
+      ],
       "bridge_unit_ids": [],
       "method_checkpoints": [],
       "worked_examples": [],
@@ -976,7 +1189,7 @@
             "pdf_page": 54,
             "file": "data/ocr_live_current/chapter5_95/doc_53.md"
           },
-          "question_text": "2.（2025·甘肃临夏期末）\n\n(2025·日照临夏期末)\n\n已知函数  \\(f(x)=(x+a)e^{x}\\) 在 x=1 处有极值.\n\n（1）求a的值；\n\n（2）求 \\(f(x)\\)在 \\([-1,3]\\)上的最值.",
+          "question_text": "2.（2025·甘肃临夏期末）\n\n\n已知函数  \\(f(x)=(x+a)e^{x}\\) 在 x=1 处有极值.\n\n（1）求a的值；\n\n（2）求 \\(f(x)\\)在 \\([-1,3]\\)上的最值.",
           "image_refs": [],
           "visual_status": "READY_TEXT_ONLY",
           "math_errors": [],
@@ -1028,7 +1241,13 @@
       "optional_course_keys": [],
       "knowledge_refs": [],
       "prerequisite_knowledge_refs": [],
-      "type_refs": [],
+      "type_refs": [
+        "类型I 由图象分析函数的极值情况",
+        "类型Ⅱ 求函数的极值点或极值",
+        "类型V 利用导数证明不等式",
+        "类型IV 函数的最值分析",
+        "类型Ⅲ 根据极值点或极值求参"
+      ],
       "bridge_unit_ids": [],
       "method_checkpoints": [],
       "worked_examples": [],
@@ -1328,7 +1547,12 @@
       "optional_course_keys": [],
       "knowledge_refs": [],
       "prerequisite_knowledge_refs": [],
-      "type_refs": [],
+      "type_refs": [
+        "类型V 利用导数证明不等式",
+        "类型IV 函数的最值分析",
+        "类型Ⅲ 根据极值点或极值求参",
+        "类型Ⅱ 求函数的极值点或极值"
+      ],
       "bridge_unit_ids": [],
       "method_checkpoints": [],
       "worked_examples": [],
@@ -1638,80 +1862,138 @@
       "vision_hint": "5.4-LI983631d81644456f",
       "vision_sidecars": [
         {
-          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_194_213_361_338.jpg",
+          "image": "data/ocr_live_current/chapter5_95/imgs/img_in_image_box_194_213_361_338.jpg",
           "image_sha256": "45d3cb64f0aeea6e9ad0c1d60cb85844bb564638a1e5b8424982aa4890fa6f13",
           "confidence": "E2",
           "structured": {
-            "objects": [],
-            "relations": [],
-            "coordinates": [],
-            "ranges": [],
-            "text": [
-              "y",
-              "x",
-              "O",
-              "y = f(x)"
+            "objects": [
+              "x轴、y轴、平滑曲线y=f(x)、左右两个空心端点"
             ],
-            "uncertainties": [],
+            "relations": [
+              "曲线从左侧空心端点上升到局部极大，再下降到局部极小",
+              "越过局部极小点后曲线上升到右侧空心端点",
+              "整条可见曲线位于x轴上方"
+            ],
+            "coordinates": [
+              "O为坐标原点"
+            ],
+            "ranges": [
+              "曲线定义在两个空心端点之间的可见区间"
+            ],
+            "text": [
+              "y=f(x)",
+              "x",
+              "y",
+              "O"
+            ],
+            "uncertainties": [
+              "端点横坐标未标数值"
+            ],
             "confidence": "E2"
           },
-          "source_provenance": null
+          "source_provenance": {
+            "inventory": "reports/all_chapters/visual-inventory-current.json",
+            "source_docs": [
+              43,
+              44
+            ],
+            "review_method": "direct_view_image",
+            "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+            "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+            "original_image_sha256": "45d3cb64f0aeea6e9ad0c1d60cb85844bb564638a1e5b8424982aa4890fa6f13"
+          }
         },
         {
-          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_408_213_591_339.jpg",
+          "image": "data/ocr_live_current/chapter5_95/imgs/img_in_image_box_408_213_591_339.jpg",
           "image_sha256": "7cc50dd623a7c46a8f78acd5540de6c7f80b6c488796eda3e0ff2ad9e2413fc5",
           "confidence": "E2",
           "structured": {
             "objects": [
-              "坐标轴O",
-              "函数图像y=f(x)",
-              "顶点",
-              "底边端点",
-              "中点"
+              "x轴、y轴、两条斜线段、顶部空心点、三个实心点、竖直虚线"
             ],
             "relations": [
-              "顶点在底边中点正上方",
-              "函数图像为三角形",
-              "坐标轴原点O在左下角"
+              "两条斜线段由左右两个x轴实心点分别连向同一个顶部空心点",
+              "顶部空心点正下方有一个实心点",
+              "该实心点与顶部空心点位于同一条竖直虚线上"
             ],
             "coordinates": [
-              "O(0,0)",
-              "顶点(x, y_max)",
-              "左端点(x1, 0)",
-              "右端点(x2, 0)",
-              "中点((x1+x2)/2, 0)"
+              "O为坐标原点"
             ],
-            "ranges": [
-              "x∈[x1, x2]",
-              "y∈[0, y_max]"
-            ],
+            "ranges": [],
             "text": [
-              "y",
+              "y=f(x)",
               "x",
-              "O",
-              "y = f(x)"
+              "y",
+              "O"
             ],
-            "uncertainties": [],
+            "uncertainties": [
+              "各特殊点横纵坐标未标数值"
+            ],
             "confidence": "E2"
           },
-          "source_provenance": null
+          "source_provenance": {
+            "inventory": "reports/all_chapters/visual-inventory-current.json",
+            "source_docs": [
+              43,
+              44
+            ],
+            "review_method": "direct_view_image",
+            "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+            "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+            "original_image_sha256": "7cc50dd623a7c46a8f78acd5540de6c7f80b6c488796eda3e0ff2ad9e2413fc5"
+          }
         }
       ],
       "vision_sidecar": {
-        "objects": [],
-        "relations": [],
-        "coordinates": [],
-        "ranges": [],
-        "text": [
-          "y",
-          "x",
-          "O",
-          "y = f(x)"
+        "objects": [
+          "x轴、y轴、平滑曲线y=f(x)、左右两个空心端点"
         ],
-        "uncertainties": [],
+        "relations": [
+          "曲线从左侧空心端点上升到局部极大，再下降到局部极小",
+          "越过局部极小点后曲线上升到右侧空心端点",
+          "整条可见曲线位于x轴上方"
+        ],
+        "coordinates": [
+          "O为坐标原点"
+        ],
+        "ranges": [
+          "曲线定义在两个空心端点之间的可见区间"
+        ],
+        "text": [
+          "y=f(x)",
+          "x",
+          "y",
+          "O"
+        ],
+        "uncertainties": [
+          "端点横坐标未标数值"
+        ],
         "confidence": "E2"
       },
-      "vision_source_provenance": [],
+      "vision_source_provenance": [
+        {
+          "inventory": "reports/all_chapters/visual-inventory-current.json",
+          "source_docs": [
+            43,
+            44
+          ],
+          "review_method": "direct_view_image",
+          "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+          "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+          "original_image_sha256": "45d3cb64f0aeea6e9ad0c1d60cb85844bb564638a1e5b8424982aa4890fa6f13"
+        },
+        {
+          "inventory": "reports/all_chapters/visual-inventory-current.json",
+          "source_docs": [
+            43,
+            44
+          ],
+          "review_method": "direct_view_image",
+          "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+          "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+          "original_image_sha256": "7cc50dd623a7c46a8f78acd5540de6c7f80b6c488796eda3e0ff2ad9e2413fc5"
+        }
+      ],
       "evidence": [
         "E1",
         "E2"
@@ -1743,35 +2025,91 @@
       "vision_hint": "5.4-LIa3dd12e45a094dd7",
       "vision_sidecars": [
         {
-          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_469_1272_723_1429.jpg",
+          "image": "data/ocr_live_current/chapter5_95/imgs/img_in_image_box_469_1272_723_1429.jpg",
           "image_sha256": "ccfd068825d9ea57230f1cbd94b03ab1f81162731cdc1402a0285faf8f544ca6",
           "confidence": "E2",
           "structured": {
-            "objects": [],
-            "relations": [],
-            "coordinates": [],
-            "ranges": [],
+            "objects": [
+              "x轴、y轴、曲线y=f'(x)、x2与x4处的竖直虚线"
+            ],
+            "relations": [
+              "曲线从左上方下降并在x1处穿过x轴",
+              "曲线在x2处达到位于x轴下方的局部极小，再上升并在x3处穿过x轴",
+              "曲线在x4处达到位于x轴上方的局部极大，之后小幅下降再上升"
+            ],
+            "coordinates": [
+              "局部极小点横坐标x2",
+              "局部极大点横坐标x4",
+              "O为坐标原点"
+            ],
+            "ranges": [
+              "图中横轴次序为x1、x2、x3、O、x4"
+            ],
             "text": [
-              "y = f'(x)"
+              "y=f'(x)",
+              "x1",
+              "x2",
+              "x3",
+              "x4",
+              "O"
             ],
             "uncertainties": [],
             "confidence": "E2"
           },
-          "source_provenance": null
+          "source_provenance": {
+            "inventory": "reports/all_chapters/visual-inventory-current.json",
+            "source_docs": [
+              44,
+              45
+            ],
+            "review_method": "direct_view_image",
+            "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+            "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+            "original_image_sha256": "ccfd068825d9ea57230f1cbd94b03ab1f81162731cdc1402a0285faf8f544ca6"
+          }
         }
       ],
       "vision_sidecar": {
-        "objects": [],
-        "relations": [],
-        "coordinates": [],
-        "ranges": [],
+        "objects": [
+          "x轴、y轴、曲线y=f'(x)、x2与x4处的竖直虚线"
+        ],
+        "relations": [
+          "曲线从左上方下降并在x1处穿过x轴",
+          "曲线在x2处达到位于x轴下方的局部极小，再上升并在x3处穿过x轴",
+          "曲线在x4处达到位于x轴上方的局部极大，之后小幅下降再上升"
+        ],
+        "coordinates": [
+          "局部极小点横坐标x2",
+          "局部极大点横坐标x4",
+          "O为坐标原点"
+        ],
+        "ranges": [
+          "图中横轴次序为x1、x2、x3、O、x4"
+        ],
         "text": [
-          "y = f'(x)"
+          "y=f'(x)",
+          "x1",
+          "x2",
+          "x3",
+          "x4",
+          "O"
         ],
         "uncertainties": [],
         "confidence": "E2"
       },
-      "vision_source_provenance": [],
+      "vision_source_provenance": [
+        {
+          "inventory": "reports/all_chapters/visual-inventory-current.json",
+          "source_docs": [
+            44,
+            45
+          ],
+          "review_method": "direct_view_image",
+          "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+          "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+          "original_image_sha256": "ccfd068825d9ea57230f1cbd94b03ab1f81162731cdc1402a0285faf8f544ca6"
+        }
+      ],
       "evidence": [
         "E1",
         "E2"
@@ -1987,10 +2325,54 @@
         50,
         51
       ],
-      "question_text": "【变式1】已知函数  \\(f(x)=2\\mathrm{e}^{x}-ax\\)，其中  \\(a\\geq0\\)，证明： \\(f(a)\\geq2a+2\\)。\n证法1：要证  \\(f(a) \\geq 2a + 2\\)，即证  \\(2\\mathrm{e}^a - a^2 \\geq 2a + 2\\)，（此不等式结构不算复杂，可尝试直接移项，构造函数求导分析）令  \\(g(a) = 2\\mathrm{e}^a - a^2 - 2a - 2\\)， \\(a \\geq 0\\)，则  \\(g'(a) = 2\\mathrm{e}^a - 2a - 2 = 2[\\mathrm{e}^a - (a+1)]\\)，\n（由前面的经典切线放缩不等式， \\(e^a \\geq a+1\\)，所以  \\(e^a - (a+1) \\geq 0\\)，于是  \\(g'(a) \\geq 0\\)，但此为解答题，不宜直接用切线放缩不等式的结论，我们给出严格的证明过程，只需对  \\(g'(a)\\) 再求导分析）\n所以  \\(g''(a) = 2(e^a - 1) \\geq 0\\)，从而  \\(g'(a)\\) 在  \\([0, +\\infty)\\) 上单调递增，故  \\(g'(a) \\geq g'(0) = 2[e^0 - (0 + 1)] = 0\\)，所以  \\(g(a)\\) 在  \\([0, +\\infty)\\) 上单调递增，故  \\(g(a) \\geq g(0) = 2e^0 - 0^2 - 2 \\times 0 - 2 = 0\\)，即  \\(2e^a - a^2 - 2a - 2 \\geq 0\\)，所以  \\(2e^a - a^2 \\geq 2a + 2\\)，即  \\(f(a) \\geq 2a + 2\\)。\n证法2：（按证法1得到只需证 \\(2\\mathrm{e}^a - a^2 \\geq 2a + 2\\)后，注意到有 \\(\\mathrm{e}^a\\)这一结构，而对任意的函数 \\(\\varphi(a)\\)，都有 \\(\\left[\\frac{\\varphi(a)}{\\mathrm{e}^a}\\right] = \\frac{\\varphi'(a) - \\varphi(a)}{\\mathrm{e}^a}\\)，其正负与 \\(\\varphi'(a) - \\varphi(a)\\)相同，可不再考虑 \\(\\mathrm{e}^a\\)，这意味着可将 \\(2\\mathrm{e}^a - a^2 \\geq 2a + 2\\)进一步转化为 \\(\\frac{a^2 + 2a + 2}{\\mathrm{e}^a} \\leq 2\\)来证，也许能简化求导分析的过程）\n要证  \\(f(a) \\geq 2a + 2\\)，只需证  \\(2\\mathrm{e}^a - a^2 \\geq 2a + 2\\)，即证  \\(2\\mathrm{e}^a \\geq a^2 + 2a + 2\\)，也即证  \\(\\frac{a^2 + 2a + 2}{\\mathrm{e}^a} \\leq 2\\) ①，\n令  \\(h(a) = \\frac{a^2 + 2a + 2}{\\mathrm{e}^a}\\)， \\(a \\geq 0\\)，则  \\(h'(a) = \\frac{(2a + 2)\\mathrm{e}^a - \\mathrm{e}^a(a^2 + 2a + 2)}{(\\mathrm{e}^a)^2} = -\\frac{a^2}{\\mathrm{e}^a} \\leq 0\\)，所以  \\(h(a)\\) 在  \\([0, +\\infty)\\) 上单调递减，\n又  \\(h(0) = \\frac{0^2 + 2 \\times 0 + 2}{\\mathrm{e}^0} = 2\\)，所以  \\(h(a) \\leq 2\\)，即  \\(\\frac{a^2 + 2a + 2}{\\mathrm{e}^a} \\leq 2\\)，从而不等式①成立，故  \\(f(a) \\geq 2a + 2\\) 成立。",
+      "question_text": "【变式1】已知函数 \\(f(x)=2\\mathrm{e}^{x}-ax\\)，其中 \\(a\\geq0\\)，证明：\\(f(a)\\geq2a+2\\)。",
       "image_refs": [],
       "visual_status": "READY_TEXT_ONLY",
       "solution_isolated": true,
+      "source_question_stem_review": {
+        "status": "SOURCE_REVIEWED_ANSWER_FREE",
+        "review_path": "reports/deep_simulation_reviews/clean-stems-ch4-ch5.json",
+        "review_sha256": "1ace2265926aa6df1a55cbf856d0737271968b94b2398bb48956c48e833c1030",
+        "old_reported_question_text_sha256": "86a5d1ad7ac531721be953e988b2a55595f99c75f0e4ae35dfe43c1a271fe5b0",
+        "pre_override_question_text_sha256": "c718e056827673fce7a82dfc39406a7bca814960ef2495f3b3c16b524f5464fd",
+        "question_text_sha256": "08048065281a853929c38bbb809f45eca6ffa4c4c557b466340b6d8dc575be33",
+        "confidence": "high",
+        "boundary_basis": "Original PDF page 51 visually shows the complete proof prompt after the preceding reflection. The next block begins '证法1'; proof method 1 and the continuation as '证法2' on page 52 are excluded.",
+        "source": {
+          "packet": "data/packets/5.4/packet.json",
+          "generated_item_source": "data/packets/5.4/learning_packet.json",
+          "ocr_docs": [
+            50,
+            51
+          ],
+          "ocr_files": [
+            {
+              "file": "data/ocr_live_current/chapter5_95/doc_50.md",
+              "sha256": "decfd021f0848caeef706d92f44b9773d5a4749a60e56b0238c8ee04d91aa6d2"
+            },
+            {
+              "file": "data/ocr_live_current/chapter5_95/doc_51.md",
+              "sha256": "2a8aa84eb6a67cf198357a2b156a4a4b387091f3bf6b90df08430634ff420891"
+            }
+          ],
+          "pdf_file": "data/ocr_sources/第5章 一元函数的导数及其应用（无答案册）.pdf",
+          "pdf_pages": [
+            51,
+            52
+          ],
+          "original_page_images": [
+            {
+              "file": "data/ocr_live_current/chapter5_95/layout_det_res_50.jpg",
+              "sha256": "2b84667cbac8c3734ded6fb41a9aaa1bde2bfce1f0b57c9d88e4908521923297"
+            },
+            {
+              "file": "data/ocr_live_current/chapter5_95/layout_det_res_51.jpg",
+              "sha256": "4bfc3408ba55a8eb2e2dd201796f9c8c1d2cd4360b160ee1d5b4f2aa163f6d85"
+            }
+          ],
+          "visual_evidence": "original PDF pages 51-52 and OCR layout pages 50-51"
+        }
+      },
       "vision_hint": "5.4-LI1403f6b08572b0ac"
     },
     {
@@ -2005,10 +2387,60 @@
         51,
         52
       ],
-      "question_text": "【变式2】证明不等式：\n证法1：（要证的不等式结构不算复杂，可尝试直接移项，构造函数求导分析）\n设  \\(f(x)=\\left(1-\\frac{2}{x}\\right)\\ln x+\\frac{1}{2}\\)， \\(x>0\\)，则  \\(f'(x)=\\frac{2}{x^2}\\ln x+\\left(1-\\frac{2}{x}\\right)\\frac{1}{x}=\\frac{2\\ln x+x-2}{x^2}\\)，\n（不易直接判断正负，考虑继续求导，但可想象，若直接求导，则会变得很复杂，怎么办呢？注意到分母的 \\(x^2\\)始终为正，于是 \\(f'(x)\\)的正负仅由分子决定，故可考虑把分子单独拿出来求导分析）设 \\(g(x)=2\\ln x+x-2\\)， \\(x>0\\)，则 \\(g'(x)=\\frac{2}{x}+1>0\\)，所以 \\(g(x)\\)在 \\((0,+\\infty)\\)上单调递增，\n（有了 \\(g(x) \\nearrow\\)，则 \\(g(x)\\)的零点即为其正负分界点，但经尝试，此处零点无法求出，怎么办呢？像这种零点不可求的情况，可考虑虚设零点，再用它来继续分析）\n因为 \\(g(1) = -1 < 0\\)， \\(g(2) = 2\\ln 2 > 0\\)，所以 \\(g(x)\\)在 \\((0, +\\infty)\\)上有唯一的零点，设为 \\(x_0\\)，则 \\(1 < x_0 < 2\\)，\n当 \\(0 < x < x_0\\)时， \\(g(x) < 0\\)，所以 \\(f'(x) < 0\\)， \\(f(x)\\)在 \\((0, x_0)\\)上单调递减，\n当 \\(x > x_0\\)时， \\(g(x) > 0\\)，所以 \\(f'(x) > 0\\)， \\(f(x)\\)在 \\((x_0, +\\infty)\\)上单调递增，所以 \\(f(x)_{\\min} = f(x_0) = \\left(1 - \\frac{2}{x_0}\\right)\\ln x_0 + \\frac{1}{2}\\) ①，\n（要证结论成立，只需证 \\(f(x_0) > 0\\)，显然直接由式①无法看出正负，怎么办呢？注意到 \\(x_0\\)是 \\(g(x)\\)的零点，于是有 \\(g(x_0) = 0\\)，可尝试利用这一层关系化简式①，再判断正负）\n因为 \\(g(x_0) = 2\\ln x_0 + x_0 - 2 = 0\\)，所以 \\(\\ln x_0 = \\frac{2 - x_0}{2}\\)，代入①得 \\(f(x_0) = \\left(1 - \\frac{2}{x_0}\\right)\\frac{2 - x_0}{2} + \\frac{1}{2} = \\frac{5}{2} - \\frac{1}{2}\\left(x_0 + \\frac{4}{x_0}\\right)\\)，\n由 \\(1 < x_0 < 2\\)知 \\(4 < x_0 + \\frac{4}{x_0} < 5\\)，所以 \\(f(x_0) > 0\\)，从而 \\(f(x) > 0\\)，故不等式 \\(\\left(1 - \\frac{2}{x}\\right)\\ln x > -\\frac{1}{2}\\)成立。\n证法2：（证法1思维量较大，有无其它方法？可以想象，对任意的函数 \\(\\varphi(x)\\)，都有 \\([\\ln x+\\varphi(x)]'=\\frac{1}{x}+\\varphi'(x)\\)，所以若能将要证的不等式中的 \\(\\ln x\\)与 \\(1-\\frac{2}{x}\\)分开，孤立出 \\(\\ln x\\)，则求导后就不再含有 \\(\\ln x\\)了，可能会更好分析，故按此尝试.注意到当 \\(1-\\frac{2}{x}\\)与 \\(\\ln x\\)同号时，结论显然成立，于是我们先单独分析同号的这两种情况）当 \\(0<x\\leq1\\)时， \\(1-\\frac{2}{x}<0\\)， \\(\\ln x\\leq0\\)，所以 \\(\\left(1-\\frac{2}{x}\\right)\\ln x\\geq0>-\\frac{1}{2}\\)，原不等式成立；\n当\\(x \\geq 2\\)时，\\(1 - \\frac{2}{x} \\geq 0\\)，\\(\\ln x > 0\\)，所以\\(\\left(1 - \\frac{2}{x}\\right)\\ln x \\geq 0 > -\\frac{1}{2}\\)，原不等式成立；\n（最后来看\\(1 < x < 2\\)的情形，此时\\(1 - \\frac{2}{x} < 0\\)，可将要证的不等式两端同除以\\(1 - \\frac{2}{x}\\)，将\\(\\ln x\\)孤立出来）\n当\\(1 < x < 2\\)时，\\(1 - \\frac{2}{x} < 0\\)，要证\\(\\left(1 - \\frac{2}{x}\\right)\\ln x > -\\frac{1}{2}\\)，只需证\\(\\ln x < -\\frac{x}{2(x-2)}\\)，即证\\(\\ln x + \\frac{x}{2(x-2)} < 0\\)，\n设\\(h(x) = \\ln x + \\frac{x}{2(x-2)}\\)，\\(1 < x < 2\\)，则\\(h'(x) = \\frac{1}{x} + \\frac{x - 2 - x}{2(x-2)^2} = \\frac{1}{x} - \\frac{1}{(x-2)^2} = \\frac{(x-1)(x-4)}{x(x-2)^2} < 0\\)，\n所以\\(h(x)\\)在\\((1,2)\\)上单调递减，结合\\(h(1) = -\\frac{1}{2} < 0\\)知\\(h(x) < 0\\)，即\\(\\ln x + \\frac{x}{2(x-2)} < 0\\)，故原不等式成立；\n综上所述，不等式\\(\\left(1 - \\frac{2}{x}\\right)\\ln x > -\\frac{1}{2}\\)对任意的\\(x > 0\\)成立。",
+      "question_text": "【变式2】证明不等式：\\(\\left(1-\\frac{2}{x}\\right)\\ln x>-\\frac{1}{2}\\)。",
       "image_refs": [],
       "visual_status": "READY_TEXT_ONLY",
       "solution_isolated": true,
+      "source_layout_repair": {
+        "status": "SOURCE_PDF_VISUALLY_VERIFIED",
+        "source_pdf_sha256": "205282fd79c60a2539cd231044a6d06c5f78a44845a9879d931766851789fa25",
+        "pdf_page": 52,
+        "reason": "OCR漏掉“证明不等式：”后的整条公式，原页公式已逐字恢复；证法1起隔离为解答。"
+      },
+      "source_question_stem_review": {
+        "status": "SOURCE_REVIEWED_ANSWER_FREE",
+        "review_path": "reports/deep_simulation_reviews/clean-stems-ch4-ch5.json",
+        "review_sha256": "1ace2265926aa6df1a55cbf856d0737271968b94b2398bb48956c48e833c1030",
+        "old_reported_question_text_sha256": "1cca63f2642fd90c1f34ba0e34e839c443b67f463e45f336a368dcfaef1a01ce",
+        "pre_override_question_text_sha256": "cdc81e631e18f652805e9689c27ba6af10f65e39f3607d369f738786b098e7c9",
+        "question_text_sha256": "cf81d43a2dc1f37e523e5d50cc4a865905f5852f168123e037d165726c7c452b",
+        "confidence": "high",
+        "boundary_basis": "OCR doc 51 retained only '证明不等式：' and dropped the displayed inequality. Original PDF page 52 visually restores the complete expression. The same inequality is repeated verbatim in proof method 1 and at the start of proof method 2, while page 53 concludes that it holds for arbitrary x>0. No extra domain clause is added because it is not printed in the stem.",
+        "source": {
+          "packet": "data/packets/5.4/packet.json",
+          "generated_item_source": "data/packets/5.4/learning_packet.json",
+          "ocr_docs": [
+            51,
+            52
+          ],
+          "ocr_files": [
+            {
+              "file": "data/ocr_live_current/chapter5_95/doc_51.md",
+              "sha256": "2a8aa84eb6a67cf198357a2b156a4a4b387091f3bf6b90df08430634ff420891"
+            },
+            {
+              "file": "data/ocr_live_current/chapter5_95/doc_52.md",
+              "sha256": "222624c9843b905d0ab2cb375b4e5bec0f1c7bfcb21278d239d4101a6c938797"
+            }
+          ],
+          "pdf_file": "data/ocr_sources/第5章 一元函数的导数及其应用（无答案册）.pdf",
+          "pdf_pages": [
+            52,
+            53
+          ],
+          "original_page_images": [
+            {
+              "file": "data/ocr_live_current/chapter5_95/layout_det_res_51.jpg",
+              "sha256": "4bfc3408ba55a8eb2e2dd201796f9c8c1d2cd4360b160ee1d5b4f2aa163f6d85"
+            },
+            {
+              "file": "data/ocr_live_current/chapter5_95/layout_det_res_52.jpg",
+              "sha256": "21fa406363cf0c3be8cb1adf0e325de67bc9d771e979a450c7004598b6a7ff4e"
+            }
+          ],
+          "visual_evidence": "original PDF pages 52-53 and OCR layout pages 51-52"
+        }
+      },
       "vision_hint": "5.4-LIf2070d1901aa5888"
     },
     {
@@ -2115,7 +2547,7 @@
         "pdf_page": 54,
         "file": "data/ocr_live_current/chapter5_95/doc_53.md"
       },
-      "question_text": "2.（2025·甘肃临夏期末）\n\n(2025·日照临夏期末)\n\n已知函数  \\(f(x)=(x+a)e^{x}\\) 在 x=1 处有极值.\n\n（1）求a的值；\n\n（2）求 \\(f(x)\\)在 \\([-1,3]\\)上的最值.",
+      "question_text": "2.（2025·甘肃临夏期末）\n\n\n已知函数  \\(f(x)=(x+a)e^{x}\\) 在 x=1 处有极值.\n\n（1）求a的值；\n\n（2）求 \\(f(x)\\)在 \\([-1,3]\\)上的最值.",
       "image_refs": [],
       "visual_status": "READY_TEXT_ONLY",
       "math_errors": [],

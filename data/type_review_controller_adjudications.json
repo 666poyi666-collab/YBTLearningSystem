@@ -1,0 +1,92 @@
+{
+  "schema_version": "ybt-type-review-controller-adjudications-v1",
+  "created_at": "2026-08-31T10:44:51.9886153+08:00",
+  "controller": "semantic-type-review-controller",
+  "scope": {
+    "item_ids": [
+      "Q-097281f5844ed6cf",
+      "Q-3235c438f136521a"
+    ],
+    "item_count": 2,
+    "purpose": "Resolve only the two content-complete manual type-review blocks after controller adjudication."
+  },
+  "source_binding": {
+    "semantic_review_report_snapshots": [
+      {
+        "path": "reports/deep_simulation_reviews/ch1-ch2-type-review.json",
+        "sha256": "76e02607500d45ffcf4b7633787c931ca0a624073eabc9624de500933fcd09bd"
+      },
+      {
+        "path": "reports/deep_simulation_reviews/ch3-type-review.json",
+        "sha256": "54aa065f1b43dd82f7d23eb1b0401d9dfde14cf323530f54c3e3a19aaaa692e4"
+      },
+      {
+        "path": "reports/deep_simulation_reviews/ch4-ch5-type-review.json",
+        "sha256": "d71b8d8b85c2ecc986043ad5aaf5782feb545054e16d1f78d3feaab77c5f7d4e"
+      }
+    ],
+    "binding_policy": "Report hashes preserve the evidence snapshot. Application is gated by exact target rows and source-page evidence so unrelated source repairs do not invalidate or get overwritten by this overlay."
+  },
+  "adjudications": [
+    {
+      "adjudication_id": "TYPE-ADJ-2.1-B9-20260831",
+      "chapter": 2,
+      "section": "2.1",
+      "cycle_id": "2.1-cycle-11",
+      "item_id": "Q-097281f5844ed6cf",
+      "item_label": "B9",
+      "question_text_sha256": "be6028b094e3193237f846b7e17f11da4d6a9715bb094f1716fa099b2d9bd0bc",
+      "expected_original_blocked_status": "MULTI_AGENT_SEMANTIC_REVIEW_BLOCKED_MANUAL",
+      "expected_original_review_status": "needs_manual_review",
+      "expected_semantic_review_path": "reports/deep_simulation_reviews/ch1-ch2-type-review.json",
+      "reviewed_primary_type": "曲线上动点所成斜率范围",
+      "secondary_types": [
+        "类型Ⅱ 由直线与线段相交求斜率的范围",
+        "类型I 直线的倾斜角、斜率的相互转化"
+      ],
+      "reason": "题目本质是固定点与抛物线上动点连线斜率的范围；原书答案同时用几何临界状态和消元后的单变量函数验证，主类型应从线段相交推广为曲线上动点所成斜率范围。",
+      "answer_evidence": {
+        "sidecar_path": "data/packets/2.1/answer_sidecar.json",
+        "source_pdf_sha256": "891709f7a2c3828bc1462d142b56be8e03a468640a531a79a660c81d85d0943b",
+        "pdf_page": 3,
+        "page_image_path": "tmp/answer-evidence-pages/2.1/page-003.jpg",
+        "page_image_sha256": "1d9d63be1102bf24cba99c42aedff4262f75dfc9e098c087dfe3cea08d9d4eec",
+        "parse_status": "parsed_repeated_numbered_answer"
+      }
+    },
+    {
+      "adjudication_id": "TYPE-ADJ-2.6-C18-20260831",
+      "chapter": 2,
+      "section": "2.6",
+      "cycle_id": "2.6-cycle-11",
+      "item_id": "Q-3235c438f136521a",
+      "item_label": "C18",
+      "question_text_sha256": "3a0b150b3509f397dc164cc8d6cec802a5907a05aa90d460271caab6bd2f0485",
+      "expected_original_blocked_status": "MULTI_AGENT_SEMANTIC_REVIEW_BLOCKED_MANUAL",
+      "expected_original_review_status": "needs_manual_review",
+      "expected_semantic_review_path": "reports/deep_simulation_reviews/ch1-ch2-type-review.json",
+      "reviewed_primary_type": "类型VI 设而不求的处理思想",
+      "secondary_types": [
+        "类型Ⅱ 弦长计算",
+        "类型IV 切线有关的计算",
+        "类型V 直线与圆有关的最值问题",
+        "类型Ⅲ 中点弦问题"
+      ],
+      "reason": "三问形成一个以参数设线、联立圆方程并用距离或韦达关系消元的综合链；设而不求是统摄方法，弦长、切线面积最值和中点弦关系保留为次类型。",
+      "answer_evidence": {
+        "sidecar_path": "data/packets/2.6/answer_sidecar.json",
+        "source_pdf_sha256": "708fee445596ecb44e92b93b8209436e52bdea00d66cc0e36f84a4a0a80a682b",
+        "pdf_page": 13,
+        "page_image_path": "tmp/answer-evidence-pages/2.6/page-013.jpg",
+        "page_image_sha256": "6a5149dc0bd78772cf837725929a91d373fa9c162edc8269e82e1b33c35cb091",
+        "parse_status": "parsed_repeated_numbered_answer"
+      }
+    }
+  ],
+  "boundaries": {
+    "adjudicates_source_defects": false,
+    "touches_2_5_B13": false,
+    "learner_mastery_claimed": false,
+    "answer_text_exposed_to_learner": false
+  }
+}

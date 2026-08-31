@@ -736,7 +736,7 @@
 | 项目 | 所属知识/类型 | 教材角色 | 内容状态 |
 |---|---|---|---|
 | 例1 | 空间向量基本定理、基底与基向量 | 知识点右侧例题 | 文本可用 |
-| B8 | 空间向量基本定理、基底与基向量 | 强化训练 | 文本可用 |
+| B8 | 类型Ⅰ 基底表示 | 强化训练 | 文本可用 |
 - **循环验收**：完成循环1的识别、首行、继续动作和独立自检
 
 <details class="cycle-items"><summary><strong>展开逐题方法</strong></summary>
@@ -754,7 +754,7 @@
 
 </details>
 
-<details class="item-detail"><summary><strong>B8</strong> · 空间向量基本定理、基底与基向量 · 强化训练</summary>
+<details class="item-detail"><summary><strong>B8</strong> · 类型Ⅰ 基底表示 · 强化训练</summary>
 
 - **课程**：3.1.1.1 space_vector_ops、3.1.2.1 decomposition、3.1.2.2 equal_surface
 - **识别**：已知基底的线性组合能否构成新基底（B8）
@@ -825,10 +825,10 @@
 | 项目 | 所属知识/类型 | 教材角色 | 内容状态 |
 |---|---|---|---|
 | 例4 | 空间向量坐标运算、平行垂直、模和夹角 | 知识点右侧例题 | 图形已核验 |
-| A1 | 空间向量坐标运算、平行垂直、模和夹角 | 强化训练 | 文本可用 |
-| A2 | 空间向量坐标运算、平行垂直、模和夹角 | 强化训练 | 文本可用 |
-| A3 | 空间向量坐标运算、平行垂直、模和夹角 | 强化训练 | 文本可用 |
-| A4 | 空间向量坐标运算、平行垂直、模和夹角 | 强化训练 | 文本可用 |
+| A1 | 类型Ⅱ 线性运算坐标表示、类型Ⅳ 平行垂直、类型Ⅲ 数量积坐标表示、类型Ⅴ 夹角与模 | 强化训练 | 文本可用 |
+| A2 | 类型Ⅱ 线性运算坐标表示、类型Ⅳ 平行垂直、类型Ⅲ 数量积坐标表示、类型Ⅴ 夹角与模 | 强化训练 | 文本可用 |
+| A3 | 类型Ⅱ 线性运算坐标表示、类型Ⅳ 平行垂直、类型Ⅲ 数量积坐标表示、类型Ⅴ 夹角与模 | 强化训练 | 文本可用 |
+| A4 | 类型Ⅱ 线性运算坐标表示、类型Ⅳ 平行垂直、类型Ⅲ 数量积坐标表示、类型Ⅴ 夹角与模 | 强化训练 | 文本可用 |
 - **循环验收**：完成循环3的识别、首行、继续动作和独立自检
 
 <details class="cycle-items"><summary><strong>展开逐题方法</strong></summary>
@@ -846,7 +846,7 @@
 
 </details>
 
-<details class="item-detail"><summary><strong>A1</strong> · 空间向量坐标运算、平行垂直、模和夹角 · 强化训练</summary>
+<details class="item-detail"><summary><strong>A1</strong> · 类型Ⅱ 线性运算坐标表示、类型Ⅳ 平行垂直、类型Ⅲ 数量积坐标表示、类型Ⅴ 夹角与模 · 强化训练</summary>
 
 - **课程**：3.1.1.1 space_vector_ops、3.1.3.1 coordinate_system、3.1.3.2 coordinate_ops
 - **识别**：三维向量直接相减（A1）
@@ -859,7 +859,7 @@
 
 </details>
 
-<details class="item-detail"><summary><strong>A2</strong> · 空间向量坐标运算、平行垂直、模和夹角 · 强化训练</summary>
+<details class="item-detail"><summary><strong>A2</strong> · 类型Ⅱ 线性运算坐标表示、类型Ⅳ 平行垂直、类型Ⅲ 数量积坐标表示、类型Ⅴ 夹角与模 · 强化训练</summary>
 
 - **课程**：3.1.1.1 space_vector_ops、3.1.3.1 coordinate_system、3.1.3.2 coordinate_ops
 - **识别**：含未知分量的垂直条件（A2）
@@ -872,7 +872,7 @@
 
 </details>
 
-<details class="item-detail"><summary><strong>A3</strong> · 空间向量坐标运算、平行垂直、模和夹角 · 强化训练</summary>
+<details class="item-detail"><summary><strong>A3</strong> · 类型Ⅱ 线性运算坐标表示、类型Ⅳ 平行垂直、类型Ⅲ 数量积坐标表示、类型Ⅴ 夹角与模 · 强化训练</summary>
 
 - **课程**：3.1.1.1 space_vector_ops、3.1.3.1 coordinate_system、3.1.3.2 coordinate_ops
 - **识别**：含未知分量的平行条件（A3）
@@ -885,7 +885,7 @@
 
 </details>
 
-<details class="item-detail"><summary><strong>A4</strong> · 空间向量坐标运算、平行垂直、模和夹角 · 强化训练</summary>
+<details class="item-detail"><summary><strong>A4</strong> · 类型Ⅱ 线性运算坐标表示、类型Ⅳ 平行垂直、类型Ⅲ 数量积坐标表示、类型Ⅴ 夹角与模 · 强化训练</summary>
 
 - **课程**：3.1.1.1 space_vector_ops、3.1.3.1 coordinate_system、3.1.3.2 coordinate_ops
 - **识别**：两个三维向量夹角余弦（A4）
@@ -1291,12 +1291,12 @@
 
 | 项目 | 所属知识/类型 | 教材角色 | 内容状态 |
 |---|---|---|---|
-| C14 | 本循环综合应用 | 强化训练 | 图形已核验 |
+| C14 | 四点共面与截线系数综合、类型Ⅰ 基底表示 | 强化训练 | 图形已核验 |
 - **循环验收**：完成循环9的识别、首行、继续动作和独立自检
 
 <details class="cycle-items"><summary><strong>展开逐题方法</strong></summary>
 
-<details class="item-detail"><summary><strong>C14</strong> · 本循环综合应用 · 强化训练</summary>
+<details class="item-detail"><summary><strong>C14</strong> · 四点共面与截线系数综合、类型Ⅰ 基底表示 · 强化训练</summary>
 
 - **课程**：3.1.2.1 decomposition、3.1.2.2 equal_surface、3.1.3.2 coordinate_ops
 - **识别**：底面重心、中点和三条侧棱截面共面（C14）
@@ -1321,13 +1321,13 @@
 
 | 项目 | 所属知识/类型 | 教材角色 | 内容状态 |
 |---|---|---|---|
-| C15 | 本循环综合应用 | 强化训练 | 文本可用 |
-| C16 | 本循环综合应用 | 强化训练 | 文本可用 |
+| C15 | 类型Ⅴ 夹角与模、正交投影与最小模、类型Ⅲ 数量积坐标表示、阿波罗尼斯球与空间动点范围、空间动点单变量化 | 强化训练 | 文本可用 |
+| C16 | 类型Ⅴ 夹角与模、正交投影与最小模、类型Ⅲ 数量积坐标表示、阿波罗尼斯球与空间动点范围、空间动点单变量化 | 强化训练 | 文本可用 |
 - **循环验收**：完成循环10的识别、首行、继续动作和独立自检
 
 <details class="cycle-items"><summary><strong>展开逐题方法</strong></summary>
 
-<details class="item-detail"><summary><strong>C15</strong> · 本循环综合应用 · 强化训练</summary>
+<details class="item-detail"><summary><strong>C15</strong> · 类型Ⅴ 夹角与模、正交投影与最小模、类型Ⅲ 数量积坐标表示、阿波罗尼斯球与空间动点范围、空间动点单变量化 · 强化训练</summary>
 
 - **课程**：3.1.1.1 space_vector_ops、3.1.3.1 coordinate_system、3.1.3.2 coordinate_ops
 - **识别**：两条正交单位方向与固定向量内积，目标为可调平面分量后的模（C15）
@@ -1340,7 +1340,7 @@
 
 </details>
 
-<details class="item-detail"><summary><strong>C16</strong> · 本循环综合应用 · 强化训练</summary>
+<details class="item-detail"><summary><strong>C16</strong> · 类型Ⅴ 夹角与模、正交投影与最小模、类型Ⅲ 数量积坐标表示、阿波罗尼斯球与空间动点范围、空间动点单变量化 · 强化训练</summary>
 
 - **课程**：3.1.1.1 space_vector_ops、3.1.3.1 coordinate_system、3.1.3.2 coordinate_ops
 - **识别**：动点距离比约束与正方体内数量积范围（C16）
@@ -1375,8 +1375,8 @@
 | 例1 | 点、直线、平面的向量表示 | 知识点右侧例题 | 文本可用 |
 | 例2 | 点、直线、平面的向量表示 | 知识点右侧例题 | 文本可用 |
 | 例3 | 平面的法向量 | 知识点右侧例题 | 图形已核验 |
-| A2 | 点、直线、平面的向量表示、平面的法向量 | 强化训练 | 图形已核验 |
-| B5 | 点、直线、平面的向量表示、平面的法向量 | 强化训练 | 图形已核验 |
+| A2 | 类型Ⅱ 研究垂直关系、类型Ⅰ 研究平行关系、类型Ⅴ 夹角与模 | 强化训练 | 图形已核验 |
+| B5 | 类型Ⅱ 研究垂直关系、类型Ⅰ 研究平行关系、类型Ⅴ 夹角与模 | 强化训练 | 图形已核验 |
 - **循环验收**：方向向量与法向量选用检查；完成本循环教材项、独立自检和近迁移后再前进
 
 <details class="cycle-items"><summary><strong>展开逐题方法</strong></summary>
@@ -1420,7 +1420,7 @@
 
 </details>
 
-<details class="item-detail"><summary><strong>A2</strong> · 点、直线、平面的向量表示、平面的法向量 · 强化训练</summary>
+<details class="item-detail"><summary><strong>A2</strong> · 类型Ⅱ 研究垂直关系、类型Ⅰ 研究平行关系、类型Ⅴ 夹角与模 · 强化训练</summary>
 
 - **课程**：3.1.3.2 coordinate_ops、3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.2 coplanar
 - **识别**：正方体中点和线面平行/垂直证明；先做中点坐标，再分别翻译线线垂直和线面平行
@@ -1433,7 +1433,7 @@
 
 </details>
 
-<details class="item-detail"><summary><strong>B5</strong> · 点、直线、平面的向量表示、平面的法向量 · 强化训练</summary>
+<details class="item-detail"><summary><strong>B5</strong> · 类型Ⅱ 研究垂直关系、类型Ⅰ 研究平行关系、类型Ⅴ 夹角与模 · 强化训练</summary>
 
 - **课程**：3.1.3.2 coordinate_ops、3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.2 coplanar
 - **识别**：平行六面体三条棱等长且夹角已知，要求长度和线面垂直；用三条基向量数量积展开长度平方和垂直条件
@@ -1964,13 +1964,13 @@
 
 | 项目 | 所属知识/类型 | 教材角色 | 内容状态 |
 |---|---|---|---|
-| C10 | 本循环综合应用 | 强化训练 | 图形已核验 |
-| C12 | 本循环综合应用 | 强化训练 | 图形已核验 |
+| C10 | 翻折守恒与动态二面角综合、类型Ⅱ 研究垂直关系、类型Ⅲ 求空间角、空间角与面内存在性综合、类型Ⅴ 点线在面内判断 | 强化训练 | 图形已核验 |
+| C12 | 翻折守恒与动态二面角综合、类型Ⅱ 研究垂直关系、类型Ⅲ 求空间角、空间角与面内存在性综合、类型Ⅴ 点线在面内判断 | 强化训练 | 图形已核验 |
 - **循环验收**：翻折守恒检查；存在性双参数化检查；完成本循环教材项、独立自检和近迁移后再前进
 
 <details class="cycle-items"><summary><strong>展开逐题方法</strong></summary>
 
-<details class="item-detail"><summary><strong>C10</strong> · 本循环综合应用 · 强化训练</summary>
+<details class="item-detail"><summary><strong>C10</strong> · 翻折守恒与动态二面角综合、类型Ⅱ 研究垂直关系、类型Ⅲ 求空间角、空间角与面内存在性综合、类型Ⅴ 点线在面内判断 · 强化训练</summary>
 
 - **课程**：3.1.3.2 coordinate_ops、3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.2 coplanar、3.1.4.4 line_plane_angle、3.1.4.5 plane_plane_angle、3.1.4.7 distance、3.1.4.8 moving_point
 - **识别**：菱形沿对角线折叠成三棱锥并包含体积/垂直/二面角；折痕守恒桥接是进入空间向量的第一步
@@ -1983,7 +1983,7 @@
 
 </details>
 
-<details class="item-detail"><summary><strong>C12</strong> · 本循环综合应用 · 强化训练</summary>
+<details class="item-detail"><summary><strong>C12</strong> · 翻折守恒与动态二面角综合、类型Ⅱ 研究垂直关系、类型Ⅲ 求空间角、空间角与面内存在性综合、类型Ⅴ 点线在面内判断 · 强化训练</summary>
 
 - **课程**：3.1.3.2 coordinate_ops、3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.2 coplanar、3.1.4.4 line_plane_angle、3.1.4.5 plane_plane_angle、3.1.4.7 distance、3.1.4.8 moving_point
 - **识别**：正方形底面、两个中点和截面内是否存在点；存在性题要先双参数表示，再解垂直条件并检查截面范围
@@ -2251,13 +2251,13 @@
 
 | 项目 | 所属知识/类型 | 教材角色 | 内容状态 |
 |---|---|---|---|
-| C5 | 底面内双参数、点面距离、外接球等距约束 | 强化训练 | 文本可用 |
-| C6 | 底面内双参数、点面距离、外接球等距约束 | 强化训练 | 图形已核验 |
+| C5 | 类型Ⅲ 立体几何综合题、外接球、空间动点距离、线面平行垂直、存在性双参数化、点面距离、面面垂直 | 强化训练 | 文本可用 |
+| C6 | 类型Ⅲ 立体几何综合题、外接球、空间动点距离、线面平行垂直、存在性双参数化、点面距离、面面垂直 | 强化训练 | 图形已核验 |
 - **循环验收**：能保留区域边界而不把动点放成无界；能把存在性写成方程组加定义域筛选；球心候选必须回代所有关键顶点
 
 <details class="cycle-items"><summary><strong>展开逐题方法</strong></summary>
 
-<details class="item-detail"><summary><strong>C5</strong> · 本循环综合应用 · 强化训练</summary>
+<details class="item-detail"><summary><strong>C5</strong> · 类型Ⅲ 立体几何综合题、外接球、空间动点距离、线面平行垂直、存在性双参数化、点面距离、面面垂直 · 强化训练</summary>
 
 - **课程**：3.1.3.3 direction_normal、3.1.4.6.a plane_equation_upper、3.1.4.7 distance、3.1.4.8 moving_point
 - **识别**：F 在底面区域内运动，选项分别切换中点、平行、垂直、距离和外接球；先统一建立正方体坐标，再按选项选择轨迹、距离或球心模型
@@ -2270,7 +2270,7 @@
 
 </details>
 
-<details class="item-detail"><summary><strong>C6</strong> · 本循环综合应用 · 强化训练</summary>
+<details class="item-detail"><summary><strong>C6</strong> · 类型Ⅲ 立体几何综合题、外接球、空间动点距离、线面平行垂直、存在性双参数化、点面距离、面面垂直 · 强化训练</summary>
 
 - **课程**：3.1.3.3 direction_normal、3.1.4.6.a plane_equation_upper、3.1.4.7 distance、3.1.4.8 moving_point
 - **识别**：四棱锥含底面梯形、竖直高和 PT 上动点，三问分别涉及面面垂直、距离和存在性；先把底面梯形放入二维坐标，再用高向量完成空间坐标化
@@ -2295,13 +2295,13 @@
 
 | 项目 | 所属知识/类型 | 教材角色 | 内容状态 |
 |---|---|---|---|
-| C7 | 棱柱/棱台平移与补形、面面垂直、线面角投影 | 强化训练 | 图形已核验 |
-| C8 | 棱柱/棱台平移与补形、面面垂直、线面角投影 | 强化训练 | 图形已核验 |
+| C7 | 类型Ⅳ 动态二面角三角方法、类型Ⅲ 立体几何综合题、补形与立体几何综合、线面平行与线面角 | 强化训练 | 图形已核验 |
+| C8 | 类型Ⅳ 动态二面角三角方法、类型Ⅲ 立体几何综合题、补形与立体几何综合、线面平行与线面角 | 强化训练 | 图形已核验 |
 - **循环验收**：辅助构造有明确来源；面面垂直和线面角分别使用对应法向量；综合题完成参数、长度、体积和角度回代
 
 <details class="cycle-items"><summary><strong>展开逐题方法</strong></summary>
 
-<details class="item-detail"><summary><strong>C7</strong> · 本循环综合应用 · 强化训练</summary>
+<details class="item-detail"><summary><strong>C7</strong> · 类型Ⅳ 动态二面角三角方法、类型Ⅲ 立体几何综合题、补形与立体几何综合、线面平行与线面角 · 强化训练</summary>
 
 - **课程**：3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.4 line_plane_angle、3.1.4.5 plane_plane_angle、3.1.4.8 moving_point
 - **识别**：正三角形底面和棱柱平移结构给出稳定基向量；先处理固定垂直关系，再用体积与二面角条件求线面角
@@ -2314,7 +2314,7 @@
 
 </details>
 
-<details class="item-detail"><summary><strong>C8</strong> · 本循环综合应用 · 强化训练</summary>
+<details class="item-detail"><summary><strong>C8</strong> · 类型Ⅳ 动态二面角三角方法、类型Ⅲ 立体几何综合题、补形与立体几何综合、线面平行与线面角 · 强化训练</summary>
 
 - **课程**：3.1.3.3 direction_normal、3.1.4.1 parallel_perpendicular、3.1.4.4 line_plane_angle、3.1.4.5 plane_plane_angle、3.1.4.8 moving_point
 - **识别**：三棱台含上下底面、两个中点和垂直平面条件；先用补形/平移整理点线关系，再用法向量处理面面垂直与线面角

@@ -1,0 +1,1704 @@
+{
+  "schema_version": "ybt-deep-section-simulation-v3",
+  "generated_at": "2026-08-31T04:06:32.476655+00:00",
+  "chapter": 4,
+  "section": "4.7",
+  "label": "第7节 微专题1：几类常见的求前n项和的方法",
+  "simulation_kind": "answer_isolated_synthetic_route_stress",
+  "honesty_boundary": "Attempts test route actionability. They contain no final learner answer, so mathematical correctness and mastery are not claimed.",
+  "source_binding": {
+    "manifest_sha256": "bcc498c040cdd2126617700aef4f26bc6ac11a420c7f2af4b083ca2e838c4ad6",
+    "student_learning_items_sha256": "bed86bf768da62cd502c6a8831d87ad97f82da9c01deeaf82a691705597e8210",
+    "student_packet_sha256": "88df6e953a64a6203c32f4564d5d7503a2717285f811350bb0bfe6fe600aef05",
+    "grader_learning_packet_sha256": "0388777ebc3da03fd190018dedc2090a1ae4d653e3c7cc159bd8465a510803d1",
+    "route_sha256": "1e8567be110e4f88b92aa58b989835037d56c0547dc5ef09580247a56e979b62",
+    "learner_input_snapshot_sha256": "2774e81d16e835322c3df0a436364f2a602e9815c8fb88256b906ea0e7059a6f"
+  },
+  "answer_isolation": {
+    "frozen_attempts_path": "reports/deep_simulation_runs/route-audit-5391e980be231c3c/frozen/4.7.jsonl.gz",
+    "frozen_attempts_sha256": "3c48070a5210737551d447adca19123f0332125963edccbe35df225c8e3ddce2",
+    "route_assessments_path": "reports/deep_simulation_runs/route-audit-5391e980be231c3c/route_assessments/4.7.jsonl.gz",
+    "route_assessments_sha256": "77a338c433fd17a68c6c6efb6c56dc994bf8f4598957ce6858dcc8438f04abb2",
+    "learner_answer_material_loaded": false,
+    "grader_material_loaded_after_freeze": true,
+    "grader_evidence": {
+      "parsed_automatic": 9,
+      "review_required_text": 1,
+      "source_page_bound": 4,
+      "textbook_solution": 4,
+      "blocked": 0
+    },
+    "status": "passed"
+  },
+  "items": [
+    {
+      "item_key": "LI:11706c5f969a2d31",
+      "item_id": "11706c5f969a2d31",
+      "ordinal": 1,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例1",
+      "group": null,
+      "cycle_id": "4.7-cycle-1",
+      "cycle_sequence": 1,
+      "cycle_title": "类型I 裂项相消法求前 n 项和",
+      "course_refs": [
+        "4.4.3.1.a 分式裂项（上）",
+        "4.4.3.1.b 分式裂项（下）",
+        "4.4.3.2 根式裂项"
+      ],
+      "course_titles": [
+        "分式裂项（上）",
+        "分式裂项（下）",
+        "根式裂项"
+      ],
+      "required_course_refs": [
+        "4.4.3.1.a 分式裂项（上）",
+        "4.4.3.1.b 分式裂项（下）",
+        "4.4.3.2 根式裂项"
+      ],
+      "prerequisite_course_refs": [],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 裂项相消法求前 n 项和"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "sequence",
+      "recognition_cues": [
+        "数列",
+        "通项",
+        "前n项和",
+        "证明",
+        "a_n",
+        "a_1",
+        "a_"
+      ],
+      "method_model": "数列下标与递推模型",
+      "first_written_line_template": "先写明目标是通项、递推还是前 n 项和，并标出首项和下标范围。",
+      "continuation_actions": [
+        "把条件化为通项、求和或递推关系",
+        "选择裂项、错位相减、分组、待定系数或归纳",
+        "整理首尾项和边界项"
+      ],
+      "independent_self_check": "检查首项、项数、下标错位、公比特值、分母和归纳起点。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "bf2794327dde7d254e8d04a6e74664341a7f32356020323f8f762882414b0ec7",
+      "source_question_text_sha256": "bf2794327dde7d254e8d04a6e74664341a7f32356020323f8f762882414b0ec7",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "bf2794327dde7d254e8d04a6e74664341a7f32356020323f8f762882414b0ec7",
+        "learner_question_text_sha256": "bf2794327dde7d254e8d04a6e74664341a7f32356020323f8f762882414b0ec7"
+      },
+      "question_signal_excerpt": "数列、通项、前n项和、证明、a_n、a_1、a_",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:dbb703dce333e0b9",
+      "item_id": "dbb703dce333e0b9",
+      "ordinal": 2,
+      "ordinal_in_cycle": 2,
+      "kind": "direct_variant",
+      "label": "例1 变式1",
+      "group": null,
+      "cycle_id": "4.7-cycle-1",
+      "cycle_sequence": 1,
+      "cycle_title": "类型I 裂项相消法求前 n 项和",
+      "course_refs": [
+        "4.4.3.1.a 分式裂项（上）",
+        "4.4.3.1.b 分式裂项（下）",
+        "4.4.3.2 根式裂项"
+      ],
+      "course_titles": [
+        "分式裂项（上）",
+        "分式裂项（下）",
+        "根式裂项"
+      ],
+      "required_course_refs": [
+        "4.4.3.1.a 分式裂项（上）",
+        "4.4.3.1.b 分式裂项（下）",
+        "4.4.3.2 根式裂项"
+      ],
+      "prerequisite_course_refs": [],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 裂项相消法求前 n 项和"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "sequence",
+      "recognition_cues": [
+        "数列",
+        "等差",
+        "a_",
+        "n",
+        "T_"
+      ],
+      "method_model": "数列下标与递推模型",
+      "first_written_line_template": "先写明目标是通项、递推还是前 n 项和，并标出首项和下标范围。",
+      "continuation_actions": [
+        "把条件化为通项、求和或递推关系",
+        "选择裂项、错位相减、分组、待定系数或归纳",
+        "整理首尾项和边界项"
+      ],
+      "independent_self_check": "检查首项、项数、下标错位、公比特值、分母和归纳起点。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "80773ed11fac3c732a0b79f1198d28ee2568425fb97b5660f372178e906ec49c",
+      "source_question_text_sha256": "80773ed11fac3c732a0b79f1198d28ee2568425fb97b5660f372178e906ec49c",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "80773ed11fac3c732a0b79f1198d28ee2568425fb97b5660f372178e906ec49c",
+        "learner_question_text_sha256": "80773ed11fac3c732a0b79f1198d28ee2568425fb97b5660f372178e906ec49c"
+      },
+      "question_signal_excerpt": "数列、等差、a_、n、T_",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:83b3d71d82d53178",
+      "item_id": "83b3d71d82d53178",
+      "ordinal": 3,
+      "ordinal_in_cycle": 3,
+      "kind": "direct_variant",
+      "label": "例1 变式2",
+      "group": null,
+      "cycle_id": "4.7-cycle-1",
+      "cycle_sequence": 1,
+      "cycle_title": "类型I 裂项相消法求前 n 项和",
+      "course_refs": [
+        "4.4.3.1.a 分式裂项（上）",
+        "4.4.3.1.b 分式裂项（下）",
+        "4.4.3.2 根式裂项"
+      ],
+      "course_titles": [
+        "分式裂项（上）",
+        "分式裂项（下）",
+        "根式裂项"
+      ],
+      "required_course_refs": [
+        "4.4.3.1.a 分式裂项（上）",
+        "4.4.3.1.b 分式裂项（下）",
+        "4.4.3.2 根式裂项"
+      ],
+      "prerequisite_course_refs": [],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 裂项相消法求前 n 项和"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "sequence",
+      "recognition_cues": [
+        "数列",
+        "前n项和",
+        "S_",
+        "n",
+        "a_"
+      ],
+      "method_model": "数列下标与递推模型",
+      "first_written_line_template": "先写明目标是通项、递推还是前 n 项和，并标出首项和下标范围。",
+      "continuation_actions": [
+        "把条件化为通项、求和或递推关系",
+        "选择裂项、错位相减、分组、待定系数或归纳",
+        "整理首尾项和边界项"
+      ],
+      "independent_self_check": "检查首项、项数、下标错位、公比特值、分母和归纳起点。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "80e32ee404aee692c050e606b15748c24a13e77d072aebdcb5b0f59d56c70b7f",
+      "source_question_text_sha256": "80e32ee404aee692c050e606b15748c24a13e77d072aebdcb5b0f59d56c70b7f",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "80e32ee404aee692c050e606b15748c24a13e77d072aebdcb5b0f59d56c70b7f",
+        "learner_question_text_sha256": "80e32ee404aee692c050e606b15748c24a13e77d072aebdcb5b0f59d56c70b7f"
+      },
+      "question_signal_excerpt": "数列、前n项和、S_、n、a_",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:2b57ab68dd5f7cf9",
+      "item_id": "2b57ab68dd5f7cf9",
+      "ordinal": 4,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例2",
+      "group": null,
+      "cycle_id": "4.7-cycle-2",
+      "cycle_sequence": 2,
+      "cycle_title": "类型Ⅱ 错位相减法求前 n 项和",
+      "course_refs": [
+        "4.4.5.1.a 错位相减法（上）",
+        "4.4.5.1.b 错位相减法（下）",
+        "4.4.3.1.a 分式裂项（上）",
+        "4.4.3.1.b 分式裂项（下）",
+        "4.4.3.2 根式裂项"
+      ],
+      "course_titles": [
+        "错位相减法（上）",
+        "错位相减法（下）",
+        "分式裂项（上）",
+        "分式裂项（下）",
+        "根式裂项"
+      ],
+      "required_course_refs": [
+        "4.4.5.1.a 错位相减法（上）",
+        "4.4.5.1.b 错位相减法（下）"
+      ],
+      "prerequisite_course_refs": [
+        "4.4.3.1.a 分式裂项（上）",
+        "4.4.3.1.b 分式裂项（下）",
+        "4.4.3.2 根式裂项"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 错位相减法求前 n 项和"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "sequence",
+      "recognition_cues": [
+        "数列",
+        "通项",
+        "前n项和",
+        "a_",
+        "n",
+        "S_"
+      ],
+      "method_model": "数列下标与递推模型",
+      "first_written_line_template": "先写明目标是通项、递推还是前 n 项和，并标出首项和下标范围。",
+      "continuation_actions": [
+        "把条件化为通项、求和或递推关系",
+        "选择裂项、错位相减、分组、待定系数或归纳",
+        "整理首尾项和边界项"
+      ],
+      "independent_self_check": "检查首项、项数、下标错位、公比特值、分母和归纳起点。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "6326e7c0d9553f08a55c6ca61d7b3b5de1411c5a94db0e0f607437ae82ebdfcb",
+      "source_question_text_sha256": "6326e7c0d9553f08a55c6ca61d7b3b5de1411c5a94db0e0f607437ae82ebdfcb",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "6326e7c0d9553f08a55c6ca61d7b3b5de1411c5a94db0e0f607437ae82ebdfcb",
+        "learner_question_text_sha256": "6326e7c0d9553f08a55c6ca61d7b3b5de1411c5a94db0e0f607437ae82ebdfcb"
+      },
+      "question_signal_excerpt": "数列、通项、前n项和、a_、n、S_",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:08cf95427815a874",
+      "item_id": "08cf95427815a874",
+      "ordinal": 5,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例3",
+      "group": null,
+      "cycle_id": "4.7-cycle-3",
+      "cycle_sequence": 3,
+      "cycle_title": "类型Ⅲ 分组求和法求前 n 项和",
+      "course_refs": [
+        "4.4.4.1 分组求和法",
+        "4.4.3.1.a 分式裂项（上）",
+        "4.4.3.1.b 分式裂项（下）",
+        "4.4.3.2 根式裂项",
+        "4.4.5.1.a 错位相减法（上）",
+        "4.4.5.1.b 错位相减法（下）"
+      ],
+      "course_titles": [
+        "分组求和法",
+        "分式裂项（上）",
+        "分式裂项（下）",
+        "根式裂项",
+        "错位相减法（上）",
+        "错位相减法（下）"
+      ],
+      "required_course_refs": [
+        "4.4.4.1 分组求和法"
+      ],
+      "prerequisite_course_refs": [
+        "4.4.3.1.a 分式裂项（上）",
+        "4.4.3.1.b 分式裂项（下）",
+        "4.4.3.2 根式裂项",
+        "4.4.5.1.a 错位相减法（上）",
+        "4.4.5.1.b 错位相减法（下）"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 分组求和法求前 n 项和"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "sequence",
+      "recognition_cues": [
+        "数列",
+        "通项",
+        "等差",
+        "a_",
+        "n",
+        "S_"
+      ],
+      "method_model": "数列下标与递推模型",
+      "first_written_line_template": "先写明目标是通项、递推还是前 n 项和，并标出首项和下标范围。",
+      "continuation_actions": [
+        "把条件化为通项、求和或递推关系",
+        "选择裂项、错位相减、分组、待定系数或归纳",
+        "整理首尾项和边界项"
+      ],
+      "independent_self_check": "检查首项、项数、下标错位、公比特值、分母和归纳起点。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "2795dd05dad378bd602c59b0836541a270101c11f895600b575d8dcd76c17c92",
+      "source_question_text_sha256": "2795dd05dad378bd602c59b0836541a270101c11f895600b575d8dcd76c17c92",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "2795dd05dad378bd602c59b0836541a270101c11f895600b575d8dcd76c17c92",
+        "learner_question_text_sha256": "2795dd05dad378bd602c59b0836541a270101c11f895600b575d8dcd76c17c92"
+      },
+      "question_signal_excerpt": "数列、通项、等差、a_、n、S_",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:c7af98d07c7a5adb",
+      "item_id": "c7af98d07c7a5adb",
+      "ordinal": 6,
+      "ordinal_in_cycle": 2,
+      "kind": "direct_variant",
+      "label": "例3 变式1",
+      "group": null,
+      "cycle_id": "4.7-cycle-3",
+      "cycle_sequence": 3,
+      "cycle_title": "类型Ⅲ 分组求和法求前 n 项和",
+      "course_refs": [
+        "4.4.4.1 分组求和法",
+        "4.4.3.1.a 分式裂项（上）",
+        "4.4.3.1.b 分式裂项（下）",
+        "4.4.3.2 根式裂项",
+        "4.4.5.1.a 错位相减法（上）",
+        "4.4.5.1.b 错位相减法（下）"
+      ],
+      "course_titles": [
+        "分组求和法",
+        "分式裂项（上）",
+        "分式裂项（下）",
+        "根式裂项",
+        "错位相减法（上）",
+        "错位相减法（下）"
+      ],
+      "required_course_refs": [
+        "4.4.4.1 分组求和法"
+      ],
+      "prerequisite_course_refs": [
+        "4.4.3.1.a 分式裂项（上）",
+        "4.4.3.1.b 分式裂项（下）",
+        "4.4.3.2 根式裂项",
+        "4.4.5.1.a 错位相减法（上）",
+        "4.4.5.1.b 错位相减法（下）"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 分组求和法求前 n 项和"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "sequence",
+      "recognition_cues": [
+        "数列",
+        "通项",
+        "前n项和",
+        "S_",
+        "n",
+        "a_"
+      ],
+      "method_model": "数列下标与递推模型",
+      "first_written_line_template": "先写明目标是通项、递推还是前 n 项和，并标出首项和下标范围。",
+      "continuation_actions": [
+        "把条件化为通项、求和或递推关系",
+        "选择裂项、错位相减、分组、待定系数或归纳",
+        "整理首尾项和边界项"
+      ],
+      "independent_self_check": "检查首项、项数、下标错位、公比特值、分母和归纳起点。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "a97671ef76932aeff0c1cd46cdb66c0b04e38c20363a2fd5339571ef06f05f4f",
+      "source_question_text_sha256": "a97671ef76932aeff0c1cd46cdb66c0b04e38c20363a2fd5339571ef06f05f4f",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "a97671ef76932aeff0c1cd46cdb66c0b04e38c20363a2fd5339571ef06f05f4f",
+        "learner_question_text_sha256": "a97671ef76932aeff0c1cd46cdb66c0b04e38c20363a2fd5339571ef06f05f4f"
+      },
+      "question_signal_excerpt": "数列、通项、前n项和、S_、n、a_",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:0e7975f50436937f",
+      "item_id": "0e7975f50436937f",
+      "ordinal": 7,
+      "ordinal_in_cycle": 3,
+      "kind": "direct_variant",
+      "label": "例3 变式2",
+      "group": null,
+      "cycle_id": "4.7-cycle-3",
+      "cycle_sequence": 3,
+      "cycle_title": "类型Ⅲ 分组求和法求前 n 项和",
+      "course_refs": [
+        "4.4.4.1 分组求和法",
+        "4.4.3.1.a 分式裂项（上）",
+        "4.4.3.1.b 分式裂项（下）",
+        "4.4.3.2 根式裂项",
+        "4.4.5.1.a 错位相减法（上）",
+        "4.4.5.1.b 错位相减法（下）"
+      ],
+      "course_titles": [
+        "分组求和法",
+        "分式裂项（上）",
+        "分式裂项（下）",
+        "根式裂项",
+        "错位相减法（上）",
+        "错位相减法（下）"
+      ],
+      "required_course_refs": [
+        "4.4.4.1 分组求和法"
+      ],
+      "prerequisite_course_refs": [
+        "4.4.3.1.a 分式裂项（上）",
+        "4.4.3.1.b 分式裂项（下）",
+        "4.4.3.2 根式裂项",
+        "4.4.5.1.a 错位相减法（上）",
+        "4.4.5.1.b 错位相减法（下）"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 分组求和法求前 n 项和"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "sequence",
+      "recognition_cues": [
+        "数列",
+        "通项",
+        "a_n",
+        "n",
+        "\\cos"
+      ],
+      "method_model": "数列下标与递推模型",
+      "first_written_line_template": "先写明目标是通项、递推还是前 n 项和，并标出首项和下标范围。",
+      "continuation_actions": [
+        "把条件化为通项、求和或递推关系",
+        "选择裂项、错位相减、分组、待定系数或归纳",
+        "整理首尾项和边界项"
+      ],
+      "independent_self_check": "检查首项、项数、下标错位、公比特值、分母和归纳起点。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "b9e78adc83b643d41ed2ae396b4bbbaae6669016bf95d15234ce6388a719669a",
+      "source_question_text_sha256": "b9e78adc83b643d41ed2ae396b4bbbaae6669016bf95d15234ce6388a719669a",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "b9e78adc83b643d41ed2ae396b4bbbaae6669016bf95d15234ce6388a719669a",
+        "learner_question_text_sha256": "b9e78adc83b643d41ed2ae396b4bbbaae6669016bf95d15234ce6388a719669a"
+      },
+      "question_signal_excerpt": "数列、通项、a_n、n、\\cos",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:119a9c3e62776237",
+      "item_id": "119a9c3e62776237",
+      "ordinal": 8,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例4",
+      "group": null,
+      "cycle_id": "4.7-cycle-4",
+      "cycle_sequence": 4,
+      "cycle_title": "类型IV 倒序相加法求和",
+      "course_refs": [
+        "4.4.4.2 倒序相加法",
+        "4.4.3.1.a 分式裂项（上）",
+        "4.4.3.1.b 分式裂项（下）",
+        "4.4.3.2 根式裂项",
+        "4.4.5.1.a 错位相减法（上）",
+        "4.4.5.1.b 错位相减法（下）",
+        "4.4.4.1 分组求和法"
+      ],
+      "course_titles": [
+        "倒序相加法",
+        "分式裂项（上）",
+        "分式裂项（下）",
+        "根式裂项",
+        "错位相减法（上）",
+        "错位相减法（下）",
+        "分组求和法"
+      ],
+      "required_course_refs": [
+        "4.4.4.2 倒序相加法"
+      ],
+      "prerequisite_course_refs": [
+        "4.4.3.1.a 分式裂项（上）",
+        "4.4.3.1.b 分式裂项（下）",
+        "4.4.3.2 根式裂项",
+        "4.4.5.1.a 错位相减法（上）",
+        "4.4.5.1.b 错位相减法（下）",
+        "4.4.4.1 分组求和法"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型IV 倒序相加法求和"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "sequence",
+      "recognition_cues": [
+        "f",
+        "x",
+        "\\frac"
+      ],
+      "method_model": "数列下标与递推模型",
+      "first_written_line_template": "先写明目标是通项、递推还是前 n 项和，并标出首项和下标范围。",
+      "continuation_actions": [
+        "把条件化为通项、求和或递推关系",
+        "选择裂项、错位相减、分组、待定系数或归纳",
+        "整理首尾项和边界项"
+      ],
+      "independent_self_check": "检查首项、项数、下标错位、公比特值、分母和归纳起点。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "8972c7eab11ed553fb609227e40b2da0e5f604071ad09ecbc4138b019aa2dfd5",
+      "source_question_text_sha256": "8972c7eab11ed553fb609227e40b2da0e5f604071ad09ecbc4138b019aa2dfd5",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "8972c7eab11ed553fb609227e40b2da0e5f604071ad09ecbc4138b019aa2dfd5",
+        "learner_question_text_sha256": "8972c7eab11ed553fb609227e40b2da0e5f604071ad09ecbc4138b019aa2dfd5"
+      },
+      "question_signal_excerpt": "f、x、\\frac",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-447fbf6f3b64a6c2",
+      "item_id": "Q-447fbf6f3b64a6c2",
+      "ordinal": 9,
+      "ordinal_in_cycle": 1,
+      "kind": "abc_exercise",
+      "label": "A1",
+      "group": "A",
+      "cycle_id": "4.7-cycle-5",
+      "cycle_sequence": 5,
+      "cycle_title": "A组 夯实基础",
+      "course_refs": [
+        "4.4.3.1.a 分式裂项（上）",
+        "4.4.3.1.b 分式裂项（下）",
+        "4.4.3.2 根式裂项",
+        "4.4.5.1.a 错位相减法（上）",
+        "4.4.5.1.b 错位相减法（下）",
+        "4.4.4.1 分组求和法",
+        "4.4.4.2 倒序相加法"
+      ],
+      "course_titles": [
+        "分式裂项（上）",
+        "分式裂项（下）",
+        "根式裂项",
+        "错位相减法（上）",
+        "错位相减法（下）",
+        "分组求和法",
+        "倒序相加法"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.4.3.1.a 分式裂项（上）",
+        "4.4.3.1.b 分式裂项（下）",
+        "4.4.3.2 根式裂项",
+        "4.4.5.1.a 错位相减法（上）",
+        "4.4.5.1.b 错位相减法（下）",
+        "4.4.4.1 分组求和法",
+        "4.4.4.2 倒序相加法"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 分组求和法求前 n 项和"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "sequence",
+      "recognition_cues": [
+        "数列",
+        "通项",
+        "等差",
+        "等比",
+        "前n项和",
+        "a_n",
+        "b_n",
+        "a_1",
+        "a_2"
+      ],
+      "method_model": "数列下标与递推模型",
+      "first_written_line_template": "先写明目标是通项、递推还是前 n 项和，并标出首项和下标范围。",
+      "continuation_actions": [
+        "把条件化为通项、求和或递推关系",
+        "选择裂项、错位相减、分组、待定系数或归纳",
+        "整理首尾项和边界项"
+      ],
+      "independent_self_check": "检查首项、项数、下标错位、公比特值、分母和归纳起点。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "150607754f0fc1fe8efd355961b468bc22d733432cf9f93648d3b8ab6249143a",
+      "source_question_text_sha256": "150607754f0fc1fe8efd355961b468bc22d733432cf9f93648d3b8ab6249143a",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "150607754f0fc1fe8efd355961b468bc22d733432cf9f93648d3b8ab6249143a",
+        "learner_question_text_sha256": "150607754f0fc1fe8efd355961b468bc22d733432cf9f93648d3b8ab6249143a"
+      },
+      "question_signal_excerpt": "数列、通项、等差、等比、前n项和、a_n、b_n、a_1、a_2",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-c31279928db3bf85",
+      "item_id": "Q-c31279928db3bf85",
+      "ordinal": 10,
+      "ordinal_in_cycle": 1,
+      "kind": "abc_exercise",
+      "label": "B2",
+      "group": "B",
+      "cycle_id": "4.7-cycle-6",
+      "cycle_sequence": 6,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.4.3.1.a 分式裂项（上）",
+        "4.4.3.1.b 分式裂项（下）",
+        "4.4.3.2 根式裂项",
+        "4.4.5.1.a 错位相减法（上）",
+        "4.4.5.1.b 错位相减法（下）",
+        "4.4.4.1 分组求和法",
+        "4.4.4.2 倒序相加法"
+      ],
+      "course_titles": [
+        "分式裂项（上）",
+        "分式裂项（下）",
+        "根式裂项",
+        "错位相减法（上）",
+        "错位相减法（下）",
+        "分组求和法",
+        "倒序相加法"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.4.3.1.a 分式裂项（上）",
+        "4.4.3.1.b 分式裂项（下）",
+        "4.4.3.2 根式裂项",
+        "4.4.5.1.a 错位相减法（上）",
+        "4.4.5.1.b 错位相减法（下）",
+        "4.4.4.1 分组求和法",
+        "4.4.4.2 倒序相加法"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型IV 倒序相加法求和"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "sequence",
+      "recognition_cues": [
+        "f",
+        "x",
+        "\\frac"
+      ],
+      "method_model": "数列下标与递推模型",
+      "first_written_line_template": "先写明目标是通项、递推还是前 n 项和，并标出首项和下标范围。",
+      "continuation_actions": [
+        "把条件化为通项、求和或递推关系",
+        "选择裂项、错位相减、分组、待定系数或归纳",
+        "整理首尾项和边界项"
+      ],
+      "independent_self_check": "检查首项、项数、下标错位、公比特值、分母和归纳起点。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "c81d5723d511dec515a544f9c882edb05706df6990f4591b7aad2eef3b834a3c",
+      "source_question_text_sha256": "c81d5723d511dec515a544f9c882edb05706df6990f4591b7aad2eef3b834a3c",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "c81d5723d511dec515a544f9c882edb05706df6990f4591b7aad2eef3b834a3c",
+        "learner_question_text_sha256": "c81d5723d511dec515a544f9c882edb05706df6990f4591b7aad2eef3b834a3c"
+      },
+      "question_signal_excerpt": "f、x、\\frac",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-a62d4837f1ca6c87",
+      "item_id": "Q-a62d4837f1ca6c87",
+      "ordinal": 11,
+      "ordinal_in_cycle": 2,
+      "kind": "abc_exercise",
+      "label": "B3",
+      "group": "B",
+      "cycle_id": "4.7-cycle-6",
+      "cycle_sequence": 6,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.4.3.1.a 分式裂项（上）",
+        "4.4.3.1.b 分式裂项（下）",
+        "4.4.3.2 根式裂项",
+        "4.4.5.1.a 错位相减法（上）",
+        "4.4.5.1.b 错位相减法（下）",
+        "4.4.4.1 分组求和法",
+        "4.4.4.2 倒序相加法"
+      ],
+      "course_titles": [
+        "分式裂项（上）",
+        "分式裂项（下）",
+        "根式裂项",
+        "错位相减法（上）",
+        "错位相减法（下）",
+        "分组求和法",
+        "倒序相加法"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.4.3.1.a 分式裂项（上）",
+        "4.4.3.1.b 分式裂项（下）",
+        "4.4.3.2 根式裂项",
+        "4.4.5.1.a 错位相减法（上）",
+        "4.4.5.1.b 错位相减法（下）",
+        "4.4.4.1 分组求和法",
+        "4.4.4.2 倒序相加法"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 裂项相消法求前 n 项和"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "sequence",
+      "recognition_cues": [
+        "数列",
+        "通项",
+        "前n项和",
+        "a_",
+        "n"
+      ],
+      "method_model": "数列下标与递推模型",
+      "first_written_line_template": "先写明目标是通项、递推还是前 n 项和，并标出首项和下标范围。",
+      "continuation_actions": [
+        "把条件化为通项、求和或递推关系",
+        "选择裂项、错位相减、分组、待定系数或归纳",
+        "整理首尾项和边界项"
+      ],
+      "independent_self_check": "检查首项、项数、下标错位、公比特值、分母和归纳起点。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "bd4773c8ea4a8353c49d46ab5ed2ab180676fa657e87955a96ad50c5e78e8247",
+      "source_question_text_sha256": "bd4773c8ea4a8353c49d46ab5ed2ab180676fa657e87955a96ad50c5e78e8247",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "bd4773c8ea4a8353c49d46ab5ed2ab180676fa657e87955a96ad50c5e78e8247",
+        "learner_question_text_sha256": "bd4773c8ea4a8353c49d46ab5ed2ab180676fa657e87955a96ad50c5e78e8247"
+      },
+      "question_signal_excerpt": "数列、通项、前n项和、a_、n",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-f59cf4ff9d8125c8",
+      "item_id": "Q-f59cf4ff9d8125c8",
+      "ordinal": 12,
+      "ordinal_in_cycle": 3,
+      "kind": "abc_exercise",
+      "label": "B4",
+      "group": "B",
+      "cycle_id": "4.7-cycle-6",
+      "cycle_sequence": 6,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.4.3.1.a 分式裂项（上）",
+        "4.4.3.1.b 分式裂项（下）",
+        "4.4.3.2 根式裂项",
+        "4.4.5.1.a 错位相减法（上）",
+        "4.4.5.1.b 错位相减法（下）",
+        "4.4.4.1 分组求和法",
+        "4.4.4.2 倒序相加法"
+      ],
+      "course_titles": [
+        "分式裂项（上）",
+        "分式裂项（下）",
+        "根式裂项",
+        "错位相减法（上）",
+        "错位相减法（下）",
+        "分组求和法",
+        "倒序相加法"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.4.3.1.a 分式裂项（上）",
+        "4.4.3.1.b 分式裂项（下）",
+        "4.4.3.2 根式裂项",
+        "4.4.5.1.a 错位相减法（上）",
+        "4.4.5.1.b 错位相减法（下）",
+        "4.4.4.1 分组求和法",
+        "4.4.4.2 倒序相加法"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 裂项相消法求前 n 项和"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "sequence",
+      "recognition_cues": [
+        "数列",
+        "通项",
+        "证明",
+        "S_n",
+        "T_n",
+        "a_n",
+        "b_n"
+      ],
+      "method_model": "数列下标与递推模型",
+      "first_written_line_template": "先写明目标是通项、递推还是前 n 项和，并标出首项和下标范围。",
+      "continuation_actions": [
+        "把条件化为通项、求和或递推关系",
+        "选择裂项、错位相减、分组、待定系数或归纳",
+        "整理首尾项和边界项"
+      ],
+      "independent_self_check": "检查首项、项数、下标错位、公比特值、分母和归纳起点。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "b68d0bab8ea7e1a8d3f82297af5e1376d7d0f8de3b0bef362d72984db56a3fdc",
+      "source_question_text_sha256": "b68d0bab8ea7e1a8d3f82297af5e1376d7d0f8de3b0bef362d72984db56a3fdc",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "b68d0bab8ea7e1a8d3f82297af5e1376d7d0f8de3b0bef362d72984db56a3fdc",
+        "learner_question_text_sha256": "b68d0bab8ea7e1a8d3f82297af5e1376d7d0f8de3b0bef362d72984db56a3fdc"
+      },
+      "question_signal_excerpt": "数列、通项、证明、S_n、T_n、a_n、b_n",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-5056a54807239d3e",
+      "item_id": "Q-5056a54807239d3e",
+      "ordinal": 13,
+      "ordinal_in_cycle": 4,
+      "kind": "abc_exercise",
+      "label": "B5",
+      "group": "B",
+      "cycle_id": "4.7-cycle-6",
+      "cycle_sequence": 6,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.4.3.1.a 分式裂项（上）",
+        "4.4.3.1.b 分式裂项（下）",
+        "4.4.3.2 根式裂项",
+        "4.4.5.1.a 错位相减法（上）",
+        "4.4.5.1.b 错位相减法（下）",
+        "4.4.4.1 分组求和法",
+        "4.4.4.2 倒序相加法"
+      ],
+      "course_titles": [
+        "分式裂项（上）",
+        "分式裂项（下）",
+        "根式裂项",
+        "错位相减法（上）",
+        "错位相减法（下）",
+        "分组求和法",
+        "倒序相加法"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.4.3.1.a 分式裂项（上）",
+        "4.4.3.1.b 分式裂项（下）",
+        "4.4.3.2 根式裂项",
+        "4.4.5.1.a 错位相减法（上）",
+        "4.4.5.1.b 错位相减法（下）",
+        "4.4.4.1 分组求和法",
+        "4.4.4.2 倒序相加法"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 裂项相消法求前 n 项和"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "sequence",
+      "recognition_cues": [
+        "数列",
+        "通项",
+        "a_",
+        "n",
+        "S_"
+      ],
+      "method_model": "数列下标与递推模型",
+      "first_written_line_template": "先写明目标是通项、递推还是前 n 项和，并标出首项和下标范围。",
+      "continuation_actions": [
+        "把条件化为通项、求和或递推关系",
+        "选择裂项、错位相减、分组、待定系数或归纳",
+        "整理首尾项和边界项"
+      ],
+      "independent_self_check": "检查首项、项数、下标错位、公比特值、分母和归纳起点。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "df9a02a2a5d4a9ffef5df0e075316f6c6a1b5f3abe77c4e8eb48a23f83b1bcdb",
+      "source_question_text_sha256": "df9a02a2a5d4a9ffef5df0e075316f6c6a1b5f3abe77c4e8eb48a23f83b1bcdb",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "df9a02a2a5d4a9ffef5df0e075316f6c6a1b5f3abe77c4e8eb48a23f83b1bcdb",
+        "learner_question_text_sha256": "df9a02a2a5d4a9ffef5df0e075316f6c6a1b5f3abe77c4e8eb48a23f83b1bcdb"
+      },
+      "question_signal_excerpt": "数列、通项、a_、n、S_",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-1ee8861e62715881",
+      "item_id": "Q-1ee8861e62715881",
+      "ordinal": 14,
+      "ordinal_in_cycle": 5,
+      "kind": "abc_exercise",
+      "label": "B6",
+      "group": "B",
+      "cycle_id": "4.7-cycle-6",
+      "cycle_sequence": 6,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.4.3.1.a 分式裂项（上）",
+        "4.4.3.1.b 分式裂项（下）",
+        "4.4.3.2 根式裂项",
+        "4.4.5.1.a 错位相减法（上）",
+        "4.4.5.1.b 错位相减法（下）",
+        "4.4.4.1 分组求和法",
+        "4.4.4.2 倒序相加法"
+      ],
+      "course_titles": [
+        "分式裂项（上）",
+        "分式裂项（下）",
+        "根式裂项",
+        "错位相减法（上）",
+        "错位相减法（下）",
+        "分组求和法",
+        "倒序相加法"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.4.3.1.a 分式裂项（上）",
+        "4.4.3.1.b 分式裂项（下）",
+        "4.4.3.2 根式裂项",
+        "4.4.5.1.a 错位相减法（上）",
+        "4.4.5.1.b 错位相减法（下）",
+        "4.4.4.1 分组求和法",
+        "4.4.4.2 倒序相加法"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 错位相减法求前 n 项和"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "sequence",
+      "recognition_cues": [
+        "数列",
+        "通项",
+        "等差",
+        "前n项和",
+        "a_",
+        "n"
+      ],
+      "method_model": "数列下标与递推模型",
+      "first_written_line_template": "先写明目标是通项、递推还是前 n 项和，并标出首项和下标范围。",
+      "continuation_actions": [
+        "把条件化为通项、求和或递推关系",
+        "选择裂项、错位相减、分组、待定系数或归纳",
+        "整理首尾项和边界项"
+      ],
+      "independent_self_check": "检查首项、项数、下标错位、公比特值、分母和归纳起点。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "ca3f4412bdc43a11782724befacd8dc085fcd7eb63a980a9d9b6ef739cb2f884",
+      "source_question_text_sha256": "ca3f4412bdc43a11782724befacd8dc085fcd7eb63a980a9d9b6ef739cb2f884",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "ca3f4412bdc43a11782724befacd8dc085fcd7eb63a980a9d9b6ef739cb2f884",
+        "learner_question_text_sha256": "ca3f4412bdc43a11782724befacd8dc085fcd7eb63a980a9d9b6ef739cb2f884"
+      },
+      "question_signal_excerpt": "数列、通项、等差、前n项和、a_、n",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-ca1aee5901ae6329",
+      "item_id": "Q-ca1aee5901ae6329",
+      "ordinal": 15,
+      "ordinal_in_cycle": 6,
+      "kind": "abc_exercise",
+      "label": "B7",
+      "group": "B",
+      "cycle_id": "4.7-cycle-6",
+      "cycle_sequence": 6,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.4.3.1.a 分式裂项（上）",
+        "4.4.3.1.b 分式裂项（下）",
+        "4.4.3.2 根式裂项",
+        "4.4.5.1.a 错位相减法（上）",
+        "4.4.5.1.b 错位相减法（下）",
+        "4.4.4.1 分组求和法",
+        "4.4.4.2 倒序相加法"
+      ],
+      "course_titles": [
+        "分式裂项（上）",
+        "分式裂项（下）",
+        "根式裂项",
+        "错位相减法（上）",
+        "错位相减法（下）",
+        "分组求和法",
+        "倒序相加法"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.4.3.1.a 分式裂项（上）",
+        "4.4.3.1.b 分式裂项（下）",
+        "4.4.3.2 根式裂项",
+        "4.4.5.1.a 错位相减法（上）",
+        "4.4.5.1.b 错位相减法（下）",
+        "4.4.4.1 分组求和法",
+        "4.4.4.2 倒序相加法"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 错位相减法求前 n 项和"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "sequence",
+      "recognition_cues": [
+        "数列",
+        "通项",
+        "等比",
+        "前n项和",
+        "a_n",
+        "n",
+        "S_n",
+        "a_1"
+      ],
+      "method_model": "数列下标与递推模型",
+      "first_written_line_template": "先写明目标是通项、递推还是前 n 项和，并标出首项和下标范围。",
+      "continuation_actions": [
+        "把条件化为通项、求和或递推关系",
+        "选择裂项、错位相减、分组、待定系数或归纳",
+        "整理首尾项和边界项"
+      ],
+      "independent_self_check": "检查首项、项数、下标错位、公比特值、分母和归纳起点。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "c7f5f3e65d163e2af2b00be38e2dd10ca40a76631f5ea9896d1f3c029b5309d9",
+      "source_question_text_sha256": "c7f5f3e65d163e2af2b00be38e2dd10ca40a76631f5ea9896d1f3c029b5309d9",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "c7f5f3e65d163e2af2b00be38e2dd10ca40a76631f5ea9896d1f3c029b5309d9",
+        "learner_question_text_sha256": "c7f5f3e65d163e2af2b00be38e2dd10ca40a76631f5ea9896d1f3c029b5309d9"
+      },
+      "question_signal_excerpt": "数列、通项、等比、前n项和、a_n、n、S_n、a_1",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-3a41f869f49eeaf0",
+      "item_id": "Q-3a41f869f49eeaf0",
+      "ordinal": 16,
+      "ordinal_in_cycle": 7,
+      "kind": "abc_exercise",
+      "label": "B8",
+      "group": "B",
+      "cycle_id": "4.7-cycle-6",
+      "cycle_sequence": 6,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.4.3.1.a 分式裂项（上）",
+        "4.4.3.1.b 分式裂项（下）",
+        "4.4.3.2 根式裂项",
+        "4.4.5.1.a 错位相减法（上）",
+        "4.4.5.1.b 错位相减法（下）",
+        "4.4.4.1 分组求和法",
+        "4.4.4.2 倒序相加法"
+      ],
+      "course_titles": [
+        "分式裂项（上）",
+        "分式裂项（下）",
+        "根式裂项",
+        "错位相减法（上）",
+        "错位相减法（下）",
+        "分组求和法",
+        "倒序相加法"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.4.3.1.a 分式裂项（上）",
+        "4.4.3.1.b 分式裂项（下）",
+        "4.4.3.2 根式裂项",
+        "4.4.5.1.a 错位相减法（上）",
+        "4.4.5.1.b 错位相减法（下）",
+        "4.4.4.1 分组求和法",
+        "4.4.4.2 倒序相加法"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 错位相减法求前 n 项和"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "sequence",
+      "recognition_cues": [
+        "数列",
+        "等差",
+        "等比",
+        "前n项和",
+        "证明",
+        "a_",
+        "n",
+        "b_"
+      ],
+      "method_model": "数列下标与递推模型",
+      "first_written_line_template": "先写明目标是通项、递推还是前 n 项和，并标出首项和下标范围。",
+      "continuation_actions": [
+        "把条件化为通项、求和或递推关系",
+        "选择裂项、错位相减、分组、待定系数或归纳",
+        "整理首尾项和边界项"
+      ],
+      "independent_self_check": "检查首项、项数、下标错位、公比特值、分母和归纳起点。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "df6c0d88ccd69c90f06d7bd1c1af5b039a6dbe30d2e94f1a47a3e0bd5cbdce23",
+      "source_question_text_sha256": "df6c0d88ccd69c90f06d7bd1c1af5b039a6dbe30d2e94f1a47a3e0bd5cbdce23",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "df6c0d88ccd69c90f06d7bd1c1af5b039a6dbe30d2e94f1a47a3e0bd5cbdce23",
+        "learner_question_text_sha256": "df6c0d88ccd69c90f06d7bd1c1af5b039a6dbe30d2e94f1a47a3e0bd5cbdce23"
+      },
+      "question_signal_excerpt": "数列、等差、等比、前n项和、证明、a_、n、b_",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-9b8af84268fab4fd",
+      "item_id": "Q-9b8af84268fab4fd",
+      "ordinal": 17,
+      "ordinal_in_cycle": 8,
+      "kind": "abc_exercise",
+      "label": "B9",
+      "group": "B",
+      "cycle_id": "4.7-cycle-6",
+      "cycle_sequence": 6,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.4.3.1.a 分式裂项（上）",
+        "4.4.3.1.b 分式裂项（下）",
+        "4.4.3.2 根式裂项",
+        "4.4.5.1.a 错位相减法（上）",
+        "4.4.5.1.b 错位相减法（下）",
+        "4.4.4.1 分组求和法",
+        "4.4.4.2 倒序相加法"
+      ],
+      "course_titles": [
+        "分式裂项（上）",
+        "分式裂项（下）",
+        "根式裂项",
+        "错位相减法（上）",
+        "错位相减法（下）",
+        "分组求和法",
+        "倒序相加法"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.4.3.1.a 分式裂项（上）",
+        "4.4.3.1.b 分式裂项（下）",
+        "4.4.3.2 根式裂项",
+        "4.4.5.1.a 错位相减法（上）",
+        "4.4.5.1.b 错位相减法（下）",
+        "4.4.4.1 分组求和法",
+        "4.4.4.2 倒序相加法"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 分组求和法求前 n 项和"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "sequence",
+      "recognition_cues": [
+        "数列",
+        "通项",
+        "等比",
+        "a_n",
+        "n",
+        "S_n"
+      ],
+      "method_model": "数列下标与递推模型",
+      "first_written_line_template": "先写明目标是通项、递推还是前 n 项和，并标出首项和下标范围。",
+      "continuation_actions": [
+        "把条件化为通项、求和或递推关系",
+        "选择裂项、错位相减、分组、待定系数或归纳",
+        "整理首尾项和边界项"
+      ],
+      "independent_self_check": "检查首项、项数、下标错位、公比特值、分母和归纳起点。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "3c52f0ec1d7caaf8b8044174636bbaff84cad4d2e5db07b2a7c3cb108ac1fa1f",
+      "source_question_text_sha256": "3c52f0ec1d7caaf8b8044174636bbaff84cad4d2e5db07b2a7c3cb108ac1fa1f",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "3c52f0ec1d7caaf8b8044174636bbaff84cad4d2e5db07b2a7c3cb108ac1fa1f",
+        "learner_question_text_sha256": "3c52f0ec1d7caaf8b8044174636bbaff84cad4d2e5db07b2a7c3cb108ac1fa1f"
+      },
+      "question_signal_excerpt": "数列、通项、等比、a_n、n、S_n",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-96b31a35f3d241dc",
+      "item_id": "Q-96b31a35f3d241dc",
+      "ordinal": 18,
+      "ordinal_in_cycle": 9,
+      "kind": "abc_exercise",
+      "label": "B10",
+      "group": "B",
+      "cycle_id": "4.7-cycle-6",
+      "cycle_sequence": 6,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.4.3.1.a 分式裂项（上）",
+        "4.4.3.1.b 分式裂项（下）",
+        "4.4.3.2 根式裂项",
+        "4.4.5.1.a 错位相减法（上）",
+        "4.4.5.1.b 错位相减法（下）",
+        "4.4.4.1 分组求和法",
+        "4.4.4.2 倒序相加法"
+      ],
+      "course_titles": [
+        "分式裂项（上）",
+        "分式裂项（下）",
+        "根式裂项",
+        "错位相减法（上）",
+        "错位相减法（下）",
+        "分组求和法",
+        "倒序相加法"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.4.3.1.a 分式裂项（上）",
+        "4.4.3.1.b 分式裂项（下）",
+        "4.4.3.2 根式裂项",
+        "4.4.5.1.a 错位相减法（上）",
+        "4.4.5.1.b 错位相减法（下）",
+        "4.4.4.1 分组求和法",
+        "4.4.4.2 倒序相加法"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 裂项相消法求前 n 项和"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "sequence",
+      "recognition_cues": [
+        "数列",
+        "通项",
+        "等差",
+        "前n项和",
+        "证明",
+        "S_",
+        "n",
+        "a_"
+      ],
+      "method_model": "数列下标与递推模型",
+      "first_written_line_template": "先写明目标是通项、递推还是前 n 项和，并标出首项和下标范围。",
+      "continuation_actions": [
+        "把条件化为通项、求和或递推关系",
+        "选择裂项、错位相减、分组、待定系数或归纳",
+        "整理首尾项和边界项"
+      ],
+      "independent_self_check": "检查首项、项数、下标错位、公比特值、分母和归纳起点。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "fdb7cbabd41d4056a71254eb19b11ee6c91a19b17b8fdd004c1a8f75e45123c6",
+      "source_question_text_sha256": "fdb7cbabd41d4056a71254eb19b11ee6c91a19b17b8fdd004c1a8f75e45123c6",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "fdb7cbabd41d4056a71254eb19b11ee6c91a19b17b8fdd004c1a8f75e45123c6",
+        "learner_question_text_sha256": "fdb7cbabd41d4056a71254eb19b11ee6c91a19b17b8fdd004c1a8f75e45123c6"
+      },
+      "question_signal_excerpt": "数列、通项、等差、前n项和、证明、S_、n、a_",
+      "source_blocked": false
+    }
+  ],
+  "route_versions": [
+    {
+      "version": 1,
+      "route_hash": "00790ccc82ae8c78617bf6f95e00a632af220ce096362a7a8368608763096b5a"
+    },
+    {
+      "version": 2,
+      "route_hash": "26fa94ddc88b74cbc35d10011cdfde56bd6a358b922f9fe631a68a2e4f9b7fb4"
+    },
+    {
+      "version": 3,
+      "route_hash": "4d3f030c97b9f6e70a3d445854c06717dd6feadb0ff2493c70cf61a4a090c4d4"
+    }
+  ],
+  "final_route_hash": "4d3f030c97b9f6e70a3d445854c06717dd6feadb0ff2493c70cf61a4a090c4d4",
+  "simulation": {
+    "protocol": "five-round-five-persona-v3-answer-isolated",
+    "generation_mode": "synthetic_route_stress_from_actual_item_features",
+    "rounds": [
+      {
+        "round": 1,
+        "purpose": "baseline_entry",
+        "route_version": 1,
+        "route_hash": "00790ccc82ae8c78617bf6f95e00a632af220ce096362a7a8368608763096b5a",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 18,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 18,
+            "blocked": 0
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 18,
+            "blocked": 0
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 18,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 18,
+            "blocked": 10
+          }
+        ],
+        "failed_item_keys": [
+          "Q:Q-1ee8861e62715881",
+          "Q:Q-3a41f869f49eeaf0",
+          "Q:Q-447fbf6f3b64a6c2",
+          "Q:Q-5056a54807239d3e",
+          "Q:Q-96b31a35f3d241dc",
+          "Q:Q-9b8af84268fab4fd",
+          "Q:Q-a62d4837f1ca6c87",
+          "Q:Q-c31279928db3bf85",
+          "Q:Q-ca1aee5901ae6329",
+          "Q:Q-f59cf4ff9d8125c8"
+        ],
+        "route_repairs": [
+          {
+            "item_keys": [
+              "Q:Q-1ee8861e62715881",
+              "Q:Q-3a41f869f49eeaf0",
+              "Q:Q-447fbf6f3b64a6c2",
+              "Q:Q-5056a54807239d3e",
+              "Q:Q-96b31a35f3d241dc",
+              "Q:Q-9b8af84268fab4fd",
+              "Q:Q-a62d4837f1ca6c87",
+              "Q:Q-c31279928db3bf85",
+              "Q:Q-ca1aee5901ae6329",
+              "Q:Q-f59cf4ff9d8125c8"
+            ],
+            "field": "independent_self_check",
+            "before": "第1轮冻结尝试记录了 self-check-weak 的首个阻断。",
+            "after": "下一轮只加入 self-check-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 10 题；不是随机题号注入。"
+          }
+        ]
+      },
+      {
+        "round": 2,
+        "purpose": "prerequisite_repair",
+        "route_version": 2,
+        "route_hash": "26fa94ddc88b74cbc35d10011cdfde56bd6a358b922f9fe631a68a2e4f9b7fb4",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 18,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 18,
+            "blocked": 0
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 18,
+            "blocked": 0
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 18,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 18,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [],
+        "route_repairs": []
+      },
+      {
+        "round": 3,
+        "purpose": "continuation_transfer",
+        "route_version": 2,
+        "route_hash": "26fa94ddc88b74cbc35d10011cdfde56bd6a358b922f9fe631a68a2e4f9b7fb4",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 18,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 18,
+            "blocked": 4
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 18,
+            "blocked": 4
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 18,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 18,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [
+          "LI:0e7975f50436937f",
+          "LI:83b3d71d82d53178",
+          "LI:c7af98d07c7a5adb",
+          "LI:dbb703dce333e0b9"
+        ],
+        "route_repairs": [
+          {
+            "item_keys": [
+              "LI:0e7975f50436937f",
+              "LI:83b3d71d82d53178",
+              "LI:c7af98d07c7a5adb",
+              "LI:dbb703dce333e0b9"
+            ],
+            "field": "recognition_cues",
+            "before": "第3轮冻结尝试记录了 recognition-weak 的首个阻断。",
+            "after": "下一轮只加入 recognition-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 4 题；不是随机题号注入。"
+          },
+          {
+            "item_keys": [
+              "LI:0e7975f50436937f",
+              "LI:83b3d71d82d53178",
+              "LI:c7af98d07c7a5adb",
+              "LI:dbb703dce333e0b9"
+            ],
+            "field": "continuation_checkpoints",
+            "before": "第3轮冻结尝试记录了 algebra-weak 的首个阻断。",
+            "after": "下一轮只加入 algebra-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 4 题；不是随机题号注入。"
+          }
+        ]
+      },
+      {
+        "round": 4,
+        "purpose": "mixed_retrieval",
+        "route_version": 3,
+        "route_hash": "4d3f030c97b9f6e70a3d445854c06717dd6feadb0ff2493c70cf61a4a090c4d4",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 18,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 18,
+            "blocked": 0
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 18,
+            "blocked": 0
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 18,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 18,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [],
+        "route_repairs": []
+      },
+      {
+        "round": 5,
+        "purpose": "fresh_context",
+        "route_version": 3,
+        "route_hash": "4d3f030c97b9f6e70a3d445854c06717dd6feadb0ff2493c70cf61a4a090c4d4",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 18,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 18,
+            "blocked": 0
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 18,
+            "blocked": 0
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 18,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 18,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [],
+        "route_repairs": []
+      }
+    ],
+    "expected_attempts_per_item": 25,
+    "actual_attempts_per_item": 25,
+    "unresolved_item_keys": [],
+    "mathematical_correctness": "not_evaluated_no_final_answer",
+    "mastery_claimed": false,
+    "status": "passed"
+  },
+  "summary": {
+    "items": 18,
+    "attempts": 450,
+    "route_assessments": 450,
+    "rounds": 5,
+    "personas_per_round": 5,
+    "repairs": 3,
+    "round_5_failed_items": 0,
+    "validator_errors": []
+  },
+  "human_learning_status": "remote_math_mcp_only",
+  "cold_24h_retest": "not_run",
+  "mastery_claimed": false,
+  "claim_scope": "route_actionability_only",
+  "mathematical_assessment_status": "not_run",
+  "route_audit_status": "passed",
+  "status": "passed"
+}

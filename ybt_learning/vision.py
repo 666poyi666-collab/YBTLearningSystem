@@ -58,6 +58,38 @@ def structured_answer_leaks(structured: Any) -> list[str]:
     return sorted({match.group(0) for match in VISION_ANSWER_LEAK_RE.finditer(text)})
 
 
+def structured_visual_errors(structured: Any, *, item_id: str = "") -> list[str]:
+    """Reject structurally non-empty visual rows that contradict the source figure."""
+    if not isinstance(structured, dict):
+        return ["structured_payload_missing"]
+    errors: list[str] = []
+    substantive = any(
+        _has_meaningful_value(structured.get(key))
+        for key in ("objects", "relations", "coordinates", "ranges")
+    )
+    if structured.get("confidence") == "E2" and not substantive:
+        errors.append("e2_has_only_incidental_text")
+
+    serialized = json.dumps(structured, ensure_ascii=False).replace(" ", "")
+    coordinate_text = json.dumps(structured.get("coordinates", []), ensure_ascii=False)
+    placeholders = any(
+        marker in coordinate_text
+        for marker in ("?", "(,", ",)", "(-,", "(+,", "(, -", "(, +")
+    )
+    if placeholders and not _has_meaningful_value(structured.get("uncertainties")):
+        errors.append("coordinate_placeholders_without_uncertainty")
+
+    if item_id == "08f4ab4a6646aaeb":
+        if "F1(-c,0)" not in serialized or "F2(c,0)" not in serialized:
+            errors.append("ellipse_foci_must_have_opposite_x_coordinates")
+    if item_id == "35f25e4a25650379":
+        if "F在y轴" in serialized or "F(0,1)" in serialized:
+            errors.append("right_opening_parabola_focus_cannot_be_on_y_axis")
+        if "F(1,0)" not in serialized and "F在x轴" not in serialized:
+            errors.append("right_opening_parabola_focus_x_axis_relation_missing")
+    return errors
+
+
 def _extract_json_object(caption: str) -> dict[str, Any] | None:
     """Extract the first complete JSON object from a model preamble.
 

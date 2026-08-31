@@ -1,0 +1,2131 @@
+{
+  "schema_version": "ybt-deep-section-simulation-v3",
+  "generated_at": "2026-08-31T04:06:32.591558+00:00",
+  "chapter": 5,
+  "section": "5.1",
+  "label": "第1节 导数的概念及其意义",
+  "simulation_kind": "answer_isolated_synthetic_route_stress",
+  "honesty_boundary": "Attempts test route actionability. They contain no final learner answer, so mathematical correctness and mastery are not claimed.",
+  "source_binding": {
+    "manifest_sha256": "db9d20c619d78b202750a5416105a3f8510f5b074d81eabb8a248314b585f5c6",
+    "student_learning_items_sha256": "986d1ffc9f1facd787b65f64774f5b5ec5e5942f21967dfea79605fe1252afa1",
+    "student_packet_sha256": "160630a6a3c875eb48155d8d8b58eae25891c0b27c9daaab9c1c0f8c911f83d4",
+    "grader_learning_packet_sha256": "bd4cc809d4c8aff19ba597098a7d824aadbc6f784c0506581facdfe5e765d39b",
+    "route_sha256": "78a1bf3333802ed703d8c725bf3a5f30a94b97cd82472f260aed424f0b2f6e62",
+    "learner_input_snapshot_sha256": "355f907968aed931ec294f78904606235511820e090dab681710ea8c4391f2ff"
+  },
+  "answer_isolation": {
+    "frozen_attempts_path": "reports/deep_simulation_runs/route-audit-5391e980be231c3c/frozen/5.1.jsonl.gz",
+    "frozen_attempts_sha256": "07c212dc08e71739ebbf394af70cc432e4db43ee8af16b12eed3c7ce960fb7f2",
+    "route_assessments_path": "reports/deep_simulation_runs/route-audit-5391e980be231c3c/route_assessments/5.1.jsonl.gz",
+    "route_assessments_sha256": "c28b6a400bd69c5ac94128bc996f6e6ec3cd1a7b01b75d17aa93517afd0847ad",
+    "learner_answer_material_loaded": false,
+    "grader_material_loaded_after_freeze": true,
+    "grader_evidence": {
+      "parsed_automatic": 9,
+      "review_required_text": 3,
+      "source_page_bound": 3,
+      "textbook_solution": 9,
+      "blocked": 0
+    },
+    "status": "passed"
+  },
+  "items": [
+    {
+      "item_key": "LI:78c6b6f9943b1014",
+      "item_id": "78c6b6f9943b1014",
+      "ordinal": 1,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例1",
+      "group": null,
+      "cycle_id": "5.1-cycle-1",
+      "cycle_sequence": 1,
+      "cycle_title": "变化率与导数的概念",
+      "course_refs": [
+        "4.1.1.1 导数的定义（上）",
+        "4.1.1.1 导数的定义（下）"
+      ],
+      "course_titles": [
+        "导数的定义（上）",
+        "导数的定义（下）"
+      ],
+      "required_course_refs": [
+        "4.1.1.1 导数的定义（上）",
+        "4.1.1.1 导数的定义（下）"
+      ],
+      "prerequisite_course_refs": [],
+      "knowledge_refs": [
+        "5.1-k1"
+      ],
+      "type_refs": [],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "直线",
+        "s",
+        "m",
+        "t"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "efddc2c7de84cc8029d78d5bba8b3f99d5bf1ce8eecebf927674c7e4aacd284e",
+      "source_question_text_sha256": "efddc2c7de84cc8029d78d5bba8b3f99d5bf1ce8eecebf927674c7e4aacd284e",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "efddc2c7de84cc8029d78d5bba8b3f99d5bf1ce8eecebf927674c7e4aacd284e",
+        "learner_question_text_sha256": "efddc2c7de84cc8029d78d5bba8b3f99d5bf1ce8eecebf927674c7e4aacd284e"
+      },
+      "question_signal_excerpt": "直线、s、m、t",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:dd1d424a17f8013d",
+      "item_id": "dd1d424a17f8013d",
+      "ordinal": 2,
+      "ordinal_in_cycle": 2,
+      "kind": "worked_example",
+      "label": "例2",
+      "group": null,
+      "cycle_id": "5.1-cycle-1",
+      "cycle_sequence": 1,
+      "cycle_title": "变化率与导数的概念",
+      "course_refs": [
+        "4.1.1.1 导数的定义（上）",
+        "4.1.1.1 导数的定义（下）"
+      ],
+      "course_titles": [
+        "导数的定义（上）",
+        "导数的定义（下）"
+      ],
+      "required_course_refs": [
+        "4.1.1.1 导数的定义（上）",
+        "4.1.1.1 导数的定义（下）"
+      ],
+      "prerequisite_course_refs": [],
+      "knowledge_refs": [
+        "5.1-k1"
+      ],
+      "type_refs": [],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "A",
+        "y",
+        "x",
+        "B"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "90938b47c0d852e96ecd1b4e3f7d7442ee3f4db2fffa8f921e8e8c6eb10a21cc",
+      "source_question_text_sha256": "90938b47c0d852e96ecd1b4e3f7d7442ee3f4db2fffa8f921e8e8c6eb10a21cc",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "90938b47c0d852e96ecd1b4e3f7d7442ee3f4db2fffa8f921e8e8c6eb10a21cc",
+        "learner_question_text_sha256": "90938b47c0d852e96ecd1b4e3f7d7442ee3f4db2fffa8f921e8e8c6eb10a21cc"
+      },
+      "question_signal_excerpt": "A、y、x、B",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:e6802422625c461d",
+      "item_id": "e6802422625c461d",
+      "ordinal": 3,
+      "ordinal_in_cycle": 3,
+      "kind": "worked_example",
+      "label": "例3",
+      "group": null,
+      "cycle_id": "5.1-cycle-1",
+      "cycle_sequence": 1,
+      "cycle_title": "变化率与导数的概念",
+      "course_refs": [
+        "4.1.1.1 导数的定义（上）",
+        "4.1.1.1 导数的定义（下）"
+      ],
+      "course_titles": [
+        "导数的定义（上）",
+        "导数的定义（下）"
+      ],
+      "required_course_refs": [
+        "4.1.1.1 导数的定义（上）",
+        "4.1.1.1 导数的定义（下）"
+      ],
+      "prerequisite_course_refs": [],
+      "knowledge_refs": [
+        "5.1-k1"
+      ],
+      "type_refs": [],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "f",
+        "x"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "b3f9a9aae9fc9ebe004e5aa2bbd5fda004a4c4f76a81e5aa508c7b9a8c5e2b4e",
+      "source_question_text_sha256": "b3f9a9aae9fc9ebe004e5aa2bbd5fda004a4c4f76a81e5aa508c7b9a8c5e2b4e",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "b3f9a9aae9fc9ebe004e5aa2bbd5fda004a4c4f76a81e5aa508c7b9a8c5e2b4e",
+        "learner_question_text_sha256": "b3f9a9aae9fc9ebe004e5aa2bbd5fda004a4c4f76a81e5aa508c7b9a8c5e2b4e"
+      },
+      "question_signal_excerpt": "f、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:55b5eb8929f59439",
+      "item_id": "55b5eb8929f59439",
+      "ordinal": 4,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例4",
+      "group": null,
+      "cycle_id": "5.1-cycle-2",
+      "cycle_sequence": 2,
+      "cycle_title": "导数的几何意义",
+      "course_refs": [
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.1.4 判断切线条数问题",
+        "4.1.1.5 公切线问题",
+        "4.1.1.1 导数的定义（上）",
+        "4.1.1.1 导数的定义（下）"
+      ],
+      "course_titles": [
+        "求在P点处的切线",
+        "求过P点的切线",
+        "判断切线条数问题",
+        "公切线问题",
+        "导数的定义（上）",
+        "导数的定义（下）"
+      ],
+      "required_course_refs": [
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.1.4 判断切线条数问题",
+        "4.1.1.5 公切线问题"
+      ],
+      "prerequisite_course_refs": [
+        "4.1.1.1 导数的定义（上）",
+        "4.1.1.1 导数的定义（下）"
+      ],
+      "knowledge_refs": [
+        "5.1-k2"
+      ],
+      "type_refs": [],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "切线",
+        "y",
+        "f",
+        "x"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "74304c905f7ad8ca0f34feba2d8c232033a5e6b40db57cde157336c1c946b241",
+      "source_question_text_sha256": "74304c905f7ad8ca0f34feba2d8c232033a5e6b40db57cde157336c1c946b241",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "74304c905f7ad8ca0f34feba2d8c232033a5e6b40db57cde157336c1c946b241",
+        "learner_question_text_sha256": "74304c905f7ad8ca0f34feba2d8c232033a5e6b40db57cde157336c1c946b241"
+      },
+      "question_signal_excerpt": "切线、y、f、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:af6aeaf2c5c1a783",
+      "item_id": "af6aeaf2c5c1a783",
+      "ordinal": 5,
+      "ordinal_in_cycle": 2,
+      "kind": "worked_example",
+      "label": "例5",
+      "group": null,
+      "cycle_id": "5.1-cycle-2",
+      "cycle_sequence": 2,
+      "cycle_title": "导数的几何意义",
+      "course_refs": [
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.1.4 判断切线条数问题",
+        "4.1.1.5 公切线问题",
+        "4.1.1.1 导数的定义（上）",
+        "4.1.1.1 导数的定义（下）"
+      ],
+      "course_titles": [
+        "求在P点处的切线",
+        "求过P点的切线",
+        "判断切线条数问题",
+        "公切线问题",
+        "导数的定义（上）",
+        "导数的定义（下）"
+      ],
+      "required_course_refs": [
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.1.4 判断切线条数问题",
+        "4.1.1.5 公切线问题"
+      ],
+      "prerequisite_course_refs": [
+        "4.1.1.1 导数的定义（上）",
+        "4.1.1.1 导数的定义（下）"
+      ],
+      "knowledge_refs": [
+        "5.1-k2"
+      ],
+      "type_refs": [],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "y",
+        "f",
+        "x"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "VISION_VERIFIED",
+        "image_refs": [
+          {
+            "ref": "imgs/img_in_image_box_800_1154_1014_1256.jpg",
+            "path": "data/ocr_live_current/chapter5_95/imgs/img_in_image_box_800_1154_1014_1256.jpg",
+            "exists": true
+          }
+        ]
+      },
+      "question_text_sha256": "7a11bc84af2364e697b8fb7d108e04561ec3957ad51573cfbb8065f1548c8284",
+      "source_question_text_sha256": "7a11bc84af2364e697b8fb7d108e04561ec3957ad51573cfbb8065f1548c8284",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "7a11bc84af2364e697b8fb7d108e04561ec3957ad51573cfbb8065f1548c8284",
+        "learner_question_text_sha256": "7a11bc84af2364e697b8fb7d108e04561ec3957ad51573cfbb8065f1548c8284"
+      },
+      "question_signal_excerpt": "y、f、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:759d6d57702d3417",
+      "item_id": "759d6d57702d3417",
+      "ordinal": 6,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例6",
+      "group": null,
+      "cycle_id": "5.1-cycle-3",
+      "cycle_sequence": 3,
+      "cycle_title": "导函数",
+      "course_refs": [
+        "4.1.1.1 导数的定义（上）",
+        "4.1.1.1 导数的定义（下）",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.1.4 判断切线条数问题",
+        "4.1.1.5 公切线问题"
+      ],
+      "course_titles": [
+        "导数的定义（上）",
+        "导数的定义（下）",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "判断切线条数问题",
+        "公切线问题"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.1.1 导数的定义（上）",
+        "4.1.1.1 导数的定义（下）",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.1.4 判断切线条数问题",
+        "4.1.1.5 公切线问题"
+      ],
+      "knowledge_refs": [
+        "5.1-k3"
+      ],
+      "type_refs": [],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "f",
+        "x"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "d68b3e6627ae3e632d362dab92f9cd49a27ce05239430697718d339145fcdc66",
+      "source_question_text_sha256": "d68b3e6627ae3e632d362dab92f9cd49a27ce05239430697718d339145fcdc66",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "d68b3e6627ae3e632d362dab92f9cd49a27ce05239430697718d339145fcdc66",
+        "learner_question_text_sha256": "d68b3e6627ae3e632d362dab92f9cd49a27ce05239430697718d339145fcdc66"
+      },
+      "question_signal_excerpt": "f、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:717717a2021e8eab",
+      "item_id": "717717a2021e8eab",
+      "ordinal": 7,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例7",
+      "group": null,
+      "cycle_id": "5.1-cycle-4",
+      "cycle_sequence": 4,
+      "cycle_title": "类型I 变化率的计算",
+      "course_refs": [
+        "4.1.1.1 导数的定义（上）",
+        "4.1.1.1 导数的定义（下）",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.1.4 判断切线条数问题",
+        "4.1.1.5 公切线问题"
+      ],
+      "course_titles": [
+        "导数的定义（上）",
+        "导数的定义（下）",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "判断切线条数问题",
+        "公切线问题"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.1.1 导数的定义（上）",
+        "4.1.1.1 导数的定义（下）",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.1.4 判断切线条数问题",
+        "4.1.1.5 公切线问题"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 变化率的计算"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "t",
+        "f"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "27697691ab0570519417c8526f1eb8e8d577b02afe80f5b2b07a7d6960bd5720",
+      "source_question_text_sha256": "27697691ab0570519417c8526f1eb8e8d577b02afe80f5b2b07a7d6960bd5720",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "27697691ab0570519417c8526f1eb8e8d577b02afe80f5b2b07a7d6960bd5720",
+        "learner_question_text_sha256": "27697691ab0570519417c8526f1eb8e8d577b02afe80f5b2b07a7d6960bd5720"
+      },
+      "question_signal_excerpt": "t、f",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:15264d4821074d8d",
+      "item_id": "15264d4821074d8d",
+      "ordinal": 8,
+      "ordinal_in_cycle": 2,
+      "kind": "direct_variant",
+      "label": "例7 变式",
+      "group": null,
+      "cycle_id": "5.1-cycle-4",
+      "cycle_sequence": 4,
+      "cycle_title": "类型I 变化率的计算",
+      "course_refs": [
+        "4.1.1.1 导数的定义（上）",
+        "4.1.1.1 导数的定义（下）",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.1.4 判断切线条数问题",
+        "4.1.1.5 公切线问题"
+      ],
+      "course_titles": [
+        "导数的定义（上）",
+        "导数的定义（下）",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "判断切线条数问题",
+        "公切线问题"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.1.1 导数的定义（上）",
+        "4.1.1.1 导数的定义（下）",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.1.4 判断切线条数问题",
+        "4.1.1.5 公切线问题"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 变化率的计算"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "cm",
+        "h",
+        "t"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "7281a1c800a9b3253d2b5f44210b97f69cf1d9faefe25841151683dfe11bb4b9",
+      "source_question_text_sha256": "7281a1c800a9b3253d2b5f44210b97f69cf1d9faefe25841151683dfe11bb4b9",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "7281a1c800a9b3253d2b5f44210b97f69cf1d9faefe25841151683dfe11bb4b9",
+        "learner_question_text_sha256": "7281a1c800a9b3253d2b5f44210b97f69cf1d9faefe25841151683dfe11bb4b9"
+      },
+      "question_signal_excerpt": "cm、h、t",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:3c3c50ab6f0d3f6b",
+      "item_id": "3c3c50ab6f0d3f6b",
+      "ordinal": 9,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例8",
+      "group": null,
+      "cycle_id": "5.1-cycle-5",
+      "cycle_sequence": 5,
+      "cycle_title": "类型Ⅱ 导数定义式的应用",
+      "course_refs": [
+        "4.1.1.1 导数的定义（上）",
+        "4.1.1.1 导数的定义（下）",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.1.4 判断切线条数问题",
+        "4.1.1.5 公切线问题"
+      ],
+      "course_titles": [
+        "导数的定义（上）",
+        "导数的定义（下）",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "判断切线条数问题",
+        "公切线问题"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.1.1 导数的定义（上）",
+        "4.1.1.1 导数的定义（下）",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.1.4 判断切线条数问题",
+        "4.1.1.5 公切线问题"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 导数定义式的应用"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "y",
+        "f",
+        "x"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "ae7da6f74ca854e77e5c741a741226d5acfcb942d7e010c8d777ac191ef0645b",
+      "source_question_text_sha256": "ae7da6f74ca854e77e5c741a741226d5acfcb942d7e010c8d777ac191ef0645b",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "ae7da6f74ca854e77e5c741a741226d5acfcb942d7e010c8d777ac191ef0645b",
+        "learner_question_text_sha256": "ae7da6f74ca854e77e5c741a741226d5acfcb942d7e010c8d777ac191ef0645b"
+      },
+      "question_signal_excerpt": "y、f、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:5eb7fd416292ad79",
+      "item_id": "5eb7fd416292ad79",
+      "ordinal": 10,
+      "ordinal_in_cycle": 2,
+      "kind": "direct_variant",
+      "label": "例8 变式",
+      "group": null,
+      "cycle_id": "5.1-cycle-5",
+      "cycle_sequence": 5,
+      "cycle_title": "类型Ⅱ 导数定义式的应用",
+      "course_refs": [
+        "4.1.1.1 导数的定义（上）",
+        "4.1.1.1 导数的定义（下）",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.1.4 判断切线条数问题",
+        "4.1.1.5 公切线问题"
+      ],
+      "course_titles": [
+        "导数的定义（上）",
+        "导数的定义（下）",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "判断切线条数问题",
+        "公切线问题"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.1.1 导数的定义（上）",
+        "4.1.1.1 导数的定义（下）",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.1.4 判断切线条数问题",
+        "4.1.1.5 公切线问题"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 导数定义式的应用"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "f",
+        "lim_",
+        "Delt",
+        "a"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "522f70b3b44fa8f4e0c99560b565493bc728b331cd1e10f2f966d093e6c67b82",
+      "source_question_text_sha256": "522f70b3b44fa8f4e0c99560b565493bc728b331cd1e10f2f966d093e6c67b82",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "522f70b3b44fa8f4e0c99560b565493bc728b331cd1e10f2f966d093e6c67b82",
+        "learner_question_text_sha256": "522f70b3b44fa8f4e0c99560b565493bc728b331cd1e10f2f966d093e6c67b82"
+      },
+      "question_signal_excerpt": "f、lim_、Delt、a",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:01d2e55dd8b46765",
+      "item_id": "01d2e55dd8b46765",
+      "ordinal": 11,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例9",
+      "group": null,
+      "cycle_id": "5.1-cycle-6",
+      "cycle_sequence": 6,
+      "cycle_title": "类型III 用导数定义求函数的切线",
+      "course_refs": [
+        "4.1.1.1 导数的定义（上）",
+        "4.1.1.1 导数的定义（下）",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.1.4 判断切线条数问题",
+        "4.1.1.5 公切线问题"
+      ],
+      "course_titles": [
+        "导数的定义（上）",
+        "导数的定义（下）",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "判断切线条数问题",
+        "公切线问题"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.1.1 导数的定义（上）",
+        "4.1.1.1 导数的定义（下）",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.1.4 判断切线条数问题",
+        "4.1.1.5 公切线问题"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型III 用导数定义求函数的切线"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "切线",
+        "f",
+        "x"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "9beb083dca38df5d4bbd6637a8e39fb24e9200a7e55e74ef6e78cda26866cb8c",
+      "source_question_text_sha256": "9beb083dca38df5d4bbd6637a8e39fb24e9200a7e55e74ef6e78cda26866cb8c",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "9beb083dca38df5d4bbd6637a8e39fb24e9200a7e55e74ef6e78cda26866cb8c",
+        "learner_question_text_sha256": "9beb083dca38df5d4bbd6637a8e39fb24e9200a7e55e74ef6e78cda26866cb8c"
+      },
+      "question_signal_excerpt": "切线、f、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:53e9279508442f33",
+      "item_id": "53e9279508442f33",
+      "ordinal": 12,
+      "ordinal_in_cycle": 2,
+      "kind": "direct_variant",
+      "label": "例9 变式",
+      "group": null,
+      "cycle_id": "5.1-cycle-6",
+      "cycle_sequence": 6,
+      "cycle_title": "类型III 用导数定义求函数的切线",
+      "course_refs": [
+        "4.1.1.1 导数的定义（上）",
+        "4.1.1.1 导数的定义（下）",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.1.4 判断切线条数问题",
+        "4.1.1.5 公切线问题"
+      ],
+      "course_titles": [
+        "导数的定义（上）",
+        "导数的定义（下）",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "判断切线条数问题",
+        "公切线问题"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.1.1 导数的定义（上）",
+        "4.1.1.1 导数的定义（下）",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.1.4 判断切线条数问题",
+        "4.1.1.5 公切线问题"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型III 用导数定义求函数的切线"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "切线",
+        "f",
+        "x"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "4b6362e550d0a074de7ee8368dace8ff85f2e6f83cfac5f0847774c6b3051800",
+      "source_question_text_sha256": "4b6362e550d0a074de7ee8368dace8ff85f2e6f83cfac5f0847774c6b3051800",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "4b6362e550d0a074de7ee8368dace8ff85f2e6f83cfac5f0847774c6b3051800",
+        "learner_question_text_sha256": "4b6362e550d0a074de7ee8368dace8ff85f2e6f83cfac5f0847774c6b3051800"
+      },
+      "question_signal_excerpt": "切线、f、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-79950cd1b260b942",
+      "item_id": "Q-79950cd1b260b942",
+      "ordinal": 13,
+      "ordinal_in_cycle": 1,
+      "kind": "abc_exercise",
+      "label": "A1",
+      "group": "A",
+      "cycle_id": "5.1-cycle-7",
+      "cycle_sequence": 7,
+      "cycle_title": "A组 夯实基础",
+      "course_refs": [
+        "4.1.1.1 导数的定义（上）",
+        "4.1.1.1 导数的定义（下）",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.1.4 判断切线条数问题",
+        "4.1.1.5 公切线问题"
+      ],
+      "course_titles": [
+        "导数的定义（上）",
+        "导数的定义（下）",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "判断切线条数问题",
+        "公切线问题"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.1.1 导数的定义（上）",
+        "4.1.1.1 导数的定义（下）",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.1.4 判断切线条数问题",
+        "4.1.1.5 公切线问题"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 变化率的计算"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "导数",
+        "f",
+        "x",
+        "\\sqrt"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "8d003d715a16ae1830d3105492dac634d8ec535e0f495ca884442d295eb29a0b",
+      "source_question_text_sha256": "8d003d715a16ae1830d3105492dac634d8ec535e0f495ca884442d295eb29a0b",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "8d003d715a16ae1830d3105492dac634d8ec535e0f495ca884442d295eb29a0b",
+        "learner_question_text_sha256": "8d003d715a16ae1830d3105492dac634d8ec535e0f495ca884442d295eb29a0b"
+      },
+      "question_signal_excerpt": "导数、f、x、\\sqrt",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-df564d3d5b0bb45d",
+      "item_id": "Q-df564d3d5b0bb45d",
+      "ordinal": 14,
+      "ordinal_in_cycle": 2,
+      "kind": "abc_exercise",
+      "label": "A2",
+      "group": "A",
+      "cycle_id": "5.1-cycle-7",
+      "cycle_sequence": 7,
+      "cycle_title": "A组 夯实基础",
+      "course_refs": [
+        "4.1.1.1 导数的定义（上）",
+        "4.1.1.1 导数的定义（下）",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.1.4 判断切线条数问题",
+        "4.1.1.5 公切线问题"
+      ],
+      "course_titles": [
+        "导数的定义（上）",
+        "导数的定义（下）",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "判断切线条数问题",
+        "公切线问题"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.1.1 导数的定义（上）",
+        "4.1.1.1 导数的定义（下）",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.1.4 判断切线条数问题",
+        "4.1.1.5 公切线问题"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 变化率的计算"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "直线",
+        "s",
+        "t"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "6107bad3f438c9c26623e7c91a70f828fc160517ef74d86ac479caf7df4e4abb",
+      "source_question_text_sha256": "6107bad3f438c9c26623e7c91a70f828fc160517ef74d86ac479caf7df4e4abb",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "6107bad3f438c9c26623e7c91a70f828fc160517ef74d86ac479caf7df4e4abb",
+        "learner_question_text_sha256": "6107bad3f438c9c26623e7c91a70f828fc160517ef74d86ac479caf7df4e4abb"
+      },
+      "question_signal_excerpt": "直线、s、t",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-9919666689e5005a",
+      "item_id": "Q-9919666689e5005a",
+      "ordinal": 15,
+      "ordinal_in_cycle": 3,
+      "kind": "abc_exercise",
+      "label": "A3",
+      "group": "A",
+      "cycle_id": "5.1-cycle-7",
+      "cycle_sequence": 7,
+      "cycle_title": "A组 夯实基础",
+      "course_refs": [
+        "4.1.1.1 导数的定义（上）",
+        "4.1.1.1 导数的定义（下）",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.1.4 判断切线条数问题",
+        "4.1.1.5 公切线问题"
+      ],
+      "course_titles": [
+        "导数的定义（上）",
+        "导数的定义（下）",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "判断切线条数问题",
+        "公切线问题"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.1.1 导数的定义（上）",
+        "4.1.1.1 导数的定义（下）",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.1.4 判断切线条数问题",
+        "4.1.1.5 公切线问题"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 导数定义式的应用"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "f",
+        "x_0",
+        "lim_",
+        "Delt"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "83b658670e54ad026cb6d498da7cb05cb5b6df862d5e4bde76234f71855c0571",
+      "source_question_text_sha256": "83b658670e54ad026cb6d498da7cb05cb5b6df862d5e4bde76234f71855c0571",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "83b658670e54ad026cb6d498da7cb05cb5b6df862d5e4bde76234f71855c0571",
+        "learner_question_text_sha256": "83b658670e54ad026cb6d498da7cb05cb5b6df862d5e4bde76234f71855c0571"
+      },
+      "question_signal_excerpt": "f、x_0、lim_、Delt",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-bcfc9f4eb1db8dbc",
+      "item_id": "Q-bcfc9f4eb1db8dbc",
+      "ordinal": 16,
+      "ordinal_in_cycle": 4,
+      "kind": "abc_exercise",
+      "label": "A4",
+      "group": "A",
+      "cycle_id": "5.1-cycle-7",
+      "cycle_sequence": 7,
+      "cycle_title": "A组 夯实基础",
+      "course_refs": [
+        "4.1.1.1 导数的定义（上）",
+        "4.1.1.1 导数的定义（下）",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.1.4 判断切线条数问题",
+        "4.1.1.5 公切线问题"
+      ],
+      "course_titles": [
+        "导数的定义（上）",
+        "导数的定义（下）",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "判断切线条数问题",
+        "公切线问题"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.1.1 导数的定义（上）",
+        "4.1.1.1 导数的定义（下）",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.1.4 判断切线条数问题",
+        "4.1.1.5 公切线问题"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 变化率的计算"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "s",
+        "t",
+        "\\frac"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "cbe6e5cd488387bb12623d5076af49837ce73c46a6eae81b471ee6919010db52",
+      "source_question_text_sha256": "cbe6e5cd488387bb12623d5076af49837ce73c46a6eae81b471ee6919010db52",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "cbe6e5cd488387bb12623d5076af49837ce73c46a6eae81b471ee6919010db52",
+        "learner_question_text_sha256": "cbe6e5cd488387bb12623d5076af49837ce73c46a6eae81b471ee6919010db52"
+      },
+      "question_signal_excerpt": "s、t、\\frac",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-902d152cfc44a93a",
+      "item_id": "Q-902d152cfc44a93a",
+      "ordinal": 17,
+      "ordinal_in_cycle": 5,
+      "kind": "abc_exercise",
+      "label": "A5",
+      "group": "A",
+      "cycle_id": "5.1-cycle-7",
+      "cycle_sequence": 7,
+      "cycle_title": "A组 夯实基础",
+      "course_refs": [
+        "4.1.1.1 导数的定义（上）",
+        "4.1.1.1 导数的定义（下）",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.1.4 判断切线条数问题",
+        "4.1.1.5 公切线问题"
+      ],
+      "course_titles": [
+        "导数的定义（上）",
+        "导数的定义（下）",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "判断切线条数问题",
+        "公切线问题"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.1.1 导数的定义（上）",
+        "4.1.1.1 导数的定义（下）",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.1.4 判断切线条数问题",
+        "4.1.1.5 公切线问题"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 变化率的计算"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "f",
+        "x",
+        "b"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "97a449c25f94736cda37378aeaae0f1553a347b1a87e92e0a5164364d04b26d9",
+      "source_question_text_sha256": "97a449c25f94736cda37378aeaae0f1553a347b1a87e92e0a5164364d04b26d9",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "97a449c25f94736cda37378aeaae0f1553a347b1a87e92e0a5164364d04b26d9",
+        "learner_question_text_sha256": "97a449c25f94736cda37378aeaae0f1553a347b1a87e92e0a5164364d04b26d9"
+      },
+      "question_signal_excerpt": "f、x、b",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-66c6ce4fc0a7ab18",
+      "item_id": "Q-66c6ce4fc0a7ab18",
+      "ordinal": 18,
+      "ordinal_in_cycle": 1,
+      "kind": "abc_exercise",
+      "label": "B6",
+      "group": "B",
+      "cycle_id": "5.1-cycle-8",
+      "cycle_sequence": 8,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.1.1.6 用切线算距离最值",
+        "4.1.1.1 导数的定义（上）",
+        "4.1.1.1 导数的定义（下）",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.1.4 判断切线条数问题",
+        "4.1.1.5 公切线问题"
+      ],
+      "course_titles": [
+        "用切线算距离最值",
+        "导数的定义（上）",
+        "导数的定义（下）",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "判断切线条数问题",
+        "公切线问题"
+      ],
+      "required_course_refs": [
+        "4.1.1.6 用切线算距离最值"
+      ],
+      "prerequisite_course_refs": [
+        "4.1.1.1 导数的定义（上）",
+        "4.1.1.1 导数的定义（下）",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.1.4 判断切线条数问题",
+        "4.1.1.5 公切线问题"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 导数定义式的应用"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "lim_",
+        "Delt",
+        "a",
+        "x"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "4ca27959107ff8a5701dfd6b908551cd13eab7b4d3f7bff37ae8fe12153c5e7c",
+      "source_question_text_sha256": "4ca27959107ff8a5701dfd6b908551cd13eab7b4d3f7bff37ae8fe12153c5e7c",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "4ca27959107ff8a5701dfd6b908551cd13eab7b4d3f7bff37ae8fe12153c5e7c",
+        "learner_question_text_sha256": "4ca27959107ff8a5701dfd6b908551cd13eab7b4d3f7bff37ae8fe12153c5e7c"
+      },
+      "question_signal_excerpt": "lim_、Delt、a、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-0a56588d82ab1902",
+      "item_id": "Q-0a56588d82ab1902",
+      "ordinal": 19,
+      "ordinal_in_cycle": 2,
+      "kind": "abc_exercise",
+      "label": "B7",
+      "group": "B",
+      "cycle_id": "5.1-cycle-8",
+      "cycle_sequence": 8,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.1.1.6 用切线算距离最值",
+        "4.1.1.1 导数的定义（上）",
+        "4.1.1.1 导数的定义（下）",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.1.4 判断切线条数问题",
+        "4.1.1.5 公切线问题"
+      ],
+      "course_titles": [
+        "用切线算距离最值",
+        "导数的定义（上）",
+        "导数的定义（下）",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "判断切线条数问题",
+        "公切线问题"
+      ],
+      "required_course_refs": [
+        "4.1.1.6 用切线算距离最值"
+      ],
+      "prerequisite_course_refs": [
+        "4.1.1.1 导数的定义（上）",
+        "4.1.1.1 导数的定义（下）",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.1.4 判断切线条数问题",
+        "4.1.1.5 公切线问题"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 导数定义式的应用"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "math",
+        "bb",
+        "R",
+        "f"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "159d0500bcca65f884400d2daaa29551b41ced21def2c47378170fff82f49fc7",
+      "source_question_text_sha256": "159d0500bcca65f884400d2daaa29551b41ced21def2c47378170fff82f49fc7",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "159d0500bcca65f884400d2daaa29551b41ced21def2c47378170fff82f49fc7",
+        "learner_question_text_sha256": "159d0500bcca65f884400d2daaa29551b41ced21def2c47378170fff82f49fc7"
+      },
+      "question_signal_excerpt": "math、bb、R、f",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-640f462d950da79b",
+      "item_id": "Q-640f462d950da79b",
+      "ordinal": 20,
+      "ordinal_in_cycle": 3,
+      "kind": "abc_exercise",
+      "label": "B8",
+      "group": "B",
+      "cycle_id": "5.1-cycle-8",
+      "cycle_sequence": 8,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.1.1.6 用切线算距离最值",
+        "4.1.1.1 导数的定义（上）",
+        "4.1.1.1 导数的定义（下）",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.1.4 判断切线条数问题",
+        "4.1.1.5 公切线问题"
+      ],
+      "course_titles": [
+        "用切线算距离最值",
+        "导数的定义（上）",
+        "导数的定义（下）",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "判断切线条数问题",
+        "公切线问题"
+      ],
+      "required_course_refs": [
+        "4.1.1.6 用切线算距离最值"
+      ],
+      "prerequisite_course_refs": [
+        "4.1.1.1 导数的定义（上）",
+        "4.1.1.1 导数的定义（下）",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.1.4 判断切线条数问题",
+        "4.1.1.5 公切线问题"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 变化率的计算"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "面积",
+        "A",
+        "B",
+        "m"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "VISION_VERIFIED",
+        "image_refs": [
+          {
+            "ref": "imgs/img_in_chart_box_492_578_912_886.jpg",
+            "path": "data/ocr_live_current/chapter5_95/imgs/img_in_chart_box_492_578_912_886.jpg",
+            "exists": true
+          }
+        ]
+      },
+      "question_text_sha256": "00616aa1aff7640de6df014673db4d709f505b7371eff979cf9f271940675f13",
+      "source_question_text_sha256": "00616aa1aff7640de6df014673db4d709f505b7371eff979cf9f271940675f13",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "00616aa1aff7640de6df014673db4d709f505b7371eff979cf9f271940675f13",
+        "learner_question_text_sha256": "00616aa1aff7640de6df014673db4d709f505b7371eff979cf9f271940675f13"
+      },
+      "question_signal_excerpt": "面积、A、B、m",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-50dbc06078af7b63",
+      "item_id": "Q-50dbc06078af7b63",
+      "ordinal": 21,
+      "ordinal_in_cycle": 4,
+      "kind": "abc_exercise",
+      "label": "B9",
+      "group": "B",
+      "cycle_id": "5.1-cycle-8",
+      "cycle_sequence": 8,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.1.1.6 用切线算距离最值",
+        "4.1.1.1 导数的定义（上）",
+        "4.1.1.1 导数的定义（下）",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.1.4 判断切线条数问题",
+        "4.1.1.5 公切线问题"
+      ],
+      "course_titles": [
+        "用切线算距离最值",
+        "导数的定义（上）",
+        "导数的定义（下）",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "判断切线条数问题",
+        "公切线问题"
+      ],
+      "required_course_refs": [
+        "4.1.1.6 用切线算距离最值"
+      ],
+      "prerequisite_course_refs": [
+        "4.1.1.1 导数的定义（上）",
+        "4.1.1.1 导数的定义（下）",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.1.4 判断切线条数问题",
+        "4.1.1.5 公切线问题"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 导数定义式的应用"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "导数",
+        "f",
+        "x",
+        "\\sqrt"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "d42a274495a6796352a0b4eeef7195be94248500c3e8f6e85f8547029723d715",
+      "source_question_text_sha256": "d42a274495a6796352a0b4eeef7195be94248500c3e8f6e85f8547029723d715",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "d42a274495a6796352a0b4eeef7195be94248500c3e8f6e85f8547029723d715",
+        "learner_question_text_sha256": "d42a274495a6796352a0b4eeef7195be94248500c3e8f6e85f8547029723d715"
+      },
+      "question_signal_excerpt": "导数、f、x、\\sqrt",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-4896e693d32f41d1",
+      "item_id": "Q-4896e693d32f41d1",
+      "ordinal": 22,
+      "ordinal_in_cycle": 5,
+      "kind": "abc_exercise",
+      "label": "B10",
+      "group": "B",
+      "cycle_id": "5.1-cycle-8",
+      "cycle_sequence": 8,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.1.1.6 用切线算距离最值",
+        "4.1.1.1 导数的定义（上）",
+        "4.1.1.1 导数的定义（下）",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.1.4 判断切线条数问题",
+        "4.1.1.5 公切线问题"
+      ],
+      "course_titles": [
+        "用切线算距离最值",
+        "导数的定义（上）",
+        "导数的定义（下）",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "判断切线条数问题",
+        "公切线问题"
+      ],
+      "required_course_refs": [
+        "4.1.1.6 用切线算距离最值"
+      ],
+      "prerequisite_course_refs": [
+        "4.1.1.1 导数的定义（上）",
+        "4.1.1.1 导数的定义（下）",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.1.4 判断切线条数问题",
+        "4.1.1.5 公切线问题"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 变化率的计算"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "s",
+        "t"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "bf37b754df6559ce6ad7cfe6e72074c079ee2ae8e34a1255ef23198286244740",
+      "source_question_text_sha256": "bf37b754df6559ce6ad7cfe6e72074c079ee2ae8e34a1255ef23198286244740",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "bf37b754df6559ce6ad7cfe6e72074c079ee2ae8e34a1255ef23198286244740",
+        "learner_question_text_sha256": "bf37b754df6559ce6ad7cfe6e72074c079ee2ae8e34a1255ef23198286244740"
+      },
+      "question_signal_excerpt": "s、t",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-7ca1110205cd0e25",
+      "item_id": "Q-7ca1110205cd0e25",
+      "ordinal": 23,
+      "ordinal_in_cycle": 6,
+      "kind": "abc_exercise",
+      "label": "B11",
+      "group": "B",
+      "cycle_id": "5.1-cycle-8",
+      "cycle_sequence": 8,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.1.1.6 用切线算距离最值",
+        "4.1.1.1 导数的定义（上）",
+        "4.1.1.1 导数的定义（下）",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.1.4 判断切线条数问题",
+        "4.1.1.5 公切线问题"
+      ],
+      "course_titles": [
+        "用切线算距离最值",
+        "导数的定义（上）",
+        "导数的定义（下）",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "判断切线条数问题",
+        "公切线问题"
+      ],
+      "required_course_refs": [
+        "4.1.1.6 用切线算距离最值"
+      ],
+      "prerequisite_course_refs": [
+        "4.1.1.1 导数的定义（上）",
+        "4.1.1.1 导数的定义（下）",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.1.4 判断切线条数问题",
+        "4.1.1.5 公切线问题"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型III 用导数定义求函数的切线",
+        "类型Ⅱ 导数定义式的应用"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "直线",
+        "切线",
+        "f",
+        "x"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "7823a2da40bc697978ea85e7d1c0263c36ca583a5e08714b7451faf21f795a58",
+      "source_question_text_sha256": "7823a2da40bc697978ea85e7d1c0263c36ca583a5e08714b7451faf21f795a58",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "7823a2da40bc697978ea85e7d1c0263c36ca583a5e08714b7451faf21f795a58",
+        "learner_question_text_sha256": "7823a2da40bc697978ea85e7d1c0263c36ca583a5e08714b7451faf21f795a58"
+      },
+      "question_signal_excerpt": "直线、切线、f、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-d80a5bd4220297bd",
+      "item_id": "Q-d80a5bd4220297bd",
+      "ordinal": 24,
+      "ordinal_in_cycle": 1,
+      "kind": "abc_exercise",
+      "label": "C12",
+      "group": "C",
+      "cycle_id": "5.1-cycle-9",
+      "cycle_sequence": 9,
+      "cycle_title": "C组 拓展提升",
+      "course_refs": [
+        "4.1.1.7 隐函数求导",
+        "4.1.1.1 导数的定义（上）",
+        "4.1.1.1 导数的定义（下）",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.1.4 判断切线条数问题",
+        "4.1.1.5 公切线问题"
+      ],
+      "course_titles": [
+        "隐函数求导",
+        "导数的定义（上）",
+        "导数的定义（下）",
+        "求在P点处的切线",
+        "求过P点的切线",
+        "判断切线条数问题",
+        "公切线问题"
+      ],
+      "required_course_refs": [
+        "4.1.1.7 隐函数求导"
+      ],
+      "prerequisite_course_refs": [
+        "4.1.1.1 导数的定义（上）",
+        "4.1.1.1 导数的定义（下）",
+        "4.1.1.2 求在P点处的切线",
+        "4.1.1.3 求过P点的切线",
+        "4.1.1.4 判断切线条数问题",
+        "4.1.1.5 公切线问题"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 变化率的计算"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "S",
+        "t",
+        "V"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "VISION_VERIFIED",
+        "image_refs": [
+          {
+            "ref": "imgs/img_in_chart_box_523_1110_698_1246.jpg",
+            "path": "data/ocr_live_current/chapter5_95/imgs/img_in_chart_box_523_1110_698_1246.jpg",
+            "exists": true
+          }
+        ]
+      },
+      "question_text_sha256": "451e98aa454754621c8f232657c4e005885d2df54138cdb98c5f2b57825fec02",
+      "source_question_text_sha256": "451e98aa454754621c8f232657c4e005885d2df54138cdb98c5f2b57825fec02",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "451e98aa454754621c8f232657c4e005885d2df54138cdb98c5f2b57825fec02",
+        "learner_question_text_sha256": "451e98aa454754621c8f232657c4e005885d2df54138cdb98c5f2b57825fec02"
+      },
+      "question_signal_excerpt": "S、t、V",
+      "source_blocked": false
+    }
+  ],
+  "route_versions": [
+    {
+      "version": 1,
+      "route_hash": "a3703e4b255d059b4aa64994544fb2aa570faad13e680383a05082ae14cc6733"
+    },
+    {
+      "version": 2,
+      "route_hash": "665fc5ce14aa1f7691a15423f750223a44613de4fabff1c143a39f29198d448f"
+    },
+    {
+      "version": 3,
+      "route_hash": "537f51fbc0aa8b46ca158309b33fc916e5c381a534c5730a6069ffdaccbc52ef"
+    }
+  ],
+  "final_route_hash": "537f51fbc0aa8b46ca158309b33fc916e5c381a534c5730a6069ffdaccbc52ef",
+  "simulation": {
+    "protocol": "five-round-five-persona-v3-answer-isolated",
+    "generation_mode": "synthetic_route_stress_from_actual_item_features",
+    "rounds": [
+      {
+        "round": 1,
+        "purpose": "baseline_entry",
+        "route_version": 1,
+        "route_hash": "a3703e4b255d059b4aa64994544fb2aa570faad13e680383a05082ae14cc6733",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 24,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 24,
+            "blocked": 7
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 24,
+            "blocked": 2
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 24,
+            "blocked": 3
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 24,
+            "blocked": 12
+          }
+        ],
+        "failed_item_keys": [
+          "LI:55b5eb8929f59439",
+          "LI:759d6d57702d3417",
+          "LI:78c6b6f9943b1014",
+          "LI:af6aeaf2c5c1a783",
+          "LI:dd1d424a17f8013d",
+          "LI:e6802422625c461d",
+          "Q:Q-0a56588d82ab1902",
+          "Q:Q-4896e693d32f41d1",
+          "Q:Q-50dbc06078af7b63",
+          "Q:Q-640f462d950da79b",
+          "Q:Q-66c6ce4fc0a7ab18",
+          "Q:Q-79950cd1b260b942",
+          "Q:Q-7ca1110205cd0e25",
+          "Q:Q-902d152cfc44a93a",
+          "Q:Q-9919666689e5005a",
+          "Q:Q-bcfc9f4eb1db8dbc",
+          "Q:Q-d80a5bd4220297bd",
+          "Q:Q-df564d3d5b0bb45d"
+        ],
+        "route_repairs": [
+          {
+            "item_keys": [
+              "LI:55b5eb8929f59439",
+              "LI:759d6d57702d3417",
+              "LI:78c6b6f9943b1014",
+              "LI:af6aeaf2c5c1a783",
+              "LI:dd1d424a17f8013d",
+              "LI:e6802422625c461d",
+              "Q:Q-7ca1110205cd0e25"
+            ],
+            "field": "recognition_cues",
+            "before": "第1轮冻结尝试记录了 recognition-weak 的首个阻断。",
+            "after": "下一轮只加入 recognition-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 7 题；不是随机题号注入。"
+          },
+          {
+            "item_keys": [
+              "Q:Q-50dbc06078af7b63",
+              "Q:Q-79950cd1b260b942"
+            ],
+            "field": "continuation_checkpoints",
+            "before": "第1轮冻结尝试记录了 algebra-weak 的首个阻断。",
+            "after": "下一轮只加入 algebra-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 2 题；不是随机题号注入。"
+          },
+          {
+            "item_keys": [
+              "LI:af6aeaf2c5c1a783",
+              "Q:Q-640f462d950da79b",
+              "Q:Q-d80a5bd4220297bd"
+            ],
+            "field": "visual_translation",
+            "before": "第1轮冻结尝试记录了 visual-weak 的首个阻断。",
+            "after": "下一轮只加入 visual-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 3 题；不是随机题号注入。"
+          },
+          {
+            "item_keys": [
+              "Q:Q-0a56588d82ab1902",
+              "Q:Q-4896e693d32f41d1",
+              "Q:Q-50dbc06078af7b63",
+              "Q:Q-640f462d950da79b",
+              "Q:Q-66c6ce4fc0a7ab18",
+              "Q:Q-79950cd1b260b942",
+              "Q:Q-7ca1110205cd0e25",
+              "Q:Q-902d152cfc44a93a",
+              "Q:Q-9919666689e5005a",
+              "Q:Q-bcfc9f4eb1db8dbc",
+              "Q:Q-d80a5bd4220297bd",
+              "Q:Q-df564d3d5b0bb45d"
+            ],
+            "field": "independent_self_check",
+            "before": "第1轮冻结尝试记录了 self-check-weak 的首个阻断。",
+            "after": "下一轮只加入 self-check-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 12 题；不是随机题号注入。"
+          }
+        ]
+      },
+      {
+        "round": 2,
+        "purpose": "prerequisite_repair",
+        "route_version": 2,
+        "route_hash": "665fc5ce14aa1f7691a15423f750223a44613de4fabff1c143a39f29198d448f",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 24,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 24,
+            "blocked": 0
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 24,
+            "blocked": 0
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 24,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 24,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [],
+        "route_repairs": []
+      },
+      {
+        "round": 3,
+        "purpose": "continuation_transfer",
+        "route_version": 2,
+        "route_hash": "665fc5ce14aa1f7691a15423f750223a44613de4fabff1c143a39f29198d448f",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 24,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 24,
+            "blocked": 3
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 24,
+            "blocked": 3
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 24,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 24,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [
+          "LI:15264d4821074d8d",
+          "LI:53e9279508442f33",
+          "LI:5eb7fd416292ad79"
+        ],
+        "route_repairs": [
+          {
+            "item_keys": [
+              "LI:15264d4821074d8d",
+              "LI:53e9279508442f33",
+              "LI:5eb7fd416292ad79"
+            ],
+            "field": "recognition_cues",
+            "before": "第3轮冻结尝试记录了 recognition-weak 的首个阻断。",
+            "after": "下一轮只加入 recognition-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 3 题；不是随机题号注入。"
+          },
+          {
+            "item_keys": [
+              "LI:15264d4821074d8d",
+              "LI:53e9279508442f33",
+              "LI:5eb7fd416292ad79"
+            ],
+            "field": "continuation_checkpoints",
+            "before": "第3轮冻结尝试记录了 algebra-weak 的首个阻断。",
+            "after": "下一轮只加入 algebra-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 3 题；不是随机题号注入。"
+          }
+        ]
+      },
+      {
+        "round": 4,
+        "purpose": "mixed_retrieval",
+        "route_version": 3,
+        "route_hash": "537f51fbc0aa8b46ca158309b33fc916e5c381a534c5730a6069ffdaccbc52ef",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 24,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 24,
+            "blocked": 0
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 24,
+            "blocked": 0
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 24,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 24,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [],
+        "route_repairs": []
+      },
+      {
+        "round": 5,
+        "purpose": "fresh_context",
+        "route_version": 3,
+        "route_hash": "537f51fbc0aa8b46ca158309b33fc916e5c381a534c5730a6069ffdaccbc52ef",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 24,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 24,
+            "blocked": 0
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 24,
+            "blocked": 0
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 24,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 24,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [],
+        "route_repairs": []
+      }
+    ],
+    "expected_attempts_per_item": 25,
+    "actual_attempts_per_item": 25,
+    "unresolved_item_keys": [],
+    "mathematical_correctness": "not_evaluated_no_final_answer",
+    "mastery_claimed": false,
+    "status": "passed"
+  },
+  "summary": {
+    "items": 24,
+    "attempts": 600,
+    "route_assessments": 600,
+    "rounds": 5,
+    "personas_per_round": 5,
+    "repairs": 6,
+    "round_5_failed_items": 0,
+    "validator_errors": []
+  },
+  "human_learning_status": "remote_math_mcp_only",
+  "cold_24h_retest": "not_run",
+  "mastery_claimed": false,
+  "claim_scope": "route_actionability_only",
+  "mathematical_assessment_status": "not_run",
+  "route_audit_status": "passed",
+  "status": "passed"
+}

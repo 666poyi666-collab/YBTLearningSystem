@@ -108,8 +108,8 @@ def export_markdown(packet: dict, plan: dict, bridges: dict) -> str:
     lines = [
         f"# {plan_section.get('label', section)}：按课程循环学习路径",
         "",
-        f"> 状态：`{packet.get('status', 'UNKNOWN')}`  ",
-        f"> 共 {len(cycles)} 个学习循环；教学例题 {counts.get('worked_examples', 0)} 道、直接变式 {counts.get('direct_variants', 0)} 道、A/B/C 习题 {counts.get('abc_exercises', 0)} 道。  ",
+        f"> 状态：`{packet.get('status', 'UNKNOWN')}`",
+        f"> 共 {len(cycles)} 个学习循环；教学例题 {counts.get('worked_examples', 0)} 道、直接变式 {counts.get('direct_variants', 0)} 道、A/B/C 习题 {counts.get('abc_exercises', 0)} 道。",
         "> 这是一张完整路线图。实际学习时一次只执行“当前循环”的一个动作，本批未通过不得进入下一批。",
         "> `任务 01` 起为整节连续学习序号；例题、变式和 A/B/C 标签保留教材原编号，教材例号跳跃不代表漏题。",
         "",
@@ -313,7 +313,7 @@ def _export_without_questions_legacy(packet: dict, plan: dict, bridges: dict) ->
     lines = [
         f"# {plan_section.get('label', section)}：无题目学习路线预览",
         "",
-        f"> 共 {len(cycles)} 个学习循环；教学例题 {counts.get('worked_examples', 0)} 道、直接变式 {counts.get('direct_variants', 0)} 道、A/B/C 习题 {counts.get('abc_exercises', 0)} 道。  ",
+        f"> 共 {len(cycles)} 个学习循环；教学例题 {counts.get('worked_examples', 0)} 道、直接变式 {counts.get('direct_variants', 0)} 道、A/B/C 习题 {counts.get('abc_exercises', 0)} 道。",
         "> 本文件只展示视频、左栏知识、方法桥接和做题编号顺序，不展示任何题干、选项、解答、答案、出处年份或题目配图。",
         "",
         "## 使用顺序",
@@ -952,7 +952,7 @@ def export_without_questions(
     lines = [
         f"# {plan_section.get('label', section)}：无题目学习路线预览",
         "",
-        f"> 共 {len(cycles)} 个学习循环；教学例题 {counts.get('worked_examples', 0)} 道、直接变式 {counts.get('direct_variants', 0)} 道、A/B/C 习题 {counts.get('abc_exercises', 0)} 道。  ",
+        f"> 共 {len(cycles)} 个学习循环；教学例题 {counts.get('worked_examples', 0)} 道、直接变式 {counts.get('direct_variants', 0)} 道、A/B/C 习题 {counts.get('abc_exercises', 0)} 道。",
         "> 本文件严格按《一本通》的版式逻辑展示：课程 → 知识点 → 知识点右侧例题 → 类型题 → A/B/C 习题。只展示路线、题号和学生作答动作，不展示任何题干、选项、解答、答案、出处年份或题目配图。",
         "",
         "## 一眼总览",

@@ -6,7 +6,7 @@
 
 ## 题目索引
 
-- A1 / `Q-7eaa2d96d2fafd33` / PDF页 50 / READY_TEXT_ONLY / 已知直线 \(l_{1}\) 的方向向量 \(\boldsymbol{\bar{s}}_{1}=(1,0,1)\) 与直线 \(l_{2}\) 的方向向量 \(\boldsymbol{\bar{s}}_{2}=(-1,2,-2)\)，则 \(l_{1}\) 和 \(l_{2}\) 夹角的余弦值为（） A. \(\frac{\sqrt{2}}{4}\) B.
+- A1 / `Q-7eaa2d96d2fafd33` / PDF页 50 / READY_TEXT_ONLY / 1.（2025·全国模拟） 已知直线 \(l_1\) 的方向向量 \(\boldsymbol{s}_1=(1,0,1)\) 与直线 \(l_2\) 的方向向量 \(\boldsymbol{s}_2=(-1,2,-2)\)，则 \(l_1\) 和 \(l_2\) 夹角的余弦值为（ ） A. \(\frac{\sqrt{2}}{4}\) B. \(\frac{1
 - A2 / `Q-fc2e49b951d6c08d` / PDF页 50 / VISION_VERIFIED / 2.（2025·福建厦门期中） 如图，正方体 \(ABCD-A_{1}B_{1}C_{1}D_{1}\) 的棱长为 2，E，F，G 分别为 \(BB_{1}\)， \(B_{1}D_{1}\)，AB 的中点. （1）求证： \(EF \perp A_{1}D\)； （2）求证：EF//平面 \(A_{1}DG\)
 - B3 / `Q-454cdf226d9af1aa` / PDF页 50 / READY_TEXT_ONLY / 3.（2025·广东深圳期末） 长方体 \(ABCD-A_{1}B_{1}C_{1}D_{1}\) 中，底面 ABCD 是边长为 2 的正方形，若直线 \(AB_{1}\) 与 \(BD_{1}\) 所成角的余弦值为 \(\frac{\sqrt{5}}{5}\)，则 \(AA_{1}\) 的长为（） A. \(2\sqrt{3}\) B. 1 或 \(2\s
 - B4 / `Q-7b81a6374f0ffe9c` / PDF页 51 / VISION_VERIFIED / ### 4. （2025·新疆模拟） 如图，在四棱锥 \(P-ABCD\) 中， \(PD \perp\) 平面 \(ABCD\)，底面 \(ABCD\) 为菱形，且 \(\angle ABC = 60^\circ\) （1）求证： \(AC \perp PB\)； （2）若 AB = 2，当平面 \(PAB \perp\) 平面 PBC 时，求 PD 的长

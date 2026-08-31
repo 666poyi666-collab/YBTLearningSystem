@@ -8,6 +8,7 @@ import json
 import re
 import shutil
 from collections import defaultdict
+from copy import deepcopy
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -137,8 +138,10 @@ COURSE_TARGET_OVERRIDES: dict[str, dict[str, int]] = {
         "4.2.5.1 单极值点问题": 8,
         "4.2.5.2 双极值点问题（上）": 8, "4.2.5.2 双极值点问题（下）": 8,
     },
-    # 5.6 is a review set: it introduces no new mandatory course.
-    "5.6": {},
+    "5.6": {
+        "4.2.6.1 求和型放缩（上）": 14,
+        "4.2.6.1 求和型放缩（下）": 14,
+    },
 }
 
 SECTION_INHERITED_COURSES: dict[str, list[str]] = {
@@ -159,8 +162,14 @@ SECTION_INHERITED_COURSES: dict[str, list[str]] = {
         "4.1.1.2 求在P点处的切线", "4.1.1.3 求过P点的切线",
         "4.1.4.1 不含参数的函数的单调性", "4.1.4.8 极值与极值点（基础）",
         "4.1.4.9 最值讨论与值域之具体函数", "4.2.2.2 常用函数放缩",
-        "4.2.6.1 求和型放缩（上）", "4.2.6.1 求和型放缩（下）",
     ],
+}
+
+SECTION_NON_CARRY_FORWARD_COURSES: dict[str, set[str]] = {
+    "5.6": {
+        "4.2.6.1 求和型放缩（上）",
+        "4.2.6.1 求和型放缩（下）",
+    },
 }
 
 SECTION_COURSE_ADDITIONS: dict[str, list[str]] = {
@@ -182,6 +191,109 @@ def load_json(path: Path) -> Any:
 
 def save_json(path: Path, payload: Any) -> None:
     path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
+SEMANTIC_SECTION_FIELDS = (
+    "type_labels",
+    "item_type_review_status",
+    "blocked_item_type_reviews",
+    "semantic_type_taxonomy_extensions",
+)
+SEMANTIC_CYCLE_FIELDS = (
+    "type_refs",
+    "item_type_assignments",
+    "type_mapping_status",
+    "blocked_item_type_assignments",
+)
+
+
+def snapshot_semantic_review(section: dict[str, Any]) -> dict[str, Any]:
+    """Keep applied multi-agent reviews stable across structural regeneration."""
+    return {
+        "section": {
+            key: deepcopy(section[key])
+            for key in SEMANTIC_SECTION_FIELDS
+            if key in section
+        },
+        "cycles": {
+            str(cycle.get("id")): {
+                key: deepcopy(cycle[key])
+                for key in SEMANTIC_CYCLE_FIELDS
+                if key in cycle
+            }
+            for cycle in section.get("learning_cycles", [])
+            if cycle.get("id")
+        },
+        "assignment_count": sum(
+            len(cycle.get("item_type_assignments", []))
+            for cycle in section.get("learning_cycles", [])
+        ),
+    }
+
+
+def restore_semantic_review(section: dict[str, Any], snapshot: dict[str, Any]) -> None:
+    """Restore reviews by stable cycle id and fail instead of silently losing them."""
+    for key, value in snapshot.get("section", {}).items():
+        section[key] = deepcopy(value)
+
+    cycles_by_id = {
+        str(cycle.get("id")): cycle
+        for cycle in section.get("learning_cycles", [])
+        if cycle.get("id")
+    }
+    missing_cycles: list[str] = []
+    for cycle_id, preserved in snapshot.get("cycles", {}).items():
+        target = cycles_by_id.get(cycle_id)
+        if target is None:
+            if preserved.get("item_type_assignments"):
+                missing_cycles.append(cycle_id)
+            continue
+        for key, value in preserved.items():
+            target[key] = deepcopy(value)
+
+    expected = int(snapshot.get("assignment_count", 0))
+    actual = sum(
+        len(cycle.get("item_type_assignments", []))
+        for cycle in section.get("learning_cycles", [])
+    )
+    if missing_cycles or actual != expected:
+        raise ValueError(
+            f"{section.get('id')} semantic review preservation failed: "
+            f"assignments {actual}/{expected}, missing cycles={missing_cycles}"
+        )
+
+
+def snapshot_course_mapping_review(section: dict[str, Any]) -> dict[str, Any] | None:
+    review = section.get("course_mapping_review")
+    if not isinstance(review, dict) or not review.get("placements"):
+        return None
+    return {
+        "course_mapping_review": deepcopy(review),
+        "course_mapping_status": section.get("course_mapping_status"),
+        "learning_cycles_status": section.get("learning_cycles_status"),
+        "unplaced_course_keys": deepcopy(section.get("unplaced_course_keys", [])),
+        "coverage_gaps": deepcopy(section.get("coverage_gaps", [])),
+    }
+
+
+def restore_course_mapping_review(section: dict[str, Any], snapshot: dict[str, Any] | None) -> None:
+    if snapshot is None:
+        return
+    cycles = {str(cycle.get("id")): cycle for cycle in section.get("learning_cycles", [])}
+    for placement in snapshot["course_mapping_review"].get("placements", []):
+        cycle_id = str(placement.get("cycle_id") or "")
+        field = str(placement.get("field") or "")
+        course_key = str(placement.get("course_key") or "")
+        if cycle_id not in cycles or field not in {"course_keys", "prerequisite_course_keys", "optional_course_keys"} or not course_key:
+            raise ValueError(f"{section.get('id')} stale reviewed course placement: {placement}")
+        values = [str(value) for value in cycles[cycle_id].get(field, [])]
+        if course_key not in values:
+            values.append(course_key)
+        cycles[cycle_id][field] = values
+    for key, value in snapshot.items():
+        if key != "course_mapping_review":
+            section[key] = deepcopy(value)
+    section["course_mapping_review"] = deepcopy(snapshot["course_mapping_review"])
 
 
 def question_keys(groups: dict[str, list[int]]) -> list[str]:
@@ -341,6 +453,7 @@ def build_cycles(section: dict[str, Any], example_numbers: list[int], groups: di
 
     cycles: list[dict[str, Any]] = []
     learned_courses: list[str] = list(SECTION_INHERITED_COURSES.get(str(section.get("id")), []))
+    non_carry_forward = SECTION_NON_CARRY_FORWARD_COURSES.get(str(section.get("id")), set())
     for block in blocks:
         new_courses = list(block.get("course_keys") or [])
         cycle = {
@@ -356,7 +469,10 @@ def build_cycles(section: dict[str, Any], example_numbers: list[int], groups: di
             "method_checkpoints": [],
         }
         cycles.append(cycle)
-        learned_courses.extend(key for key in new_courses if key not in learned_courses)
+        learned_courses.extend(
+            key for key in new_courses
+            if key not in learned_courses and key not in non_carry_forward
+        )
 
     for group in ("A", "B", "C"):
         if group not in groups:
@@ -388,6 +504,8 @@ def apply_section(
     structure: dict[str, Any],
     recovery_keys: set[tuple[str, str, int]],
 ) -> None:
+    semantic_review = snapshot_semantic_review(section)
+    course_mapping_review = snapshot_course_mapping_review(section)
     section_id = str(section["id"])
     groups = GROUP_OVERRIDES.get(section_id, structure.get("question_groups") or {})
     examples = [int(row["number"]) for row in structure.get("examples") or []]
@@ -440,20 +558,27 @@ def apply_section(
     section["required_course_keys"] = required_keys
     section["support_course_keys"] = support_keys
     section["learning_cycles"] = build_cycles(section, examples, groups)
+    restore_semantic_review(section, semantic_review)
+    restore_course_mapping_review(section, course_mapping_review)
     section["learning_cycles_status"] = section.get("course_mapping_status", "SOURCE_ORDER_BASELINE_CURRENT")
     section["coverage_status"] = "SOURCE_STRUCTURE_READY_SIMULATION_PENDING"
     section["coverage_gate"] = (
-        "教材页、题号、例题和直属变式已按当前 OCR 与源页恢复层闭合；"
-        "视觉题侧车、逐题零基础模拟和冷复测未通过前不得宣称掌握。"
+        "教材结构、题号、纯题干和答案隔离已通过静态题包门禁；"
+        "课程覆盖与桥接单独记录，学生掌握度仍需真实作答和24小时冷复测证据。"
     )
-    section["coverage_gaps"] = [
+    preserved_gaps = [
+        deepcopy(row)
+        for row in section.get("coverage_gaps", [])
+        if isinstance(row, dict) and row.get("kind") != "unplaced_course"
+    ]
+    section["coverage_gaps"] = [*preserved_gaps, *[
         {
             "kind": "unplaced_course",
             "course_key": key,
             "reason": "语义审计未确认与具体教材循环的直接对应；课程仍保留在节次账本中。",
         }
         for key in section.get("unplaced_course_keys", [])
-    ]
+    ]]
 
 
 def apply_chapter(chapter: int, backup_root: Path) -> dict[str, Any]:

@@ -346,3 +346,31 @@ Rules:
 - Profile versions never decrease. A version increment requires a profile-history record tied to frozen attempt evidence.
 - `status=completed` requires all required courses to be `simulated_completed`, every section to pass, and every canonical item to pass.
 - `human_learning_status` and `cold_24h_retest` are never promoted by proxy evidence.
+
+## 8. All-Book Answer-Isolated Route Audit
+
+The five-chapter audit is separate from the legacy section-owner delivery schema above. It writes a versioned run under:
+
+```text
+reports/deep_simulation_runs/<run-id>/
+  <section>.json
+  frozen/<section>.jsonl.gz
+  route_assessments/<section>.jsonl.gz
+```
+
+Only a fully validated 38-section run may update `reports/deep_section_simulations/current.json`. A failed or interrupted run remains unreferenced staging evidence and cannot replace current.
+
+Frozen attempts use schema `ybt-frozen-route-attempts-v1` and must contain `section`, `input_snapshot_sha256`, `item_key`, persona, round, course call, recognition statement, first line, continuation, self-check, blocker, correction, and `attempt_sha256`. They must set `answer_material_loaded=false` and contain no grader source or answer field.
+
+Route assessments use schema `ybt-route-assessments-v1`. Each assessment binds exactly one frozen attempt SHA and may record grader-source availability plus a route verdict. When the frozen attempt has no final mathematical answer, it must set:
+
+```json
+{
+  "mathematical_correctness": "not_evaluated_no_final_answer",
+  "mastery_observed": false
+}
+```
+
+Do not name these records `grades` or `evaluations`. The run summary uses `route_audit_status`, `route_assessments`, `claim_scope=route_actionability_only`, and `mathematical_assessment_status=not_run`.
+
+`primary-user-proxy` current state is derived from immutable run files under `reports/learner_simulation/runs/`. A transcript hash and non-empty `full_text` produce `transcript_loaded_for_proxy`, not course completion. Until the proxy consumes courses and submits independently graded final answers, keep all required courses unfinished and set `simulated_learning_status=not_run_no_final_learner_answers`.

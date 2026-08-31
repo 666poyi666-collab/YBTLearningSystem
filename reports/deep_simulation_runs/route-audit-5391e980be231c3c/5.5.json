@@ -1,0 +1,2430 @@
+{
+  "schema_version": "ybt-deep-section-simulation-v3",
+  "generated_at": "2026-08-31T04:06:33.042982+00:00",
+  "chapter": 5,
+  "section": "5.5",
+  "label": "第5节 微专题3：导数综合大题",
+  "simulation_kind": "answer_isolated_synthetic_route_stress",
+  "honesty_boundary": "Attempts test route actionability. They contain no final learner answer, so mathematical correctness and mastery are not claimed.",
+  "source_binding": {
+    "manifest_sha256": "db9d20c619d78b202750a5416105a3f8510f5b074d81eabb8a248314b585f5c6",
+    "student_learning_items_sha256": "91837a709f1174da0e4bb1e051fa1b3f3e1a2987d957d19f1ec25cc2164cb262",
+    "student_packet_sha256": "cefeee8cd2a35078fc3afca642e9ee3d0d5f38af862e04cab02b54dbf0b611e9",
+    "grader_learning_packet_sha256": "8a6fd151da209977b684e15acfe9ad93884ab4af8fe581c9536b8fe48e461e98",
+    "route_sha256": "974baa33c028b4ef13e063465f0c8085857483b9c7a3cb76ff91bd59d459211b",
+    "learner_input_snapshot_sha256": "14bbffb19669c9f83a217df1be2742c12bb55d31a2da291954121d1328e469a4"
+  },
+  "answer_isolation": {
+    "frozen_attempts_path": "reports/deep_simulation_runs/route-audit-5391e980be231c3c/frozen/5.5.jsonl.gz",
+    "frozen_attempts_sha256": "40413ca610547f0279eb7c2223469075876a0f75b873b9109ea447133c548867",
+    "route_assessments_path": "reports/deep_simulation_runs/route-audit-5391e980be231c3c/route_assessments/5.5.jsonl.gz",
+    "route_assessments_sha256": "06ceb3d096b40cde1c68f01d6af846f4a3e409d0731d61200d386b7f38e08133",
+    "learner_answer_material_loaded": false,
+    "grader_material_loaded_after_freeze": true,
+    "grader_evidence": {
+      "parsed_automatic": 12,
+      "review_required_text": 0,
+      "source_page_bound": 4,
+      "textbook_solution": 8,
+      "blocked": 0
+    },
+    "status": "passed"
+  },
+  "items": [
+    {
+      "item_key": "LI:a495336e7e92d43c",
+      "item_id": "a495336e7e92d43c",
+      "ordinal": 1,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例1",
+      "group": null,
+      "cycle_id": "5.5-cycle-1",
+      "cycle_sequence": 1,
+      "cycle_title": "类型Ⅰ 隐零点问题",
+      "course_refs": [
+        "4.2.1.1 导数可因式分解型分类讨论",
+        "4.2.1.3 洛必达法则",
+        "4.2.3.2 导数可因式分解型分类讨论（基础）",
+        "4.2.3.2 导数可因式分解型分类讨论（进阶）"
+      ],
+      "course_titles": [
+        "导数可因式分解型分类讨论",
+        "洛必达法则",
+        "导数可因式分解型分类讨论（基础）",
+        "导数可因式分解型分类讨论（进阶）"
+      ],
+      "required_course_refs": [
+        "4.2.1.1 导数可因式分解型分类讨论",
+        "4.2.1.3 洛必达法则",
+        "4.2.3.2 导数可因式分解型分类讨论（基础）",
+        "4.2.3.2 导数可因式分解型分类讨论（进阶）"
+      ],
+      "prerequisite_course_refs": [],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅰ 隐零点问题"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "单调",
+        "证明",
+        "f",
+        "x",
+        "ax"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "5db27b39cd2e973a3b343a70730893d768169164c7bc9f01e99521b5474911ee",
+      "source_question_text_sha256": "5db27b39cd2e973a3b343a70730893d768169164c7bc9f01e99521b5474911ee",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "5db27b39cd2e973a3b343a70730893d768169164c7bc9f01e99521b5474911ee",
+        "learner_question_text_sha256": "5db27b39cd2e973a3b343a70730893d768169164c7bc9f01e99521b5474911ee"
+      },
+      "question_signal_excerpt": "单调、证明、f、x、ax",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:5f4b534f05de4ddb",
+      "item_id": "5f4b534f05de4ddb",
+      "ordinal": 2,
+      "ordinal_in_cycle": 2,
+      "kind": "direct_variant",
+      "label": "例1 变式",
+      "group": null,
+      "cycle_id": "5.5-cycle-1",
+      "cycle_sequence": 1,
+      "cycle_title": "类型Ⅰ 隐零点问题",
+      "course_refs": [
+        "4.2.1.1 导数可因式分解型分类讨论",
+        "4.2.1.3 洛必达法则",
+        "4.2.3.2 导数可因式分解型分类讨论（基础）",
+        "4.2.3.2 导数可因式分解型分类讨论（进阶）"
+      ],
+      "course_titles": [
+        "导数可因式分解型分类讨论",
+        "洛必达法则",
+        "导数可因式分解型分类讨论（基础）",
+        "导数可因式分解型分类讨论（进阶）"
+      ],
+      "required_course_refs": [
+        "4.2.1.1 导数可因式分解型分类讨论",
+        "4.2.1.3 洛必达法则",
+        "4.2.3.2 导数可因式分解型分类讨论（基础）",
+        "4.2.3.2 导数可因式分解型分类讨论（进阶）"
+      ],
+      "prerequisite_course_refs": [],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅰ 隐零点问题"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "单调",
+        "证明",
+        "f",
+        "x",
+        "\\frac"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "022859b63e531a66a217477be05612867f0f8eb778b5675e8d66493927021f82",
+      "source_question_text_sha256": "022859b63e531a66a217477be05612867f0f8eb778b5675e8d66493927021f82",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "022859b63e531a66a217477be05612867f0f8eb778b5675e8d66493927021f82",
+        "learner_question_text_sha256": "022859b63e531a66a217477be05612867f0f8eb778b5675e8d66493927021f82"
+      },
+      "question_signal_excerpt": "单调、证明、f、x、\\frac",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:45b78f40783d06f4",
+      "item_id": "45b78f40783d06f4",
+      "ordinal": 3,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例2",
+      "group": null,
+      "cycle_id": "5.5-cycle-2",
+      "cycle_sequence": 2,
+      "cycle_title": "类型Ⅱ 含参不等式问题",
+      "course_refs": [
+        "4.2.1.2 参变分离法",
+        "4.2.2.1 主元法（基础）",
+        "4.2.2.1 主元法（进阶）",
+        "4.2.2.2 常用函数放缩",
+        "4.2.1.4 双逻辑连接词的函数问题之单函数单调性构造",
+        "4.2.1.5 双逻辑连接词的函数问题之双函数最值构造",
+        "4.2.3.1 参变分离法（基础）",
+        "4.2.3.1 参变分离法（提高）",
+        "4.2.3.1 参变分离法（进阶）"
+      ],
+      "course_titles": [
+        "参变分离法",
+        "主元法（基础）",
+        "主元法（进阶）",
+        "常用函数放缩",
+        "双逻辑连接词的函数问题之单函数单调性构造",
+        "双逻辑连接词的函数问题之双函数最值构造",
+        "参变分离法（基础）",
+        "参变分离法（提高）",
+        "参变分离法（进阶）"
+      ],
+      "required_course_refs": [
+        "4.2.1.2 参变分离法",
+        "4.2.2.1 主元法（基础）",
+        "4.2.2.1 主元法（进阶）",
+        "4.2.2.2 常用函数放缩",
+        "4.2.1.4 双逻辑连接词的函数问题之单函数单调性构造",
+        "4.2.1.5 双逻辑连接词的函数问题之双函数最值构造",
+        "4.2.3.1 参变分离法（基础）",
+        "4.2.3.1 参变分离法（提高）",
+        "4.2.3.1 参变分离法（进阶）"
+      ],
+      "prerequisite_course_refs": [],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 含参不等式问题"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "恒成立",
+        "不等式",
+        "范围",
+        "ae",
+        "x",
+        "\\ln"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "145faa431912217e54ed77de9293e3422511a2e5a56d6e900cdb756c87877ccc",
+      "source_question_text_sha256": "145faa431912217e54ed77de9293e3422511a2e5a56d6e900cdb756c87877ccc",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "145faa431912217e54ed77de9293e3422511a2e5a56d6e900cdb756c87877ccc",
+        "learner_question_text_sha256": "145faa431912217e54ed77de9293e3422511a2e5a56d6e900cdb756c87877ccc"
+      },
+      "question_signal_excerpt": "恒成立、不等式、范围、ae、x、\\ln",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:3c02db88d198a599",
+      "item_id": "3c02db88d198a599",
+      "ordinal": 4,
+      "ordinal_in_cycle": 2,
+      "kind": "worked_example",
+      "label": "例3",
+      "group": null,
+      "cycle_id": "5.5-cycle-2",
+      "cycle_sequence": 2,
+      "cycle_title": "类型Ⅱ 含参不等式问题",
+      "course_refs": [
+        "4.2.1.2 参变分离法",
+        "4.2.2.1 主元法（基础）",
+        "4.2.2.1 主元法（进阶）",
+        "4.2.2.2 常用函数放缩",
+        "4.2.1.4 双逻辑连接词的函数问题之单函数单调性构造",
+        "4.2.1.5 双逻辑连接词的函数问题之双函数最值构造",
+        "4.2.3.1 参变分离法（基础）",
+        "4.2.3.1 参变分离法（提高）",
+        "4.2.3.1 参变分离法（进阶）"
+      ],
+      "course_titles": [
+        "参变分离法",
+        "主元法（基础）",
+        "主元法（进阶）",
+        "常用函数放缩",
+        "双逻辑连接词的函数问题之单函数单调性构造",
+        "双逻辑连接词的函数问题之双函数最值构造",
+        "参变分离法（基础）",
+        "参变分离法（提高）",
+        "参变分离法（进阶）"
+      ],
+      "required_course_refs": [
+        "4.2.1.2 参变分离法",
+        "4.2.2.1 主元法（基础）",
+        "4.2.2.1 主元法（进阶）",
+        "4.2.2.2 常用函数放缩",
+        "4.2.1.4 双逻辑连接词的函数问题之单函数单调性构造",
+        "4.2.1.5 双逻辑连接词的函数问题之双函数最值构造",
+        "4.2.3.1 参变分离法（基础）",
+        "4.2.3.1 参变分离法（提高）",
+        "4.2.3.1 参变分离法（进阶）"
+      ],
+      "prerequisite_course_refs": [],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 含参不等式问题"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "恒成立",
+        "证明",
+        "范围",
+        "f",
+        "x",
+        "a",
+        "\\ln"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "9bf06793d8c18b5b40ee60743aaaa46428b850482788989f0af5f0366ef597cc",
+      "source_question_text_sha256": "9bf06793d8c18b5b40ee60743aaaa46428b850482788989f0af5f0366ef597cc",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "9bf06793d8c18b5b40ee60743aaaa46428b850482788989f0af5f0366ef597cc",
+        "learner_question_text_sha256": "9bf06793d8c18b5b40ee60743aaaa46428b850482788989f0af5f0366ef597cc"
+      },
+      "question_signal_excerpt": "恒成立、证明、范围、f、x、a、\\ln",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:34302ee327896c6f",
+      "item_id": "34302ee327896c6f",
+      "ordinal": 5,
+      "ordinal_in_cycle": 3,
+      "kind": "worked_example",
+      "label": "例4",
+      "group": null,
+      "cycle_id": "5.5-cycle-2",
+      "cycle_sequence": 2,
+      "cycle_title": "类型Ⅱ 含参不等式问题",
+      "course_refs": [
+        "4.2.1.2 参变分离法",
+        "4.2.2.1 主元法（基础）",
+        "4.2.2.1 主元法（进阶）",
+        "4.2.2.2 常用函数放缩",
+        "4.2.1.4 双逻辑连接词的函数问题之单函数单调性构造",
+        "4.2.1.5 双逻辑连接词的函数问题之双函数最值构造",
+        "4.2.3.1 参变分离法（基础）",
+        "4.2.3.1 参变分离法（提高）",
+        "4.2.3.1 参变分离法（进阶）"
+      ],
+      "course_titles": [
+        "参变分离法",
+        "主元法（基础）",
+        "主元法（进阶）",
+        "常用函数放缩",
+        "双逻辑连接词的函数问题之单函数单调性构造",
+        "双逻辑连接词的函数问题之双函数最值构造",
+        "参变分离法（基础）",
+        "参变分离法（提高）",
+        "参变分离法（进阶）"
+      ],
+      "required_course_refs": [
+        "4.2.1.2 参变分离法",
+        "4.2.2.1 主元法（基础）",
+        "4.2.2.1 主元法（进阶）",
+        "4.2.2.2 常用函数放缩",
+        "4.2.1.4 双逻辑连接词的函数问题之单函数单调性构造",
+        "4.2.1.5 双逻辑连接词的函数问题之双函数最值构造",
+        "4.2.3.1 参变分离法（基础）",
+        "4.2.3.1 参变分离法（提高）",
+        "4.2.3.1 参变分离法（进阶）"
+      ],
+      "prerequisite_course_refs": [],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 含参不等式问题"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "零点",
+        "范围",
+        "f",
+        "x",
+        "a",
+        "\\mathrm"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "08dea80b761d79fa6604d65389d36a7637a1af733b027815d935ae684542aead",
+      "source_question_text_sha256": "08dea80b761d79fa6604d65389d36a7637a1af733b027815d935ae684542aead",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "08dea80b761d79fa6604d65389d36a7637a1af733b027815d935ae684542aead",
+        "learner_question_text_sha256": "08dea80b761d79fa6604d65389d36a7637a1af733b027815d935ae684542aead"
+      },
+      "question_signal_excerpt": "零点、范围、f、x、a、\\mathrm",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:ec710ec92a5830d6",
+      "item_id": "ec710ec92a5830d6",
+      "ordinal": 6,
+      "ordinal_in_cycle": 4,
+      "kind": "direct_variant",
+      "label": "例2 变式",
+      "group": null,
+      "cycle_id": "5.5-cycle-2",
+      "cycle_sequence": 2,
+      "cycle_title": "类型Ⅱ 含参不等式问题",
+      "course_refs": [
+        "4.2.1.2 参变分离法",
+        "4.2.2.1 主元法（基础）",
+        "4.2.2.1 主元法（进阶）",
+        "4.2.2.2 常用函数放缩",
+        "4.2.1.4 双逻辑连接词的函数问题之单函数单调性构造",
+        "4.2.1.5 双逻辑连接词的函数问题之双函数最值构造",
+        "4.2.3.1 参变分离法（基础）",
+        "4.2.3.1 参变分离法（提高）",
+        "4.2.3.1 参变分离法（进阶）"
+      ],
+      "course_titles": [
+        "参变分离法",
+        "主元法（基础）",
+        "主元法（进阶）",
+        "常用函数放缩",
+        "双逻辑连接词的函数问题之单函数单调性构造",
+        "双逻辑连接词的函数问题之双函数最值构造",
+        "参变分离法（基础）",
+        "参变分离法（提高）",
+        "参变分离法（进阶）"
+      ],
+      "required_course_refs": [
+        "4.2.1.2 参变分离法",
+        "4.2.2.1 主元法（基础）",
+        "4.2.2.1 主元法（进阶）",
+        "4.2.2.2 常用函数放缩",
+        "4.2.1.4 双逻辑连接词的函数问题之单函数单调性构造",
+        "4.2.1.5 双逻辑连接词的函数问题之双函数最值构造",
+        "4.2.3.1 参变分离法（基础）",
+        "4.2.3.1 参变分离法（提高）",
+        "4.2.3.1 参变分离法（进阶）"
+      ],
+      "prerequisite_course_refs": [],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 含参不等式问题"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "单调",
+        "范围",
+        "f",
+        "x",
+        "\\frac"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "de1469b73e0c76468a88af1ce5e67af2f6d7a867e9f1a0a5d048adef2adb15e0",
+      "source_question_text_sha256": "de1469b73e0c76468a88af1ce5e67af2f6d7a867e9f1a0a5d048adef2adb15e0",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "de1469b73e0c76468a88af1ce5e67af2f6d7a867e9f1a0a5d048adef2adb15e0",
+        "learner_question_text_sha256": "de1469b73e0c76468a88af1ce5e67af2f6d7a867e9f1a0a5d048adef2adb15e0"
+      },
+      "question_signal_excerpt": "单调、范围、f、x、\\frac",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:bffa3057d2322a12",
+      "item_id": "bffa3057d2322a12",
+      "ordinal": 7,
+      "ordinal_in_cycle": 5,
+      "kind": "direct_variant",
+      "label": "例3 变式",
+      "group": null,
+      "cycle_id": "5.5-cycle-2",
+      "cycle_sequence": 2,
+      "cycle_title": "类型Ⅱ 含参不等式问题",
+      "course_refs": [
+        "4.2.1.2 参变分离法",
+        "4.2.2.1 主元法（基础）",
+        "4.2.2.1 主元法（进阶）",
+        "4.2.2.2 常用函数放缩",
+        "4.2.1.4 双逻辑连接词的函数问题之单函数单调性构造",
+        "4.2.1.5 双逻辑连接词的函数问题之双函数最值构造",
+        "4.2.3.1 参变分离法（基础）",
+        "4.2.3.1 参变分离法（提高）",
+        "4.2.3.1 参变分离法（进阶）"
+      ],
+      "course_titles": [
+        "参变分离法",
+        "主元法（基础）",
+        "主元法（进阶）",
+        "常用函数放缩",
+        "双逻辑连接词的函数问题之单函数单调性构造",
+        "双逻辑连接词的函数问题之双函数最值构造",
+        "参变分离法（基础）",
+        "参变分离法（提高）",
+        "参变分离法（进阶）"
+      ],
+      "required_course_refs": [
+        "4.2.1.2 参变分离法",
+        "4.2.2.1 主元法（基础）",
+        "4.2.2.1 主元法（进阶）",
+        "4.2.2.2 常用函数放缩",
+        "4.2.1.4 双逻辑连接词的函数问题之单函数单调性构造",
+        "4.2.1.5 双逻辑连接词的函数问题之双函数最值构造",
+        "4.2.3.1 参变分离法（基础）",
+        "4.2.3.1 参变分离法（提高）",
+        "4.2.3.1 参变分离法（进阶）"
+      ],
+      "prerequisite_course_refs": [],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 含参不等式问题"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "范围",
+        "f",
+        "x",
+        "\\mathrm",
+        "e"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "2714730803a89f3e599cd0bd41b4d9ab97ad2d8c7d0a586d58c67716b20fa673",
+      "source_question_text_sha256": "2714730803a89f3e599cd0bd41b4d9ab97ad2d8c7d0a586d58c67716b20fa673",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "2714730803a89f3e599cd0bd41b4d9ab97ad2d8c7d0a586d58c67716b20fa673",
+        "learner_question_text_sha256": "2714730803a89f3e599cd0bd41b4d9ab97ad2d8c7d0a586d58c67716b20fa673"
+      },
+      "question_signal_excerpt": "范围、f、x、\\mathrm、e",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:b385761294276e29",
+      "item_id": "b385761294276e29",
+      "ordinal": 8,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例5",
+      "group": null,
+      "cycle_id": "5.5-cycle-3",
+      "cycle_sequence": 3,
+      "cycle_title": "类型Ⅲ 多变量问题",
+      "course_refs": [
+        "4.2.2.3 分离函数法",
+        "4.2.4.2 双变量的换元构造",
+        "4.2.1.2 参变分离法",
+        "4.2.2.1 主元法（基础）",
+        "4.2.2.1 主元法（进阶）",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "course_titles": [
+        "分离函数法",
+        "双变量的换元构造",
+        "参变分离法",
+        "主元法（基础）",
+        "主元法（进阶）",
+        "常用函数放缩"
+      ],
+      "required_course_refs": [
+        "4.2.2.3 分离函数法",
+        "4.2.4.2 双变量的换元构造"
+      ],
+      "prerequisite_course_refs": [
+        "4.2.1.2 参变分离法",
+        "4.2.2.1 主元法（基础）",
+        "4.2.2.1 主元法（进阶）",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 多变量问题"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "单调",
+        "极值",
+        "证明",
+        "f",
+        "x",
+        "\\frac"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "a5559ba609b34ff808f57dc20e769d9b60bc3c5d88b5ebdbbd3449a9e440d23b",
+      "source_question_text_sha256": "a5559ba609b34ff808f57dc20e769d9b60bc3c5d88b5ebdbbd3449a9e440d23b",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "a5559ba609b34ff808f57dc20e769d9b60bc3c5d88b5ebdbbd3449a9e440d23b",
+        "learner_question_text_sha256": "a5559ba609b34ff808f57dc20e769d9b60bc3c5d88b5ebdbbd3449a9e440d23b"
+      },
+      "question_signal_excerpt": "单调、极值、证明、f、x、\\frac",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:cfbc7b5589da5980",
+      "item_id": "cfbc7b5589da5980",
+      "ordinal": 9,
+      "ordinal_in_cycle": 2,
+      "kind": "worked_example",
+      "label": "例6",
+      "group": null,
+      "cycle_id": "5.5-cycle-3",
+      "cycle_sequence": 3,
+      "cycle_title": "类型Ⅲ 多变量问题",
+      "course_refs": [
+        "4.2.2.3 分离函数法",
+        "4.2.4.2 双变量的换元构造",
+        "4.2.1.2 参变分离法",
+        "4.2.2.1 主元法（基础）",
+        "4.2.2.1 主元法（进阶）",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "course_titles": [
+        "分离函数法",
+        "双变量的换元构造",
+        "参变分离法",
+        "主元法（基础）",
+        "主元法（进阶）",
+        "常用函数放缩"
+      ],
+      "required_course_refs": [
+        "4.2.2.3 分离函数法",
+        "4.2.4.2 双变量的换元构造"
+      ],
+      "prerequisite_course_refs": [
+        "4.2.1.2 参变分离法",
+        "4.2.2.1 主元法（基础）",
+        "4.2.2.1 主元法（进阶）",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 多变量问题"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "单调",
+        "零点",
+        "f",
+        "x",
+        "a",
+        "\\frac"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "c4870dfb9d59a5dc731bff56e80bf8d23f164c651ebaba629f0d489910d9f5c1",
+      "source_question_text_sha256": "c4870dfb9d59a5dc731bff56e80bf8d23f164c651ebaba629f0d489910d9f5c1",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "c4870dfb9d59a5dc731bff56e80bf8d23f164c651ebaba629f0d489910d9f5c1",
+        "learner_question_text_sha256": "c4870dfb9d59a5dc731bff56e80bf8d23f164c651ebaba629f0d489910d9f5c1"
+      },
+      "question_signal_excerpt": "单调、零点、f、x、a、\\frac",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:440e17b1ebe1ce76",
+      "item_id": "440e17b1ebe1ce76",
+      "ordinal": 10,
+      "ordinal_in_cycle": 3,
+      "kind": "worked_example",
+      "label": "例7",
+      "group": null,
+      "cycle_id": "5.5-cycle-3",
+      "cycle_sequence": 3,
+      "cycle_title": "类型Ⅲ 多变量问题",
+      "course_refs": [
+        "4.2.2.3 分离函数法",
+        "4.2.4.2 双变量的换元构造",
+        "4.2.1.2 参变分离法",
+        "4.2.2.1 主元法（基础）",
+        "4.2.2.1 主元法（进阶）",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "course_titles": [
+        "分离函数法",
+        "双变量的换元构造",
+        "参变分离法",
+        "主元法（基础）",
+        "主元法（进阶）",
+        "常用函数放缩"
+      ],
+      "required_course_refs": [
+        "4.2.2.3 分离函数法",
+        "4.2.4.2 双变量的换元构造"
+      ],
+      "prerequisite_course_refs": [
+        "4.2.1.2 参变分离法",
+        "4.2.2.1 主元法（基础）",
+        "4.2.2.1 主元法（进阶）",
+        "4.2.2.2 常用函数放缩"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 多变量问题"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "极值",
+        "范围",
+        "f",
+        "x",
+        "x_1"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "be9e0db50aec162441b2c1611026b8fa45ae2f46bb1057c9a19f58a2842b7f74",
+      "source_question_text_sha256": "be9e0db50aec162441b2c1611026b8fa45ae2f46bb1057c9a19f58a2842b7f74",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "be9e0db50aec162441b2c1611026b8fa45ae2f46bb1057c9a19f58a2842b7f74",
+        "learner_question_text_sha256": "be9e0db50aec162441b2c1611026b8fa45ae2f46bb1057c9a19f58a2842b7f74"
+      },
+      "question_signal_excerpt": "极值、范围、f、x、x_1",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:3f441f4c1ab5304e",
+      "item_id": "3f441f4c1ab5304e",
+      "ordinal": 11,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例8",
+      "group": null,
+      "cycle_id": "5.5-cycle-4",
+      "cycle_sequence": 4,
+      "cycle_title": "类型IV 零点问题",
+      "course_refs": [
+        "4.2.4.1 极值点偏移模型（上）",
+        "4.2.4.1 极值点偏移模型（下）",
+        "4.2.5.1 单极值点问题",
+        "4.2.5.2 双极值点问题（上）",
+        "4.2.5.2 双极值点问题（下）",
+        "4.2.1.2 参变分离法",
+        "4.2.2.1 主元法（基础）",
+        "4.2.2.1 主元法（进阶）",
+        "4.2.2.2 常用函数放缩",
+        "4.2.2.3 分离函数法",
+        "4.2.4.2 双变量的换元构造"
+      ],
+      "course_titles": [
+        "极值点偏移模型（上）",
+        "极值点偏移模型（下）",
+        "单极值点问题",
+        "双极值点问题（上）",
+        "双极值点问题（下）",
+        "参变分离法",
+        "主元法（基础）",
+        "主元法（进阶）",
+        "常用函数放缩",
+        "分离函数法",
+        "双变量的换元构造"
+      ],
+      "required_course_refs": [
+        "4.2.4.1 极值点偏移模型（上）",
+        "4.2.4.1 极值点偏移模型（下）",
+        "4.2.5.1 单极值点问题",
+        "4.2.5.2 双极值点问题（上）",
+        "4.2.5.2 双极值点问题（下）"
+      ],
+      "prerequisite_course_refs": [
+        "4.2.1.2 参变分离法",
+        "4.2.2.1 主元法（基础）",
+        "4.2.2.1 主元法（进阶）",
+        "4.2.2.2 常用函数放缩",
+        "4.2.2.3 分离函数法",
+        "4.2.4.2 双变量的换元构造"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型IV 零点问题"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "单调",
+        "零点",
+        "f",
+        "x",
+        "a"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "8bb30263c906f17319b0a4da1c0ead1be8a296bbb8b1a65734d2f49e1fffd763",
+      "source_question_text_sha256": "8bb30263c906f17319b0a4da1c0ead1be8a296bbb8b1a65734d2f49e1fffd763",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "8bb30263c906f17319b0a4da1c0ead1be8a296bbb8b1a65734d2f49e1fffd763",
+        "learner_question_text_sha256": "8bb30263c906f17319b0a4da1c0ead1be8a296bbb8b1a65734d2f49e1fffd763"
+      },
+      "question_signal_excerpt": "单调、零点、f、x、a",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:423085847c88f0da",
+      "item_id": "423085847c88f0da",
+      "ordinal": 12,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例9",
+      "group": null,
+      "cycle_id": "5.5-cycle-5",
+      "cycle_sequence": 5,
+      "cycle_title": "类型V 求和不等式证明问题",
+      "course_refs": [
+        "4.2.1.2 参变分离法",
+        "4.2.2.1 主元法（基础）",
+        "4.2.2.1 主元法（进阶）",
+        "4.2.2.2 常用函数放缩",
+        "4.2.2.3 分离函数法",
+        "4.2.4.2 双变量的换元构造",
+        "4.2.4.1 极值点偏移模型（上）",
+        "4.2.4.1 极值点偏移模型（下）",
+        "4.2.5.1 单极值点问题",
+        "4.2.5.2 双极值点问题（上）",
+        "4.2.5.2 双极值点问题（下）"
+      ],
+      "course_titles": [
+        "参变分离法",
+        "主元法（基础）",
+        "主元法（进阶）",
+        "常用函数放缩",
+        "分离函数法",
+        "双变量的换元构造",
+        "极值点偏移模型（上）",
+        "极值点偏移模型（下）",
+        "单极值点问题",
+        "双极值点问题（上）",
+        "双极值点问题（下）"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.2.1.2 参变分离法",
+        "4.2.2.1 主元法（基础）",
+        "4.2.2.1 主元法（进阶）",
+        "4.2.2.2 常用函数放缩",
+        "4.2.2.3 分离函数法",
+        "4.2.4.2 双变量的换元构造",
+        "4.2.4.1 极值点偏移模型（上）",
+        "4.2.4.1 极值点偏移模型（下）",
+        "4.2.5.1 单极值点问题",
+        "4.2.5.2 双极值点问题（上）",
+        "4.2.5.2 双极值点问题（下）"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型V 求和不等式证明问题"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "证明",
+        "范围",
+        "f",
+        "x",
+        "\\ln"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "86163d5d90d54dd6ffd45f219ece92bd7f500d7b31c0c77ccabb0cf09c4af153",
+      "source_question_text_sha256": "86163d5d90d54dd6ffd45f219ece92bd7f500d7b31c0c77ccabb0cf09c4af153",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "86163d5d90d54dd6ffd45f219ece92bd7f500d7b31c0c77ccabb0cf09c4af153",
+        "learner_question_text_sha256": "86163d5d90d54dd6ffd45f219ece92bd7f500d7b31c0c77ccabb0cf09c4af153"
+      },
+      "question_signal_excerpt": "证明、范围、f、x、\\ln",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-9405f15a368aa19e",
+      "item_id": "Q-9405f15a368aa19e",
+      "ordinal": 13,
+      "ordinal_in_cycle": 1,
+      "kind": "abc_exercise",
+      "label": "B1",
+      "group": "B",
+      "cycle_id": "5.5-cycle-6",
+      "cycle_sequence": 6,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.2.1.2 参变分离法",
+        "4.2.2.1 主元法（基础）",
+        "4.2.2.1 主元法（进阶）",
+        "4.2.2.2 常用函数放缩",
+        "4.2.2.3 分离函数法",
+        "4.2.4.2 双变量的换元构造",
+        "4.2.4.1 极值点偏移模型（上）",
+        "4.2.4.1 极值点偏移模型（下）",
+        "4.2.5.1 单极值点问题",
+        "4.2.5.2 双极值点问题（上）",
+        "4.2.5.2 双极值点问题（下）"
+      ],
+      "course_titles": [
+        "参变分离法",
+        "主元法（基础）",
+        "主元法（进阶）",
+        "常用函数放缩",
+        "分离函数法",
+        "双变量的换元构造",
+        "极值点偏移模型（上）",
+        "极值点偏移模型（下）",
+        "单极值点问题",
+        "双极值点问题（上）",
+        "双极值点问题（下）"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.2.1.2 参变分离法",
+        "4.2.2.1 主元法（基础）",
+        "4.2.2.1 主元法（进阶）",
+        "4.2.2.2 常用函数放缩",
+        "4.2.2.3 分离函数法",
+        "4.2.4.2 双变量的换元构造",
+        "4.2.4.1 极值点偏移模型（上）",
+        "4.2.4.1 极值点偏移模型（下）",
+        "4.2.5.1 单极值点问题",
+        "4.2.5.2 双极值点问题（上）",
+        "4.2.5.2 双极值点问题（下）"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 含参不等式问题"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "单调",
+        "恒成立",
+        "范围",
+        "f",
+        "x",
+        "ax"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "a3ac04bb4115868caa604415ec63211b9f63dda5e67ca7a518004da23e323763",
+      "source_question_text_sha256": "a3ac04bb4115868caa604415ec63211b9f63dda5e67ca7a518004da23e323763",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "a3ac04bb4115868caa604415ec63211b9f63dda5e67ca7a518004da23e323763",
+        "learner_question_text_sha256": "a3ac04bb4115868caa604415ec63211b9f63dda5e67ca7a518004da23e323763"
+      },
+      "question_signal_excerpt": "单调、恒成立、范围、f、x、ax",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-9daa90dc6483fce2",
+      "item_id": "Q-9daa90dc6483fce2",
+      "ordinal": 14,
+      "ordinal_in_cycle": 2,
+      "kind": "abc_exercise",
+      "label": "B2",
+      "group": "B",
+      "cycle_id": "5.5-cycle-6",
+      "cycle_sequence": 6,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.2.1.2 参变分离法",
+        "4.2.2.1 主元法（基础）",
+        "4.2.2.1 主元法（进阶）",
+        "4.2.2.2 常用函数放缩",
+        "4.2.2.3 分离函数法",
+        "4.2.4.2 双变量的换元构造",
+        "4.2.4.1 极值点偏移模型（上）",
+        "4.2.4.1 极值点偏移模型（下）",
+        "4.2.5.1 单极值点问题",
+        "4.2.5.2 双极值点问题（上）",
+        "4.2.5.2 双极值点问题（下）"
+      ],
+      "course_titles": [
+        "参变分离法",
+        "主元法（基础）",
+        "主元法（进阶）",
+        "常用函数放缩",
+        "分离函数法",
+        "双变量的换元构造",
+        "极值点偏移模型（上）",
+        "极值点偏移模型（下）",
+        "单极值点问题",
+        "双极值点问题（上）",
+        "双极值点问题（下）"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.2.1.2 参变分离法",
+        "4.2.2.1 主元法（基础）",
+        "4.2.2.1 主元法（进阶）",
+        "4.2.2.2 常用函数放缩",
+        "4.2.2.3 分离函数法",
+        "4.2.4.2 双变量的换元构造",
+        "4.2.4.1 极值点偏移模型（上）",
+        "4.2.4.1 极值点偏移模型（下）",
+        "4.2.5.1 单极值点问题",
+        "4.2.5.2 双极值点问题（上）",
+        "4.2.5.2 双极值点问题（下）"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 含参不等式问题"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "单调",
+        "恒成立",
+        "范围",
+        "f",
+        "x",
+        "\\ln"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "55833b51002b3add6105988555020a4d3c52f8a6ac86a28ea9b39c55b719e87b",
+      "source_question_text_sha256": "55833b51002b3add6105988555020a4d3c52f8a6ac86a28ea9b39c55b719e87b",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "55833b51002b3add6105988555020a4d3c52f8a6ac86a28ea9b39c55b719e87b",
+        "learner_question_text_sha256": "55833b51002b3add6105988555020a4d3c52f8a6ac86a28ea9b39c55b719e87b"
+      },
+      "question_signal_excerpt": "单调、恒成立、范围、f、x、\\ln",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-d8150c7f29bb3359",
+      "item_id": "Q-d8150c7f29bb3359",
+      "ordinal": 15,
+      "ordinal_in_cycle": 1,
+      "kind": "abc_exercise",
+      "label": "C3",
+      "group": "C",
+      "cycle_id": "5.5-cycle-7",
+      "cycle_sequence": 7,
+      "cycle_title": "C组 拓展提升",
+      "course_refs": [
+        "4.2.1.2 参变分离法",
+        "4.2.2.1 主元法（基础）",
+        "4.2.2.1 主元法（进阶）",
+        "4.2.2.2 常用函数放缩",
+        "4.2.2.3 分离函数法",
+        "4.2.4.2 双变量的换元构造",
+        "4.2.4.1 极值点偏移模型（上）",
+        "4.2.4.1 极值点偏移模型（下）",
+        "4.2.5.1 单极值点问题",
+        "4.2.5.2 双极值点问题（上）",
+        "4.2.5.2 双极值点问题（下）"
+      ],
+      "course_titles": [
+        "参变分离法",
+        "主元法（基础）",
+        "主元法（进阶）",
+        "常用函数放缩",
+        "分离函数法",
+        "双变量的换元构造",
+        "极值点偏移模型（上）",
+        "极值点偏移模型（下）",
+        "单极值点问题",
+        "双极值点问题（上）",
+        "双极值点问题（下）"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.2.1.2 参变分离法",
+        "4.2.2.1 主元法（基础）",
+        "4.2.2.1 主元法（进阶）",
+        "4.2.2.2 常用函数放缩",
+        "4.2.2.3 分离函数法",
+        "4.2.4.2 双变量的换元构造",
+        "4.2.4.1 极值点偏移模型（上）",
+        "4.2.4.1 极值点偏移模型（下）",
+        "4.2.5.1 单极值点问题",
+        "4.2.5.2 双极值点问题（上）",
+        "4.2.5.2 双极值点问题（下）"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 含参不等式问题"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "恒成立",
+        "证明",
+        "范围",
+        "f",
+        "x",
+        "\\ln"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "8648afcb39bcd9f36ed3191f5c54f91910defceca2130825db8612986775708c",
+      "source_question_text_sha256": "8648afcb39bcd9f36ed3191f5c54f91910defceca2130825db8612986775708c",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "8648afcb39bcd9f36ed3191f5c54f91910defceca2130825db8612986775708c",
+        "learner_question_text_sha256": "8648afcb39bcd9f36ed3191f5c54f91910defceca2130825db8612986775708c"
+      },
+      "question_signal_excerpt": "恒成立、证明、范围、f、x、\\ln",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-a143df25440f3c78",
+      "item_id": "Q-a143df25440f3c78",
+      "ordinal": 16,
+      "ordinal_in_cycle": 2,
+      "kind": "abc_exercise",
+      "label": "C4",
+      "group": "C",
+      "cycle_id": "5.5-cycle-7",
+      "cycle_sequence": 7,
+      "cycle_title": "C组 拓展提升",
+      "course_refs": [
+        "4.2.1.2 参变分离法",
+        "4.2.2.1 主元法（基础）",
+        "4.2.2.1 主元法（进阶）",
+        "4.2.2.2 常用函数放缩",
+        "4.2.2.3 分离函数法",
+        "4.2.4.2 双变量的换元构造",
+        "4.2.4.1 极值点偏移模型（上）",
+        "4.2.4.1 极值点偏移模型（下）",
+        "4.2.5.1 单极值点问题",
+        "4.2.5.2 双极值点问题（上）",
+        "4.2.5.2 双极值点问题（下）"
+      ],
+      "course_titles": [
+        "参变分离法",
+        "主元法（基础）",
+        "主元法（进阶）",
+        "常用函数放缩",
+        "分离函数法",
+        "双变量的换元构造",
+        "极值点偏移模型（上）",
+        "极值点偏移模型（下）",
+        "单极值点问题",
+        "双极值点问题（上）",
+        "双极值点问题（下）"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.2.1.2 参变分离法",
+        "4.2.2.1 主元法（基础）",
+        "4.2.2.1 主元法（进阶）",
+        "4.2.2.2 常用函数放缩",
+        "4.2.2.3 分离函数法",
+        "4.2.4.2 双变量的换元构造",
+        "4.2.4.1 极值点偏移模型（上）",
+        "4.2.4.1 极值点偏移模型（下）",
+        "4.2.5.1 单极值点问题",
+        "4.2.5.2 双极值点问题（上）",
+        "4.2.5.2 双极值点问题（下）"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 含参不等式问题"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "单调",
+        "范围",
+        "f",
+        "x",
+        "\\sin"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "c5d252ed052acd6fe1183e1ad27053a1a124e142e1a08be4e18114d58b151717",
+      "source_question_text_sha256": "c5d252ed052acd6fe1183e1ad27053a1a124e142e1a08be4e18114d58b151717",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "c5d252ed052acd6fe1183e1ad27053a1a124e142e1a08be4e18114d58b151717",
+        "learner_question_text_sha256": "c5d252ed052acd6fe1183e1ad27053a1a124e142e1a08be4e18114d58b151717"
+      },
+      "question_signal_excerpt": "单调、范围、f、x、\\sin",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-997da5881e3cfbe6",
+      "item_id": "Q-997da5881e3cfbe6",
+      "ordinal": 17,
+      "ordinal_in_cycle": 3,
+      "kind": "abc_exercise",
+      "label": "C5",
+      "group": "C",
+      "cycle_id": "5.5-cycle-7",
+      "cycle_sequence": 7,
+      "cycle_title": "C组 拓展提升",
+      "course_refs": [
+        "4.2.1.2 参变分离法",
+        "4.2.2.1 主元法（基础）",
+        "4.2.2.1 主元法（进阶）",
+        "4.2.2.2 常用函数放缩",
+        "4.2.2.3 分离函数法",
+        "4.2.4.2 双变量的换元构造",
+        "4.2.4.1 极值点偏移模型（上）",
+        "4.2.4.1 极值点偏移模型（下）",
+        "4.2.5.1 单极值点问题",
+        "4.2.5.2 双极值点问题（上）",
+        "4.2.5.2 双极值点问题（下）"
+      ],
+      "course_titles": [
+        "参变分离法",
+        "主元法（基础）",
+        "主元法（进阶）",
+        "常用函数放缩",
+        "分离函数法",
+        "双变量的换元构造",
+        "极值点偏移模型（上）",
+        "极值点偏移模型（下）",
+        "单极值点问题",
+        "双极值点问题（上）",
+        "双极值点问题（下）"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.2.1.2 参变分离法",
+        "4.2.2.1 主元法（基础）",
+        "4.2.2.1 主元法（进阶）",
+        "4.2.2.2 常用函数放缩",
+        "4.2.2.3 分离函数法",
+        "4.2.4.2 双变量的换元构造",
+        "4.2.4.1 极值点偏移模型（上）",
+        "4.2.4.1 极值点偏移模型（下）",
+        "4.2.5.1 单极值点问题",
+        "4.2.5.2 双极值点问题（上）",
+        "4.2.5.2 双极值点问题（下）"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅰ 隐零点问题",
+        "类型IV 零点问题"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "证明",
+        "f",
+        "x"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "2a661aaf7e4a5e123c2e6c99048cac3f750dd24b163b0ddede594303e9148992",
+      "source_question_text_sha256": "2a661aaf7e4a5e123c2e6c99048cac3f750dd24b163b0ddede594303e9148992",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "2a661aaf7e4a5e123c2e6c99048cac3f750dd24b163b0ddede594303e9148992",
+        "learner_question_text_sha256": "2a661aaf7e4a5e123c2e6c99048cac3f750dd24b163b0ddede594303e9148992"
+      },
+      "question_signal_excerpt": "证明、f、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-81466bd897d80879",
+      "item_id": "Q-81466bd897d80879",
+      "ordinal": 18,
+      "ordinal_in_cycle": 4,
+      "kind": "abc_exercise",
+      "label": "C6",
+      "group": "C",
+      "cycle_id": "5.5-cycle-7",
+      "cycle_sequence": 7,
+      "cycle_title": "C组 拓展提升",
+      "course_refs": [
+        "4.2.1.2 参变分离法",
+        "4.2.2.1 主元法（基础）",
+        "4.2.2.1 主元法（进阶）",
+        "4.2.2.2 常用函数放缩",
+        "4.2.2.3 分离函数法",
+        "4.2.4.2 双变量的换元构造",
+        "4.2.4.1 极值点偏移模型（上）",
+        "4.2.4.1 极值点偏移模型（下）",
+        "4.2.5.1 单极值点问题",
+        "4.2.5.2 双极值点问题（上）",
+        "4.2.5.2 双极值点问题（下）"
+      ],
+      "course_titles": [
+        "参变分离法",
+        "主元法（基础）",
+        "主元法（进阶）",
+        "常用函数放缩",
+        "分离函数法",
+        "双变量的换元构造",
+        "极值点偏移模型（上）",
+        "极值点偏移模型（下）",
+        "单极值点问题",
+        "双极值点问题（上）",
+        "双极值点问题（下）"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.2.1.2 参变分离法",
+        "4.2.2.1 主元法（基础）",
+        "4.2.2.1 主元法（进阶）",
+        "4.2.2.2 常用函数放缩",
+        "4.2.2.3 分离函数法",
+        "4.2.4.2 双变量的换元构造",
+        "4.2.4.1 极值点偏移模型（上）",
+        "4.2.4.1 极值点偏移模型（下）",
+        "4.2.5.1 单极值点问题",
+        "4.2.5.2 双极值点问题（上）",
+        "4.2.5.2 双极值点问题（下）"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型IV 零点问题",
+        "类型Ⅱ 含参不等式问题"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "切线",
+        "零点",
+        "f",
+        "x",
+        "\\mathrm",
+        "e"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "e7814f9f096158278e43936c92b69b7e1f0479768ad3959b25b563f38509d7de",
+      "source_question_text_sha256": "e7814f9f096158278e43936c92b69b7e1f0479768ad3959b25b563f38509d7de",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "e7814f9f096158278e43936c92b69b7e1f0479768ad3959b25b563f38509d7de",
+        "learner_question_text_sha256": "e7814f9f096158278e43936c92b69b7e1f0479768ad3959b25b563f38509d7de"
+      },
+      "question_signal_excerpt": "切线、零点、f、x、\\mathrm、e",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-4c565882d1d26388",
+      "item_id": "Q-4c565882d1d26388",
+      "ordinal": 19,
+      "ordinal_in_cycle": 5,
+      "kind": "abc_exercise",
+      "label": "C7",
+      "group": "C",
+      "cycle_id": "5.5-cycle-7",
+      "cycle_sequence": 7,
+      "cycle_title": "C组 拓展提升",
+      "course_refs": [
+        "4.2.1.2 参变分离法",
+        "4.2.2.1 主元法（基础）",
+        "4.2.2.1 主元法（进阶）",
+        "4.2.2.2 常用函数放缩",
+        "4.2.2.3 分离函数法",
+        "4.2.4.2 双变量的换元构造",
+        "4.2.4.1 极值点偏移模型（上）",
+        "4.2.4.1 极值点偏移模型（下）",
+        "4.2.5.1 单极值点问题",
+        "4.2.5.2 双极值点问题（上）",
+        "4.2.5.2 双极值点问题（下）"
+      ],
+      "course_titles": [
+        "参变分离法",
+        "主元法（基础）",
+        "主元法（进阶）",
+        "常用函数放缩",
+        "分离函数法",
+        "双变量的换元构造",
+        "极值点偏移模型（上）",
+        "极值点偏移模型（下）",
+        "单极值点问题",
+        "双极值点问题（上）",
+        "双极值点问题（下）"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.2.1.2 参变分离法",
+        "4.2.2.1 主元法（基础）",
+        "4.2.2.1 主元法（进阶）",
+        "4.2.2.2 常用函数放缩",
+        "4.2.2.3 分离函数法",
+        "4.2.4.2 双变量的换元构造",
+        "4.2.4.1 极值点偏移模型（上）",
+        "4.2.4.1 极值点偏移模型（下）",
+        "4.2.5.1 单极值点问题",
+        "4.2.5.2 双极值点问题（上）",
+        "4.2.5.2 双极值点问题（下）"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 含参不等式问题"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "斜率",
+        "切线",
+        "恒成立",
+        "范围",
+        "f",
+        "x",
+        "\\mathrm"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "673a0343d2862836f64a409a92042a579e7c62ea56c775c2f9ab5cd8654ce91d",
+      "source_question_text_sha256": "673a0343d2862836f64a409a92042a579e7c62ea56c775c2f9ab5cd8654ce91d",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "673a0343d2862836f64a409a92042a579e7c62ea56c775c2f9ab5cd8654ce91d",
+        "learner_question_text_sha256": "673a0343d2862836f64a409a92042a579e7c62ea56c775c2f9ab5cd8654ce91d"
+      },
+      "question_signal_excerpt": "斜率、切线、恒成立、范围、f、x、\\mathrm",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-55ea180d39729f95",
+      "item_id": "Q-55ea180d39729f95",
+      "ordinal": 20,
+      "ordinal_in_cycle": 6,
+      "kind": "abc_exercise",
+      "label": "C8",
+      "group": "C",
+      "cycle_id": "5.5-cycle-7",
+      "cycle_sequence": 7,
+      "cycle_title": "C组 拓展提升",
+      "course_refs": [
+        "4.2.1.2 参变分离法",
+        "4.2.2.1 主元法（基础）",
+        "4.2.2.1 主元法（进阶）",
+        "4.2.2.2 常用函数放缩",
+        "4.2.2.3 分离函数法",
+        "4.2.4.2 双变量的换元构造",
+        "4.2.4.1 极值点偏移模型（上）",
+        "4.2.4.1 极值点偏移模型（下）",
+        "4.2.5.1 单极值点问题",
+        "4.2.5.2 双极值点问题（上）",
+        "4.2.5.2 双极值点问题（下）"
+      ],
+      "course_titles": [
+        "参变分离法",
+        "主元法（基础）",
+        "主元法（进阶）",
+        "常用函数放缩",
+        "分离函数法",
+        "双变量的换元构造",
+        "极值点偏移模型（上）",
+        "极值点偏移模型（下）",
+        "单极值点问题",
+        "双极值点问题（上）",
+        "双极值点问题（下）"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.2.1.2 参变分离法",
+        "4.2.2.1 主元法（基础）",
+        "4.2.2.1 主元法（进阶）",
+        "4.2.2.2 常用函数放缩",
+        "4.2.2.3 分离函数法",
+        "4.2.4.2 双变量的换元构造",
+        "4.2.4.1 极值点偏移模型（上）",
+        "4.2.4.1 极值点偏移模型（下）",
+        "4.2.5.1 单极值点问题",
+        "4.2.5.2 双极值点问题（上）",
+        "4.2.5.2 双极值点问题（下）"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 含参不等式问题"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "极值",
+        "范围",
+        "f",
+        "x",
+        "ax",
+        "\\ln"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "81b4c057e84a41ed89e3cb7502aec8bb2904b218499f85e15c8e48ba32af2b36",
+      "source_question_text_sha256": "81b4c057e84a41ed89e3cb7502aec8bb2904b218499f85e15c8e48ba32af2b36",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "81b4c057e84a41ed89e3cb7502aec8bb2904b218499f85e15c8e48ba32af2b36",
+        "learner_question_text_sha256": "81b4c057e84a41ed89e3cb7502aec8bb2904b218499f85e15c8e48ba32af2b36"
+      },
+      "question_signal_excerpt": "极值、范围、f、x、ax、\\ln",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-f60095ff32d56be6",
+      "item_id": "Q-f60095ff32d56be6",
+      "ordinal": 21,
+      "ordinal_in_cycle": 7,
+      "kind": "abc_exercise",
+      "label": "C9",
+      "group": "C",
+      "cycle_id": "5.5-cycle-7",
+      "cycle_sequence": 7,
+      "cycle_title": "C组 拓展提升",
+      "course_refs": [
+        "4.2.1.2 参变分离法",
+        "4.2.2.1 主元法（基础）",
+        "4.2.2.1 主元法（进阶）",
+        "4.2.2.2 常用函数放缩",
+        "4.2.2.3 分离函数法",
+        "4.2.4.2 双变量的换元构造",
+        "4.2.4.1 极值点偏移模型（上）",
+        "4.2.4.1 极值点偏移模型（下）",
+        "4.2.5.1 单极值点问题",
+        "4.2.5.2 双极值点问题（上）",
+        "4.2.5.2 双极值点问题（下）"
+      ],
+      "course_titles": [
+        "参变分离法",
+        "主元法（基础）",
+        "主元法（进阶）",
+        "常用函数放缩",
+        "分离函数法",
+        "双变量的换元构造",
+        "极值点偏移模型（上）",
+        "极值点偏移模型（下）",
+        "单极值点问题",
+        "双极值点问题（上）",
+        "双极值点问题（下）"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.2.1.2 参变分离法",
+        "4.2.2.1 主元法（基础）",
+        "4.2.2.1 主元法（进阶）",
+        "4.2.2.2 常用函数放缩",
+        "4.2.2.3 分离函数法",
+        "4.2.4.2 双变量的换元构造",
+        "4.2.4.1 极值点偏移模型（上）",
+        "4.2.4.1 极值点偏移模型（下）",
+        "4.2.5.1 单极值点问题",
+        "4.2.5.2 双极值点问题（上）",
+        "4.2.5.2 双极值点问题（下）"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 含参不等式问题",
+        "类型V 求和不等式证明问题"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "单调",
+        "恒成立",
+        "证明",
+        "范围",
+        "a",
+        "f",
+        "x"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "a8719ea889df12c9f1b422bd5fe1b460ee49bd1e8414b78d30faaa4493711376",
+      "source_question_text_sha256": "a8719ea889df12c9f1b422bd5fe1b460ee49bd1e8414b78d30faaa4493711376",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "a8719ea889df12c9f1b422bd5fe1b460ee49bd1e8414b78d30faaa4493711376",
+        "learner_question_text_sha256": "a8719ea889df12c9f1b422bd5fe1b460ee49bd1e8414b78d30faaa4493711376"
+      },
+      "question_signal_excerpt": "单调、恒成立、证明、范围、a、f、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-f86c1b48fa2c2739",
+      "item_id": "Q-f86c1b48fa2c2739",
+      "ordinal": 22,
+      "ordinal_in_cycle": 8,
+      "kind": "abc_exercise",
+      "label": "C10",
+      "group": "C",
+      "cycle_id": "5.5-cycle-7",
+      "cycle_sequence": 7,
+      "cycle_title": "C组 拓展提升",
+      "course_refs": [
+        "4.2.1.2 参变分离法",
+        "4.2.2.1 主元法（基础）",
+        "4.2.2.1 主元法（进阶）",
+        "4.2.2.2 常用函数放缩",
+        "4.2.2.3 分离函数法",
+        "4.2.4.2 双变量的换元构造",
+        "4.2.4.1 极值点偏移模型（上）",
+        "4.2.4.1 极值点偏移模型（下）",
+        "4.2.5.1 单极值点问题",
+        "4.2.5.2 双极值点问题（上）",
+        "4.2.5.2 双极值点问题（下）"
+      ],
+      "course_titles": [
+        "参变分离法",
+        "主元法（基础）",
+        "主元法（进阶）",
+        "常用函数放缩",
+        "分离函数法",
+        "双变量的换元构造",
+        "极值点偏移模型（上）",
+        "极值点偏移模型（下）",
+        "单极值点问题",
+        "双极值点问题（上）",
+        "双极值点问题（下）"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.2.1.2 参变分离法",
+        "4.2.2.1 主元法（基础）",
+        "4.2.2.1 主元法（进阶）",
+        "4.2.2.2 常用函数放缩",
+        "4.2.2.3 分离函数法",
+        "4.2.4.2 双变量的换元构造",
+        "4.2.4.1 极值点偏移模型（上）",
+        "4.2.4.1 极值点偏移模型（下）",
+        "4.2.5.1 单极值点问题",
+        "4.2.5.2 双极值点问题（上）",
+        "4.2.5.2 双极值点问题（下）"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 多变量问题",
+        "类型Ⅰ 隐零点问题"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "极值",
+        "证明",
+        "范围",
+        "f",
+        "x",
+        "ax"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "1fa1ccc7e6cfbc104efa1b05f79d7cf600f9363f8884da3ab00fe6ef69bb2a10",
+      "source_question_text_sha256": "1fa1ccc7e6cfbc104efa1b05f79d7cf600f9363f8884da3ab00fe6ef69bb2a10",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "1fa1ccc7e6cfbc104efa1b05f79d7cf600f9363f8884da3ab00fe6ef69bb2a10",
+        "learner_question_text_sha256": "1fa1ccc7e6cfbc104efa1b05f79d7cf600f9363f8884da3ab00fe6ef69bb2a10"
+      },
+      "question_signal_excerpt": "极值、证明、范围、f、x、ax",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-6338992c7f2357e6",
+      "item_id": "Q-6338992c7f2357e6",
+      "ordinal": 23,
+      "ordinal_in_cycle": 9,
+      "kind": "abc_exercise",
+      "label": "C11",
+      "group": "C",
+      "cycle_id": "5.5-cycle-7",
+      "cycle_sequence": 7,
+      "cycle_title": "C组 拓展提升",
+      "course_refs": [
+        "4.2.1.2 参变分离法",
+        "4.2.2.1 主元法（基础）",
+        "4.2.2.1 主元法（进阶）",
+        "4.2.2.2 常用函数放缩",
+        "4.2.2.3 分离函数法",
+        "4.2.4.2 双变量的换元构造",
+        "4.2.4.1 极值点偏移模型（上）",
+        "4.2.4.1 极值点偏移模型（下）",
+        "4.2.5.1 单极值点问题",
+        "4.2.5.2 双极值点问题（上）",
+        "4.2.5.2 双极值点问题（下）"
+      ],
+      "course_titles": [
+        "参变分离法",
+        "主元法（基础）",
+        "主元法（进阶）",
+        "常用函数放缩",
+        "分离函数法",
+        "双变量的换元构造",
+        "极值点偏移模型（上）",
+        "极值点偏移模型（下）",
+        "单极值点问题",
+        "双极值点问题（上）",
+        "双极值点问题（下）"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.2.1.2 参变分离法",
+        "4.2.2.1 主元法（基础）",
+        "4.2.2.1 主元法（进阶）",
+        "4.2.2.2 常用函数放缩",
+        "4.2.2.3 分离函数法",
+        "4.2.4.2 双变量的换元构造",
+        "4.2.4.1 极值点偏移模型（上）",
+        "4.2.4.1 极值点偏移模型（下）",
+        "4.2.5.1 单极值点问题",
+        "4.2.5.2 双极值点问题（上）",
+        "4.2.5.2 双极值点问题（下）"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 多变量问题"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "恒成立",
+        "不等式",
+        "证明",
+        "f",
+        "x",
+        "\\ln"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "43e139bb23c1cb4427d168792c82a41a2a1dda047b45b0f57351bcf840f8d116",
+      "source_question_text_sha256": "43e139bb23c1cb4427d168792c82a41a2a1dda047b45b0f57351bcf840f8d116",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "43e139bb23c1cb4427d168792c82a41a2a1dda047b45b0f57351bcf840f8d116",
+        "learner_question_text_sha256": "43e139bb23c1cb4427d168792c82a41a2a1dda047b45b0f57351bcf840f8d116"
+      },
+      "question_signal_excerpt": "恒成立、不等式、证明、f、x、\\ln",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-9df132347b6de732",
+      "item_id": "Q-9df132347b6de732",
+      "ordinal": 24,
+      "ordinal_in_cycle": 10,
+      "kind": "abc_exercise",
+      "label": "C12",
+      "group": "C",
+      "cycle_id": "5.5-cycle-7",
+      "cycle_sequence": 7,
+      "cycle_title": "C组 拓展提升",
+      "course_refs": [
+        "4.2.1.2 参变分离法",
+        "4.2.2.1 主元法（基础）",
+        "4.2.2.1 主元法（进阶）",
+        "4.2.2.2 常用函数放缩",
+        "4.2.2.3 分离函数法",
+        "4.2.4.2 双变量的换元构造",
+        "4.2.4.1 极值点偏移模型（上）",
+        "4.2.4.1 极值点偏移模型（下）",
+        "4.2.5.1 单极值点问题",
+        "4.2.5.2 双极值点问题（上）",
+        "4.2.5.2 双极值点问题（下）"
+      ],
+      "course_titles": [
+        "参变分离法",
+        "主元法（基础）",
+        "主元法（进阶）",
+        "常用函数放缩",
+        "分离函数法",
+        "双变量的换元构造",
+        "极值点偏移模型（上）",
+        "极值点偏移模型（下）",
+        "单极值点问题",
+        "双极值点问题（上）",
+        "双极值点问题（下）"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.2.1.2 参变分离法",
+        "4.2.2.1 主元法（基础）",
+        "4.2.2.1 主元法（进阶）",
+        "4.2.2.2 常用函数放缩",
+        "4.2.2.3 分离函数法",
+        "4.2.4.2 双变量的换元构造",
+        "4.2.4.1 极值点偏移模型（上）",
+        "4.2.4.1 极值点偏移模型（下）",
+        "4.2.5.1 单极值点问题",
+        "4.2.5.2 双极值点问题（上）",
+        "4.2.5.2 双极值点问题（下）"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 含参不等式问题",
+        "类型V 求和不等式证明问题"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "恒成立",
+        "范围",
+        "f",
+        "x",
+        "\\mathrm",
+        "e"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "55bbe363f3cc97747c29fc4c3523714a16cbc3d9251c58e618b8aeddade76c6e",
+      "source_question_text_sha256": "55bbe363f3cc97747c29fc4c3523714a16cbc3d9251c58e618b8aeddade76c6e",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "55bbe363f3cc97747c29fc4c3523714a16cbc3d9251c58e618b8aeddade76c6e",
+        "learner_question_text_sha256": "55bbe363f3cc97747c29fc4c3523714a16cbc3d9251c58e618b8aeddade76c6e"
+      },
+      "question_signal_excerpt": "恒成立、范围、f、x、\\mathrm、e",
+      "source_blocked": false
+    }
+  ],
+  "route_versions": [
+    {
+      "version": 1,
+      "route_hash": "e6edb2dc7ed3a2fc69bff33b0d83c8cf898be0bf835d6514e3e0e24caa80ddc7"
+    },
+    {
+      "version": 2,
+      "route_hash": "57bf51b2036422d8a3db41cb4778a4f64c9f809cd84f01387a50df9d5f5b2d9a"
+    },
+    {
+      "version": 3,
+      "route_hash": "ae2ef1b09b1d7cfc5240f1e18fea9857748976e6c6f3592f37b4daf8271feb48"
+    }
+  ],
+  "final_route_hash": "ae2ef1b09b1d7cfc5240f1e18fea9857748976e6c6f3592f37b4daf8271feb48",
+  "simulation": {
+    "protocol": "five-round-five-persona-v3-answer-isolated",
+    "generation_mode": "synthetic_route_stress_from_actual_item_features",
+    "rounds": [
+      {
+        "round": 1,
+        "purpose": "baseline_entry",
+        "route_version": 1,
+        "route_hash": "e6edb2dc7ed3a2fc69bff33b0d83c8cf898be0bf835d6514e3e0e24caa80ddc7",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 24,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 24,
+            "blocked": 5
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 24,
+            "blocked": 17
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 24,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 24,
+            "blocked": 12
+          }
+        ],
+        "failed_item_keys": [
+          "LI:34302ee327896c6f",
+          "LI:3c02db88d198a599",
+          "LI:423085847c88f0da",
+          "LI:440e17b1ebe1ce76",
+          "LI:45b78f40783d06f4",
+          "LI:bffa3057d2322a12",
+          "LI:ec710ec92a5830d6",
+          "Q:Q-4c565882d1d26388",
+          "Q:Q-55ea180d39729f95",
+          "Q:Q-6338992c7f2357e6",
+          "Q:Q-81466bd897d80879",
+          "Q:Q-9405f15a368aa19e",
+          "Q:Q-997da5881e3cfbe6",
+          "Q:Q-9daa90dc6483fce2",
+          "Q:Q-9df132347b6de732",
+          "Q:Q-a143df25440f3c78",
+          "Q:Q-d8150c7f29bb3359",
+          "Q:Q-f60095ff32d56be6",
+          "Q:Q-f86c1b48fa2c2739"
+        ],
+        "route_repairs": [
+          {
+            "item_keys": [
+              "Q:Q-81466bd897d80879",
+              "Q:Q-997da5881e3cfbe6",
+              "Q:Q-9df132347b6de732",
+              "Q:Q-f60095ff32d56be6",
+              "Q:Q-f86c1b48fa2c2739"
+            ],
+            "field": "recognition_cues",
+            "before": "第1轮冻结尝试记录了 recognition-weak 的首个阻断。",
+            "after": "下一轮只加入 recognition-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 5 题；不是随机题号注入。"
+          },
+          {
+            "item_keys": [
+              "LI:34302ee327896c6f",
+              "LI:3c02db88d198a599",
+              "LI:423085847c88f0da",
+              "LI:440e17b1ebe1ce76",
+              "LI:45b78f40783d06f4",
+              "LI:bffa3057d2322a12",
+              "LI:ec710ec92a5830d6",
+              "Q:Q-4c565882d1d26388",
+              "Q:Q-55ea180d39729f95",
+              "Q:Q-6338992c7f2357e6",
+              "Q:Q-9405f15a368aa19e",
+              "Q:Q-9daa90dc6483fce2",
+              "Q:Q-9df132347b6de732",
+              "Q:Q-a143df25440f3c78",
+              "Q:Q-d8150c7f29bb3359",
+              "Q:Q-f60095ff32d56be6",
+              "Q:Q-f86c1b48fa2c2739"
+            ],
+            "field": "continuation_checkpoints",
+            "before": "第1轮冻结尝试记录了 algebra-weak 的首个阻断。",
+            "after": "下一轮只加入 algebra-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 17 题；不是随机题号注入。"
+          },
+          {
+            "item_keys": [
+              "Q:Q-4c565882d1d26388",
+              "Q:Q-55ea180d39729f95",
+              "Q:Q-6338992c7f2357e6",
+              "Q:Q-81466bd897d80879",
+              "Q:Q-9405f15a368aa19e",
+              "Q:Q-997da5881e3cfbe6",
+              "Q:Q-9daa90dc6483fce2",
+              "Q:Q-9df132347b6de732",
+              "Q:Q-a143df25440f3c78",
+              "Q:Q-d8150c7f29bb3359",
+              "Q:Q-f60095ff32d56be6",
+              "Q:Q-f86c1b48fa2c2739"
+            ],
+            "field": "independent_self_check",
+            "before": "第1轮冻结尝试记录了 self-check-weak 的首个阻断。",
+            "after": "下一轮只加入 self-check-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 12 题；不是随机题号注入。"
+          }
+        ]
+      },
+      {
+        "round": 2,
+        "purpose": "prerequisite_repair",
+        "route_version": 2,
+        "route_hash": "57bf51b2036422d8a3db41cb4778a4f64c9f809cd84f01387a50df9d5f5b2d9a",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 24,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 24,
+            "blocked": 0
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 24,
+            "blocked": 0
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 24,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 24,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [],
+        "route_repairs": []
+      },
+      {
+        "round": 3,
+        "purpose": "continuation_transfer",
+        "route_version": 2,
+        "route_hash": "57bf51b2036422d8a3db41cb4778a4f64c9f809cd84f01387a50df9d5f5b2d9a",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 24,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 24,
+            "blocked": 3
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 24,
+            "blocked": 3
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 24,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 24,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [
+          "LI:5f4b534f05de4ddb",
+          "LI:bffa3057d2322a12",
+          "LI:ec710ec92a5830d6"
+        ],
+        "route_repairs": [
+          {
+            "item_keys": [
+              "LI:5f4b534f05de4ddb",
+              "LI:bffa3057d2322a12",
+              "LI:ec710ec92a5830d6"
+            ],
+            "field": "recognition_cues",
+            "before": "第3轮冻结尝试记录了 recognition-weak 的首个阻断。",
+            "after": "下一轮只加入 recognition-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 3 题；不是随机题号注入。"
+          },
+          {
+            "item_keys": [
+              "LI:5f4b534f05de4ddb",
+              "LI:bffa3057d2322a12",
+              "LI:ec710ec92a5830d6"
+            ],
+            "field": "continuation_checkpoints",
+            "before": "第3轮冻结尝试记录了 algebra-weak 的首个阻断。",
+            "after": "下一轮只加入 algebra-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 3 题；不是随机题号注入。"
+          }
+        ]
+      },
+      {
+        "round": 4,
+        "purpose": "mixed_retrieval",
+        "route_version": 3,
+        "route_hash": "ae2ef1b09b1d7cfc5240f1e18fea9857748976e6c6f3592f37b4daf8271feb48",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 24,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 24,
+            "blocked": 0
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 24,
+            "blocked": 0
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 24,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 24,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [],
+        "route_repairs": []
+      },
+      {
+        "round": 5,
+        "purpose": "fresh_context",
+        "route_version": 3,
+        "route_hash": "ae2ef1b09b1d7cfc5240f1e18fea9857748976e6c6f3592f37b4daf8271feb48",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 24,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 24,
+            "blocked": 0
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 24,
+            "blocked": 0
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 24,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 24,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [],
+        "route_repairs": []
+      }
+    ],
+    "expected_attempts_per_item": 25,
+    "actual_attempts_per_item": 25,
+    "unresolved_item_keys": [],
+    "mathematical_correctness": "not_evaluated_no_final_answer",
+    "mastery_claimed": false,
+    "status": "passed"
+  },
+  "summary": {
+    "items": 24,
+    "attempts": 600,
+    "route_assessments": 600,
+    "rounds": 5,
+    "personas_per_round": 5,
+    "repairs": 5,
+    "round_5_failed_items": 0,
+    "validator_errors": []
+  },
+  "human_learning_status": "remote_math_mcp_only",
+  "cold_24h_retest": "not_run",
+  "mastery_claimed": false,
+  "claim_scope": "route_actionability_only",
+  "mathematical_assessment_status": "not_run",
+  "route_audit_status": "passed",
+  "status": "passed"
+}

@@ -25,7 +25,7 @@
         6
       ]
     },
-    "derived_question_correction_count": 0
+    "derived_question_correction_count": 3
   },
   "status": "VERIFIED",
   "consumer_guard": "Only consume when status=VERIFIED; UNVERIFIED packets are diagnostic evidence only.",
@@ -113,18 +113,40 @@
     {
       "ocr_doc": 170,
       "source_path": "data/ocr_live_current/third_chapter_180/doc_170.md",
-      "text": "4.（2024·东北三省三校第一次联考）\n\n已知双曲线  \\(C: \\frac{x^{2}}{a^{2}} - \\frac{y^{2}}{b^{2}} = 1 (a > 0, b > 0)\\) 的右顶点为  \\(E(1,0)\\)，斜率为 1 的直线交双曲线 C 于 M, N 两点，且 MN 的中点为  \\(\\underline{Q}(1,3)\\).\n\n（1）求双曲线 C 的方程；\n\n（2）证明： \\(\\triangle MEN\\) 为直角三角形.\n\n## C 组 拓展提升\n\n5.（2025·山东模拟）\n\n设抛物线  \\(C: x^2 = 2py (p > 0)\\) 的焦点为  \\(F\\)，点  \\(A(t, 2)\\) 在抛物线  \\(C\\) 上，且  \\(|AF| = 3\\)。\n\n（1）求p的值：\n\n（2）过 F 的直线 l 与抛物线 C 交于 M, N 两点，在 y 轴上是否存在定点 P，使  \\(\\frac{|PM|}{|PN|} = \\frac{|MF|}{|NF|}\\) 恒成立？若存在，求出点 P 的坐标；若不存在，说明理由.",
+      "text": "4.（2024·东北三省三校第一次联考）\n\n已知双曲线 \\(C:\\frac{x^{2}}{a^{2}}-\\frac{y^{2}}{b^{2}}=1\\,(a>0,b>0)\\) 的右顶点为 \\(E(1,0)\\)，斜率为 1 的直线交双曲线 \\(C\\) 于 \\(M,N\\) 两点，且 \\(MN\\) 的中点为 \\(Q(1,3)\\)。\n\n（1）求双曲线 C 的方程；\n\n（2）证明： \\(\\triangle MEN\\) 为直角三角形.\n\n## C 组 拓展提升\n\n5.（2025·山东模拟）\n\n设抛物线  \\(C: x^2 = 2py (p > 0)\\) 的焦点为  \\(F\\)，点  \\(A(t, 2)\\) 在抛物线  \\(C\\) 上，且  \\(|AF| = 3\\)。\n\n（1）求p的值：\n\n（2）过 F 的直线 l 与抛物线 C 交于 M, N 两点，在 y 轴上是否存在定点 P，使  \\(\\frac{|PM|}{|PN|} = \\frac{|MF|}{|NF|}\\) 恒成立？若存在，求出点 P 的坐标；若不存在，说明理由.",
       "text_sha256": "ddf8a26d63a567f00d731d810e0feb996c9f94efcf55a58ccc8ad174cac97921",
       "image_refs": [],
-      "math_errors": []
+      "math_errors": [],
+      "derived_question_corrections": [
+        {
+          "id": "DQC-CH3S12-B4-Q-FORMAT",
+          "action": "replace_line",
+          "evidence": "SOURCE_SECTION_PDF_VISUAL_REVIEW_CONFIRMS_PLAIN_POINT_Q",
+          "reason": "paddle_ocr_emitted_visual_underline_as_latex_command"
+        }
+      ]
     },
     {
       "ocr_doc": 171,
       "source_path": "data/ocr_live_current/third_chapter_180/doc_171.md",
-      "text": "6.（2024·广东广州一模（节选））\n\n已知 O 为坐标原点，双曲线  \\(C: \\frac{x^{2}}{a^{2}} - \\frac{y^{2}}{b^{2}} = 1 (a > 0, b\\)\n\n>0) 的焦距为 4，且过点  \\((\\sqrt{2},\\sqrt{3})\\).\n\n（1）求 C 的方程：\n\n（2）若直线  \\(l\\) 与  \\(C\\) 交于  \\(A\\)， \\(B\\) 两点，且  \\(\\overrightarrow{OA} \\cdot \\overrightarrow{OB} = 0\\)，求  \\(|AB|\\) 的取值范围.",
+      "text": "6.（2024·广东广州一模（节选））\n\n已知 \\(O\\) 为坐标原点，双曲线 \\(C:\\frac{x^{2}}{a^{2}}-\\frac{y^{2}}{b^{2}}=1\\,(a>0,b>0)\\) 的焦距为 4，且过点 \\((\\sqrt{2},\\sqrt{3})\\)。\n\n\n（1）求 C 的方程：\n\n（2）若直线  \\(l\\) 与  \\(C\\) 交于  \\(A\\)， \\(B\\) 两点，且  \\(\\overrightarrow{OA} \\cdot \\overrightarrow{OB} = 0\\)，求  \\(|AB|\\) 的取值范围.",
       "text_sha256": "3be9112bfc595b81e40158616766cfe580c5e583e0f91852b7e60b7fa2b49aed",
       "image_refs": [],
-      "math_errors": []
+      "math_errors": [],
+      "derived_question_corrections": [
+        {
+          "id": "DQC-CH3S12-C6-PARAMETERS",
+          "action": "replace_line",
+          "evidence": "SOURCE_SECTION_PDF_VISUAL_REVIEW_CONFIRMS_A_AND_B_POSITIVE",
+          "reason": "paddle_ocr_split_b_greater_than_zero_across_lines"
+        },
+        {
+          "id": "DQC-CH3S12-C6-ORPHAN-PARAMETER-TAIL",
+          "action": "remove_line",
+          "evidence": "SOURCE_SECTION_PDF_VISUAL_REVIEW_CONFIRMS_SINGLE_LINE_CONDITION",
+          "reason": "merged_into_source_verified_c6_parameter_line"
+        }
+      ]
     }
   ],
   "questions": [
@@ -196,7 +218,7 @@
         "pdf_page": 171,
         "file": "data/ocr_live_current/third_chapter_180/doc_170.md"
       },
-      "question_text": "4.（2024·东北三省三校第一次联考）\n\n已知双曲线  \\(C: \\frac{x^{2}}{a^{2}} - \\frac{y^{2}}{b^{2}} = 1 (a > 0, b > 0)\\) 的右顶点为  \\(E(1,0)\\)，斜率为 1 的直线交双曲线 C 于 M, N 两点，且 MN 的中点为  \\(\\underline{Q}(1,3)\\).\n\n（1）求双曲线 C 的方程；\n\n（2）证明： \\(\\triangle MEN\\) 为直角三角形.",
+      "question_text": "4.（2024·东北三省三校第一次联考）\n\n已知双曲线 \\(C:\\frac{x^{2}}{a^{2}}-\\frac{y^{2}}{b^{2}}=1\\,(a>0,b>0)\\) 的右顶点为 \\(E(1,0)\\)，斜率为 1 的直线交双曲线 \\(C\\) 于 \\(M,N\\) 两点，且 \\(MN\\) 的中点为 \\(Q(1,3)\\)。\n\n（1）求双曲线 C 的方程；\n\n（2）证明： \\(\\triangle MEN\\) 为直角三角形.",
       "image_refs": [],
       "visual_status": "READY_TEXT_ONLY",
       "math_errors": [],
@@ -234,7 +256,7 @@
         "pdf_page": 172,
         "file": "data/ocr_live_current/third_chapter_180/doc_171.md"
       },
-      "question_text": "6.（2024·广东广州一模（节选））\n\n已知 O 为坐标原点，双曲线  \\(C: \\frac{x^{2}}{a^{2}} - \\frac{y^{2}}{b^{2}} = 1 (a > 0, b\\)\n\n>0) 的焦距为 4，且过点  \\((\\sqrt{2},\\sqrt{3})\\).\n\n（1）求 C 的方程：\n\n（2）若直线  \\(l\\) 与  \\(C\\) 交于  \\(A\\)， \\(B\\) 两点，且  \\(\\overrightarrow{OA} \\cdot \\overrightarrow{OB} = 0\\)，求  \\(|AB|\\) 的取值范围.",
+      "question_text": "6.（2024·广东广州一模（节选））\n\n已知 \\(O\\) 为坐标原点，双曲线 \\(C:\\frac{x^{2}}{a^{2}}-\\frac{y^{2}}{b^{2}}=1\\,(a>0,b>0)\\) 的焦距为 4，且过点 \\((\\sqrt{2},\\sqrt{3})\\)。\n\n\n（1）求 C 的方程：\n\n（2）若直线  \\(l\\) 与  \\(C\\) 交于  \\(A\\)， \\(B\\) 两点，且  \\(\\overrightarrow{OA} \\cdot \\overrightarrow{OB} = 0\\)，求  \\(|AB|\\) 的取值范围.",
       "image_refs": [],
       "visual_status": "READY_TEXT_ONLY",
       "math_errors": [],

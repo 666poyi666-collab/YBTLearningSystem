@@ -6,7 +6,7 @@
 
 ## 题目索引
 
-- B1 / `Q-9405f15a368aa19e` / PDF页 71 / READY_TEXT_ONLY / 1. (2025 · 陕西模拟) 已知函数 \(f(x) = x^2 - ax + \ln x\)， \(a \in \mathbb{R}\)。高中数学一本通 （1）若 \(f(x)\) 是单调函数，求 a 的最大值； （2）若 \(f(x)>0\) 在 \((1,+\infty)\) 上恒成立，求 a 的取值范围.
+- B1 / `Q-9405f15a368aa19e` / PDF页 71 / READY_TEXT_ONLY / 1. (2025 · 陕西模拟) 已知函数 \(f(x)=x^2-ax+\ln x\)，\(a\in\mathbb{R}\)。 （1）若 \(f(x)\) 是单调函数，求 a 的最大值； （2）若 \(f(x)>0\) 在 \((1,+\infty)\) 上恒成立，求 a 的取值范围.
 - B2 / `Q-9daa90dc6483fce2` / PDF页 71 / READY_TEXT_ONLY / ### 2. （2025·湖南一模） 已知函数 \(f(x) = \ln x + ax^2\)， \(g(x) = e^x - ax^2\)， \(a \in \mathbb{R}\)。 （1）讨论 \(f(x)\) 的单调性； （2）若 \(g(2x) \geq 4x^{2}\left[f(x) + \frac{1}{x} - ax^{2}\right]\
 - C3 / `Q-d8150c7f29bb3359` / PDF页 72 / READY_TEXT_ONLY / ### 3. （2025·安徽阜阳模拟） 已知函数 \(f(x) = \ln x + ax + 1\)， \(a \in \mathbb{R}\)。 （1）若 \(f(x) \leq 0\) 恒成立，求 a 的取值范围； （2）当a=1时，证明： \(f(x)<xe^{x-2}+3\)
 - C4 / `Q-a143df25440f3c78` / PDF页 72 / READY_TEXT_ONLY / ### 4. （2025 · 江西模拟） 已知函数 \(f(x) = x + \sin x - ax \cos x (a \in \mathbf{R})\). （1）若a=1，讨论 \(f(x)\)在 \(\left[-\frac{\pi}{2},\pi\right]\)上的单调性； （2）若当 \(x\in\left[0,\frac{\pi}{2}\rig

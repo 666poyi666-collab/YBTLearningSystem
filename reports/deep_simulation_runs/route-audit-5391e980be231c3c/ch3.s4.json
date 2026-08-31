@@ -1,0 +1,2810 @@
+{
+  "schema_version": "ybt-deep-section-simulation-v3",
+  "generated_at": "2026-08-31T04:06:31.334238+00:00",
+  "chapter": 3,
+  "section": "ch3.s4",
+  "label": "第4节 双曲线及其标准方程",
+  "simulation_kind": "answer_isolated_synthetic_route_stress",
+  "honesty_boundary": "Attempts test route actionability. They contain no final learner answer, so mathematical correctness and mastery are not claimed.",
+  "source_binding": {
+    "manifest_sha256": "5983a4e8eaae43e9f4c90c3e2b6b2a13e3ad4f167c8aae55ef5cbef7ef013654",
+    "student_learning_items_sha256": "4382278dbf8cde21820588be4413bad059b38e350da133cc0d581898aca25450",
+    "student_packet_sha256": "bac8d6438584dbe39386a810fe3a4b5c261fad540ba3de1a666e6dc4c91f0e71",
+    "grader_learning_packet_sha256": "1f09d7b44c49406a9a5bd5ffd05744fb4090796af63d75f0365baee77602c05d",
+    "route_sha256": "6805f02a6cb65e0ee259c358014a5ce06b1c42b482126aedb36cc06718ef9ffe",
+    "learner_input_snapshot_sha256": "65e2f1934beb26089f00a01705b48e95155f03476507e0952c35edca50323f2d"
+  },
+  "answer_isolation": {
+    "frozen_attempts_path": "reports/deep_simulation_runs/route-audit-5391e980be231c3c/frozen/ch3.s4.jsonl.gz",
+    "frozen_attempts_sha256": "5bb8cdee14d7056371df100228458c8d124215cba50b999f712af91aa79a3d2e",
+    "route_assessments_path": "reports/deep_simulation_runs/route-audit-5391e980be231c3c/route_assessments/ch3.s4.jsonl.gz",
+    "route_assessments_sha256": "fc401f898dbdfacb46c55fe7dd4feb1f192bba1ed53e36df61dfc5ad6d68c455",
+    "learner_answer_material_loaded": false,
+    "grader_material_loaded_after_freeze": true,
+    "grader_evidence": {
+      "parsed_automatic": 11,
+      "review_required_text": 5,
+      "source_page_bound": 12,
+      "textbook_solution": 11,
+      "blocked": 0
+    },
+    "status": "passed"
+  },
+  "items": [
+    {
+      "item_key": "LI:826cf8879961ebf3",
+      "item_id": "826cf8879961ebf3",
+      "ordinal": 1,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例1",
+      "group": null,
+      "cycle_id": "ch3.s4-cycle-1",
+      "cycle_sequence": 1,
+      "cycle_title": "双曲线的定义",
+      "course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "course_titles": [
+        "双曲线的第一定义及标准方程"
+      ],
+      "required_course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "prerequisite_course_refs": [],
+      "knowledge_refs": [
+        "ch3.s4-k1"
+      ],
+      "type_refs": [],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "双曲线",
+        "焦点",
+        "F_",
+        "\\frac",
+        "x"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "f3da4c9c8533422c62c0b5d2b0f713b69e95f04df61b2c70d3d481e494fbe8a8",
+      "source_question_text_sha256": "f3da4c9c8533422c62c0b5d2b0f713b69e95f04df61b2c70d3d481e494fbe8a8",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "f3da4c9c8533422c62c0b5d2b0f713b69e95f04df61b2c70d3d481e494fbe8a8",
+        "learner_question_text_sha256": "f3da4c9c8533422c62c0b5d2b0f713b69e95f04df61b2c70d3d481e494fbe8a8"
+      },
+      "question_signal_excerpt": "双曲线、焦点、F_、\\frac、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:dda080bd95bfe76b",
+      "item_id": "dda080bd95bfe76b",
+      "ordinal": 2,
+      "ordinal_in_cycle": 2,
+      "kind": "worked_example",
+      "label": "例2",
+      "group": null,
+      "cycle_id": "ch3.s4-cycle-1",
+      "cycle_sequence": 1,
+      "cycle_title": "双曲线的定义",
+      "course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "course_titles": [
+        "双曲线的第一定义及标准方程"
+      ],
+      "required_course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "prerequisite_course_refs": [],
+      "knowledge_refs": [
+        "ch3.s4-k1"
+      ],
+      "type_refs": [],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "双曲线",
+        "焦点",
+        "x",
+        "\\frac",
+        "y"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "7628c2c858a113cd0be04fefcb9af90281f7ebddc3012a0acc47ba943b9570ba",
+      "source_question_text_sha256": "7628c2c858a113cd0be04fefcb9af90281f7ebddc3012a0acc47ba943b9570ba",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "7628c2c858a113cd0be04fefcb9af90281f7ebddc3012a0acc47ba943b9570ba",
+        "learner_question_text_sha256": "7628c2c858a113cd0be04fefcb9af90281f7ebddc3012a0acc47ba943b9570ba"
+      },
+      "question_signal_excerpt": "双曲线、焦点、x、\\frac、y",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:cef6a9a3bc345ac8",
+      "item_id": "cef6a9a3bc345ac8",
+      "ordinal": 3,
+      "ordinal_in_cycle": 3,
+      "kind": "worked_example",
+      "label": "例3",
+      "group": null,
+      "cycle_id": "ch3.s4-cycle-1",
+      "cycle_sequence": 1,
+      "cycle_title": "双曲线的定义",
+      "course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "course_titles": [
+        "双曲线的第一定义及标准方程"
+      ],
+      "required_course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "prerequisite_course_refs": [],
+      "knowledge_refs": [
+        "ch3.s4-k1"
+      ],
+      "type_refs": [],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "双曲线",
+        "焦点",
+        "y",
+        "A",
+        "\\frac",
+        "x"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "0b60ffec60e6cdb7cd5b603dff3296ef33d9540ff7b7578771b258676cbc9412",
+      "source_question_text_sha256": "0b60ffec60e6cdb7cd5b603dff3296ef33d9540ff7b7578771b258676cbc9412",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "0b60ffec60e6cdb7cd5b603dff3296ef33d9540ff7b7578771b258676cbc9412",
+        "learner_question_text_sha256": "0b60ffec60e6cdb7cd5b603dff3296ef33d9540ff7b7578771b258676cbc9412"
+      },
+      "question_signal_excerpt": "双曲线、焦点、y、A、\\frac、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:8f1c53235bddacbb",
+      "item_id": "8f1c53235bddacbb",
+      "ordinal": 4,
+      "ordinal_in_cycle": 4,
+      "kind": "worked_example",
+      "label": "例4",
+      "group": null,
+      "cycle_id": "ch3.s4-cycle-1",
+      "cycle_sequence": 1,
+      "cycle_title": "双曲线的定义",
+      "course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "course_titles": [
+        "双曲线的第一定义及标准方程"
+      ],
+      "required_course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "prerequisite_course_refs": [],
+      "knowledge_refs": [
+        "ch3.s4-k1"
+      ],
+      "type_refs": [],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "双曲线",
+        "范围",
+        "\\frac",
+        "x",
+        "m"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "4100ecada0788efd07f68dff187886e87cabbe5e12982fe247863f3762fa429d",
+      "source_question_text_sha256": "4100ecada0788efd07f68dff187886e87cabbe5e12982fe247863f3762fa429d",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "4100ecada0788efd07f68dff187886e87cabbe5e12982fe247863f3762fa429d",
+        "learner_question_text_sha256": "4100ecada0788efd07f68dff187886e87cabbe5e12982fe247863f3762fa429d"
+      },
+      "question_signal_excerpt": "双曲线、范围、\\frac、x、m",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:1ab7984824e94701",
+      "item_id": "1ab7984824e94701",
+      "ordinal": 5,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例5",
+      "group": null,
+      "cycle_id": "ch3.s4-cycle-2",
+      "cycle_sequence": 2,
+      "cycle_title": "类型I 双曲线定义的简单应用",
+      "course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "course_titles": [
+        "双曲线的第一定义及标准方程"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 双曲线定义的简单应用"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "距离",
+        "双曲线",
+        "焦点",
+        "C",
+        "\\frac",
+        "x"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "a6f8204ae920b136e8d515cefdf68029b448b91e70c9ba112650dee079d5187c",
+      "source_question_text_sha256": "a6f8204ae920b136e8d515cefdf68029b448b91e70c9ba112650dee079d5187c",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "a6f8204ae920b136e8d515cefdf68029b448b91e70c9ba112650dee079d5187c",
+        "learner_question_text_sha256": "a6f8204ae920b136e8d515cefdf68029b448b91e70c9ba112650dee079d5187c"
+      },
+      "question_signal_excerpt": "距离、双曲线、焦点、C、\\frac、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:15f53c530e263b9e",
+      "item_id": "15f53c530e263b9e",
+      "ordinal": 6,
+      "ordinal_in_cycle": 2,
+      "kind": "direct_variant",
+      "label": "例5 变式1",
+      "group": null,
+      "cycle_id": "ch3.s4-cycle-2",
+      "cycle_sequence": 2,
+      "cycle_title": "类型I 双曲线定义的简单应用",
+      "course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "course_titles": [
+        "双曲线的第一定义及标准方程"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 双曲线定义的简单应用"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "双曲线",
+        "焦点",
+        "面积",
+        "\\frac",
+        "x",
+        "y"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "c2ef0cb785be2b354bdcaf934cb8e685535e00f91d6ec6069bebf99c9f93a6f0",
+      "source_question_text_sha256": "c2ef0cb785be2b354bdcaf934cb8e685535e00f91d6ec6069bebf99c9f93a6f0",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "c2ef0cb785be2b354bdcaf934cb8e685535e00f91d6ec6069bebf99c9f93a6f0",
+        "learner_question_text_sha256": "c2ef0cb785be2b354bdcaf934cb8e685535e00f91d6ec6069bebf99c9f93a6f0"
+      },
+      "question_signal_excerpt": "双曲线、焦点、面积、\\frac、x、y",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:bf32a92ecb82d526",
+      "item_id": "bf32a92ecb82d526",
+      "ordinal": 7,
+      "ordinal_in_cycle": 3,
+      "kind": "direct_variant",
+      "label": "例5 变式2",
+      "group": null,
+      "cycle_id": "ch3.s4-cycle-2",
+      "cycle_sequence": 2,
+      "cycle_title": "类型I 双曲线定义的简单应用",
+      "course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "course_titles": [
+        "双曲线的第一定义及标准方程"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 双曲线定义的简单应用"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "双曲线",
+        "焦点",
+        "C",
+        "x",
+        "\\frac",
+        "y"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "71734608b7f57892905f4f2dbdd3debbc33c6c3ed98eccb70292ba6a2b2660f9",
+      "source_question_text_sha256": "71734608b7f57892905f4f2dbdd3debbc33c6c3ed98eccb70292ba6a2b2660f9",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "71734608b7f57892905f4f2dbdd3debbc33c6c3ed98eccb70292ba6a2b2660f9",
+        "learner_question_text_sha256": "71734608b7f57892905f4f2dbdd3debbc33c6c3ed98eccb70292ba6a2b2660f9"
+      },
+      "question_signal_excerpt": "双曲线、焦点、C、x、\\frac、y",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:9e0acf4d0494c319",
+      "item_id": "9e0acf4d0494c319",
+      "ordinal": 8,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例6",
+      "group": null,
+      "cycle_id": "ch3.s4-cycle-3",
+      "cycle_sequence": 3,
+      "cycle_title": "类型Ⅱ 求双曲线的标准方程",
+      "course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "course_titles": [
+        "双曲线的第一定义及标准方程"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 求双曲线的标准方程"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "圆",
+        "椭圆",
+        "双曲线",
+        "焦点",
+        "P",
+        "\\sqrt",
+        "x"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "485c38eac8db48f575a413310d691cfabc84c3b0799441dfad4eed1806c577b6",
+      "source_question_text_sha256": "485c38eac8db48f575a413310d691cfabc84c3b0799441dfad4eed1806c577b6",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "485c38eac8db48f575a413310d691cfabc84c3b0799441dfad4eed1806c577b6",
+        "learner_question_text_sha256": "485c38eac8db48f575a413310d691cfabc84c3b0799441dfad4eed1806c577b6"
+      },
+      "question_signal_excerpt": "圆、椭圆、双曲线、焦点、P、\\sqrt、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:079d25e7078b534f",
+      "item_id": "079d25e7078b534f",
+      "ordinal": 9,
+      "ordinal_in_cycle": 2,
+      "kind": "worked_example",
+      "label": "例7",
+      "group": null,
+      "cycle_id": "ch3.s4-cycle-3",
+      "cycle_sequence": 3,
+      "cycle_title": "类型Ⅱ 求双曲线的标准方程",
+      "course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "course_titles": [
+        "双曲线的第一定义及标准方程"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 求双曲线的标准方程"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "A",
+        "B",
+        "P",
+        "PA"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "5c5f96ed8f3406835202e8d07d01760622a8b2cc13fd706399ec8ec03231e385",
+      "source_question_text_sha256": "5c5f96ed8f3406835202e8d07d01760622a8b2cc13fd706399ec8ec03231e385",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "5c5f96ed8f3406835202e8d07d01760622a8b2cc13fd706399ec8ec03231e385",
+        "learner_question_text_sha256": "5c5f96ed8f3406835202e8d07d01760622a8b2cc13fd706399ec8ec03231e385"
+      },
+      "question_signal_excerpt": "A、B、P、PA",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:2c9f3143c2f0f015",
+      "item_id": "2c9f3143c2f0f015",
+      "ordinal": 10,
+      "ordinal_in_cycle": 3,
+      "kind": "direct_variant",
+      "label": "例6 变式1",
+      "group": null,
+      "cycle_id": "ch3.s4-cycle-3",
+      "cycle_sequence": 3,
+      "cycle_title": "类型Ⅱ 求双曲线的标准方程",
+      "course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "course_titles": [
+        "双曲线的第一定义及标准方程"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 求双曲线的标准方程"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "双曲线",
+        "焦点",
+        "P",
+        "\\sqrt",
+        "Q"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "b1b4b2b50995cf91a08a724857187e2e853af1f93ba5856413f773eb0c9773cb",
+      "source_question_text_sha256": "b1b4b2b50995cf91a08a724857187e2e853af1f93ba5856413f773eb0c9773cb",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "b1b4b2b50995cf91a08a724857187e2e853af1f93ba5856413f773eb0c9773cb",
+        "learner_question_text_sha256": "b1b4b2b50995cf91a08a724857187e2e853af1f93ba5856413f773eb0c9773cb"
+      },
+      "question_signal_excerpt": "双曲线、焦点、P、\\sqrt、Q",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:9dae7c8665cb9bc3",
+      "item_id": "9dae7c8665cb9bc3",
+      "ordinal": 11,
+      "ordinal_in_cycle": 4,
+      "kind": "direct_variant",
+      "label": "例6 变式2",
+      "group": null,
+      "cycle_id": "ch3.s4-cycle-3",
+      "cycle_sequence": 3,
+      "cycle_title": "类型Ⅱ 求双曲线的标准方程",
+      "course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "course_titles": [
+        "双曲线的第一定义及标准方程"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 求双曲线的标准方程"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "双曲线",
+        "焦点",
+        "\\frac",
+        "x",
+        "y"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "0f83857b91a1bbf26224e7806720f29f860e73354181dedf67f1f7e305546516",
+      "source_question_text_sha256": "0f83857b91a1bbf26224e7806720f29f860e73354181dedf67f1f7e305546516",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "0f83857b91a1bbf26224e7806720f29f860e73354181dedf67f1f7e305546516",
+        "learner_question_text_sha256": "0f83857b91a1bbf26224e7806720f29f860e73354181dedf67f1f7e305546516"
+      },
+      "question_signal_excerpt": "双曲线、焦点、\\frac、x、y",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:3b23e04d5b4af017",
+      "item_id": "3b23e04d5b4af017",
+      "ordinal": 12,
+      "ordinal_in_cycle": 5,
+      "kind": "direct_variant",
+      "label": "例7 变式1",
+      "group": null,
+      "cycle_id": "ch3.s4-cycle-3",
+      "cycle_sequence": 3,
+      "cycle_title": "类型Ⅱ 求双曲线的标准方程",
+      "course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "course_titles": [
+        "双曲线的第一定义及标准方程"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 求双曲线的标准方程"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "圆",
+        "A",
+        "B",
+        "x",
+        "y"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "8b04b9b0fb8ebc7b077c3244ba2f1a2fa32a6530b8a8b95d5b9cd28e5d0f358d",
+      "source_question_text_sha256": "8b04b9b0fb8ebc7b077c3244ba2f1a2fa32a6530b8a8b95d5b9cd28e5d0f358d",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "8b04b9b0fb8ebc7b077c3244ba2f1a2fa32a6530b8a8b95d5b9cd28e5d0f358d",
+        "learner_question_text_sha256": "8b04b9b0fb8ebc7b077c3244ba2f1a2fa32a6530b8a8b95d5b9cd28e5d0f358d"
+      },
+      "question_signal_excerpt": "圆、A、B、x、y",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:e68a91b7c4a0a3a9",
+      "item_id": "e68a91b7c4a0a3a9",
+      "ordinal": 13,
+      "ordinal_in_cycle": 6,
+      "kind": "direct_variant",
+      "label": "例7 变式2",
+      "group": null,
+      "cycle_id": "ch3.s4-cycle-3",
+      "cycle_sequence": 3,
+      "cycle_title": "类型Ⅱ 求双曲线的标准方程",
+      "course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "course_titles": [
+        "双曲线的第一定义及标准方程"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 求双曲线的标准方程"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "圆",
+        "O_",
+        "x",
+        "y"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "9a20f5b91e720070c62aaecf1e49e987077cd21a9d458cd9acd66ddec5075db4",
+      "source_question_text_sha256": "9a20f5b91e720070c62aaecf1e49e987077cd21a9d458cd9acd66ddec5075db4",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "9a20f5b91e720070c62aaecf1e49e987077cd21a9d458cd9acd66ddec5075db4",
+        "learner_question_text_sha256": "9a20f5b91e720070c62aaecf1e49e987077cd21a9d458cd9acd66ddec5075db4"
+      },
+      "question_signal_excerpt": "圆、O_、x、y",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:7c8040c9c46c01f6",
+      "item_id": "7c8040c9c46c01f6",
+      "ordinal": 14,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例8",
+      "group": null,
+      "cycle_id": "ch3.s4-cycle-4",
+      "cycle_sequence": 4,
+      "cycle_title": "类型Ⅲ 由双曲线的标准方程求参",
+      "course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "course_titles": [
+        "双曲线的第一定义及标准方程"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 由双曲线的标准方程求参"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "双曲线",
+        "焦点",
+        "\\frac",
+        "x",
+        "y"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "5cc4ef8e6ee95ec7f161c8d4af7e15fafa52aa5eabe9d2882efb07b3e5bda681",
+      "source_question_text_sha256": "5cc4ef8e6ee95ec7f161c8d4af7e15fafa52aa5eabe9d2882efb07b3e5bda681",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "5cc4ef8e6ee95ec7f161c8d4af7e15fafa52aa5eabe9d2882efb07b3e5bda681",
+        "learner_question_text_sha256": "5cc4ef8e6ee95ec7f161c8d4af7e15fafa52aa5eabe9d2882efb07b3e5bda681"
+      },
+      "question_signal_excerpt": "双曲线、焦点、\\frac、x、y",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:3894418708b9e80e",
+      "item_id": "3894418708b9e80e",
+      "ordinal": 15,
+      "ordinal_in_cycle": 2,
+      "kind": "direct_variant",
+      "label": "例8 变式1",
+      "group": null,
+      "cycle_id": "ch3.s4-cycle-4",
+      "cycle_sequence": 4,
+      "cycle_title": "类型Ⅲ 由双曲线的标准方程求参",
+      "course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "course_titles": [
+        "双曲线的第一定义及标准方程"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 由双曲线的标准方程求参"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "双曲线",
+        "\\frac",
+        "x",
+        "m"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "646baf39d048baaa1b2dad40e066e639ac07fadd307c7ce86d65971b2cd4d32c",
+      "source_question_text_sha256": "646baf39d048baaa1b2dad40e066e639ac07fadd307c7ce86d65971b2cd4d32c",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "646baf39d048baaa1b2dad40e066e639ac07fadd307c7ce86d65971b2cd4d32c",
+        "learner_question_text_sha256": "646baf39d048baaa1b2dad40e066e639ac07fadd307c7ce86d65971b2cd4d32c"
+      },
+      "question_signal_excerpt": "双曲线、\\frac、x、m",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:2b6096b66e06bd5c",
+      "item_id": "2b6096b66e06bd5c",
+      "ordinal": 16,
+      "ordinal_in_cycle": 3,
+      "kind": "direct_variant",
+      "label": "例8 变式2",
+      "group": null,
+      "cycle_id": "ch3.s4-cycle-4",
+      "cycle_sequence": 4,
+      "cycle_title": "类型Ⅲ 由双曲线的标准方程求参",
+      "course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "course_titles": [
+        "双曲线的第一定义及标准方程"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 由双曲线的标准方程求参"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "圆",
+        "椭圆",
+        "双曲线",
+        "焦点",
+        "\\frac",
+        "x",
+        "t"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "5f5116459d7df1042aab5afe20ed227305da6e3afa543ff564aef6cfdcb9d766",
+      "source_question_text_sha256": "5f5116459d7df1042aab5afe20ed227305da6e3afa543ff564aef6cfdcb9d766",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "5f5116459d7df1042aab5afe20ed227305da6e3afa543ff564aef6cfdcb9d766",
+        "learner_question_text_sha256": "5f5116459d7df1042aab5afe20ed227305da6e3afa543ff564aef6cfdcb9d766"
+      },
+      "question_signal_excerpt": "圆、椭圆、双曲线、焦点、\\frac、x、t",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:0666fc1188f6c4bb",
+      "item_id": "0666fc1188f6c4bb",
+      "ordinal": 17,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例9",
+      "group": null,
+      "cycle_id": "ch3.s4-cycle-5",
+      "cycle_sequence": 5,
+      "cycle_title": "类型IV 双曲线定义与几何性质综合题",
+      "course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "course_titles": [
+        "双曲线的第一定义及标准方程"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型IV 双曲线定义与几何性质综合题"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "双曲线",
+        "焦点",
+        "P",
+        "C",
+        "\\frac",
+        "x"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "4c1f6482840cb6911546f4f94ac5402da714364baeb0c41f87b77656a47fb5be",
+      "source_question_text_sha256": "4c1f6482840cb6911546f4f94ac5402da714364baeb0c41f87b77656a47fb5be",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "4c1f6482840cb6911546f4f94ac5402da714364baeb0c41f87b77656a47fb5be",
+        "learner_question_text_sha256": "4c1f6482840cb6911546f4f94ac5402da714364baeb0c41f87b77656a47fb5be"
+      },
+      "question_signal_excerpt": "双曲线、焦点、P、C、\\frac、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:657c2d59f277a43b",
+      "item_id": "657c2d59f277a43b",
+      "ordinal": 18,
+      "ordinal_in_cycle": 2,
+      "kind": "direct_variant",
+      "label": "例9 变式1",
+      "group": null,
+      "cycle_id": "ch3.s4-cycle-5",
+      "cycle_sequence": 5,
+      "cycle_title": "类型IV 双曲线定义与几何性质综合题",
+      "course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "course_titles": [
+        "双曲线的第一定义及标准方程"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型IV 双曲线定义与几何性质综合题"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "双曲线",
+        "焦点",
+        "面积",
+        "F_1",
+        "\\sqrt",
+        "F_2"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "07a4a0c8834b26c3edef6b17b71438d3f5135077586a3b8f4a011de2c3d796de",
+      "source_question_text_sha256": "07a4a0c8834b26c3edef6b17b71438d3f5135077586a3b8f4a011de2c3d796de",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "07a4a0c8834b26c3edef6b17b71438d3f5135077586a3b8f4a011de2c3d796de",
+        "learner_question_text_sha256": "07a4a0c8834b26c3edef6b17b71438d3f5135077586a3b8f4a011de2c3d796de"
+      },
+      "question_signal_excerpt": "双曲线、焦点、面积、F_1、\\sqrt、F_2",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:e963dd38d4062127",
+      "item_id": "e963dd38d4062127",
+      "ordinal": 19,
+      "ordinal_in_cycle": 3,
+      "kind": "direct_variant",
+      "label": "例9 变式2",
+      "group": null,
+      "cycle_id": "ch3.s4-cycle-5",
+      "cycle_sequence": 5,
+      "cycle_title": "类型IV 双曲线定义与几何性质综合题",
+      "course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "course_titles": [
+        "双曲线的第一定义及标准方程"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型IV 双曲线定义与几何性质综合题"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "双曲线",
+        "焦点",
+        "C",
+        "\\frac",
+        "x"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "418db97a9000f581ce61e0f21cac4debe972434b110aa0f4c6c98e518774adda",
+      "source_question_text_sha256": "418db97a9000f581ce61e0f21cac4debe972434b110aa0f4c6c98e518774adda",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "418db97a9000f581ce61e0f21cac4debe972434b110aa0f4c6c98e518774adda",
+        "learner_question_text_sha256": "418db97a9000f581ce61e0f21cac4debe972434b110aa0f4c6c98e518774adda"
+      },
+      "question_signal_excerpt": "双曲线、焦点、C、\\frac、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:48ee3812701823e8",
+      "item_id": "48ee3812701823e8",
+      "ordinal": 20,
+      "ordinal_in_cycle": 4,
+      "kind": "direct_variant",
+      "label": "例9 变式3",
+      "group": null,
+      "cycle_id": "ch3.s4-cycle-5",
+      "cycle_sequence": 5,
+      "cycle_title": "类型IV 双曲线定义与几何性质综合题",
+      "course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "course_titles": [
+        "双曲线的第一定义及标准方程"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型IV 双曲线定义与几何性质综合题"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "双曲线",
+        "焦点",
+        "\\frac",
+        "x",
+        "y"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "41a54a94f0926bc58d5af57f23c6264308373b98d648a0334c56d537e9849e0d",
+      "source_question_text_sha256": "41a54a94f0926bc58d5af57f23c6264308373b98d648a0334c56d537e9849e0d",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "41a54a94f0926bc58d5af57f23c6264308373b98d648a0334c56d537e9849e0d",
+        "learner_question_text_sha256": "41a54a94f0926bc58d5af57f23c6264308373b98d648a0334c56d537e9849e0d"
+      },
+      "question_signal_excerpt": "双曲线、焦点、\\frac、x、y",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:5b1d55af34742b56",
+      "item_id": "5b1d55af34742b56",
+      "ordinal": 21,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例10",
+      "group": null,
+      "cycle_id": "ch3.s4-cycle-6",
+      "cycle_sequence": 6,
+      "cycle_title": "类型V 双曲线有关的应用题",
+      "course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "course_titles": [
+        "双曲线的第一定义及标准方程"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型V 双曲线有关的应用题"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "直线",
+        "距离",
+        "A",
+        "B",
+        "AB",
+        "C"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "VISION_VERIFIED",
+        "image_refs": [
+          {
+            "ref": "imgs/img_in_image_box_476_989_718_1174.jpg",
+            "path": "data/ocr_live_current/third_chapter_180/imgs/img_in_image_box_476_989_718_1174.jpg",
+            "exists": true
+          }
+        ]
+      },
+      "question_text_sha256": "f79b014da151ad88274dd4d55af791e0179b98ae0a74db57df3a922379f3173f",
+      "source_question_text_sha256": "f79b014da151ad88274dd4d55af791e0179b98ae0a74db57df3a922379f3173f",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "f79b014da151ad88274dd4d55af791e0179b98ae0a74db57df3a922379f3173f",
+        "learner_question_text_sha256": "f79b014da151ad88274dd4d55af791e0179b98ae0a74db57df3a922379f3173f"
+      },
+      "question_signal_excerpt": "直线、距离、A、B、AB、C",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:4d733f9a5a3fd863",
+      "item_id": "4d733f9a5a3fd863",
+      "ordinal": 22,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例11",
+      "group": null,
+      "cycle_id": "ch3.s4-cycle-7",
+      "cycle_sequence": 7,
+      "cycle_title": "类型VI 基于双曲线定义的最值问题",
+      "course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "course_titles": [
+        "双曲线的第一定义及标准方程"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型VI 基于双曲线定义的最值问题"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "双曲线",
+        "焦点",
+        "C",
+        "\\frac",
+        "x"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "8e81f6c46c53f250f5d82069bc0d3acf41a7b217140ea9a99b363b9f128355b4",
+      "source_question_text_sha256": "8e81f6c46c53f250f5d82069bc0d3acf41a7b217140ea9a99b363b9f128355b4",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "8e81f6c46c53f250f5d82069bc0d3acf41a7b217140ea9a99b363b9f128355b4",
+        "learner_question_text_sha256": "8e81f6c46c53f250f5d82069bc0d3acf41a7b217140ea9a99b363b9f128355b4"
+      },
+      "question_signal_excerpt": "双曲线、焦点、C、\\frac、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:5ec0a901e9eba6b1",
+      "item_id": "5ec0a901e9eba6b1",
+      "ordinal": 23,
+      "ordinal_in_cycle": 2,
+      "kind": "direct_variant",
+      "label": "例11 变式",
+      "group": null,
+      "cycle_id": "ch3.s4-cycle-7",
+      "cycle_sequence": 7,
+      "cycle_title": "类型VI 基于双曲线定义的最值问题",
+      "course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "course_titles": [
+        "双曲线的第一定义及标准方程"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型VI 基于双曲线定义的最值问题"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "圆",
+        "双曲线",
+        "焦点",
+        "F",
+        "C_1",
+        "\\frac",
+        "y"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "ed832217596b2108c7769c8096dd666c56c5a4bfeb445ed9bee171185d8e9f79",
+      "source_question_text_sha256": "ed832217596b2108c7769c8096dd666c56c5a4bfeb445ed9bee171185d8e9f79",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "ed832217596b2108c7769c8096dd666c56c5a4bfeb445ed9bee171185d8e9f79",
+        "learner_question_text_sha256": "ed832217596b2108c7769c8096dd666c56c5a4bfeb445ed9bee171185d8e9f79"
+      },
+      "question_signal_excerpt": "圆、双曲线、焦点、F、C_1、\\frac、y",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-7af61febd0dc9587",
+      "item_id": "Q-7af61febd0dc9587",
+      "ordinal": 24,
+      "ordinal_in_cycle": 1,
+      "kind": "abc_exercise",
+      "label": "A1",
+      "group": "A",
+      "cycle_id": "ch3.s4-cycle-8",
+      "cycle_sequence": 8,
+      "cycle_title": "A组 夯实基础",
+      "course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "course_titles": [
+        "双曲线的第一定义及标准方程"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 双曲线定义的简单应用"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "A",
+        "B",
+        "P",
+        "left"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "bc3a0ac41658cdff1f7c3fafd2731d98df676c01ff6bc2eaec122c71e9d39a78",
+      "source_question_text_sha256": "bc3a0ac41658cdff1f7c3fafd2731d98df676c01ff6bc2eaec122c71e9d39a78",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "bc3a0ac41658cdff1f7c3fafd2731d98df676c01ff6bc2eaec122c71e9d39a78",
+        "learner_question_text_sha256": "bc3a0ac41658cdff1f7c3fafd2731d98df676c01ff6bc2eaec122c71e9d39a78"
+      },
+      "question_signal_excerpt": "A、B、P、left",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-417dd54269a0ae36",
+      "item_id": "Q-417dd54269a0ae36",
+      "ordinal": 25,
+      "ordinal_in_cycle": 2,
+      "kind": "abc_exercise",
+      "label": "A2",
+      "group": "A",
+      "cycle_id": "ch3.s4-cycle-8",
+      "cycle_sequence": 8,
+      "cycle_title": "A组 夯实基础",
+      "course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "course_titles": [
+        "双曲线的第一定义及标准方程"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 双曲线定义的简单应用"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "距离",
+        "双曲线",
+        "C",
+        "\\frac",
+        "x"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "a0b88553ca52e624a257424758ae05a4356c517b0d69fc80bfc2d92537978365",
+      "source_question_text_sha256": "a0b88553ca52e624a257424758ae05a4356c517b0d69fc80bfc2d92537978365",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "a0b88553ca52e624a257424758ae05a4356c517b0d69fc80bfc2d92537978365",
+        "learner_question_text_sha256": "a0b88553ca52e624a257424758ae05a4356c517b0d69fc80bfc2d92537978365"
+      },
+      "question_signal_excerpt": "距离、双曲线、C、\\frac、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-46cd1e193a6286cc",
+      "item_id": "Q-46cd1e193a6286cc",
+      "ordinal": 26,
+      "ordinal_in_cycle": 3,
+      "kind": "abc_exercise",
+      "label": "A3",
+      "group": "A",
+      "cycle_id": "ch3.s4-cycle-8",
+      "cycle_sequence": 8,
+      "cycle_title": "A组 夯实基础",
+      "course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "course_titles": [
+        "双曲线的第一定义及标准方程"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 由双曲线的标准方程求参"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "双曲线",
+        "\\frac",
+        "y",
+        "m"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "d19a30856b68020baa2d7bcadcac5791d18719f1929cbaebb0828a2e4b1afab9",
+      "source_question_text_sha256": "d19a30856b68020baa2d7bcadcac5791d18719f1929cbaebb0828a2e4b1afab9",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "d19a30856b68020baa2d7bcadcac5791d18719f1929cbaebb0828a2e4b1afab9",
+        "learner_question_text_sha256": "d19a30856b68020baa2d7bcadcac5791d18719f1929cbaebb0828a2e4b1afab9"
+      },
+      "question_signal_excerpt": "双曲线、\\frac、y、m",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-ef6bc7ba07eca4fc",
+      "item_id": "Q-ef6bc7ba07eca4fc",
+      "ordinal": 27,
+      "ordinal_in_cycle": 4,
+      "kind": "abc_exercise",
+      "label": "A4",
+      "group": "A",
+      "cycle_id": "ch3.s4-cycle-8",
+      "cycle_sequence": 8,
+      "cycle_title": "A组 夯实基础",
+      "course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "course_titles": [
+        "双曲线的第一定义及标准方程"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 求双曲线的标准方程"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "圆",
+        "椭圆",
+        "双曲线",
+        "焦点",
+        "\\frac",
+        "x",
+        "y"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "31713fae5e5beafd668109c90971675cfabf7172fc4bf15c0d15b903d2af15b6",
+      "source_question_text_sha256": "31713fae5e5beafd668109c90971675cfabf7172fc4bf15c0d15b903d2af15b6",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "31713fae5e5beafd668109c90971675cfabf7172fc4bf15c0d15b903d2af15b6",
+        "learner_question_text_sha256": "31713fae5e5beafd668109c90971675cfabf7172fc4bf15c0d15b903d2af15b6"
+      },
+      "question_signal_excerpt": "圆、椭圆、双曲线、焦点、\\frac、x、y",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-730bf4eb25cfa4c7",
+      "item_id": "Q-730bf4eb25cfa4c7",
+      "ordinal": 28,
+      "ordinal_in_cycle": 5,
+      "kind": "abc_exercise",
+      "label": "A5",
+      "group": "A",
+      "cycle_id": "ch3.s4-cycle-8",
+      "cycle_sequence": 8,
+      "cycle_title": "A组 夯实基础",
+      "course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "course_titles": [
+        "双曲线的第一定义及标准方程"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 求双曲线的标准方程"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "双曲线",
+        "焦点",
+        "a",
+        "\\sqrt",
+        "A",
+        "y"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "ce940420310e8491a534e6cd0ce99287230e956eb0684272e0aa82954955d5ea",
+      "source_question_text_sha256": "ce940420310e8491a534e6cd0ce99287230e956eb0684272e0aa82954955d5ea",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "ce940420310e8491a534e6cd0ce99287230e956eb0684272e0aa82954955d5ea",
+        "learner_question_text_sha256": "ce940420310e8491a534e6cd0ce99287230e956eb0684272e0aa82954955d5ea"
+      },
+      "question_signal_excerpt": "双曲线、焦点、a、\\sqrt、A、y",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-7c4fb640d209af6a",
+      "item_id": "Q-7c4fb640d209af6a",
+      "ordinal": 29,
+      "ordinal_in_cycle": 1,
+      "kind": "abc_exercise",
+      "label": "B6",
+      "group": "B",
+      "cycle_id": "ch3.s4-cycle-9",
+      "cycle_sequence": 9,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "intersection_algebra_upper",
+        "intersection_algebra_lower",
+        "hyperbola_definition_equation"
+      ],
+      "course_titles": [
+        "交点问题的基本代数处理（上·题型辨识）",
+        "交点问题的基本代数处理（下·点线设法与处理）",
+        "双曲线的第一定义及标准方程"
+      ],
+      "required_course_refs": [
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "prerequisite_course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 由双曲线的标准方程求参"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "圆",
+        "椭圆",
+        "双曲线",
+        "焦点",
+        "范围",
+        "\\frac",
+        "x",
+        "m"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "f113dede631cf6bdc829e6ff01a52c55149a4d8254d1cae619a54db991711755",
+      "source_question_text_sha256": "f113dede631cf6bdc829e6ff01a52c55149a4d8254d1cae619a54db991711755",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "f113dede631cf6bdc829e6ff01a52c55149a4d8254d1cae619a54db991711755",
+        "learner_question_text_sha256": "f113dede631cf6bdc829e6ff01a52c55149a4d8254d1cae619a54db991711755"
+      },
+      "question_signal_excerpt": "圆、椭圆、双曲线、焦点、范围、\\frac、x、m",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-6029c5df1e4cc436",
+      "item_id": "Q-6029c5df1e4cc436",
+      "ordinal": 30,
+      "ordinal_in_cycle": 2,
+      "kind": "abc_exercise",
+      "label": "B7",
+      "group": "B",
+      "cycle_id": "ch3.s4-cycle-9",
+      "cycle_sequence": 9,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "intersection_algebra_upper",
+        "intersection_algebra_lower",
+        "hyperbola_definition_equation"
+      ],
+      "course_titles": [
+        "交点问题的基本代数处理（上·题型辨识）",
+        "交点问题的基本代数处理（下·点线设法与处理）",
+        "双曲线的第一定义及标准方程"
+      ],
+      "required_course_refs": [
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "prerequisite_course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型IV 双曲线定义与几何性质综合题"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "双曲线",
+        "焦点",
+        "C",
+        "x",
+        "y",
+        "F_1"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "f210549d0a9693f8e9e3334e1b6ecc9790608986915a1bb22ceb07d0f4461bf9",
+      "source_question_text_sha256": "f210549d0a9693f8e9e3334e1b6ecc9790608986915a1bb22ceb07d0f4461bf9",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "f210549d0a9693f8e9e3334e1b6ecc9790608986915a1bb22ceb07d0f4461bf9",
+        "learner_question_text_sha256": "f210549d0a9693f8e9e3334e1b6ecc9790608986915a1bb22ceb07d0f4461bf9"
+      },
+      "question_signal_excerpt": "双曲线、焦点、C、x、y、F_1",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-1f8e388d1e390fa9",
+      "item_id": "Q-1f8e388d1e390fa9",
+      "ordinal": 31,
+      "ordinal_in_cycle": 3,
+      "kind": "abc_exercise",
+      "label": "B8",
+      "group": "B",
+      "cycle_id": "ch3.s4-cycle-9",
+      "cycle_sequence": 9,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "intersection_algebra_upper",
+        "intersection_algebra_lower",
+        "hyperbola_definition_equation"
+      ],
+      "course_titles": [
+        "交点问题的基本代数处理（上·题型辨识）",
+        "交点问题的基本代数处理（下·点线设法与处理）",
+        "双曲线的第一定义及标准方程"
+      ],
+      "required_course_refs": [
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "prerequisite_course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型IV 双曲线定义与几何性质综合题"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "双曲线",
+        "焦点",
+        "F_1",
+        "F_2",
+        "x",
+        "y"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "13e3c1e81a5598ae381961f4781ea5f9ed7e7bf99c4d2fda1dc0c0d76f66c17d",
+      "source_question_text_sha256": "13e3c1e81a5598ae381961f4781ea5f9ed7e7bf99c4d2fda1dc0c0d76f66c17d",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "13e3c1e81a5598ae381961f4781ea5f9ed7e7bf99c4d2fda1dc0c0d76f66c17d",
+        "learner_question_text_sha256": "13e3c1e81a5598ae381961f4781ea5f9ed7e7bf99c4d2fda1dc0c0d76f66c17d"
+      },
+      "question_signal_excerpt": "双曲线、焦点、F_1、F_2、x、y",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-3e60b28be8f931bb",
+      "item_id": "Q-3e60b28be8f931bb",
+      "ordinal": 32,
+      "ordinal_in_cycle": 4,
+      "kind": "abc_exercise",
+      "label": "B9",
+      "group": "B",
+      "cycle_id": "ch3.s4-cycle-9",
+      "cycle_sequence": 9,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "intersection_algebra_upper",
+        "intersection_algebra_lower",
+        "hyperbola_definition_equation"
+      ],
+      "course_titles": [
+        "交点问题的基本代数处理（上·题型辨识）",
+        "交点问题的基本代数处理（下·点线设法与处理）",
+        "双曲线的第一定义及标准方程"
+      ],
+      "required_course_refs": [
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "prerequisite_course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型IV 双曲线定义与几何性质综合题"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "双曲线",
+        "焦点",
+        "C",
+        "\\frac",
+        "x"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "f7dddbb8f002e85976603111656b7fd8749b3d833ef1721f6a26e67729f5f9b8",
+      "source_question_text_sha256": "f7dddbb8f002e85976603111656b7fd8749b3d833ef1721f6a26e67729f5f9b8",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "f7dddbb8f002e85976603111656b7fd8749b3d833ef1721f6a26e67729f5f9b8",
+        "learner_question_text_sha256": "f7dddbb8f002e85976603111656b7fd8749b3d833ef1721f6a26e67729f5f9b8"
+      },
+      "question_signal_excerpt": "双曲线、焦点、C、\\frac、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-3e8f42849a52bfff",
+      "item_id": "Q-3e8f42849a52bfff",
+      "ordinal": 33,
+      "ordinal_in_cycle": 5,
+      "kind": "abc_exercise",
+      "label": "B10",
+      "group": "B",
+      "cycle_id": "ch3.s4-cycle-9",
+      "cycle_sequence": 9,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "intersection_algebra_upper",
+        "intersection_algebra_lower",
+        "hyperbola_definition_equation"
+      ],
+      "course_titles": [
+        "交点问题的基本代数处理（上·题型辨识）",
+        "交点问题的基本代数处理（下·点线设法与处理）",
+        "双曲线的第一定义及标准方程"
+      ],
+      "required_course_refs": [
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "prerequisite_course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 双曲线定义的简单应用",
+        "类型Ⅱ 求双曲线的标准方程"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "圆",
+        "M",
+        "F_1",
+        "F_2",
+        "x"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "9b01c4c34f654e6def7f3e38f5de2c2485430ebb316657441f22b4ea4ed5e3d4",
+      "source_question_text_sha256": "9b01c4c34f654e6def7f3e38f5de2c2485430ebb316657441f22b4ea4ed5e3d4",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "9b01c4c34f654e6def7f3e38f5de2c2485430ebb316657441f22b4ea4ed5e3d4",
+        "learner_question_text_sha256": "9b01c4c34f654e6def7f3e38f5de2c2485430ebb316657441f22b4ea4ed5e3d4"
+      },
+      "question_signal_excerpt": "圆、M、F_1、F_2、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-2b15e5d4e88c05e7",
+      "item_id": "Q-2b15e5d4e88c05e7",
+      "ordinal": 34,
+      "ordinal_in_cycle": 6,
+      "kind": "abc_exercise",
+      "label": "B11",
+      "group": "B",
+      "cycle_id": "ch3.s4-cycle-9",
+      "cycle_sequence": 9,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "intersection_algebra_upper",
+        "intersection_algebra_lower",
+        "hyperbola_definition_equation"
+      ],
+      "course_titles": [
+        "交点问题的基本代数处理（上·题型辨识）",
+        "交点问题的基本代数处理（下·点线设法与处理）",
+        "双曲线的第一定义及标准方程"
+      ],
+      "required_course_refs": [
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "prerequisite_course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型IV 双曲线定义与几何性质综合题"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "直线",
+        "距离",
+        "圆",
+        "双曲线",
+        "焦点",
+        "O",
+        "C",
+        "\\frac",
+        "x"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "1c7c5eb2711595c25f45abcfab126fc1487a070d9fd544cb74b64bdb1d235053",
+      "source_question_text_sha256": "1c7c5eb2711595c25f45abcfab126fc1487a070d9fd544cb74b64bdb1d235053",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "1c7c5eb2711595c25f45abcfab126fc1487a070d9fd544cb74b64bdb1d235053",
+        "learner_question_text_sha256": "1c7c5eb2711595c25f45abcfab126fc1487a070d9fd544cb74b64bdb1d235053"
+      },
+      "question_signal_excerpt": "直线、距离、圆、双曲线、焦点、O、C、\\frac、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-e5f760a32510eb88",
+      "item_id": "Q-e5f760a32510eb88",
+      "ordinal": 35,
+      "ordinal_in_cycle": 7,
+      "kind": "abc_exercise",
+      "label": "B12",
+      "group": "B",
+      "cycle_id": "ch3.s4-cycle-9",
+      "cycle_sequence": 9,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "intersection_algebra_upper",
+        "intersection_algebra_lower",
+        "hyperbola_definition_equation"
+      ],
+      "course_titles": [
+        "交点问题的基本代数处理（上·题型辨识）",
+        "交点问题的基本代数处理（下·点线设法与处理）",
+        "双曲线的第一定义及标准方程"
+      ],
+      "required_course_refs": [
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "prerequisite_course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型VI 基于双曲线定义的最值问题"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "P",
+        "C",
+        "x",
+        "\\sqrt"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "967a272fef208fbda266581470424d19504cca4d1033afdebf5982d72783d6b5",
+      "source_question_text_sha256": "967a272fef208fbda266581470424d19504cca4d1033afdebf5982d72783d6b5",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "967a272fef208fbda266581470424d19504cca4d1033afdebf5982d72783d6b5",
+        "learner_question_text_sha256": "967a272fef208fbda266581470424d19504cca4d1033afdebf5982d72783d6b5"
+      },
+      "question_signal_excerpt": "P、C、x、\\sqrt",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-91a0a17f1d57d602",
+      "item_id": "Q-91a0a17f1d57d602",
+      "ordinal": 36,
+      "ordinal_in_cycle": 8,
+      "kind": "abc_exercise",
+      "label": "B13",
+      "group": "B",
+      "cycle_id": "ch3.s4-cycle-9",
+      "cycle_sequence": 9,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "intersection_algebra_upper",
+        "intersection_algebra_lower",
+        "hyperbola_definition_equation"
+      ],
+      "course_titles": [
+        "交点问题的基本代数处理（上·题型辨识）",
+        "交点问题的基本代数处理（下·点线设法与处理）",
+        "双曲线的第一定义及标准方程"
+      ],
+      "required_course_refs": [
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "prerequisite_course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型V 双曲线有关的应用题"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "直线",
+        "距离",
+        "圆",
+        "xOy",
+        "M",
+        "F",
+        "x"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "47927d239cbaba0c84f6b103b5ef7f45d10268a13d38af7fc2dbe14df8b99046",
+      "source_question_text_sha256": "47927d239cbaba0c84f6b103b5ef7f45d10268a13d38af7fc2dbe14df8b99046",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "47927d239cbaba0c84f6b103b5ef7f45d10268a13d38af7fc2dbe14df8b99046",
+        "learner_question_text_sha256": "47927d239cbaba0c84f6b103b5ef7f45d10268a13d38af7fc2dbe14df8b99046"
+      },
+      "question_signal_excerpt": "直线、距离、圆、xOy、M、F、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-266b3f765c3bca31",
+      "item_id": "Q-266b3f765c3bca31",
+      "ordinal": 37,
+      "ordinal_in_cycle": 9,
+      "kind": "abc_exercise",
+      "label": "B14",
+      "group": "B",
+      "cycle_id": "ch3.s4-cycle-9",
+      "cycle_sequence": 9,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "intersection_algebra_upper",
+        "intersection_algebra_lower",
+        "hyperbola_definition_equation"
+      ],
+      "course_titles": [
+        "交点问题的基本代数处理（上·题型辨识）",
+        "交点问题的基本代数处理（下·点线设法与处理）",
+        "双曲线的第一定义及标准方程"
+      ],
+      "required_course_refs": [
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "prerequisite_course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型V 双曲线有关的应用题",
+        "类型VI 基于双曲线定义的最值问题"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "直线",
+        "距离",
+        "证明",
+        "B",
+        "A",
+        "km",
+        "C"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "VISION_VERIFIED",
+        "image_refs": [
+          {
+            "ref": "imgs/img_in_image_box_841_1372_1098_1551.jpg",
+            "path": "data/ocr_live_current/third_chapter_180/imgs/img_in_image_box_841_1372_1098_1551.jpg",
+            "exists": true
+          }
+        ]
+      },
+      "question_text_sha256": "c7384a396352ca6519956b937788d786cb959d486dc4de894d34312f5a6e971c",
+      "source_question_text_sha256": "c7384a396352ca6519956b937788d786cb959d486dc4de894d34312f5a6e971c",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "c7384a396352ca6519956b937788d786cb959d486dc4de894d34312f5a6e971c",
+        "learner_question_text_sha256": "c7384a396352ca6519956b937788d786cb959d486dc4de894d34312f5a6e971c"
+      },
+      "question_signal_excerpt": "直线、距离、证明、B、A、km、C",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-0d6aa37fd9899ce2",
+      "item_id": "Q-0d6aa37fd9899ce2",
+      "ordinal": 38,
+      "ordinal_in_cycle": 1,
+      "kind": "abc_exercise",
+      "label": "C15",
+      "group": "C",
+      "cycle_id": "ch3.s4-cycle-10",
+      "cycle_sequence": 10,
+      "cycle_title": "C组 拓展提升",
+      "course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "course_titles": [
+        "双曲线的第一定义及标准方程"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型VI 基于双曲线定义的最值问题"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "圆",
+        "双曲线",
+        "焦点",
+        "E",
+        "\\frac",
+        "x",
+        "y"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "79fe07d140141ab10c350ae417c3288ce55e7bc11acaca5fcc90fca333fc3922",
+      "source_question_text_sha256": "79fe07d140141ab10c350ae417c3288ce55e7bc11acaca5fcc90fca333fc3922",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "79fe07d140141ab10c350ae417c3288ce55e7bc11acaca5fcc90fca333fc3922",
+        "learner_question_text_sha256": "79fe07d140141ab10c350ae417c3288ce55e7bc11acaca5fcc90fca333fc3922"
+      },
+      "question_signal_excerpt": "圆、双曲线、焦点、E、\\frac、x、y",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-89835c669412e477",
+      "item_id": "Q-89835c669412e477",
+      "ordinal": 39,
+      "ordinal_in_cycle": 2,
+      "kind": "abc_exercise",
+      "label": "C16",
+      "group": "C",
+      "cycle_id": "ch3.s4-cycle-10",
+      "cycle_sequence": 10,
+      "cycle_title": "C组 拓展提升",
+      "course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "course_titles": [
+        "双曲线的第一定义及标准方程"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "hyperbola_definition_equation"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型VI 基于双曲线定义的最值问题"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "双曲线",
+        "焦点",
+        "xOy",
+        "F_",
+        "E"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "c74bcb08c3f2a66a4849304e467a9dc6b92cf8199bb15cc5651f541688b36eb4",
+      "source_question_text_sha256": "c74bcb08c3f2a66a4849304e467a9dc6b92cf8199bb15cc5651f541688b36eb4",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "c74bcb08c3f2a66a4849304e467a9dc6b92cf8199bb15cc5651f541688b36eb4",
+        "learner_question_text_sha256": "c74bcb08c3f2a66a4849304e467a9dc6b92cf8199bb15cc5651f541688b36eb4"
+      },
+      "question_signal_excerpt": "双曲线、焦点、xOy、F_、E",
+      "source_blocked": false
+    }
+  ],
+  "route_versions": [
+    {
+      "version": 1,
+      "route_hash": "c3a5041c399ee73d00755175985e590ea9ad472f345a38c9d8e8cdc7986df736"
+    },
+    {
+      "version": 2,
+      "route_hash": "846b51ff12c2901c35a70e6f03efd9114201d92b5fe11bbab65db8c3ff560b42"
+    },
+    {
+      "version": 3,
+      "route_hash": "d35ee3653942c129fa27b6766a8bbda7a016ae75deec6796ea4b4f4aa3fa89e5"
+    }
+  ],
+  "final_route_hash": "d35ee3653942c129fa27b6766a8bbda7a016ae75deec6796ea4b4f4aa3fa89e5",
+  "simulation": {
+    "protocol": "five-round-five-persona-v3-answer-isolated",
+    "generation_mode": "synthetic_route_stress_from_actual_item_features",
+    "rounds": [
+      {
+        "round": 1,
+        "purpose": "baseline_entry",
+        "route_version": 1,
+        "route_hash": "c3a5041c399ee73d00755175985e590ea9ad472f345a38c9d8e8cdc7986df736",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 39,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 39,
+            "blocked": 6
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 39,
+            "blocked": 8
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 39,
+            "blocked": 2
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 39,
+            "blocked": 16
+          }
+        ],
+        "failed_item_keys": [
+          "LI:1ab7984824e94701",
+          "LI:5b1d55af34742b56",
+          "LI:826cf8879961ebf3",
+          "LI:8f1c53235bddacbb",
+          "LI:cef6a9a3bc345ac8",
+          "LI:dda080bd95bfe76b",
+          "Q:Q-0d6aa37fd9899ce2",
+          "Q:Q-1f8e388d1e390fa9",
+          "Q:Q-266b3f765c3bca31",
+          "Q:Q-2b15e5d4e88c05e7",
+          "Q:Q-3e60b28be8f931bb",
+          "Q:Q-3e8f42849a52bfff",
+          "Q:Q-417dd54269a0ae36",
+          "Q:Q-46cd1e193a6286cc",
+          "Q:Q-6029c5df1e4cc436",
+          "Q:Q-730bf4eb25cfa4c7",
+          "Q:Q-7af61febd0dc9587",
+          "Q:Q-7c4fb640d209af6a",
+          "Q:Q-89835c669412e477",
+          "Q:Q-91a0a17f1d57d602",
+          "Q:Q-e5f760a32510eb88",
+          "Q:Q-ef6bc7ba07eca4fc"
+        ],
+        "route_repairs": [
+          {
+            "item_keys": [
+              "LI:826cf8879961ebf3",
+              "LI:8f1c53235bddacbb",
+              "LI:cef6a9a3bc345ac8",
+              "LI:dda080bd95bfe76b",
+              "Q:Q-266b3f765c3bca31",
+              "Q:Q-3e8f42849a52bfff"
+            ],
+            "field": "recognition_cues",
+            "before": "第1轮冻结尝试记录了 recognition-weak 的首个阻断。",
+            "after": "下一轮只加入 recognition-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 6 题；不是随机题号注入。"
+          },
+          {
+            "item_keys": [
+              "LI:1ab7984824e94701",
+              "LI:5b1d55af34742b56",
+              "LI:8f1c53235bddacbb",
+              "Q:Q-266b3f765c3bca31",
+              "Q:Q-2b15e5d4e88c05e7",
+              "Q:Q-417dd54269a0ae36",
+              "Q:Q-7c4fb640d209af6a",
+              "Q:Q-91a0a17f1d57d602"
+            ],
+            "field": "continuation_checkpoints",
+            "before": "第1轮冻结尝试记录了 algebra-weak 的首个阻断。",
+            "after": "下一轮只加入 algebra-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 8 题；不是随机题号注入。"
+          },
+          {
+            "item_keys": [
+              "LI:5b1d55af34742b56",
+              "Q:Q-266b3f765c3bca31"
+            ],
+            "field": "visual_translation",
+            "before": "第1轮冻结尝试记录了 visual-weak 的首个阻断。",
+            "after": "下一轮只加入 visual-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 2 题；不是随机题号注入。"
+          },
+          {
+            "item_keys": [
+              "Q:Q-0d6aa37fd9899ce2",
+              "Q:Q-1f8e388d1e390fa9",
+              "Q:Q-266b3f765c3bca31",
+              "Q:Q-2b15e5d4e88c05e7",
+              "Q:Q-3e60b28be8f931bb",
+              "Q:Q-3e8f42849a52bfff",
+              "Q:Q-417dd54269a0ae36",
+              "Q:Q-46cd1e193a6286cc",
+              "Q:Q-6029c5df1e4cc436",
+              "Q:Q-730bf4eb25cfa4c7",
+              "Q:Q-7af61febd0dc9587",
+              "Q:Q-7c4fb640d209af6a",
+              "Q:Q-89835c669412e477",
+              "Q:Q-91a0a17f1d57d602",
+              "Q:Q-e5f760a32510eb88",
+              "Q:Q-ef6bc7ba07eca4fc"
+            ],
+            "field": "independent_self_check",
+            "before": "第1轮冻结尝试记录了 self-check-weak 的首个阻断。",
+            "after": "下一轮只加入 self-check-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 16 题；不是随机题号注入。"
+          }
+        ]
+      },
+      {
+        "round": 2,
+        "purpose": "prerequisite_repair",
+        "route_version": 2,
+        "route_hash": "846b51ff12c2901c35a70e6f03efd9114201d92b5fe11bbab65db8c3ff560b42",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 39,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 39,
+            "blocked": 0
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 39,
+            "blocked": 0
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 39,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 39,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [],
+        "route_repairs": []
+      },
+      {
+        "round": 3,
+        "purpose": "continuation_transfer",
+        "route_version": 2,
+        "route_hash": "846b51ff12c2901c35a70e6f03efd9114201d92b5fe11bbab65db8c3ff560b42",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 39,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 39,
+            "blocked": 12
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 39,
+            "blocked": 12
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 39,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 39,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [
+          "LI:15f53c530e263b9e",
+          "LI:2b6096b66e06bd5c",
+          "LI:2c9f3143c2f0f015",
+          "LI:3894418708b9e80e",
+          "LI:3b23e04d5b4af017",
+          "LI:48ee3812701823e8",
+          "LI:5ec0a901e9eba6b1",
+          "LI:657c2d59f277a43b",
+          "LI:9dae7c8665cb9bc3",
+          "LI:bf32a92ecb82d526",
+          "LI:e68a91b7c4a0a3a9",
+          "LI:e963dd38d4062127"
+        ],
+        "route_repairs": [
+          {
+            "item_keys": [
+              "LI:15f53c530e263b9e",
+              "LI:2b6096b66e06bd5c",
+              "LI:2c9f3143c2f0f015",
+              "LI:3894418708b9e80e",
+              "LI:3b23e04d5b4af017",
+              "LI:48ee3812701823e8",
+              "LI:5ec0a901e9eba6b1",
+              "LI:657c2d59f277a43b",
+              "LI:9dae7c8665cb9bc3",
+              "LI:bf32a92ecb82d526",
+              "LI:e68a91b7c4a0a3a9",
+              "LI:e963dd38d4062127"
+            ],
+            "field": "recognition_cues",
+            "before": "第3轮冻结尝试记录了 recognition-weak 的首个阻断。",
+            "after": "下一轮只加入 recognition-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 12 题；不是随机题号注入。"
+          },
+          {
+            "item_keys": [
+              "LI:15f53c530e263b9e",
+              "LI:2b6096b66e06bd5c",
+              "LI:2c9f3143c2f0f015",
+              "LI:3894418708b9e80e",
+              "LI:3b23e04d5b4af017",
+              "LI:48ee3812701823e8",
+              "LI:5ec0a901e9eba6b1",
+              "LI:657c2d59f277a43b",
+              "LI:9dae7c8665cb9bc3",
+              "LI:bf32a92ecb82d526",
+              "LI:e68a91b7c4a0a3a9",
+              "LI:e963dd38d4062127"
+            ],
+            "field": "continuation_checkpoints",
+            "before": "第3轮冻结尝试记录了 algebra-weak 的首个阻断。",
+            "after": "下一轮只加入 algebra-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 12 题；不是随机题号注入。"
+          }
+        ]
+      },
+      {
+        "round": 4,
+        "purpose": "mixed_retrieval",
+        "route_version": 3,
+        "route_hash": "d35ee3653942c129fa27b6766a8bbda7a016ae75deec6796ea4b4f4aa3fa89e5",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 39,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 39,
+            "blocked": 0
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 39,
+            "blocked": 0
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 39,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 39,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [],
+        "route_repairs": []
+      },
+      {
+        "round": 5,
+        "purpose": "fresh_context",
+        "route_version": 3,
+        "route_hash": "d35ee3653942c129fa27b6766a8bbda7a016ae75deec6796ea4b4f4aa3fa89e5",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 39,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 39,
+            "blocked": 0
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 39,
+            "blocked": 0
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 39,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 39,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [],
+        "route_repairs": []
+      }
+    ],
+    "expected_attempts_per_item": 25,
+    "actual_attempts_per_item": 25,
+    "unresolved_item_keys": [],
+    "mathematical_correctness": "not_evaluated_no_final_answer",
+    "mastery_claimed": false,
+    "status": "passed"
+  },
+  "summary": {
+    "items": 39,
+    "attempts": 975,
+    "route_assessments": 975,
+    "rounds": 5,
+    "personas_per_round": 5,
+    "repairs": 6,
+    "round_5_failed_items": 0,
+    "validator_errors": []
+  },
+  "human_learning_status": "remote_math_mcp_only",
+  "cold_24h_retest": "not_run",
+  "mastery_claimed": false,
+  "claim_scope": "route_actionability_only",
+  "mathematical_assessment_status": "not_run",
+  "route_audit_status": "passed",
+  "status": "passed"
+}

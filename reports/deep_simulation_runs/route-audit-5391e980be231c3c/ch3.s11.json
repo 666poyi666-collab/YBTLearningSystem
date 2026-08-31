@@ -1,0 +1,1361 @@
+{
+  "schema_version": "ybt-deep-section-simulation-v3",
+  "generated_at": "2026-08-31T04:06:31.804623+00:00",
+  "chapter": 3,
+  "section": "ch3.s11",
+  "label": "第11节 微专题7：解析几何大题——定值与定点",
+  "simulation_kind": "answer_isolated_synthetic_route_stress",
+  "honesty_boundary": "Attempts test route actionability. They contain no final learner answer, so mathematical correctness and mastery are not claimed.",
+  "source_binding": {
+    "manifest_sha256": "5983a4e8eaae43e9f4c90c3e2b6b2a13e3ad4f167c8aae55ef5cbef7ef013654",
+    "student_learning_items_sha256": "4d4bbffe7c1b635d34e91289d367dfcaecd980cf255da11803fa02e2ce91f299",
+    "student_packet_sha256": "9c56e75459e7ecf07ad6d87642c60bd8ebf09531b78fc067716efe3435f0f433",
+    "grader_learning_packet_sha256": "ce28c1ec804ce4ae5365e258a43e4a9aab29dcafe1b3744e10aa5d68e8e1b2e6",
+    "route_sha256": "31226262dbec076a467be657bb0ec7f2ab2d84615e29975bab996de681e901af",
+    "learner_input_snapshot_sha256": "a9ffe1d5d9ad738e4a0e758fa0ba13ee92ae4a7ed85dd91c9daef62a51b8a5eb"
+  },
+  "answer_isolation": {
+    "frozen_attempts_path": "reports/deep_simulation_runs/route-audit-5391e980be231c3c/frozen/ch3.s11.jsonl.gz",
+    "frozen_attempts_sha256": "41abfcdb653a7886ac744004110fff1a5cf71ba97deb9de9693ae31af7885041",
+    "route_assessments_path": "reports/deep_simulation_runs/route-audit-5391e980be231c3c/route_assessments/ch3.s11.jsonl.gz",
+    "route_assessments_sha256": "c982311ac0af11db2c01d6fc6c4af4b0834d8d1350a5a56cac65802f04fb48be",
+    "learner_answer_material_loaded": false,
+    "grader_material_loaded_after_freeze": true,
+    "grader_evidence": {
+      "parsed_automatic": 6,
+      "review_required_text": 0,
+      "source_page_bound": 2,
+      "textbook_solution": 4,
+      "blocked": 0
+    },
+    "status": "passed"
+  },
+  "items": [
+    {
+      "item_key": "LI:377bdebac47f47e9",
+      "item_id": "377bdebac47f47e9",
+      "ordinal": 1,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例1",
+      "group": null,
+      "cycle_id": "ch3.s11-cycle-1",
+      "cycle_sequence": 1,
+      "cycle_title": "类型I 证明类定值问题",
+      "course_refs": [
+        "constant_value_1",
+        "constant_value_2"
+      ],
+      "course_titles": [
+        "第一类定值问题",
+        "第二类定值问题"
+      ],
+      "required_course_refs": [
+        "constant_value_1",
+        "constant_value_2"
+      ],
+      "prerequisite_course_refs": [],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 证明类定值问题"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "斜率",
+        "直线",
+        "距离",
+        "圆",
+        "椭圆",
+        "xOy",
+        "A",
+        "B",
+        "C"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "b6adf6eff5b34798194f60465add72b8949ef7b78ed4d525c7007f04c965d70a",
+      "source_question_text_sha256": "b6adf6eff5b34798194f60465add72b8949ef7b78ed4d525c7007f04c965d70a",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "b6adf6eff5b34798194f60465add72b8949ef7b78ed4d525c7007f04c965d70a",
+        "learner_question_text_sha256": "b6adf6eff5b34798194f60465add72b8949ef7b78ed4d525c7007f04c965d70a"
+      },
+      "question_signal_excerpt": "斜率、直线、距离、圆、椭圆、xOy、A、B、C",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:93e275f2ec0106cc",
+      "item_id": "93e275f2ec0106cc",
+      "ordinal": 2,
+      "ordinal_in_cycle": 2,
+      "kind": "direct_variant",
+      "label": "例1 变式",
+      "group": null,
+      "cycle_id": "ch3.s11-cycle-1",
+      "cycle_sequence": 1,
+      "cycle_title": "类型I 证明类定值问题",
+      "course_refs": [
+        "constant_value_1",
+        "constant_value_2"
+      ],
+      "course_titles": [
+        "第一类定值问题",
+        "第二类定值问题"
+      ],
+      "required_course_refs": [
+        "constant_value_1",
+        "constant_value_2"
+      ],
+      "prerequisite_course_refs": [],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 证明类定值问题"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "直线",
+        "双曲线",
+        "证明",
+        "面积",
+        "E",
+        "\\frac",
+        "x",
+        "a"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "eb22561546e0f0bc3dd2dbd7a3a2d12dc12e5b47759aa8f8fe0f49f2c0bd9073",
+      "source_question_text_sha256": "eb22561546e0f0bc3dd2dbd7a3a2d12dc12e5b47759aa8f8fe0f49f2c0bd9073",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "eb22561546e0f0bc3dd2dbd7a3a2d12dc12e5b47759aa8f8fe0f49f2c0bd9073",
+        "learner_question_text_sha256": "eb22561546e0f0bc3dd2dbd7a3a2d12dc12e5b47759aa8f8fe0f49f2c0bd9073"
+      },
+      "question_signal_excerpt": "直线、双曲线、证明、面积、E、\\frac、x、a",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:cc48ec449063ae36",
+      "item_id": "cc48ec449063ae36",
+      "ordinal": 3,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例2",
+      "group": null,
+      "cycle_id": "ch3.s11-cycle-2",
+      "cycle_sequence": 2,
+      "cycle_title": "类型Ⅱ 探究类定值问题",
+      "course_refs": [
+        "fixed_point_1",
+        "fixed_point_2_upper",
+        "fixed_point_2_lower",
+        "constant_value_1",
+        "constant_value_2"
+      ],
+      "course_titles": [
+        "第一类定点问题",
+        "第二类定点问题（上）",
+        "第二类定点问题（下）",
+        "第一类定值问题",
+        "第二类定值问题"
+      ],
+      "required_course_refs": [
+        "fixed_point_1",
+        "fixed_point_2_upper",
+        "fixed_point_2_lower"
+      ],
+      "prerequisite_course_refs": [
+        "constant_value_1",
+        "constant_value_2"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 探究类定值问题"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "直线",
+        "圆",
+        "椭圆",
+        "焦点",
+        "离心率",
+        "C",
+        "\\frac",
+        "x",
+        "a"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "89e1973f129fdd6a215a76b629c6a1de3cbd942411047e5906d692d93b4c2f75",
+      "source_question_text_sha256": "89e1973f129fdd6a215a76b629c6a1de3cbd942411047e5906d692d93b4c2f75",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "89e1973f129fdd6a215a76b629c6a1de3cbd942411047e5906d692d93b4c2f75",
+        "learner_question_text_sha256": "89e1973f129fdd6a215a76b629c6a1de3cbd942411047e5906d692d93b4c2f75"
+      },
+      "question_signal_excerpt": "直线、圆、椭圆、焦点、离心率、C、\\frac、x、a",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:2122069dc9c95384",
+      "item_id": "2122069dc9c95384",
+      "ordinal": 4,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例3",
+      "group": null,
+      "cycle_id": "ch3.s11-cycle-3",
+      "cycle_sequence": 3,
+      "cycle_title": "类型III 定点问题",
+      "course_refs": [
+        "pole_polar_upper",
+        "pole_polar_lower",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower",
+        "constant_value_1",
+        "constant_value_2",
+        "fixed_point_1",
+        "fixed_point_2_upper",
+        "fixed_point_2_lower"
+      ],
+      "course_titles": [
+        "极点极线模型（上）",
+        "极点极线模型（下）",
+        "交点问题的基本代数处理（上·题型辨识）",
+        "交点问题的基本代数处理（下·点线设法与处理）",
+        "第一类定值问题",
+        "第二类定值问题",
+        "第一类定点问题",
+        "第二类定点问题（上）",
+        "第二类定点问题（下）"
+      ],
+      "required_course_refs": [
+        "pole_polar_upper",
+        "pole_polar_lower",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "prerequisite_course_refs": [
+        "constant_value_1",
+        "constant_value_2",
+        "fixed_point_1",
+        "fixed_point_2_upper",
+        "fixed_point_2_lower"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型III 定点问题"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "斜率",
+        "直线",
+        "圆",
+        "椭圆",
+        "证明",
+        "C",
+        "\\frac",
+        "x",
+        "a"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "21fba9e798c15a1109584b7145002aa0728323c1a2cc5e6273c60ec048eacbc2",
+      "source_question_text_sha256": "21fba9e798c15a1109584b7145002aa0728323c1a2cc5e6273c60ec048eacbc2",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "21fba9e798c15a1109584b7145002aa0728323c1a2cc5e6273c60ec048eacbc2",
+        "learner_question_text_sha256": "21fba9e798c15a1109584b7145002aa0728323c1a2cc5e6273c60ec048eacbc2"
+      },
+      "question_signal_excerpt": "斜率、直线、圆、椭圆、证明、C、\\frac、x、a",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:bdd896172b570edc",
+      "item_id": "bdd896172b570edc",
+      "ordinal": 5,
+      "ordinal_in_cycle": 2,
+      "kind": "worked_example",
+      "label": "例4",
+      "group": null,
+      "cycle_id": "ch3.s11-cycle-3",
+      "cycle_sequence": 3,
+      "cycle_title": "类型III 定点问题",
+      "course_refs": [
+        "pole_polar_upper",
+        "pole_polar_lower",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower",
+        "constant_value_1",
+        "constant_value_2",
+        "fixed_point_1",
+        "fixed_point_2_upper",
+        "fixed_point_2_lower"
+      ],
+      "course_titles": [
+        "极点极线模型（上）",
+        "极点极线模型（下）",
+        "交点问题的基本代数处理（上·题型辨识）",
+        "交点问题的基本代数处理（下·点线设法与处理）",
+        "第一类定值问题",
+        "第二类定值问题",
+        "第一类定点问题",
+        "第二类定点问题（上）",
+        "第二类定点问题（下）"
+      ],
+      "required_course_refs": [
+        "pole_polar_upper",
+        "pole_polar_lower",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "prerequisite_course_refs": [
+        "constant_value_1",
+        "constant_value_2",
+        "fixed_point_1",
+        "fixed_point_2_upper",
+        "fixed_point_2_lower"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型III 定点问题"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "直线",
+        "圆",
+        "双曲线",
+        "焦点",
+        "证明",
+        "C",
+        "\\frac",
+        "x",
+        "a"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "VISION_VERIFIED",
+        "image_refs": [
+          {
+            "ref": "imgs/img_in_image_box_889_502_1093_723.jpg",
+            "path": "data/ocr_live_current/third_chapter_180/imgs/img_in_image_box_889_502_1093_723.jpg",
+            "exists": true
+          }
+        ]
+      },
+      "question_text_sha256": "1f767ec1d2c2aae72be0e5a375edcfc0123e59aad47aee6af2d857c4cc0ad017",
+      "source_question_text_sha256": "1f767ec1d2c2aae72be0e5a375edcfc0123e59aad47aee6af2d857c4cc0ad017",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "1f767ec1d2c2aae72be0e5a375edcfc0123e59aad47aee6af2d857c4cc0ad017",
+        "learner_question_text_sha256": "1f767ec1d2c2aae72be0e5a375edcfc0123e59aad47aee6af2d857c4cc0ad017"
+      },
+      "question_signal_excerpt": "直线、圆、双曲线、焦点、证明、C、\\frac、x、a",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:24b0447b85fbe498",
+      "item_id": "24b0447b85fbe498",
+      "ordinal": 6,
+      "ordinal_in_cycle": 3,
+      "kind": "direct_variant",
+      "label": "例3 变式",
+      "group": null,
+      "cycle_id": "ch3.s11-cycle-3",
+      "cycle_sequence": 3,
+      "cycle_title": "类型III 定点问题",
+      "course_refs": [
+        "pole_polar_upper",
+        "pole_polar_lower",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower",
+        "constant_value_1",
+        "constant_value_2",
+        "fixed_point_1",
+        "fixed_point_2_upper",
+        "fixed_point_2_lower"
+      ],
+      "course_titles": [
+        "极点极线模型（上）",
+        "极点极线模型（下）",
+        "交点问题的基本代数处理（上·题型辨识）",
+        "交点问题的基本代数处理（下·点线设法与处理）",
+        "第一类定值问题",
+        "第二类定值问题",
+        "第一类定点问题",
+        "第二类定点问题（上）",
+        "第二类定点问题（下）"
+      ],
+      "required_course_refs": [
+        "pole_polar_upper",
+        "pole_polar_lower",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "prerequisite_course_refs": [
+        "constant_value_1",
+        "constant_value_2",
+        "fixed_point_1",
+        "fixed_point_2_upper",
+        "fixed_point_2_lower"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型III 定点问题"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "直线",
+        "圆",
+        "弦",
+        "椭圆",
+        "焦点",
+        "\\frac",
+        "x",
+        "a"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "426c2e38811dab2ab16d3c1a73350ac126ab1b0c265af5346e843db53aafddcf",
+      "source_question_text_sha256": "426c2e38811dab2ab16d3c1a73350ac126ab1b0c265af5346e843db53aafddcf",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "426c2e38811dab2ab16d3c1a73350ac126ab1b0c265af5346e843db53aafddcf",
+        "learner_question_text_sha256": "426c2e38811dab2ab16d3c1a73350ac126ab1b0c265af5346e843db53aafddcf"
+      },
+      "question_signal_excerpt": "直线、圆、弦、椭圆、焦点、\\frac、x、a",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-711152e32c7ec2a2",
+      "item_id": "Q-711152e32c7ec2a2",
+      "ordinal": 7,
+      "ordinal_in_cycle": 1,
+      "kind": "abc_exercise",
+      "label": "B1",
+      "group": "B",
+      "cycle_id": "ch3.s11-cycle-4",
+      "cycle_sequence": 4,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "constant_value_1",
+        "constant_value_2",
+        "fixed_point_1",
+        "fixed_point_2_upper",
+        "fixed_point_2_lower",
+        "pole_polar_upper",
+        "pole_polar_lower",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "course_titles": [
+        "第一类定值问题",
+        "第二类定值问题",
+        "第一类定点问题",
+        "第二类定点问题（上）",
+        "第二类定点问题（下）",
+        "极点极线模型（上）",
+        "极点极线模型（下）",
+        "交点问题的基本代数处理（上·题型辨识）",
+        "交点问题的基本代数处理（下·点线设法与处理）"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "constant_value_1",
+        "constant_value_2",
+        "fixed_point_1",
+        "fixed_point_2_upper",
+        "fixed_point_2_lower",
+        "pole_polar_upper",
+        "pole_polar_lower",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型III 定点问题"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "直线",
+        "抛物线",
+        "证明",
+        "P",
+        "C",
+        "x",
+        "py"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "f5ce6a81eeca6f578ab95c9c5d1d52c9d446e5b11440f17476fc214832f0ab43",
+      "source_question_text_sha256": "f5ce6a81eeca6f578ab95c9c5d1d52c9d446e5b11440f17476fc214832f0ab43",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "f5ce6a81eeca6f578ab95c9c5d1d52c9d446e5b11440f17476fc214832f0ab43",
+        "learner_question_text_sha256": "f5ce6a81eeca6f578ab95c9c5d1d52c9d446e5b11440f17476fc214832f0ab43"
+      },
+      "question_signal_excerpt": "直线、抛物线、证明、P、C、x、py",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-4dcbc9a798bae021",
+      "item_id": "Q-4dcbc9a798bae021",
+      "ordinal": 8,
+      "ordinal_in_cycle": 2,
+      "kind": "abc_exercise",
+      "label": "B2",
+      "group": "B",
+      "cycle_id": "ch3.s11-cycle-4",
+      "cycle_sequence": 4,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "constant_value_1",
+        "constant_value_2",
+        "fixed_point_1",
+        "fixed_point_2_upper",
+        "fixed_point_2_lower",
+        "pole_polar_upper",
+        "pole_polar_lower",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "course_titles": [
+        "第一类定值问题",
+        "第二类定值问题",
+        "第一类定点问题",
+        "第二类定点问题（上）",
+        "第二类定点问题（下）",
+        "极点极线模型（上）",
+        "极点极线模型（下）",
+        "交点问题的基本代数处理（上·题型辨识）",
+        "交点问题的基本代数处理（下·点线设法与处理）"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "constant_value_1",
+        "constant_value_2",
+        "fixed_point_1",
+        "fixed_point_2_upper",
+        "fixed_point_2_lower",
+        "pole_polar_upper",
+        "pole_polar_lower",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 证明类定值问题"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "斜率",
+        "直线",
+        "圆",
+        "椭圆",
+        "焦点",
+        "C",
+        "\\frac",
+        "x",
+        "a"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "46009683b03fb08e0d0ee081d6d4ddecc7b00a42bded8e0df1bad7d50fa91b37",
+      "source_question_text_sha256": "46009683b03fb08e0d0ee081d6d4ddecc7b00a42bded8e0df1bad7d50fa91b37",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "46009683b03fb08e0d0ee081d6d4ddecc7b00a42bded8e0df1bad7d50fa91b37",
+        "learner_question_text_sha256": "46009683b03fb08e0d0ee081d6d4ddecc7b00a42bded8e0df1bad7d50fa91b37"
+      },
+      "question_signal_excerpt": "斜率、直线、圆、椭圆、焦点、C、\\frac、x、a",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-e78ad2df06aa13dd",
+      "item_id": "Q-e78ad2df06aa13dd",
+      "ordinal": 9,
+      "ordinal_in_cycle": 1,
+      "kind": "abc_exercise",
+      "label": "C3",
+      "group": "C",
+      "cycle_id": "ch3.s11-cycle-5",
+      "cycle_sequence": 5,
+      "cycle_title": "C组 拓展提升",
+      "course_refs": [
+        "constant_value_1",
+        "constant_value_2",
+        "fixed_point_1",
+        "fixed_point_2_upper",
+        "fixed_point_2_lower",
+        "pole_polar_upper",
+        "pole_polar_lower",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "course_titles": [
+        "第一类定值问题",
+        "第二类定值问题",
+        "第一类定点问题",
+        "第二类定点问题（上）",
+        "第二类定点问题（下）",
+        "极点极线模型（上）",
+        "极点极线模型（下）",
+        "交点问题的基本代数处理（上·题型辨识）",
+        "交点问题的基本代数处理（下·点线设法与处理）"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "constant_value_1",
+        "constant_value_2",
+        "fixed_point_1",
+        "fixed_point_2_upper",
+        "fixed_point_2_lower",
+        "pole_polar_upper",
+        "pole_polar_lower",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型III 定点问题"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "斜率",
+        "直线",
+        "圆",
+        "椭圆",
+        "离心率",
+        "C",
+        "\\frac",
+        "x",
+        "a"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "37ffd1399d10e1bf739be6450a7af8947152d402970d73db3810d0720d898d4e",
+      "source_question_text_sha256": "37ffd1399d10e1bf739be6450a7af8947152d402970d73db3810d0720d898d4e",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "37ffd1399d10e1bf739be6450a7af8947152d402970d73db3810d0720d898d4e",
+        "learner_question_text_sha256": "37ffd1399d10e1bf739be6450a7af8947152d402970d73db3810d0720d898d4e"
+      },
+      "question_signal_excerpt": "斜率、直线、圆、椭圆、离心率、C、\\frac、x、a",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-14417fb94a7478e2",
+      "item_id": "Q-14417fb94a7478e2",
+      "ordinal": 10,
+      "ordinal_in_cycle": 2,
+      "kind": "abc_exercise",
+      "label": "C4",
+      "group": "C",
+      "cycle_id": "ch3.s11-cycle-5",
+      "cycle_sequence": 5,
+      "cycle_title": "C组 拓展提升",
+      "course_refs": [
+        "constant_value_1",
+        "constant_value_2",
+        "fixed_point_1",
+        "fixed_point_2_upper",
+        "fixed_point_2_lower",
+        "pole_polar_upper",
+        "pole_polar_lower",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "course_titles": [
+        "第一类定值问题",
+        "第二类定值问题",
+        "第一类定点问题",
+        "第二类定点问题（上）",
+        "第二类定点问题（下）",
+        "极点极线模型（上）",
+        "极点极线模型（下）",
+        "交点问题的基本代数处理（上·题型辨识）",
+        "交点问题的基本代数处理（下·点线设法与处理）"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "constant_value_1",
+        "constant_value_2",
+        "fixed_point_1",
+        "fixed_point_2_upper",
+        "fixed_point_2_lower",
+        "pole_polar_upper",
+        "pole_polar_lower",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 探究类定值问题",
+        "类型III 定点问题"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "斜率",
+        "直线",
+        "抛物线",
+        "焦点",
+        "P",
+        "a",
+        "C",
+        "y"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "e9cdc5c7057ddaa6abfc5cfca46b274559e018e7aa3e9f223017ebe23d3468bd",
+      "source_question_text_sha256": "e9cdc5c7057ddaa6abfc5cfca46b274559e018e7aa3e9f223017ebe23d3468bd",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "e9cdc5c7057ddaa6abfc5cfca46b274559e018e7aa3e9f223017ebe23d3468bd",
+        "learner_question_text_sha256": "e9cdc5c7057ddaa6abfc5cfca46b274559e018e7aa3e9f223017ebe23d3468bd"
+      },
+      "question_signal_excerpt": "斜率、直线、抛物线、焦点、P、a、C、y",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-90f0962a7086349e",
+      "item_id": "Q-90f0962a7086349e",
+      "ordinal": 11,
+      "ordinal_in_cycle": 3,
+      "kind": "abc_exercise",
+      "label": "C5",
+      "group": "C",
+      "cycle_id": "ch3.s11-cycle-5",
+      "cycle_sequence": 5,
+      "cycle_title": "C组 拓展提升",
+      "course_refs": [
+        "constant_value_1",
+        "constant_value_2",
+        "fixed_point_1",
+        "fixed_point_2_upper",
+        "fixed_point_2_lower",
+        "pole_polar_upper",
+        "pole_polar_lower",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "course_titles": [
+        "第一类定值问题",
+        "第二类定值问题",
+        "第一类定点问题",
+        "第二类定点问题（上）",
+        "第二类定点问题（下）",
+        "极点极线模型（上）",
+        "极点极线模型（下）",
+        "交点问题的基本代数处理（上·题型辨识）",
+        "交点问题的基本代数处理（下·点线设法与处理）"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "constant_value_1",
+        "constant_value_2",
+        "fixed_point_1",
+        "fixed_point_2_upper",
+        "fixed_point_2_lower",
+        "pole_polar_upper",
+        "pole_polar_lower",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型III 定点问题",
+        "类型I 证明类定值问题"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "斜率",
+        "直线",
+        "圆",
+        "双曲线",
+        "证明",
+        "T_1",
+        "\\sqrt",
+        "T_2"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "6696b5bf6e71de8344efa0ef80ead353a8ed25b736f91b6ab1e33359fc8a2c25",
+      "source_question_text_sha256": "6696b5bf6e71de8344efa0ef80ead353a8ed25b736f91b6ab1e33359fc8a2c25",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "6696b5bf6e71de8344efa0ef80ead353a8ed25b736f91b6ab1e33359fc8a2c25",
+        "learner_question_text_sha256": "6696b5bf6e71de8344efa0ef80ead353a8ed25b736f91b6ab1e33359fc8a2c25"
+      },
+      "question_signal_excerpt": "斜率、直线、圆、双曲线、证明、T_1、\\sqrt、T_2",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-81da3098dcc8278d",
+      "item_id": "Q-81da3098dcc8278d",
+      "ordinal": 12,
+      "ordinal_in_cycle": 4,
+      "kind": "abc_exercise",
+      "label": "C6",
+      "group": "C",
+      "cycle_id": "ch3.s11-cycle-5",
+      "cycle_sequence": 5,
+      "cycle_title": "C组 拓展提升",
+      "course_refs": [
+        "constant_value_1",
+        "constant_value_2",
+        "fixed_point_1",
+        "fixed_point_2_upper",
+        "fixed_point_2_lower",
+        "pole_polar_upper",
+        "pole_polar_lower",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "course_titles": [
+        "第一类定值问题",
+        "第二类定值问题",
+        "第一类定点问题",
+        "第二类定点问题（上）",
+        "第二类定点问题（下）",
+        "极点极线模型（上）",
+        "极点极线模型（下）",
+        "交点问题的基本代数处理（上·题型辨识）",
+        "交点问题的基本代数处理（下·点线设法与处理）"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "constant_value_1",
+        "constant_value_2",
+        "fixed_point_1",
+        "fixed_point_2_upper",
+        "fixed_point_2_lower",
+        "pole_polar_upper",
+        "pole_polar_lower",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型III 定点问题"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "直线",
+        "圆",
+        "弦",
+        "P",
+        "y",
+        "C"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "02143c40caacade41ba525e43c49cb46db0ae4c8b4cda6af3dc750e32274d3c3",
+      "source_question_text_sha256": "02143c40caacade41ba525e43c49cb46db0ae4c8b4cda6af3dc750e32274d3c3",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "02143c40caacade41ba525e43c49cb46db0ae4c8b4cda6af3dc750e32274d3c3",
+        "learner_question_text_sha256": "02143c40caacade41ba525e43c49cb46db0ae4c8b4cda6af3dc750e32274d3c3"
+      },
+      "question_signal_excerpt": "直线、圆、弦、P、y、C",
+      "source_blocked": false
+    }
+  ],
+  "route_versions": [
+    {
+      "version": 1,
+      "route_hash": "fff1a4ccbb34783142f26b64344d69e1b69f27e3081119b4f8b34ba7b30f86b8"
+    },
+    {
+      "version": 2,
+      "route_hash": "36cb3dbb1b723643d6a3e12813774d70dcb85f2fd7107ea167d4dbd5c3a1897d"
+    },
+    {
+      "version": 3,
+      "route_hash": "71d933fe279d4eec826b0a735d79f5328a3d2193f924d92309d3a709de1bf29c"
+    }
+  ],
+  "final_route_hash": "71d933fe279d4eec826b0a735d79f5328a3d2193f924d92309d3a709de1bf29c",
+  "simulation": {
+    "protocol": "five-round-five-persona-v3-answer-isolated",
+    "generation_mode": "synthetic_route_stress_from_actual_item_features",
+    "rounds": [
+      {
+        "round": 1,
+        "purpose": "baseline_entry",
+        "route_version": 1,
+        "route_hash": "fff1a4ccbb34783142f26b64344d69e1b69f27e3081119b4f8b34ba7b30f86b8",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 12,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 12,
+            "blocked": 2
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 12,
+            "blocked": 1
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 12,
+            "blocked": 1
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 12,
+            "blocked": 6
+          }
+        ],
+        "failed_item_keys": [
+          "LI:377bdebac47f47e9",
+          "LI:bdd896172b570edc",
+          "Q:Q-14417fb94a7478e2",
+          "Q:Q-4dcbc9a798bae021",
+          "Q:Q-711152e32c7ec2a2",
+          "Q:Q-81da3098dcc8278d",
+          "Q:Q-90f0962a7086349e",
+          "Q:Q-e78ad2df06aa13dd"
+        ],
+        "route_repairs": [
+          {
+            "item_keys": [
+              "Q:Q-14417fb94a7478e2",
+              "Q:Q-90f0962a7086349e"
+            ],
+            "field": "recognition_cues",
+            "before": "第1轮冻结尝试记录了 recognition-weak 的首个阻断。",
+            "after": "下一轮只加入 recognition-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 2 题；不是随机题号注入。"
+          },
+          {
+            "item_keys": [
+              "LI:377bdebac47f47e9"
+            ],
+            "field": "continuation_checkpoints",
+            "before": "第1轮冻结尝试记录了 algebra-weak 的首个阻断。",
+            "after": "下一轮只加入 algebra-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 1 题；不是随机题号注入。"
+          },
+          {
+            "item_keys": [
+              "LI:bdd896172b570edc"
+            ],
+            "field": "visual_translation",
+            "before": "第1轮冻结尝试记录了 visual-weak 的首个阻断。",
+            "after": "下一轮只加入 visual-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 1 题；不是随机题号注入。"
+          },
+          {
+            "item_keys": [
+              "Q:Q-14417fb94a7478e2",
+              "Q:Q-4dcbc9a798bae021",
+              "Q:Q-711152e32c7ec2a2",
+              "Q:Q-81da3098dcc8278d",
+              "Q:Q-90f0962a7086349e",
+              "Q:Q-e78ad2df06aa13dd"
+            ],
+            "field": "independent_self_check",
+            "before": "第1轮冻结尝试记录了 self-check-weak 的首个阻断。",
+            "after": "下一轮只加入 self-check-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 6 题；不是随机题号注入。"
+          }
+        ]
+      },
+      {
+        "round": 2,
+        "purpose": "prerequisite_repair",
+        "route_version": 2,
+        "route_hash": "36cb3dbb1b723643d6a3e12813774d70dcb85f2fd7107ea167d4dbd5c3a1897d",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 12,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 12,
+            "blocked": 0
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 12,
+            "blocked": 0
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 12,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 12,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [],
+        "route_repairs": []
+      },
+      {
+        "round": 3,
+        "purpose": "continuation_transfer",
+        "route_version": 2,
+        "route_hash": "36cb3dbb1b723643d6a3e12813774d70dcb85f2fd7107ea167d4dbd5c3a1897d",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 12,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 12,
+            "blocked": 2
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 12,
+            "blocked": 2
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 12,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 12,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [
+          "LI:24b0447b85fbe498",
+          "LI:93e275f2ec0106cc"
+        ],
+        "route_repairs": [
+          {
+            "item_keys": [
+              "LI:24b0447b85fbe498",
+              "LI:93e275f2ec0106cc"
+            ],
+            "field": "recognition_cues",
+            "before": "第3轮冻结尝试记录了 recognition-weak 的首个阻断。",
+            "after": "下一轮只加入 recognition-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 2 题；不是随机题号注入。"
+          },
+          {
+            "item_keys": [
+              "LI:24b0447b85fbe498",
+              "LI:93e275f2ec0106cc"
+            ],
+            "field": "continuation_checkpoints",
+            "before": "第3轮冻结尝试记录了 algebra-weak 的首个阻断。",
+            "after": "下一轮只加入 algebra-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 2 题；不是随机题号注入。"
+          }
+        ]
+      },
+      {
+        "round": 4,
+        "purpose": "mixed_retrieval",
+        "route_version": 3,
+        "route_hash": "71d933fe279d4eec826b0a735d79f5328a3d2193f924d92309d3a709de1bf29c",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 12,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 12,
+            "blocked": 0
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 12,
+            "blocked": 0
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 12,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 12,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [],
+        "route_repairs": []
+      },
+      {
+        "round": 5,
+        "purpose": "fresh_context",
+        "route_version": 3,
+        "route_hash": "71d933fe279d4eec826b0a735d79f5328a3d2193f924d92309d3a709de1bf29c",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 12,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 12,
+            "blocked": 0
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 12,
+            "blocked": 0
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 12,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 12,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [],
+        "route_repairs": []
+      }
+    ],
+    "expected_attempts_per_item": 25,
+    "actual_attempts_per_item": 25,
+    "unresolved_item_keys": [],
+    "mathematical_correctness": "not_evaluated_no_final_answer",
+    "mastery_claimed": false,
+    "status": "passed"
+  },
+  "summary": {
+    "items": 12,
+    "attempts": 300,
+    "route_assessments": 300,
+    "rounds": 5,
+    "personas_per_round": 5,
+    "repairs": 6,
+    "round_5_failed_items": 0,
+    "validator_errors": []
+  },
+  "human_learning_status": "remote_math_mcp_only",
+  "cold_24h_retest": "not_run",
+  "mastery_claimed": false,
+  "claim_scope": "route_actionability_only",
+  "mathematical_assessment_status": "not_run",
+  "route_audit_status": "passed",
+  "status": "passed"
+}

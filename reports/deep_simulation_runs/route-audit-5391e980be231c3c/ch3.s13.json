@@ -1,0 +1,1251 @@
+{
+  "schema_version": "ybt-deep-section-simulation-v3",
+  "generated_at": "2026-08-31T04:06:31.883568+00:00",
+  "chapter": 3,
+  "section": "ch3.s13",
+  "label": "第13节 微专题9：解析几何大题——特殊图形与特殊方法",
+  "simulation_kind": "answer_isolated_synthetic_route_stress",
+  "honesty_boundary": "Attempts test route actionability. They contain no final learner answer, so mathematical correctness and mastery are not claimed.",
+  "source_binding": {
+    "manifest_sha256": "5983a4e8eaae43e9f4c90c3e2b6b2a13e3ad4f167c8aae55ef5cbef7ef013654",
+    "student_learning_items_sha256": "2c61498d1369d6b8b0514472387478ff5d614aeb317e274a1392847c0e22aea6",
+    "student_packet_sha256": "7d37bdfa197ca2b004b1957da0df93363e5b05dffcf276159326b2e79f489ba2",
+    "grader_learning_packet_sha256": "f803e7e94771af478d90669d1dbe28b154b3d6aa039cd00381737f0f70e9b9c0",
+    "route_sha256": "4cefb893f5e42fb049814e0993e69f6d23b19a2a9c1aa0d8b6a2b3f2d876da11",
+    "learner_input_snapshot_sha256": "ec77d50abfbb4a3f0f7a0a2a505df9aa00f3b0544dfb32b18ba28ecda40d0b06"
+  },
+  "answer_isolation": {
+    "frozen_attempts_path": "reports/deep_simulation_runs/route-audit-5391e980be231c3c/frozen/ch3.s13.jsonl.gz",
+    "frozen_attempts_sha256": "129bb01136e003704dc16aa64cb6385c89db2fa10d1d9c40f231b30b47f53862",
+    "route_assessments_path": "reports/deep_simulation_runs/route-audit-5391e980be231c3c/route_assessments/ch3.s13.jsonl.gz",
+    "route_assessments_sha256": "403c5316aa69dfd4fdb75e7ece3e36123095545af5cf8a06ee4db88224432958",
+    "learner_answer_material_loaded": false,
+    "grader_material_loaded_after_freeze": true,
+    "grader_evidence": {
+      "parsed_automatic": 5,
+      "review_required_text": 0,
+      "source_page_bound": 2,
+      "textbook_solution": 3,
+      "blocked": 0
+    },
+    "status": "passed"
+  },
+  "items": [
+    {
+      "item_key": "LI:a8afdc4ec31f7d4e",
+      "item_id": "a8afdc4ec31f7d4e",
+      "ordinal": 1,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例1",
+      "group": null,
+      "cycle_id": "ch3.s13-cycle-1",
+      "cycle_sequence": 1,
+      "cycle_title": "类型I 平行四边形的翻译方法",
+      "course_refs": [
+        "collinearity",
+        "eliminate_parameter",
+        "related_point_method",
+        "moving_point_basic"
+      ],
+      "course_titles": [
+        "共线问题",
+        "消参法",
+        "相关点法",
+        "简单动点问题的处理"
+      ],
+      "required_course_refs": [
+        "collinearity",
+        "eliminate_parameter",
+        "related_point_method",
+        "moving_point_basic"
+      ],
+      "prerequisite_course_refs": [],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 平行四边形的翻译方法"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "直线",
+        "圆",
+        "C",
+        "x",
+        "y",
+        "F"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "8ad28c72f62e486e266612591babedfa55781fea759b221c49356cd195497305",
+      "source_question_text_sha256": "8ad28c72f62e486e266612591babedfa55781fea759b221c49356cd195497305",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "8ad28c72f62e486e266612591babedfa55781fea759b221c49356cd195497305",
+        "learner_question_text_sha256": "8ad28c72f62e486e266612591babedfa55781fea759b221c49356cd195497305"
+      },
+      "question_signal_excerpt": "直线、圆、C、x、y、F",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:e72cba227718b5fb",
+      "item_id": "e72cba227718b5fb",
+      "ordinal": 2,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例2",
+      "group": null,
+      "cycle_id": "ch3.s13-cycle-2",
+      "cycle_sequence": 2,
+      "cycle_title": "类型Ⅱ 菱形的翻译方法",
+      "course_refs": [
+        "completion_separation_substitution",
+        "quadratic_fraction_speed_upper",
+        "quadratic_fraction_speed_lower",
+        "complete_asymmetry",
+        "collinearity",
+        "eliminate_parameter",
+        "related_point_method",
+        "moving_point_basic"
+      ],
+      "course_titles": [
+        "配方法与分离常数法与换元法",
+        "特殊二次分式速解（上）",
+        "特殊二次分式速解（下）",
+        "补全不对称",
+        "共线问题",
+        "消参法",
+        "相关点法",
+        "简单动点问题的处理"
+      ],
+      "required_course_refs": [
+        "completion_separation_substitution",
+        "quadratic_fraction_speed_upper",
+        "quadratic_fraction_speed_lower",
+        "complete_asymmetry"
+      ],
+      "prerequisite_course_refs": [
+        "collinearity",
+        "eliminate_parameter",
+        "related_point_method",
+        "moving_point_basic"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 菱形的翻译方法"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "直线",
+        "圆",
+        "椭圆",
+        "焦点",
+        "C",
+        "F",
+        "A",
+        "left"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "64892fe37117df1d1fbebaea3635c74c81469cc3a8730f2066287d9c7c5ba9ca",
+      "source_question_text_sha256": "64892fe37117df1d1fbebaea3635c74c81469cc3a8730f2066287d9c7c5ba9ca",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "64892fe37117df1d1fbebaea3635c74c81469cc3a8730f2066287d9c7c5ba9ca",
+        "learner_question_text_sha256": "64892fe37117df1d1fbebaea3635c74c81469cc3a8730f2066287d9c7c5ba9ca"
+      },
+      "question_signal_excerpt": "直线、圆、椭圆、焦点、C、F、A、left",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:4988207add985630",
+      "item_id": "4988207add985630",
+      "ordinal": 3,
+      "ordinal_in_cycle": 2,
+      "kind": "direct_variant",
+      "label": "例2 变式",
+      "group": null,
+      "cycle_id": "ch3.s13-cycle-2",
+      "cycle_sequence": 2,
+      "cycle_title": "类型Ⅱ 菱形的翻译方法",
+      "course_refs": [
+        "completion_separation_substitution",
+        "quadratic_fraction_speed_upper",
+        "quadratic_fraction_speed_lower",
+        "complete_asymmetry",
+        "collinearity",
+        "eliminate_parameter",
+        "related_point_method",
+        "moving_point_basic"
+      ],
+      "course_titles": [
+        "配方法与分离常数法与换元法",
+        "特殊二次分式速解（上）",
+        "特殊二次分式速解（下）",
+        "补全不对称",
+        "共线问题",
+        "消参法",
+        "相关点法",
+        "简单动点问题的处理"
+      ],
+      "required_course_refs": [
+        "completion_separation_substitution",
+        "quadratic_fraction_speed_upper",
+        "quadratic_fraction_speed_lower",
+        "complete_asymmetry"
+      ],
+      "prerequisite_course_refs": [
+        "collinearity",
+        "eliminate_parameter",
+        "related_point_method",
+        "moving_point_basic"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 菱形的翻译方法"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "圆",
+        "弦",
+        "范围",
+        "P",
+        "Q",
+        "x"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "f182e71f3d2924df82428e44704505eb5ebdc6de01589464f467db3b09afc0af",
+      "source_question_text_sha256": "f182e71f3d2924df82428e44704505eb5ebdc6de01589464f467db3b09afc0af",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "f182e71f3d2924df82428e44704505eb5ebdc6de01589464f467db3b09afc0af",
+        "learner_question_text_sha256": "f182e71f3d2924df82428e44704505eb5ebdc6de01589464f467db3b09afc0af"
+      },
+      "question_signal_excerpt": "圆、弦、范围、P、Q、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:fb6d250c8aeb0a2b",
+      "item_id": "fb6d250c8aeb0a2b",
+      "ordinal": 4,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例3",
+      "group": null,
+      "cycle_id": "ch3.s13-cycle-3",
+      "cycle_sequence": 3,
+      "cycle_title": "类型Ⅲ 非对称韦达定理问题",
+      "course_refs": [
+        "eliminate_asymmetry",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower",
+        "collinearity",
+        "eliminate_parameter",
+        "related_point_method",
+        "moving_point_basic",
+        "completion_separation_substitution",
+        "quadratic_fraction_speed_upper",
+        "quadratic_fraction_speed_lower",
+        "complete_asymmetry"
+      ],
+      "course_titles": [
+        "消去不对称",
+        "交点问题的基本代数处理（上·题型辨识）",
+        "交点问题的基本代数处理（下·点线设法与处理）",
+        "共线问题",
+        "消参法",
+        "相关点法",
+        "简单动点问题的处理",
+        "配方法与分离常数法与换元法",
+        "特殊二次分式速解（上）",
+        "特殊二次分式速解（下）",
+        "补全不对称"
+      ],
+      "required_course_refs": [
+        "eliminate_asymmetry",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "prerequisite_course_refs": [
+        "collinearity",
+        "eliminate_parameter",
+        "related_point_method",
+        "moving_point_basic",
+        "completion_separation_substitution",
+        "quadratic_fraction_speed_upper",
+        "quadratic_fraction_speed_lower",
+        "complete_asymmetry"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 非对称韦达定理问题"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "直线",
+        "圆",
+        "椭圆",
+        "焦点",
+        "证明",
+        "C",
+        "\\frac",
+        "x",
+        "a"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "f2ac578a54f3c759f70dfb4666a5c8d60dc0c2531941e3e0e0f3f226a91939e3",
+      "source_question_text_sha256": "f2ac578a54f3c759f70dfb4666a5c8d60dc0c2531941e3e0e0f3f226a91939e3",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "f2ac578a54f3c759f70dfb4666a5c8d60dc0c2531941e3e0e0f3f226a91939e3",
+        "learner_question_text_sha256": "f2ac578a54f3c759f70dfb4666a5c8d60dc0c2531941e3e0e0f3f226a91939e3"
+      },
+      "question_signal_excerpt": "直线、圆、椭圆、焦点、证明、C、\\frac、x、a",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:267b038d41549cf2",
+      "item_id": "267b038d41549cf2",
+      "ordinal": 5,
+      "ordinal_in_cycle": 2,
+      "kind": "direct_variant",
+      "label": "例3 变式",
+      "group": null,
+      "cycle_id": "ch3.s13-cycle-3",
+      "cycle_sequence": 3,
+      "cycle_title": "类型Ⅲ 非对称韦达定理问题",
+      "course_refs": [
+        "eliminate_asymmetry",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower",
+        "collinearity",
+        "eliminate_parameter",
+        "related_point_method",
+        "moving_point_basic",
+        "completion_separation_substitution",
+        "quadratic_fraction_speed_upper",
+        "quadratic_fraction_speed_lower",
+        "complete_asymmetry"
+      ],
+      "course_titles": [
+        "消去不对称",
+        "交点问题的基本代数处理（上·题型辨识）",
+        "交点问题的基本代数处理（下·点线设法与处理）",
+        "共线问题",
+        "消参法",
+        "相关点法",
+        "简单动点问题的处理",
+        "配方法与分离常数法与换元法",
+        "特殊二次分式速解（上）",
+        "特殊二次分式速解（下）",
+        "补全不对称"
+      ],
+      "required_course_refs": [
+        "eliminate_asymmetry",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "prerequisite_course_refs": [
+        "collinearity",
+        "eliminate_parameter",
+        "related_point_method",
+        "moving_point_basic",
+        "completion_separation_substitution",
+        "quadratic_fraction_speed_upper",
+        "quadratic_fraction_speed_lower",
+        "complete_asymmetry"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 非对称韦达定理问题"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "直线",
+        "圆",
+        "椭圆",
+        "焦点",
+        "C",
+        "\\frac",
+        "x",
+        "a"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "59a48e9d43095358c43f88a9291f181ff33c6e918735ff688510a10d295ad6e3",
+      "source_question_text_sha256": "59a48e9d43095358c43f88a9291f181ff33c6e918735ff688510a10d295ad6e3",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "59a48e9d43095358c43f88a9291f181ff33c6e918735ff688510a10d295ad6e3",
+        "learner_question_text_sha256": "59a48e9d43095358c43f88a9291f181ff33c6e918735ff688510a10d295ad6e3"
+      },
+      "question_signal_excerpt": "直线、圆、椭圆、焦点、C、\\frac、x、a",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-064bfb115aaf6ccc",
+      "item_id": "Q-064bfb115aaf6ccc",
+      "ordinal": 6,
+      "ordinal_in_cycle": 1,
+      "kind": "abc_exercise",
+      "label": "B1",
+      "group": "B",
+      "cycle_id": "ch3.s13-cycle-4",
+      "cycle_sequence": 4,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "collinearity",
+        "eliminate_parameter",
+        "related_point_method",
+        "moving_point_basic",
+        "completion_separation_substitution",
+        "quadratic_fraction_speed_upper",
+        "quadratic_fraction_speed_lower",
+        "complete_asymmetry",
+        "eliminate_asymmetry",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "course_titles": [
+        "共线问题",
+        "消参法",
+        "相关点法",
+        "简单动点问题的处理",
+        "配方法与分离常数法与换元法",
+        "特殊二次分式速解（上）",
+        "特殊二次分式速解（下）",
+        "补全不对称",
+        "消去不对称",
+        "交点问题的基本代数处理（上·题型辨识）",
+        "交点问题的基本代数处理（下·点线设法与处理）"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "collinearity",
+        "eliminate_parameter",
+        "related_point_method",
+        "moving_point_basic",
+        "completion_separation_substitution",
+        "quadratic_fraction_speed_upper",
+        "quadratic_fraction_speed_lower",
+        "complete_asymmetry",
+        "eliminate_asymmetry",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 菱形的翻译方法",
+        "类型I 平行四边形的翻译方法"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "直线",
+        "抛物线",
+        "焦点",
+        "C",
+        "y",
+        "px",
+        "p"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "dfaff81f8912b52a22accb55e36b59549158ef11ce207e2974a0037edb5a0da9",
+      "source_question_text_sha256": "dfaff81f8912b52a22accb55e36b59549158ef11ce207e2974a0037edb5a0da9",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "dfaff81f8912b52a22accb55e36b59549158ef11ce207e2974a0037edb5a0da9",
+        "learner_question_text_sha256": "dfaff81f8912b52a22accb55e36b59549158ef11ce207e2974a0037edb5a0da9"
+      },
+      "question_signal_excerpt": "直线、抛物线、焦点、C、y、px、p",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-ea32833917357949",
+      "item_id": "Q-ea32833917357949",
+      "ordinal": 7,
+      "ordinal_in_cycle": 2,
+      "kind": "abc_exercise",
+      "label": "B2",
+      "group": "B",
+      "cycle_id": "ch3.s13-cycle-4",
+      "cycle_sequence": 4,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "collinearity",
+        "eliminate_parameter",
+        "related_point_method",
+        "moving_point_basic",
+        "completion_separation_substitution",
+        "quadratic_fraction_speed_upper",
+        "quadratic_fraction_speed_lower",
+        "complete_asymmetry",
+        "eliminate_asymmetry",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "course_titles": [
+        "共线问题",
+        "消参法",
+        "相关点法",
+        "简单动点问题的处理",
+        "配方法与分离常数法与换元法",
+        "特殊二次分式速解（上）",
+        "特殊二次分式速解（下）",
+        "补全不对称",
+        "消去不对称",
+        "交点问题的基本代数处理（上·题型辨识）",
+        "交点问题的基本代数处理（下·点线设法与处理）"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "collinearity",
+        "eliminate_parameter",
+        "related_point_method",
+        "moving_point_basic",
+        "completion_separation_substitution",
+        "quadratic_fraction_speed_upper",
+        "quadratic_fraction_speed_lower",
+        "complete_asymmetry",
+        "eliminate_asymmetry",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型I 平行四边形的翻译方法",
+        "类型Ⅲ 非对称韦达定理问题"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "圆",
+        "椭圆",
+        "离心率",
+        "证明",
+        "面积",
+        "C",
+        "\\frac",
+        "x",
+        "a"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "de33ed4a553f58359e439ef9d0129f80f22265db0ffc14790dccebf0a76cc523",
+      "source_question_text_sha256": "de33ed4a553f58359e439ef9d0129f80f22265db0ffc14790dccebf0a76cc523",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "de33ed4a553f58359e439ef9d0129f80f22265db0ffc14790dccebf0a76cc523",
+        "learner_question_text_sha256": "de33ed4a553f58359e439ef9d0129f80f22265db0ffc14790dccebf0a76cc523"
+      },
+      "question_signal_excerpt": "圆、椭圆、离心率、证明、面积、C、\\frac、x、a",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-1e24c3b511e40116",
+      "item_id": "Q-1e24c3b511e40116",
+      "ordinal": 8,
+      "ordinal_in_cycle": 1,
+      "kind": "abc_exercise",
+      "label": "C3",
+      "group": "C",
+      "cycle_id": "ch3.s13-cycle-5",
+      "cycle_sequence": 5,
+      "cycle_title": "C组 拓展提升",
+      "course_refs": [
+        "collinearity",
+        "eliminate_parameter",
+        "related_point_method",
+        "moving_point_basic",
+        "completion_separation_substitution",
+        "quadratic_fraction_speed_upper",
+        "quadratic_fraction_speed_lower",
+        "complete_asymmetry",
+        "eliminate_asymmetry",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "course_titles": [
+        "共线问题",
+        "消参法",
+        "相关点法",
+        "简单动点问题的处理",
+        "配方法与分离常数法与换元法",
+        "特殊二次分式速解（上）",
+        "特殊二次分式速解（下）",
+        "补全不对称",
+        "消去不对称",
+        "交点问题的基本代数处理（上·题型辨识）",
+        "交点问题的基本代数处理（下·点线设法与处理）"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "collinearity",
+        "eliminate_parameter",
+        "related_point_method",
+        "moving_point_basic",
+        "completion_separation_substitution",
+        "quadratic_fraction_speed_upper",
+        "quadratic_fraction_speed_lower",
+        "complete_asymmetry",
+        "eliminate_asymmetry",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 菱形的翻译方法",
+        "类型I 平行四边形的翻译方法"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "斜率",
+        "直线",
+        "对称",
+        "圆",
+        "椭圆",
+        "E",
+        "\\frac",
+        "x",
+        "a"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "c3590d1a73d47efe05d6d4a30e797a2a42c98602565c51a3204850ff17b410b7",
+      "source_question_text_sha256": "c3590d1a73d47efe05d6d4a30e797a2a42c98602565c51a3204850ff17b410b7",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "c3590d1a73d47efe05d6d4a30e797a2a42c98602565c51a3204850ff17b410b7",
+        "learner_question_text_sha256": "c3590d1a73d47efe05d6d4a30e797a2a42c98602565c51a3204850ff17b410b7"
+      },
+      "question_signal_excerpt": "斜率、直线、对称、圆、椭圆、E、\\frac、x、a",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-e4c9cccafbaadcfb",
+      "item_id": "Q-e4c9cccafbaadcfb",
+      "ordinal": 9,
+      "ordinal_in_cycle": 2,
+      "kind": "abc_exercise",
+      "label": "C4",
+      "group": "C",
+      "cycle_id": "ch3.s13-cycle-5",
+      "cycle_sequence": 5,
+      "cycle_title": "C组 拓展提升",
+      "course_refs": [
+        "collinearity",
+        "eliminate_parameter",
+        "related_point_method",
+        "moving_point_basic",
+        "completion_separation_substitution",
+        "quadratic_fraction_speed_upper",
+        "quadratic_fraction_speed_lower",
+        "complete_asymmetry",
+        "eliminate_asymmetry",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "course_titles": [
+        "共线问题",
+        "消参法",
+        "相关点法",
+        "简单动点问题的处理",
+        "配方法与分离常数法与换元法",
+        "特殊二次分式速解（上）",
+        "特殊二次分式速解（下）",
+        "补全不对称",
+        "消去不对称",
+        "交点问题的基本代数处理（上·题型辨识）",
+        "交点问题的基本代数处理（下·点线设法与处理）"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "collinearity",
+        "eliminate_parameter",
+        "related_point_method",
+        "moving_point_basic",
+        "completion_separation_substitution",
+        "quadratic_fraction_speed_upper",
+        "quadratic_fraction_speed_lower",
+        "complete_asymmetry",
+        "eliminate_asymmetry",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 非对称韦达定理问题",
+        "类型Ⅱ 菱形的翻译方法"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "直线",
+        "圆",
+        "椭圆",
+        "焦点",
+        "E",
+        "\\frac",
+        "x",
+        "a"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "7782918469506fd22225fdb1d3fae2ba334f8de7d030c9e2bea89eb9e9519195",
+      "source_question_text_sha256": "7782918469506fd22225fdb1d3fae2ba334f8de7d030c9e2bea89eb9e9519195",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "7782918469506fd22225fdb1d3fae2ba334f8de7d030c9e2bea89eb9e9519195",
+        "learner_question_text_sha256": "7782918469506fd22225fdb1d3fae2ba334f8de7d030c9e2bea89eb9e9519195"
+      },
+      "question_signal_excerpt": "直线、圆、椭圆、焦点、E、\\frac、x、a",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-1c5f30c723b7709f",
+      "item_id": "Q-1c5f30c723b7709f",
+      "ordinal": 10,
+      "ordinal_in_cycle": 3,
+      "kind": "abc_exercise",
+      "label": "C5",
+      "group": "C",
+      "cycle_id": "ch3.s13-cycle-5",
+      "cycle_sequence": 5,
+      "cycle_title": "C组 拓展提升",
+      "course_refs": [
+        "collinearity",
+        "eliminate_parameter",
+        "related_point_method",
+        "moving_point_basic",
+        "completion_separation_substitution",
+        "quadratic_fraction_speed_upper",
+        "quadratic_fraction_speed_lower",
+        "complete_asymmetry",
+        "eliminate_asymmetry",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "course_titles": [
+        "共线问题",
+        "消参法",
+        "相关点法",
+        "简单动点问题的处理",
+        "配方法与分离常数法与换元法",
+        "特殊二次分式速解（上）",
+        "特殊二次分式速解（下）",
+        "补全不对称",
+        "消去不对称",
+        "交点问题的基本代数处理（上·题型辨识）",
+        "交点问题的基本代数处理（下·点线设法与处理）"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "collinearity",
+        "eliminate_parameter",
+        "related_point_method",
+        "moving_point_basic",
+        "completion_separation_substitution",
+        "quadratic_fraction_speed_upper",
+        "quadratic_fraction_speed_lower",
+        "complete_asymmetry",
+        "eliminate_asymmetry",
+        "intersection_algebra_upper",
+        "intersection_algebra_lower"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 非对称韦达定理问题",
+        "类型I 平行四边形的翻译方法"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "conic",
+      "recognition_cues": [
+        "直线",
+        "距离",
+        "双曲线",
+        "焦点",
+        "证明",
+        "E",
+        "\\frac",
+        "x",
+        "a"
+      ],
+      "method_model": "圆锥曲线识别与联立",
+      "first_written_line_template": "先由焦点轴、定义、准线或标准式确定曲线方向和参数关系。",
+      "continuation_actions": [
+        "写出标准方程与参数恒等式",
+        "代入点、直线、弦或焦点条件",
+        "用判别式、韦达或定义完成消元"
+      ],
+      "independent_self_check": "检查焦点轴、参数正性、判别式及代数根与真实交点的对应。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "c0b860e4ac19e9c950ee96048599a46c29b97427940f849ed4d354c21cba2be4",
+      "source_question_text_sha256": "c0b860e4ac19e9c950ee96048599a46c29b97427940f849ed4d354c21cba2be4",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "c0b860e4ac19e9c950ee96048599a46c29b97427940f849ed4d354c21cba2be4",
+        "learner_question_text_sha256": "c0b860e4ac19e9c950ee96048599a46c29b97427940f849ed4d354c21cba2be4"
+      },
+      "question_signal_excerpt": "直线、距离、双曲线、焦点、证明、E、\\frac、x、a",
+      "source_blocked": false
+    }
+  ],
+  "route_versions": [
+    {
+      "version": 1,
+      "route_hash": "4364d29f24e5031fec1c7daa5eb0504cab6becb4229536d53d976664f4be4c48"
+    },
+    {
+      "version": 2,
+      "route_hash": "0d4ade249f0780849570b065e7e2134a06a689ba7742075a9177bae510209d87"
+    },
+    {
+      "version": 3,
+      "route_hash": "f6ad7366c1e88e367b08f18d0e730cf3175756b67a047dab33eb99070384f2ad"
+    }
+  ],
+  "final_route_hash": "f6ad7366c1e88e367b08f18d0e730cf3175756b67a047dab33eb99070384f2ad",
+  "simulation": {
+    "protocol": "five-round-five-persona-v3-answer-isolated",
+    "generation_mode": "synthetic_route_stress_from_actual_item_features",
+    "rounds": [
+      {
+        "round": 1,
+        "purpose": "baseline_entry",
+        "route_version": 1,
+        "route_hash": "4364d29f24e5031fec1c7daa5eb0504cab6becb4229536d53d976664f4be4c48",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 10,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 10,
+            "blocked": 5
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 10,
+            "blocked": 2
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 10,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 10,
+            "blocked": 5
+          }
+        ],
+        "failed_item_keys": [
+          "LI:4988207add985630",
+          "Q:Q-064bfb115aaf6ccc",
+          "Q:Q-1c5f30c723b7709f",
+          "Q:Q-1e24c3b511e40116",
+          "Q:Q-e4c9cccafbaadcfb",
+          "Q:Q-ea32833917357949"
+        ],
+        "route_repairs": [
+          {
+            "item_keys": [
+              "Q:Q-064bfb115aaf6ccc",
+              "Q:Q-1c5f30c723b7709f",
+              "Q:Q-1e24c3b511e40116",
+              "Q:Q-e4c9cccafbaadcfb",
+              "Q:Q-ea32833917357949"
+            ],
+            "field": "recognition_cues",
+            "before": "第1轮冻结尝试记录了 recognition-weak 的首个阻断。",
+            "after": "下一轮只加入 recognition-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 5 题；不是随机题号注入。"
+          },
+          {
+            "item_keys": [
+              "LI:4988207add985630",
+              "Q:Q-1c5f30c723b7709f"
+            ],
+            "field": "continuation_checkpoints",
+            "before": "第1轮冻结尝试记录了 algebra-weak 的首个阻断。",
+            "after": "下一轮只加入 algebra-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 2 题；不是随机题号注入。"
+          },
+          {
+            "item_keys": [
+              "Q:Q-064bfb115aaf6ccc",
+              "Q:Q-1c5f30c723b7709f",
+              "Q:Q-1e24c3b511e40116",
+              "Q:Q-e4c9cccafbaadcfb",
+              "Q:Q-ea32833917357949"
+            ],
+            "field": "independent_self_check",
+            "before": "第1轮冻结尝试记录了 self-check-weak 的首个阻断。",
+            "after": "下一轮只加入 self-check-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 5 题；不是随机题号注入。"
+          }
+        ]
+      },
+      {
+        "round": 2,
+        "purpose": "prerequisite_repair",
+        "route_version": 2,
+        "route_hash": "0d4ade249f0780849570b065e7e2134a06a689ba7742075a9177bae510209d87",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 10,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 10,
+            "blocked": 0
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 10,
+            "blocked": 0
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 10,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 10,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [],
+        "route_repairs": []
+      },
+      {
+        "round": 3,
+        "purpose": "continuation_transfer",
+        "route_version": 2,
+        "route_hash": "0d4ade249f0780849570b065e7e2134a06a689ba7742075a9177bae510209d87",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 10,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 10,
+            "blocked": 2
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 10,
+            "blocked": 2
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 10,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 10,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [
+          "LI:267b038d41549cf2",
+          "LI:4988207add985630"
+        ],
+        "route_repairs": [
+          {
+            "item_keys": [
+              "LI:267b038d41549cf2",
+              "LI:4988207add985630"
+            ],
+            "field": "recognition_cues",
+            "before": "第3轮冻结尝试记录了 recognition-weak 的首个阻断。",
+            "after": "下一轮只加入 recognition-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 2 题；不是随机题号注入。"
+          },
+          {
+            "item_keys": [
+              "LI:267b038d41549cf2",
+              "LI:4988207add985630"
+            ],
+            "field": "continuation_checkpoints",
+            "before": "第3轮冻结尝试记录了 algebra-weak 的首个阻断。",
+            "after": "下一轮只加入 algebra-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 2 题；不是随机题号注入。"
+          }
+        ]
+      },
+      {
+        "round": 4,
+        "purpose": "mixed_retrieval",
+        "route_version": 3,
+        "route_hash": "f6ad7366c1e88e367b08f18d0e730cf3175756b67a047dab33eb99070384f2ad",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 10,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 10,
+            "blocked": 0
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 10,
+            "blocked": 0
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 10,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 10,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [],
+        "route_repairs": []
+      },
+      {
+        "round": 5,
+        "purpose": "fresh_context",
+        "route_version": 3,
+        "route_hash": "f6ad7366c1e88e367b08f18d0e730cf3175756b67a047dab33eb99070384f2ad",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 10,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 10,
+            "blocked": 0
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 10,
+            "blocked": 0
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 10,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 10,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [],
+        "route_repairs": []
+      }
+    ],
+    "expected_attempts_per_item": 25,
+    "actual_attempts_per_item": 25,
+    "unresolved_item_keys": [],
+    "mathematical_correctness": "not_evaluated_no_final_answer",
+    "mastery_claimed": false,
+    "status": "passed"
+  },
+  "summary": {
+    "items": 10,
+    "attempts": 250,
+    "route_assessments": 250,
+    "rounds": 5,
+    "personas_per_round": 5,
+    "repairs": 5,
+    "round_5_failed_items": 0,
+    "validator_errors": []
+  },
+  "human_learning_status": "remote_math_mcp_only",
+  "cold_24h_retest": "not_run",
+  "mastery_claimed": false,
+  "claim_scope": "route_actionability_only",
+  "mathematical_assessment_status": "not_run",
+  "route_audit_status": "passed",
+  "status": "passed"
+}

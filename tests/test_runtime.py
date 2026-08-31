@@ -890,6 +890,24 @@ class PacketRuntimeTests(unittest.TestCase):
             if row.get("section") == "1.1"
             and row.get("kind") in {"worked_example", "direct_variant"}
         ]
+        attachment_overrides = json.loads(
+            (root / "data" / "item_image_attachment_overrides.json").read_text(encoding="utf-8")
+        )
+        dropped_hashes = {
+            str(row.get("drop", {}).get("image_sha256") or "")
+            for row in attachment_overrides.get("overrides", [])
+            if row.get("section") == "1.1"
+        }
+        dropped_names = {
+            Path(str(row.get("drop", {}).get("ref") or "")).name
+            for row in attachment_overrides.get("overrides", [])
+            if row.get("section") == "1.1"
+        }
+        expected_images = [
+            row for row in expected_images
+            if row.get("image_sha256") not in dropped_hashes
+            and Path(str(row.get("image") or "")).name not in dropped_names
+        ]
         self.assertEqual(
             sum(len(item["image_refs"]) for item in visual_items),
             len(expected_images),
@@ -1011,7 +1029,9 @@ class PacketRuntimeTests(unittest.TestCase):
         metadata, simulation = acceptance.load_current_simulation(root)
         self.assertEqual(metadata["path"], "reports/zero_base_cycles/1.1-current-agent-simulation.json")
         self.assertEqual(metadata["status"], "passed", metadata)
-        self.assertEqual(metadata["mastery_status"], "passed")
+        self.assertEqual(metadata["route_audit_status"], "passed")
+        self.assertEqual(metadata["mastery_status"], "not_run")
+        self.assertEqual(simulation["summary"]["mathematical_correctness"], "not_evaluated_no_final_answer")
         self.assertEqual(simulation["summary"]["pass"], 5)
         self.assertEqual(len(simulation["item_results"]), 38)
         self.assertEqual(metadata["source_revision_match"], True)
@@ -1083,8 +1103,9 @@ class PacketRuntimeTests(unittest.TestCase):
         self.assertIn("reports/zero_base_cycles/1.1-current-agent-simulation.json", result["revisions"]["student_evidence"]["files"])
         current_generation = json.loads(current.read_text(encoding="utf-8"))["generation"]
         self.assertEqual(result["release_gates"]["current_zero_base_simulation_generation"], current_generation)
-        # 模拟层面 mastery 门通过（5/5 全覆盖）；发布门仍必须关闭（24h 冷复测/真人未运行）。
-        self.assertTrue(result["release_gates"]["current_zero_base_simulation_mastery_gate"])
+        # 5/5 only proves route actionability; mastery and publish gates remain closed.
+        self.assertTrue(result["release_gates"]["current_zero_base_route_audit_gate"])
+        self.assertFalse(result["release_gates"]["current_zero_base_simulation_mastery_gate"])
         self.assertFalse(result["release_gates"]["all_questions_release"])
         self.assertFalse(result["release_gates"]["full_every_question_release_gate"])
 

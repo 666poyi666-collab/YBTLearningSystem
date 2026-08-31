@@ -418,35 +418,69 @@
           "vision_hint": "4.1-LI0afede61206c7a93",
           "vision_sidecars": [
             {
-              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_425_722_755_914.jpg",
+              "image": "data/ocr_live_current/chapter4_100/imgs/img_in_image_box_425_722_755_914.jpg",
               "image_sha256": "456167ffc10e9fb4548a9fff294e98491120692a153923047a747f2ccd63afc6",
               "confidence": "E2",
               "structured": {
-                "objects": [],
-                "relations": [],
-                "coordinates": [],
-                "ranges": [],
-                "text": [
-                  "高中数学"
+                "objects": [
+                  "由左至右排列的4组黑色点阵"
                 ],
-                "uncertainties": [],
+                "relations": [
+                  "4组点阵彼此分离",
+                  "点阵占用的行数和宽度由左至右递增"
+                ],
+                "coordinates": [],
+                "ranges": [
+                  "各组可见黑点数依次为1、5、12、22"
+                ],
+                "text": [],
+                "uncertainties": [
+                  "浅灰背景水印不属于点阵"
+                ],
                 "confidence": "E2"
               },
-              "source_provenance": null
+              "source_provenance": {
+                "inventory": "reports/all_chapters/visual-inventory-current.json",
+                "source_docs": [
+                  4
+                ],
+                "review_method": "direct_view_image",
+                "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+                "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+                "original_image_sha256": "456167ffc10e9fb4548a9fff294e98491120692a153923047a747f2ccd63afc6"
+              }
             }
           ],
           "vision_sidecar": {
-            "objects": [],
-            "relations": [],
-            "coordinates": [],
-            "ranges": [],
-            "text": [
-              "高中数学"
+            "objects": [
+              "由左至右排列的4组黑色点阵"
             ],
-            "uncertainties": [],
+            "relations": [
+              "4组点阵彼此分离",
+              "点阵占用的行数和宽度由左至右递增"
+            ],
+            "coordinates": [],
+            "ranges": [
+              "各组可见黑点数依次为1、5、12、22"
+            ],
+            "text": [],
+            "uncertainties": [
+              "浅灰背景水印不属于点阵"
+            ],
             "confidence": "E2"
           },
-          "vision_source_provenance": [],
+          "vision_source_provenance": [
+            {
+              "inventory": "reports/all_chapters/visual-inventory-current.json",
+              "source_docs": [
+                4
+              ],
+              "review_method": "direct_view_image",
+              "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+              "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+              "original_image_sha256": "456167ffc10e9fb4548a9fff294e98491120692a153923047a747f2ccd63afc6"
+            }
+          ],
           "evidence": [
             "E1",
             "E2"
@@ -853,10 +887,44 @@
           "source_docs": [
             10
           ],
-          "question_text": "【变式1】已知在数列\\(\\{a_n\\}\\)中，\\(0 < a_n < 1 (n \\in \\mathbb{N}^*)\\)，\\(a_{n+1} = \\frac{na_n + a_n^2}{n+1}\\)，求证：\\(\\{a_n\\}\\)是单调递减数列。\n证法1：（要证\\(\\{a_n\\}\\)是单调递减数列，只需证\\(a_{n+1}<a_n\\)，即证\\(a_{n+1}-a_n<0\\)，题干给出了\\(a_{n+1}\\)与\\(a_n\\)的递推关系，可将该关系代入，消去\\(a_{n+1}\\)，化简证明）\n由题意，\\(a_{n+1}-a_n=\\frac{na_n+a_n^2}{n+1}-a_n=\\frac{na_n+a_n^2-(n+1)a_n}{n+1}=\\frac{a_n^2-a_n}{n+1}=\\frac{a_n(a_n-1)}{n+1}\\)，\n因为  \\(0 < a_{n} < 1\\)，所以  \\(\\frac{a_{n}(a_{n}-1)}{n+1} < 0\\)，从而  \\(a_{n+1} - a_{n} < 0\\)，故  \\(a_{n+1} < a_{n}\\)，所以  \\(\\{a_{n}\\}\\) 是单调递减数列.\n证法2：（由题设条件不难发现 \\(\\{a_{n}\\}\\)是正项数列，于是也可考虑作商比较，即通过证明 \\(\\frac{a_{n+1}}{a_{n}}<1\\)来证 \\(a_{n+1}<a_{n}\\)，观察发现由所给递推关系式刚好也容易构造出 \\(\\frac{a_{n+1}}{a_{n}}\\)这一结构，故按此处理）\n由题意， \\(a_{n+1}=\\frac{na_n+a_n^2}{n+1}\\)，所以 \\(\\frac{a_{n+1}}{a_n}=\\frac{n+a_n}{n+1}\\)，因为 \\(0<a_n<1\\)，所以 \\(n+a_n<n+1\\)，且 \\(n+a_n\\)和 \\(n+1\\)都是正数，所以 \\(0<\\frac{n+a_n}{n+1}<1\\)，从而 \\(0<\\frac{a_{n+1}}{a_n}<1\\)，故 \\(a_{n+1}<a_n\\)，所以 \\(\\{a_n\\}\\)是单调递减数列.",
+          "question_text": "【变式1】已知在数列 \\(\\{a_n\\}\\) 中，\\(0<a_n<1\\ (n\\in\\mathbb{N}^*)\\)，\\(a_{n+1}=\\frac{na_n+a_n^2}{n+1}\\)，求证：\\(\\{a_n\\}\\) 是单调递减数列。",
           "image_refs": [],
           "visual_status": "READY_TEXT_ONLY",
           "solution_isolated": true,
+          "source_question_stem_review": {
+            "status": "SOURCE_REVIEWED_ANSWER_FREE",
+            "review_path": "reports/deep_simulation_reviews/clean-stems-ch4-ch5.json",
+            "review_sha256": "1ace2265926aa6df1a55cbf856d0737271968b94b2398bb48956c48e833c1030",
+            "old_reported_question_text_sha256": "0c5d9bf6342d3f10987bc4fb2e19dcf6b18aeb92dfccf66125d61c1c7bdad9d6",
+            "pre_override_question_text_sha256": "5ad2bbd63db4511fe58c1d8a0b333b1cb94f94226097b63a8fce4065ca5c6565",
+            "question_text_sha256": "2a87d9719e53a7d693e2b8bb022c1abb0bfaad014ef48946d508be136ce90a9a",
+            "confidence": "high",
+            "boundary_basis": "Original PDF page 11 visually shows the complete bold stem after the preceding reflection. The stem ends at '单调递减数列。'; the next printed block begins '证法1', so both proof methods are excluded.",
+            "source": {
+              "packet": "data/packets/4.1/packet.json",
+              "generated_item_source": "data/packets/4.1/learning_packet.json",
+              "ocr_docs": [
+                10
+              ],
+              "ocr_files": [
+                {
+                  "file": "data/ocr_live_current/chapter4_100/doc_10.md",
+                  "sha256": "46819367809d4a3c46a1116464049dd65c9dd7f51ad3c099b214ca9073ddb816"
+                }
+              ],
+              "pdf_file": "data/ocr_sources/第4章 数列（无答案册）.pdf",
+              "pdf_pages": [
+                11
+              ],
+              "original_page_images": [
+                {
+                  "file": "data/ocr_live_current/chapter4_100/layout_det_res_10.jpg",
+                  "sha256": "5b8339c7561d1cdbee86eab7318fe8161e9e28b90a97d112f29365437f88aedd"
+                }
+              ],
+              "visual_evidence": "original PDF page 11 and OCR layout page 10"
+            }
+          },
           "vision_hint": "4.1-LIa9b6679b8704ce30"
         },
         {
@@ -985,7 +1053,11 @@
       "optional_course_keys": [],
       "knowledge_refs": [],
       "prerequisite_knowledge_refs": [],
-      "type_refs": [],
+      "type_refs": [
+        "类型Ⅰ 观察、归纳法求数列的通项公式或数列中的某一项",
+        "类型V 周期数列问题",
+        "类型Ⅱ 数列中的项的简单分析"
+      ],
       "bridge_unit_ids": [],
       "method_checkpoints": [],
       "worked_examples": [],
@@ -1108,7 +1180,14 @@
       "optional_course_keys": [],
       "knowledge_refs": [],
       "prerequisite_knowledge_refs": [],
-      "type_refs": [],
+      "type_refs": [
+        "类型Ⅰ 观察、归纳法求数列的通项公式或数列中的某一项",
+        "类型Ⅲ 由递推公式求通项公式——累加法与累乘法",
+        "类型IV $ a_{n} $ 与 $ S_{n} $ 的关系的应用",
+        "类型Ⅶ 两类数列求前 n 项和问题",
+        "类型VI 数列单调性的判断及应用",
+        "类型V 周期数列问题"
+      ],
       "bridge_unit_ids": [],
       "method_checkpoints": [],
       "worked_examples": [],
@@ -1200,381 +1279,394 @@
           ],
           "vision_sidecars": [
             {
-              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_458_417_504_481.jpg",
+              "image": "data/ocr_live_current/chapter4_100/imgs/img_in_image_box_458_417_504_481.jpg",
               "image_sha256": "bc53404d5e8f16b4886393ed3f06bb7f46314c8050b256f70734385725a3216f",
               "confidence": "E2",
               "structured": {
-                "objects": [],
-                "relations": [],
+                "objects": [
+                  "由三条线段围成的三角形、3个黑点"
+                ],
+                "relations": [
+                  "3个黑点分别位于三角形的三个顶点"
+                ],
                 "coordinates": [],
-                "ranges": [],
+                "ranges": [
+                  "黑点数为3"
+                ],
                 "text": [
                   "3"
                 ],
                 "uncertainties": [],
                 "confidence": "E2"
               },
-              "source_provenance": null
+              "source_provenance": {
+                "inventory": "reports/all_chapters/visual-inventory-current.json",
+                "source_docs": [
+                  15
+                ],
+                "review_method": "direct_view_image",
+                "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+                "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+                "original_image_sha256": "bc53404d5e8f16b4886393ed3f06bb7f46314c8050b256f70734385725a3216f"
+              }
             },
             {
-              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_558_388_635_459.jpg",
+              "image": "data/ocr_live_current/chapter4_100/imgs/img_in_image_box_558_388_635_459.jpg",
               "image_sha256": "db51d1f7581660614c252a5c0e8d7b181ba64e8a83fdd9db6433d907b925b006",
               "confidence": "E2",
               "structured": {
                 "objects": [
-                  "顶点",
-                  "边",
-                  "三角形",
-                  "线段",
-                  "点",
-                  "线段"
+                  "三角形线框、6个黑点"
                 ],
                 "relations": [
-                  "顶点连接",
-                  "边构成三角形",
-                  "线段连接点",
-                  "点构成线段",
-                  "线段构成三角形",
-                  "点连接边"
+                  "黑点按从上到下1、2、3三层排列",
+                  "左右斜边与底边上的相邻黑点由线段连接",
+                  "中层两点分别与底边中点相连"
                 ],
-                "coordinates": [
-                  "[0.5, 0.8]",
-                  "[0.3, 0.5]",
-                  "[0.7, 0.5]",
-                  "[0.1, 0.2]",
-                  "[0.5, 0.2]",
-                  "[0.9, 0.2]"
-                ],
+                "coordinates": [],
                 "ranges": [
-                  "[0.1, 0.2]:[0.5, 0.8]",
-                  "[0.3, 0.5]:[0.1, 0.2]",
-                  "[0.7, 0.5]:[0.5, 0.2]",
-                  "[0.1, 0.2]:[0.9, 0.2]",
-                  "[0.5, 0.2]:[0.9, 0.2]",
-                  "[0.5, 0.8]:[0.3, 0.5]"
+                  "黑点数为6"
                 ],
                 "text": [],
                 "uncertainties": [],
                 "confidence": "E2"
               },
-              "source_provenance": null
+              "source_provenance": {
+                "inventory": "reports/all_chapters/visual-inventory-current.json",
+                "source_docs": [
+                  15
+                ],
+                "review_method": "direct_view_image",
+                "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+                "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+                "original_image_sha256": "db51d1f7581660614c252a5c0e8d7b181ba64e8a83fdd9db6433d907b925b006"
+              }
             },
             {
-              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_688_361_799_461.jpg",
+              "image": "data/ocr_live_current/chapter4_100/imgs/img_in_image_box_688_361_799_461.jpg",
               "image_sha256": "d92b0d7702938696e63910f09867f248e86b9be74d14a244aa3a075935f7d52e",
               "confidence": "E2",
               "structured": {
                 "objects": [
-                  {
-                    "name": "三角形顶点",
-                    "type": "点"
-                  },
-                  {
-                    "name": "三角形边",
-                    "type": "线段"
-                  },
-                  {
-                    "name": "内部线段",
-                    "type": "线段"
-                  },
-                  {
-                    "name": "内部点",
-                    "type": "点"
-                  }
+                  "分层三角形线框、10个黑点"
                 ],
                 "relations": [
-                  {
-                    "from": "三角形顶点",
-                    "to": "三角形边",
-                    "type": "连接"
-                  },
-                  {
-                    "from": "内部点",
-                    "to": "内部线段",
-                    "type": "连接"
-                  },
-                  {
-                    "from": "三角形边",
-                    "to": "内部点",
-                    "type": "连接"
-                  },
-                  {
-                    "from": "内部线段",
-                    "to": "三角形边",
-                    "type": "连接"
-                  }
+                  "黑点按从上到下1、2、3、4四层排列",
+                  "边界黑点与内部黑点由斜线和水平线连接"
                 ],
-                "coordinates": [
-                  {
-                    "name": "三角形顶点",
-                    "values": [
-                      [
-                        5,
-                        0
-                      ],
-                      [
-                        2.5,
-                        3
-                      ],
-                      [
-                        7.5,
-                        3
-                      ]
-                    ]
-                  },
-                  {
-                    "name": "内部点",
-                    "values": [
-                      [
-                        3.5,
-                        1.5
-                      ],
-                      [
-                        4.5,
-                        2
-                      ],
-                      [
-                        5.5,
-                        1.5
-                      ],
-                      [
-                        6,
-                        1.5
-                      ],
-                      [
-                        5,
-                        2
-                      ]
-                    ]
-                  },
-                  {
-                    "name": "内部线段端点",
-                    "values": [
-                      [
-                        3.5,
-                        1.5
-                      ],
-                      [
-                        4.5,
-                        2
-                      ],
-                      [
-                        5.5,
-                        1.5
-                      ],
-                      [
-                        6,
-                        1.5
-                      ]
-                    ]
-                  }
+                "coordinates": [],
+                "ranges": [
+                  "黑点数为10"
                 ],
-                "ranges": [],
                 "text": [],
                 "uncertainties": [],
                 "confidence": "E2"
               },
-              "source_provenance": null
+              "source_provenance": {
+                "inventory": "reports/all_chapters/visual-inventory-current.json",
+                "source_docs": [
+                  15
+                ],
+                "review_method": "direct_view_image",
+                "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+                "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+                "original_image_sha256": "d92b0d7702938696e63910f09867f248e86b9be74d14a244aa3a075935f7d52e"
+              }
             },
             {
-              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_458_559_504_606.jpg",
+              "image": "data/ocr_live_current/chapter4_100/imgs/img_in_image_box_458_559_504_606.jpg",
               "image_sha256": "f2632efdc66a6c13bfa5acfc9c1201b1b58bf418dd7d75b8246395ce9ee4c82a",
               "confidence": "E2",
               "structured": {
                 "objects": [
-                  "正方形"
+                  "正方形线框、4个黑点"
                 ],
                 "relations": [
-                  "正方形的四条边"
+                  "4个黑点分别位于正方形的四个顶点"
                 ],
-                "coordinates": [
-                  [
-                    0,
-                    0
-                  ],
-                  [
-                    0,
-                    1
-                  ],
-                  [
-                    1,
-                    1
-                  ],
-                  [
-                    1,
-                    0
-                  ]
+                "coordinates": [],
+                "ranges": [
+                  "黑点数为4"
                 ],
-                "ranges": [],
                 "text": [],
                 "uncertainties": [],
                 "confidence": "E2"
               },
-              "source_provenance": null
+              "source_provenance": {
+                "inventory": "reports/all_chapters/visual-inventory-current.json",
+                "source_docs": [
+                  15
+                ],
+                "review_method": "direct_view_image",
+                "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+                "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+                "original_image_sha256": "f2632efdc66a6c13bfa5acfc9c1201b1b58bf418dd7d75b8246395ce9ee4c82a"
+              }
             },
             {
-              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_557_526_635_604.jpg",
+              "image": "data/ocr_live_current/chapter4_100/imgs/img_in_image_box_557_526_635_604.jpg",
               "image_sha256": "6eb34d835c64ab8188cfae4790f50406394721014d211229dfe841e2ffef81d9",
               "confidence": "E2",
               "structured": {
                 "objects": [
-                  "正方形",
-                  "内嵌小正方形"
+                  "一大一小两个相连的正方形线框、9个黑点"
                 ],
-                "relations": [],
-                "coordinates": [
-                  [
-                    11,
-                    11
-                  ],
-                  [
-                    11,
-                    33
-                  ],
-                  [
-                    33,
-                    11
-                  ],
-                  [
-                    33,
-                    33
-                  ],
-                  [
-                    19,
-                    19
-                  ],
-                  [
-                    23,
-                    23
-                  ]
+                "relations": [
+                  "小正方形位于大正方形左下区域并与大正方形共用左下顶点",
+                  "黑点分布在两层正方形的顶点与边上"
                 ],
-                "ranges": [],
+                "coordinates": [],
+                "ranges": [
+                  "黑点数为9"
+                ],
                 "text": [],
                 "uncertainties": [],
                 "confidence": "E2"
               },
-              "source_provenance": null
+              "source_provenance": {
+                "inventory": "reports/all_chapters/visual-inventory-current.json",
+                "source_docs": [
+                  15
+                ],
+                "review_method": "direct_view_image",
+                "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+                "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+                "original_image_sha256": "6eb34d835c64ab8188cfae4790f50406394721014d211229dfe841e2ffef81d9"
+              }
             },
             {
-              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_689_494_799_604.jpg",
+              "image": "data/ocr_live_current/chapter4_100/imgs/img_in_image_box_689_494_799_604.jpg",
               "image_sha256": "98205a1aa429f9d70cfd6c6b6372d3067fce4d47d31bed6817fc9b01f910c6f7",
               "confidence": "E2",
               "structured": {
                 "objects": [
-                  "矩形框",
-                  "内嵌矩形框"
+                  "三层相连的正方形线框、16个黑点"
                 ],
-                "relations": [],
+                "relations": [
+                  "三个正方形由左下向右上逐层扩大并共用左下顶点",
+                  "黑点分布在各层正方形的顶点与边上"
+                ],
                 "coordinates": [],
-                "ranges": [],
+                "ranges": [
+                  "黑点数为16"
+                ],
                 "text": [],
                 "uncertainties": [],
                 "confidence": "E2"
               },
-              "source_provenance": null
+              "source_provenance": {
+                "inventory": "reports/all_chapters/visual-inventory-current.json",
+                "source_docs": [
+                  15
+                ],
+                "review_method": "direct_view_image",
+                "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+                "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+                "original_image_sha256": "98205a1aa429f9d70cfd6c6b6372d3067fce4d47d31bed6817fc9b01f910c6f7"
+              }
             },
             {
-              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_447_734_517_805.jpg",
+              "image": "data/ocr_live_current/chapter4_100/imgs/img_in_image_box_447_734_517_805.jpg",
               "image_sha256": "fc167d6b94ac64a9898f9b90a2e154be0ebf5fc081a91cdd0cc77ebe902bb2ce",
               "confidence": "E2",
               "structured": {
-                "objects": [],
+                "objects": [
+                  "五边形线框、5个黑点"
+                ],
                 "relations": [
-                  "五边形顶点连接",
-                  "边连接顶点"
+                  "5个黑点分别位于五边形的五个顶点"
                 ],
-                "coordinates": [
-                  "顶点坐标",
-                  "边端点坐标"
+                "coordinates": [],
+                "ranges": [
+                  "黑点数为5"
                 ],
-                "ranges": [],
                 "text": [],
                 "uncertainties": [],
                 "confidence": "E2"
               },
-              "source_provenance": null
+              "source_provenance": {
+                "inventory": "reports/all_chapters/visual-inventory-current.json",
+                "source_docs": [
+                  15
+                ],
+                "review_method": "direct_view_image",
+                "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+                "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+                "original_image_sha256": "fc167d6b94ac64a9898f9b90a2e154be0ebf5fc081a91cdd0cc77ebe902bb2ce"
+              }
             },
             {
-              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_535_687_655_803.jpg",
+              "image": "data/ocr_live_current/chapter4_100/imgs/img_in_image_box_535_687_655_803.jpg",
               "image_sha256": "7608763aa2f03dfa9d1c868d4d9455dc9b860a9d862c4254370874d2e68eed68",
               "confidence": "E2",
               "structured": {
                 "objects": [
-                  {
-                    "name": "五边形",
-                    "type": "多边形"
-                  },
-                  {
-                    "name": "内五边形",
-                    "type": "多边形"
-                  }
+                  "两层相连的五边形折线、12个黑点"
                 ],
-                "relations": [],
-                "coordinates": [
-                  [
-                    0,
-                    0
-                  ],
-                  [
-                    1,
-                    1
-                  ],
-                  [
-                    2,
-                    0.5
-                  ],
-                  [
-                    2,
-                    0
-                  ],
-                  [
-                    1.5,
-                    0.2
-                  ],
-                  [
-                    1,
-                    0.5
-                  ]
+                "relations": [
+                  "内层五边形位于外层五边形内部",
+                  "黑点沿内外两层五边形折线分布，层间由左侧折线连接"
                 ],
-                "ranges": [],
+                "coordinates": [],
+                "ranges": [
+                  "黑点数为12"
+                ],
                 "text": [],
                 "uncertainties": [],
                 "confidence": "E2"
               },
-              "source_provenance": null
+              "source_provenance": {
+                "inventory": "reports/all_chapters/visual-inventory-current.json",
+                "source_docs": [
+                  15
+                ],
+                "review_method": "direct_view_image",
+                "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+                "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+                "original_image_sha256": "7608763aa2f03dfa9d1c868d4d9455dc9b860a9d862c4254370874d2e68eed68"
+              }
             },
             {
-              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_658_639_828_802.jpg",
+              "image": "data/ocr_live_current/chapter4_100/imgs/img_in_image_box_658_639_828_802.jpg",
               "image_sha256": "35a0874815953b1f34c2b6764e965b1a1059a4e33ab3113d21a0e43b75295e3f",
               "confidence": "E2",
               "structured": {
                 "objects": [
-                  "五边形",
-                  "内嵌四边形",
-                  "内嵌小四边形"
+                  "三层相连的五边形折线、22个黑点"
                 ],
-                "relations": [],
+                "relations": [
+                  "三个五边形轮廓由内向外逐层扩大",
+                  "黑点沿三层五边形折线分布，层间由左下方向的折线连接"
+                ],
                 "coordinates": [],
-                "ranges": [],
+                "ranges": [
+                  "黑点数为22"
+                ],
                 "text": [],
                 "uncertainties": [],
                 "confidence": "E2"
               },
-              "source_provenance": null
+              "source_provenance": {
+                "inventory": "reports/all_chapters/visual-inventory-current.json",
+                "source_docs": [
+                  15
+                ],
+                "review_method": "direct_view_image",
+                "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+                "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+                "original_image_sha256": "35a0874815953b1f34c2b6764e965b1a1059a4e33ab3113d21a0e43b75295e3f"
+              }
             }
           ],
           "vision_sidecar": {
-            "objects": [],
-            "relations": [],
+            "objects": [
+              "由三条线段围成的三角形、3个黑点"
+            ],
+            "relations": [
+              "3个黑点分别位于三角形的三个顶点"
+            ],
             "coordinates": [],
-            "ranges": [],
+            "ranges": [
+              "黑点数为3"
+            ],
             "text": [
               "3"
             ],
             "uncertainties": [],
             "confidence": "E2"
           },
-          "vision_source_provenance": []
+          "vision_source_provenance": [
+            {
+              "inventory": "reports/all_chapters/visual-inventory-current.json",
+              "source_docs": [
+                15
+              ],
+              "review_method": "direct_view_image",
+              "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+              "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+              "original_image_sha256": "bc53404d5e8f16b4886393ed3f06bb7f46314c8050b256f70734385725a3216f"
+            },
+            {
+              "inventory": "reports/all_chapters/visual-inventory-current.json",
+              "source_docs": [
+                15
+              ],
+              "review_method": "direct_view_image",
+              "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+              "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+              "original_image_sha256": "db51d1f7581660614c252a5c0e8d7b181ba64e8a83fdd9db6433d907b925b006"
+            },
+            {
+              "inventory": "reports/all_chapters/visual-inventory-current.json",
+              "source_docs": [
+                15
+              ],
+              "review_method": "direct_view_image",
+              "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+              "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+              "original_image_sha256": "d92b0d7702938696e63910f09867f248e86b9be74d14a244aa3a075935f7d52e"
+            },
+            {
+              "inventory": "reports/all_chapters/visual-inventory-current.json",
+              "source_docs": [
+                15
+              ],
+              "review_method": "direct_view_image",
+              "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+              "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+              "original_image_sha256": "f2632efdc66a6c13bfa5acfc9c1201b1b58bf418dd7d75b8246395ce9ee4c82a"
+            },
+            {
+              "inventory": "reports/all_chapters/visual-inventory-current.json",
+              "source_docs": [
+                15
+              ],
+              "review_method": "direct_view_image",
+              "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+              "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+              "original_image_sha256": "6eb34d835c64ab8188cfae4790f50406394721014d211229dfe841e2ffef81d9"
+            },
+            {
+              "inventory": "reports/all_chapters/visual-inventory-current.json",
+              "source_docs": [
+                15
+              ],
+              "review_method": "direct_view_image",
+              "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+              "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+              "original_image_sha256": "98205a1aa429f9d70cfd6c6b6372d3067fce4d47d31bed6817fc9b01f910c6f7"
+            },
+            {
+              "inventory": "reports/all_chapters/visual-inventory-current.json",
+              "source_docs": [
+                15
+              ],
+              "review_method": "direct_view_image",
+              "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+              "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+              "original_image_sha256": "fc167d6b94ac64a9898f9b90a2e154be0ebf5fc081a91cdd0cc77ebe902bb2ce"
+            },
+            {
+              "inventory": "reports/all_chapters/visual-inventory-current.json",
+              "source_docs": [
+                15
+              ],
+              "review_method": "direct_view_image",
+              "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+              "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+              "original_image_sha256": "7608763aa2f03dfa9d1c868d4d9455dc9b860a9d862c4254370874d2e68eed68"
+            },
+            {
+              "inventory": "reports/all_chapters/visual-inventory-current.json",
+              "source_docs": [
+                15
+              ],
+              "review_method": "direct_view_image",
+              "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+              "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+              "original_image_sha256": "35a0874815953b1f34c2b6764e965b1a1059a4e33ab3113d21a0e43b75295e3f"
+            }
+          ]
         },
         {
           "qid": "Q-52fe385ca95d135a",
@@ -1720,7 +1812,7 @@
             "pdf_page": 18,
             "file": "data/ocr_live_current/chapter4_100/doc_17.md"
           },
-          "question_text": "15.（2025·）东模拟）\n\n记 \\(S_n\\)为首项为1的数列 \\(\\{a_n\\}\\)的前 \\(n\\)项和，且 \\(\\frac{S_n}{a_n} = n^2\\)，则 \\(S_{30} =\\)（ ）\n\nA.  \\(\\frac{60}{29}\\) B.  \\(\\frac{50}{29}\\)\n\nC.  \\(\\frac{60}{31}\\) D.  \\(\\frac{50}{31}\\)",
+          "question_text": "15.（2025·广东模拟）\n\n记 \\(S_n\\)为首项为1的数列 \\(\\{a_n\\}\\)的前 \\(n\\)项和，且 \\(\\frac{S_n}{a_n} = n^2\\)，则 \\(S_{30} =\\)（ ）\n\nA.  \\(\\frac{60}{29}\\) B.  \\(\\frac{50}{29}\\)\n\nC.  \\(\\frac{60}{31}\\) D.  \\(\\frac{50}{31}\\)",
           "image_refs": [],
           "visual_status": "READY_TEXT_ONLY",
           "math_errors": [],
@@ -1845,7 +1937,11 @@
       "optional_course_keys": [],
       "knowledge_refs": [],
       "prerequisite_knowledge_refs": [],
-      "type_refs": [],
+      "type_refs": [
+        "类型V 周期数列问题",
+        "类型VI 数列单调性的判断及应用",
+        "类型Ⅱ 数列中的项的简单分析"
+      ],
       "bridge_unit_ids": [],
       "method_checkpoints": [],
       "worked_examples": [],
@@ -2397,35 +2493,69 @@
       "vision_hint": "4.1-LI0afede61206c7a93",
       "vision_sidecars": [
         {
-          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_425_722_755_914.jpg",
+          "image": "data/ocr_live_current/chapter4_100/imgs/img_in_image_box_425_722_755_914.jpg",
           "image_sha256": "456167ffc10e9fb4548a9fff294e98491120692a153923047a747f2ccd63afc6",
           "confidence": "E2",
           "structured": {
-            "objects": [],
-            "relations": [],
-            "coordinates": [],
-            "ranges": [],
-            "text": [
-              "高中数学"
+            "objects": [
+              "由左至右排列的4组黑色点阵"
             ],
-            "uncertainties": [],
+            "relations": [
+              "4组点阵彼此分离",
+              "点阵占用的行数和宽度由左至右递增"
+            ],
+            "coordinates": [],
+            "ranges": [
+              "各组可见黑点数依次为1、5、12、22"
+            ],
+            "text": [],
+            "uncertainties": [
+              "浅灰背景水印不属于点阵"
+            ],
             "confidence": "E2"
           },
-          "source_provenance": null
+          "source_provenance": {
+            "inventory": "reports/all_chapters/visual-inventory-current.json",
+            "source_docs": [
+              4
+            ],
+            "review_method": "direct_view_image",
+            "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+            "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+            "original_image_sha256": "456167ffc10e9fb4548a9fff294e98491120692a153923047a747f2ccd63afc6"
+          }
         }
       ],
       "vision_sidecar": {
-        "objects": [],
-        "relations": [],
-        "coordinates": [],
-        "ranges": [],
-        "text": [
-          "高中数学"
+        "objects": [
+          "由左至右排列的4组黑色点阵"
         ],
-        "uncertainties": [],
+        "relations": [
+          "4组点阵彼此分离",
+          "点阵占用的行数和宽度由左至右递增"
+        ],
+        "coordinates": [],
+        "ranges": [
+          "各组可见黑点数依次为1、5、12、22"
+        ],
+        "text": [],
+        "uncertainties": [
+          "浅灰背景水印不属于点阵"
+        ],
         "confidence": "E2"
       },
-      "vision_source_provenance": [],
+      "vision_source_provenance": [
+        {
+          "inventory": "reports/all_chapters/visual-inventory-current.json",
+          "source_docs": [
+            4
+          ],
+          "review_method": "direct_view_image",
+          "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+          "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+          "original_image_sha256": "456167ffc10e9fb4548a9fff294e98491120692a153923047a747f2ccd63afc6"
+        }
+      ],
       "evidence": [
         "E1",
         "E2"
@@ -2547,10 +2677,44 @@
       "source_docs": [
         10
       ],
-      "question_text": "【变式1】已知在数列\\(\\{a_n\\}\\)中，\\(0 < a_n < 1 (n \\in \\mathbb{N}^*)\\)，\\(a_{n+1} = \\frac{na_n + a_n^2}{n+1}\\)，求证：\\(\\{a_n\\}\\)是单调递减数列。\n证法1：（要证\\(\\{a_n\\}\\)是单调递减数列，只需证\\(a_{n+1}<a_n\\)，即证\\(a_{n+1}-a_n<0\\)，题干给出了\\(a_{n+1}\\)与\\(a_n\\)的递推关系，可将该关系代入，消去\\(a_{n+1}\\)，化简证明）\n由题意，\\(a_{n+1}-a_n=\\frac{na_n+a_n^2}{n+1}-a_n=\\frac{na_n+a_n^2-(n+1)a_n}{n+1}=\\frac{a_n^2-a_n}{n+1}=\\frac{a_n(a_n-1)}{n+1}\\)，\n因为  \\(0 < a_{n} < 1\\)，所以  \\(\\frac{a_{n}(a_{n}-1)}{n+1} < 0\\)，从而  \\(a_{n+1} - a_{n} < 0\\)，故  \\(a_{n+1} < a_{n}\\)，所以  \\(\\{a_{n}\\}\\) 是单调递减数列.\n证法2：（由题设条件不难发现 \\(\\{a_{n}\\}\\)是正项数列，于是也可考虑作商比较，即通过证明 \\(\\frac{a_{n+1}}{a_{n}}<1\\)来证 \\(a_{n+1}<a_{n}\\)，观察发现由所给递推关系式刚好也容易构造出 \\(\\frac{a_{n+1}}{a_{n}}\\)这一结构，故按此处理）\n由题意， \\(a_{n+1}=\\frac{na_n+a_n^2}{n+1}\\)，所以 \\(\\frac{a_{n+1}}{a_n}=\\frac{n+a_n}{n+1}\\)，因为 \\(0<a_n<1\\)，所以 \\(n+a_n<n+1\\)，且 \\(n+a_n\\)和 \\(n+1\\)都是正数，所以 \\(0<\\frac{n+a_n}{n+1}<1\\)，从而 \\(0<\\frac{a_{n+1}}{a_n}<1\\)，故 \\(a_{n+1}<a_n\\)，所以 \\(\\{a_n\\}\\)是单调递减数列.",
+      "question_text": "【变式1】已知在数列 \\(\\{a_n\\}\\) 中，\\(0<a_n<1\\ (n\\in\\mathbb{N}^*)\\)，\\(a_{n+1}=\\frac{na_n+a_n^2}{n+1}\\)，求证：\\(\\{a_n\\}\\) 是单调递减数列。",
       "image_refs": [],
       "visual_status": "READY_TEXT_ONLY",
       "solution_isolated": true,
+      "source_question_stem_review": {
+        "status": "SOURCE_REVIEWED_ANSWER_FREE",
+        "review_path": "reports/deep_simulation_reviews/clean-stems-ch4-ch5.json",
+        "review_sha256": "1ace2265926aa6df1a55cbf856d0737271968b94b2398bb48956c48e833c1030",
+        "old_reported_question_text_sha256": "0c5d9bf6342d3f10987bc4fb2e19dcf6b18aeb92dfccf66125d61c1c7bdad9d6",
+        "pre_override_question_text_sha256": "5ad2bbd63db4511fe58c1d8a0b333b1cb94f94226097b63a8fce4065ca5c6565",
+        "question_text_sha256": "2a87d9719e53a7d693e2b8bb022c1abb0bfaad014ef48946d508be136ce90a9a",
+        "confidence": "high",
+        "boundary_basis": "Original PDF page 11 visually shows the complete bold stem after the preceding reflection. The stem ends at '单调递减数列。'; the next printed block begins '证法1', so both proof methods are excluded.",
+        "source": {
+          "packet": "data/packets/4.1/packet.json",
+          "generated_item_source": "data/packets/4.1/learning_packet.json",
+          "ocr_docs": [
+            10
+          ],
+          "ocr_files": [
+            {
+              "file": "data/ocr_live_current/chapter4_100/doc_10.md",
+              "sha256": "46819367809d4a3c46a1116464049dd65c9dd7f51ad3c099b214ca9073ddb816"
+            }
+          ],
+          "pdf_file": "data/ocr_sources/第4章 数列（无答案册）.pdf",
+          "pdf_pages": [
+            11
+          ],
+          "original_page_images": [
+            {
+              "file": "data/ocr_live_current/chapter4_100/layout_det_res_10.jpg",
+              "sha256": "5b8339c7561d1cdbee86eab7318fe8161e9e28b90a97d112f29365437f88aedd"
+            }
+          ],
+          "visual_evidence": "original PDF page 11 and OCR layout page 10"
+        }
+      },
       "vision_hint": "4.1-LIa9b6679b8704ce30"
     },
     {
@@ -2773,381 +2937,394 @@
       ],
       "vision_sidecars": [
         {
-          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_458_417_504_481.jpg",
+          "image": "data/ocr_live_current/chapter4_100/imgs/img_in_image_box_458_417_504_481.jpg",
           "image_sha256": "bc53404d5e8f16b4886393ed3f06bb7f46314c8050b256f70734385725a3216f",
           "confidence": "E2",
           "structured": {
-            "objects": [],
-            "relations": [],
+            "objects": [
+              "由三条线段围成的三角形、3个黑点"
+            ],
+            "relations": [
+              "3个黑点分别位于三角形的三个顶点"
+            ],
             "coordinates": [],
-            "ranges": [],
+            "ranges": [
+              "黑点数为3"
+            ],
             "text": [
               "3"
             ],
             "uncertainties": [],
             "confidence": "E2"
           },
-          "source_provenance": null
+          "source_provenance": {
+            "inventory": "reports/all_chapters/visual-inventory-current.json",
+            "source_docs": [
+              15
+            ],
+            "review_method": "direct_view_image",
+            "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+            "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+            "original_image_sha256": "bc53404d5e8f16b4886393ed3f06bb7f46314c8050b256f70734385725a3216f"
+          }
         },
         {
-          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_558_388_635_459.jpg",
+          "image": "data/ocr_live_current/chapter4_100/imgs/img_in_image_box_558_388_635_459.jpg",
           "image_sha256": "db51d1f7581660614c252a5c0e8d7b181ba64e8a83fdd9db6433d907b925b006",
           "confidence": "E2",
           "structured": {
             "objects": [
-              "顶点",
-              "边",
-              "三角形",
-              "线段",
-              "点",
-              "线段"
+              "三角形线框、6个黑点"
             ],
             "relations": [
-              "顶点连接",
-              "边构成三角形",
-              "线段连接点",
-              "点构成线段",
-              "线段构成三角形",
-              "点连接边"
+              "黑点按从上到下1、2、3三层排列",
+              "左右斜边与底边上的相邻黑点由线段连接",
+              "中层两点分别与底边中点相连"
             ],
-            "coordinates": [
-              "[0.5, 0.8]",
-              "[0.3, 0.5]",
-              "[0.7, 0.5]",
-              "[0.1, 0.2]",
-              "[0.5, 0.2]",
-              "[0.9, 0.2]"
-            ],
+            "coordinates": [],
             "ranges": [
-              "[0.1, 0.2]:[0.5, 0.8]",
-              "[0.3, 0.5]:[0.1, 0.2]",
-              "[0.7, 0.5]:[0.5, 0.2]",
-              "[0.1, 0.2]:[0.9, 0.2]",
-              "[0.5, 0.2]:[0.9, 0.2]",
-              "[0.5, 0.8]:[0.3, 0.5]"
+              "黑点数为6"
             ],
             "text": [],
             "uncertainties": [],
             "confidence": "E2"
           },
-          "source_provenance": null
+          "source_provenance": {
+            "inventory": "reports/all_chapters/visual-inventory-current.json",
+            "source_docs": [
+              15
+            ],
+            "review_method": "direct_view_image",
+            "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+            "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+            "original_image_sha256": "db51d1f7581660614c252a5c0e8d7b181ba64e8a83fdd9db6433d907b925b006"
+          }
         },
         {
-          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_688_361_799_461.jpg",
+          "image": "data/ocr_live_current/chapter4_100/imgs/img_in_image_box_688_361_799_461.jpg",
           "image_sha256": "d92b0d7702938696e63910f09867f248e86b9be74d14a244aa3a075935f7d52e",
           "confidence": "E2",
           "structured": {
             "objects": [
-              {
-                "name": "三角形顶点",
-                "type": "点"
-              },
-              {
-                "name": "三角形边",
-                "type": "线段"
-              },
-              {
-                "name": "内部线段",
-                "type": "线段"
-              },
-              {
-                "name": "内部点",
-                "type": "点"
-              }
+              "分层三角形线框、10个黑点"
             ],
             "relations": [
-              {
-                "from": "三角形顶点",
-                "to": "三角形边",
-                "type": "连接"
-              },
-              {
-                "from": "内部点",
-                "to": "内部线段",
-                "type": "连接"
-              },
-              {
-                "from": "三角形边",
-                "to": "内部点",
-                "type": "连接"
-              },
-              {
-                "from": "内部线段",
-                "to": "三角形边",
-                "type": "连接"
-              }
+              "黑点按从上到下1、2、3、4四层排列",
+              "边界黑点与内部黑点由斜线和水平线连接"
             ],
-            "coordinates": [
-              {
-                "name": "三角形顶点",
-                "values": [
-                  [
-                    5,
-                    0
-                  ],
-                  [
-                    2.5,
-                    3
-                  ],
-                  [
-                    7.5,
-                    3
-                  ]
-                ]
-              },
-              {
-                "name": "内部点",
-                "values": [
-                  [
-                    3.5,
-                    1.5
-                  ],
-                  [
-                    4.5,
-                    2
-                  ],
-                  [
-                    5.5,
-                    1.5
-                  ],
-                  [
-                    6,
-                    1.5
-                  ],
-                  [
-                    5,
-                    2
-                  ]
-                ]
-              },
-              {
-                "name": "内部线段端点",
-                "values": [
-                  [
-                    3.5,
-                    1.5
-                  ],
-                  [
-                    4.5,
-                    2
-                  ],
-                  [
-                    5.5,
-                    1.5
-                  ],
-                  [
-                    6,
-                    1.5
-                  ]
-                ]
-              }
+            "coordinates": [],
+            "ranges": [
+              "黑点数为10"
             ],
-            "ranges": [],
             "text": [],
             "uncertainties": [],
             "confidence": "E2"
           },
-          "source_provenance": null
+          "source_provenance": {
+            "inventory": "reports/all_chapters/visual-inventory-current.json",
+            "source_docs": [
+              15
+            ],
+            "review_method": "direct_view_image",
+            "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+            "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+            "original_image_sha256": "d92b0d7702938696e63910f09867f248e86b9be74d14a244aa3a075935f7d52e"
+          }
         },
         {
-          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_458_559_504_606.jpg",
+          "image": "data/ocr_live_current/chapter4_100/imgs/img_in_image_box_458_559_504_606.jpg",
           "image_sha256": "f2632efdc66a6c13bfa5acfc9c1201b1b58bf418dd7d75b8246395ce9ee4c82a",
           "confidence": "E2",
           "structured": {
             "objects": [
-              "正方形"
+              "正方形线框、4个黑点"
             ],
             "relations": [
-              "正方形的四条边"
+              "4个黑点分别位于正方形的四个顶点"
             ],
-            "coordinates": [
-              [
-                0,
-                0
-              ],
-              [
-                0,
-                1
-              ],
-              [
-                1,
-                1
-              ],
-              [
-                1,
-                0
-              ]
+            "coordinates": [],
+            "ranges": [
+              "黑点数为4"
             ],
-            "ranges": [],
             "text": [],
             "uncertainties": [],
             "confidence": "E2"
           },
-          "source_provenance": null
+          "source_provenance": {
+            "inventory": "reports/all_chapters/visual-inventory-current.json",
+            "source_docs": [
+              15
+            ],
+            "review_method": "direct_view_image",
+            "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+            "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+            "original_image_sha256": "f2632efdc66a6c13bfa5acfc9c1201b1b58bf418dd7d75b8246395ce9ee4c82a"
+          }
         },
         {
-          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_557_526_635_604.jpg",
+          "image": "data/ocr_live_current/chapter4_100/imgs/img_in_image_box_557_526_635_604.jpg",
           "image_sha256": "6eb34d835c64ab8188cfae4790f50406394721014d211229dfe841e2ffef81d9",
           "confidence": "E2",
           "structured": {
             "objects": [
-              "正方形",
-              "内嵌小正方形"
+              "一大一小两个相连的正方形线框、9个黑点"
             ],
-            "relations": [],
-            "coordinates": [
-              [
-                11,
-                11
-              ],
-              [
-                11,
-                33
-              ],
-              [
-                33,
-                11
-              ],
-              [
-                33,
-                33
-              ],
-              [
-                19,
-                19
-              ],
-              [
-                23,
-                23
-              ]
+            "relations": [
+              "小正方形位于大正方形左下区域并与大正方形共用左下顶点",
+              "黑点分布在两层正方形的顶点与边上"
             ],
-            "ranges": [],
+            "coordinates": [],
+            "ranges": [
+              "黑点数为9"
+            ],
             "text": [],
             "uncertainties": [],
             "confidence": "E2"
           },
-          "source_provenance": null
+          "source_provenance": {
+            "inventory": "reports/all_chapters/visual-inventory-current.json",
+            "source_docs": [
+              15
+            ],
+            "review_method": "direct_view_image",
+            "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+            "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+            "original_image_sha256": "6eb34d835c64ab8188cfae4790f50406394721014d211229dfe841e2ffef81d9"
+          }
         },
         {
-          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_689_494_799_604.jpg",
+          "image": "data/ocr_live_current/chapter4_100/imgs/img_in_image_box_689_494_799_604.jpg",
           "image_sha256": "98205a1aa429f9d70cfd6c6b6372d3067fce4d47d31bed6817fc9b01f910c6f7",
           "confidence": "E2",
           "structured": {
             "objects": [
-              "矩形框",
-              "内嵌矩形框"
+              "三层相连的正方形线框、16个黑点"
             ],
-            "relations": [],
+            "relations": [
+              "三个正方形由左下向右上逐层扩大并共用左下顶点",
+              "黑点分布在各层正方形的顶点与边上"
+            ],
             "coordinates": [],
-            "ranges": [],
+            "ranges": [
+              "黑点数为16"
+            ],
             "text": [],
             "uncertainties": [],
             "confidence": "E2"
           },
-          "source_provenance": null
+          "source_provenance": {
+            "inventory": "reports/all_chapters/visual-inventory-current.json",
+            "source_docs": [
+              15
+            ],
+            "review_method": "direct_view_image",
+            "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+            "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+            "original_image_sha256": "98205a1aa429f9d70cfd6c6b6372d3067fce4d47d31bed6817fc9b01f910c6f7"
+          }
         },
         {
-          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_447_734_517_805.jpg",
+          "image": "data/ocr_live_current/chapter4_100/imgs/img_in_image_box_447_734_517_805.jpg",
           "image_sha256": "fc167d6b94ac64a9898f9b90a2e154be0ebf5fc081a91cdd0cc77ebe902bb2ce",
           "confidence": "E2",
           "structured": {
-            "objects": [],
+            "objects": [
+              "五边形线框、5个黑点"
+            ],
             "relations": [
-              "五边形顶点连接",
-              "边连接顶点"
+              "5个黑点分别位于五边形的五个顶点"
             ],
-            "coordinates": [
-              "顶点坐标",
-              "边端点坐标"
+            "coordinates": [],
+            "ranges": [
+              "黑点数为5"
             ],
-            "ranges": [],
             "text": [],
             "uncertainties": [],
             "confidence": "E2"
           },
-          "source_provenance": null
+          "source_provenance": {
+            "inventory": "reports/all_chapters/visual-inventory-current.json",
+            "source_docs": [
+              15
+            ],
+            "review_method": "direct_view_image",
+            "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+            "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+            "original_image_sha256": "fc167d6b94ac64a9898f9b90a2e154be0ebf5fc081a91cdd0cc77ebe902bb2ce"
+          }
         },
         {
-          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_535_687_655_803.jpg",
+          "image": "data/ocr_live_current/chapter4_100/imgs/img_in_image_box_535_687_655_803.jpg",
           "image_sha256": "7608763aa2f03dfa9d1c868d4d9455dc9b860a9d862c4254370874d2e68eed68",
           "confidence": "E2",
           "structured": {
             "objects": [
-              {
-                "name": "五边形",
-                "type": "多边形"
-              },
-              {
-                "name": "内五边形",
-                "type": "多边形"
-              }
+              "两层相连的五边形折线、12个黑点"
             ],
-            "relations": [],
-            "coordinates": [
-              [
-                0,
-                0
-              ],
-              [
-                1,
-                1
-              ],
-              [
-                2,
-                0.5
-              ],
-              [
-                2,
-                0
-              ],
-              [
-                1.5,
-                0.2
-              ],
-              [
-                1,
-                0.5
-              ]
+            "relations": [
+              "内层五边形位于外层五边形内部",
+              "黑点沿内外两层五边形折线分布，层间由左侧折线连接"
             ],
-            "ranges": [],
+            "coordinates": [],
+            "ranges": [
+              "黑点数为12"
+            ],
             "text": [],
             "uncertainties": [],
             "confidence": "E2"
           },
-          "source_provenance": null
+          "source_provenance": {
+            "inventory": "reports/all_chapters/visual-inventory-current.json",
+            "source_docs": [
+              15
+            ],
+            "review_method": "direct_view_image",
+            "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+            "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+            "original_image_sha256": "7608763aa2f03dfa9d1c868d4d9455dc9b860a9d862c4254370874d2e68eed68"
+          }
         },
         {
-          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_658_639_828_802.jpg",
+          "image": "data/ocr_live_current/chapter4_100/imgs/img_in_image_box_658_639_828_802.jpg",
           "image_sha256": "35a0874815953b1f34c2b6764e965b1a1059a4e33ab3113d21a0e43b75295e3f",
           "confidence": "E2",
           "structured": {
             "objects": [
-              "五边形",
-              "内嵌四边形",
-              "内嵌小四边形"
+              "三层相连的五边形折线、22个黑点"
             ],
-            "relations": [],
+            "relations": [
+              "三个五边形轮廓由内向外逐层扩大",
+              "黑点沿三层五边形折线分布，层间由左下方向的折线连接"
+            ],
             "coordinates": [],
-            "ranges": [],
+            "ranges": [
+              "黑点数为22"
+            ],
             "text": [],
             "uncertainties": [],
             "confidence": "E2"
           },
-          "source_provenance": null
+          "source_provenance": {
+            "inventory": "reports/all_chapters/visual-inventory-current.json",
+            "source_docs": [
+              15
+            ],
+            "review_method": "direct_view_image",
+            "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+            "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+            "original_image_sha256": "35a0874815953b1f34c2b6764e965b1a1059a4e33ab3113d21a0e43b75295e3f"
+          }
         }
       ],
       "vision_sidecar": {
-        "objects": [],
-        "relations": [],
+        "objects": [
+          "由三条线段围成的三角形、3个黑点"
+        ],
+        "relations": [
+          "3个黑点分别位于三角形的三个顶点"
+        ],
         "coordinates": [],
-        "ranges": [],
+        "ranges": [
+          "黑点数为3"
+        ],
         "text": [
           "3"
         ],
         "uncertainties": [],
         "confidence": "E2"
       },
-      "vision_source_provenance": []
+      "vision_source_provenance": [
+        {
+          "inventory": "reports/all_chapters/visual-inventory-current.json",
+          "source_docs": [
+            15
+          ],
+          "review_method": "direct_view_image",
+          "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+          "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+          "original_image_sha256": "bc53404d5e8f16b4886393ed3f06bb7f46314c8050b256f70734385725a3216f"
+        },
+        {
+          "inventory": "reports/all_chapters/visual-inventory-current.json",
+          "source_docs": [
+            15
+          ],
+          "review_method": "direct_view_image",
+          "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+          "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+          "original_image_sha256": "db51d1f7581660614c252a5c0e8d7b181ba64e8a83fdd9db6433d907b925b006"
+        },
+        {
+          "inventory": "reports/all_chapters/visual-inventory-current.json",
+          "source_docs": [
+            15
+          ],
+          "review_method": "direct_view_image",
+          "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+          "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+          "original_image_sha256": "d92b0d7702938696e63910f09867f248e86b9be74d14a244aa3a075935f7d52e"
+        },
+        {
+          "inventory": "reports/all_chapters/visual-inventory-current.json",
+          "source_docs": [
+            15
+          ],
+          "review_method": "direct_view_image",
+          "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+          "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+          "original_image_sha256": "f2632efdc66a6c13bfa5acfc9c1201b1b58bf418dd7d75b8246395ce9ee4c82a"
+        },
+        {
+          "inventory": "reports/all_chapters/visual-inventory-current.json",
+          "source_docs": [
+            15
+          ],
+          "review_method": "direct_view_image",
+          "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+          "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+          "original_image_sha256": "6eb34d835c64ab8188cfae4790f50406394721014d211229dfe841e2ffef81d9"
+        },
+        {
+          "inventory": "reports/all_chapters/visual-inventory-current.json",
+          "source_docs": [
+            15
+          ],
+          "review_method": "direct_view_image",
+          "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+          "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+          "original_image_sha256": "98205a1aa429f9d70cfd6c6b6372d3067fce4d47d31bed6817fc9b01f910c6f7"
+        },
+        {
+          "inventory": "reports/all_chapters/visual-inventory-current.json",
+          "source_docs": [
+            15
+          ],
+          "review_method": "direct_view_image",
+          "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+          "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+          "original_image_sha256": "fc167d6b94ac64a9898f9b90a2e154be0ebf5fc081a91cdd0cc77ebe902bb2ce"
+        },
+        {
+          "inventory": "reports/all_chapters/visual-inventory-current.json",
+          "source_docs": [
+            15
+          ],
+          "review_method": "direct_view_image",
+          "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+          "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+          "original_image_sha256": "7608763aa2f03dfa9d1c868d4d9455dc9b860a9d862c4254370874d2e68eed68"
+        },
+        {
+          "inventory": "reports/all_chapters/visual-inventory-current.json",
+          "source_docs": [
+            15
+          ],
+          "review_method": "direct_view_image",
+          "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+          "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+          "original_image_sha256": "35a0874815953b1f34c2b6764e965b1a1059a4e33ab3113d21a0e43b75295e3f"
+        }
+      ]
     },
     {
       "qid": "Q-52fe385ca95d135a",
@@ -3293,7 +3470,7 @@
         "pdf_page": 18,
         "file": "data/ocr_live_current/chapter4_100/doc_17.md"
       },
-      "question_text": "15.（2025·）东模拟）\n\n记 \\(S_n\\)为首项为1的数列 \\(\\{a_n\\}\\)的前 \\(n\\)项和，且 \\(\\frac{S_n}{a_n} = n^2\\)，则 \\(S_{30} =\\)（ ）\n\nA.  \\(\\frac{60}{29}\\) B.  \\(\\frac{50}{29}\\)\n\nC.  \\(\\frac{60}{31}\\) D.  \\(\\frac{50}{31}\\)",
+      "question_text": "15.（2025·广东模拟）\n\n记 \\(S_n\\)为首项为1的数列 \\(\\{a_n\\}\\)的前 \\(n\\)项和，且 \\(\\frac{S_n}{a_n} = n^2\\)，则 \\(S_{30} =\\)（ ）\n\nA.  \\(\\frac{60}{29}\\) B.  \\(\\frac{50}{29}\\)\n\nC.  \\(\\frac{60}{31}\\) D.  \\(\\frac{50}{31}\\)",
       "image_refs": [],
       "visual_status": "READY_TEXT_ONLY",
       "math_errors": [],

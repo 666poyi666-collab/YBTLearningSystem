@@ -9,7 +9,7 @@ description: Build, audit, simulate, and refine all five chapters and 38 section
 
 1. **静态资料闭合**：教材文字、题图、知识点、循环、课程映射和教师转写可读取。
 2. **学习路线闭合**：每个项目有唯一教材位置、课程调用、学习顺序和验收动作。
-3. **学习者完成**：`primary-user-proxy` 或真实用户留下对应证据。
+3. **学习者完成**：`primary-user-proxy` 或真实用户提交最终作答，并留下课程消费、冻结作答和独立判分证据。
 4. **延迟保持**：24 小时冷复测独立记录。
 
 先读 [context-audit-contract.md](references/context-audit-contract.md) 了解第一层和 ChatGPT 接入边界。
@@ -33,6 +33,8 @@ description: Build, audit, simulate, and refine all five chapters and 38 section
 - Reconstruct the actual textbook structure before naming blocks. Knowledge with adjacent examples, type examples with their variants, and reinforcement exercises are common patterns, not a template that may overrule the page.
 - Cover every canonical item exactly once. Never create, omit, merge, duplicate, renumber, or move an item across sections.
 - Treat `student_learning_items.json` as the source for worked examples and direct variants; treat `student_packet.json` as the source for A/B/C exercise text. Never infer exercise text from a count or title.
+- Before any persona receives an item, project only whitelisted learner fields and run `scripts/audit_student_question_isolation.py`. A worked example or variant that contains a solution heading, reasoning tail, following knowledge block, abnormal length, or unresolved source review is `blocked`; never pass the contaminated text through and merely hide it in the output.
+- Do not load `learning_packet.json`, `packet.json`, `answer_sidecar.json`, teacher solutions, or answer evidence while constructing persona attempts. Write and hash the answer-free frozen-attempt artifact first; grader-only sources may be opened only afterward.
 - Resolve legacy image references through the active chapter OCR image directory. A question is visually complete only when its referenced image file exists, its visual evidence is present, and the path is recorded in the context audit.
 - Treat `data/course_transcripts/*.json.full_text` as the teacher-method source. Course titles prove nothing about what the teacher taught.
 - Keep learner-facing artifacts answer-free. Never expose `answer_sidecar.json`, worked solutions for target attempts, correct options, or final results.
@@ -41,11 +43,13 @@ description: Build, audit, simulate, and refine all five chapters and 38 section
 - Mark a course as new only at its first use in the active chapter route. Within a cycle, still list every already-learned course the item calls.
 - Treat section 1.1 as the continuously maintained golden regression sample. Apply confirmed interaction fixes across all 38 sections without using 1.1 as a reason to postpone their static routes.
 - Prefer Luna/Paddle cross-check evidence. When a current capability probe proves the Luna host cannot consume images, use the READY-bound, exact-image-SHA GLM vision sidecar plus PaddleOCR and record Luna as `blocked`; never relabel fallback evidence as Luna. A visual item is unusable without one of these current immutable paths.
-- Keep the fixed five-persona suite as an internal route stress test. It does not model the current user.
-- After section routes are merged, run one sequential `primary-user-proxy` across the chapter. Start with only a zero-base assumption and update its persistent profile only from frozen attempt evidence.
+- Keep the fixed five-persona suite as a synthetic internal route stress audit. It does not solve the mathematics, model the current user, or prove correctness; name its output `route_assessments`, never `grades`.
+- After section routes are merged, run one sequential `primary-user-proxy` across the chapter. Start with only a zero-base assumption and update its persistent profile only from immutable frozen-attempt evidence. Preserve prior run history instead of recreating version 1 on every build.
 - Default the real learner plan to one section per day. A cycle is a short execution unit inside that day unless the learner explicitly changes the pace.
 - Treat speech-recognition text as fallible evidence. When an option, subscript, sign, or symbol may have been corrupted, confirm the intended expression before judging or recording a wrong question.
 - Every simulated attempt must preserve the learner's actual course call, recognition statement, first line, continuation attempt, and self-check. Boolean-only simulation is invalid.
+- If an attempt does not contain a final mathematical answer, set `mathematical_correctness=not_evaluated_no_final_answer`; route actionability may pass, but item mastery, course completion and simulated chapter completion remain `not_run` or unfinished.
+- Distinguish answer evidence as `parsed_automatic`, `review_required_text`, or `source_page_bound`. Low-confidence OCR and page-only evidence may support a human grader but cannot authorize automatic scoring.
 - Keep route stress testing, the growing learner, independent verification, human learning, and 24-hour cold retest separate. Human and 24-hour gates remain `not_run` unless real evidence exists.
 - For the real learner, use the remote math MCP as the live state authority. A browser `localStorage` flag or a conversation statement is not cloud progress until an idempotent MCP write succeeds.
 - After the learner confirms an error, blocker, or hint dependency, call `math_record_wrong_question` so the diagnostic and type classification advance together. Do not turn speech-recognition mistakes or model guesses into wrong-question records.
@@ -70,7 +74,7 @@ description: Build, audit, simulate, and refine all five chapters and 38 section
 5. Build the section overview: first course, later new courses, already-learned dependencies, exact item labels in order, and unlocked supplementary practice pages/题号.
 6. Build each cycle in source order. Write the item method fields required by the output schema without copying question text or answers.
 7. Record course coverage gaps separately from missing source files. If an advanced item has no dedicated transcript, mark the gap and add a bridge requirement; do not claim full teacher coverage.
-8. Run five rounds with five zero-base personas per round. Every persona must attempt every section item; freeze each attempt before judging it.
+8. Run five rounds with five zero-base personas per round as a route audit. Every persona must attempt every section item; persist the answer-free attempt file and its SHA before opening grader-only material.
 9. When any persona cannot recognize the entry, write the first line, continue, or self-correct, revise the route and increment its version. Re-run the affected item for all five personas in the next round.
 10. Run `scripts/validate_section_delivery.py` against the delivery. It must reject inconsistent failure lists, generic copied attempts, missing repair mappings, and boolean-only evidence.
 11. Write detailed machine evidence and a compact learner-facing section report. Shared guidance belongs at cycle/type level; individual items show only their label and real deviations.
@@ -79,8 +83,8 @@ description: Build, audit, simulate, and refine all five chapters and 38 section
 
 1. Merge validated section routes in textbook order and deduplicate required courses.
 2. Initialize or load `data/learner_progress/chapter<chapter>.json`; never reset the learner profile between sections.
-3. Let `primary-user-proxy` consume required course transcripts before attempting dependent items. Record course completion evidence separately from coverage.
-4. Freeze each attempt before evaluation. Update the profile version only when the evidence adds a confirmed strength, gap, uncertainty, hint dependency, or self-check gap.
+3. Let `primary-user-proxy` load and actually consume required course transcript `full_text` before attempting dependent items. A file hash or non-empty text check proves availability only; it does not prove consumption or course completion.
+4. Freeze each attempt before route assessment or mathematical evaluation. Update the profile version only when the evidence adds a confirmed strength, gap, uncertainty, hint dependency, or self-check gap; synthetic predictions remain labeled predictions.
 5. At chapter close, list unfinished required courses and unresolved items. Mark simulated chapter completion only when both lists are empty and the chapter progress validator passes.
 6. Report real-user course completion and 24-hour retest independently; do not infer them from the proxy.
 7. Keep browser-local, cloud real-user, and repository proxy progress separate. The HTML page may store stars, listened cycles, passed items, and questions in `localStorage`; after explicit confirmation, use MCP write tools to synchronize real events. A copied snapshot alone is not a successful cloud write.
@@ -113,6 +117,10 @@ python codex-skill\ybt-all-chapters-learning-path\scripts\validate_chapter_learn
 
 python codex-skill\ybt-all-chapters-learning-path\scripts\build_chatgpt_context_audit.py `
   --project-root .
+
+python scripts\audit_student_question_isolation.py
+python scripts\deep_simulate_all_sections.py
+python -m unittest tests.test_answer_evidence_builder tests.test_answer_isolated_simulation -v
 ```
 
-Return `passed` only when the validators pass, the context audit complete flags are true, and the assignment's current hashes still match. A model's own statement that it finished is never acceptance evidence.
+Return `route_audit_status=passed` only when the validators pass, all 1,209 learner projections pass, the versioned run is atomically activated through `reports/deep_section_simulations/current.json`, and its current hashes match. Never translate that state into mathematical correctness, proxy learning completion, human completion, or mastery. A model's own statement that it finished is never acceptance evidence.

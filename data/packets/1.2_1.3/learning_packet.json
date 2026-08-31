@@ -37,7 +37,9 @@
         "1.2-k1"
       ],
       "prerequisite_knowledge_refs": [],
-      "type_refs": [],
+      "type_refs": [
+        "类型Ⅰ 基底表示"
+      ],
       "bridge_unit_ids": [],
       "method_checkpoints": [],
       "worked_examples": [
@@ -304,7 +306,12 @@
         "1.3-k2"
       ],
       "prerequisite_knowledge_refs": [],
-      "type_refs": [],
+      "type_refs": [
+        "类型Ⅱ 线性运算坐标表示",
+        "类型Ⅳ 平行垂直",
+        "类型Ⅲ 数量积坐标表示",
+        "类型Ⅴ 夹角与模"
+      ],
       "bridge_unit_ids": [],
       "method_checkpoints": [],
       "worked_examples": [
@@ -822,25 +829,25 @@
           ],
           "vision_sidecars": [
             {
-              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_full\\imgs\\img_in_image_box_521_674_697_871.jpg",
+              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_521_674_697_871.jpg",
               "image_sha256": "4bea76413e3227a932c8d08183ec2282079bb4242867a18f1268d91f6a3af61b",
               "confidence": "E2",
               "structured": {
-                "objects": [],
+                "objects": [
+                  "三棱锥P-ABC",
+                  "点M"
+                ],
                 "relations": [
-                  "点M在AC上",
-                  "线段PM连接点P和点M",
-                  "AC为底面边，PB与AC交于点M"
+                  "P连接A、C、B",
+                  "M在AC上且在PB上"
                 ],
-                "coordinates": [
-                  "点P在图形上方，点A在左，点C在右，点B在右下方，点M在AC中点位置"
-                ],
+                "coordinates": [],
                 "ranges": [],
                 "text": [
                   "P",
                   "A",
-                  "B",
                   "C",
+                  "B",
                   "M"
                 ],
                 "uncertainties": [],
@@ -850,21 +857,21 @@
             }
           ],
           "vision_sidecar": {
-            "objects": [],
+            "objects": [
+              "三棱锥P-ABC",
+              "点M"
+            ],
             "relations": [
-              "点M在AC上",
-              "线段PM连接点P和点M",
-              "AC为底面边，PB与AC交于点M"
+              "P连接A、C、B",
+              "M在AC上且在PB上"
             ],
-            "coordinates": [
-              "点P在图形上方，点A在左，点C在右，点B在右下方，点M在AC中点位置"
-            ],
+            "coordinates": [],
             "ranges": [],
             "text": [
               "P",
               "A",
-              "B",
               "C",
+              "B",
               "M"
             ],
             "uncertainties": [],
@@ -1769,8 +1776,13 @@
         "1.2-k1",
         "1.3-k2"
       ],
-      "type_refs": [],
-      "bridge_unit_ids": [],
+      "type_refs": [
+        "四点共面与截线系数综合",
+        "类型Ⅰ 基底表示"
+      ],
+      "bridge_unit_ids": [
+        "micro-four-point-coplanar"
+      ],
       "method_checkpoints": [
         {
           "id": "1.2_1.3-coplanar-check-1",
@@ -1821,74 +1833,23 @@
           ],
           "vision_sidecars": [
             {
-              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_full\\imgs\\img_in_image_box_510_395_708_552.jpg",
+              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_510_395_708_552.jpg",
               "image_sha256": "36272820a82dd013e4ea9c35660eb1eee35c267a8a0b54fc3fb7d051957a9842",
               "confidence": "E2",
               "structured": {
                 "objects": [
-                  "S",
-                  "F",
-                  "C",
-                  "D",
-                  "M",
-                  "E",
-                  "A",
-                  "B",
-                  "G"
+                  "三棱锥S-ABC",
+                  "点G"
                 ],
                 "relations": [
-                  "SA",
-                  "SB",
-                  "SC",
-                  "AB",
-                  "CD",
-                  "SF",
-                  "FC",
-                  "SE",
-                  "EB",
-                  "DM",
-                  "EM",
-                  "AG",
-                  "BG"
+                  "SA连接S到A",
+                  "SB连接S到B",
+                  "SC连接S到C",
+                  "AB连接A到B",
+                  "AC连接A到C",
+                  "BC连接B到C"
                 ],
-                "coordinates": [
-                  {
-                    "name": "S",
-                    "position": "顶部"
-                  },
-                  {
-                    "name": "F",
-                    "position": "SC上"
-                  },
-                  {
-                    "name": "C",
-                    "position": "A上方偏左"
-                  },
-                  {
-                    "name": "D",
-                    "position": "C与A之间"
-                  },
-                  {
-                    "name": "M",
-                    "position": "中间"
-                  },
-                  {
-                    "name": "E",
-                    "position": "SB上"
-                  },
-                  {
-                    "name": "A",
-                    "position": "左下"
-                  },
-                  {
-                    "name": "B",
-                    "position": "右下"
-                  },
-                  {
-                    "name": "G",
-                    "position": "AB下方偏左"
-                  }
-                ],
+                "coordinates": [],
                 "ranges": [],
                 "text": [],
                 "uncertainties": [],
@@ -1899,69 +1860,18 @@
           ],
           "vision_sidecar": {
             "objects": [
-              "S",
-              "F",
-              "C",
-              "D",
-              "M",
-              "E",
-              "A",
-              "B",
-              "G"
+              "三棱锥S-ABC",
+              "点G"
             ],
             "relations": [
-              "SA",
-              "SB",
-              "SC",
-              "AB",
-              "CD",
-              "SF",
-              "FC",
-              "SE",
-              "EB",
-              "DM",
-              "EM",
-              "AG",
-              "BG"
+              "SA连接S到A",
+              "SB连接S到B",
+              "SC连接S到C",
+              "AB连接A到B",
+              "AC连接A到C",
+              "BC连接B到C"
             ],
-            "coordinates": [
-              {
-                "name": "S",
-                "position": "顶部"
-              },
-              {
-                "name": "F",
-                "position": "SC上"
-              },
-              {
-                "name": "C",
-                "position": "A上方偏左"
-              },
-              {
-                "name": "D",
-                "position": "C与A之间"
-              },
-              {
-                "name": "M",
-                "position": "中间"
-              },
-              {
-                "name": "E",
-                "position": "SB上"
-              },
-              {
-                "name": "A",
-                "position": "左下"
-              },
-              {
-                "name": "B",
-                "position": "右下"
-              },
-              {
-                "name": "G",
-                "position": "AB下方偏左"
-              }
-            ],
+            "coordinates": [],
             "ranges": [],
             "text": [],
             "uncertainties": [],
@@ -2015,10 +1925,17 @@
         "1.3-k1",
         "1.3-k2"
       ],
-      "type_refs": [],
+      "type_refs": [
+        "类型Ⅴ 夹角与模",
+        "正交投影与最小模",
+        "类型Ⅲ 数量积坐标表示",
+        "阿波罗尼斯球与空间动点范围",
+        "空间动点单变量化"
+      ],
       "bridge_unit_ids": [
         "bridge-1.1-polarization",
-        "bridge-1.2-apollonius"
+        "bridge-1.2-apollonius",
+        "bridge-1.2-single-variable"
       ],
       "method_checkpoints": [
         {
@@ -3123,25 +3040,25 @@
       ],
       "vision_sidecars": [
         {
-          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_full\\imgs\\img_in_image_box_521_674_697_871.jpg",
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_521_674_697_871.jpg",
           "image_sha256": "4bea76413e3227a932c8d08183ec2282079bb4242867a18f1268d91f6a3af61b",
           "confidence": "E2",
           "structured": {
-            "objects": [],
+            "objects": [
+              "三棱锥P-ABC",
+              "点M"
+            ],
             "relations": [
-              "点M在AC上",
-              "线段PM连接点P和点M",
-              "AC为底面边，PB与AC交于点M"
+              "P连接A、C、B",
+              "M在AC上且在PB上"
             ],
-            "coordinates": [
-              "点P在图形上方，点A在左，点C在右，点B在右下方，点M在AC中点位置"
-            ],
+            "coordinates": [],
             "ranges": [],
             "text": [
               "P",
               "A",
-              "B",
               "C",
+              "B",
               "M"
             ],
             "uncertainties": [],
@@ -3151,21 +3068,21 @@
         }
       ],
       "vision_sidecar": {
-        "objects": [],
+        "objects": [
+          "三棱锥P-ABC",
+          "点M"
+        ],
         "relations": [
-          "点M在AC上",
-          "线段PM连接点P和点M",
-          "AC为底面边，PB与AC交于点M"
+          "P连接A、C、B",
+          "M在AC上且在PB上"
         ],
-        "coordinates": [
-          "点P在图形上方，点A在左，点C在右，点B在右下方，点M在AC中点位置"
-        ],
+        "coordinates": [],
         "ranges": [],
         "text": [
           "P",
           "A",
-          "B",
           "C",
+          "B",
           "M"
         ],
         "uncertainties": [],
@@ -3596,74 +3513,23 @@
       ],
       "vision_sidecars": [
         {
-          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_full\\imgs\\img_in_image_box_510_395_708_552.jpg",
+          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\first_chapter_69\\imgs\\img_in_image_box_510_395_708_552.jpg",
           "image_sha256": "36272820a82dd013e4ea9c35660eb1eee35c267a8a0b54fc3fb7d051957a9842",
           "confidence": "E2",
           "structured": {
             "objects": [
-              "S",
-              "F",
-              "C",
-              "D",
-              "M",
-              "E",
-              "A",
-              "B",
-              "G"
+              "三棱锥S-ABC",
+              "点G"
             ],
             "relations": [
-              "SA",
-              "SB",
-              "SC",
-              "AB",
-              "CD",
-              "SF",
-              "FC",
-              "SE",
-              "EB",
-              "DM",
-              "EM",
-              "AG",
-              "BG"
+              "SA连接S到A",
+              "SB连接S到B",
+              "SC连接S到C",
+              "AB连接A到B",
+              "AC连接A到C",
+              "BC连接B到C"
             ],
-            "coordinates": [
-              {
-                "name": "S",
-                "position": "顶部"
-              },
-              {
-                "name": "F",
-                "position": "SC上"
-              },
-              {
-                "name": "C",
-                "position": "A上方偏左"
-              },
-              {
-                "name": "D",
-                "position": "C与A之间"
-              },
-              {
-                "name": "M",
-                "position": "中间"
-              },
-              {
-                "name": "E",
-                "position": "SB上"
-              },
-              {
-                "name": "A",
-                "position": "左下"
-              },
-              {
-                "name": "B",
-                "position": "右下"
-              },
-              {
-                "name": "G",
-                "position": "AB下方偏左"
-              }
-            ],
+            "coordinates": [],
             "ranges": [],
             "text": [],
             "uncertainties": [],
@@ -3674,69 +3540,18 @@
       ],
       "vision_sidecar": {
         "objects": [
-          "S",
-          "F",
-          "C",
-          "D",
-          "M",
-          "E",
-          "A",
-          "B",
-          "G"
+          "三棱锥S-ABC",
+          "点G"
         ],
         "relations": [
-          "SA",
-          "SB",
-          "SC",
-          "AB",
-          "CD",
-          "SF",
-          "FC",
-          "SE",
-          "EB",
-          "DM",
-          "EM",
-          "AG",
-          "BG"
+          "SA连接S到A",
+          "SB连接S到B",
+          "SC连接S到C",
+          "AB连接A到B",
+          "AC连接A到C",
+          "BC连接B到C"
         ],
-        "coordinates": [
-          {
-            "name": "S",
-            "position": "顶部"
-          },
-          {
-            "name": "F",
-            "position": "SC上"
-          },
-          {
-            "name": "C",
-            "position": "A上方偏左"
-          },
-          {
-            "name": "D",
-            "position": "C与A之间"
-          },
-          {
-            "name": "M",
-            "position": "中间"
-          },
-          {
-            "name": "E",
-            "position": "SB上"
-          },
-          {
-            "name": "A",
-            "position": "左下"
-          },
-          {
-            "name": "B",
-            "position": "右下"
-          },
-          {
-            "name": "G",
-            "position": "AB下方偏左"
-          }
-        ],
+        "coordinates": [],
         "ranges": [],
         "text": [],
         "uncertainties": [],

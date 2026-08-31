@@ -1,0 +1,297 @@
+{
+  "schema_version": "1.1",
+  "report_type": "clean_learner_question_stem_review",
+  "generated_at": "2026-08-31T10:40:07.6215390+08:00",
+  "review_scope": {
+    "sections": ["4.1", "4.5", "4.6", "5.2", "5.4", "5.6"],
+    "item_count": 7,
+    "write_boundary": "report_only"
+  },
+  "normalization": {
+    "math_delimiters": "repository learner-item convention: \\( ... \\)",
+    "pdf_page_basis": "one-based PDF page; OCR doc N maps to PDF page N+1 for both chapter source PDFs",
+    "question_boundary_rule": "include the printed item label and the complete prompt; stop before analysis, solution, proof method, answer, reflection, or the next item",
+    "hash_contract": "old_text_sha256 and new_text_sha256 are SHA-256 over the exact UTF-8 question_text string without a trailing newline"
+  },
+  "source_files": [
+    {
+      "file": "data/ocr_sources/第4章 数列（无答案册）.pdf",
+      "sha256": "e32b88dc4c34007ae8ec16ee0faed3a2949ae1952235d1b9a8e5aea5f2d59f5c",
+      "page_count": 100
+    },
+    {
+      "file": "data/ocr_sources/第5章 一元函数的导数及其应用（无答案册）.pdf",
+      "sha256": "205282fd79c60a2539cd231044a6d06c5f78a44845a9879d931766851789fa25",
+      "page_count": 95
+    }
+  ],
+  "summary": {
+    "reviewed": 7,
+    "ready": 7,
+    "blocked": 0,
+    "solution_contamination_removed": 7,
+    "mathematical_ocr_corrections": 1,
+    "visually_recovered_missing_stems": 1,
+    "remaining_uncertainty_count": 0
+  },
+  "items": [
+    {
+      "section": "4.1",
+      "item_id": "a9b6679b8704ce30",
+      "label": "变式1",
+      "status": "ready",
+      "clean_question_text": "【变式1】已知在数列 \\(\\{a_n\\}\\) 中，\\(0<a_n<1\\ (n\\in\\mathbb{N}^*)\\)，\\(a_{n+1}=\\frac{na_n+a_n^2}{n+1}\\)，求证：\\(\\{a_n\\}\\) 是单调递减数列。",
+      "boundary_basis": "Original PDF page 11 visually shows the complete bold stem after the preceding reflection. The stem ends at '单调递减数列。'; the next printed block begins '证法1', so both proof methods are excluded.",
+      "source": {
+        "packet": "data/packets/4.1/packet.json",
+        "generated_item_source": "data/packets/4.1/learning_packet.json",
+        "ocr_docs": [10],
+        "ocr_files": [
+          {
+            "file": "data/ocr_live_current/chapter4_100/doc_10.md",
+            "sha256": "46819367809d4a3c46a1116464049dd65c9dd7f51ad3c099b214ca9073ddb816"
+          }
+        ],
+        "pdf_file": "data/ocr_sources/第4章 数列（无答案册）.pdf",
+        "pdf_pages": [11],
+        "original_page_images": [
+          {
+            "file": "data/ocr_live_current/chapter4_100/layout_det_res_10.jpg",
+            "sha256": "5b8339c7561d1cdbee86eab7318fe8161e9e28b90a97d112f29365437f88aedd"
+          }
+        ],
+        "visual_evidence": "original PDF page 11 and OCR layout page 10"
+      },
+      "old_text_sha256": "0c5d9bf6342d3f10987bc4fb2e19dcf6b18aeb92dfccf66125d61c1c7bdad9d6",
+      "new_text_sha256": "2a87d9719e53a7d693e2b8bb022c1abb0bfaad014ef48946d508be136ce90a9a",
+      "confidence": "high",
+      "remaining_uncertainty": null
+    },
+    {
+      "section": "4.5",
+      "item_id": "1de775e66fcb1e46",
+      "label": "变式2",
+      "status": "ready",
+      "clean_question_text": "【变式2】记 \\(S_n\\) 为等比数列 \\(\\{a_n\\}\\) 的前 \\(n\\) 项和，若 \\(S_9+8S_3=9S_6\\)，则 \\(\\{a_n\\}\\) 的公比为___。",
+      "boundary_basis": "Original PDF page 67 visually shows the complete fill-in stem. The next line begins '解法1', and page 68 continues '解法2'; all calculation, the second method, and the answer are excluded.",
+      "source": {
+        "packet": "data/packets/4.5/packet.json",
+        "generated_item_source": "data/packets/4.5/learning_packet.json",
+        "ocr_docs": [66, 67],
+        "ocr_files": [
+          {
+            "file": "data/ocr_live_current/chapter4_100/doc_66.md",
+            "sha256": "30cfe9ea6f2d70c636ff26f3f0a3008b1be18d1338518f6f15714dfee0d1174f"
+          },
+          {
+            "file": "data/ocr_live_current/chapter4_100/doc_67.md",
+            "sha256": "0733e414c04113d4d7867c2887b4b7f1b286ce53cfe08fcfc66d019896d4249c"
+          }
+        ],
+        "pdf_file": "data/ocr_sources/第4章 数列（无答案册）.pdf",
+        "pdf_pages": [67, 68],
+        "original_page_images": [
+          {
+            "file": "data/ocr_live_current/chapter4_100/layout_det_res_66.jpg",
+            "sha256": "ba6fdcd996c5db60565b712f94a31366137ce24b5ed55a5bdec57c3a018a2eaf"
+          },
+          {
+            "file": "data/ocr_live_current/chapter4_100/layout_det_res_67.jpg",
+            "sha256": "44157db84c1dce69b6e66966788accbc075e76748f8770a4feeff549cc4918b0"
+          }
+        ],
+        "visual_evidence": "original PDF pages 67-68 and OCR layout pages 66-67"
+      },
+      "old_text_sha256": "7940d7744d7a0881a0e6db31d408e16aa4fc16318651f8c2d23b67e198277bb8",
+      "new_text_sha256": "3197176d8232cbc8812bcd3013e5a2afd4329405d41f624bfbbe3b1b812cb909",
+      "confidence": "high",
+      "remaining_uncertainty": null
+    },
+    {
+      "section": "4.6",
+      "item_id": "c7a1f7856662363b",
+      "label": "变式",
+      "status": "ready",
+      "clean_question_text": "【变式】已知数列 \\(\\{a_n\\}\\) 满足 \\(a_1=\\frac{1}{2}\\)，且 \\(a_{n+1}=\\frac{1}{3}a_n^3+\\frac{2}{3}a_n\\)，求证：\\(\\frac{1}{2}\\cdot\\left(\\frac{2}{3}\\right)^{n-1}\\leq a_n\\leq\\frac{1}{2}\\cdot\\left(\\frac{3}{4}\\right)^{n-1}\\)。",
+      "boundary_basis": "Original PDF page 80 visually shows the complete stem and both exponents as n-1. The current packet's first line incorrectly has n+1, while its own proof immediately switches to n-1. The stem ends before '证法1'; proof method 1 continues onto page 81 and proof method 2 is also excluded.",
+      "source": {
+        "packet": "data/packets/4.6/packet.json",
+        "generated_item_source": "data/packets/4.6/learning_packet.json",
+        "ocr_docs": [79, 80],
+        "ocr_files": [
+          {
+            "file": "data/ocr_live_current/chapter4_100/doc_79.md",
+            "sha256": "9d3b325350f96d0fa223aca5bdadf930cbeb61e36b95813d9818fe6b8728c677"
+          },
+          {
+            "file": "data/ocr_live_current/chapter4_100/doc_80.md",
+            "sha256": "8bfa3cbff7672b3e865dff389dec57d6be1e0c3a4e9dc34bff206366d4cb3646"
+          }
+        ],
+        "pdf_file": "data/ocr_sources/第4章 数列（无答案册）.pdf",
+        "pdf_pages": [80, 81],
+        "original_page_images": [
+          {
+            "file": "data/ocr_live_current/chapter4_100/layout_det_res_79.jpg",
+            "sha256": "04a69aebd1d454b3c0fea3a19568cf13c191fcae90191f2df2ec2b760c5ec002"
+          },
+          {
+            "file": "data/ocr_live_current/chapter4_100/layout_det_res_80.jpg",
+            "sha256": "688e11fad296c1443a059055822fbdd55bcdb5cfd49bb86f01850301a21d9f60"
+          }
+        ],
+        "visual_evidence": "original PDF pages 80-81 and OCR layout pages 79-80"
+      },
+      "old_text_sha256": "b388550ba872303db4aa3c4c6310d5f179d2275ab9460dca88f8188dcfe63351",
+      "new_text_sha256": "1eaafc8f6f114643509b42bc6d3abab4b479ae14f4647c78572ddca68e354e02",
+      "confidence": "high",
+      "remaining_uncertainty": null
+    },
+    {
+      "section": "5.2",
+      "item_id": "89d58501c9101dcf",
+      "label": "变式3",
+      "status": "ready",
+      "clean_question_text": "【变式3】若 \\(f(x)=x+2\\sqrt{x}\\) 在点 \\((1,3)\\) 处的切线也是 \\(g(x)=\\ln x+x+a\\) 的切线，则 \\(a=\\)___。",
+      "boundary_basis": "Original PDF page 14 visually shows one complete fill-in sentence. The following blue '解析' and the line beginning '由题意' are solution content and are excluded; the graph on the same page illustrates the solution rather than adding a condition to the stem.",
+      "source": {
+        "packet": "data/packets/5.2/packet.json",
+        "generated_item_source": "data/packets/5.2/learning_packet.json",
+        "ocr_docs": [13],
+        "ocr_files": [
+          {
+            "file": "data/ocr_live_current/chapter5_95/doc_13.md",
+            "sha256": "23b58db05af09f4f272de0b5f5e7ae3248dad3e5905b212e71a7fab00357cfb7"
+          }
+        ],
+        "pdf_file": "data/ocr_sources/第5章 一元函数的导数及其应用（无答案册）.pdf",
+        "pdf_pages": [14],
+        "original_page_images": [
+          {
+            "file": "data/ocr_live_current/chapter5_95/layout_det_res_13.jpg",
+            "sha256": "f571111eea28baab1f4893f3dc553b2b61f4fbf27a5897bdddab5ffe705a1b22"
+          }
+        ],
+        "visual_evidence": "original PDF page 14 and OCR layout page 13"
+      },
+      "old_text_sha256": "3781bfb24dbef5d3a0527cea1e402003602e7e54710e7eb26796a09b764b63cf",
+      "new_text_sha256": "7a3583a83f123d5f192964bca58b4994aadc36656faf77c1b2011ed944cc40ad",
+      "confidence": "high",
+      "remaining_uncertainty": null
+    },
+    {
+      "section": "5.4",
+      "item_id": "1403f6b08572b0ac",
+      "label": "变式1",
+      "status": "ready",
+      "clean_question_text": "【变式1】已知函数 \\(f(x)=2\\mathrm{e}^{x}-ax\\)，其中 \\(a\\geq0\\)，证明：\\(f(a)\\geq2a+2\\)。",
+      "boundary_basis": "Original PDF page 51 visually shows the complete proof prompt after the preceding reflection. The next block begins '证法1'; proof method 1 and the continuation as '证法2' on page 52 are excluded.",
+      "source": {
+        "packet": "data/packets/5.4/packet.json",
+        "generated_item_source": "data/packets/5.4/learning_packet.json",
+        "ocr_docs": [50, 51],
+        "ocr_files": [
+          {
+            "file": "data/ocr_live_current/chapter5_95/doc_50.md",
+            "sha256": "decfd021f0848caeef706d92f44b9773d5a4749a60e56b0238c8ee04d91aa6d2"
+          },
+          {
+            "file": "data/ocr_live_current/chapter5_95/doc_51.md",
+            "sha256": "2a8aa84eb6a67cf198357a2b156a4a4b387091f3bf6b90df08430634ff420891"
+          }
+        ],
+        "pdf_file": "data/ocr_sources/第5章 一元函数的导数及其应用（无答案册）.pdf",
+        "pdf_pages": [51, 52],
+        "original_page_images": [
+          {
+            "file": "data/ocr_live_current/chapter5_95/layout_det_res_50.jpg",
+            "sha256": "2b84667cbac8c3734ded6fb41a9aaa1bde2bfce1f0b57c9d88e4908521923297"
+          },
+          {
+            "file": "data/ocr_live_current/chapter5_95/layout_det_res_51.jpg",
+            "sha256": "4bfc3408ba55a8eb2e2dd201796f9c8c1d2cd4360b160ee1d5b4f2aa163f6d85"
+          }
+        ],
+        "visual_evidence": "original PDF pages 51-52 and OCR layout pages 50-51"
+      },
+      "old_text_sha256": "86a5d1ad7ac531721be953e988b2a55595f99c75f0e4ae35dfe43c1a271fe5b0",
+      "new_text_sha256": "08048065281a853929c38bbb809f45eca6ffa4c4c557b466340b6d8dc575be33",
+      "confidence": "high",
+      "remaining_uncertainty": null
+    },
+    {
+      "section": "5.4",
+      "item_id": "f2070d1901aa5888",
+      "label": "变式2",
+      "status": "ready",
+      "clean_question_text": "【变式2】证明不等式：\\(\\left(1-\\frac{2}{x}\\right)\\ln x>-\\frac{1}{2}\\)。",
+      "boundary_basis": "OCR doc 51 retained only '证明不等式：' and dropped the displayed inequality. Original PDF page 52 visually restores the complete expression. The same inequality is repeated verbatim in proof method 1 and at the start of proof method 2, while page 53 concludes that it holds for arbitrary x>0. No extra domain clause is added because it is not printed in the stem.",
+      "source": {
+        "packet": "data/packets/5.4/packet.json",
+        "generated_item_source": "data/packets/5.4/learning_packet.json",
+        "ocr_docs": [51, 52],
+        "ocr_files": [
+          {
+            "file": "data/ocr_live_current/chapter5_95/doc_51.md",
+            "sha256": "2a8aa84eb6a67cf198357a2b156a4a4b387091f3bf6b90df08430634ff420891"
+          },
+          {
+            "file": "data/ocr_live_current/chapter5_95/doc_52.md",
+            "sha256": "222624c9843b905d0ab2cb375b4e5bec0f1c7bfcb21278d239d4101a6c938797"
+          }
+        ],
+        "pdf_file": "data/ocr_sources/第5章 一元函数的导数及其应用（无答案册）.pdf",
+        "pdf_pages": [52, 53],
+        "original_page_images": [
+          {
+            "file": "data/ocr_live_current/chapter5_95/layout_det_res_51.jpg",
+            "sha256": "4bfc3408ba55a8eb2e2dd201796f9c8c1d2cd4360b160ee1d5b4f2aa163f6d85"
+          },
+          {
+            "file": "data/ocr_live_current/chapter5_95/layout_det_res_52.jpg",
+            "sha256": "21fa406363cf0c3be8cb1adf0e325de67bc9d771e979a450c7004598b6a7ff4e"
+          }
+        ],
+        "visual_evidence": "original PDF pages 52-53 and OCR layout pages 51-52"
+      },
+      "old_text_sha256": "1cca63f2642fd90c1f34ba0e34e839c443b67f463e45f336a368dcfaef1a01ce",
+      "new_text_sha256": "cf81d43a2dc1f37e523e5d50cc4a865905f5852f168123e037d165726c7c452b",
+      "confidence": "high",
+      "remaining_uncertainty": null
+    },
+    {
+      "section": "5.6",
+      "item_id": "4de21b0cdecbde16",
+      "label": "例8",
+      "status": "ready",
+      "clean_question_text": "【例8】（2018·新课标Ⅱ卷（节选））已知 \\(f(x)=\\mathrm{e}^x-ax^2\\)，若 \\(a=1\\)，证明：当 \\(x\\geq0\\) 时，\\(f(x)\\geq1\\)。",
+      "boundary_basis": "Original PDF page 81 visually shows the complete cited prompt under '类型V：不等式证明'. The next printed block begins '证法1', so both proof methods are excluded.",
+      "source": {
+        "packet": "data/packets/5.6/packet.json",
+        "generated_item_source": "data/packets/5.6/learning_packet.json",
+        "ocr_docs": [80],
+        "ocr_files": [
+          {
+            "file": "data/ocr_live_current/chapter5_95/doc_80.md",
+            "sha256": "53914ea22407c7d23a935c502c83249cd4961f3fad614f9ba96c617ee5ff5770"
+          }
+        ],
+        "pdf_file": "data/ocr_sources/第5章 一元函数的导数及其应用（无答案册）.pdf",
+        "pdf_pages": [81],
+        "original_page_images": [
+          {
+            "file": "data/ocr_live_current/chapter5_95/layout_det_res_80.jpg",
+            "sha256": "4bb3d1e4d1f50948db80c35e0d4c94e3698d607b752d1e4838612bc93e183df9"
+          }
+        ],
+        "visual_evidence": "original PDF page 81 and OCR layout page 80"
+      },
+      "old_text_sha256": "be35ed1ccb6ad97403df0094b4f46011a17edeeae2f7af664be2d0bc3b85ea09",
+      "new_text_sha256": "65f5a649b1b57e4f7195944e618378904653551ee2150130a5ca1521da113e4c",
+      "confidence": "high",
+      "remaining_uncertainty": null
+    }
+  ],
+  "mastery_claimed": false,
+  "shared_packets_modified_by_review": false
+}

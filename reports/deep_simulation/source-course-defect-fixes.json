@@ -1,0 +1,591 @@
+{
+  "schema_version": "ybt-source-course-defect-fixes-v1",
+  "generated_at": "2026-08-31T03:08:38+00:00",
+  "status": "passed",
+  "scope": "source question, learner stem, teaching-solution, visual, course identity/route, and type-hash reconciliation",
+  "source_type_reviews": {
+    "resolved": 5,
+    "resolved_item_ids": [
+      "Q-71eccd74698e096f",
+      "Q-d5eb29be8ab5dedf",
+      "Q-821eb5edcaa8d410",
+      "Q-ad967b8b2931d0c9",
+      "Q-979c0e6d96423ab0"
+    ],
+    "remaining_blockers": [
+      {
+        "chapter": 2,
+        "section": "2.1",
+        "cycle_id": "2.1-cycle-11",
+        "item_id": "Q-097281f5844ed6cf",
+        "item_label": "B9",
+        "status": "MULTI_AGENT_SEMANTIC_REVIEW_BLOCKED_MANUAL",
+        "reason": "目标量可解释为固定点与抛物线上动点连线斜率，但对象不是线段；现有五类缺少精确子类型。"
+      },
+      {
+        "chapter": 2,
+        "section": "2.6",
+        "cycle_id": "2.6-cycle-11",
+        "item_id": "Q-3235c438f136521a",
+        "item_label": "C18",
+        "status": "MULTI_AGENT_SEMANTIC_REVIEW_BLOCKED_MANUAL",
+        "reason": "三问分别覆盖弦长、切线面积最值和弦中点向量存在性；现有单一主类型无法完整表达。"
+      }
+    ],
+    "summary": {
+      "items": 512,
+      "accepted": 510,
+      "blocked": 2,
+      "review_status_counts": {
+        "approved": 67,
+        "classified": 16,
+        "confirmed": 213,
+        "corrected": 214,
+        "needs_manual_review": 2
+      },
+      "taxonomy_extensions": 24,
+      "sections": 37,
+      "cycles": 69
+    },
+    "review_hashes": {
+      "reports/deep_simulation_reviews/ch1-ch2-type-review.json": "76e02607500d45ffcf4b7633787c931ca0a624073eabc9624de500933fcd09bd",
+      "reports/deep_simulation_reviews/ch3-type-review.json": "54aa065f1b43dd82f7d23eb1b0401d9dfde14cf323530f54c3e3a19aaaa692e4",
+      "reports/deep_simulation_reviews/ch4-ch5-type-review.json": "d71b8d8b85c2ecc986043ad5aaf5782feb545054e16d1f78d3feaab77c5f7d4e"
+    }
+  },
+  "stable_identity": {
+    "exercise": {
+      "count": 546,
+      "expected": 546,
+      "id_drift_count": 0,
+      "drift": []
+    },
+    "learning_items": {
+      "count": 663,
+      "expected": 663,
+      "id_drift_count": 0,
+      "drift": []
+    }
+  },
+  "clean_learner_stems": {
+    "items": 16,
+    "passed": 16,
+    "rows": [
+      {
+        "section": "1.4",
+        "label": "例9",
+        "item_id": "2a2eaf5c7869332b",
+        "status": "passed",
+        "question_text_sha256": "89e44c4c4f0b9e1882491ab8588ea3f8423f0da84ee360c6d7e80538f476bfe3",
+        "review_path": "reports/deep_simulation_reviews/clean-stems-ch1-ch3.json"
+      },
+      {
+        "section": "1.4",
+        "label": "例11",
+        "item_id": "c28ca305f7a1fba9",
+        "status": "passed",
+        "question_text_sha256": "0256c579cd472bf2c757db937bc96f7de8261348be5a32b5b662afe98f33cc27",
+        "review_path": "reports/deep_simulation_reviews/clean-stems-ch1-ch3.json"
+      },
+      {
+        "section": "1.4",
+        "label": "例21",
+        "item_id": "eaaf1bb065d2f647",
+        "status": "passed",
+        "question_text_sha256": "d43bc2ebfacb371b4e16cf72c5e2bdeb98bf7b50f1771de9eac752f78449ed59",
+        "review_path": "reports/deep_simulation_reviews/clean-stems-ch1-ch3.json"
+      },
+      {
+        "section": "2.1",
+        "label": "例5",
+        "item_id": "00945ef16c0964a4",
+        "status": "passed",
+        "question_text_sha256": "dde45b2678fe14532bb2a865b4c35468af441a0fe178dabb93bdd90ecf2e7ab8",
+        "review_path": "reports/deep_simulation_reviews/clean-stems-ch1-ch3.json"
+      },
+      {
+        "section": "2.1",
+        "label": "例7",
+        "item_id": "2798aec914d103bb",
+        "status": "passed",
+        "question_text_sha256": "43b6633c24c756ecb8212e680272268b97a0ce2cfe779417b910910699f22b89",
+        "review_path": "reports/deep_simulation_reviews/clean-stems-ch1-ch3.json"
+      },
+      {
+        "section": "2.2",
+        "label": "变式2",
+        "item_id": "2961c2d191abdf76",
+        "status": "passed",
+        "question_text_sha256": "1d663b956d2d9c91b48142384df94f7c592c40991ebe73acf3f06ec232a28795",
+        "review_path": "reports/deep_simulation_reviews/clean-stems-ch1-ch3.json"
+      },
+      {
+        "section": "ch3.s1",
+        "label": "例3",
+        "item_id": "1a74b68ffcc8be3c",
+        "status": "passed",
+        "question_text_sha256": "ab4354d66212b3e79d0d3783f033d01fcb4a9b222ccd907d940b0a7c0f7572d4",
+        "review_path": "reports/deep_simulation_reviews/clean-stems-ch1-ch3.json"
+      },
+      {
+        "section": "ch3.s1",
+        "label": "例6",
+        "item_id": "08f4ab4a6646aaeb",
+        "status": "passed",
+        "question_text_sha256": "e907449cc6d5249e9cc01379bb5723b15f5e6bf9283b9d81769233b06df506b8",
+        "review_path": "reports/deep_simulation_reviews/clean-stems-ch1-ch3.json"
+      },
+      {
+        "section": "ch3.s12",
+        "label": "例2",
+        "item_id": "35f25e4a25650379",
+        "status": "passed",
+        "question_text_sha256": "c79dc8b370bb279e03b22c3f3e50bee8da5ce4a9b77329a865169e0393c60d29",
+        "review_path": "reports/deep_simulation_reviews/clean-stems-ch1-ch3.json"
+      },
+      {
+        "section": "4.1",
+        "label": "变式1",
+        "item_id": "a9b6679b8704ce30",
+        "status": "passed",
+        "question_text_sha256": "2a87d9719e53a7d693e2b8bb022c1abb0bfaad014ef48946d508be136ce90a9a",
+        "review_path": "reports/deep_simulation_reviews/clean-stems-ch4-ch5.json"
+      },
+      {
+        "section": "4.5",
+        "label": "变式2",
+        "item_id": "1de775e66fcb1e46",
+        "status": "passed",
+        "question_text_sha256": "3197176d8232cbc8812bcd3013e5a2afd4329405d41f624bfbbe3b1b812cb909",
+        "review_path": "reports/deep_simulation_reviews/clean-stems-ch4-ch5.json"
+      },
+      {
+        "section": "4.6",
+        "label": "变式",
+        "item_id": "c7a1f7856662363b",
+        "status": "passed",
+        "question_text_sha256": "1eaafc8f6f114643509b42bc6d3abab4b479ae14f4647c78572ddca68e354e02",
+        "review_path": "reports/deep_simulation_reviews/clean-stems-ch4-ch5.json"
+      },
+      {
+        "section": "5.2",
+        "label": "变式3",
+        "item_id": "89d58501c9101dcf",
+        "status": "passed",
+        "question_text_sha256": "7a3583a83f123d5f192964bca58b4994aadc36656faf77c1b2011ed944cc40ad",
+        "review_path": "reports/deep_simulation_reviews/clean-stems-ch4-ch5.json"
+      },
+      {
+        "section": "5.4",
+        "label": "变式1",
+        "item_id": "1403f6b08572b0ac",
+        "status": "passed",
+        "question_text_sha256": "08048065281a853929c38bbb809f45eca6ffa4c4c557b466340b6d8dc575be33",
+        "review_path": "reports/deep_simulation_reviews/clean-stems-ch4-ch5.json"
+      },
+      {
+        "section": "5.4",
+        "label": "变式2",
+        "item_id": "f2070d1901aa5888",
+        "status": "passed",
+        "question_text_sha256": "cf81d43a2dc1f37e523e5d50cc4a865905f5852f168123e037d165726c7c452b",
+        "review_path": "reports/deep_simulation_reviews/clean-stems-ch4-ch5.json"
+      },
+      {
+        "section": "5.6",
+        "label": "例8",
+        "item_id": "4de21b0cdecbde16",
+        "status": "passed",
+        "question_text_sha256": "65f5a649b1b57e4f7195944e618378904653551ee2150130a5ca1521da113e4c",
+        "review_path": "reports/deep_simulation_reviews/clean-stems-ch4-ch5.json"
+      }
+    ]
+  },
+  "worked_example_repairs": [
+    {
+      "section": "ch3.s1",
+      "label": "例3",
+      "item_id": "1a74b68ffcc8be3c",
+      "question_text_sha256": "ab4354d66212b3e79d0d3783f033d01fcb4a9b222ccd907d940b0a7c0f7572d4",
+      "solution_present": true,
+      "source_layout_repair": {
+        "status": "SOURCE_PDF_VISUALLY_VERIFIED",
+        "source_pdf_sha256": "d5fd328c1937e8695f8527a16bfd6916849401eabe474ba3f4c0a9c185bf3af7",
+        "pdf_pages": [
+          1,
+          2
+        ],
+        "reason": "例3题干跨双栏页尾与下一页页首，OCR把左栏知识正文插入题干。"
+      },
+      "source_question_stem_review": {
+        "status": "SOURCE_REVIEWED_ANSWER_FREE",
+        "review_path": "reports/deep_simulation_reviews/clean-stems-ch1-ch3.json",
+        "review_sha256": "49c435c709a768f0f095b33d0a1d1768f254563ff37e93ed796b921c51daa1aa",
+        "old_reported_question_text_sha256": "2f389d4a0a3cc7d0a816ab765745c398500f47b400c4482ca13ae839795ca6f7",
+        "pre_override_question_text_sha256": "0a53a1779daa519943f153f3458842be2d24c90961ca18929effd67dfec883c6",
+        "question_text_sha256": "ab4354d66212b3e79d0d3783f033d01fcb4a9b222ccd907d940b0a7c0f7572d4",
+        "confidence": "high",
+        "boundary_basis": "OCR doc 0 lines 62-64 provide the beginning. The omitted continuation appears at OCR doc 1 line 46 after column interleaving and is immediately followed by '解析：' at line 50. The combined sentence is grammatically complete and the analysis repeats the exact one-focus/other-focus relationship.",
+        "source": {
+          "packet": "data/packets/ch3.s1/packet.json",
+          "ocr_docs": [
+            0,
+            1
+          ],
+          "ocr_files": [
+            "data/ocr_live_current/third_chapter_180/doc_0.md",
+            "data/ocr_live_current/third_chapter_180/doc_1.md"
+          ],
+          "pdf_file": null,
+          "pdf_pages": [
+            1,
+            2
+          ],
+          "visual_evidence": "packet OCR cross-column continuation and analysis echo"
+        }
+      }
+    },
+    {
+      "section": "ch3.s1",
+      "label": "例6",
+      "item_id": "08f4ab4a6646aaeb",
+      "question_text_sha256": "e907449cc6d5249e9cc01379bb5723b15f5e6bf9283b9d81769233b06df506b8",
+      "solution_present": true,
+      "source_layout_repair": {
+        "status": "SOURCE_PDF_VISUALLY_VERIFIED",
+        "source_pdf_sha256": "d5fd328c1937e8695f8527a16bfd6916849401eabe474ba3f4c0a9c185bf3af7",
+        "pdf_pages": [
+          2,
+          3
+        ],
+        "reason": "例6位于右栏，左栏特征三角形与焦点三角形正文被OCR插入题干和解析之间。"
+      },
+      "source_question_stem_review": {
+        "status": "SOURCE_REVIEWED_ANSWER_FREE",
+        "review_path": "reports/deep_simulation_reviews/clean-stems-ch1-ch3.json",
+        "review_sha256": "49c435c709a768f0f095b33d0a1d1768f254563ff37e93ed796b921c51daa1aa",
+        "old_reported_question_text_sha256": "47e8ec41b103ca662ed2a0db1f1e91c617662e4b02ec484313b4b2215f8b1982",
+        "pre_override_question_text_sha256": "727c3a4e980068a757e271e705c9843ca3779842d3551f1c329e78eea234ee47",
+        "question_text_sha256": "e907449cc6d5249e9cc01379bb5723b15f5e6bf9283b9d81769233b06df506b8",
+        "confidence": "high",
+        "boundary_basis": "OCR doc 1 line 92 is a complete fill-in prompt. OCR doc 2 lines 1-8 are interleaved knowledge text; line 10 starts the item's analysis, so all text after the prompt is excluded.",
+        "source": {
+          "packet": "data/packets/ch3.s1/packet.json",
+          "ocr_docs": [
+            1,
+            2
+          ],
+          "ocr_files": [
+            "data/ocr_live_current/third_chapter_180/doc_1.md",
+            "data/ocr_live_current/third_chapter_180/doc_2.md"
+          ],
+          "pdf_file": null,
+          "pdf_pages": [
+            2,
+            3
+          ],
+          "visual_evidence": "packet OCR and analysis continuity"
+        }
+      }
+    },
+    {
+      "section": "ch3.s12",
+      "label": "例2",
+      "item_id": "35f25e4a25650379",
+      "question_text_sha256": "c79dc8b370bb279e03b22c3f3e50bee8da5ce4a9b77329a865169e0393c60d29",
+      "solution_present": true,
+      "source_layout_repair": {
+        "status": "SOURCE_PDF_VISUALLY_VERIFIED",
+        "source_pdf_sha256": "4060e78273b1d002bc484a186f69df8b1acfaa643b332a75926ea10964b1de86",
+        "pdf_pages": [
+          3,
+          4
+        ],
+        "reason": "OCR遗漏蓝色提示后的“解：（1）”标记，导致整段解答进入question_text。"
+      },
+      "source_question_stem_review": {
+        "status": "SOURCE_REVIEWED_ANSWER_FREE",
+        "review_path": "reports/deep_simulation_reviews/clean-stems-ch1-ch3.json",
+        "review_sha256": "49c435c709a768f0f095b33d0a1d1768f254563ff37e93ed796b921c51daa1aa",
+        "old_reported_question_text_sha256": "afa9f0cad5d113b87e70b2199a6287859f7b53e265ec1cac69358195ac666b4f",
+        "pre_override_question_text_sha256": "9ec4e30d5aca5962f570ec45e8d4453d63a47b4759312552a4e3af55ba02204f",
+        "question_text_sha256": "c79dc8b370bb279e03b22c3f3e50bee8da5ce4a9b77329a865169e0393c60d29",
+        "confidence": "high",
+        "boundary_basis": "OCR doc 165 lines 3-7 contain the complete two-part prompt. Line 9 begins the solution (despite a damaged leading marker), so the entire solution extending through doc 166 is excluded.",
+        "source": {
+          "packet": "data/packets/ch3.s12/packet.json",
+          "ocr_docs": [
+            165,
+            166
+          ],
+          "ocr_files": [
+            "data/ocr_live_current/third_chapter_180/doc_165.md",
+            "data/ocr_live_current/third_chapter_180/doc_166.md"
+          ],
+          "pdf_file": null,
+          "pdf_pages": [
+            166,
+            167
+          ],
+          "visual_evidence": "packet OCR and solution boundary"
+        }
+      }
+    },
+    {
+      "section": "4.4",
+      "label": "例6",
+      "item_id": "0e5887227aedcbf0",
+      "question_text_sha256": "0c2d11e49a3bedf99eaed9723e281ce4da2403013336d6294449dd6f78fdad99",
+      "solution_present": true,
+      "source_layout_repair": {
+        "status": "SOURCE_PDF_VISUALLY_VERIFIED",
+        "source_pdf_sha256": "e32b88dc4c34007ae8ec16ee0faed3a2949ae1952235d1b9a8e5aea5f2d59f5c",
+        "pdf_pages": [
+          53,
+          54
+        ],
+        "reason": "例6题干在第53页右栏，解析位于第54页右栏且被OCR排到下一知识点标题之后。"
+      },
+      "source_question_stem_review": null
+    },
+    {
+      "section": "5.5",
+      "label": "例9",
+      "item_id": "423085847c88f0da",
+      "question_text_sha256": "86163d5d90d54dd6ffd45f219ece92bd7f500d7b31c0c77ccabb0cf09c4af153",
+      "solution_present": true,
+      "source_layout_repair": null,
+      "source_question_stem_review": null
+    },
+    {
+      "section": "5.6",
+      "label": "例8",
+      "item_id": "4de21b0cdecbde16",
+      "question_text_sha256": "65f5a649b1b57e4f7195944e618378904653551ee2150130a5ca1521da113e4c",
+      "solution_present": true,
+      "source_layout_repair": null,
+      "source_question_stem_review": {
+        "status": "SOURCE_REVIEWED_ANSWER_FREE",
+        "review_path": "reports/deep_simulation_reviews/clean-stems-ch4-ch5.json",
+        "review_sha256": "1ace2265926aa6df1a55cbf856d0737271968b94b2398bb48956c48e833c1030",
+        "old_reported_question_text_sha256": "be35ed1ccb6ad97403df0094b4f46011a17edeeae2f7af664be2d0bc3b85ea09",
+        "pre_override_question_text_sha256": "d243b9b978385abb8502f635fb8cb57fd2fd47df20ca4d2df112be7d569cfe29",
+        "question_text_sha256": "65f5a649b1b57e4f7195944e618378904653551ee2150130a5ca1521da113e4c",
+        "confidence": "high",
+        "boundary_basis": "Original PDF page 81 visually shows the complete cited prompt under '类型V：不等式证明'. The next printed block begins '证法1', so both proof methods are excluded.",
+        "source": {
+          "packet": "data/packets/5.6/packet.json",
+          "generated_item_source": "data/packets/5.6/learning_packet.json",
+          "ocr_docs": [
+            80
+          ],
+          "ocr_files": [
+            {
+              "file": "data/ocr_live_current/chapter5_95/doc_80.md",
+              "sha256": "53914ea22407c7d23a935c502c83249cd4961f3fad614f9ba96c617ee5ff5770"
+            }
+          ],
+          "pdf_file": "data/ocr_sources/第5章 一元函数的导数及其应用（无答案册）.pdf",
+          "pdf_pages": [
+            81
+          ],
+          "original_page_images": [
+            {
+              "file": "data/ocr_live_current/chapter5_95/layout_det_res_80.jpg",
+              "sha256": "4bb3d1e4d1f50948db80c35e0d4c94e3698d607b752d1e4838612bc93e183df9"
+            }
+          ],
+          "visual_evidence": "original PDF page 81 and OCR layout page 80"
+        }
+      }
+    }
+  ],
+  "resolved_exercise_sources": [
+    {
+      "item_id": "Q-71eccd74698e096f",
+      "section": "2.5",
+      "label": "B13",
+      "question_text_sha256": "c1e745a687e8b2368759ac50850e4b5fc5ef7a5e68720671311faea6e1af4d83",
+      "source_anchor": {
+        "ocr_doc": 69,
+        "pdf_page": 70,
+        "file": "data/ocr_live_current/second_chapter_109/doc_69.md"
+      },
+      "corrections": [
+        "DQC-2.5-B13-BISECT",
+        "DQC-2.5-B13-RUNNING-HEADER"
+      ],
+      "evidence": "SOURCE_SECTION_PDF_PAGE_14_VISUALLY_CONFIRMS_平分"
+    },
+    {
+      "item_id": "Q-d5eb29be8ab5dedf",
+      "section": "ch3.s9",
+      "label": "C11",
+      "question_text_sha256": "4d22eb5b9fc59787c306da226d41891dff087d1e3219c5c538ec47a31f8a145e",
+      "source_anchor": {
+        "ocr_doc": 140,
+        "pdf_page": 141,
+        "file": "data/ocr_live_current/third_chapter_180/doc_140.md"
+      },
+      "corrections": [
+        "DQC-CH3S9-C11-PQ"
+      ],
+      "evidence": "SOURCE_SECTION_PDF_PAGE_11_VISUALLY_CONFIRMS_P_COMMA_Q"
+    },
+    {
+      "item_id": "Q-821eb5edcaa8d410",
+      "section": "4.4",
+      "label": "C16",
+      "question_text_sha256": "de871a920b01dbbc68f7f1b338b427463d5f5897824cf3a56ac674b2a6928844",
+      "source_anchor": {
+        "ocr_doc": 63,
+        "pdf_page": 64,
+        "file": "data/ocr_live_current/chapter4_100/doc_63.md"
+      },
+      "corrections": [
+        "DQC-4.4-C16-PROOF-TARGET"
+      ],
+      "evidence": "MERGED_SOURCE_PDF_PAGE_64_VISUALLY_CONFIRMS_COMPLETE_PROPOSITION"
+    },
+    {
+      "item_id": "Q-ad967b8b2931d0c9",
+      "section": "5.3",
+      "label": "B7",
+      "question_text_sha256": "54c30ec7425f55494820f00d535316636dd689c47896d5b94076b121acd7f2b7",
+      "source_anchor": {
+        "ocr_doc": 37,
+        "pdf_page": 38,
+        "file": "data/ocr_live_current/chapter5_95/doc_37.md"
+      },
+      "corrections": [
+        "DQC-5.3-B8-RESTORE-NUMBER"
+      ],
+      "evidence": "MERGED_SOURCE_PDF_PAGE_38_VISUALLY_CONFIRMS_B7_B8_BOUNDARY"
+    },
+    {
+      "item_id": "Q-979c0e6d96423ab0",
+      "section": "5.3",
+      "label": "C20",
+      "question_text_sha256": "829c0df23bf793f574f0219b3f26c60ebeacbdfc8f09edbe0cfe1a383bf56726",
+      "source_anchor": {
+        "ocr_doc": 41,
+        "pdf_page": 42,
+        "file": "data/ocr_live_current/chapter5_95/doc_41.md"
+      },
+      "corrections": [
+        "DQC-5.3-C20-RESTORE-PROOFS"
+      ],
+      "evidence": "MERGED_SOURCE_PDF_PAGE_42_VISUALLY_CONFIRMS_BOTH_PROOF_TASKS"
+    }
+  ],
+  "course_repairs": {
+    "courses": [
+      {
+        "course_key": "4.2.6.1 求和型放缩（上）",
+        "course_id": "4.2.6.1.a",
+        "transcript_sha256": "1c5dbfa228ef365d4617cd6de339f4787c7cc9b3f036861a56948a74a3792854",
+        "term_normalization": {
+          "schema_version": "ybt-course-term-normalization-v1",
+          "status": "SOURCE_CONTEXT_REVIEWED",
+          "normalized_at": "2026-08-31T02:45:20+00:00",
+          "original_full_text_sha256": "ce64b3aff482e003171ff57ced72b74eccbd168ad44ee2493bc852208027e2f0",
+          "normalized_full_text_sha256": "e9eba5c31fcd9f85e9bef5562ad0c1b287349074443a2fff4d310e0c6663a788",
+          "full_text_replacements": {
+            "复值放缩->赋值放缩": 5,
+            "负值放缩->赋值放缩": 1,
+            "复制放缩->赋值放缩": 2,
+            "复值->赋值": 7,
+            "放松->放缩": 39,
+            "放错->放缩": 3,
+            "防措->放缩": 1,
+            "方错->放缩": 1,
+            "放合->放缩": 1,
+            "放坡->放缩": 1,
+            "数直型放缩->数值型放缩": 1,
+            "竖直型放缩->数值型放缩": 1,
+            "竖直性放缩->数值型放缩": 2,
+            "通向性放缩->通项型放缩": 2,
+            "求和性放缩->求和型放缩": 6
+          },
+          "sentence_replacements": {
+            "复值放缩->赋值放缩": 5,
+            "放松->放缩": 39,
+            "数直型放缩->数值型放缩": 1,
+            "放错->放缩": 3,
+            "通向性放缩->通项型放缩": 2,
+            "负值放缩->赋值放缩": 1,
+            "竖直型放缩->数值型放缩": 1,
+            "竖直性放缩->数值型放缩": 2,
+            "复制放缩->赋值放缩": 2,
+            "复值->赋值": 7,
+            "防措->放缩": 1,
+            "放合->放缩": 1,
+            "求和性放缩->求和型放缩": 6,
+            "方错->放缩": 1,
+            "放坡->放缩": 1
+          },
+          "timestamp_fields_preserved": true,
+          "rule": "Only high-confidence homophones of 赋值/放缩/数值型/通项型 in the named mathematics courses are normalized."
+        }
+      },
+      {
+        "course_key": "4.2.6.1 求和型放缩（下）",
+        "course_id": "4.2.6.1.b",
+        "transcript_sha256": "b5a5eadc23399bcb893bed740849a658002c5d43303414af1858ccfbedb65388",
+        "term_normalization": {
+          "schema_version": "ybt-course-term-normalization-v1",
+          "status": "SOURCE_CONTEXT_REVIEWED",
+          "normalized_at": "2026-08-31T02:45:20+00:00",
+          "original_full_text_sha256": "69738f88bf28820c2bb42b4d8abbf1855c99ff33bf5201df46f7820f446a5975",
+          "normalized_full_text_sha256": "b382b742adf9f0887abe2c9821394c5fa059bca5a6c426cd7b3cf7139867f3f6",
+          "full_text_replacements": {
+            "复制放缩->赋值放缩": 2,
+            "复值->赋值": 3,
+            "放松->放缩": 18,
+            "黄缩->放缩": 1,
+            "通向性放缩->通项型放缩": 1,
+            "求和性放缩->求和型放缩": 14
+          },
+          "sentence_replacements": {
+            "求和性放缩->求和型放缩": 14,
+            "放松->放缩": 18,
+            "复值->赋值": 3,
+            "黄缩->放缩": 1,
+            "复制放缩->赋值放缩": 2,
+            "通向性放缩->通项型放缩": 1
+          },
+          "timestamp_fields_preserved": true,
+          "rule": "Only high-confidence homophones of 赋值/放缩/数值型/通项型 in the named mathematics courses are normalized."
+        }
+      }
+    ],
+    "direct_first_use_cycles": [
+      "5.6-cycle-7"
+    ],
+    "incorrect_prerequisite_cycles": [],
+    "status": "passed"
+  },
+  "template_domain_checks": [
+    {
+      "section": "4.1",
+      "expected": "sequence",
+      "actual": "sequence",
+      "status": "passed"
+    },
+    {
+      "section": "4.5",
+      "expected": "sequence",
+      "actual": "sequence",
+      "status": "passed"
+    },
+    {
+      "section": "5.5",
+      "label": "例9",
+      "expected": "derivative",
+      "actual": "derivative",
+      "status": "passed"
+    }
+  ],
+  "mastery_claimed": false,
+  "human_progress_modified": false
+}

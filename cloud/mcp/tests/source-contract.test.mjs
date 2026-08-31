@@ -5,7 +5,7 @@ import test from 'node:test'
 import { fileURLToPath } from 'node:url'
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
-const [source, packageText, schema, config, importer, learnerMigration, handoutMigration, handoutImporter, practiceMigration, practiceImporter, annotationMigration] = await Promise.all([
+const [source, packageText, schema, config, importer, learnerMigration, handoutMigration, handoutImporter, practiceMigration, practiceImporter, annotationMigration, answerMigration] = await Promise.all([
   readFile(resolve(root, 'src/index.ts'), 'utf8'),
   readFile(resolve(root, 'package.json'), 'utf8'),
   readFile(resolve(root, 'migrations/0001_initial.sql'), 'utf8'),
@@ -17,6 +17,7 @@ const [source, packageText, schema, config, importer, learnerMigration, handoutM
   readFile(resolve(root, 'migrations/0004_practice_and_handwriting.sql'), 'utf8'),
   readFile(resolve(root, 'scripts/import_practice_book.mjs'), 'utf8'),
   readFile(resolve(root, 'migrations/0005_handwriting_annotation_contract.sql'), 'utf8'),
+  readFile(resolve(root, 'migrations/0006_answer_evidence_contract.sql'), 'utf8'),
 ])
 const packageJson = JSON.parse(packageText)
 
@@ -47,6 +48,15 @@ test('exposes complete learner-safe content reads', () => {
   assert.match(source, /math_get_item_content/)
   assert.match(source, /math_get_course_transcript/)
   assert.match(source, /math_get_answer_sources/)
+  assert.match(source, /answer_source_page_unavailable/)
+  assert.match(source, /mustNotGradeAutomatically/)
+  assert.match(source, /ocrCandidateText/)
+  assert.match(source, /automaticGradingAllowed/)
+  assert.match(source, /answerPageImageContent/)
+  assert.match(source, /sha256Base64/)
+  assert.match(source, /modelSolutionPolicy/)
+  assert.match(source, /answerEvidenceReady/)
+  assert.match(source, /pragma_table_info\('answer_sources'\)/)
   assert.match(source, /math_get_learner_profile/)
   assert.match(source, /math_export_wrong_questions/)
   assert.match(source, /math_record_diagnostic/)
@@ -90,6 +100,14 @@ test('content importer is versioned, idempotent and covers the complete selectiv
   assert.match(importer, /v1-\$\{manifestSha\.slice\(0, 16\)\}/)
   assert.match(importer, /const libraryChapters = \[1, 2, 3, 4, 5\]/)
   assert.match(importer, /original_answer_book/)
+  assert.match(importer, /ANSWER_SIDECAR_SCHEMAS/)
+  assert.match(importer, /GRADER_ONLY_NEVER_PASS_TO_STUDENT_OR_PERSONA/)
+  assert.match(importer, /ybt-cloud-answer-page-pack-v1/)
+  assert.match(importer, /answerSources.length !== expectedAnswerCount/)
+  assert.match(importer, /unsafe automatic-grading claim/)
+  assert.match(importer, /source_page_visual/)
+  assert.match(importer, /source_page_image_sha256/)
+  assert.match(importer, /source_page_r2_key/)
   assert.match(importer, /packetBindingBytes/)
   assert.match(importer, /student_learning_items\.json', 'student_packet\.json', 'answer_sidecar\.json/)
   assert.match(importer, /for \(const catalogEntry of catalog\.courses \?\? \[\]\) await registerCourse/)
@@ -125,4 +143,12 @@ test('ships additive production migrations and a fail-closed handout importer', 
   assert.match(practiceImporter, /rm\(outputRoot, \{ recursive: true, force: true \}\)/)
   assert.match(annotationMigration, /uncertainties_json/)
   assert.match(annotationMigration, /annotation_spec_json/)
+  assert.doesNotMatch(answerMigration, /DROP TABLE|DELETE FROM/)
+  assert.match(answerMigration, /ALTER TABLE answer_sources ADD COLUMN evidence_kind/)
+  assert.match(answerMigration, /automatic_grading_allowed INTEGER NOT NULL DEFAULT 0/)
+  assert.match(answerMigration, /review_required INTEGER NOT NULL DEFAULT 1/)
+  assert.match(answerMigration, /source_pdf_sha256/)
+  assert.match(answerMigration, /source_pdf_page/)
+  assert.match(answerMigration, /source_page_image_sha256/)
+  assert.match(answerMigration, /source_page_r2_key/)
 })

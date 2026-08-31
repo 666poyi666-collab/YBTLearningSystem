@@ -61,8 +61,17 @@ SIDECAR_PATHS = (
     ROOT / "data" / "vision_sidecar_full.json",
     ROOT / "reports" / "source_visual_probe_sidecar.json",
     ROOT / "data" / "vision_sidecar_all_chapters.json",
+    ROOT / "data" / "vision_semantic_overrides.json",
+)
+CLEAN_STEM_REPORTS = (
+    ROOT / "reports" / "deep_simulation_reviews" / "clean-stems-ch1-ch3.json",
+    ROOT / "reports" / "deep_simulation_reviews" / "clean-stems-ch4-ch5.json",
 )
 COURSE_ID_RE = re.compile(r"^(\d+(?:\.\d+){2,}(?:\.[a-z])?)\s+(.+)$", re.I)
+COURSE_ID_OVERRIDES = {
+    "4.2.6.1 求和型放缩（上）": "4.2.6.1.a",
+    "4.2.6.1 求和型放缩（下）": "4.2.6.1.b",
+}
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -151,6 +160,9 @@ def _chapter_course_metadata(chapter: int, manifest: dict[str, Any]) -> dict[str
                 "course_id": match.group(1) if match else value,
                 "title": match.group(2) if match else value,
             }
+    for course_key, course_id in COURSE_ID_OVERRIDES.items():
+        if course_key in metadata:
+            metadata[course_key]["course_id"] = course_id
     return metadata
 
 
@@ -351,13 +363,54 @@ def load_visual_results() -> list[dict[str, Any]]:
         if not path.is_file():
             continue
         for item in load_json(path).get("results", []):
-            key = (str(item.get("question_hint") or ""), str(item.get("image") or ""))
+            key = (
+                str(item.get("question_hint") or ""),
+                str(item.get("image_sha256") or item.get("image") or ""),
+            )
             if not key[0]:
                 continue
             previous = merged.get(key)
             if previous is None or _sidecar_score(item) >= _sidecar_score(previous):
                 merged[key] = item
     return list(merged.values())
+
+
+def load_clean_question_stems() -> list[dict[str, Any]]:
+    """Load only source-reviewed, answer-free learner stems with exact hashes."""
+    rows: dict[str, dict[str, Any]] = {}
+    for path in CLEAN_STEM_REPORTS:
+        if not path.is_file():
+            continue
+        payload = load_json(path)
+        report_sha256 = sha256_file(path)
+        for raw in payload.get("items", []):
+            if raw.get("status") != "ready":
+                continue
+            item_id = str(raw.get("item_id") or "")
+            text = str(raw.get("clean_question_text") or "")
+            expected_sha256 = str(raw.get("new_text_sha256") or "").lower()
+            actual_sha256 = hashlib.sha256(text.encode("utf-8")).hexdigest()
+            if not item_id or not text or actual_sha256 != expected_sha256:
+                raise ValueError(f"invalid clean-stem evidence in {path}: {item_id!r}")
+            if item_id in rows:
+                raise ValueError(f"duplicate clean-stem item id: {item_id}")
+            rows[item_id] = {
+                **raw,
+                "review_path": path.relative_to(ROOT).as_posix(),
+                "review_sha256": report_sha256,
+            }
+    return list(rows.values())
+
+
+def load_image_attachment_overrides() -> list[dict[str, Any]]:
+    path = ROOT / "data" / "item_image_attachment_overrides.json"
+    if not path.is_file():
+        return []
+    payload = load_json(path)
+    rows = payload.get("overrides", [])
+    if not isinstance(rows, list):
+        raise ValueError("item image attachment overrides must be a list")
+    return rows
 
 
 def _visual_inventory(section_id: str, packet: dict[str, Any], learning: dict[str, Any]) -> list[dict[str, Any]]:
@@ -422,6 +475,9 @@ def build_all(
     course_catalog = build_course_catalog(manifests, verify_hashes=verify_course_hashes)
     save_json(ROOT / "data" / "all_chapters_course_catalog.json", course_catalog)
     visual_results = load_visual_results() if use_visual_sidecars else []
+    clean_question_stems = load_clean_question_stems()
+    image_attachment_overrides = load_image_attachment_overrides()
+    source_repair_registry = load_json(ROOT / "data" / "question_number_recoveries.json")
     section_rows: list[dict[str, Any]] = []
     visual_rows: list[dict[str, Any]] = []
     actual = {
@@ -441,8 +497,10 @@ def build_all(
         for section in manifest.get("sections", []):
             section_id = str(section["id"])
             combined_sidecar = {
-                "known_visual_recoveries": manifest.get("known_visual_recoveries", []),
-                "derived_question_corrections": manifest.get("derived_question_corrections", []),
+                "known_visual_recoveries": source_repair_registry.get("known_visual_recoveries", []),
+                "derived_question_corrections": source_repair_registry.get("derived_question_corrections", []),
+                "clean_learner_question_stems": clean_question_stems,
+                "item_image_attachment_overrides": image_attachment_overrides,
                 "results": [
                     item for item in visual_results if item.get("section") == section_id
                 ],

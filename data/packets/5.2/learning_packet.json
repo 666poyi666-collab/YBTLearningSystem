@@ -442,40 +442,88 @@
           "vision_hint": "5.2-LIe35f94e52d48001a",
           "vision_sidecars": [
             {
-              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_867_117_1093_340.jpg",
+              "image": "data/ocr_live_current/chapter5_95/imgs/img_in_image_box_867_117_1093_340.jpg",
               "image_sha256": "aff5b045321604d453e63292a403f65db954d627dfaf173fed920c285daebd82",
-              "confidence": "E2",
+              "confidence": "E1",
               "structured": {
-                "objects": [],
-                "relations": [],
-                "coordinates": [],
+                "objects": [
+                  "x轴、y轴、曲线y=e^x+2x、直线y=3x-1、点M、点N、浅蓝辅助线"
+                ],
+                "relations": [
+                  "M位于曲线附近并落在一条浅蓝斜线上",
+                  "N位于标注为y=3x-1的斜线上",
+                  "M与N由浅蓝线段连接"
+                ],
+                "coordinates": [
+                  "O为坐标原点"
+                ],
                 "ranges": [],
                 "text": [
+                  "y=e^x+2x",
                   "y=3x-1",
-                  "y=e^x+2x"
+                  "M",
+                  "N",
+                  "O"
                 ],
-                "uncertainties": [],
-                "confidence": "E2"
+                "uncertainties": [
+                  "浅蓝辅助线的数学含义未在图内文字中标明"
+                ],
+                "confidence": "E1"
               },
-              "source_provenance": null
+              "source_provenance": {
+                "inventory": "reports/all_chapters/visual-inventory-current.json",
+                "source_docs": [
+                  14,
+                  15
+                ],
+                "review_method": "direct_view_image",
+                "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+                "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+                "original_image_sha256": "aff5b045321604d453e63292a403f65db954d627dfaf173fed920c285daebd82"
+              }
             }
           ],
           "vision_sidecar": {
-            "objects": [],
-            "relations": [],
-            "coordinates": [],
+            "objects": [
+              "x轴、y轴、曲线y=e^x+2x、直线y=3x-1、点M、点N、浅蓝辅助线"
+            ],
+            "relations": [
+              "M位于曲线附近并落在一条浅蓝斜线上",
+              "N位于标注为y=3x-1的斜线上",
+              "M与N由浅蓝线段连接"
+            ],
+            "coordinates": [
+              "O为坐标原点"
+            ],
             "ranges": [],
             "text": [
+              "y=e^x+2x",
               "y=3x-1",
-              "y=e^x+2x"
+              "M",
+              "N",
+              "O"
             ],
-            "uncertainties": [],
-            "confidence": "E2"
+            "uncertainties": [
+              "浅蓝辅助线的数学含义未在图内文字中标明"
+            ],
+            "confidence": "E1"
           },
-          "vision_source_provenance": [],
+          "vision_source_provenance": [
+            {
+              "inventory": "reports/all_chapters/visual-inventory-current.json",
+              "source_docs": [
+                14,
+                15
+              ],
+              "review_method": "direct_view_image",
+              "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+              "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+              "original_image_sha256": "aff5b045321604d453e63292a403f65db954d627dfaf173fed920c285daebd82"
+            }
+          ],
           "evidence": [
             "E1",
-            "E2"
+            "E1"
           ]
         }
       ],
@@ -526,7 +574,7 @@
           "source_docs": [
             13
           ],
-          "question_text": "【变式 3】若  \\(f(x)=x+2\\sqrt{x}\\) 在点  \\((1,3)\\) 处的切线也是  \\(g(x)=\\ln x+x+a\\) 的切线，则  \\(a=\\) ___.\n由题意， \\(f'(x)=(x+2\\sqrt{x})'=x'+(2\\sqrt{x})'=1+2\\cdot\\frac{1}{2\\sqrt{x}}=1+\\frac{1}{\\sqrt{x}}\\)，所以 \\(f'(1)=2\\)，\n故 \\(f(x)\\) 在点 \\((1,3)\\) 处的切线方程为 \\(y-3=2(x-1)\\)，整理得：\\(y=2x+1\\)，\n怎样翻译该直线与 \\(g(x)\\) 也相切？此时的切点不知道了，可考虑设切点处理，\n设 \\(y=2x+1\\) 与 \\(g(x)\\) 相切于点 \\(A(x_0,g(x_0))\\)，由题意，\\(g'(x)=\\frac{1}{x}+1\\)，\n所以如图，\\(\\begin{cases}\\frac{1}{x_0}+1=2(g(x)\\text{在}x_0\\text{处的导数值等于切线斜率})\\\\2x_0+1=\\ln x_0+x_0+a(\\text{切点是切线与}g(x)\\text{图象的公共点})\\end{cases}\\)，解得：\\(x_0=1\\)，\\(a=2\\)。",
+          "question_text": "【变式3】若 \\(f(x)=x+2\\sqrt{x}\\) 在点 \\((1,3)\\) 处的切线也是 \\(g(x)=\\ln x+x+a\\) 的切线，则 \\(a=\\)___。",
           "image_refs": [
             {
               "ref": "imgs/img_in_image_box_934_976_1092_1166.jpg",
@@ -536,40 +584,127 @@
           ],
           "visual_status": "VISION_VERIFIED",
           "solution_isolated": true,
+          "source_layout_repair": {
+            "status": "SOURCE_PDF_TEXT_VERIFIED",
+            "source_docs": [
+              13
+            ],
+            "reason": "根据源页边界，从“由题意”起隔离后续教学过程。"
+          },
+          "source_question_stem_review": {
+            "status": "SOURCE_REVIEWED_ANSWER_FREE",
+            "review_path": "reports/deep_simulation_reviews/clean-stems-ch4-ch5.json",
+            "review_sha256": "1ace2265926aa6df1a55cbf856d0737271968b94b2398bb48956c48e833c1030",
+            "old_reported_question_text_sha256": "3781bfb24dbef5d3a0527cea1e402003602e7e54710e7eb26796a09b764b63cf",
+            "pre_override_question_text_sha256": "7bf06ef553d4e901c8f2f4f0e5aa0074112b7dbdfc87eaac52423a43c6202cc7",
+            "question_text_sha256": "7a3583a83f123d5f192964bca58b4994aadc36656faf77c1b2011ed944cc40ad",
+            "confidence": "high",
+            "boundary_basis": "Original PDF page 14 visually shows one complete fill-in sentence. The following blue '解析' and the line beginning '由题意' are solution content and are excluded; the graph on the same page illustrates the solution rather than adding a condition to the stem.",
+            "source": {
+              "packet": "data/packets/5.2/packet.json",
+              "generated_item_source": "data/packets/5.2/learning_packet.json",
+              "ocr_docs": [
+                13
+              ],
+              "ocr_files": [
+                {
+                  "file": "data/ocr_live_current/chapter5_95/doc_13.md",
+                  "sha256": "23b58db05af09f4f272de0b5f5e7ae3248dad3e5905b212e71a7fab00357cfb7"
+                }
+              ],
+              "pdf_file": "data/ocr_sources/第5章 一元函数的导数及其应用（无答案册）.pdf",
+              "pdf_pages": [
+                14
+              ],
+              "original_page_images": [
+                {
+                  "file": "data/ocr_live_current/chapter5_95/layout_det_res_13.jpg",
+                  "sha256": "f571111eea28baab1f4893f3dc553b2b61f4fbf27a5897bdddab5ffe705a1b22"
+                }
+              ],
+              "visual_evidence": "original PDF page 14 and OCR layout page 13"
+            }
+          },
           "vision_hint": "5.2-LI89d58501c9101dcf",
           "vision_sidecars": [
             {
-              "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_934_976_1092_1166.jpg",
+              "image": "data/ocr_live_current/chapter5_95/imgs/img_in_image_box_934_976_1092_1166.jpg",
               "image_sha256": "2eb638d10b97dbb9a65c2cb1d34d8ef785989e84fa70b3ec166af92568e17c51",
               "confidence": "E2",
               "structured": {
-                "objects": [],
-                "relations": [],
-                "coordinates": [],
-                "ranges": [],
+                "objects": [
+                  "x轴、y轴、曲线y=g(x)、浅蓝直线y=2x+1、点A、竖直虚线"
+                ],
+                "relations": [
+                  "浅蓝直线与曲线在A处接触",
+                  "A向下的竖直虚线落在横轴x0处"
+                ],
+                "coordinates": [
+                  "A的横坐标为x0",
+                  "O为坐标原点"
+                ],
+                "ranges": [
+                  "x0位于x轴正半轴"
+                ],
                 "text": [
                   "y=2x+1",
-                  "y=g(x)"
+                  "y=g(x)",
+                  "A",
+                  "x0",
+                  "O"
                 ],
                 "uncertainties": [],
                 "confidence": "E2"
               },
-              "source_provenance": null
+              "source_provenance": {
+                "inventory": "reports/all_chapters/visual-inventory-current.json",
+                "source_docs": [
+                  13
+                ],
+                "review_method": "direct_view_image",
+                "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+                "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+                "original_image_sha256": "2eb638d10b97dbb9a65c2cb1d34d8ef785989e84fa70b3ec166af92568e17c51"
+              }
             }
           ],
           "vision_sidecar": {
-            "objects": [],
-            "relations": [],
-            "coordinates": [],
-            "ranges": [],
+            "objects": [
+              "x轴、y轴、曲线y=g(x)、浅蓝直线y=2x+1、点A、竖直虚线"
+            ],
+            "relations": [
+              "浅蓝直线与曲线在A处接触",
+              "A向下的竖直虚线落在横轴x0处"
+            ],
+            "coordinates": [
+              "A的横坐标为x0",
+              "O为坐标原点"
+            ],
+            "ranges": [
+              "x0位于x轴正半轴"
+            ],
             "text": [
               "y=2x+1",
-              "y=g(x)"
+              "y=g(x)",
+              "A",
+              "x0",
+              "O"
             ],
             "uncertainties": [],
             "confidence": "E2"
           },
-          "vision_source_provenance": [],
+          "vision_source_provenance": [
+            {
+              "inventory": "reports/all_chapters/visual-inventory-current.json",
+              "source_docs": [
+                13
+              ],
+              "review_method": "direct_view_image",
+              "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+              "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+              "original_image_sha256": "2eb638d10b97dbb9a65c2cb1d34d8ef785989e84fa70b3ec166af92568e17c51"
+            }
+          ],
           "evidence": [
             "E1",
             "E2"
@@ -689,7 +824,10 @@
       "optional_course_keys": [],
       "knowledge_refs": [],
       "prerequisite_knowledge_refs": [],
-      "type_refs": [],
+      "type_refs": [
+        "类型Ⅱ 切线问题",
+        "类型I 导数的计算"
+      ],
       "bridge_unit_ids": [],
       "method_checkpoints": [],
       "worked_examples": [],
@@ -777,7 +915,10 @@
       "optional_course_keys": [],
       "knowledge_refs": [],
       "prerequisite_knowledge_refs": [],
-      "type_refs": [],
+      "type_refs": [
+        "类型Ⅱ 切线问题",
+        "类型I 导数的计算"
+      ],
       "bridge_unit_ids": [],
       "method_checkpoints": [],
       "worked_examples": [],
@@ -960,7 +1101,10 @@
       "optional_course_keys": [],
       "knowledge_refs": [],
       "prerequisite_knowledge_refs": [],
-      "type_refs": [],
+      "type_refs": [
+        "类型Ⅱ 切线问题",
+        "类型III 导数与奇偶性、对称性、周期性综合"
+      ],
       "bridge_unit_ids": [],
       "method_checkpoints": [],
       "worked_examples": [],
@@ -1284,40 +1428,88 @@
       "vision_hint": "5.2-LIe35f94e52d48001a",
       "vision_sidecars": [
         {
-          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_867_117_1093_340.jpg",
+          "image": "data/ocr_live_current/chapter5_95/imgs/img_in_image_box_867_117_1093_340.jpg",
           "image_sha256": "aff5b045321604d453e63292a403f65db954d627dfaf173fed920c285daebd82",
-          "confidence": "E2",
+          "confidence": "E1",
           "structured": {
-            "objects": [],
-            "relations": [],
-            "coordinates": [],
+            "objects": [
+              "x轴、y轴、曲线y=e^x+2x、直线y=3x-1、点M、点N、浅蓝辅助线"
+            ],
+            "relations": [
+              "M位于曲线附近并落在一条浅蓝斜线上",
+              "N位于标注为y=3x-1的斜线上",
+              "M与N由浅蓝线段连接"
+            ],
+            "coordinates": [
+              "O为坐标原点"
+            ],
             "ranges": [],
             "text": [
+              "y=e^x+2x",
               "y=3x-1",
-              "y=e^x+2x"
+              "M",
+              "N",
+              "O"
             ],
-            "uncertainties": [],
-            "confidence": "E2"
+            "uncertainties": [
+              "浅蓝辅助线的数学含义未在图内文字中标明"
+            ],
+            "confidence": "E1"
           },
-          "source_provenance": null
+          "source_provenance": {
+            "inventory": "reports/all_chapters/visual-inventory-current.json",
+            "source_docs": [
+              14,
+              15
+            ],
+            "review_method": "direct_view_image",
+            "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+            "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+            "original_image_sha256": "aff5b045321604d453e63292a403f65db954d627dfaf173fed920c285daebd82"
+          }
         }
       ],
       "vision_sidecar": {
-        "objects": [],
-        "relations": [],
-        "coordinates": [],
+        "objects": [
+          "x轴、y轴、曲线y=e^x+2x、直线y=3x-1、点M、点N、浅蓝辅助线"
+        ],
+        "relations": [
+          "M位于曲线附近并落在一条浅蓝斜线上",
+          "N位于标注为y=3x-1的斜线上",
+          "M与N由浅蓝线段连接"
+        ],
+        "coordinates": [
+          "O为坐标原点"
+        ],
         "ranges": [],
         "text": [
+          "y=e^x+2x",
           "y=3x-1",
-          "y=e^x+2x"
+          "M",
+          "N",
+          "O"
         ],
-        "uncertainties": [],
-        "confidence": "E2"
+        "uncertainties": [
+          "浅蓝辅助线的数学含义未在图内文字中标明"
+        ],
+        "confidence": "E1"
       },
-      "vision_source_provenance": [],
+      "vision_source_provenance": [
+        {
+          "inventory": "reports/all_chapters/visual-inventory-current.json",
+          "source_docs": [
+            14,
+            15
+          ],
+          "review_method": "direct_view_image",
+          "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+          "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+          "original_image_sha256": "aff5b045321604d453e63292a403f65db954d627dfaf173fed920c285daebd82"
+        }
+      ],
       "evidence": [
         "E1",
-        "E2"
+        "E1"
       ]
     },
     {
@@ -1403,7 +1595,7 @@
       "source_docs": [
         13
       ],
-      "question_text": "【变式 3】若  \\(f(x)=x+2\\sqrt{x}\\) 在点  \\((1,3)\\) 处的切线也是  \\(g(x)=\\ln x+x+a\\) 的切线，则  \\(a=\\) ___.\n由题意， \\(f'(x)=(x+2\\sqrt{x})'=x'+(2\\sqrt{x})'=1+2\\cdot\\frac{1}{2\\sqrt{x}}=1+\\frac{1}{\\sqrt{x}}\\)，所以 \\(f'(1)=2\\)，\n故 \\(f(x)\\) 在点 \\((1,3)\\) 处的切线方程为 \\(y-3=2(x-1)\\)，整理得：\\(y=2x+1\\)，\n怎样翻译该直线与 \\(g(x)\\) 也相切？此时的切点不知道了，可考虑设切点处理，\n设 \\(y=2x+1\\) 与 \\(g(x)\\) 相切于点 \\(A(x_0,g(x_0))\\)，由题意，\\(g'(x)=\\frac{1}{x}+1\\)，\n所以如图，\\(\\begin{cases}\\frac{1}{x_0}+1=2(g(x)\\text{在}x_0\\text{处的导数值等于切线斜率})\\\\2x_0+1=\\ln x_0+x_0+a(\\text{切点是切线与}g(x)\\text{图象的公共点})\\end{cases}\\)，解得：\\(x_0=1\\)，\\(a=2\\)。",
+      "question_text": "【变式3】若 \\(f(x)=x+2\\sqrt{x}\\) 在点 \\((1,3)\\) 处的切线也是 \\(g(x)=\\ln x+x+a\\) 的切线，则 \\(a=\\)___。",
       "image_refs": [
         {
           "ref": "imgs/img_in_image_box_934_976_1092_1166.jpg",
@@ -1413,40 +1605,127 @@
       ],
       "visual_status": "VISION_VERIFIED",
       "solution_isolated": true,
+      "source_layout_repair": {
+        "status": "SOURCE_PDF_TEXT_VERIFIED",
+        "source_docs": [
+          13
+        ],
+        "reason": "根据源页边界，从“由题意”起隔离后续教学过程。"
+      },
+      "source_question_stem_review": {
+        "status": "SOURCE_REVIEWED_ANSWER_FREE",
+        "review_path": "reports/deep_simulation_reviews/clean-stems-ch4-ch5.json",
+        "review_sha256": "1ace2265926aa6df1a55cbf856d0737271968b94b2398bb48956c48e833c1030",
+        "old_reported_question_text_sha256": "3781bfb24dbef5d3a0527cea1e402003602e7e54710e7eb26796a09b764b63cf",
+        "pre_override_question_text_sha256": "7bf06ef553d4e901c8f2f4f0e5aa0074112b7dbdfc87eaac52423a43c6202cc7",
+        "question_text_sha256": "7a3583a83f123d5f192964bca58b4994aadc36656faf77c1b2011ed944cc40ad",
+        "confidence": "high",
+        "boundary_basis": "Original PDF page 14 visually shows one complete fill-in sentence. The following blue '解析' and the line beginning '由题意' are solution content and are excluded; the graph on the same page illustrates the solution rather than adding a condition to the stem.",
+        "source": {
+          "packet": "data/packets/5.2/packet.json",
+          "generated_item_source": "data/packets/5.2/learning_packet.json",
+          "ocr_docs": [
+            13
+          ],
+          "ocr_files": [
+            {
+              "file": "data/ocr_live_current/chapter5_95/doc_13.md",
+              "sha256": "23b58db05af09f4f272de0b5f5e7ae3248dad3e5905b212e71a7fab00357cfb7"
+            }
+          ],
+          "pdf_file": "data/ocr_sources/第5章 一元函数的导数及其应用（无答案册）.pdf",
+          "pdf_pages": [
+            14
+          ],
+          "original_page_images": [
+            {
+              "file": "data/ocr_live_current/chapter5_95/layout_det_res_13.jpg",
+              "sha256": "f571111eea28baab1f4893f3dc553b2b61f4fbf27a5897bdddab5ffe705a1b22"
+            }
+          ],
+          "visual_evidence": "original PDF page 14 and OCR layout page 13"
+        }
+      },
       "vision_hint": "5.2-LI89d58501c9101dcf",
       "vision_sidecars": [
         {
-          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter5_95\\imgs\\img_in_image_box_934_976_1092_1166.jpg",
+          "image": "data/ocr_live_current/chapter5_95/imgs/img_in_image_box_934_976_1092_1166.jpg",
           "image_sha256": "2eb638d10b97dbb9a65c2cb1d34d8ef785989e84fa70b3ec166af92568e17c51",
           "confidence": "E2",
           "structured": {
-            "objects": [],
-            "relations": [],
-            "coordinates": [],
-            "ranges": [],
+            "objects": [
+              "x轴、y轴、曲线y=g(x)、浅蓝直线y=2x+1、点A、竖直虚线"
+            ],
+            "relations": [
+              "浅蓝直线与曲线在A处接触",
+              "A向下的竖直虚线落在横轴x0处"
+            ],
+            "coordinates": [
+              "A的横坐标为x0",
+              "O为坐标原点"
+            ],
+            "ranges": [
+              "x0位于x轴正半轴"
+            ],
             "text": [
               "y=2x+1",
-              "y=g(x)"
+              "y=g(x)",
+              "A",
+              "x0",
+              "O"
             ],
             "uncertainties": [],
             "confidence": "E2"
           },
-          "source_provenance": null
+          "source_provenance": {
+            "inventory": "reports/all_chapters/visual-inventory-current.json",
+            "source_docs": [
+              13
+            ],
+            "review_method": "direct_view_image",
+            "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+            "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+            "original_image_sha256": "2eb638d10b97dbb9a65c2cb1d34d8ef785989e84fa70b3ec166af92568e17c51"
+          }
         }
       ],
       "vision_sidecar": {
-        "objects": [],
-        "relations": [],
-        "coordinates": [],
-        "ranges": [],
+        "objects": [
+          "x轴、y轴、曲线y=g(x)、浅蓝直线y=2x+1、点A、竖直虚线"
+        ],
+        "relations": [
+          "浅蓝直线与曲线在A处接触",
+          "A向下的竖直虚线落在横轴x0处"
+        ],
+        "coordinates": [
+          "A的横坐标为x0",
+          "O为坐标原点"
+        ],
+        "ranges": [
+          "x0位于x轴正半轴"
+        ],
         "text": [
           "y=2x+1",
-          "y=g(x)"
+          "y=g(x)",
+          "A",
+          "x0",
+          "O"
         ],
         "uncertainties": [],
         "confidence": "E2"
       },
-      "vision_source_provenance": [],
+      "vision_source_provenance": [
+        {
+          "inventory": "reports/all_chapters/visual-inventory-current.json",
+          "source_docs": [
+            13
+          ],
+          "review_method": "direct_view_image",
+          "review_report": "reports/deep_simulation_reviews/visual-fixes-ch45.json",
+          "review_report_sha256": "980d0d943fab271f1fef786071c9e87fcbb413161171cc858cb91f641234af77",
+          "original_image_sha256": "2eb638d10b97dbb9a65c2cb1d34d8ef785989e84fa70b3ec166af92568e17c51"
+        }
+      ],
       "evidence": [
         "E1",
         "E2"

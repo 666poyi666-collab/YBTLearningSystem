@@ -29,11 +29,13 @@ class AllSectionSimulationTests(unittest.TestCase):
     def test_primary_proxy_keeps_real_and_synthetic_evidence_separate(self) -> None:
         path = ROOT / "reports/learner_simulation/primary-user-proxy-all-chapters.json"
         payload = json.loads(path.read_text(encoding="utf-8"))
+        self.assertEqual(payload["schema_version"], "ybt-primary-user-proxy-all-chapters-v3")
         self.assertEqual(payload["coverage"]["canonical_items"], 1209)
         self.assertEqual(payload["learner"]["initial_assumptions"], ["zero_base"])
         self.assertEqual(payload["human_learning_status"], "use_remote_math_mcp")
         self.assertFalse(payload["mastery_claimed"])
-        self.assertTrue(all(row["evidence_kind"] == "synthetic_prediction_not_real_user" for row in payload["attempts"]))
+        self.assertTrue(all(row["evidence_kind"] == "synthetic_proxy_attempt_not_human" for row in payload["attempts"]))
+        self.assertTrue(all(row["mathematical_correctness"] == "not_evaluated_no_final_answer" for row in payload["attempts"]))
 
 
 if __name__ == "__main__":

@@ -371,27 +371,41 @@
           "image_sha256": "456167ffc10e9fb4548a9fff294e98491120692a153923047a747f2ccd63afc6",
           "confidence": "E2",
           "structured": {
-            "objects": [],
-            "relations": [],
-            "coordinates": [],
-            "ranges": [],
-            "text": [
-              "高中数学"
+            "objects": [
+              "由左至右排列的4组黑色点阵"
             ],
-            "uncertainties": [],
+            "relations": [
+              "4组点阵彼此分离",
+              "点阵占用的行数和宽度由左至右递增"
+            ],
+            "coordinates": [],
+            "ranges": [
+              "各组可见黑点数依次为1、5、12、22"
+            ],
+            "text": [],
+            "uncertainties": [
+              "浅灰背景水印不属于点阵"
+            ],
             "confidence": "E2"
           }
         }
       ],
       "vision_sidecar": {
-        "objects": [],
-        "relations": [],
-        "coordinates": [],
-        "ranges": [],
-        "text": [
-          "高中数学"
+        "objects": [
+          "由左至右排列的4组黑色点阵"
         ],
-        "uncertainties": [],
+        "relations": [
+          "4组点阵彼此分离",
+          "点阵占用的行数和宽度由左至右递增"
+        ],
+        "coordinates": [],
+        "ranges": [
+          "各组可见黑点数依次为1、5、12、22"
+        ],
+        "text": [],
+        "uncertainties": [
+          "浅灰背景水印不属于点阵"
+        ],
         "confidence": "E2"
       },
       "evidence": [
@@ -516,7 +530,7 @@
         10
       ],
       "vision_hint": "4.1-LIa9b6679b8704ce30",
-      "question_text": "【变式1】已知在数列\\(\\{a_n\\}\\)中，\\(0 < a_n < 1 (n \\in \\mathbb{N}^*)\\)，\\(a_{n+1} = \\frac{na_n + a_n^2}{n+1}\\)，求证：\\(\\{a_n\\}\\)是单调递减数列。\n证法1：（要证\\(\\{a_n\\}\\)是单调递减数列，只需证\\(a_{n+1}<a_n\\)，即证\\(a_{n+1}-a_n<0\\)，题干给出了\\(a_{n+1}\\)与\\(a_n\\)的递推关系，可将该关系代入，消去\\(a_{n+1}\\)，化简证明）\n由题意，\\(a_{n+1}-a_n=\\frac{na_n+a_n^2}{n+1}-a_n=\\frac{na_n+a_n^2-(n+1)a_n}{n+1}=\\frac{a_n^2-a_n}{n+1}=\\frac{a_n(a_n-1)}{n+1}\\)，\n因为  \\(0 < a_{n} < 1\\)，所以  \\(\\frac{a_{n}(a_{n}-1)}{n+1} < 0\\)，从而  \\(a_{n+1} - a_{n} < 0\\)，故  \\(a_{n+1} < a_{n}\\)，所以  \\(\\{a_{n}\\}\\) 是单调递减数列.\n证法2：（由题设条件不难发现 \\(\\{a_{n}\\}\\)是正项数列，于是也可考虑作商比较，即通过证明 \\(\\frac{a_{n+1}}{a_{n}}<1\\)来证 \\(a_{n+1}<a_{n}\\)，观察发现由所给递推关系式刚好也容易构造出 \\(\\frac{a_{n+1}}{a_{n}}\\)这一结构，故按此处理）\n由题意， \\(a_{n+1}=\\frac{na_n+a_n^2}{n+1}\\)，所以 \\(\\frac{a_{n+1}}{a_n}=\\frac{n+a_n}{n+1}\\)，因为 \\(0<a_n<1\\)，所以 \\(n+a_n<n+1\\)，且 \\(n+a_n\\)和 \\(n+1\\)都是正数，所以 \\(0<\\frac{n+a_n}{n+1}<1\\)，从而 \\(0<\\frac{a_{n+1}}{a_n}<1\\)，故 \\(a_{n+1}<a_n\\)，所以 \\(\\{a_n\\}\\)是单调递减数列.",
+      "question_text": "【变式1】已知在数列 \\(\\{a_n\\}\\) 中，\\(0<a_n<1\\ (n\\in\\mathbb{N}^*)\\)，\\(a_{n+1}=\\frac{na_n+a_n^2}{n+1}\\)，求证：\\(\\{a_n\\}\\) 是单调递减数列。",
       "image_refs": [],
       "visual_status": "READY_TEXT_ONLY",
       "evidence": []

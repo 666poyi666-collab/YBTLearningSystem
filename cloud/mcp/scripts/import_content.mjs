@@ -13,7 +13,7 @@
 import { createHash } from 'node:crypto'
 import { mkdir, readFile, readdir, rm, writeFile } from 'node:fs/promises'
 import { existsSync, readFileSync } from 'node:fs'
-import { basename, dirname, join, resolve, win32 } from 'node:path'
+import { basename, dirname, isAbsolute, join, relative, resolve, win32 } from 'node:path'
 import { spawn } from 'node:child_process'
 import { fileURLToPath } from 'node:url'
 
@@ -30,6 +30,8 @@ const dryRun = argv.has('--dry-run') || !argv.has('--remote')
 const remote = argv.has('--remote')
 const bucket = 'math-learning-content'
 const database = 'math-learning'
+const ANSWER_SIDECAR_SCHEMAS = new Set(['ybt-answer-sidecar-v2', 'ybt-answer-sidecar-v3'])
+const VISUAL_REVIEW_MARKER = '[SOURCE_PAGE_VISUAL_REVIEW_REQUIRED]'
 
 function json(path) {
   return readFile(path, 'utf8').then(JSON.parse)
@@ -73,6 +75,17 @@ function courseIdFromKey(courseKey, fallback) {
 function mimeType(fileName) {
   const ext = fileName.toLowerCase().split('.').pop()
   return ext === 'png' ? 'image/png' : ext === 'webp' ? 'image/webp' : 'image/jpeg'
+}
+
+function isSha256(value) {
+  return /^[0-9a-f]{64}$/i.test(String(value ?? ''))
+}
+
+function repoPath(value) {
+  const path = resolve(repoRoot, String(value ?? '').replaceAll('\\', '/'))
+  const local = relative(repoRoot, path)
+  if (!local || local.startsWith('..') || isAbsolute(local)) throw new Error(`answer evidence path escapes repository: ${value}`)
+  return path
 }
 
 async function readCurrentCommit() {
@@ -216,6 +229,8 @@ async function main() {
   const items = []
   const links = []
   const answerSources = []
+  const answerPagePacks = []
+  let expectedAnswerCount = 0
 
   async function registerCourse(courseKey, metadata = {}) {
     if (courses.has(courseKey)) return
@@ -311,6 +326,12 @@ async function main() {
     const packetManifest = await json(join(dataRoot, 'packets', packetFolder, 'manifest.json'))
     const answerPath = join(dataRoot, 'packets', packetFolder, 'answer_sidecar.json')
     const answerPack = existsSync(answerPath) ? await json(answerPath) : { answers: [] }
+    if (!ANSWER_SIDECAR_SCHEMAS.has(String(answerPack.schema_version ?? ''))) {
+      throw new Error(`answer sidecar ${auditSection.section} must use evidence schema v2/v3; found ${answerPack.schema_version ?? 'missing'}`)
+    }
+    if (answerPack.consumer_guard !== 'GRADER_ONLY_NEVER_PASS_TO_STUDENT_OR_PERSONA') {
+      throw new Error(`answer sidecar ${auditSection.section} is missing the grader-only consumer guard`)
+    }
     const cycleByLabel = new Map()
     const cycleByExample = new Map()
     for (const cycle of manifestSection.learning_cycles ?? []) {
@@ -367,20 +388,119 @@ async function main() {
       addItem(raw, 'exercise', label, cycleByLabel.get(label)?.knowledge_refs?.[0] ?? null)
     }
 
-    for (const answer of answerPack.answers ?? []) {
-      const label = `${answer.group ?? ''}${answer.number ?? ''}`
-      const item = sectionItems.find((candidate) => candidate.label === label)
-      const answerText = typeof answer.answer_text === 'string' ? answer.answer_text.trim() : ''
-      if (item && answerText) {
-        answerSources.push({
-          itemId: item.item_id,
-          sourceKind: 'original_answer_book',
-          sourceVersionId,
-          answerText,
-          sourceSha256: sha256(Buffer.from(answerText, 'utf8')),
-        })
-      }
+    const answerRows = Array.isArray(answerPack.answers) ? answerPack.answers : []
+    const packetQuestions = Array.isArray(packet.questions) ? packet.questions : []
+    expectedAnswerCount += packetQuestions.length
+    if (answerRows.length !== packetQuestions.length) {
+      throw new Error(`answer sidecar ${auditSection.section} has ${answerRows.length} rows for ${packetQuestions.length} questions`)
     }
+    const answerByQid = new Map()
+    const answerByLabel = new Map()
+    for (const answer of answerRows) {
+      const qid = String(answer.qid ?? '')
+      const label = `${answer.group ?? ''}${answer.number ?? ''}`
+      if (qid && answerByQid.has(qid)) throw new Error(`duplicate answer qid in ${auditSection.section}: ${qid}`)
+      if (label && answerByLabel.has(label)) throw new Error(`duplicate answer label in ${auditSection.section}: ${label}`)
+      if (qid) answerByQid.set(qid, answer)
+      if (label) answerByLabel.set(label, answer)
+    }
+    const answerPageKey = `${version}/answer-pages/${packetFolder}.json`
+    const answerPagePack = {
+      schema_version: 'ybt-cloud-answer-page-pack-v1',
+      source_version: sourceVersionId,
+      section: auditSection.section,
+      consumer_guard: 'GRADER_ONLY_SOURCE_EVIDENCE',
+      pages: {},
+    }
+    const topSourcePdf = answerPack.source_pdf && typeof answerPack.source_pdf === 'object' ? answerPack.source_pdf : {}
+    for (const question of packetQuestions) {
+      const label = `${question.group}${question.number}`
+      const item = sectionItems.find((candidate) => candidate.item_id === question.qid)
+        ?? sectionItems.find((candidate) => candidate.label === label)
+      const answer = answerByQid.get(String(question.qid ?? '')) ?? answerByLabel.get(label)
+      if (!item || !answer) throw new Error(`answer evidence missing for ${auditSection.section} ${label}`)
+
+      const source = answer.source && typeof answer.source === 'object' ? answer.source : {}
+      const sourcePdfName = String(source.file_name ?? topSourcePdf.file_name ?? '')
+      const sourcePdfSha256 = String(source.source_pdf_sha256 ?? topSourcePdf.sha256 ?? '').toLowerCase()
+      const sourcePdfPage = Number(source.pdf_page)
+      const pageImagePath = String(source.page_image_path ?? '')
+      const pageImageSha256 = String(source.page_image_sha256 ?? '').toLowerCase()
+      if (!sourcePdfName || !isSha256(sourcePdfSha256) || !Number.isInteger(sourcePdfPage) || sourcePdfPage < 1) {
+        throw new Error(`answer evidence ${auditSection.section} ${label} lacks a stable PDF/page binding`)
+      }
+      if (!pageImagePath || !isSha256(pageImageSha256)) {
+        throw new Error(`answer evidence ${auditSection.section} ${label} lacks a stable source-page image binding`)
+      }
+      const pagePath = repoPath(pageImagePath)
+      if (!existsSync(pagePath)) throw new Error(`answer source page is missing: ${pageImagePath}`)
+      const pageBytes = requireBuffer(pagePath)
+      if (sha256(pageBytes) !== pageImageSha256) throw new Error(`answer source page SHA mismatch: ${pageImagePath}`)
+      const assetKey = `${auditSection.section}:${sourcePdfPage}`
+      const existingPage = answerPagePack.pages[assetKey]
+      if (existingPage && existingPage.sha256 !== pageImageSha256) {
+        throw new Error(`conflicting answer page evidence for ${assetKey}`)
+      }
+      answerPagePack.pages[assetKey] = existingPage ?? {
+        mimeType: mimeType(pageImagePath),
+        sha256: pageImageSha256,
+        data: pageBytes.toString('base64'),
+      }
+
+      const evidenceKind = String(answer.evidence_kind ?? '')
+      const confidence = String(answer.confidence ?? 'none')
+      const answerTextKind = String(answer.answer_text_kind ?? 'missing')
+      const parseStatus = String(answer.parse_status ?? 'not_parsed')
+      const reviewRequired = answer.review_required !== false
+      const rawAnswerText = typeof answer.answer_text === 'string' ? answer.answer_text.trim() : ''
+      const answerText = answerTextKind === 'ocr_answer_text' && rawAnswerText !== VISUAL_REVIEW_MARKER ? rawAnswerText : ''
+      const automaticGradingAllowed = answer.automatic_grading_allowed === true
+        && evidenceKind === 'parsed_answer_text'
+        && confidence === 'high'
+        && !reviewRequired
+        && answerTextKind === 'ocr_answer_text'
+        && answerText.length > 0
+      if (answer.automatic_grading_allowed === true && !automaticGradingAllowed) {
+        throw new Error(`unsafe automatic-grading claim in ${auditSection.section} ${label}`)
+      }
+      if (!['parsed_answer_text', 'source_page_visual'].includes(evidenceKind)) {
+        throw new Error(`unsupported or blocked answer evidence in ${auditSection.section} ${label}: ${evidenceKind || 'missing'}`)
+      }
+      if (evidenceKind === 'source_page_visual' && (answerText || !reviewRequired)) {
+        throw new Error(`source-page-only evidence cannot contain a usable answer: ${auditSection.section} ${label}`)
+      }
+
+      const sourceIntegrity = {
+        answerText,
+        evidenceKind,
+        confidence,
+        sourcePdfSha256,
+        sourcePdfPage,
+        pageImageSha256,
+      }
+      answerSources.push({
+        itemId: item.item_id,
+        sourceKind: 'original_answer_book',
+        sourceVersionId,
+        answerText,
+        sourceSha256: sha256(Buffer.from(stableJson(sourceIntegrity), 'utf8')),
+        evidenceKind,
+        confidence,
+        reviewRequired,
+        automaticGradingAllowed,
+        answerTextKind,
+        parseStatus,
+        sourcePdfName,
+        sourcePdfSha256,
+        sourcePdfPage,
+        sourcePageImageSha256: pageImageSha256,
+        sourcePageR2Key: answerPageKey,
+        sourcePageAssetKey: assetKey,
+      })
+    }
+    const answerPagePackPath = join(outputRoot, 'answer-pages', `${packetFolder}.json`)
+    await writeObject(answerPagePackPath, answerPagePack)
+    answerPagePacks.push({ key: answerPageKey, path: answerPagePackPath, assets: Object.keys(answerPagePack.pages).length })
 
     sectionItems.sort((a, b) => {
       const aDoc = Number(a.source_docs?.[0] ?? a.source_anchor?.ocr_doc ?? 0)
@@ -411,6 +531,20 @@ async function main() {
     }
   }
 
+  if (answerSources.length !== expectedAnswerCount) {
+    throw new Error(`answer evidence coverage mismatch: imported ${answerSources.length}/${expectedAnswerCount}`)
+  }
+  const answerItemIds = new Set(answerSources.map((answer) => answer.itemId))
+  if (answerItemIds.size !== answerSources.length) throw new Error('answer evidence contains duplicate item bindings')
+  const answerEvidenceStats = {
+    total: answerSources.length,
+    automatic: answerSources.filter((answer) => answer.automaticGradingAllowed).length,
+    reviewRequiredText: answerSources.filter((answer) => answer.evidenceKind === 'parsed_answer_text' && answer.reviewRequired).length,
+    sourcePageVisual: answerSources.filter((answer) => answer.evidenceKind === 'source_page_visual').length,
+    blocked: answerSources.filter((answer) => !['parsed_answer_text', 'source_page_visual'].includes(answer.evidenceKind)).length,
+  }
+  if (answerEvidenceStats.blocked !== 0) throw new Error(`blocked answer evidence remains: ${answerEvidenceStats.blocked}`)
+
   for (const catalogEntry of catalog.courses ?? []) await registerCourse(catalogEntry.course_key, catalogEntry)
 
   const transcriptPack = {
@@ -432,7 +566,7 @@ async function main() {
   for (const section of sections) statements.push(`INSERT OR REPLACE INTO sections (section_key, chapter_key, title, manifest_r2_key, sort_order) VALUES (${sqlString(section.sectionKey)}, ${sqlString(section.chapterKey)}, ${sqlString(section.title)}, ${sqlString(section.manifestR2Key)}, ${sqlNumber(section.sortOrder)});`)
   for (const course of courseRows) statements.push(`INSERT OR REPLACE INTO courses (course_key, title, transcript_r2_key, transcript_sha256, duration_ms, has_timeline) VALUES (${sqlString(course.courseKey)}, ${sqlString(`${course.courseNumber} ${course.title}`.trim())}, ${sqlString(course.transcriptR2Key)}, ${sqlString(course.sourceSha256)}, ${sqlNumber(course.durationMs)}, ${course.hasTimeline ? 1 : 0});`)
   for (const item of items) statements.push(`INSERT OR REPLACE INTO items (item_id, section_key, label, item_type, concept_key, content_r2_key, source_sha256, sort_order) VALUES (${sqlString(item.itemId)}, ${sqlString(item.sectionKey)}, ${sqlString(item.label)}, ${sqlString(item.itemType)}, ${sqlString(item.conceptKey)}, ${sqlString(item.contentR2Key)}, ${sqlString(item.sourceSha256)}, ${sqlNumber(item.sortOrder)});`)
-  for (const answer of answerSources) statements.push(`INSERT OR REPLACE INTO answer_sources (item_id, source_kind, source_version_id, answer_text, source_sha256) VALUES (${sqlString(answer.itemId)}, ${sqlString(answer.sourceKind)}, ${sqlString(answer.sourceVersionId)}, ${sqlString(answer.answerText)}, ${sqlString(answer.sourceSha256)});`)
+  for (const answer of answerSources) statements.push(`INSERT INTO answer_sources (item_id, source_kind, source_version_id, answer_text, source_sha256, evidence_kind, confidence, review_required, automatic_grading_allowed, answer_text_kind, parse_status, source_pdf_name, source_pdf_sha256, source_pdf_page, source_page_image_sha256, source_page_r2_key, source_page_asset_key) VALUES (${sqlString(answer.itemId)}, ${sqlString(answer.sourceKind)}, ${sqlString(answer.sourceVersionId)}, ${sqlString(answer.answerText)}, ${sqlString(answer.sourceSha256)}, ${sqlString(answer.evidenceKind)}, ${sqlString(answer.confidence)}, ${answer.reviewRequired ? 1 : 0}, ${answer.automaticGradingAllowed ? 1 : 0}, ${sqlString(answer.answerTextKind)}, ${sqlString(answer.parseStatus)}, ${sqlString(answer.sourcePdfName)}, ${sqlString(answer.sourcePdfSha256)}, ${sqlNumber(answer.sourcePdfPage)}, ${sqlString(answer.sourcePageImageSha256)}, ${sqlString(answer.sourcePageR2Key)}, ${sqlString(answer.sourcePageAssetKey)}) ON CONFLICT(item_id, source_kind, source_version_id) DO UPDATE SET answer_text=excluded.answer_text, source_sha256=excluded.source_sha256, evidence_kind=excluded.evidence_kind, confidence=excluded.confidence, review_required=excluded.review_required, automatic_grading_allowed=excluded.automatic_grading_allowed, answer_text_kind=excluded.answer_text_kind, parse_status=excluded.parse_status, source_pdf_name=excluded.source_pdf_name, source_pdf_sha256=excluded.source_pdf_sha256, source_pdf_page=excluded.source_pdf_page, source_page_image_sha256=excluded.source_page_image_sha256, source_page_r2_key=excluded.source_page_r2_key, source_page_asset_key=excluded.source_page_asset_key;`)
   const relationshipPriority = { optional_course: 1, prerequisite_course: 2, cycle_course: 3 }
   const uniqueLinks = new Map()
   for (const link of links) {
@@ -508,7 +642,9 @@ async function main() {
     schema_version: 'ybt-cloud-import-plan-v1', sourceVersionId, manifestSha, currentCommit,
     library: '选择性必修1', chapters: chapters.length, sections: sections.length, items: items.length, courses: courses.size,
     links: uniqueLinks.size, transcriptChunks: chunks.length, imageObjects: Object.keys(imagePack).length,
-    r2: [{ key: imageKey, path: imagePackPath }, { key: transcriptKey, path: transcriptPackPath }, ...sectionPacks],
+    answerSources: answerSources.length, answerEvidence: answerEvidenceStats,
+    answerPagePacks: answerPagePacks.length, answerPageAssets: answerPagePacks.reduce((total, pack) => total + pack.assets, 0),
+    r2: [{ key: imageKey, path: imagePackPath }, { key: transcriptKey, path: transcriptPackPath }, ...sectionPacks, ...answerPagePacks.map(({ key, path }) => ({ key, path }))],
     sql: sqlPaths,
   }
   await writeObject(join(outputRoot, 'plan.json'), plan)

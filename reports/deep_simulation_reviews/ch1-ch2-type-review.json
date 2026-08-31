@@ -1,0 +1,1705 @@
+{
+  "schema_version": "ybt-semantic-type-review-v1",
+  "scope": {
+    "chapter1_untyped_items": 16,
+    "chapter2_classified_items": 121,
+    "total_items": 137
+  },
+  "review_policy": "逐题读取当前 learning_packet.question_text；机器相似度只作原建议，按题目主目标确定 primary type，复合方法写入 secondary_types。",
+  "source_binding": {
+    "item_type_classification_sha256": "7cf7246abd266405dd7d1127fff873a147c87156391a33ce390a142ae60b73c0",
+    "chapter1_manifest_sha256": "0608555b035903f07206990cbada0c6b7f11f940fc3ba205596136430ab9bc5e",
+    "chapter2_manifest_sha256": "ad69cb78d75f9b3be7b9cf0f20195dc188192b7952e96296ac93733f59b0dfbc",
+    "chapter1_packet_sha256": {
+      "1.2+1.3": "be13293bb83574f956839f0b06d679461161a9b8ffe4ecd364457891c2df6ec6",
+      "1.4": "4ebba5ee8154cc23de2b1df634453e89770aac60bbf69015dc8a044a31804106",
+      "micro专题1": "08255e5e4fb0d5ba5357eb8d21f466a2e593850c765ae2d05dffd7c7a4c0b6bf"
+    }
+  },
+  "review_rows": [
+    {
+      "section": "1.2+1.3",
+      "item_id": "Q-0630a159d64974a8",
+      "item_label": "B8",
+      "original_suggestion": null,
+      "reviewed_primary_type": "类型Ⅰ 基底表示",
+      "secondary_types": [],
+      "review_status": "classified",
+      "reason": "题目要求判断三组线性组合能否仍构成空间基底，核心是线性无关与基底判定。",
+      "question_text_sha256": "0c21d6424f77c8dc868b5598d196999b5a115f286e4a0d6f362c7965be821371"
+    },
+    {
+      "section": "1.2+1.3",
+      "item_id": "Q-70bb401fd2a8de01",
+      "item_label": "A1",
+      "original_suggestion": null,
+      "reviewed_primary_type": "类型Ⅱ 线性运算坐标表示",
+      "secondary_types": [],
+      "review_status": "classified",
+      "reason": "直接计算三维向量坐标之差。",
+      "question_text_sha256": "1228b917bc6f3d7920fc70ac9658c6e52fe124920429712c78059fa8034e8673"
+    },
+    {
+      "section": "1.2+1.3",
+      "item_id": "Q-1c0a1fbeca800ee8",
+      "item_label": "A2",
+      "original_suggestion": null,
+      "reviewed_primary_type": "类型Ⅳ 平行垂直",
+      "secondary_types": [
+        "类型Ⅲ 数量积坐标表示"
+      ],
+      "review_status": "classified",
+      "reason": "由两向量垂直建立坐标数量积为零并求参数。",
+      "question_text_sha256": "ab4cdf084ad0b37cd1cb8147eacde9bba61f7662c3c4d628387f62acda2b55c2"
+    },
+    {
+      "section": "1.2+1.3",
+      "item_id": "Q-e873f29ab00fe598",
+      "item_label": "A3",
+      "original_suggestion": null,
+      "reviewed_primary_type": "类型Ⅳ 平行垂直",
+      "secondary_types": [
+        "类型Ⅱ 线性运算坐标表示"
+      ],
+      "review_status": "classified",
+      "reason": "由坐标向量平行的比例关系求未知分量。",
+      "question_text_sha256": "2443ad9a9d4c4c893003d6e3e1216fa1f17492485afefa9c350647c757cc44ab"
+    },
+    {
+      "section": "1.2+1.3",
+      "item_id": "Q-f6de63d4b31109a5",
+      "item_label": "A4",
+      "original_suggestion": null,
+      "reviewed_primary_type": "类型Ⅴ 夹角与模",
+      "secondary_types": [
+        "类型Ⅲ 数量积坐标表示"
+      ],
+      "review_status": "classified",
+      "reason": "用坐标数量积与两个模计算向量夹角余弦。",
+      "question_text_sha256": "479f011117731674dd3fadb522fb18d60bd0512c855ae6b05484cc440015fda8"
+    },
+    {
+      "section": "1.2+1.3",
+      "item_id": "Q-162d9e165cd68ca4",
+      "item_label": "C14",
+      "original_suggestion": null,
+      "reviewed_primary_type": "四点共面与截线系数综合",
+      "secondary_types": [
+        "类型Ⅰ 基底表示"
+      ],
+      "review_status": "classified",
+      "reason": "利用重心、中点和截面共面条件建立三条侧棱分点系数关系。",
+      "question_text_sha256": "2fd143c53c25ae5d7369ab7db5914b4bc40789d16fdf8118bdec94ef16ddc614"
+    },
+    {
+      "section": "1.2+1.3",
+      "item_id": "Q-025c526da85301de",
+      "item_label": "C15",
+      "original_suggestion": null,
+      "reviewed_primary_type": "类型Ⅴ 夹角与模",
+      "secondary_types": [
+        "正交投影与最小模",
+        "类型Ⅲ 数量积坐标表示"
+      ],
+      "review_status": "classified",
+      "reason": "在两个正交单位方向上调节分量，使剩余向量的模最小，本质是正交投影。",
+      "question_text_sha256": "378e95faf12ad3033b6df5f8f843046ee4e2b191f318c035316288dc0b2bd687"
+    },
+    {
+      "section": "1.2+1.3",
+      "item_id": "Q-e9bcbf739dbec4c7",
+      "item_label": "C16",
+      "original_suggestion": null,
+      "reviewed_primary_type": "阿波罗尼斯球与空间动点范围",
+      "secondary_types": [
+        "类型Ⅴ 夹角与模",
+        "空间动点单变量化"
+      ],
+      "review_status": "classified",
+      "reason": "PF=2PE 先确定阿波罗尼斯球，再在正方体约束下求数量积表达式范围。",
+      "question_text_sha256": "fa34b937376bf4fe2764327fed234a19217f6db2562149a24efaffc2e2169759"
+    },
+    {
+      "section": "1.4",
+      "item_id": "Q-fc2e49b951d6c08d",
+      "item_label": "A2",
+      "original_suggestion": null,
+      "reviewed_primary_type": "类型Ⅱ 研究垂直关系",
+      "secondary_types": [
+        "类型Ⅰ 研究平行关系"
+      ],
+      "review_status": "classified",
+      "reason": "同题依次证明线线垂直与线面平行，垂直证明是第一主任务。",
+      "question_text_sha256": "c56960c77089de1e77f1bf94a817089384c578ad595c7619d794e2c8cf52df00"
+    },
+    {
+      "section": "1.4",
+      "item_id": "Q-23bbe86ea10ffe8e",
+      "item_label": "B5",
+      "original_suggestion": null,
+      "reviewed_primary_type": "类型Ⅱ 研究垂直关系",
+      "secondary_types": [
+        "类型Ⅴ 夹角与模"
+      ],
+      "review_status": "classified",
+      "reason": "先用数量积求对角线长度，再证明直线垂直平面，主目标为垂直关系。",
+      "question_text_sha256": "85ab365c19d92adb88303502fe300da9938bb8c03adcd051850de0c8e9da8810"
+    },
+    {
+      "section": "1.4",
+      "item_id": "Q-633423dd3e2e44c0",
+      "item_label": "C10",
+      "original_suggestion": null,
+      "reviewed_primary_type": "翻折守恒与动态二面角综合",
+      "secondary_types": [
+        "类型Ⅱ 研究垂直关系",
+        "类型Ⅲ 求空间角"
+      ],
+      "review_status": "classified",
+      "reason": "沿BD翻折后先迁移守恒的垂直关系，再由体积和二面角反求分点长度。",
+      "question_text_sha256": "5703ce151060fb0214a8e05d2b1551287c2106ffe280d1ea67391dfa6887d060"
+    },
+    {
+      "section": "1.4",
+      "item_id": "Q-6f6ec75aef2de938",
+      "item_label": "C12",
+      "original_suggestion": null,
+      "reviewed_primary_type": "空间角与面内存在性综合",
+      "secondary_types": [
+        "类型Ⅲ 求空间角",
+        "类型Ⅴ 点线在面内判断"
+      ],
+      "review_status": "classified",
+      "reason": "第一问求线面角，第二问在截面内参数化点并判定垂直存在性。",
+      "question_text_sha256": "d93be57c69644f181f20a41310be5f4fd051bf495699d7bee2a159bbd76639c5"
+    },
+    {
+      "section": "micro专题1",
+      "item_id": "Q-ab24d2e6734637e8",
+      "item_label": "C5",
+      "original_suggestion": null,
+      "reviewed_primary_type": "类型Ⅲ 立体几何综合题",
+      "secondary_types": [
+        "外接球",
+        "空间动点距离",
+        "线面平行垂直"
+      ],
+      "review_status": "classified",
+      "reason": "四个选项分别覆盖线面平行、面面垂直、动点距离和外接球，必须按综合题处理。",
+      "question_text_sha256": "177328b85f764c39e37b6c9512b97aa449785619f2745f593ce9319f99108040"
+    },
+    {
+      "section": "micro专题1",
+      "item_id": "Q-99b92e20cec34b20",
+      "item_label": "C6",
+      "original_suggestion": null,
+      "reviewed_primary_type": "类型Ⅲ 立体几何综合题",
+      "secondary_types": [
+        "存在性双参数化",
+        "点面距离",
+        "面面垂直"
+      ],
+      "review_status": "classified",
+      "reason": "三问连续处理面面垂直、点面距离和动点存在性，是完整的立体几何综合链。",
+      "question_text_sha256": "173f3c18b1193043e43c094c09aa9b5c1e4f02a15cd320988368032c1b98a644"
+    },
+    {
+      "section": "micro专题1",
+      "item_id": "Q-39bd2558138d842f",
+      "item_label": "C7",
+      "original_suggestion": null,
+      "reviewed_primary_type": "类型Ⅳ 动态二面角三角方法",
+      "secondary_types": [
+        "类型Ⅲ 立体几何综合题"
+      ],
+      "review_status": "classified",
+      "reason": "由体积和指定二面角反推侧棱与底面所成角，动态二面角是关键桥接。",
+      "question_text_sha256": "9cf4c9883132b4db7f059467e5b3ccf165b35c17d3951ae6c87b63710e4ef3ad"
+    },
+    {
+      "section": "micro专题1",
+      "item_id": "Q-2ee3a3fc10f4a542",
+      "item_label": "C8",
+      "original_suggestion": null,
+      "reviewed_primary_type": "补形与立体几何综合",
+      "secondary_types": [
+        "类型Ⅲ 立体几何综合题",
+        "线面平行与线面角"
+      ],
+      "review_status": "classified",
+      "reason": "三棱台需补形或使用平行截面关系，再完成线面平行证明和线面角计算。",
+      "question_text_sha256": "ca94bc88ca724e3990aaa06ac34143e21f77fd70b8db6ae4e10ee425cc1e547d"
+    },
+    {
+      "section": "2.1",
+      "item_id": "Q-ce944321e0519d3a",
+      "item_label": "A1",
+      "original_suggestion": "类型I 直线的倾斜角、斜率的相互转化",
+      "reviewed_primary_type": "类型I 直线的倾斜角、斜率的相互转化",
+      "secondary_types": [],
+      "review_status": "approved",
+      "reason": "已知斜率直接求倾斜角，是斜率与倾斜角的标准互化。",
+      "question_text_sha256": "676653d3515a7ea81391c0c54e1b4c8bf5470c6a22734d05640152e6722d481d"
+    },
+    {
+      "section": "2.1",
+      "item_id": "Q-19b4d5904acf1328",
+      "item_label": "A2",
+      "original_suggestion": "类型I 直线的倾斜角、斜率的相互转化",
+      "reviewed_primary_type": "类型I 直线的倾斜角、斜率的相互转化",
+      "secondary_types": [],
+      "review_status": "approved",
+      "reason": "由斜率判断方向向量，本质是斜率与方向向量分量比的互化。",
+      "question_text_sha256": "ca81fe03c461a1a27fce917cd48d14bc3f842e4abe88ce3f144d7be1462c7e97"
+    },
+    {
+      "section": "2.1",
+      "item_id": "Q-3a5dba29a0f6a403",
+      "item_label": "A3",
+      "original_suggestion": "类型I 直线的倾斜角、斜率的相互转化",
+      "reviewed_primary_type": "类型I 直线的倾斜角、斜率的相互转化",
+      "secondary_types": [],
+      "review_status": "approved",
+      "reason": "由倾斜角得到斜率，再用两点斜率公式求参数。",
+      "question_text_sha256": "178651bccf2d5cb1fbc554319d305c2f53eab22709ff53298d598393f5b594a1"
+    },
+    {
+      "section": "2.1",
+      "item_id": "Q-d92ea8b572cc4934",
+      "item_label": "A4",
+      "original_suggestion": "类型IV 判定两条直线垂直",
+      "reviewed_primary_type": "类型IV 判定两条直线垂直",
+      "secondary_types": [
+        "类型I 直线的倾斜角、斜率的相互转化"
+      ],
+      "review_status": "approved",
+      "reason": "核心是利用垂直关系求另一条直线斜率，倾斜角互化是前置。",
+      "question_text_sha256": "cdb1243308a8b72451797734eb6209bf209f2c2aa985c72716a7d8235a1efb1c"
+    },
+    {
+      "section": "2.1",
+      "item_id": "Q-9e945790486a32b9",
+      "item_label": "A5",
+      "original_suggestion": "类型I 直线的倾斜角、斜率的相互转化",
+      "reviewed_primary_type": "类型I 直线的倾斜角、斜率的相互转化",
+      "secondary_types": [],
+      "review_status": "approved",
+      "reason": "倾斜角转为斜率，再与方向向量分量比对应。",
+      "question_text_sha256": "1c11043373b8dce50baf20803b1220d4c1160e4e0b55cf89e5fa558b63a4a01b"
+    },
+    {
+      "section": "2.1",
+      "item_id": "Q-36eee38ff8ba869e",
+      "item_label": "B6",
+      "original_suggestion": "类型IV 判定两条直线垂直",
+      "reviewed_primary_type": "类型IV 判定两条直线垂直",
+      "secondary_types": [
+        "类型I 直线的倾斜角、斜率的相互转化"
+      ],
+      "review_status": "approved",
+      "reason": "用两点斜率表示一条直线，再由斜率乘积为负一求参数。",
+      "question_text_sha256": "b8e1a9b3ee997088ebd0a671f7675154dc1113f244846ba040fcc2971ddf9ace"
+    },
+    {
+      "section": "2.1",
+      "item_id": "Q-944bc7b0ec2bf6e8",
+      "item_label": "B7",
+      "original_suggestion": "类型III 判定两条直线平行",
+      "reviewed_primary_type": "类型V 用斜率判断几何图形的形状",
+      "secondary_types": [
+        "类型IV 判定两条直线垂直"
+      ],
+      "review_status": "corrected",
+      "reason": "目标是判断三角形类型，应由边斜率关系判断锐角、直角或钝角，而非判平行。",
+      "question_text_sha256": "a25cc4cf565101c680e056ebd8e1d282f842453c8921937669a73de81edbe701"
+    },
+    {
+      "section": "2.1",
+      "item_id": "Q-a61039655b31fd8f",
+      "item_label": "B8",
+      "original_suggestion": "类型Ⅱ 由直线与线段相交求斜率的范围",
+      "reviewed_primary_type": "类型Ⅱ 由直线与线段相交求斜率的范围",
+      "secondary_types": [],
+      "review_status": "approved",
+      "reason": "直线过固定点并与线段相交，完全对应端点斜率边界模型。",
+      "question_text_sha256": "612c989ec617df2913967177332f7d6d4a0b72b6bf3c519878e675c328b43086"
+    },
+    {
+      "section": "2.1",
+      "item_id": "Q-097281f5844ed6cf",
+      "item_label": "B9",
+      "original_suggestion": "类型Ⅱ 由直线与线段相交求斜率的范围",
+      "reviewed_primary_type": "曲线上动点所成斜率范围",
+      "secondary_types": [
+        "类型Ⅱ 由直线与线段相交求斜率的范围",
+        "类型I 直线的倾斜角、斜率的相互转化"
+      ],
+      "review_status": "needs_manual_review",
+      "reason": "目标量可解释为固定点与抛物线上动点连线斜率，但对象不是线段；现有五类缺少精确子类型。",
+      "question_text_sha256": "be6028b094e3193237f846b7e17f11da4d6a9715bb094f1716fa099b2d9bd0bc"
+    },
+    {
+      "section": "2.1",
+      "item_id": "Q-4594021e9cfb780b",
+      "item_label": "B10",
+      "original_suggestion": "类型I 直线的倾斜角、斜率的相互转化",
+      "reviewed_primary_type": "类型IV 判定两条直线垂直",
+      "secondary_types": [
+        "类型III 判定两条直线平行"
+      ],
+      "review_status": "corrected",
+      "reason": "点的位置同时由一组垂直关系和一组平行关系确定，核心不是斜率互化。",
+      "question_text_sha256": "7a3686002ca687c6006336977a661c2d658e93aacaee50f9f6ac87ab8696c22c"
+    },
+    {
+      "section": "2.1",
+      "item_id": "Q-97d905978e299c54",
+      "item_label": "B11",
+      "original_suggestion": "类型IV 判定两条直线垂直",
+      "reviewed_primary_type": "类型V 用斜率判断几何图形的形状",
+      "secondary_types": [
+        "类型III 判定两条直线平行",
+        "类型IV 判定两条直线垂直"
+      ],
+      "review_status": "corrected",
+      "reason": "目标是判断四边形形状，需综合验证对边平行和邻边垂直。",
+      "question_text_sha256": "138ede43a8342679464c7c13b9c58154944347481a83c057f7919c1c165a0f5c"
+    },
+    {
+      "section": "2.1",
+      "item_id": "Q-e8b15139a7d8de67",
+      "item_label": "C12",
+      "original_suggestion": "类型IV 判定两条直线垂直",
+      "reviewed_primary_type": "类型I 直线的倾斜角、斜率的相互转化",
+      "secondary_types": [],
+      "review_status": "corrected",
+      "reason": "核心是比较倾斜角差的余弦与两斜率乘积符号区间，并非垂直判定。",
+      "question_text_sha256": "26263002794ed497297cd2f03b45dd1f80cd5979c5e37f6dbe6b17d166a28e33"
+    },
+    {
+      "section": "2.1",
+      "item_id": "Q-fb5bf93a4f805a45",
+      "item_label": "C13",
+      "original_suggestion": "类型I 直线的倾斜角、斜率的相互转化",
+      "reviewed_primary_type": "类型Ⅱ 由直线与线段相交求斜率的范围",
+      "secondary_types": [
+        "类型I 直线的倾斜角、斜率的相互转化"
+      ],
+      "review_status": "corrected",
+      "reason": "点的轨迹退化为线段，过定点直线与该线段相交，属于端点斜率范围模型。",
+      "question_text_sha256": "7dbc8fe937ede75a7bc0b0c3c2969aca34ad9b4f44266a6c0645b095cfdd738d"
+    },
+    {
+      "section": "2.1",
+      "item_id": "Q-0e6c53eb7d0c5ed6",
+      "item_label": "C14",
+      "original_suggestion": "类型IV 判定两条直线垂直",
+      "reviewed_primary_type": "类型I 直线的倾斜角、斜率的相互转化",
+      "secondary_types": [],
+      "review_status": "corrected",
+      "reason": "先由坐标求两条线斜率，再进行倾斜角合角运算，题面没有垂直判定目标。",
+      "question_text_sha256": "46b713489b8e1bddd6d3ab6553b10cc6af836791c2b1153e7622d6296c84955b"
+    },
+    {
+      "section": "2.2",
+      "item_id": "Q-dac25810cd4982b9",
+      "item_label": "A1",
+      "original_suggestion": "类型I 直线的点斜式和斜截式方程",
+      "reviewed_primary_type": "类型I 直线的点斜式和斜截式方程",
+      "secondary_types": [],
+      "review_status": "approved",
+      "reason": "已知倾斜角和经过点，直接使用点斜式或斜截式。",
+      "question_text_sha256": "18ab169d562416f009c1bb013a6c4a4c6515545d950d7b3487bf718b7b7299f7"
+    },
+    {
+      "section": "2.2",
+      "item_id": "Q-2d98607db06d12e1",
+      "item_label": "A2",
+      "original_suggestion": "类型I 直线的点斜式和斜截式方程",
+      "reviewed_primary_type": "类型I 直线的点斜式和斜截式方程",
+      "secondary_types": [
+        "类型III 直线的一般式方程"
+      ],
+      "review_status": "approved",
+      "reason": "由方向向量求斜率并结合经过点写方程，最后整理为一般式。",
+      "question_text_sha256": "1544df5f2acdc45b435bbc533abd5c2b676a2d4a7662ee99b7f0d5079e698aae"
+    },
+    {
+      "section": "2.2",
+      "item_id": "Q-a0286d36022aef7a",
+      "item_label": "A3",
+      "original_suggestion": "类型I 直线的点斜式和斜截式方程",
+      "reviewed_primary_type": "类型Ⅱ 直线的两点式和截距式方程",
+      "secondary_types": [],
+      "review_status": "corrected",
+      "reason": "给出截距式并询问纵截距，应归入截距式。",
+      "question_text_sha256": "9e8fa5e9cd096e2115c8d5201093031a251d04fbe0ad737b2b179adf42790724"
+    },
+    {
+      "section": "2.2",
+      "item_id": "Q-33669c866b4ece8c",
+      "item_label": "A4",
+      "original_suggestion": "类型I 直线的点斜式和斜截式方程",
+      "reviewed_primary_type": "类型I 直线的点斜式和斜截式方程",
+      "secondary_types": [
+        "类型IV 由直线的平行、垂直求参"
+      ],
+      "review_status": "approved",
+      "reason": "先由垂直关系确定斜率，再以给定点写点斜式。",
+      "question_text_sha256": "7bb0583804c3f46b881e262437b3c4d6dd694985c29ddabdea4682398b033334"
+    },
+    {
+      "section": "2.2",
+      "item_id": "Q-bbf1a95521c59863",
+      "item_label": "B5",
+      "original_suggestion": "类型I 直线的点斜式和斜截式方程",
+      "reviewed_primary_type": "类型I 直线的点斜式和斜截式方程",
+      "secondary_types": [
+        "类型IV 由直线的平行、垂直求参"
+      ],
+      "review_status": "approved",
+      "reason": "求垂直平分线需中点与垂直斜率，最终用点斜式求截距。",
+      "question_text_sha256": "0695061c314c45cfa27d40d217957beb614baf61db17c16dcd3f46f9b60461ff"
+    },
+    {
+      "section": "2.2",
+      "item_id": "Q-b9c2e576e039f4fa",
+      "item_label": "B6",
+      "original_suggestion": "类型Ⅱ 直线的两点式和截距式方程",
+      "reviewed_primary_type": "类型Ⅱ 直线的两点式和截距式方程",
+      "secondary_types": [],
+      "review_status": "approved",
+      "reason": "中线经过顶点和对边中点，由两点确定直线。",
+      "question_text_sha256": "99d500d8bd46b7aa869334bdb30a32879463dcffb7af3a0622b5ad843bfed066"
+    },
+    {
+      "section": "2.2",
+      "item_id": "Q-e9150a073ab4c7d6",
+      "item_label": "B7",
+      "original_suggestion": "类型I 直线的点斜式和斜截式方程",
+      "reviewed_primary_type": "类型Ⅱ 直线的两点式和截距式方程",
+      "secondary_types": [
+        "类型I 直线的点斜式和斜截式方程"
+      ],
+      "review_status": "corrected",
+      "reason": "最终任务是求两轴截距并计算截距三角形面积，截距式是主方法。",
+      "question_text_sha256": "05d99078af6e5eca9d4b42c5484bfa52567dbb36afdf7dd2ca7c52d89d4857e0"
+    },
+    {
+      "section": "2.2",
+      "item_id": "Q-d5c4ab905b61b765",
+      "item_label": "B8",
+      "original_suggestion": "类型Ⅱ 直线的两点式和截距式方程",
+      "reviewed_primary_type": "类型Ⅱ 直线的两点式和截距式方程",
+      "secondary_types": [],
+      "review_status": "approved",
+      "reason": "过点且两轴截距相等，需用截距式并检查过原点的特殊情形。",
+      "question_text_sha256": "9f506c4209cb10f5ae8a959c6a8098e19208c452326bcce66f3fade91783ebfc"
+    },
+    {
+      "section": "2.2",
+      "item_id": "Q-452b913885498cde",
+      "item_label": "B9",
+      "original_suggestion": "类型IV 由直线的平行、垂直求参",
+      "reviewed_primary_type": "类型IV 由直线的平行、垂直求参",
+      "secondary_types": [
+        "类型III 直线的一般式方程"
+      ],
+      "review_status": "approved",
+      "reason": "两条一般式直线平行求参数，并需排除重合。",
+      "question_text_sha256": "fd61da231755a036535bc8aad55889b1311cc1522567b8c19a61554add7f0958"
+    },
+    {
+      "section": "2.2",
+      "item_id": "Q-9a07588f5e052ef4",
+      "item_label": "B10",
+      "original_suggestion": "类型Ⅱ 直线的两点式和截距式方程",
+      "reviewed_primary_type": "类型Ⅱ 直线的两点式和截距式方程",
+      "secondary_types": [],
+      "review_status": "approved",
+      "reason": "从一般式读出两轴截距，再利用截距和条件求最值。",
+      "question_text_sha256": "6fa2d3f4e4c7a901703a8e364180c28d79a2ee2031aedcf39585a10f22f0b6a9"
+    },
+    {
+      "section": "2.2",
+      "item_id": "Q-60df0ce52b93ee63",
+      "item_label": "B11",
+      "original_suggestion": "类型IV 由直线的平行、垂直求参",
+      "reviewed_primary_type": "类型IV 由直线的平行、垂直求参",
+      "secondary_types": [
+        "类型III 直线的一般式方程"
+      ],
+      "review_status": "approved",
+      "reason": "多选核心是一般式直线的平行、垂直参数判定，象限判断为附加分支。",
+      "question_text_sha256": "a10e8608e3a5bf44a932769c627a7bbfe8985208c42960f1c49b32a2e55496e7"
+    },
+    {
+      "section": "2.2",
+      "item_id": "Q-3eaddb4bf4e4ded4",
+      "item_label": "B12",
+      "original_suggestion": "类型I 直线的点斜式和斜截式方程",
+      "reviewed_primary_type": "类型V 寻找直线所过的定点",
+      "secondary_types": [
+        "类型Ⅱ 直线的两点式和截距式方程"
+      ],
+      "review_status": "corrected",
+      "reason": "第一问明确证明参数直线恒过定点，第二问才处理截距关系。",
+      "question_text_sha256": "2eadcd4624acf3a1e421f4ab451f1c0f1b7dc36ebb47f16846a08287b28615ef"
+    },
+    {
+      "section": "2.2",
+      "item_id": "Q-1f7ecce5a185bf1c",
+      "item_label": "B13",
+      "original_suggestion": "类型Ⅱ 直线的两点式和截距式方程",
+      "reviewed_primary_type": "类型Ⅱ 直线的两点式和截距式方程",
+      "secondary_types": [],
+      "review_status": "approved",
+      "reason": "两问均以坐标轴截距约束求直线，截距式是主方法。",
+      "question_text_sha256": "99294cb663889b8e0ea69d23cddc67e795a8eb975c82988156e2543509521139"
+    },
+    {
+      "section": "2.2",
+      "item_id": "Q-e96c4f99e0cf83e1",
+      "item_label": "C14",
+      "original_suggestion": "类型V 寻找直线所过的定点",
+      "reviewed_primary_type": "类型V 寻找直线所过的定点",
+      "secondary_types": [
+        "类型IV 由直线的平行、垂直求参"
+      ],
+      "review_status": "approved",
+      "reason": "两条动直线各过定点且始终垂直，交点结构用于后续最值。",
+      "question_text_sha256": "037d2a4019f6bdb63dbfa29d96086f4906027bafa12d4c99e42a33c4c8101b1f"
+    },
+    {
+      "section": "2.2",
+      "item_id": "Q-09ab35cb69cad600",
+      "item_label": "C15",
+      "original_suggestion": "类型I 直线的点斜式和斜截式方程",
+      "reviewed_primary_type": "类型Ⅱ 直线的两点式和截距式方程",
+      "secondary_types": [],
+      "review_status": "corrected",
+      "reason": "直线与坐标轴正半轴交于两点，核心是截距参数及乘积最值。",
+      "question_text_sha256": "4d337db8854ce863c9ad352a30fa90f12a5e3942f41926a54f4a48221c8db0aa"
+    },
+    {
+      "section": "2.2",
+      "item_id": "Q-da74056981b97015",
+      "item_label": "C16",
+      "original_suggestion": "类型Ⅱ 直线的两点式和截距式方程",
+      "reviewed_primary_type": "类型Ⅱ 直线的两点式和截距式方程",
+      "secondary_types": [],
+      "review_status": "approved",
+      "reason": "负斜率直线的两轴截距决定三角形面积，属于截距约束最值。",
+      "question_text_sha256": "1b86ce7580a22fa8e133513cc11d1e9197fda3ebf2a80b198a8ea09d3edb7170"
+    },
+    {
+      "section": "2.3",
+      "item_id": "Q-ced557a824d3d557",
+      "item_label": "A1",
+      "original_suggestion": "类型I 直线的交点问题、过两直线交点的直线系方程的应用",
+      "reviewed_primary_type": "类型I 直线的交点问题、过两直线交点的直线系方程的应用",
+      "secondary_types": [],
+      "review_status": "approved",
+      "reason": "直接联立两条直线求交点。",
+      "question_text_sha256": "a8c88a5285ab9d5c1143990654f5e3152defe8f1a14da07db6bd17a68295d0b2"
+    },
+    {
+      "section": "2.3",
+      "item_id": "Q-29812ebaf23a2cb0",
+      "item_label": "A2",
+      "original_suggestion": "类型I 直线的交点问题、过两直线交点的直线系方程的应用",
+      "reviewed_primary_type": "类型I 直线的交点问题、过两直线交点的直线系方程的应用",
+      "secondary_types": [],
+      "review_status": "approved",
+      "reason": "先求两直线交点，再结合方向向量写目标直线。",
+      "question_text_sha256": "a47e4246af30ca6481a6c1983cd9a25305c55602dacba471eaea09223434a21a"
+    },
+    {
+      "section": "2.3",
+      "item_id": "Q-8c7e3eeb0a906257",
+      "item_label": "A3",
+      "original_suggestion": "类型Ⅱ 两点间距离公式的应用",
+      "reviewed_primary_type": "类型III 点到直线距离公式的应用",
+      "secondary_types": [],
+      "review_status": "corrected",
+      "reason": "题目明确求点到给定直线的距离。",
+      "question_text_sha256": "59ddfa16f75b4d9e83463d227d24b6a73def165047e8cf955656574e9bfa6dd0"
+    },
+    {
+      "section": "2.3",
+      "item_id": "Q-e21be9d01e196fc0",
+      "item_label": "A4",
+      "original_suggestion": "类型I 直线的交点问题、过两直线交点的直线系方程的应用",
+      "reviewed_primary_type": "类型IV 两条平行线间距离公式的应用",
+      "secondary_types": [],
+      "review_status": "corrected",
+      "reason": "两直线互相平行，目标直接是两平行线间距离。",
+      "question_text_sha256": "e57e58113bfb3a30fd2b33eab9a1a845d429a203ca7ef99b5167f5de3e1c55dd"
+    },
+    {
+      "section": "2.3",
+      "item_id": "Q-5e9eb78446721aee",
+      "item_label": "B5",
+      "original_suggestion": "类型I 直线的交点问题、过两直线交点的直线系方程的应用",
+      "reviewed_primary_type": "类型I 直线的交点问题、过两直线交点的直线系方程的应用",
+      "secondary_types": [],
+      "review_status": "approved",
+      "reason": "参数直线经过另外两条直线交点，使用联立或直线系求参数。",
+      "question_text_sha256": "63606ef01c07182d9cad8ca732e1bad2fad440a4d08c2a8b767610012736c5b1"
+    },
+    {
+      "section": "2.3",
+      "item_id": "Q-a11526b932e77934",
+      "item_label": "B6",
+      "original_suggestion": "类型Ⅱ 两点间距离公式的应用",
+      "reviewed_primary_type": "类型IV 两条平行线间距离公式的应用",
+      "secondary_types": [],
+      "review_status": "corrected",
+      "reason": "先由平行条件求参数，再求两条平行直线之间距离。",
+      "question_text_sha256": "c3502a811ec2225b87532bcaec000d29ad48c7c2eb6b6bac5a8898f4992c5349"
+    },
+    {
+      "section": "2.3",
+      "item_id": "Q-8e5e2a4bf9efa56a",
+      "item_label": "B7",
+      "original_suggestion": "类型I 直线的交点问题、过两直线交点的直线系方程的应用",
+      "reviewed_primary_type": "类型I 直线的交点问题、过两直线交点的直线系方程的应用",
+      "secondary_types": [],
+      "review_status": "approved",
+      "reason": "联立含参直线，并以交点象限约束参数。",
+      "question_text_sha256": "0be82e921e6474e670581cebc676f8583f50a7336a1f7a3c667aeabe20f90112"
+    },
+    {
+      "section": "2.3",
+      "item_id": "Q-df9a8fb3ee6eef2c",
+      "item_label": "B8",
+      "original_suggestion": "类型I 直线的交点问题、过两直线交点的直线系方程的应用",
+      "reviewed_primary_type": "类型I 直线的交点问题、过两直线交点的直线系方程的应用",
+      "secondary_types": [],
+      "review_status": "approved",
+      "reason": "目标直线经过两已知直线交点并满足截距条件。",
+      "question_text_sha256": "952f9ff51d8374cf668568fe128b3c3ad242fc914152f7b37936487ec399d9a6"
+    },
+    {
+      "section": "2.3",
+      "item_id": "Q-055c9f3bacafd137",
+      "item_label": "B9",
+      "original_suggestion": "类型I 直线的交点问题、过两直线交点的直线系方程的应用",
+      "reviewed_primary_type": "类型IV 两条平行线间距离公式的应用",
+      "secondary_types": [],
+      "review_status": "corrected",
+      "reason": "三条直线互相平行，对称轴是两平行线的等距中间线。",
+      "question_text_sha256": "9bfc5da0c2159b1423634fc5d6ad99d9f34fb066a3a3b3830437c445d3504c80"
+    },
+    {
+      "section": "2.3",
+      "item_id": "Q-86ff78f9b3dc3390",
+      "item_label": "B10",
+      "original_suggestion": "类型III 点到直线距离公式的应用",
+      "reviewed_primary_type": "类型IV 两条平行线间距离公式的应用",
+      "secondary_types": [
+        "类型Ⅱ 两点间距离公式的应用"
+      ],
+      "review_status": "corrected",
+      "reason": "两点分别在两条平行线上，平方距离最小值即两平行线距离的平方。",
+      "question_text_sha256": "351146042b728837d1a10a572b2a6d8aba6e0872130dd930fe00edfe170aaaa8"
+    },
+    {
+      "section": "2.3",
+      "item_id": "Q-a1bca3bac3dc0534",
+      "item_label": "B11",
+      "original_suggestion": "类型I 直线的交点问题、过两直线交点的直线系方程的应用",
+      "reviewed_primary_type": "类型I 直线的交点问题、过两直线交点的直线系方程的应用",
+      "secondary_types": [],
+      "review_status": "approved",
+      "reason": "三线构成三角形需排除平行和三线共点，核心是交点及退化条件。",
+      "question_text_sha256": "57251be9e6011388d3f6ded86427012d9b3c7f1dcfa89585b3c0df3f09899b7f"
+    },
+    {
+      "section": "2.3",
+      "item_id": "Q-64c8837896b1c374",
+      "item_label": "B12",
+      "original_suggestion": "类型Ⅱ 两点间距离公式的应用",
+      "reviewed_primary_type": "类型III 点到直线距离公式的应用",
+      "secondary_types": [],
+      "review_status": "corrected",
+      "reason": "点按固定向量平移后，目标是新点到原直线的距离。",
+      "question_text_sha256": "1040601576fbc9e71c099bc9c656f182a13d3820bcec39f7c97bac659534e453"
+    },
+    {
+      "section": "2.3",
+      "item_id": "Q-90360edf0941d5d3",
+      "item_label": "B13",
+      "original_suggestion": "类型Ⅱ 两点间距离公式的应用",
+      "reviewed_primary_type": "类型III 点到直线距离公式的应用",
+      "secondary_types": [
+        "类型I 直线的交点问题、过两直线交点的直线系方程的应用"
+      ],
+      "review_status": "corrected",
+      "reason": "条件是两点到过固定点直线的距离相等，需列点线距离等式并分同侧、异侧。",
+      "question_text_sha256": "fe46847da514f2edf34e97957553666981e61adcb6ca42636aaef1571c5bc3f1"
+    },
+    {
+      "section": "2.3",
+      "item_id": "Q-1f21c01d24034f22",
+      "item_label": "B14",
+      "original_suggestion": "类型III 点到直线距离公式的应用",
+      "reviewed_primary_type": "类型III 点到直线距离公式的应用",
+      "secondary_types": [
+        "类型I 直线的交点问题、过两直线交点的直线系方程的应用"
+      ],
+      "review_status": "approved",
+      "reason": "参数直线族过定点，点到直线的最大距离由固定点几何界给出。",
+      "question_text_sha256": "84c0e3e2395f072458ee63ad2d59b53becd79e2f3e8d6a528f6dcf9e4e89fb6c"
+    },
+    {
+      "section": "2.3",
+      "item_id": "Q-c22af89ebe5ec08e",
+      "item_label": "B15",
+      "original_suggestion": "类型Ⅱ 两点间距离公式的应用",
+      "reviewed_primary_type": "类型Ⅱ 两点间距离公式的应用",
+      "secondary_types": [],
+      "review_status": "approved",
+      "reason": "两个根式表示动点到两个定点的距离和，使用反射或三角不等式求最小值。",
+      "question_text_sha256": "5092308d165f901566a4cc1f1aba15193fef24eb95a3d018f92a9368d6d90ae7"
+    },
+    {
+      "section": "2.3",
+      "item_id": "Q-c23c8d0a70cbf347",
+      "item_label": "B16",
+      "original_suggestion": "类型V 综合大题",
+      "reviewed_primary_type": "类型V 综合大题",
+      "secondary_types": [],
+      "review_status": "approved",
+      "reason": "欧拉线、重心、外心、垂心、外接圆半径与未知顶点联立，属于综合题。",
+      "question_text_sha256": "a1b91388301dc0b3f6a13b41cbf765c89f47ce47209a53a5e11d3b58e2a66055"
+    },
+    {
+      "section": "2.3",
+      "item_id": "Q-421aed873c295d39",
+      "item_label": "B17",
+      "original_suggestion": "类型V 综合大题",
+      "reviewed_primary_type": "类型V 综合大题",
+      "secondary_types": [
+        "类型III 点到直线距离公式的应用",
+        "类型I 直线的交点问题、过两直线交点的直线系方程的应用"
+      ],
+      "review_status": "approved",
+      "reason": "先求边线，再作垂线求垂足，最后求向量，是投影与交点组合。",
+      "question_text_sha256": "3d82960728ead2af1c478068dbb380cd447f3b77470aadca49eb5908e07057e5"
+    },
+    {
+      "section": "2.3",
+      "item_id": "Q-37dcb04b91f64b9f",
+      "item_label": "B18",
+      "original_suggestion": "类型I 直线的交点问题、过两直线交点的直线系方程的应用",
+      "reviewed_primary_type": "类型V 综合大题",
+      "secondary_types": [
+        "类型I 直线的交点问题、过两直线交点的直线系方程的应用"
+      ],
+      "review_status": "corrected",
+      "reason": "两问分别涉及过点作垂线、过两线交点且截距相等，跨越多种建线模型。",
+      "question_text_sha256": "f176cf1295a1e192cbd6b0ea04ef63d866f0e915632294200ec4dc9bfc56ac63"
+    },
+    {
+      "section": "2.3",
+      "item_id": "Q-854394d4abc08b04",
+      "item_label": "B19",
+      "original_suggestion": "类型V 综合大题",
+      "reviewed_primary_type": "类型V 综合大题",
+      "secondary_types": [
+        "类型I 直线的交点问题、过两直线交点的直线系方程的应用"
+      ],
+      "review_status": "approved",
+      "reason": "由两条高反推三角形边线，再求第三条高和中线。",
+      "question_text_sha256": "f48423bc40948003a3650bb1c985aeb0737b47010c4b14efde465b0de215e898"
+    },
+    {
+      "section": "2.3",
+      "item_id": "Q-a72f2821fd83ff5c",
+      "item_label": "B20",
+      "original_suggestion": "类型III 点到直线距离公式的应用",
+      "reviewed_primary_type": "类型V 综合大题",
+      "secondary_types": [
+        "类型I 直线的交点问题、过两直线交点的直线系方程的应用"
+      ],
+      "review_status": "corrected",
+      "reason": "利用菱形对角线互相平分和对边平行，综合求边线及顶点，并非距离题。",
+      "question_text_sha256": "078105fb82281a9daed760f944a72112ae21050b7e4eb2564101deb432fe9faf"
+    },
+    {
+      "section": "2.3",
+      "item_id": "Q-664a0619efb7b133",
+      "item_label": "C21",
+      "original_suggestion": "类型I 直线的交点问题、过两直线交点的直线系方程的应用",
+      "reviewed_primary_type": "类型V 综合大题",
+      "secondary_types": [
+        "类型I 直线的交点问题、过两直线交点的直线系方程的应用"
+      ],
+      "review_status": "corrected",
+      "reason": "同时使用中点、两直线交点和垂直平分线方向，是多条件综合题。",
+      "question_text_sha256": "9de86ac1c35decc55697e8f97e5c53f3dff9484768633afa994e17b09770fc82"
+    },
+    {
+      "section": "2.3",
+      "item_id": "Q-9feb8feb1adaaaee",
+      "item_label": "C22",
+      "original_suggestion": "类型V 综合大题",
+      "reviewed_primary_type": "类型V 综合大题",
+      "secondary_types": [
+        "类型I 直线的交点问题、过两直线交点的直线系方程的应用"
+      ],
+      "review_status": "approved",
+      "reason": "第一问为动直线与线段相交的参数范围，第二问为交点及面积最值。",
+      "question_text_sha256": "486fcbb5ef262be8b460b085243f49a0d9dcf62375d34be10e8e3fd10547e87f"
+    },
+    {
+      "section": "2.4",
+      "item_id": "Q-686ef0610485533c",
+      "item_label": "A1",
+      "original_suggestion": "类型Ⅲ 直线关于直线对称",
+      "reviewed_primary_type": "类型Ⅲ 直线关于直线对称",
+      "secondary_types": [],
+      "review_status": "approved",
+      "reason": "求一条直线关于x=1的对称直线。",
+      "question_text_sha256": "179c670f49b40ebcc85a4bc0cf429acbb4815c6e65a2e9b59f65b82ca61f3eb1"
+    },
+    {
+      "section": "2.4",
+      "item_id": "Q-000b6754e9fadbbc",
+      "item_label": "A2",
+      "original_suggestion": "类型Ⅲ 直线关于直线对称",
+      "reviewed_primary_type": "类型I 点关于直线对称",
+      "secondary_types": [],
+      "review_status": "corrected",
+      "reason": "题目直接求点关于直线的对称点。",
+      "question_text_sha256": "11a7565a791015db5aa76f7ea9e96e592a373a6fc0959a8f08fa4bde40557743"
+    },
+    {
+      "section": "2.4",
+      "item_id": "Q-52c5c8e1617d43df",
+      "item_label": "A3",
+      "original_suggestion": "类型Ⅲ 直线关于直线对称",
+      "reviewed_primary_type": "类型IV 入射光线与反射光线的对称问题",
+      "secondary_types": [],
+      "review_status": "corrected",
+      "reason": "光线经x轴反射后求反射光线方程。",
+      "question_text_sha256": "9709cb5ea53bcc8c3efff6676089bb84eee8461f9c594ea6cab335b2cc040e04"
+    },
+    {
+      "section": "2.4",
+      "item_id": "Q-8ba0e365a4bb943d",
+      "item_label": "A4",
+      "original_suggestion": "类型Ⅲ 直线关于直线对称",
+      "reviewed_primary_type": "类型Ⅲ 直线关于直线对称",
+      "secondary_types": [],
+      "review_status": "approved",
+      "reason": "直接求一条直线关于另一条直线的对称直线。",
+      "question_text_sha256": "d3b98a5a11b2fe1c5f5cb2192edddeaf4241bbe40b8c87e943d41062d6354f45"
+    },
+    {
+      "section": "2.4",
+      "item_id": "Q-12532ef01c76c81d",
+      "item_label": "B5",
+      "original_suggestion": "类型IV 入射光线与反射光线的对称问题",
+      "reviewed_primary_type": "类型IV 入射光线与反射光线的对称问题",
+      "secondary_types": [],
+      "review_status": "approved",
+      "reason": "由入射点、反射轴和反射后经过点反求入射线斜率。",
+      "question_text_sha256": "b233008d3136a9dde639ffb3e8b81e0a2eed2c5a1a45c779297c66124208f827"
+    },
+    {
+      "section": "2.4",
+      "item_id": "Q-fe8a53956be22904",
+      "item_label": "B6",
+      "original_suggestion": "类型Ⅱ 直线关于点对称",
+      "reviewed_primary_type": "类型Ⅱ 直线关于点对称",
+      "secondary_types": [],
+      "review_status": "approved",
+      "reason": "直接求直线关于给定点的中心对称直线。",
+      "question_text_sha256": "82d0d1d21bd8197a330f1ffa1fdfaa27f5698a925a2b9eafad88db73163f8913"
+    },
+    {
+      "section": "2.4",
+      "item_id": "Q-fdeec324d405409e",
+      "item_label": "B7",
+      "original_suggestion": "类型Ⅲ 直线关于直线对称",
+      "reviewed_primary_type": "类型Ⅲ 直线关于直线对称",
+      "secondary_types": [],
+      "review_status": "approved",
+      "reason": "求直线关于另一条直线的对称像。",
+      "question_text_sha256": "1346d43c84ca7cf64a60a9a7a515564f0fa760cd248e0e8b63e6d40bc4e66d26"
+    },
+    {
+      "section": "2.4",
+      "item_id": "Q-f11cdadf1d84082b",
+      "item_label": "B8",
+      "original_suggestion": "类型Ⅲ 直线关于直线对称",
+      "reviewed_primary_type": "类型Ⅲ 直线关于直线对称",
+      "secondary_types": [],
+      "review_status": "approved",
+      "reason": "由两条互为对称的直线反求对称轴。",
+      "question_text_sha256": "134ed30817402c60927b40863e558e2d6c437461b50dc2351556080deebe2f06"
+    },
+    {
+      "section": "2.4",
+      "item_id": "Q-342090e484b73156",
+      "item_label": "B9",
+      "original_suggestion": "类型Ⅲ 直线关于直线对称",
+      "reviewed_primary_type": "类型V 利用对称解决线段的和、差最值问题",
+      "secondary_types": [],
+      "review_status": "corrected",
+      "reason": "动点在直线上，目标是到两定点距离差绝对值的最大值。",
+      "question_text_sha256": "6da227f3dfefc24cb2ad9d6ff7e2e10c122fda86880ea44ed89585c8e67fdaa9"
+    },
+    {
+      "section": "2.4",
+      "item_id": "Q-42dce5b9f38e4d56",
+      "item_label": "B10",
+      "original_suggestion": "类型V 利用对称解决线段的和、差最值问题",
+      "reviewed_primary_type": "类型Ⅲ 直线关于直线对称",
+      "secondary_types": [
+        "跨节：直线交点与垂直"
+      ],
+      "review_status": "corrected",
+      "reason": "角平分线把两边所在直线互相反射，结合高线方向求顶点和边线，不是距离最值。",
+      "question_text_sha256": "b3ca68642de91bba87b9fe5103b39fb687294e7eb6a3ffc1045a2256cb30de4d"
+    },
+    {
+      "section": "2.4",
+      "item_id": "Q-052da827fab67dc3",
+      "item_label": "B11",
+      "original_suggestion": "类型Ⅲ 直线关于直线对称",
+      "reviewed_primary_type": "类型V 利用对称解决线段的和、差最值问题",
+      "secondary_types": [
+        "跨节：直线交点与垂直"
+      ],
+      "review_status": "corrected",
+      "reason": "第二问求动点到两点距离和最小值，是本题核心难点；第一问为基础建线。",
+      "question_text_sha256": "4a03b1195825ce946de74705df9e7d05428524ce3334faa88c6950f9923c9277"
+    },
+    {
+      "section": "2.4",
+      "item_id": "Q-6ac5740a0fa93753",
+      "item_label": "C12",
+      "original_suggestion": "类型V 利用对称解决线段的和、差最值问题",
+      "reviewed_primary_type": "类型V 利用对称解决线段的和、差最值问题",
+      "secondary_types": [],
+      "review_status": "approved",
+      "reason": "在两条约束直线上取点，使三角形周长最小，使用连续反射。",
+      "question_text_sha256": "ff658c1e35015e2baa4477446f44debb4c1e43986854f646d96b2f280038e3e2"
+    },
+    {
+      "section": "2.4",
+      "item_id": "Q-c203ad2b1eaebe82",
+      "item_label": "C13",
+      "original_suggestion": "类型Ⅲ 直线关于直线对称",
+      "reviewed_primary_type": "类型V 利用对称解决线段的和、差最值问题",
+      "secondary_types": [
+        "类型I 点关于直线对称"
+      ],
+      "review_status": "corrected",
+      "reason": "P、Q互为对称且距离固定，目标是两段距离和最小值。",
+      "question_text_sha256": "f34d8f48b95904f2fb3f57359e1e67376c2a839ac7b52c19078726e81caf914f"
+    },
+    {
+      "section": "2.4",
+      "item_id": "Q-001ac42a438304a2",
+      "item_label": "C14",
+      "original_suggestion": "类型IV 入射光线与反射光线的对称问题",
+      "reviewed_primary_type": "类型IV 入射光线与反射光线的对称问题",
+      "secondary_types": [],
+      "review_status": "approved",
+      "reason": "光线经两次反射后回到起点，需展开反射路径。",
+      "question_text_sha256": "ed1274320612f212e7bb483103221a51e7367bc613ec6a433f540f72d0e31d76"
+    },
+    {
+      "section": "2.4",
+      "item_id": "Q-11363f2287039519",
+      "item_label": "C15",
+      "original_suggestion": "类型IV 入射光线与反射光线的对称问题",
+      "reviewed_primary_type": "类型IV 入射光线与反射光线的对称问题",
+      "secondary_types": [],
+      "review_status": "approved",
+      "reason": "矩形边界上的多次反射展开后求发射角范围。",
+      "question_text_sha256": "da8ed6f68e600aa8154d5a2a5617f30ca1a57ea07f6fb0baa0ee58c2333067d5"
+    },
+    {
+      "section": "2.5",
+      "item_id": "Q-1d1c179ef62d3920",
+      "item_label": "A1",
+      "original_suggestion": "类型I 二元二次方程表示圆的系数条件",
+      "reviewed_primary_type": "类型I 二元二次方程表示圆的系数条件",
+      "secondary_types": [],
+      "review_status": "approved",
+      "reason": "由一般方程配方得到半径，再结合圆面积求参数。",
+      "question_text_sha256": "986b013946893b0cb4df18cb96f4dc2eea1625b86e315ff0c0a687e32a8a8619"
+    },
+    {
+      "section": "2.5",
+      "item_id": "Q-e94a897cdb8b2dad",
+      "item_label": "A2",
+      "original_suggestion": "类型I 二元二次方程表示圆的系数条件",
+      "reviewed_primary_type": "类型Ⅲ 求圆的方程",
+      "secondary_types": [],
+      "review_status": "corrected",
+      "reason": "给出直径两端点并求圆的一般方程。",
+      "question_text_sha256": "8a7f377bcac9cadb3142eb325533fde93eaa28e78290b848209b969f407a070a"
+    },
+    {
+      "section": "2.5",
+      "item_id": "Q-a79b484c3228f737",
+      "item_label": "A3",
+      "original_suggestion": "类型I 二元二次方程表示圆的系数条件",
+      "reviewed_primary_type": "类型I 二元二次方程表示圆的系数条件",
+      "secondary_types": [],
+      "review_status": "approved",
+      "reason": "判断含参二元二次方程表示实圆的充要条件。",
+      "question_text_sha256": "66d755644c7b6446cf84f782c5ba72ed2cf50a1088f5b983cf90ca7ad130a803"
+    },
+    {
+      "section": "2.5",
+      "item_id": "Q-a05912ce778125c5",
+      "item_label": "B4",
+      "original_suggestion": "类型I 二元二次方程表示圆的系数条件",
+      "reviewed_primary_type": "类型I 二元二次方程表示圆的系数条件",
+      "secondary_types": [],
+      "review_status": "approved",
+      "reason": "二次项系数和半径正性共同限制方程表示圆。",
+      "question_text_sha256": "bd8cdb9b5173e4f95c81a9c5b391253e9175259b1b20f3c49402e4fc100b0c4f"
+    },
+    {
+      "section": "2.5",
+      "item_id": "Q-505f2963324b5f03",
+      "item_label": "B5",
+      "original_suggestion": "类型I 二元二次方程表示圆的系数条件",
+      "reviewed_primary_type": "类型Ⅱ 点与圆的位置关系的判断与求参",
+      "secondary_types": [],
+      "review_status": "corrected",
+      "reason": "由给定点在圆外建立参数不等式，同时检查方程确实表示圆。",
+      "question_text_sha256": "747ab3f7faac8a426c7fa1396efc14f87fb941c8d8d09c8a2899bab61d6c9741"
+    },
+    {
+      "section": "2.5",
+      "item_id": "Q-81dcbfc2490cda70",
+      "item_label": "B6",
+      "original_suggestion": "类型I 二元二次方程表示圆的系数条件",
+      "reviewed_primary_type": "类型IV 圆相关的对称问题",
+      "secondary_types": [],
+      "review_status": "corrected",
+      "reason": "直线是圆的对称轴，必须经过圆心，由圆心坐标求参数。",
+      "question_text_sha256": "d10ee1385f91e2ad2b62d9113b70c3ffff18f16dcb38ee434131a8444efc70e2"
+    },
+    {
+      "section": "2.5",
+      "item_id": "Q-8850121c80954b15",
+      "item_label": "B7",
+      "original_suggestion": "类型IV 圆相关的对称问题",
+      "reviewed_primary_type": "类型IV 圆相关的对称问题",
+      "secondary_types": [],
+      "review_status": "approved",
+      "reason": "求圆关于x轴的对称圆。",
+      "question_text_sha256": "66169ea37eda2aada3b984599ee487ff5710a81ce9241e8270fa243a3485cdb9"
+    },
+    {
+      "section": "2.5",
+      "item_id": "Q-aa50375a26d2c121",
+      "item_label": "B8",
+      "original_suggestion": "类型IV 圆相关的对称问题",
+      "reviewed_primary_type": "类型IV 圆相关的对称问题",
+      "secondary_types": [],
+      "review_status": "approved",
+      "reason": "两圆互为轴对称，反求两圆心连线的垂直平分线。",
+      "question_text_sha256": "43bc0e266a9b84ef197e23fe23b930966b721579448666309c190ffa38b3aa7a"
+    },
+    {
+      "section": "2.5",
+      "item_id": "Q-0944694dc2bc896d",
+      "item_label": "B9",
+      "original_suggestion": "类型I 二元二次方程表示圆的系数条件",
+      "reviewed_primary_type": "类型VI 定点与圆上动点之间距离的最值问题",
+      "secondary_types": [],
+      "review_status": "corrected",
+      "reason": "目标式是圆上动点到定点距离的平方最大值。",
+      "question_text_sha256": "4c8ae9e2a6d1e9ec97ff96580c792e5d6a4c56148ef714bb2aebf2c779e3edf0"
+    },
+    {
+      "section": "2.5",
+      "item_id": "Q-2a25963af8c2e96b",
+      "item_label": "B10",
+      "original_suggestion": "类型I 二元二次方程表示圆的系数条件",
+      "reviewed_primary_type": "类型Ⅲ 求圆的方程",
+      "secondary_types": [
+        "四点共圆判定"
+      ],
+      "review_status": "corrected",
+      "reason": "由三点确定圆，再用第四点在圆上求参数。",
+      "question_text_sha256": "449f4a1db5fe2402c3f7cadbb8ab15703de20b4bc313a906e4e8cb824d06bc87"
+    },
+    {
+      "section": "2.5",
+      "item_id": "Q-e7af51c7ac4decdc",
+      "item_label": "B11",
+      "original_suggestion": "类型IV 圆相关的对称问题",
+      "reviewed_primary_type": "类型IV 圆相关的对称问题",
+      "secondary_types": [
+        "类型Ⅲ 求圆的方程"
+      ],
+      "review_status": "approved",
+      "reason": "先由圆心轨迹和两点确定原圆，再关于给定直线作对称圆。",
+      "question_text_sha256": "09adffb60046526ab57d3f6e37101e02e53cd1b78b849b33c4ad6cfe390062c2"
+    },
+    {
+      "section": "2.5",
+      "item_id": "Q-1a7519f4800ccb42",
+      "item_label": "B12",
+      "original_suggestion": "类型VI 定点与圆上动点之间距离的最值问题",
+      "reviewed_primary_type": "类型VI 定点与圆上动点之间距离的最值问题",
+      "secondary_types": [
+        "跨节：点关于直线对称"
+      ],
+      "review_status": "approved",
+      "reason": "圆上动点与直线上动点共同参与距离和最小值，主模型仍是圆上动点距离。",
+      "question_text_sha256": "33835706e0c7a11c68c2565142e4d9a5ea794754689fc0db54af2a16c06556c3"
+    },
+    {
+      "section": "2.5",
+      "item_id": "Q-71eccd74698e096f",
+      "item_label": "B13",
+      "original_suggestion": "类型V 与圆有关的求轨迹方程问题",
+      "reviewed_primary_type": "类型V 与圆有关的求轨迹方程问题",
+      "secondary_types": [
+        "类型Ⅲ 求圆的方程"
+      ],
+      "review_status": "corrected",
+      "reason": "原页确认圆 G 恒被直线族平分；第二问求圆上动点连线中点的轨迹，按‘与圆有关的轨迹方程’主类型并辅以求圆方程放行。",
+      "question_text_sha256": "c1e745a687e8b2368759ac50850e4b5fc5ef7a5e68720671311faea6e1af4d83",
+      "source_repair": {
+        "status": "SOURCE_PAGE_REPAIRED_AND_HASH_REBOUND",
+        "reconciled_at": "2026-08-31T03:05:10+00:00",
+        "correction_ids": [
+          "DQC-2.5-B13-BISECT",
+          "DQC-2.5-B13-RUNNING-HEADER"
+        ],
+        "evidence": "SOURCE_SECTION_PDF_PAGE_14_VISUALLY_CONFIRMS_平分",
+        "question_text_sha256": "c1e745a687e8b2368759ac50850e4b5fc5ef7a5e68720671311faea6e1af4d83",
+        "source_anchor": {
+          "ocr_doc": 69,
+          "pdf_page": 70,
+          "file": "data/ocr_live_current/second_chapter_109/doc_69.md"
+        }
+      }
+    },
+    {
+      "section": "2.5",
+      "item_id": "Q-4c504b01b18e6649",
+      "item_label": "B14",
+      "original_suggestion": "类型I 二元二次方程表示圆的系数条件",
+      "reviewed_primary_type": "类型V 与圆有关的求轨迹方程问题",
+      "secondary_types": [
+        "类型Ⅲ 求圆的方程",
+        "跨节：直线与圆相交"
+      ],
+      "review_status": "corrected",
+      "reason": "核心是动弦中点的轨迹方程，圆心半径只是前置。",
+      "question_text_sha256": "8f302388e71419fcfdf7fa8744267b713571825d74cc6d2d9aed82cdb978cbbb"
+    },
+    {
+      "section": "2.5",
+      "item_id": "Q-976814534568be46",
+      "item_label": "B15",
+      "original_suggestion": "类型V 与圆有关的求轨迹方程问题",
+      "reviewed_primary_type": "类型Ⅲ 求圆的方程",
+      "secondary_types": [
+        "四点共圆判定"
+      ],
+      "review_status": "corrected",
+      "reason": "平面几何计算后证明四点共圆，不涉及动点轨迹。",
+      "question_text_sha256": "08605048800fa99b28792eae05c681b49dab08443e60355894789d4384e8b541"
+    },
+    {
+      "section": "2.5",
+      "item_id": "Q-620bbd5f21a156da",
+      "item_label": "C16",
+      "original_suggestion": "类型Ⅶ 圆过定点问题",
+      "reviewed_primary_type": "类型Ⅶ 圆过定点问题",
+      "secondary_types": [],
+      "review_status": "approved",
+      "reason": "由二次函数三个坐标轴交点确定圆系，并研究圆系恒过定点。",
+      "question_text_sha256": "cef19b1eceb6fac19dd9d37b8adfa3725e7454463f2934797c7e189ea4a07e51"
+    },
+    {
+      "section": "2.6",
+      "item_id": "Q-a775a7ecbf82bae9",
+      "item_label": "A1",
+      "original_suggestion": "类型Ⅱ 弦长计算",
+      "reviewed_primary_type": "类型I 直线与圆的位置关系的判断与应用",
+      "secondary_types": [],
+      "review_status": "corrected",
+      "reason": "由圆心到直线距离判断相离、相切、相交或是否过圆心。",
+      "question_text_sha256": "f3d4213519d60c333a406d8414838a2c240bbb2241b68af7f49be2ad062475e1"
+    },
+    {
+      "section": "2.6",
+      "item_id": "Q-a2b4c4c8b5292dae",
+      "item_label": "A2",
+      "original_suggestion": "类型IV 切线有关的计算",
+      "reviewed_primary_type": "类型IV 切线有关的计算",
+      "secondary_types": [],
+      "review_status": "approved",
+      "reason": "过圆上点求圆的切线方程。",
+      "question_text_sha256": "77047dbfe296e9f7575164497768d2f5b3db58c1232952b1c95fdf6aa273f722"
+    },
+    {
+      "section": "2.6",
+      "item_id": "Q-901c0d316a14b0f2",
+      "item_label": "A3",
+      "original_suggestion": "类型Ⅱ 弦长计算",
+      "reviewed_primary_type": "类型I 直线与圆的位置关系的判断与应用",
+      "secondary_types": [],
+      "review_status": "corrected",
+      "reason": "判断含参直线与圆的公共点个数。",
+      "question_text_sha256": "bacb068675995963f8c4bc9d46feabae2644abbd823faeb98876edc23abe16d4"
+    },
+    {
+      "section": "2.6",
+      "item_id": "Q-06e2c71bc7f8bfd6",
+      "item_label": "A4",
+      "original_suggestion": "类型Ⅱ 弦长计算",
+      "reviewed_primary_type": "类型Ⅲ 中点弦问题",
+      "secondary_types": [],
+      "review_status": "corrected",
+      "reason": "已知弦中点，利用圆心到弦的连线垂直于弦求直线方程。",
+      "question_text_sha256": "10772eef43b198457c0179eb1a8b7c3b18621e22524f2bc913b14833c5f2ee27"
+    },
+    {
+      "section": "2.6",
+      "item_id": "Q-b9078b717235eac4",
+      "item_label": "B5",
+      "original_suggestion": "类型Ⅱ 弦长计算",
+      "reviewed_primary_type": "类型Ⅱ 弦长计算",
+      "secondary_types": [
+        "类型V 直线与圆有关的最值问题"
+      ],
+      "review_status": "approved",
+      "reason": "动直线截圆所得弦长的取值范围。",
+      "question_text_sha256": "bb67769faf4a8eaa683941c5a88ac619dc632cb1ee0b917892192a7dea736a95"
+    },
+    {
+      "section": "2.6",
+      "item_id": "Q-352a2de1b919b75b",
+      "item_label": "B6",
+      "original_suggestion": "类型Ⅱ 弦长计算",
+      "reviewed_primary_type": "类型Ⅱ 弦长计算",
+      "secondary_types": [
+        "跨节：求圆的方程"
+      ],
+      "review_status": "approved",
+      "reason": "由圆心轨迹、相切和被坐标轴截得弦长共同确定圆。",
+      "question_text_sha256": "ce7dea3d4fa5e9e9185709d34e8b1e447f30378bb7e4518df9a675352ecac879"
+    },
+    {
+      "section": "2.6",
+      "item_id": "Q-6eee87ab39f56bef",
+      "item_label": "B7",
+      "original_suggestion": "类型IV 切线有关的计算",
+      "reviewed_primary_type": "类型IV 切线有关的计算",
+      "secondary_types": [],
+      "review_status": "approved",
+      "reason": "轴截面中两条线与圆弧相切，由切线几何关系求顶角。",
+      "question_text_sha256": "b8c559c6239c9b04ac166c1fb1745b8b7fa78d2695af8c35d8265ee393c3a6fc"
+    },
+    {
+      "section": "2.6",
+      "item_id": "Q-dcd3d8b0ea0ce8e2",
+      "item_label": "B8",
+      "original_suggestion": "类型V 直线与圆有关的最值问题",
+      "reviewed_primary_type": "类型I 直线与圆的位置关系的判断与应用",
+      "secondary_types": [
+        "类型V 直线与圆有关的最值问题"
+      ],
+      "review_status": "corrected",
+      "reason": "根式表示半圆，方程无实解等价于参数直线与半圆无交点。",
+      "question_text_sha256": "0d878cee1bd4d2f87215dc0ba60568db49776dd0cfbd97c7166f0d1aad26fd9a"
+    },
+    {
+      "section": "2.6",
+      "item_id": "Q-9af9370c5459c9e2",
+      "item_label": "B9",
+      "original_suggestion": "类型V 直线与圆有关的最值问题",
+      "reviewed_primary_type": "类型V 直线与圆有关的最值问题",
+      "secondary_types": [],
+      "review_status": "approved",
+      "reason": "代数式表示圆上点与定点连线斜率，求切线斜率边界。",
+      "question_text_sha256": "c8f016c7d89b53593a886a1f5212fd4b5b8f231b0069f01d2f13ac78990beddf"
+    },
+    {
+      "section": "2.6",
+      "item_id": "Q-dd078437bd5c6af9",
+      "item_label": "B10",
+      "original_suggestion": "类型Ⅱ 弦长计算",
+      "reviewed_primary_type": "类型Ⅱ 弦长计算",
+      "secondary_types": [],
+      "review_status": "approved",
+      "reason": "三角形面积由圆心到弦距离和弦长共同决定。",
+      "question_text_sha256": "262ae48e5686ad8a8b65e520f2d3a801a047e5fdbea6b2fa0b3ca759fc02f24a"
+    },
+    {
+      "section": "2.6",
+      "item_id": "Q-f50c361a8e26b2b1",
+      "item_label": "B11",
+      "original_suggestion": "类型IV 切线有关的计算",
+      "reviewed_primary_type": "类型Ⅱ 弦长计算",
+      "secondary_types": [
+        "类型I 直线与圆的位置关系的判断与应用",
+        "类型V 直线与圆有关的最值问题"
+      ],
+      "review_status": "corrected",
+      "reason": "多选主体是动直线过定点、与圆相交及最短弦，切线不是核心。",
+      "question_text_sha256": "ec84b62fffd8918f928df064cdd4a430cbf313b90782c824df95d3e4bbf87eaa"
+    },
+    {
+      "section": "2.6",
+      "item_id": "Q-8d0aba03d6cbaaff",
+      "item_label": "B12",
+      "original_suggestion": "类型IV 切线有关的计算",
+      "reviewed_primary_type": "类型V 直线与圆有关的最值问题",
+      "secondary_types": [],
+      "review_status": "corrected",
+      "reason": "求圆上动点与直线上动点间距离的最小值。",
+      "question_text_sha256": "9254523d7f2d7d44939d9e31a5a5fa3f2f40b977858a3567fc3a197320d1f657"
+    },
+    {
+      "section": "2.6",
+      "item_id": "Q-412dee7816321003",
+      "item_label": "B13",
+      "original_suggestion": "类型V 直线与圆有关的最值问题",
+      "reviewed_primary_type": "类型I 直线与圆的位置关系的判断与应用",
+      "secondary_types": [
+        "类型V 直线与圆有关的最值问题"
+      ],
+      "review_status": "corrected",
+      "reason": "研究圆与两条平行于给定直线的等距轨迹之交点个数，以确定半径范围。",
+      "question_text_sha256": "bc42f67281b2afdc6626377166e9bd20f1edba1558379863164cde7bd8d6ad17"
+    },
+    {
+      "section": "2.6",
+      "item_id": "Q-191d7514ff3e3b26",
+      "item_label": "B14",
+      "original_suggestion": "类型Ⅱ 弦长计算",
+      "reviewed_primary_type": "类型IV 切线有关的计算",
+      "secondary_types": [
+        "跨节：求圆的方程"
+      ],
+      "review_status": "corrected",
+      "reason": "先确定圆，再求过圆外点的两条切线方程，切线是最终主任务。",
+      "question_text_sha256": "391ed0a49b00a49303de74814a14605acb6693c6130765379d9d6cd7fe01628e"
+    },
+    {
+      "section": "2.6",
+      "item_id": "Q-4f9b54e94f717ad7",
+      "item_label": "B15",
+      "original_suggestion": "类型Ⅱ 弦长计算",
+      "reviewed_primary_type": "类型IV 切线有关的计算",
+      "secondary_types": [
+        "类型V 直线与圆有关的最值问题",
+        "跨节：求圆的方程"
+      ],
+      "review_status": "corrected",
+      "reason": "第一问由切点和圆心轨迹求圆，第二问求两切线构成四边形面积最小值。",
+      "question_text_sha256": "39b732b1b61633ba7484a42471d74197e95ffe369924fa77f2a894fc4c23a44e"
+    },
+    {
+      "section": "2.6",
+      "item_id": "Q-607b4bc952d9fa3e",
+      "item_label": "C16",
+      "original_suggestion": "类型Ⅲ 中点弦问题",
+      "reviewed_primary_type": "类型VI 设而不求的处理思想",
+      "secondary_types": [
+        "类型Ⅱ 弦长计算"
+      ],
+      "review_status": "corrected",
+      "reason": "点积条件与弦方向条件适合用交点关系整体处理，T并非弦中点。",
+      "question_text_sha256": "17159bf9ae9c1769d77a29158778709be86a7f27405d184b3423b2a34c35f151"
+    },
+    {
+      "section": "2.6",
+      "item_id": "Q-41fa9a7d7b856196",
+      "item_label": "C17",
+      "original_suggestion": "类型VI 设而不求的处理思想",
+      "reviewed_primary_type": "类型VI 设而不求的处理思想",
+      "secondary_types": [],
+      "review_status": "approved",
+      "reason": "不显式求交点坐标，利用根与系数关系处理两条交线斜率。",
+      "question_text_sha256": "8317d3236816d2a08e573083f9075c04b5db1f01386497b6340b4c9220d0c8a7"
+    },
+    {
+      "section": "2.6",
+      "item_id": "Q-3235c438f136521a",
+      "item_label": "C18",
+      "original_suggestion": "类型Ⅲ 中点弦问题",
+      "reviewed_primary_type": "类型VI 设而不求的处理思想",
+      "secondary_types": [
+        "类型Ⅱ 弦长计算",
+        "类型IV 切线有关的计算",
+        "类型V 直线与圆有关的最值问题",
+        "类型Ⅲ 中点弦问题"
+      ],
+      "review_status": "needs_manual_review",
+      "reason": "三问分别覆盖弦长、切线面积最值和弦中点向量存在性；现有单一主类型无法完整表达。",
+      "question_text_sha256": "3a0b150b3509f397dc164cc8d6cec802a5907a05aa90d460271caab6bd2f0485"
+    },
+    {
+      "section": "2.6",
+      "item_id": "Q-b674f328e704d034",
+      "item_label": "C19",
+      "original_suggestion": "类型Ⅲ 中点弦问题",
+      "reviewed_primary_type": "类型VI 设而不求的处理思想",
+      "secondary_types": [
+        "跨节：轨迹方程",
+        "类型V 直线与圆有关的最值问题"
+      ],
+      "review_status": "corrected",
+      "reason": "第一问求分点轨迹，第二问用交点和斜率关系证明截距乘积为定值，不是中点弦。",
+      "question_text_sha256": "78060629b6ee5572916e9dd70b3ae47ab748a3d681d3264c3235c591ff1404c5"
+    },
+    {
+      "section": "2.7",
+      "item_id": "Q-de8b91fd6d8bd93d",
+      "item_label": "A1",
+      "original_suggestion": "类型I 圆与圆的位置关系的判断与应用",
+      "reviewed_primary_type": "类型I 圆与圆的位置关系的判断与应用",
+      "secondary_types": [],
+      "review_status": "approved",
+      "reason": "比较圆心距与半径和、差判断两圆位置关系。",
+      "question_text_sha256": "15f52e9185d73eff2fc6d55a75cef476b9d5bd36e7dab76dcc9d28e506b613a9"
+    },
+    {
+      "section": "2.7",
+      "item_id": "Q-12a05e91f9e96b9e",
+      "item_label": "A2",
+      "original_suggestion": "类型I 圆与圆的位置关系的判断与应用",
+      "reviewed_primary_type": "类型I 圆与圆的位置关系的判断与应用",
+      "secondary_types": [],
+      "review_status": "approved",
+      "reason": "由两圆位置关系判断公切线条数。",
+      "question_text_sha256": "25b35afce923e8384174dd84c12295945e0b608ed848097e7d6e1f71d43dd502"
+    },
+    {
+      "section": "2.7",
+      "item_id": "Q-e60ca351152df240",
+      "item_label": "A3",
+      "original_suggestion": "类型Ⅱ 两圆的公共弦问题",
+      "reviewed_primary_type": "类型Ⅱ 两圆的公共弦问题",
+      "secondary_types": [],
+      "review_status": "approved",
+      "reason": "两圆方程相减得到公共弦所在直线。",
+      "question_text_sha256": "d616f2d4914da724e5b7f9f579afcd95ba9cbe8c76ee9b44a03428bcc8239634"
+    },
+    {
+      "section": "2.7",
+      "item_id": "Q-44dd9bc56418d9da",
+      "item_label": "B4",
+      "original_suggestion": "类型I 圆与圆的位置关系的判断与应用",
+      "reviewed_primary_type": "类型I 圆与圆的位置关系的判断与应用",
+      "secondary_types": [],
+      "review_status": "approved",
+      "reason": "圆心固定在原点，通过相切条件选择一个合法半径。",
+      "question_text_sha256": "42185051977454f2b5036a5e1afd10c5973fabb8835c09daca39737d169d30ff"
+    },
+    {
+      "section": "2.7",
+      "item_id": "Q-4a733d5b94389d64",
+      "item_label": "B5",
+      "original_suggestion": "类型I 圆与圆的位置关系的判断与应用",
+      "reviewed_primary_type": "类型I 圆与圆的位置关系的判断与应用",
+      "secondary_types": [],
+      "review_status": "approved",
+      "reason": "三条公切线对应两圆外切，由此求参数。",
+      "question_text_sha256": "9898870a0440c8918de6329f9d265a0e898ec892a1046ec33299eabcdc5a9e8a"
+    },
+    {
+      "section": "2.7",
+      "item_id": "Q-d325a6417f4a22c4",
+      "item_label": "B6",
+      "original_suggestion": "类型I 圆与圆的位置关系的判断与应用",
+      "reviewed_primary_type": "类型IV 基于两圆位置关系的一类最值问题",
+      "secondary_types": [
+        "类型I 圆与圆的位置关系的判断与应用"
+      ],
+      "review_status": "corrected",
+      "reason": "动点分别在两个圆上，目标是两点距离最大值。",
+      "question_text_sha256": "066c0a5beaece1737d55c57707ba212478cfd3c8fe594c6f44c6f34f4f03075e"
+    },
+    {
+      "section": "2.7",
+      "item_id": "Q-1a60db334ec0137c",
+      "item_label": "B7",
+      "original_suggestion": "类型I 圆与圆的位置关系的判断与应用",
+      "reviewed_primary_type": "类型V 隐圆问题",
+      "secondary_types": [
+        "切点弦与极点极线"
+      ],
+      "review_status": "corrected",
+      "reason": "动点引圆的两切线，切点弦随动点变化但经过定点，属于极点极线结构。",
+      "question_text_sha256": "1fb4b2785cd2b9fb8c9f47e7c2b25f5cf2f0c2e24ae59b9a898e00aa3db1a212"
+    },
+    {
+      "section": "2.7",
+      "item_id": "Q-430fcab2047db52d",
+      "item_label": "B8",
+      "original_suggestion": "类型Ⅱ 两圆的公共弦问题",
+      "reviewed_primary_type": "类型Ⅱ 两圆的公共弦问题",
+      "secondary_types": [],
+      "review_status": "approved",
+      "reason": "由根轴和圆心到根轴距离计算公共弦长。",
+      "question_text_sha256": "17437c25054f1385a491c564eeaa9ccf84c8576640b42dd66385b77230224c06"
+    },
+    {
+      "section": "2.7",
+      "item_id": "Q-6a30dcbeeb004cc7",
+      "item_label": "B9",
+      "original_suggestion": "类型III 求两圆的公切线方程",
+      "reviewed_primary_type": "类型I 圆与圆的位置关系的判断与应用",
+      "secondary_types": [
+        "类型III 求两圆的公切线方程"
+      ],
+      "review_status": "corrected",
+      "reason": "目标是构造一个同时与两条直线及已知圆相切的圆，不是求两圆公切线。",
+      "question_text_sha256": "70c089c424cebc9aa6e8ab4d753d1ef2e76cd1847398273ed4eb8ff6f912a29b"
+    },
+    {
+      "section": "2.7",
+      "item_id": "Q-731096b278b5a9a2",
+      "item_label": "B10",
+      "original_suggestion": "类型I 圆与圆的位置关系的判断与应用",
+      "reviewed_primary_type": "类型III 求两圆的公切线方程",
+      "secondary_types": [
+        "类型I 圆与圆的位置关系的判断与应用"
+      ],
+      "review_status": "corrected",
+      "reason": "利用两外切圆的一条公切线及圆心到该线距离，求半径比。",
+      "question_text_sha256": "f272a96d76fab5b1acbbae7c137d960089e46974edd9953faa32c18469d9604d"
+    },
+    {
+      "section": "2.7",
+      "item_id": "Q-93afdf586dee5dd3",
+      "item_label": "B11",
+      "original_suggestion": "类型V 隐圆问题",
+      "reviewed_primary_type": "类型V 隐圆问题",
+      "secondary_types": [],
+      "review_status": "approved",
+      "reason": "距离比条件生成阿波罗尼斯圆，再研究参数直线与隐圆有交点。",
+      "question_text_sha256": "8d8c3ab3616845c410e41bcc17f1c34568da4877894fd0426f75e846bcfeb5f7"
+    },
+    {
+      "section": "2.7",
+      "item_id": "Q-585ad5af2b889532",
+      "item_label": "B12",
+      "original_suggestion": "类型I 圆与圆的位置关系的判断与应用",
+      "reviewed_primary_type": "类型III 求两圆的公切线方程",
+      "secondary_types": [],
+      "review_status": "corrected",
+      "reason": "直接求同时与两个已知圆相切的直线方程。",
+      "question_text_sha256": "d48bd4172002855c06e19343499bd2596173801a2c6a68dc2277f750f754791c"
+    },
+    {
+      "section": "2.7",
+      "item_id": "Q-ee0b2552a620d558",
+      "item_label": "B13",
+      "original_suggestion": "类型III 求两圆的公切线方程",
+      "reviewed_primary_type": "类型III 求两圆的公切线方程",
+      "secondary_types": [],
+      "review_status": "approved",
+      "reason": "写出两个给定圆的一条公切线。",
+      "question_text_sha256": "c92b89d6d67ecef2c663ff3dc6ba17f111e6c3df7ec8aab9ccb9f912635b9d54"
+    },
+    {
+      "section": "2.7",
+      "item_id": "Q-9753a64cc705740f",
+      "item_label": "B14",
+      "original_suggestion": "类型I 圆与圆的位置关系的判断与应用",
+      "reviewed_primary_type": "类型V 隐圆问题",
+      "secondary_types": [],
+      "review_status": "corrected",
+      "reason": "两动直线交点的轨迹形成隐圆或圆弧，目标是到原点距离范围。",
+      "question_text_sha256": "eb1569363b6260d4a20c1c5f413d681c7e146652f1b48caef961200fd92b3083"
+    },
+    {
+      "section": "2.7",
+      "item_id": "Q-c66df36a3e5c4f7f",
+      "item_label": "B15",
+      "original_suggestion": "类型Ⅱ 两圆的公共弦问题",
+      "reviewed_primary_type": "类型V 隐圆问题",
+      "secondary_types": [
+        "类型IV 基于两圆位置关系的一类最值问题"
+      ],
+      "review_status": "corrected",
+      "reason": "距离比条件先生成阿波罗尼斯圆，再求圆上点到参数直线的最大距离。",
+      "question_text_sha256": "886492ca292cd3d1c78a0faff0e4a54ff411b2230f11b4699a3f9f7860550201"
+    },
+    {
+      "section": "2.7",
+      "item_id": "Q-4948c11510e291ea",
+      "item_label": "B16",
+      "original_suggestion": "类型I 圆与圆的位置关系的判断与应用",
+      "reviewed_primary_type": "类型I 圆与圆的位置关系的判断与应用",
+      "secondary_types": [
+        "类型Ⅱ 两圆的公共弦问题"
+      ],
+      "review_status": "approved",
+      "reason": "综合判断圆心距、相切、相交、公切线条数和公共弦长。",
+      "question_text_sha256": "9d394c20842cec7929a3cc510121582f42c5f097335be3d26b98e58626ded83b"
+    },
+    {
+      "section": "2.7",
+      "item_id": "Q-01bee3311080f2cb",
+      "item_label": "C17",
+      "original_suggestion": "类型V 隐圆问题",
+      "reviewed_primary_type": "类型V 隐圆问题",
+      "secondary_types": [],
+      "review_status": "approved",
+      "reason": "切线长比例条件化成点P的隐圆，再研究参数直线与隐圆有两个交点。",
+      "question_text_sha256": "4f3dfb4ccb10bc7c9d885f22f15ce3af91750e8d152a44d4a22c9aacd34fcf2b"
+    },
+    {
+      "section": "2.7",
+      "item_id": "Q-f8d63b657ac4e8fc",
+      "item_label": "C18",
+      "original_suggestion": "类型VI 两类圆系方程的应用",
+      "reviewed_primary_type": "类型VI 两类圆系方程的应用",
+      "secondary_types": [
+        "跨节：直线与圆相交"
+      ],
+      "review_status": "approved",
+      "reason": "含参圆方程与定直线相交，利用两交点向量垂直求圆系参数。",
+      "question_text_sha256": "b4e1adcee13a536c0c4a94d4d5a89ffed13f071e51dbed8d33d8105dece01ee8"
+    },
+    {
+      "section": "2.7",
+      "item_id": "Q-33e71e5233203fca",
+      "item_label": "C19",
+      "original_suggestion": "类型V 隐圆问题",
+      "reviewed_primary_type": "类型V 隐圆问题",
+      "secondary_types": [],
+      "review_status": "approved",
+      "reason": "直角条件将BC约束到以A为关联点的隐圆结构，再与已知圆联动求弦长范围。",
+      "question_text_sha256": "792728ab5b54bf339a1cceb6afef796465f2daebc7c3e8a5229d3de76d2ad19e"
+    }
+  ],
+  "summary": {
+    "reviewed_items": 137,
+    "chapter1_new_classifications": 16,
+    "chapter2_reviewed_items": 121,
+    "approved": 67,
+    "classified_from_untyped": 16,
+    "corrected": 51,
+    "needs_manual_review": 3,
+    "manual_followups": [
+      "2.1 B9：现有类型体系缺少曲线上动点所成斜率范围。",
+      "2.5 B13：题面存在“恒被直线平行”的OCR异常，需回看原页。",
+      "2.6 C18：三问横跨弦长、切线面积最值和中点弦存在性，需决定是否保留综合子类。"
+    ],
+    "status": "review_complete_with_three_explicit_followups"
+  }
+}

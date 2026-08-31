@@ -1,0 +1,4903 @@
+{
+  "schema_version": "ybt-deep-section-simulation-v3",
+  "generated_at": "2026-08-31T04:06:32.838096+00:00",
+  "chapter": 5,
+  "section": "5.3",
+  "label": "第3节 函数的单调性",
+  "simulation_kind": "answer_isolated_synthetic_route_stress",
+  "honesty_boundary": "Attempts test route actionability. They contain no final learner answer, so mathematical correctness and mastery are not claimed.",
+  "source_binding": {
+    "manifest_sha256": "db9d20c619d78b202750a5416105a3f8510f5b074d81eabb8a248314b585f5c6",
+    "student_learning_items_sha256": "55662ff0f07e1d33290d7eba476ed59d3da8c1c47be275fc64486160b19e997f",
+    "student_packet_sha256": "3e09bf85ee96ff95c931a922d3217b3856a5bb3f19b4ccd6dba0783bf781bd50",
+    "grader_learning_packet_sha256": "9f051a61b75dad4389e3b9f00ae9c07d56adf45e67cf91b4e9e180392731a747",
+    "route_sha256": "2d5e39181610683e979d32875525ee86b483d3a98eeb6ba6aa8265272edfba63",
+    "learner_input_snapshot_sha256": "2e4438e67575d44fe2cb8219ee029692baa6adf5778c33af44f7fdbfd753a458"
+  },
+  "answer_isolation": {
+    "frozen_attempts_path": "reports/deep_simulation_runs/route-audit-5391e980be231c3c/frozen/5.3.jsonl.gz",
+    "frozen_attempts_sha256": "e694dd6f366ff905d77b2e6544f7d9f0f7e5ae42898f5af9d0ade4f1de18a8aa",
+    "route_assessments_path": "reports/deep_simulation_runs/route-audit-5391e980be231c3c/route_assessments/5.3.jsonl.gz",
+    "route_assessments_sha256": "b51353b1ae56f2450c41570c86b92a449b412309cb06554eb4985dc5539505a1",
+    "learner_answer_material_loaded": false,
+    "grader_material_loaded_after_freeze": true,
+    "grader_evidence": {
+      "parsed_automatic": 20,
+      "review_required_text": 0,
+      "source_page_bound": 19,
+      "textbook_solution": 11,
+      "blocked": 0
+    },
+    "status": "passed"
+  },
+  "items": [
+    {
+      "item_key": "LI:42d873f4c41e7188",
+      "item_id": "42d873f4c41e7188",
+      "ordinal": 1,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例1",
+      "group": null,
+      "cycle_id": "5.3-cycle-1",
+      "cycle_sequence": 1,
+      "cycle_title": "函数的单调性与导数",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性"
+      ],
+      "required_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性"
+      ],
+      "prerequisite_course_refs": [],
+      "knowledge_refs": [
+        "5.3-k1"
+      ],
+      "type_refs": [],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "不等式",
+        "f",
+        "x"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "VISION_VERIFIED",
+        "image_refs": [
+          {
+            "ref": "imgs/img_in_image_box_810_434_1005_596.jpg",
+            "path": "data/ocr_live_current/chapter5_95/imgs/img_in_image_box_810_434_1005_596.jpg",
+            "exists": true
+          }
+        ]
+      },
+      "question_text_sha256": "713e96e4974176df30a942238a44c2e4549d0e2cb017135123689b67cf608a8a",
+      "source_question_text_sha256": "713e96e4974176df30a942238a44c2e4549d0e2cb017135123689b67cf608a8a",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "713e96e4974176df30a942238a44c2e4549d0e2cb017135123689b67cf608a8a",
+        "learner_question_text_sha256": "713e96e4974176df30a942238a44c2e4549d0e2cb017135123689b67cf608a8a"
+      },
+      "question_signal_excerpt": "不等式、f、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:1b9adce99417c31e",
+      "item_id": "1b9adce99417c31e",
+      "ordinal": 2,
+      "ordinal_in_cycle": 2,
+      "kind": "worked_example",
+      "label": "例2",
+      "group": null,
+      "cycle_id": "5.3-cycle-1",
+      "cycle_sequence": 1,
+      "cycle_title": "函数的单调性与导数",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性"
+      ],
+      "required_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性"
+      ],
+      "prerequisite_course_refs": [],
+      "knowledge_refs": [
+        "5.3-k1"
+      ],
+      "type_refs": [],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "单调",
+        "范围",
+        "f",
+        "x",
+        "\\frac"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "84b921eca30772431fa893f1dee6c7fedc9cadf5cc1ce5235fdfbd955ef5a72c",
+      "source_question_text_sha256": "84b921eca30772431fa893f1dee6c7fedc9cadf5cc1ce5235fdfbd955ef5a72c",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "84b921eca30772431fa893f1dee6c7fedc9cadf5cc1ce5235fdfbd955ef5a72c",
+        "learner_question_text_sha256": "84b921eca30772431fa893f1dee6c7fedc9cadf5cc1ce5235fdfbd955ef5a72c"
+      },
+      "question_signal_excerpt": "单调、范围、f、x、\\frac",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:093e4401719d60b9",
+      "item_id": "093e4401719d60b9",
+      "ordinal": 3,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例3",
+      "group": null,
+      "cycle_id": "5.3-cycle-2",
+      "cycle_sequence": 2,
+      "cycle_title": "利用导数判断函数的单调性",
+      "course_refs": [
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型",
+        "4.1.3.1 含参二次不等式的分类技巧",
+        "4.1.3.2 二次方程根的分布（上）",
+        "4.1.3.2 二次方程根的分布（下）",
+        "4.1.3.3 二次恒成立模型",
+        "4.1.4.1 不含参数的函数的单调性"
+      ],
+      "course_titles": [
+        "含参函数单调性讨论之可因式分解型（上）",
+        "含参函数单调性讨论之可因式分解型（中）",
+        "含参函数单调性讨论之可因式分解型（下）",
+        "含参函数单调性讨论之类二次型",
+        "含参函数单调性讨论之不可因式分解型（上）",
+        "含参函数单调性讨论之不可因式分解型（中）",
+        "含参函数单调性讨论之不可因式分解型（下）",
+        "含参函数单调性讨论之超越函数",
+        "已知单调性求参之导数为二次型",
+        "已知单调性求参之导数为非二次型",
+        "含参二次不等式的分类技巧",
+        "二次方程根的分布（上）",
+        "二次方程根的分布（下）",
+        "二次恒成立模型",
+        "不含参数的函数的单调性"
+      ],
+      "required_course_refs": [
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型",
+        "4.1.3.1 含参二次不等式的分类技巧",
+        "4.1.3.2 二次方程根的分布（上）",
+        "4.1.3.2 二次方程根的分布（下）",
+        "4.1.3.3 二次恒成立模型"
+      ],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性"
+      ],
+      "knowledge_refs": [
+        "5.3-k2"
+      ],
+      "type_refs": [],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "单调",
+        "f",
+        "x",
+        "\\ln"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "483ec403aed3aec6d9f5780098d87e52e85243eef2bf1cba104780c003fe3007",
+      "source_question_text_sha256": "483ec403aed3aec6d9f5780098d87e52e85243eef2bf1cba104780c003fe3007",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "483ec403aed3aec6d9f5780098d87e52e85243eef2bf1cba104780c003fe3007",
+        "learner_question_text_sha256": "483ec403aed3aec6d9f5780098d87e52e85243eef2bf1cba104780c003fe3007"
+      },
+      "question_signal_excerpt": "单调、f、x、\\ln",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:5c4976572e9b3284",
+      "item_id": "5c4976572e9b3284",
+      "ordinal": 4,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例4",
+      "group": null,
+      "cycle_id": "5.3-cycle-3",
+      "cycle_sequence": 3,
+      "cycle_title": "类型Ⅰ 导函数与原函数图象关联的分析",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "含参函数单调性讨论之可因式分解型（上）",
+        "含参函数单调性讨论之可因式分解型（中）",
+        "含参函数单调性讨论之可因式分解型（下）",
+        "含参函数单调性讨论之类二次型",
+        "含参函数单调性讨论之不可因式分解型（上）",
+        "含参函数单调性讨论之不可因式分解型（中）",
+        "含参函数单调性讨论之不可因式分解型（下）",
+        "含参函数单调性讨论之超越函数",
+        "已知单调性求参之导数为二次型",
+        "已知单调性求参之导数为非二次型"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅰ 导函数与原函数图象关联的分析"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "y",
+        "f",
+        "x"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "VISION_VERIFIED",
+        "image_refs": [
+          {
+            "ref": "imgs/img_in_image_box_120_1056_277_1201.jpg",
+            "path": "data/ocr_live_current/chapter5_95/imgs/img_in_image_box_120_1056_277_1201.jpg",
+            "exists": true
+          },
+          {
+            "ref": "imgs/img_in_image_box_292_1053_475_1255.jpg",
+            "path": "data/ocr_live_current/chapter5_95/imgs/img_in_image_box_292_1053_475_1255.jpg",
+            "exists": true
+          },
+          {
+            "ref": "imgs/img_in_image_box_487_1053_674_1252.jpg",
+            "path": "data/ocr_live_current/chapter5_95/imgs/img_in_image_box_487_1053_674_1252.jpg",
+            "exists": true
+          },
+          {
+            "ref": "imgs/img_in_image_box_690_1054_874_1227.jpg",
+            "path": "data/ocr_live_current/chapter5_95/imgs/img_in_image_box_690_1054_874_1227.jpg",
+            "exists": true
+          },
+          {
+            "ref": "imgs/img_in_image_box_889_1052_1075_1225.jpg",
+            "path": "data/ocr_live_current/chapter5_95/imgs/img_in_image_box_889_1052_1075_1225.jpg",
+            "exists": true
+          }
+        ]
+      },
+      "question_text_sha256": "494fd54805fb6e0a7165c47b7f3fe1a75b2f864a7244a00f8e781e1adb389a9b",
+      "source_question_text_sha256": "494fd54805fb6e0a7165c47b7f3fe1a75b2f864a7244a00f8e781e1adb389a9b",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "494fd54805fb6e0a7165c47b7f3fe1a75b2f864a7244a00f8e781e1adb389a9b",
+        "learner_question_text_sha256": "494fd54805fb6e0a7165c47b7f3fe1a75b2f864a7244a00f8e781e1adb389a9b"
+      },
+      "question_signal_excerpt": "y、f、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:50fc5c7694177dad",
+      "item_id": "50fc5c7694177dad",
+      "ordinal": 5,
+      "ordinal_in_cycle": 2,
+      "kind": "direct_variant",
+      "label": "例4 变式1",
+      "group": null,
+      "cycle_id": "5.3-cycle-3",
+      "cycle_sequence": 3,
+      "cycle_title": "类型Ⅰ 导函数与原函数图象关联的分析",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "含参函数单调性讨论之可因式分解型（上）",
+        "含参函数单调性讨论之可因式分解型（中）",
+        "含参函数单调性讨论之可因式分解型（下）",
+        "含参函数单调性讨论之类二次型",
+        "含参函数单调性讨论之不可因式分解型（上）",
+        "含参函数单调性讨论之不可因式分解型（中）",
+        "含参函数单调性讨论之不可因式分解型（下）",
+        "含参函数单调性讨论之超越函数",
+        "已知单调性求参之导数为二次型",
+        "已知单调性求参之导数为非二次型"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅰ 导函数与原函数图象关联的分析"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "y",
+        "f",
+        "x"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "VISION_VERIFIED",
+        "image_refs": [
+          {
+            "ref": "imgs/img_in_image_box_176_165_342_292.jpg",
+            "path": "data/ocr_live_current/chapter5_95/imgs/img_in_image_box_176_165_342_292.jpg",
+            "exists": true
+          },
+          {
+            "ref": "imgs/img_in_image_box_367_167_514_291.jpg",
+            "path": "data/ocr_live_current/chapter5_95/imgs/img_in_image_box_367_167_514_291.jpg",
+            "exists": true
+          },
+          {
+            "ref": "imgs/img_in_image_box_536_164_677_289.jpg",
+            "path": "data/ocr_live_current/chapter5_95/imgs/img_in_image_box_536_164_677_289.jpg",
+            "exists": true
+          },
+          {
+            "ref": "imgs/img_in_image_box_702_165_851_287.jpg",
+            "path": "data/ocr_live_current/chapter5_95/imgs/img_in_image_box_702_165_851_287.jpg",
+            "exists": true
+          },
+          {
+            "ref": "imgs/img_in_image_box_877_164_1016_290.jpg",
+            "path": "data/ocr_live_current/chapter5_95/imgs/img_in_image_box_877_164_1016_290.jpg",
+            "exists": true
+          }
+        ]
+      },
+      "question_text_sha256": "c0d917408c9433378a4c8fab8074d2ec6afd9f3186188531f0a7b87b50685e59",
+      "source_question_text_sha256": "c0d917408c9433378a4c8fab8074d2ec6afd9f3186188531f0a7b87b50685e59",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "c0d917408c9433378a4c8fab8074d2ec6afd9f3186188531f0a7b87b50685e59",
+        "learner_question_text_sha256": "c0d917408c9433378a4c8fab8074d2ec6afd9f3186188531f0a7b87b50685e59"
+      },
+      "question_signal_excerpt": "y、f、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:4a741aebf8b1ab18",
+      "item_id": "4a741aebf8b1ab18",
+      "ordinal": 6,
+      "ordinal_in_cycle": 3,
+      "kind": "direct_variant",
+      "label": "例4 变式2",
+      "group": null,
+      "cycle_id": "5.3-cycle-3",
+      "cycle_sequence": 3,
+      "cycle_title": "类型Ⅰ 导函数与原函数图象关联的分析",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "含参函数单调性讨论之可因式分解型（上）",
+        "含参函数单调性讨论之可因式分解型（中）",
+        "含参函数单调性讨论之可因式分解型（下）",
+        "含参函数单调性讨论之类二次型",
+        "含参函数单调性讨论之不可因式分解型（上）",
+        "含参函数单调性讨论之不可因式分解型（中）",
+        "含参函数单调性讨论之不可因式分解型（下）",
+        "含参函数单调性讨论之超越函数",
+        "已知单调性求参之导数为二次型",
+        "已知单调性求参之导数为非二次型"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅰ 导函数与原函数图象关联的分析"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "f",
+        "x"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "65155cd7bfe10edfcadf44b0dbb165f37d5323840769fec1666bac3d257968fd",
+      "source_question_text_sha256": "65155cd7bfe10edfcadf44b0dbb165f37d5323840769fec1666bac3d257968fd",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "65155cd7bfe10edfcadf44b0dbb165f37d5323840769fec1666bac3d257968fd",
+        "learner_question_text_sha256": "65155cd7bfe10edfcadf44b0dbb165f37d5323840769fec1666bac3d257968fd"
+      },
+      "question_signal_excerpt": "f、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:11127f5d6bd6592e",
+      "item_id": "11127f5d6bd6592e",
+      "ordinal": 7,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例5",
+      "group": null,
+      "cycle_id": "5.3-cycle-4",
+      "cycle_sequence": 4,
+      "cycle_title": "类型Ⅱ 用导数研究无参函数的单调性",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "含参函数单调性讨论之可因式分解型（上）",
+        "含参函数单调性讨论之可因式分解型（中）",
+        "含参函数单调性讨论之可因式分解型（下）",
+        "含参函数单调性讨论之类二次型",
+        "含参函数单调性讨论之不可因式分解型（上）",
+        "含参函数单调性讨论之不可因式分解型（中）",
+        "含参函数单调性讨论之不可因式分解型（下）",
+        "含参函数单调性讨论之超越函数",
+        "已知单调性求参之导数为二次型",
+        "已知单调性求参之导数为非二次型"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 用导数研究无参函数的单调性"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "切线",
+        "单调",
+        "f",
+        "x",
+        "\\frac"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "08a94f63cb1bec4465ce93bab3ea02ab647ffa33187370a6bf596294ca057ef5",
+      "source_question_text_sha256": "08a94f63cb1bec4465ce93bab3ea02ab647ffa33187370a6bf596294ca057ef5",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "08a94f63cb1bec4465ce93bab3ea02ab647ffa33187370a6bf596294ca057ef5",
+        "learner_question_text_sha256": "08a94f63cb1bec4465ce93bab3ea02ab647ffa33187370a6bf596294ca057ef5"
+      },
+      "question_signal_excerpt": "切线、单调、f、x、\\frac",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:dd697f86bcc774b4",
+      "item_id": "dd697f86bcc774b4",
+      "ordinal": 8,
+      "ordinal_in_cycle": 2,
+      "kind": "direct_variant",
+      "label": "例5 变式1",
+      "group": null,
+      "cycle_id": "5.3-cycle-4",
+      "cycle_sequence": 4,
+      "cycle_title": "类型Ⅱ 用导数研究无参函数的单调性",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "含参函数单调性讨论之可因式分解型（上）",
+        "含参函数单调性讨论之可因式分解型（中）",
+        "含参函数单调性讨论之可因式分解型（下）",
+        "含参函数单调性讨论之类二次型",
+        "含参函数单调性讨论之不可因式分解型（上）",
+        "含参函数单调性讨论之不可因式分解型（中）",
+        "含参函数单调性讨论之不可因式分解型（下）",
+        "含参函数单调性讨论之超越函数",
+        "已知单调性求参之导数为二次型",
+        "已知单调性求参之导数为非二次型"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 用导数研究无参函数的单调性"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "单调",
+        "f",
+        "x",
+        "\\frac",
+        "\\ln"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "babe5b3c6fcd4f3614feb21efe9451662b0efe68a8d200aa9242a8912af26fc4",
+      "source_question_text_sha256": "babe5b3c6fcd4f3614feb21efe9451662b0efe68a8d200aa9242a8912af26fc4",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "babe5b3c6fcd4f3614feb21efe9451662b0efe68a8d200aa9242a8912af26fc4",
+        "learner_question_text_sha256": "babe5b3c6fcd4f3614feb21efe9451662b0efe68a8d200aa9242a8912af26fc4"
+      },
+      "question_signal_excerpt": "单调、f、x、\\frac、\\ln",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:d79a697e770ca7ad",
+      "item_id": "d79a697e770ca7ad",
+      "ordinal": 9,
+      "ordinal_in_cycle": 3,
+      "kind": "direct_variant",
+      "label": "例5 变式2",
+      "group": null,
+      "cycle_id": "5.3-cycle-4",
+      "cycle_sequence": 4,
+      "cycle_title": "类型Ⅱ 用导数研究无参函数的单调性",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "含参函数单调性讨论之可因式分解型（上）",
+        "含参函数单调性讨论之可因式分解型（中）",
+        "含参函数单调性讨论之可因式分解型（下）",
+        "含参函数单调性讨论之类二次型",
+        "含参函数单调性讨论之不可因式分解型（上）",
+        "含参函数单调性讨论之不可因式分解型（中）",
+        "含参函数单调性讨论之不可因式分解型（下）",
+        "含参函数单调性讨论之超越函数",
+        "已知单调性求参之导数为二次型",
+        "已知单调性求参之导数为非二次型"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 用导数研究无参函数的单调性"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "单调",
+        "f",
+        "x",
+        "\\frac",
+        "e"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "55e4fb873df5a2b5a5e6f82410e6386cbf192e1e6781ebfa59c01ded8c17560f",
+      "source_question_text_sha256": "55e4fb873df5a2b5a5e6f82410e6386cbf192e1e6781ebfa59c01ded8c17560f",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "55e4fb873df5a2b5a5e6f82410e6386cbf192e1e6781ebfa59c01ded8c17560f",
+        "learner_question_text_sha256": "55e4fb873df5a2b5a5e6f82410e6386cbf192e1e6781ebfa59c01ded8c17560f"
+      },
+      "question_signal_excerpt": "单调、f、x、\\frac、e",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:457a31650d634e53",
+      "item_id": "457a31650d634e53",
+      "ordinal": 10,
+      "ordinal_in_cycle": 4,
+      "kind": "direct_variant",
+      "label": "例5 变式3",
+      "group": null,
+      "cycle_id": "5.3-cycle-4",
+      "cycle_sequence": 4,
+      "cycle_title": "类型Ⅱ 用导数研究无参函数的单调性",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "含参函数单调性讨论之可因式分解型（上）",
+        "含参函数单调性讨论之可因式分解型（中）",
+        "含参函数单调性讨论之可因式分解型（下）",
+        "含参函数单调性讨论之类二次型",
+        "含参函数单调性讨论之不可因式分解型（上）",
+        "含参函数单调性讨论之不可因式分解型（中）",
+        "含参函数单调性讨论之不可因式分解型（下）",
+        "含参函数单调性讨论之超越函数",
+        "已知单调性求参之导数为二次型",
+        "已知单调性求参之导数为非二次型"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 用导数研究无参函数的单调性"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "切线",
+        "单调",
+        "f",
+        "x",
+        "a"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "1cb99a6024273ef19aefab41a798bb0a01cf62f5dc7808f12206a12ea508ce4e",
+      "source_question_text_sha256": "1cb99a6024273ef19aefab41a798bb0a01cf62f5dc7808f12206a12ea508ce4e",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "1cb99a6024273ef19aefab41a798bb0a01cf62f5dc7808f12206a12ea508ce4e",
+        "learner_question_text_sha256": "1cb99a6024273ef19aefab41a798bb0a01cf62f5dc7808f12206a12ea508ce4e"
+      },
+      "question_signal_excerpt": "切线、单调、f、x、a",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:5aaf13674700f857",
+      "item_id": "5aaf13674700f857",
+      "ordinal": 11,
+      "ordinal_in_cycle": 5,
+      "kind": "direct_variant",
+      "label": "例5 变式4",
+      "group": null,
+      "cycle_id": "5.3-cycle-4",
+      "cycle_sequence": 4,
+      "cycle_title": "类型Ⅱ 用导数研究无参函数的单调性",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "含参函数单调性讨论之可因式分解型（上）",
+        "含参函数单调性讨论之可因式分解型（中）",
+        "含参函数单调性讨论之可因式分解型（下）",
+        "含参函数单调性讨论之类二次型",
+        "含参函数单调性讨论之不可因式分解型（上）",
+        "含参函数单调性讨论之不可因式分解型（中）",
+        "含参函数单调性讨论之不可因式分解型（下）",
+        "含参函数单调性讨论之超越函数",
+        "已知单调性求参之导数为二次型",
+        "已知单调性求参之导数为非二次型"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 用导数研究无参函数的单调性"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "单调",
+        "f",
+        "x",
+        "e"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "5dd960a73d83dd0b75395c91fd1a48a8b0b8d5362ee270c0e4774edcaf0f4422",
+      "source_question_text_sha256": "5dd960a73d83dd0b75395c91fd1a48a8b0b8d5362ee270c0e4774edcaf0f4422",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "5dd960a73d83dd0b75395c91fd1a48a8b0b8d5362ee270c0e4774edcaf0f4422",
+        "learner_question_text_sha256": "5dd960a73d83dd0b75395c91fd1a48a8b0b8d5362ee270c0e4774edcaf0f4422"
+      },
+      "question_signal_excerpt": "单调、f、x、e",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:a441ff4e1493ea5f",
+      "item_id": "a441ff4e1493ea5f",
+      "ordinal": 12,
+      "ordinal_in_cycle": 6,
+      "kind": "direct_variant",
+      "label": "例5 变式5",
+      "group": null,
+      "cycle_id": "5.3-cycle-4",
+      "cycle_sequence": 4,
+      "cycle_title": "类型Ⅱ 用导数研究无参函数的单调性",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "含参函数单调性讨论之可因式分解型（上）",
+        "含参函数单调性讨论之可因式分解型（中）",
+        "含参函数单调性讨论之可因式分解型（下）",
+        "含参函数单调性讨论之类二次型",
+        "含参函数单调性讨论之不可因式分解型（上）",
+        "含参函数单调性讨论之不可因式分解型（中）",
+        "含参函数单调性讨论之不可因式分解型（下）",
+        "含参函数单调性讨论之超越函数",
+        "已知单调性求参之导数为二次型",
+        "已知单调性求参之导数为非二次型"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 用导数研究无参函数的单调性"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "单调",
+        "f",
+        "x",
+        "\\ln"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "e877176283b5675a5a4e2d5ba93a3f95f3cc8b284092faf26b963065cc356e5b",
+      "source_question_text_sha256": "e877176283b5675a5a4e2d5ba93a3f95f3cc8b284092faf26b963065cc356e5b",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "e877176283b5675a5a4e2d5ba93a3f95f3cc8b284092faf26b963065cc356e5b",
+        "learner_question_text_sha256": "e877176283b5675a5a4e2d5ba93a3f95f3cc8b284092faf26b963065cc356e5b"
+      },
+      "question_signal_excerpt": "单调、f、x、\\ln",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:0306980f630fd9f3",
+      "item_id": "0306980f630fd9f3",
+      "ordinal": 13,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例6",
+      "group": null,
+      "cycle_id": "5.3-cycle-5",
+      "cycle_sequence": 5,
+      "cycle_title": "类型Ⅲ 讨论含参函数的单调性",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "含参函数单调性讨论之可因式分解型（上）",
+        "含参函数单调性讨论之可因式分解型（中）",
+        "含参函数单调性讨论之可因式分解型（下）",
+        "含参函数单调性讨论之类二次型",
+        "含参函数单调性讨论之不可因式分解型（上）",
+        "含参函数单调性讨论之不可因式分解型（中）",
+        "含参函数单调性讨论之不可因式分解型（下）",
+        "含参函数单调性讨论之超越函数",
+        "已知单调性求参之导数为二次型",
+        "已知单调性求参之导数为非二次型"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 讨论含参函数的单调性"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "单调",
+        "f",
+        "x",
+        "ax",
+        "\\mathrm"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "0f00bd51fa63e63c0e5595e09ebe26be1813826b2bad4da74c61642461ed85d2",
+      "source_question_text_sha256": "0f00bd51fa63e63c0e5595e09ebe26be1813826b2bad4da74c61642461ed85d2",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "0f00bd51fa63e63c0e5595e09ebe26be1813826b2bad4da74c61642461ed85d2",
+        "learner_question_text_sha256": "0f00bd51fa63e63c0e5595e09ebe26be1813826b2bad4da74c61642461ed85d2"
+      },
+      "question_signal_excerpt": "单调、f、x、ax、\\mathrm",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:ca0620f56e0a53dd",
+      "item_id": "ca0620f56e0a53dd",
+      "ordinal": 14,
+      "ordinal_in_cycle": 2,
+      "kind": "worked_example",
+      "label": "例7",
+      "group": null,
+      "cycle_id": "5.3-cycle-5",
+      "cycle_sequence": 5,
+      "cycle_title": "类型Ⅲ 讨论含参函数的单调性",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "含参函数单调性讨论之可因式分解型（上）",
+        "含参函数单调性讨论之可因式分解型（中）",
+        "含参函数单调性讨论之可因式分解型（下）",
+        "含参函数单调性讨论之类二次型",
+        "含参函数单调性讨论之不可因式分解型（上）",
+        "含参函数单调性讨论之不可因式分解型（中）",
+        "含参函数单调性讨论之不可因式分解型（下）",
+        "含参函数单调性讨论之超越函数",
+        "已知单调性求参之导数为二次型",
+        "已知单调性求参之导数为非二次型"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 讨论含参函数的单调性"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "单调",
+        "f",
+        "x",
+        "\\frac"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "cebb2571c9e0c1c29742ae17af499bc65b9c31f5b4f5685edca5b4f7aa741291",
+      "source_question_text_sha256": "cebb2571c9e0c1c29742ae17af499bc65b9c31f5b4f5685edca5b4f7aa741291",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "cebb2571c9e0c1c29742ae17af499bc65b9c31f5b4f5685edca5b4f7aa741291",
+        "learner_question_text_sha256": "cebb2571c9e0c1c29742ae17af499bc65b9c31f5b4f5685edca5b4f7aa741291"
+      },
+      "question_signal_excerpt": "单调、f、x、\\frac",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:99d66413f1030c0f",
+      "item_id": "99d66413f1030c0f",
+      "ordinal": 15,
+      "ordinal_in_cycle": 3,
+      "kind": "direct_variant",
+      "label": "例6 变式1",
+      "group": null,
+      "cycle_id": "5.3-cycle-5",
+      "cycle_sequence": 5,
+      "cycle_title": "类型Ⅲ 讨论含参函数的单调性",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "含参函数单调性讨论之可因式分解型（上）",
+        "含参函数单调性讨论之可因式分解型（中）",
+        "含参函数单调性讨论之可因式分解型（下）",
+        "含参函数单调性讨论之类二次型",
+        "含参函数单调性讨论之不可因式分解型（上）",
+        "含参函数单调性讨论之不可因式分解型（中）",
+        "含参函数单调性讨论之不可因式分解型（下）",
+        "含参函数单调性讨论之超越函数",
+        "已知单调性求参之导数为二次型",
+        "已知单调性求参之导数为非二次型"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 讨论含参函数的单调性"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "单调",
+        "f",
+        "x",
+        "\\ln"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "c87bebd820d2b145a1a61a92ffdd3dd20469c4d044697712f6b7a534e2f505bd",
+      "source_question_text_sha256": "c87bebd820d2b145a1a61a92ffdd3dd20469c4d044697712f6b7a534e2f505bd",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "c87bebd820d2b145a1a61a92ffdd3dd20469c4d044697712f6b7a534e2f505bd",
+        "learner_question_text_sha256": "c87bebd820d2b145a1a61a92ffdd3dd20469c4d044697712f6b7a534e2f505bd"
+      },
+      "question_signal_excerpt": "单调、f、x、\\ln",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:12c6b4bb7cdc6972",
+      "item_id": "12c6b4bb7cdc6972",
+      "ordinal": 16,
+      "ordinal_in_cycle": 4,
+      "kind": "direct_variant",
+      "label": "例6 变式2",
+      "group": null,
+      "cycle_id": "5.3-cycle-5",
+      "cycle_sequence": 5,
+      "cycle_title": "类型Ⅲ 讨论含参函数的单调性",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "含参函数单调性讨论之可因式分解型（上）",
+        "含参函数单调性讨论之可因式分解型（中）",
+        "含参函数单调性讨论之可因式分解型（下）",
+        "含参函数单调性讨论之类二次型",
+        "含参函数单调性讨论之不可因式分解型（上）",
+        "含参函数单调性讨论之不可因式分解型（中）",
+        "含参函数单调性讨论之不可因式分解型（下）",
+        "含参函数单调性讨论之超越函数",
+        "已知单调性求参之导数为二次型",
+        "已知单调性求参之导数为非二次型"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 讨论含参函数的单调性"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "单调",
+        "f",
+        "x",
+        "ax",
+        "a"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "a1f96bb704977de28874346be99719214b5a00105fb51233b0e16b3e38394727",
+      "source_question_text_sha256": "a1f96bb704977de28874346be99719214b5a00105fb51233b0e16b3e38394727",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "a1f96bb704977de28874346be99719214b5a00105fb51233b0e16b3e38394727",
+        "learner_question_text_sha256": "a1f96bb704977de28874346be99719214b5a00105fb51233b0e16b3e38394727"
+      },
+      "question_signal_excerpt": "单调、f、x、ax、a",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:b4380502e4ac2404",
+      "item_id": "b4380502e4ac2404",
+      "ordinal": 17,
+      "ordinal_in_cycle": 5,
+      "kind": "direct_variant",
+      "label": "例7 变式1",
+      "group": null,
+      "cycle_id": "5.3-cycle-5",
+      "cycle_sequence": 5,
+      "cycle_title": "类型Ⅲ 讨论含参函数的单调性",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "含参函数单调性讨论之可因式分解型（上）",
+        "含参函数单调性讨论之可因式分解型（中）",
+        "含参函数单调性讨论之可因式分解型（下）",
+        "含参函数单调性讨论之类二次型",
+        "含参函数单调性讨论之不可因式分解型（上）",
+        "含参函数单调性讨论之不可因式分解型（中）",
+        "含参函数单调性讨论之不可因式分解型（下）",
+        "含参函数单调性讨论之超越函数",
+        "已知单调性求参之导数为二次型",
+        "已知单调性求参之导数为非二次型"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 讨论含参函数的单调性"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "单调",
+        "f",
+        "x",
+        "m"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "5f9721a4dfd995d1a7a6e596f3a565f9a74682d8ebb18b68ab95a4191a905eaa",
+      "source_question_text_sha256": "5f9721a4dfd995d1a7a6e596f3a565f9a74682d8ebb18b68ab95a4191a905eaa",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "5f9721a4dfd995d1a7a6e596f3a565f9a74682d8ebb18b68ab95a4191a905eaa",
+        "learner_question_text_sha256": "5f9721a4dfd995d1a7a6e596f3a565f9a74682d8ebb18b68ab95a4191a905eaa"
+      },
+      "question_signal_excerpt": "单调、f、x、m",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:b25b833b987c45cf",
+      "item_id": "b25b833b987c45cf",
+      "ordinal": 18,
+      "ordinal_in_cycle": 6,
+      "kind": "direct_variant",
+      "label": "例7 变式2",
+      "group": null,
+      "cycle_id": "5.3-cycle-5",
+      "cycle_sequence": 5,
+      "cycle_title": "类型Ⅲ 讨论含参函数的单调性",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "含参函数单调性讨论之可因式分解型（上）",
+        "含参函数单调性讨论之可因式分解型（中）",
+        "含参函数单调性讨论之可因式分解型（下）",
+        "含参函数单调性讨论之类二次型",
+        "含参函数单调性讨论之不可因式分解型（上）",
+        "含参函数单调性讨论之不可因式分解型（中）",
+        "含参函数单调性讨论之不可因式分解型（下）",
+        "含参函数单调性讨论之超越函数",
+        "已知单调性求参之导数为二次型",
+        "已知单调性求参之导数为非二次型"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 讨论含参函数的单调性"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "单调",
+        "f",
+        "x",
+        "\\frac",
+        "e"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "0f387253bf538c6c17a3171b919ea2e944c7935a37defeff523d6253b64e6faf",
+      "source_question_text_sha256": "0f387253bf538c6c17a3171b919ea2e944c7935a37defeff523d6253b64e6faf",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "0f387253bf538c6c17a3171b919ea2e944c7935a37defeff523d6253b64e6faf",
+        "learner_question_text_sha256": "0f387253bf538c6c17a3171b919ea2e944c7935a37defeff523d6253b64e6faf"
+      },
+      "question_signal_excerpt": "单调、f、x、\\frac、e",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:729302327af91c5c",
+      "item_id": "729302327af91c5c",
+      "ordinal": 19,
+      "ordinal_in_cycle": 7,
+      "kind": "direct_variant",
+      "label": "例7 变式3",
+      "group": null,
+      "cycle_id": "5.3-cycle-5",
+      "cycle_sequence": 5,
+      "cycle_title": "类型Ⅲ 讨论含参函数的单调性",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "含参函数单调性讨论之可因式分解型（上）",
+        "含参函数单调性讨论之可因式分解型（中）",
+        "含参函数单调性讨论之可因式分解型（下）",
+        "含参函数单调性讨论之类二次型",
+        "含参函数单调性讨论之不可因式分解型（上）",
+        "含参函数单调性讨论之不可因式分解型（中）",
+        "含参函数单调性讨论之不可因式分解型（下）",
+        "含参函数单调性讨论之超越函数",
+        "已知单调性求参之导数为二次型",
+        "已知单调性求参之导数为非二次型"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 讨论含参函数的单调性"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "单调",
+        "f",
+        "x",
+        "\\frac"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "127a9c82ba68fceb40df8f90b205e9073c250b35f2b6d02f46acc46f6e4adc80",
+      "source_question_text_sha256": "127a9c82ba68fceb40df8f90b205e9073c250b35f2b6d02f46acc46f6e4adc80",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "127a9c82ba68fceb40df8f90b205e9073c250b35f2b6d02f46acc46f6e4adc80",
+        "learner_question_text_sha256": "127a9c82ba68fceb40df8f90b205e9073c250b35f2b6d02f46acc46f6e4adc80"
+      },
+      "question_signal_excerpt": "单调、f、x、\\frac",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:5c93498462b9899e",
+      "item_id": "5c93498462b9899e",
+      "ordinal": 20,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例8",
+      "group": null,
+      "cycle_id": "5.3-cycle-6",
+      "cycle_sequence": 6,
+      "cycle_title": "类型IV 已知单调性求参数范围",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "含参函数单调性讨论之可因式分解型（上）",
+        "含参函数单调性讨论之可因式分解型（中）",
+        "含参函数单调性讨论之可因式分解型（下）",
+        "含参函数单调性讨论之类二次型",
+        "含参函数单调性讨论之不可因式分解型（上）",
+        "含参函数单调性讨论之不可因式分解型（中）",
+        "含参函数单调性讨论之不可因式分解型（下）",
+        "含参函数单调性讨论之超越函数",
+        "已知单调性求参之导数为二次型",
+        "已知单调性求参之导数为非二次型"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型IV 已知单调性求参数范围"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "单调",
+        "范围",
+        "f",
+        "x"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "4a151ddc00646c7f1e048a9960375e78d38c2fcc84f637cd526a4148341d1c3d",
+      "source_question_text_sha256": "4a151ddc00646c7f1e048a9960375e78d38c2fcc84f637cd526a4148341d1c3d",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "4a151ddc00646c7f1e048a9960375e78d38c2fcc84f637cd526a4148341d1c3d",
+        "learner_question_text_sha256": "4a151ddc00646c7f1e048a9960375e78d38c2fcc84f637cd526a4148341d1c3d"
+      },
+      "question_signal_excerpt": "单调、范围、f、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:e7fddfb8e1fc9059",
+      "item_id": "e7fddfb8e1fc9059",
+      "ordinal": 21,
+      "ordinal_in_cycle": 2,
+      "kind": "direct_variant",
+      "label": "例8 变式",
+      "group": null,
+      "cycle_id": "5.3-cycle-6",
+      "cycle_sequence": 6,
+      "cycle_title": "类型IV 已知单调性求参数范围",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "含参函数单调性讨论之可因式分解型（上）",
+        "含参函数单调性讨论之可因式分解型（中）",
+        "含参函数单调性讨论之可因式分解型（下）",
+        "含参函数单调性讨论之类二次型",
+        "含参函数单调性讨论之不可因式分解型（上）",
+        "含参函数单调性讨论之不可因式分解型（中）",
+        "含参函数单调性讨论之不可因式分解型（下）",
+        "含参函数单调性讨论之超越函数",
+        "已知单调性求参之导数为二次型",
+        "已知单调性求参之导数为非二次型"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型IV 已知单调性求参数范围"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "单调",
+        "范围",
+        "f",
+        "x",
+        "a",
+        "\\ln"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "ea382ace87a363bc78f88f85fe738f2f4490a8f1524e2d88a93e96d4d5874b2c",
+      "source_question_text_sha256": "ea382ace87a363bc78f88f85fe738f2f4490a8f1524e2d88a93e96d4d5874b2c",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "ea382ace87a363bc78f88f85fe738f2f4490a8f1524e2d88a93e96d4d5874b2c",
+        "learner_question_text_sha256": "ea382ace87a363bc78f88f85fe738f2f4490a8f1524e2d88a93e96d4d5874b2c"
+      },
+      "question_signal_excerpt": "单调、范围、f、x、a、\\ln",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:d9e6e5dc8e447dd9",
+      "item_id": "d9e6e5dc8e447dd9",
+      "ordinal": 22,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例9",
+      "group": null,
+      "cycle_id": "5.3-cycle-7",
+      "cycle_sequence": 7,
+      "cycle_title": "类型V 利用导数研究函数的零点个数",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "含参函数单调性讨论之可因式分解型（上）",
+        "含参函数单调性讨论之可因式分解型（中）",
+        "含参函数单调性讨论之可因式分解型（下）",
+        "含参函数单调性讨论之类二次型",
+        "含参函数单调性讨论之不可因式分解型（上）",
+        "含参函数单调性讨论之不可因式分解型（中）",
+        "含参函数单调性讨论之不可因式分解型（下）",
+        "含参函数单调性讨论之超越函数",
+        "已知单调性求参之导数为二次型",
+        "已知单调性求参之导数为非二次型"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型V 利用导数研究函数的零点个数"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "单调",
+        "零点",
+        "证明",
+        "f",
+        "x",
+        "\\ln"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "af748baeaaeb9b219b1de33984ad45bcdacedebc01482460fde04667ec83f284",
+      "source_question_text_sha256": "af748baeaaeb9b219b1de33984ad45bcdacedebc01482460fde04667ec83f284",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "af748baeaaeb9b219b1de33984ad45bcdacedebc01482460fde04667ec83f284",
+        "learner_question_text_sha256": "af748baeaaeb9b219b1de33984ad45bcdacedebc01482460fde04667ec83f284"
+      },
+      "question_signal_excerpt": "单调、零点、证明、f、x、\\ln",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:74a1f422955890a5",
+      "item_id": "74a1f422955890a5",
+      "ordinal": 23,
+      "ordinal_in_cycle": 2,
+      "kind": "direct_variant",
+      "label": "例9 变式1",
+      "group": null,
+      "cycle_id": "5.3-cycle-7",
+      "cycle_sequence": 7,
+      "cycle_title": "类型V 利用导数研究函数的零点个数",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "含参函数单调性讨论之可因式分解型（上）",
+        "含参函数单调性讨论之可因式分解型（中）",
+        "含参函数单调性讨论之可因式分解型（下）",
+        "含参函数单调性讨论之类二次型",
+        "含参函数单调性讨论之不可因式分解型（上）",
+        "含参函数单调性讨论之不可因式分解型（中）",
+        "含参函数单调性讨论之不可因式分解型（下）",
+        "含参函数单调性讨论之超越函数",
+        "已知单调性求参之导数为二次型",
+        "已知单调性求参之导数为非二次型"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型V 利用导数研究函数的零点个数"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "单调",
+        "零点",
+        "证明",
+        "a",
+        ">",
+        "f",
+        "x"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "602f3100456cd841766b9c2f539a8ccbf81f002beca179542bb03b010778851d",
+      "source_question_text_sha256": "602f3100456cd841766b9c2f539a8ccbf81f002beca179542bb03b010778851d",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "602f3100456cd841766b9c2f539a8ccbf81f002beca179542bb03b010778851d",
+        "learner_question_text_sha256": "602f3100456cd841766b9c2f539a8ccbf81f002beca179542bb03b010778851d"
+      },
+      "question_signal_excerpt": "单调、零点、证明、a、>、f、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:9b1a1fc65fa3ae97",
+      "item_id": "9b1a1fc65fa3ae97",
+      "ordinal": 24,
+      "ordinal_in_cycle": 3,
+      "kind": "direct_variant",
+      "label": "例9 变式2",
+      "group": null,
+      "cycle_id": "5.3-cycle-7",
+      "cycle_sequence": 7,
+      "cycle_title": "类型V 利用导数研究函数的零点个数",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "含参函数单调性讨论之可因式分解型（上）",
+        "含参函数单调性讨论之可因式分解型（中）",
+        "含参函数单调性讨论之可因式分解型（下）",
+        "含参函数单调性讨论之类二次型",
+        "含参函数单调性讨论之不可因式分解型（上）",
+        "含参函数单调性讨论之不可因式分解型（中）",
+        "含参函数单调性讨论之不可因式分解型（下）",
+        "含参函数单调性讨论之超越函数",
+        "已知单调性求参之导数为二次型",
+        "已知单调性求参之导数为非二次型"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型V 利用导数研究函数的零点个数"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "零点",
+        "证明",
+        "范围",
+        "f",
+        "x",
+        "ax"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "f02760cef49106ad8865d31c201c69f100d24ba2372c113f1cf10e313d852b13",
+      "source_question_text_sha256": "f02760cef49106ad8865d31c201c69f100d24ba2372c113f1cf10e313d852b13",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "f02760cef49106ad8865d31c201c69f100d24ba2372c113f1cf10e313d852b13",
+        "learner_question_text_sha256": "f02760cef49106ad8865d31c201c69f100d24ba2372c113f1cf10e313d852b13"
+      },
+      "question_signal_excerpt": "零点、证明、范围、f、x、ax",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:13517b8214f1c2d4",
+      "item_id": "13517b8214f1c2d4",
+      "ordinal": 25,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例10",
+      "group": null,
+      "cycle_id": "5.3-cycle-8",
+      "cycle_sequence": 8,
+      "cycle_title": "类型VI 构造原函数",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "含参函数单调性讨论之可因式分解型（上）",
+        "含参函数单调性讨论之可因式分解型（中）",
+        "含参函数单调性讨论之可因式分解型（下）",
+        "含参函数单调性讨论之类二次型",
+        "含参函数单调性讨论之不可因式分解型（上）",
+        "含参函数单调性讨论之不可因式分解型（中）",
+        "含参函数单调性讨论之不可因式分解型（下）",
+        "含参函数单调性讨论之超越函数",
+        "已知单调性求参之导数为二次型",
+        "已知单调性求参之导数为非二次型"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型VI 构造原函数"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "不等式",
+        "f",
+        "x"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "5e12d686b9e85a97427e745baa791381bcef48d62bfa630baa63d243f3776335",
+      "source_question_text_sha256": "5e12d686b9e85a97427e745baa791381bcef48d62bfa630baa63d243f3776335",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "5e12d686b9e85a97427e745baa791381bcef48d62bfa630baa63d243f3776335",
+        "learner_question_text_sha256": "5e12d686b9e85a97427e745baa791381bcef48d62bfa630baa63d243f3776335"
+      },
+      "question_signal_excerpt": "不等式、f、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:657af3f04c535c65",
+      "item_id": "657af3f04c535c65",
+      "ordinal": 26,
+      "ordinal_in_cycle": 2,
+      "kind": "worked_example",
+      "label": "例11",
+      "group": null,
+      "cycle_id": "5.3-cycle-8",
+      "cycle_sequence": 8,
+      "cycle_title": "类型VI 构造原函数",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "含参函数单调性讨论之可因式分解型（上）",
+        "含参函数单调性讨论之可因式分解型（中）",
+        "含参函数单调性讨论之可因式分解型（下）",
+        "含参函数单调性讨论之类二次型",
+        "含参函数单调性讨论之不可因式分解型（上）",
+        "含参函数单调性讨论之不可因式分解型（中）",
+        "含参函数单调性讨论之不可因式分解型（下）",
+        "含参函数单调性讨论之超越函数",
+        "已知单调性求参之导数为二次型",
+        "已知单调性求参之导数为非二次型"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型VI 构造原函数"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "f",
+        "x",
+        "in"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "bf1795e79ccae01bfab009bbca7578fd586caf419c2a37fafed4ea07ec9aa8f0",
+      "source_question_text_sha256": "bf1795e79ccae01bfab009bbca7578fd586caf419c2a37fafed4ea07ec9aa8f0",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "bf1795e79ccae01bfab009bbca7578fd586caf419c2a37fafed4ea07ec9aa8f0",
+        "learner_question_text_sha256": "bf1795e79ccae01bfab009bbca7578fd586caf419c2a37fafed4ea07ec9aa8f0"
+      },
+      "question_signal_excerpt": "f、x、in",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:2ed21c04e0a0ffc0",
+      "item_id": "2ed21c04e0a0ffc0",
+      "ordinal": 27,
+      "ordinal_in_cycle": 3,
+      "kind": "direct_variant",
+      "label": "例10 变式1",
+      "group": null,
+      "cycle_id": "5.3-cycle-8",
+      "cycle_sequence": 8,
+      "cycle_title": "类型VI 构造原函数",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "含参函数单调性讨论之可因式分解型（上）",
+        "含参函数单调性讨论之可因式分解型（中）",
+        "含参函数单调性讨论之可因式分解型（下）",
+        "含参函数单调性讨论之类二次型",
+        "含参函数单调性讨论之不可因式分解型（上）",
+        "含参函数单调性讨论之不可因式分解型（中）",
+        "含参函数单调性讨论之不可因式分解型（下）",
+        "含参函数单调性讨论之超越函数",
+        "已知单调性求参之导数为二次型",
+        "已知单调性求参之导数为非二次型"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型VI 构造原函数"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "不等式",
+        "f",
+        "x",
+        "g"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "cb2e474be99a46b8e19dc888c17b53130d13d92ea24ac3dda72fd1e2a819ab78",
+      "source_question_text_sha256": "cb2e474be99a46b8e19dc888c17b53130d13d92ea24ac3dda72fd1e2a819ab78",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "cb2e474be99a46b8e19dc888c17b53130d13d92ea24ac3dda72fd1e2a819ab78",
+        "learner_question_text_sha256": "cb2e474be99a46b8e19dc888c17b53130d13d92ea24ac3dda72fd1e2a819ab78"
+      },
+      "question_signal_excerpt": "不等式、f、x、g",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:c2c57439db24f8e1",
+      "item_id": "c2c57439db24f8e1",
+      "ordinal": 28,
+      "ordinal_in_cycle": 4,
+      "kind": "direct_variant",
+      "label": "例10 变式2",
+      "group": null,
+      "cycle_id": "5.3-cycle-8",
+      "cycle_sequence": 8,
+      "cycle_title": "类型VI 构造原函数",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "含参函数单调性讨论之可因式分解型（上）",
+        "含参函数单调性讨论之可因式分解型（中）",
+        "含参函数单调性讨论之可因式分解型（下）",
+        "含参函数单调性讨论之类二次型",
+        "含参函数单调性讨论之不可因式分解型（上）",
+        "含参函数单调性讨论之不可因式分解型（中）",
+        "含参函数单调性讨论之不可因式分解型（下）",
+        "含参函数单调性讨论之超越函数",
+        "已知单调性求参之导数为二次型",
+        "已知单调性求参之导数为非二次型"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型VI 构造原函数"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "范围",
+        "math",
+        "bb",
+        "R",
+        "f"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "30f5f91c6cb59557709efb5f4b4036ddeff872111c96e5e29501d1cb74dc95a7",
+      "source_question_text_sha256": "30f5f91c6cb59557709efb5f4b4036ddeff872111c96e5e29501d1cb74dc95a7",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "30f5f91c6cb59557709efb5f4b4036ddeff872111c96e5e29501d1cb74dc95a7",
+        "learner_question_text_sha256": "30f5f91c6cb59557709efb5f4b4036ddeff872111c96e5e29501d1cb74dc95a7"
+      },
+      "question_signal_excerpt": "范围、math、bb、R、f",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:69b70b7b2d2f545a",
+      "item_id": "69b70b7b2d2f545a",
+      "ordinal": 29,
+      "ordinal_in_cycle": 5,
+      "kind": "direct_variant",
+      "label": "例11 变式1",
+      "group": null,
+      "cycle_id": "5.3-cycle-8",
+      "cycle_sequence": 8,
+      "cycle_title": "类型VI 构造原函数",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "含参函数单调性讨论之可因式分解型（上）",
+        "含参函数单调性讨论之可因式分解型（中）",
+        "含参函数单调性讨论之可因式分解型（下）",
+        "含参函数单调性讨论之类二次型",
+        "含参函数单调性讨论之不可因式分解型（上）",
+        "含参函数单调性讨论之不可因式分解型（中）",
+        "含参函数单调性讨论之不可因式分解型（下）",
+        "含参函数单调性讨论之超越函数",
+        "已知单调性求参之导数为二次型",
+        "已知单调性求参之导数为非二次型"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型VI 构造原函数"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "不等式",
+        "math",
+        "bb",
+        "R",
+        "f"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "c9736fe2e9ee200d88eca702723c469730515c8d43e0f03d82f14ab6778695e9",
+      "source_question_text_sha256": "c9736fe2e9ee200d88eca702723c469730515c8d43e0f03d82f14ab6778695e9",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "c9736fe2e9ee200d88eca702723c469730515c8d43e0f03d82f14ab6778695e9",
+        "learner_question_text_sha256": "c9736fe2e9ee200d88eca702723c469730515c8d43e0f03d82f14ab6778695e9"
+      },
+      "question_signal_excerpt": "不等式、math、bb、R、f",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:01c0bcc3ffb35351",
+      "item_id": "01c0bcc3ffb35351",
+      "ordinal": 30,
+      "ordinal_in_cycle": 6,
+      "kind": "direct_variant",
+      "label": "例11 变式2",
+      "group": null,
+      "cycle_id": "5.3-cycle-8",
+      "cycle_sequence": 8,
+      "cycle_title": "类型VI 构造原函数",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "含参函数单调性讨论之可因式分解型（上）",
+        "含参函数单调性讨论之可因式分解型（中）",
+        "含参函数单调性讨论之可因式分解型（下）",
+        "含参函数单调性讨论之类二次型",
+        "含参函数单调性讨论之不可因式分解型（上）",
+        "含参函数单调性讨论之不可因式分解型（中）",
+        "含参函数单调性讨论之不可因式分解型（下）",
+        "含参函数单调性讨论之超越函数",
+        "已知单调性求参之导数为二次型",
+        "已知单调性求参之导数为非二次型"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型VI 构造原函数"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "不等式",
+        "f",
+        "x",
+        "in"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "ac351ed8757b35da2f3bcca76f14ae4fd9c17de6dd4471f47e35d87215d3ea06",
+      "source_question_text_sha256": "ac351ed8757b35da2f3bcca76f14ae4fd9c17de6dd4471f47e35d87215d3ea06",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "ac351ed8757b35da2f3bcca76f14ae4fd9c17de6dd4471f47e35d87215d3ea06",
+        "learner_question_text_sha256": "ac351ed8757b35da2f3bcca76f14ae4fd9c17de6dd4471f47e35d87215d3ea06"
+      },
+      "question_signal_excerpt": "不等式、f、x、in",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-c7221a2f8c6e43f5",
+      "item_id": "Q-c7221a2f8c6e43f5",
+      "ordinal": 31,
+      "ordinal_in_cycle": 1,
+      "kind": "abc_exercise",
+      "label": "A1",
+      "group": "A",
+      "cycle_id": "5.3-cycle-9",
+      "cycle_sequence": 9,
+      "cycle_title": "A组 夯实基础",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "含参函数单调性讨论之可因式分解型（上）",
+        "含参函数单调性讨论之可因式分解型（中）",
+        "含参函数单调性讨论之可因式分解型（下）",
+        "含参函数单调性讨论之类二次型",
+        "含参函数单调性讨论之不可因式分解型（上）",
+        "含参函数单调性讨论之不可因式分解型（中）",
+        "含参函数单调性讨论之不可因式分解型（下）",
+        "含参函数单调性讨论之超越函数",
+        "已知单调性求参之导数为二次型",
+        "已知单调性求参之导数为非二次型"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅰ 导函数与原函数图象关联的分析"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "单调",
+        "f",
+        "x"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "VISION_VERIFIED",
+        "image_refs": [
+          {
+            "ref": "imgs/img_in_image_box_522_614_698_753.jpg",
+            "path": "data/ocr_live_current/chapter5_95/imgs/img_in_image_box_522_614_698_753.jpg",
+            "exists": true
+          }
+        ]
+      },
+      "question_text_sha256": "6daa725057f50ed55301b3aabd32c6ece5272e41c32ab12a1bee6b7040e32858",
+      "source_question_text_sha256": "6daa725057f50ed55301b3aabd32c6ece5272e41c32ab12a1bee6b7040e32858",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "6daa725057f50ed55301b3aabd32c6ece5272e41c32ab12a1bee6b7040e32858",
+        "learner_question_text_sha256": "6daa725057f50ed55301b3aabd32c6ece5272e41c32ab12a1bee6b7040e32858"
+      },
+      "question_signal_excerpt": "单调、f、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-56cca61040bece6d",
+      "item_id": "Q-56cca61040bece6d",
+      "ordinal": 32,
+      "ordinal_in_cycle": 2,
+      "kind": "abc_exercise",
+      "label": "A2",
+      "group": "A",
+      "cycle_id": "5.3-cycle-9",
+      "cycle_sequence": 9,
+      "cycle_title": "A组 夯实基础",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "含参函数单调性讨论之可因式分解型（上）",
+        "含参函数单调性讨论之可因式分解型（中）",
+        "含参函数单调性讨论之可因式分解型（下）",
+        "含参函数单调性讨论之类二次型",
+        "含参函数单调性讨论之不可因式分解型（上）",
+        "含参函数单调性讨论之不可因式分解型（中）",
+        "含参函数单调性讨论之不可因式分解型（下）",
+        "含参函数单调性讨论之超越函数",
+        "已知单调性求参之导数为二次型",
+        "已知单调性求参之导数为非二次型"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅰ 导函数与原函数图象关联的分析"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "f",
+        "x"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "VISION_VERIFIED",
+        "image_refs": [
+          {
+            "ref": "imgs/img_in_image_box_537_1121_722_1237.jpg",
+            "path": "data/ocr_live_current/chapter5_95/imgs/img_in_image_box_537_1121_722_1237.jpg",
+            "exists": true
+          },
+          {
+            "ref": "imgs/img_in_image_box_435_1250_600_1369.jpg",
+            "path": "data/ocr_live_current/chapter5_95/imgs/img_in_image_box_435_1250_600_1369.jpg",
+            "exists": true
+          },
+          {
+            "ref": "imgs/img_in_image_box_623_1251_788_1368.jpg",
+            "path": "data/ocr_live_current/chapter5_95/imgs/img_in_image_box_623_1251_788_1368.jpg",
+            "exists": true
+          },
+          {
+            "ref": "imgs/img_in_image_box_433_1399_599_1519.jpg",
+            "path": "data/ocr_live_current/chapter5_95/imgs/img_in_image_box_433_1399_599_1519.jpg",
+            "exists": true
+          },
+          {
+            "ref": "imgs/img_in_image_box_622_1399_788_1519.jpg",
+            "path": "data/ocr_live_current/chapter5_95/imgs/img_in_image_box_622_1399_788_1519.jpg",
+            "exists": true
+          }
+        ]
+      },
+      "question_text_sha256": "0efa6a49820cf622353b6ab3eb2a16360e842215b505c4eef6a2caec624775bf",
+      "source_question_text_sha256": "0efa6a49820cf622353b6ab3eb2a16360e842215b505c4eef6a2caec624775bf",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "0efa6a49820cf622353b6ab3eb2a16360e842215b505c4eef6a2caec624775bf",
+        "learner_question_text_sha256": "0efa6a49820cf622353b6ab3eb2a16360e842215b505c4eef6a2caec624775bf"
+      },
+      "question_signal_excerpt": "f、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-3e6467b021790a50",
+      "item_id": "Q-3e6467b021790a50",
+      "ordinal": 33,
+      "ordinal_in_cycle": 3,
+      "kind": "abc_exercise",
+      "label": "A3",
+      "group": "A",
+      "cycle_id": "5.3-cycle-9",
+      "cycle_sequence": 9,
+      "cycle_title": "A组 夯实基础",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "含参函数单调性讨论之可因式分解型（上）",
+        "含参函数单调性讨论之可因式分解型（中）",
+        "含参函数单调性讨论之可因式分解型（下）",
+        "含参函数单调性讨论之类二次型",
+        "含参函数单调性讨论之不可因式分解型（上）",
+        "含参函数单调性讨论之不可因式分解型（中）",
+        "含参函数单调性讨论之不可因式分解型（下）",
+        "含参函数单调性讨论之超越函数",
+        "已知单调性求参之导数为二次型",
+        "已知单调性求参之导数为非二次型"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 用导数研究无参函数的单调性"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "单调",
+        "f",
+        "x"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "fc8375bace5be0929aee867d84bc7875ceebe59436c8e56a1cfab51007530e3a",
+      "source_question_text_sha256": "fc8375bace5be0929aee867d84bc7875ceebe59436c8e56a1cfab51007530e3a",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "fc8375bace5be0929aee867d84bc7875ceebe59436c8e56a1cfab51007530e3a",
+        "learner_question_text_sha256": "fc8375bace5be0929aee867d84bc7875ceebe59436c8e56a1cfab51007530e3a"
+      },
+      "question_signal_excerpt": "单调、f、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-6dcd49b4bbe1ba67",
+      "item_id": "Q-6dcd49b4bbe1ba67",
+      "ordinal": 34,
+      "ordinal_in_cycle": 1,
+      "kind": "abc_exercise",
+      "label": "B4",
+      "group": "B",
+      "cycle_id": "5.3-cycle-10",
+      "cycle_sequence": 10,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "含参函数单调性讨论之可因式分解型（上）",
+        "含参函数单调性讨论之可因式分解型（中）",
+        "含参函数单调性讨论之可因式分解型（下）",
+        "含参函数单调性讨论之类二次型",
+        "含参函数单调性讨论之不可因式分解型（上）",
+        "含参函数单调性讨论之不可因式分解型（中）",
+        "含参函数单调性讨论之不可因式分解型（下）",
+        "含参函数单调性讨论之超越函数",
+        "已知单调性求参之导数为二次型",
+        "已知单调性求参之导数为非二次型"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅰ 导函数与原函数图象关联的分析"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "f",
+        "x"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "VISION_VERIFIED",
+        "image_refs": [
+          {
+            "ref": "imgs/img_in_image_box_277_753_912_889.jpg",
+            "path": "data/ocr_live_current/chapter5_95/imgs/img_in_image_box_277_753_912_889.jpg",
+            "exists": true
+          }
+        ]
+      },
+      "question_text_sha256": "e722dd5b3d6fa646df743d42e4ccf71a59938916390f679c3f65fa5c98c8a4b0",
+      "source_question_text_sha256": "e722dd5b3d6fa646df743d42e4ccf71a59938916390f679c3f65fa5c98c8a4b0",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "e722dd5b3d6fa646df743d42e4ccf71a59938916390f679c3f65fa5c98c8a4b0",
+        "learner_question_text_sha256": "e722dd5b3d6fa646df743d42e4ccf71a59938916390f679c3f65fa5c98c8a4b0"
+      },
+      "question_signal_excerpt": "f、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-debbf5ad8450f103",
+      "item_id": "Q-debbf5ad8450f103",
+      "ordinal": 35,
+      "ordinal_in_cycle": 2,
+      "kind": "abc_exercise",
+      "label": "B5",
+      "group": "B",
+      "cycle_id": "5.3-cycle-10",
+      "cycle_sequence": 10,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "含参函数单调性讨论之可因式分解型（上）",
+        "含参函数单调性讨论之可因式分解型（中）",
+        "含参函数单调性讨论之可因式分解型（下）",
+        "含参函数单调性讨论之类二次型",
+        "含参函数单调性讨论之不可因式分解型（上）",
+        "含参函数单调性讨论之不可因式分解型（中）",
+        "含参函数单调性讨论之不可因式分解型（下）",
+        "含参函数单调性讨论之超越函数",
+        "已知单调性求参之导数为二次型",
+        "已知单调性求参之导数为非二次型"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型VI 构造原函数"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "恒成立",
+        "math",
+        "bb",
+        "R",
+        "f"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "c2642144208c42673ef542b59fe36e6186d4a4ca42d963615f19fbff1032a4e0",
+      "source_question_text_sha256": "c2642144208c42673ef542b59fe36e6186d4a4ca42d963615f19fbff1032a4e0",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "c2642144208c42673ef542b59fe36e6186d4a4ca42d963615f19fbff1032a4e0",
+        "learner_question_text_sha256": "c2642144208c42673ef542b59fe36e6186d4a4ca42d963615f19fbff1032a4e0"
+      },
+      "question_signal_excerpt": "恒成立、math、bb、R、f",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-2d43019cb70e2072",
+      "item_id": "Q-2d43019cb70e2072",
+      "ordinal": 36,
+      "ordinal_in_cycle": 3,
+      "kind": "abc_exercise",
+      "label": "B6",
+      "group": "B",
+      "cycle_id": "5.3-cycle-10",
+      "cycle_sequence": 10,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "含参函数单调性讨论之可因式分解型（上）",
+        "含参函数单调性讨论之可因式分解型（中）",
+        "含参函数单调性讨论之可因式分解型（下）",
+        "含参函数单调性讨论之类二次型",
+        "含参函数单调性讨论之不可因式分解型（上）",
+        "含参函数单调性讨论之不可因式分解型（中）",
+        "含参函数单调性讨论之不可因式分解型（下）",
+        "含参函数单调性讨论之超越函数",
+        "已知单调性求参之导数为二次型",
+        "已知单调性求参之导数为非二次型"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型VI 构造原函数"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "不等式",
+        "f",
+        "x",
+        "math",
+        "bb"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "021a52579ed21ff8faa84a0b2588417a73dff2fffae3110835c8209408e7f6f8",
+      "source_question_text_sha256": "021a52579ed21ff8faa84a0b2588417a73dff2fffae3110835c8209408e7f6f8",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "021a52579ed21ff8faa84a0b2588417a73dff2fffae3110835c8209408e7f6f8",
+        "learner_question_text_sha256": "021a52579ed21ff8faa84a0b2588417a73dff2fffae3110835c8209408e7f6f8"
+      },
+      "question_signal_excerpt": "不等式、f、x、math、bb",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-ad967b8b2931d0c9",
+      "item_id": "Q-ad967b8b2931d0c9",
+      "ordinal": 37,
+      "ordinal_in_cycle": 4,
+      "kind": "abc_exercise",
+      "label": "B7",
+      "group": "B",
+      "cycle_id": "5.3-cycle-10",
+      "cycle_sequence": 10,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "含参函数单调性讨论之可因式分解型（上）",
+        "含参函数单调性讨论之可因式分解型（中）",
+        "含参函数单调性讨论之可因式分解型（下）",
+        "含参函数单调性讨论之类二次型",
+        "含参函数单调性讨论之不可因式分解型（上）",
+        "含参函数单调性讨论之不可因式分解型（中）",
+        "含参函数单调性讨论之不可因式分解型（下）",
+        "含参函数单调性讨论之超越函数",
+        "已知单调性求参之导数为二次型",
+        "已知单调性求参之导数为非二次型"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型VI 构造原函数"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "不等式",
+        "f",
+        "x",
+        "math",
+        "bb"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "54c30ec7425f55494820f00d535316636dd689c47896d5b94076b121acd7f2b7",
+      "source_question_text_sha256": "54c30ec7425f55494820f00d535316636dd689c47896d5b94076b121acd7f2b7",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "54c30ec7425f55494820f00d535316636dd689c47896d5b94076b121acd7f2b7",
+        "learner_question_text_sha256": "54c30ec7425f55494820f00d535316636dd689c47896d5b94076b121acd7f2b7"
+      },
+      "question_signal_excerpt": "不等式、f、x、math、bb",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-4c8051bb16292394",
+      "item_id": "Q-4c8051bb16292394",
+      "ordinal": 38,
+      "ordinal_in_cycle": 5,
+      "kind": "abc_exercise",
+      "label": "B8",
+      "group": "B",
+      "cycle_id": "5.3-cycle-10",
+      "cycle_sequence": 10,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "含参函数单调性讨论之可因式分解型（上）",
+        "含参函数单调性讨论之可因式分解型（中）",
+        "含参函数单调性讨论之可因式分解型（下）",
+        "含参函数单调性讨论之类二次型",
+        "含参函数单调性讨论之不可因式分解型（上）",
+        "含参函数单调性讨论之不可因式分解型（中）",
+        "含参函数单调性讨论之不可因式分解型（下）",
+        "含参函数单调性讨论之超越函数",
+        "已知单调性求参之导数为二次型",
+        "已知单调性求参之导数为非二次型"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型VI 构造原函数"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "不等式",
+        "f",
+        "x"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "b9784243bcb1f980af81749a07083c00e22e96413e843ed36edf1a78d4207fc0",
+      "source_question_text_sha256": "b9784243bcb1f980af81749a07083c00e22e96413e843ed36edf1a78d4207fc0",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "b9784243bcb1f980af81749a07083c00e22e96413e843ed36edf1a78d4207fc0",
+        "learner_question_text_sha256": "b9784243bcb1f980af81749a07083c00e22e96413e843ed36edf1a78d4207fc0"
+      },
+      "question_signal_excerpt": "不等式、f、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-56eabd19e3f3ae90",
+      "item_id": "Q-56eabd19e3f3ae90",
+      "ordinal": 39,
+      "ordinal_in_cycle": 6,
+      "kind": "abc_exercise",
+      "label": "B9",
+      "group": "B",
+      "cycle_id": "5.3-cycle-10",
+      "cycle_sequence": 10,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "含参函数单调性讨论之可因式分解型（上）",
+        "含参函数单调性讨论之可因式分解型（中）",
+        "含参函数单调性讨论之可因式分解型（下）",
+        "含参函数单调性讨论之类二次型",
+        "含参函数单调性讨论之不可因式分解型（上）",
+        "含参函数单调性讨论之不可因式分解型（中）",
+        "含参函数单调性讨论之不可因式分解型（下）",
+        "含参函数单调性讨论之超越函数",
+        "已知单调性求参之导数为二次型",
+        "已知单调性求参之导数为非二次型"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型IV 已知单调性求参数范围"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "单调",
+        "范围",
+        "f",
+        "x",
+        "\\ln"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "e8257ac85aadfc73746c49986f6bef66d9b0aca25d620f5bbcde06d21737155f",
+      "source_question_text_sha256": "e8257ac85aadfc73746c49986f6bef66d9b0aca25d620f5bbcde06d21737155f",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "e8257ac85aadfc73746c49986f6bef66d9b0aca25d620f5bbcde06d21737155f",
+        "learner_question_text_sha256": "e8257ac85aadfc73746c49986f6bef66d9b0aca25d620f5bbcde06d21737155f"
+      },
+      "question_signal_excerpt": "单调、范围、f、x、\\ln",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-f485a1f1cb73b395",
+      "item_id": "Q-f485a1f1cb73b395",
+      "ordinal": 40,
+      "ordinal_in_cycle": 7,
+      "kind": "abc_exercise",
+      "label": "B10",
+      "group": "B",
+      "cycle_id": "5.3-cycle-10",
+      "cycle_sequence": 10,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "含参函数单调性讨论之可因式分解型（上）",
+        "含参函数单调性讨论之可因式分解型（中）",
+        "含参函数单调性讨论之可因式分解型（下）",
+        "含参函数单调性讨论之类二次型",
+        "含参函数单调性讨论之不可因式分解型（上）",
+        "含参函数单调性讨论之不可因式分解型（中）",
+        "含参函数单调性讨论之不可因式分解型（下）",
+        "含参函数单调性讨论之超越函数",
+        "已知单调性求参之导数为二次型",
+        "已知单调性求参之导数为非二次型"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 讨论含参函数的单调性"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "单调",
+        "f",
+        "x",
+        "\\ln"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "480e77667d280a86604c384853ec39ef051b2476b1893e402573d0a52fc8876c",
+      "source_question_text_sha256": "480e77667d280a86604c384853ec39ef051b2476b1893e402573d0a52fc8876c",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "480e77667d280a86604c384853ec39ef051b2476b1893e402573d0a52fc8876c",
+        "learner_question_text_sha256": "480e77667d280a86604c384853ec39ef051b2476b1893e402573d0a52fc8876c"
+      },
+      "question_signal_excerpt": "单调、f、x、\\ln",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-7c869708ca99eecf",
+      "item_id": "Q-7c869708ca99eecf",
+      "ordinal": 41,
+      "ordinal_in_cycle": 8,
+      "kind": "abc_exercise",
+      "label": "B11",
+      "group": "B",
+      "cycle_id": "5.3-cycle-10",
+      "cycle_sequence": 10,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "含参函数单调性讨论之可因式分解型（上）",
+        "含参函数单调性讨论之可因式分解型（中）",
+        "含参函数单调性讨论之可因式分解型（下）",
+        "含参函数单调性讨论之类二次型",
+        "含参函数单调性讨论之不可因式分解型（上）",
+        "含参函数单调性讨论之不可因式分解型（中）",
+        "含参函数单调性讨论之不可因式分解型（下）",
+        "含参函数单调性讨论之超越函数",
+        "已知单调性求参之导数为二次型",
+        "已知单调性求参之导数为非二次型"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 用导数研究无参函数的单调性"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "单调",
+        "f",
+        "x",
+        "pi"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "8b0b78e28901bf5504d7b0f6389b0fd5099f90976f857e114b36b4472148abf0",
+      "source_question_text_sha256": "8b0b78e28901bf5504d7b0f6389b0fd5099f90976f857e114b36b4472148abf0",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "8b0b78e28901bf5504d7b0f6389b0fd5099f90976f857e114b36b4472148abf0",
+        "learner_question_text_sha256": "8b0b78e28901bf5504d7b0f6389b0fd5099f90976f857e114b36b4472148abf0"
+      },
+      "question_signal_excerpt": "单调、f、x、pi",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-3f3a808beb8fa9ca",
+      "item_id": "Q-3f3a808beb8fa9ca",
+      "ordinal": 42,
+      "ordinal_in_cycle": 9,
+      "kind": "abc_exercise",
+      "label": "B12",
+      "group": "B",
+      "cycle_id": "5.3-cycle-10",
+      "cycle_sequence": 10,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "含参函数单调性讨论之可因式分解型（上）",
+        "含参函数单调性讨论之可因式分解型（中）",
+        "含参函数单调性讨论之可因式分解型（下）",
+        "含参函数单调性讨论之类二次型",
+        "含参函数单调性讨论之不可因式分解型（上）",
+        "含参函数单调性讨论之不可因式分解型（中）",
+        "含参函数单调性讨论之不可因式分解型（下）",
+        "含参函数单调性讨论之超越函数",
+        "已知单调性求参之导数为二次型",
+        "已知单调性求参之导数为非二次型"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 讨论含参函数的单调性"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "单调",
+        "f",
+        "x",
+        "a",
+        "\\ln"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "0b4ac74a1abde0e0fa2002b52b84312166e6c7b2b08c25810556e952a75dbe24",
+      "source_question_text_sha256": "0b4ac74a1abde0e0fa2002b52b84312166e6c7b2b08c25810556e952a75dbe24",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "0b4ac74a1abde0e0fa2002b52b84312166e6c7b2b08c25810556e952a75dbe24",
+        "learner_question_text_sha256": "0b4ac74a1abde0e0fa2002b52b84312166e6c7b2b08c25810556e952a75dbe24"
+      },
+      "question_signal_excerpt": "单调、f、x、a、\\ln",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-48626324a93ddb74",
+      "item_id": "Q-48626324a93ddb74",
+      "ordinal": 43,
+      "ordinal_in_cycle": 10,
+      "kind": "abc_exercise",
+      "label": "B13",
+      "group": "B",
+      "cycle_id": "5.3-cycle-10",
+      "cycle_sequence": 10,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "含参函数单调性讨论之可因式分解型（上）",
+        "含参函数单调性讨论之可因式分解型（中）",
+        "含参函数单调性讨论之可因式分解型（下）",
+        "含参函数单调性讨论之类二次型",
+        "含参函数单调性讨论之不可因式分解型（上）",
+        "含参函数单调性讨论之不可因式分解型（中）",
+        "含参函数单调性讨论之不可因式分解型（下）",
+        "含参函数单调性讨论之超越函数",
+        "已知单调性求参之导数为二次型",
+        "已知单调性求参之导数为非二次型"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 用导数研究无参函数的单调性"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "单调",
+        "证明",
+        "f",
+        "x",
+        "left"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "cf23af2c46dda2f2a0d7cd91ce49d477e53c5c1353a94ea38da9887448da3567",
+      "source_question_text_sha256": "cf23af2c46dda2f2a0d7cd91ce49d477e53c5c1353a94ea38da9887448da3567",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "cf23af2c46dda2f2a0d7cd91ce49d477e53c5c1353a94ea38da9887448da3567",
+        "learner_question_text_sha256": "cf23af2c46dda2f2a0d7cd91ce49d477e53c5c1353a94ea38da9887448da3567"
+      },
+      "question_signal_excerpt": "单调、证明、f、x、left",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-f13f64f24305dc86",
+      "item_id": "Q-f13f64f24305dc86",
+      "ordinal": 44,
+      "ordinal_in_cycle": 11,
+      "kind": "abc_exercise",
+      "label": "B14",
+      "group": "B",
+      "cycle_id": "5.3-cycle-10",
+      "cycle_sequence": 10,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "含参函数单调性讨论之可因式分解型（上）",
+        "含参函数单调性讨论之可因式分解型（中）",
+        "含参函数单调性讨论之可因式分解型（下）",
+        "含参函数单调性讨论之类二次型",
+        "含参函数单调性讨论之不可因式分解型（上）",
+        "含参函数单调性讨论之不可因式分解型（中）",
+        "含参函数单调性讨论之不可因式分解型（下）",
+        "含参函数单调性讨论之超越函数",
+        "已知单调性求参之导数为二次型",
+        "已知单调性求参之导数为非二次型"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 讨论含参函数的单调性"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "切线",
+        "单调",
+        "f",
+        "x",
+        "a"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "3ce849b0dffcbc99165edca270685ebf7096d3fa5341cb781366e9a617c38db4",
+      "source_question_text_sha256": "3ce849b0dffcbc99165edca270685ebf7096d3fa5341cb781366e9a617c38db4",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "3ce849b0dffcbc99165edca270685ebf7096d3fa5341cb781366e9a617c38db4",
+        "learner_question_text_sha256": "3ce849b0dffcbc99165edca270685ebf7096d3fa5341cb781366e9a617c38db4"
+      },
+      "question_signal_excerpt": "切线、单调、f、x、a",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-f892a1b507e632c0",
+      "item_id": "Q-f892a1b507e632c0",
+      "ordinal": 45,
+      "ordinal_in_cycle": 12,
+      "kind": "abc_exercise",
+      "label": "B15",
+      "group": "B",
+      "cycle_id": "5.3-cycle-10",
+      "cycle_sequence": 10,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "含参函数单调性讨论之可因式分解型（上）",
+        "含参函数单调性讨论之可因式分解型（中）",
+        "含参函数单调性讨论之可因式分解型（下）",
+        "含参函数单调性讨论之类二次型",
+        "含参函数单调性讨论之不可因式分解型（上）",
+        "含参函数单调性讨论之不可因式分解型（中）",
+        "含参函数单调性讨论之不可因式分解型（下）",
+        "含参函数单调性讨论之超越函数",
+        "已知单调性求参之导数为二次型",
+        "已知单调性求参之导数为非二次型"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 讨论含参函数的单调性"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "单调",
+        "f",
+        "x",
+        "\\frac",
+        "ax"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "ab0a2c851492e35c1438f327918b0fc3d46db202590ccd12ed16049697846fd8",
+      "source_question_text_sha256": "ab0a2c851492e35c1438f327918b0fc3d46db202590ccd12ed16049697846fd8",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "ab0a2c851492e35c1438f327918b0fc3d46db202590ccd12ed16049697846fd8",
+        "learner_question_text_sha256": "ab0a2c851492e35c1438f327918b0fc3d46db202590ccd12ed16049697846fd8"
+      },
+      "question_signal_excerpt": "单调、f、x、\\frac、ax",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-6371c17e1934c920",
+      "item_id": "Q-6371c17e1934c920",
+      "ordinal": 46,
+      "ordinal_in_cycle": 13,
+      "kind": "abc_exercise",
+      "label": "B16",
+      "group": "B",
+      "cycle_id": "5.3-cycle-10",
+      "cycle_sequence": 10,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "含参函数单调性讨论之可因式分解型（上）",
+        "含参函数单调性讨论之可因式分解型（中）",
+        "含参函数单调性讨论之可因式分解型（下）",
+        "含参函数单调性讨论之类二次型",
+        "含参函数单调性讨论之不可因式分解型（上）",
+        "含参函数单调性讨论之不可因式分解型（中）",
+        "含参函数单调性讨论之不可因式分解型（下）",
+        "含参函数单调性讨论之超越函数",
+        "已知单调性求参之导数为二次型",
+        "已知单调性求参之导数为非二次型"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型V 利用导数研究函数的零点个数",
+        "类型Ⅲ 讨论含参函数的单调性"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "零点",
+        "范围",
+        "f",
+        "x",
+        "\\mathrm",
+        "e"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "3aa3f46d079abef831dcb2d941aea3a78ffb4e0b71775216aee65b105984d3d2",
+      "source_question_text_sha256": "3aa3f46d079abef831dcb2d941aea3a78ffb4e0b71775216aee65b105984d3d2",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "3aa3f46d079abef831dcb2d941aea3a78ffb4e0b71775216aee65b105984d3d2",
+        "learner_question_text_sha256": "3aa3f46d079abef831dcb2d941aea3a78ffb4e0b71775216aee65b105984d3d2"
+      },
+      "question_signal_excerpt": "零点、范围、f、x、\\mathrm、e",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-31de6dda9fc8d8e9",
+      "item_id": "Q-31de6dda9fc8d8e9",
+      "ordinal": 47,
+      "ordinal_in_cycle": 14,
+      "kind": "abc_exercise",
+      "label": "B17",
+      "group": "B",
+      "cycle_id": "5.3-cycle-10",
+      "cycle_sequence": 10,
+      "cycle_title": "B组 强化能力",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "含参函数单调性讨论之可因式分解型（上）",
+        "含参函数单调性讨论之可因式分解型（中）",
+        "含参函数单调性讨论之可因式分解型（下）",
+        "含参函数单调性讨论之类二次型",
+        "含参函数单调性讨论之不可因式分解型（上）",
+        "含参函数单调性讨论之不可因式分解型（中）",
+        "含参函数单调性讨论之不可因式分解型（下）",
+        "含参函数单调性讨论之超越函数",
+        "已知单调性求参之导数为二次型",
+        "已知单调性求参之导数为非二次型"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 讨论含参函数的单调性"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "单调",
+        "f",
+        "x",
+        "xe"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "36984d9794a9eaddee1a13747186eb3f73a7e1f03cb2b806ab742ec537d01a91",
+      "source_question_text_sha256": "36984d9794a9eaddee1a13747186eb3f73a7e1f03cb2b806ab742ec537d01a91",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "36984d9794a9eaddee1a13747186eb3f73a7e1f03cb2b806ab742ec537d01a91",
+        "learner_question_text_sha256": "36984d9794a9eaddee1a13747186eb3f73a7e1f03cb2b806ab742ec537d01a91"
+      },
+      "question_signal_excerpt": "单调、f、x、xe",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-1ccdda5b2f9656c5",
+      "item_id": "Q-1ccdda5b2f9656c5",
+      "ordinal": 48,
+      "ordinal_in_cycle": 1,
+      "kind": "abc_exercise",
+      "label": "C18",
+      "group": "C",
+      "cycle_id": "5.3-cycle-11",
+      "cycle_sequence": 11,
+      "cycle_title": "C组 拓展提升",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "含参函数单调性讨论之可因式分解型（上）",
+        "含参函数单调性讨论之可因式分解型（中）",
+        "含参函数单调性讨论之可因式分解型（下）",
+        "含参函数单调性讨论之类二次型",
+        "含参函数单调性讨论之不可因式分解型（上）",
+        "含参函数单调性讨论之不可因式分解型（中）",
+        "含参函数单调性讨论之不可因式分解型（下）",
+        "含参函数单调性讨论之超越函数",
+        "已知单调性求参之导数为二次型",
+        "已知单调性求参之导数为非二次型"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型IV 已知单调性求参数范围"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "范围",
+        "f",
+        "x",
+        "a",
+        "\\ln"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "1bf9149847030705b86e21d3de4963aad15311f0ac837c10b893fba8cc86d034",
+      "source_question_text_sha256": "1bf9149847030705b86e21d3de4963aad15311f0ac837c10b893fba8cc86d034",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "1bf9149847030705b86e21d3de4963aad15311f0ac837c10b893fba8cc86d034",
+        "learner_question_text_sha256": "1bf9149847030705b86e21d3de4963aad15311f0ac837c10b893fba8cc86d034"
+      },
+      "question_signal_excerpt": "范围、f、x、a、\\ln",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-9c1bf7bbbb5313ea",
+      "item_id": "Q-9c1bf7bbbb5313ea",
+      "ordinal": 49,
+      "ordinal_in_cycle": 2,
+      "kind": "abc_exercise",
+      "label": "C19",
+      "group": "C",
+      "cycle_id": "5.3-cycle-11",
+      "cycle_sequence": 11,
+      "cycle_title": "C组 拓展提升",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "含参函数单调性讨论之可因式分解型（上）",
+        "含参函数单调性讨论之可因式分解型（中）",
+        "含参函数单调性讨论之可因式分解型（下）",
+        "含参函数单调性讨论之类二次型",
+        "含参函数单调性讨论之不可因式分解型（上）",
+        "含参函数单调性讨论之不可因式分解型（中）",
+        "含参函数单调性讨论之不可因式分解型（下）",
+        "含参函数单调性讨论之超越函数",
+        "已知单调性求参之导数为二次型",
+        "已知单调性求参之导数为非二次型"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型IV 已知单调性求参数范围",
+        "类型Ⅱ 用导数研究无参函数的单调性"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "单调",
+        "范围",
+        "f",
+        "x",
+        "\\mathrm",
+        "e"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "8cdf2d309576b39cdab60cd0f3958d9f450a87272bf1563714770481d98f1f3c",
+      "source_question_text_sha256": "8cdf2d309576b39cdab60cd0f3958d9f450a87272bf1563714770481d98f1f3c",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "8cdf2d309576b39cdab60cd0f3958d9f450a87272bf1563714770481d98f1f3c",
+        "learner_question_text_sha256": "8cdf2d309576b39cdab60cd0f3958d9f450a87272bf1563714770481d98f1f3c"
+      },
+      "question_signal_excerpt": "单调、范围、f、x、\\mathrm、e",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-979c0e6d96423ab0",
+      "item_id": "Q-979c0e6d96423ab0",
+      "ordinal": 50,
+      "ordinal_in_cycle": 3,
+      "kind": "abc_exercise",
+      "label": "C20",
+      "group": "C",
+      "cycle_id": "5.3-cycle-11",
+      "cycle_sequence": 11,
+      "cycle_title": "C组 拓展提升",
+      "course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "course_titles": [
+        "不含参数的函数的单调性",
+        "含参函数单调性讨论之可因式分解型（上）",
+        "含参函数单调性讨论之可因式分解型（中）",
+        "含参函数单调性讨论之可因式分解型（下）",
+        "含参函数单调性讨论之类二次型",
+        "含参函数单调性讨论之不可因式分解型（上）",
+        "含参函数单调性讨论之不可因式分解型（中）",
+        "含参函数单调性讨论之不可因式分解型（下）",
+        "含参函数单调性讨论之超越函数",
+        "已知单调性求参之导数为二次型",
+        "已知单调性求参之导数为非二次型"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "4.1.4.1 不含参数的函数的单调性",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（上）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（中）",
+        "4.1.4.2 含参函数单调性讨论之可因式分解型（下）",
+        "4.1.4.3 含参函数单调性讨论之类二次型",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（上）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（中）",
+        "4.1.4.4 含参函数单调性讨论之不可因式分解型（下）",
+        "4.1.4.5 含参函数单调性讨论之超越函数",
+        "4.1.4.6 已知单调性求参之导数为二次型",
+        "4.1.4.7 已知单调性求参之导数为非二次型"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅱ 用导数研究无参函数的单调性"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "derivative",
+      "recognition_cues": [
+        "零点",
+        "证明",
+        "f",
+        "x",
+        "\\sin"
+      ],
+      "method_model": "导数定义域与符号模型",
+      "first_written_line_template": "第一行先写定义域并求导；切线题同时区分切点处切线与过点切线。",
+      "continuation_actions": [
+        "因式分解或分类讨论导数符号",
+        "列单调区间、临界点或参数条件",
+        "用端点、极值、零点或构造函数回到目标"
+      ],
+      "independent_self_check": "检查定义域、不可导点、端点、空区间、等号和参数分类闭合。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "829c0df23bf793f574f0219b3f26c60ebeacbdfc8f09edbe0cfe1a383bf56726",
+      "source_question_text_sha256": "829c0df23bf793f574f0219b3f26c60ebeacbdfc8f09edbe0cfe1a383bf56726",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "829c0df23bf793f574f0219b3f26c60ebeacbdfc8f09edbe0cfe1a383bf56726",
+        "learner_question_text_sha256": "829c0df23bf793f574f0219b3f26c60ebeacbdfc8f09edbe0cfe1a383bf56726"
+      },
+      "question_signal_excerpt": "零点、证明、f、x、\\sin",
+      "source_blocked": false
+    }
+  ],
+  "route_versions": [
+    {
+      "version": 1,
+      "route_hash": "15625e86a4db4e62150bb92f352850a837280bf00c8b6a689e0f5a4e046c089c"
+    },
+    {
+      "version": 2,
+      "route_hash": "a3b639f8e3e54bc5bb23b47b333f53b18c617efde96b18e452c3464274cd5669"
+    },
+    {
+      "version": 3,
+      "route_hash": "bcef535b77987a8f4b40543595ae5b9846c60f41b3de6cd9f5e67d6027c6bf1c"
+    }
+  ],
+  "final_route_hash": "bcef535b77987a8f4b40543595ae5b9846c60f41b3de6cd9f5e67d6027c6bf1c",
+  "simulation": {
+    "protocol": "five-round-five-persona-v3-answer-isolated",
+    "generation_mode": "synthetic_route_stress_from_actual_item_features",
+    "rounds": [
+      {
+        "round": 1,
+        "purpose": "baseline_entry",
+        "route_version": 1,
+        "route_hash": "15625e86a4db4e62150bb92f352850a837280bf00c8b6a689e0f5a4e046c089c",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 50,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 50,
+            "blocked": 5
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 50,
+            "blocked": 10
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 50,
+            "blocked": 6
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 50,
+            "blocked": 20
+          }
+        ],
+        "failed_item_keys": [
+          "LI:093e4401719d60b9",
+          "LI:1b9adce99417c31e",
+          "LI:42d873f4c41e7188",
+          "LI:50fc5c7694177dad",
+          "LI:5c4976572e9b3284",
+          "LI:5c93498462b9899e",
+          "LI:9b1a1fc65fa3ae97",
+          "LI:c2c57439db24f8e1",
+          "LI:e7fddfb8e1fc9059",
+          "Q:Q-1ccdda5b2f9656c5",
+          "Q:Q-2d43019cb70e2072",
+          "Q:Q-31de6dda9fc8d8e9",
+          "Q:Q-3e6467b021790a50",
+          "Q:Q-3f3a808beb8fa9ca",
+          "Q:Q-48626324a93ddb74",
+          "Q:Q-4c8051bb16292394",
+          "Q:Q-56cca61040bece6d",
+          "Q:Q-56eabd19e3f3ae90",
+          "Q:Q-6371c17e1934c920",
+          "Q:Q-6dcd49b4bbe1ba67",
+          "Q:Q-7c869708ca99eecf",
+          "Q:Q-979c0e6d96423ab0",
+          "Q:Q-9c1bf7bbbb5313ea",
+          "Q:Q-ad967b8b2931d0c9",
+          "Q:Q-c7221a2f8c6e43f5",
+          "Q:Q-debbf5ad8450f103",
+          "Q:Q-f13f64f24305dc86",
+          "Q:Q-f485a1f1cb73b395",
+          "Q:Q-f892a1b507e632c0"
+        ],
+        "route_repairs": [
+          {
+            "item_keys": [
+              "LI:093e4401719d60b9",
+              "LI:1b9adce99417c31e",
+              "LI:42d873f4c41e7188",
+              "Q:Q-6371c17e1934c920",
+              "Q:Q-9c1bf7bbbb5313ea"
+            ],
+            "field": "recognition_cues",
+            "before": "第1轮冻结尝试记录了 recognition-weak 的首个阻断。",
+            "after": "下一轮只加入 recognition-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 5 题；不是随机题号注入。"
+          },
+          {
+            "item_keys": [
+              "LI:1b9adce99417c31e",
+              "LI:5c93498462b9899e",
+              "LI:9b1a1fc65fa3ae97",
+              "LI:c2c57439db24f8e1",
+              "LI:e7fddfb8e1fc9059",
+              "Q:Q-1ccdda5b2f9656c5",
+              "Q:Q-56eabd19e3f3ae90",
+              "Q:Q-6371c17e1934c920",
+              "Q:Q-9c1bf7bbbb5313ea",
+              "Q:Q-debbf5ad8450f103"
+            ],
+            "field": "continuation_checkpoints",
+            "before": "第1轮冻结尝试记录了 algebra-weak 的首个阻断。",
+            "after": "下一轮只加入 algebra-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 10 题；不是随机题号注入。"
+          },
+          {
+            "item_keys": [
+              "LI:42d873f4c41e7188",
+              "LI:50fc5c7694177dad",
+              "LI:5c4976572e9b3284",
+              "Q:Q-56cca61040bece6d",
+              "Q:Q-6dcd49b4bbe1ba67",
+              "Q:Q-c7221a2f8c6e43f5"
+            ],
+            "field": "visual_translation",
+            "before": "第1轮冻结尝试记录了 visual-weak 的首个阻断。",
+            "after": "下一轮只加入 visual-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 6 题；不是随机题号注入。"
+          },
+          {
+            "item_keys": [
+              "Q:Q-1ccdda5b2f9656c5",
+              "Q:Q-2d43019cb70e2072",
+              "Q:Q-31de6dda9fc8d8e9",
+              "Q:Q-3e6467b021790a50",
+              "Q:Q-3f3a808beb8fa9ca",
+              "Q:Q-48626324a93ddb74",
+              "Q:Q-4c8051bb16292394",
+              "Q:Q-56cca61040bece6d",
+              "Q:Q-56eabd19e3f3ae90",
+              "Q:Q-6371c17e1934c920",
+              "Q:Q-6dcd49b4bbe1ba67",
+              "Q:Q-7c869708ca99eecf",
+              "Q:Q-979c0e6d96423ab0",
+              "Q:Q-9c1bf7bbbb5313ea",
+              "Q:Q-ad967b8b2931d0c9",
+              "Q:Q-c7221a2f8c6e43f5",
+              "Q:Q-debbf5ad8450f103",
+              "Q:Q-f13f64f24305dc86",
+              "Q:Q-f485a1f1cb73b395",
+              "Q:Q-f892a1b507e632c0"
+            ],
+            "field": "independent_self_check",
+            "before": "第1轮冻结尝试记录了 self-check-weak 的首个阻断。",
+            "after": "下一轮只加入 self-check-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 20 题；不是随机题号注入。"
+          }
+        ]
+      },
+      {
+        "round": 2,
+        "purpose": "prerequisite_repair",
+        "route_version": 2,
+        "route_hash": "a3b639f8e3e54bc5bb23b47b333f53b18c617efde96b18e452c3464274cd5669",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 50,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 50,
+            "blocked": 0
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 50,
+            "blocked": 0
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 50,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 50,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [],
+        "route_repairs": []
+      },
+      {
+        "round": 3,
+        "purpose": "continuation_transfer",
+        "route_version": 2,
+        "route_hash": "a3b639f8e3e54bc5bb23b47b333f53b18c617efde96b18e452c3464274cd5669",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 50,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 50,
+            "blocked": 19
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 50,
+            "blocked": 19
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 50,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 50,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [
+          "LI:01c0bcc3ffb35351",
+          "LI:12c6b4bb7cdc6972",
+          "LI:2ed21c04e0a0ffc0",
+          "LI:457a31650d634e53",
+          "LI:4a741aebf8b1ab18",
+          "LI:50fc5c7694177dad",
+          "LI:5aaf13674700f857",
+          "LI:69b70b7b2d2f545a",
+          "LI:729302327af91c5c",
+          "LI:74a1f422955890a5",
+          "LI:99d66413f1030c0f",
+          "LI:9b1a1fc65fa3ae97",
+          "LI:a441ff4e1493ea5f",
+          "LI:b25b833b987c45cf",
+          "LI:b4380502e4ac2404",
+          "LI:c2c57439db24f8e1",
+          "LI:d79a697e770ca7ad",
+          "LI:dd697f86bcc774b4",
+          "LI:e7fddfb8e1fc9059"
+        ],
+        "route_repairs": [
+          {
+            "item_keys": [
+              "LI:01c0bcc3ffb35351",
+              "LI:12c6b4bb7cdc6972",
+              "LI:2ed21c04e0a0ffc0",
+              "LI:457a31650d634e53",
+              "LI:4a741aebf8b1ab18",
+              "LI:50fc5c7694177dad",
+              "LI:5aaf13674700f857",
+              "LI:69b70b7b2d2f545a",
+              "LI:729302327af91c5c",
+              "LI:74a1f422955890a5",
+              "LI:99d66413f1030c0f",
+              "LI:9b1a1fc65fa3ae97",
+              "LI:a441ff4e1493ea5f",
+              "LI:b25b833b987c45cf",
+              "LI:b4380502e4ac2404",
+              "LI:c2c57439db24f8e1",
+              "LI:d79a697e770ca7ad",
+              "LI:dd697f86bcc774b4",
+              "LI:e7fddfb8e1fc9059"
+            ],
+            "field": "recognition_cues",
+            "before": "第3轮冻结尝试记录了 recognition-weak 的首个阻断。",
+            "after": "下一轮只加入 recognition-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 19 题；不是随机题号注入。"
+          },
+          {
+            "item_keys": [
+              "LI:01c0bcc3ffb35351",
+              "LI:12c6b4bb7cdc6972",
+              "LI:2ed21c04e0a0ffc0",
+              "LI:457a31650d634e53",
+              "LI:4a741aebf8b1ab18",
+              "LI:50fc5c7694177dad",
+              "LI:5aaf13674700f857",
+              "LI:69b70b7b2d2f545a",
+              "LI:729302327af91c5c",
+              "LI:74a1f422955890a5",
+              "LI:99d66413f1030c0f",
+              "LI:9b1a1fc65fa3ae97",
+              "LI:a441ff4e1493ea5f",
+              "LI:b25b833b987c45cf",
+              "LI:b4380502e4ac2404",
+              "LI:c2c57439db24f8e1",
+              "LI:d79a697e770ca7ad",
+              "LI:dd697f86bcc774b4",
+              "LI:e7fddfb8e1fc9059"
+            ],
+            "field": "continuation_checkpoints",
+            "before": "第3轮冻结尝试记录了 algebra-weak 的首个阻断。",
+            "after": "下一轮只加入 algebra-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 19 题；不是随机题号注入。"
+          }
+        ]
+      },
+      {
+        "round": 4,
+        "purpose": "mixed_retrieval",
+        "route_version": 3,
+        "route_hash": "bcef535b77987a8f4b40543595ae5b9846c60f41b3de6cd9f5e67d6027c6bf1c",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 50,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 50,
+            "blocked": 0
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 50,
+            "blocked": 0
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 50,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 50,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [],
+        "route_repairs": []
+      },
+      {
+        "round": 5,
+        "purpose": "fresh_context",
+        "route_version": 3,
+        "route_hash": "bcef535b77987a8f4b40543595ae5b9846c60f41b3de6cd9f5e67d6027c6bf1c",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 50,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 50,
+            "blocked": 0
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 50,
+            "blocked": 0
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 50,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 50,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [],
+        "route_repairs": []
+      }
+    ],
+    "expected_attempts_per_item": 25,
+    "actual_attempts_per_item": 25,
+    "unresolved_item_keys": [],
+    "mathematical_correctness": "not_evaluated_no_final_answer",
+    "mastery_claimed": false,
+    "status": "passed"
+  },
+  "summary": {
+    "items": 50,
+    "attempts": 1250,
+    "route_assessments": 1250,
+    "rounds": 5,
+    "personas_per_round": 5,
+    "repairs": 6,
+    "round_5_failed_items": 0,
+    "validator_errors": []
+  },
+  "human_learning_status": "remote_math_mcp_only",
+  "cold_24h_retest": "not_run",
+  "mastery_claimed": false,
+  "claim_scope": "route_actionability_only",
+  "mathematical_assessment_status": "not_run",
+  "route_audit_status": "passed",
+  "status": "passed"
+}

@@ -1,5 +1,18 @@
 # Development Log
 
+## 2026-08-31 全书语义、答案隔离与 Cloud 答案证据收口
+
+- 使用多智能体逐题复核第 1 章第 2 节至第 5 章的 512 道 A/B/C 题型：512/512 accepted、0 blocked；修正 214 项机器建议，保留复合次类型，并以原题/原答案页证据裁决 `2.1 B9` 与 `2.6 C18`。`2.5 B13` 恢复为“恒被直线平分”，4 个源题面缺陷同步从原页修复。
+- 从原页重切 16 个混入解析、后续知识块或完整证明的 learner 例题/变式；新增全书题干投影门禁，1,209/1,209 题面通过，546 个 exercise 与 663 个 learning item 的稳定 ID 均为 0 漂移。
+- 独立复核 59 张原图并合并 55 条有效结构化视觉证据；发现并删除 4 个误挂附件（上一题四面体图、前一例圆图和 2 个页脚水印）。重建后 38/38 `packet` 与 38/38 `learning_packet` 均为 `VERIFIED`，全五章来源审计 0 blocker。
+- 全书原答案证据闭合为 546/546：473 条允许自动使用，51 条 OCR 文本必须对照原页，22 条仅使用原页视觉证据，0 blocked；每条绑定原 PDF、页码、页面图 SHA 和 OCR SHA。全书构建器现在保留匹配 QID 的 v3 sidecar，QID 漂移时失败关闭，不再静默降级为 7.1 空答案。
+- 将五人格五轮重新定义为合成路线压力审计：冻结前只读取白名单化学生题包和无答案路线，冻结 SHA 落盘后才读取 grader-only 资料。当前原子运行 `route-audit-5391e980be231c3c` 覆盖 38 节、353 循环、1,209 项、30,225 条冻结尝试和 30,225 条 `route_assessments`；Round 5 阻断 0、隔离错误 0、ID 全局唯一。JSONL 改为 gzip 后完整运行仅 9.88 MB，两套未发布旧运行和 37 份 v2 单节生成物已清理。所有记录保持 `mathematical_correctness=not_evaluated_no_final_answer`、`mastery_claimed=false`。
+- `primary-user-proxy` 改为版本化运行与 current 快照；文稿 `full_text` 哈希只标记 `transcript_loaded_for_proxy`，不再冒充课程消费。没有最终数学作答时保持 `simulated_learning_status=not_run_no_final_learner_answers`，真实用户状态继续只认远程 MCP。
+- 恢复 12 节 39 个经转写 SHA 复核的课程落点；`5.6` 的“4.2.6.1 求和型放缩（上/下）”只在例 12-14 的综合循环首次直接引入，不再被错误广播为全节前置。全书课程合同为 38/38 节、1,209 项、0 error。
+- 新增 Cloudflare D1 增量迁移 `0006_answer_evidence_contract.sql` 和版本化答案页 R2 包；`math_get_answer_sources` 区分自动答案、待复核 OCR 和仅原页证据，后两类强制禁自动判分并返回验 SHA 图片，模型解法继续单列。Cloud MCP 8/8 测试通过；最终 dry-run 版本 `v1-82aac1d4dce375de` 为 5 章、38 节、1,209 项、170 课程、5,097 链接、19,234 文稿片段、546 答案、38 页包/326 唯一页，尚未部署远端。
+- 新增 `docs/PROJECT-MAP.md`，以非代码语言说明静态资料、路线审计、浏览器状态、仓库代理、D1 真实进度和 ChatGPT MCP 数据流；Skill 同步加入题干隔离、原子 current、跨运行代理和答案置信边界。
+- 最终本地验证：Python 174 项通过、1 项因本机没有旧 DeepSeek 视觉配置跳过；Skill section 4/4、progress 4/4、章节进度 2/2、题型/裁决/视觉/答案/来源/课程审计全部通过；Skill `quick_validate` 通过。真实学习、最终数学判分和 24 小时冷复测仍为 `not_run`。
+
 ## 2026-08-30 全五章路线与用户代理闭环
 
 - 将正式交付范围从前两章扩大到选择性必修 1 全五章、38 节；同步更新 `AGENTS.md`、产品需求、Skill、ChatGPT 使用说明和启动提示词。第一章第一节保留为持续回归样板，但不再阻塞后续节次。

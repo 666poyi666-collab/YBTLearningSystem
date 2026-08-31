@@ -1,25 +1,23 @@
 {
   "artifact": "CURRENT_GENERATION_ZERO_BASE_AGENT_SIMULATION",
   "section": "1.1",
-  "generation": "G-LUNA-20260830-ALL38",
+  "generation": "G-ROUTE-AUDIT-20260831",
   "authority": {
-    "kind": "luna_section_delivery_projection",
-    "delivery": "reports/ch12_luna_sections/LUNA-CH12-01/delivery.json",
-    "task_id": "LUNA-CH12-01",
-    "model": "combo/protect-luna",
-    "reasoning_effort": "max",
-    "context_window": 128000,
-    "protocol": "five-round-five-persona-v2",
+    "kind": "answer_isolated_route_audit_projection",
+    "current_pointer": "reports/deep_section_simulations/current.json",
+    "run_id": "route-audit-5391e980be231c3c",
+    "protocol": "five-round-five-persona-v3-answer-isolated",
     "source_round": 5,
-    "projection_persona": "R5-P1"
+    "projection_persona": "literal-zero-base",
+    "claim_scope": "route_actionability_only"
   },
   "worker_contract": {
     "workers_dispatched": 5,
     "workers_completed": 5,
-    "role": "deepseek_worker",
-    "model": "gpt-5.6-luna",
-    "reasoning_effort": "max",
-    "context_window": 1050000,
+    "role": "synthetic_route_stress_persona",
+    "model": "deterministic-route-audit",
+    "reasoning_effort": "not_applicable",
+    "context_window": null,
     "answer_sidecar_read": false
   },
   "task_coverage": {
@@ -34,33 +32,34 @@
     "fail": 0,
     "task_coverage_complete": true,
     "route_verdict": "PASS",
+    "mathematical_correctness": "not_evaluated_no_final_answer",
     "human_acceptance_not_proven": true,
     "cold_retest_24h": "not_run",
     "real_user_observation": "not_run"
   },
   "workers": [
     {
-      "persona_id": "R5-P1",
+      "persona_id": "algebra-weak",
       "status": "pass",
       "item_count": 38
     },
     {
-      "persona_id": "R5-P2",
+      "persona_id": "literal-zero-base",
       "status": "pass",
       "item_count": 38
     },
     {
-      "persona_id": "R5-P3",
+      "persona_id": "recognition-weak",
       "status": "pass",
       "item_count": 38
     },
     {
-      "persona_id": "R5-P4",
+      "persona_id": "self-check-weak",
       "status": "pass",
       "item_count": 38
     },
     {
-      "persona_id": "R5-P5",
+      "persona_id": "visual-weak",
       "status": "pass",
       "item_count": 38
     }
@@ -77,32 +76,36 @@
       "cycle": 1,
       "item_id": "3da13562633d3606",
       "source_revision": {
-        "generation": "G-LUNA-20260830-ALL38",
-        "authority": "reports/ch12_luna_sections/LUNA-CH12-01/delivery.json",
-        "route_version": 2,
+        "generation": "G-ROUTE-AUDIT-20260831",
+        "authority": "reports/deep_section_simulations/current.json",
+        "run_id": "route-audit-5391e980be231c3c",
         "round": 5
       },
       "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
-      "observation_signal": "题面要求从长方体顶点向量中找相等或相反关系",
+      "observation_signal": "向量",
       "course_call": {
         "course_keys": [
           "space_vector_ops"
         ],
-        "method_model_id": "方向与模的双条件筛选模型；向量可平移，起点不决定向量本身",
+        "method_model_id": "向量几何翻译",
         "knowledge_refs": [
-          "空间向量的相关概念"
+          "1.1-k1",
+          "1.1-k2"
         ],
-        "type_refs": []
+        "type_refs": [
+          "类型Ⅰ 线性运算"
+        ]
       },
-      "first_line": "先写：候选向量\\(\\overrightarrow{UV}\\)需满足方向与目标同/反向且\\(|UV|=|XY|\\)；先保留题干符号，不写数值结论。",
+      "first_line": "R5 literal-zero-base：先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
       "second_line": "",
-      "continuation": "固定目标箭头方向｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；沿平行棱逐条核对方向和长度｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；把相反方向单独翻转后再登记｜第5轮｜literal-zero-base｜fresh answer-free 冷启动",
-      "independent_self_check": "倒置候选箭头后模是否不变；本轮用对象先于公式方式独立回查。",
+      "continuation": "步骤1：统一起点或建立坐标系；对象=例1。；步骤2：把条件写成线性表示、坐标或数量积；对象=例1。；步骤3：按系数、坐标或夹角条件推进；对象=例1。",
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。（由 literal-zero-base 实际写入本次路线尝试）",
       "first_breakpoint": null,
       "hint_level": "none",
       "verdict": "PASS",
-      "evidence_level": "LUNA_SECTION_DELIVERY_ROUND_5_PROJECTION",
+      "evidence_level": "ANSWER_ISOLATED_ROUTE_AUDIT_ROUND_5_PROJECTION",
       "answer_sidecar_read": false,
+      "mathematical_correctness": "not_evaluated_no_final_answer",
       "human_acceptance_not_proven": true
     },
     {
@@ -110,32 +113,36 @@
       "cycle": 1,
       "item_id": "24dd4a64777ed832",
       "source_revision": {
-        "generation": "G-LUNA-20260830-ALL38",
-        "authority": "reports/ch12_luna_sections/LUNA-CH12-01/delivery.json",
-        "route_version": 2,
+        "generation": "G-ROUTE-AUDIT-20260831",
+        "authority": "reports/deep_section_simulations/current.json",
+        "run_id": "route-audit-5391e980be231c3c",
         "round": 5
       },
       "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
-      "observation_signal": "题面出现平行六面体和多项向量相加，需把项接成首尾或平行四边形",
+      "observation_signal": "ABCD",
       "course_call": {
         "course_keys": [
           "space_vector_ops"
         ],
-        "method_model_id": "空间向量加减的首尾相接/平行四边形模型，先平移再合并",
+        "method_model_id": "向量几何翻译",
         "knowledge_refs": [
-          "空间向量的线性运算"
+          "1.1-k1",
+          "1.1-k2"
         ],
-        "type_refs": []
+        "type_refs": [
+          "类型Ⅰ 线性运算"
+        ]
       },
-      "first_line": "先写：\\(\\overrightarrow{目标}=\\overrightarrow{第一项}+\\overrightarrow{第二项}+\\cdots\\)；先保留题干符号，不写数值结论。",
+      "first_line": "R5 literal-zero-base：先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
       "second_line": "",
-      "continuation": "确认每项起终点｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；优先寻找首尾相接或共起点结构｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；逐项合并并保留向量方向｜第5轮｜literal-zero-base｜fresh answer-free 冷启动",
-      "independent_self_check": "首尾是否闭合；本轮用对象先于公式方式独立回查。",
+      "continuation": "步骤1：统一起点或建立坐标系；对象=例2。；步骤2：把条件写成线性表示、坐标或数量积；对象=例2。；步骤3：按系数、坐标或夹角条件推进；对象=例2。",
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。（由 literal-zero-base 实际写入本次路线尝试）",
       "first_breakpoint": null,
       "hint_level": "none",
       "verdict": "PASS",
-      "evidence_level": "LUNA_SECTION_DELIVERY_ROUND_5_PROJECTION",
+      "evidence_level": "ANSWER_ISOLATED_ROUTE_AUDIT_ROUND_5_PROJECTION",
       "answer_sidecar_read": false,
+      "mathematical_correctness": "not_evaluated_no_final_answer",
       "human_acceptance_not_proven": true
     },
     {
@@ -143,32 +150,36 @@
       "cycle": 1,
       "item_id": "df584e2805cfa309",
       "source_revision": {
-        "generation": "G-LUNA-20260830-ALL38",
-        "authority": "reports/ch12_luna_sections/LUNA-CH12-01/delivery.json",
-        "route_version": 2,
+        "generation": "G-ROUTE-AUDIT-20260831",
+        "authority": "reports/deep_section_simulations/current.json",
+        "run_id": "route-audit-5391e980be231c3c",
         "round": 5
       },
       "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
-      "observation_signal": "题面给出四面体、边上中点和向量比例，目标是用基准向量表示另一条向量",
+      "observation_signal": "ABCD",
       "course_call": {
         "course_keys": [
           "space_vector_ops"
         ],
-        "method_model_id": "位置向量/分点向量模型：先把中点写成两端平均，再沿同一直线用比例传递",
+        "method_model_id": "向量几何翻译",
         "knowledge_refs": [
-          "空间向量的线性运算"
+          "1.1-k1",
+          "1.1-k2"
         ],
-        "type_refs": []
+        "type_refs": [
+          "类型Ⅰ 线性运算"
+        ]
       },
-      "first_line": "先写：\\(\\overrightarrow{AE}=\\tfrac12\\overrightarrow{AB}+\\tfrac12\\overrightarrow{AC}\\)，再按题设比例设目标向量；先保留题干符号，不写数值结论。",
+      "first_line": "R5 literal-zero-base：先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
       "second_line": "",
-      "continuation": "先定位中点所在边｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；把端点向量统一到A为起点｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；使用给定比例表示内部点方向｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；回到目标向量的起点终点｜第5轮｜literal-zero-base｜fresh answer-free 冷启动",
-      "independent_self_check": "中点系数是否和为1；本轮用对象先于公式方式独立回查。",
+      "continuation": "步骤1：统一起点或建立坐标系；对象=例3。；步骤2：把条件写成线性表示、坐标或数量积；对象=例3。；步骤3：按系数、坐标或夹角条件推进；对象=例3。",
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。（由 literal-zero-base 实际写入本次路线尝试）",
       "first_breakpoint": null,
       "hint_level": "none",
       "verdict": "PASS",
-      "evidence_level": "LUNA_SECTION_DELIVERY_ROUND_5_PROJECTION",
+      "evidence_level": "ANSWER_ISOLATED_ROUTE_AUDIT_ROUND_5_PROJECTION",
       "answer_sidecar_read": false,
+      "mathematical_correctness": "not_evaluated_no_final_answer",
       "human_acceptance_not_proven": true
     },
     {
@@ -176,34 +187,36 @@
       "cycle": 1,
       "item_id": "8915857a2181490b",
       "source_revision": {
-        "generation": "G-LUNA-20260830-ALL38",
-        "authority": "reports/ch12_luna_sections/LUNA-CH12-01/delivery.json",
-        "route_version": 2,
+        "generation": "G-ROUTE-AUDIT-20260831",
+        "authority": "reports/deep_section_simulations/current.json",
+        "run_id": "route-audit-5391e980be231c3c",
         "round": 5
       },
       "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
-      "observation_signal": "题面是符号向量或括号表达式，目标是线性展开与合并",
+      "observation_signal": "a",
       "course_call": {
         "course_keys": [
           "space_vector_ops"
         ],
-        "method_model_id": "代数线性运算模型：先展开外层系数和减号，再合并同类向量",
+        "method_model_id": "向量几何翻译",
         "knowledge_refs": [
-          "空间向量的线性运算"
+          "1.1-k1",
+          "1.1-k2"
         ],
         "type_refs": [
           "类型Ⅰ 线性运算"
         ]
       },
-      "first_line": "先写：\\(E=\\sum_i c_i\\mathbf{u}_i\\)，保留每个括号的外层符号；先保留题干符号，不写数值结论。",
+      "first_line": "R5 literal-zero-base：先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
       "second_line": "",
-      "continuation": "逐层展开括号｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；把同一基向量的系数放在同列｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；合并系数后再把几何向量翻译回题目对象｜第5轮｜literal-zero-base｜fresh answer-free 冷启动",
-      "independent_self_check": "每个基向量是否都有来源；本轮用对象先于公式方式独立回查。",
+      "continuation": "步骤1：统一起点或建立坐标系；对象=例9。；步骤2：把条件写成线性表示、坐标或数量积；对象=例9。；步骤3：按系数、坐标或夹角条件推进；对象=例9。",
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。（由 literal-zero-base 实际写入本次路线尝试）",
       "first_breakpoint": null,
       "hint_level": "none",
       "verdict": "PASS",
-      "evidence_level": "LUNA_SECTION_DELIVERY_ROUND_5_PROJECTION",
+      "evidence_level": "ANSWER_ISOLATED_ROUTE_AUDIT_ROUND_5_PROJECTION",
       "answer_sidecar_read": false,
+      "mathematical_correctness": "not_evaluated_no_final_answer",
       "human_acceptance_not_proven": true
     },
     {
@@ -211,34 +224,36 @@
       "cycle": 1,
       "item_id": "81bf55e4b2eab3a4",
       "source_revision": {
-        "generation": "G-LUNA-20260830-ALL38",
-        "authority": "reports/ch12_luna_sections/LUNA-CH12-01/delivery.json",
-        "route_version": 2,
+        "generation": "G-ROUTE-AUDIT-20260831",
+        "authority": "reports/deep_section_simulations/current.json",
+        "run_id": "route-audit-5391e980be231c3c",
         "round": 5
       },
       "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
-      "observation_signal": "题面是平行六面体中的多项几何向量，要求化简并定位结果向量",
+      "observation_signal": "向量",
       "course_call": {
         "course_keys": [
           "space_vector_ops"
         ],
-        "method_model_id": "平移向量到公共起点/首尾相接，再用平行六面体平行关系闭合",
+        "method_model_id": "向量几何翻译",
         "knowledge_refs": [
-          "空间向量的线性运算"
+          "1.1-k1",
+          "1.1-k2"
         ],
         "type_refs": [
           "类型Ⅰ 线性运算"
         ]
       },
-      "first_line": "先写：\\(\\overrightarrow{结果}=\\overrightarrow{项1}+\\overrightarrow{项2}+\\overrightarrow{项3}\\)；先保留题干符号，不写数值结论。",
+      "first_line": "R5 literal-zero-base：先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
       "second_line": "",
-      "continuation": "选一个公共起点｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；用平行棱替换同向向量｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；处理分点系数再首尾相接｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；在图上标注结果的终点位置｜第5轮｜literal-zero-base｜fresh answer-free 冷启动",
-      "independent_self_check": "结果向量能否沿原式反拆；本轮用对象先于公式方式独立回查。",
+      "continuation": "步骤1：统一起点或建立坐标系；对象=例10。；步骤2：把条件写成线性表示、坐标或数量积；对象=例10。；步骤3：按系数、坐标或夹角条件推进；对象=例10。",
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。（由 literal-zero-base 实际写入本次路线尝试）",
       "first_breakpoint": null,
       "hint_level": "none",
       "verdict": "PASS",
-      "evidence_level": "LUNA_SECTION_DELIVERY_ROUND_5_PROJECTION",
+      "evidence_level": "ANSWER_ISOLATED_ROUTE_AUDIT_ROUND_5_PROJECTION",
       "answer_sidecar_read": false,
+      "mathematical_correctness": "not_evaluated_no_final_answer",
       "human_acceptance_not_proven": true
     },
     {
@@ -246,33 +261,36 @@
       "cycle": 1,
       "item_id": "A1",
       "source_revision": {
-        "generation": "G-LUNA-20260830-ALL38",
-        "authority": "reports/ch12_luna_sections/LUNA-CH12-01/delivery.json",
-        "route_version": 2,
+        "generation": "G-ROUTE-AUDIT-20260831",
+        "authority": "reports/deep_section_simulations/current.json",
+        "run_id": "route-audit-5391e980be231c3c",
         "round": 5
       },
       "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
-      "observation_signal": "题面在四面体中给出底边中点和OA/OB/OC，要求表示AN",
+      "observation_signal": "OABC",
       "course_call": {
         "course_keys": [
           "space_vector_ops"
         ],
-        "method_model_id": "分点位置向量模型：先写中点位置向量，再减去起点位置向量",
+        "method_model_id": "向量几何翻译",
         "knowledge_refs": [
-          "空间向量的相关概念",
-          "空间向量的线性运算"
+          "1.1-k1",
+          "1.1-k2"
         ],
-        "type_refs": []
+        "type_refs": [
+          "类型Ⅰ 线性运算"
+        ]
       },
-      "first_line": "先写：\\(\\overrightarrow{AN}=\\overrightarrow{ON}-\\overrightarrow{OA}\\)；先保留题干符号，不写数值结论。",
+      "first_line": "R5 literal-zero-base：先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
       "second_line": "",
-      "continuation": "写出N的中点位置向量｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；统一以O为参考点｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；再做位置向量相减｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；检查每个系数来自哪一条边｜第5轮｜literal-zero-base｜fresh answer-free 冷启动",
-      "independent_self_check": "中点系数是否各为二分之一；本轮用对象先于公式方式独立回查。",
+      "continuation": "步骤1：统一起点或建立坐标系；对象=A1。；步骤2：把条件写成线性表示、坐标或数量积；对象=A1。；步骤3：按系数、坐标或夹角条件推进；对象=A1。",
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。（由 literal-zero-base 实际写入本次路线尝试）",
       "first_breakpoint": null,
       "hint_level": "none",
       "verdict": "PASS",
-      "evidence_level": "LUNA_SECTION_DELIVERY_ROUND_5_PROJECTION",
+      "evidence_level": "ANSWER_ISOLATED_ROUTE_AUDIT_ROUND_5_PROJECTION",
       "answer_sidecar_read": false,
+      "mathematical_correctness": "not_evaluated_no_final_answer",
       "human_acceptance_not_proven": true
     },
     {
@@ -280,32 +298,36 @@
       "cycle": 1,
       "item_id": "A2",
       "source_revision": {
-        "generation": "G-LUNA-20260830-ALL38",
-        "authority": "reports/ch12_luna_sections/LUNA-CH12-01/delivery.json",
-        "route_version": 2,
+        "generation": "G-ROUTE-AUDIT-20260831",
+        "authority": "reports/deep_section_simulations/current.json",
+        "run_id": "route-audit-5391e980be231c3c",
         "round": 5
       },
       "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
-      "observation_signal": "题面由符号向量和有向线段减法组成，需区分代数向量与几何向量",
+      "observation_signal": "a",
       "course_call": {
         "course_keys": [
           "space_vector_ops"
         ],
-        "method_model_id": "括号展开与路径闭合模型，几何向量先改写成统一起点的形式",
+        "method_model_id": "向量几何翻译",
         "knowledge_refs": [
-          "空间向量的线性运算"
+          "1.1-k1",
+          "1.1-k2"
         ],
-        "type_refs": []
+        "type_refs": [
+          "类型Ⅰ 线性运算"
+        ]
       },
-      "first_line": "先写：\\(E=2(a-2b-3c)-3(a+2b-c)\\) 或按题目第一小问逐项列出；先保留题干符号，不写数值结论。",
+      "first_line": "R5 literal-zero-base：先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
       "second_line": "",
-      "continuation": "先处理系数与括号｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；将AB、DB、AC写成同一参考点关系｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；合并同类项并保持向量记号｜第5轮｜literal-zero-base｜fresh answer-free 冷启动",
-      "independent_self_check": "代回一个简单同起点表示是否保持原式；本轮用对象先于公式方式独立回查。",
+      "continuation": "步骤1：统一起点或建立坐标系；对象=A2。；步骤2：把条件写成线性表示、坐标或数量积；对象=A2。；步骤3：按系数、坐标或夹角条件推进；对象=A2。",
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。（由 literal-zero-base 实际写入本次路线尝试）",
       "first_breakpoint": null,
       "hint_level": "none",
       "verdict": "PASS",
-      "evidence_level": "LUNA_SECTION_DELIVERY_ROUND_5_PROJECTION",
+      "evidence_level": "ANSWER_ISOLATED_ROUTE_AUDIT_ROUND_5_PROJECTION",
       "answer_sidecar_read": false,
+      "mathematical_correctness": "not_evaluated_no_final_answer",
       "human_acceptance_not_proven": true
     },
     {
@@ -313,32 +335,36 @@
       "cycle": 1,
       "item_id": "A3",
       "source_revision": {
-        "generation": "G-LUNA-20260830-ALL38",
-        "authority": "reports/ch12_luna_sections/LUNA-CH12-01/delivery.json",
-        "route_version": 2,
+        "generation": "G-ROUTE-AUDIT-20260831",
+        "authority": "reports/deep_section_simulations/current.json",
+        "run_id": "route-audit-5391e980be231c3c",
         "round": 5
       },
       "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
-      "observation_signal": "题面是正方体中点G与对角线交点O的多项向量式",
+      "observation_signal": "ABCD",
       "course_call": {
         "course_keys": [
           "space_vector_ops"
         ],
-        "method_model_id": "正方体平行关系+中点/对角线位置模型，先把每项改写为A或同一顶点的基向量",
+        "method_model_id": "向量几何翻译",
         "knowledge_refs": [
-          "空间向量的线性运算"
+          "1.1-k1",
+          "1.1-k2"
         ],
-        "type_refs": []
+        "type_refs": [
+          "类型Ⅰ 线性运算"
+        ]
       },
-      "first_line": "先写：\\(\\overrightarrow{GD}=\\overrightarrow{GA}+\\overrightarrow{AD}\\)，并为O写出对角线位置表示；先保留题干符号，不写数值结论。",
+      "first_line": "R5 literal-zero-base：先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
       "second_line": "",
-      "continuation": "确认G在竖棱中点｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；确认O为底面对角线交点｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；逐项统一参考点｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；最后合并半系数｜第5轮｜literal-zero-base｜fresh answer-free 冷启动",
-      "independent_self_check": "系数是否体现中点/对角线；本轮用对象先于公式方式独立回查。",
+      "continuation": "步骤1：统一起点或建立坐标系；对象=A3。；步骤2：把条件写成线性表示、坐标或数量积；对象=A3。；步骤3：按系数、坐标或夹角条件推进；对象=A3。",
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。（由 literal-zero-base 实际写入本次路线尝试）",
       "first_breakpoint": null,
       "hint_level": "none",
       "verdict": "PASS",
-      "evidence_level": "LUNA_SECTION_DELIVERY_ROUND_5_PROJECTION",
+      "evidence_level": "ANSWER_ISOLATED_ROUTE_AUDIT_ROUND_5_PROJECTION",
       "answer_sidecar_read": false,
+      "mathematical_correctness": "not_evaluated_no_final_answer",
       "human_acceptance_not_proven": true
     },
     {
@@ -346,32 +372,35 @@
       "cycle": 2,
       "item_id": "1bc60321129e778d",
       "source_revision": {
-        "generation": "G-LUNA-20260830-ALL38",
-        "authority": "reports/ch12_luna_sections/LUNA-CH12-01/delivery.json",
-        "route_version": 2,
+        "generation": "G-ROUTE-AUDIT-20260831",
+        "authority": "reports/deep_section_simulations/current.json",
+        "run_id": "route-audit-5391e980be231c3c",
         "round": 5
       },
       "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
-      "observation_signal": "题面要求判断向量共线/平行，且给出可拆分的空间向量关系",
+      "observation_signal": "向量",
       "course_call": {
         "course_keys": [
           "decomposition"
         ],
-        "method_model_id": "空间向量基本定理的共线判据：选非零方向向量，目标向量写成同一方向的实数倍",
+        "method_model_id": "向量几何翻译",
         "knowledge_refs": [
-          "共线向量与共面向量"
+          "1.1-k3"
         ],
-        "type_refs": []
+        "type_refs": [
+          "类型Ⅱ 证明平行、共线"
+        ]
       },
-      "first_line": "先写：\\(\\overrightarrow{u}=\\lambda\\overrightarrow{v},\\quad\\overrightarrow{v}\\ne\\mathbf0\\)；先保留题干符号，不写数值结论。",
+      "first_line": "R5 literal-zero-base：先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
       "second_line": "",
-      "continuation": "先确认目标是共线而非共面｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；选一个非零方向向量｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；把另一个向量拆到该方向｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；把倍数关系翻译为几何结论｜第5轮｜literal-zero-base｜fresh answer-free 冷启动",
-      "independent_self_check": "倍数是否为实数；本轮用对象先于公式方式独立回查。",
+      "continuation": "步骤1：统一起点或建立坐标系；对象=例4。；步骤2：把条件写成线性表示、坐标或数量积；对象=例4。；步骤3：按系数、坐标或夹角条件推进；对象=例4。",
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。（由 literal-zero-base 实际写入本次路线尝试）",
       "first_breakpoint": null,
       "hint_level": "none",
       "verdict": "PASS",
-      "evidence_level": "LUNA_SECTION_DELIVERY_ROUND_5_PROJECTION",
+      "evidence_level": "ANSWER_ISOLATED_ROUTE_AUDIT_ROUND_5_PROJECTION",
       "answer_sidecar_read": false,
+      "mathematical_correctness": "not_evaluated_no_final_answer",
       "human_acceptance_not_proven": true
     },
     {
@@ -379,32 +408,35 @@
       "cycle": 2,
       "item_id": "9dbc42c31a3d3813",
       "source_revision": {
-        "generation": "G-LUNA-20260830-ALL38",
-        "authority": "reports/ch12_luna_sections/LUNA-CH12-01/delivery.json",
-        "route_version": 2,
+        "generation": "G-ROUTE-AUDIT-20260831",
+        "authority": "reports/deep_section_simulations/current.json",
+        "run_id": "route-audit-5391e980be231c3c",
         "round": 5
       },
       "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
-      "observation_signal": "题面通过三条基向量和系数关系判断共线或共面",
+      "observation_signal": "向量",
       "course_call": {
         "course_keys": [
           "decomposition"
         ],
-        "method_model_id": "不共面基底的唯一拆分模型：逐项比较系数，再辨别一维倍数或二维组合",
+        "method_model_id": "向量几何翻译",
         "knowledge_refs": [
-          "共线向量与共面向量"
+          "1.1-k3"
         ],
-        "type_refs": []
+        "type_refs": [
+          "类型Ⅱ 证明平行、共线"
+        ]
       },
-      "first_line": "先写：\\(\\overrightarrow{u}=x\\mathbf e_1+y\\mathbf e_2+z\\mathbf e_3\\)，并标注基底条件；先保留题干符号，不写数值结论。",
+      "first_line": "R5 literal-zero-base：先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
       "second_line": "",
-      "continuation": "写出两个目标向量的基底展开｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；逐项比较三个系数｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；检查是否存在同一个比例因子｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；落回共线/平行结论｜第5轮｜literal-zero-base｜fresh answer-free 冷启动",
-      "independent_self_check": "三个系数比例是否同一；本轮用对象先于公式方式独立回查。",
+      "continuation": "步骤1：统一起点或建立坐标系；对象=例5。；步骤2：把条件写成线性表示、坐标或数量积；对象=例5。；步骤3：按系数、坐标或夹角条件推进；对象=例5。",
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。（由 literal-zero-base 实际写入本次路线尝试）",
       "first_breakpoint": null,
       "hint_level": "none",
       "verdict": "PASS",
-      "evidence_level": "LUNA_SECTION_DELIVERY_ROUND_5_PROJECTION",
+      "evidence_level": "ANSWER_ISOLATED_ROUTE_AUDIT_ROUND_5_PROJECTION",
       "answer_sidecar_read": false,
+      "mathematical_correctness": "not_evaluated_no_final_answer",
       "human_acceptance_not_proven": true
     },
     {
@@ -412,34 +444,35 @@
       "cycle": 2,
       "item_id": "e7779f7dc2baf837",
       "source_revision": {
-        "generation": "G-LUNA-20260830-ALL38",
-        "authority": "reports/ch12_luna_sections/LUNA-CH12-01/delivery.json",
-        "route_version": 2,
+        "generation": "G-ROUTE-AUDIT-20260831",
+        "authority": "reports/deep_section_simulations/current.json",
+        "run_id": "route-audit-5391e980be231c3c",
         "round": 5
       },
       "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
-      "observation_signal": "题面要证明三点共线/两线平行，并给出相对同一起点的向量展开",
+      "observation_signal": "向量",
       "course_call": {
         "course_keys": [
           "decomposition"
         ],
-        "method_model_id": "先求相邻段向量差，再证明两段是非零实数倍",
+        "method_model_id": "向量几何翻译",
         "knowledge_refs": [
-          "共线向量与共面向量"
+          "1.1-k3"
         ],
         "type_refs": [
           "类型Ⅱ 证明平行、共线"
         ]
       },
-      "first_line": "先写：\\(\\overrightarrow{BC}=\\overrightarrow{AC}-\\overrightarrow{AB},\\quad\\overrightarrow{CD}=\\overrightarrow{AD}-\\overrightarrow{AC}\\)；先保留题干符号，不写数值结论。",
+      "first_line": "R5 literal-zero-base：先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
       "second_line": "",
-      "continuation": "按路径求出相邻段｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；展开到同一组不共面基向量｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；比较各项系数找公共倍数｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；把倍数关系翻译为三点共线｜第5轮｜literal-zero-base｜fresh answer-free 冷启动",
-      "independent_self_check": "两段是否共享同一方向；本轮用对象先于公式方式独立回查。",
+      "continuation": "步骤1：统一起点或建立坐标系；对象=例11。；步骤2：把条件写成线性表示、坐标或数量积；对象=例11。；步骤3：按系数、坐标或夹角条件推进；对象=例11。",
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。（由 literal-zero-base 实际写入本次路线尝试）",
       "first_breakpoint": null,
       "hint_level": "none",
       "verdict": "PASS",
-      "evidence_level": "LUNA_SECTION_DELIVERY_ROUND_5_PROJECTION",
+      "evidence_level": "ANSWER_ISOLATED_ROUTE_AUDIT_ROUND_5_PROJECTION",
       "answer_sidecar_read": false,
+      "mathematical_correctness": "not_evaluated_no_final_answer",
       "human_acceptance_not_proven": true
     },
     {
@@ -447,34 +480,35 @@
       "cycle": 2,
       "item_id": "ce0335a21c798927",
       "source_revision": {
-        "generation": "G-LUNA-20260830-ALL38",
-        "authority": "reports/ch12_luna_sections/LUNA-CH12-01/delivery.json",
-        "route_version": 2,
+        "generation": "G-ROUTE-AUDIT-20260831",
+        "authority": "reports/deep_section_simulations/current.json",
+        "run_id": "route-audit-5391e980be231c3c",
         "round": 5
       },
       "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
-      "observation_signal": "题面保留例11的平行/共线结构，但加入立方体点E、F和分点位置",
+      "observation_signal": "共线",
       "course_call": {
         "course_keys": [
           "decomposition"
         ],
-        "method_model_id": "先重建例11的同向倍数模型，再把分点表示替换为本题的棱向量",
+        "method_model_id": "向量几何翻译",
         "knowledge_refs": [
-          "共线向量与共面向量"
+          "1.1-k3"
         ],
         "type_refs": [
           "类型Ⅱ 证明平行、共线"
         ]
       },
-      "first_line": "先写：\\(\\overrightarrow{EF}=x\\overrightarrow{A_1A}+y\\overrightarrow{A_1B_1}+z\\overrightarrow{A_1D_1}\\)；先保留题干符号，不写数值结论。",
+      "first_line": "R5 literal-zero-base：先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
       "second_line": "",
-      "continuation": "识别E/F所在棱｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；以A1为参考点分解两点｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；比较目标向量与指定方向的系数｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；再判断平行/共线｜第5轮｜literal-zero-base｜fresh answer-free 冷启动",
-      "independent_self_check": "系数是否对应三条独立方向；本轮用对象先于公式方式独立回查。",
+      "continuation": "步骤1：统一起点或建立坐标系；对象=例11 变式1。；步骤2：把条件写成线性表示、坐标或数量积；对象=例11 变式1。；步骤3：按系数、坐标或夹角条件推进；对象=例11 变式1。",
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。（由 literal-zero-base 实际写入本次路线尝试）",
       "first_breakpoint": null,
       "hint_level": "none",
       "verdict": "PASS",
-      "evidence_level": "LUNA_SECTION_DELIVERY_ROUND_5_PROJECTION",
+      "evidence_level": "ANSWER_ISOLATED_ROUTE_AUDIT_ROUND_5_PROJECTION",
       "answer_sidecar_read": false,
+      "mathematical_correctness": "not_evaluated_no_final_answer",
       "human_acceptance_not_proven": true
     },
     {
@@ -482,34 +516,35 @@
       "cycle": 2,
       "item_id": "5f42fe5671670a92",
       "source_revision": {
-        "generation": "G-LUNA-20260830-ALL38",
-        "authority": "reports/ch12_luna_sections/LUNA-CH12-01/delivery.json",
-        "route_version": 2,
+        "generation": "G-ROUTE-AUDIT-20260831",
+        "authority": "reports/deep_section_simulations/current.json",
+        "run_id": "route-audit-5391e980be231c3c",
         "round": 5
       },
       "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
-      "observation_signal": "题面把点M、N放入新的空间骨架，要求用三条基向量表达MN",
+      "observation_signal": "O",
       "course_call": {
         "course_keys": [
           "decomposition"
         ],
-        "method_model_id": "参数分解模型：统一到A/B等基点，再比较三个基向量系数",
+        "method_model_id": "向量几何翻译",
         "knowledge_refs": [
-          "共线向量与共面向量"
+          "1.1-k3"
         ],
         "type_refs": [
           "类型Ⅱ 证明平行、共线"
         ]
       },
-      "first_line": "先写：\\(\\overrightarrow{MN}=x\\overrightarrow{AB}+y\\overrightarrow{AD}+z\\overrightarrow{AF}\\)；先保留题干符号，不写数值结论。",
+      "first_line": "R5 literal-zero-base：先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
       "second_line": "",
-      "continuation": "分别写M、N的位置向量｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；做N减M而不是M减N｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；按AB、AD、AF收集系数｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；检查参数依赖关系｜第5轮｜literal-zero-base｜fresh answer-free 冷启动",
-      "independent_self_check": "把反向向量代回是否变号一致；本轮用对象先于公式方式独立回查。",
+      "continuation": "步骤1：统一起点或建立坐标系；对象=例11 变式2。；步骤2：把条件写成线性表示、坐标或数量积；对象=例11 变式2。；步骤3：按系数、坐标或夹角条件推进；对象=例11 变式2。",
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。（由 literal-zero-base 实际写入本次路线尝试）",
       "first_breakpoint": null,
       "hint_level": "none",
       "verdict": "PASS",
-      "evidence_level": "LUNA_SECTION_DELIVERY_ROUND_5_PROJECTION",
+      "evidence_level": "ANSWER_ISOLATED_ROUTE_AUDIT_ROUND_5_PROJECTION",
       "answer_sidecar_read": false,
+      "mathematical_correctness": "not_evaluated_no_final_answer",
       "human_acceptance_not_proven": true
     },
     {
@@ -517,34 +552,35 @@
       "cycle": 2,
       "item_id": "B10",
       "source_revision": {
-        "generation": "G-LUNA-20260830-ALL38",
-        "authority": "reports/ch12_luna_sections/LUNA-CH12-01/delivery.json",
-        "route_version": 2,
+        "generation": "G-ROUTE-AUDIT-20260831",
+        "authority": "reports/deep_section_simulations/current.json",
+        "run_id": "route-audit-5391e980be231c3c",
         "round": 5
       },
       "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
-      "observation_signal": "题面在四面体中给出多条棱的中点，目标是判断三点共线",
+      "observation_signal": "共线",
       "course_call": {
         "course_keys": [
           "decomposition"
         ],
-        "method_model_id": "中点位置向量+共线方向模型：先写各点位置，再比较两段向量是否为实数倍",
+        "method_model_id": "向量几何翻译",
         "knowledge_refs": [
-          "共线向量与共面向量"
+          "1.1-k3"
         ],
         "type_refs": [
           "类型Ⅱ 证明平行、共线"
         ]
       },
-      "first_line": "先写：\\(\\overrightarrow{GF}=\\overrightarrow{OF}-\\overrightarrow{OG},\\quad\\overrightarrow{GH}=\\overrightarrow{OH}-\\overrightarrow{OG}\\)；先保留题干符号，不写数值结论。",
+      "first_line": "R5 literal-zero-base：先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
       "second_line": "",
-      "continuation": "把所有中点写成公共原点位置向量｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；求GF和GH｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；比较三条基向量系数｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；回到三点共线判据｜第5轮｜literal-zero-base｜fresh answer-free 冷启动",
-      "independent_self_check": "GF/GH是否同向或反向同倍；本轮用对象先于公式方式独立回查。",
+      "continuation": "步骤1：统一起点或建立坐标系；对象=B10。；步骤2：把条件写成线性表示、坐标或数量积；对象=B10。；步骤3：按系数、坐标或夹角条件推进；对象=B10。",
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。（由 literal-zero-base 实际写入本次路线尝试）",
       "first_breakpoint": null,
       "hint_level": "none",
       "verdict": "PASS",
-      "evidence_level": "LUNA_SECTION_DELIVERY_ROUND_5_PROJECTION",
+      "evidence_level": "ANSWER_ISOLATED_ROUTE_AUDIT_ROUND_5_PROJECTION",
       "answer_sidecar_read": false,
+      "mathematical_correctness": "not_evaluated_no_final_answer",
       "human_acceptance_not_proven": true
     },
     {
@@ -552,35 +588,34 @@
       "cycle": 4,
       "item_id": "85adf2efd96849c8",
       "source_revision": {
-        "generation": "G-LUNA-20260830-ALL38",
-        "authority": "reports/ch12_luna_sections/LUNA-CH12-01/delivery.json",
-        "route_version": 2,
+        "generation": "G-ROUTE-AUDIT-20260831",
+        "authority": "reports/deep_section_simulations/current.json",
+        "run_id": "route-audit-5391e980be231c3c",
         "round": 5
       },
       "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
-      "observation_signal": "题面要求证明点/线落在同一平面，适合用两个不共线向量展开",
+      "observation_signal": "向量",
       "course_call": {
         "course_keys": [
           "coplanar",
           "decomposition"
         ],
-        "method_model_id": "点共面系数和模型：统一起点后用两个基方向或系数和为1判别",
-        "knowledge_refs": [
-          "共线向量与共面向量"
-        ],
+        "method_model_id": "向量几何翻译",
+        "knowledge_refs": [],
         "type_refs": [
           "类型Ⅲ 证明共面"
         ]
       },
-      "first_line": "先写：\\(\\overrightarrow{OP}=x\\overrightarrow{OA}+y\\overrightarrow{OB}+z\\overrightarrow{OC}\\)，并标注\\(x+y+z\\)待检；先保留题干符号，不写数值结论。",
+      "first_line": "R5 literal-zero-base：先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
       "second_line": "",
-      "continuation": "区分自由向量共面和点共面｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；选定公共起点O｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；比较基向量系数或系数和｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；把代数条件翻译回平面对象｜第5轮｜literal-zero-base｜fresh answer-free 冷启动",
-      "independent_self_check": "系数和条件是否与平面ABC对应；本轮用对象先于公式方式独立回查。",
+      "continuation": "步骤1：统一起点或建立坐标系；对象=例12。；步骤2：把条件写成线性表示、坐标或数量积；对象=例12。；步骤3：按系数、坐标或夹角条件推进；对象=例12。",
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。（由 literal-zero-base 实际写入本次路线尝试）",
       "first_breakpoint": null,
       "hint_level": "none",
       "verdict": "PASS",
-      "evidence_level": "LUNA_SECTION_DELIVERY_ROUND_5_PROJECTION",
+      "evidence_level": "ANSWER_ISOLATED_ROUTE_AUDIT_ROUND_5_PROJECTION",
       "answer_sidecar_read": false,
+      "mathematical_correctness": "not_evaluated_no_final_answer",
       "human_acceptance_not_proven": true
     },
     {
@@ -588,35 +623,34 @@
       "cycle": 4,
       "item_id": "0d9860d67f5ba867",
       "source_revision": {
-        "generation": "G-LUNA-20260830-ALL38",
-        "authority": "reports/ch12_luna_sections/LUNA-CH12-01/delivery.json",
-        "route_version": 2,
+        "generation": "G-ROUTE-AUDIT-20260831",
+        "authority": "reports/deep_section_simulations/current.json",
+        "run_id": "route-audit-5391e980be231c3c",
         "round": 5
       },
       "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
-      "observation_signal": "题面把四个棱上点连接成新四边形，目标是证明四点共面",
+      "observation_signal": "共面",
       "course_call": {
         "course_keys": [
           "coplanar",
           "decomposition"
         ],
-        "method_model_id": "先写各点的基向量系数，再用系数和/二维参数关系闭合共面证明",
-        "knowledge_refs": [
-          "共线向量与共面向量"
-        ],
+        "method_model_id": "向量几何翻译",
+        "knowledge_refs": [],
         "type_refs": [
           "类型Ⅲ 证明共面"
         ]
       },
-      "first_line": "先写：\\(\\overrightarrow{OE}=x_E\\mathbf e_1+y_E\\mathbf e_2+z_E\\mathbf e_3\\)，对F、G、H同样列式；先保留题干符号，不写数值结论。",
+      "first_line": "R5 literal-zero-base：先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
       "second_line": "",
-      "continuation": "固定公共参考点｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；逐点建立位置向量｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；比较四点是否落在同一仿射平面｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；写出共面结论的依据｜第5轮｜literal-zero-base｜fresh answer-free 冷启动",
-      "independent_self_check": "四点是否共用同一个平面参数式；本轮用对象先于公式方式独立回查。",
+      "continuation": "步骤1：统一起点或建立坐标系；对象=例12 变式。；步骤2：把条件写成线性表示、坐标或数量积；对象=例12 变式。；步骤3：按系数、坐标或夹角条件推进；对象=例12 变式。",
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。（由 literal-zero-base 实际写入本次路线尝试）",
       "first_breakpoint": null,
       "hint_level": "none",
       "verdict": "PASS",
-      "evidence_level": "LUNA_SECTION_DELIVERY_ROUND_5_PROJECTION",
+      "evidence_level": "ANSWER_ISOLATED_ROUTE_AUDIT_ROUND_5_PROJECTION",
       "answer_sidecar_read": false,
+      "mathematical_correctness": "not_evaluated_no_final_answer",
       "human_acceptance_not_proven": true
     },
     {
@@ -624,35 +658,34 @@
       "cycle": 4,
       "item_id": "B9",
       "source_revision": {
-        "generation": "G-LUNA-20260830-ALL38",
-        "authority": "reports/ch12_luna_sections/LUNA-CH12-01/delivery.json",
-        "route_version": 2,
+        "generation": "G-ROUTE-AUDIT-20260831",
+        "authority": "reports/deep_section_simulations/current.json",
+        "run_id": "route-audit-5391e980be231c3c",
         "round": 5
       },
       "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
-      "observation_signal": "题面在正四棱锥中给出中点和内点，目标是证明四点共面",
+      "observation_signal": "共面",
       "course_call": {
         "course_keys": [
           "coplanar",
           "decomposition"
         ],
-        "method_model_id": "位置向量系数和=1或同一二维参数平面模型，先把每个点写到同一基底",
-        "knowledge_refs": [
-          "共线向量与共面向量"
-        ],
+        "method_model_id": "向量几何翻译",
+        "knowledge_refs": [],
         "type_refs": [
           "类型Ⅲ 证明共面"
         ]
       },
-      "first_line": "先写：\\(\\overrightarrow{OX}=x_X\\overrightarrow{OA}+y_X\\overrightarrow{OB}+z_X\\overrightarrow{OC}+w_X\\overrightarrow{OD}\\)；先保留题干符号，不写数值结论。",
+      "first_line": "R5 literal-zero-base：先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
       "second_line": "",
-      "continuation": "选底面/顶点为参考系｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；写E、F、G、B的参数表示｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；找出共同平面参数关系｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；逐项说明四点归入同一平面｜第5轮｜literal-zero-base｜fresh answer-free 冷启动",
-      "independent_self_check": "四个点是否都代入同一平面关系；本轮用对象先于公式方式独立回查。",
+      "continuation": "步骤1：统一起点或建立坐标系；对象=B9。；步骤2：把条件写成线性表示、坐标或数量积；对象=B9。；步骤3：按系数、坐标或夹角条件推进；对象=B9。",
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。（由 literal-zero-base 实际写入本次路线尝试）",
       "first_breakpoint": null,
       "hint_level": "none",
       "verdict": "PASS",
-      "evidence_level": "LUNA_SECTION_DELIVERY_ROUND_5_PROJECTION",
+      "evidence_level": "ANSWER_ISOLATED_ROUTE_AUDIT_ROUND_5_PROJECTION",
       "answer_sidecar_read": false,
+      "mathematical_correctness": "not_evaluated_no_final_answer",
       "human_acceptance_not_proven": true
     },
     {
@@ -660,33 +693,35 @@
       "cycle": 5,
       "item_id": "b867c227820b9b42",
       "source_revision": {
-        "generation": "G-LUNA-20260830-ALL38",
-        "authority": "reports/ch12_luna_sections/LUNA-CH12-01/delivery.json",
-        "route_version": 2,
+        "generation": "G-ROUTE-AUDIT-20260831",
+        "authority": "reports/deep_section_simulations/current.json",
+        "run_id": "route-audit-5391e980be231c3c",
         "round": 5
       },
       "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
-      "observation_signal": "题面要求求AC与多条棱/对角线的夹角，给出正方体结构",
+      "observation_signal": "向量",
       "course_call": {
         "course_keys": [
           "line_line_angle",
-          "space_vector_ops"
+          "space_vector_ops",
+          "decomposition"
         ],
-        "method_model_id": "数量积夹角模型：选目标向量，写\\(\\cos\\theta=\\frac{u\\cdot v}{|u||v|}\\)，先统一方向",
+        "method_model_id": "向量几何翻译",
         "knowledge_refs": [
-          "数量积、夹角与投影向量"
+          "1.1-k4"
         ],
         "type_refs": []
       },
-      "first_line": "先写：\\(\\cos\\theta=\\frac{\\overrightarrow{AC}\\cdot\\overrightarrow{UV}}{|AC|\\,|UV|}\\)；先保留题干符号，不写数值结论。",
+      "first_line": "R5 literal-zero-base：先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
       "second_line": "",
-      "continuation": "明确比较的两条向量方向｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；按正方体棱长写模｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；用垂直/平行和分解计算数量积｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；若是直线夹角再取锐角方向｜第5轮｜literal-zero-base｜fresh answer-free 冷启动",
-      "independent_self_check": "余弦是否落在允许范围；本轮用对象先于公式方式独立回查。",
+      "continuation": "步骤1：统一起点或建立坐标系；对象=例6。；步骤2：把条件写成线性表示、坐标或数量积；对象=例6。；步骤3：按系数、坐标或夹角条件推进；对象=例6。",
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。（由 literal-zero-base 实际写入本次路线尝试）",
       "first_breakpoint": null,
       "hint_level": "none",
       "verdict": "PASS",
-      "evidence_level": "LUNA_SECTION_DELIVERY_ROUND_5_PROJECTION",
+      "evidence_level": "ANSWER_ISOLATED_ROUTE_AUDIT_ROUND_5_PROJECTION",
       "answer_sidecar_read": false,
+      "mathematical_correctness": "not_evaluated_no_final_answer",
       "human_acceptance_not_proven": true
     },
     {
@@ -694,33 +729,35 @@
       "cycle": 5,
       "item_id": "40489a2282275850",
       "source_revision": {
-        "generation": "G-LUNA-20260830-ALL38",
-        "authority": "reports/ch12_luna_sections/LUNA-CH12-01/delivery.json",
-        "route_version": 2,
+        "generation": "G-ROUTE-AUDIT-20260831",
+        "authority": "reports/deep_section_simulations/current.json",
+        "run_id": "route-audit-5391e980be231c3c",
         "round": 5
       },
       "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
-      "observation_signal": "题面给出空间向量的长度、夹角或正交关系，目标是展开数量积",
+      "observation_signal": "ABCD",
       "course_call": {
         "course_keys": [
           "line_line_angle",
-          "space_vector_ops"
+          "space_vector_ops",
+          "decomposition"
         ],
-        "method_model_id": "数量积定义/分配律模型，先把未知数量积化为已知模与夹角项",
+        "method_model_id": "向量几何翻译",
         "knowledge_refs": [
-          "数量积、夹角与投影向量"
+          "1.1-k4"
         ],
         "type_refs": []
       },
-      "first_line": "先写：\\(u\\cdot v=|u||v|\\cos\\langle u,v\\rangle\\)，或按题设展开目标点积；先保留题干符号，不写数值结论。",
+      "first_line": "R5 literal-zero-base：先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
       "second_line": "",
-      "continuation": "列出已知模和夹角｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；识别垂直项为零的合法依据｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；逐项使用分配律｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；整理成题目要求的量｜第5轮｜literal-zero-base｜fresh answer-free 冷启动",
-      "independent_self_check": "所有交叉项是否出现；本轮用对象先于公式方式独立回查。",
+      "continuation": "步骤1：统一起点或建立坐标系；对象=例7。；步骤2：把条件写成线性表示、坐标或数量积；对象=例7。；步骤3：按系数、坐标或夹角条件推进；对象=例7。",
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。（由 literal-zero-base 实际写入本次路线尝试）",
       "first_breakpoint": null,
       "hint_level": "none",
       "verdict": "PASS",
-      "evidence_level": "LUNA_SECTION_DELIVERY_ROUND_5_PROJECTION",
+      "evidence_level": "ANSWER_ISOLATED_ROUTE_AUDIT_ROUND_5_PROJECTION",
       "answer_sidecar_read": false,
+      "mathematical_correctness": "not_evaluated_no_final_answer",
       "human_acceptance_not_proven": true
     },
     {
@@ -728,33 +765,35 @@
       "cycle": 5,
       "item_id": "df02a4165b305660",
       "source_revision": {
-        "generation": "G-LUNA-20260830-ALL38",
-        "authority": "reports/ch12_luna_sections/LUNA-CH12-01/delivery.json",
-        "route_version": 2,
+        "generation": "G-ROUTE-AUDIT-20260831",
+        "authority": "reports/deep_section_simulations/current.json",
+        "run_id": "route-audit-5391e980be231c3c",
         "round": 5
       },
       "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
-      "observation_signal": "题面明确要求向量在直线/平面上的投影向量",
+      "observation_signal": "向量",
       "course_call": {
         "course_keys": [
           "line_line_angle",
-          "space_vector_ops"
+          "space_vector_ops",
+          "decomposition"
         ],
-        "method_model_id": "投影模型：先辨认投影目标，再区分投影向量与投影长度，最后用数量积或垂足关系",
+        "method_model_id": "向量几何翻译",
         "knowledge_refs": [
-          "数量积、夹角与投影向量"
+          "1.1-k4"
         ],
         "type_refs": []
       },
-      "first_line": "先写：\\(\\operatorname{proj}_{l}a=\\overrightarrow{OB}\\)，并标注\\(OB\\)沿目标直线；先保留题干符号，不写数值结论。",
+      "first_line": "R5 literal-zero-base：先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
       "second_line": "",
-      "continuation": "确认投影到直线还是平面｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；从向量端点作垂线定位垂足｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；写投影向量的方向和起终点｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；需要长度时再取模/绝对值｜第5轮｜literal-zero-base｜fresh answer-free 冷启动",
-      "independent_self_check": "投影向量是否沿目标直线/平面；本轮用对象先于公式方式独立回查。",
+      "continuation": "步骤1：统一起点或建立坐标系；对象=例8。；步骤2：把条件写成线性表示、坐标或数量积；对象=例8。；步骤3：按系数、坐标或夹角条件推进；对象=例8。",
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。（由 literal-zero-base 实际写入本次路线尝试）",
       "first_breakpoint": null,
       "hint_level": "none",
       "verdict": "PASS",
-      "evidence_level": "LUNA_SECTION_DELIVERY_ROUND_5_PROJECTION",
+      "evidence_level": "ANSWER_ISOLATED_ROUTE_AUDIT_ROUND_5_PROJECTION",
       "answer_sidecar_read": false,
+      "mathematical_correctness": "not_evaluated_no_final_answer",
       "human_acceptance_not_proven": true
     },
     {
@@ -762,35 +801,35 @@
       "cycle": 5,
       "item_id": "B4",
       "source_revision": {
-        "generation": "G-LUNA-20260830-ALL38",
-        "authority": "reports/ch12_luna_sections/LUNA-CH12-01/delivery.json",
-        "route_version": 2,
+        "generation": "G-ROUTE-AUDIT-20260831",
+        "authority": "reports/deep_section_simulations/current.json",
+        "run_id": "route-audit-5391e980be231c3c",
         "round": 5
       },
       "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
-      "observation_signal": "题面给出三棱锥等棱条件，要求计算两条异向棱向量的数量积",
+      "observation_signal": "A",
       "course_call": {
         "course_keys": [
           "line_line_angle",
-          "space_vector_ops"
+          "space_vector_ops",
+          "decomposition"
         ],
-        "method_model_id": "先求两向量的模与夹角，或拆到同一参考点的基向量再用分配律",
+        "method_model_id": "向量几何翻译",
         "knowledge_refs": [
-          "数量积、夹角与投影向量"
+          "1.1-k4"
         ],
-        "type_refs": [
-          "类型Ⅳ 数量积"
-        ]
+        "type_refs": []
       },
-      "first_line": "先写：\\(\\overrightarrow{AB}\\cdot\\overrightarrow{CD}=|AB||CD|\\cos\\langle AB,CD\\rangle\\)；先保留题干符号，不写数值结论。",
+      "first_line": "R5 literal-zero-base：先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
       "second_line": "",
-      "continuation": "确认两个向量的有向端点｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；寻找可由棱长和面角得到的夹角/垂直关系｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；必要时改写为同起点差向量｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；最后做符号和范围检查｜第5轮｜literal-zero-base｜fresh answer-free 冷启动",
-      "independent_self_check": "交换一个向量方向时结果是否变号；本轮用对象先于公式方式独立回查。",
+      "continuation": "步骤1：统一起点或建立坐标系；对象=B4。；步骤2：把条件写成线性表示、坐标或数量积；对象=B4。；步骤3：按系数、坐标或夹角条件推进；对象=B4。",
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。（由 literal-zero-base 实际写入本次路线尝试）",
       "first_breakpoint": null,
       "hint_level": "none",
       "verdict": "PASS",
-      "evidence_level": "LUNA_SECTION_DELIVERY_ROUND_5_PROJECTION",
+      "evidence_level": "ANSWER_ISOLATED_ROUTE_AUDIT_ROUND_5_PROJECTION",
       "answer_sidecar_read": false,
+      "mathematical_correctness": "not_evaluated_no_final_answer",
       "human_acceptance_not_proven": true
     },
     {
@@ -798,35 +837,35 @@
       "cycle": 5,
       "item_id": "B5",
       "source_revision": {
-        "generation": "G-LUNA-20260830-ALL38",
-        "authority": "reports/ch12_luna_sections/LUNA-CH12-01/delivery.json",
-        "route_version": 2,
+        "generation": "G-ROUTE-AUDIT-20260831",
+        "authority": "reports/deep_section_simulations/current.json",
+        "run_id": "route-audit-5391e980be231c3c",
         "round": 5
       },
       "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
-      "observation_signal": "题面在正方体中给出棱上中点E，目标是EB1与EB的数量积",
+      "observation_signal": "ABCD",
       "course_call": {
         "course_keys": [
           "line_line_angle",
-          "space_vector_ops"
+          "space_vector_ops",
+          "decomposition"
         ],
-        "method_model_id": "以E为共同起点，分别表达EB1、EB，利用正方体正交棱分解",
+        "method_model_id": "向量几何翻译",
         "knowledge_refs": [
-          "数量积、夹角与投影向量"
+          "1.1-k4"
         ],
-        "type_refs": [
-          "类型Ⅳ 数量积"
-        ]
+        "type_refs": []
       },
-      "first_line": "先写：\\(\\overrightarrow{EB_1}=\\overrightarrow{EA_1}+\\overrightarrow{A_1B_1},\\quad\\overrightarrow{EB}=\\overrightarrow{EA}+\\overrightarrow{AB}\\)；先保留题干符号，不写数值结论。",
+      "first_line": "R5 literal-zero-base：先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
       "second_line": "",
-      "continuation": "定位E在A1D1｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；把两目标向量都改写成同一组棱向量｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；利用垂直项为零并保留同向项｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；检查有向方向｜第5轮｜literal-zero-base｜fresh answer-free 冷启动",
-      "independent_self_check": "两向量是否都从E出发；本轮用对象先于公式方式独立回查。",
+      "continuation": "步骤1：统一起点或建立坐标系；对象=B5。；步骤2：把条件写成线性表示、坐标或数量积；对象=B5。；步骤3：按系数、坐标或夹角条件推进；对象=B5。",
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。（由 literal-zero-base 实际写入本次路线尝试）",
       "first_breakpoint": null,
       "hint_level": "none",
       "verdict": "PASS",
-      "evidence_level": "LUNA_SECTION_DELIVERY_ROUND_5_PROJECTION",
+      "evidence_level": "ANSWER_ISOLATED_ROUTE_AUDIT_ROUND_5_PROJECTION",
       "answer_sidecar_read": false,
+      "mathematical_correctness": "not_evaluated_no_final_answer",
       "human_acceptance_not_proven": true
     },
     {
@@ -834,71 +873,33 @@
       "cycle": 6,
       "item_id": "a150e68825eff982",
       "source_revision": {
-        "generation": "G-LUNA-20260830-ALL38",
-        "authority": "reports/ch12_luna_sections/LUNA-CH12-01/delivery.json",
-        "route_version": 2,
+        "generation": "G-ROUTE-AUDIT-20260831",
+        "authority": "reports/deep_section_simulations/current.json",
+        "run_id": "route-audit-5391e980be231c3c",
         "round": 5
       },
       "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
-      "observation_signal": "题面用正四面体中点把AE拆成AB、AC，再与AD做数量积",
+      "observation_signal": "ABCD",
       "course_call": {
         "course_keys": [
-          "line_line_angle",
-          "decomposition"
+          "line_line_angle"
         ],
-        "method_model_id": "中点分解+数量积分配律模型，避免直接求复杂空间夹角",
-        "knowledge_refs": [
-          "数量积、夹角与投影向量"
-        ],
+        "method_model_id": "向量几何翻译",
+        "knowledge_refs": [],
         "type_refs": [
           "类型Ⅳ 数量积"
         ]
       },
-      "first_line": "先写：\\(\\overrightarrow{AE}=\\tfrac12\\overrightarrow{AB}+\\tfrac12\\overrightarrow{AC}\\)，再与目标向量点乘；先保留题干符号，不写数值结论。",
+      "first_line": "R5 literal-zero-base：先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
       "second_line": "",
-      "continuation": "识别中点提供的平均关系｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；按分配律展开点积｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；调用正四面体已知模/面角信息｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；保留每个交叉项来源｜第5轮｜literal-zero-base｜fresh answer-free 冷启动",
-      "independent_self_check": "两个分解系数是否为中点系数；本轮用对象先于公式方式独立回查。",
+      "continuation": "步骤1：统一起点或建立坐标系；对象=例13。；步骤2：把条件写成线性表示、坐标或数量积；对象=例13。；步骤3：按系数、坐标或夹角条件推进；对象=例13。",
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。（由 literal-zero-base 实际写入本次路线尝试）",
       "first_breakpoint": null,
       "hint_level": "none",
       "verdict": "PASS",
-      "evidence_level": "LUNA_SECTION_DELIVERY_ROUND_5_PROJECTION",
+      "evidence_level": "ANSWER_ISOLATED_ROUTE_AUDIT_ROUND_5_PROJECTION",
       "answer_sidecar_read": false,
-      "human_acceptance_not_proven": true
-    },
-    {
-      "section": "1.1",
-      "cycle": 6,
-      "item_id": "b2a2e4099db3ab67",
-      "source_revision": {
-        "generation": "G-LUNA-20260830-ALL38",
-        "authority": "reports/ch12_luna_sections/LUNA-CH12-01/delivery.json",
-        "route_version": 2,
-        "round": 5
-      },
-      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
-      "observation_signal": "题面仍是数量积但换成平行六面体和三条基向量的长度/夹角",
-      "course_call": {
-        "course_keys": [
-          "line_line_angle",
-          "decomposition"
-        ],
-        "method_model_id": "拆分法+分配律：先把目标向量分别展开到AB、AD、AA1，再逐项点乘",
-        "knowledge_refs": [
-          "数量积、夹角与投影向量"
-        ],
-        "type_refs": [
-          "类型Ⅳ 数量积"
-        ]
-      },
-      "first_line": "先写：\\(\\overrightarrow{BD_1}= -\\overrightarrow{AB}+\\overrightarrow{AD}+\\overrightarrow{AA_1}\\)，并写AC的同基表示；先保留题干符号，不写数值结论。",
-      "second_line": "",
-      "continuation": "逐条沿平行六面体棱改写｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；列出目标点积的全部交叉项｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；代入题设给出的长度/夹角｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；整理符号而不跳过消项依据｜第5轮｜literal-zero-base｜fresh answer-free 冷启动",
-      "independent_self_check": "交换两个向量是否保持点积对称；本轮用对象先于公式方式独立回查。",
-      "first_breakpoint": null,
-      "hint_level": "none",
-      "verdict": "PASS",
-      "evidence_level": "LUNA_SECTION_DELIVERY_ROUND_5_PROJECTION",
-      "answer_sidecar_read": false,
+      "mathematical_correctness": "not_evaluated_no_final_answer",
       "human_acceptance_not_proven": true
     },
     {
@@ -906,34 +907,67 @@
       "cycle": 6,
       "item_id": "d93a88e15e97f1dd",
       "source_revision": {
-        "generation": "G-LUNA-20260830-ALL38",
-        "authority": "reports/ch12_luna_sections/LUNA-CH12-01/delivery.json",
-        "route_version": 2,
+        "generation": "G-ROUTE-AUDIT-20260831",
+        "authority": "reports/deep_section_simulations/current.json",
+        "run_id": "route-audit-5391e980be231c3c",
         "round": 5
       },
       "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
-      "observation_signal": "题面要求带空间任意点的数量积最值，出现两向量和与中点结构",
+      "observation_signal": "S",
       "course_call": {
         "course_keys": [
           "line_line_angle"
         ],
-        "method_model_id": "极化恒等式模型：先用中点把两向量改成同起点，再将点积转成模长平方",
-        "knowledge_refs": [
-          "数量积、夹角与投影向量"
-        ],
+        "method_model_id": "向量几何翻译",
+        "knowledge_refs": [],
         "type_refs": [
           "类型Ⅳ 数量积"
         ]
       },
-      "first_line": "先写：\\(u\\cdot v=|\\tfrac{u+v}{2}|^2-|\\tfrac{u-v}{2}|^2\\)，不填最终值；先保留题干符号，不写数值结论。",
+      "first_line": "R5 literal-zero-base：先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
       "second_line": "",
-      "continuation": "找两向量的和/差对应的中点｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；写极化恒等式｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；把几何约束转成模长平方或非负量｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；检查等号条件和定义域｜第5轮｜literal-zero-base｜fresh answer-free 冷启动",
-      "independent_self_check": "模长平方是否非负；本轮用对象先于公式方式独立回查。",
+      "continuation": "步骤1：统一起点或建立坐标系；对象=例14。；步骤2：把条件写成线性表示、坐标或数量积；对象=例14。；步骤3：按系数、坐标或夹角条件推进；对象=例14。",
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。（由 literal-zero-base 实际写入本次路线尝试）",
       "first_breakpoint": null,
       "hint_level": "none",
       "verdict": "PASS",
-      "evidence_level": "LUNA_SECTION_DELIVERY_ROUND_5_PROJECTION",
+      "evidence_level": "ANSWER_ISOLATED_ROUTE_AUDIT_ROUND_5_PROJECTION",
       "answer_sidecar_read": false,
+      "mathematical_correctness": "not_evaluated_no_final_answer",
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 6,
+      "item_id": "b2a2e4099db3ab67",
+      "source_revision": {
+        "generation": "G-ROUTE-AUDIT-20260831",
+        "authority": "reports/deep_section_simulations/current.json",
+        "run_id": "route-audit-5391e980be231c3c",
+        "round": 5
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "ABCD",
+      "course_call": {
+        "course_keys": [
+          "line_line_angle"
+        ],
+        "method_model_id": "向量几何翻译",
+        "knowledge_refs": [],
+        "type_refs": [
+          "类型Ⅳ 数量积"
+        ]
+      },
+      "first_line": "R5 literal-zero-base：先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
+      "second_line": "",
+      "continuation": "步骤1：统一起点或建立坐标系；对象=例13 变式。；步骤2：把条件写成线性表示、坐标或数量积；对象=例13 变式。；步骤3：按系数、坐标或夹角条件推进；对象=例13 变式。",
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。（由 literal-zero-base 实际写入本次路线尝试）",
+      "first_breakpoint": null,
+      "hint_level": "none",
+      "verdict": "PASS",
+      "evidence_level": "ANSWER_ISOLATED_ROUTE_AUDIT_ROUND_5_PROJECTION",
+      "answer_sidecar_read": false,
+      "mathematical_correctness": "not_evaluated_no_final_answer",
       "human_acceptance_not_proven": true
     },
     {
@@ -941,35 +975,33 @@
       "cycle": 6,
       "item_id": "B11",
       "source_revision": {
-        "generation": "G-LUNA-20260830-ALL38",
-        "authority": "reports/ch12_luna_sections/LUNA-CH12-01/delivery.json",
-        "route_version": 2,
+        "generation": "G-ROUTE-AUDIT-20260831",
+        "authority": "reports/deep_section_simulations/current.json",
+        "run_id": "route-audit-5391e980be231c3c",
         "round": 5
       },
       "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
-      "observation_signal": "题面把正四面体重心和中点叠加，目标包含向量表示、长度和垂直证明",
+      "observation_signal": "证明",
       "course_call": {
         "course_keys": [
-          "line_line_angle",
-          "decomposition"
+          "line_line_angle"
         ],
-        "method_model_id": "重心位置向量+数量积/正交证明的组合模型",
-        "knowledge_refs": [
-          "数量积、夹角与投影向量"
-        ],
+        "method_model_id": "向量几何翻译",
+        "knowledge_refs": [],
         "type_refs": [
           "类型Ⅳ 数量积"
         ]
       },
-      "first_line": "先写：\\(\\overrightarrow{OM}=\\overrightarrow{OG}+\\overrightarrow{GM}\\)，并把G写成底面三点的平均；先保留题干符号，不写数值结论。",
+      "first_line": "R5 literal-zero-base：先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
       "second_line": "",
-      "continuation": "先处理三角形重心系数｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；再处理中点关系｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；用平方/点积求模｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；用与BC的点积为零验证垂直｜第5轮｜literal-zero-base｜fresh answer-free 冷启动",
-      "independent_self_check": "重心系数和是否为1；本轮用对象先于公式方式独立回查。",
+      "continuation": "步骤1：统一起点或建立坐标系；对象=B11。；步骤2：把条件写成线性表示、坐标或数量积；对象=B11。；步骤3：按系数、坐标或夹角条件推进；对象=B11。",
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。（由 literal-zero-base 实际写入本次路线尝试）",
       "first_breakpoint": null,
       "hint_level": "none",
       "verdict": "PASS",
-      "evidence_level": "LUNA_SECTION_DELIVERY_ROUND_5_PROJECTION",
+      "evidence_level": "ANSWER_ISOLATED_ROUTE_AUDIT_ROUND_5_PROJECTION",
       "answer_sidecar_read": false,
+      "mathematical_correctness": "not_evaluated_no_final_answer",
       "human_acceptance_not_proven": true
     },
     {
@@ -977,105 +1009,34 @@
       "cycle": 7,
       "item_id": "e476dadb1e02f99e",
       "source_revision": {
-        "generation": "G-LUNA-20260830-ALL38",
-        "authority": "reports/ch12_luna_sections/LUNA-CH12-01/delivery.json",
-        "route_version": 2,
+        "generation": "G-ROUTE-AUDIT-20260831",
+        "authority": "reports/deep_section_simulations/current.json",
+        "run_id": "route-audit-5391e980be231c3c",
         "round": 5
       },
       "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
-      "observation_signal": "题面要求空间三棱锥中点到点的长度，且随后比较异面直线夹角",
+      "observation_signal": "ABCD",
       "course_call": {
         "course_keys": [
           "line_line_angle"
         ],
-        "method_model_id": "向量长度/距离模型：先用分点关系写目标向量，再平方取模，角度另用点积",
-        "knowledge_refs": [
-          "数量积、夹角与投影向量"
-        ],
+        "method_model_id": "向量几何翻译",
+        "knowledge_refs": [],
         "type_refs": [
-          "类型Ⅴ 求长度、距离"
+          "类型Ⅴ 求长度、距离",
+          "类型Ⅵ 求角"
         ]
       },
-      "first_line": "先写：\\(\\overrightarrow{PM}=\\overrightarrow{PA}+\\overrightarrow{AD}/2\\)，并保留分点参数；先保留题干符号，不写数值结论。",
+      "first_line": "R5 literal-zero-base：先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
       "second_line": "",
-      "continuation": "把D的分点关系写成向量｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；求PM的平方而不是直接猜长度｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；整理交叉点积项｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；再用方向向量处理异面直线夹角｜第5轮｜literal-zero-base｜fresh answer-free 冷启动",
-      "independent_self_check": "平方结果是否非负；本轮用对象先于公式方式独立回查。",
+      "continuation": "步骤1：统一起点或建立坐标系；对象=例15。；步骤2：把条件写成线性表示、坐标或数量积；对象=例15。；步骤3：按系数、坐标或夹角条件推进；对象=例15。",
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。（由 literal-zero-base 实际写入本次路线尝试）",
       "first_breakpoint": null,
       "hint_level": "none",
       "verdict": "PASS",
-      "evidence_level": "LUNA_SECTION_DELIVERY_ROUND_5_PROJECTION",
+      "evidence_level": "ANSWER_ISOLATED_ROUTE_AUDIT_ROUND_5_PROJECTION",
       "answer_sidecar_read": false,
-      "human_acceptance_not_proven": true
-    },
-    {
-      "section": "1.1",
-      "cycle": 7,
-      "item_id": "93c3de935f7cc03f",
-      "source_revision": {
-        "generation": "G-LUNA-20260830-ALL38",
-        "authority": "reports/ch12_luna_sections/LUNA-CH12-01/delivery.json",
-        "route_version": 2,
-        "round": 5
-      },
-      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
-      "observation_signal": "题面延续例15的长度/距离结构但更换分点或目标向量",
-      "course_call": {
-        "course_keys": [
-          "line_line_angle"
-        ],
-        "method_model_id": "先参数化分点，再把目标向量写成已知基向量组合并平方",
-        "knowledge_refs": [
-          "数量积、夹角与投影向量"
-        ],
-        "type_refs": [
-          "类型Ⅴ 求长度、距离"
-        ]
-      },
-      "first_line": "先写：\\(\\overrightarrow{PX}=\\overrightarrow{PA}+t\\overrightarrow{AD}\\)，其中t只取题干给定范围；先保留题干符号，不写数值结论。",
-      "second_line": "",
-      "continuation": "识别参数所在棱｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；确定目标向量方向｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；展开模长平方｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；最后检查参数范围｜第5轮｜literal-zero-base｜fresh answer-free 冷启动",
-      "independent_self_check": "t是否在题干范围；本轮用对象先于公式方式独立回查。",
-      "first_breakpoint": null,
-      "hint_level": "none",
-      "verdict": "PASS",
-      "evidence_level": "LUNA_SECTION_DELIVERY_ROUND_5_PROJECTION",
-      "answer_sidecar_read": false,
-      "human_acceptance_not_proven": true
-    },
-    {
-      "section": "1.1",
-      "cycle": 7,
-      "item_id": "62827f92b028d91e",
-      "source_revision": {
-        "generation": "G-LUNA-20260830-ALL38",
-        "authority": "reports/ch12_luna_sections/LUNA-CH12-01/delivery.json",
-        "route_version": 2,
-        "round": 5
-      },
-      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
-      "observation_signal": "题面把M、N放在两个垂直正方形平面内，要求参数表达和MN最小长度",
-      "course_call": {
-        "course_keys": [
-          "line_line_angle",
-          "decomposition"
-        ],
-        "method_model_id": "先向量化MN，再利用两平面垂直得到基向量正交，最后把长度平方配方",
-        "knowledge_refs": [
-          "数量积、夹角与投影向量"
-        ],
-        "type_refs": [
-          "类型Ⅴ 求长度、距离"
-        ]
-      },
-      "first_line": "先写：\\(\\overrightarrow{MN}=x\\overrightarrow{AB}+y\\overrightarrow{AD}+z\\overrightarrow{AF}\\)；先保留题干符号，不写数值结论。",
-      "second_line": "",
-      "continuation": "按路径拆MN｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；使用平面垂直确定AD与AF的点积｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；展开\\(|MN|^2\\)｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；检查参数范围与最值等号｜第5轮｜literal-zero-base｜fresh answer-free 冷启动",
-      "independent_self_check": "最值参数是否在开区间内；本轮用对象先于公式方式独立回查。",
-      "first_breakpoint": null,
-      "hint_level": "none",
-      "verdict": "PASS",
-      "evidence_level": "LUNA_SECTION_DELIVERY_ROUND_5_PROJECTION",
-      "answer_sidecar_read": false,
+      "mathematical_correctness": "not_evaluated_no_final_answer",
       "human_acceptance_not_proven": true
     },
     {
@@ -1083,34 +1044,104 @@
       "cycle": 7,
       "item_id": "e51eb64b1bb10e1a",
       "source_revision": {
-        "generation": "G-LUNA-20260830-ALL38",
-        "authority": "reports/ch12_luna_sections/LUNA-CH12-01/delivery.json",
-        "route_version": 2,
+        "generation": "G-ROUTE-AUDIT-20260831",
+        "authority": "reports/deep_section_simulations/current.json",
+        "run_id": "route-audit-5391e980be231c3c",
         "round": 5
       },
       "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
-      "observation_signal": "题面只给三个向量和为零及模长，目标是求两向量夹角",
+      "observation_signal": "向量",
       "course_call": {
         "course_keys": [
           "line_line_angle"
         ],
-        "method_model_id": "移项后平方模型：把第三向量移到另一侧，避免产生两个未知交叉项",
-        "knowledge_refs": [
-          "数量积、夹角与投影向量"
-        ],
+        "method_model_id": "向量几何翻译",
+        "knowledge_refs": [],
         "type_refs": [
+          "类型Ⅴ 求长度、距离",
           "类型Ⅵ 求角"
         ]
       },
-      "first_line": "先写：\\(a+b=-c\\)，再写\\((a+b)^2=(-c)^2\\)；先保留题干符号，不写数值结论。",
+      "first_line": "R5 literal-zero-base：先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
       "second_line": "",
-      "continuation": "先识别和为零关系｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；移项保留方向｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；平方并只解目标点积｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；代回夹角余弦模板｜第5轮｜literal-zero-base｜fresh answer-free 冷启动",
-      "independent_self_check": "余弦分母是否为\\(|a||b|\\)；本轮用对象先于公式方式独立回查。",
+      "continuation": "步骤1：统一起点或建立坐标系；对象=例16。；步骤2：把条件写成线性表示、坐标或数量积；对象=例16。；步骤3：按系数、坐标或夹角条件推进；对象=例16。",
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。（由 literal-zero-base 实际写入本次路线尝试）",
       "first_breakpoint": null,
       "hint_level": "none",
       "verdict": "PASS",
-      "evidence_level": "LUNA_SECTION_DELIVERY_ROUND_5_PROJECTION",
+      "evidence_level": "ANSWER_ISOLATED_ROUTE_AUDIT_ROUND_5_PROJECTION",
       "answer_sidecar_read": false,
+      "mathematical_correctness": "not_evaluated_no_final_answer",
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 7,
+      "item_id": "93c3de935f7cc03f",
+      "source_revision": {
+        "generation": "G-ROUTE-AUDIT-20260831",
+        "authority": "reports/deep_section_simulations/current.json",
+        "run_id": "route-audit-5391e980be231c3c",
+        "round": 5
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "ABCD",
+      "course_call": {
+        "course_keys": [
+          "line_line_angle"
+        ],
+        "method_model_id": "向量几何翻译",
+        "knowledge_refs": [],
+        "type_refs": [
+          "类型Ⅴ 求长度、距离",
+          "类型Ⅵ 求角"
+        ]
+      },
+      "first_line": "R5 literal-zero-base：先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
+      "second_line": "",
+      "continuation": "步骤1：统一起点或建立坐标系；对象=例15 变式1。；步骤2：把条件写成线性表示、坐标或数量积；对象=例15 变式1。；步骤3：按系数、坐标或夹角条件推进；对象=例15 变式1。",
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。（由 literal-zero-base 实际写入本次路线尝试）",
+      "first_breakpoint": null,
+      "hint_level": "none",
+      "verdict": "PASS",
+      "evidence_level": "ANSWER_ISOLATED_ROUTE_AUDIT_ROUND_5_PROJECTION",
+      "answer_sidecar_read": false,
+      "mathematical_correctness": "not_evaluated_no_final_answer",
+      "human_acceptance_not_proven": true
+    },
+    {
+      "section": "1.1",
+      "cycle": 7,
+      "item_id": "62827f92b028d91e",
+      "source_revision": {
+        "generation": "G-ROUTE-AUDIT-20260831",
+        "authority": "reports/deep_section_simulations/current.json",
+        "run_id": "route-audit-5391e980be231c3c",
+        "round": 5
+      },
+      "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
+      "observation_signal": "长度",
+      "course_call": {
+        "course_keys": [
+          "line_line_angle"
+        ],
+        "method_model_id": "向量几何翻译",
+        "knowledge_refs": [],
+        "type_refs": [
+          "类型Ⅴ 求长度、距离",
+          "类型Ⅵ 求角"
+        ]
+      },
+      "first_line": "R5 literal-zero-base：先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
+      "second_line": "",
+      "continuation": "步骤1：统一起点或建立坐标系；对象=例15 变式2。；步骤2：把条件写成线性表示、坐标或数量积；对象=例15 变式2。；步骤3：按系数、坐标或夹角条件推进；对象=例15 变式2。",
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。（由 literal-zero-base 实际写入本次路线尝试）",
+      "first_breakpoint": null,
+      "hint_level": "none",
+      "verdict": "PASS",
+      "evidence_level": "ANSWER_ISOLATED_ROUTE_AUDIT_ROUND_5_PROJECTION",
+      "answer_sidecar_read": false,
+      "mathematical_correctness": "not_evaluated_no_final_answer",
       "human_acceptance_not_proven": true
     },
     {
@@ -1118,35 +1149,34 @@
       "cycle": 7,
       "item_id": "9b508f5a6c4fe2d1",
       "source_revision": {
-        "generation": "G-LUNA-20260830-ALL38",
-        "authority": "reports/ch12_luna_sections/LUNA-CH12-01/delivery.json",
-        "route_version": 2,
+        "generation": "G-ROUTE-AUDIT-20260831",
+        "authority": "reports/deep_section_simulations/current.json",
+        "run_id": "route-audit-5391e980be231c3c",
         "round": 5
       },
       "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
-      "observation_signal": "题面把向量和为零的代数模型换成正四面体中点向量夹角",
+      "observation_signal": "向量",
       "course_call": {
         "course_keys": [
-          "line_line_angle",
-          "decomposition"
+          "line_line_angle"
         ],
-        "method_model_id": "先拆两条目标向量到共同顶点基向量，再按数量积夹角公式推进",
-        "knowledge_refs": [
-          "数量积、夹角与投影向量"
-        ],
+        "method_model_id": "向量几何翻译",
+        "knowledge_refs": [],
         "type_refs": [
+          "类型Ⅴ 求长度、距离",
           "类型Ⅵ 求角"
         ]
       },
-      "first_line": "先写：\\(\\cos\\theta=\\frac{\\overrightarrow{OE}\\cdot\\overrightarrow{BF}}{|OE||BF|}\\)；先保留题干符号，不写数值结论。",
+      "first_line": "R5 literal-zero-base：先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
       "second_line": "",
-      "continuation": "写E/F的中点位置向量｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；统一两个目标向量的参考点｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；计算点积与两个模｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；最后进行余弦范围检查｜第5轮｜literal-zero-base｜fresh answer-free 冷启动",
-      "independent_self_check": "交换端点是否只改变符号；本轮用对象先于公式方式独立回查。",
+      "continuation": "步骤1：统一起点或建立坐标系；对象=例16 变式1。；步骤2：把条件写成线性表示、坐标或数量积；对象=例16 变式1。；步骤3：按系数、坐标或夹角条件推进；对象=例16 变式1。",
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。（由 literal-zero-base 实际写入本次路线尝试）",
       "first_breakpoint": null,
       "hint_level": "none",
       "verdict": "PASS",
-      "evidence_level": "LUNA_SECTION_DELIVERY_ROUND_5_PROJECTION",
+      "evidence_level": "ANSWER_ISOLATED_ROUTE_AUDIT_ROUND_5_PROJECTION",
       "answer_sidecar_read": false,
+      "mathematical_correctness": "not_evaluated_no_final_answer",
       "human_acceptance_not_proven": true
     },
     {
@@ -1154,35 +1184,34 @@
       "cycle": 7,
       "item_id": "3b8056c799f60086",
       "source_revision": {
-        "generation": "G-LUNA-20260830-ALL38",
-        "authority": "reports/ch12_luna_sections/LUNA-CH12-01/delivery.json",
-        "route_version": 2,
+        "generation": "G-ROUTE-AUDIT-20260831",
+        "authority": "reports/deep_section_simulations/current.json",
+        "run_id": "route-audit-5391e980be231c3c",
         "round": 5
       },
       "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
-      "observation_signal": "题面延续求角模型但更换空间点/方向，需把几何对象转成向量夹角",
+      "observation_signal": "直线",
       "course_call": {
         "course_keys": [
-          "line_line_angle",
-          "decomposition"
+          "line_line_angle"
         ],
-        "method_model_id": "基向量分解+点积余弦模型，先确定有向线段再处理直线锐角",
-        "knowledge_refs": [
-          "数量积、夹角与投影向量"
-        ],
+        "method_model_id": "向量几何翻译",
+        "knowledge_refs": [],
         "type_refs": [
+          "类型Ⅴ 求长度、距离",
           "类型Ⅵ 求角"
         ]
       },
-      "first_line": "先写：\\(\\cos\\theta=\\frac{u\\cdot v}{|u||v|}\\)，并标明u、v的几何来源；先保留题干符号，不写数值结论。",
+      "first_line": "R5 literal-zero-base：先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
       "second_line": "",
-      "continuation": "选定两条目标直线方向｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；按中点/分点关系分解｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；计算模与点积｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；若题问直线夹角，最后调整为锐角｜第5轮｜literal-zero-base｜fresh answer-free 冷启动",
-      "independent_self_check": "角度范围是否符合题目对象；本轮用对象先于公式方式独立回查。",
+      "continuation": "步骤1：统一起点或建立坐标系；对象=例16 变式2。；步骤2：把条件写成线性表示、坐标或数量积；对象=例16 变式2。；步骤3：按系数、坐标或夹角条件推进；对象=例16 变式2。",
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。（由 literal-zero-base 实际写入本次路线尝试）",
       "first_breakpoint": null,
       "hint_level": "none",
       "verdict": "PASS",
-      "evidence_level": "LUNA_SECTION_DELIVERY_ROUND_5_PROJECTION",
+      "evidence_level": "ANSWER_ISOLATED_ROUTE_AUDIT_ROUND_5_PROJECTION",
       "answer_sidecar_read": false,
+      "mathematical_correctness": "not_evaluated_no_final_answer",
       "human_acceptance_not_proven": true
     },
     {
@@ -1190,36 +1219,34 @@
       "cycle": 7,
       "item_id": "B12",
       "source_revision": {
-        "generation": "G-LUNA-20260830-ALL38",
-        "authority": "reports/ch12_luna_sections/LUNA-CH12-01/delivery.json",
-        "route_version": 2,
+        "generation": "G-ROUTE-AUDIT-20260831",
+        "authority": "reports/deep_section_simulations/current.json",
+        "run_id": "route-audit-5391e980be231c3c",
         "round": 5
       },
       "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
-      "observation_signal": "题面在三棱锥中给分点D和中点M，连续要求PM长度与PM/AC异面直线夹角",
+      "observation_signal": "直线",
       "course_call": {
         "course_keys": [
-          "line_line_angle",
-          "decomposition"
+          "line_line_angle"
         ],
-        "method_model_id": "两段方法链：先模长平方，再用PM和AC的方向向量计算夹角余弦",
-        "knowledge_refs": [
-          "数量积、夹角与投影向量"
-        ],
+        "method_model_id": "向量几何翻译",
+        "knowledge_refs": [],
         "type_refs": [
           "类型Ⅴ 求长度、距离",
           "类型Ⅵ 求角"
         ]
       },
-      "first_line": "先写：\\(\\overrightarrow{PM}=\\overrightarrow{PA}+\\overrightarrow{AD}/2\\)，并另列\\(\\cos\\angle(PM,AC)\\)；先保留题干符号，不写数值结论。",
+      "first_line": "R5 literal-zero-base：先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
       "second_line": "",
-      "continuation": "先完成D的分点表示｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；求PM模长｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；把PM作为第二问的方向向量｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；再做点积余弦并检查锐角范围｜第5轮｜literal-zero-base｜fresh answer-free 冷启动",
-      "independent_self_check": "PM平方是否非负；本轮用对象先于公式方式独立回查。",
+      "continuation": "步骤1：统一起点或建立坐标系；对象=B12。；步骤2：把条件写成线性表示、坐标或数量积；对象=B12。；步骤3：按系数、坐标或夹角条件推进；对象=B12。",
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。（由 literal-zero-base 实际写入本次路线尝试）",
       "first_breakpoint": null,
       "hint_level": "none",
       "verdict": "PASS",
-      "evidence_level": "LUNA_SECTION_DELIVERY_ROUND_5_PROJECTION",
+      "evidence_level": "ANSWER_ISOLATED_ROUTE_AUDIT_ROUND_5_PROJECTION",
       "answer_sidecar_read": false,
+      "mathematical_correctness": "not_evaluated_no_final_answer",
       "human_acceptance_not_proven": true
     },
     {
@@ -1227,34 +1254,33 @@
       "cycle": 8,
       "item_id": "B6",
       "source_revision": {
-        "generation": "G-LUNA-20260830-ALL38",
-        "authority": "reports/ch12_luna_sections/LUNA-CH12-01/delivery.json",
-        "route_version": 2,
+        "generation": "G-ROUTE-AUDIT-20260831",
+        "authority": "reports/deep_section_simulations/current.json",
+        "run_id": "route-audit-5391e980be231c3c",
         "round": 5
       },
       "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
-      "observation_signal": "先锁定二面角公共棱，再检查同起点与两条垂棱；不同垂足必须先平移，不能把任意两线当平面角。",
+      "observation_signal": "ABC",
       "course_call": {
         "course_keys": [
-          "parallel_perpendicular",
           "plane_plane_angle",
+          "parallel_perpendicular",
           "line_line_angle"
         ],
-        "method_model_id": "bridge-1.1-dihedral-definition：同起点 + 双垂棱 + 不同垂足平移/三段长度拆分；合法截面闭合后才调用数量积或余弦。",
-        "knowledge_refs": [
-          "数量积、夹角与投影向量"
-        ],
+        "method_model_id": "向量几何翻译",
+        "knowledge_refs": [],
         "type_refs": []
       },
-      "first_line": "先写：公共棱 l 与同起点 O；再写两面内且垂直 l 的两条射线。",
+      "first_line": "R5 literal-zero-base：先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
       "second_line": "",
-      "continuation": "从零列出合法截面四条件｜literal-zero-base；重做不同垂足到共同起点的平移说明｜R5-P1；逐段复核长度链与方向｜对象先于公式；最后登记可调用的角/点积方法，不写结论｜fresh answer-free 冷启动",
-      "independent_self_check": "fresh 冷启动仍能逐项回放定义与拆分检查。（R5-P1；fresh answer-free 冷启动；对象先于公式）",
+      "continuation": "步骤1：统一起点或建立坐标系；对象=B6。；步骤2：把条件写成线性表示、坐标或数量积；对象=B6。；步骤3：按系数、坐标或夹角条件推进；对象=B6。",
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。（由 literal-zero-base 实际写入本次路线尝试）",
       "first_breakpoint": null,
       "hint_level": "none",
       "verdict": "PASS",
-      "evidence_level": "LUNA_SECTION_DELIVERY_ROUND_5_PROJECTION",
+      "evidence_level": "ANSWER_ISOLATED_ROUTE_AUDIT_ROUND_5_PROJECTION",
       "answer_sidecar_read": false,
+      "mathematical_correctness": "not_evaluated_no_final_answer",
       "human_acceptance_not_proven": true
     },
     {
@@ -1262,34 +1288,33 @@
       "cycle": 8,
       "item_id": "B7",
       "source_revision": {
-        "generation": "G-LUNA-20260830-ALL38",
-        "authority": "reports/ch12_luna_sections/LUNA-CH12-01/delivery.json",
-        "route_version": 2,
+        "generation": "G-ROUTE-AUDIT-20260831",
+        "authority": "reports/deep_section_simulations/current.json",
+        "run_id": "route-audit-5391e980be231c3c",
         "round": 5
       },
       "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
-      "observation_signal": "先读出 α-l-β 的公共棱 l，再验证两面内截线的同起点、双垂棱和不同垂足平移，之后才做二维关系。",
+      "observation_signal": "alph",
       "course_call": {
         "course_keys": [
-          "parallel_perpendicular",
           "plane_plane_angle",
+          "parallel_perpendicular",
           "line_line_angle"
         ],
-        "method_model_id": "bridge-1.1-dihedral-definition：二面角定义→同起点双垂棱→不同垂足平移→三段长度拆分→数量积/余弦核验。",
-        "knowledge_refs": [
-          "数量积、夹角与投影向量"
-        ],
+        "method_model_id": "向量几何翻译",
+        "knowledge_refs": [],
         "type_refs": []
       },
-      "first_line": "先写：l 为两面公共棱，O 为共同截面点；两条截线分别在两面内且垂直 l。",
+      "first_line": "R5 literal-zero-base：先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
       "second_line": "",
-      "continuation": "重建合法截面并标出两个垂足｜literal-zero-base；说明不同垂足平移不改线段方向和长度｜R5-P1；逐段拆长度并回看端点方向｜对象先于公式；检查平面角与直线夹角的对象边界｜fresh answer-free 冷启动",
-      "independent_self_check": "本轮定义、平移、三段拆分和角对象检查均闭合。（R5-P1；fresh answer-free 冷启动；对象先于公式）",
+      "continuation": "步骤1：统一起点或建立坐标系；对象=B7。；步骤2：把条件写成线性表示、坐标或数量积；对象=B7。；步骤3：按系数、坐标或夹角条件推进；对象=B7。",
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。（由 literal-zero-base 实际写入本次路线尝试）",
       "first_breakpoint": null,
       "hint_level": "none",
       "verdict": "PASS",
-      "evidence_level": "LUNA_SECTION_DELIVERY_ROUND_5_PROJECTION",
+      "evidence_level": "ANSWER_ISOLATED_ROUTE_AUDIT_ROUND_5_PROJECTION",
       "answer_sidecar_read": false,
+      "mathematical_correctness": "not_evaluated_no_final_answer",
       "human_acceptance_not_proven": true
     },
     {
@@ -1297,35 +1322,33 @@
       "cycle": 9,
       "item_id": "B8",
       "source_revision": {
-        "generation": "G-LUNA-20260830-ALL38",
-        "authority": "reports/ch12_luna_sections/LUNA-CH12-01/delivery.json",
-        "route_version": 2,
+        "generation": "G-ROUTE-AUDIT-20260831",
+        "authority": "reports/deep_section_simulations/current.json",
+        "run_id": "route-audit-5391e980be231c3c",
         "round": 5
       },
       "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
-      "observation_signal": "题面把正方体内任意点的点积最值与极化/几何约束结合",
+      "observation_signal": "P",
       "course_call": {
         "course_keys": [
           "decomposition",
           "coplanar",
           "line_line_angle"
         ],
-        "method_model_id": "极化恒等式+向量分解模型；先把点积写成模长平方，再检查点在长方体内的定义域",
-        "knowledge_refs": [
-          "共线向量与共面向量",
-          "数量积、夹角与投影向量"
-        ],
+        "method_model_id": "向量几何翻译",
+        "knowledge_refs": [],
         "type_refs": []
       },
-      "first_line": "先写：\\(u\\cdot v=|\\tfrac{u+v}{2}|^2-|\\tfrac{u-v}{2}|^2\\)，并列点P的参数范围；先保留题干符号，不写数值结论。",
+      "first_line": "R5 literal-zero-base：先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
       "second_line": "",
-      "continuation": "识别目标点积的和差结构｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；建立中点/对称点关系｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；把几何范围转成参数或模长约束｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；独立检查等号位置｜第5轮｜literal-zero-base｜fresh answer-free 冷启动",
-      "independent_self_check": "点P是否仍在正方体允许域；本轮用对象先于公式方式独立回查。",
+      "continuation": "步骤1：统一起点或建立坐标系；对象=B8。；步骤2：把条件写成线性表示、坐标或数量积；对象=B8。；步骤3：按系数、坐标或夹角条件推进；对象=B8。",
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。（由 literal-zero-base 实际写入本次路线尝试）",
       "first_breakpoint": null,
       "hint_level": "none",
       "verdict": "PASS",
-      "evidence_level": "LUNA_SECTION_DELIVERY_ROUND_5_PROJECTION",
+      "evidence_level": "ANSWER_ISOLATED_ROUTE_AUDIT_ROUND_5_PROJECTION",
       "answer_sidecar_read": false,
+      "mathematical_correctness": "not_evaluated_no_final_answer",
       "human_acceptance_not_proven": true
     },
     {
@@ -1333,35 +1356,33 @@
       "cycle": 9,
       "item_id": "C13",
       "source_revision": {
-        "generation": "G-LUNA-20260830-ALL38",
-        "authority": "reports/ch12_luna_sections/LUNA-CH12-01/delivery.json",
-        "route_version": 2,
+        "generation": "G-ROUTE-AUDIT-20260831",
+        "authority": "reports/deep_section_simulations/current.json",
+        "run_id": "route-audit-5391e980be231c3c",
         "round": 5
       },
       "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
-      "observation_signal": "题面要求在四点共面系数和与数量积/最值之间切换",
+      "observation_signal": "向量",
       "course_call": {
         "course_keys": [
           "decomposition",
           "coplanar",
           "line_line_angle"
         ],
-        "method_model_id": "先用四点共面系数和=1判定参数，再用数量积分配或极化处理目标量",
-        "knowledge_refs": [
-          "共线向量与共面向量",
-          "数量积、夹角与投影向量"
-        ],
+        "method_model_id": "向量几何翻译",
+        "knowledge_refs": [],
         "type_refs": []
       },
-      "first_line": "先写：\\(\\overrightarrow{OP}=x\\overrightarrow{OA}+y\\overrightarrow{OB}+z\\overrightarrow{OC},\\quad x+y+z=1\\)；先保留题干符号，不写数值结论。",
+      "first_line": "R5 literal-zero-base：先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
       "second_line": "",
-      "continuation": "先锁定共面参数条件｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；把目标向量统一到同一基底｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；选择点积定义/分配律/极化之一｜第5轮｜literal-zero-base｜fresh answer-free 冷启动；完成几何回代｜第5轮｜literal-zero-base｜fresh answer-free 冷启动",
-      "independent_self_check": "系数和是否为1；本轮用对象先于公式方式独立回查。",
+      "continuation": "步骤1：统一起点或建立坐标系；对象=C13。；步骤2：把条件写成线性表示、坐标或数量积；对象=C13。；步骤3：按系数、坐标或夹角条件推进；对象=C13。",
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。（由 literal-zero-base 实际写入本次路线尝试）",
       "first_breakpoint": null,
       "hint_level": "none",
       "verdict": "PASS",
-      "evidence_level": "LUNA_SECTION_DELIVERY_ROUND_5_PROJECTION",
+      "evidence_level": "ANSWER_ISOLATED_ROUTE_AUDIT_ROUND_5_PROJECTION",
       "answer_sidecar_read": false,
+      "mathematical_correctness": "not_evaluated_no_final_answer",
       "human_acceptance_not_proven": true
     },
     {
@@ -1369,55 +1390,55 @@
       "cycle": 10,
       "item_id": "C14",
       "source_revision": {
-        "generation": "G-LUNA-20260830-ALL38",
-        "authority": "reports/ch12_luna_sections/LUNA-CH12-01/delivery.json",
-        "route_version": 2,
+        "generation": "G-ROUTE-AUDIT-20260831",
+        "authority": "reports/deep_section_simulations/current.json",
+        "run_id": "route-audit-5391e980be231c3c",
         "round": 5
       },
       "context_sha256": "502b4a0f18800345284b8848558ba1336b70f9b34c56a2155bad39c5015df35f",
-      "observation_signal": "把综合题拆成四个门：四点共面/仿射求交、正数乘积最值、平面与距离、外接球等距回代；每门先验条件再推进。",
+      "observation_signal": "距离",
       "course_call": {
         "course_keys": [
-          "decomposition",
-          "parallel_perpendicular",
-          "coplanar",
           "plane_equation_upper",
           "plane_equation_lower",
           "distance",
+          "decomposition",
+          "parallel_perpendicular",
+          "coplanar",
           "line_line_angle"
         ],
-        "method_model_id": "bridge-1.1-positive-product-sum：正数条件→平方非负→等号条件→几何定义域回代；并行完成仿射求交、平面距离和外接球三点等距回代。",
-        "knowledge_refs": [
-          "共线向量与共面向量",
-          "数量积、夹角与投影向量"
-        ],
+        "method_model_id": "向量几何翻译",
+        "knowledge_refs": [],
         "type_refs": []
       },
-      "first_line": "先写：x>0，y>0，xy=k（k>0）；另列仿射参数范围与三点等距检查表。",
+      "first_line": "R5 literal-zero-base：先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
       "second_line": "",
-      "continuation": "从零复述正数乘积方法链并保留等号条件｜literal-zero-base；把等号条件回代到几何定义域｜R5-P1；独立检查仿射求交分母、共面参数和距离门｜对象先于公式；完成球心三点等距回代后再做总体验收｜fresh answer-free 冷启动",
-      "independent_self_check": "fresh 冷启动仍能完成 C14 的正数乘积、定义域、仿射求交和外接球回代检查。（R5-P1；fresh answer-free 冷启动；对象先于公式）",
+      "continuation": "步骤1：统一起点或建立坐标系；对象=C14。；步骤2：把条件写成线性表示、坐标或数量积；对象=C14。；步骤3：按系数、坐标或夹角条件推进；对象=C14。",
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。（由 literal-zero-base 实际写入本次路线尝试）",
       "first_breakpoint": null,
       "hint_level": "none",
       "verdict": "PASS",
-      "evidence_level": "LUNA_SECTION_DELIVERY_ROUND_5_PROJECTION",
+      "evidence_level": "ANSWER_ISOLATED_ROUTE_AUDIT_ROUND_5_PROJECTION",
       "answer_sidecar_read": false,
+      "mathematical_correctness": "not_evaluated_no_final_answer",
       "human_acceptance_not_proven": true
     }
   ],
   "source_revision": {
-    "chapter1_manifest.json": "90e2376c45439e678d08936bb66c0954dbc8aaf96ad8ff45cbee634efbb1f9d2",
+    "chapter1_manifest.json": "071cd794cb2d44b17cfa117e50da06c25097867878c30918da6abd5f7268929f",
     "data/bridge_micro_lessons.json": "6037dca3a4258ad9f95749b9ec6f6066490f13e04f26a7284a60a124963dc5fc",
-    "data/packets/1.1/learning_packet.json": "a3e45019c9be1e8c223652a5c6152d0026f593ea015ff93581fc5ea170b58dfa",
-    "data/packets/1.1/student_learning_items.json": "be185865b16f4872efa2facd0d3d7c809d42a7add5ff8ac433a7dd77766acbc5",
+    "data/packets/1.1/learning_packet.json": "d5b61c7fc71af71a55be5ff5c47b6568bbd206e2125b59e40dd77d6ef894d9ce",
+    "data/packets/1.1/student_learning_items.json": "223f3fbd41c5ee15eab4948a5fd9206980f8f5bf6fc9ee0dd22adfd08dbc0166",
     "data/contexts/1.1.json": "7b51a4f14c14ba17a5807009ef90093a0276ef9cd00b925bd5e0950da2c2e316",
     "data/question_coverage.json": "ca55dde790a033278d36148f14e3475d5eefe946af616d0064dd9ec5e026622e",
     "data/zero_base_simulation_standard.md": "cd13e8516a359453f03bde643fcfc99d9d84e4ff9f0b19e1cf42cc04285932f6",
-    "data/packets/1.1/learning_path_without_questions.md": "4c531d74a5482271e98891b7f321d5e3ecc5fbb4a55e84fdd995f9cadff2efbe",
-    "reports/ch12_luna_sections/LUNA-CH12-01/delivery.json": "a4e4b253f28f1e1ba834fa310d7d6e4b38e7ddabb64c50ada7792434aef2660a"
+    "data/packets/1.1/learning_path_without_questions.md": "11b9c0c93f80de6d6d6983dc6a897d086c5313c30fbfdbc9cec83ce9f48bad7b",
+    "reports/deep_section_simulations/current.json": "5f8e191ac2818082581d80eb79c14a237b5dcdd06a3560694ecb2f5620b30cc4"
   },
   "projection": {
-    "source_delivery_sha256": "a4e4b253f28f1e1ba834fa310d7d6e4b38e7ddabb64c50ada7792434aef2660a",
-    "note": "Current section delivery is the authority; no historical report was promoted without rebinding."
+    "source_report_sha256": "01de6bde5589cd4ac83dfc0d156091444e938a211c01174219c71b7e4e80ec0a",
+    "frozen_attempts_sha256": "b5cd9dce71883b5248c0c80eadc0c2796e9574a672130a6821ca7ad48bd7acc3",
+    "route_assessments_sha256": "a9cb310894d234353e4f62d53c2978284c132cf06a0bc4023f0e489e7be1481b",
+    "note": "Compatibility projection only; route actionability is not mathematical correctness or mastery."
   }
 }

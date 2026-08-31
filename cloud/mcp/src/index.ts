@@ -203,6 +203,33 @@ async function readContentJson(env: Env, key: string): Promise<JsonRecord | null
   }
 }
 
+async function sha256Base64(value: string): Promise<string | null> {
+  try {
+    const binary = atob(value)
+    const bytes = new Uint8Array(binary.length)
+    for (let index = 0; index < binary.length; index += 1) bytes[index] = binary.charCodeAt(index)
+    const digest = new Uint8Array(await crypto.subtle.digest('SHA-256', bytes))
+    return [...digest].map((byte) => byte.toString(16).padStart(2, '0')).join('')
+  } catch {
+    return null
+  }
+}
+
+async function answerPageImageContent(env: Env, row: JsonRecord): Promise<ImageContent | null> {
+  const key = typeof row.source_page_r2_key === 'string' ? row.source_page_r2_key : ''
+  const assetKey = typeof row.source_page_asset_key === 'string' ? row.source_page_asset_key : ''
+  const expectedSha = typeof row.source_page_image_sha256 === 'string' ? row.source_page_image_sha256.toLowerCase() : ''
+  if (!key || !assetKey || !/^[0-9a-f]{64}$/.test(expectedSha)) return null
+  const pack = await readContentJson(env, key)
+  if (!pack || pack.schema_version !== 'ybt-cloud-answer-page-pack-v1' || !pack.pages || typeof pack.pages !== 'object') return null
+  const pages = pack.pages as JsonRecord
+  const asset = pages[assetKey] && typeof pages[assetKey] === 'object' ? pages[assetKey] as JsonRecord : null
+  if (!asset || typeof asset.data !== 'string' || typeof asset.mimeType !== 'string') return null
+  if (String(asset.sha256 ?? '').toLowerCase() !== expectedSha) return null
+  if (await sha256Base64(asset.data) !== expectedSha) return null
+  return { type: 'image', data: asset.data, mimeType: asset.mimeType }
+}
+
 function recordArray(value: unknown): JsonRecord[] {
   return Array.isArray(value) ? value.filter((item): item is JsonRecord => Boolean(item && typeof item === 'object' && !Array.isArray(item))) : []
 }
@@ -756,20 +783,96 @@ function createServer(env: Env, scopes: readonly string[]): McpServer {
   })
 
   server.registerTool('math_get_answer_sources', {
-    description: '读取已导入的原书答案来源。返回原书答案与来源版本，不把模型推导冒充原书答案；模型解法由当前对话另行生成并标注。',
-    inputSchema: { itemId: z.string().min(1).max(200) },
-  }, async ({ itemId }) => {
+    description: '读取已导入的原书答案证据。只有高置信且明确允许的文本才能自动判分；低置信或仅原页证据必须人工/视觉核对。模型解法始终另列。',
+    inputSchema: {
+      itemId: z.string().min(1).max(200),
+      includeSourcePage: z.boolean().default(false),
+      includeHistory: z.boolean().default(false),
+    },
+  }, async ({ itemId, includeSourcePage, includeHistory }) => {
     if (!readAllowed()) return failure('insufficient_scope', READ_SCOPE)
     const rows = await env.DB.prepare(`
-      SELECT item_id, source_kind, source_version_id, answer_text, source_sha256
-      FROM answer_sources WHERE item_id = ? ORDER BY source_kind
+      SELECT item_id, source_kind, source_version_id, answer_text, source_sha256,
+             evidence_kind, confidence, review_required, automatic_grading_allowed,
+             answer_text_kind, parse_status, source_pdf_name, source_pdf_sha256,
+             source_pdf_page, source_page_image_sha256, source_page_r2_key,
+             source_page_asset_key, sv.imported_at AS source_version_imported_at
+      FROM answer_sources a
+      JOIN source_versions sv ON sv.id = a.source_version_id
+      WHERE item_id = ?
+      ORDER BY sv.imported_at DESC, source_kind
     `).bind(itemId).all<JsonRecord>()
+    const selectedRows = includeHistory
+      ? rows.results
+      : rows.results.filter((row, index, all) => all.findIndex((candidate) => candidate.source_kind === row.source_kind) === index)
+    const sources: JsonRecord[] = []
+    const images: ImageContent[] = []
+    for (const row of selectedRows) {
+      const evidenceKind = String(row.evidence_kind ?? 'legacy_answer_text')
+      const confidence = String(row.confidence ?? 'legacy_unreviewed')
+      const reviewRequired = Number(row.review_required ?? 1) !== 0
+      const rawAnswerText = typeof row.answer_text === 'string' ? row.answer_text.trim() : ''
+      const answerTextKind = String(row.answer_text_kind ?? 'legacy_unreviewed_text')
+      const automaticGradingAllowed = Number(row.automatic_grading_allowed ?? 0) === 1
+        && evidenceKind === 'parsed_answer_text'
+        && confidence === 'high'
+        && !reviewRequired
+        && answerTextKind === 'ocr_answer_text'
+        && rawAnswerText.length > 0
+      const requiresVisualReview = evidenceKind === 'source_page_visual'
+        || (evidenceKind === 'parsed_answer_text' && reviewRequired)
+      const shouldReadImage = includeSourcePage || requiresVisualReview
+      let imageBlockIndex: number | null = null
+      if (shouldReadImage) {
+        const image = await answerPageImageContent(env, row)
+        if (!image && requiresVisualReview) {
+          return failure('answer_source_page_unavailable', '需要核对的原书答案页不可读，已停止自动判分', {
+            itemId,
+            sourceVersionId: row.source_version_id,
+            evidenceKind,
+          })
+        }
+        if (image) {
+          images.push(image)
+          imageBlockIndex = images.length
+        }
+      }
+      sources.push({
+        itemId: row.item_id,
+        sourceKind: row.source_kind,
+        sourceVersionId: row.source_version_id,
+        sourceVersionImportedAt: row.source_version_imported_at,
+        answerText: automaticGradingAllowed ? rawAnswerText : null,
+        ocrCandidateText: evidenceKind === 'parsed_answer_text' && !automaticGradingAllowed ? rawAnswerText : null,
+        answerTextKind,
+        evidenceKind,
+        confidence,
+        parseStatus: row.parse_status,
+        reviewRequired,
+        automaticGradingAllowed,
+        mustNotGradeAutomatically: !automaticGradingAllowed,
+        sourceIntegritySha256: row.source_sha256,
+        sourcePdf: {
+          fileName: row.source_pdf_name,
+          sha256: row.source_pdf_sha256,
+          pdfPage: row.source_pdf_page,
+        },
+        sourcePage: {
+          imageSha256: row.source_page_image_sha256,
+          r2Key: row.source_page_r2_key,
+          assetKey: row.source_page_asset_key,
+          imageBlockIndex,
+        },
+      })
+    }
     return result({
       ok: true,
       itemId,
-      sources: rows.results,
+      sources,
+      sourcePageImageCount: images.length,
+      gradingPolicy: '仅 automaticGradingAllowed=true 的高置信原书文本可作自动判分证据；其他证据必须核对原页，不得根据 OCR 候选文本直接判定对错。',
       modelSolutionPolicy: '模型解法必须单独标为 model_solution，并与原书答案分栏；推荐方案需说明选择理由。',
-    })
+    }, images)
   })
 
   server.registerTool('math_get_course_transcript', {
@@ -1578,10 +1681,12 @@ function protectedResourceMetadata(env: Env): Response {
 async function readiness(env: Env): Promise<Response> {
   try {
     const row = await env.DB.prepare(`SELECT COUNT(*) AS count FROM sqlite_master WHERE type = 'table' AND name IN ('source_versions','chapters','sections','items','courses','item_course_links','transcript_chunks','learning_events','learner_state','questions','answer_sources','learner_diagnostics','memory_items','type_classifications','wrong_question_exports','handout_sources','handout_pages','handout_course_links','practice_sources','practice_pages','practice_items','practice_route_links','practice_attempts','handwriting_analyses')`).first<{ count: number | string }>()
+    const answerColumns = await env.DB.prepare(`SELECT COUNT(*) AS count FROM pragma_table_info('answer_sources') WHERE name IN ('evidence_kind','confidence','review_required','automatic_grading_allowed','answer_text_kind','parse_status','source_pdf_name','source_pdf_sha256','source_pdf_page','source_page_image_sha256','source_page_r2_key','source_page_asset_key')`).first<{ count: number | string }>()
     const configured = oauthConfig(env) !== null
-    const storageReady = Number(row?.count ?? 0) === 24
+    const answerEvidenceReady = Number(answerColumns?.count ?? 0) === 12
+    const storageReady = Number(row?.count ?? 0) === 24 && answerEvidenceReady
     const ready = storageReady && configured
-    return Response.json({ ok: ready, service: 'math-learning-mcp', storage: storageReady ? 'ready' : 'migration_required', oauth: configured ? 'configured' : 'not_configured' }, { status: ready ? 200 : 503 })
+    return Response.json({ ok: ready, service: 'math-learning-mcp', storage: storageReady ? 'ready' : 'migration_required', answerEvidence: answerEvidenceReady ? 'ready' : 'migration_required', oauth: configured ? 'configured' : 'not_configured' }, { status: ready ? 200 : 503 })
   } catch {
     return Response.json({ ok: false, service: 'math-learning-mcp', storage: 'unavailable' }, { status: 503 })
   }

@@ -29,7 +29,7 @@
         16
       ]
     },
-    "derived_question_correction_count": 0
+    "derived_question_correction_count": 1
   },
   "status": "VERIFIED",
   "consumer_guard": "Student/DeepSeek context: no answers. Consume only when status=VERIFIED.",
@@ -140,10 +140,18 @@
     {
       "ocr_doc": 63,
       "source_path": "data/ocr_live_current/chapter4_100/doc_63.md",
-      "text": "## C组 拓展提升\n\n14.（2025·四川绵阳开学考试）\n\n在公差不为0的等差数列 \\(\\{a_{n}\\}\\)中， \\(a_{3}+a_{10}=15\\)，且 \\(a_{2}\\)， \\(a_{5}\\)， \\(a_{11}\\)成等比数列.\n\n（1）求 \\(\\{a_{n}\\}\\)的通项公式；\n\n（2）设 \\(b_{n}=\\frac{1}{a_{n}}+\\frac{1}{a_{n+1}}+\\cdots+\\frac{1}{a_{2n-1}}\\)，证明： \\(\\frac{1}{2}\\leq b_{n}<1\\).\n\n### 15. （2025 · 云南模拟）\n\n已知数列 \\(\\{a_n\\}\\) 的前 \\(n\\) 项积为 \\(T_n\\)，满足 \\(T_n = 1 \\times 3 \\times 5 \\times \\cdots \\times (2n-1)\\)，其中 \\(n \\in \\mathbb{N}^*\\)。\n\n（1）求数列 \\(\\{a_{n}\\}\\)的通项公式；\n\n（2）已知数列 \\(\\{a_n\\}\\) 的前 \\(n\\) 项和为 \\(S_n\\)，数列 \\(\\{b_n\\}\\) 是公比大于 1 的等比数列，且 \\(b_1 = a_1\\)，\\(b_3 = S_5\\)，\\(c_n = (\\sqrt{2})^{a_{n+1}} - \\lambda b_{n+1}\\)，若数列 \\(\\{c_n\\}\\) 是递减数列，求实数 \\(\\lambda\\) 的取值范围。\n\n### 16. （2025·浙江杭州期末（改））\n\n数列 \\(\\{a_{n}\\}\\)满足 \\(a_{n+1}=a_{n}^{2}+4a_{n}+2\\)， \\(a_{1}=8\\)。\n\n（1）证明数列  \\(\\{\\lg(a_n+2)\\}\\) 是等比数列，并求  \\(a_n\\)\n\n（2）若 \\(a_{p}\\)， \\(a_{p+1}\\)， \\(a_{p+2}\\)是 \\(\\{a_{n}\\}\\)中连续的三项，试证明：",
+      "text": "## C组 拓展提升\n\n14.（2025·四川绵阳开学考试）\n\n在公差不为0的等差数列 \\(\\{a_{n}\\}\\)中， \\(a_{3}+a_{10}=15\\)，且 \\(a_{2}\\)， \\(a_{5}\\)， \\(a_{11}\\)成等比数列.\n\n（1）求 \\(\\{a_{n}\\}\\)的通项公式；\n\n（2）设 \\(b_{n}=\\frac{1}{a_{n}}+\\frac{1}{a_{n+1}}+\\cdots+\\frac{1}{a_{2n-1}}\\)，证明： \\(\\frac{1}{2}\\leq b_{n}<1\\).\n\n### 15. （2025 · 云南模拟）\n\n已知数列 \\(\\{a_n\\}\\) 的前 \\(n\\) 项积为 \\(T_n\\)，满足 \\(T_n = 1 \\times 3 \\times 5 \\times \\cdots \\times (2n-1)\\)，其中 \\(n \\in \\mathbb{N}^*\\)。\n\n（1）求数列 \\(\\{a_{n}\\}\\)的通项公式；\n\n（2）已知数列 \\(\\{a_n\\}\\) 的前 \\(n\\) 项和为 \\(S_n\\)，数列 \\(\\{b_n\\}\\) 是公比大于 1 的等比数列，且 \\(b_1 = a_1\\)，\\(b_3 = S_5\\)，\\(c_n = (\\sqrt{2})^{a_{n+1}} - \\lambda b_{n+1}\\)，若数列 \\(\\{c_n\\}\\) 是递减数列，求实数 \\(\\lambda\\) 的取值范围。\n\n### 16. （2025·浙江杭州期末（改））\n\n数列 \\(\\{a_{n}\\}\\)满足 \\(a_{n+1}=a_{n}^{2}+4a_{n}+2\\)， \\(a_{1}=8\\)。\n\n（1）证明数列  \\(\\{\\lg(a_n+2)\\}\\) 是等比数列，并求  \\(a_n\\)\n\n（2）若 \\(a_p\\)，\\(a_{p+1}\\)，\\(a_{p+2}\\) 是 \\(\\{a_n\\}\\) 中连续的三项，试证明：\\(a_p\\)，\\(a_{p+1}\\)，\\(a_{p+2}\\) 不可能成等比数列。",
       "text_sha256": "8d3a14ccbbad2bfdaaac5738c20ae6b1dcf37dea227329233d2913385e07dd0b",
       "image_refs": [],
-      "math_errors": []
+      "math_errors": [],
+      "derived_question_corrections": [
+        {
+          "id": "DQC-4.4-C16-PROOF-TARGET",
+          "action": "replace_line",
+          "evidence": "MERGED_SOURCE_PDF_PAGE_64_VISUALLY_CONFIRMS_COMPLETE_PROPOSITION",
+          "reason": "paddle_ocr_truncated_the_proposition_after_prove_colon"
+        }
+      ]
     }
   ],
   "questions": [
@@ -178,50 +186,20 @@
         "file": "data/ocr_live_current/chapter4_100/doc_59.md"
       },
       "question_text": "### 2. （2025·甘肃兰州期中）\n\n已知数列 \\(\\{a_n\\}\\) 的前 \\(n\\) 项和为 \\(S_n\\)，且满足 \\(a_n = 2S_n - 1 (n \\in \\mathbb{N}^*)\\)。\n\n（1）求 \\(a_{1}\\)， \\(a_{2}\\)的值；\n\n（2）证明：数列 \\(\\{a_{n}\\}\\)为等比数列并求其通项公式.\n\n",
-      "image_refs": [
-        {
-          "ref": "imgs/img_in_image_box_274_803_911_881.jpg",
-          "path": "data/ocr_live_current/chapter4_100/imgs/img_in_image_box_274_803_911_881.jpg",
-          "exists": true
-        }
-      ],
-      "visual_status": "VISION_VERIFIED",
+      "image_refs": [],
+      "visual_status": "READY_TEXT_ONLY",
       "math_errors": [],
       "evidence": [
-        "E1",
-        "E2"
+        "E1"
       ],
-      "vision_sidecars": [
+      "source_repairs": [
         {
-          "image": "C:\\开发\\小工具\\一本通学习系统_v7\\data\\ocr_live_current\\chapter4_100\\imgs\\img_in_image_box_274_803_911_881.jpg",
-          "image_sha256": "1632f5a7b2f13565b791cd2828395c3e78c987860e09167594387b533f4a8b93",
-          "confidence": "E2",
-          "structured": {
-            "objects": [],
-            "relations": [],
-            "coordinates": [],
-            "ranges": [],
-            "text": [
-              "一数·高中数学一本通"
-            ],
-            "uncertainties": [],
-            "confidence": "E2"
-          },
-          "source_provenance": null
+          "id": "4.4-Q-b929113a92e393ac-drop-footer-watermark",
+          "kind": "image_attachment",
+          "reason": "The crop contains only an incomplete textbook watermark and no mathematical figure for A2.",
+          "review_ref": "reports/deep_simulation_reviews/visual-fixes-ch45.json"
         }
-      ],
-      "vision_sidecar": {
-        "objects": [],
-        "relations": [],
-        "coordinates": [],
-        "ranges": [],
-        "text": [
-          "一数·高中数学一本通"
-        ],
-        "uncertainties": [],
-        "confidence": "E2"
-      },
-      "vision_source_provenance": []
+      ]
     },
     {
       "qid": "Q-b7786b05d4e9272c",
@@ -481,7 +459,7 @@
         "pdf_page": 64,
         "file": "data/ocr_live_current/chapter4_100/doc_63.md"
       },
-      "question_text": "### 16. （2025·浙江杭州期末（改））\n\n数列 \\(\\{a_{n}\\}\\)满足 \\(a_{n+1}=a_{n}^{2}+4a_{n}+2\\)， \\(a_{1}=8\\)。\n\n（1）证明数列  \\(\\{\\lg(a_n+2)\\}\\) 是等比数列，并求  \\(a_n\\)\n\n（2）若 \\(a_{p}\\)， \\(a_{p+1}\\)， \\(a_{p+2}\\)是 \\(\\{a_{n}\\}\\)中连续的三项，试证明：",
+      "question_text": "### 16. （2025·浙江杭州期末（改））\n\n数列 \\(\\{a_{n}\\}\\)满足 \\(a_{n+1}=a_{n}^{2}+4a_{n}+2\\)， \\(a_{1}=8\\)。\n\n（1）证明数列  \\(\\{\\lg(a_n+2)\\}\\) 是等比数列，并求  \\(a_n\\)\n\n（2）若 \\(a_p\\)，\\(a_{p+1}\\)，\\(a_{p+2}\\) 是 \\(\\{a_n\\}\\) 中连续的三项，试证明：\\(a_p\\)，\\(a_{p+1}\\)，\\(a_{p+2}\\) 不可能成等比数列。",
       "image_refs": [],
       "visual_status": "READY_TEXT_ONLY",
       "math_errors": [],

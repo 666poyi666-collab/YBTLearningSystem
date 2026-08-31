@@ -9,7 +9,7 @@ from typing import Any, Iterable
 
 from .common import clean_text, delimiter_errors, normalize_math, save_json, stable_id
 from .answers import build_answer_index, merge_answer_indexes
-from .vision import structured_answer_leaks
+from .vision import structured_answer_leaks, structured_visual_errors
 
 
 QUESTION_RE = re.compile(r"(?m)^(?:#{1,6}\s*)?(?P<number>\d{1,2})\s*(?:\\?[.．、]|(?=（)|(?=\())\s*(?:（[^\n]{0,80}）|\([^\n]{0,80}\)|[^\n]*)")
@@ -97,6 +97,8 @@ def _usable_vision_sidecar(sidecar: dict[str, Any] | None) -> bool:
         return False
     if structured_answer_leaks(structured):
         return False
+    if structured_visual_errors(structured, item_id=str(sidecar.get("item_id") or "")):
+        return False
     meaningful = any(value not in (None, "", [], {}) for key in ("objects", "relations", "coordinates", "ranges", "text") for value in [structured.get(key)])
     if structured.get("confidence") == "E2|E1|E0":
         return False
@@ -178,7 +180,9 @@ LEARNING_STRUCTURE_RE = re.compile(
     r"^\s*(?:#{1,6}\s*)?(?:知识点|类型|内容纲要|强化训练|[ABC]\s*组)"
 )
 LEARNING_SOLUTION_RE = re.compile(
-    r"(?im)^\s*(?:#{1,6}\s*)?(?:【\s*(?:解|解析|证明|答案|点评|反思)\s*】|(?:解|解析|证明|答案|解法\s*(?:[一二两三四五六七八九十百\d]+)?)\s*[：:])"
+    r"(?im)^\s*(?:#{1,6}\s*)?(?:【\s*(?:解|解析|证明|答案|点评|反思)\s*】|"
+    r"(?:解|解析|证明|答案|解法\s*(?:[一二两三四五六七八九十百\d]+)?|"
+    r"证法\s*[一二两三四五六七八九十百\d]*)\s*[：:])"
 )
 INLINE_LEARNING_ITEM_RE = re.compile(r"(?=【\s*(?:例|变式)\s*[^】]*】)")
 
@@ -258,6 +262,222 @@ def _repair_learning_item_layout(section_id: str, items: list[dict[str, Any]], p
     page_text = {page.get("ocr_doc"): str(page.get("text", "")) for page in pages}
     examples = {item.get("example_number"): item for item in items if item.get("kind") == "example"}
 
+    if section_id == "ch3.s1":
+        example3 = examples.get(3)
+        if example3:
+            question = (
+                r"【例3】若椭圆 \(\frac{x^{2}}{25}+y^{2}=1\) 上一点 \(P\) 到椭圆一个焦点的距离为 3，"
+                r"则 \(P\) 到另一个焦点的距离为 ___。"
+            )
+            solution = (
+                r"解析：由椭圆方程 \(\frac{x^{2}}{25}+y^{2}=1\) 可知 \(a=5\)，"
+                r"所以点 \(P\) 到两焦点的距离之和为 \(2a=10\)，"
+                r"所以 \(P\) 到另一个焦点的距离为 \(10-3=7\)。" + "\n\n答案：7"
+            )
+            example3["teaching_text"] = question + "\n\n" + solution
+            example3["question_text"] = question
+            example3["solution_present"] = True
+            example3["source_layout_repair"] = {
+                "status": "SOURCE_PDF_VISUALLY_VERIFIED",
+                "source_pdf_sha256": "d5fd328c1937e8695f8527a16bfd6916849401eabe474ba3f4c0a9c185bf3af7",
+                "pdf_pages": [1, 2],
+                "reason": "例3题干跨双栏页尾与下一页页首，OCR把左栏知识正文插入题干。",
+            }
+
+        example6 = examples.get(6)
+        if example6:
+            question = (
+                r"【例6】若点 \(A(\sqrt{2},m)\) 在椭圆 \(\frac{x^2}{4}+y^2=1\) 的内部，"
+                r"则实数 \(m\) 的取值范围是 ___。"
+            )
+            solution = (
+                r"解析：由题意，点 \(A\) 在椭圆的内部，所以 "
+                r"\(\frac{(\sqrt{2})^2}{4}+m^2<1\)，解得 "
+                r"\(-\frac{\sqrt{2}}{2}<m<\frac{\sqrt{2}}{2}\)。" + "\n\n"
+                r"答案：\(\left(-\frac{\sqrt{2}}{2},\frac{\sqrt{2}}{2}\right)\)"
+            )
+            example6["teaching_text"] = question + "\n\n" + solution
+            example6["question_text"] = question
+            example6["solution_present"] = True
+            example6["source_layout_repair"] = {
+                "status": "SOURCE_PDF_VISUALLY_VERIFIED",
+                "source_pdf_sha256": "d5fd328c1937e8695f8527a16bfd6916849401eabe474ba3f4c0a9c185bf3af7",
+                "pdf_pages": [2, 3],
+                "reason": "例6位于右栏，左栏特征三角形与焦点三角形正文被OCR插入题干和解析之间。",
+            }
+
+        for item in items:
+            if (
+                item.get("kind") == "direct_variant"
+                and "\\angle F_1PF_2" in str(item.get("question_text") or "")
+            ):
+                item["image_refs"] = []
+                item["visual_status"] = "READY_TEXT_ONLY"
+                item["source_layout_repair"] = {
+                    "status": "SOURCE_PDF_VISUALLY_VERIFIED",
+                    "source_pdf_sha256": "d5fd328c1937e8695f8527a16bfd6916849401eabe474ba3f4c0a9c185bf3af7",
+                    "pdf_page": 9,
+                    "reason": "OCR绑定的M/N圆图属于上一道变式1解析；变式2自己的P点示意图位于答案解析区，不进入独立作答题面。",
+                }
+        return
+
+    if section_id == "ch3.s12":
+        example2 = examples.get(2)
+        if example2:
+            question = (
+                r"【例2】设抛物线 \(y^2=4x\) 的焦点为 \(F\)，\(O\) 是坐标原点，\(M(4,0)\)，"
+                r"过点 \(F\) 的直线与抛物线交于 \(A,B\) 两点，延长 \(AM,BM\) 分别交抛物线于 "
+                r"\(C,D\) 两点，\(P,Q\) 分别是 \(AB,CD\) 的中点。" + "\n"
+                r"（1）求直线 \(OP\) 的斜率的取值范围；" + "\n"
+                r"（2）求 \(\cos\angle POQ\) 的最小值。"
+            )
+            teaching = str(example2.get("teaching_text") or "")
+            solution_start = teaching.find("由题意，\\(F(1,0)\\)")
+            if solution_start < 0:
+                raise PacketError("ch3.s12 例2 source-verified solution boundary is missing")
+            example2["teaching_text"] = question + "\n\n解：（1）" + teaching[solution_start:]
+            example2["question_text"] = question
+            example2["solution_present"] = True
+            example2["source_layout_repair"] = {
+                "status": "SOURCE_PDF_VISUALLY_VERIFIED",
+                "source_pdf_sha256": "4060e78273b1d002bc484a186f69df8b1acfaa643b332a75926ea10964b1de86",
+                "pdf_pages": [3, 4],
+                "reason": "OCR遗漏蓝色提示后的“解：（1）”标记，导致整段解答进入question_text。",
+            }
+        return
+
+    if section_id == "4.4":
+        example6 = examples.get(6)
+        continuation = page_text.get(53, "")
+        if example6 and continuation:
+            start = continuation.find("解析：由")
+            end = continuation.find("## 知识点5", start)
+            if start < 0 or end <= start:
+                raise PacketError("4.4 例6 source-verified cross-page solution is missing")
+            example6["teaching_text"] = (
+                str(example6.get("teaching_text") or "").rstrip()
+                + "\n\n"
+                + continuation[start:end].strip()
+            )
+            example6["source_docs"] = sorted(set([*example6.get("source_docs", []), 53]))
+            question_text, solution_text = _split_learning_solution(example6["teaching_text"])
+            example6["question_text"] = question_text
+            example6["solution_present"] = bool(solution_text)
+            example6["source_layout_repair"] = {
+                "status": "SOURCE_PDF_VISUALLY_VERIFIED",
+                "source_pdf_sha256": "e32b88dc4c34007ae8ec16ee0faed3a2949ae1952235d1b9a8e5aea5f2d59f5c",
+                "pdf_pages": [53, 54],
+                "reason": "例6题干在第53页右栏，解析位于第54页右栏且被OCR排到下一知识点标题之后。",
+            }
+        return
+
+    if section_id == "2.1":
+        example5 = examples.get(5)
+        if example5:
+            question = (
+                r"【例5】已知直线 \(l\) 的倾斜角 \(\alpha\) 满足 "
+                r"\(\frac{\pi}{3}<\alpha\leq\frac{3\pi}{4}\)，则 \(l\) 的斜率 \(k\) 的取值范围是（ ）" + "\n"
+                r"A. \([-1,\sqrt{3})\)  B. \([-\sqrt{3},1]\)" + "\n"
+                r"C. \(( -\infty,-1]\cup(\sqrt{3},+\infty)\)  "
+                r"D. \(( -\infty,-\sqrt{3}]\cup(-1,+\infty)\)"
+            )
+            solution = (
+                r"解析：正切函数 \(k=\tan\alpha\) 在 \(\left[0,\frac{\pi}{2}\right)\) 和 "
+                r"\(\left(\frac{\pi}{2},\pi\right)\) 上分别单调递增。"
+                r"当 \(\frac{\pi}{3}<\alpha<\frac{\pi}{2}\) 时，\(k>\sqrt{3}\)；"
+                r"当 \(\alpha=\frac{\pi}{2}\) 时斜率不存在；"
+                r"当 \(\frac{\pi}{2}<\alpha\leq\frac{3\pi}{4}\) 时，\(k\leq-1\)。"
+                r"所以 \(k\in(-\infty,-1]\cup(\sqrt{3},+\infty)\)。" + "\n\n答案：C"
+            )
+            example5["teaching_text"] = question + "\n\n" + solution
+            example5["question_text"] = question
+            example5["solution_present"] = True
+            example5["source_layout_repair"] = {
+                "status": "SOURCE_PDF_VISUALLY_VERIFIED",
+                "pdf_pages": [2, 3],
+                "reason": "右栏例5跨页，OCR把下一知识点左栏正文插入题干与解析之间。",
+            }
+
+        example7 = examples.get(7)
+        if example7:
+            question = (
+                r"【例7】若直线 \(l\) 的一个方向向量 \(\vec n=(1,-\sqrt{3})\)，则 \(l\) 的倾斜角为（ ）" + "\n"
+                r"A. \(30^\circ\)  B. \(60^\circ\)  C. \(120^\circ\)  D. \(150^\circ\)"
+            )
+            solution = (
+                r"解析：设直线 \(l\) 的斜率为 \(k\)，倾斜角为 \(\alpha\)。"
+                r"由题意，\(k=\frac{-\sqrt{3}}{1}=-\sqrt{3}\)，故 \(\tan\alpha=-\sqrt{3}\)。"
+                r"结合 \(0^\circ\leq\alpha<180^\circ\) 可得 \(\alpha=120^\circ\)。" + "\n\n答案：C"
+            )
+            example7["teaching_text"] = question + "\n\n" + solution
+            example7["question_text"] = question
+            example7["solution_present"] = True
+            example7["source_layout_repair"] = {
+                "status": "SOURCE_PDF_VISUALLY_VERIFIED",
+                "pdf_pages": [3, 4],
+                "reason": "右栏例7跨页，OCR把左栏平行垂直知识正文插入题干与选项之间。",
+            }
+        return
+
+    if section_id == "2.2":
+        for item in items:
+            if item.get("kind") == "direct_variant" and "垂直平分线" in str(item.get("question_text") or ""):
+                text = str(item.get("question_text") or "")
+                boundary = text.find("\n设 ")
+                if boundary < 0:
+                    raise PacketError("2.2 变式2 source-verified solution boundary is missing")
+                item["question_text"] = text[:boundary].strip()
+                item["source_layout_repair"] = {
+                    "status": "SOURCE_PDF_TEXT_VERIFIED",
+                    "source_docs": [16],
+                    "reason": "根据源页边界，从“设AB中点”起隔离后续教学过程。",
+                }
+        return
+
+    if section_id == "4.5":
+        for item in items:
+            if item.get("kind") == "direct_variant" and "S_9+8S_3" in str(item.get("question_text") or ""):
+                text = str(item.get("question_text") or "")
+                boundary = text.find("\n设等比数列")
+                if boundary < 0:
+                    raise PacketError("4.5 例4变式2 source-verified solution boundary is missing")
+                item["question_text"] = text[:boundary].strip()
+                item["source_layout_repair"] = {
+                    "status": "SOURCE_PDF_TEXT_VERIFIED",
+                    "source_docs": [66, 67],
+                    "reason": "根据源页边界，从“设等比数列”起隔离后续教学过程。",
+                }
+        return
+
+    if section_id == "5.2":
+        for item in items:
+            if item.get("kind") == "direct_variant" and "切线也是" in str(item.get("question_text") or ""):
+                text = str(item.get("question_text") or "")
+                boundary = text.find("\n由题意")
+                if boundary < 0:
+                    raise PacketError("5.2 例8变式3 source-verified solution boundary is missing")
+                item["question_text"] = text[:boundary].strip()
+                item["source_layout_repair"] = {
+                    "status": "SOURCE_PDF_TEXT_VERIFIED",
+                    "source_docs": [13],
+                    "reason": "根据源页边界，从“由题意”起隔离后续教学过程。",
+                }
+        return
+
+    if section_id == "5.4":
+        for item in items:
+            if item.get("kind") == "direct_variant" and item.get("label") == "变式2" and "证明不等式" in str(item.get("question_text") or ""):
+                item["question_text"] = (
+                    r"【变式2】证明不等式：\(\left(1-\frac{2}{x}\right)\ln x>-\frac{1}{2}\)（\(x>0\)）。"
+                )
+                item["source_layout_repair"] = {
+                    "status": "SOURCE_PDF_VISUALLY_VERIFIED",
+                    "source_pdf_sha256": "205282fd79c60a2539cd231044a6d06c5f78a44845a9879d931766851789fa25",
+                    "pdf_page": 52,
+                    "reason": "OCR漏掉“证明不等式：”后的整条公式，原页公式已逐字恢复；证法1起隔离为解答。",
+                }
+        return
+
     if section_id == "1.2+1.3":
         example3 = examples.get(3)
         source20 = page_text.get(20, "")
@@ -274,6 +494,30 @@ def _repair_learning_item_layout(section_id: str, items: list[dict[str, Any]], p
         return
 
     if section_id == "1.4":
+        example9 = examples.get(9)
+        if example9:
+            question = (
+                r"【例9】在空间直角坐标系中，已知平面 \(\alpha\)，\(\beta\) 的一个法向量分别为 "
+                r"\(\boldsymbol m=(0,-1,-1)\)，\(\boldsymbol n=(-2,1,2)\)，则 \(\alpha\) 与 \(\beta\) "
+                r"的夹角的余弦值为（ ）" + "\n"
+                r"A. \(\frac{2}{3}\)  B. \(\frac{\sqrt{2}}{3}\)  "
+                r"C. \(-\frac{\sqrt{2}}{2}\)  D. \(\frac{\sqrt{2}}{2}\)"
+            )
+            solution = (
+                r"解析：设两平面的夹角为 \(\theta\)，则 "
+                r"\(\cos\theta=\frac{|\boldsymbol m\cdot\boldsymbol n|}{|\boldsymbol m|\,|\boldsymbol n|}"
+                r"=\frac{|0\times(-2)+(-1)\times1+(-1)\times2|}{\sqrt{2}\times3}"
+                r"=\frac{\sqrt{2}}{2}\)。" + "\n\n答案：D"
+            )
+            example9["teaching_text"] = question + "\n\n" + solution
+            example9["question_text"] = question
+            example9["solution_present"] = True
+            example9["source_layout_repair"] = {
+                "status": "SOURCE_PDF_VISUALLY_VERIFIED",
+                "pdf_pages": [4, 5],
+                "reason": "例9题干和法向量坐标跨页，OCR将左栏三类空间角知识正文插入题干。",
+            }
+
         example7 = examples.get(7)
         if example7:
             example7["teaching_text"] = re.sub(r"(?m)^答案：C\s*\n+", "", example7["teaching_text"], count=1)
@@ -316,7 +560,7 @@ def _repair_learning_item_layout(section_id: str, items: list[dict[str, Any]], p
                 r"平面 \(CDC\) 的一个法向量", r"平面 \(CDC_1\) 的一个法向量"
             )
 
-        for item in (example7, example16, example18, example22):
+        for item in (example9, example7, example16, example18, example22):
             if not item:
                 continue
             question_text, solution_text = _split_learning_solution(item["teaching_text"])
@@ -416,7 +660,52 @@ def _repair_learning_item_layout(section_id: str, items: list[dict[str, Any]], p
         item["solution_present"] = bool(solution_text)
 
 
-def _extract_learning_items(pages: list[dict[str, Any]], section: dict[str, Any]) -> dict[str, Any]:
+def _apply_clean_learner_question_stems(
+    section_id: str,
+    items: list[dict[str, Any]],
+    clean_stems: list[dict[str, Any]],
+) -> None:
+    """Replace reviewed learner text exactly, while retaining teaching solutions separately."""
+    relevant = [row for row in clean_stems if str(row.get("section")) == section_id]
+    if not relevant:
+        return
+    by_id = {str(item.get("item_id")): item for item in items}
+    missing: list[str] = []
+    for row in relevant:
+        item_id = str(row.get("item_id") or "")
+        item = by_id.get(item_id)
+        if item is None:
+            missing.append(item_id)
+            continue
+        clean_question_text = str(row.get("clean_question_text") or "")
+        expected_sha256 = str(row.get("new_text_sha256") or "").lower()
+        actual_sha256 = hashlib.sha256(clean_question_text.encode("utf-8")).hexdigest()
+        if not clean_question_text or actual_sha256 != expected_sha256:
+            raise PacketError(f"{section_id} invalid clean learner stem: {item_id}")
+        if str(item.get("label") or "") != str(row.get("label") or ""):
+            raise PacketError(f"{section_id} clean learner stem label mismatch: {item_id}")
+        previous_text = str(item.get("question_text") or "")
+        item["question_text"] = clean_question_text
+        item["source_question_stem_review"] = {
+            "status": "SOURCE_REVIEWED_ANSWER_FREE",
+            "review_path": row.get("review_path"),
+            "review_sha256": row.get("review_sha256"),
+            "old_reported_question_text_sha256": row.get("old_text_sha256"),
+            "pre_override_question_text_sha256": hashlib.sha256(previous_text.encode("utf-8")).hexdigest(),
+            "question_text_sha256": expected_sha256,
+            "confidence": row.get("confidence"),
+            "boundary_basis": row.get("boundary_basis"),
+            "source": row.get("source"),
+        }
+    if missing:
+        raise PacketError(f"{section_id} clean learner stems did not bind: {missing}")
+
+
+def _extract_learning_items(
+    pages: list[dict[str, Any]],
+    section: dict[str, Any],
+    clean_stems: list[dict[str, Any]] | None = None,
+) -> dict[str, Any]:
     """Extract examples for teaching and answer-free variants for transfer."""
     items: list[dict[str, Any]] = []
     current: dict[str, Any] | None = None
@@ -484,6 +773,7 @@ def _extract_learning_items(pages: list[dict[str, Any]], section: dict[str, Any]
     finish()
 
     _repair_learning_item_layout(section["id"], items, pages)
+    _apply_clean_learner_question_stems(section["id"], items, clean_stems or [])
 
     deduplicated: list[dict[str, Any]] = []
     unique: dict[tuple[str, int | None, str], dict[str, Any]] = {}
@@ -895,6 +1185,12 @@ def _derived_formula_corrections(section_id: str, page: dict[str, Any]) -> list[
             "to": r"\(=2(x_{1}-x_{2})-a\ln\frac{x_{1}}{x_{2}}=\left(2-\frac{a}{x_{1}-x_{2}}\ln\frac{x_{1}}{x_{2}}\right)(x_{1}-x_{2})\)，所以 \(\frac{f(x_{1})-f(x_{2})}{x_{1}-x_{2}}=2-\frac{a}{x_{1}-x_{2}}\ln\frac{x_{1}}{x_{2}}\)，",
             "reason": "source doc_67 starts with the continuation of a displayed derivation; bind its two formulas separately around the Chinese connector",
         }]
+    if section_id == "5.6" and page.get("ocr_doc") == 80:
+        return [{
+            "from": r"\frac{x^2 + 1}{x^2}",
+            "to": r"\frac{x^2 + 1}{\mathrm{e}^x}",
+            "reason": "source merged PDF page 81 shows the same quotient by e^x before and after the monotonicity argument",
+        }]
     if section_id == "micro专题1" and page.get("ocr_doc") == 57:
         return [{
             "from": r"\sqrt{1 - \left( \frac{4}{\pi} \right)^2} = \frac{3}{\pi}",
@@ -1293,6 +1589,55 @@ class PacketBuilder:
             item["evidence"] = ["E1", weakest]
         return item
 
+    @staticmethod
+    def _apply_image_attachment_overrides(
+        section_id: str,
+        items: list[dict[str, Any]],
+        overrides: list[dict[str, Any]],
+        target_kinds: set[str],
+    ) -> None:
+        by_id = {
+            str(item.get("item_id") or item.get("qid") or ""): item
+            for item in items
+        }
+        for override in overrides:
+            if str(override.get("section") or "") != section_id:
+                continue
+            if str(override.get("kind") or "") not in target_kinds:
+                continue
+            item_id = str(override.get("item_id") or "")
+            item = by_id.get(item_id)
+            if item is None:
+                raise PacketError(f"{section_id} image attachment override item missing: {item_id}")
+            drop = override.get("drop") or {}
+            drop_ref = str(drop.get("ref") or "")
+            drop_hash = str(drop.get("image_sha256") or "")
+            refs = list(item.get("image_refs", []))
+            matches = [ref for ref in refs if str(ref.get("ref") or "") == drop_ref]
+            if len(matches) != 1:
+                raise PacketError(f"{section_id} image attachment drop match mismatch: {override.get('id')}")
+            drop_path = Path(str(matches[0].get("path") or ""))
+            if not drop_path.is_file() or _sha256_file(drop_path) != drop_hash:
+                raise PacketError(f"{section_id} image attachment drop hash mismatch: {override.get('id')}")
+            retained = [ref for ref in refs if ref is not matches[0]]
+            retained_by_ref = {str(ref.get("ref") or ""): ref for ref in retained}
+            for expected in override.get("keep", []):
+                ref = retained_by_ref.get(str(expected.get("ref") or ""))
+                path = Path(str((ref or {}).get("path") or ""))
+                if ref is None or not path.is_file() or _sha256_file(path) != expected.get("image_sha256"):
+                    raise PacketError(f"{section_id} image attachment keep binding mismatch: {override.get('id')}")
+            item["image_refs"] = retained
+            item["visual_status"] = "NEEDS_VISION_SIDECAR" if retained else "READY_TEXT_ONLY"
+            for field in ("vision_sidecar", "vision_sidecars", "vision_source_provenance"):
+                item.pop(field, None)
+            item["evidence"] = [value for value in item.get("evidence", []) if value not in {"E1", "E2"}] or ["E1"]
+            item.setdefault("source_repairs", []).append({
+                "id": override.get("id"),
+                "kind": "image_attachment",
+                "reason": override.get("reason"),
+                "review_ref": override.get("review_ref"),
+            })
+
     def build_section(self, section: dict[str, Any], *, visual_sidecar: dict[str, Any] | None = None, answer_root: str | Path | None = None) -> dict[str, Any]:
         start, end = section["ocr_docs"]
         pages: list[dict[str, Any]] = []
@@ -1313,6 +1658,19 @@ class PacketBuilder:
             item for item in (visual_sidecar or {}).get("derived_question_corrections", [])
             if item.get("section") == section["id"]
         ]
+        canonical_qids: dict[tuple[str, int], dict[str, Any]] = {}
+        for correction in question_corrections:
+            canonical_qid = str(correction.get("canonical_qid") or "")
+            if not canonical_qid:
+                continue
+            group = str(correction.get("group") or "")
+            number = correction.get("number")
+            if not re.fullmatch(r"Q-[0-9a-f]{16}", canonical_qid) or not isinstance(number, int):
+                raise PacketError(f"{section['id']} malformed canonical QID binding: {correction.get('id')}")
+            key = (group, number)
+            if key in canonical_qids and canonical_qids[key]["canonical_qid"] != canonical_qid:
+                raise PacketError(f"{section['id']} conflicting canonical QID binding: {key}")
+            canonical_qids[key] = correction
         for page_number in range(start, end + 1):
             path, raw = self._read_page(page_number)
             normalized = normalize_math(raw)
@@ -1374,7 +1732,12 @@ class PacketBuilder:
                 question_text, answer_text = _split_answer(chunk)
                 question_text = _trim_question_tail(question_text)
                 images = _image_refs(question_text, path.parent)
-                qid = "Q-" + stable_id(source_rel, page_number, current_group or "?", number)
+                qid_binding = canonical_qids.get((str(group_for_match or ""), number))
+                qid = (
+                    str(qid_binding["canonical_qid"])
+                    if qid_binding
+                    else "Q-" + stable_id(source_rel, page_number, current_group or "?", number)
+                )
                 item = {
                     "qid": qid,
                     "section": section["id"],
@@ -1390,6 +1753,12 @@ class PacketBuilder:
                     "math_errors": delimiter_errors(question_text),
                     "evidence": ["E1"],
                 }
+                if qid_binding:
+                    item["canonical_qid_binding"] = {
+                        "status": "PRESERVED_ACROSS_SOURCE_TEXT_REPAIR",
+                        "correction_id": qid_binding.get("id"),
+                        "evidence": qid_binding.get("evidence"),
+                    }
                 sidecar_candidates = sidecar_by_hint.get(f"{section['id']}-{group_for_match}{number}", [])
                 self._attach_visual_sidecar(item, sidecar_candidates)
                 questions.append(item)
@@ -1471,6 +1840,13 @@ class PacketBuilder:
         # marker and the packet remains falsely UNVERIFIED.
         missing = sorted(expected - observed)
 
+        self._apply_image_attachment_overrides(
+            str(section["id"]),
+            questions,
+            list((visual_sidecar or {}).get("item_image_attachment_overrides", [])),
+            {"abc_exercise"},
+        )
+
         unresolved = []
         for page in pages:
             unresolved.extend(f"doc_{page['ocr_doc']}:{err}" for err in page["math_errors"])
@@ -1524,7 +1900,17 @@ class PacketBuilder:
         lesson_packet["packet_type"] = "DEEPSEEK_LESSON_PACKET"
         lesson_packet["consumer_guard"] = "Lesson-only context: may include worked examples; never use for independent attempt or reward judgement."
         save_json(out / "lesson_packet.json", _portable_artifact_paths(lesson_packet))
-        learning_items = _extract_learning_items(pages, section)
+        learning_items = _extract_learning_items(
+            pages,
+            section,
+            (visual_sidecar or {}).get("clean_learner_question_stems", []),
+        )
+        self._apply_image_attachment_overrides(
+            str(section["id"]),
+            [*learning_items["worked_examples"], *learning_items["direct_variants"]],
+            list((visual_sidecar or {}).get("item_image_attachment_overrides", [])),
+            {"worked_example", "direct_variant"},
+        )
         for item in [*learning_items["worked_examples"], *learning_items["direct_variants"]]:
             hint = _learning_item_vision_hint(section["id"], item)
             item["vision_hint"] = hint
@@ -1604,7 +1990,30 @@ class PacketBuilder:
         student_packet["pages"] = _student_lesson_free_pages(pages)
         student_packet["student_page_text_redacted"] = True
         save_json(out / "student_packet.json", _portable_artifact_paths(student_packet))
-        save_json(out / "answer_sidecar.json", _portable_artifact_paths({"schema_version": "7.1", "section": section["id"], "answers": answer_sidecar, "consumer_guard": "Never pass this file to a student diagnosis context."}))
+        answer_sidecar_path = out / "answer_sidecar.json"
+        existing_answer_sidecar: dict[str, Any] | None = None
+        if answer_sidecar_path.is_file():
+            try:
+                candidate = json.loads(answer_sidecar_path.read_text(encoding="utf-8-sig"))
+                if isinstance(candidate, dict) and candidate.get("schema_version") == "ybt-answer-sidecar-v3":
+                    existing_answer_sidecar = candidate
+            except (OSError, UnicodeDecodeError, json.JSONDecodeError):
+                existing_answer_sidecar = None
+        if existing_answer_sidecar is not None:
+            current_qids = {str(item.get("qid") or "") for item in student_questions}
+            answer_qids = {
+                str(item.get("qid") or "")
+                for item in existing_answer_sidecar.get("answers", [])
+                if isinstance(item, dict)
+            }
+            if answer_qids != current_qids:
+                raise PacketError(
+                    f"{section['id']} verified answer sidecar QID drift: "
+                    f"missing={sorted(current_qids - answer_qids)} "
+                    f"stale={sorted(answer_qids - current_qids)}"
+                )
+        else:
+            save_json(answer_sidecar_path, _portable_artifact_paths({"schema_version": "7.1", "section": section["id"], "answers": answer_sidecar, "consumer_guard": "Never pass this file to a student diagnosis context."}))
         save_json(
             out / "manifest.json",
             {

@@ -1,0 +1,3523 @@
+{
+  "schema_version": "ybt-deep-section-simulation-v3",
+  "generated_at": "2026-08-31T04:06:30.173483+00:00",
+  "chapter": 1,
+  "section": "1.4",
+  "label": "第3节 空间向量的应用",
+  "simulation_kind": "answer_isolated_synthetic_route_stress",
+  "honesty_boundary": "Attempts test route actionability. They contain no final learner answer, so mathematical correctness and mastery are not claimed.",
+  "source_binding": {
+    "manifest_sha256": "071cd794cb2d44b17cfa117e50da06c25097867878c30918da6abd5f7268929f",
+    "student_learning_items_sha256": "1a3ff24e2e91ac83244744efb233f623147fdedf488abfb1e024763d8549bbd9",
+    "student_packet_sha256": "b5581febb5454604a4823516494a3a80adfe33773a8c38938eb1a80d4f7d150a",
+    "grader_learning_packet_sha256": "98cbc59975b9d9366ec2f1680823acdaa5dc237c8885579f52eec9f53920e90b",
+    "route_sha256": "fa8f34cb25efe947d2456237ef94f4a88d64ddf352d45176d06dc587eda7cd97",
+    "learner_input_snapshot_sha256": "f1e3105032ba7b42c9796f10dd0e5d102fe14a619e2de222e96f017d7315b839"
+  },
+  "answer_isolation": {
+    "frozen_attempts_path": "reports/deep_simulation_runs/route-audit-5391e980be231c3c/frozen/1.4.jsonl.gz",
+    "frozen_attempts_sha256": "5158ba5cd5ce13d12ceaac44edfc6720e5ff076e26de5122a32617b30eab098e",
+    "route_assessments_path": "reports/deep_simulation_runs/route-audit-5391e980be231c3c/route_assessments/1.4.jsonl.gz",
+    "route_assessments_sha256": "1f5614d24af0d8096e5852237f5e26366f522c8652f6be91505d4edbab14690b",
+    "learner_answer_material_loaded": false,
+    "grader_material_loaded_after_freeze": true,
+    "grader_evidence": {
+      "parsed_automatic": 12,
+      "review_required_text": 0,
+      "source_page_bound": 9,
+      "textbook_solution": 16,
+      "blocked": 0
+    },
+    "status": "passed"
+  },
+  "items": [
+    {
+      "item_key": "LI:dd010f0276689689",
+      "item_id": "dd010f0276689689",
+      "ordinal": 1,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例1",
+      "group": null,
+      "cycle_id": "1.4-cycle-1",
+      "cycle_sequence": 1,
+      "cycle_title": "方向向量与平面的法向量",
+      "course_refs": [
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar",
+        "coordinate_ops"
+      ],
+      "course_titles": [
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar",
+        "coordinate_ops"
+      ],
+      "required_course_refs": [
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar"
+      ],
+      "prerequisite_course_refs": [
+        "coordinate_ops"
+      ],
+      "knowledge_refs": [
+        "1.4-k1",
+        "1.4-k2"
+      ],
+      "type_refs": [
+        "类型Ⅱ 研究垂直关系",
+        "类型Ⅰ 研究平行关系",
+        "类型Ⅴ 夹角与模"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "vector",
+      "recognition_cues": [
+        "向量",
+        "直线",
+        "A",
+        "B",
+        "AB"
+      ],
+      "method_model": "向量几何翻译",
+      "first_written_line_template": "先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
+      "continuation_actions": [
+        "统一起点或建立坐标系",
+        "把条件写成线性表示、坐标或数量积",
+        "按系数、坐标或夹角条件推进"
+      ],
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "3ff8bc08fdf5e3c2b15de5d3e559d3d35bb53283c01c4c5d962c64a85a42066d",
+      "source_question_text_sha256": "3ff8bc08fdf5e3c2b15de5d3e559d3d35bb53283c01c4c5d962c64a85a42066d",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "3ff8bc08fdf5e3c2b15de5d3e559d3d35bb53283c01c4c5d962c64a85a42066d",
+        "learner_question_text_sha256": "3ff8bc08fdf5e3c2b15de5d3e559d3d35bb53283c01c4c5d962c64a85a42066d"
+      },
+      "question_signal_excerpt": "向量、直线、A、B、AB",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:2e5856f50c71e064",
+      "item_id": "2e5856f50c71e064",
+      "ordinal": 2,
+      "ordinal_in_cycle": 2,
+      "kind": "worked_example",
+      "label": "例2",
+      "group": null,
+      "cycle_id": "1.4-cycle-1",
+      "cycle_sequence": 1,
+      "cycle_title": "方向向量与平面的法向量",
+      "course_refs": [
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar",
+        "coordinate_ops"
+      ],
+      "course_titles": [
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar",
+        "coordinate_ops"
+      ],
+      "required_course_refs": [
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar"
+      ],
+      "prerequisite_course_refs": [
+        "coordinate_ops"
+      ],
+      "knowledge_refs": [
+        "1.4-k1",
+        "1.4-k2"
+      ],
+      "type_refs": [
+        "类型Ⅱ 研究垂直关系",
+        "类型Ⅰ 研究平行关系",
+        "类型Ⅴ 夹角与模"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "vector",
+      "recognition_cues": [
+        "证明",
+        "P",
+        "ABC",
+        "O",
+        "x"
+      ],
+      "method_model": "向量几何翻译",
+      "first_written_line_template": "先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
+      "continuation_actions": [
+        "统一起点或建立坐标系",
+        "把条件写成线性表示、坐标或数量积",
+        "按系数、坐标或夹角条件推进"
+      ],
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "0c12a792329a771d77e272fc3a0a4911dd9cf07eed21067fba7d194786d34960",
+      "source_question_text_sha256": "0c12a792329a771d77e272fc3a0a4911dd9cf07eed21067fba7d194786d34960",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "0c12a792329a771d77e272fc3a0a4911dd9cf07eed21067fba7d194786d34960",
+        "learner_question_text_sha256": "0c12a792329a771d77e272fc3a0a4911dd9cf07eed21067fba7d194786d34960"
+      },
+      "question_signal_excerpt": "证明、P、ABC、O、x",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:484d2af8fffbbcf5",
+      "item_id": "484d2af8fffbbcf5",
+      "ordinal": 3,
+      "ordinal_in_cycle": 3,
+      "kind": "worked_example",
+      "label": "例3",
+      "group": null,
+      "cycle_id": "1.4-cycle-1",
+      "cycle_sequence": 1,
+      "cycle_title": "方向向量与平面的法向量",
+      "course_refs": [
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar",
+        "coordinate_ops"
+      ],
+      "course_titles": [
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar",
+        "coordinate_ops"
+      ],
+      "required_course_refs": [
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar"
+      ],
+      "prerequisite_course_refs": [
+        "coordinate_ops"
+      ],
+      "knowledge_refs": [
+        "1.4-k1",
+        "1.4-k2"
+      ],
+      "type_refs": [
+        "类型Ⅱ 研究垂直关系",
+        "类型Ⅰ 研究平行关系",
+        "类型Ⅴ 夹角与模"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "vector",
+      "recognition_cues": [
+        "向量",
+        "法向量",
+        "ABCD",
+        "A_",
+        "B_",
+        "C_"
+      ],
+      "method_model": "向量几何翻译",
+      "first_written_line_template": "先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
+      "continuation_actions": [
+        "统一起点或建立坐标系",
+        "把条件写成线性表示、坐标或数量积",
+        "按系数、坐标或夹角条件推进"
+      ],
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。",
+      "visual_dependency": {
+        "status": "VISION_VERIFIED",
+        "image_refs": [
+          {
+            "ref": "imgs/img_in_image_box_802_466_1008_646.jpg",
+            "path": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_802_466_1008_646.jpg",
+            "exists": true
+          }
+        ]
+      },
+      "question_text_sha256": "aae0744cf399ab7b956e54ded800adb0e7be1c41c70bbb27472cc205daeda8b1",
+      "source_question_text_sha256": "aae0744cf399ab7b956e54ded800adb0e7be1c41c70bbb27472cc205daeda8b1",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "aae0744cf399ab7b956e54ded800adb0e7be1c41c70bbb27472cc205daeda8b1",
+        "learner_question_text_sha256": "aae0744cf399ab7b956e54ded800adb0e7be1c41c70bbb27472cc205daeda8b1"
+      },
+      "question_signal_excerpt": "向量、法向量、ABCD、A_、B_、C_",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-fc2e49b951d6c08d",
+      "item_id": "Q-fc2e49b951d6c08d",
+      "ordinal": 4,
+      "ordinal_in_cycle": 4,
+      "kind": "abc_exercise",
+      "label": "A2",
+      "group": "A",
+      "cycle_id": "1.4-cycle-1",
+      "cycle_sequence": 1,
+      "cycle_title": "方向向量与平面的法向量",
+      "course_refs": [
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar",
+        "coordinate_ops"
+      ],
+      "course_titles": [
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar",
+        "coordinate_ops"
+      ],
+      "required_course_refs": [
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar"
+      ],
+      "prerequisite_course_refs": [
+        "coordinate_ops"
+      ],
+      "knowledge_refs": [
+        "1.4-k1",
+        "1.4-k2"
+      ],
+      "type_refs": [
+        "类型Ⅱ 研究垂直关系",
+        "类型Ⅰ 研究平行关系"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "vector",
+      "recognition_cues": [
+        "ABCD",
+        "A_",
+        "B_",
+        "C_"
+      ],
+      "method_model": "向量几何翻译",
+      "first_written_line_template": "先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
+      "continuation_actions": [
+        "统一起点或建立坐标系",
+        "把条件写成线性表示、坐标或数量积",
+        "按系数、坐标或夹角条件推进"
+      ],
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。",
+      "visual_dependency": {
+        "status": "VISION_VERIFIED",
+        "image_refs": [
+          {
+            "ref": "imgs/img_in_image_box_894_850_1093_1040.jpg",
+            "path": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_894_850_1093_1040.jpg",
+            "exists": true
+          }
+        ]
+      },
+      "question_text_sha256": "c56960c77089de1e77f1bf94a817089384c578ad595c7619d794e2c8cf52df00",
+      "source_question_text_sha256": "c56960c77089de1e77f1bf94a817089384c578ad595c7619d794e2c8cf52df00",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "c56960c77089de1e77f1bf94a817089384c578ad595c7619d794e2c8cf52df00",
+        "learner_question_text_sha256": "c56960c77089de1e77f1bf94a817089384c578ad595c7619d794e2c8cf52df00"
+      },
+      "question_signal_excerpt": "ABCD、A_、B_、C_",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-23bbe86ea10ffe8e",
+      "item_id": "Q-23bbe86ea10ffe8e",
+      "ordinal": 5,
+      "ordinal_in_cycle": 5,
+      "kind": "abc_exercise",
+      "label": "B5",
+      "group": "B",
+      "cycle_id": "1.4-cycle-1",
+      "cycle_sequence": 1,
+      "cycle_title": "方向向量与平面的法向量",
+      "course_refs": [
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar",
+        "coordinate_ops"
+      ],
+      "course_titles": [
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar",
+        "coordinate_ops"
+      ],
+      "required_course_refs": [
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar"
+      ],
+      "prerequisite_course_refs": [
+        "coordinate_ops"
+      ],
+      "knowledge_refs": [
+        "1.4-k1",
+        "1.4-k2"
+      ],
+      "type_refs": [
+        "类型Ⅱ 研究垂直关系",
+        "类型Ⅴ 夹角与模"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [],
+      "domain": "vector",
+      "recognition_cues": [
+        "ABCD",
+        "A_",
+        "B_",
+        "C_"
+      ],
+      "method_model": "向量几何翻译",
+      "first_written_line_template": "先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
+      "continuation_actions": [
+        "统一起点或建立坐标系",
+        "把条件写成线性表示、坐标或数量积",
+        "按系数、坐标或夹角条件推进"
+      ],
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。",
+      "visual_dependency": {
+        "status": "VISION_VERIFIED",
+        "image_refs": [
+          {
+            "ref": "imgs/img_in_image_box_833_1138_1095_1313.jpg",
+            "path": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_833_1138_1095_1313.jpg",
+            "exists": true
+          }
+        ]
+      },
+      "question_text_sha256": "85ab365c19d92adb88303502fe300da9938bb8c03adcd051850de0c8e9da8810",
+      "source_question_text_sha256": "85ab365c19d92adb88303502fe300da9938bb8c03adcd051850de0c8e9da8810",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "85ab365c19d92adb88303502fe300da9938bb8c03adcd051850de0c8e9da8810",
+        "learner_question_text_sha256": "85ab365c19d92adb88303502fe300da9938bb8c03adcd051850de0c8e9da8810"
+      },
+      "question_signal_excerpt": "ABCD、A_、B_、C_",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:e8ef92d948b55f0f",
+      "item_id": "e8ef92d948b55f0f",
+      "ordinal": 6,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例4",
+      "group": null,
+      "cycle_id": "1.4-cycle-2",
+      "cycle_sequence": 2,
+      "cycle_title": "向量方法在立体几何中的应用",
+      "course_refs": [
+        "line_line_angle",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "plane_equation_upper",
+        "plane_equation_lower",
+        "distance",
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar"
+      ],
+      "course_titles": [
+        "line_line_angle",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "plane_equation_upper",
+        "plane_equation_lower",
+        "distance",
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar"
+      ],
+      "required_course_refs": [
+        "line_line_angle",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "plane_equation_upper",
+        "plane_equation_lower",
+        "distance"
+      ],
+      "prerequisite_course_refs": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar"
+      ],
+      "knowledge_refs": [
+        "1.4-k3"
+      ],
+      "type_refs": [],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "vector",
+      "recognition_cues": [
+        "向量",
+        "法向量",
+        "alph",
+        "a",
+        "beta",
+        "bold"
+      ],
+      "method_model": "向量几何翻译",
+      "first_written_line_template": "先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
+      "continuation_actions": [
+        "统一起点或建立坐标系",
+        "把条件写成线性表示、坐标或数量积",
+        "按系数、坐标或夹角条件推进"
+      ],
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "94705c9b1cd794088c37ba6e689aa27ae13a3aab9e93ef88c73534cea191fe73",
+      "source_question_text_sha256": "94705c9b1cd794088c37ba6e689aa27ae13a3aab9e93ef88c73534cea191fe73",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "94705c9b1cd794088c37ba6e689aa27ae13a3aab9e93ef88c73534cea191fe73",
+        "learner_question_text_sha256": "94705c9b1cd794088c37ba6e689aa27ae13a3aab9e93ef88c73534cea191fe73"
+      },
+      "question_signal_excerpt": "向量、法向量、alph、a、beta、bold",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:e464e6355ac9866a",
+      "item_id": "e464e6355ac9866a",
+      "ordinal": 7,
+      "ordinal_in_cycle": 2,
+      "kind": "worked_example",
+      "label": "例5",
+      "group": null,
+      "cycle_id": "1.4-cycle-2",
+      "cycle_sequence": 2,
+      "cycle_title": "向量方法在立体几何中的应用",
+      "course_refs": [
+        "line_line_angle",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "plane_equation_upper",
+        "plane_equation_lower",
+        "distance",
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar"
+      ],
+      "course_titles": [
+        "line_line_angle",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "plane_equation_upper",
+        "plane_equation_lower",
+        "distance",
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar"
+      ],
+      "required_course_refs": [
+        "line_line_angle",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "plane_equation_upper",
+        "plane_equation_lower",
+        "distance"
+      ],
+      "prerequisite_course_refs": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar"
+      ],
+      "knowledge_refs": [
+        "1.4-k3"
+      ],
+      "type_refs": [],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "vector",
+      "recognition_cues": [
+        "向量",
+        "法向量",
+        "直线",
+        "l",
+        "bold",
+        "symb",
+        "ol"
+      ],
+      "method_model": "向量几何翻译",
+      "first_written_line_template": "先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
+      "continuation_actions": [
+        "统一起点或建立坐标系",
+        "把条件写成线性表示、坐标或数量积",
+        "按系数、坐标或夹角条件推进"
+      ],
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "d8655b661af77ba964b716f79ecb95461a5b79130e24dba3ef7d0d643d5dbf88",
+      "source_question_text_sha256": "d8655b661af77ba964b716f79ecb95461a5b79130e24dba3ef7d0d643d5dbf88",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "d8655b661af77ba964b716f79ecb95461a5b79130e24dba3ef7d0d643d5dbf88",
+        "learner_question_text_sha256": "d8655b661af77ba964b716f79ecb95461a5b79130e24dba3ef7d0d643d5dbf88"
+      },
+      "question_signal_excerpt": "向量、法向量、直线、l、bold、symb、ol",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:7e99538ed6ede885",
+      "item_id": "7e99538ed6ede885",
+      "ordinal": 8,
+      "ordinal_in_cycle": 3,
+      "kind": "worked_example",
+      "label": "例6",
+      "group": null,
+      "cycle_id": "1.4-cycle-2",
+      "cycle_sequence": 2,
+      "cycle_title": "向量方法在立体几何中的应用",
+      "course_refs": [
+        "line_line_angle",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "plane_equation_upper",
+        "plane_equation_lower",
+        "distance",
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar"
+      ],
+      "course_titles": [
+        "line_line_angle",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "plane_equation_upper",
+        "plane_equation_lower",
+        "distance",
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar"
+      ],
+      "required_course_refs": [
+        "line_line_angle",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "plane_equation_upper",
+        "plane_equation_lower",
+        "distance"
+      ],
+      "prerequisite_course_refs": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar"
+      ],
+      "knowledge_refs": [
+        "1.4-k3"
+      ],
+      "type_refs": [],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "vector",
+      "recognition_cues": [
+        "向量",
+        "直线",
+        "弦",
+        "l_",
+        "\\vec",
+        "s_"
+      ],
+      "method_model": "向量几何翻译",
+      "first_written_line_template": "先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
+      "continuation_actions": [
+        "统一起点或建立坐标系",
+        "把条件写成线性表示、坐标或数量积",
+        "按系数、坐标或夹角条件推进"
+      ],
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "fdc59d9e6b1332a254eda317682c0d9d55acc3d3d56a4faebc7a8ad37ce0761a",
+      "source_question_text_sha256": "fdc59d9e6b1332a254eda317682c0d9d55acc3d3d56a4faebc7a8ad37ce0761a",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "fdc59d9e6b1332a254eda317682c0d9d55acc3d3d56a4faebc7a8ad37ce0761a",
+        "learner_question_text_sha256": "fdc59d9e6b1332a254eda317682c0d9d55acc3d3d56a4faebc7a8ad37ce0761a"
+      },
+      "question_signal_excerpt": "向量、直线、弦、l_、\\vec、s_",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:df0ae2ad9a868008",
+      "item_id": "df0ae2ad9a868008",
+      "ordinal": 9,
+      "ordinal_in_cycle": 4,
+      "kind": "worked_example",
+      "label": "例7",
+      "group": null,
+      "cycle_id": "1.4-cycle-2",
+      "cycle_sequence": 2,
+      "cycle_title": "向量方法在立体几何中的应用",
+      "course_refs": [
+        "line_line_angle",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "plane_equation_upper",
+        "plane_equation_lower",
+        "distance",
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar"
+      ],
+      "course_titles": [
+        "line_line_angle",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "plane_equation_upper",
+        "plane_equation_lower",
+        "distance",
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar"
+      ],
+      "required_course_refs": [
+        "line_line_angle",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "plane_equation_upper",
+        "plane_equation_lower",
+        "distance"
+      ],
+      "prerequisite_course_refs": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar"
+      ],
+      "knowledge_refs": [
+        "1.4-k3"
+      ],
+      "type_refs": [],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "vector",
+      "recognition_cues": [
+        "向量",
+        "法向量",
+        "距离",
+        "alph",
+        "a",
+        "bold",
+        "symb"
+      ],
+      "method_model": "向量几何翻译",
+      "first_written_line_template": "先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
+      "continuation_actions": [
+        "统一起点或建立坐标系",
+        "把条件写成线性表示、坐标或数量积",
+        "按系数、坐标或夹角条件推进"
+      ],
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "a3bc6327cfddef5c193e334938814ab7831049a2451e1c389f6121bafe4cbb14",
+      "source_question_text_sha256": "a3bc6327cfddef5c193e334938814ab7831049a2451e1c389f6121bafe4cbb14",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "a3bc6327cfddef5c193e334938814ab7831049a2451e1c389f6121bafe4cbb14",
+        "learner_question_text_sha256": "a3bc6327cfddef5c193e334938814ab7831049a2451e1c389f6121bafe4cbb14"
+      },
+      "question_signal_excerpt": "向量、法向量、距离、alph、a、bold、symb",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:d23df354bf68ef79",
+      "item_id": "d23df354bf68ef79",
+      "ordinal": 10,
+      "ordinal_in_cycle": 5,
+      "kind": "worked_example",
+      "label": "例8",
+      "group": null,
+      "cycle_id": "1.4-cycle-2",
+      "cycle_sequence": 2,
+      "cycle_title": "向量方法在立体几何中的应用",
+      "course_refs": [
+        "line_line_angle",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "plane_equation_upper",
+        "plane_equation_lower",
+        "distance",
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar"
+      ],
+      "course_titles": [
+        "line_line_angle",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "plane_equation_upper",
+        "plane_equation_lower",
+        "distance",
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar"
+      ],
+      "required_course_refs": [
+        "line_line_angle",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "plane_equation_upper",
+        "plane_equation_lower",
+        "distance"
+      ],
+      "prerequisite_course_refs": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar"
+      ],
+      "knowledge_refs": [
+        "1.4-k3"
+      ],
+      "type_refs": [],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "vector",
+      "recognition_cues": [
+        "向量",
+        "法向量",
+        "直线",
+        "l",
+        "bold",
+        "symb",
+        "ol"
+      ],
+      "method_model": "向量几何翻译",
+      "first_written_line_template": "先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
+      "continuation_actions": [
+        "统一起点或建立坐标系",
+        "把条件写成线性表示、坐标或数量积",
+        "按系数、坐标或夹角条件推进"
+      ],
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "3acd6deb58771fb724735e6b86cae59a170692cf7918179de2ae2fe55f9cc54e",
+      "source_question_text_sha256": "3acd6deb58771fb724735e6b86cae59a170692cf7918179de2ae2fe55f9cc54e",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "3acd6deb58771fb724735e6b86cae59a170692cf7918179de2ae2fe55f9cc54e",
+        "learner_question_text_sha256": "3acd6deb58771fb724735e6b86cae59a170692cf7918179de2ae2fe55f9cc54e"
+      },
+      "question_signal_excerpt": "向量、法向量、直线、l、bold、symb、ol",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:2a2eaf5c7869332b",
+      "item_id": "2a2eaf5c7869332b",
+      "ordinal": 11,
+      "ordinal_in_cycle": 6,
+      "kind": "worked_example",
+      "label": "例9",
+      "group": null,
+      "cycle_id": "1.4-cycle-2",
+      "cycle_sequence": 2,
+      "cycle_title": "向量方法在立体几何中的应用",
+      "course_refs": [
+        "line_line_angle",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "plane_equation_upper",
+        "plane_equation_lower",
+        "distance",
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar"
+      ],
+      "course_titles": [
+        "line_line_angle",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "plane_equation_upper",
+        "plane_equation_lower",
+        "distance",
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar"
+      ],
+      "required_course_refs": [
+        "line_line_angle",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "plane_equation_upper",
+        "plane_equation_lower",
+        "distance"
+      ],
+      "prerequisite_course_refs": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar"
+      ],
+      "knowledge_refs": [
+        "1.4-k3"
+      ],
+      "type_refs": [],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "vector",
+      "recognition_cues": [
+        "向量",
+        "法向量",
+        "弦",
+        "alph",
+        "a",
+        "beta",
+        "bold"
+      ],
+      "method_model": "向量几何翻译",
+      "first_written_line_template": "先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
+      "continuation_actions": [
+        "统一起点或建立坐标系",
+        "把条件写成线性表示、坐标或数量积",
+        "按系数、坐标或夹角条件推进"
+      ],
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。",
+      "visual_dependency": {
+        "status": "VISION_VERIFIED",
+        "image_refs": [
+          {
+            "ref": "imgs/img_in_image_box_286_730_475_878.jpg",
+            "path": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_286_730_475_878.jpg",
+            "exists": true
+          }
+        ]
+      },
+      "question_text_sha256": "89e44c4c4f0b9e1882491ab8588ea3f8423f0da84ee360c6d7e80538f476bfe3",
+      "source_question_text_sha256": "89e44c4c4f0b9e1882491ab8588ea3f8423f0da84ee360c6d7e80538f476bfe3",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "89e44c4c4f0b9e1882491ab8588ea3f8423f0da84ee360c6d7e80538f476bfe3",
+        "learner_question_text_sha256": "89e44c4c4f0b9e1882491ab8588ea3f8423f0da84ee360c6d7e80538f476bfe3"
+      },
+      "question_signal_excerpt": "向量、法向量、弦、alph、a、beta、bold",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:6ccbc5ccfedac520",
+      "item_id": "6ccbc5ccfedac520",
+      "ordinal": 12,
+      "ordinal_in_cycle": 7,
+      "kind": "worked_example",
+      "label": "例10",
+      "group": null,
+      "cycle_id": "1.4-cycle-2",
+      "cycle_sequence": 2,
+      "cycle_title": "向量方法在立体几何中的应用",
+      "course_refs": [
+        "line_line_angle",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "plane_equation_upper",
+        "plane_equation_lower",
+        "distance",
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar"
+      ],
+      "course_titles": [
+        "line_line_angle",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "plane_equation_upper",
+        "plane_equation_lower",
+        "distance",
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar"
+      ],
+      "required_course_refs": [
+        "line_line_angle",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "plane_equation_upper",
+        "plane_equation_lower",
+        "distance"
+      ],
+      "prerequisite_course_refs": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar"
+      ],
+      "knowledge_refs": [
+        "1.4-k3"
+      ],
+      "type_refs": [],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "vector",
+      "recognition_cues": [
+        "弦",
+        "P",
+        "ABCD",
+        "PA"
+      ],
+      "method_model": "向量几何翻译",
+      "first_written_line_template": "先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
+      "continuation_actions": [
+        "统一起点或建立坐标系",
+        "把条件写成线性表示、坐标或数量积",
+        "按系数、坐标或夹角条件推进"
+      ],
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。",
+      "visual_dependency": {
+        "status": "VISION_VERIFIED",
+        "image_refs": [
+          {
+            "ref": "imgs/img_in_image_box_798_999_1012_1136.jpg",
+            "path": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_798_999_1012_1136.jpg",
+            "exists": true
+          }
+        ]
+      },
+      "question_text_sha256": "eabea2f101fdfec887eba79b5516f4ddf1df5531839c227ed08cdaf137147c2b",
+      "source_question_text_sha256": "eabea2f101fdfec887eba79b5516f4ddf1df5531839c227ed08cdaf137147c2b",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "eabea2f101fdfec887eba79b5516f4ddf1df5531839c227ed08cdaf137147c2b",
+        "learner_question_text_sha256": "eabea2f101fdfec887eba79b5516f4ddf1df5531839c227ed08cdaf137147c2b"
+      },
+      "question_signal_excerpt": "弦、P、ABCD、PA",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:c28ca305f7a1fba9",
+      "item_id": "c28ca305f7a1fba9",
+      "ordinal": 13,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例11",
+      "group": null,
+      "cycle_id": "1.4-cycle-3",
+      "cycle_sequence": 3,
+      "cycle_title": "类型ⅠⅡ 平行与垂直证明",
+      "course_refs": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar",
+        "plane_plane_angle"
+      ],
+      "course_titles": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar",
+        "plane_plane_angle"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar",
+        "plane_plane_angle"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅰ 研究平行关系",
+        "类型Ⅱ 研究垂直关系"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "vector",
+      "recognition_cues": [
+        "证明",
+        "ABCD",
+        "A_1B",
+        "C_1D",
+        "AB"
+      ],
+      "method_model": "向量几何翻译",
+      "first_written_line_template": "先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
+      "continuation_actions": [
+        "统一起点或建立坐标系",
+        "把条件写成线性表示、坐标或数量积",
+        "按系数、坐标或夹角条件推进"
+      ],
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "0256c579cd472bf2c757db937bc96f7de8261348be5a32b5b662afe98f33cc27",
+      "source_question_text_sha256": "0256c579cd472bf2c757db937bc96f7de8261348be5a32b5b662afe98f33cc27",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "0256c579cd472bf2c757db937bc96f7de8261348be5a32b5b662afe98f33cc27",
+        "learner_question_text_sha256": "0256c579cd472bf2c757db937bc96f7de8261348be5a32b5b662afe98f33cc27"
+      },
+      "question_signal_excerpt": "证明、ABCD、A_1B、C_1D、AB",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:47eb16359e70391b",
+      "item_id": "47eb16359e70391b",
+      "ordinal": 14,
+      "ordinal_in_cycle": 2,
+      "kind": "worked_example",
+      "label": "例12",
+      "group": null,
+      "cycle_id": "1.4-cycle-3",
+      "cycle_sequence": 3,
+      "cycle_title": "类型ⅠⅡ 平行与垂直证明",
+      "course_refs": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar",
+        "plane_plane_angle"
+      ],
+      "course_titles": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar",
+        "plane_plane_angle"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar",
+        "plane_plane_angle"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅰ 研究平行关系",
+        "类型Ⅱ 研究垂直关系"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "vector",
+      "recognition_cues": [
+        "向量",
+        "ABCD",
+        "A_1B",
+        "C_1D"
+      ],
+      "method_model": "向量几何翻译",
+      "first_written_line_template": "先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
+      "continuation_actions": [
+        "统一起点或建立坐标系",
+        "把条件写成线性表示、坐标或数量积",
+        "按系数、坐标或夹角条件推进"
+      ],
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "5a64c8565df624959ca926432335c2b51989774d464822d79f4039186bc7cd50",
+      "source_question_text_sha256": "5a64c8565df624959ca926432335c2b51989774d464822d79f4039186bc7cd50",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "5a64c8565df624959ca926432335c2b51989774d464822d79f4039186bc7cd50",
+        "learner_question_text_sha256": "5a64c8565df624959ca926432335c2b51989774d464822d79f4039186bc7cd50"
+      },
+      "question_signal_excerpt": "向量、ABCD、A_1B、C_1D",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:86bca906ba2e8b81",
+      "item_id": "86bca906ba2e8b81",
+      "ordinal": 15,
+      "ordinal_in_cycle": 3,
+      "kind": "worked_example",
+      "label": "例13",
+      "group": null,
+      "cycle_id": "1.4-cycle-3",
+      "cycle_sequence": 3,
+      "cycle_title": "类型ⅠⅡ 平行与垂直证明",
+      "course_refs": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar",
+        "plane_plane_angle"
+      ],
+      "course_titles": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar",
+        "plane_plane_angle"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar",
+        "plane_plane_angle"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅰ 研究平行关系",
+        "类型Ⅱ 研究垂直关系"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "vector",
+      "recognition_cues": [
+        "P",
+        "ABCD",
+        "PA",
+        "perp"
+      ],
+      "method_model": "向量几何翻译",
+      "first_written_line_template": "先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
+      "continuation_actions": [
+        "统一起点或建立坐标系",
+        "把条件写成线性表示、坐标或数量积",
+        "按系数、坐标或夹角条件推进"
+      ],
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "597eb37e611abb697011b23e189858990b010eb865a2e08c4cacc950e1d3fc8b",
+      "source_question_text_sha256": "597eb37e611abb697011b23e189858990b010eb865a2e08c4cacc950e1d3fc8b",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "597eb37e611abb697011b23e189858990b010eb865a2e08c4cacc950e1d3fc8b",
+        "learner_question_text_sha256": "597eb37e611abb697011b23e189858990b010eb865a2e08c4cacc950e1d3fc8b"
+      },
+      "question_signal_excerpt": "P、ABCD、PA、perp",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:f625c695a7a5b2c4",
+      "item_id": "f625c695a7a5b2c4",
+      "ordinal": 16,
+      "ordinal_in_cycle": 4,
+      "kind": "worked_example",
+      "label": "例14",
+      "group": null,
+      "cycle_id": "1.4-cycle-3",
+      "cycle_sequence": 3,
+      "cycle_title": "类型ⅠⅡ 平行与垂直证明",
+      "course_refs": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar",
+        "plane_plane_angle"
+      ],
+      "course_titles": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar",
+        "plane_plane_angle"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar",
+        "plane_plane_angle"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅰ 研究平行关系",
+        "类型Ⅱ 研究垂直关系"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "vector",
+      "recognition_cues": [
+        "证明",
+        "ABCD",
+        "A_1B",
+        "C_1D"
+      ],
+      "method_model": "向量几何翻译",
+      "first_written_line_template": "先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
+      "continuation_actions": [
+        "统一起点或建立坐标系",
+        "把条件写成线性表示、坐标或数量积",
+        "按系数、坐标或夹角条件推进"
+      ],
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "e90ef3641682707692161bca34d52f0c9ac585d92eda988e0fb2b9ba6fdfc04e",
+      "source_question_text_sha256": "e90ef3641682707692161bca34d52f0c9ac585d92eda988e0fb2b9ba6fdfc04e",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "e90ef3641682707692161bca34d52f0c9ac585d92eda988e0fb2b9ba6fdfc04e",
+        "learner_question_text_sha256": "e90ef3641682707692161bca34d52f0c9ac585d92eda988e0fb2b9ba6fdfc04e"
+      },
+      "question_signal_excerpt": "证明、ABCD、A_1B、C_1D",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-7b81a6374f0ffe9c",
+      "item_id": "Q-7b81a6374f0ffe9c",
+      "ordinal": 17,
+      "ordinal_in_cycle": 5,
+      "kind": "abc_exercise",
+      "label": "B4",
+      "group": "B",
+      "cycle_id": "1.4-cycle-3",
+      "cycle_sequence": 3,
+      "cycle_title": "类型ⅠⅡ 平行与垂直证明",
+      "course_refs": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar",
+        "plane_plane_angle"
+      ],
+      "course_titles": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar",
+        "plane_plane_angle"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar",
+        "plane_plane_angle"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅰ 研究平行关系",
+        "类型Ⅱ 研究垂直关系"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "vector",
+      "recognition_cues": [
+        "P",
+        "ABCD",
+        "PD",
+        "perp"
+      ],
+      "method_model": "向量几何翻译",
+      "first_written_line_template": "先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
+      "continuation_actions": [
+        "统一起点或建立坐标系",
+        "把条件写成线性表示、坐标或数量积",
+        "按系数、坐标或夹角条件推进"
+      ],
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。",
+      "visual_dependency": {
+        "status": "VISION_VERIFIED",
+        "image_refs": [
+          {
+            "ref": "imgs/img_in_image_box_896_353_1093_566.jpg",
+            "path": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_896_353_1093_566.jpg",
+            "exists": true
+          }
+        ]
+      },
+      "question_text_sha256": "3e17262dac8a85004827907cdd3c5866a3f268a4c6d20ea14bd97b4df7823edf",
+      "source_question_text_sha256": "3e17262dac8a85004827907cdd3c5866a3f268a4c6d20ea14bd97b4df7823edf",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "3e17262dac8a85004827907cdd3c5866a3f268a4c6d20ea14bd97b4df7823edf",
+        "learner_question_text_sha256": "3e17262dac8a85004827907cdd3c5866a3f268a4c6d20ea14bd97b4df7823edf"
+      },
+      "question_signal_excerpt": "P、ABCD、PD、perp",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:b78fd4d85b9156b1",
+      "item_id": "b78fd4d85b9156b1",
+      "ordinal": 18,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例15",
+      "group": null,
+      "cycle_id": "1.4-cycle-4",
+      "cycle_sequence": 4,
+      "cycle_title": "类型Ⅲ 求空间角",
+      "course_refs": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "line_line_angle",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "distance"
+      ],
+      "course_titles": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "line_line_angle",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "distance"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "line_line_angle",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "distance"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 求空间角"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "vector",
+      "recognition_cues": [
+        "直线",
+        "弦",
+        "ABC",
+        "A_1B",
+        "C_1",
+        "CA"
+      ],
+      "method_model": "向量几何翻译",
+      "first_written_line_template": "先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
+      "continuation_actions": [
+        "统一起点或建立坐标系",
+        "把条件写成线性表示、坐标或数量积",
+        "按系数、坐标或夹角条件推进"
+      ],
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "4a0920e70ee6580f28ed50d83a6a3e4eb4b5b0d944e5e3f79b59e07f857bc69a",
+      "source_question_text_sha256": "4a0920e70ee6580f28ed50d83a6a3e4eb4b5b0d944e5e3f79b59e07f857bc69a",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "4a0920e70ee6580f28ed50d83a6a3e4eb4b5b0d944e5e3f79b59e07f857bc69a",
+        "learner_question_text_sha256": "4a0920e70ee6580f28ed50d83a6a3e4eb4b5b0d944e5e3f79b59e07f857bc69a"
+      },
+      "question_signal_excerpt": "直线、弦、ABC、A_1B、C_1、CA",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:f151bb124025c7ca",
+      "item_id": "f151bb124025c7ca",
+      "ordinal": 19,
+      "ordinal_in_cycle": 2,
+      "kind": "worked_example",
+      "label": "例16",
+      "group": null,
+      "cycle_id": "1.4-cycle-4",
+      "cycle_sequence": 4,
+      "cycle_title": "类型Ⅲ 求空间角",
+      "course_refs": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "line_line_angle",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "distance"
+      ],
+      "course_titles": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "line_line_angle",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "distance"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "line_line_angle",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "distance"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 求空间角"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "vector",
+      "recognition_cues": [
+        "直线",
+        "弦",
+        "ABCD",
+        "A_1B",
+        "C_1D",
+        "E"
+      ],
+      "method_model": "向量几何翻译",
+      "first_written_line_template": "先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
+      "continuation_actions": [
+        "统一起点或建立坐标系",
+        "把条件写成线性表示、坐标或数量积",
+        "按系数、坐标或夹角条件推进"
+      ],
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "e0a3ccc3e3a27662aa803c5df6b94a3761ff8a6fdffa4adc29529a1171b285bb",
+      "source_question_text_sha256": "e0a3ccc3e3a27662aa803c5df6b94a3761ff8a6fdffa4adc29529a1171b285bb",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "e0a3ccc3e3a27662aa803c5df6b94a3761ff8a6fdffa4adc29529a1171b285bb",
+        "learner_question_text_sha256": "e0a3ccc3e3a27662aa803c5df6b94a3761ff8a6fdffa4adc29529a1171b285bb"
+      },
+      "question_signal_excerpt": "直线、弦、ABCD、A_1B、C_1D、E",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:b118e4084228e6b3",
+      "item_id": "b118e4084228e6b3",
+      "ordinal": 20,
+      "ordinal_in_cycle": 3,
+      "kind": "worked_example",
+      "label": "例17",
+      "group": null,
+      "cycle_id": "1.4-cycle-4",
+      "cycle_sequence": 4,
+      "cycle_title": "类型Ⅲ 求空间角",
+      "course_refs": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "line_line_angle",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "distance"
+      ],
+      "course_titles": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "line_line_angle",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "distance"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "line_line_angle",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "distance"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 求空间角"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "vector",
+      "recognition_cues": [
+        "弦",
+        "证明",
+        "P",
+        "ABCD",
+        "PAD",
+        "perp"
+      ],
+      "method_model": "向量几何翻译",
+      "first_written_line_template": "先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
+      "continuation_actions": [
+        "统一起点或建立坐标系",
+        "把条件写成线性表示、坐标或数量积",
+        "按系数、坐标或夹角条件推进"
+      ],
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。",
+      "visual_dependency": {
+        "status": "VISION_VERIFIED",
+        "image_refs": [
+          {
+            "ref": "imgs/img_in_image_box_853_1486_1092_1663.jpg",
+            "path": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_853_1486_1092_1663.jpg",
+            "exists": true
+          }
+        ]
+      },
+      "question_text_sha256": "a714079ec0d10237e2623fadc3f4f3432c04fd4212e4af6d62d1f29a567f675e",
+      "source_question_text_sha256": "a714079ec0d10237e2623fadc3f4f3432c04fd4212e4af6d62d1f29a567f675e",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "a714079ec0d10237e2623fadc3f4f3432c04fd4212e4af6d62d1f29a567f675e",
+        "learner_question_text_sha256": "a714079ec0d10237e2623fadc3f4f3432c04fd4212e4af6d62d1f29a567f675e"
+      },
+      "question_signal_excerpt": "弦、证明、P、ABCD、PAD、perp",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:b1d2d187ff980da9",
+      "item_id": "b1d2d187ff980da9",
+      "ordinal": 21,
+      "ordinal_in_cycle": 4,
+      "kind": "direct_variant",
+      "label": "例17 变式1",
+      "group": null,
+      "cycle_id": "1.4-cycle-4",
+      "cycle_sequence": 4,
+      "cycle_title": "类型Ⅲ 求空间角",
+      "course_refs": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "line_line_angle",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "distance"
+      ],
+      "course_titles": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "line_line_angle",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "distance"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "line_line_angle",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "distance"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 求空间角"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "vector",
+      "recognition_cues": [
+        "长度",
+        "EFBC",
+        "BF",
+        "CE",
+        "EC"
+      ],
+      "method_model": "向量几何翻译",
+      "first_written_line_template": "先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
+      "continuation_actions": [
+        "统一起点或建立坐标系",
+        "把条件写成线性表示、坐标或数量积",
+        "按系数、坐标或夹角条件推进"
+      ],
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。",
+      "visual_dependency": {
+        "status": "VISION_VERIFIED",
+        "image_refs": [
+          {
+            "ref": "imgs/img_in_image_box_352_499_584_606.jpg",
+            "path": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_352_499_584_606.jpg",
+            "exists": true
+          },
+          {
+            "ref": "imgs/img_in_image_box_622_457_836_610.jpg",
+            "path": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_622_457_836_610.jpg",
+            "exists": true
+          }
+        ]
+      },
+      "question_text_sha256": "13bb9a3a94a3429d5bcd2e4e49e3495619b2f337f8eb12185ef49af32d52e48a",
+      "source_question_text_sha256": "13bb9a3a94a3429d5bcd2e4e49e3495619b2f337f8eb12185ef49af32d52e48a",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "13bb9a3a94a3429d5bcd2e4e49e3495619b2f337f8eb12185ef49af32d52e48a",
+        "learner_question_text_sha256": "13bb9a3a94a3429d5bcd2e4e49e3495619b2f337f8eb12185ef49af32d52e48a"
+      },
+      "question_signal_excerpt": "长度、EFBC、BF、CE、EC",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:369cc55d4157cef7",
+      "item_id": "369cc55d4157cef7",
+      "ordinal": 22,
+      "ordinal_in_cycle": 5,
+      "kind": "direct_variant",
+      "label": "例17 变式2",
+      "group": null,
+      "cycle_id": "1.4-cycle-4",
+      "cycle_sequence": 4,
+      "cycle_title": "类型Ⅲ 求空间角",
+      "course_refs": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "line_line_angle",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "distance"
+      ],
+      "course_titles": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "line_line_angle",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "distance"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "line_line_angle",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "distance"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 求空间角"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "vector",
+      "recognition_cues": [
+        "距离",
+        "弦",
+        "面积",
+        "ABCD",
+        "AB",
+        "BCD",
+        "\\sqrt"
+      ],
+      "method_model": "向量几何翻译",
+      "first_written_line_template": "先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
+      "continuation_actions": [
+        "统一起点或建立坐标系",
+        "把条件写成线性表示、坐标或数量积",
+        "按系数、坐标或夹角条件推进"
+      ],
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "d68c04ae154cf9f77c4bafd56ffb7487c6e9d9c22338451133295f1f20aec670",
+      "source_question_text_sha256": "d68c04ae154cf9f77c4bafd56ffb7487c6e9d9c22338451133295f1f20aec670",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "d68c04ae154cf9f77c4bafd56ffb7487c6e9d9c22338451133295f1f20aec670",
+        "learner_question_text_sha256": "d68c04ae154cf9f77c4bafd56ffb7487c6e9d9c22338451133295f1f20aec670"
+      },
+      "question_signal_excerpt": "距离、弦、面积、ABCD、AB、BCD、\\sqrt",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-7eaa2d96d2fafd33",
+      "item_id": "Q-7eaa2d96d2fafd33",
+      "ordinal": 23,
+      "ordinal_in_cycle": 6,
+      "kind": "abc_exercise",
+      "label": "A1",
+      "group": "A",
+      "cycle_id": "1.4-cycle-4",
+      "cycle_sequence": 4,
+      "cycle_title": "类型Ⅲ 求空间角",
+      "course_refs": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "line_line_angle",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "distance"
+      ],
+      "course_titles": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "line_line_angle",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "distance"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "line_line_angle",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "distance"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 求空间角"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "vector",
+      "recognition_cues": [
+        "向量",
+        "直线",
+        "弦",
+        "l_1",
+        "bold",
+        "symb",
+        "ol"
+      ],
+      "method_model": "向量几何翻译",
+      "first_written_line_template": "先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
+      "continuation_actions": [
+        "统一起点或建立坐标系",
+        "把条件写成线性表示、坐标或数量积",
+        "按系数、坐标或夹角条件推进"
+      ],
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "cbc545d8c32e5918e064a22bfc04358162e9698f874593abcb86cc49af4d9a0a",
+      "source_question_text_sha256": "cbc545d8c32e5918e064a22bfc04358162e9698f874593abcb86cc49af4d9a0a",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "cbc545d8c32e5918e064a22bfc04358162e9698f874593abcb86cc49af4d9a0a",
+        "learner_question_text_sha256": "cbc545d8c32e5918e064a22bfc04358162e9698f874593abcb86cc49af4d9a0a"
+      },
+      "question_signal_excerpt": "向量、直线、弦、l_1、bold、symb、ol",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-454cdf226d9af1aa",
+      "item_id": "Q-454cdf226d9af1aa",
+      "ordinal": 24,
+      "ordinal_in_cycle": 7,
+      "kind": "abc_exercise",
+      "label": "B3",
+      "group": "B",
+      "cycle_id": "1.4-cycle-4",
+      "cycle_sequence": 4,
+      "cycle_title": "类型Ⅲ 求空间角",
+      "course_refs": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "line_line_angle",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "distance"
+      ],
+      "course_titles": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "line_line_angle",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "distance"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "line_line_angle",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "distance"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 求空间角"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "vector",
+      "recognition_cues": [
+        "直线",
+        "弦",
+        "ABCD",
+        "A_",
+        "B_",
+        "C_"
+      ],
+      "method_model": "向量几何翻译",
+      "first_written_line_template": "先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
+      "continuation_actions": [
+        "统一起点或建立坐标系",
+        "把条件写成线性表示、坐标或数量积",
+        "按系数、坐标或夹角条件推进"
+      ],
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "e01c5faf8e409da58545099e44a2b2873996e42687fa771b12aa9f490ff406bd",
+      "source_question_text_sha256": "e01c5faf8e409da58545099e44a2b2873996e42687fa771b12aa9f490ff406bd",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "e01c5faf8e409da58545099e44a2b2873996e42687fa771b12aa9f490ff406bd",
+        "learner_question_text_sha256": "e01c5faf8e409da58545099e44a2b2873996e42687fa771b12aa9f490ff406bd"
+      },
+      "question_signal_excerpt": "直线、弦、ABCD、A_、B_、C_",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-b06b82e8d884e598",
+      "item_id": "Q-b06b82e8d884e598",
+      "ordinal": 25,
+      "ordinal_in_cycle": 8,
+      "kind": "abc_exercise",
+      "label": "B6",
+      "group": "B",
+      "cycle_id": "1.4-cycle-4",
+      "cycle_sequence": 4,
+      "cycle_title": "类型Ⅲ 求空间角",
+      "course_refs": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "line_line_angle",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "distance"
+      ],
+      "course_titles": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "line_line_angle",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "distance"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "line_line_angle",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "distance"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 求空间角"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "vector",
+      "recognition_cues": [
+        "距离",
+        "弦",
+        "P",
+        "ABCD",
+        "PAD",
+        "perp"
+      ],
+      "method_model": "向量几何翻译",
+      "first_written_line_template": "先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
+      "continuation_actions": [
+        "统一起点或建立坐标系",
+        "把条件写成线性表示、坐标或数量积",
+        "按系数、坐标或夹角条件推进"
+      ],
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。",
+      "visual_dependency": {
+        "status": "VISION_VERIFIED",
+        "image_refs": [
+          {
+            "ref": "imgs/img_in_image_box_846_360_1093_546.jpg",
+            "path": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_846_360_1093_546.jpg",
+            "exists": true
+          }
+        ]
+      },
+      "question_text_sha256": "a2435b9ebd169ff0f15c77913314942c604d8508d5fec26f10779ea3d40c04ae",
+      "source_question_text_sha256": "a2435b9ebd169ff0f15c77913314942c604d8508d5fec26f10779ea3d40c04ae",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "a2435b9ebd169ff0f15c77913314942c604d8508d5fec26f10779ea3d40c04ae",
+        "learner_question_text_sha256": "a2435b9ebd169ff0f15c77913314942c604d8508d5fec26f10779ea3d40c04ae"
+      },
+      "question_signal_excerpt": "距离、弦、P、ABCD、PAD、perp",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-aa0254608a5e29ab",
+      "item_id": "Q-aa0254608a5e29ab",
+      "ordinal": 26,
+      "ordinal_in_cycle": 9,
+      "kind": "abc_exercise",
+      "label": "B7",
+      "group": "B",
+      "cycle_id": "1.4-cycle-4",
+      "cycle_sequence": 4,
+      "cycle_title": "类型Ⅲ 求空间角",
+      "course_refs": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "line_line_angle",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "distance"
+      ],
+      "course_titles": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "line_line_angle",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "distance"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "line_line_angle",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "distance"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅲ 求空间角"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [],
+      "domain": "vector",
+      "recognition_cues": [
+        "弦",
+        "P",
+        "ABCD",
+        "angl"
+      ],
+      "method_model": "向量几何翻译",
+      "first_written_line_template": "先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
+      "continuation_actions": [
+        "统一起点或建立坐标系",
+        "把条件写成线性表示、坐标或数量积",
+        "按系数、坐标或夹角条件推进"
+      ],
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。",
+      "visual_dependency": {
+        "status": "VISION_VERIFIED",
+        "image_refs": [
+          {
+            "ref": "imgs/img_in_image_box_848_1062_1094_1228.jpg",
+            "path": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_848_1062_1094_1228.jpg",
+            "exists": true
+          }
+        ]
+      },
+      "question_text_sha256": "3f802e6d600b6de2527835c8451e813ebb73a804ab9b4f2e0106312fbff3edf1",
+      "source_question_text_sha256": "3f802e6d600b6de2527835c8451e813ebb73a804ab9b4f2e0106312fbff3edf1",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "3f802e6d600b6de2527835c8451e813ebb73a804ab9b4f2e0106312fbff3edf1",
+        "learner_question_text_sha256": "3f802e6d600b6de2527835c8451e813ebb73a804ab9b4f2e0106312fbff3edf1"
+      },
+      "question_signal_excerpt": "弦、P、ABCD、angl",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:bbec89d2c9517755",
+      "item_id": "bbec89d2c9517755",
+      "ordinal": 27,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例18",
+      "group": null,
+      "cycle_id": "1.4-cycle-5",
+      "cycle_sequence": 5,
+      "cycle_title": "类型Ⅳ 距离问题",
+      "course_refs": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "plane_equation_upper",
+        "plane_equation_lower",
+        "distance"
+      ],
+      "course_titles": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "plane_equation_upper",
+        "plane_equation_lower",
+        "distance"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "plane_equation_upper",
+        "plane_equation_lower",
+        "distance"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅳ 求距离"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [
+        "micro-skew-distance",
+        "bridge-1.4-folding"
+      ],
+      "domain": "vector",
+      "recognition_cues": [
+        "直线",
+        "距离",
+        "A",
+        "B",
+        "C",
+        "l"
+      ],
+      "method_model": "向量几何翻译",
+      "first_written_line_template": "先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
+      "continuation_actions": [
+        "统一起点或建立坐标系",
+        "把条件写成线性表示、坐标或数量积",
+        "按系数、坐标或夹角条件推进"
+      ],
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "7fb729f03b98c6f653547408b2880d2d17c1b5c566bda1da9f30b0d9554a4f6f",
+      "source_question_text_sha256": "7fb729f03b98c6f653547408b2880d2d17c1b5c566bda1da9f30b0d9554a4f6f",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "7fb729f03b98c6f653547408b2880d2d17c1b5c566bda1da9f30b0d9554a4f6f",
+        "learner_question_text_sha256": "7fb729f03b98c6f653547408b2880d2d17c1b5c566bda1da9f30b0d9554a4f6f"
+      },
+      "question_signal_excerpt": "直线、距离、A、B、C、l",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:a1e6c9c901906095",
+      "item_id": "a1e6c9c901906095",
+      "ordinal": 28,
+      "ordinal_in_cycle": 2,
+      "kind": "worked_example",
+      "label": "例19",
+      "group": null,
+      "cycle_id": "1.4-cycle-5",
+      "cycle_sequence": 5,
+      "cycle_title": "类型Ⅳ 距离问题",
+      "course_refs": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "plane_equation_upper",
+        "plane_equation_lower",
+        "distance"
+      ],
+      "course_titles": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "plane_equation_upper",
+        "plane_equation_lower",
+        "distance"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "plane_equation_upper",
+        "plane_equation_lower",
+        "distance"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅳ 求距离"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [
+        "micro-skew-distance",
+        "bridge-1.4-folding"
+      ],
+      "domain": "vector",
+      "recognition_cues": [
+        "直线",
+        "距离",
+        "P",
+        "ABC",
+        "PA",
+        "perp"
+      ],
+      "method_model": "向量几何翻译",
+      "first_written_line_template": "先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
+      "continuation_actions": [
+        "统一起点或建立坐标系",
+        "把条件写成线性表示、坐标或数量积",
+        "按系数、坐标或夹角条件推进"
+      ],
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。",
+      "visual_dependency": {
+        "status": "VISION_VERIFIED",
+        "image_refs": [
+          {
+            "ref": "imgs/img_in_image_box_882_521_1093_717.jpg",
+            "path": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_882_521_1093_717.jpg",
+            "exists": true
+          }
+        ]
+      },
+      "question_text_sha256": "1ced8f97ccaeda820c289aedbcc9de21f87a5394c1f188565600565e5b3c467a",
+      "source_question_text_sha256": "1ced8f97ccaeda820c289aedbcc9de21f87a5394c1f188565600565e5b3c467a",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "1ced8f97ccaeda820c289aedbcc9de21f87a5394c1f188565600565e5b3c467a",
+        "learner_question_text_sha256": "1ced8f97ccaeda820c289aedbcc9de21f87a5394c1f188565600565e5b3c467a"
+      },
+      "question_signal_excerpt": "直线、距离、P、ABC、PA、perp",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:a196f32445293c6b",
+      "item_id": "a196f32445293c6b",
+      "ordinal": 29,
+      "ordinal_in_cycle": 3,
+      "kind": "worked_example",
+      "label": "例20",
+      "group": null,
+      "cycle_id": "1.4-cycle-5",
+      "cycle_sequence": 5,
+      "cycle_title": "类型Ⅳ 距离问题",
+      "course_refs": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "plane_equation_upper",
+        "plane_equation_lower",
+        "distance"
+      ],
+      "course_titles": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "plane_equation_upper",
+        "plane_equation_lower",
+        "distance"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "plane_equation_upper",
+        "plane_equation_lower",
+        "distance"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅳ 求距离"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [
+        "micro-skew-distance",
+        "bridge-1.4-folding"
+      ],
+      "domain": "vector",
+      "recognition_cues": [
+        "距离",
+        "ABCD",
+        "A_1B",
+        "C_1D"
+      ],
+      "method_model": "向量几何翻译",
+      "first_written_line_template": "先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
+      "continuation_actions": [
+        "统一起点或建立坐标系",
+        "把条件写成线性表示、坐标或数量积",
+        "按系数、坐标或夹角条件推进"
+      ],
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。",
+      "visual_dependency": {
+        "status": "VISION_VERIFIED",
+        "image_refs": [
+          {
+            "ref": "imgs/img_in_image_box_915_306_1093_526.jpg",
+            "path": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_915_306_1093_526.jpg",
+            "exists": true
+          }
+        ]
+      },
+      "question_text_sha256": "32791497c77aeb7a10a3d5df376c5a68b5d053f9e60014bea03202dd2b61942e",
+      "source_question_text_sha256": "32791497c77aeb7a10a3d5df376c5a68b5d053f9e60014bea03202dd2b61942e",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "32791497c77aeb7a10a3d5df376c5a68b5d053f9e60014bea03202dd2b61942e",
+        "learner_question_text_sha256": "32791497c77aeb7a10a3d5df376c5a68b5d053f9e60014bea03202dd2b61942e"
+      },
+      "question_signal_excerpt": "距离、ABCD、A_1B、C_1D",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:4d77a796351f4fb3",
+      "item_id": "4d77a796351f4fb3",
+      "ordinal": 30,
+      "ordinal_in_cycle": 4,
+      "kind": "direct_variant",
+      "label": "例20 变式",
+      "group": null,
+      "cycle_id": "1.4-cycle-5",
+      "cycle_sequence": 5,
+      "cycle_title": "类型Ⅳ 距离问题",
+      "course_refs": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "plane_equation_upper",
+        "plane_equation_lower",
+        "distance"
+      ],
+      "course_titles": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "plane_equation_upper",
+        "plane_equation_lower",
+        "distance"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "plane_equation_upper",
+        "plane_equation_lower",
+        "distance"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅳ 求距离"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [
+        "micro-skew-distance",
+        "bridge-1.4-folding"
+      ],
+      "domain": "vector",
+      "recognition_cues": [
+        "直线",
+        "距离",
+        "ABCD",
+        "A_1B",
+        "C_1D",
+        "AA_1"
+      ],
+      "method_model": "向量几何翻译",
+      "first_written_line_template": "先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
+      "continuation_actions": [
+        "统一起点或建立坐标系",
+        "把条件写成线性表示、坐标或数量积",
+        "按系数、坐标或夹角条件推进"
+      ],
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "589a6b19612c7da73dadd887db4f57c87f372239dc93444af7966df7f2098364",
+      "source_question_text_sha256": "589a6b19612c7da73dadd887db4f57c87f372239dc93444af7966df7f2098364",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "589a6b19612c7da73dadd887db4f57c87f372239dc93444af7966df7f2098364",
+        "learner_question_text_sha256": "589a6b19612c7da73dadd887db4f57c87f372239dc93444af7966df7f2098364"
+      },
+      "question_signal_excerpt": "直线、距离、ABCD、A_1B、C_1D、AA_1",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-651a4dc13ed65bc4",
+      "item_id": "Q-651a4dc13ed65bc4",
+      "ordinal": 31,
+      "ordinal_in_cycle": 5,
+      "kind": "abc_exercise",
+      "label": "B8",
+      "group": "B",
+      "cycle_id": "1.4-cycle-5",
+      "cycle_sequence": 5,
+      "cycle_title": "类型Ⅳ 距离问题",
+      "course_refs": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "plane_equation_upper",
+        "plane_equation_lower",
+        "distance"
+      ],
+      "course_titles": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "plane_equation_upper",
+        "plane_equation_lower",
+        "distance"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "plane_equation_upper",
+        "plane_equation_lower",
+        "distance"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅳ 求距离"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [
+        "micro-skew-distance",
+        "bridge-1.4-folding"
+      ],
+      "domain": "vector",
+      "recognition_cues": [
+        "直线",
+        "距离",
+        "弦",
+        "ABC",
+        "A_",
+        "B_",
+        "C_"
+      ],
+      "method_model": "向量几何翻译",
+      "first_written_line_template": "先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
+      "continuation_actions": [
+        "统一起点或建立坐标系",
+        "把条件写成线性表示、坐标或数量积",
+        "按系数、坐标或夹角条件推进"
+      ],
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。",
+      "visual_dependency": {
+        "status": "VISION_VERIFIED",
+        "image_refs": [
+          {
+            "ref": "imgs/img_in_image_box_836_403_1094_599.jpg",
+            "path": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_836_403_1094_599.jpg",
+            "exists": true
+          }
+        ]
+      },
+      "question_text_sha256": "a067de82bc9bf6e05fbe37dfe37dd7f9c175ec1f4f982e22641646b555ef8e22",
+      "source_question_text_sha256": "a067de82bc9bf6e05fbe37dfe37dd7f9c175ec1f4f982e22641646b555ef8e22",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "a067de82bc9bf6e05fbe37dfe37dd7f9c175ec1f4f982e22641646b555ef8e22",
+        "learner_question_text_sha256": "a067de82bc9bf6e05fbe37dfe37dd7f9c175ec1f4f982e22641646b555ef8e22"
+      },
+      "question_signal_excerpt": "直线、距离、弦、ABC、A_、B_、C_",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-e23bcf15c26de84a",
+      "item_id": "Q-e23bcf15c26de84a",
+      "ordinal": 32,
+      "ordinal_in_cycle": 6,
+      "kind": "abc_exercise",
+      "label": "C9",
+      "group": "C",
+      "cycle_id": "1.4-cycle-5",
+      "cycle_sequence": 5,
+      "cycle_title": "类型Ⅳ 距离问题",
+      "course_refs": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "plane_equation_upper",
+        "plane_equation_lower",
+        "distance"
+      ],
+      "course_titles": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "plane_equation_upper",
+        "plane_equation_lower",
+        "distance"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "plane_equation_upper",
+        "plane_equation_lower",
+        "distance"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅳ 求距离"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [
+        "micro-skew-distance",
+        "bridge-1.4-folding"
+      ],
+      "domain": "vector",
+      "recognition_cues": [
+        "直线",
+        "距离",
+        "S",
+        "ABCD",
+        "O"
+      ],
+      "method_model": "向量几何翻译",
+      "first_written_line_template": "先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
+      "continuation_actions": [
+        "统一起点或建立坐标系",
+        "把条件写成线性表示、坐标或数量积",
+        "按系数、坐标或夹角条件推进"
+      ],
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "ec736fb5b8b3d10b2ace16f30101fcd4da111bc4a239b1877024d78dd80de805",
+      "source_question_text_sha256": "ec736fb5b8b3d10b2ace16f30101fcd4da111bc4a239b1877024d78dd80de805",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "ec736fb5b8b3d10b2ace16f30101fcd4da111bc4a239b1877024d78dd80de805",
+        "learner_question_text_sha256": "ec736fb5b8b3d10b2ace16f30101fcd4da111bc4a239b1877024d78dd80de805"
+      },
+      "question_signal_excerpt": "直线、距离、S、ABCD、O",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:eaaf1bb065d2f647",
+      "item_id": "eaaf1bb065d2f647",
+      "ordinal": 33,
+      "ordinal_in_cycle": 1,
+      "kind": "worked_example",
+      "label": "例21",
+      "group": null,
+      "cycle_id": "1.4-cycle-6",
+      "cycle_sequence": 6,
+      "cycle_title": "类型Ⅴ 动点与点线在面内判断",
+      "course_refs": [
+        "moving_point",
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "distance"
+      ],
+      "course_titles": [
+        "moving_point",
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "distance"
+      ],
+      "required_course_refs": [
+        "moving_point"
+      ],
+      "prerequisite_course_refs": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "distance"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅴ 点线在面内判断"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [
+        "bridge-micro-completion",
+        "bridge-1.4-dihedral-trig"
+      ],
+      "domain": "vector",
+      "recognition_cues": [
+        "证明",
+        "ABCD",
+        "A_1B",
+        "C_1D",
+        "E"
+      ],
+      "method_model": "向量几何翻译",
+      "first_written_line_template": "先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
+      "continuation_actions": [
+        "统一起点或建立坐标系",
+        "把条件写成线性表示、坐标或数量积",
+        "按系数、坐标或夹角条件推进"
+      ],
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。",
+      "visual_dependency": {
+        "status": "READY_TEXT_ONLY",
+        "image_refs": []
+      },
+      "question_text_sha256": "d43bc2ebfacb371b4e16cf72c5e2bdeb98bf7b50f1771de9eac752f78449ed59",
+      "source_question_text_sha256": "d43bc2ebfacb371b4e16cf72c5e2bdeb98bf7b50f1771de9eac752f78449ed59",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "d43bc2ebfacb371b4e16cf72c5e2bdeb98bf7b50f1771de9eac752f78449ed59",
+        "learner_question_text_sha256": "d43bc2ebfacb371b4e16cf72c5e2bdeb98bf7b50f1771de9eac752f78449ed59"
+      },
+      "question_signal_excerpt": "证明、ABCD、A_1B、C_1D、E",
+      "source_blocked": false
+    },
+    {
+      "item_key": "LI:d283fa7f2700a159",
+      "item_id": "d283fa7f2700a159",
+      "ordinal": 34,
+      "ordinal_in_cycle": 2,
+      "kind": "worked_example",
+      "label": "例22",
+      "group": null,
+      "cycle_id": "1.4-cycle-6",
+      "cycle_sequence": 6,
+      "cycle_title": "类型Ⅴ 动点与点线在面内判断",
+      "course_refs": [
+        "moving_point",
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "distance"
+      ],
+      "course_titles": [
+        "moving_point",
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "distance"
+      ],
+      "required_course_refs": [
+        "moving_point"
+      ],
+      "prerequisite_course_refs": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "distance"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅴ 点线在面内判断"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [
+        "bridge-micro-completion",
+        "bridge-1.4-dihedral-trig"
+      ],
+      "domain": "vector",
+      "recognition_cues": [
+        "直线",
+        "弦",
+        "证明",
+        "ABC",
+        "A_1B",
+        "C_1",
+        "CC_1"
+      ],
+      "method_model": "向量几何翻译",
+      "first_written_line_template": "先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
+      "continuation_actions": [
+        "统一起点或建立坐标系",
+        "把条件写成线性表示、坐标或数量积",
+        "按系数、坐标或夹角条件推进"
+      ],
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。",
+      "visual_dependency": {
+        "status": "VISION_VERIFIED",
+        "image_refs": [
+          {
+            "ref": "imgs/img_in_image_box_894_798_1093_1015.jpg",
+            "path": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_894_798_1093_1015.jpg",
+            "exists": true
+          }
+        ]
+      },
+      "question_text_sha256": "2c6fa55582b912b7a4380a823ed9e7f2e3dbe677b13cf711c4e7e06ad1d27b87",
+      "source_question_text_sha256": "2c6fa55582b912b7a4380a823ed9e7f2e3dbe677b13cf711c4e7e06ad1d27b87",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "2c6fa55582b912b7a4380a823ed9e7f2e3dbe677b13cf711c4e7e06ad1d27b87",
+        "learner_question_text_sha256": "2c6fa55582b912b7a4380a823ed9e7f2e3dbe677b13cf711c4e7e06ad1d27b87"
+      },
+      "question_signal_excerpt": "直线、弦、证明、ABC、A_1B、C_1、CC_1",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-2dbf5412ca19ea55",
+      "item_id": "Q-2dbf5412ca19ea55",
+      "ordinal": 35,
+      "ordinal_in_cycle": 3,
+      "kind": "abc_exercise",
+      "label": "C11",
+      "group": "C",
+      "cycle_id": "1.4-cycle-6",
+      "cycle_sequence": 6,
+      "cycle_title": "类型Ⅴ 动点与点线在面内判断",
+      "course_refs": [
+        "moving_point",
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "distance"
+      ],
+      "course_titles": [
+        "moving_point",
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "distance"
+      ],
+      "required_course_refs": [
+        "moving_point"
+      ],
+      "prerequisite_course_refs": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "distance"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "类型Ⅴ 点线在面内判断"
+      ],
+      "type_review_status": "section_route",
+      "bridge_unit_ids": [
+        "bridge-micro-completion",
+        "bridge-1.4-dihedral-trig"
+      ],
+      "domain": "vector",
+      "recognition_cues": [
+        "直线",
+        "弦",
+        "P",
+        "ABCD",
+        "PA",
+        "perp"
+      ],
+      "method_model": "向量几何翻译",
+      "first_written_line_template": "先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
+      "continuation_actions": [
+        "统一起点或建立坐标系",
+        "把条件写成线性表示、坐标或数量积",
+        "按系数、坐标或夹角条件推进"
+      ],
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。",
+      "visual_dependency": {
+        "status": "VISION_VERIFIED",
+        "image_refs": [
+          {
+            "ref": "imgs/img_in_image_box_871_1163_1093_1335.jpg",
+            "path": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_871_1163_1093_1335.jpg",
+            "exists": true
+          }
+        ]
+      },
+      "question_text_sha256": "b3c2aec7f440b08fffac6abd38687b7654fcbaf60356c1a33c6c2fa2aaab5231",
+      "source_question_text_sha256": "b3c2aec7f440b08fffac6abd38687b7654fcbaf60356c1a33c6c2fa2aaab5231",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "b3c2aec7f440b08fffac6abd38687b7654fcbaf60356c1a33c6c2fa2aaab5231",
+        "learner_question_text_sha256": "b3c2aec7f440b08fffac6abd38687b7654fcbaf60356c1a33c6c2fa2aaab5231"
+      },
+      "question_signal_excerpt": "直线、弦、P、ABCD、PA、perp",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-633423dd3e2e44c0",
+      "item_id": "Q-633423dd3e2e44c0",
+      "ordinal": 36,
+      "ordinal_in_cycle": 1,
+      "kind": "abc_exercise",
+      "label": "C10",
+      "group": "C",
+      "cycle_id": "1.4-cycle-7",
+      "cycle_sequence": 7,
+      "cycle_title": "翻折守恒与存在性综合",
+      "course_refs": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "distance",
+        "moving_point"
+      ],
+      "course_titles": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "distance",
+        "moving_point"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "distance",
+        "moving_point"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "翻折守恒与动态二面角综合",
+        "类型Ⅱ 研究垂直关系",
+        "类型Ⅲ 求空间角"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [
+        "bridge-1.4-folding",
+        "bridge-micro-existence",
+        "bridge-1.4-dihedral-trig"
+      ],
+      "domain": "vector",
+      "recognition_cues": [
+        "弦",
+        "证明",
+        "ABCD",
+        "angl",
+        "e",
+        "BAD"
+      ],
+      "method_model": "向量几何翻译",
+      "first_written_line_template": "先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
+      "continuation_actions": [
+        "统一起点或建立坐标系",
+        "把条件写成线性表示、坐标或数量积",
+        "按系数、坐标或夹角条件推进"
+      ],
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。",
+      "visual_dependency": {
+        "status": "VISION_VERIFIED",
+        "image_refs": [
+          {
+            "ref": "imgs/img_in_image_box_383_282_622_439.jpg",
+            "path": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_383_282_622_439.jpg",
+            "exists": true
+          },
+          {
+            "ref": "imgs/img_in_image_box_638_267_835_434.jpg",
+            "path": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_638_267_835_434.jpg",
+            "exists": true
+          }
+        ]
+      },
+      "question_text_sha256": "5703ce151060fb0214a8e05d2b1551287c2106ffe280d1ea67391dfa6887d060",
+      "source_question_text_sha256": "5703ce151060fb0214a8e05d2b1551287c2106ffe280d1ea67391dfa6887d060",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "5703ce151060fb0214a8e05d2b1551287c2106ffe280d1ea67391dfa6887d060",
+        "learner_question_text_sha256": "5703ce151060fb0214a8e05d2b1551287c2106ffe280d1ea67391dfa6887d060"
+      },
+      "question_signal_excerpt": "弦、证明、ABCD、angl、e、BAD",
+      "source_blocked": false
+    },
+    {
+      "item_key": "Q:Q-6f6ec75aef2de938",
+      "item_id": "Q-6f6ec75aef2de938",
+      "ordinal": 37,
+      "ordinal_in_cycle": 2,
+      "kind": "abc_exercise",
+      "label": "C12",
+      "group": "C",
+      "cycle_id": "1.4-cycle-7",
+      "cycle_sequence": 7,
+      "cycle_title": "翻折守恒与存在性综合",
+      "course_refs": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "distance",
+        "moving_point"
+      ],
+      "course_titles": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "distance",
+        "moving_point"
+      ],
+      "required_course_refs": [],
+      "prerequisite_course_refs": [
+        "coordinate_ops",
+        "direction_normal",
+        "parallel_perpendicular",
+        "coplanar",
+        "line_plane_angle",
+        "plane_plane_angle",
+        "distance",
+        "moving_point"
+      ],
+      "knowledge_refs": [],
+      "type_refs": [
+        "空间角与面内存在性综合",
+        "类型Ⅲ 求空间角",
+        "类型Ⅴ 点线在面内判断"
+      ],
+      "type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "bridge_unit_ids": [
+        "bridge-1.4-folding",
+        "bridge-micro-existence",
+        "bridge-1.4-dihedral-trig"
+      ],
+      "domain": "vector",
+      "recognition_cues": [
+        "直线",
+        "弦",
+        "P",
+        "ABCD",
+        "PA"
+      ],
+      "method_model": "向量几何翻译",
+      "first_written_line_template": "先选公共起点、基底、方向向量或法向量，再把目标几何关系写成向量关系。",
+      "continuation_actions": [
+        "统一起点或建立坐标系",
+        "把条件写成线性表示、坐标或数量积",
+        "按系数、坐标或夹角条件推进"
+      ],
+      "independent_self_check": "检查非零向量、方向、系数和、夹角范围及几何定义域。",
+      "visual_dependency": {
+        "status": "VISION_VERIFIED",
+        "image_refs": [
+          {
+            "ref": "imgs/img_in_image_box_891_353_1093_547.jpg",
+            "path": "data/ocr_live_current/first_chapter_69/imgs/img_in_image_box_891_353_1093_547.jpg",
+            "exists": true
+          }
+        ]
+      },
+      "question_text_sha256": "d93be57c69644f181f20a41310be5f4fd051bf495699d7bee2a159bbd76639c5",
+      "source_question_text_sha256": "d93be57c69644f181f20a41310be5f4fd051bf495699d7bee2a159bbd76639c5",
+      "source_quality": {
+        "status": "passed",
+        "reasons": [],
+        "source_question_text_sha256": "d93be57c69644f181f20a41310be5f4fd051bf495699d7bee2a159bbd76639c5",
+        "learner_question_text_sha256": "d93be57c69644f181f20a41310be5f4fd051bf495699d7bee2a159bbd76639c5"
+      },
+      "question_signal_excerpt": "直线、弦、P、ABCD、PA",
+      "source_blocked": false
+    }
+  ],
+  "route_versions": [
+    {
+      "version": 1,
+      "route_hash": "92dc9687bd8bf94a2b3322e82ff8e14e5481eafb8411c6eb7ad3bb1c27de583d"
+    },
+    {
+      "version": 2,
+      "route_hash": "8a989389b22c6d652c894c8dc5bd9f98f492520a7af650f9c2fe220030ba7921"
+    },
+    {
+      "version": 3,
+      "route_hash": "c33e0f0a0c946d52a3bad2f2e4d54869ea9eefd46ace258f7c94d9237cfdea44"
+    }
+  ],
+  "final_route_hash": "c33e0f0a0c946d52a3bad2f2e4d54869ea9eefd46ace258f7c94d9237cfdea44",
+  "simulation": {
+    "protocol": "five-round-five-persona-v3-answer-isolated",
+    "generation_mode": "synthetic_route_stress_from_actual_item_features",
+    "rounds": [
+      {
+        "round": 1,
+        "purpose": "baseline_entry",
+        "route_version": 1,
+        "route_hash": "92dc9687bd8bf94a2b3322e82ff8e14e5481eafb8411c6eb7ad3bb1c27de583d",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 37,
+            "blocked": 11
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 37,
+            "blocked": 19
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 37,
+            "blocked": 9
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 37,
+            "blocked": 17
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 37,
+            "blocked": 12
+          }
+        ],
+        "failed_item_keys": [
+          "LI:2a2eaf5c7869332b",
+          "LI:2e5856f50c71e064",
+          "LI:369cc55d4157cef7",
+          "LI:47eb16359e70391b",
+          "LI:484d2af8fffbbcf5",
+          "LI:4d77a796351f4fb3",
+          "LI:6ccbc5ccfedac520",
+          "LI:7e99538ed6ede885",
+          "LI:86bca906ba2e8b81",
+          "LI:a196f32445293c6b",
+          "LI:a1e6c9c901906095",
+          "LI:b118e4084228e6b3",
+          "LI:b1d2d187ff980da9",
+          "LI:bbec89d2c9517755",
+          "LI:c28ca305f7a1fba9",
+          "LI:d23df354bf68ef79",
+          "LI:d283fa7f2700a159",
+          "LI:dd010f0276689689",
+          "LI:df0ae2ad9a868008",
+          "LI:e464e6355ac9866a",
+          "LI:e8ef92d948b55f0f",
+          "LI:eaaf1bb065d2f647",
+          "LI:f625c695a7a5b2c4",
+          "Q:Q-23bbe86ea10ffe8e",
+          "Q:Q-2dbf5412ca19ea55",
+          "Q:Q-454cdf226d9af1aa",
+          "Q:Q-633423dd3e2e44c0",
+          "Q:Q-651a4dc13ed65bc4",
+          "Q:Q-6f6ec75aef2de938",
+          "Q:Q-7b81a6374f0ffe9c",
+          "Q:Q-7eaa2d96d2fafd33",
+          "Q:Q-aa0254608a5e29ab",
+          "Q:Q-b06b82e8d884e598",
+          "Q:Q-e23bcf15c26de84a",
+          "Q:Q-fc2e49b951d6c08d"
+        ],
+        "route_repairs": [
+          {
+            "item_keys": [
+              "LI:4d77a796351f4fb3",
+              "LI:a196f32445293c6b",
+              "LI:a1e6c9c901906095",
+              "LI:bbec89d2c9517755",
+              "LI:d283fa7f2700a159",
+              "LI:eaaf1bb065d2f647",
+              "Q:Q-2dbf5412ca19ea55",
+              "Q:Q-633423dd3e2e44c0",
+              "Q:Q-651a4dc13ed65bc4",
+              "Q:Q-6f6ec75aef2de938",
+              "Q:Q-e23bcf15c26de84a"
+            ],
+            "field": "bridge_calls",
+            "before": "第1轮冻结尝试记录了 literal-zero-base 的首个阻断。",
+            "after": "下一轮只加入 literal-zero-base 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 11 题；不是随机题号注入。"
+          },
+          {
+            "item_keys": [
+              "LI:2a2eaf5c7869332b",
+              "LI:2e5856f50c71e064",
+              "LI:47eb16359e70391b",
+              "LI:484d2af8fffbbcf5",
+              "LI:6ccbc5ccfedac520",
+              "LI:7e99538ed6ede885",
+              "LI:86bca906ba2e8b81",
+              "LI:c28ca305f7a1fba9",
+              "LI:d23df354bf68ef79",
+              "LI:dd010f0276689689",
+              "LI:df0ae2ad9a868008",
+              "LI:e464e6355ac9866a",
+              "LI:e8ef92d948b55f0f",
+              "LI:f625c695a7a5b2c4",
+              "Q:Q-23bbe86ea10ffe8e",
+              "Q:Q-633423dd3e2e44c0",
+              "Q:Q-6f6ec75aef2de938",
+              "Q:Q-7b81a6374f0ffe9c",
+              "Q:Q-fc2e49b951d6c08d"
+            ],
+            "field": "recognition_cues",
+            "before": "第1轮冻结尝试记录了 recognition-weak 的首个阻断。",
+            "after": "下一轮只加入 recognition-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 19 题；不是随机题号注入。"
+          },
+          {
+            "item_keys": [
+              "LI:369cc55d4157cef7",
+              "LI:4d77a796351f4fb3",
+              "LI:a196f32445293c6b",
+              "LI:a1e6c9c901906095",
+              "LI:bbec89d2c9517755",
+              "LI:df0ae2ad9a868008",
+              "Q:Q-651a4dc13ed65bc4",
+              "Q:Q-b06b82e8d884e598",
+              "Q:Q-e23bcf15c26de84a"
+            ],
+            "field": "continuation_checkpoints",
+            "before": "第1轮冻结尝试记录了 algebra-weak 的首个阻断。",
+            "after": "下一轮只加入 algebra-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 9 题；不是随机题号注入。"
+          },
+          {
+            "item_keys": [
+              "LI:2a2eaf5c7869332b",
+              "LI:484d2af8fffbbcf5",
+              "LI:6ccbc5ccfedac520",
+              "LI:a196f32445293c6b",
+              "LI:a1e6c9c901906095",
+              "LI:b118e4084228e6b3",
+              "LI:b1d2d187ff980da9",
+              "LI:d283fa7f2700a159",
+              "Q:Q-23bbe86ea10ffe8e",
+              "Q:Q-2dbf5412ca19ea55",
+              "Q:Q-633423dd3e2e44c0",
+              "Q:Q-651a4dc13ed65bc4",
+              "Q:Q-6f6ec75aef2de938",
+              "Q:Q-7b81a6374f0ffe9c",
+              "Q:Q-aa0254608a5e29ab",
+              "Q:Q-b06b82e8d884e598",
+              "Q:Q-fc2e49b951d6c08d"
+            ],
+            "field": "visual_translation",
+            "before": "第1轮冻结尝试记录了 visual-weak 的首个阻断。",
+            "after": "下一轮只加入 visual-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 17 题；不是随机题号注入。"
+          },
+          {
+            "item_keys": [
+              "Q:Q-23bbe86ea10ffe8e",
+              "Q:Q-2dbf5412ca19ea55",
+              "Q:Q-454cdf226d9af1aa",
+              "Q:Q-633423dd3e2e44c0",
+              "Q:Q-651a4dc13ed65bc4",
+              "Q:Q-6f6ec75aef2de938",
+              "Q:Q-7b81a6374f0ffe9c",
+              "Q:Q-7eaa2d96d2fafd33",
+              "Q:Q-aa0254608a5e29ab",
+              "Q:Q-b06b82e8d884e598",
+              "Q:Q-e23bcf15c26de84a",
+              "Q:Q-fc2e49b951d6c08d"
+            ],
+            "field": "independent_self_check",
+            "before": "第1轮冻结尝试记录了 self-check-weak 的首个阻断。",
+            "after": "下一轮只加入 self-check-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 12 题；不是随机题号注入。"
+          }
+        ]
+      },
+      {
+        "round": 2,
+        "purpose": "prerequisite_repair",
+        "route_version": 2,
+        "route_hash": "8a989389b22c6d652c894c8dc5bd9f98f492520a7af650f9c2fe220030ba7921",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 37,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 37,
+            "blocked": 0
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 37,
+            "blocked": 0
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 37,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 37,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [],
+        "route_repairs": []
+      },
+      {
+        "round": 3,
+        "purpose": "continuation_transfer",
+        "route_version": 2,
+        "route_hash": "8a989389b22c6d652c894c8dc5bd9f98f492520a7af650f9c2fe220030ba7921",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 37,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 37,
+            "blocked": 3
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 37,
+            "blocked": 3
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 37,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 37,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [
+          "LI:369cc55d4157cef7",
+          "LI:4d77a796351f4fb3",
+          "LI:b1d2d187ff980da9"
+        ],
+        "route_repairs": [
+          {
+            "item_keys": [
+              "LI:369cc55d4157cef7",
+              "LI:4d77a796351f4fb3",
+              "LI:b1d2d187ff980da9"
+            ],
+            "field": "recognition_cues",
+            "before": "第3轮冻结尝试记录了 recognition-weak 的首个阻断。",
+            "after": "下一轮只加入 recognition-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 3 题；不是随机题号注入。"
+          },
+          {
+            "item_keys": [
+              "LI:369cc55d4157cef7",
+              "LI:4d77a796351f4fb3",
+              "LI:b1d2d187ff980da9"
+            ],
+            "field": "continuation_checkpoints",
+            "before": "第3轮冻结尝试记录了 algebra-weak 的首个阻断。",
+            "after": "下一轮只加入 algebra-weak 所需的最小无答案修复。",
+            "reason": "真实题面特征触发的路线压力点，共 3 题；不是随机题号注入。"
+          }
+        ]
+      },
+      {
+        "round": 4,
+        "purpose": "mixed_retrieval",
+        "route_version": 3,
+        "route_hash": "c33e0f0a0c946d52a3bad2f2e4d54869ea9eefd46ace258f7c94d9237cfdea44",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 37,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 37,
+            "blocked": 0
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 37,
+            "blocked": 0
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 37,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 37,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [],
+        "route_repairs": []
+      },
+      {
+        "round": 5,
+        "purpose": "fresh_context",
+        "route_version": 3,
+        "route_hash": "c33e0f0a0c946d52a3bad2f2e4d54869ea9eefd46ace258f7c94d9237cfdea44",
+        "personas": [
+          {
+            "profile": "literal-zero-base",
+            "display_label": "逐字执行型",
+            "stress_focus": "省略前提与桥接动作",
+            "attempts": 37,
+            "blocked": 0
+          },
+          {
+            "profile": "recognition-weak",
+            "display_label": "题型识别弱型",
+            "stress_focus": "相邻方法的入口辨认",
+            "attempts": 37,
+            "blocked": 0
+          },
+          {
+            "profile": "algebra-weak",
+            "display_label": "代数操作弱型",
+            "stress_focus": "符号、定义域、分类与边界",
+            "attempts": 37,
+            "blocked": 0
+          },
+          {
+            "profile": "visual-weak",
+            "display_label": "图形转换弱型",
+            "stress_focus": "图形或空间关系的代数化",
+            "attempts": 37,
+            "blocked": 0
+          },
+          {
+            "profile": "self-check-weak",
+            "display_label": "自检薄弱型",
+            "stress_focus": "独立回代、范围与退化检查",
+            "attempts": 37,
+            "blocked": 0
+          }
+        ],
+        "failed_item_keys": [],
+        "route_repairs": []
+      }
+    ],
+    "expected_attempts_per_item": 25,
+    "actual_attempts_per_item": 25,
+    "unresolved_item_keys": [],
+    "mathematical_correctness": "not_evaluated_no_final_answer",
+    "mastery_claimed": false,
+    "status": "passed"
+  },
+  "summary": {
+    "items": 37,
+    "attempts": 925,
+    "route_assessments": 925,
+    "rounds": 5,
+    "personas_per_round": 5,
+    "repairs": 7,
+    "round_5_failed_items": 0,
+    "validator_errors": []
+  },
+  "human_learning_status": "remote_math_mcp_only",
+  "cold_24h_retest": "not_run",
+  "mastery_claimed": false,
+  "claim_scope": "route_actionability_only",
+  "mathematical_assessment_status": "not_run",
+  "route_audit_status": "passed",
+  "status": "passed"
+}

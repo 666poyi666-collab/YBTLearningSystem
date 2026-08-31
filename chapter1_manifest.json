@@ -711,7 +711,12 @@
         "类型Ⅱ 线性运算坐标表示",
         "类型Ⅲ 数量积坐标表示",
         "类型Ⅳ 平行垂直",
-        "类型Ⅴ 夹角与模"
+        "类型Ⅴ 夹角与模",
+        "类型Ⅰ 基底表示",
+        "四点共面与截线系数综合",
+        "正交投影与最小模",
+        "阿波罗尼斯球与空间动点范围",
+        "空间动点单变量化"
       ],
       "type_training": [
         {
@@ -808,9 +813,7 @@
         "阿波罗尼斯球",
         "四点共面系数和=1"
       ],
-      "coverage_gaps": [
-        "现有课程转写未检出阿波罗尼斯球/单变量化专门讲解；C15-C16 需专项桥接，不能把现有三门课标为完整覆盖。"
-      ],
+      "coverage_gaps": [],
       "bridge_units": [
         {
           "id": "bridge-1.2-apollonius",
@@ -826,13 +829,24 @@
             "能读出球心/半径并判断轨迹是否存在",
             "能回代验证点的范围与题设"
           ],
-          "source_status": "NO_DEDICATED_VIDEO_IN_CURRENT_TRANSCRIPTS",
-          "release_status": "SUPPLEMENT_READY"
+          "source_status": "REPOSITORY_ANSWER_FREE_SUPPLEMENT_HASH_BOUND",
+          "release_status": "SUPPLEMENT_READY",
+          "supplement_path": "data/bridge_supplement_lessons.json",
+          "supplement_sha256": "046f89d8e5d1edbdee2dc6d9bf8adcbaa2f17924d3779205b5b54d55d97a8e70",
+          "independent_checks": [
+            "能写出平方距离展开式",
+            "能说明为什么要完成平方",
+            "能列出轨迹与题设范围的三项复核"
+          ],
+          "mastery_boundary": "Route supplement is available; real completion and delayed retention remain unproven."
         },
         {
           "id": "bridge-1.2-single-variable",
           "title": "空间动点单变量化配方",
-          "target_questions": [],
+          "target_questions": [
+            "C15",
+            "C16"
+          ],
           "prerequisites": [
             "1.3-k1",
             "1.3-k2"
@@ -842,8 +856,50 @@
             "能把长度/夹角/数量积化成 f(λ)",
             "能区分定义域端点与内部极值"
           ],
-          "source_status": "MATERIAL_EXISTS_IN_LATER_DYNAMIC_POINT_TRANSCRIPTS_ONLY",
-          "release_status": "REQUIRED_SUPPLEMENT_NOT_VERIFIED"
+          "source_status": "REPOSITORY_ANSWER_FREE_SUPPLEMENT_HASH_BOUND",
+          "release_status": "SUPPLEMENT_READY",
+          "supplement_path": "data/bridge_supplement_lessons.json",
+          "supplement_sha256": "046f89d8e5d1edbdee2dc6d9bf8adcbaa2f17924d3779205b5b54d55d97a8e70",
+          "independent_checks": [
+            "能解释 λ=0、λ=1 的端点意义",
+            "能把目标量化成 λ 的式子",
+            "能筛掉定义域外的解"
+          ],
+          "mastery_boundary": "Route supplement is available; real completion and delayed retention remain unproven."
+        },
+        {
+          "id": "bridge-1.1-polarization",
+          "title": "极化恒等式与数量积最值",
+          "target_questions": [
+            "C16"
+          ],
+          "release_status": "SUPPLEMENT_READY",
+          "source_status": "REPOSITORY_ANSWER_FREE_SUPPLEMENT_HASH_BOUND",
+          "supplement_path": "data/bridge_supplement_lessons.json",
+          "supplement_sha256": "046f89d8e5d1edbdee2dc6d9bf8adcbaa2f17924d3779205b5b54d55d97a8e70",
+          "independent_checks": [
+            "能独立展开两种恒等式",
+            "能说明选择哪一种形式",
+            "能写出定义域和等号条件"
+          ],
+          "mastery_boundary": "Route supplement is available; real completion and delayed retention remain unproven."
+        },
+        {
+          "id": "micro-four-point-coplanar",
+          "title": "四点共面系数和=1",
+          "target_questions": [
+            "C14"
+          ],
+          "release_status": "SUPPLEMENT_READY",
+          "source_status": "REPOSITORY_ANSWER_FREE_SUPPLEMENT_HASH_BOUND",
+          "supplement_path": "data/bridge_supplement_lessons.json",
+          "supplement_sha256": "046f89d8e5d1edbdee2dc6d9bf8adcbaa2f17924d3779205b5b54d55d97a8e70",
+          "independent_checks": [
+            "能正向推出系数和为1",
+            "能完成逆向证明",
+            "能区分点共面与向量共面"
+          ],
+          "mastery_boundary": "Route supplement is available; real completion and delayed retention remain unproven."
         }
       ],
       "learning_cycles": [
@@ -861,7 +917,9 @@
             "1.2-k1"
           ],
           "prerequisite_knowledge_refs": [],
-          "type_refs": [],
+          "type_refs": [
+            "类型Ⅰ 基底表示"
+          ],
           "example_numbers": [
             1
           ],
@@ -870,7 +928,24 @@
           ],
           "bridge_unit_ids": [],
           "method_checkpoints": [],
-          "course_mapping_status": "SEMANTIC_REVIEWED"
+          "course_mapping_status": "SEMANTIC_REVIEWED",
+          "item_type_assignments": [
+            {
+              "item_id": "Q-0630a159d64974a8",
+              "item_label": "B8",
+              "type_title": "类型Ⅰ 基底表示",
+              "confidence": "medium",
+              "evidence_ref": "data/item_type_classification.json#Q-0630a159d64974a8",
+              "machine_type_title": "类型Ⅳ 平行垂直",
+              "question_text_sha256": "0c21d6424f77c8dc868b5598d196999b5a115f286e4a0d6f362c7965be821371",
+              "review_ref": "reports/deep_simulation_reviews/ch1-ch2-type-review.json#Q-0630a159d64974a8",
+              "review_reason": "题目要求判断三组线性组合能否仍构成空间基底，核心是线性无关与基底判定。",
+              "secondary_types": [],
+              "review_status": "MULTI_AGENT_SEMANTIC_REVIEWED"
+            }
+          ],
+          "type_mapping_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+          "blocked_item_type_assignments": []
         },
         {
           "id": "1.2_1.3-cycle-2",
@@ -910,7 +985,12 @@
             "1.3-k2"
           ],
           "prerequisite_knowledge_refs": [],
-          "type_refs": [],
+          "type_refs": [
+            "类型Ⅱ 线性运算坐标表示",
+            "类型Ⅳ 平行垂直",
+            "类型Ⅲ 数量积坐标表示",
+            "类型Ⅴ 夹角与模"
+          ],
           "example_numbers": [
             4
           ],
@@ -922,7 +1002,69 @@
           ],
           "bridge_unit_ids": [],
           "method_checkpoints": [],
-          "course_mapping_status": "SEMANTIC_REVIEWED"
+          "course_mapping_status": "SEMANTIC_REVIEWED",
+          "item_type_assignments": [
+            {
+              "item_id": "Q-70bb401fd2a8de01",
+              "item_label": "A1",
+              "type_title": "类型Ⅱ 线性运算坐标表示",
+              "confidence": "high",
+              "evidence_ref": "data/item_type_classification.json#Q-70bb401fd2a8de01",
+              "machine_type_title": "类型Ⅱ 线性运算坐标表示",
+              "question_text_sha256": "1228b917bc6f3d7920fc70ac9658c6e52fe124920429712c78059fa8034e8673",
+              "review_ref": "reports/deep_simulation_reviews/ch1-ch2-type-review.json#Q-70bb401fd2a8de01",
+              "review_reason": "直接计算三维向量坐标之差。",
+              "secondary_types": [],
+              "review_status": "MULTI_AGENT_SEMANTIC_REVIEWED"
+            },
+            {
+              "item_id": "Q-1c0a1fbeca800ee8",
+              "item_label": "A2",
+              "type_title": "类型Ⅳ 平行垂直",
+              "confidence": "medium",
+              "evidence_ref": "data/item_type_classification.json#Q-1c0a1fbeca800ee8",
+              "machine_type_title": "类型Ⅰ 基底表示",
+              "question_text_sha256": "ab4cdf084ad0b37cd1cb8147eacde9bba61f7662c3c4d628387f62acda2b55c2",
+              "review_ref": "reports/deep_simulation_reviews/ch1-ch2-type-review.json#Q-1c0a1fbeca800ee8",
+              "review_reason": "由两向量垂直建立坐标数量积为零并求参数。",
+              "secondary_types": [
+                "类型Ⅲ 数量积坐标表示"
+              ],
+              "review_status": "MULTI_AGENT_SEMANTIC_REVIEWED"
+            },
+            {
+              "item_id": "Q-e873f29ab00fe598",
+              "item_label": "A3",
+              "type_title": "类型Ⅳ 平行垂直",
+              "confidence": "high",
+              "evidence_ref": "data/item_type_classification.json#Q-e873f29ab00fe598",
+              "machine_type_title": "类型Ⅲ 数量积坐标表示",
+              "question_text_sha256": "2443ad9a9d4c4c893003d6e3e1216fa1f17492485afefa9c350647c757cc44ab",
+              "review_ref": "reports/deep_simulation_reviews/ch1-ch2-type-review.json#Q-e873f29ab00fe598",
+              "review_reason": "由坐标向量平行的比例关系求未知分量。",
+              "secondary_types": [
+                "类型Ⅱ 线性运算坐标表示"
+              ],
+              "review_status": "MULTI_AGENT_SEMANTIC_REVIEWED"
+            },
+            {
+              "item_id": "Q-f6de63d4b31109a5",
+              "item_label": "A4",
+              "type_title": "类型Ⅴ 夹角与模",
+              "confidence": "high",
+              "evidence_ref": "data/item_type_classification.json#Q-f6de63d4b31109a5",
+              "machine_type_title": "类型Ⅴ 夹角与模",
+              "question_text_sha256": "479f011117731674dd3fadb522fb18d60bd0512c855ae6b05484cc440015fda8",
+              "review_ref": "reports/deep_simulation_reviews/ch1-ch2-type-review.json#Q-f6de63d4b31109a5",
+              "review_reason": "用坐标数量积与两个模计算向量夹角余弦。",
+              "secondary_types": [
+                "类型Ⅲ 数量积坐标表示"
+              ],
+              "review_status": "MULTI_AGENT_SEMANTIC_REVIEWED"
+            }
+          ],
+          "type_mapping_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+          "blocked_item_type_assignments": []
         },
         {
           "id": "1.2_1.3-cycle-4",
@@ -1072,12 +1214,17 @@
             "1.2-k1",
             "1.3-k2"
           ],
-          "type_refs": [],
+          "type_refs": [
+            "四点共面与截线系数综合",
+            "类型Ⅰ 基底表示"
+          ],
           "example_numbers": [],
           "exercise_keys": [
             "C14"
           ],
-          "bridge_unit_ids": [],
+          "bridge_unit_ids": [
+            "micro-four-point-coplanar"
+          ],
           "method_checkpoints": [
             {
               "id": "1.2_1.3-coplanar-check-1",
@@ -1098,7 +1245,26 @@
               "answer_policy": "NO_ANSWER"
             }
           ],
-          "course_mapping_status": "SEMANTIC_REVIEWED"
+          "course_mapping_status": "SEMANTIC_REVIEWED",
+          "item_type_assignments": [
+            {
+              "item_id": "Q-162d9e165cd68ca4",
+              "item_label": "C14",
+              "type_title": "四点共面与截线系数综合",
+              "confidence": "high",
+              "evidence_ref": "data/item_type_classification.json#Q-162d9e165cd68ca4",
+              "machine_type_title": "类型Ⅰ 基底表示",
+              "question_text_sha256": "2fd143c53c25ae5d7369ab7db5914b4bc40789d16fdf8118bdec94ef16ddc614",
+              "review_ref": "reports/deep_simulation_reviews/ch1-ch2-type-review.json#Q-162d9e165cd68ca4",
+              "review_reason": "利用重心、中点和截面共面条件建立三条侧棱分点系数关系。",
+              "secondary_types": [
+                "类型Ⅰ 基底表示"
+              ],
+              "review_status": "MULTI_AGENT_SEMANTIC_REVIEWED"
+            }
+          ],
+          "type_mapping_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+          "blocked_item_type_assignments": []
         },
         {
           "id": "1.2_1.3-cycle-10",
@@ -1114,7 +1280,13 @@
             "1.3-k1",
             "1.3-k2"
           ],
-          "type_refs": [],
+          "type_refs": [
+            "类型Ⅴ 夹角与模",
+            "正交投影与最小模",
+            "类型Ⅲ 数量积坐标表示",
+            "阿波罗尼斯球与空间动点范围",
+            "空间动点单变量化"
+          ],
           "example_numbers": [],
           "exercise_keys": [
             "C15",
@@ -1122,7 +1294,8 @@
           ],
           "bridge_unit_ids": [
             "bridge-1.1-polarization",
-            "bridge-1.2-apollonius"
+            "bridge-1.2-apollonius",
+            "bridge-1.2-single-variable"
           ],
           "method_checkpoints": [
             {
@@ -1146,13 +1319,106 @@
               "answer_policy": "NO_ANSWER"
             }
           ],
-          "course_mapping_status": "SEMANTIC_REVIEWED"
+          "course_mapping_status": "SEMANTIC_REVIEWED",
+          "item_type_assignments": [
+            {
+              "item_id": "Q-025c526da85301de",
+              "item_label": "C15",
+              "type_title": "类型Ⅴ 夹角与模",
+              "confidence": "medium",
+              "evidence_ref": "data/item_type_classification.json#Q-025c526da85301de",
+              "machine_type_title": "类型Ⅳ 平行垂直",
+              "question_text_sha256": "378e95faf12ad3033b6df5f8f843046ee4e2b191f318c035316288dc0b2bd687",
+              "review_ref": "reports/deep_simulation_reviews/ch1-ch2-type-review.json#Q-025c526da85301de",
+              "review_reason": "在两个正交单位方向上调节分量，使剩余向量的模最小，本质是正交投影。",
+              "secondary_types": [
+                "正交投影与最小模",
+                "类型Ⅲ 数量积坐标表示"
+              ],
+              "review_status": "MULTI_AGENT_SEMANTIC_REVIEWED"
+            },
+            {
+              "item_id": "Q-e9bcbf739dbec4c7",
+              "item_label": "C16",
+              "type_title": "阿波罗尼斯球与空间动点范围",
+              "confidence": "high",
+              "evidence_ref": "data/item_type_classification.json#Q-e9bcbf739dbec4c7",
+              "machine_type_title": "类型Ⅰ 基底表示",
+              "question_text_sha256": "fa34b937376bf4fe2764327fed234a19217f6db2562149a24efaffc2e2169759",
+              "review_ref": "reports/deep_simulation_reviews/ch1-ch2-type-review.json#Q-e9bcbf739dbec4c7",
+              "review_reason": "PF=2PE 先确定阿波罗尼斯球，再在正方体约束下求数量积表达式范围。",
+              "secondary_types": [
+                "类型Ⅴ 夹角与模",
+                "空间动点单变量化"
+              ],
+              "review_status": "MULTI_AGENT_SEMANTIC_REVIEWED"
+            }
+          ],
+          "type_mapping_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+          "blocked_item_type_assignments": []
         }
       ],
       "exit_gate": "基底分解、建系写点、坐标运算各一题独立完整；A组达到约定正确率；C15/C16远迁移单独补课。",
       "verified_question_count": 16,
-      "coverage_status": "PARTIAL_UNVERIFIED",
-      "coverage_gate": "题包门禁：packet=VERIFIED、context=VERIFIED、视觉证据为E1/E2且答案隔离（已通过）；课程覆盖缺口、桥接课和学生掌握度仍需按 exit_gate 独立验收"
+      "coverage_status": "ROUTE_READY_WITH_ANSWER_FREE_SUPPLEMENTS",
+      "coverage_gate": "教材结构、题号、纯题干和答案隔离已通过静态题包门禁；课程覆盖与桥接单独记录，学生掌握度仍需真实作答和24小时冷复测证据。",
+      "coverage_exceptions": [
+        {
+          "kind": "no_dedicated_video",
+          "detail": "现有课程转写未检出阿波罗尼斯球/单变量化专门讲解；C15-C16 需专项桥接，不能把现有三门课标为完整覆盖。",
+          "resolved_for_route_by": [
+            "bridge-1.1-polarization",
+            "bridge-1.2-apollonius",
+            "bridge-1.2-single-variable",
+            "micro-four-point-coplanar"
+          ],
+          "course_coverage_claimed": false
+        }
+      ],
+      "item_type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "blocked_item_type_reviews": [],
+      "semantic_type_taxonomy_extensions": [
+        {
+          "chapter": 1,
+          "section": "1.2+1.3",
+          "type_title": "类型Ⅰ 基底表示",
+          "introduced_by_item_id": "Q-0630a159d64974a8",
+          "introduced_by_item_label": "B8",
+          "role": "primary"
+        },
+        {
+          "chapter": 1,
+          "section": "1.2+1.3",
+          "type_title": "四点共面与截线系数综合",
+          "introduced_by_item_id": "Q-162d9e165cd68ca4",
+          "introduced_by_item_label": "C14",
+          "role": "primary"
+        },
+        {
+          "chapter": 1,
+          "section": "1.2+1.3",
+          "type_title": "正交投影与最小模",
+          "introduced_by_item_id": "Q-025c526da85301de",
+          "introduced_by_item_label": "C15",
+          "role": "secondary"
+        },
+        {
+          "chapter": 1,
+          "section": "1.2+1.3",
+          "type_title": "阿波罗尼斯球与空间动点范围",
+          "introduced_by_item_id": "Q-e9bcbf739dbec4c7",
+          "introduced_by_item_label": "C16",
+          "role": "primary"
+        },
+        {
+          "chapter": 1,
+          "section": "1.2+1.3",
+          "type_title": "空间动点单变量化",
+          "introduced_by_item_id": "Q-e9bcbf739dbec4c7",
+          "introduced_by_item_label": "C16",
+          "role": "secondary"
+        }
+      ]
     },
     {
       "id": "1.4",
@@ -1221,7 +1487,10 @@
         "类型Ⅱ 研究垂直关系",
         "类型Ⅲ 求空间角",
         "类型Ⅳ 求距离",
-        "类型Ⅴ 点线在面内判断"
+        "类型Ⅴ 点线在面内判断",
+        "类型Ⅴ 夹角与模",
+        "翻折守恒与动态二面角综合",
+        "空间角与面内存在性综合"
       ],
       "type_training": [
         {
@@ -1324,14 +1593,13 @@
         "翻折守恒",
         "动态二面角三角参数化"
       ],
-      "coverage_gaps": [
-        "现有课程转写覆盖基础空间角/距离，但未检出翻折守恒和动态二面角三角参数化专门课；C9-C12 必须先过专项桥接。"
-      ],
+      "coverage_gaps": [],
       "bridge_units": [
         {
           "id": "bridge-1.4-folding",
           "title": "翻折守恒与折后平面角",
           "target_questions": [
+            "C9",
             "C10"
           ],
           "prerequisites": [
@@ -1342,14 +1610,23 @@
             "能作出二面角的平面角截面",
             "能把折后问题转回向量或三角关系并检查锐钝"
           ],
-          "source_status": "NO_DEDICATED_VIDEO_IN_CURRENT_TRANSCRIPTS",
-          "release_status": "REQUIRED_SUPPLEMENT_NOT_VERIFIED"
+          "source_status": "REPOSITORY_ANSWER_FREE_SUPPLEMENT_HASH_BOUND",
+          "release_status": "SUPPLEMENT_READY",
+          "supplement_path": "data/bridge_supplement_lessons.json",
+          "supplement_sha256": "046f89d8e5d1edbdee2dc6d9bf8adcbaa2f17924d3779205b5b54d55d97a8e70",
+          "independent_checks": [
+            "能说明截面为什么代表平面角",
+            "能区分折痕上的不变量与折后新角",
+            "能检查参数端点和锐钝角分支"
+          ],
+          "mastery_boundary": "Route supplement is available; real completion and delayed retention remain unproven."
         },
         {
           "id": "bridge-1.4-dihedral-trig",
           "title": "动态二面角三角参数化",
           "target_questions": [
-            "C11"
+            "C11",
+            "C12"
           ],
           "prerequisites": [
             "1.4-k3"
@@ -1359,8 +1636,68 @@
             "能用参数表示截面内点和两平面夹角",
             "能用 sin/cos 与定义域判断目标二面角"
           ],
-          "source_status": "NO_DEDICATED_VIDEO_IN_CURRENT_TRANSCRIPTS",
-          "release_status": "REQUIRED_SUPPLEMENT_NOT_VERIFIED"
+          "source_status": "REPOSITORY_ANSWER_FREE_SUPPLEMENT_HASH_BOUND",
+          "release_status": "SUPPLEMENT_READY",
+          "supplement_path": "data/bridge_supplement_lessons.json",
+          "supplement_sha256": "046f89d8e5d1edbdee2dc6d9bf8adcbaa2f17924d3779205b5b54d55d97a8e70",
+          "independent_checks": [
+            "能说明公共棱和截面保持有效的原因",
+            "能从余弦符号和绝对值选择分支",
+            "能把存在性写成带定义域的方程组"
+          ],
+          "mastery_boundary": "Route supplement is available; real completion and delayed retention remain unproven."
+        },
+        {
+          "id": "bridge-micro-completion",
+          "title": "补形与辅助平行体",
+          "target_questions": [
+            "C11"
+          ],
+          "release_status": "SUPPLEMENT_READY",
+          "source_status": "REPOSITORY_ANSWER_FREE_SUPPLEMENT_HASH_BOUND",
+          "supplement_path": "data/bridge_supplement_lessons.json",
+          "supplement_sha256": "046f89d8e5d1edbdee2dc6d9bf8adcbaa2f17924d3779205b5b54d55d97a8e70",
+          "independent_checks": [
+            "能说明补形依据",
+            "能区分题设事实与辅助构造",
+            "能完成向量闭合并回译"
+          ],
+          "mastery_boundary": "Route supplement is available; real completion and delayed retention remain unproven."
+        },
+        {
+          "id": "bridge-micro-existence",
+          "title": "存在性双参数化",
+          "target_questions": [
+            "C12"
+          ],
+          "release_status": "SUPPLEMENT_READY",
+          "source_status": "REPOSITORY_ANSWER_FREE_SUPPLEMENT_HASH_BOUND",
+          "supplement_path": "data/bridge_supplement_lessons.json",
+          "supplement_sha256": "046f89d8e5d1edbdee2dc6d9bf8adcbaa2f17924d3779205b5b54d55d97a8e70",
+          "independent_checks": [
+            "定义域先于解方程",
+            "能筛掉线段外的代数解",
+            "能说明存在性结论而不是只报一个候选"
+          ],
+          "mastery_boundary": "Route supplement is available; real completion and delayed retention remain unproven."
+        },
+        {
+          "id": "micro-skew-distance",
+          "title": "异面直线距离",
+          "target_questions": [
+            "B8",
+            "C9"
+          ],
+          "release_status": "SUPPLEMENT_READY",
+          "source_status": "REPOSITORY_ANSWER_FREE_SUPPLEMENT_HASH_BOUND",
+          "supplement_path": "data/bridge_supplement_lessons.json",
+          "supplement_sha256": "046f89d8e5d1edbdee2dc6d9bf8adcbaa2f17924d3779205b5b54d55d97a8e70",
+          "independent_checks": [
+            "能区分异面距离与线线角",
+            "能验证公垂向量同时垂直两条直线",
+            "能说明 X、Y 必须分别在线上"
+          ],
+          "mastery_boundary": "Route supplement is available; real completion and delayed retention remain unproven."
         }
       ],
       "learning_cycles": [
@@ -1381,7 +1718,11 @@
             "1.4-k2"
           ],
           "prerequisite_knowledge_refs": [],
-          "type_refs": [],
+          "type_refs": [
+            "类型Ⅱ 研究垂直关系",
+            "类型Ⅰ 研究平行关系",
+            "类型Ⅴ 夹角与模"
+          ],
           "example_numbers": [
             1,
             2,
@@ -1404,7 +1745,41 @@
             }
           ],
           "bridge_unit_ids": [],
-          "course_mapping_status": "SEMANTIC_REVIEWED"
+          "course_mapping_status": "SEMANTIC_REVIEWED",
+          "item_type_assignments": [
+            {
+              "item_id": "Q-fc2e49b951d6c08d",
+              "item_label": "A2",
+              "type_title": "类型Ⅱ 研究垂直关系",
+              "confidence": "high",
+              "evidence_ref": "data/item_type_classification.json#Q-fc2e49b951d6c08d",
+              "machine_type_title": "类型Ⅳ 求距离",
+              "question_text_sha256": "c56960c77089de1e77f1bf94a817089384c578ad595c7619d794e2c8cf52df00",
+              "review_ref": "reports/deep_simulation_reviews/ch1-ch2-type-review.json#Q-fc2e49b951d6c08d",
+              "review_reason": "同题依次证明线线垂直与线面平行，垂直证明是第一主任务。",
+              "secondary_types": [
+                "类型Ⅰ 研究平行关系"
+              ],
+              "review_status": "MULTI_AGENT_SEMANTIC_REVIEWED"
+            },
+            {
+              "item_id": "Q-23bbe86ea10ffe8e",
+              "item_label": "B5",
+              "type_title": "类型Ⅱ 研究垂直关系",
+              "confidence": "high",
+              "evidence_ref": "data/item_type_classification.json#Q-23bbe86ea10ffe8e",
+              "machine_type_title": "类型Ⅳ 求距离",
+              "question_text_sha256": "85ab365c19d92adb88303502fe300da9938bb8c03adcd051850de0c8e9da8810",
+              "review_ref": "reports/deep_simulation_reviews/ch1-ch2-type-review.json#Q-23bbe86ea10ffe8e",
+              "review_reason": "先用数量积求对角线长度，再证明直线垂直平面，主目标为垂直关系。",
+              "secondary_types": [
+                "类型Ⅴ 夹角与模"
+              ],
+              "review_status": "MULTI_AGENT_SEMANTIC_REVIEWED"
+            }
+          ],
+          "type_mapping_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+          "blocked_item_type_assignments": []
         },
         {
           "id": "1.4-cycle-2",
@@ -1587,7 +1962,10 @@
               "answer_policy": "NO_ANSWER"
             }
           ],
-          "bridge_unit_ids": [],
+          "bridge_unit_ids": [
+            "micro-skew-distance",
+            "bridge-1.4-folding"
+          ],
           "course_mapping_status": "SEMANTIC_REVIEWED"
         },
         {
@@ -1630,7 +2008,8 @@
             }
           ],
           "bridge_unit_ids": [
-            "bridge-micro-completion"
+            "bridge-micro-completion",
+            "bridge-1.4-dihedral-trig"
           ],
           "course_mapping_status": "SEMANTIC_REVIEWED"
         },
@@ -1651,7 +2030,13 @@
           "optional_course_keys": [],
           "knowledge_refs": [],
           "prerequisite_knowledge_refs": [],
-          "type_refs": [],
+          "type_refs": [
+            "翻折守恒与动态二面角综合",
+            "类型Ⅱ 研究垂直关系",
+            "类型Ⅲ 求空间角",
+            "空间角与面内存在性综合",
+            "类型Ⅴ 点线在面内判断"
+          ],
           "example_numbers": [],
           "exercise_keys": [
             "C10",
@@ -1679,15 +2064,94 @@
           ],
           "bridge_unit_ids": [
             "bridge-1.4-folding",
-            "bridge-micro-existence"
+            "bridge-micro-existence",
+            "bridge-1.4-dihedral-trig"
           ],
-          "course_mapping_status": "SEMANTIC_REVIEWED"
+          "course_mapping_status": "SEMANTIC_REVIEWED",
+          "item_type_assignments": [
+            {
+              "item_id": "Q-633423dd3e2e44c0",
+              "item_label": "C10",
+              "type_title": "翻折守恒与动态二面角综合",
+              "confidence": "high",
+              "evidence_ref": "data/item_type_classification.json#Q-633423dd3e2e44c0",
+              "machine_type_title": "类型Ⅲ 求空间角",
+              "question_text_sha256": "5703ce151060fb0214a8e05d2b1551287c2106ffe280d1ea67391dfa6887d060",
+              "review_ref": "reports/deep_simulation_reviews/ch1-ch2-type-review.json#Q-633423dd3e2e44c0",
+              "review_reason": "沿BD翻折后先迁移守恒的垂直关系，再由体积和二面角反求分点长度。",
+              "secondary_types": [
+                "类型Ⅱ 研究垂直关系",
+                "类型Ⅲ 求空间角"
+              ],
+              "review_status": "MULTI_AGENT_SEMANTIC_REVIEWED"
+            },
+            {
+              "item_id": "Q-6f6ec75aef2de938",
+              "item_label": "C12",
+              "type_title": "空间角与面内存在性综合",
+              "confidence": "high",
+              "evidence_ref": "data/item_type_classification.json#Q-6f6ec75aef2de938",
+              "machine_type_title": "类型Ⅲ 求空间角",
+              "question_text_sha256": "d93be57c69644f181f20a41310be5f4fd051bf495699d7bee2a159bbd76639c5",
+              "review_ref": "reports/deep_simulation_reviews/ch1-ch2-type-review.json#Q-6f6ec75aef2de938",
+              "review_reason": "第一问求线面角，第二问在截面内参数化点并判定垂直存在性。",
+              "secondary_types": [
+                "类型Ⅲ 求空间角",
+                "类型Ⅴ 点线在面内判断"
+              ],
+              "review_status": "MULTI_AGENT_SEMANTIC_REVIEWED"
+            }
+          ],
+          "type_mapping_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+          "blocked_item_type_assignments": []
         }
       ],
       "exit_gate": "法向量、线/面角、面/面角、距离各有一题FULL_PASS；图形题必须完成视觉核验。",
       "verified_question_count": 12,
-      "coverage_status": "PARTIAL_UNVERIFIED",
-      "coverage_gate": "题包门禁：packet=VERIFIED、context=VERIFIED、视觉证据为E1/E2且答案隔离（已通过）；课程覆盖缺口、桥接课和学生掌握度仍需按 exit_gate 独立验收"
+      "coverage_status": "ROUTE_READY_WITH_ANSWER_FREE_SUPPLEMENTS",
+      "coverage_gate": "教材结构、题号、纯题干和答案隔离已通过静态题包门禁；课程覆盖与桥接单独记录，学生掌握度仍需真实作答和24小时冷复测证据。",
+      "coverage_exceptions": [
+        {
+          "kind": "no_dedicated_video",
+          "detail": "现有课程转写覆盖基础空间角/距离，但未检出翻折守恒和动态二面角三角参数化专门课；C9-C12 必须先过专项桥接。",
+          "resolved_for_route_by": [
+            "bridge-1.4-dihedral-trig",
+            "bridge-1.4-folding",
+            "bridge-micro-completion",
+            "bridge-micro-existence",
+            "micro-skew-distance"
+          ],
+          "course_coverage_claimed": false
+        }
+      ],
+      "item_type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "blocked_item_type_reviews": [],
+      "semantic_type_taxonomy_extensions": [
+        {
+          "chapter": 1,
+          "section": "1.4",
+          "type_title": "类型Ⅴ 夹角与模",
+          "introduced_by_item_id": "Q-23bbe86ea10ffe8e",
+          "introduced_by_item_label": "B5",
+          "role": "secondary"
+        },
+        {
+          "chapter": 1,
+          "section": "1.4",
+          "type_title": "翻折守恒与动态二面角综合",
+          "introduced_by_item_id": "Q-633423dd3e2e44c0",
+          "introduced_by_item_label": "C10",
+          "role": "primary"
+        },
+        {
+          "chapter": 1,
+          "section": "1.4",
+          "type_title": "空间角与面内存在性综合",
+          "introduced_by_item_id": "Q-6f6ec75aef2de938",
+          "introduced_by_item_label": "C12",
+          "role": "primary"
+        }
+      ]
     },
     {
       "id": "micro专题1",
@@ -1724,7 +2188,15 @@
         "类型Ⅰ 线上动点",
         "类型Ⅱ 向量线性回避坐标",
         "类型Ⅲ 立体几何综合题",
-        "类型Ⅳ 动态二面角三角方法"
+        "类型Ⅳ 动态二面角三角方法",
+        "外接球",
+        "空间动点距离",
+        "线面平行垂直",
+        "存在性双参数化",
+        "点面距离",
+        "面面垂直",
+        "补形与立体几何综合",
+        "线面平行与线面角"
       ],
       "type_training": [
         {
@@ -1802,9 +2274,7 @@
         "补形",
         "动态二面角三角参数化"
       ],
-      "coverage_gaps": [
-        "现有课程转写未检出外接球找心、存在性双参数化、补形、动态二面角三角参数化专门课；C5-C8 不能仅凭九门基础课放行。"
-      ],
+      "coverage_gaps": [],
       "bridge_units": [
         {
           "id": "bridge-micro-sphere",
@@ -1820,15 +2290,23 @@
             "能选择三条独立约束求球心",
             "能回代所有关键点验证半径"
           ],
-          "source_status": "NO_DEDICATED_VIDEO_IN_CURRENT_TRANSCRIPTS",
-          "release_status": "SUPPLEMENT_READY"
+          "source_status": "REPOSITORY_ANSWER_FREE_SUPPLEMENT_HASH_BOUND",
+          "release_status": "SUPPLEMENT_READY",
+          "supplement_path": "data/bridge_supplement_lessons.json",
+          "supplement_sha256": "046f89d8e5d1edbdee2dc6d9bf8adcbaa2f17924d3779205b5b54d55d97a8e70",
+          "independent_checks": [
+            "能解释等距平方差为何给出垂直平分面",
+            "能选三条独立约束",
+            "能回代并说明唯一性或对称性"
+          ],
+          "mastery_boundary": "Route supplement is available; real completion and delayed retention remain unproven."
         },
         {
           "id": "bridge-micro-existence",
           "title": "存在性双参数化",
           "target_questions": [
             "C6",
-            "C12"
+            "C7"
           ],
           "prerequisites": [
             "micro-k1"
@@ -1838,14 +2316,21 @@
             "能把共线/距离/角度条件化成方程组",
             "能筛去不满足线段范围的伪解"
           ],
-          "source_status": "NO_DEDICATED_VIDEO_IN_CURRENT_TRANSCRIPTS",
-          "release_status": "SUPPLEMENT_READY"
+          "source_status": "REPOSITORY_ANSWER_FREE_SUPPLEMENT_HASH_BOUND",
+          "release_status": "SUPPLEMENT_READY",
+          "supplement_path": "data/bridge_supplement_lessons.json",
+          "supplement_sha256": "046f89d8e5d1edbdee2dc6d9bf8adcbaa2f17924d3779205b5b54d55d97a8e70",
+          "independent_checks": [
+            "定义域先于解方程",
+            "能筛掉线段外的代数解",
+            "能说明存在性结论而不是只报一个候选"
+          ],
+          "mastery_boundary": "Route supplement is available; real completion and delayed retention remain unproven."
         },
         {
           "id": "bridge-micro-completion",
           "title": "补形与辅助平行体",
           "target_questions": [
-            "C7",
             "C8"
           ],
           "prerequisites": [
@@ -1856,8 +2341,105 @@
             "能把补形后的边关系翻译成向量等式",
             "能说明补形不改变待证关系的理由"
           ],
-          "source_status": "NO_DEDICATED_VIDEO_IN_CURRENT_TRANSCRIPTS",
-          "release_status": "SUPPLEMENT_READY"
+          "source_status": "REPOSITORY_ANSWER_FREE_SUPPLEMENT_HASH_BOUND",
+          "release_status": "SUPPLEMENT_READY",
+          "supplement_path": "data/bridge_supplement_lessons.json",
+          "supplement_sha256": "046f89d8e5d1edbdee2dc6d9bf8adcbaa2f17924d3779205b5b54d55d97a8e70",
+          "independent_checks": [
+            "能说明补形依据",
+            "能区分题设事实与辅助构造",
+            "能完成向量闭合并回译"
+          ],
+          "mastery_boundary": "Route supplement is available; real completion and delayed retention remain unproven."
+        },
+        {
+          "id": "bridge-1.2-apollonius",
+          "title": "阿波罗尼斯球与等距轨迹",
+          "target_questions": [
+            "C5"
+          ],
+          "release_status": "SUPPLEMENT_READY",
+          "source_status": "REPOSITORY_ANSWER_FREE_SUPPLEMENT_HASH_BOUND",
+          "supplement_path": "data/bridge_supplement_lessons.json",
+          "supplement_sha256": "046f89d8e5d1edbdee2dc6d9bf8adcbaa2f17924d3779205b5b54d55d97a8e70",
+          "independent_checks": [
+            "能写出平方距离展开式",
+            "能说明为什么要完成平方",
+            "能列出轨迹与题设范围的三项复核"
+          ],
+          "mastery_boundary": "Route supplement is available; real completion and delayed retention remain unproven."
+        },
+        {
+          "id": "bridge-1.2-single-variable",
+          "title": "空间动点单变量化配方",
+          "target_questions": [
+            "B1",
+            "C6"
+          ],
+          "release_status": "SUPPLEMENT_READY",
+          "source_status": "REPOSITORY_ANSWER_FREE_SUPPLEMENT_HASH_BOUND",
+          "supplement_path": "data/bridge_supplement_lessons.json",
+          "supplement_sha256": "046f89d8e5d1edbdee2dc6d9bf8adcbaa2f17924d3779205b5b54d55d97a8e70",
+          "independent_checks": [
+            "能解释 λ=0、λ=1 的端点意义",
+            "能把目标量化成 λ 的式子",
+            "能筛掉定义域外的解"
+          ],
+          "mastery_boundary": "Route supplement is available; real completion and delayed retention remain unproven."
+        },
+        {
+          "id": "bridge-1.4-dihedral-trig",
+          "title": "动态二面角三角参数化",
+          "target_questions": [
+            "B2",
+            "C7",
+            "C8"
+          ],
+          "release_status": "SUPPLEMENT_READY",
+          "source_status": "REPOSITORY_ANSWER_FREE_SUPPLEMENT_HASH_BOUND",
+          "supplement_path": "data/bridge_supplement_lessons.json",
+          "supplement_sha256": "046f89d8e5d1edbdee2dc6d9bf8adcbaa2f17924d3779205b5b54d55d97a8e70",
+          "independent_checks": [
+            "能说明公共棱和截面保持有效的原因",
+            "能从余弦符号和绝对值选择分支",
+            "能把存在性写成带定义域的方程组"
+          ],
+          "mastery_boundary": "Route supplement is available; real completion and delayed retention remain unproven."
+        },
+        {
+          "id": "bridge-1.4-folding",
+          "title": "翻折守恒与折后平面角",
+          "target_questions": [
+            "B2",
+            "C7"
+          ],
+          "release_status": "SUPPLEMENT_READY",
+          "source_status": "REPOSITORY_ANSWER_FREE_SUPPLEMENT_HASH_BOUND",
+          "supplement_path": "data/bridge_supplement_lessons.json",
+          "supplement_sha256": "046f89d8e5d1edbdee2dc6d9bf8adcbaa2f17924d3779205b5b54d55d97a8e70",
+          "independent_checks": [
+            "能说明截面为什么代表平面角",
+            "能区分折痕上的不变量与折后新角",
+            "能检查参数端点和锐钝角分支"
+          ],
+          "mastery_boundary": "Route supplement is available; real completion and delayed retention remain unproven."
+        },
+        {
+          "id": "micro-skew-distance",
+          "title": "异面直线距离",
+          "target_questions": [
+            "C5"
+          ],
+          "release_status": "SUPPLEMENT_READY",
+          "source_status": "REPOSITORY_ANSWER_FREE_SUPPLEMENT_HASH_BOUND",
+          "supplement_path": "data/bridge_supplement_lessons.json",
+          "supplement_sha256": "046f89d8e5d1edbdee2dc6d9bf8adcbaa2f17924d3779205b5b54d55d97a8e70",
+          "independent_checks": [
+            "能区分异面距离与线线角",
+            "能验证公垂向量同时垂直两条直线",
+            "能说明 X、Y 必须分别在线上"
+          ],
+          "mastery_boundary": "Route supplement is available; real completion and delayed retention remain unproven."
         }
       ],
       "learning_cycles": [
@@ -2029,7 +2611,15 @@
           "optional_course_keys": [],
           "knowledge_refs": [],
           "prerequisite_knowledge_refs": [],
-          "type_refs": [],
+          "type_refs": [
+            "类型Ⅲ 立体几何综合题",
+            "外接球",
+            "空间动点距离",
+            "线面平行垂直",
+            "存在性双参数化",
+            "点面距离",
+            "面面垂直"
+          ],
           "example_numbers": [],
           "exercise_keys": [
             "C5",
@@ -2053,9 +2643,50 @@
           ],
           "bridge_unit_ids": [
             "bridge-micro-sphere",
-            "bridge-micro-existence"
+            "bridge-micro-existence",
+            "bridge-1.2-single-variable",
+            "bridge-1.2-apollonius",
+            "micro-skew-distance"
           ],
-          "course_mapping_status": "SEMANTIC_REVIEWED"
+          "course_mapping_status": "SEMANTIC_REVIEWED",
+          "item_type_assignments": [
+            {
+              "item_id": "Q-ab24d2e6734637e8",
+              "item_label": "C5",
+              "type_title": "类型Ⅲ 立体几何综合题",
+              "confidence": "medium",
+              "evidence_ref": "data/item_type_classification.json#Q-ab24d2e6734637e8",
+              "machine_type_title": "类型Ⅲ 立体几何综合题",
+              "question_text_sha256": "177328b85f764c39e37b6c9512b97aa449785619f2745f593ce9319f99108040",
+              "review_ref": "reports/deep_simulation_reviews/ch1-ch2-type-review.json#Q-ab24d2e6734637e8",
+              "review_reason": "四个选项分别覆盖线面平行、面面垂直、动点距离和外接球，必须按综合题处理。",
+              "secondary_types": [
+                "外接球",
+                "空间动点距离",
+                "线面平行垂直"
+              ],
+              "review_status": "MULTI_AGENT_SEMANTIC_REVIEWED"
+            },
+            {
+              "item_id": "Q-99b92e20cec34b20",
+              "item_label": "C6",
+              "type_title": "类型Ⅲ 立体几何综合题",
+              "confidence": "high",
+              "evidence_ref": "data/item_type_classification.json#Q-99b92e20cec34b20",
+              "machine_type_title": "类型Ⅱ 向量线性回避坐标",
+              "question_text_sha256": "173f3c18b1193043e43c094c09aa9b5c1e4f02a15cd320988368032c1b98a644",
+              "review_ref": "reports/deep_simulation_reviews/ch1-ch2-type-review.json#Q-99b92e20cec34b20",
+              "review_reason": "三问连续处理面面垂直、点面距离和动点存在性，是完整的立体几何综合链。",
+              "secondary_types": [
+                "存在性双参数化",
+                "点面距离",
+                "面面垂直"
+              ],
+              "review_status": "MULTI_AGENT_SEMANTIC_REVIEWED"
+            }
+          ],
+          "type_mapping_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+          "blocked_item_type_assignments": []
         },
         {
           "id": "micro-cycle-6",
@@ -2071,7 +2702,12 @@
           "optional_course_keys": [],
           "knowledge_refs": [],
           "prerequisite_knowledge_refs": [],
-          "type_refs": [],
+          "type_refs": [
+            "类型Ⅳ 动态二面角三角方法",
+            "类型Ⅲ 立体几何综合题",
+            "补形与立体几何综合",
+            "线面平行与线面角"
+          ],
           "example_numbers": [],
           "exercise_keys": [
             "C7",
@@ -2094,15 +2730,138 @@
             }
           ],
           "bridge_unit_ids": [
-            "bridge-micro-completion"
+            "bridge-micro-completion",
+            "bridge-1.4-folding",
+            "bridge-1.4-dihedral-trig",
+            "bridge-micro-existence"
           ],
-          "course_mapping_status": "SEMANTIC_REVIEWED"
+          "course_mapping_status": "SEMANTIC_REVIEWED",
+          "item_type_assignments": [
+            {
+              "item_id": "Q-39bd2558138d842f",
+              "item_label": "C7",
+              "type_title": "类型Ⅳ 动态二面角三角方法",
+              "confidence": "medium",
+              "evidence_ref": "data/item_type_classification.json#Q-39bd2558138d842f",
+              "machine_type_title": "类型Ⅲ 立体几何综合题",
+              "question_text_sha256": "9cf4c9883132b4db7f059467e5b3ccf165b35c17d3951ae6c87b63710e4ef3ad",
+              "review_ref": "reports/deep_simulation_reviews/ch1-ch2-type-review.json#Q-39bd2558138d842f",
+              "review_reason": "由体积和指定二面角反推侧棱与底面所成角，动态二面角是关键桥接。",
+              "secondary_types": [
+                "类型Ⅲ 立体几何综合题"
+              ],
+              "review_status": "MULTI_AGENT_SEMANTIC_REVIEWED"
+            },
+            {
+              "item_id": "Q-2ee3a3fc10f4a542",
+              "item_label": "C8",
+              "type_title": "补形与立体几何综合",
+              "confidence": "high",
+              "evidence_ref": "data/item_type_classification.json#Q-2ee3a3fc10f4a542",
+              "machine_type_title": "类型Ⅲ 立体几何综合题",
+              "question_text_sha256": "ca94bc88ca724e3990aaa06ac34143e21f77fd70b8db6ae4e10ee425cc1e547d",
+              "review_ref": "reports/deep_simulation_reviews/ch1-ch2-type-review.json#Q-2ee3a3fc10f4a542",
+              "review_reason": "三棱台需补形或使用平行截面关系，再完成线面平行证明和线面角计算。",
+              "secondary_types": [
+                "类型Ⅲ 立体几何综合题",
+                "线面平行与线面角"
+              ],
+              "review_status": "MULTI_AGENT_SEMANTIC_REVIEWED"
+            }
+          ],
+          "type_mapping_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+          "blocked_item_type_assignments": []
         }
       ],
       "exit_gate": "B组各类型至少一题FULL_PASS；C5-C8经过专项微单元和未污染远迁移；另做一题限时综合题。",
       "verified_question_count": 8,
-      "coverage_status": "PARTIAL_UNVERIFIED",
-      "coverage_gate": "题包门禁：packet=VERIFIED、context=VERIFIED、视觉证据为E1/E2且答案隔离（已通过）；课程覆盖缺口、桥接课和学生掌握度仍需按 exit_gate 独立验收"
+      "coverage_status": "ROUTE_READY_WITH_ANSWER_FREE_SUPPLEMENTS",
+      "coverage_gate": "教材结构、题号、纯题干和答案隔离已通过静态题包门禁；课程覆盖与桥接单独记录，学生掌握度仍需真实作答和24小时冷复测证据。",
+      "coverage_exceptions": [
+        {
+          "kind": "no_dedicated_video",
+          "detail": "现有课程转写未检出外接球找心、存在性双参数化、补形、动态二面角三角参数化专门课；C5-C8 不能仅凭九门基础课放行。",
+          "resolved_for_route_by": [
+            "bridge-1.2-apollonius",
+            "bridge-1.2-single-variable",
+            "bridge-1.4-dihedral-trig",
+            "bridge-1.4-folding",
+            "bridge-micro-completion",
+            "bridge-micro-existence",
+            "bridge-micro-sphere",
+            "micro-skew-distance"
+          ],
+          "course_coverage_claimed": false
+        }
+      ],
+      "item_type_review_status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+      "blocked_item_type_reviews": [],
+      "semantic_type_taxonomy_extensions": [
+        {
+          "chapter": 1,
+          "section": "micro专题1",
+          "type_title": "外接球",
+          "introduced_by_item_id": "Q-ab24d2e6734637e8",
+          "introduced_by_item_label": "C5",
+          "role": "secondary"
+        },
+        {
+          "chapter": 1,
+          "section": "micro专题1",
+          "type_title": "空间动点距离",
+          "introduced_by_item_id": "Q-ab24d2e6734637e8",
+          "introduced_by_item_label": "C5",
+          "role": "secondary"
+        },
+        {
+          "chapter": 1,
+          "section": "micro专题1",
+          "type_title": "线面平行垂直",
+          "introduced_by_item_id": "Q-ab24d2e6734637e8",
+          "introduced_by_item_label": "C5",
+          "role": "secondary"
+        },
+        {
+          "chapter": 1,
+          "section": "micro专题1",
+          "type_title": "存在性双参数化",
+          "introduced_by_item_id": "Q-99b92e20cec34b20",
+          "introduced_by_item_label": "C6",
+          "role": "secondary"
+        },
+        {
+          "chapter": 1,
+          "section": "micro专题1",
+          "type_title": "点面距离",
+          "introduced_by_item_id": "Q-99b92e20cec34b20",
+          "introduced_by_item_label": "C6",
+          "role": "secondary"
+        },
+        {
+          "chapter": 1,
+          "section": "micro专题1",
+          "type_title": "面面垂直",
+          "introduced_by_item_id": "Q-99b92e20cec34b20",
+          "introduced_by_item_label": "C6",
+          "role": "secondary"
+        },
+        {
+          "chapter": 1,
+          "section": "micro专题1",
+          "type_title": "补形与立体几何综合",
+          "introduced_by_item_id": "Q-2ee3a3fc10f4a542",
+          "introduced_by_item_label": "C8",
+          "role": "primary"
+        },
+        {
+          "chapter": 1,
+          "section": "micro专题1",
+          "type_title": "线面平行与线面角",
+          "introduced_by_item_id": "Q-2ee3a3fc10f4a542",
+          "introduced_by_item_label": "C8",
+          "role": "secondary"
+        }
+      ]
     }
   ],
   "known_visual_recoveries": [
@@ -2163,5 +2922,17 @@
       "start_regex": "^如图，在棱长为4的正方体",
       "evidence": "primary_ocr_question_recovery"
     }
-  ]
+  ],
+  "item_type_semantic_review": {
+    "status": "MULTI_AGENT_SEMANTIC_REVIEWED",
+    "applied_at": "2026-08-31T01:52:22.871907+00:00",
+    "items": 16,
+    "accepted": 16,
+    "blocked": 0,
+    "source_reports": [
+      "reports/deep_simulation_reviews/ch1-ch2-type-review.json"
+    ],
+    "mastery_claimed": false,
+    "source_reconciled_at": "2026-08-31T03:08:38+00:00"
+  }
 }
