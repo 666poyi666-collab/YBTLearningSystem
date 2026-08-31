@@ -9,7 +9,7 @@
 - 将五人格五轮重新定义为合成路线压力审计：冻结前只读取白名单化学生题包和无答案路线，冻结 SHA 落盘后才读取 grader-only 资料。当前原子运行 `route-audit-5391e980be231c3c` 覆盖 38 节、353 循环、1,209 项、30,225 条冻结尝试和 30,225 条 `route_assessments`；Round 5 阻断 0、隔离错误 0、ID 全局唯一。JSONL 改为 gzip 后完整运行仅 9.88 MB，两套未发布旧运行和 37 份 v2 单节生成物已清理。所有记录保持 `mathematical_correctness=not_evaluated_no_final_answer`、`mastery_claimed=false`。
 - `primary-user-proxy` 改为版本化运行与 current 快照；文稿 `full_text` 哈希只标记 `transcript_loaded_for_proxy`，不再冒充课程消费。没有最终数学作答时保持 `simulated_learning_status=not_run_no_final_learner_answers`，真实用户状态继续只认远程 MCP。
 - 恢复 12 节 39 个经转写 SHA 复核的课程落点；`5.6` 的“4.2.6.1 求和型放缩（上/下）”只在例 12-14 的综合循环首次直接引入，不再被错误广播为全节前置。全书课程合同为 38/38 节、1,209 项、0 error。
-- 新增 Cloudflare D1 增量迁移 `0006_answer_evidence_contract.sql` 和版本化答案页 R2 包；`math_get_answer_sources` 区分自动答案、待复核 OCR 和仅原页证据，后两类强制禁自动判分并返回验 SHA 图片，模型解法继续单列。Cloud MCP 8/8 测试通过；最终 dry-run 版本 `v1-82aac1d4dce375de` 为 5 章、38 节、1,209 项、170 课程、5,097 链接、19,234 文稿片段、546 答案、38 页包/326 唯一页，尚未部署远端。
+- 新增 Cloudflare D1 增量迁移 `0006_answer_evidence_contract.sql` 和版本化答案页 R2 包；`math_get_answer_sources` 区分自动答案、待复核 OCR 和仅原页证据，后两类强制禁自动判分并返回验 SHA 图片，模型解法继续单列。Cloud MCP 8/8 测试通过；生产版本 `v1-82aac1d4dce375de` 已导入 5 章、38 节、1,209 项、170 课程、5,097 链接、19,234 文稿片段、546 当前答案和 38 页包/326 唯一页，绑定提交 `d2eb9e1`。78/78 个 R2 对象下载验 SHA 通过；D1 无待迁移且 7 条学习事件、3/3/3 诊断/题型/记忆保持不变。Worker 版本 `0f7f29b2-01e3-4d36-8f43-b375c329a939` 的 health/readiness/OAuth 元数据均为 200，无令牌 MCP 为 401。
 - 新增 `docs/PROJECT-MAP.md`，以非代码语言说明静态资料、路线审计、浏览器状态、仓库代理、D1 真实进度和 ChatGPT MCP 数据流；Skill 同步加入题干隔离、原子 current、跨运行代理和答案置信边界。
 - 最终本地验证：Python 174 项通过、1 项因本机没有旧 DeepSeek 视觉配置跳过；Skill section 4/4、progress 4/4、章节进度 2/2、题型/裁决/视觉/答案/来源/课程审计全部通过；Skill `quick_validate` 通过。真实学习、最终数学判分和 24 小时冷复测仍为 `not_run`。
 

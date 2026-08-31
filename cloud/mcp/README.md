@@ -30,12 +30,12 @@
 
 代码、D1 schema、私有 R2、共享 OAuth audience/scopes 和独立资源服务器凭据均已建立。远端迁移、内容导入、生产部署和未授权访问验收已通过；`/healthz`、`/readyz` 与 protected-resource 元数据均为 200，无令牌 `/mcp` 为 401。
 
-当前生产内容版本为 `v1-c08c593ea5db28bc`，绑定提交 `966a885`：选择性必修 1 第一至第五章共 38 节、1,209 个教材项目、5,191 条唯一项目-课程链接和 50 条当前原书答案。课程目录保留 170 门与 19,234 个转写片段；所有章节课程均已落到明确循环，路线映射不等于真人听完或掌握。R2 保存节次题包、课程转写包和题图包，40/40 个版本对象已逐个下载验哈希。
+当前生产内容版本为 `v1-82aac1d4dce375de`，绑定提交 `d2eb9e1a754b6cbd206dfb3af1bb8eb3fda1e207`：选择性必修 1 第一至第五章共 38 节、1,209 个教材项目、5,097 条唯一项目-课程链接、170 门课程、19,234 个转写片段和 546 条当前原书答案。答案分为 473 条自动可用、51 条文本待原页复核和 22 条仅原页证据；R2 保存 38 个答案页包和 326 张唯一页图。78/78 个当前版本对象已逐个下载验 SHA。
 
 补充练习库版本化导入计划由 `scripts/import_practice_book.mjs` 生成，索引器为仓库根目录 `scripts/build_practice_book_index.py`。当前书源为 106 页、727 个唯一题目；第一章 194 题、第二章 230 题、第三章 269 题，另有 34 道模块综合题。最新候选路由版本为 `practice-v1-f55a4c6c3bbfd761`，包含 3,020 条候选链接；题面 OCR 是搜索辅助，原页图是题面权威，跨节综合页不生成伪精确 cycle 绑定。源 PDF 本身没有答案，必刷题始终选做且不阻塞主线。
 
-学习者安全的读取工具包括：`math_get_section_overview`（完整节次大纲与项目索引）、`math_get_item_content`（完整题面与题图，不返回答案侧车）、`math_get_course_transcript`（完整老师文稿及可靠时间轴）、三项讲义检索/原页工具、课程优先学习包、必刷题路由/原页工具、手写逐行分析和 `math_get_answer_sources`（已导入的一本通原书答案来源）。模型自己的解法不写入原书答案表，必须由 ChatGPT 单独标记为 `model_solution` 并给出推荐理由。没有可验证逐句时间轴时，返回 `timelineAvailable=false` 和空时间轴，不作估算。当前生产 Worker 为 `https://math-learning-mcp.focuslink-poyi-6465e9.workers.dev`，最新部署版本为 `25231906-c1f3-467b-9a3d-ae30908bf2c7`。
+学习者安全的读取工具包括：`math_get_section_overview`（完整节次大纲与项目索引）、`math_get_item_content`（完整题面与题图，不返回答案侧车）、`math_get_course_transcript`（完整老师文稿及可靠时间轴）、三项讲义检索/原页工具、课程优先学习包、必刷题路由/原页工具、手写逐行分析和 `math_get_answer_sources`（已导入的一本通原书答案来源）。模型自己的解法不写入原书答案表，必须由 ChatGPT 单独标记为 `model_solution` 并给出推荐理由。没有可验证逐句时间轴时，返回 `timelineAvailable=false` 和空时间轴，不作估算。当前生产 Worker 为 `https://math-learning-mcp.focuslink-poyi-6465e9.workers.dev`，最新部署版本为 `0f7f29b2-01e3-4d36-8f43-b375c329a939`。
 
-`0006_answer_evidence_contract.sql` 是纯增量迁移，不重建或删除任何用户表。旧答案行自动降级为 `legacy_unreviewed`，默认禁止自动判分。本地待导入合同要求 546/546 道强化训练题全部建立 D1 索引和 R2 页图证据；此变更尚未部署，不得把本地 dry-run 冒充生产已更新。
+`0006_answer_evidence_contract.sql` 是纯增量迁移，不重建或删除任何用户表，已应用到生产 D1。旧答案行自动降级为 `legacy_unreviewed`，默认禁止自动判分；工具默认按来源类型返回最新内容版本，旧记录只在显式 `includeHistory=true` 时可见。
 
 ChatGPT 网页端“数学一本通学习”开发模式 App 已完成 OAuth 授权。当前 D1 保留 7 条用户确认学习事件、3 条诊断、3 条题型分类和 3 条记忆点；内容/练习重导入没有覆盖这些记录。`/healthz`、`/readyz` 均为 200，无令牌 `/mcp` 为 401。
